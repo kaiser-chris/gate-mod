@@ -4,14 +4,37 @@
 		effect_starting_politics_conservative = yes
 		effect_starting_pop_literacy_very_high = yes
 		effect_starting_pop_wealth_high = yes
+
+		# Technology
 		add_technology_researched = magic_understanding_production
 		add_technology_researched = magic_understanding_society
 		add_technology_researched = magic_understanding_military
-		
+
+		# Laws
+		activate_law = law_type:law_frontier_colonization
+		activate_law = law_type:law_local_police
+		activate_law = law_type:law_slavery_banned
+		activate_law = law_type:law_religious_schools
+		activate_law = law_type:law_theocracy
+		activate_law = law_type:law_state_religion
+
+        set_ruling_interest_groups = {
+        	ig_landowners
+        }
+
+		# Institutions
 		set_institution_investment_level = {
 			institution = institution_schools
 			level = 2
-		}	
+		}
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 2
+		}
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 1
+		}
 
 		ig:ig_intelligentsia = {
 			add_ruling_interest_group = yes

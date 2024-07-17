@@ -2,26 +2,131 @@
 	s:STATE_ZAMBIA = {
 		region_state:GAD = {
 			create_pop = {
+				culture = arcturian
+				size = 125000
+			}
+			create_pop = {
 				culture = lunda
-				size = 28092
+				religion = golden_religion
+				size = 35092
+			}
+			create_pop = {
+				culture = lunda
+				size = 5092
 			}
 			create_pop = {
 				culture = kavango_bantu
-				size = 70000
+				religion = golden_religion
+				size = 59000
 			}
 			create_pop = {
 				culture = chewa
-				size = 9264
+				religion = golden_religion
+				size = 11264
 			}
 			create_pop = {
-				pop_type = slaves
+				culture = kavango_bantu
+				size = 11000
+			}
+			create_pop = {
+				culture = chewa
+				size = 1000
+			}
+		}
+	}
+	s:STATE_NORTH_ANGOLA = {
+		region_state:GAD = {
+			create_pop = {
+				culture = arcturian
+				size = 25000
+			}
+			create_pop = {
+				culture = bakongo
+				religion = golden_religion
+				size = 336404
+			}
+			create_pop = {
+				culture = kavango_bantu
+				religion = golden_religion
+				size = 111004
+			}
+			create_pop = {
+				culture = bakongo
+				size = 15404
+			}
+			create_pop = {
+				culture = kavango_bantu
+				size = 5004
+			}
+		}
+	}
+	s:STATE_EAST_ANGOLA = {
+		region_state:GAD = {
+			create_pop = {
+				culture = arcturian
+				size = 95000
+			}
+			create_pop = {
+				culture = kavango_bantu
+				religion = golden_religion
+				size = 139400
+			}
+			create_pop = {
+				culture = bakongo
+				religion = golden_religion
+				size = 8000
+			}
+			create_pop = {
 				culture = lunda
-				size = 12000
+				religion = golden_religion
+				size = 160000
 			}
 			create_pop = {
-				pop_type = slaves
-				culture = chewa
-				size = 3000
+				culture = ovimbundu
+				religion = golden_religion
+				size = 113200
+			}
+			create_pop = {
+				culture = kavango_bantu
+				size = 14400
+			}
+			create_pop = {
+				culture = bakongo
+				size = 100
+			}
+			create_pop = {
+				culture = lunda
+				size = 4000
+			}
+			create_pop = {
+				culture = ovimbundu
+				size = 12200
+			}
+		}
+	}
+	s:STATE_SOUTH_ANGOLA = {
+		region_state:GAD = {
+			create_pop = {
+				culture = arcturian
+				size = 20000
+			}
+			create_pop = {
+				culture = ovimbundu
+				religion = golden_religion
+				size = 30000
+			}
+			create_pop = {
+				culture = kavango_bantu
+				religion = golden_religion
+				size = 100004
+			}
+			create_pop = {
+				culture = ovimbundu
+				size = 35000
+			}
+			create_pop = {
+				culture = kavango_bantu
+				size = 40004
 			}
 		}
 	}
