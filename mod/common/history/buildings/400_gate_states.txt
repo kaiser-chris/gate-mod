@@ -2,32 +2,6 @@
 	s:STATE_ZAMBIA={
 		region_state:GAD={
 			create_building={
-				building="building_fishing_wharf"
-				add_ownership={
-					building={
-						type="building_fishing_wharf"
-						country="c:GAD"
-						levels=3
-						region="STATE_ZAMBIA"
-					}
-				}
-				reserves=1
-				activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated"  }
-			}
-			create_building={
-				building="building_rye_farm"
-				add_ownership={
-					building={
-						type="building_manor_house"
-						country="c:GAD"
-						levels=1
-						region="STATE_ZAMBIA"
-					}
-				}
-				reserves=1
-				activate_production_methods={ "pm_tools" "pm_soil_enriching_farming"  "pm_potatoes" }
-			}
-			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
 					building={
@@ -60,17 +34,6 @@
 				activate_production_methods={ "pm_saw_mills"  "pm_no_equipment" "pm_road_carts" "pm_hardwood" }
 			}
 			create_building={
-				building="building_port"
-				add_ownership={
-					country={
-						country="c:GAD"
-						levels=1
-					}
-				}
-				reserves=1
-				activate_production_methods={ "pm_basic_port" }
-			}
-			create_building={
 				building="building_gate"
 				add_ownership={
 					country={
@@ -84,15 +47,13 @@
 			create_building={
 				building="building_mana_extractor"
 				add_ownership={
-					building={
-						type="building_mana_extractor"
+					country={
 						country="c:GAD"
 						levels=3
-						region="STATE_ZAMBIA"
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_dummy" }
+				activate_production_methods={ "pm_mage_mana_extraction" }
 			}
 		}
 	}

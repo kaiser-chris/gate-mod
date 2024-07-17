@@ -1,4 +1,4 @@
-building_gate = {
+﻿building_gate = {
 	building_group = bg_monuments
 	texture = "gfx/interface/icons/building_icons/building_gate.dds"
 	buildable = no
@@ -26,9 +26,12 @@ building_mana_extractor = {
 	building_group = bg_light_industry
 	texture = "gfx/interface/icons/building_icons/building_mana_extractor.dds"
 	city_type = city
+	entity_not_constructed = { }
+	entity_under_construction = {  }
+	entity_constructed = { }
 
 	unlocking_technologies = {
-		#TODO define magic technology requirements
+		magic_understanding
 	}
 
 	possible = {
@@ -36,9 +39,8 @@ building_mana_extractor = {
 	}
 
 	production_method_groups = {
-		pmg_magic_extraction
+		pmg_mana_extraction
 	}
 
 	required_construction = construction_cost_high
-
 }

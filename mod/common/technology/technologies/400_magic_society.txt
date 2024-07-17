@@ -1,0 +1,31 @@
+﻿### ERA 1
+
+magic_understanding = {
+	# Unlocks all magic society research
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/sericulture.dds"
+	category = society
+	can_research = no
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+magic_sericulture = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/sericulture.dds"
+	category = society
+
+	unlocking_technologies = {
+		magic_understanding
+	}
+	
+	modifier = {
+		building_silk_plantation_throughput_add = 0.25
+	}
+	
+	ai_weight = {
+		value = 2 # Important in general
+	}
+}

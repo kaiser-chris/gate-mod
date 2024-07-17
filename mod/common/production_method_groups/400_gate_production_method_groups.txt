@@ -5,7 +5,7 @@ pmg_magic_gate_exploitation = {
 	ai_selection = most_productive
 
 	production_methods = {
-	    #TODO Add proper production method
+	    #TODO: Add proper production method
         # Support from home
         # Discovery
         # Enslavement
@@ -14,15 +14,14 @@ pmg_magic_gate_exploitation = {
 	}
 }
 
-pmg_magic_extraction = {
+pmg_mana_extraction = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
 
 	production_methods = {
-	    #TODO Add proper production method
-	    # Natural mana extraction
-	    # Ritual extraction
-	    # Magitech extraction
-		pm_dummy
+		#TODO: Add proper production method
+        # Ritual extraction
+        # Magitech extraction
+		pm_mage_mana_extraction
 	}
 }

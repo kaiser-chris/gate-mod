@@ -1,0 +1,16 @@
+﻿pm_mage_mana_extraction = {
+    #TODO Add proper icon
+	texture = "gfx/interface/icons/production_method_icons/base_1.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_output_mana_add = 100
+		}
+
+		level_scaled = {
+			# profit
+			building_employment_mages_add = 100
+		}
+	}
+}
