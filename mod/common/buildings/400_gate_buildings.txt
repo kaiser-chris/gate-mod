@@ -19,6 +19,7 @@
 
 	required_construction = construction_cost_monument
 
+	#TODO: Add proper background for magic buildings
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 }
 
@@ -31,7 +32,7 @@ building_mana_extractor = {
 	entity_constructed = { }
 
 	unlocking_technologies = {
-		magic_understanding
+		magic_understanding_production
 	}
 
 	possible = {
@@ -43,4 +44,7 @@ building_mana_extractor = {
 	}
 
 	required_construction = construction_cost_high
+
+	#TODO: Add proper background for magic buildings
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_light_industry.dds"
 }
