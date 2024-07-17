@@ -70,6 +70,30 @@
 				reserves=1
 				activate_production_methods={ "pm_basic_port" }
 			}
+			create_building={
+				building="building_gate"
+				add_ownership={
+					country={
+						country="c:GAD"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_dummy" }
+			}
+			create_building={
+				building="building_mana_extractor"
+				add_ownership={
+					building={
+						type="building_mana_extractor"
+						country="c:GAD"
+						levels=3
+						region="STATE_ZAMBIA"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_dummy" }
+			}
 		}
 	}
 }
