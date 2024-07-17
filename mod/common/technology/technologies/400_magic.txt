@@ -1,0 +1,17 @@
+﻿### ERA 1
+
+magic_sericulture = {
+	# Unlocks Mulberry Groves PM on Rice Farms
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/sericulture.dds"
+	category = magic
+	can_research = no
+	
+	modifier = {
+		building_silk_plantation_throughput_add = 0.25
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
