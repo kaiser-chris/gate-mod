@@ -1,6 +1,8 @@
 # Overview
 
-Gate is a mod for Victoria 3
+Gate (Working Title) is a mod for Victoria 3.
+
+THIS MOD IS UNFINISHED AND STILL IN DEVELOPMENT!
 
 ## Notes
 
