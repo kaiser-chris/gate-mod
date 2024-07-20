@@ -1,0 +1,13 @@
+﻿TRADE_ROUTES = {
+
+	# Mountain Kingdom
+	c:GMK = {
+		create_trade_route = {
+			goods = dye
+			level = 10
+			direction = import
+			target = c:FRA.market
+		}
+	}
+
+}

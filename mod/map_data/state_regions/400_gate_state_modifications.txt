@@ -1,0 +1,42 @@
+﻿# Overwriting states in this file will lead to warnings in the log about already defined provinces.
+# We still need to fully define the state with all provinces since otherwise the game will crash.
+
+# Mountain Kingdom
+# Add more mines
+STATE_TYROL = {
+    id = 55
+    subsistence_building = "building_subsistence_farms"
+    provinces = { "x4A9C68" "x51C0E0" "x5D4166" "xAB7EB0" "xC74CD7" "xD0C0E0" "xEC6873" "xF061C0" "xF0E0C0" }
+    traits = { "state_trait_alps_mountains" "state_trait_dwarven_tunnels" }
+    city = "x51C0E0"
+    farm = "x5D4166"
+    mine = "xF0E0C0"
+    wood = "xD0C0E0"
+    arable_land = 30
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_gold_mining = 10
+        bg_iron_mining = 36
+        bg_coal_mining = 70
+        bg_logging = 9
+    }
+}
+STATE_SOUTH_TYROL = {
+    id = 56
+    subsistence_building = "building_subsistence_farms"
+    provinces = { "x039D0F" "x1120FF" "xD040E0" "xD0BF60" }
+    traits = { "state_trait_alps_mountains" "state_trait_dwarven_tunnels" }
+    city = "xD0BF60"
+    farm = "xD0BF60"
+    mine = "x039D0F"
+    wood = "xD040E0"
+    arable_land = 15
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_logging = 6
+        bg_iron_mining = 20
+        bg_coal_mining = 32
+        bg_lead_mining = 15
+        bg_sulfur_mining = 15
+    }
+}

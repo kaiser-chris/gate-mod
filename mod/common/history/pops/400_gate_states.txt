@@ -86,12 +86,34 @@
 				size = 200000
 			}
 		}
+		# Overwrite old counts
+		region_state:AUS = {
+			create_pop = {
+				culture = south_german
+				size = 100
+			}
+			create_pop = {
+				culture = alemannic
+				religion = catholic
+				size = 100
+			}
+		}
 	}
 	s:STATE_SOUTH_TYROL = {
 		region_state:GMK = {
 			create_pop = {
 				culture = dwarven
 				size = 100000
+			}
+		}
+		region_state:AUS = {
+			create_pop = {
+				culture = south_german
+				size = 100
+			}
+			create_pop = {
+				culture = north_italian
+				size = 100
 			}
 		}
 	}

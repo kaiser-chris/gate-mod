@@ -1,0 +1,256 @@
+﻿#TODO: Define proper buildings for new countries
+BUILDINGS={
+	# Mountain Kingdom
+	s:STATE_TYROL={
+		region_state:AUS= {
+			remove_building = building_gold_mine
+			remove_building = building_iron_mine
+			remove_building = building_livestock_ranch
+		}
+		region_state:GMK={
+			create_building={
+				building="building_university"
+				add_ownership={
+					country={
+						country="c:GMK"
+						levels=2
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" }
+			}
+			create_building={
+				building="building_gate"
+				add_ownership={
+					country={
+						country="c:GMK"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_dummy" }
+			}
+			create_building={
+				building="building_mana_extractor"
+				add_ownership={
+					country={
+						country="c:GMK"
+						levels=5
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_mage_mana_extraction" }
+			}
+			create_building={
+				building="building_iron_mine"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:GMK"
+						levels=5
+						region="STATE_TYROL"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_atmospheric_engine_pump_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_coal_mine"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:GMK"
+						levels=3
+						region="STATE_TYROL"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_atmospheric_engine_pump_building_coal_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_gold_mine"
+				add_ownership={
+					country={
+						country="c:GMK"
+						levels=2
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_atmospheric_engine_pump_building_gold_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_livestock_ranch"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:GMK"
+						levels=1
+						region="STATE_TYROL"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_slaughterhouses" "pm_sheep_farms" "pm_standard_fences" "pm_unrefrigerated"  }
+			}
+			create_building={
+				building="building_tooling_workshops"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:GMK"
+						levels=5
+						region="STATE_TYROL"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_steel" "pm_automation_disabled"  }
+			}
+			create_building={
+				building="building_paper_mills"
+				add_ownership={
+					country={
+						country="c:GMK"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_sulfite_pulping" "pm_automation_disabled"  }
+			}
+		}
+	}
+	s:STATE_SOUTH_TYROL={
+		region_state:GMK={
+			create_building={
+				building="building_glassworks"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:GMK"
+						levels=1
+						region="STATE_SOUTH_TYROL"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_disabled_ceramics" "pm_forest_glass" "pm_manual_glassblowing"  }
+			}
+			create_building={
+				building="building_steel_mills"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:GMK"
+						levels=2
+						region="STATE_SOUTH_TYROL"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_blister_steel_process" "pm_automation_disabled"  }
+			}
+			create_building={
+				building="building_logging_camp"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:GMK"
+						levels=3
+						region="STATE_SOUTH_TYROL"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_saw_mills"  "pm_no_equipment" "pm_road_carts" "pm_hardwood" }
+			}
+			create_building={
+				building="building_iron_mine"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:GMK"
+						levels=2
+						region="STATE_SOUTH_TYROL"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_atmospheric_engine_pump_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_lead_mine"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:GMK"
+						levels=2
+						region="STATE_SOUTH_TYROL"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_atmospheric_engine_pump_building_lead_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_sulfur_mine"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:GMK"
+						levels=2
+						region="STATE_SOUTH_TYROL"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_atmospheric_engine_pump_building_sulfur_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_coal_mine"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:GMK"
+						levels=2
+						region="STATE_SOUTH_TYROL"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_atmospheric_engine_pump_building_coal_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_construction_sector"
+				add_ownership={
+					country={
+						country="c:GMK"
+						levels=2
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_iron_frame_buildings" }
+			}
+			create_building={
+				building="building_wheat_farm"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:GMK"
+						levels=1
+						region="STATE_SOUTH_TYROL"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_simple_farming" "pm_citrus_orchards" "pm_tools"  }
+			}
+		}
+	}
+
+	# Bavaria
+	s:STATE_BAVARIA = {
+		region_state:BAV = {
+			create_building = {
+				building = "building_paper_mills"
+				add_ownership = {
+					country = {
+						country="c:GMK"
+						levels=3
+					}
+				}
+				reserves = 1
+				activate_production_methods = { "pm_sulfite_pulping" "pm_automation_disabled" }
+			}
+		}
+	}
+}
