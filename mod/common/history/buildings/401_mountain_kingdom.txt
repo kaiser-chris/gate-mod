@@ -3,6 +3,7 @@ BUILDINGS={
 	# Mountain Kingdom
 	s:STATE_TYROL={
 		region_state:AUS= {
+			# Clean up base game buildings
 			remove_building = building_gold_mine
 			remove_building = building_iron_mine
 			remove_building = building_livestock_ranch
@@ -29,6 +30,17 @@ BUILDINGS={
 				}
 				reserves=1
 				activate_production_methods={ "pm_dummy" }
+			}
+			create_building={
+				building="building_murk_ways"
+				add_ownership={
+					country={
+						country="c:GMK"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_murk_transportation" }
 			}
 			create_building={
 				building="building_mana_extractor"
@@ -118,7 +130,22 @@ BUILDINGS={
 		}
 	}
 	s:STATE_SOUTH_TYROL={
+		region_state:AUS= {
+			# Clean up base game buildings
+			remove_building = building_wheat_farm
+		}
 		region_state:GMK={
+			create_building={
+				building="building_murk_ways"
+				add_ownership={
+					country={
+						country="c:GMK"
+						levels=2
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_murk_transportation" }
+			}
 			create_building={
 				building="building_glassworks"
 				add_ownership={
