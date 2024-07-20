@@ -10,15 +10,16 @@ GAD = {
 }
 
 GMK = {
-	#TODO: Define custom flag
 	pattern = "pattern_solid.tga"
-	color1 = "black"
-	color2 = "white"
-	color3 = "red"
+	color1 = "light_blue"
+	color2 = "grey"
+	color3 = "yellow"
+	color4 = "grey"
 
 	colored_emblem = {
-		texture = "ce_tricolor_horizontal.dds"
+		texture = "ce_mountain.dds"
 		color1 = color2
 		color2 = color3
+		color3 = color4
 	}
 }
