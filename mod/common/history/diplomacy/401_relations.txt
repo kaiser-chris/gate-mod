@@ -1,0 +1,24 @@
+﻿DIPLOMACY = {
+
+	# Mountain Kingdom has positive relationships
+	# with major european countries
+	c:GMK = {
+		set_relations = { country = c:PRU value = 30 }
+		set_relations = { country = c:FRA value = 30 }
+		set_relations = { country = c:AUS value = 30 }
+		set_relations = { country = c:BAV value = 50 }
+	}
+	c:AUS = {
+		set_relations = { country = c:GMK value = 30 }
+	}
+	c:BAV = {
+		set_relations = { country = c:GMK value = 50 }
+	}
+	c:FRA = {
+		set_relations = { country = c:GMK value = 50 }
+	}
+	c:PRU = {
+		set_relations = { country = c:GMK value = 30 }
+	}
+
+}

@@ -8,6 +8,18 @@
 			direction = import
 			target = c:FRA.market
 		}
+		create_trade_route = {
+			goods = artillery
+			level = 4
+			direction = export
+			target = c:FRA.market
+		}
+		create_trade_route = {
+			goods = artillery
+			level = 2
+			direction = export
+			target = c:AUS.market
+		}
 	}
 
 }

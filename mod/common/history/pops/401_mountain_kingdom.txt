@@ -1,0 +1,62 @@
+﻿POPS = {
+
+	# Move existing population somewhere.
+	# This is needed so the population is properly assimilated.
+	# When this is not done qualifications and building occupancy
+	# are not set correctly.
+	c:AUS = {
+		save_scope_as = austria_country
+	}
+	s:STATE_AUSTRIA = {
+		random_scope_state = {
+			save_scope_as = austria_state
+		}
+	}
+	scope:austria_country = {
+		every_scope_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_TYROL
+					state_region = s:STATE_SOUTH_TYROL
+				}
+			}
+			every_scope_pop = {
+				limit = {
+					OR = {
+						culture = cu:south_german
+						culture = cu:alemannic
+						culture = cu:north_italian
+					}
+				}
+				move_pop = scope:austria_state
+			}
+		}
+	}
+
+	# New population
+	s:STATE_TYROL = {
+		region_state:GMK = {
+			create_pop = {
+				culture = dwarven
+				size = 600000
+			}
+			create_pop = {
+				culture = south_german
+				size = 329286
+			}
+		}
+	}
+	s:STATE_SOUTH_TYROL = {
+		region_state:GMK = {
+			create_pop = {
+				culture = dwarven
+				size = 400000
+			}
+			create_pop = {
+				culture = south_german
+				size = 124100
+			}
+		}
+	}
+
+}

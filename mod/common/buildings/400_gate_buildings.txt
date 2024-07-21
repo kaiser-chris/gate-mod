@@ -64,6 +64,7 @@ building_murk_ways = {
 	}
 
 	possible = {
+		# Murk Ways can only be build in mountains.
 		OR = {
 			has_state_trait = state_trait_scottish_highlands
 			has_state_trait = state_trait_cascades
