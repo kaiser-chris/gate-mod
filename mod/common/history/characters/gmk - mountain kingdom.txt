@@ -1,16 +1,14 @@
-﻿#TODO: Add proper characters
-CHARACTERS = {
+﻿CHARACTERS = {
 	c:GMK = {
 		create_character = {
-			# Leopold, Grand Duke of Baden
-			first_name = "Leopold"
-			last_name = "von_Baden"
+			first_name = "Krimok"
+			last_name = "of_Topax"
 			historical = no
 			ruler = yes
 			age = 46
 			culture = cu:dwarven
 			interest_group = ig_industrialists
-			ideology = ideology_reformer
+			ideology = ideology_market_liberal
 			traits = {
 				cautious
 			}
@@ -20,24 +18,23 @@ CHARACTERS = {
 		}
 		
 		create_character = {
-			# Louis II, Grande Duke of Baden
-			first_name = Ludwig
-			last_name = von_Baden
+			first_name = Korima
+			last_name = of_Topax
 			historical = no
 			heir = yes
+			female = yes
 			age = 12
 			culture = cu:dwarven
 			interest_group = ig_intelligentsia
-			ideology = ideology_moderate
+			ideology = ideology_royalist
 			traits = {
 				trait_child
-				#psychological_affliction # "Nicht heilbaren Geisteskrankheit"
 			}
 		}
 
 		create_character = {
-			first_name = "Ludwig_Georg"
-			last_name = "Winter"
+			first_name = "Omnead"
+			last_name = "Mithriljaw"
 			historical = no
 			age = 58
 			ig_leader = yes
@@ -50,8 +47,8 @@ CHARACTERS = {
 		}
 
 		create_character = {
-			first_name = "Friedrich"
-			last_name = "von_Blittersdorf"
+			first_name = "Fondim"
+			last_name = "of_Ingoka"
 			historical = no
 			age = 44
 			ig_leader = yes
@@ -64,12 +61,12 @@ CHARACTERS = {
 		}
 
 		create_character = {
-			# Karl Wilhelm Eugen von Freydorf, minister of war
-			first_name = Karl_Wilhelm_Eugen
-			last_name = von_Freydorf
+			first_name = Ingimima
+			last_name = of_Lubrixa
 			historical = no
 			birth_date = 1781.2.3
 			ig_leader = yes
+			female = yes
 			culture = cu:dwarven
 			interest_group = ig_armed_forces
 			ideology = ideology_royalist
@@ -81,16 +78,15 @@ CHARACTERS = {
 		}
 
 		create_character = {
-			# Friedrich Hoffman, lieutenent general, and later minister of war
 			is_general = yes
-			first_name = Friedrich
-			last_name = Hoffmann
+			first_name = Halim
+			last_name = Beastarmour
 			historical = no
 			culture = cu:dwarven
 			birth_date = 1795.1.15
 			interest_group = ig_armed_forces
 			commander_rank = commander_rank_2
-			ideology = ideology_reformer
+			ideology = ideology_royalist
 			traits = {
 				basic_political_operator
 				basic_defensive_strategist
