@@ -54,6 +54,19 @@ BUILDINGS={
 				activate_production_methods={ "pm_cannons" "pm_automation_disabled"  }
 			}
 			create_building={
+				building="building_furniture_manufacturies"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:GMK"
+						levels=1
+						region="STATE_TYROL"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_lathe"  "pm_automation_disabled" "pm_luxury_furniture" }
+			}
+			create_building={
 				building="building_chemical_plants"
 				add_ownership={
 					building={
@@ -193,6 +206,32 @@ BUILDINGS={
 				activate_production_methods={ "pm_murk_transportation" }
 			}
 			create_building={
+				building="building_food_industry"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:GMK"
+						levels=1
+						region="STATE_SOUTH_TYROL"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_pot_stills" "pm_disabled_canning" "pm_sweeteners" "pm_manual_dough_processing"  }
+			}
+			create_building={
+				building="building_textile_mills"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:GMK"
+						levels=2
+						region="STATE_SOUTH_TYROL"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_dye_workshops"  "pm_traditional_looms" "pm_no_luxury_clothes" }
+			}
+			create_building={
 				building="building_glassworks"
 				add_ownership={
 					building={
@@ -300,7 +339,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:GMK"
-						levels=13
+						levels=14
 						region="STATE_SOUTH_TYROL"
 					}
 				}

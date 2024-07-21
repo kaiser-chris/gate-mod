@@ -29,6 +29,7 @@
 		activate_law = law_type:law_no_migration_controls
 		activate_law = law_type:law_free_trade
 		activate_law = law_type:law_private_schools
+		activate_law = law_type:law_homesteading
 
         set_ruling_interest_groups = {
 			ig_industrialists
@@ -44,7 +45,10 @@
 			level = 1
 		}
 
-		ig:ig_intelligentsia = {
+		ig:ig_petty_bourgeoisie = {
+			add_ruling_interest_group = yes
+		}
+		ig:ig_armed_forces = {
 			add_ruling_interest_group = yes
 		}
 	}
