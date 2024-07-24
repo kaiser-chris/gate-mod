@@ -1,0 +1,16 @@
+﻿# This scripts are run after all other history scripts were run
+GLOBAL = {
+
+	# Every country has a journal entry for mana saturation
+	every_country = {
+		limit = {
+			NOT = {
+				is_country_type = decentralized
+			}
+		}
+		add_journal_entry = {
+			type = je_mana_saturation
+		}
+	}
+
+}

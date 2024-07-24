@@ -1,0 +1,44 @@
+﻿calculate_monthly_building_mana_satuaration = {
+	set_global_variable = {
+		name = gate_mana_saturation_progress_buildings_var
+		value = 0
+	}
+
+	# Inherently magic buildings
+	every_scope_building = {
+		limit = {
+			OR = {
+				is_building_type = building_murk_ways
+				is_building_type = building_mana_extractor
+			}
+			occupancy >= 0.5
+		}
+		change_global_variable = {
+			name = gate_mana_saturation_progress_buildings_var
+			add = level
+		}
+	}
+
+	# Magic production methods
+	every_scope_building = {
+		limit = {
+			OR = {
+				has_active_production_method = pm_crystal_explosives_building_gold_mine
+				has_active_production_method = pm_crystal_explosives_building_lead_mine
+				has_active_production_method = pm_crystal_explosives_building_sulfur_mine
+				has_active_production_method = pm_crystal_explosives_building_iron_mine
+				has_active_production_method = pm_crystal_explosives_building_coal_mine
+			}
+			occupancy >= 0.5
+		}
+		change_global_variable = {
+			name = gate_mana_saturation_progress_buildings_var
+			add = level
+		}
+	}
+
+	change_global_variable = {
+		name = gate_mana_saturation_progress_buildings_var
+		divide = 2
+	}
+}

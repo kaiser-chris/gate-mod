@@ -1,0 +1,27 @@
+﻿gate_mana_saturation_progress_bar = {
+ 	name = "gate_mana_saturation_progress_bar_name"
+ 	desc = "gate_mana_saturation_progress_bar_desc"
+
+	default = yes
+
+ 	yearly_progress = {
+		if = {
+			limit = {
+				exists = global_var:gate_mana_saturation_progress_var
+				exists = global_var:gate_mana_saturation_progress_buildings_var
+			}
+			add = {
+			   desc = "gate_mana_saturation_progress_bar_balance"
+			   value = global_var:gate_mana_saturation_progress_var
+		    }
+			add = {
+				desc = "gate_mana_saturation_buildings_progress_bar_balance"
+				value = global_var:gate_mana_saturation_progress_buildings_var
+			}
+		}
+ 	}
+
+ 	start_value = 10
+ 	min_value = 0
+ 	max_value = 100
+}

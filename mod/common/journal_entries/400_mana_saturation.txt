@@ -1,0 +1,86 @@
+﻿je_mana_saturation = {
+	#TODO: Add proper icon
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_gate_content
+
+	#TODO: Add buttons to do rituals to increase mana saturation
+	#scripted_button = scripted_button_key
+
+	immediate = {
+		# Mana Saturation through gates.
+		# Without further input will lead to full saturation in 1896
+		set_global_variable = {
+			name = gate_mana_saturation_progress_var
+			value = 1.5
+		}
+		calculate_monthly_building_mana_satuaration = yes
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			calculate_monthly_building_mana_satuaration = yes
+		}
+	}
+
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = je_mana_saturation_low_progress
+				trigger = {
+					global_var:gate_mana_saturation_progress_var < 50
+				}
+			}
+			triggered_desc = {
+				desc = je_mana_saturation_medium_progress
+				trigger = {
+					global_var:gate_mana_saturation_progress_var < 80
+				}
+			}
+			triggered_desc = {
+				desc = je_mana_saturation_high_progress
+				trigger = {
+					global_var:gate_mana_saturation_progress_var >= 80
+				}
+			}
+		}
+	}
+
+	complete = {
+		scope:journal_entry = {
+			scripted_bar_progress = {
+				name = gate_mana_saturation_progress_bar
+				value >= 100
+			}
+		}
+		custom_tooltip = {
+			text = je_mana_saturation_goal_tooltip
+			scope:journal_entry = {
+				scripted_bar_progress = {
+					name = gate_mana_saturation_progress_bar
+					value >= 100
+				}
+			}
+		}
+	}
+
+	on_complete = {
+		custom_tooltip = {
+			text = je_mana_saturation_result_tooltip
+		}
+		#TODO: Create event that gives magic to every nation
+		# trigger_event = {
+		# 	id = test_event.10
+		# 	days = 0
+		# }
+	}
+
+	transferable = no
+	can_revolution_inherit = yes
+
+	progressbar = no
+	scripted_progress_bar = gate_mana_saturation_progress_bar
+
+	weight = 200
+	should_be_pinned_by_default = yes
+}
