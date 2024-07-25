@@ -20,7 +20,7 @@
 }
 
 pm_murk_transportation = {
-	texture = "gfx/interface/icons/production_method_icons/no_public_transport.dds"
+	texture = "gfx/interface/icons/production_method_icons/no_rail_transport.dds"
 
 	unlocking_technologies = {
 		magic_dwarf_murk
@@ -28,7 +28,7 @@ pm_murk_transportation = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			# output goods
+			# input goods
 			goods_input_mana_add = 5
 		}
 
@@ -45,6 +45,39 @@ pm_murk_transportation = {
 	}
 }
 
+pm_murk_rail_transportation = {
+	texture = "gfx/interface/icons/production_method_icons/rail_transport.dds"
+
+	unlocking_technologies = {
+		railways
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_mana_add = 5
+			goods_input_engines_add = 5
+			goods_input_coal_add = 2
+
+			# output goods
+			goods_output_transportation_add = 20
+		}
+
+		level_scaled = {
+			# profit
+			building_employment_mages_add = 1000
+			building_employment_machinists_add = 1000
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_infrastructure_add = 30
+			state_pollution_generation_add = 20
+		}
+	}
+}
+
 pm_magic_streetlights = {
 	texture = "gfx/interface/icons/production_method_icons/magic_streetlights.dds"
 
@@ -54,11 +87,15 @@ pm_magic_streetlights = {
 
 	building_modifiers = {
 		workforce_scaled = {
+			# input goods
 			goods_input_mana_add = 1
+
+			# output goods
 			goods_output_services_add = 2
 		}
 
 		level_scaled = {
+			# profit
 			building_employment_mages_add = 100
 		}
 	}
