@@ -1,14 +1,14 @@
 ﻿l_english:
  je_group_gate_content: "Magical Affairs"
- je_mana_saturation: "World Wide Mana Saturation"
- #TODO: Flesh out
+ je_mana_saturation: "Global Mana Saturation"
  je_mana_saturation_goal_tooltip: "Magic has saturated the whole world"
  je_mana_saturation_result_tooltip: "Magic will be available to all nations"
  je_mana_saturation_reason: "Some description text"
  je_mana_saturation_low_progress: "Low saturation"
  je_mana_saturation_medium_progress: "Medium saturation"
  je_mana_saturation_high_progress: "High saturation"
- gate_mana_saturation_progress_bar_name: "World Wide Mana Saturation"
+ gate_mana_saturation_progress_bar_name: "Global Mana Saturation"
  gate_mana_saturation_progress_bar_desc: "Progress: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|1]/100)"
  gate_mana_saturation_progress_bar_balance: "Mana spewing out of $building_gate$"
  gate_mana_saturation_buildings_progress_bar_balance: "$mana$ usage in buildings"
+ gate_mana_saturation_mages_progress_bar_balance: "$mages$"

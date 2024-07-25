@@ -8,6 +8,7 @@
 		if = {
 			limit = {
 				exists = global_var:gate_mana_saturation_progress_var
+				exists = global_var:gate_mana_saturation_progress_mages_var
 				exists = global_var:gate_mana_saturation_progress_buildings_var
 			}
 			add = {
@@ -15,13 +16,17 @@
 			   value = global_var:gate_mana_saturation_progress_var
 		    }
 			add = {
+				desc = "gate_mana_saturation_mages_progress_bar_balance"
+				value = global_var:gate_mana_saturation_progress_mages_var
+			}
+			add = {
 				desc = "gate_mana_saturation_buildings_progress_bar_balance"
 				value = global_var:gate_mana_saturation_progress_buildings_var
 			}
 		}
  	}
 
- 	start_value = 10
+ 	start_value = 7
  	min_value = 0
  	max_value = 100
 }

@@ -37,8 +37,37 @@
 		}
 	}
 
+	# Every building level has only a small
+	# influence on global mana saturation
 	change_global_variable = {
 		name = gate_mana_saturation_progress_buildings_var
-		divide = 2
+		divide = 50
+	}
+}
+
+calculate_monthly_mages_mana_satuaration = {
+	set_global_variable = {
+		name = gate_mana_saturation_progress_mages_var
+		value = 0
+	}
+
+	# There seems to be no way to get the population of a specific pop
+	# The only way to get population numbers is by state
+	# So we for now we just count the consolidated pops
+	every_scope_pop = {
+		limit = {
+			is_pop_type = mages
+		}
+		change_global_variable = {
+			name = gate_mana_saturation_progress_mages_var
+			add = 1
+		}
+	}
+
+	# Every mage has only a small
+	# influence on global mana saturation
+	change_global_variable = {
+		name = gate_mana_saturation_progress_mages_var
+		divide = 100
 	}
 }

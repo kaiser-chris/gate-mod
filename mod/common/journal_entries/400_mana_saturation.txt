@@ -14,11 +14,13 @@
 			name = gate_mana_saturation_progress_var
 			value = 1.5
 		}
+		calculate_monthly_mages_mana_satuaration = yes
 		calculate_monthly_building_mana_satuaration = yes
 	}
 
 	on_monthly_pulse = {
 		effect = {
+			calculate_monthly_mages_mana_satuaration = yes
 			calculate_monthly_building_mana_satuaration = yes
 		}
 	}
