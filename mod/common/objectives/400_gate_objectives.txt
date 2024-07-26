@@ -1,0 +1,16 @@
+﻿objective_magic_dominance = {
+	enabled_background = "gfx/interface/icons/objectives/magic_gate_illu.dds"
+	icon = "gfx/interface/icons/objectives/economic_dominance.dds"
+	
+	recommended_tags = { GMK GAD }
+	
+	objective_subgoals = {
+
+	}
+	
+	final_subgoal = sg_strong_market
+	
+	on_start = {
+		start_tutorial_lesson = { tutorial_lesson = economic_dominance }
+	}
+}
