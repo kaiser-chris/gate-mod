@@ -4,7 +4,6 @@
 	buildable = no
 	expandable = no
 	downsizeable = no
-	locator = "gate_africa"
 
 	production_method_groups = {
 		pmg_magic_gate_exploitation
@@ -30,8 +29,10 @@ building_mana_extractor = {
 	}
 
 	possible = {
-		state_region = s:STATE_ZAMBIA
-		state_region = s:STATE_TYROL
+		OR = {
+			has_building = building_gate
+			global_var:gate_mana_saturation_full = yes
+		}
 	}
 
 	production_method_groups = {

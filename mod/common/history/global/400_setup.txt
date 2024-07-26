@@ -2,6 +2,11 @@
 GLOBAL = {
 
 	# Every country has a journal entry for mana saturation
+	# since some countries can interact with the journal entry
+	set_global_variable = {
+		name = gate_mana_saturation_full
+		value = no
+	}
 	every_country = {
 		limit = {
 			NOT = {
@@ -12,5 +17,4 @@ GLOBAL = {
 			type = je_mana_saturation
 		}
 	}
-
 }

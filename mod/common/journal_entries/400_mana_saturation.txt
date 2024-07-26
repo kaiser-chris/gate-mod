@@ -1,6 +1,6 @@
 ﻿je_mana_saturation = {
 	#TODO: Add proper icon
-	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	icon = "gfx/interface/icons/event_icons/magic.dds"
 
 	group = je_group_gate_content
 
@@ -30,43 +30,64 @@
 			triggered_desc = {
 				desc = je_mana_saturation_low_progress
 				trigger = {
-					global_var:gate_mana_saturation_progress_var < 50
+					scope:journal_entry = {
+						scripted_bar_progress = {
+							name = gate_mana_saturation_progress_bar
+							value < 50
+						}
+					}
 				}
 			}
 			triggered_desc = {
 				desc = je_mana_saturation_medium_progress
 				trigger = {
-					global_var:gate_mana_saturation_progress_var < 80
+					scope:journal_entry = {
+						scripted_bar_progress = {
+							name = gate_mana_saturation_progress_bar
+							value < 80
+						}
+					}
 				}
 			}
 			triggered_desc = {
 				desc = je_mana_saturation_high_progress
 				trigger = {
-					global_var:gate_mana_saturation_progress_var >= 80
+					scope:journal_entry = {
+						scripted_bar_progress = {
+							name = gate_mana_saturation_progress_bar
+							value < 100
+						}
+					}
 				}
 			}
 		}
 	}
 
 	complete = {
-		scope:journal_entry = {
-			scripted_bar_progress = {
-				name = gate_mana_saturation_progress_bar
-				value >= 100
-			}
-		}
-		custom_tooltip = {
-			text = je_mana_saturation_goal_tooltip
-			scope:journal_entry = {
-				scripted_bar_progress = {
-					name = gate_mana_saturation_progress_bar
-					value >= 100
+		trigger_if = {
+			OR = {
+				custom_tooltip = {
+					text = je_mana_saturation_already_done_tooltip
+					global_var:gate_mana_saturation_full = yes
+				}
+				custom_tooltip = {
+					text = je_mana_saturation_goal_tooltip
+					scope:journal_entry = {
+						scripted_bar_progress = {
+							name = gate_mana_saturation_progress_bar
+							value >= 100
+						}
+					}
 				}
 			}
 		}
 	}
 
 	on_complete = {
+		set_global_variable = {
+			name = gate_mana_saturation_full
+			value = yes
+		}
 		custom_tooltip = {
 			text = je_mana_saturation_result_tooltip
 		}
