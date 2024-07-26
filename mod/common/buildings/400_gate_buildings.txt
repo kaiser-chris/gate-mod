@@ -12,6 +12,7 @@
 	possible = {
 		state_region = s:STATE_ZAMBIA
 		state_region = s:STATE_TYROL
+		state_region = s:STATE_SAN_SALVADOR
 	}
 
 	required_construction = construction_cost_monument
@@ -32,6 +33,9 @@ building_mana_extractor = {
 		OR = {
 			has_building = building_gate
 			global_var:gate_mana_saturation_full = yes
+			any_neighbouring_state = {
+				has_building = building_gate
+			}
 		}
 	}
 
@@ -56,26 +60,32 @@ building_murk_ways = {
 	}
 
 	possible = {
-		# Murk Ways can only be build in mountains.
-		OR = {
-			has_state_trait = state_trait_scottish_highlands
-			has_state_trait = state_trait_cascades
-			has_state_trait = state_trait_sierra_nevada
-			has_state_trait = state_trait_rocky_mountains
-			has_state_trait = state_trait_sierra_madre_occidental
-			has_state_trait = state_trait_sierra_madre_oriental
-			has_state_trait = state_trait_central_american_cordilleras
-			has_state_trait = state_trait_wasatch_range
-			has_state_trait = state_trait_andes
-			has_state_trait = state_trait_alps_mountains
-			has_state_trait = state_trait_caucasus_mountains
-			has_state_trait = state_trait_atlas_mountains
-			has_state_trait = state_trait_zagros_mountains
-			has_state_trait = state_trait_alborz_mountains
-			has_state_trait = state_trait_baluchistan_mountains
-			has_state_trait = state_trait_mount_lebanon
-			has_state_trait = state_trait_himalayas_mountains
-			has_state_trait = state_trait_great_dividing_range
+		AND = {
+			# Don't show building when necessary technology is missing
+			owner = {
+				has_technology_researched = magic_dwarf_murk
+			}
+			# Murk Ways can only be build in mountains.
+			OR = {
+				has_state_trait = state_trait_scottish_highlands
+				has_state_trait = state_trait_cascades
+				has_state_trait = state_trait_sierra_nevada
+				has_state_trait = state_trait_rocky_mountains
+				has_state_trait = state_trait_sierra_madre_occidental
+				has_state_trait = state_trait_sierra_madre_oriental
+				has_state_trait = state_trait_central_american_cordilleras
+				has_state_trait = state_trait_wasatch_range
+				has_state_trait = state_trait_andes
+				has_state_trait = state_trait_alps_mountains
+				has_state_trait = state_trait_caucasus_mountains
+				has_state_trait = state_trait_atlas_mountains
+				has_state_trait = state_trait_zagros_mountains
+				has_state_trait = state_trait_alborz_mountains
+				has_state_trait = state_trait_baluchistan_mountains
+				has_state_trait = state_trait_mount_lebanon
+				has_state_trait = state_trait_himalayas_mountains
+				has_state_trait = state_trait_great_dividing_range
+			}
 		}
 	}
 
