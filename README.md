@@ -12,7 +12,7 @@ Eitov is a magical planet with Dwarves, Elves and other races. When the Gates op
 
 While others choose to work with the powers on Earth like the Dwarves of Min Raetia who live in the Alps and choose to enter into a Personal Union with Bavaria.
 
-TODO: Needs to more text
+TODO: Needs more text and refinement
 
 ## Content
 
