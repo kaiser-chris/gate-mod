@@ -44,4 +44,36 @@ GLOBAL = {
 		}
 	}
 
+	# Orkish Kingdom
+	s:STATE_NICARAGUA = {
+		set_owner_of_provinces = {
+			country = c:GOK
+			provinces = { x95FC5A x17F33B }
+		}
+	}
+	s:STATE_COSTA_RICA = {
+		set_owner_of_provinces = {
+			country = c:GOK
+			provinces = { x1A076A }
+		}
+	}
+	s:STATE_GUATEMALA = {
+		set_owner_of_provinces = {
+			country = c:GOK
+			provinces = { xDEC8D3 xD0B040 }
+		}
+	}
+	s:STATE_HONDURAS = {
+		set_owner_of_provinces = {
+			country = c:GOK
+			provinces = { x3C64D6 }
+		}
+	}
+	s:STATE_SAN_SALVADOR = {
+		set_owner_of_provinces = {
+			country = c:GOK
+			provinces = { xB0D0C7 }
+		}
+	}
+
 }

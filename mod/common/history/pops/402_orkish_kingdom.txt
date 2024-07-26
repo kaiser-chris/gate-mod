@@ -1,0 +1,113 @@
+﻿# Remove existing population first.
+# This is needed so the population is properly assimilated.
+# When this is not done qualifications and building occupancy
+# are not set correctly.
+POPS = {
+
+	s:STATE_NICARAGUA = {
+		region_state:UCA = {
+			kill_population_percent_in_state = {
+				percent = 1
+			}
+		}
+		region_state:MKT = {
+			kill_population_percent_in_state = {
+				percent = 1
+			}
+		}
+		region_state:GOK = {
+			create_pop = {
+				culture = dwarven
+				size = 600000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = miskito
+				size = 44000
+			}
+		}
+	}
+	s:STATE_COSTA_RICA = {
+		region_state:UCA = {
+			kill_population_percent_in_state = {
+				percent = 1
+			}
+		}
+		region_state:GOK = {
+			create_pop = {
+				culture = dwarven
+				size = 600000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = central_american
+				size = 83992
+			}
+		}
+	}
+	s:STATE_GUATEMALA = {
+		region_state:UCA = {
+			kill_population_percent_in_state = {
+				percent = 1
+			}
+		}
+		region_state:GBR = {
+			kill_population_percent_in_state = {
+				percent = 1
+			}
+		}
+		region_state:GOK = {
+			create_pop = {
+				culture = dwarven
+				size = 600000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = central_american
+				size = 164404
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = mayan
+				size = 312000
+			}
+		}
+	}
+	s:STATE_HONDURAS = {
+		region_state:UCA = {
+			kill_population_percent_in_state = {
+				percent = 1
+			}
+		}
+		region_state:GOK = {
+			create_pop = {
+				culture = dwarven
+				size = 600000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = central_american
+				size = 385204
+			}
+		}
+	}
+	s:STATE_SAN_SALVADOR = {
+		region_state:UCA = {
+			kill_population_percent_in_state = {
+				percent = 1
+			}
+		}
+		region_state:GOK = {
+			create_pop = {
+				culture = dwarven
+				size = 600000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = central_american
+				size = 428204
+			}
+		}
+	}
+
+}

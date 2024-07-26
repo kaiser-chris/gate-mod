@@ -1,0 +1,46 @@
+﻿COUNTRIES = {
+	c:GOK = {
+		# Technological partnership with Bavaria (BAV)
+		effect_starting_technology_tier_2_tech = yes
+		effect_starting_politics_conservative = yes
+		effect_starting_pop_literacy_very_high = yes
+		effect_starting_pop_wealth_high = yes
+
+		# Technology
+		add_technology_researched = magic_understanding_production
+		add_technology_researched = magic_understanding_society
+		add_technology_researched = magic_understanding_military
+		add_technology_researched = mana_extraction
+
+		# Laws
+		activate_law = law_type:law_local_police
+		activate_law = law_type:law_slave_trade
+		activate_law = law_type:law_racial_segregation
+		activate_law = law_type:law_censorship
+		activate_law = law_type:law_no_health_system
+		activate_law = law_type:law_national_guard
+		activate_law = law_type:law_no_workers_rights
+		activate_law = law_type:law_no_social_security
+		activate_law = law_type:law_serfdom
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_child_labor_allowed
+		activate_law = law_type:law_no_womens_rights
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_no_colonial_affairs
+		activate_law = law_type:law_closed_borders
+		activate_law = law_type:law_isolationism
+		activate_law = law_type:law_no_schools
+		activate_law = law_type:law_traditionalism
+		activate_law = law_type:law_land_based_taxation
+
+        set_ruling_interest_groups = {
+			ig_armed_forces
+        }
+
+		ig:ig_landowners = {
+			add_ruling_interest_group = yes
+		}
+	}
+}

@@ -1,0 +1,39 @@
+﻿# "Why do some state entries have quote marks around them, when others don't?"
+# "It's because of differing methods of editing throughout the production of the game. Quote marks are unnecessary, but harmless if present."
+
+STATES = {
+
+	s:STATE_TYROL = {
+		create_state = {
+			country = c:GMK
+			owned_provinces = { x4A9C68 xEC6873 xC74CD7 xF061C0 xAB7EB0 x5D4166 xD0C0E0 xF0E0C0 }
+		}
+
+		add_homeland = cu:dwarven
+	}
+	s:STATE_SOUTH_TYROL = {
+		create_state = {
+			country = c:GMK
+			owned_provinces = { x1120FF xD040E0 x039D0F }
+		}
+
+		add_homeland = cu:dwarven
+		remove_homeland = cu:north_italian
+	}
+
+	# The dwarves claim the whole Alps
+	# (All states with Alps as state trait)
+	s:STATE_EAST_SWITZERLAND = {
+		add_claim = c:GMK
+		add_homeland = cu:dwarven
+	}
+	s:STATE_WEST_SWITZERLAND = {
+		add_claim = c:GMK
+		add_homeland = cu:dwarven
+	}
+	s:STATE_SAVOY = {
+		add_claim = c:GMK
+		add_homeland = cu:dwarven
+	}
+
+}
