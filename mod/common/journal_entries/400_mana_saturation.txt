@@ -1,6 +1,5 @@
 ﻿je_mana_saturation = {
-	#TODO: Add proper icon
-	icon = "gfx/interface/icons/event_icons/magic.dds"
+	icon = "gfx/interface/icons/event_icons/event_world.dds"
 
 	group = je_group_gate_content
 
@@ -9,7 +8,7 @@
 
 	immediate = {
 		# Mana Saturation through gates.
-		# Without further input will lead to full saturation in 1896
+		# Without further input will lead to full saturation in 1890s
 		set_global_variable = {
 			name = gate_mana_saturation_progress_var
 			value = 1.5

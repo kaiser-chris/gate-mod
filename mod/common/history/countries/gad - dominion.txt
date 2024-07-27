@@ -38,6 +38,9 @@
         set_ruling_interest_groups = {
         	ig_landowners
         }
+		ig:ig_devout = {
+			add_ruling_interest_group = yes
+		}
 
 		# Institutions
 		set_institution_investment_level = {
@@ -53,8 +56,5 @@
 			level = 1
 		}
 
-		ig:ig_devout = {
-			add_ruling_interest_group = yes
-		}
 	}
 }
