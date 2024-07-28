@@ -1,9 +1,4 @@
 ﻿calculate_monthly_building_mana_satuaration = {
-	set_global_variable = {
-		name = gate_mana_saturation_progress_buildings_var
-		value = 0
-	}
-
 	# Inherently magic buildings
 	every_scope_building = {
 		limit = {
@@ -46,11 +41,6 @@
 }
 
 calculate_monthly_mages_mana_satuaration = {
-	set_global_variable = {
-		name = gate_mana_saturation_progress_mages_var
-		value = 0
-	}
-
 	# There seems to be no way to get the population of a specific pop
 	# The only way to get population numbers is by state
 	# So we for now we just count the consolidated pops

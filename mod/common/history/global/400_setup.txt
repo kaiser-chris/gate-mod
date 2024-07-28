@@ -7,6 +7,24 @@ GLOBAL = {
 		name = gate_mana_saturation_full
 		value = no
 	}
+	# Mana Saturation through gates.
+	# Without further input will lead to full saturation in 1890s
+	set_global_variable = {
+		name = gate_mana_saturation_progress_var
+		value = 1.5
+	}
+	set_global_variable = {
+		name = gate_mana_saturation_progress_buildings_var
+		value = 0
+	}
+	set_global_variable = {
+		name = gate_mana_saturation_progress_mages_var
+		value = 0
+	}
+	# every_country = {
+	# 	calculate_monthly_mages_mana_satuaration = yes
+	# 	calculate_monthly_building_mana_satuaration = yes
+	# }
 	every_country = {
 		limit = {
 			NOT = {

@@ -6,24 +6,6 @@
 	#TODO: Add buttons to do rituals to increase mana saturation
 	#scripted_button = scripted_button_key
 
-	immediate = {
-		# Mana Saturation through gates.
-		# Without further input will lead to full saturation in 1890s
-		set_global_variable = {
-			name = gate_mana_saturation_progress_var
-			value = 1.5
-		}
-		calculate_monthly_mages_mana_satuaration = yes
-		calculate_monthly_building_mana_satuaration = yes
-	}
-
-	on_monthly_pulse = {
-		effect = {
-			calculate_monthly_mages_mana_satuaration = yes
-			calculate_monthly_building_mana_satuaration = yes
-		}
-	}
-
 	status_desc = {
 		first_valid = {
 			triggered_desc = {
