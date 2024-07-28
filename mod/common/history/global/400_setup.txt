@@ -1,8 +1,6 @@
 ﻿# This scripts are run after all other history scripts were run
 GLOBAL = {
 
-	# Every country has a journal entry for mana saturation
-	# since some countries can interact with the journal entry
 	set_global_variable = {
 		name = gate_mana_saturation_full
 		value = no
@@ -14,17 +12,19 @@ GLOBAL = {
 		value = 1.5
 	}
 	set_global_variable = {
-		name = gate_mana_saturation_progress_buildings_var
-		value = 0
-	}
-	set_global_variable = {
 		name = gate_mana_saturation_progress_mages_var
 		value = 0
 	}
-	# every_country = {
-	# 	calculate_monthly_mages_mana_satuaration = yes
-	# 	calculate_monthly_building_mana_satuaration = yes
-	# }
+	set_global_variable = {
+		name = gate_mana_saturation_progress_buildings_var
+		value = 0
+	}
+	every_country = {
+		calculate_monthly_mages_mana_satuaration = yes
+		calculate_monthly_building_mana_satuaration = yes
+	}
+	# Every country has a journal entry for mana saturation
+	# since some countries can interact with the journal entry
 	every_country = {
 		limit = {
 			NOT = {
