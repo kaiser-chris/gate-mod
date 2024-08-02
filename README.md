@@ -12,11 +12,20 @@ Eitov is a magical planet with Dwarves, Elves and other races. When the Gates op
 
 While others choose to work with the powers on Earth like the Dwarves of Min Raetia who live in the Alps and choose to enter into a Personal Union with Bavaria.
 
-TODO: Needs more text and refinement
-
 ## Content
+Below is a list of the currently implemented content:
 
-TODO: List out currently implemented content after the mod is in a final state
+[//]: # (CONTENT-START)
+
+ - 3 new Countries
+ - 2 new Cultures
+ - 3 new Buildings
+ - 2 new Journal Entries
+ - 1 new Events
+ - 1 new Pop
+ - 1 new Good
+
+[//]: # (CONTENT-END)
 
 # Future
 
@@ -37,6 +46,12 @@ Below are wishes for the future that are currently unrealistic because of engine
    - With fog of war mechanic like EU4
 
 # Development Notes
+
+## Content List
+
+Please execute [update-content.sh](./script/update-content.sh) to update the content list in this file.
+
+DO NOT EDIT THAT LIST BY HAND!
 
 ## Images
 
