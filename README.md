@@ -17,8 +17,10 @@ Below is a list of the currently implemented content:
 
 [//]: # (CONTENT-START)
 
+ - 6 new Technologies
  - 3 new Countries
  - 2 new Cultures
+ - 2 new Religions
  - 3 new Buildings
  - 2 new Journal Entries
  - 1 new Events
