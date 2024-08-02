@@ -1,0 +1,48 @@
+﻿je_dwarven_alps_button_switzerland_charm = {
+	name = "je_dwarven_alps_button_switzerland_charm"
+	desc = "je_dwarven_alps_button_switzerland_charm_desc"
+
+	visible = {
+		c:SWI = {
+			OR = {
+				any_scope_state = {
+					state_region = s:STATE_EAST_SWITZERLAND
+				}
+				any_scope_state = {
+					state_region = s:STATE_WEST_SWITZERLAND
+				}
+			}
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = je_dwarven_alps_button_switzerland_charm_cooldown_tt
+			NOT = {
+				has_variable = je_dwarven_alps_button_switzerland_charm_cooldown
+			}
+		}
+		is_diplomatic_play_committed_participant = no
+		is_at_war = no
+		NOT = {
+			c:SWI = {
+				is_subject_of = c:GMK
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 100
+	}
+
+	effect = {
+		set_variable = {
+			name = je_dwarven_alps_button_switzerland_charm_cooldown
+			months = normal_modifier_time
+		}
+		trigger_event = {
+			id = dwarven_alps.1
+			popup = yes
+		}
+	}
+}

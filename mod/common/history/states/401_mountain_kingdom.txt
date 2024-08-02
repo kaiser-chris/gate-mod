@@ -18,6 +18,9 @@ STATES = {
 		}
 
 		add_homeland = cu:dwarven
+
+		# We don't want the dwarves be part of
+		# italy or italian events
 		remove_homeland = cu:north_italian
 	}
 
@@ -25,15 +28,12 @@ STATES = {
 	# (All states with Alps as state trait)
 	s:STATE_EAST_SWITZERLAND = {
 		add_claim = c:GMK
-		add_homeland = cu:dwarven
 	}
 	s:STATE_WEST_SWITZERLAND = {
 		add_claim = c:GMK
-		add_homeland = cu:dwarven
 	}
 	s:STATE_SAVOY = {
 		add_claim = c:GMK
-		add_homeland = cu:dwarven
 	}
 
 }
