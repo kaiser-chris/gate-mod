@@ -1,6 +1,5 @@
 ﻿pm_gate_closed = {
-	#TODO Add proper icon
-	texture = "gfx/interface/icons/production_method_icons/base_1.dds"
+	texture = "gfx/interface/icons/production_method_icons/gate_barred.dds"
 
 	building_modifiers = {
 		workforce_scaled = {
@@ -15,17 +14,16 @@
 }
 
 pm_gate_immigration_dwarves = {
-    #TODO Add proper icon
-	texture = "gfx/interface/icons/production_method_icons/base_1.dds"
+	texture = "gfx/interface/icons/production_method_icons/gate_immigration.dds"
 
 	is_hidden_when_unavailable = yes
 
-	#TODO: Find better dependency so all immigration policies have sensible requirements
 	unlocking_technologies = {
-		magic_dwarf_murk
+		dwarven_gate_immigration
 	}
 
 	building_modifiers = {
+		#TODO: Can we add something like custom tooltip here?
 		level_scaled = {
 			building_employment_mages_add = 100
 			building_employment_bureaucrats_add = 1000
@@ -34,17 +32,16 @@ pm_gate_immigration_dwarves = {
 }
 
 pm_gate_mass_immigration_dwarves = {
-	#TODO Add proper icon
-	texture = "gfx/interface/icons/production_method_icons/base_1.dds"
+	texture = "gfx/interface/icons/production_method_icons/gate_mass_immigration.dds"
 
 	is_hidden_when_unavailable = yes
 
-	#TODO: Find better dependency so all immigration policies have sensible requirements
 	unlocking_technologies = {
-		magic_dwarf_murk
+		dwarven_gate_immigration
 	}
 
 	building_modifiers = {
+		#TODO: Can we add something like custom tooltip here?
 		level_scaled = {
 			building_employment_mages_add = 100
 			building_employment_bureaucrats_add = 2000
