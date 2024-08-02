@@ -1,22 +1,11 @@
 ﻿on_monthly_pulse = {
     on_actions = {
-        calculate_mana_saturation
+        on_monthly_calculate_mana_saturation
     }
 }
 
-calculate_mana_saturation = {
+on_monthly_calculate_mana_saturation = {
     effect = {
-        set_global_variable = {
-            name = gate_mana_saturation_progress_mages_var
-            value = 0
-        }
-        set_global_variable = {
-            name = gate_mana_saturation_progress_buildings_var
-            value = 0
-        }
-        every_country = {
-            calculate_monthly_mages_mana_satuaration = yes
-            calculate_monthly_building_mana_satuaration = yes
-        }
+        calculate_monthly_mana_saturation = yes
     }
 }

@@ -1,4 +1,32 @@
-﻿calculate_monthly_building_mana_satuaration = {
+﻿calculate_monthly_mana_saturation = {
+	# Every month we calculate new
+	set_global_variable = {
+		name = gate_mana_saturation_progress_mages_var
+		value = 0
+	}
+	set_global_variable = {
+		name = gate_mana_saturation_progress_buildings_var
+		value = 0
+	}
+
+	every_country = {
+		calculate_monthly_mages_mana_satuaration = yes
+		calculate_monthly_building_mana_satuaration = yes
+	}
+
+	# Every building level and mage has only a small
+	# influence on global mana saturation
+	change_global_variable = {
+		name = gate_mana_saturation_progress_buildings_var
+		divide = 100
+	}
+	change_global_variable = {
+		name = gate_mana_saturation_progress_mages_var
+		divide = 100
+	}
+}
+
+calculate_monthly_building_mana_satuaration = {
 	# Inherently magic buildings
 	every_scope_building = {
 		limit = {
@@ -31,13 +59,6 @@
 			add = level
 		}
 	}
-
-	# Every building level has only a small
-	# influence on global mana saturation
-	change_global_variable = {
-		name = gate_mana_saturation_progress_buildings_var
-		divide = 50
-	}
 }
 
 calculate_monthly_mages_mana_satuaration = {
@@ -52,12 +73,5 @@ calculate_monthly_mages_mana_satuaration = {
 			name = gate_mana_saturation_progress_mages_var
 			add = 1
 		}
-	}
-
-	# Every mage has only a small
-	# influence on global mana saturation
-	change_global_variable = {
-		name = gate_mana_saturation_progress_mages_var
-		divide = 100
 	}
 }

@@ -11,18 +11,8 @@ GLOBAL = {
 		name = gate_mana_saturation_progress_var
 		value = 1.5
 	}
-	set_global_variable = {
-		name = gate_mana_saturation_progress_mages_var
-		value = 0
-	}
-	set_global_variable = {
-		name = gate_mana_saturation_progress_buildings_var
-		value = 0
-	}
-	every_country = {
-		calculate_monthly_mages_mana_satuaration = yes
-		calculate_monthly_building_mana_satuaration = yes
-	}
+	calculate_monthly_mana_saturation = yes
+
 	# Every country has a journal entry for mana saturation
 	# since some countries can interact with the journal entry
 	every_country = {
