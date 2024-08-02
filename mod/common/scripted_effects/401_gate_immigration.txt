@@ -1,0 +1,71 @@
+﻿set_building_immigration_traits = {
+	# Because we are in building scope and can
+	# not get the state scope we need to modify
+	# all gate states at once
+	if = {
+		limit = {
+			is_building_type = building_gate
+		}
+		set_immigration_traits = yes
+	}
+}
+
+set_immigration_traits = {
+	every_state = {
+		limit = {
+			has_building = building_gate
+		}
+		state_region = {
+			# Remove ALL immigration traits
+			remove_state_trait = state_trait_dwarven_immigration
+			remove_state_trait = state_trait_dwarven_mass_immigration
+		}
+	}
+	every_state = {
+		limit = {
+			is_production_method_active = {
+				building_type = building_gate
+				production_method = pm_gate_immigration_dwarves
+			}
+		}
+		state_region = {
+			# Add RELEVANT immigration trait
+			add_state_trait = state_trait_dwarven_immigration
+		}
+	}
+	every_state = {
+		limit = {
+			is_production_method_active = {
+				building_type = building_gate
+				production_method = pm_gate_mass_immigration_dwarves
+			}
+		}
+		state_region = {
+			# Add RELEVANT immigration trait
+			add_state_trait = state_trait_dwarven_mass_immigration
+		}
+	}
+}
+
+add_gate_immigration = {
+	every_state = {
+		limit = {
+			has_state_trait = state_trait_dwarven_immigration
+		}
+		#TODO: Balance this
+		create_pop = {
+			culture = dwarven
+			size = 10000
+		}
+	}
+	every_state = {
+		limit = {
+			has_state_trait = state_trait_dwarven_mass_immigration
+		}
+		#TODO: Balance this
+		create_pop = {
+			culture = dwarven
+			size = 30000
+		}
+	}
+}

@@ -1,0 +1,32 @@
+﻿# Root = Country
+on_monthly_pulse = {
+    on_actions = {
+        on_monthly_calculate_mana_saturation
+        on_monthly_add_gate_immigration
+    }
+}
+
+on_monthly_calculate_mana_saturation = {
+    effect = {
+        calculate_monthly_mana_saturation = yes
+    }
+}
+
+on_monthly_add_gate_immigration = {
+    effect = {
+        add_gate_immigration = yes
+    }
+}
+
+# Root = Building
+on_production_method_changed = {
+    on_actions = {
+        on_production_method_changed_immigration
+    }
+}
+
+on_production_method_changed_immigration = {
+    effect = {
+        set_building_immigration_traits = yes
+    }
+}

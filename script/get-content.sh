@@ -30,6 +30,12 @@ for filename in ./mod/common/buildings/*.txt; do
   buildingCount=$((buildingCount+$(strings "$filename" | grep -c '^\w.*=.*{')))
 done
 
+# Get Buildings
+productionCount=0
+for filename in ./mod/common/production_methods/*.txt; do
+  productionCount=$((productionCount+$(strings "$filename" | grep -c '^\w.*=.*{')))
+done
+
 # Get Goods
 goodCount=0
 for filename in ./mod/common/goods/*.txt; do
@@ -63,6 +69,8 @@ printf '\n'
 printf ' - %s new Religions' "$religionCount"
 printf '\n'
 printf ' - %s new Buildings' "$buildingCount"
+printf '\n'
+printf ' - %s new Production Methods for new and old Buildings' "$productionCount"
 printf '\n'
 printf ' - %s new Journal Entries' "$journalEntriesCount"
 printf '\n'

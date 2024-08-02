@@ -1,0 +1,40 @@
+﻿# The dummy PM group is used for buildings that serve no gameplay mechanical purpose but still need to be reacted to be e.g. city hub graphics
+
+pmg_magic_gate_exploitation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+	    #TODO: Add proper production method
+        # Support from home
+        # Discovery
+        # Enslavement
+        # Settlement
+		pm_gate_closed
+		pm_gate_immigration_dwarves
+		pm_gate_mass_immigration_dwarves
+	}
+}
+
+pmg_mana_extraction = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		#TODO: Add proper production method
+        # Ritual extraction
+        # Magitech extraction
+		pm_mage_mana_extraction
+	}
+}
+
+pmg_murk_transportation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_murk_unused
+		pm_murk_transportation
+		pm_murk_rail_transportation
+	}
+}
