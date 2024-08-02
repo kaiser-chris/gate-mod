@@ -42,3 +42,7 @@ Below are wishes for the future that are currently unrealistic because of engine
 
 Victoria 3 uses DDS files for icons and general gfx images.
 When changing or creating a DDS file you will need to save it as **B8G8R8A8 (Linear, A8R8G8B8)**.
+
+## Videos
+
+The game videos are bk2 files. To play these you will need the [RAD Video Tools](https://www.radgametools.com/bnkdown.htm). 
