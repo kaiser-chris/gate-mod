@@ -103,3 +103,46 @@ dwarven_alps.3 = {
 		default_option = yes
 	}
 }
+
+dwarven_alps.4 = {
+	type = country_event
+
+	title = dwarven_alps.4.t
+	desc = dwarven_alps.4.d
+	flavor = dwarven_alps.4.f
+
+	event_image = {
+		video = "unspecific_military_parade"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+		add_primary_culture = cu:south_german
+		add_primary_culture = cu:alemannic
+		every_country = {
+			limit = {
+				OR = {
+					country_has_primary_culture = cu:south_german
+					country_has_primary_culture = cu:alemannic
+				}
+			}
+			change_relations = {
+				country = ROOT
+				value = 20
+			}
+		}
+	}
+
+	option = {
+		name = dwarven_alps.4.a
+		default_option = yes
+	}
+}

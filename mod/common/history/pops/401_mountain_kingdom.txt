@@ -42,7 +42,13 @@
 			}
 			create_pop = {
 				culture = south_german
-				size = 329286
+				size = 429286
+			}
+			# Voralberg. Arbitrarily pinning this at 23% of the total population of Voralburg + Tyrol + Salzburg
+			create_pop = {
+				culture = alemannic
+				religion = catholic
+				size = 130018
 			}
 		}
 	}
@@ -54,7 +60,7 @@
 			}
 			create_pop = {
 				culture = south_german
-				size = 124100
+				size = 174100
 			}
 		}
 	}
