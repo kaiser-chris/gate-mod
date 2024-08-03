@@ -21,9 +21,17 @@ dwarven_alps.1 = {
 	}
 
 	immediate = {
-		change_relations = {
-			country = c:SWI
-			value = 20
+		c:SWI = {
+			add_technology_researched = magic_understanding_production
+			add_technology_researched = magic_understanding_society
+			add_technology_researched = magic_understanding_military
+			set_variable = {
+				name = swiss_magic_var
+			}
+			create_diplomatic_pact = {
+				country = ROOT
+				type = alliance
+			}
 		}
 	}
 
@@ -136,13 +144,43 @@ dwarven_alps.4 = {
 			}
 			change_relations = {
 				country = ROOT
-				value = 20
+				value = 10
 			}
 		}
 	}
 
 	option = {
 		name = dwarven_alps.4.a
+		default_option = yes
+	}
+}
+
+dwarven_alps.5 = {
+	type = country_event
+
+	title = dwarven_alps.5.t
+	desc = dwarven_alps.5.d
+	flavor = dwarven_alps.5.f
+
+	event_image = {
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+		annex_with_incorporation = c:SWI
+	}
+
+	option = {
+		name = dwarven_alps.5.a
 		default_option = yes
 	}
 }

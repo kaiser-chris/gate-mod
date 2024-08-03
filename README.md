@@ -24,7 +24,7 @@ Below is a list of the currently implemented content:
  - 3 new Buildings
  - 13 new Production Methods for new and old Buildings
  - 2 new Journal Entries
- - 4 new Events
+ - 5 new Events
  - 1 new Pop
  - 1 new Good
 

@@ -1,31 +1,60 @@
-﻿je_dwarven_alps_button_switzerland_charm = {
-	name = "je_dwarven_alps_button_switzerland_charm"
-	desc = "je_dwarven_alps_button_switzerland_charm_desc"
+﻿je_dwarven_alps_button_switzerland_magic = {
+	name = "je_dwarven_alps_button_switzerland_magic"
+	desc = "je_dwarven_alps_button_switzerland_magic_desc"
 
-	visible = {
+	possible = {
+		is_diplomatic_play_committed_participant = no
+		is_at_war = no
 		c:SWI = {
-			OR = {
-				any_scope_state = {
-					state_region = s:STATE_EAST_SWITZERLAND
+			custom_tooltip = {
+				text = je_dwarven_alps_button_switzerland_magic_already
+				NOT = {
+					has_variable = swiss_magic_var
 				}
-				any_scope_state = {
-					state_region = s:STATE_WEST_SWITZERLAND
+			}
+			relations:ROOT >= relations_threshold:cordial
+			NOT = {
+				OR = {
+					is_subject_of = c:GMK
+					has_diplomatic_pact = {
+						who = ROOT
+						type = alliance
+					}
 				}
 			}
 		}
 	}
 
-	possible = {
-		custom_tooltip = {
-			text = je_dwarven_alps_button_switzerland_charm_cooldown_tt
-			NOT = {
-				has_variable = je_dwarven_alps_button_switzerland_charm_cooldown
-			}
+	ai_chance = {
+		base = 100
+	}
+
+	effect = {
+		trigger_event = {
+			id = dwarven_alps.1
+			popup = yes
 		}
+	}
+}
+
+je_dwarven_alps_button_switzerland_integrate = {
+	name = "je_dwarven_alps_button_switzerland_integrate"
+	desc = "je_dwarven_alps_button_switzerland_integrate_desc"
+
+	possible = {
 		is_diplomatic_play_committed_participant = no
 		is_at_war = no
-		NOT = {
-			c:SWI = {
+		OR = {
+			country_has_primary_culture = cu:alemannic
+			country_has_primary_culture = cu:francoprovencal
+		}
+		c:SWI = {
+			relations:ROOT >= relations_threshold:friendly
+			OR = {
+				has_diplomatic_pact = {
+					who = ROOT
+					type = alliance
+				}
 				is_subject_of = c:GMK
 			}
 		}
@@ -36,12 +65,8 @@
 	}
 
 	effect = {
-		set_variable = {
-			name = je_dwarven_alps_button_switzerland_charm_cooldown
-			months = normal_modifier_time
-		}
 		trigger_event = {
-			id = dwarven_alps.1
+			id = dwarven_alps.5
 			popup = yes
 		}
 	}
