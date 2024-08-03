@@ -3,17 +3,7 @@
 
 	group = je_group_gate_content
 
-	is_shown_when_inactive = {
-		root = c:GMK
-	}
-
-	possible = {
-		custom_tooltip = {
-			text = je_dwarven_alps_possible_tooltip
-			root = c:GMK
-		}
-	}
-
+	scripted_button = je_dwarven_alps_button_tunnels
 	scripted_button = je_dwarven_alps_button_switzerland_charm
 
 	complete = {
@@ -22,47 +12,39 @@
 			state_region = s:STATE_TYROL
 			is_incorporated = yes
 			is_split_state = no
+			has_state_trait = state_trait_dwarven_tunnels
 		}
 		any_scope_state = {
 			state_region = s:STATE_SOUTH_TYROL
 			is_incorporated = yes
 			is_split_state = no
+			has_state_trait = state_trait_dwarven_tunnels
 		}
 		any_scope_state = {
 			state_region = s:STATE_EAST_SWITZERLAND
 			is_incorporated = yes
 			is_split_state = no
+			has_state_trait = state_trait_dwarven_tunnels
 		}
 		any_scope_state = {
 			state_region = s:STATE_WEST_SWITZERLAND
 			is_incorporated = yes
 			is_split_state = no
+			has_state_trait = state_trait_dwarven_tunnels
 		}
 		any_scope_state = {
 			state_region = s:STATE_SAVOY
 			is_incorporated = yes
 			is_split_state = no
+			has_state_trait = state_trait_dwarven_tunnels
 		}
 	}
 
 	on_complete = {
-		custom_tooltip = {
-			text = je_dwarven_alps_result_tooltip
+		trigger_event = {
+			id = dwarven_alps.3
+			popup = yes
 		}
-		s:STATE_EAST_SWITZERLAND = {
-			add_homeland = cu:dwarven
-		}
-		s:STATE_WEST_SWITZERLAND = {
-			add_homeland = cu:dwarven
-		}
-		s:STATE_SAVOY = {
-			add_homeland = cu:dwarven
-		}
-		#TODO: Create event that gives magic to every nation
-		# trigger_event = {
-		# 	id = test_event.10
-		# 	days = 0
-		# }
 	}
 
 	transferable = no

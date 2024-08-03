@@ -48,11 +48,11 @@
 		trigger_if = {
 			OR = {
 				custom_tooltip = {
-					text = je_mana_saturation_already_done_tooltip
+					text = je_mana_saturation_already_done_tt
 					global_var:gate_mana_saturation_full = yes
 				}
 				custom_tooltip = {
-					text = je_mana_saturation_goal_tooltip
+					text = je_mana_saturation_goal_tt
 					scope:journal_entry = {
 						scripted_bar_progress = {
 							name = gate_mana_saturation_progress_bar
@@ -70,7 +70,7 @@
 			value = yes
 		}
 		custom_tooltip = {
-			text = je_mana_saturation_result_tooltip
+			text = je_mana_saturation_result_tt
 		}
 		#TODO: Create event that gives magic to every nation
 		# trigger_event = {

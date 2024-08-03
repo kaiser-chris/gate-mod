@@ -13,7 +13,7 @@ dwarven_alps.1 = {
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
 	
 	duration = 3
 	
@@ -29,6 +29,77 @@ dwarven_alps.1 = {
 
 	option = {
 		name = dwarven_alps.1.a
+		default_option = yes
+	}
+}
+
+dwarven_alps.2 = {
+	type = country_event
+
+	title = dwarven_alps.2.t
+	desc = dwarven_alps.2.d
+	flavor = dwarven_alps.2.f
+
+	event_image = {
+		#TODO: Create custom video for this
+		video = "unspecific_gears_pistons"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+		every_scope_state = {
+			limit = {
+				has_state_trait = state_trait_alps_mountains
+				NOT = {
+					has_state_trait = state_trait_dwarven_tunnels
+				}
+			}
+			state_region = {
+				add_state_trait = state_trait_dwarven_tunnels
+				add_homeland = cu:dwarven
+			}
+		}
+	}
+
+	option = {
+		name = dwarven_alps.2.a
+		default_option = yes
+	}
+}
+
+dwarven_alps.3 = {
+	type = country_event
+
+	title = dwarven_alps.3.t
+	desc = dwarven_alps.3.d
+	flavor = dwarven_alps.3.f
+
+	event_image = {
+		video = "unspecific_military_parade"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = dwarven_alps.3.a
 		default_option = yes
 	}
 }
