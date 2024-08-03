@@ -17,7 +17,7 @@ Below is a list of the currently implemented content:
 
 [//]: # (CONTENT-START)
 
- - 7 new Technologies
+ - 8 new Technologies
  - 3 new Countries
  - 2 new Cultures
  - 2 new Religions
