@@ -8,7 +8,8 @@ THIS MOD IS UNFINISHED AND STILL IN DEVELOPMENT!
 
 In 1814 multiple Magic Gates to the planet of Eitov opened all around Earth. 
 
-Eitov is a magical planet with Dwarves, Elves and other races. When the Gates opened some spilled out conquering armies like the Orcs in Central America or the Arcturian Dominion in Africa.
+Eitov is a magical planet with Dwarves, Elves and other races.
+When the Gates opened, some spilled out conquering armies like the Orcs in Central America or the Arcturian Dominion in Africa.
 
 While others choose to work with the powers on Earth like the Dwarves of Min Raetia who live in the Alps and choose to enter into a Personal Union with Bavaria.
 
@@ -38,7 +39,7 @@ Below is a list of the currently implemented content:
 
 ## Improvements
 
-These are improvements that are planed for the future but are not in active development.
+These are improvements that are planned for the future but are not in active development.
 
  - Define/Create portraits/clothes for new countries
  - Add custom meshes for new buildings
@@ -48,7 +49,7 @@ These are improvements that are planed for the future but are not in active deve
 
 Below are wishes for the future that are currently unrealistic because of engine and time limitations.
 
- - Add planet of Eitov as fully playable world to the game
+ - Add the planet of Eitov as a fully playable world to the game
    - Not as a replacement but both planets at once
    - With fog of war mechanic like EU4
 
