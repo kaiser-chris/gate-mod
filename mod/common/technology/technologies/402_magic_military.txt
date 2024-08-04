@@ -11,3 +11,35 @@ magic_understanding_military = {
 		value = 1
 	}
 }
+
+mage_infantry = {
+	# Mage Infantry
+	era = era_1
+	#TODO: Add proper icon
+	texture = "gfx/interface/icons/invention_icons/magic_understanding.dds"
+	category = military
+
+	unlocking_technologies = {
+		magic_understanding_military
+	}
+
+	ai_weight = {
+		value = 2 # Important tech for everyone
+	}
+}
+
+mage_artillery = {
+	# Mage Artillery
+	era = era_1
+	#TODO: Add proper icon
+	texture = "gfx/interface/icons/invention_icons/magic_understanding.dds"
+	category = military
+
+	unlocking_technologies = {
+		magic_understanding_military
+	}
+
+	ai_weight = {
+		value = 2 # Important tech for everyone
+	}
+}

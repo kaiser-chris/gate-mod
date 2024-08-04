@@ -1,0 +1,76 @@
+﻿###
+### Keep "unit tiers" per group in ascending order; the system will determine the default unit type for a country
+### by the last defined unit type that it can build
+###
+
+### ARMY
+
+### Infantry
+
+combat_unit_type_mage_infantry = {
+    group = combat_unit_group_infantry
+
+    upkeep_modifier = {
+        goods_input_mana_add = 1
+    }
+
+    battle_modifier = {
+        unit_offense_add = 25
+        unit_defense_add = 15
+        unit_morale_loss_add = 10
+    }
+
+	unlocking_technologies = {
+        mage_infantry
+    }
+
+    combat_unit_image = {
+        #TODO: Add more image variants
+        texture = "gfx/unit_illustrations/infantry_mage.dds"
+    }
+
+	upgrades = {	
+		combat_unit_type_skirmish_infantry
+        combat_unit_type_trench_infantry
+        combat_unit_type_squad_infantry
+        combat_unit_type_mechanized_infantry
+	}
+}
+
+### Artillery
+
+combat_unit_type_mage_artillery = {
+    group = combat_unit_group_artillery
+
+    upkeep_modifier = {
+        goods_input_mana_add = 1
+    }
+
+    battle_modifier = {
+        unit_offense_add = 30
+        unit_defense_add = 10
+        unit_morale_loss_add = 10
+        unit_kill_rate_add = 0.1
+        unit_devastation_mult = 0.1
+    }
+
+    formation_modifier = {
+        military_formation_mobilization_speed_mult = -0.2
+        military_formation_movement_speed_mult = -0.2
+    }
+
+    unlocking_technologies = {
+        mage_artillery
+    }
+
+    combat_unit_image = {
+        #TODO: Add more image variants
+        texture = "gfx/unit_illustrations/artillery_mage.dds"
+    }
+
+    upgrades = {
+        combat_unit_type_mobile_artillery
+        combat_unit_type_shrapnel_artillery
+        combat_unit_type_siege_artillery
+    }
+}

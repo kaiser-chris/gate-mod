@@ -6,15 +6,9 @@
 			name = dwarf_army
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
+				type = unit_type:combat_unit_type_mage_infantry
 				state_region = s:STATE_TYROL
 				count = 15
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_TYROL
-				count = 5
 			}
 
 			combat_unit = {
@@ -23,6 +17,11 @@
 				count = 5
 			}
 
+			combat_unit = {
+				type = unit_type:combat_unit_type_lancers
+				state_region = s:STATE_TYROL
+				count = 5
+			}
 		}
 	}
 }
