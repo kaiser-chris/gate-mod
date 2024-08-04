@@ -1,64 +1,23 @@
 #!/bin/sh
 
-# Get countries
-countriesCount=0
-for filename in ./mod/common/country_definitions/*.txt; do
-  countriesCount=$((countriesCount+$(strings "$filename" | grep -c '^\w.*=.*{')))
-done
+countContent() {
+  count=0
+  for filename in ./mod/"$1"/*.txt; do
+    count=$((count+$(strings "$filename" | grep -c '^\w.*=.*{')))
+  done
+  printf '%s' "$count"
+}
 
-# Get Journal Entries
-journalEntriesCount=0
-for filename in ./mod/common/journal_entries/*.txt; do
-  journalEntriesCount=$((journalEntriesCount+$(strings "$filename" | grep -c '^\w.*=.*{')))
-done
-
-# Get Events
-eventCount=0
-for filename in ./mod/events/gate_events/*.txt; do
-  eventCount=$((eventCount+$(strings "$filename" | grep -c '^\w.*=.*{')))
-done
-
-# Get Events
-popCount=0
-for filename in ./mod/common/pop_types/*.txt; do
-  popCount=$((popCount+1))
-done
-
-# Get Buildings
-buildingCount=0
-for filename in ./mod/common/buildings/*.txt; do
-  buildingCount=$((buildingCount+$(strings "$filename" | grep -c '^\w.*=.*{')))
-done
-
-# Get Buildings
-productionCount=0
-for filename in ./mod/common/production_methods/*.txt; do
-  productionCount=$((productionCount+$(strings "$filename" | grep -c '^\w.*=.*{')))
-done
-
-# Get Goods
-goodCount=0
-for filename in ./mod/common/goods/*.txt; do
-  goodCount=$((goodCount+$(strings "$filename" | grep -c '^\w.*=.*{')))
-done
-
-# Get Cultures
-cultureCount=0
-for filename in ./mod/common/cultures/*.txt; do
-  cultureCount=$((cultureCount+$(strings "$filename" | grep -c '^\w.*=.*{')))
-done
-
-# Get Religions
-religionCount=0
-for filename in ./mod/common/religions/*.txt; do
-  religionCount=$((religionCount+$(strings "$filename" | grep -c '^\w.*=.*{')))
-done
-
-# Get Technologies
-technologyCount=0
-for filename in ./mod/common/technology/technologies/*.txt; do
-  technologyCount=$((technologyCount+$(strings "$filename" | grep -c '^\w.*=.*{')))
-done
+countriesCount="$(countContent 'common/country_definitions')"
+journalEntriesCount="$(countContent 'common/journal_entries')"
+eventCount="$(countContent 'events/gate_events')"
+popCount="$(countContent 'common/pop_types')"
+buildingCount="$(countContent 'common/buildings')"
+productionCount="$(countContent 'common/production_methods')"
+goodCount="$(countContent 'common/goods')"
+cultureCount="$(countContent 'common/cultures')"
+religionCount="$(countContent 'common/religions')"
+technologyCount="$(countContent 'common/technology/technologies')"
 
 printf ' - %s new Technologies' "$technologyCount"
 printf '\n'
