@@ -27,6 +27,9 @@ Below is a list of the currently implemented content:
  - 5 new Events
  - 1 new Pop
  - 1 new Good
+ - 1 new Diplomatic Play
+ - 1 new Diplomatic Action
+ - 260 new Localization Keys
 
 [//]: # (CONTENT-END)
 

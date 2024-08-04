@@ -10,16 +10,16 @@
 
 	immediate = {
 		c:SWI = {
-			save_scope_as = swiss_scope
+			save_scope_as = loc_swiss_scope
 		}
 		c:GMK = {
-			save_scope_as = raetia_scope
+			save_scope_as = loc_raetia_scope
 		}
 		cu:alemannic = {
-			save_scope_as = alemannic_scope
+			save_scope_as = loc_alemannic_scope
 		}
 		cu:south_german = {
-			save_scope_as = south_german_scope
+			save_scope_as = loc_south_german_scope
 		}
 	}
 
@@ -61,6 +61,10 @@
 		trigger_event = {
 			id = dwarven_alps.3
 			popup = yes
+		}
+		add_modifier = {
+			name = unification_prestige
+			months = very_long_modifier_time
 		}
 	}
 

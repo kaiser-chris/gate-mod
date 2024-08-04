@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# Counts all lines in .txt files that start with a character and end with ' = {'.
+# This finds lines like: 'demand_magic_knowledge = {'.
+# These are generally the definition of something new and therefor can
+# be used to count content.
 countContent() {
   count=0
   for filename in ./mod/"$1"/*.txt; do
@@ -8,6 +12,16 @@ countContent() {
   printf '%s' "$count"
 }
 
+# Counts all lines in .yml files that represent localization keys.
+countTranslation() {
+  count=0
+  for filename in ./mod/"$1"/*.yml; do
+    count=$((count+$(strings "$filename" | grep -c '^\s\w.*:\s\".*\"')))
+  done
+  printf '%s' "$count"
+}
+
+# Scripts
 countriesCount="$(countContent 'common/country_definitions')"
 journalEntriesCount="$(countContent 'common/journal_entries')"
 eventCount="$(countContent 'events/gate_events')"
@@ -18,6 +32,12 @@ goodCount="$(countContent 'common/goods')"
 cultureCount="$(countContent 'common/cultures')"
 religionCount="$(countContent 'common/religions')"
 technologyCount="$(countContent 'common/technology/technologies')"
+diplomaticPlaysCount="$(countContent 'common/diplomatic_plays')"
+diplomaticActionsCount="$(countContent 'common/diplomatic_actions')"
+
+# Localization
+locCount="$(countTranslation 'localization/english')"
+locCount="$((locCount+$(countTranslation 'localization/english/culture')))"
 
 printf ' - %s new Technologies' "$technologyCount"
 printf '\n'
@@ -38,3 +58,9 @@ printf '\n'
 printf ' - %s new Pop' "$popCount"
 printf '\n'
 printf ' - %s new Good' "$goodCount"
+printf '\n'
+printf ' - %s new Diplomatic Play' "$diplomaticPlaysCount"
+printf '\n'
+printf ' - %s new Diplomatic Action' "$diplomaticActionsCount"
+printf '\n'
+printf ' - %s new Localization Keys' "$locCount"
