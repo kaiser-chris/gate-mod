@@ -51,19 +51,6 @@ Below are wishes for the future that are currently unrealistic because of engine
    - Not as a replacement but both planets at once
    - With fog of war mechanic like EU4
 
-# Development Notes
+# How to contribute
 
-## Content List
-
-Please execute [update-content.sh](./script/update-content.sh) to update the content list in this file.
-
-DO NOT EDIT THAT LIST BY HAND!
-
-## Images
-
-Victoria 3 uses DDS files for icons and general gfx images.
-When changing or creating a DDS file you will need to save it as **B8G8R8A8 (Linear, A8R8G8B8)**.
-
-## Videos
-
-The game videos are bk2 files. To play these you will need the [RAD Video Tools](https://www.radgametools.com/bnkdown.htm). 
+See [Contribution Notes](https://github.com/kaiser-chris/gate-mod/wiki/Contribution-Notes)
