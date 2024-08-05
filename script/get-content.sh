@@ -33,7 +33,6 @@ cultureCount="$(countContent 'common/cultures')"
 religionCount="$(countContent 'common/religions')"
 technologyCount="$(countContent 'common/technology/technologies')"
 combatUnitTypesCount="$(countContent 'common/combat_unit_types')"
-diplomaticPlaysCount="$(countContent 'common/diplomatic_plays')"
 diplomaticActionsCount="$(countContent 'common/diplomatic_actions')"
 
 # Localization
@@ -61,8 +60,6 @@ printf '\n'
 printf ' - %s new Good' "$goodCount"
 printf '\n'
 printf ' - %s new Combat Unit Types' "$combatUnitTypesCount"
-printf '\n'
-printf ' - %s new Diplomatic Play' "$diplomaticPlaysCount"
 printf '\n'
 printf ' - %s new Diplomatic Action' "$diplomaticActionsCount"
 printf '\n'

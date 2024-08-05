@@ -1,6 +1,6 @@
 ﻿demand_magic_knowledge = {
 
-	groups= {
+	groups = {
 		general
 	}
 
@@ -44,9 +44,17 @@
 		add_technology_researched = magic_understanding_production
 		add_technology_researched = magic_understanding_society
 		add_technology_researched = magic_understanding_military
+		change_infamy = 5
 	}
 
-	#TODO: Write acceptance algorithm
+	decline_effect = {
+		change_relations = {
+			country = scope:target_country
+			value = -20
+		}
+		change_infamy = 10
+	}
+
 	ai = {
 		evaluation_chance = {
 			value = 0.25
@@ -59,28 +67,35 @@
 				value = -100
 			}
 
-			if = {
-				limit = {
-					"scope:actor.ai_ideological_opinion(root)" > 0
+			add = {
+				desc = "DIPLOMATIC_ACCEPTANCE_RANK"
+				if = {
+					limit = {
+						scope:actor = {
+							country_rank > root.country_rank
+						}
+					}
+					value = 10
 				}
-				add = {
-					desc = "DIPLOMATIC_ACCEPTANCE_IDEOLOGICAL_OPINION"
-					value = "scope:actor.ai_ideological_opinion(root)"
-					multiply = 1
+				else = {
+					value = -1000
+				}
+			}
+
+			add = {
+				desc = "DIPLOMATIC_ACCEPTANCE_ARMY_STRENGTH"
+				if = {
+					limit = {
+						"scope:actor.ai_army_comparison(root)" > 0
+					}
+					value = "scope:actor.ai_army_comparison(root)"
 					max = 50
 				}
-			}
-			else_if = {
-				limit = {
-					"scope:actor.ai_ideological_opinion(root)" < 0
-				}
-				add = {
-					desc = "DIPLOMATIC_ACCEPTANCE_IDEOLOGICAL_OPINION_NEGATIVE"
-					value = "scope:actor.ai_ideological_opinion(root)"
-					multiply = 1
-					min = -50
+				else = {
+					value = -1000
 				}
 			}
+
 			add = {
 				desc = "DIPLOMATIC_ACCEPTANCE_ATTITUDE"
 				if = {
@@ -187,32 +202,6 @@
 				limit = {
 					has_diplomatic_pact = {
 						who = scope:actor
-						type = trade_agreement
-					}
-				}
-				add = {
-					desc = "DIPLOMATIC_ACCEPTANCE_TRADE_AGREEMENT"
-					value = 15
-				}
-			}
-
-			if = {
-				limit = {
-					has_diplomatic_pact = {
-						who = scope:actor
-						type = foreign_investment_rights
-					}
-				}
-				add = {
-					desc = "DIPLOMATIC_ACCEPTANCE_FOREIGN_INVESTMENT_RIGHTS"
-					value = 25
-				}
-			}
-
-			if = {
-				limit = {
-					has_diplomatic_pact = {
-						who = scope:actor
 						type = alliance
 					}
 				}
@@ -241,48 +230,6 @@
 				add = {
 					desc = "DIPLOMATIC_ACCEPTANCE_ALLIED_TO_RIVALS"
 					value = -1000
-				}
-			}
-
-			if = {
-				limit = {
-					exists = power_bloc
-					exists = scope:actor.power_bloc
-				}
-				if = {
-					limit = {
-						power_bloc = scope:actor.power_bloc
-					}
-					add = {
-						desc = "DIPLOMATIC_ACCEPTANCE_SAME_POWER_BLOC"
-						value = 25
-					}
-				}
-				else = {
-					add = {
-						desc = "DIPLOMATIC_ACCEPTANCE_DIFFERENT_POWER_BLOC"
-						value = -25
-					}
-				}
-			}
-
-			add = {
-				desc = "DIPLOMATIC_ACCEPTANCE_PRINCIPLE_SACRED_CIVICS"
-
-				if = {
-					limit = {
-						AND = {
-							scope:actor.power_bloc = {
-								OR = {
-									has_principle = principle:principle_sacred_civics_1
-									has_principle = principle:principle_sacred_civics_2
-									has_principle = principle:principle_sacred_civics_3
-								}
-							}
-							scope:actor.religion = root.religion
-						}
-					}
-					add = 20
 				}
 			}
 		}
