@@ -1,6 +1,7 @@
 ﻿# These production methods groups are modified groups from
 # the base game.
 
+# Urban Center
 pmg_street_lighting = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
@@ -11,6 +12,7 @@ pmg_street_lighting = {
 	}
 }
 
+# Mines
 pmg_explosives_building_coal_mine = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
@@ -20,7 +22,6 @@ pmg_explosives_building_coal_mine = {
 		pm_dynamite_building_coal_mine
 	}
 }
-
 pmg_explosives_building_iron_mine = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
@@ -30,7 +31,6 @@ pmg_explosives_building_iron_mine = {
 		pm_dynamite_building_iron_mine
 	}
 }
-
 pmg_explosives_building_lead_mine = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
@@ -40,7 +40,6 @@ pmg_explosives_building_lead_mine = {
 		pm_dynamite_building_lead_mine
 	}
 }
-
 pmg_explosives_building_sulfur_mine = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
@@ -50,7 +49,6 @@ pmg_explosives_building_sulfur_mine = {
 		pm_dynamite_building_sulfur_mine
 	}
 }
-
 pmg_explosives_building_gold_mine = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
@@ -58,5 +56,57 @@ pmg_explosives_building_gold_mine = {
 		pm_crystal_explosives_building_gold_mine
 		pm_nitroglycerin_building_gold_mine
 		pm_dynamite_building_gold_mine
+	}
+}
+
+# Farms
+pmg_base_building_rye_farm = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_simple_farming
+		pm_magic_farming
+		pm_soil_enriching_farming
+		pm_fertilization
+		pm_chemical_fertilizer
+	}
+}
+pmg_base_building_wheat_farm = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_simple_farming
+		pm_magic_farming
+		pm_soil_enriching_farming
+		pm_fertilization
+		pm_chemical_fertilizer
+	}
+}
+pmg_base_building_rice_farm = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_simple_farming_building_rice_farm
+		pm_magic_farming_building_rice_farm
+		pm_soil_enriching_farming_building_rice_farm
+		pm_fertilization_building_rice_farm
+		pm_chemical_fertilizer_building_rice_farm
+	}
+}
+pmg_base_building_maize_farm = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_simple_farming
+		pm_magic_farming
+		pm_soil_enriching_farming
+		pm_fertilization
+		pm_chemical_fertilizer
+	}
+}
+pmg_base_building_millet_farm = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_simple_farming
+		pm_magic_farming
+		pm_soil_enriching_farming
+		pm_fertilization
+		pm_chemical_fertilizer
 	}
 }

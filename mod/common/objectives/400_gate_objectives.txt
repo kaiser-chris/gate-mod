@@ -2,7 +2,7 @@
 	enabled_background = "gfx/interface/icons/objectives/magic_gate_illu.dds"
 	icon = "gfx/interface/icons/objectives/magic_dominance.dds"
 	
-	recommended_tags = { GMK GAD GOK }
+	recommended_tags = { GMK GAD GOK GBR }
 	
 	objective_subgoals = {
 
@@ -11,6 +11,8 @@
 	final_subgoal = sg_strong_market
 	
 	on_start = {
-		start_tutorial_lesson = { tutorial_lesson = magic_dominance }
+		start_tutorial_lesson = {
+			tutorial_lesson = magic_dominance
+		}
 	}
 }

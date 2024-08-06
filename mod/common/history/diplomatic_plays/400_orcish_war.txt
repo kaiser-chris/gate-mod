@@ -4,11 +4,15 @@
 			name = gok_war
 		
 			target_state = s:STATE_YUCATAN.region_state:MEX
-			
-			war = yes
+
+			escalation = 80
 			
 			type = dp_conquer_state
-			
+
+			add_target_backers = {
+				c:GBR
+			}
+
 			add_war_goal = {
 				holder = c:GOK
 				type = conquer_state
@@ -31,6 +35,13 @@
 				holder = c:MEX
 				type = ban_slavery
 				target_country = c:GOK
+				primary_demand = yes
+			}
+
+			add_war_goal = {
+				holder = c:GBR
+				type = conquer_state
+				target_state = s:STATE_SAN_SALVADOR.region_state:GOK
 				primary_demand = yes
 			}
 		}

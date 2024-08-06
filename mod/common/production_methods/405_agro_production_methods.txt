@@ -1,0 +1,49 @@
+﻿pm_magic_farming = {
+	texture = "gfx/interface/icons/production_method_icons/magic_farming.dds"
+
+	unlocking_technologies = {
+		magic_farming
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_mana_add = 5
+
+			# output goods
+			goods_output_grain_add = 30
+		}
+
+		level_scaled = {
+			# earnings
+			building_employment_laborers_add = 3500
+			building_employment_farmers_add = 1000
+			building_employment_mages_add = 500
+		}
+	}
+}
+
+pm_magic_farming_building_rice_farm = {
+	texture = "gfx/interface/icons/production_method_icons/magic_farming.dds"
+
+	unlocking_technologies = {
+		magic_farming
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_mana_add = 10
+
+			# output goods
+			goods_output_grain_add = 60
+		}
+
+		level_scaled = {
+			# earnings
+			building_employment_laborers_add = 7000
+			building_employment_farmers_add = 2000
+			building_employment_mages_add = 1000
+		}
+	}
+}
