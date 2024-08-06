@@ -1,0 +1,105 @@
+﻿MILITARY_FORMATIONS = {
+	c:GOK = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_central_america
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mage_infantry
+				state_region = s:STATE_COSTA_RICA
+				count = 25
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mage_artillery
+				state_region = s:STATE_COSTA_RICA
+				count = 15
+			}
+
+			save_scope_as = orc_army_a
+		}
+
+		#TODO: Create character
+		create_character = {
+			# General Santa Anna, caudillo supreme
+			first_name = Antonio
+			last_name = Lopez_de_Santa_Anna
+			historical = yes
+			birth_date = 1794.2.21
+			dna = dna_antonio_lopez
+			hq = region_central_america
+			ig_leader = yes # Both general and IG leader
+			is_general = yes # Both general and IG leader
+			interest_group = ig_armed_forces
+			ideology = ideology_moderate
+			commander_rank = commander_rank_2
+			traits = {
+				ambitious
+				reckless
+				arrogant
+			}
+			on_created = {
+				set_variable = {
+					name = is_orc_army_a_commander
+				}
+			}
+			save_scope_as = orc_army_a_commander
+		}
+
+		scope:orc_army_a_commander = {
+			transfer_to_formation = scope:orc_army_a
+		}
+	}
+
+	c:GOK = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_central_america
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mage_infantry
+				state_region = s:STATE_GUATEMALA
+				count = 25
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mage_artillery
+				state_region = s:STATE_GUATEMALA
+				count = 15
+			}
+
+			save_scope_as = orc_army_b
+		}
+
+		#TODO: Create character
+		create_character = {
+			# General Santa Anna, caudillo supreme
+			first_name = Antonio
+			last_name = Lopez_de_Santa_Anna
+			historical = yes
+			birth_date = 1794.2.21
+			dna = dna_antonio_lopez
+			hq = region_central_america
+			ig_leader = yes # Both general and IG leader
+			is_general = yes # Both general and IG leader
+			interest_group = ig_armed_forces
+			ideology = ideology_moderate
+			commander_rank = commander_rank_2
+			traits = {
+				ambitious
+				reckless
+				arrogant
+			}
+			on_created = {
+				set_variable = {
+					name = is_orc_army_b_commander
+				}
+			}
+			save_scope_as = orc_army_b_commander
+		}
+
+		scope:orc_army_b_commander = {
+			transfer_to_formation = scope:orc_army_b
+		}
+	}
+}

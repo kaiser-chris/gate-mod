@@ -7,18 +7,18 @@ POPS = {
 	s:STATE_NICARAGUA = {
 		region_state:UCA = {
 			kill_population_percent_in_state = {
-				percent = 1
+				percent = 1 # 100%
 			}
 		}
 		region_state:MKT = {
 			kill_population_percent_in_state = {
-				percent = 1
+				percent = 1 # 100%
 			}
 		}
 		region_state:GOK = {
 			create_pop = {
-				culture = dwarven
-				size = 600000
+				culture = orcish
+				size = 200000
 			}
 			create_pop = {
 				pop_type = slaves
@@ -30,13 +30,13 @@ POPS = {
 	s:STATE_COSTA_RICA = {
 		region_state:UCA = {
 			kill_population_percent_in_state = {
-				percent = 1
+				percent = 1 # 100%
 			}
 		}
 		region_state:GOK = {
 			create_pop = {
-				culture = dwarven
-				size = 600000
+				culture = orcish
+				size = 300000
 			}
 			create_pop = {
 				pop_type = slaves
@@ -48,18 +48,18 @@ POPS = {
 	s:STATE_GUATEMALA = {
 		region_state:UCA = {
 			kill_population_percent_in_state = {
-				percent = 1
+				percent = 1 # 100%
 			}
 		}
 		region_state:GBR = {
 			kill_population_percent_in_state = {
-				percent = 1
+				percent = 1 # 100%
 			}
 		}
 		region_state:GOK = {
 			create_pop = {
-				culture = dwarven
-				size = 600000
+				culture = orcish
+				size = 200000
 			}
 			create_pop = {
 				pop_type = slaves
@@ -76,13 +76,13 @@ POPS = {
 	s:STATE_HONDURAS = {
 		region_state:UCA = {
 			kill_population_percent_in_state = {
-				percent = 1
+				percent = 1 # 100%
 			}
 		}
 		region_state:GOK = {
 			create_pop = {
-				culture = dwarven
-				size = 600000
+				culture = orcish
+				size = 200000
 			}
 			create_pop = {
 				pop_type = slaves
@@ -94,12 +94,12 @@ POPS = {
 	s:STATE_SAN_SALVADOR = {
 		region_state:UCA = {
 			kill_population_percent_in_state = {
-				percent = 1
+				percent = 1 # 100%
 			}
 		}
 		region_state:GOK = {
 			create_pop = {
-				culture = dwarven
+				culture = orcish
 				size = 600000
 			}
 			create_pop = {

@@ -25,6 +25,13 @@ combat_unit_type_mage_infantry = {
     }
 
     combat_unit_image = {
+        trigger = {
+            this = cu:orcish
+        }
+        texture = "gfx/unit_illustrations/infantry_mage_orc.dds"
+    }
+
+    combat_unit_image = {
         #TODO: Add more image variants
         texture = "gfx/unit_illustrations/infantry_mage.dds"
     }
@@ -61,6 +68,13 @@ combat_unit_type_mage_artillery = {
 
     unlocking_technologies = {
         mage_artillery
+    }
+
+    combat_unit_image = {
+        trigger = {
+            this = cu:orcish
+        }
+        texture = "gfx/unit_illustrations/artillery_mage_orc.dds"
     }
 
     combat_unit_image = {
