@@ -25,6 +25,28 @@
 
 	c:GBR = {
 		random_scope_general = {
+			limit = {
+				# GBR_henry_hardinge
+				# Home Army
+				has_trait = tactful
+				has_trait = resupply_commander
+			}
+
+			commander_military_formation = {
+				fully_mobilize_army = yes
+				teleport_to_front = p:x6D71DA.front
+			}
+		}
+
+		random_scope_general = {
+			limit = {
+				# GBR_john_colborne
+				# West Indies Army
+				has_trait = basic_colonial_administrator
+				has_trait = direct
+				has_trait = tactful
+			}
+
 			commander_military_formation = {
 				fully_mobilize_army = yes
 				teleport_to_front = p:x6D71DA.front
