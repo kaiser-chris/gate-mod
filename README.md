@@ -34,6 +34,31 @@ Below is a list of the currently implemented content:
 
 [//]: # (CONTENT-END)
 
+## Problems & Incompatibilities
+
+### Incompatibilities
+
+ - This mod overwrites/changes UI elements
+   - The Tech Tree UI needed to be changed to show not researchable technologies since base Magic Knowledge is not researchable.
+   - The Objective selection screen needed to be changed to properly show the new objective.
+ - This mod overwrites base game Production Method Groups to extend them and might clash with other mods that also extend them:
+   - pmg_street_lighting (Urban Center)
+   - pmg_explosives_building_coal_mine (Coal Mine)
+   - pmg_explosives_building_iron_mine (Iron Mine)
+   - pmg_explosives_building_lead_mine (Lead Mine)
+   - pmg_explosives_building_gold_mine (Gold Mine)
+   - pmg_explosives_building_sulfur_mine (Sulfur Mine)
+   - pmg_base_building_rye_farm (Rye Farm)
+   - pmg_base_building_wheat_farm (Wheat Farm)
+   - pmg_base_building_rice_farm (Rice Farm)
+   - pmg_base_building_maize_farm (Maize Farm)
+   - pmg_base_building_millet_farm (Millet Farm)
+
+### Problems
+
+ - In the Tech Tree UI some of the new technologies are selectable for non-magic countries even though they are not researchable.
+ - Since we can't add new war goals, 'Demand Magic Knowledge' is a Diplomatic Action instead of a war goal.
+
 # Future
 
 ## Improvements
