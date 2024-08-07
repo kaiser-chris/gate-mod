@@ -1,0 +1,48 @@
+﻿dwarven_tunnels_decision = {
+	is_shown = {
+		exists = c:GMK
+		this = c:GMK
+	}
+
+	possible = {
+		this = c:GMK
+		is_diplomatic_play_committed_participant = no
+		is_at_war = no
+		any_scope_state = {
+			OR = {
+				has_state_trait = state_trait_scottish_highlands
+				has_state_trait = state_trait_cascades
+				has_state_trait = state_trait_sierra_nevada
+				has_state_trait = state_trait_rocky_mountains
+				has_state_trait = state_trait_sierra_madre_occidental
+				has_state_trait = state_trait_sierra_madre_oriental
+				has_state_trait = state_trait_central_american_cordilleras
+				has_state_trait = state_trait_wasatch_range
+				has_state_trait = state_trait_andes
+				has_state_trait = state_trait_alps_mountains
+				has_state_trait = state_trait_caucasus_mountains
+				has_state_trait = state_trait_atlas_mountains
+				has_state_trait = state_trait_zagros_mountains
+				has_state_trait = state_trait_alborz_mountains
+				has_state_trait = state_trait_baluchistan_mountains
+				has_state_trait = state_trait_mount_lebanon
+				has_state_trait = state_trait_himalayas_mountains
+				has_state_trait = state_trait_great_dividing_range
+			}
+			NOT = {
+				has_state_trait = state_trait_dwarven_tunnels
+			}
+		}
+	}
+	
+	when_taken = {
+		trigger_event = {
+			id = dwarven_alps.2
+			popup = yes
+		}
+	}
+
+	ai_chance = {
+		base = 100
+	}
+}

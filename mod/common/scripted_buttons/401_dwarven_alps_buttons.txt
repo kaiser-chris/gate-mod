@@ -72,33 +72,6 @@ je_dwarven_alps_button_switzerland_integrate = {
 	}
 }
 
-je_dwarven_alps_button_tunnels = {
-	name = "je_dwarven_alps_button_tunnels"
-	desc = "je_dwarven_alps_button_tunnels_desc"
-
-	possible = {
-		is_diplomatic_play_committed_participant = no
-		is_at_war = no
-		any_scope_state = {
-			has_state_trait = state_trait_alps_mountains
-			NOT = {
-				has_state_trait = state_trait_dwarven_tunnels
-			}
-		}
-	}
-
-	ai_chance = {
-		base = 100
-	}
-
-	effect = {
-		trigger_event = {
-			id = dwarven_alps.2
-			popup = yes
-		}
-	}
-}
-
 je_dwarven_alps_integrate_germans = {
 	name = "je_dwarven_alps_integrate_germans"
 	desc = "je_dwarven_alps_integrate_germans_desc"
