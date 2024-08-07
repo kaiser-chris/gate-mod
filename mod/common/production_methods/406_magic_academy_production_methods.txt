@@ -1,0 +1,139 @@
+﻿pm_magic_academy_no_support = {
+	#TODO: Find proper logo for pm_magic_academy_no_support
+	texture = "gfx/interface/icons/production_method_icons/ownership_academics.dds"
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_bureaucracy_add = -10
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_migration_pull_mult = 0.05
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 10
+		}
+
+		level_scaled = {
+			building_employment_mages_add = 1000
+		}
+	}
+}
+
+pm_magic_academy_partial_support = {
+	#TODO: Find proper logo for pm_magic_academy_partial_support
+	texture = "gfx/interface/icons/production_method_icons/ownership_academics.dds"
+
+	unlocking_technologies = {
+		formalized_magic
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_bureaucracy_add = -100
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pop_qualifications_mult = 0.05
+			state_migration_pull_mult = 0.10
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 30
+		}
+
+		level_scaled = {
+			building_employment_mages_add = 3000
+		}
+	}
+}
+
+pm_magic_academy_full_support = {
+	#TODO: Find proper logo for pm_magic_academy_full_support
+	texture = "gfx/interface/icons/production_method_icons/ownership_academics.dds"
+
+	unlocking_technologies = {
+		formalized_magic
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_bureaucracy_add = -200
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pop_qualifications_mult = 0.1
+			state_migration_pull_mult = 0.15
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 60
+		}
+
+		level_scaled = {
+			building_employment_mages_add = 6000
+		}
+	}
+}
+
+pm_magic_academy_simple_research = {
+	#TODO: Find proper logo for pm_magic_academy_no_research
+	texture = "gfx/interface/icons/production_method_icons/ownership_academics.dds"
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_weekly_innovation_add = 5
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 10
+		}
+
+		level_scaled = {
+			building_employment_academics_add = 500
+			building_employment_mages_add = 500
+		}
+	}
+}
+
+pm_magic_academy_technology_research = {
+	#TODO: Find proper logo for pm_magic_academy_full_support
+	texture = "gfx/interface/icons/production_method_icons/ownership_academics.dds"
+
+	unlocking_technologies = {
+		magic_science
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_weekly_innovation_add = 20
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 50
+		}
+
+		level_scaled = {
+			building_employment_academics_add = 1000
+			building_employment_mages_add = 1000
+		}
+	}
+}
+

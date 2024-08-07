@@ -38,3 +38,24 @@ pmg_murk_transportation = {
 		pm_murk_rail_transportation
 	}
 }
+
+pmg_magic_academy_support = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_magic_academy_no_support
+		pm_magic_academy_partial_support
+		pm_magic_academy_full_support
+	}
+}
+
+pmg_magic_academy_research = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_magic_academy_simple_research
+		pm_magic_academy_technology_research
+	}
+}

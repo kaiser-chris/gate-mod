@@ -28,10 +28,10 @@
  je_dwarven_alps_button_tunnels_desc: "To fully integrate a new state we need to connect it to our tunnels."
  je_dwarven_alps_button_tunnels_result_tt: "Add $state_trait_dwarven_tunnels$ trait to alpine state"
  je_dwarven_alps_integrate_germans: "Integrate German Population"
- je_dwarven_alps_integrate_germans_desc: "Add [SCOPE.sCulture('loc_south_german_scope').GetName] and [SCOPE.sCulture('loc_alemannic_scope').GetName] cultures as [concept_primary_cultures]."
+ je_dwarven_alps_integrate_germans_desc: "Add [SCOPE.sCulture('loc_south_german_scope').GetName] and [SCOPE.sCulture('loc_alemannic_scope').GetName] cultures as [concept_primary_cultures]. This will draw us into german politics."
  dwarven_alps.1.t: "Magic Alliance"
  dwarven_alps.1.d: "Forged and Alliance with [SCOPE.sCountry('loc_swiss_scope').GetName] for our magic knowledge."
- dwarven_alps.1.f: "We have shown them what we can offer." #TODO: Flesh out a proper description
+ dwarven_alps.1.f: "We have shown them what we can offer." #TODO: Flesh out a proper description for dwarven_alps.1.f (Magic Alliance)
  dwarven_alps.1.a: "We will share the mountain range"
  dwarven_alps.2.t: "Digging Tunnels"
  dwarven_alps.2.d: "Add $state_trait_dwarven_tunnels$ trait to alpine state."
@@ -43,9 +43,9 @@
  dwarven_alps.3.a: "We own the Alps"
  dwarven_alps.4.t: "Integrate German Population"
  dwarven_alps.4.d: "Add [SCOPE.sCulture('loc_south_german_scope').GetName] and [SCOPE.sCulture('loc_alemannic_scope').GetName] cultures as [concept_primary_cultures]."
- dwarven_alps.4.f: "" #TODO: Flesh out a proper description
+ dwarven_alps.4.f: "Germans will be full citizens going forward.\nThis will draw us into german politics." #TODO: Flesh out a proper description for dwarven_alps.4.f (Integrate German Population)
  dwarven_alps.4.a: "We will make dwarves out of them yet"
  dwarven_alps.5.t: "Swiss Integration"
  dwarven_alps.5.d: "We have fully integrated [SCOPE.sCountry('loc_swiss_scope').GetName]."
- dwarven_alps.5.f: "We have shown them what we can offer." #TODO: Flesh out a proper description
+ dwarven_alps.5.f: "We have shown them what we can offer." #TODO: Flesh out a proper description for dwarven_alps.5.f (Swiss Integration)
  dwarven_alps.5.a: "We will share the mountain range"

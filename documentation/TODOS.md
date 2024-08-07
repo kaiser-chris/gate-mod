@@ -19,8 +19,8 @@ Below is a table with all currently open ToDos.
 
 | File | Line | ToDo |
 | ---- | ---- | ---- |
-| ./mod/common/combat_unit_types/400_land_combat_unit_types.txt | 35 |  Add more image variants |
-| ./mod/common/combat_unit_types/400_land_combat_unit_types.txt | 81 |  Add more image variants |
+| ./mod/common/combat_unit_types/400_land_combat_unit_types.txt | 35 |  Add more image variants for combat_unit_type_mage_infantry |
+| ./mod/common/combat_unit_types/400_land_combat_unit_types.txt | 81 |  Add more image variants for combat_unit_type_mage_artillery |
 | ./mod/common/cultures/400_arcturian.txt | 2 |  Define custom culture (Currently copy of german) |
 | ./mod/common/cultures/401_dwarven.txt | 55 |  Create dwarven graphics & ethnicity |
 | ./mod/common/cultures/402_orcish.txt | 2 |  Define custom culture (Currently copy of dwarven) |
@@ -38,23 +38,31 @@ Below is a table with all currently open ToDos.
 | ./mod/common/production_method_groups/401_gate_production_method_groups.txt | 8 |  Add proper production method |
 | ./mod/common/production_methods/400_gate_production_methods.txt | 26 |  Can we add something like custom tooltip here? |
 | ./mod/common/production_methods/400_gate_production_methods.txt | 44 |  Can we add something like custom tooltip here? |
+| ./mod/common/production_methods/406_magic_academy_production_methods.txt | 115 |  Find proper logo for pm_magic_academy_full_support |
+| ./mod/common/production_methods/406_magic_academy_production_methods.txt | 29 |  Find proper logo for pm_magic_academy_partial_support |
+| ./mod/common/production_methods/406_magic_academy_production_methods.txt | 2 |  Find proper logo for pm_magic_academy_no_support |
+| ./mod/common/production_methods/406_magic_academy_production_methods.txt | 61 |  Find proper logo for pm_magic_academy_full_support |
+| ./mod/common/production_methods/406_magic_academy_production_methods.txt | 93 |  Find proper logo for pm_magic_academy_no_research |
 | ./mod/common/religions/gate_religion.txt | 2 |  Add proper icon |
 | ./mod/common/scripted_effects/401_gate_immigration.txt | 55 |  Balance this |
 | ./mod/common/scripted_effects/401_gate_immigration.txt | 65 |  Balance this |
-| ./mod/common/technology/technologies/401_magic_production.txt | 19 |  Add proper icon |
-| ./mod/common/technology/technologies/401_magic_production.txt | 34 |  Add proper icon |
-| ./mod/common/technology/technologies/402_magic_military.txt | 18 |  Add proper icon |
-| ./mod/common/technology/technologies/402_magic_military.txt | 34 |  Add proper icon |
+| ./mod/common/technology/technologies/401_magic_production.txt | 19 |  Add proper logo for mana_extraction |
+| ./mod/common/technology/technologies/401_magic_production.txt | 34 |  Add proper logo for magic_farming |
+| ./mod/common/technology/technologies/402_magic_military.txt | 18 |  Add proper logo for mage_infantry |
+| ./mod/common/technology/technologies/402_magic_military.txt | 34 |  Add proper logo for mage_artillery |
+| ./mod/common/technology/technologies/403_magic_society.txt | 28 |  Add proper logo for formalized_magic |
+| ./mod/common/technology/technologies/403_magic_society.txt | 48 |  Add proper logo for magic_technology_integration |
 | ./mod/events/gate_events/dwarven_alps_events.txt | 52 |  Create custom video for this |
 | ./mod/gfx/map/city_data/city_types/400_gate_buildings.txt | 1 |  Needs more definitions for other cultures |
 | ./mod/gui/objective_types.gui | 1 |  Find a way to not overwrite this file |
 | ./mod/gui/tech_tree.gui | 1 |  Find a way to not overwrite this file |
 | ./mod/localization/english/gate_countries_l_english.yml | 10 |  Add proper flavor text |
-| ./mod/localization/english/gate_journal_l_english.yml | 34 |  Flesh out a proper description |
-| ./mod/localization/english/gate_journal_l_english.yml | 46 |  Flesh out a proper description |
-| ./mod/localization/english/gate_journal_l_english.yml | 50 |  Flesh out a proper description |
+| ./mod/localization/english/gate_journal_l_english.yml | 34 |  Flesh out a proper description for dwarven_alps.1.f (Magic Alliance) |
+| ./mod/localization/english/gate_journal_l_english.yml | 46 |  Flesh out a proper description for dwarven_alps.4.f (Integrate German Population) |
+| ./mod/localization/english/gate_journal_l_english.yml | 50 |  Flesh out a proper description for dwarven_alps.5.f (Swiss Integration) |
 | ./mod/localization/english/gate_objective_l_english.yml | 11 |  Flesh out |
 | ./mod/localization/english/gate_religion_l_english.yml | 5 |  Find better name |
 | ./mod/localization/english/gate_technology_l_english.yml | 19 |  Write description for formalized_magic |
+| ./mod/localization/english/gate_technology_l_english.yml | 21 |  Write description for magic_science |
 
 [//]: # (TODO-END)
