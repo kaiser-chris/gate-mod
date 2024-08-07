@@ -89,4 +89,5 @@ Below are wishes for the future that are currently unrealistic because of engine
 # How to contribute
 
 See [Contribution Notes](https://github.com/kaiser-chris/gate-mod/wiki/Contribution-Notes)
+
 See [Open ToDo](./documentation/TODOS.md)
