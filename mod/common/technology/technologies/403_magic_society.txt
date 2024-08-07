@@ -22,3 +22,22 @@ dwarven_gate_immigration = {
 		value = 1
 	}
 }
+
+formalized_magic = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/magic_understanding.dds"
+	category = society
+
+	modifier = {
+		state_education_access_wealth_add = 0.001
+	}
+
+	unlocking_technologies = {
+		academia
+		magic_understanding_society
+	}
+
+	ai_weight = {
+		value = 1.5 # Important in general
+	}
+}
