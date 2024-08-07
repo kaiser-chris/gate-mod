@@ -1,0 +1,24 @@
+﻿#TODO: Deactivate all decisions in this file before release
+debug_mana_saturation_decision = {
+	is_shown = {
+		is_player = yes
+	}
+
+	possible = {
+	}
+
+	when_taken = {
+		set_global_variable = {
+			name = gate_mana_saturation_full
+			value = yes
+		}
+		trigger_event = {
+			id = mana_saturation.1
+			popup = yes
+		}
+	}
+
+	ai_chance = {
+		base = 100
+	}
+}

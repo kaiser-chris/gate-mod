@@ -69,14 +69,10 @@
 			name = gate_mana_saturation_full
 			value = yes
 		}
-		custom_tooltip = {
-			text = je_mana_saturation_result_tt
+		trigger_event = {
+			id = mana_saturation.1
+			popup = yes
 		}
-		#TODO: Create event that gives magic to every nation
-		# trigger_event = {
-		# 	id = test_event.10
-		# 	days = 0
-		# }
 	}
 
 	transferable = no

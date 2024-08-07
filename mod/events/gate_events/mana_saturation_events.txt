@@ -1,0 +1,42 @@
+﻿namespace = mana_saturation
+
+mana_saturation.1 = {
+	type = country_event
+	
+	title = mana_saturation.1.t
+	desc = mana_saturation.1.d
+	flavor = mana_saturation.1.f
+	
+	event_image = {
+		video = "asia_confucianism_shinto"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+	
+	duration = 3
+	
+	trigger = {
+	}
+
+	immediate = {
+		every_country = {
+			limit = {
+				NOT = {
+					has_technology_researched = magic_understanding_production
+					has_technology_researched = magic_understanding_society
+					has_technology_researched = magic_understanding_military
+				}
+			}
+			add_technology_researched = magic_understanding_production
+			add_technology_researched = magic_understanding_society
+			add_technology_researched = magic_understanding_military
+		}
+	}
+
+	option = {
+		name = mana_saturation.1.a
+		default_option = yes
+	}
+}
