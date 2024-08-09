@@ -32,7 +32,6 @@ Below is a table with all currently open ToDos.
 | ./mod/common/history/characters/gad - dominion.txt | 1 |  Add proper characters |
 | ./mod/common/history/military_formations/402_orcish_kingdom.txt | 22 |  Create character |
 | ./mod/common/history/military_formations/402_orcish_kingdom.txt | 72 |  Create character |
-| ./mod/common/journal_entries/400_mana_saturation.txt | 6 |  Add buttons to do rituals to increase mana saturation |
 | ./mod/common/pop_types/mages.txt | 2 |  Need to add mages to landowners |
 | ./mod/common/production_method_groups/401_gate_production_method_groups.txt | 24 |  Add proper production method |
 | ./mod/common/production_method_groups/401_gate_production_method_groups.txt | 8 |  Add proper production method |
@@ -57,12 +56,13 @@ Below is a table with all currently open ToDos.
 | ./mod/gui/objective_types.gui | 1 |  Find a way to not overwrite this file |
 | ./mod/gui/tech_tree.gui | 1 |  Find a way to not overwrite this file |
 | ./mod/localization/english/gate_countries_l_english.yml | 10 |  Add proper flavor text GOK_FLAVOR_TEXT (Orkish Supremacy) |
-| ./mod/localization/english/gate_journal_l_english.yml | 17 |  Flesh out a proper description for mana_saturation.1.f (A World of Magic) |
-| ./mod/localization/english/gate_journal_l_english.yml | 34 |  Flesh out a proper description for dwarven_alps.1.f (Magic Alliance) |
-| ./mod/localization/english/gate_journal_l_english.yml | 46 |  Flesh out a proper description for dwarven_alps.4.f (Integrate German Population) |
-| ./mod/localization/english/gate_journal_l_english.yml | 50 |  Flesh out a proper description for dwarven_alps.5.f (Swiss Integration) |
-| ./mod/localization/english/gate_journal_l_english.yml | 54 |  Flesh out a proper description for je_obj_magic_knowledge_desc |
-| ./mod/localization/english/gate_journal_l_english.yml | 57 |  Flesh out a proper description for je_obj_magic_academy_desc |
+| ./mod/localization/english/gate_journal_l_english.yml | 21 |  Flesh out a proper description for mana_saturation.1.f (A World of Magic) |
+| ./mod/localization/english/gate_journal_l_english.yml | 25 |  Flesh out a proper description for mana_saturation.2.f (Heinous Ritual) |
+| ./mod/localization/english/gate_journal_l_english.yml | 44 |  Flesh out a proper description for dwarven_alps.1.f (Magic Alliance) |
+| ./mod/localization/english/gate_journal_l_english.yml | 56 |  Flesh out a proper description for dwarven_alps.4.f (Integrate German Population) |
+| ./mod/localization/english/gate_journal_l_english.yml | 60 |  Flesh out a proper description for dwarven_alps.5.f (Swiss Integration) |
+| ./mod/localization/english/gate_journal_l_english.yml | 64 |  Flesh out a proper description for je_obj_magic_knowledge_desc |
+| ./mod/localization/english/gate_journal_l_english.yml | 67 |  Flesh out a proper description for je_obj_magic_academy_desc |
 | ./mod/localization/english/gate_objective_l_english.yml | 11 |  Flesh out objective_magic_dominance_desc_GBR (Great Britain) |
 | ./mod/localization/english/gate_religion_l_english.yml | 5 |  Find better name for blood_god |
 | ./mod/localization/english/gate_technology_l_english.yml | 19 |  Write description for formalized_magic |

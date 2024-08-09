@@ -3,8 +3,11 @@
 
 	group = je_group_gate_content
 
-	#TODO: Add buttons to do rituals to increase mana saturation
-	#scripted_button = scripted_button_key
+	scripted_button = je_mana_saturation_button_slave_ritual
+
+	immediate = {
+		save_scope_as = loc_country_scope
+	}
 
 	status_desc = {
 		first_valid = {

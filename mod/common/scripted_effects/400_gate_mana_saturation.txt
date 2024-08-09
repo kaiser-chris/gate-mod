@@ -1,4 +1,9 @@
 ﻿calculate_monthly_mana_saturation = {
+	set_global_variable = {
+		name = gate_mana_saturation_progress_ritual_var
+		value = 0
+	}
+	
 	# Every month we calculate new
 	set_global_variable = {
 		name = gate_mana_saturation_progress_mages_var

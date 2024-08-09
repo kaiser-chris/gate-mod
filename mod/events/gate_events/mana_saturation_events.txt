@@ -40,3 +40,48 @@ mana_saturation.1 = {
 		default_option = yes
 	}
 }
+
+mana_saturation.2 = {
+	type = country_event
+
+	title = mana_saturation.2.t
+	desc = mana_saturation.2.d
+	flavor = mana_saturation.2.f
+
+	event_image = {
+		video = "southamerica_slave_chains"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = mana_saturation.2.a
+		kill_population = {
+			value = 10000
+			pop_type = slaves
+		}
+		change_infamy = 10
+		custom_tooltip = {
+			text = mana_saturation.2.a_progress_tt
+			change_global_variable = {
+				name = gate_mana_saturation_progress_ritual_var
+				add = 5
+			}
+		}
+	}
+
+	option = {
+		name = mana_saturation.2.b
+		default_option = yes
+	}
+}

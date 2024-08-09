@@ -4,6 +4,7 @@
 
 	default = yes
 
+	# Yearly progress from world situation
  	yearly_progress = {
 		if = {
 			limit = {
@@ -25,6 +26,19 @@
 			}
 		}
  	}
+
+	# Progress from rituals
+	monthly_progress = {
+		if = {
+			limit = {
+				exists = global_var:gate_mana_saturation_progress_ritual_var
+			}
+			add = {
+				desc = "gate_mana_saturation_ritual_progress_bar_balance"
+				value = global_var:gate_mana_saturation_progress_ritual_var
+			}
+		}
+	}
 
 	# We start at 7% because 1814 gates opened
 	# and game starts in 1836
