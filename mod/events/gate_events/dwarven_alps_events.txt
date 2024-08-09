@@ -21,6 +21,11 @@ dwarven_alps.1 = {
 	}
 
 	immediate = {
+	}
+
+	option = {
+		name = dwarven_alps.1.a
+		default_option = yes
 		c:SWI = {
 			add_technology_researched = magic_understanding_production
 			add_technology_researched = magic_understanding_society
@@ -33,11 +38,6 @@ dwarven_alps.1 = {
 				type = alliance
 			}
 		}
-	}
-
-	option = {
-		name = dwarven_alps.1.a
-		default_option = yes
 	}
 }
 
@@ -151,6 +151,11 @@ dwarven_alps.4 = {
 	}
 
 	immediate = {
+	}
+
+	option = {
+		name = dwarven_alps.4.a
+		default_option = yes
 		add_primary_culture = cu:south_german
 		add_primary_culture = cu:alemannic
 		every_country = {
@@ -165,11 +170,6 @@ dwarven_alps.4 = {
 				value = 10
 			}
 		}
-	}
-
-	option = {
-		name = dwarven_alps.4.a
-		default_option = yes
 	}
 }
 
@@ -194,11 +194,11 @@ dwarven_alps.5 = {
 	}
 
 	immediate = {
-		annex_with_incorporation = c:SWI
 	}
 
 	option = {
 		name = dwarven_alps.5.a
 		default_option = yes
+		annex_with_incorporation = c:SWI
 	}
 }
