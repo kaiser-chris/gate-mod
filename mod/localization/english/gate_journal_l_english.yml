@@ -19,13 +19,23 @@
  mana_saturation.1.t: "A World of Magic"
  mana_saturation.1.d: "[concept_mana_saturation] has reached its maximum.\nAll countries get [concept_magic_knowledge]."
  mana_saturation.1.f: "Every person of earth can feel the magic flowing through the air. Magic understanding follows this feeling." #TODO: Flesh out a proper description for mana_saturation.1.f (A World of Magic)
- mana_saturation.1.a: "Nothing will ever be the same"
+ mana_saturation.1.a: "Nothing will ever be the same."
  mana_saturation.2.t: "Heinous Ritual"
  mana_saturation.2.d: "Increase mana saturation through ritual sacrifices."
  mana_saturation.2.f: "TODO" #TODO: Flesh out a proper description for mana_saturation.2.f (Heinous Ritual)
- mana_saturation.2.a: "This world needs more magic whatever the price"
+ mana_saturation.2.a: "This world needs more magic whatever the price."
  mana_saturation.2.a_progress_tt: "Increases [concept_mana_saturation] by five percent at the end of the month"
- mana_saturation.2.b: "We need to stop this madness"
+ mana_saturation.2.b: "We need to stop this madness."
+ dragon_cost_modifier: "Dragon Devastation Humanitarian Help"
+ dragon_help_modifier: "Dragon Devastation"
+ dragon_no_help_modifier: "Dragon Devastation"
+ mana_saturation.3.t: "Draconic Awakening"
+ mana_saturation.3.d: "A dragon awakened in [SCOPE.sState('dragon_greenland_state').GetName] and devastated it and the surrounding states."
+ mana_saturation.3.f: "In the heart of Greenland, where the cold gnaws deepest and the sun forgets to rise, the Ice Dragon stirs. Beneath glaciers older than time, its slumber ends, eyes gleaming like frozen stars. As it rises, the land shudders, and the air turns sharp with frost. It breathes, and the world responds—ice and snow surge, transforming the green expanse into a desolate white abyss. The dragon’s fury is brief but devastating, leaving only shattered ice and echoes of its terrible power. Greenland lies in ruin, but the creature, at last, is dead."
+ mana_saturation.3.a: "We shall help with all we have."
+ mana_saturation.3.b: "Dragons are capricious creatures."
+ mana_saturation.4.a: "We shall help with all we have."
+ mana_saturation.4.b: "Dragons are capricious creatures."
 # Dwarven Integration
  je_dwarven_alps: "Owners of the Alps"
  je_dwarven_alps_status: "We claim all of our home mountain range."
@@ -42,26 +52,20 @@
  dwarven_alps.1.t: "Magic Alliance"
  dwarven_alps.1.d: "Forged and Alliance with [SCOPE.sCountry('loc_swiss_scope').GetName] for our magic knowledge."
  dwarven_alps.1.f: "We have shown them what we can offer." #TODO: Flesh out a proper description for dwarven_alps.1.f (Magic Alliance)
- dwarven_alps.1.a: "We will share the mountain range"
+ dwarven_alps.1.a: "We will share the mountain range."
  dwarven_alps.2.t: "Digging Tunnels"
  dwarven_alps.2.d: "Add $state_trait_dwarven_tunnels$ trait to mountainous states."
  dwarven_alps.2.f: "Our miners are working non stop to connect these new states.\n\nWe dig!\nWe mine!\nThe mountain will be mine!"
- dwarven_alps.2.a: "One more mountain is ours"
+ dwarven_alps.2.a: "One more mountain is ours."
  dwarven_alps.3.t: "Owners of the Alps"
  dwarven_alps.3.d: "All alpine states are under our control."
  dwarven_alps.3.f: "Finally all of the Alps are ours and we will STAY!"
- dwarven_alps.3.a: "We own the Alps"
+ dwarven_alps.3.a: "We own the Alps."
  dwarven_alps.4.t: "Integrate German Population"
  dwarven_alps.4.d: "Add [SCOPE.sCulture('loc_south_german_scope').GetName] and [SCOPE.sCulture('loc_alemannic_scope').GetName] cultures as [concept_primary_cultures]."
  dwarven_alps.4.f: "Germans will be full citizens going forward.\nThis will draw us into german politics." #TODO: Flesh out a proper description for dwarven_alps.4.f (Integrate German Population)
- dwarven_alps.4.a: "We will make dwarves out of them yet"
+ dwarven_alps.4.a: "We will make dwarves out of them yet."
  dwarven_alps.5.t: "Swiss Integration"
  dwarven_alps.5.d: "We have fully integrated [SCOPE.sCountry('loc_swiss_scope').GetName]."
  dwarven_alps.5.f: "We have shown them what we can offer." #TODO: Flesh out a proper description for dwarven_alps.5.f (Swiss Integration)
- dwarven_alps.5.a: "We will share the mountain range"
-# Magic Dominance (Objective)
- je_obj_magic_knowledge: "Learn Magic Knowledge"
- je_obj_magic_knowledge_reason: "TODO" #TODO: Flesh out a proper description for je_obj_magic_knowledge_desc
- je_obj_magic_knowledge_goal_tt: "Learned [concept_magic_knowledge]"
- je_obj_magic_academy: "Build Magic Academy"
- je_obj_magic_academy_reason: "TODO" #TODO: Flesh out a proper description for je_obj_magic_academy_desc
+ dwarven_alps.5.a: "We will share the mountain range."

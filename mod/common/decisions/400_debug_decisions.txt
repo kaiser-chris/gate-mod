@@ -50,3 +50,23 @@ debug_complete_sg_magic_academy = {
 		base = 100
 	}
 }
+
+debug_dragon_greenland_decision = {
+	is_shown = {
+		is_player = yes
+		NOT = { has_global_variable = dragon_greenland_var }
+	}
+
+	when_taken = {
+		every_country = {
+			trigger_event = {
+				id = mana_saturation.3
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 100
+	}
+}
+
