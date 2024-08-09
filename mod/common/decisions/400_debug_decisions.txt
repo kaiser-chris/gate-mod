@@ -2,9 +2,7 @@
 debug_mana_saturation_decision = {
 	is_shown = {
 		is_player = yes
-	}
-
-	possible = {
+		global_var:gate_mana_saturation_full = no
 	}
 
 	when_taken = {
@@ -12,10 +10,40 @@ debug_mana_saturation_decision = {
 			name = gate_mana_saturation_full
 			value = yes
 		}
-		trigger_event = {
-			id = mana_saturation.1
-			popup = yes
+	}
+
+	ai_chance = {
+		base = 100
+	}
+}
+
+debug_complete_sg_magic_knowledge = {
+	is_shown = {
+		is_player = yes
+		NOT = {
+			has_completed_subgoal = sg_magic_knowledge
 		}
+	}
+
+	when_taken = {
+		complete_objective_subgoal = sg_magic_knowledge
+	}
+
+	ai_chance = {
+		base = 100
+	}
+}
+
+debug_complete_sg_magic_academy = {
+	is_shown = {
+		is_player = yes
+		NOT = {
+			has_completed_subgoal = sg_magic_academy
+		}
+	}
+
+	when_taken = {
+		complete_objective_subgoal = sg_magic_academy
 	}
 
 	ai_chance = {

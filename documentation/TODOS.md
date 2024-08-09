@@ -19,12 +19,13 @@ Below is a table with all currently open ToDos.
 
 | File | Line | ToDo |
 | ---- | ---- | ---- |
-| ./mod/common/combat_unit_types/400_land_combat_unit_types.txt | 35 |  Add more image variants for combat_unit_type_mage_infantry |
-| ./mod/common/combat_unit_types/400_land_combat_unit_types.txt | 81 |  Add more image variants for combat_unit_type_mage_artillery |
+| ./mod/common/combat_unit_types/400_land_combat_unit_types.txt | 42 |  Add more image variants for combat_unit_type_mage_infantry |
+| ./mod/common/combat_unit_types/400_land_combat_unit_types.txt | 95 |  Add more image variants for combat_unit_type_mage_artillery |
 | ./mod/common/cultures/400_arcturian.txt | 2 |  Define custom culture (Currently copy of german) |
 | ./mod/common/cultures/401_dwarven.txt | 55 |  Create dwarven graphics & ethnicity |
 | ./mod/common/cultures/402_orcish.txt | 2 |  Define custom culture (Currently copy of dwarven) |
 | ./mod/common/cultures/402_orcish.txt | 55 |  Create dwarven graphics & ethnicity |
+| ./mod/common/decisions/400_debug_decisions.txt | 1 |  Deactivate all decisions in this file before release |
 | ./mod/common/history/buildings/400_dominion.txt | 1 |  Define proper buildings for new countries |
 | ./mod/common/history/buildings/401_mountain_kingdom.txt | 1 |  Define proper buildings for new countries |
 | ./mod/common/history/buildings/402_orcish_kingdom.txt | 1 |  Define proper buildings for new countries |
@@ -56,10 +57,12 @@ Below is a table with all currently open ToDos.
 | ./mod/gui/objective_types.gui | 1 |  Find a way to not overwrite this file |
 | ./mod/gui/tech_tree.gui | 1 |  Find a way to not overwrite this file |
 | ./mod/localization/english/gate_countries_l_english.yml | 10 |  Add proper flavor text GOK_FLAVOR_TEXT (Orkish Supremacy) |
-| ./mod/localization/english/gate_journal_l_english.yml | 19 |  Flesh out a proper description for mana_saturation.1.f (A World of Magic) |
-| ./mod/localization/english/gate_journal_l_english.yml | 36 |  Flesh out a proper description for dwarven_alps.1.f (Magic Alliance) |
-| ./mod/localization/english/gate_journal_l_english.yml | 48 |  Flesh out a proper description for dwarven_alps.4.f (Integrate German Population) |
-| ./mod/localization/english/gate_journal_l_english.yml | 52 |  Flesh out a proper description for dwarven_alps.5.f (Swiss Integration) |
+| ./mod/localization/english/gate_journal_l_english.yml | 17 |  Flesh out a proper description for mana_saturation.1.f (A World of Magic) |
+| ./mod/localization/english/gate_journal_l_english.yml | 34 |  Flesh out a proper description for dwarven_alps.1.f (Magic Alliance) |
+| ./mod/localization/english/gate_journal_l_english.yml | 46 |  Flesh out a proper description for dwarven_alps.4.f (Integrate German Population) |
+| ./mod/localization/english/gate_journal_l_english.yml | 50 |  Flesh out a proper description for dwarven_alps.5.f (Swiss Integration) |
+| ./mod/localization/english/gate_journal_l_english.yml | 54 |  Flesh out a proper description for je_obj_magic_knowledge_desc |
+| ./mod/localization/english/gate_journal_l_english.yml | 57 |  Flesh out a proper description for je_obj_magic_academy_desc |
 | ./mod/localization/english/gate_objective_l_english.yml | 11 |  Flesh out objective_magic_dominance_desc_GBR (Great Britain) |
 | ./mod/localization/english/gate_religion_l_english.yml | 5 |  Find better name for blood_god |
 | ./mod/localization/english/gate_technology_l_english.yml | 19 |  Write description for formalized_magic |

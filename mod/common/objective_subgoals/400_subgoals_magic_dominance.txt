@@ -1,0 +1,33 @@
+﻿sg_magic_knowledge = {
+	category = sgcat_magic_dominance
+	is_repeatable = no
+
+	trigger = {
+	}
+	
+	on_start = {
+		add_journal_entry = {
+			type = je_obj_magic_knowledge
+			objective_subgoal = sg_magic_knowledge
+		}
+	}
+}
+
+sg_magic_academy = {
+	category = sgcat_magic_dominance
+	is_repeatable = no
+
+	unlocking_subgoals_all = {
+		sg_magic_knowledge
+	}
+
+	trigger = {
+	}
+
+	on_start = {
+		add_journal_entry = {
+			type = je_obj_magic_academy
+			objective_subgoal = sg_magic_academy
+		}
+	}
+}

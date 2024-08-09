@@ -47,8 +47,7 @@
 	complete = {
 		trigger_if = {
 			OR = {
-				custom_tooltip = {
-					text = je_mana_saturation_already_done_tt
+				hidden_trigger = {
 					global_var:gate_mana_saturation_full = yes
 				}
 				custom_tooltip = {
