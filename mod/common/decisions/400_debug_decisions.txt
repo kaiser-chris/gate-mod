@@ -70,3 +70,22 @@ debug_dragon_greenland_decision = {
 	}
 }
 
+debug_dragon_california_decision = {
+	is_shown = {
+		is_player = yes
+		NOT = { has_global_variable = dragon_california_var }
+	}
+
+	when_taken = {
+		every_country = {
+			trigger_event = {
+				id = mana_saturation.5
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 100
+	}
+}
+

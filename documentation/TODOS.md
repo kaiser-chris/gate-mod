@@ -37,11 +37,11 @@ Below is a table with all currently open ToDos.
 | ./mod/common/production_method_groups/401_gate_production_method_groups.txt | 8 |  Add proper production method |
 | ./mod/common/production_methods/400_gate_production_methods.txt | 26 |  Can we add something like custom tooltip here? |
 | ./mod/common/production_methods/400_gate_production_methods.txt | 44 |  Can we add something like custom tooltip here? |
-| ./mod/common/production_methods/406_magic_academy_production_methods.txt | 115 |  Find proper logo for pm_magic_academy_full_support |
+| ./mod/common/production_methods/406_magic_academy_production_methods.txt | 117 |  Find proper logo for pm_magic_academy_full_support |
 | ./mod/common/production_methods/406_magic_academy_production_methods.txt | 29 |  Find proper logo for pm_magic_academy_partial_support |
 | ./mod/common/production_methods/406_magic_academy_production_methods.txt | 2 |  Find proper logo for pm_magic_academy_no_support |
-| ./mod/common/production_methods/406_magic_academy_production_methods.txt | 61 |  Find proper logo for pm_magic_academy_full_support |
-| ./mod/common/production_methods/406_magic_academy_production_methods.txt | 93 |  Find proper logo for pm_magic_academy_no_research |
+| ./mod/common/production_methods/406_magic_academy_production_methods.txt | 62 |  Find proper logo for pm_magic_academy_full_support |
+| ./mod/common/production_methods/406_magic_academy_production_methods.txt | 95 |  Find proper logo for pm_magic_academy_no_research |
 | ./mod/common/religions/gate_religion.txt | 2 |  Add proper icon |
 | ./mod/common/scripted_effects/401_gate_immigration.txt | 55 |  Balance trait state_trait_dwarven_immigration |
 | ./mod/common/scripted_effects/401_gate_immigration.txt | 65 |  Balance trait state_trait_dwarven_mass_immigration |
@@ -58,12 +58,12 @@ Below is a table with all currently open ToDos.
 | ./mod/localization/english/gate_countries_l_english.yml | 10 |  Add proper flavor text GOK_FLAVOR_TEXT (Orkish Supremacy) |
 | ./mod/localization/english/gate_journal_l_english.yml | 21 |  Flesh out a proper description for mana_saturation.1.f (A World of Magic) |
 | ./mod/localization/english/gate_journal_l_english.yml | 25 |  Flesh out a proper description for mana_saturation.2.f (Heinous Ritual) |
-| ./mod/localization/english/gate_journal_l_english.yml | 44 |  Flesh out a proper description for dwarven_alps.1.f (Magic Alliance) |
-| ./mod/localization/english/gate_journal_l_english.yml | 56 |  Flesh out a proper description for dwarven_alps.4.f (Integrate German Population) |
-| ./mod/localization/english/gate_journal_l_english.yml | 60 |  Flesh out a proper description for dwarven_alps.5.f (Swiss Integration) |
-| ./mod/localization/english/gate_journal_l_english.yml | 64 |  Flesh out a proper description for je_obj_magic_knowledge_desc |
-| ./mod/localization/english/gate_journal_l_english.yml | 67 |  Flesh out a proper description for je_obj_magic_academy_desc |
+| ./mod/localization/english/gate_journal_l_english.yml | 56 |  Flesh out a proper description for dwarven_alps.1.f (Magic Alliance) |
+| ./mod/localization/english/gate_journal_l_english.yml | 68 |  Flesh out a proper description for dwarven_alps.4.f (Integrate German Population) |
+| ./mod/localization/english/gate_journal_l_english.yml | 72 |  Flesh out a proper description for dwarven_alps.5.f (Swiss Integration) |
 | ./mod/localization/english/gate_objective_l_english.yml | 11 |  Flesh out objective_magic_dominance_desc_GBR (Great Britain) |
+| ./mod/localization/english/gate_objective_l_english.yml | 18 |  Flesh out a proper description for je_obj_magic_knowledge_desc |
+| ./mod/localization/english/gate_objective_l_english.yml | 21 |  Flesh out a proper description for je_obj_magic_academy_desc |
 | ./mod/localization/english/gate_religion_l_english.yml | 5 |  Find better name for blood_god |
 | ./mod/localization/english/gate_technology_l_english.yml | 19 |  Write description for formalized_magic |
 | ./mod/localization/english/gate_technology_l_english.yml | 21 |  Write description for magic_science |

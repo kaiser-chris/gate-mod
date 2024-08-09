@@ -90,9 +90,9 @@ mana_saturation.3 = {
 	type = country_event
 	placement = scope:dragon_greenland_state
 
-	title = mana_saturation.3.t
-	desc = mana_saturation.3.d
-	flavor = mana_saturation.3.f
+	title = mana_saturation.dragon.t
+	desc = mana_saturation.dragon_greenland.d
+	flavor = mana_saturation.dragon_greenland.f
 
 	event_image = {
 		video = "unspecific_devastation"
@@ -133,7 +133,7 @@ mana_saturation.3 = {
 	}
 
 	option = { #help our people
-		name = mana_saturation.3.a
+		name = mana_saturation.dragon.victim.a
 		default_option = yes
 		scope:dragon_greenland_state = {
 			add_modifier = {
@@ -162,7 +162,7 @@ mana_saturation.3 = {
 	}
 
 	option = { #nothing we can do
-		name = mana_saturation.3.b
+		name = mana_saturation.dragon.victim.b
 		scope:dragon_greenland_state = {
 			add_modifier = {
 				name = dragon_no_help_modifier
@@ -194,9 +194,9 @@ mana_saturation.4 = {
 	type = country_event
 	placement = scope:dragon_greenland_state
 
-	title = mana_saturation.3.t
-	desc = mana_saturation.3.d
-	flavor = mana_saturation.3.f
+	title = mana_saturation.dragon.t
+	desc = mana_saturation.dragon_greenland.d
+	flavor = mana_saturation.dragon_greenland.f
 
 	event_image = {
 		video = "unspecific_devastation"
@@ -209,7 +209,7 @@ mana_saturation.4 = {
 	duration = 3
 
 	option = { #send some humaritarian help
-		name = mana_saturation.4.a
+		name = mana_saturation.dragon.other.a
 		change_relations = {
 			country = scope:dragon_greenland_country
 			value = 30
@@ -222,10 +222,156 @@ mana_saturation.4 = {
 	}
 
 	option = { #it doesn't affect us that much
-		name = mana_saturation.4.b
+		name = mana_saturation.dragon.other.b
 		default_option = yes
 		change_relations = {
 			country = scope:dragon_greenland_country
+			value = -30
+		}
+		change_infamy = 5
+	}
+}
+
+mana_saturation.5 = {
+	type = country_event
+	placement = scope:dragon_california_state
+
+	title = mana_saturation.dragon.t
+	desc = mana_saturation.dragon_california.d
+	flavor = mana_saturation.dragon_california.f
+
+	event_image = {
+		video = "unspecific_devastation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+
+	trigger = {
+		NOT = { has_global_variable = dragon_california_var }
+		any_scope_state = {
+			state_region = s:STATE_CALIFORNIA
+		}
+	}
+
+	immediate = {
+		set_global_variable = dragon_california_var
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_CALIFORNIA
+			}
+			save_scope_as = dragon_california_state
+			owner = {
+				save_scope_as = dragon_california_country
+				set_variable = dragon_california_country_var
+			}
+		}
+		every_country = {
+			limit = {
+				is_player = yes
+				NOT = { has_variable = dragon_california_country_var }
+			}
+			trigger_event = { id = mana_saturation.6 } #notification event
+		}
+	}
+
+	option = { #help our people
+		name = mana_saturation.dragon.victim.a
+		default_option = yes
+		scope:dragon_california_state = {
+			add_modifier = {
+				name = dragon_help_modifier
+				months = short_modifier_time
+			}
+		}
+		scope:dragon_california_state.state_region = {
+			add_devastation = 50
+		}
+		every_state = {
+			limit = {
+				any_neighbouring_state = {
+					this = scope:dragon_california_state
+				}
+			}
+			state_region = {
+				add_devastation = 20
+			}
+		}
+		add_modifier = {
+			name = dragon_cost_modifier
+			months = short_modifier_time
+			multiplier = money_amount_multiplier_small
+		}
+	}
+
+	option = { #nothing we can do
+		name = mana_saturation.dragon.victim.b
+		scope:dragon_california_state = {
+			add_modifier = {
+				name = dragon_no_help_modifier
+				months = short_modifier_time
+			}
+		}
+		scope:dragon_california_state.state_region = {
+			add_devastation = 80
+		}
+		every_state = {
+			limit = {
+				any_neighbouring_state = {
+					this = scope:dragon_california_state
+				}
+			}
+			state_region = {
+				add_devastation = 50
+			}
+		}
+		capital = {
+			add_radicals_in_state = { #public outrage
+				value = medium_radicals
+			}
+		}
+	}
+}
+
+mana_saturation.6 = {
+	type = country_event
+	placement = scope:dragon_california_state
+
+	title = mana_saturation.dragon.t
+	desc = mana_saturation.dragon_california.d
+	flavor = mana_saturation.dragon_california.f
+
+	event_image = {
+		video = "unspecific_devastation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+
+	option = { #send some humaritarian help
+		name = mana_saturation.dragon.other.a
+		change_relations = {
+			country = scope:dragon_california_country
+			value = 30
+		}
+		add_modifier = {
+			name = dragon_cost_modifier
+			months = short_modifier_time
+			multiplier = money_amount_multiplier_small
+		}
+	}
+
+	option = { #it doesn't affect us that much
+		name = mana_saturation.dragon.other.b
+		default_option = yes
+		change_relations = {
+			country = scope:dragon_california_country
 			value = -30
 		}
 		change_infamy = 5
