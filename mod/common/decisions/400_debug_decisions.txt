@@ -2,13 +2,13 @@
 debug_mana_saturation_decision = {
 	is_shown = {
 		is_player = yes
-		global_var:gate_mana_saturation_full = no
+
+		NOT = { has_global_variable = gate_mana_saturation_full }
 	}
 
 	when_taken = {
 		set_global_variable = {
 			name = gate_mana_saturation_full
-			value = yes
 		}
 	}
 

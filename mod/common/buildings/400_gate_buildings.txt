@@ -36,7 +36,7 @@ building_mana_extractor = {
 	possible = {
 		OR = {
 			has_building = building_gate
-			global_var:gate_mana_saturation_full = yes
+			has_global_variable = gate_mana_saturation_full
 			any_neighbouring_state = {
 				has_building = building_gate
 			}

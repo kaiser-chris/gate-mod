@@ -106,6 +106,7 @@ mana_saturation.3 = {
 
 	trigger = {
 		NOT = { has_global_variable = dragon_greenland_var }
+		NOT = { has_global_variable = gate_mana_saturation_full }
 		any_scope_state = {
 			state_region = s:STATE_GREENLAND
 		}
@@ -252,6 +253,7 @@ mana_saturation.5 = {
 
 	trigger = {
 		NOT = { has_global_variable = dragon_california_var }
+		NOT = { has_global_variable = gate_mana_saturation_full }
 		any_scope_state = {
 			state_region = s:STATE_CALIFORNIA
 		}

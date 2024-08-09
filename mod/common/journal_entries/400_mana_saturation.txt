@@ -47,19 +47,11 @@
 		}
 	}
 
-	on_yearly_pulse = {
-		random_events = {
-			chance_of_no_event = 85
-			1 = mana_saturation.3 # Dragon - Greenland
-			2 = mana_saturation.5 # Dragon - California
-		}
-	}
-
 	complete = {
 		trigger_if = {
 			OR = {
 				hidden_trigger = {
-					global_var:gate_mana_saturation_full = yes
+					has_global_variable = gate_mana_saturation_full
 				}
 				custom_tooltip = {
 					text = je_mana_saturation_goal_tt
@@ -77,7 +69,6 @@
 	on_complete = {
 		set_global_variable = {
 			name = gate_mana_saturation_full
-			value = yes
 		}
 		trigger_event = {
 			id = mana_saturation.1
