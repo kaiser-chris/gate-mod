@@ -209,7 +209,7 @@ mana_saturation.4 = {
 
 	duration = 3
 
-	option = { #send some humaritarian help
+	option = { #send some humanitarian help
 		name = mana_saturation.dragon.other.a
 		change_relations = {
 			country = scope:dragon_greenland_country
@@ -356,7 +356,7 @@ mana_saturation.6 = {
 
 	duration = 3
 
-	option = { #send some humaritarian help
+	option = { #send some humanitarian help
 		name = mana_saturation.dragon.other.a
 		change_relations = {
 			country = scope:dragon_california_country
@@ -374,6 +374,300 @@ mana_saturation.6 = {
 		default_option = yes
 		change_relations = {
 			country = scope:dragon_california_country
+			value = -30
+		}
+		change_infamy = 5
+	}
+}
+
+mana_saturation.7 = {
+	type = country_event
+	placement = scope:dragon_kolyma_state
+
+	title = mana_saturation.dragon.t
+	desc = mana_saturation.dragon_kolyma.d
+	flavor = mana_saturation.dragon_kolyma.f
+
+	event_image = {
+		video = "unspecific_devastation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+
+	trigger = {
+		NOT = { has_global_variable = dragon_kolyma_var }
+		NOT = { has_global_variable = gate_mana_saturation_full }
+		any_scope_state = {
+			state_region = s:STATE_KOLYMA
+		}
+	}
+
+	immediate = {
+		set_global_variable = dragon_kolyma_var
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_KOLYMA
+			}
+			save_scope_as = dragon_kolyma_state
+			owner = {
+				save_scope_as = dragon_kolyma_country
+				set_variable = dragon_kolyma_country_var
+			}
+		}
+		every_country = {
+			limit = {
+				is_player = yes
+				NOT = { has_variable = dragon_kolyma_country_var }
+			}
+			trigger_event = { id = mana_saturation.8 } #notification event
+		}
+	}
+
+	option = { #help our people
+		name = mana_saturation.dragon.victim.a
+		default_option = yes
+		scope:dragon_kolyma_state = {
+			add_modifier = {
+				name = dragon_help_modifier
+				months = short_modifier_time
+			}
+		}
+		scope:dragon_kolyma_state.state_region = {
+			add_devastation = 50
+		}
+		every_state = {
+			limit = {
+				any_neighbouring_state = {
+					this = scope:dragon_kolyma_state
+				}
+			}
+			state_region = {
+				add_devastation = 20
+			}
+		}
+		add_modifier = {
+			name = dragon_cost_modifier
+			months = short_modifier_time
+			multiplier = money_amount_multiplier_small
+		}
+	}
+
+	option = { #nothing we can do
+		name = mana_saturation.dragon.victim.b
+		scope:dragon_kolyma_state = {
+			add_modifier = {
+				name = dragon_no_help_modifier
+				months = short_modifier_time
+			}
+		}
+		scope:dragon_kolyma_state.state_region = {
+			add_devastation = 80
+		}
+		every_state = {
+			limit = {
+				any_neighbouring_state = {
+					this = scope:dragon_kolyma_state
+				}
+			}
+			state_region = {
+				add_devastation = 50
+			}
+		}
+		capital = {
+			add_radicals_in_state = { #public outrage
+				value = medium_radicals
+			}
+		}
+	}
+}
+
+mana_saturation.8 = {
+	type = country_event
+	placement = scope:dragon_kolyma_state
+
+	title = mana_saturation.dragon.t
+	desc = mana_saturation.dragon_kolyma.d
+	flavor = mana_saturation.dragon_kolyma.f
+
+	event_image = {
+		video = "unspecific_devastation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+
+	option = { #send some humanitarian help
+		name = mana_saturation.dragon.other.a
+		change_relations = {
+			country = scope:dragon_kolyma_country
+			value = 30
+		}
+		add_modifier = {
+			name = dragon_cost_modifier
+			months = short_modifier_time
+			multiplier = money_amount_multiplier_small
+		}
+	}
+
+	option = { #it doesn't affect us that much
+		name = mana_saturation.dragon.other.b
+		default_option = yes
+		change_relations = {
+			country = scope:dragon_kolyma_country
+			value = -30
+		}
+		change_infamy = 5
+	}
+}
+
+mana_saturation.9 = {
+	type = country_event
+	placement = scope:dragon_himalaya_state
+
+	title = mana_saturation.dragon.t
+	desc = mana_saturation.dragon_himalaya.d
+	flavor = mana_saturation.dragon_himalaya.f
+
+	event_image = {
+		video = "unspecific_devastation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+
+	trigger = {
+		NOT = { has_global_variable = dragon_himalaya_var }
+		NOT = { has_global_variable = gate_mana_saturation_full }
+		any_scope_state = {
+			state_region = s:STATE_HIMALAYAS
+		}
+	}
+
+	immediate = {
+		set_global_variable = dragon_himalaya_var
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_HIMALAYAS
+			}
+			save_scope_as = dragon_himalaya_state
+			owner = {
+				save_scope_as = dragon_himalaya_country
+				set_variable = dragon_himalaya_country_var
+			}
+		}
+		every_country = {
+			limit = {
+				is_player = yes
+				NOT = { has_variable = dragon_himalaya_country_var }
+			}
+			trigger_event = { id = mana_saturation.10 } #notification event
+		}
+	}
+
+	option = { #help our people
+		name = mana_saturation.dragon.victim.a
+		default_option = yes
+		scope:dragon_himalaya_state = {
+			add_modifier = {
+				name = dragon_help_modifier
+				months = short_modifier_time
+			}
+		}
+		scope:dragon_himalaya_state.state_region = {
+			add_devastation = 50
+		}
+		every_state = {
+			limit = {
+				any_neighbouring_state = {
+					this = scope:dragon_himalaya_state
+				}
+			}
+			state_region = {
+				add_devastation = 20
+			}
+		}
+		add_modifier = {
+			name = dragon_cost_modifier
+			months = short_modifier_time
+			multiplier = money_amount_multiplier_small
+		}
+	}
+
+	option = { #nothing we can do
+		name = mana_saturation.dragon.victim.b
+		scope:dragon_himalaya_state = {
+			add_modifier = {
+				name = dragon_no_help_modifier
+				months = short_modifier_time
+			}
+		}
+		scope:dragon_himalaya_state.state_region = {
+			add_devastation = 80
+		}
+		every_state = {
+			limit = {
+				any_neighbouring_state = {
+					this = scope:dragon_himalaya_state
+				}
+			}
+			state_region = {
+				add_devastation = 50
+			}
+		}
+		capital = {
+			add_radicals_in_state = { #public outrage
+				value = medium_radicals
+			}
+		}
+	}
+}
+
+mana_saturation.10 = {
+	type = country_event
+	placement = scope:dragon_himalaya_state
+
+	title = mana_saturation.dragon.t
+	desc = mana_saturation.dragon_himalaya.d
+	flavor = mana_saturation.dragon_himalaya.f
+
+	event_image = {
+		video = "unspecific_devastation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+
+	option = { #send some humanitarian help
+		name = mana_saturation.dragon.other.a
+		change_relations = {
+			country = scope:dragon_himalaya_country
+			value = 30
+		}
+		add_modifier = {
+			name = dragon_cost_modifier
+			months = short_modifier_time
+			multiplier = money_amount_multiplier_small
+		}
+	}
+
+	option = { #it doesn't affect us that much
+		name = mana_saturation.dragon.other.b
+		default_option = yes
+		change_relations = {
+			country = scope:dragon_himalaya_country
 			value = -30
 		}
 		change_infamy = 5

@@ -89,3 +89,40 @@ debug_dragon_california_decision = {
 	}
 }
 
+debug_dragon_kolyma_decision = {
+	is_shown = {
+		is_player = yes
+		NOT = { has_global_variable = dragon_kolyma_var }
+	}
+
+	when_taken = {
+		every_country = {
+			trigger_event = {
+				id = mana_saturation.7
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 100
+	}
+}
+
+debug_dragon_himalaya_decision = {
+	is_shown = {
+		is_player = yes
+		NOT = { has_global_variable = dragon_himalaya_var }
+	}
+
+	when_taken = {
+		every_country = {
+			trigger_event = {
+				id = mana_saturation.9
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 100
+	}
+}
