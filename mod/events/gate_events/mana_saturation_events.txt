@@ -673,3 +673,53 @@ mana_saturation.10 = {
 		change_infamy = 5
 	}
 }
+
+mana_saturation.11 = {
+	type = country_event
+	placement = scope:magic_growing_state
+
+	title = mana_saturation.11.t
+	desc = mana_saturation.11.d
+	flavor = mana_saturation.11.f
+
+	event_image = {
+		video = "africa_prosperous_farm"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_growing.dds"
+
+	duration = 3
+
+	trigger = {
+		is_player = yes
+		global_var:magic_growing_var <= 20
+	}
+
+	immediate = {
+		change_global_variable = {
+			name = magic_growing_var
+			add = 1
+		}
+		random_state = {
+			limit = {
+				NOT = {
+					has_state_trait = state_trait_northern_canadian_terrain
+					has_state_trait = state_trait_siberian_terrain
+					has_state_trait = state_trait_arctic_whaling
+					has_state_trait = state_trait_good_soils
+				}
+			}
+			save_scope_as = magic_growing_state
+		}
+	}
+
+	option = {
+		name = mana_saturation.11.a
+		default_option = yes
+		scope:magic_growing_state.state_region = {
+			add_state_trait = state_trait_magic_soil
+		}
+	}
+}

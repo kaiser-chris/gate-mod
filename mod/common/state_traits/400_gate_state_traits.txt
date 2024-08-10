@@ -13,3 +13,12 @@ state_trait_dwarven_immigration = {
 state_trait_dwarven_mass_immigration = {
 	icon = "gfx/interface/icons/state_trait_icons/gate_migration.dds"
 }
+
+state_trait_magic_soil = {
+	icon = "gfx/interface/icons/state_trait_icons/good_soils.dds"
+
+	modifier = {
+		building_group_bg_agriculture_throughput_add = 0.2
+		building_group_bg_plantations_throughput_add = 0.2
+	}
+}

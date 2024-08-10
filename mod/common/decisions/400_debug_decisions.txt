@@ -2,7 +2,6 @@
 debug_mana_saturation_decision = {
 	is_shown = {
 		is_player = yes
-
 		NOT = { has_global_variable = gate_mana_saturation_full }
 	}
 
@@ -119,6 +118,23 @@ debug_dragon_himalaya_decision = {
 			trigger_event = {
 				id = mana_saturation.9
 			}
+		}
+	}
+
+	ai_chance = {
+		base = 100
+	}
+}
+
+debug_magic_growing_decision = {
+	is_shown = {
+		is_player = yes
+		global_var:magic_growing_var <= 20
+	}
+
+	when_taken = {
+		trigger_event = {
+			id = mana_saturation.11
 		}
 	}
 

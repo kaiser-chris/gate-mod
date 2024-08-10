@@ -1,6 +1,10 @@
 ﻿# This scripts are run after all other history scripts were run
 GLOBAL = {
 
+	set_global_variable = {
+		name = magic_growing_var
+		value = 0
+	}
 	# Mana Saturation through gates.
 	# Without further input will lead to full saturation in 1890s
 	set_global_variable = {
