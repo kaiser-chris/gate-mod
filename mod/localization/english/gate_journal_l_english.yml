@@ -18,11 +18,11 @@
  gate_mana_saturation_ritual_progress_bar_balance: "Rituals"
  mana_saturation.1.t: "A World of Magic"
  mana_saturation.1.d: "[concept_mana_saturation] has reached its maximum.\nAll countries get [concept_magic_knowledge]."
- mana_saturation.1.f: "Every person of earth can feel the magic flowing through the air. Magic understanding follows this feeling." #TODO: Flesh out a proper description for mana_saturation.1.f (A World of Magic)
+ mana_saturation.1.f: "The world now thrums with a constant, low vibration, the air thick with the shimmer of unseen forces. Every stone, every leaf, every breath hums with the raw, pulsing energy of mana. The oceans glow with an eerie light, and the sky dances with colors never before seen by human eyes. The earth has become a living conduit of power, its very core saturated with magic."
  mana_saturation.1.a: "Nothing will ever be the same."
  mana_saturation.2.t: "Heinous Ritual"
  mana_saturation.2.d: "Increase mana saturation through ritual sacrifices."
- mana_saturation.2.f: "TODO" #TODO: Flesh out a proper description for mana_saturation.2.f (Heinous Ritual)
+ mana_saturation.2.f: "In the shadow of towering spires, whispers of dark rituals filled the air. The council decreed that to saturate the earth with mana, the blood of the enslaved would be spilled. Beneath a blood-red moon, the condemned were led to ancient altars, their lives exchanged for the promise of arcane power. The earth drank deeply, its veins pulsing with new energy, as the price of power was paid in the currency of despair."
  mana_saturation.2.a: "This world needs more magic whatever the price."
  mana_saturation.2.a_progress_tt: "Increases [concept_mana_saturation] by five percent at the end of the month"
  mana_saturation.2.b: "We need to stop this madness."
@@ -60,8 +60,8 @@
  dwarven_tunnels_decision: "Digging Dwarven Tunnels"
  dwarven_tunnels_decision_desc: "Add $state_trait_dwarven_tunnels$ trait to mountainous states."
  dwarven_alps.1.t: "Magic Alliance"
- dwarven_alps.1.d: "Forged and Alliance with [SCOPE.sCountry('loc_swiss_scope').GetName] for our magic knowledge."
- dwarven_alps.1.f: "We have shown them what we can offer." #TODO: Flesh out a proper description for dwarven_alps.1.f (Magic Alliance)
+ dwarven_alps.1.d: "Forged and Alliance with [SCOPE.sCountry('loc_swiss_scope').GetName] for our [concept_magic_knowledge]."
+ dwarven_alps.1.f: "In the frostbitten peaks of $GMK$, the dwarves emerged from their hidden forges, carrying secrets older than the mountains themselves. Under the watchful gaze of ancient stone sentinels, they met with the envoys of Switzerland, their eyes gleaming with a mix of caution and hope. In exchange for sharing their arcane knowledge, the dwarves sought the strength of an alliance with the surface dwellers. The pact was sealed with a clasped handshake, binding mountain and valley in a union that promised to reshape the fate of both realms."
  dwarven_alps.1.a: "We will share the mountain range."
  dwarven_alps.2.t: "Digging Tunnels"
  dwarven_alps.2.d: "Add $state_trait_dwarven_tunnels$ trait to mountainous states."
@@ -73,9 +73,9 @@
  dwarven_alps.3.a: "We own the Alps."
  dwarven_alps.4.t: "Integrate German Population"
  dwarven_alps.4.d: "Add [SCOPE.sCulture('loc_south_german_scope').GetName] and [SCOPE.sCulture('loc_alemannic_scope').GetName] cultures as [concept_primary_cultures]."
- dwarven_alps.4.f: "Germans will be full citizens going forward.\nThis will draw us into german politics." #TODO: Flesh out a proper description for dwarven_alps.4.f (Integrate German Population)
+ dwarven_alps.4.f: "In the shadow of towering alpine peaks, the dwarves of $GMK$ convened, their axes and hammers glinting with resolve. The German settlers who had carved out lives on these rugged heights now faced a new chapter. With a formal decree, the dwarves extended their hand in integration, blending their ancient traditions with the industrious spirit of the mountain folk. As the icy winds howled around them, a new alliance was forged in the heart of the mountains, uniting cultures and crafting a future where every stone and every story would be intertwined."
  dwarven_alps.4.a: "We will make dwarves out of them yet."
  dwarven_alps.5.t: "Swiss Integration"
  dwarven_alps.5.d: "We have fully integrated [SCOPE.sCountry('loc_swiss_scope').GetName]."
- dwarven_alps.5.f: "We have shown them what we can offer." #TODO: Flesh out a proper description for dwarven_alps.5.f (Swiss Integration)
+ dwarven_alps.5.f: "In the heart of the Alps, where the peaks pierce the heavens, the leaders of $GMK$ and $SWI$ stood side by side, their voices echoing through ancient halls. The dwarven king, his crown gleaming with the light of the earth’s core, proclaimed the unification of their peoples. $SWI$ would join under dwarven leadership, melding the strength of stone with the resilience of flesh. The mountains roared in approval, as the two nations became one, forging a new era of prosperity and power, where magic and might would reign supreme."
  dwarven_alps.5.a: "We will share the mountain range."

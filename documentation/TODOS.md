@@ -56,11 +56,6 @@ Below is a table with all currently open ToDos.
 | ./mod/gui/objective_types.gui | 1 |  Find a way to not overwrite this file |
 | ./mod/gui/tech_tree.gui | 1 |  Find a way to not overwrite this file |
 | ./mod/localization/english/gate_countries_l_english.yml | 10 |  Add proper flavor text GOK_FLAVOR_TEXT (Orkish Supremacy) |
-| ./mod/localization/english/gate_journal_l_english.yml | 21 |  Flesh out a proper description for mana_saturation.1.f (A World of Magic) |
-| ./mod/localization/english/gate_journal_l_english.yml | 25 |  Flesh out a proper description for mana_saturation.2.f (Heinous Ritual) |
-| ./mod/localization/english/gate_journal_l_english.yml | 60 |  Flesh out a proper description for dwarven_alps.1.f (Magic Alliance) |
-| ./mod/localization/english/gate_journal_l_english.yml | 72 |  Flesh out a proper description for dwarven_alps.4.f (Integrate German Population) |
-| ./mod/localization/english/gate_journal_l_english.yml | 76 |  Flesh out a proper description for dwarven_alps.5.f (Swiss Integration) |
 | ./mod/localization/english/gate_objective_l_english.yml | 11 |  Flesh out objective_magic_dominance_desc_GBR (Great Britain) |
 | ./mod/localization/english/gate_objective_l_english.yml | 18 |  Flesh out a proper description for je_obj_magic_knowledge_desc |
 | ./mod/localization/english/gate_objective_l_english.yml | 21 |  Flesh out a proper description for je_obj_magic_academy_desc |
