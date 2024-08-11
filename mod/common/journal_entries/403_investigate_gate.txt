@@ -1,0 +1,95 @@
+﻿je_investigate_gate = {
+	icon = "gfx/interface/icons/event_icons/event_world.dds"
+
+	group = je_group_gate_content
+
+	scripted_button = je_investigate_gate_button_focus_academia
+
+	complete = {
+		scope:journal_entry = {
+			is_goal_complete = yes
+		}
+	}
+
+	invalid = {
+		OR = {
+			AND = {
+				has_technology_researched = magic_understanding_production
+				has_technology_researched = magic_understanding_society
+				has_technology_researched = magic_understanding_military
+			}
+			NOT = {
+				any_scope_state = {
+					has_building = building_gate
+				}
+			}
+		}
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			# Base
+			if = {
+				limit = {
+					NOT = {
+						has_technology_researched = magic_understanding_production
+						has_technology_researched = magic_understanding_society
+						has_technology_researched = magic_understanding_military
+					}
+					any_scope_state = {
+						has_building = building_gate
+					}
+				}
+				change_variable = {
+					name = investigate_gate_var
+					add = 1
+				}
+			}
+
+			# Focused Efforts
+			if = {
+				limit = {
+					has_modifier = focus_investigate_gate_cost_modifier
+				}
+				change_variable = {
+					name = investigate_gate_var
+					add = 2
+				}
+			}
+		}
+	}
+
+
+	on_complete = {
+		hidden_effect = {
+			remove_modifier = focus_investigate_gate_cost_modifier
+		}
+		trigger_event = {
+			id = investigate_gate.1
+			popup = yes
+		}
+	}
+
+	on_invalid = {
+		hidden_effect = {
+			remove_modifier = focus_investigate_gate_cost_modifier
+		}
+		remove_variable = investigate_gate_var
+	}
+
+	current_value = {
+		value = root.var:investigate_gate_var
+	}
+
+	goal_add_value = {
+		add = 60
+	}
+
+	progressbar = yes
+
+	transferable = no
+	can_revolution_inherit = yes
+
+	weight = 200
+	should_be_pinned_by_default = yes
+}

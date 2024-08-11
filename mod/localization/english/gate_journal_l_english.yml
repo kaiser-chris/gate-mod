@@ -1,5 +1,6 @@
 ﻿l_english:
  je_group_gate_content: "Magical Affairs"
+
 # Mana Saturation
  je_mana_saturation: "Global Mana Saturation"
  je_mana_saturation_goal_tt: "[concept_mana_saturation] has reached its maximum"
@@ -45,7 +46,8 @@
  mana_saturation.11.t: "Mana Increases Plant Growth"
  mana_saturation.11.d: "Through increased [concept_mana_saturation] plants are growing faster in [SCOPE.sState('magic_growing_state').GetName]."
  mana_saturation.11.f: "As the veil between worlds thinned, mana seeped into the earth like a whispered secret. Overnight, seeds burst into bloom, vines spiraled skyward, and ancient trees unfurled leaves of radiant green. The land hummed with newfound life, a vibrant pulse in every root and branch, as nature thrived in this enchanted dawn."
- mana_saturation.11.a: "Interesting."
+ mana_saturation.11.a: "This will change how we grow crops."
+
 # Dwarven Integration
  je_dwarven_alps: "Owners of the Alps"
  je_dwarven_alps_status: "We claim all of our home mountain range."
@@ -79,3 +81,18 @@
  dwarven_alps.5.d: "We have fully integrated [SCOPE.sCountry('loc_swiss_scope').GetName]."
  dwarven_alps.5.f: "In the heart of the Alps, where the peaks pierce the heavens, the leaders of $GMK$ and $SWI$ stood side by side, their voices echoing through ancient halls. The dwarven king, his crown gleaming with the light of the earth’s core, proclaimed the unification of their peoples. $SWI$ would join under dwarven leadership, melding the strength of stone with the resilience of flesh. The mountains roared in approval, as the two nations became one, forging a new era of prosperity and power, where magic and might would reign supreme."
  dwarven_alps.5.a: "We will share the mountain range."
+
+# Investigating Magic Gate
+ je_investigate_gate: "Investigating $building_gate$"
+ je_investigate_gate_reason: "TODO" #TODO: Write flavor text for je_learn_magic_reason
+ je_investigate_gate_goal: "Successful Investigation"
+ je_investigate_gate_button_focus_academia: "Focus all our Efforts"
+ je_investigate_gate_button_focus_academia_desc: "We will focus all our efforts on this investigation, even if it hurts our technological progress."
+ je_investigate_gate_button_focus_academia_result_tt: "The modifier is removed at the end of the investigation"
+ focus_investigate_gate_cost_modifier: "Focused Investigation"
+ investigate_gate_decision: "Investigate $building_gate$"
+ investigate_gate_decision_desc: "Investigate [GetBuildingType('building_gate').GetName] to learn [concept_magic_knowledge]."
+ investigate_gate.1.t: "Successful Investigation"
+ investigate_gate.1.d: "Our investigation of the [GetBuildingType('building_gate').GetName] has resulted in [concept_magic_knowledge]."
+ investigate_gate.1.f: "After months of relentless study and guarded whispers, our scholars finally unlocked the secrets of the captured magic gate. The ancient runes that once defied understanding now pulsed with life, revealing knowledge long lost to time. As the gate’s mysteries unfolded, streams of arcane energy flowed into our hands, reshaping our understanding of the world. With this newfound power, our country stands on the brink of a magical renaissance, poised to harness the forces that had eluded us for generations."
+ investigate_gate.1.a: "This power will lead us to new heights."

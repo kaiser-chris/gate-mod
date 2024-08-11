@@ -1,0 +1,39 @@
+﻿investigate_gate_decision = {
+	is_shown = {
+		NOT = {
+			has_technology_researched = magic_understanding_production
+			has_technology_researched = magic_understanding_society
+			has_technology_researched = magic_understanding_military
+		}
+	}
+
+	possible = {
+		is_diplomatic_play_committed_participant = no
+		is_at_war = no
+		NOT = {
+			has_technology_researched = magic_understanding_production
+			has_technology_researched = magic_understanding_society
+			has_technology_researched = magic_understanding_military
+		}
+		any_scope_state = {
+			has_building = building_gate
+		}
+		hidden_trigger = {
+			NOT = { has_variable = investigate_gate_var }
+		}
+	}
+
+	when_taken = {
+		set_variable = {
+			name = investigate_gate_var
+			value = 0
+		}
+		add_journal_entry = {
+			type = je_investigate_gate
+		}
+	}
+
+	ai_chance = {
+		base = 100
+	}
+}

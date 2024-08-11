@@ -24,13 +24,13 @@ Below is a list of the currently implemented content:
  - 3 new Religions
  - 4 new Buildings
  - 20 new Production Methods for new and old Buildings
- - 4 new Journal Entries
- - 16 new Events
+ - 5 new Journal Entries
+ - 17 new Events
  - 1 new Pop
  - 1 new Good
  - 2 new Combat Unit Types
  - 1 new Diplomatic Action
- - 340 new Localization Keys
+ - 352 new Localization Keys
 
 [//]: # (CONTENT-END)
 
@@ -64,7 +64,7 @@ I would love to have other people contribute art to the mod.
 
 ### Problems
 
- - In the Tech Tree UI some of the new technologies are selectable for non-magic countries even though they are not researchable.
+ - In the Tech Tree UI, some of the new technologies are selectable for non-magic countries even though they are not researchable.
  - Since we can't add new war goals, 'Demand Magic Knowledge' is a Diplomatic Action instead of a war goal.
  - New Combat Unit Types are always set as default because they are defined in a new file that is loaded after all base game Combat Unit Types. This is necessary since we do not want to overwrite the base game Combat Unit Types to keep compatibility with future game updates.
 

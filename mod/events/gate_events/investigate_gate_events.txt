@@ -1,0 +1,30 @@
+﻿namespace = investigate_gate
+
+investigate_gate.1 = {
+	type = country_event
+	
+	title = investigate_gate.1.t
+	desc = investigate_gate.1.d
+	flavor = investigate_gate.1.f
+	
+	event_image = {
+		video = "asia_confucianism_shinto"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+	
+	duration = 3
+	
+	trigger = {
+	}
+
+	option = {
+		name = investigate_gate.1.a
+		default_option = yes
+		add_technology_researched = magic_understanding_production
+		add_technology_researched = magic_understanding_society
+		add_technology_researched = magic_understanding_military
+	}
+}
