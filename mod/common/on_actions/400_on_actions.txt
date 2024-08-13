@@ -20,15 +20,18 @@ on_monthly_add_gate_immigration = {
 
 on_yearly_pulse_country = {
     on_actions = {
-        on_yearly_mana_saturation_events
+        on_yearly_mana_saturation_other_events
+        on_yearly_mana_saturation_dragon_events
     }
 }
 
-on_yearly_mana_saturation_events = {
+on_yearly_mana_saturation_other_events = {
     random_events = {
-        chance_of_no_event = 33
-        66 = mana_saturation.11 # Magic Soils
+        chance_of_no_event = 40
+        60 = mana_saturation.11 # Magic Soils
     }
+}
+on_yearly_mana_saturation_dragon_events = {
     random_events = {
         chance_of_no_event = 95
         1 = mana_saturation.3 # Dragon - Greenland

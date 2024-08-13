@@ -106,7 +106,6 @@ mana_saturation.3 = {
 
 	trigger = {
 		NOT = { has_global_variable = dragon_greenland_var }
-		NOT = { has_global_variable = gate_mana_saturation_full }
 		any_scope_state = {
 			state_region = s:STATE_GREENLAND
 		}
@@ -253,7 +252,6 @@ mana_saturation.5 = {
 
 	trigger = {
 		NOT = { has_global_variable = dragon_california_var }
-		NOT = { has_global_variable = gate_mana_saturation_full }
 		any_scope_state = {
 			state_region = s:STATE_CALIFORNIA
 		}
@@ -400,7 +398,6 @@ mana_saturation.7 = {
 
 	trigger = {
 		NOT = { has_global_variable = dragon_kolyma_var }
-		NOT = { has_global_variable = gate_mana_saturation_full }
 		any_scope_state = {
 			state_region = s:STATE_KOLYMA
 		}
@@ -547,7 +544,6 @@ mana_saturation.9 = {
 
 	trigger = {
 		NOT = { has_global_variable = dragon_himalaya_var }
-		NOT = { has_global_variable = gate_mana_saturation_full }
 		any_scope_state = {
 			state_region = s:STATE_HIMALAYAS
 		}
