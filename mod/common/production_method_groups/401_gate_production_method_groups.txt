@@ -59,3 +59,31 @@ pmg_magic_academy_research = {
 		pm_magic_academy_technology_research
 	}
 }
+
+pmg_golem_workshop_production = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_golem_workshop_artisan_production
+	}
+}
+
+pmg_golem_depot_mining = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_golem_depot_no_golems
+		pm_golem_depot_mining_golems
+	}
+}
+
+pmg_golem_depot_agriculture = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_golem_depot_no_golems
+	}
+}
