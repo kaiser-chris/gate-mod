@@ -8,7 +8,6 @@
 			goods_input_mana_add = 10
 			goods_input_hardwood_add = 20
 			goods_input_fabric_add = 20
-			goods_input_steel_add = 20
 
 			# output goods
 			goods_output_golem_add = 20
@@ -27,18 +26,18 @@ pm_golem_workshop_steam_production = {
 	texture = "gfx/interface/icons/production_method_icons/gate_barred.dds"
 
 	unlocking_technologies = {
-		#TODO: Create technology for pm_golem_workshop_steam_production
-		formalized_magic
+		magic_steam_golems
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
 			goods_input_mana_add = 20
-			goods_input_hardwood_add = 20
+			goods_input_hardwood_add = 10
 			goods_input_fabric_add = 20
-			goods_input_steel_add = 30
+			goods_input_steel_add = 10
 			goods_input_engines_add = 10
+			goods_input_coal_add = 10
 
 			# output goods
 			goods_output_golem_add = 35
@@ -59,15 +58,13 @@ pm_golem_workshop_electric_production = {
 	texture = "gfx/interface/icons/production_method_icons/gate_barred.dds"
 
 	unlocking_technologies = {
-		#TODO: Create technology for pm_golem_workshop_electric_production
-		formalized_magic
+		magic_electric_golems
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
 			goods_input_mana_add = 20
-			goods_input_hardwood_add = 20
 			goods_input_fabric_add = 20
 			goods_input_steel_add = 30
 			goods_input_engines_add = 5
@@ -114,8 +111,7 @@ pm_golem_depot_mining_normal_golems = {
 	}
 
 	unlocking_technologies = {
-		#TODO: Create technology for golems
-		formalized_magic
+		magic_golems
 	}
 
 	building_modifiers = {
@@ -147,8 +143,7 @@ pm_golem_depot_mining_steam_golems = {
 	}
 
 	unlocking_technologies = {
-		#TODO: Create technology for pm_golem_depot_mining_steam_golems
-		formalized_magic
+		magic_steam_golems
 	}
 
 	building_modifiers = {
@@ -156,6 +151,7 @@ pm_golem_depot_mining_steam_golems = {
 			# input goods
 			goods_input_golem_add = 30
 			goods_input_engines_add = 10
+			goods_input_coal_add = 10
 		}
 
 		level_scaled = {
@@ -181,14 +177,13 @@ pm_golem_depot_mining_electric_golems = {
 	}
 
 	unlocking_technologies = {
-		#TODO: Create technology for pm_golem_depot_mining_electric_golems
-		formalized_magic
+		magic_electric_golems
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_golem_add = 40
+			goods_input_golem_add = 50
 			goods_input_engines_add = 5
 			goods_input_electricity_add = 50
 		}

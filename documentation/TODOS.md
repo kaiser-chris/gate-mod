@@ -20,9 +20,7 @@ Below is a table with all currently open ToDos.
 | File | Line | ToDo |
 | ---- | ---- | ---- |
 | ./mod/common/buildings/400_gate_buildings.txt | 135 |  Create icon for building_golem_workshop |
-| ./mod/common/buildings/400_gate_buildings.txt | 140 |  Create technology for golems |
-| ./mod/common/buildings/400_gate_buildings.txt | 155 |  Create icon for building_golem_depot |
-| ./mod/common/buildings/400_gate_buildings.txt | 161 |  Create technology for golems |
+| ./mod/common/buildings/400_gate_buildings.txt | 154 |  Create icon for building_golem_depot |
 | ./mod/common/combat_unit_types/400_land_combat_unit_types.txt | 42 |  Add more image variants for combat_unit_type_mage_infantry |
 | ./mod/common/combat_unit_types/400_land_combat_unit_types.txt | 95 |  Add more image variants for combat_unit_type_mage_artillery |
 | ./mod/common/cultures/400_arcturian.txt | 2 |  Define custom culture (Currently copy of german) |
@@ -47,24 +45,29 @@ Below is a table with all currently open ToDos.
 | ./mod/common/production_methods/406_magic_academy_production_methods.txt | 2 |  Find proper logo for pm_magic_academy_no_support |
 | ./mod/common/production_methods/406_magic_academy_production_methods.txt | 62 |  Find proper logo for pm_magic_academy_full_support |
 | ./mod/common/production_methods/406_magic_academy_production_methods.txt | 95 |  Find proper logo for pm_magic_academy_no_research |
-| ./mod/common/production_methods/407_golem_production_methods.txt | 103 |  Create icon for pm_golem_depot_mining_normal_golems |
-| ./mod/common/production_methods/407_golem_production_methods.txt | 117 |  Create technology for golems |
-| ./mod/common/production_methods/407_golem_production_methods.txt | 136 |  Create icon for pm_golem_depot_mining_steam_golems |
-| ./mod/common/production_methods/407_golem_production_methods.txt | 150 |  Create technology for pm_golem_depot_mining_steam_golems |
-| ./mod/common/production_methods/407_golem_production_methods.txt | 170 |  Create icon for pm_golem_depot_mining_electric_golems |
-| ./mod/common/production_methods/407_golem_production_methods.txt | 184 |  Create technology for pm_golem_depot_mining_electric_golems |
-| ./mod/common/production_methods/407_golem_production_methods.txt | 26 |  Create icon for pm_golem_workshop_steam_production |
-| ./mod/common/production_methods/407_golem_production_methods.txt | 2 |  Create icon for pm_golem_workshop_artisan_production |
-| ./mod/common/production_methods/407_golem_production_methods.txt | 30 |  Create technology for pm_golem_workshop_steam_production |
-| ./mod/common/production_methods/407_golem_production_methods.txt | 58 |  Create icon for pm_golem_workshop_electric_production |
-| ./mod/common/production_methods/407_golem_production_methods.txt | 62 |  Create technology for pm_golem_workshop_electric_production |
-| ./mod/common/production_methods/407_golem_production_methods.txt | 93 |  Create icon for pm_golem_depot_no_golems |
-| ./mod/common/production_methods/407_golem_production_methods.txt | 98 |  Create icon for pm_golem_depot_no_golems |
+| ./mod/common/production_methods/407_golem_depot_production_methods.txt | 12 |  Create icon for pm_golem_depot_mining_normal_golems |
+| ./mod/common/production_methods/407_golem_depot_production_methods.txt | 2 |  Create icon for pm_golem_depot_no_golems |
+| ./mod/common/production_methods/407_golem_depot_production_methods.txt | 44 |  Create icon for pm_golem_depot_mining_steam_golems |
+| ./mod/common/production_methods/407_golem_depot_production_methods.txt | 78 |  Create icon for pm_golem_depot_mining_electric_golems |
+| ./mod/common/production_methods/407_golem_depot_production_methods.txt | 7 |  Create icon for pm_golem_depot_no_golems |
+| ./mod/common/production_methods/407_golem_workshop_production_methods.txt | 100 |  Create icon for pm_golem_depot_mining_normal_golems |
+| ./mod/common/production_methods/407_golem_workshop_production_methods.txt | 132 |  Create icon for pm_golem_depot_mining_steam_golems |
+| ./mod/common/production_methods/407_golem_workshop_production_methods.txt | 166 |  Create icon for pm_golem_depot_mining_electric_golems |
+| ./mod/common/production_methods/407_golem_workshop_production_methods.txt | 25 |  Create icon for pm_golem_workshop_steam_production |
+| ./mod/common/production_methods/407_golem_workshop_production_methods.txt | 2 |  Create icon for pm_golem_workshop_artisan_production |
+| ./mod/common/production_methods/407_golem_workshop_production_methods.txt | 57 |  Create icon for pm_golem_workshop_electric_production |
+| ./mod/common/production_methods/407_golem_workshop_production_methods.txt | 90 |  Create icon for pm_golem_depot_no_golems |
+| ./mod/common/production_methods/407_golem_workshop_production_methods.txt | 95 |  Create icon for pm_golem_depot_no_golems |
 | ./mod/common/religions/gate_religion.txt | 2 |  Add proper icon |
 | ./mod/common/scripted_effects/401_gate_immigration.txt | 55 |  Balance trait state_trait_dwarven_immigration |
 | ./mod/common/scripted_effects/401_gate_immigration.txt | 65 |  Balance trait state_trait_dwarven_mass_immigration |
+| ./mod/common/technology/technologies/401_magic_production.txt | 114 |  Add proper logo for magic_golems |
+| ./mod/common/technology/technologies/401_magic_production.txt | 130 |  Add proper logo for magic_golems |
+| ./mod/common/technology/technologies/401_magic_production.txt | 146 |  Add proper logo for magic_golems |
 | ./mod/common/technology/technologies/401_magic_production.txt | 19 |  Add proper logo for mana_extraction |
 | ./mod/common/technology/technologies/401_magic_production.txt | 34 |  Add proper logo for magic_farming |
+| ./mod/common/technology/technologies/401_magic_production.txt | 83 |  Add proper logo for magic_golems |
+| ./mod/common/technology/technologies/401_magic_production.txt | 98 |  Add proper logo for magic_golems |
 | ./mod/common/technology/technologies/402_magic_military.txt | 18 |  Add proper logo for mage_infantry |
 | ./mod/common/technology/technologies/402_magic_military.txt | 34 |  Add proper logo for mage_artillery |
 | ./mod/common/technology/technologies/403_magic_society.txt | 28 |  Add proper logo for formalized_magic |
@@ -79,7 +82,12 @@ Below is a table with all currently open ToDos.
 | ./mod/localization/english/gate_objective_l_english.yml | 18 |  Flesh out a proper description for je_obj_magic_knowledge_desc |
 | ./mod/localization/english/gate_objective_l_english.yml | 21 |  Flesh out a proper description for je_obj_magic_academy_desc |
 | ./mod/localization/english/gate_religion_l_english.yml | 5 |  Find better name for blood_god |
-| ./mod/localization/english/gate_technology_l_english.yml | 19 |  Write description for formalized_magic |
-| ./mod/localization/english/gate_technology_l_english.yml | 21 |  Write description for magic_science |
+| ./mod/localization/english/gate_technology_l_english.yml | 14 |  Write description for magic_golems |
+| ./mod/localization/english/gate_technology_l_english.yml | 16 |  Write description for magic_steam_golems |
+| ./mod/localization/english/gate_technology_l_english.yml | 18 |  Write description for magic_electric_golems |
+| ./mod/localization/english/gate_technology_l_english.yml | 20 |  Write description for magic_and_steam |
+| ./mod/localization/english/gate_technology_l_english.yml | 22 |  Write description for magic_and_electricity |
+| ./mod/localization/english/gate_technology_l_english.yml | 29 |  Write description for formalized_magic |
+| ./mod/localization/english/gate_technology_l_english.yml | 31 |  Write description for magic_science |
 
 [//]: # (TODO-END)
