@@ -5,7 +5,7 @@ pmg_magic_gate_exploitation = {
 	ai_selection = most_productive
 
 	production_methods = {
-	    #TODO: Add proper production method
+	    #TODO: Add proper production method to pmg_magic_gate_exploitation
         # Support from home
         # Discovery
         # Enslavement
@@ -21,7 +21,7 @@ pmg_mana_extraction = {
 	ai_selection = most_productive
 
 	production_methods = {
-		#TODO: Add proper production method
+		#TODO: Add proper production method to pmg_mana_extraction
         # Ritual extraction
         # Magitech extraction
 		pm_mage_mana_extraction
@@ -74,8 +74,10 @@ pmg_golem_depot_mining = {
 	ai_selection = most_productive
 
 	production_methods = {
-		pm_golem_depot_no_golems
-		pm_golem_depot_mining_golems
+		pm_golem_depot_mining_none
+		pm_golem_depot_mining_normal_golems
+		pm_golem_depot_mining_steam_golems
+		pm_golem_depot_mining_electric_golems
 	}
 }
 
@@ -84,6 +86,6 @@ pmg_golem_depot_agriculture = {
 	ai_selection = most_productive
 
 	production_methods = {
-		pm_golem_depot_no_golems
+		pm_golem_depot_agriculture_none
 	}
 }
