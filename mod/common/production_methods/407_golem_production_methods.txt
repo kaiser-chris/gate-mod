@@ -22,6 +22,73 @@
 	}
 }
 
+pm_golem_workshop_steam_production = {
+	#TODO: Create icon for pm_golem_workshop_steam_production
+	texture = "gfx/interface/icons/production_method_icons/gate_barred.dds"
+
+	unlocking_technologies = {
+		#TODO: Create technology for pm_golem_workshop_steam_production
+		formalized_magic
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_mana_add = 20
+			goods_input_hardwood_add = 20
+			goods_input_fabric_add = 20
+			goods_input_steel_add = 30
+			goods_input_engines_add = 10
+
+			# output goods
+			goods_output_golem_add = 35
+		}
+
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_mages_add = 2000
+			building_employment_laborers_add = 1000
+			building_employment_machinists_add = 2000
+			building_employment_engineers_add = 1000
+		}
+	}
+}
+
+pm_golem_workshop_electric_production = {
+	#TODO: Create icon for pm_golem_workshop_electric_production
+	texture = "gfx/interface/icons/production_method_icons/gate_barred.dds"
+
+	unlocking_technologies = {
+		#TODO: Create technology for pm_golem_workshop_electric_production
+		formalized_magic
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_mana_add = 20
+			goods_input_hardwood_add = 20
+			goods_input_fabric_add = 20
+			goods_input_steel_add = 30
+			goods_input_engines_add = 5
+			goods_input_electricity_add = 35
+
+			# output goods
+			goods_output_golem_add = 60
+		}
+
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_mages_add = 2000
+			building_employment_laborers_add = 1000
+			building_employment_machinists_add = 3000
+			building_employment_engineers_add = 2000
+		}
+	}
+
+	required_input_goods = electricity
+}
+
 pm_golem_depot_agriculture_none = {
 	#TODO: Create icon for pm_golem_depot_no_golems
 	texture = "gfx/interface/icons/production_method_icons/gate_barred.dds"
@@ -132,4 +199,6 @@ pm_golem_depot_mining_electric_golems = {
 			building_employment_clerks_add = 750
 		}
 	}
+
+	required_input_goods = electricity
 }

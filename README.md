@@ -23,7 +23,7 @@ Below is a list of the currently implemented content:
  - 3 new Cultures
  - 3 new Religions
  - 6 new Buildings
- - 26 new Production Methods for new and old Buildings
+ - 28 new Production Methods for new and old Buildings
  - 5 new Journal Entries
  - 17 new Events
  - 1 new Pop

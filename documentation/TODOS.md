@@ -47,15 +47,19 @@ Below is a table with all currently open ToDos.
 | ./mod/common/production_methods/406_magic_academy_production_methods.txt | 2 |  Find proper logo for pm_magic_academy_no_support |
 | ./mod/common/production_methods/406_magic_academy_production_methods.txt | 62 |  Find proper logo for pm_magic_academy_full_support |
 | ./mod/common/production_methods/406_magic_academy_production_methods.txt | 95 |  Find proper logo for pm_magic_academy_no_research |
-| ./mod/common/production_methods/407_golem_production_methods.txt | 109 |  Create technology for pm_golem_depot_mining_electric_golems |
-| ./mod/common/production_methods/407_golem_production_methods.txt | 18 |  Create icon for pm_golem_depot_no_golems |
-| ./mod/common/production_methods/407_golem_production_methods.txt | 23 |  Create icon for pm_golem_depot_no_golems |
-| ./mod/common/production_methods/407_golem_production_methods.txt | 28 |  Create icon for pm_golem_depot_mining_normal_golems |
+| ./mod/common/production_methods/407_golem_production_methods.txt | 103 |  Create icon for pm_golem_depot_mining_normal_golems |
+| ./mod/common/production_methods/407_golem_production_methods.txt | 117 |  Create technology for golems |
+| ./mod/common/production_methods/407_golem_production_methods.txt | 136 |  Create icon for pm_golem_depot_mining_steam_golems |
+| ./mod/common/production_methods/407_golem_production_methods.txt | 150 |  Create technology for pm_golem_depot_mining_steam_golems |
+| ./mod/common/production_methods/407_golem_production_methods.txt | 170 |  Create icon for pm_golem_depot_mining_electric_golems |
+| ./mod/common/production_methods/407_golem_production_methods.txt | 184 |  Create technology for pm_golem_depot_mining_electric_golems |
+| ./mod/common/production_methods/407_golem_production_methods.txt | 26 |  Create icon for pm_golem_workshop_steam_production |
 | ./mod/common/production_methods/407_golem_production_methods.txt | 2 |  Create icon for pm_golem_workshop_artisan_production |
-| ./mod/common/production_methods/407_golem_production_methods.txt | 42 |  Create technology for golems |
-| ./mod/common/production_methods/407_golem_production_methods.txt | 61 |  Create icon for pm_golem_depot_mining_steam_golems |
-| ./mod/common/production_methods/407_golem_production_methods.txt | 75 |  Create technology for pm_golem_depot_mining_steam_golems |
-| ./mod/common/production_methods/407_golem_production_methods.txt | 95 |  Create icon for pm_golem_depot_mining_electric_golems |
+| ./mod/common/production_methods/407_golem_production_methods.txt | 30 |  Create technology for pm_golem_workshop_steam_production |
+| ./mod/common/production_methods/407_golem_production_methods.txt | 58 |  Create icon for pm_golem_workshop_electric_production |
+| ./mod/common/production_methods/407_golem_production_methods.txt | 62 |  Create technology for pm_golem_workshop_electric_production |
+| ./mod/common/production_methods/407_golem_production_methods.txt | 93 |  Create icon for pm_golem_depot_no_golems |
+| ./mod/common/production_methods/407_golem_production_methods.txt | 98 |  Create icon for pm_golem_depot_no_golems |
 | ./mod/common/religions/gate_religion.txt | 2 |  Add proper icon |
 | ./mod/common/scripted_effects/401_gate_immigration.txt | 55 |  Balance trait state_trait_dwarven_immigration |
 | ./mod/common/scripted_effects/401_gate_immigration.txt | 65 |  Balance trait state_trait_dwarven_mass_immigration |
