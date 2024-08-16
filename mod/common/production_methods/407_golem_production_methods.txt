@@ -4,12 +4,20 @@
 
 	building_modifiers = {
 		workforce_scaled = {
+			# input goods
+			goods_input_mana_add = 10
+			goods_input_hardwood_add = 20
+			goods_input_fabric_add = 20
+			goods_input_steel_add = 20
+
 			# output goods
-			goods_output_golem_add = 30
+			goods_output_golem_add = 20
 		}
 
 		level_scaled = {
-			building_employment_mages_add = 1000
+			building_employment_shopkeepers_add = 500
+			building_employment_mages_add = 5000
+			building_employment_laborers_add = 2000
 		}
 	}
 }
