@@ -8,7 +8,7 @@
 	religion = golden_religion
 	
 	cultures = {
-	    arcturian
+	    elven
 	}
 
 	capital = STATE_ZAMBIA
@@ -33,7 +33,7 @@ GMK = {
 GOK = {
 	color = rgb{ 119  32  29 }
 
-	country_type = recognized
+	country_type = unrecognized
 
 	tier = kingdom
 
@@ -44,4 +44,22 @@ GOK = {
 	}
 
 	capital = STATE_SAN_SALVADOR
+}
+
+GNS = {
+	color = rgb{ 29  112  50 }
+
+	country_type = unrecognized
+
+	tier = kingdom
+
+	religion = blood_god
+
+	cultures = {
+		orcish
+		dwarven
+		elven
+	}
+
+	capital = STATE_EASTERN_NEW_GUINEA
 }
