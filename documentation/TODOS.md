@@ -23,16 +23,23 @@ Below is a table with all currently open ToDos.
 | ./mod/common/buildings/400_gate_buildings.txt | 154 |  Create icon for building_golem_depot |
 | ./mod/common/combat_unit_types/400_land_combat_unit_types.txt | 42 |  Add more image variants for combat_unit_type_mage_infantry |
 | ./mod/common/combat_unit_types/400_land_combat_unit_types.txt | 95 |  Add more image variants for combat_unit_type_mage_artillery |
-| ./mod/common/cultures/400_arcturian.txt | 2 |  Define custom culture (Currently copy of german) |
+| ./mod/common/cultures/400_elven.txt | 2 |  Define custom culture (Currently copy of german) |
 | ./mod/common/cultures/401_dwarven.txt | 55 |  Create dwarven graphics & ethnicity |
 | ./mod/common/cultures/402_orcish.txt | 2 |  Define custom culture (Currently copy of dwarven) |
 | ./mod/common/cultures/402_orcish.txt | 55 |  Create dwarven graphics & ethnicity |
 | ./mod/common/decisions/400_debug_decisions.txt | 1 |  Deactivate all decisions in this file before release |
 | ./mod/common/goods/400_gate_goods.txt | 13 |  Create icon for golem good |
-| ./mod/common/history/buildings/400_dominion.txt | 1 |  Define proper buildings for new countries |
-| ./mod/common/history/buildings/401_mountain_kingdom.txt | 1 |  Define proper buildings for new countries |
-| ./mod/common/history/buildings/402_orcish_kingdom.txt | 1 |  Define proper buildings for new countries |
+| ./mod/common/history/buildings/400_dominion.txt | 17 |  Add GAD buildings in STATE_NORTH_ANGOLA |
+| ./mod/common/history/buildings/400_dominion.txt | 22 |  Add GAD buildings in STATE_EAST_ANGOLA |
+| ./mod/common/history/buildings/400_dominion.txt | 32 |  Add GAD buildings in STATE_SOUTH_ANGOLA |
+| ./mod/common/history/buildings/400_dominion.txt | 5 |  Add GAD buildings in STATE_ZAMBIA |
+| ./mod/common/history/buildings/403_new_samadore.txt | 14 |  Add GNS buildings in STATE_WESTERN_NEW_GUINEA |
+| ./mod/common/history/buildings/403_new_samadore.txt | 19 |  Add GNS buildings in STATE_EASTERN_NEW_GUINEA |
+| ./mod/common/history/buildings/403_new_samadore.txt | 38 |  Add GNS buildings in STATE_MOLUCCAS |
+| ./mod/common/history/buildings/403_new_samadore.txt | 43 |  Add GNS buildings in STATE_BOUGAINVILLE |
 | ./mod/common/history/characters/gad - dominion.txt | 1 |  Add proper characters |
+| ./mod/common/history/countries/gad - dominion.txt | 3 |  Define laws and technology for GAD |
+| ./mod/common/history/countries/gns - new samadore.txt | 3 |  Define laws and technology for GNS |
 | ./mod/common/history/military_formations/402_orcish_kingdom.txt | 22 |  Create character |
 | ./mod/common/history/military_formations/402_orcish_kingdom.txt | 72 |  Create character |
 | ./mod/common/pop_types/mages.txt | 2 |  Need to add mages to landowners |
@@ -78,6 +85,7 @@ Below is a table with all currently open ToDos.
 | ./mod/gui/objective_types.gui | 1 |  Find a way to not overwrite this file |
 | ./mod/gui/tech_tree.gui | 1 |  Find a way to not overwrite this file |
 | ./mod/localization/english/gate_countries_l_english.yml | 10 |  Add proper flavor text GOK_FLAVOR_TEXT (Orkish Supremacy) |
+| ./mod/localization/english/gate_countries_l_english.yml | 13 |  Add proper flavor text GNG_FLAVOR_TEXT (New Samadore) |
 | ./mod/localization/english/gate_objective_l_english.yml | 11 |  Flesh out objective_magic_dominance_desc_GBR (Great Britain) |
 | ./mod/localization/english/gate_objective_l_english.yml | 18 |  Flesh out a proper description for je_obj_magic_knowledge_desc |
 | ./mod/localization/english/gate_objective_l_english.yml | 21 |  Flesh out a proper description for je_obj_magic_academy_desc |

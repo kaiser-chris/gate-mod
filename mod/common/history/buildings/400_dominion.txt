@@ -1,62 +1,36 @@
-﻿#TODO: Define proper buildings for new countries
-BUILDINGS={
-	# Arcturian Dominion
+﻿BUILDINGS={
+
 	s:STATE_ZAMBIA={
 		region_state:GAD={
-			create_building={
-				building="building_livestock_ranch"
-				add_ownership={
-					building={
-						type="building_manor_house"
-						country="c:GAD"
-						levels=3
-						region="STATE_ZAMBIA"
-					}
-				}
-				reserves=1
-				activate_production_methods={ "pm_sheep_farms"  "pm_standard_fences" "pm_unrefrigerated" "pm_slaughterhouses" }
-			}
-			create_building={
-				building="building_logging_camp"
-				add_ownership={
-					building={
-						type="building_logging_camp"
-						country="c:GAD"
-						levels=1
-						region="STATE_ZAMBIA"
-					}
-					building={
-						type="building_financial_district"
-						country="c:GAD"
-						levels=1
-						region="STATE_ZAMBIA"
-					}
-				}
-				reserves=1
-				activate_production_methods={ "pm_saw_mills"  "pm_no_equipment" "pm_road_carts" "pm_hardwood" }
-			}
-			create_building={
-				building="building_gate"
-				add_ownership={
-					country={
-						country="c:GAD"
-						levels=1
-					}
-				}
-				reserves=1
-				activate_production_methods={ "pm_gate_closed" }
-			}
-			create_building={
-				building="building_mana_extractor"
-				add_ownership={
-					country={
-						country="c:GAD"
-						levels=3
-					}
-				}
-				reserves=1
-				activate_production_methods={ "pm_mage_mana_extraction" }
-			}
+			#TODO: Add GAD buildings in STATE_ZAMBIA
 		}
 	}
+	s:STATE_NORTH_ANGOLA = {
+		region_state:POR={
+			# Clean up base game buildings
+			remove_building = building_millet_farm
+			remove_building = building_coffee_plantation
+			remove_building = building_dye_plantation
+			remove_building = building_port
+		}
+		region_state:GAD = {
+			#TODO: Add GAD buildings in STATE_NORTH_ANGOLA
+		}
+	}
+	s:STATE_EAST_ANGOLA = {
+		region_state:GAD = {
+			#TODO: Add GAD buildings in STATE_EAST_ANGOLA
+		}
+	}
+	s:STATE_SOUTH_ANGOLA = {
+		region_state:POR={
+			# Clean up base game buildings
+			remove_building = building_coffee_plantation
+			remove_building = building_millet_farm
+		}
+		region_state:GAD = {
+			#TODO: Add GAD buildings in STATE_SOUTH_ANGOLA
+		}
+	}
+
 }

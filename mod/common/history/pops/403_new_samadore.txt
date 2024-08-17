@@ -1,0 +1,123 @@
+﻿# Remove existing population first.
+# This is needed so the population is properly assimilated.
+# When this is not done qualifications and building occupancy
+# are not set correctly.
+POPS = {
+
+	s:STATE_WESTERN_NEW_GUINEA = {
+		region_state:PPU = {
+			kill_population_percent_in_state = {
+				percent = 1 # 100%
+			}
+		}
+		region_state:TID = {
+			kill_population_percent_in_state = {
+				percent = 1 # 100%
+			}
+		}
+		region_state:GNS = {
+			create_pop = {
+				culture = melanesian
+				size = 351996
+			}
+			create_pop = {
+				culture = moluccan
+				size = 20404
+			}
+			create_pop = {
+				culture = melanesian
+				size = 61000
+			}
+			create_pop = {
+				culture = melanesian
+				size = 2000
+			}
+		}
+	}
+	s:STATE_EASTERN_NEW_GUINEA = {
+		region_state:PPU = {
+			kill_population_percent_in_state = {
+				percent = 1 # 100%
+			}
+		}
+		region_state:GNS = {
+			create_pop = {
+				culture = melanesian
+				size = 400102
+			}
+		}
+	}
+	s:STATE_MOLUCCAS = {
+		region_state:DEI = {
+			kill_population_percent_in_state = {
+				percent = 1 # 100%
+			}
+		}
+		region_state:TID = {
+			kill_population_percent_in_state = {
+				percent = 1 # 100%
+			}
+		}
+		region_state:GNS = {
+			create_pop = {
+				culture = moluccan
+				size = 96508
+			}
+			create_pop = {
+				culture = moluccan
+				religion = animist
+				size = 79213
+			}
+			create_pop = {
+				culture = moluccan
+				religion = animist
+				size = 35676
+			}
+			create_pop = {
+				culture = melanesian
+				size = 12078
+			}
+			create_pop = {
+				culture = moluccan
+				size = 96808
+			}
+			create_pop = {
+				culture = dutch
+				size = 388
+			}
+			create_pop = {
+				culture = moluccan
+				religion = animist
+				size = 102128
+			}
+			create_pop = {
+				culture = moluccan
+				religion = animist
+				size = 32866
+			}
+			create_pop = {
+				culture = melanesian
+				size = 14778
+			}
+			create_pop = {
+				culture = moluccan
+				religion = protestant
+				size = 7323
+			}
+		}
+	}
+	s:STATE_BOUGAINVILLE = {
+		region_state:HLA = {
+			kill_population_percent_in_state = {
+				percent = 1 # 100%
+			}
+		}
+		region_state:GNS = {
+			create_pop = {
+				culture = melanesian
+				size = 48000
+			}
+		}
+	}
+
+}
