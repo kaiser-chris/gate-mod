@@ -19,8 +19,6 @@ Below is a table with all currently open ToDos.
 
 | File | Line | ToDo |
 | ---- | ---- | ---- |
-| ./mod/common/buildings/400_gate_buildings.txt | 135 |  Create icon for building_golem_workshop |
-| ./mod/common/buildings/400_gate_buildings.txt | 154 |  Create icon for building_golem_depot |
 | ./mod/common/cultures/400_elven.txt | 2 |  Define custom culture (Currently copy of german) |
 | ./mod/common/cultures/401_dwarven.txt | 55 |  Create dwarven graphics & ethnicity |
 | ./mod/common/cultures/402_orcish.txt | 2 |  Define custom culture (Currently copy of dwarven) |
