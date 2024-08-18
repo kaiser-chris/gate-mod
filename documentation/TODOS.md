@@ -28,7 +28,6 @@ Below is a table with all currently open ToDos.
 | ./mod/common/cultures/402_orcish.txt | 2 |  Define custom culture (Currently copy of dwarven) |
 | ./mod/common/cultures/402_orcish.txt | 55 |  Create dwarven graphics & ethnicity |
 | ./mod/common/decisions/400_debug_decisions.txt | 1 |  Deactivate all decisions in this file before release |
-| ./mod/common/goods/400_gate_goods.txt | 13 |  Create icon for golem good |
 | ./mod/common/history/buildings/400_dominion.txt | 17 |  Add GAD buildings in STATE_NORTH_ANGOLA |
 | ./mod/common/history/buildings/400_dominion.txt | 22 |  Add GAD buildings in STATE_EAST_ANGOLA |
 | ./mod/common/history/buildings/400_dominion.txt | 32 |  Add GAD buildings in STATE_SOUTH_ANGOLA |
@@ -81,7 +80,6 @@ Below is a table with all currently open ToDos.
 | ./mod/common/technology/technologies/403_magic_society.txt | 48 |  Add proper logo for magic_technology_integration |
 | ./mod/events/gate_events/dwarven_alps_events.txt | 52 |  Create custom video for event dwarven_alps.2 (Digging Dwarven Tunnels) |
 | ./mod/gfx/map/city_data/city_types/400_gate_buildings.txt | 1 |  Needs more definitions for other cultures |
-| ./mod/gui/gate_goods_texticons.gui | 14 |  Create icon for golem good |
 | ./mod/gui/objective_types.gui | 1 |  Find a way to not overwrite this file |
 | ./mod/gui/tech_tree.gui | 1 |  Find a way to not overwrite this file |
 | ./mod/localization/english/gate_countries_l_english.yml | 10 |  Add proper flavor text GOK_FLAVOR_TEXT (Orkish Supremacy) |
