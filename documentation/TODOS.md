@@ -63,13 +63,12 @@ Below is a table with all currently open ToDos.
 | ./mod/common/religions/gate_religion.txt | 2 |  Add proper icon |
 | ./mod/common/scripted_effects/401_gate_immigration.txt | 55 |  Balance trait state_trait_dwarven_immigration |
 | ./mod/common/scripted_effects/401_gate_immigration.txt | 65 |  Balance trait state_trait_dwarven_mass_immigration |
-| ./mod/common/technology/technologies/401_magic_production.txt | 114 |  Add proper logo for magic_golems |
-| ./mod/common/technology/technologies/401_magic_production.txt | 130 |  Add proper logo for magic_golems |
-| ./mod/common/technology/technologies/401_magic_production.txt | 146 |  Add proper logo for magic_golems |
+| ./mod/common/technology/technologies/401_magic_production.txt | 113 |  Add proper logo for magic_golems |
+| ./mod/common/technology/technologies/401_magic_production.txt | 129 |  Add proper logo for magic_golems |
+| ./mod/common/technology/technologies/401_magic_production.txt | 145 |  Add proper logo for magic_golems |
 | ./mod/common/technology/technologies/401_magic_production.txt | 19 |  Add proper logo for mana_extraction |
 | ./mod/common/technology/technologies/401_magic_production.txt | 34 |  Add proper logo for magic_farming |
 | ./mod/common/technology/technologies/401_magic_production.txt | 83 |  Add proper logo for magic_golems |
-| ./mod/common/technology/technologies/401_magic_production.txt | 98 |  Add proper logo for magic_golems |
 | ./mod/common/technology/technologies/402_magic_military.txt | 18 |  Add proper logo for mage_infantry |
 | ./mod/common/technology/technologies/402_magic_military.txt | 34 |  Add proper logo for mage_artillery |
 | ./mod/common/technology/technologies/403_magic_society.txt | 28 |  Add proper logo for formalized_magic |
