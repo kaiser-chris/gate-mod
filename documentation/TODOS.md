@@ -63,7 +63,7 @@ Below is a table with all currently open ToDos.
 | ./mod/common/religions/gate_religion.txt | 2 |  Add proper icon |
 | ./mod/common/scripted_effects/401_gate_immigration.txt | 55 |  Balance trait state_trait_dwarven_immigration |
 | ./mod/common/scripted_effects/401_gate_immigration.txt | 65 |  Balance trait state_trait_dwarven_mass_immigration |
-| ./mod/common/technology/technologies/401_magic_production.txt | 127 |  Add proper logo for magic_golems |
+| ./mod/common/technology/technologies/401_magic_production.txt | 127 |  Add proper logo for magic_and_electricity |
 | ./mod/common/technology/technologies/401_magic_production.txt | 19 |  Add proper logo for mana_extraction |
 | ./mod/common/technology/technologies/401_magic_production.txt | 34 |  Add proper logo for magic_farming |
 | ./mod/common/technology/technologies/402_magic_military.txt | 18 |  Add proper logo for mage_infantry |
@@ -72,7 +72,6 @@ Below is a table with all currently open ToDos.
 | ./mod/common/technology/technologies/403_magic_society.txt | 48 |  Add proper logo for magic_technology_integration |
 | ./mod/events/gate_events/dwarven_alps_events.txt | 52 |  Create custom video for event dwarven_alps.2 (Digging Dwarven Tunnels) |
 | ./mod/gfx/map/city_data/city_types/400_gate_buildings.txt | 1 |  Needs more definitions for other cultures |
-| ./mod/gui/objective_types.gui | 1 |  Find a way to not overwrite this file |
 | ./mod/gui/tech_tree.gui | 1 |  Find a way to not overwrite this file |
 | ./mod/localization/english/gate_countries_l_english.yml | 10 |  Add proper flavor text GOK_FLAVOR_TEXT (Orkish Supremacy) |
 | ./mod/localization/english/gate_countries_l_english.yml | 13 |  Add proper flavor text GNG_FLAVOR_TEXT (New Samadore) |
