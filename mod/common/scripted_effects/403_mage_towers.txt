@@ -1,0 +1,157 @@
+﻿add_mage_towers = {
+	every_state = {
+		limit = {
+			any_scope_pop = {
+				is_pop_type = mages
+			}
+		}
+
+		if = {
+			limit = {
+				AND = {
+					pop_type_percent_state = {
+						target  = pop_type:mages
+						value < 0.1
+					}
+					NOT = {
+						state_has_building_type_levels = {
+							target = bt:building_mage_tower
+							value = 1
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_building = building_mage_tower
+				}
+				remove_building = building_mage_tower
+			}
+			create_building = {
+				building = building_mage_tower
+				level = 1
+				reserves = 1
+			}
+		}
+		else_if = {
+			limit = {
+				AND = {
+					pop_type_percent_state = {
+						target = pop_type:mages
+						value < 0.2
+					}
+					pop_type_percent_state = {
+						target = pop_type:mages
+						value >= 0.1
+					}
+					NOT = {
+						state_has_building_type_levels = {
+							target = bt:building_mage_tower
+							value = 2
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_building = building_mage_tower
+				}
+				remove_building = building_mage_tower
+			}
+			create_building = {
+				building = building_mage_tower
+				level = 2
+				reserves = 1
+			}
+		}
+		else_if = {
+			limit = {
+				AND = {
+					pop_type_percent_state = {
+						target = pop_type:mages
+						value < 0.3
+					}
+					pop_type_percent_state = {
+						target = pop_type:mages
+						value >= 0.2
+					}
+					NOT = {
+						state_has_building_type_levels = {
+							target = bt:building_mage_tower
+							value = 4
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_building = building_mage_tower
+				}
+				remove_building = building_mage_tower
+			}
+			create_building = {
+				building = building_mage_tower
+				level = 4
+				reserves = 1
+			}
+		}
+		else_if = {
+			limit = {
+				AND = {
+					pop_type_percent_state = {
+						target = pop_type:mages
+						value < 0.4
+					}
+					pop_type_percent_state = {
+						target = pop_type:mages
+						value >= 0.3
+					}
+					NOT = {
+						state_has_building_type_levels = {
+							target = bt:building_mage_tower
+							value = 6
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_building = building_mage_tower
+				}
+				remove_building = building_mage_tower
+			}
+			create_building = {
+				building = building_mage_tower
+				level = 6
+				reserves = 1
+			}
+		}
+		else_if = {
+			limit = {
+				AND = {
+					pop_type_percent_state = {
+						target = pop_type:mages
+						value >= 0.4
+					}
+					NOT = {
+						state_has_building_type_levels = {
+							target = bt:building_mage_tower
+							value = 10
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_building = building_mage_tower
+				}
+				remove_building = building_mage_tower
+			}
+			create_building = {
+				building = building_mage_tower
+				level = 10
+				reserves = 1
+			}
+		}
+	}
+}
