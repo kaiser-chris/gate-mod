@@ -1,4 +1,4 @@
-BUILDINGS={
+﻿BUILDINGS={
 
 	s:STATE_TYROL={
 		region_state:AUS= {
@@ -270,7 +270,7 @@ BUILDINGS={
 				activate_production_methods={ "pm_saw_mills" "pm_no_equipment" "pm_road_carts" "pm_hardwood" }
 			}
 			create_building={
-				building="building_iron_mine"
+				building="building_dwarven_iron_mine"
 				add_ownership={
 					building={
 						type="building_financial_district"
@@ -283,7 +283,7 @@ BUILDINGS={
 				activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_crystal_explosives_building_iron_mine" "pm_no_steam_automation" "pm_road_carts"  }
 			}
 			create_building={
-				building="building_lead_mine"
+				building="building_dwarven_lead_mine"
 				add_ownership={
 					building={
 						type="building_financial_district"
@@ -296,7 +296,7 @@ BUILDINGS={
 				activate_production_methods={ "pm_picks_and_shovels_building_lead_mine" "pm_crystal_explosives_building_lead_mine" "pm_no_steam_automation" "pm_road_carts"  }
 			}
 			create_building={
-				building="building_sulfur_mine"
+				building="building_dwarven_sulfur_mine"
 				add_ownership={
 					building={
 						type="building_financial_district"
@@ -309,7 +309,7 @@ BUILDINGS={
 				activate_production_methods={ "pm_picks_and_shovels_building_sulfur_mine" "pm_crystal_explosives_building_sulfur_mine" "pm_no_steam_automation" "pm_road_carts"  }
 			}
 			create_building={
-				building="building_coal_mine"
+				building="building_dwarven_coal_mine"
 				add_ownership={
 					building={
 						type="building_financial_district"
