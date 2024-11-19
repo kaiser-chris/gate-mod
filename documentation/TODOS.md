@@ -19,6 +19,11 @@ Below is a table with all currently open ToDos.
 
 | File | Line | ToDo |
 | ---- | ---- | ---- |
+| ./.config/vic3/common/scripted_progress_bars.cwt | 50 |  Fill |
+| ./.config/vic3/common/scripted_progress_bars.cwt | 56 |  Fill |
+| ./.config/vic3/common/scripted_progress_bars.cwt | 62 |  Fill |
+| ./.config/vic3/effects.cwt | 946 |  market? |
+| ./.config/vic3/links.cwt | 34 |  market goods vs goods |
 | ./mod/common/cultures/400_elven.txt | 2 |  Define custom culture (Currently copy of german) |
 | ./mod/common/cultures/401_dwarven.txt | 55 |  Create dwarven graphics & ethnicity |
 | ./mod/common/cultures/402_orcish.txt | 2 |  Define custom culture (Currently copy of dwarven) |
@@ -70,8 +75,7 @@ Below is a table with all currently open ToDos.
 | ./mod/common/technology/technologies/402_magic_military.txt | 34 |  Add proper logo for mage_artillery |
 | ./mod/common/technology/technologies/403_magic_society.txt | 28 |  Add proper logo for formalized_magic |
 | ./mod/common/technology/technologies/403_magic_society.txt | 48 |  Add proper logo for magic_technology_integration |
-| ./mod/events/gate_events/dwarven_alps_events.txt | 52 |  Create custom video for event dwarven_alps.2 (Digging Dwarven Tunnels) |
-| ./mod/gfx/map/city_data/city_types/400_gate_buildings.txt | 1 |  Needs more definitions for other cultures |
+| ./mod/events/gate_events/dwarven_alps_events.txt | 54 |  Create custom video for event dwarven_alps.2 (Digging Dwarven Tunnels) |
 | ./mod/gui/tech_tree.gui | 1 |  Find a way to not overwrite this file |
 | ./mod/localization/english/gate_countries_l_english.yml | 10 |  Add proper flavor text GOK_FLAVOR_TEXT (Orkish Supremacy) |
 | ./mod/localization/english/gate_countries_l_english.yml | 13 |  Add proper flavor text GNG_FLAVOR_TEXT (New Samadore) |
