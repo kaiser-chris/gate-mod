@@ -1,4 +1,4 @@
-# "Why do some state entries have quote marks around them, when others don't?"
+﻿# "Why do some state entries have quote marks around them, when others don't?"
 # "It's because of differing methods of editing throughout the production of the game. Quote marks are unnecessary, but harmless if present."
 
 STATES = {
@@ -10,6 +10,18 @@ STATES = {
 		}
 
 		add_homeland = cu:dwarven
+		add_state_trait = state_trait_dwarven_tunnels
+
+		every_scope_state = {
+			add_modifier = {
+				name = dwarven_coal_mine_modifier
+				multiplier = 70
+			}
+			add_modifier = {
+				name = dwarven_gold_mine_modifier
+				multiplier = 8
+			}
+		}
 	}
 	s:STATE_SOUTH_TYROL = {
 		create_state = {
@@ -18,6 +30,26 @@ STATES = {
 		}
 
 		add_homeland = cu:dwarven
+		add_state_trait = state_trait_dwarven_tunnels
+
+		every_scope_state = {
+			add_modifier = {
+				name = dwarven_coal_mine_modifier
+				multiplier = 32
+			}
+			add_modifier = {
+				name = dwarven_iron_mine_modifier
+				multiplier = 20
+			}
+			add_modifier = {
+				name = dwarven_lead_mine_modifier
+				multiplier = 15
+			}
+			add_modifier = {
+				name = dwarven_sulfur_mine_modifier
+				multiplier = 15
+			}
+		}
 
 		# We don't want the dwarves be part of
 		# italy or italian events

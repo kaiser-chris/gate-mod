@@ -1,0 +1,31 @@
+﻿bg_dwarven_mining = {
+    parent_group = bg_mining
+    capped_by_resources = yes
+    always_possible = yes
+    can_use_slaves = yes
+}
+
+bg_dwarven_gold_mining = {
+    parent_group = bg_dwarven_mining
+    default_building = building_dwarven_gold_mine
+}
+
+bg_dwarven_coal_mining = {
+    parent_group = bg_dwarven_mining
+    default_building = building_dwarven_coal_mine
+}
+
+bg_dwarven_iron_mining = {
+    parent_group = bg_dwarven_mining
+    default_building = building_dwarven_iron_mine
+}
+
+bg_dwarven_lead_mining = {
+    parent_group = bg_dwarven_mining
+    default_building = building_dwarven_lead_mine
+}
+
+bg_dwarven_sulfur_mining = {
+    parent_group = bg_dwarven_mining
+    default_building = building_dwarven_sulfur_mine
+}
