@@ -19,10 +19,7 @@ Below is a table with all currently open ToDos.
 
 | File | Line | ToDo |
 | ---- | ---- | ---- |
-| ./.config/vic3/common/scripted_progress_bars.cwt | 50 |  Fill |
-| ./.config/vic3/common/scripted_progress_bars.cwt | 56 |  Fill |
-| ./.config/vic3/common/scripted_progress_bars.cwt | 62 |  Fill |
-| ./.config/vic3/effects.cwt | 947 |  market? |
+| ./.config/vic3/effects.cwt | 1029 |  market? |
 | ./.config/vic3/links.cwt | 34 |  market goods vs goods |
 | ./mod/common/cultures/400_elven.txt | 2 |  Define custom culture (Currently copy of german) |
 | ./mod/common/cultures/401_dwarven.txt | 55 |  Create dwarven graphics & ethnicity |
@@ -52,14 +49,9 @@ Below is a table with all currently open ToDos.
 | ./mod/common/production_methods/406_magic_academy_production_methods.txt | 2 |  Find proper logo for pm_magic_academy_no_support |
 | ./mod/common/production_methods/406_magic_academy_production_methods.txt | 62 |  Find proper logo for pm_magic_academy_full_support |
 | ./mod/common/production_methods/406_magic_academy_production_methods.txt | 95 |  Find proper logo for pm_magic_academy_no_research |
-| ./mod/common/production_methods/407_golem_workshop_production_methods.txt | 100 |  Create icon for pm_golem_depot_mining_normal_golems |
-| ./mod/common/production_methods/407_golem_workshop_production_methods.txt | 132 |  Create icon for pm_golem_depot_mining_steam_golems |
-| ./mod/common/production_methods/407_golem_workshop_production_methods.txt | 166 |  Create icon for pm_golem_depot_mining_electric_golems |
 | ./mod/common/production_methods/407_golem_workshop_production_methods.txt | 25 |  Create icon for pm_golem_workshop_steam_production |
 | ./mod/common/production_methods/407_golem_workshop_production_methods.txt | 2 |  Create icon for pm_golem_workshop_artisan_production |
 | ./mod/common/production_methods/407_golem_workshop_production_methods.txt | 57 |  Create icon for pm_golem_workshop_electric_production |
-| ./mod/common/production_methods/407_golem_workshop_production_methods.txt | 90 |  Create icon for pm_golem_depot_no_golems |
-| ./mod/common/production_methods/407_golem_workshop_production_methods.txt | 95 |  Create icon for pm_golem_depot_no_golems |
 | ./mod/common/production_methods/408_golem_depot_production_methods.txt | 12 |  Create icon for pm_golem_depot_mining_normal_golems |
 | ./mod/common/production_methods/408_golem_depot_production_methods.txt | 2 |  Create icon for pm_golem_depot_no_golems |
 | ./mod/common/production_methods/408_golem_depot_production_methods.txt | 44 |  Create icon for pm_golem_depot_mining_steam_golems |
