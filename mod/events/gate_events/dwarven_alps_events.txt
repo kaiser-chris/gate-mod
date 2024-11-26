@@ -165,6 +165,7 @@ dwarven_alps.4 = {
 		every_country = {
 			limit = {
 				OR = {
+					country_has_primary_culture = cu:north_german
 					country_has_primary_culture = cu:south_german
 					country_has_primary_culture = cu:alemannic
 				}

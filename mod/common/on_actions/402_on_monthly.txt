@@ -1,0 +1,26 @@
+﻿# Root = Country
+on_monthly_pulse = {
+    on_actions = {
+        on_monthly_calculate_mana_saturation
+        on_monthly_add_gate_immigration
+        on_monthly_add_mage_towers
+    }
+}
+
+on_monthly_calculate_mana_saturation = {
+    effect = {
+        calculate_monthly_mana_saturation = yes
+    }
+}
+
+on_monthly_add_gate_immigration = {
+    effect = {
+        add_gate_immigration = yes
+    }
+}
+
+on_monthly_add_mage_towers = {
+    effect = {
+        add_mage_towers = yes
+    }
+}
