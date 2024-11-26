@@ -2,7 +2,6 @@
     #TODO: Need to add mages to landowners
 	texture = "gfx/interface/icons/pops_icons/mages.dds"
 	color = hsv{ 0.94 0.51 0.37 }
-	strata = upper
 	start_quality_of_life = 15
 	wage_weight = 6
 	paid_private_wage = yes
@@ -62,7 +61,12 @@
 			}
 			if = {
 				limit = {
-					culture_accepted = no
+					state = {
+						state_cultural_acceptance = {
+							target = PREV.culture
+							value < acceptance_status_4
+						}
+					}
 				}
 				multiply = {
 					value = 0.1
