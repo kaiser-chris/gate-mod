@@ -7,6 +7,14 @@
 
 	immediate = {
 		save_scope_as = loc_country_scope
+		set_global_variable = {
+			name = gate_mana_saturation_progress
+			value = {
+				value = 7
+				max = 100
+				min = 0
+			}
+		}
 	}
 
 	status_desc = {
@@ -47,6 +55,17 @@
 		}
 	}
 
+	on_weekly_pulse = {
+		effect = {
+			scope:journal_entry = {
+				set_global_variable = {
+					name = gate_mana_saturation_progress
+					value = "scripted_bar_progress(gate_mana_saturation_progress_bar)"
+				}
+			}
+		}
+	}
+
 	complete = {
 		trigger_if = {
 			OR = {
@@ -69,6 +88,10 @@
 	on_complete = {
 		set_global_variable = {
 			name = gate_mana_saturation_full
+		}
+		set_global_variable = {
+			name = gate_mana_saturation_progress
+			value = 100
 		}
 		trigger_event = {
 			id = mana_saturation.1

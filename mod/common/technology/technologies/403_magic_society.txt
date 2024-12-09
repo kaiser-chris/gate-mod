@@ -28,6 +28,7 @@ formalized_magic = {
 	#TODO: Add proper logo for formalized_magic
 	texture = "gfx/interface/icons/invention_icons/magic_understanding.dds"
 	category = society
+	can_research = no
 
 	modifier = {
 		state_education_access_wealth_add = 0.001
@@ -48,6 +49,7 @@ magic_science = {
 	#TODO: Add proper logo for magic_technology_integration
 	texture = "gfx/interface/icons/invention_icons/magic_understanding.dds"
 	category = society
+	can_research = no
 
 	modifier = {
 		country_weekly_innovation_add = 10

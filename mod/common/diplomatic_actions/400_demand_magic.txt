@@ -17,9 +17,7 @@
 	
 	potential = {
 		scope:target_country = {
-			has_technology_researched = magic_understanding_production
-			has_technology_researched = magic_understanding_society
-			has_technology_researched = magic_understanding_military
+			is_magic_country = yes
 			NOT = {
 				is_country_type = decentralized
 			}
@@ -29,14 +27,10 @@
 	possible = {
 		NOT = {
 			is_subject_of = scope:target_country
-			has_technology_researched = magic_understanding_production
-			has_technology_researched = magic_understanding_society
-			has_technology_researched = magic_understanding_military
+			is_magic_country = yes
 		}
 		scope:target_country = {
-			has_technology_researched = magic_understanding_production
-			has_technology_researched = magic_understanding_society
-			has_technology_researched = magic_understanding_military
+			is_magic_country = yes
 		}
 	}
 

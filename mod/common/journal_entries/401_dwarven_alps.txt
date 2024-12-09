@@ -133,9 +133,6 @@ je_dwarven_integration_of_germans = {
 	}
 
 	on_complete = {
-		limit = {
-			scope:has_capital_interest = no
-		}
 		trigger_event = {
 			id = dwarven_alps.4
 			popup = yes

@@ -30,4 +30,18 @@ GLOBAL = {
 
 	# Set correct gate immigration traits for
 	set_immigration_traits = yes
+
+	# Add Gate Button
+	add_to_global_variable_list = {
+		name = custom_button_list
+		target = ideology:gate_button
+	}
+
+	# Add Gate Technology Button
+	add_to_global_variable_list = {
+		name = custom_button_list
+		target = ideology:gate_button_technology
+	}
+
+	collect_magic_countries = yes
 }

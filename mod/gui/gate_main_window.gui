@@ -1,0 +1,62 @@
+# vbox = {
+# 	name = gate_panel
+#
+# 	layoutpolicy_vertical = expanding
+# 	margin_top = 83
+# 	layer = middle
+#
+# 	position = { -654 0 }
+#
+# 	visible = "[GetScriptedGui('sgui_gate_window_visisblity').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+#
+# 	gate_sidebar_panel = {}
+# }
+
+#TODO: Fix this
+template information_panels {
+	add_wargoal_panel = {}
+	battle_panel = {}
+	battle_participants_panel = {}
+	building_details_panel = {}
+	commander_panel = {}
+	military_formation_panel = {}
+	country_panel = {}
+	society_panel = {}
+	culture_info_panel = {}
+	decisions_panel = {}
+	diplomatic_overview_panel = {}
+	diplomatic_play_panel = {}
+	election_panel = {}
+	front_panel = {}
+	goods_state_panel = {}
+	goods_local_prices_panel = {}
+	goods_usage_panel = {}
+	goods_panel = {}
+	interest_group_panel = {}
+	journal_entry_panel = {}
+	journal_panel = {}
+	market_panel = {}
+	naval_invasion_panel = {}
+	panel_military = {}
+	party_panel = {}
+	pop_details_panel = {}
+	pops_overview_panel = {}
+	political_movement_panel = {}
+	power_bloc_panel = {}
+	power_bloc_formation_panel = {}
+	religion_info_panel = {}
+	sea_region_panel = {}
+	state_population_panel = {}
+	states_panel = {}
+	sway_country_panel = {}
+	war_panel = {}
+	budget_panel = {}
+	country_formation_panel = {}
+	companies_panel = {}
+	construction_panel = {}
+	political_lobby_panel = {}
+	compact_building_browser_panel = {}
+	countries_panel = {}
+	gate_sidebar_panel = {}
+	gate_technology_panel = {}
+}

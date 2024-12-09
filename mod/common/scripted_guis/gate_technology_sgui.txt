@@ -1,0 +1,247 @@
+﻿@gate_technology_tab_count = 3
+
+sgui_gate_technology_button = {
+	scope = country
+
+	is_shown = {
+		always = yes
+	}
+
+	is_valid = {
+		always = yes
+	}
+
+	# Cycle through tabs or close window
+	effect = {
+		if = {
+			# When there are more tabs cycle to next one
+			limit = {
+				has_variable = gate_main_window_is_active
+				has_variable = gate_main_window_active_tab
+			}
+			remove_variable = gate_main_window_is_active
+			remove_variable = gate_main_window_active_tab
+		}
+
+		if = {
+			# When there are more tabs cycle to next one
+			limit = {
+				has_variable = gate_main_technology_is_active
+				has_variable = gate_main_technology_active_tab
+				var:gate_main_technology_active_tab < @gate_technology_tab_count
+			}
+			change_variable = {
+				name = gate_main_technology_active_tab
+				add = 1
+			}
+		}
+		else_if = {
+			# After cycling through all tabs close window
+			limit = {
+				has_variable = gate_main_technology_is_active
+				has_variable = gate_main_technology_active_tab
+				var:gate_main_technology_active_tab >= @gate_technology_tab_count
+			}
+			remove_variable = gate_main_technology_is_active
+			remove_variable = gate_main_technology_active_tab
+		}
+		else = {
+			# If there is no variable we set it
+			set_variable = {
+				name = gate_main_technology_active_tab
+				value = 1
+			}
+			set_variable = gate_main_technology_is_active
+		}
+	}
+}
+
+sgui_gate_technology_visisblity = {
+	scope = country
+
+	is_shown = {
+		AND = {
+			has_variable = gate_main_technology_is_active
+			has_variable = gate_main_technology_active_tab
+		}
+	}
+}
+
+sgui_gate_technology_tab_production = {
+	scope = country
+
+	is_shown = {
+		AND = {
+			has_variable = gate_main_technology_is_active
+			has_variable = gate_main_technology_active_tab
+			var:gate_main_technology_active_tab = 1
+		}
+	}
+
+	effect = {
+		set_variable = {
+			name = gate_main_technology_active_tab
+			value = 1
+		}
+	}
+}
+
+sgui_gate_technology_tab_military = {
+	scope = country
+
+	is_shown = {
+		AND = {
+			has_variable = gate_main_technology_is_active
+			has_variable = gate_main_technology_active_tab
+			var:gate_main_technology_active_tab = 2
+		}
+	}
+
+	effect = {
+		set_variable = {
+			name = gate_main_technology_active_tab
+			value = 2
+		}
+	}
+}
+
+sgui_gate_technology_tab_society = {
+	scope = country
+
+	is_shown = {
+		AND = {
+			has_variable = gate_main_technology_is_active
+			has_variable = gate_main_technology_active_tab
+			var:gate_main_technology_active_tab = 3
+		}
+	}
+
+	effect = {
+		set_variable = {
+			name = gate_main_technology_active_tab
+			value = 3
+		}
+	}
+}
+
+# THIS = country
+# scope:technology = technology
+sgui_gate_window_execute_research = {
+	scope = country
+
+	effect = {
+		set_variable = {
+			name = magic_research
+			value = scope:technology
+		}
+		set_variable = {
+			name = magic_research_progress
+			value = 50
+		}
+	}
+
+	is_valid = {
+		AND = {
+			NOT = { has_variable = magic_research }
+			NOT = { has_technology_researched = scope:technology }
+		}
+	}
+}
+
+# THIS = country
+# scope:technology = technology
+sgui_gate_window_cancel_research = {
+	scope = country
+
+	effect = {
+		remove_variable = magic_research
+		remove_variable = magic_research_progress
+	}
+
+	confirm_title = gg_cancel_magic_research_title
+	confirm_text = gg_cancel_magic_research_text
+}
+
+magic_understanding_production = {
+	is_valid = {
+		always = no
+	}
+
+	is_shown = {
+		always = no
+	}
+}
+
+mana_extraction = {
+	is_valid = {
+		has_technology_researched = mana_extraction
+	}
+}
+
+magic_golems = {
+	is_valid = {
+		has_technology_researched = magic_understanding_production
+	}
+}
+
+magic_farming = {
+	is_valid = {
+		has_technology_researched = magic_understanding_production
+	}
+}
+
+magic_dwarf_murk = {
+	is_valid = {
+		always = no
+	}
+
+	is_shown = {
+		always = no
+	}
+}
+
+magic_dwarf_murk_railways = {
+	is_valid = {
+		has_technology_researched = magic_dwarf_murk
+	}
+
+	is_shown = {
+		has_technology_researched = magic_dwarf_murk
+	}
+}
+
+magic_and_steam = {
+	is_valid = {
+		AND = {
+			has_technology_researched = mana_extraction
+			has_technology_researched = atmospheric_engine
+		}
+	}
+}
+
+magic_steam_golems = {
+	is_valid = {
+		AND = {
+			has_technology_researched = magic_golems
+			has_technology_researched = magic_and_steam
+		}
+	}
+}
+
+magic_and_electricity = {
+	is_valid = {
+		AND = {
+			has_technology_researched = electrical_generation
+			has_technology_researched = magic_and_steam
+		}
+	}
+}
+
+magic_electric_golems = {
+	is_valid = {
+		AND = {
+			has_technology_researched = magic_and_electricity
+			has_technology_researched = magic_steam_golems
+		}
+	}
+}

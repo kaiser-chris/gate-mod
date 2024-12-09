@@ -1,0 +1,21 @@
+﻿magic_understanding_military = {
+	is_valid = {
+		always = no
+	}
+
+	is_shown = {
+		always = no
+	}
+}
+
+mage_infantry = {
+	is_valid = {
+		has_technology_researched = magic_understanding_military
+	}
+}
+
+mage_artillery = {
+	is_valid = {
+		has_technology_researched = magic_understanding_military
+	}
+}

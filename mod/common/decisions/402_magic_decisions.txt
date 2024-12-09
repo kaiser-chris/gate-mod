@@ -1,9 +1,7 @@
 ﻿investigate_gate_decision = {
 	is_shown = {
 		NOT = {
-			has_technology_researched = magic_understanding_production
-			has_technology_researched = magic_understanding_society
-			has_technology_researched = magic_understanding_military
+			is_magic_country = yes
 		}
 	}
 
@@ -11,9 +9,7 @@
 		is_diplomatic_play_committed_participant = no
 		is_at_war = no
 		NOT = {
-			has_technology_researched = magic_understanding_production
-			has_technology_researched = magic_understanding_society
-			has_technology_researched = magic_understanding_military
+			is_magic_country = yes
 		}
 		any_scope_state = {
 			has_building = building_gate

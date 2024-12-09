@@ -1,0 +1,219 @@
+# COPY-PASTED FOR NOW
+@panel_width_minus_10 = 530			# used to be 450
+@panel_width_minus_30 = 510
+@panel_width = 540  				# used to be 460
+@panel_width_half = 270				# used to be 230
+@panel_width_plus_10 = 550  		# used to be 470
+@panel_width_plus_14 = 554			# used to be 474
+@panel_width_plus_14_half = 277		# used to be 237
+@panel_width_plus_20 = 560			# used to be 480
+@panel_width_plus_30 = 570			# used to be 490
+@panel_width_plus_70 = 610			# used to be 530
+
+types gate_types {
+
+    type gate_sidebar_panel = default_block_window {
+        datacontext = "[GetScriptedGui('sgui_gate_window_visisblity')]"
+
+        visible = "[And(ScriptedGui.IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End), Not(InformationPanelBar.IsAnyPanelOpen))]"
+
+        blockoverride "animation_state_block" {
+            state = {
+                name = _show
+                # Close open panel before showing this one
+                on_start = "[InformationPanelBar.ClosePanel]"
+                start_sound = {
+                    soundeffect = "event:/SFX/UI/SideBar/markets"
+                }
+            }
+
+            state = {
+                name = _hide
+                start_sound = {
+                    soundeffect = "event:/SFX/UI/SideBar/markets_stop"
+                }
+            }
+        }
+
+        blockoverride "window_header_name"
+        {
+            raw_text = "#BOLD Magic#!"
+        }
+
+        blockoverride "header_back_button" {
+            onclick = "[GetScriptedGui('sgui_gate_close_window').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+        }
+
+        blockoverride "header_close_button" {
+            onclick = "[GetScriptedGui('sgui_gate_close_window').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+        }
+
+        blockoverride "fixed_top"
+        {
+            tab_buttons = {
+                blockoverride "first_button" {
+                    text = "gate_tab_magic_overview"
+                }
+                blockoverride "first_button_tooltip" {
+                    tooltip = "gate_tab_magic_overview"
+                }
+                blockoverride "first_button_click" {
+                    onclick = "[GetScriptedGui('sgui_gate_window_tab_magic').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+                }
+                blockoverride "first_button_visibility" {
+                    visible = "[GetScriptedGui('sgui_gate_window_tab_magic').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+                }
+                blockoverride "first_button_visibility_checked" {
+                    visible = "[Not(GetScriptedGui('sgui_gate_window_tab_magic').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
+                }
+                blockoverride "first_button_selected" {
+                    text = "gate_tab_magic_overview_selected"
+                }
+                blockoverride "first_button_name" {
+                    name = "gate_tab_magic_overview"
+                }
+
+                blockoverride "second_button" {
+                    text = "gate_tab_magic_research"
+                }
+                blockoverride "second_button_tooltip" {
+                    tooltip = "gate_tab_magic_research"
+                }
+                blockoverride "second_button_click" {
+                    onclick = "[GetScriptedGui('sgui_gate_window_tab_research').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+                }
+                blockoverride "second_button_visibility" {
+                    visible = "[GetScriptedGui('sgui_gate_window_tab_research').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+                }
+                blockoverride "second_button_visibility_checked" {
+                    visible = "[Not(GetScriptedGui('sgui_gate_window_tab_research').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
+                }
+                blockoverride "second_button_selected" {
+                    text = "gate_tab_magic_research_selected"
+                }
+                blockoverride "second_button_name" {
+                    name = "gate_tab_magic_research"
+                }
+            }
+        }
+
+        blockoverride "scrollarea_content"
+        {
+            # Magic
+            flowcontainer = {
+                visible = "[GetScriptedGui('sgui_gate_window_tab_magic').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+                using = default_list_position
+                margin_top = 10
+                direction = vertical
+
+                default_header = {
+                    blockoverride "text" {
+                        text = "gg_header_magic_state"
+                    }
+                }
+
+                flowcontainer = {
+                    using = default_list_position
+                    direction = vertical
+                    margin_bottom = 10
+                    using = default_content_fade
+
+                    gate_statistic = {
+                        blockoverride "name" {
+                            text = "gg_mana_saturation"
+                        }
+                        blockoverride "desc" {
+                            text = "gg_mana_saturation_statistic"
+                        }
+                    }
+
+                    gate_statistic = {
+                        blockoverride "name" {
+                            text = "gg_magic_countries"
+                        }
+                        blockoverride "desc" {
+                            text = "gg_magic_countries_statistic"
+                        }
+                    }
+                }
+            }
+
+            # Research
+            flowcontainer = {
+                visible = "[GetScriptedGui('sgui_gate_window_tab_research').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+                using = default_list_position
+                margin_top = 10
+                direction = vertical
+
+                default_header = {
+                    blockoverride "text" {
+                        text = "gg_header_magic_state"
+                    }
+                }
+
+                flowcontainer = {
+                    using = default_list_position
+                    direction = vertical
+                    margin_bottom = 10
+                    using = default_content_fade
+
+                    gate_statistic = {
+                        blockoverride "name" {
+                            text = "gg_mana_saturation"
+                        }
+                        blockoverride "desc" {
+                            text = "gg_mana_saturation_statistic"
+                        }
+                    }
+
+                    gate_statistic = {
+                        blockoverride "name" {
+                            text = "gg_magic_countries"
+                        }
+                        blockoverride "desc" {
+                            text = "gg_magic_countries_statistic"
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    type gate_statistic = container {
+        maximumsize = { @panel_width_minus_30 -1 }
+        minimumsize = { @panel_width_minus_30 -1 }
+
+        flowcontainer = {
+            margin = { 20 10 }
+            direction = vertical
+
+            textbox = {
+                block "name" {
+                    text = "test"
+                }
+                autoresize = yes
+                align = left|nobaseline
+                using = fontsize_large
+                multiline = yes
+                maximumsize = { 420 -1 }
+                minimumsize = { 420 -1 }
+                default_format = "#header"
+            }
+
+            textbox = {
+                block "desc" {
+                    text = "test"
+                }
+                autoresize = yes
+                align = left|nobaseline
+                multiline = yes
+                maximumsize = { 420 -1 }
+                minimumsize = { 420 -1 }
+            }
+        }
+
+        divider_clean = {
+            parentanchor = bottom
+        }
+    }
+}

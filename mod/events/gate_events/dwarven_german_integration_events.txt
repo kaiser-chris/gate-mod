@@ -38,6 +38,13 @@ dwarven_german_integration.1 = {
 	option = {
 		name = dwarven_german_integration.1.a
 		default_option = yes
+
+		scope:journal_entry = {
+			add_progress = {
+				name = pb_gate_german_integration
+				value = -5
+			}
+		}
 		add_radicals = {
 			value = small_radicals
 			culture = cu:alemannic
@@ -62,6 +69,7 @@ dwarven_german_integration.1 = {
 
 	option = {
 		name = dwarven_german_integration.1.b
+
 		trigger = {
 			scope:mine_state = {
 				any_scope_building = {
@@ -70,14 +78,18 @@ dwarven_german_integration.1 = {
 				}
 			}
 		}
-
+		scope:journal_entry = {
+			add_progress = {
+				name = pb_gate_german_integration
+				value = 5
+			}
+		}
 		custom_tooltip = {
 			text = dwarven_german_integration.1.b.tt
 			scope:mine_state = {
 				build_random_mine_in_state = yes
 			}
 		}
-
 		# Increased cost because no building time
 		add_treasury = {
 			value = construction_cost_high
@@ -92,6 +104,13 @@ dwarven_german_integration.1 = {
 
 	option = {
 		name = dwarven_german_integration.1.c
+
+		scope:journal_entry = {
+			add_progress = {
+				name = pb_gate_german_integration
+				value = 5
+			}
+		}
 		add_loyalists = {
 			value = small_radicals
 			culture = cu:alemannic

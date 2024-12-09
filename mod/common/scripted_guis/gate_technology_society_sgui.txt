@@ -1,0 +1,36 @@
+﻿magic_understanding_society = {
+	is_valid = {
+		always = no
+	}
+
+	is_shown = {
+		always = no
+	}
+}
+
+dwarven_gate_immigration = {
+	is_valid = {
+		always = no
+	}
+
+	is_shown = {
+		always = no
+	}
+}
+
+formalized_magic = {
+	is_valid = {
+		AND = {
+			has_technology_researched = academia
+			has_technology_researched = magic_understanding_society
+		}
+	}
+}
+
+magic_science = {
+	is_valid = {
+		AND = {
+			has_technology_researched = formalized_magic
+		}
+	}
+}

@@ -1,0 +1,83 @@
+﻿magic_understanding_production = {
+	is_valid = {
+		always = no
+	}
+
+	is_shown = {
+		always = no
+	}
+}
+
+mana_extraction = {
+	is_valid = {
+		has_technology_researched = mana_extraction
+	}
+}
+
+magic_golems = {
+	is_valid = {
+		has_technology_researched = magic_understanding_production
+	}
+}
+
+magic_farming = {
+	is_valid = {
+		has_technology_researched = magic_understanding_production
+	}
+}
+
+magic_dwarf_murk = {
+	is_valid = {
+		always = no
+	}
+
+	is_shown = {
+		always = no
+	}
+}
+
+magic_dwarf_murk_railways = {
+	is_valid = {
+		has_technology_researched = magic_dwarf_murk
+	}
+
+	is_shown = {
+		has_technology_researched = magic_dwarf_murk
+	}
+}
+
+magic_and_steam = {
+	is_valid = {
+		AND = {
+			has_technology_researched = mana_extraction
+			has_technology_researched = atmospheric_engine
+		}
+	}
+}
+
+magic_steam_golems = {
+	is_valid = {
+		AND = {
+			has_technology_researched = magic_golems
+			has_technology_researched = magic_and_steam
+		}
+	}
+}
+
+magic_and_electricity = {
+	is_valid = {
+		AND = {
+			has_technology_researched = electrical_generation
+			has_technology_researched = magic_and_steam
+		}
+	}
+}
+
+magic_electric_golems = {
+	is_valid = {
+		AND = {
+			has_technology_researched = magic_and_electricity
+			has_technology_researched = magic_steam_golems
+		}
+	}
+}

@@ -4,6 +4,7 @@ on_monthly_pulse = {
         on_monthly_calculate_mana_saturation
         on_monthly_add_gate_immigration
         on_monthly_add_mage_towers
+        on_monthly_statistics
     }
 }
 
@@ -22,5 +23,11 @@ on_monthly_add_gate_immigration = {
 on_monthly_add_mage_towers = {
     effect = {
         add_mage_towers = yes
+    }
+}
+
+on_monthly_statistics = {
+    effect = {
+        collect_magic_countries = yes
     }
 }

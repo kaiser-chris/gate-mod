@@ -14,9 +14,7 @@
 	invalid = {
 		OR = {
 			AND = {
-				has_technology_researched = magic_understanding_production
-				has_technology_researched = magic_understanding_society
-				has_technology_researched = magic_understanding_military
+				is_magic_country = yes
 			}
 			NOT = {
 				any_scope_state = {
@@ -32,9 +30,7 @@
 			if = {
 				limit = {
 					NOT = {
-						has_technology_researched = magic_understanding_production
-						has_technology_researched = magic_understanding_society
-						has_technology_researched = magic_understanding_military
+						is_magic_country = yes
 					}
 					any_scope_state = {
 						has_building = building_gate
