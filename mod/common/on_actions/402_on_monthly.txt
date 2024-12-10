@@ -1,4 +1,4 @@
-﻿# Root = Country
+﻿# Root = any
 on_monthly_pulse = {
     on_actions = {
         on_monthly_calculate_mana_saturation
@@ -29,5 +29,18 @@ on_monthly_add_mage_towers = {
 on_monthly_statistics = {
     effect = {
         collect_magic_countries = yes
+    }
+}
+
+# Root = country
+on_monthly_pulse_country = {
+    on_actions = {
+        on_monthly_calculate_magic_research
+    }
+}
+
+on_monthly_calculate_magic_research = {
+    effect = {
+        calculate_magic_research = yes
     }
 }

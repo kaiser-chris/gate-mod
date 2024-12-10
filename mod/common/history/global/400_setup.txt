@@ -1,6 +1,5 @@
 ﻿# This scripts are run after all other history scripts were run
 GLOBAL = {
-
 	set_global_variable = {
 		name = magic_growing_var
 		value = 0
@@ -28,7 +27,7 @@ GLOBAL = {
 
 	add_mage_towers = yes
 
-	# Set correct gate immigration traits for
+	# Set correct gate immigration traits
 	set_immigration_traits = yes
 
 	# Add Gate Button
@@ -41,6 +40,14 @@ GLOBAL = {
 	add_to_global_variable_list = {
 		name = custom_button_list
 		target = ideology:gate_button_technology
+	}
+
+	set_global_variable = {
+		name = weekly_magic_innovation_base
+		value = 25
+	}
+	every_country = {
+		calculate_magic_research = yes
 	}
 
 	collect_magic_countries = yes

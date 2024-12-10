@@ -1,0 +1,36 @@
+﻿namespace = orphan_fix
+
+# This file is here to shut up the error log about unused variables
+orphan_fix.1 = {
+    type = country_event
+
+    placement = root
+
+    hidden = yes
+	
+	trigger = {
+		# DO NOT CALL THIS EVENT
+	}
+	
+	cancellation_trigger = {
+		always = yes
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				global_var:gate_mana_saturation_progress < 0
+				var:weekly_magic_innovation < 0
+			}
+			every_in_global_list = {
+				variable = magic_countries
+				change_infamy = 0
+			}
+			every_in_global_list = {
+				variable = custom_button_list
+			}
+		}
+	}
+	
+	orphan = yes
+}

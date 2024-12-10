@@ -7,51 +7,5 @@
 		effect_starting_pop_literacy_very_high = yes
 		effect_starting_pop_wealth_high = yes
 
-		# Technology
-		add_technology_researched = magic_understanding_production
-		add_technology_researched = magic_understanding_society
-		add_technology_researched = magic_understanding_military
-		add_technology_researched = mage_infantry
-		add_technology_researched = mage_artillery
-		add_technology_researched = mana_extraction
-		add_technology_researched = magic_farming
-		add_technology_researched = human_rights
-
-		# Laws
-		activate_law = law_type:law_dedicated_police
-		activate_law = law_type:law_slavery_banned
-		activate_law = law_type:law_total_separation
-		activate_law = law_type:law_monarchy
-		activate_law = law_type:law_women_in_the_workplace
-		activate_law = law_type:law_technocracy
-		activate_law = law_type:law_no_migration_controls
-		activate_law = law_type:law_free_trade
-		activate_law = law_type:law_private_schools
-		activate_law = law_type:law_homesteading
-
-        set_ruling_interest_groups = {
-			ig_industrialists
-        }
-
-		# Institutions
-		set_institution_investment_level = {
-			institution = institution_schools
-			level = 2
-		}
-		set_institution_investment_level = {
-			institution = institution_police
-			level = 1
-		}
-
-		ig:ig_petty_bourgeoisie = {
-			add_ruling_interest_group = yes
-		}
-		ig:ig_armed_forces = {
-			add_ruling_interest_group = yes
-		}
-
-		add_journal_entry = {
-			type = je_dwarven_alps
-		}
 	}
 }

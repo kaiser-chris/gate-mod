@@ -1,0 +1,59 @@
+﻿calculate_magic_research = {
+	if = {
+		limit = {
+			is_magic_country = yes
+		}
+		# Mage Gate Innovation
+		set_variable = {
+			name = weekly_magic_innovation_magic_gate
+			value = {
+				value = 0
+				every_scope_building = {
+					limit = {
+						is_building_type = building_gate
+					}
+					add = 10
+				}
+			}
+		}
+
+		# Mage Tower Innovation
+		set_variable = {
+			name = weekly_magic_innovation_mage_tower
+			value = {
+				value = 0
+				every_scope_building = {
+					limit = {
+						is_building_type = building_mage_tower
+					}
+					add = 5
+				}
+			}
+		}
+
+		# Magic Academy Innovation
+		set_variable = {
+			name = weekly_magic_innovation_magic_academy
+			value = {
+				value = 0
+				every_scope_building = {
+					limit = {
+						is_building_type = building_magic_academy
+					}
+					add = 20
+				}
+			}
+		}
+
+		# Total Innovation
+		set_variable = {
+			name = weekly_magic_innovation
+			value = {
+				value = global_var:weekly_magic_innovation_base
+				add = var:weekly_magic_innovation_magic_gate
+				add = var:weekly_magic_innovation_mage_tower
+				add = var:weekly_magic_innovation_magic_academy
+			}
+		}
+	}
+}

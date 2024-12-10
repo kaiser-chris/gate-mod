@@ -9,6 +9,8 @@
 @panel_width_plus_20 = 560			# used to be 480
 @panel_width_plus_30 = 570			# used to be 490
 @panel_width_plus_70 = 610			# used to be 530
+@tooltip_max_width = 550
+@tooltip_max_width_plus_margin = 580
 
 types gate_types {
 
@@ -161,13 +163,51 @@ types gate_types {
                 direction = vertical
                 spacing = 5
                 margin_top = 10
-                margin_left = 8
                 margin_bottom = 10
 
+                default_header_2texts = {
+                    blockoverride "text1" {
+                        text = gg_header_active_research
+                    }
+                    blockoverride "text2" {
+                        raw_text = "#variable @innovation![GetPlayer.MakeScope.Var('weekly_magic_innovation').GetValue|D+=]#!"
+                        tooltipwidget = {
+                            FancyTooltipWidgetType = {
+                                blockoverride "name" {
+                                    raw_text = "[concept_magic_innovation]"
+                                }
 
-                default_header = {
-                    blockoverride "text" {
-                        text = "gg_header_active_research"
+                                blockoverride "icon_texture" {
+                                    texture = "gfx/interface/icons/generic_icons/innovation.dds"
+                                }
+
+                                blockoverride "type" {
+                                    visible = no
+                                }
+
+                                blockoverride "text" {
+                                    text = gg_magic_innovation_tooltip
+                                }
+
+                                blockoverride "tooltip_content_after" {
+                                    custom_tooltip_textbox = {
+                                        text = "[Concatenate('    ', Localize('gg_magic_innovation_base'))]"
+                                    }
+                                    custom_tooltip_textbox = {
+                                        visible = "[GreaterThan_CFixedPoint(GetPlayer.MakeScope.Var('weekly_magic_innovation_magic_gate').GetValue, '(CFixedPoint)0')]"
+                                        text = "[Concatenate('    ', Localize('gg_magic_innovation_magic_gate_tooltip'))]"
+                                    }
+                                    custom_tooltip_textbox = {
+                                        visible = "[GreaterThan_CFixedPoint(GetPlayer.MakeScope.Var('weekly_magic_innovation_mage_tower').GetValue, '(CFixedPoint)0')]"
+                                        text = "[Concatenate('    ', Localize('gg_magic_innovation_mage_tower_tooltip'))]"
+                                    }
+                                    custom_tooltip_textbox = {
+                                        visible = "[GreaterThan_CFixedPoint(GetPlayer.MakeScope.Var('weekly_magic_innovation_magic_academy').GetValue, '(CFixedPoint)0')]"
+                                        text = "[Concatenate('    ', Localize('gg_magic_innovation_magic_academy_tooltip'))]"
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
 
@@ -223,8 +263,7 @@ types gate_types {
             }
         }
 
-        blockoverride "scrollarea_content"
-        {
+        blockoverride "scrollarea_content" {
             # Production
             flowcontainer = {
                 visible = "[GetScriptedGui('sgui_gate_technology_tab_production').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -237,11 +276,7 @@ types gate_types {
                     }
                 }
 
-                gate_technologies_production = {
-                    blockoverride "visibility" {
-                        visible = "[And(Not(Technology.HasResearchedTech(GetPlayer.Self)), Or(Not(GetPlayer.MakeScope.Var('magic_research').IsSet), Not(ObjectsEqual(GetPlayer.MakeScope.Var('magic_research').GetTechnology.MakeScope, Technology.MakeScope))))]"
-                    }
-                }
+                gate_technologies_production = {}
 
                 default_header = {
                     blockoverride "text" {
@@ -271,11 +306,7 @@ types gate_types {
                     }
                 }
 
-                gate_technologies_military = {
-                    blockoverride "visibility" {
-                        visible = "[And(Not(Technology.HasResearchedTech(GetPlayer.Self)), Or(Not(GetPlayer.MakeScope.Var('magic_research').IsSet), Not(ObjectsEqual(GetPlayer.MakeScope.Var('magic_research').GetTechnology.MakeScope, Technology.MakeScope))))]"
-                    }
-                }
+                gate_technologies_military = {}
 
                 default_header = {
                     blockoverride "text" {
@@ -481,7 +512,108 @@ types gate_types {
         }
 
         tooltipwidget = {
-            FancyTooltip_Technology = {}
+            FancyTooltipWidgetType = {
+                blockoverride "text" {
+                    # Does not modify size that is why we repeat it below
+                    widget = {
+                        layer = bottom
+                        parentanchor = top|left
+                        custom_tooltip_textbox = {
+                            text = DATA_TECHNOLOGY_NAME_TOOLTIP
+                        }
+                    }
+                }
+                blockoverride "tooltip_content_before" {
+                }
+                blockoverride "tooltip_content_after" {
+                    widget = {
+                        flowcontainer = {
+                            margin = { 15 10 }
+                            position = { -15 -10 }
+                            min_width = @tooltip_max_width_plus_margin
+                            custom_tooltip_textbox = {
+                                text = gg_magic_technology_tooltip_cost
+                                multiline = no
+                            }
+                            custom_tooltip_textbox = {
+                                raw_text = "#v #tooltippable [Technology.GetCost(GetPlayer.Self)|K]#!#!"
+                                multiline = no
+                                tooltip = "[Technology.GetCostDesc(GetPlayer.Self)]"
+                            }
+                            custom_tooltip_textbox = {
+                                text = gg_magic_technology_tooltip_duration
+                                multiline = no
+                            }
+
+                            background = {
+                                spriteType = CorneredTiled
+                                spriteborder = { 48 48 }
+                                texture = "gfx/interface/tooltip/tooltip_bg.dds"
+                                texture_density = 2
+                                tintcolor = "[TooltipInfo.GetTintColor]"
+                            }
+                        }
+                    }
+                    # Invisible and just used for tooltip sizing
+                    container = {
+                        alpha = 0
+                        layer = bottom
+                        parentanchor = top|left
+                        custom_tooltip_textbox = {
+                            text = DATA_TECHNOLOGY_NAME_TOOLTIP
+                        }
+                        flowcontainer = {
+                            min_width = @tooltip_max_width
+
+                            custom_tooltip_textbox = {
+                                text = gg_magic_technology_tooltip_cost
+                                multiline = no
+                            }
+                            custom_tooltip_textbox = {
+                                raw_text = "#v #tooltippable [Technology.GetCost(GetPlayer.Self)|K]#!#!"
+                                multiline = no
+                                tooltip = "[Technology.GetCostDesc(GetPlayer.Self)]"
+                            }
+                            custom_tooltip_textbox = {
+                                text = gg_magic_technology_tooltip_duration
+                                multiline = no
+                            }
+                        }
+                    }
+                }
+
+                blockoverride "icon_texture" {
+                    texture = "[Technology.GetTexture]"
+
+                    widget = {
+                        size = { 34 34 }
+                        position = { -6 30 }
+
+                        icon = {
+                            size = { 60% 60% }
+                            texture = "gfx/interface/backgrounds/round_button_bg.dds"
+                        }
+
+                        textbox = {
+                            text = "TECHNOLOGY_TYPE_DESCRIPTION"
+                            align = center|nobaseline
+                            position = { -7 -7 }
+                            using = fontsize_small
+                            size = { 20% 20% }
+                            parentanchor = center
+                        }
+                    }
+
+                }
+
+                blockoverride "name" {
+                    text = "[Technology.GetNameNoFormatting]"
+                }
+
+                blockoverride "type" {
+                    text = "TOOLTIP_TYPE_TECHNOLOGY"
+                }
+            }
         }
 
         block "button_style" {
@@ -494,7 +626,6 @@ types gate_types {
 
         block "enabled" {
             enabled = "[And(ScriptedGui.IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End), GetScriptedGui('sgui_gate_window_execute_research').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('technology', Technology.MakeScope).End))]"
-            #enabled = "[And3(Not(Technology.HasResearchedTech(GetPlayer.Self)), Technology.IsResearchable, GetScriptedGui('sgui_gate_window_execute_research').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('technology', Technology.MakeScope).End))]"
         }
 
         block "background" {}
