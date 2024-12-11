@@ -526,6 +526,9 @@ types gate_types {
                 blockoverride "tooltip_content_before" {
                 }
                 blockoverride "tooltip_content_after" {
+                    # This widget will be layered over the original tooltip to overwrite the first line.
+                    # This is needed because there is no way rebuild/modify the full technology tooltip.
+                    # So we render the original tooltip and overwrite the first line to replace some text.
                     widget = {
                         flowcontainer = {
                             margin = { 15 10 }
