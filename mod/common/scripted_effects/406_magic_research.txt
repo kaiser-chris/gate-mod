@@ -55,5 +55,24 @@
 				add = var:weekly_magic_innovation_magic_academy
 			}
 		}
+
+		if = {
+			limit = {
+				has_variable = magic_research
+				has_variable = magic_research_progress
+			}
+			change_variable = {
+				name = magic_research_progress
+				add = {
+					value = var:weekly_magic_innovation
+					multiply = 4
+				}
+			}
+		}
 	}
+}
+
+remove_magic_research = {
+	remove_variable = magic_research
+	remove_variable = magic_research_progress
 }

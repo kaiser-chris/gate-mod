@@ -15,8 +15,9 @@
 types gate_types {
 
     type gate_technology_panel = default_block_window {
-        datacontext = "[GetScriptedGui('sgui_gate_technology_visisblity')]"
+        name = "gate_technology_panel"
 
+        datacontext = "[GetScriptedGui('sgui_gate_technology_visisblity')]"
         visible = "[And(ScriptedGui.IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End), Not(InformationPanelBar.IsAnyPanelOpen))]"
 
         blockoverride "animation_state_block" {
@@ -171,6 +172,8 @@ types gate_types {
                     }
                     blockoverride "text2" {
                         raw_text = "#variable @innovation![GetPlayer.MakeScope.Var('weekly_magic_innovation').GetValue|D+=]#!"
+
+                        # Explanation Tooltip
                         tooltipwidget = {
                             FancyTooltipWidgetType = {
                                 blockoverride "name" {
@@ -205,27 +208,50 @@ types gate_types {
                                         visible = "[GreaterThan_CFixedPoint(GetPlayer.MakeScope.Var('weekly_magic_innovation_magic_academy').GetValue, '(CFixedPoint)0')]"
                                         text = "[Concatenate('    ', Localize('gg_magic_innovation_magic_academy_tooltip'))]"
                                     }
+                                    custom_tooltip_textbox = {
+                                        margin_top = 10
+                                        text = gg_magic_innovation_warning_tooltip
+                                    }
                                 }
                             }
                         }
                     }
                 }
 
-                gate_technology = {
+                gate_technologies_production = {
+                    blockoverride "container_spacing" {}
                     blockoverride "enabled" {
                         enabled = yes
                     }
-
                     blockoverride "onclick" {
-                        onclick = "[GetScriptedGui('sgui_gate_window_cancel_research').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('technology', Technology.MakeScope).End)]"
+                        onclick = "[GetScriptedGui('sgui_gate_window_cancel_research').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
                     }
-
                     blockoverride "visibility" {
-                        visible = "[GetPlayer.MakeScope.Var('magic_research').IsSet]"
+                        visible = "[And(GetPlayer.MakeScope.Var('magic_research').IsSet, ObjectsEqual(GetPlayer.MakeScope.Var('magic_research').GetTechnology.MakeScope, Technology.MakeScope))]"
                     }
-
-                    blockoverride "context" {
-                        datacontext = "[GetPlayer.MakeScope.GetVariable('magic_research').GetTechnology]"
+                }
+                gate_technologies_military = {
+                    blockoverride "container_spacing" {}
+                    blockoverride "enabled" {
+                        enabled = yes
+                    }
+                    blockoverride "onclick" {
+                        onclick = "[GetScriptedGui('sgui_gate_window_cancel_research').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                    }
+                    blockoverride "visibility" {
+                        visible = "[And(GetPlayer.MakeScope.Var('magic_research').IsSet, ObjectsEqual(GetPlayer.MakeScope.Var('magic_research').GetTechnology.MakeScope, Technology.MakeScope))]"
+                    }
+                }
+                gate_technologies_society = {
+                    blockoverride "container_spacing" {}
+                    blockoverride "enabled" {
+                        enabled = yes
+                    }
+                    blockoverride "onclick" {
+                        onclick = "[GetScriptedGui('sgui_gate_window_cancel_research').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                    }
+                    blockoverride "visibility" {
+                        visible = "[And(GetPlayer.MakeScope.Var('magic_research').IsSet, ObjectsEqual(GetPlayer.MakeScope.Var('magic_research').GetTechnology.MakeScope, Technology.MakeScope))]"
                     }
                 }
 
@@ -250,11 +276,10 @@ types gate_types {
                     using = fontsize_xxl
                     using = look_at_me_text_animation
                     parentanchor = top|hcenter
-                    margin_bottom = 25
+                    margin_bottom = 35
                     margin_top = 0
                     minimumsize = { @panel_width -1 }
                 }
-
 
                 divider_light = {
                     size = { @panel_width 2 }
@@ -359,10 +384,13 @@ types gate_types {
 
     type gate_technologies_production = flowcontainer {
         direction = vertical
-        spacing = 5
+        parentanchor = top|left
         margin_left = 8
-        margin_top = 10
-        margin_bottom = 10
+        block "container_spacing" {
+            spacing = 5
+            margin_top = 10
+            margin_bottom = 10
+        }
 
         gate_technology = {
             blockoverride "context" {
@@ -437,10 +465,12 @@ types gate_types {
 
     type gate_technologies_military = flowcontainer {
         direction = vertical
-        spacing = 5
         margin_left = 8
-        margin_top = 10
-        margin_bottom = 10
+        block "container_spacing" {
+            spacing = 5
+            margin_top = 10
+            margin_bottom = 10
+        }
 
         gate_technology = {
             blockoverride "context" {
@@ -466,10 +496,12 @@ types gate_types {
 
     type gate_technologies_society = flowcontainer {
         direction = vertical
-        spacing = 5
         margin_left = 8
-        margin_top = 10
-        margin_bottom = 10
+        block "container_spacing" {
+            spacing = 5
+            margin_top = 10
+            margin_bottom = 10
+        }
 
         gate_technology = {
             blockoverride "context" {
@@ -509,6 +541,13 @@ types gate_types {
 
         block "visibility" {
             visible = "[And3(ScriptedGui.IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End), Not(Technology.HasResearchedTech(GetPlayer.Self)), Or(Not(GetPlayer.MakeScope.Var('magic_research').IsSet), Not(ObjectsEqual(GetPlayer.MakeScope.Var('magic_research').GetTechnology.MakeScope, Technology.MakeScope))))]"
+        }
+
+        # Technology done
+        # Only triggers when opened
+        state = {
+            trigger_when = "[And3(GetPlayer.MakeScope.Var('magic_research').IsSet, ObjectsEqual(GetPlayer.MakeScope.Var('magic_research').GetTechnology.MakeScope, Technology.MakeScope), GreaterThanOrEqualTo_CFixedPoint(GetPlayer.MakeScope.Var('magic_research_progress').GetValue, Technology.GetCost(GetPlayer.Self)))]"
+            on_finish = "[ScriptedGui.Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('technology', Technology.MakeScope).End)]"
         }
 
         tooltipwidget = {
@@ -635,94 +674,157 @@ types gate_types {
 
         flowcontainer = {
             resizeparent = yes
+            direction = vertical
+
             block "minimumsize" {
                 minimumsize = { @panel_width -1 }
             }
             block "flowcontainer_properties" {
-                margin = { 10 8 }
-                spacing = 10
+                margin_left = 10
+                margin_right = 10
+                margin_bottom = 8
             }
 
+            # Icons & Text
             flowcontainer = {
-                direction = vertical
+                margin_left = 5
 
-                # Technology Icon
-                icon = {
-                    texture = "[Technology.GetTexture]"
-                    block "iconsize" {
-                        size = { 40 40 }
-                    }
-                }
-
-                # Has been researched
-                icon = {
-                    visible = "[Technology.HasResearchedTech(GetPlayer.Self)]"
-                    parentanchor = hcenter
-                    block "completing_iconsize" {
-                        size = { 20 20 }
-                    }
-                    texture = "gfx/interface/icons/generic_icons/green_checkmark.dds"
-                    tooltip = "gg_technology_in_research"
-                    using = shimmer
-
-                    icon = {
-                        parentanchor = center
-                        using = rotate_glow_animation_02
-                        size = { 300% 300% }
-                        alpha = 0.5
-                    }
-                }
-            }
-
-            flowcontainer = {
-                direction = vertical
-                parentanchor = vcenter
-
-                # title
-                textbox = {
-                    text = "[Technology.GetName]"
-                    autoresize = yes
-                    align = left|nobaseline
-                    multiline = yes
-                    default_format = "#header"
-
-                    block "fontsize" {
-                        using = fontsize_large
-                    }
-
-                    block "textsize" {
-                        maximumsize = { 450 -1 }
-                        minimumsize = { 450 -1 }
-                    }
-                }
-
-                # status description
-                textbox = {
-                    text = "[Technology.GetDesc]"
-                    visible = "[Not(StringIsEmpty(Technology.GetDesc))]"
-                    autoresize = yes
-                    align = left|nobaseline
-                    multiline = yes
-                    block "textsize" {
-                        maximumsize = { 450 -1 }
-                        minimumsize = { 450 -1 }
-                    }
-                    margin_bottom = 2
-                }
-
-                # progress bar
+                # Icons
                 flowcontainer = {
-                    visible = "[And(GetPlayer.MakeScope.Var('magic_research').IsSet, ObjectsEqual(GetPlayer.MakeScope.Var('magic_research').GetTechnology.MakeScope, Technology.MakeScope))]"
-                    margin = { 0 10 }
-                    default_progressbar_horizontal = {
-                        block "progressbar_size" {
-                            size = { 450 20 }
+                    margin_left = 10
+                    direction = vertical
+                    margin_top = 8
+
+                    # Technology Frame & Icon
+                    icon = {
+                        texture = "gfx/interface/backgrounds/round_frame_dec.dds"
+                        parentanchor = top|right
+                        size = { 60 60 }
+                        alwaystransparent = yes
+
+                        # Technology Icon
+                        flowcontainer = {
+                            margin = { 10 10 }
+                            icon = {
+                                texture = "[Technology.GetTexture]"
+                                block "iconsize" {
+                                    size = { 40 40 }
+                                }
+                            }
                         }
-                        blockoverride "values" {
-                            value = "[GetPlayer.MakeScope.Var('magic_research_progress').GetValue]"
-                            min = 0
-                            max = 100
+                    }
+
+                    # Add check mark when researched
+                    icon = {
+                        visible = "[Technology.HasResearchedTech(GetPlayer.Self)]"
+                        parentanchor = hcenter
+                        block "completing_iconsize" {
+                            size = { 20 20 }
                         }
+                        texture = "gfx/interface/icons/generic_icons/green_checkmark.dds"
+                        tooltip = "gg_technology_in_research"
+                        using = shimmer
+
+                        icon = {
+                            parentanchor = center
+                            using = rotate_glow_animation_02
+                            size = { 300% 300% }
+                            alpha = 0.5
+                        }
+                    }
+                }
+
+                # Text
+                flowcontainer = {
+                    direction = vertical
+                    parentanchor = vcenter
+
+                    # Title
+                    textbox = {
+                        margin = { 15 10 }
+                        background = {
+                            using = fade_right_entry_fancy_header_colored
+                            using = dark_area
+                        }
+
+                        text = "[Technology.GetNameNoFormatting]"
+                        autoresize = yes
+                        align = left|nobaseline
+                        multiline = yes
+                        default_format = "#header"
+
+                        block "fontsize" {
+                            using = fontsize_large
+                        }
+
+                        block "textsize" {
+                            maximumsize = { 435 -1 }
+                            minimumsize = { 435 -1 }
+                        }
+                    }
+
+                    # Description
+                    textbox = {
+                        margin = { 15 0 }
+                        margin_bottom = 5
+                        text = "[Technology.GetDesc]"
+                        visible = "[Not(StringIsEmpty(Technology.GetDesc))]"
+                        autoresize = yes
+                        align = left|nobaseline
+                        multiline = yes
+                        block "textsize" {
+                            maximumsize = { 435 -1 }
+                            minimumsize = { 435 -1 }
+                        }
+                    }
+                }
+            }
+
+            # Unlocks
+            flowcontainer = {
+                margin_top = 0
+                margin_bottom = 5
+                margin_left = 5
+                margin_right = 5
+                parentanchor = bottom|right
+                spacing = 5
+                datamodel = "[Technology.GetUnlocks(GetPlayer.Self)]"
+
+                block "unlocks_alpha" {}
+
+                item = {
+                    icon = {
+                        size = { 25 25 }
+                        texture = "[TechnologyUnlock.GetTexture]"
+                        tooltip = "[TechnologyUnlock.GetTooltip]"
+                        using = tooltip_se
+
+                        modify_texture = {
+                            visible = "[TechnologyUnlock.HasFrame]"
+                            using = simple_frame_mask
+                        }
+
+                        icon = {
+                            visible = "[TechnologyUnlock.HasFrame]"
+                            using = simple_frame
+                            size = { 100% 100% }
+                        }
+                    }
+                }
+            }
+
+            # progress bar
+            flowcontainer = {
+                visible = "[And(GetPlayer.MakeScope.Var('magic_research').IsSet, ObjectsEqual(GetPlayer.MakeScope.Var('magic_research').GetTechnology.MakeScope, Technology.MakeScope))]"
+                margin = { 10 10 }
+                default_progressbar_horizontal = {
+                    block "progressbar_size" {
+                        size = { 500 20 }
+                    }
+                    blockoverride "values" {
+                        value = "[GetPlayer.MakeScope.Var('magic_research_progress').GetValue]"
+                        min = 0
+                        max = "[Technology.GetCost(GetPlayer.Self)]"
                     }
                 }
             }

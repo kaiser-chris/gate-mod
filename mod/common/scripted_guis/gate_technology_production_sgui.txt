@@ -2,9 +2,12 @@
 	is_valid = {
 		always = no
 	}
-
 	is_shown = {
 		always = no
+	}
+	effect = {
+		add_technology_researched = magic_understanding_production
+		remove_magic_research = yes
 	}
 }
 
@@ -12,11 +15,19 @@ mana_extraction = {
 	is_valid = {
 		has_technology_researched = mana_extraction
 	}
+	effect = {
+		add_technology_researched = mana_extraction
+		remove_magic_research = yes
+	}
 }
 
 magic_golems = {
 	is_valid = {
 		has_technology_researched = magic_understanding_production
+	}
+	effect = {
+		add_technology_researched = magic_golems
+		remove_magic_research = yes
 	}
 }
 
@@ -24,15 +35,22 @@ magic_farming = {
 	is_valid = {
 		has_technology_researched = magic_understanding_production
 	}
+	effect = {
+		add_technology_researched = magic_farming
+		remove_magic_research = yes
+	}
 }
 
 magic_dwarf_murk = {
 	is_valid = {
 		always = no
 	}
-
 	is_shown = {
 		always = no
+	}
+	effect = {
+		add_technology_researched = magic_dwarf_murk
+		remove_magic_research = yes
 	}
 }
 
@@ -40,9 +58,12 @@ magic_dwarf_murk_railways = {
 	is_valid = {
 		has_technology_researched = magic_dwarf_murk
 	}
-
 	is_shown = {
 		has_technology_researched = magic_dwarf_murk
+	}
+	effect = {
+		add_technology_researched = magic_dwarf_murk_railways
+		remove_magic_research = yes
 	}
 }
 
@@ -53,6 +74,10 @@ magic_and_steam = {
 			has_technology_researched = atmospheric_engine
 		}
 	}
+	effect = {
+		add_technology_researched = magic_and_steam
+		remove_magic_research = yes
+	}
 }
 
 magic_steam_golems = {
@@ -61,6 +86,10 @@ magic_steam_golems = {
 			has_technology_researched = magic_golems
 			has_technology_researched = magic_and_steam
 		}
+	}
+	effect = {
+		add_technology_researched = magic_steam_golems
+		remove_magic_research = yes
 	}
 }
 
@@ -71,6 +100,10 @@ magic_and_electricity = {
 			has_technology_researched = magic_and_steam
 		}
 	}
+	effect = {
+		add_technology_researched = magic_and_electricity
+		remove_magic_research = yes
+	}
 }
 
 magic_electric_golems = {
@@ -79,5 +112,9 @@ magic_electric_golems = {
 			has_technology_researched = magic_and_electricity
 			has_technology_researched = magic_steam_golems
 		}
+	}
+	effect = {
+		add_technology_researched = magic_electric_golems
+		remove_magic_research = yes
 	}
 }

@@ -25,6 +25,10 @@ formalized_magic = {
 			has_technology_researched = magic_understanding_society
 		}
 	}
+	effect = {
+		add_technology_researched = formalized_magic
+		remove_magic_research = yes
+	}
 }
 
 magic_science = {
@@ -32,5 +36,9 @@ magic_science = {
 		AND = {
 			has_technology_researched = formalized_magic
 		}
+	}
+	effect = {
+		add_technology_researched = magic_science
+		remove_magic_research = yes
 	}
 }

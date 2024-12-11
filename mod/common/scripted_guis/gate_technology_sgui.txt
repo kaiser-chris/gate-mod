@@ -136,7 +136,7 @@ sgui_gate_window_execute_research = {
 		}
 		set_variable = {
 			name = magic_research_progress
-			value = 50
+			value = 0
 		}
 	}
 
@@ -154,10 +154,9 @@ sgui_gate_window_cancel_research = {
 	scope = country
 
 	effect = {
-		remove_variable = magic_research
-		remove_variable = magic_research_progress
+		remove_magic_research = yes
 	}
 
-	confirm_title = gg_cancel_magic_research_title
+	confirm_title = gg_cancel_magic_research
 	confirm_text = gg_cancel_magic_research_text
 }

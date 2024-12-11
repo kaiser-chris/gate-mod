@@ -1,0 +1,19 @@
+﻿has_no_magic_research_alert = {
+	script_context = player_country
+	texture = gfx/interface/icons/alert_icons/has_no_magic_research.dds
+
+	valid = {
+		AND = {
+			is_magic_country = yes
+			NOT = {
+				has_variable = magic_research
+			}
+		}
+	}
+
+	type = alert
+
+	alert_group = gate_alerts
+
+	color = green
+}
