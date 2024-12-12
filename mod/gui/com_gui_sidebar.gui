@@ -7,7 +7,7 @@ vbox = {
 	name = "com_gui_sidebar"
 	parentanchor = bottom|left
 	max_update_rate = 8
-	
+
 	layoutpolicy_vertical = expanding
 	margin_bottom = 50
 	spacing = 0
@@ -16,9 +16,9 @@ vbox = {
 	# Are there registered custom buttons?
 	# And is the pause menu shown?
 	visible = "[And(Not(IsDataModelEmpty(GetGlobalList('custom_button_list'))),And( IsInGame, And( Not( IsPauseMenuShown ), Not( IsGameOverScreenShown ))))]"
-	
+
 	expand = {}
-	
+
 	widget = {
 		size = { 50 50 }
 		icon = {
@@ -63,6 +63,8 @@ vbox = {
 
 			item = {
 				widget = {
+					datacontext = "[GetScriptedGui(Scope.GetIdeology.GetNameNoFormatting)]"
+
 					size = { 50 50 }
 
 					icon = {
@@ -80,10 +82,9 @@ vbox = {
 						size = { 47 47 }
 						position = { 0 1 }
 
-						visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
-						enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+						enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 
-						onclick = "[GetScriptedGui( Scope.GetIdeology.GetNameNoFormatting ).Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+						onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 						tooltip = "[Scope.GetIdeology.GetDesc]"
 
 
@@ -113,5 +114,5 @@ vbox = {
 			}
 		}
 	}
-	
+
 }

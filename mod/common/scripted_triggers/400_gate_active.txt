@@ -2,11 +2,3 @@
 magic_gate_is_active = {
 	always = yes
 }
-
-is_magic_country = {
-	AND = {
-		has_technology_researched = magic_understanding_production
-		has_technology_researched = magic_understanding_society
-		has_technology_researched = magic_understanding_military
-	}
-}
