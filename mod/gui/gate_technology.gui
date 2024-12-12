@@ -26,14 +26,14 @@ types gate_types {
                 # Close open panel before showing this one
                 on_start = "[InformationPanelBar.ClosePanel]"
                 start_sound = {
-                    soundeffect = "event:/SFX/UI/SideBar/markets"
+                    soundeffect = "event:/SFX/UI/SideBar/technology"
                 }
             }
 
             state = {
                 name = _hide
                 start_sound = {
-                    soundeffect = "event:/SFX/UI/SideBar/markets_stop"
+                    soundeffect = "event:/SFX/UI/SideBar/technology_stop"
                 }
             }
         }
@@ -506,118 +506,17 @@ types gate_types {
         }
 
         # Technology done
-        # Only triggers when opened
+        # Only triggers when open
+        # Is triggered through hidden UI
+        # See: gate_research_trigger
         state = {
             trigger_when = "[And3(GetPlayer.MakeScope.Var('magic_research').IsSet, ObjectsEqual(GetPlayer.MakeScope.Var('magic_research').GetTechnology.MakeScope, Technology.MakeScope), GreaterThanOrEqualTo_CFixedPoint(GetPlayer.MakeScope.Var('magic_research_progress').GetValue, Technology.GetCost(GetPlayer.Self)))]"
             on_finish = "[ScriptedGui.Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('technology', Technology.MakeScope).End)]"
         }
 
+        using = technology_confirm_button_sound
         tooltipwidget = {
-            FancyTooltipWidgetType = {
-                blockoverride "text" {
-                    # Does not modify size that is why we repeat it below
-                    widget = {
-                        layer = bottom
-                        parentanchor = top|left
-                        custom_tooltip_textbox = {
-                            text = DATA_TECHNOLOGY_NAME_TOOLTIP
-                        }
-                    }
-                }
-                blockoverride "tooltip_content_before" {
-                }
-                blockoverride "tooltip_content_after" {
-                    # This widget will be layered over the original tooltip to overwrite the first line.
-                    # This is needed because there is no way rebuild/modify the full technology tooltip.
-                    # So we render the original tooltip and overwrite the first line to replace some text.
-                    widget = {
-                        flowcontainer = {
-                            margin = { 15 10 }
-                            position = { -15 -10 }
-                            min_width = @tooltip_max_width_plus_margin
-                            custom_tooltip_textbox = {
-                                text = gg_magic_technology_tooltip_cost
-                                multiline = no
-                            }
-                            custom_tooltip_textbox = {
-                                raw_text = "#v #tooltippable [Technology.GetCost(GetPlayer.Self)|K]#!#!"
-                                multiline = no
-                                tooltip = "[Technology.GetCostDesc(GetPlayer.Self)]"
-                            }
-                            custom_tooltip_textbox = {
-                                text = gg_magic_technology_tooltip_duration
-                                multiline = no
-                            }
-
-                            background = {
-                                spriteType = CorneredTiled
-                                spriteborder = { 48 48 }
-                                texture = "gfx/interface/tooltip/tooltip_bg.dds"
-                                texture_density = 2
-                                tintcolor = "[TooltipInfo.GetTintColor]"
-                            }
-                        }
-                    }
-                    # Invisible and just used for tooltip sizing
-                    container = {
-                        alpha = 0
-                        layer = bottom
-                        parentanchor = top|left
-                        custom_tooltip_textbox = {
-                            text = DATA_TECHNOLOGY_NAME_TOOLTIP
-                        }
-                        flowcontainer = {
-                            min_width = @tooltip_max_width
-
-                            custom_tooltip_textbox = {
-                                text = gg_magic_technology_tooltip_cost
-                                multiline = no
-                            }
-                            custom_tooltip_textbox = {
-                                raw_text = "#v #tooltippable [Technology.GetCost(GetPlayer.Self)|K]#!#!"
-                                multiline = no
-                                tooltip = "[Technology.GetCostDesc(GetPlayer.Self)]"
-                            }
-                            custom_tooltip_textbox = {
-                                text = gg_magic_technology_tooltip_duration
-                                multiline = no
-                            }
-                        }
-                    }
-                }
-
-                blockoverride "icon_texture" {
-                    texture = "[Technology.GetTexture]"
-
-                    widget = {
-                        size = { 34 34 }
-                        position = { -6 30 }
-
-                        icon = {
-                            size = { 60% 60% }
-                            texture = "gfx/interface/backgrounds/round_button_bg.dds"
-                        }
-
-                        textbox = {
-                            text = "TECHNOLOGY_TYPE_DESCRIPTION"
-                            align = center|nobaseline
-                            position = { -7 -7 }
-                            using = fontsize_small
-                            size = { 20% 20% }
-                            parentanchor = center
-                        }
-                    }
-
-                }
-
-                blockoverride "name" {
-                    text = "[Technology.GetNameNoFormatting]"
-                }
-
-                blockoverride "type" {
-                    text = "TOOLTIP_TYPE_TECHNOLOGY"
-                }
-            }
+            magic_technology_tooltip = {}
         }
 
         block "button_style" {
@@ -790,6 +689,112 @@ types gate_types {
                     }
                 }
             }
+        }
+    }
+
+    type magic_technology_tooltip = FancyTooltipWidgetType {
+        blockoverride "text" {
+            # Does not modify size that is why we repeat it below
+            widget = {
+                layer = bottom
+                parentanchor = top|left
+                custom_tooltip_textbox = {
+                    text = DATA_TECHNOLOGY_NAME_TOOLTIP
+                }
+            }
+        }
+        blockoverride "tooltip_content_before" {
+        }
+        blockoverride "tooltip_content_after" {
+            # This widget will be layered over the original tooltip to overwrite the first line.
+            # This is needed because there is no way rebuild/modify the full technology tooltip.
+            # So we render the original tooltip and overwrite the first line to replace some text.
+            widget = {
+                flowcontainer = {
+                    margin = { 15 10 }
+                    position = { -15 -10 }
+                    min_width = @tooltip_max_width_plus_margin
+                    custom_tooltip_textbox = {
+                        text = gg_magic_technology_tooltip_cost
+                        multiline = no
+                    }
+                    custom_tooltip_textbox = {
+                        raw_text = "#v #tooltippable [Technology.GetCost(GetPlayer.Self)|K]#!#!"
+                        multiline = no
+                        tooltip = "[Technology.GetCostDesc(GetPlayer.Self)]"
+                    }
+                    custom_tooltip_textbox = {
+                        text = gg_magic_technology_tooltip_duration
+                        multiline = no
+                    }
+
+                    background = {
+                        spriteType = CorneredTiled
+                        spriteborder = { 48 48 }
+                        texture = "gfx/interface/tooltip/tooltip_bg.dds"
+                        texture_density = 2
+                        tintcolor = "[TooltipInfo.GetTintColor]"
+                    }
+                }
+            }
+            # Invisible and just used for tooltip sizing
+            container = {
+                alpha = 0
+                layer = bottom
+                parentanchor = top|left
+                custom_tooltip_textbox = {
+                    text = DATA_TECHNOLOGY_NAME_TOOLTIP
+                }
+                flowcontainer = {
+                    min_width = @tooltip_max_width
+
+                    custom_tooltip_textbox = {
+                        text = gg_magic_technology_tooltip_cost
+                        multiline = no
+                    }
+                    custom_tooltip_textbox = {
+                        raw_text = "#v #tooltippable [Technology.GetCost(GetPlayer.Self)|K]#!#!"
+                        multiline = no
+                        tooltip = "[Technology.GetCostDesc(GetPlayer.Self)]"
+                    }
+                    custom_tooltip_textbox = {
+                        text = gg_magic_technology_tooltip_duration
+                        multiline = no
+                    }
+                }
+            }
+        }
+
+        blockoverride "icon_texture" {
+            texture = "[Technology.GetTexture]"
+
+            widget = {
+                size = { 34 34 }
+                position = { -6 30 }
+
+                icon = {
+                    size = { 60% 60% }
+                    texture = "gfx/interface/backgrounds/round_button_bg.dds"
+                }
+
+                textbox = {
+                    text = "TECHNOLOGY_TYPE_DESCRIPTION"
+                    align = center|nobaseline
+                    position = { -7 -7 }
+                    using = fontsize_small
+                    size = { 20% 20% }
+                    parentanchor = center
+                }
+            }
+
+        }
+
+        blockoverride "name" {
+            text = "[Technology.GetNameNoFormatting]"
+        }
+
+        blockoverride "type" {
+            text = "TOOLTIP_TYPE_TECHNOLOGY"
         }
     }
 
