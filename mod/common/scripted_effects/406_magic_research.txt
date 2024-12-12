@@ -45,6 +45,37 @@
 			}
 		}
 
+		# University Innovation
+		set_variable = {
+			name = weekly_magic_innovation_university
+			value = {
+				value = 0
+				every_scope_building = {
+					limit = {
+						is_building_type = building_university
+					}
+					if = {
+						limit = {
+							has_active_production_method = pm_university_simple_magic_research
+						}
+						add = {
+							value = 2
+							multiply = level
+						}
+					}
+					else_if = {
+						limit = {
+							has_active_production_method = pm_university_advanced_magic_research
+						}
+						add = {
+							value = 4
+							multiply = level
+						}
+					}
+				}
+			}
+		}
+
 		# Total Innovation
 		set_variable = {
 			name = weekly_magic_innovation
@@ -53,6 +84,7 @@
 				add = var:weekly_magic_innovation_magic_gate
 				add = var:weekly_magic_innovation_mage_tower
 				add = var:weekly_magic_innovation_magic_academy
+				add = var:weekly_magic_innovation_university
 			}
 		}
 

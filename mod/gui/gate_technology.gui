@@ -171,7 +171,7 @@ types gate_types {
                         text = gg_header_active_research
                     }
                     blockoverride "text2" {
-                        raw_text = "#variable @innovation![GetPlayer.MakeScope.Var('weekly_magic_innovation').GetValue|D+=]#!"
+                        raw_text = "#variable @magic_innovation![GetPlayer.MakeScope.Var('weekly_magic_innovation').GetValue|0+=]#!"
 
                         # Explanation Tooltip
                         tooltipwidget = {
@@ -207,6 +207,10 @@ types gate_types {
                                     custom_tooltip_textbox = {
                                         visible = "[GreaterThan_CFixedPoint(GetPlayer.MakeScope.Var('weekly_magic_innovation_magic_academy').GetValue, '(CFixedPoint)0')]"
                                         text = "[Concatenate('    ', Localize('gg_magic_innovation_magic_academy_tooltip'))]"
+                                    }
+                                    custom_tooltip_textbox = {
+                                        visible = "[GreaterThan_CFixedPoint(GetPlayer.MakeScope.Var('weekly_magic_innovation_university').GetValue, '(CFixedPoint)0')]"
+                                        text = "[Concatenate('    ', Localize('gg_magic_innovation_university_tooltip'))]"
                                     }
                                     custom_tooltip_textbox = {
                                         margin_top = 10
