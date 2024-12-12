@@ -3,15 +3,24 @@
 	desc = "je_mana_saturation_button_slave_ritual_desc"
 
 	visible = {
-		has_technology_researched = magic_understanding_production
-		has_technology_researched = magic_understanding_society
-		has_technology_researched = magic_understanding_military
+		is_magic_country = yes
+		any_scope_state = {
+			is_slave_state = yes
+		}
 	}
 
 	possible = {
-		NOT = {
-			has_law = law_type:law_slavery_banned
-		}
+			AND = {
+				NOT = {
+					has_law = law_type:law_slavery_banned
+				}
+				custom_tooltip = {
+					text = je_mana_saturation_button_slave_ritual_cooldown
+					NOT = {
+						has_variable = slave_ritual_cooldown
+					}
+				}
+			}
 		custom_tooltip = {
 			# Seems infamy_less_than trigger loc is broken
 			text = je_mana_saturation_button_slave_ritual_infamy
@@ -19,11 +28,17 @@
 		}
 	}
 
+	# We do not want the UI to press the button every time
 	ai_chance = {
 		base = 100
+		subtract = infamy
 	}
 
 	effect = {
+		set_variable = {
+			name = slave_ritual_cooldown
+			years = 1
+		}
 		trigger_event = {
 			id = mana_saturation.2
 			popup = yes
