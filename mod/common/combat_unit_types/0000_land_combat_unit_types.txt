@@ -2,6 +2,8 @@
 ### Keep "unit tiers" per group in ascending order; the system will determine the default unit type for a country
 ### by the last defined unit type that it can build
 ###
+### Combat units in this file are sorted below existing base game combat units
+###
 
 ### ARMY
 
@@ -11,7 +13,7 @@ combat_unit_type_mage_infantry = {
     group = combat_unit_group_infantry
 
     upkeep_modifier = {
-        goods_input_mana_add = 1
+        goods_input_mana_add = 2
     }
 
     battle_modifier = {
@@ -63,7 +65,7 @@ combat_unit_type_mage_artillery = {
     group = combat_unit_group_artillery
 
     upkeep_modifier = {
-        goods_input_mana_add = 1
+        goods_input_mana_add = 3
     }
 
     battle_modifier = {
