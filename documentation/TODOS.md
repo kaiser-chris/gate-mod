@@ -19,8 +19,8 @@ Below is a table with all currently open ToDos.
 
 | File | Line | ToDo |
 | ---- | ---- | ---- |
-| ./.config/vic3/effects.cwt | 1029 |  market? |
-| ./.config/vic3/links.cwt | 34 |  market goods vs goods |
+| ./.config/vic3/effects.cwt | 1098 |  market? |
+| ./.config/vic3/links.cwt | 40 |  market goods vs goods |
 | ./mod/common/cultures/400_elven.txt | 2 |  Define custom culture (Currently copy of german) |
 | ./mod/common/cultures/401_dwarven.txt | 55 |  Create dwarven graphics & ethnicity |
 | ./mod/common/cultures/402_orcish.txt | 2 |  Define custom culture (Currently copy of dwarven) |
@@ -44,11 +44,12 @@ Below is a table with all currently open ToDos.
 | ./mod/common/production_method_groups/401_gate_production_method_groups.txt | 8 |  Add proper production method to pmg_magic_gate_exploitation |
 | ./mod/common/production_methods/400_gate_production_methods.txt | 26 |  Can we add something like custom tooltip here? |
 | ./mod/common/production_methods/400_gate_production_methods.txt | 44 |  Can we add something like custom tooltip here? |
-| ./mod/common/production_methods/406_magic_academy_production_methods.txt | 117 |  Find proper logo for pm_magic_academy_full_support |
+| ./mod/common/production_methods/406_magic_academy_production_methods.txt | 100 |  Find proper logo for pm_university_simple_magic_research |
+| ./mod/common/production_methods/406_magic_academy_production_methods.txt | 127 |  Find proper logo for pm_university_advanced_magic_research |
 | ./mod/common/production_methods/406_magic_academy_production_methods.txt | 29 |  Find proper logo for pm_magic_academy_partial_support |
 | ./mod/common/production_methods/406_magic_academy_production_methods.txt | 2 |  Find proper logo for pm_magic_academy_no_support |
 | ./mod/common/production_methods/406_magic_academy_production_methods.txt | 62 |  Find proper logo for pm_magic_academy_full_support |
-| ./mod/common/production_methods/406_magic_academy_production_methods.txt | 95 |  Find proper logo for pm_magic_academy_no_research |
+| ./mod/common/production_methods/406_magic_academy_production_methods.txt | 95 |  Find proper logo for pm_university_no_magic_research |
 | ./mod/common/production_methods/407_golem_workshop_production_methods.txt | 25 |  Create icon for pm_golem_workshop_steam_production |
 | ./mod/common/production_methods/407_golem_workshop_production_methods.txt | 2 |  Create icon for pm_golem_workshop_artisan_production |
 | ./mod/common/production_methods/407_golem_workshop_production_methods.txt | 57 |  Create icon for pm_golem_workshop_electric_production |
@@ -61,20 +62,28 @@ Below is a table with all currently open ToDos.
 | ./mod/common/religions/gate_religion.txt | 2 |  Add proper icon |
 | ./mod/common/scripted_effects/401_gate_immigration.txt | 55 |  Balance trait state_trait_dwarven_immigration |
 | ./mod/common/scripted_effects/401_gate_immigration.txt | 65 |  Balance trait state_trait_dwarven_mass_immigration |
-| ./mod/common/technology/technologies/401_magic_production.txt | 127 |  Add proper logo for magic_and_electricity |
+| ./mod/common/technology/technologies/401_magic_production.txt | 133 |  Add proper logo for magic_and_electricity |
 | ./mod/common/technology/technologies/401_magic_production.txt | 19 |  Add proper logo for mana_extraction |
-| ./mod/common/technology/technologies/401_magic_production.txt | 34 |  Add proper logo for magic_farming |
+| ./mod/common/technology/technologies/401_magic_production.txt | 35 |  Add proper logo for magic_farming |
 | ./mod/common/technology/technologies/402_magic_military.txt | 18 |  Add proper logo for mage_infantry |
-| ./mod/common/technology/technologies/402_magic_military.txt | 34 |  Add proper logo for mage_artillery |
+| ./mod/common/technology/technologies/402_magic_military.txt | 35 |  Add proper logo for mage_artillery |
 | ./mod/common/technology/technologies/403_magic_society.txt | 28 |  Add proper logo for formalized_magic |
-| ./mod/common/technology/technologies/403_magic_society.txt | 48 |  Add proper logo for magic_technology_integration |
+| ./mod/common/technology/technologies/403_magic_society.txt | 49 |  Add proper logo for magic_technology_integration |
 | ./mod/events/gate_events/dwarven_alps_events.txt | 54 |  Create custom video for event dwarven_alps.2 (Digging Dwarven Tunnels) |
-| ./mod/gui/tech_tree.gui | 1 |  Find a way to not overwrite this file |
+| ./mod/gui/gate_main_window.gui | 15 |  Fix this |
 | ./mod/localization/english/gate_countries_l_english.yml | 10 |  Add proper flavor text GOK_FLAVOR_TEXT (Orkish Supremacy) |
 | ./mod/localization/english/gate_countries_l_english.yml | 13 |  Add proper flavor text GNG_FLAVOR_TEXT (New Samadore) |
+| ./mod/localization/english/gate_laws_l_english.yml | 3 |  Add lawgroup_orcish_hegemony_desc |
+| ./mod/localization/english/gate_laws_l_english.yml | 5 |  Add law_orcish_hegemony_enforced_desc |
+| ./mod/localization/english/gate_laws_l_english.yml | 7 |  Add law_orcish_hegemony_not_enforced_desc |
 | ./mod/localization/english/gate_objective_l_english.yml | 11 |  Flesh out objective_magic_dominance_desc_GBR (Great Britain) |
 | ./mod/localization/english/gate_objective_l_english.yml | 18 |  Flesh out a proper description for je_obj_magic_knowledge_desc |
 | ./mod/localization/english/gate_objective_l_english.yml | 21 |  Flesh out a proper description for je_obj_magic_academy_desc |
+| ./mod/localization/english/gate_orcish_social_hierarchy_l_english.yml | 11 |  Add orc_citizens_desc |
+| ./mod/localization/english/gate_orcish_social_hierarchy_l_english.yml | 13 |  Add orc_soldiers_desc |
+| ./mod/localization/english/gate_orcish_social_hierarchy_l_english.yml | 15 |  Add orc_lowers_desc |
+| ./mod/localization/english/gate_orcish_social_hierarchy_l_english.yml | 7 |  Add orc_shamans_desc |
+| ./mod/localization/english/gate_orcish_social_hierarchy_l_english.yml | 9 |  Add orc_lords_desc |
 | ./mod/localization/english/gate_religion_l_english.yml | 5 |  Find better name for blood_god |
 | ./mod/localization/english/gate_technology_l_english.yml | 14 |  Write description for magic_golems |
 | ./mod/localization/english/gate_technology_l_english.yml | 16 |  Write description for magic_steam_golems |

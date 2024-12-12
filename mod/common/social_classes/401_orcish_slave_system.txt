@@ -1,0 +1,85 @@
+﻿orc_shamans = {
+	social_hierarchy = orcish_slave_system
+	strata = upper
+
+	pop_criteria = {
+		culture = cu:orcish
+	}
+
+	allowed_professions = {
+		academics
+		bureaucrats
+		clergymen
+		mages
+	}
+}
+
+orc_lords = {
+	social_hierarchy = orcish_slave_system
+	strata = middle
+
+	pop_criteria = {
+		culture = cu:orcish
+	}
+
+	allowed_professions = {
+		aristocrats
+		capitalists
+		engineers
+		officers
+	}
+}
+
+orc_soldiers = {
+	social_hierarchy = orcish_slave_system
+	strata = middle
+
+	allowed_professions = {
+		soldiers
+	}
+}
+
+orc_citizens = {
+	social_hierarchy = orcish_slave_system
+	strata = middle
+
+	pop_criteria = {
+		culture = cu:orcish
+	}
+
+	allowed_professions = {
+		clerks
+		farmers
+		shopkeepers
+		machinists
+	}
+}
+
+orc_lowers = {
+	social_hierarchy = orcish_slave_system
+	strata = lower
+
+	pop_criteria = {
+		culture = cu:orcish
+	}
+
+	allowed_professions = {
+		laborers
+		peasants
+	}
+}
+
+orc_slaves = {
+	social_hierarchy = orcish_slave_system
+	strata = lower
+
+	pop_criteria = {
+		NOT = {
+			culture = cu:orcish
+		}
+	}
+
+	allowed_professions = {
+		slaves
+	}
+}

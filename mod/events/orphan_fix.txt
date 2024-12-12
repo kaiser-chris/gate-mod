@@ -1,15 +1,17 @@
 ﻿namespace = orphan_fix
 
 # This file is here to shut up the error log about unused variables
+# These variables are used for the GUI or in localizations
 orphan_fix.1 = {
     type = country_event
 
     placement = root
 
     hidden = yes
-	
+
+	# DO NOT CALL THIS EVENT
 	trigger = {
-		# DO NOT CALL THIS EVENT
+		always = no
 	}
 	
 	cancellation_trigger = {
