@@ -6,6 +6,13 @@ widget = {
     allow_outside = yes
     alpha = 0
 
+    # Checks for debug mode
+    # and executes scripted gui
+    state = {
+        trigger_when = "[And(InDebugMode, Not(GetGlobalVariable('gate_debug')))]"
+        on_finish = "[GetScriptedGui('sgui_gate_enable_debug').Execute(GetPlayer.Self)]"
+    }
+
     flowcontainer = {
         parentanchor = bottom|left
         gate_technologies_production = {

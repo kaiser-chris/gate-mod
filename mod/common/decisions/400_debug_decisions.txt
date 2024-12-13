@@ -1,6 +1,6 @@
-﻿#TODO: Deactivate all decisions in this file before release
-debug_mana_saturation_decision = {
+﻿debug_mana_saturation_decision = {
 	is_shown = {
+		has_global_variable = gate_debug
 		is_player = yes
 		NOT = { has_global_variable = gate_mana_saturation_full }
 	}
@@ -18,6 +18,7 @@ debug_mana_saturation_decision = {
 
 debug_complete_sg_magic_knowledge = {
 	is_shown = {
+		has_global_variable = gate_debug
 		is_player = yes
 		NOT = {
 			has_completed_subgoal = sg_magic_knowledge
@@ -35,6 +36,7 @@ debug_complete_sg_magic_knowledge = {
 
 debug_complete_sg_magic_academy = {
 	is_shown = {
+		has_global_variable = gate_debug
 		is_player = yes
 		NOT = {
 			has_completed_subgoal = sg_magic_academy
@@ -52,6 +54,7 @@ debug_complete_sg_magic_academy = {
 
 debug_dragon_greenland_decision = {
 	is_shown = {
+		has_global_variable = gate_debug
 		is_player = yes
 		NOT = { has_global_variable = dragon_greenland_var }
 	}
@@ -71,6 +74,7 @@ debug_dragon_greenland_decision = {
 
 debug_dragon_california_decision = {
 	is_shown = {
+		has_global_variable = gate_debug
 		is_player = yes
 		NOT = { has_global_variable = dragon_california_var }
 	}
@@ -90,6 +94,7 @@ debug_dragon_california_decision = {
 
 debug_dragon_kolyma_decision = {
 	is_shown = {
+		has_global_variable = gate_debug
 		is_player = yes
 		NOT = { has_global_variable = dragon_kolyma_var }
 	}
@@ -109,6 +114,7 @@ debug_dragon_kolyma_decision = {
 
 debug_dragon_himalaya_decision = {
 	is_shown = {
+		has_global_variable = gate_debug
 		is_player = yes
 		NOT = { has_global_variable = dragon_himalaya_var }
 	}
@@ -128,6 +134,7 @@ debug_dragon_himalaya_decision = {
 
 debug_magic_growing_decision = {
 	is_shown = {
+		has_global_variable = gate_debug
 		is_player = yes
 		global_var:magic_growing_var <= 20
 	}
