@@ -105,7 +105,7 @@
 				add_ownership={
 					country={
 						country="c:GMK"
-						levels=5
+						levels=6
 					}
 				}
 				reserves=1
@@ -159,7 +159,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_slaughterhouses" "pm_sheep_farms" "pm_standard_fences" "pm_unrefrigerated"  }
+				activate_production_methods={ "pm_butchering_tools" "pm_sheep_farms" "pm_standard_fences" "pm_unrefrigerated"  }
 			}
 			create_building={
 				building="building_tooling_workshops"
@@ -173,6 +173,19 @@
 				}
 				reserves=1
 				activate_production_methods={ "pm_steel" "pm_automation_disabled"  }
+			}
+			create_building={
+				building="building_textile_mills"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:GMK"
+						levels=1
+						region="STATE_SOUTH_TYROL"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_dye_workshops"  "pm_traditional_looms" "pm_no_luxury_clothes" }
 			}
 			create_building={
 				building="building_paper_mills"
@@ -193,6 +206,28 @@
 			remove_building = building_wheat_farm
 		}
 		region_state:GMK={
+			create_building={
+				building="building_government_administration"
+				add_ownership={
+					country={
+						country="c:GMK"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_vertical_filing_cabinets" "pm_professional_bureaucrats" "pm_religious_bureaucrats" }
+			}
+			create_building={
+				building="building_mana_extractor"
+				add_ownership={
+					country={
+						country="c:GMK"
+						levels=2
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_mage_mana_extraction" }
+			}
 			create_building={
 				building="building_murk_ways"
 				add_ownership={
@@ -255,6 +290,19 @@
 				}
 				reserves=1
 				activate_production_methods={ "pm_blister_steel_process" "pm_automation_disabled"  }
+			}
+			create_building={
+				building="building_tooling_workshops"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:GMK"
+						levels=1
+						region="STATE_SOUTH_TYROL"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_steel" "pm_automation_disabled"  }
 			}
 			create_building={
 				building="building_logging_camp"
@@ -361,6 +409,28 @@
 				}
 				reserves = 1
 				activate_production_methods = { "pm_sulfite_pulping" "pm_automation_disabled" }
+			}
+			create_building = {
+				building = "building_wheat_farm"
+				add_ownership = {
+					country = {
+						country="c:GMK"
+						levels=2
+					}
+				}
+				reserves = 1
+				activate_production_methods={ "pm_soil_enriching_farming" "pm_citrus_orchards" "pm_tools"  }
+			}
+			create_building={
+				building="building_logging_camp"
+				add_ownership={
+					country = {
+						country="c:GMK"
+						levels=3
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_saw_mills" "pm_no_equipment" "pm_road_carts" "pm_hardwood" }
 			}
 		}
 	}

@@ -61,11 +61,13 @@ sgui_gate_window_tab_research = {
 sgui_gate_enable_debug = {
 	scope = country
 
-	effect = {
-		change_infamy = 10
-		set_global_variable = {
-			name = gate_debug
-			value = 1
+	is_valid = {
+		NOT = {
+			has_global_variable = gate_debug
 		}
+	}
+
+	effect = {
+		set_global_variable = gate_debug
 	}
 }
