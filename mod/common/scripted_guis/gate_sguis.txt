@@ -1,63 +1,4 @@
-﻿@gate_window_tab_count = 2
-
-sgui_gate_button = {
-	scope = country
-	
-	is_shown = {
-		always = yes
-	}
-	
-	is_valid = {
-		always = yes
-	}
-
-	# Cycle through tabs or close window
-	effect = {
-		if = {
-			# When there are more tabs cycle to next one
-			limit = {
-				has_variable = gate_main_technology_is_active
-				has_variable = gate_main_technology_active_tab
-			}
-			remove_variable = gate_main_technology_is_active
-			remove_variable = gate_main_technology_active_tab
-		}
-
-		if = {
-			# When there are more tabs cycle to next one
-			limit = {
-				has_variable = gate_main_window_is_active
-				has_variable = gate_main_window_active_tab
-				var:gate_main_window_active_tab < @gate_window_tab_count
-			}
-			change_variable = {
-				name = gate_main_window_active_tab
-				add = 1
-			}
-			change_infamy = -10
-		}
-		else_if = {
-			# After cycling through all tabs close window
-			limit = {
-				has_variable = gate_main_window_is_active
-				has_variable = gate_main_window_active_tab
-				var:gate_main_window_active_tab >= @gate_window_tab_count
-			}
-			remove_variable = gate_main_window_is_active
-			remove_variable = gate_main_window_active_tab
-		}
-		else = {
-			# If there is no variable we set it
-			set_variable = {
-				name = gate_main_window_active_tab
-				value = 1
-			}
-			set_variable = gate_main_window_is_active
-		}
-	}
-}
-
-sgui_gate_close_window = {
+﻿sgui_gate_close_window = {
 	scope = country
 
 	effect = {
@@ -113,6 +54,18 @@ sgui_gate_window_tab_research = {
 		set_variable = {
 			name = gate_main_window_active_tab
 			value = 2
+		}
+	}
+}
+
+sgui_gate_enable_debug = {
+	scope = country
+
+	effect = {
+		change_infamy = 10
+		set_global_variable = {
+			name = gate_debug
+			value = 1
 		}
 	}
 }
