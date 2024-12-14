@@ -30,18 +30,11 @@ GLOBAL = {
 	# Set correct gate immigration traits
 	set_immigration_traits = yes
 
-	# Add Gate Button
-	add_to_global_variable_list = {
-		name = custom_button_list
-		target = ideology:gate_button_main
-	}
+	# Add custom buttons
+	add_magic_technology_button = yes
+	add_magic_main_button = yes
 
-	# Add Gate Technology Button
-	add_to_global_variable_list = {
-		name = custom_button_list
-		target = ideology:gate_button_technology
-	}
-
+	# Set global base magic innovation and calculate it
 	set_global_variable = {
 		name = weekly_magic_innovation_base
 		value = 25
@@ -50,5 +43,6 @@ GLOBAL = {
 		calculate_magic_research = yes
 	}
 
+	# Statistics GUI
 	collect_magic_countries = yes
 }

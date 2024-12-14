@@ -3,12 +3,8 @@
 gate_button_technology = {
 	scope = country
 
-	is_shown = {
-		always = yes
-	}
-
 	is_valid = {
-		always = yes
+		is_magic_country = yes
 	}
 
 	# Cycle through tabs or close window

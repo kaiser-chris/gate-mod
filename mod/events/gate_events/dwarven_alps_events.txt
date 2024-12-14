@@ -28,9 +28,7 @@ dwarven_alps.1 = {
 		name = dwarven_alps.1.a
 		default_option = yes
 		c:SWI = {
-			add_technology_researched = magic_understanding_production
-			add_technology_researched = magic_understanding_society
-			add_technology_researched = magic_understanding_military
+			learn_magic = yes
 			set_variable = {
 				name = swiss_magic_var
 			}
