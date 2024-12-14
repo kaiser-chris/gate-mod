@@ -22,10 +22,9 @@ Below is a table with all currently open ToDos.
 | ./.config/vic3/effects.cwt | 1098 |  market? |
 | ./.config/vic3/links.cwt | 40 |  market goods vs goods |
 | ./mod/common/cultures/400_elven.txt | 2 |  Define custom culture (Currently copy of german) |
-| ./mod/common/cultures/401_dwarven.txt | 55 |  Create dwarven graphics & ethnicity |
+| ./mod/common/cultures/401_dwarven.txt | 59 |  Create dwarven graphics |
 | ./mod/common/cultures/402_orcish.txt | 2 |  Define custom culture (Currently copy of dwarven) |
 | ./mod/common/cultures/402_orcish.txt | 55 |  Create dwarven graphics & ethnicity |
-| ./mod/common/decisions/400_debug_decisions.txt | 1 |  Deactivate all decisions in this file before release |
 | ./mod/common/history/buildings/400_dominion.txt | 17 |  Add GAD buildings in STATE_NORTH_ANGOLA |
 | ./mod/common/history/buildings/400_dominion.txt | 22 |  Add GAD buildings in STATE_EAST_ANGOLA |
 | ./mod/common/history/buildings/400_dominion.txt | 32 |  Add GAD buildings in STATE_SOUTH_ANGOLA |
@@ -69,8 +68,8 @@ Below is a table with all currently open ToDos.
 | ./mod/common/technology/technologies/402_magic_military.txt | 35 |  Add proper logo for mage_artillery |
 | ./mod/common/technology/technologies/403_magic_society.txt | 28 |  Add proper logo for formalized_magic |
 | ./mod/common/technology/technologies/403_magic_society.txt | 49 |  Add proper logo for magic_technology_integration |
-| ./mod/events/gate_events/dwarven_alps_events.txt | 54 |  Create custom video for event dwarven_alps.2 (Digging Dwarven Tunnels) |
-| ./mod/gui/gate_main_window.gui | 15 |  Fix this |
+| ./mod/events/gate_events/dwarven_alps_events.txt | 52 |  Create custom video for event dwarven_alps.2 (Digging Dwarven Tunnels) |
+| ./mod/gui/gate_overwrites.gui | 1 |  Fix this |
 | ./mod/localization/english/gate_countries_l_english.yml | 10 |  Add proper flavor text GOK_FLAVOR_TEXT (Orkish Supremacy) |
 | ./mod/localization/english/gate_countries_l_english.yml | 13 |  Add proper flavor text GNG_FLAVOR_TEXT (New Samadore) |
 | ./mod/localization/english/gate_laws_l_english.yml | 3 |  Add lawgroup_orcish_hegemony_desc |
