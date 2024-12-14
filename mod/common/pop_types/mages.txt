@@ -1,5 +1,4 @@
 ﻿mages = {
-    #TODO: Need to add mages to landowners
 	texture = "gfx/interface/icons/pops_icons/mages.dds"
 	color = hsv{ 0.94 0.51 0.37 }
 	start_quality_of_life = 15
@@ -19,16 +18,21 @@
 		value = 1
 
 		add = {
-			desc = "POP_STARVATION"	
-			
+			desc = "POP_STARVATION"
+
 			if = {
-				limit = { 
-					standard_of_living < 5
+				limit = {
+					is_in_mild_starvation = yes
 				}
-				value = 1
-			}		
+				value = 0.5
+			}
+			else_if = {
+				limit = {
+					is_in_severe_starvation = yes
+				}
+				value = 1.5
+			}
 		}
-		
 	}
 	
 	qualifications_growth_desc = "mages_qualifications_desc"
@@ -53,6 +57,15 @@
 			if = {
 				limit = {
 					is_pop_type = aristocrats
+				}
+				multiply = {
+					value = 5
+					desc = "QUALIFICATIONS_FAVORED_TYPE"
+				}
+			}
+			if = {
+				limit = {
+					is_pop_type = academics
 				}
 				multiply = {
 					value = 5
