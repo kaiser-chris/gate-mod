@@ -77,6 +77,8 @@
 		literacy_rate > 0.25
 		OR = {
 			is_pop_type = mages
+			is_pop_type = druids
+			is_pop_type = academics
 			is_pop_type = aristocrats
 		}
 	}
@@ -84,13 +86,25 @@
 	pop_weight = {
 		value = 0
 
+		# Mages
 		add = {
 			desc = pop_mages
 			if = {
 				limit = {
 					is_pop_type = mages
 				}
-				value = 250
+				value = 200
+			}
+		}
+
+		# Druids
+		add = {
+			desc = pop_druids
+			if = {
+				limit = {
+					is_pop_type = druids
+				}
+				value = 150
 			}
 		}
 
@@ -101,6 +115,16 @@
 					is_pop_type = aristocrats
 				}
 				value = 75
+			}
+		}
+
+		add = {
+			desc = POP_ACADEMICS
+			if = {
+				limit = {
+					is_pop_type = academics
+				}
+				value = 100
 			}
 		}
 		

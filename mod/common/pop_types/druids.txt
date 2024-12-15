@@ -1,5 +1,5 @@
-﻿mages = {
-	# TODO: Update mages pop icon
+﻿druids = {
+	# TODO: Update druids pop icon
 	texture = "gfx/interface/icons/pops_icons/mages.dds"
 	color = hsv{ 0.94 0.51 0.37 }
 	start_quality_of_life = 15
@@ -10,7 +10,6 @@
 	dependent_wage = 0.5	# per year
 	unemployment = yes
 
-	
 	# 70% - 100% politically engaged
 	political_engagement_base = 0.7
 	political_engagement_literacy_factor = 0.3
@@ -35,8 +34,8 @@
 			}
 		}
 	}
-	
-	qualifications_growth_desc = mages_qualifications_desc
+
+	qualifications_growth_desc = druids_qualifications_desc
 	qualifications = {
 		if = {
 			limit = {
@@ -57,7 +56,7 @@
 			}
 			if = {
 				limit = {
-					is_pop_type = aristocrats
+					is_pop_type = farmers
 				}
 				multiply = {
 					value = 5
@@ -66,7 +65,7 @@
 			}
 			if = {
 				limit = {
-					is_pop_type = academics
+					is_pop_type = laborers
 				}
 				multiply = {
 					value = 5
@@ -89,8 +88,8 @@
 			}
 		}
 		else_if = {
-			limit = { 
-				is_peasant_under_serfdom = yes 
+			limit = {
+				is_peasant_under_serfdom = yes
 			}
 			value = {
 				desc = QUALIFICATIONS_PEASANTS_UNDER_SERFDOM

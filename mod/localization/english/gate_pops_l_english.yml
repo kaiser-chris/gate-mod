@@ -1,7 +1,15 @@
 ﻿l_english:
+# Mages
  mages: "@mages! $mages_no_icon$"
  mages_only_icon: "@mages!"
  mages_no_icon: "Mages"
  mages_desc: "Educated magic users that are often from the wealthy elite. Their political interests are most often represented by the [GetInterestGroupVariant('ig_magic_users',GetPlayer).GetNameWithCountryVariant]."
  mages_qualifications_desc: "Only pops with adequate [concept_literacy] can become #v $mages$#!. Potential increases with greater [concept_literacy] and [concept_wealth]. Pops whose [concept_culture] faces [concept_discrimination] take a much longer time. #v $aristocrats$#! and #v $academics$#! have a particularly easy time becoming #v $mages$#!."
  pop_mages: "$mages$ [concept_profession]"
+# Druids
+ druids: "@druids! $druids_no_icon$"
+ druids_only_icon: "@druids!"
+ druids_no_icon: "Druids"
+ druids_desc: "Natural magic users that are often from farming families. Their political interests are most often represented by the [GetInterestGroupVariant('ig_magic_users',GetPlayer).GetNameWithCountryVariant]."
+ druids_qualifications_desc: ""Any pop can become #v $druids$#!. Potential increases with greater [concept_literacy] and [concept_wealth]. Pops whose [concept_culture] faces [concept_discrimination] take a much longer time. #v $farmers$#! and #v $laborers$#! have a particularly easy time becoming #v $druids$#!."
+ pop_druids: "$druids$ [concept_profession]"
