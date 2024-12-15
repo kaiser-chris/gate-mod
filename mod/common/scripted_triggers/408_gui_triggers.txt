@@ -1,0 +1,12 @@
+﻿# Checks whether other windows are already open
+are_other_windows_open = {
+    AND = {
+        OR = {
+            has_variable = gate_main_window_is_active
+            has_variable = gate_main_technology_is_active
+        }
+        NOT = {
+            has_variable = $check$
+        }
+    }
+}

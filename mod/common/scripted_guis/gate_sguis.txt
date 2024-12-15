@@ -2,10 +2,7 @@
 	scope = country
 
 	effect = {
-		remove_variable = gate_main_window_is_active
-		remove_variable = gate_main_window_active_tab
-		remove_variable = gate_main_technology_is_active
-		remove_variable = gate_main_technology_active_tab
+		close_all_windows = yes
 	}
 }
 

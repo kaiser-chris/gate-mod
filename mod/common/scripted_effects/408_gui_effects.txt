@@ -1,0 +1,62 @@
+﻿open_window_with_tabs = {
+    if = {
+        limit = {
+            are_other_windows_open = {
+                check = $window_variable$
+            }
+        }
+        close_all_windows = yes
+    }
+
+    if = {
+        # When there are more tabs cycle to next one
+        limit = {
+            has_variable = $window_variable$
+            has_variable = $tab_variable$
+            var:$tab_variable$ < $tab_count$
+        }
+        change_variable = {
+            name = $tab_variable$
+            add = 1
+        }
+    }
+    else_if = {
+        # After cycling through all tabs close window
+        limit = {
+            has_variable = $window_variable$
+            has_variable = $tab_variable$
+            var:$tab_variable$ >= $tab_count$
+        }
+        remove_variable = $window_variable$
+        remove_variable = $tab_variable$
+    }
+    else = {
+        # If there is no variable we set it
+        set_variable = {
+            name = $tab_variable$
+            value = 1
+        }
+        set_variable = $window_variable$
+    }
+}
+
+close_all_windows = {
+    remove_variable = gate_main_window_is_active
+    remove_variable = gate_main_window_active_tab
+    remove_variable = gate_main_technology_is_active
+    remove_variable = gate_main_technology_active_tab
+}
+
+add_magic_main_button = {
+    add_to_global_variable_list = {
+        name = custom_button_list
+        target = ideology:gate_button_main
+    }
+}
+
+add_magic_technology_button = {
+    add_to_global_variable_list = {
+        name = custom_button_list
+        target = ideology:gate_button_technology
+    }
+}
