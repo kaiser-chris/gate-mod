@@ -1,6 +1,9 @@
-﻿# TODO: Further flesh out orcish ethnicity
-orcish = {
+﻿orcish = {
     template = "south_american"
+
+    skin_color = {
+        10 = { 0.8 0.8 0.9 0.9 }
+    }
 
     eye_color = {
         # Brown
@@ -46,13 +49,6 @@ orcish = {
         10 = {  name = layer_2_low_thickness             range = { 0.25 0.75 }     }
         # 10 = {  name = layer_2_low_thickness             range = { 0.5 0.75 }     }
         10 = {  name = layer_2_lower_thickness             range = { 0.25 0.75 }     }
-    }
-
-    gene_head_height = {
-        10 = {
-            name = "skin_color_hue_pos"
-            range = { 0.4 0.4 }
-        }
     }
 
 }

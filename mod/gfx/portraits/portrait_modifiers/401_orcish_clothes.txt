@@ -1,0 +1,190 @@
+﻿orcish_clothes = {
+    usage = game
+    selection_behavior = weighted_random
+    fallback = default_clothes
+
+    default_clothes = {
+        weight = {
+            base = 1
+        }
+    }
+
+    orcish_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = outfits
+                template = african_outfits_politician
+                range = { 0.1 0.5 } # For the work to randomly correctness
+            }
+            accessory = {
+                mode = add
+                gene = necklaces
+                template = african_necklaces
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                orcish_portrait_trigger = yes
+            }
+        }
+    }
+    orcish_poor_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = outfits
+                template = african_outfits
+                range = { 0 0.5 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                orcish_portrait_pop_trigger = yes
+            }
+        }
+    }
+    orcish_middle_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = outfits
+                template = african_outfits
+                range = { 0.5 0.7 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 600
+                AND = {
+                    orcish_portrait_pop_trigger = yes
+                    middle_clothes_pop_trigger = yes
+                }
+            }
+        }
+    }
+    orcish_upper_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = outfits
+                template = african_outfits
+                range = { 0.75 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 600
+                AND = {
+                    orcish_portrait_pop_trigger = yes
+                    upper_clothes_pop_trigger = yes
+                }
+            }
+        }
+    }
+
+    orcish_ruler_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = legwear
+                template = african_zulu_dingane_legwear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = top_layer
+                template = african_zulu_dingane
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 1000
+                has_dlc_feature = ep1_cosmetics
+                scope:character ?= {
+                    is_ruler = yes
+                    is_female = no
+                }
+                orcish_portrait_trigger = yes
+            }
+        }
+    }
+
+    orcish_prince_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = legwear
+                template = african_zulu_dingane_legwear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 1000
+                has_dlc_feature = ep1_cosmetics
+                scope:character ?= {
+                    is_heir = yes
+                    is_female = no
+                }
+                orcish_portrait_trigger = yes
+            }
+        }
+    }
+
+    orcish_impi_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = outfits
+                template = african_outfits
+                range = { 0 0.1 }
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = zulu_impi_legwear
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 1000
+                has_dlc_feature = ep1_cosmetics
+                OR = {
+                    scope:pop ?= {
+                        OR = {
+                            culture = cu:orcish
+                        }
+                        OR = {
+                            is_pop_type = mages
+                            is_pop_type = druids
+                            is_pop_type = aristocrats
+                            is_pop_type = soldiers
+                            is_pop_type = officers
+                        }
+                    }
+                    scope:character ?={
+                        has_role = general
+                        is_ruler = no
+                        OR = {
+                            has_culture = cu:orcish
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

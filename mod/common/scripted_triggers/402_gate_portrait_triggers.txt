@@ -1,0 +1,24 @@
+﻿orcish_portrait_trigger = {
+    exists = scope:character
+    scope:character = {
+        has_culture = cu:orcish
+    }
+}
+orcish_portrait_pop_trigger = {
+    exists = scope:pop
+    scope:pop = {
+        culture = cu:orcish
+    }
+}
+dwarven_portrait_trigger = {
+    exists = scope:character
+    scope:character = {
+        has_culture = cu:dwarven
+    }
+}
+dwarven_portrait_pop_trigger = {
+    exists = scope:pop
+    scope:pop = {
+        culture = cu:dwarven
+    }
+}
