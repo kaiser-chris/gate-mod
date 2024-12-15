@@ -1,13 +1,36 @@
-﻿morph_genes = {
-    skin_change = {
-        inheritable = yes
-        default = {
+﻿@maleAnimMin = -0.5
+@maleAnimMax = 0.5
+@femaleAnimMin = -0.4
+@femaleAnimMax = 0.4
+
+morph_genes = {
+    # This is a dirty hack to prevent
+    # error because existing base game
+    # dna does not have skin_change or
+    # hair_change
+    gene_head_height = {
+        ## Base Game Head Height ##
+        head_height = {
             index = 0
-            male = {}
-            female = male
+            male = {
+                setting = {
+                    attribute = "head_head_height"
+                    value = { min = @maleAnimMin max = @maleAnimMax }
+                    age = age_preset_child_features
+                }
+            }
+            female = {
+                setting = {
+                    attribute = "head_head_height"
+                    value = { min = @femaleAnimMin max = @femaleAnimMax }
+                    age = age_preset_child_features
+                }
+            }
             boy = male
-            girl = male
+            girl = female
         }
+
+        ## Skin Change (skin_change) ##
         skin_color_hue_pos = {
             index = 1
             male = {
@@ -93,7 +116,7 @@
             boy = male
             girl = male
         }
-        full_color_change_pos = {
+        skin_full_color_change_pos = {
             index = 7
             male = {
                 hair_hsv_shift_curve = {
@@ -119,7 +142,7 @@
             boy = male
             girl = male
         }
-        eye_color_pos = {
+        skin_eye_color_pos = {
             index = 8
             male = {
                 eye_hsv_shift_curve = {
@@ -133,18 +156,10 @@
             boy = male
             girl = male
         }
-    }
-    hair_change = {
-        inheritable = yes
-        default = {
-            index = 0
-            male = {}
-            female = male
-            boy = male
-            girl = male
-        }
-        eye_color_pos = {
-            index = 1
+
+        ## Hair Change (hair_change) ##
+        hair_eye_color_pos = {
+            index = 9
             male = {
                 hair_hsv_shift_curve = {
                     curve = {
@@ -163,8 +178,8 @@
             boy = male
             girl = male
         }
-        color_neg = {
-            index = 2
+        hair_color_neg = {
+            index = 10
             male = {
                 hair_hsv_shift_curve = {
                     curve = {
@@ -183,8 +198,8 @@
             boy = male
             girl = male
         }
-        color_pos = {
-            index = 3
+        hair_color_pos = {
+            index = 11
             male = {
                 hair_hsv_shift_curve = {
                     curve = {
@@ -203,8 +218,8 @@
             boy = male
             girl = male
         }
-        color_value_range = {
-            index = 4
+        hair_color_value_range = {
+            index = 12
             male = {
                 hair_hsv_shift_curve = {
                     curve = {
@@ -224,7 +239,7 @@
             girl = male
         }
         hair_value_range = {
-            index = 5
+            index = 13
             male = {
                 hair_hsv_shift_curve = {
                     curve = {
@@ -244,7 +259,7 @@
             girl = male
         }
         hair_saturation_range = {
-            index = 6
+            index = 14
             male = {
                 hair_hsv_shift_curve = {
                     curve = {
@@ -263,6 +278,5 @@
             boy = male
             girl = male
         }
-
     }
 }
