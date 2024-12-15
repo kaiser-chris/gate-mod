@@ -6,7 +6,6 @@
 	index = 3
 
 	ideologies = {
-		ideology_plutocratic
 		ideology_jingoist
 		ideology_meritocratic
 		ideology_individualist
@@ -28,14 +27,14 @@
 
 	on_enable = {
 		ig:ig_magic_users = {
+			# Orcish Supremacy
 			if = {
 				limit = {
 					owner = { c:GOK ?= this }
 				}
-				# TODO: Create orc shamans ig traits
-				set_ig_trait = ig_trait:ig_trait_social_criticism
-				set_ig_trait = ig_trait:ig_trait_avant_garde
-				set_ig_trait = ig_trait:ig_trait_restoration
+				set_ig_trait = ig_trait:ig_trait_slave_masters
+				set_ig_trait = ig_trait:ig_trait_military_support
+				set_ig_trait = ig_trait:ig_trait_annoyed_masters
 			}
 			else_if = {
 				limit = {

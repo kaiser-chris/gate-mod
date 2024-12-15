@@ -1,0 +1,27 @@
+﻿ig_trait_slave_masters = {
+	icon = "gfx/interface/icons/ig_trait_icons/propagandists.dds"
+	min_approval = loyal
+	
+	modifier = {
+		state_slaves_mortality_mult = -0.1
+	}
+}
+
+ig_trait_military_support = {
+	icon = "gfx/interface/icons/ig_trait_icons/avant_garde.dds"
+	min_approval = happy
+	
+	modifier = {
+		unit_offense_mult = 0.05
+		unit_defense_mult = 0.05
+	}
+}
+
+ig_trait_annoyed_masters = {
+	icon = "gfx/interface/icons/ig_trait_icons/social_criticism.dds"
+	max_approval = unhappy
+	
+	modifier = {
+		state_slaves_mortality_mult = 0.1
+	}
+}
