@@ -17,8 +17,7 @@ types gate_types {
     type gate_technology_panel = default_block_window {
         name = "gate_technology_panel"
 
-        datacontext = "[GetScriptedGui('sgui_gate_technology_visisblity')]"
-        visible = "[And(ScriptedGui.IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End), Not(InformationPanelBar.IsAnyPanelOpen))]"
+        visible = "[And(Not(InformationPanelBar.IsAnyPanelOpen), GetVariableSystem.HasValue('com_open_window', 'gate_button_technology'))]"
 
         blockoverride "animation_state_block" {
             state = {
@@ -44,11 +43,11 @@ types gate_types {
         }
 
         blockoverride "header_back_button" {
-            onclick = "[GetScriptedGui('sgui_gate_close_window').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+            onclick = "[GetVariableSystem.Clear('com_open_window')]"
         }
 
         blockoverride "header_close_button" {
-            onclick = "[GetScriptedGui('sgui_gate_close_window').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+            onclick = "[GetVariableSystem.Clear('com_open_window')]"
         }
 
         blockoverride "fixed_top"
@@ -62,13 +61,13 @@ types gate_types {
                     tooltip = "PRODUCTION_NO_CONCEPT"
                 }
                 blockoverride "first_button_click" {
-                    onclick = "[GetScriptedGui('sgui_gate_technology_tab_production').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+                    onclick = "[GetScriptedGui('sgui_gate_technology_tab_production').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
                 }
                 blockoverride "first_button_visibility" {
-                    visible = "[GetScriptedGui('sgui_gate_technology_tab_production').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+                    visible = "[GetScriptedGui('sgui_gate_technology_tab_production').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
                 }
                 blockoverride "first_button_visibility_checked" {
-                    visible = "[Not(GetScriptedGui('sgui_gate_technology_tab_production').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
+                    visible = "[Not(GetScriptedGui('sgui_gate_technology_tab_production').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
                 }
                 blockoverride "first_button_selected" {
                     text = "PRODUCTION_NO_CONCEPT"

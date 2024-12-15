@@ -7,21 +7,9 @@
 
 	# Cycle through tabs or close window
 	effect = {
-		open_window_with_tabs = {
+		cycle_tabs = {
 			tab_count = 3
 			tab_variable = gate_main_technology_active_tab
-			window_variable = gate_main_technology_is_active
-		}
-	}
-}
-
-sgui_gate_technology_visisblity = {
-	scope = country
-
-	is_shown = {
-		AND = {
-			has_variable = gate_main_technology_is_active
-			has_variable = gate_main_technology_active_tab
 		}
 	}
 }
@@ -31,7 +19,6 @@ sgui_gate_technology_tab_production = {
 
 	is_shown = {
 		AND = {
-			has_variable = gate_main_technology_is_active
 			has_variable = gate_main_technology_active_tab
 			var:gate_main_technology_active_tab = 1
 		}
@@ -50,7 +37,6 @@ sgui_gate_technology_tab_military = {
 
 	is_shown = {
 		AND = {
-			has_variable = gate_main_technology_is_active
 			has_variable = gate_main_technology_active_tab
 			var:gate_main_technology_active_tab = 2
 		}
@@ -69,7 +55,6 @@ sgui_gate_technology_tab_society = {
 
 	is_shown = {
 		AND = {
-			has_variable = gate_main_technology_is_active
 			has_variable = gate_main_technology_active_tab
 			var:gate_main_technology_active_tab = 3
 		}

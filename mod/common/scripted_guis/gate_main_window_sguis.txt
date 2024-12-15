@@ -11,10 +11,9 @@
 
     # Cycle through tabs or close window
     effect = {
-        open_window_with_tabs = {
+        cycle_tabs = {
             tab_count = 2
             tab_variable = gate_main_window_active_tab
-            window_variable = gate_main_window_is_active
         }
     }
 }

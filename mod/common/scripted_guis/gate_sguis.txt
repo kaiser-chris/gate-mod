@@ -1,28 +1,8 @@
-﻿sgui_gate_close_window = {
-	scope = country
-
-	effect = {
-		close_all_windows = yes
-	}
-}
-
-sgui_gate_window_visisblity = {
+﻿sgui_gate_window_tab_magic = {
 	scope = country
 
 	is_shown = {
 		AND = {
-			has_variable = gate_main_window_is_active
-			has_variable = gate_main_window_active_tab
-		}
-	}
-}
-
-sgui_gate_window_tab_magic = {
-	scope = country
-
-	is_shown = {
-		AND = {
-			has_variable = gate_main_window_is_active
 			has_variable = gate_main_window_active_tab
 			var:gate_main_window_active_tab = 1
 		}
@@ -41,7 +21,6 @@ sgui_gate_window_tab_research = {
 
 	is_shown = {
 		AND = {
-			has_variable = gate_main_window_is_active
 			has_variable = gate_main_window_active_tab
 			var:gate_main_window_active_tab = 2
 		}

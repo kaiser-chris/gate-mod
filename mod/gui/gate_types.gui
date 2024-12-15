@@ -15,7 +15,7 @@ types gate_types {
     type gate_sidebar_panel = default_block_window {
         datacontext = "[GetScriptedGui('sgui_gate_window_visisblity')]"
 
-        visible = "[And(ScriptedGui.IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End), Not(InformationPanelBar.IsAnyPanelOpen))]"
+        visible = "[And(Not(InformationPanelBar.IsAnyPanelOpen), GetVariableSystem.HasValue('com_open_window', 'gate_button_main'))]"
 
         blockoverride "animation_state_block" {
             state = {
@@ -41,11 +41,11 @@ types gate_types {
         }
 
         blockoverride "header_back_button" {
-            onclick = "[GetScriptedGui('sgui_gate_close_window').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+            onclick = "[GetVariableSystem.Clear('com_open_window')]"
         }
 
         blockoverride "header_close_button" {
-            onclick = "[GetScriptedGui('sgui_gate_close_window').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+            onclick = "[GetVariableSystem.Clear('com_open_window')]"
         }
 
         blockoverride "fixed_top"
