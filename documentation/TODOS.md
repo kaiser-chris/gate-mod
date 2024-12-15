@@ -38,7 +38,6 @@ Below is a table with all currently open ToDos.
 | ./mod/common/history/countries/gns - new samadore.txt | 3 |  Define laws and technology for GNS |
 | ./mod/common/history/military_formations/402_orcish_kingdom.txt | 22 |  Create character |
 | ./mod/common/history/military_formations/402_orcish_kingdom.txt | 72 |  Create character |
-| ./mod/common/pop_types/mages.txt | 2 |  Need to add mages to landowners |
 | ./mod/common/production_method_groups/401_gate_production_method_groups.txt | 24 |  Add proper production method to pmg_mana_extraction |
 | ./mod/common/production_method_groups/401_gate_production_method_groups.txt | 8 |  Add proper production method to pmg_magic_gate_exploitation |
 | ./mod/common/production_methods/400_gate_production_methods.txt | 26 |  Can we add something like custom tooltip here? |
@@ -70,7 +69,6 @@ Below is a table with all currently open ToDos.
 | ./mod/common/technology/technologies/403_magic_society.txt | 49 |  Add proper logo for magic_technology_integration |
 | ./mod/events/gate_events/dwarven_alps_events.txt | 52 |  Create custom video for event dwarven_alps.2 (Digging Dwarven Tunnels) |
 | ./mod/gui/gate_overwrites.gui | 1 |  Fix this |
-| ./mod/localization/english/gate_countries_l_english.yml | 10 |  Add proper flavor text GOK_FLAVOR_TEXT (Orkish Supremacy) |
 | ./mod/localization/english/gate_countries_l_english.yml | 13 |  Add proper flavor text GNG_FLAVOR_TEXT (New Samadore) |
 | ./mod/localization/english/gate_laws_l_english.yml | 3 |  Add lawgroup_orcish_hegemony_desc |
 | ./mod/localization/english/gate_laws_l_english.yml | 5 |  Add law_orcish_hegemony_enforced_desc |

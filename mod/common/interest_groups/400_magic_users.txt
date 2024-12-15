@@ -6,9 +6,11 @@
 	index = 3
 
 	ideologies = {
-		ideology_jingoist
-		ideology_meritocratic
-		ideology_individualist
+		# General
+		ideology_militarist
+		# Orc specific
+		ideology_orcish_slavery
+		ideology_orchish_patriarchal
 	}
 	
 	character_ideologies = {
@@ -36,6 +38,7 @@
 				set_ig_trait = ig_trait:ig_trait_military_support
 				set_ig_trait = ig_trait:ig_trait_annoyed_masters
 			}
+			# Arcturian Dominion
 			else_if = {
 				limit = {
 					owner = { c:GAD ?= this }

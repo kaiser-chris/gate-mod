@@ -26,11 +26,11 @@ Below is a list of the currently implemented content:
  - 30 new Production Methods for new and old Buildings
  - 6 new Journal Entries
  - 18 new Events
- - 1 new Pop
- - 2 new Good
+ - 2 new Pops
+ - 2 new Goods
  - 2 new Combat Unit Types
  - 1 new Diplomatic Action
- - 629 new Localization Keys
+ - 651 new Localization Keys
 
 [//]: # (CONTENT-END)
 

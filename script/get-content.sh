@@ -55,9 +55,9 @@ printf ' - %s new Journal Entries' "$journalEntriesCount"
 printf '\n'
 printf ' - %s new Events' "$eventCount"
 printf '\n'
-printf ' - %s new Pop' "$popCount"
+printf ' - %s new Pops' "$popCount"
 printf '\n'
-printf ' - %s new Good' "$goodCount"
+printf ' - %s new Goods' "$goodCount"
 printf '\n'
 printf ' - %s new Combat Unit Types' "$combatUnitTypesCount"
 printf '\n'
