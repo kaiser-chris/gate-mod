@@ -49,5 +49,10 @@
 
 		# No one likes slaving orcs
 		change_infamy = 40
+
+		set_variable = {
+			name = custom_social_hieracy
+			value = active_law:lawgroup_orcish_hegemony
+		}
 	}
 }
