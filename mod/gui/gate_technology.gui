@@ -17,7 +17,7 @@ types gate_types {
     type gate_technology_panel = default_block_window {
         name = "gate_technology_panel"
 
-        visible = "[And(Not(InformationPanelBar.IsAnyPanelOpen), GetVariableSystem.HasValue('com_open_window', 'gate_button_technology'))]"
+        visible = "[GetVariableSystem.HasValue('com_open_window', 'gate_button_technology')]"
 
         blockoverride "animation_state_block" {
             state = {

@@ -13,9 +13,9 @@
 types gate_types {
 
     type gate_sidebar_panel = default_block_window {
-        datacontext = "[GetScriptedGui('sgui_gate_window_visisblity')]"
+        name = "gate_main_panel"
 
-        visible = "[And(Not(InformationPanelBar.IsAnyPanelOpen), GetVariableSystem.HasValue('com_open_window', 'gate_button_main'))]"
+        visible = "[GetVariableSystem.HasValue('com_open_window', 'gate_button_main')]"
 
         blockoverride "animation_state_block" {
             state = {
