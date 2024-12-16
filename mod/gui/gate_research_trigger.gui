@@ -13,7 +13,6 @@ widget = {
             trigger_when = "[GetScriptedGui('sgui_gate_enable_debug').IsValid(GetPlayer.Self)]"
             on_finish = "[GetScriptedGui('sgui_gate_enable_debug').Execute(GetPlayer.Self)]"
         }
-
     }
 
     flowcontainer = {

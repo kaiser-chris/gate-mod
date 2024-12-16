@@ -41,7 +41,8 @@ types gate_types {
 
         blockoverride "window_header_name"
         {
-            raw_text = "#BOLD Magic#!"
+            text = gg_panel_technology_title
+            default_format = "#bold"
         }
 
         blockoverride "header_back_button" {
@@ -664,12 +665,6 @@ types gate_types {
                         modify_texture = {
                             visible = "[TechnologyUnlock.HasFrame]"
                             using = simple_frame_mask
-                        }
-
-                        icon = {
-                            visible = "[TechnologyUnlock.HasFrame]"
-                            using = simple_frame
-                            size = { 100% 100% }
                         }
                     }
                 }

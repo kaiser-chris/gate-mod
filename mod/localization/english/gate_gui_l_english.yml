@@ -1,13 +1,18 @@
 ﻿l_english:
  gate_button_main: "gate_button_main"
- gate_button_main_desc: "Magic"
+ gate_button_main_desc: "$gg_panel_main_title$"
+ gate_button_main_tooltip: "#header $gg_panel_main_title$#!"
  gate_button_technology: "gate_button_technology"
- gate_button_technology_desc: "Magic Technology"
+ gate_button_technology_desc: "$gg_panel_technology_title$"
+ gate_button_technology_tooltip: "#header $gg_panel_technology_title$#!\n[SelectLocalization(GetPlayer.MakeScope.Var('magic_research').IsSet, 'gate_button_technology_magic_research', 'gate_button_technology_no_research')]"
+ gate_button_technology_magic_research: "We are currently researching [GetPlayer.MakeScope.Var('magic_research').GetTechnology.GetName]."
+ gate_button_technology_no_research: "We are currently not researching any [concept_magic_technology]."
  gate_tab_magic_overview: "Overview"
  gate_tab_magic_overview_selected: "#bold $gate_tab_magic_overview$#!"
  gate_tab_magic_research: "Research"
  gate_tab_magic_research_selected: "#bold $gate_tab_magic_research$#!"
 # Overview
+ gg_panel_main_title: "Magic"
  gg_mana_saturation: "Mana Saturation"
  gg_mana_saturation_statistic: "The current world wide [concept_mana_saturation] is currently [GetGlobalVariable('gate_mana_saturation_progress').GetValue|1]%"
  gg_magic_countries: "Magic Countries"
@@ -15,6 +20,7 @@
  gg_header_magic_innovation: "Magic Innovation"
  gg_header_magic_state: "State of Magic in the World"
 # Magic Technology Panel
+ gg_panel_technology_title: "Magic Technology"
  gg_technology_in_research: "@green_checkmark! #bold This Technology has already been researched#!"
  gg_technology_no_research: "No Current Magic Research"
  gg_technology_no_research_blink: "#BOLD Select New Research#!"

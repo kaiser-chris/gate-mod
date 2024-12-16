@@ -41,7 +41,8 @@ types gate_types {
 
         blockoverride "window_header_name"
         {
-            raw_text = "#BOLD Magic#!"
+            text = gg_panel_main_title
+            default_format = "#bold"
         }
 
         blockoverride "header_back_button" {
