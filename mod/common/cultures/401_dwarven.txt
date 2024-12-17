@@ -1,15 +1,17 @@
 ﻿dwarven={
 	color= rgb{ 133 121 101 }
 	religion = mountain_protestant
+
 	traits = {
 		common_speaking # Speaks the common language from beyond the gate
 		gate_heritage # From beyond the gate
 		german_speaking # Learned german
-		european_heritage # TODO: Replace european_heritage with eitov_heritage
 	}
+
 	obsessions = {
 		liquor
 	}
+
 	male_common_first_names={
 		Hedmum Jodrael Bokhik Omnead
 		Kogguid Dummout Dukgraec Kimdeth
@@ -17,6 +19,7 @@
 		Gakgrulir Yorgrec Thrafreak Lorsuri
 		Brosgroun Dorazmous Dhumnam Kagrorlim
 	}
+
 	female_common_first_names = {
 		Baridruhulda Khukulyn Fongrohilda Lokrosli
 		Grughubena Luznaesli Daressokara Dekhuilyn
@@ -24,6 +27,7 @@
 		Akdrustr Bralgreabo Khouzmoustr Bemwotaine
 		Doumrire Khezzubo Loghutain
 	}
+
 	noble_last_names = {
 		Mithrilborn Noblebringer Mithrilblade
 		of_Ogroxa of_Topax
@@ -34,6 +38,7 @@
 		of_Zagrar of_Hoguma
 		of_Hagrix of_Harik
 	}
+
 	common_last_names={
 		Rubymaster Honorbelt Winddigger Mithriljaw
 		Twilightfall Flatrock Blunthelm Warmtoe
@@ -51,12 +56,12 @@
 		Ischomum Krimok Zorgom Tarorixik
 		Fondim Halax Halim Ubarix
 	}
+
 	female_regal_first_names = {
 		Ogria Luxaxa Korima Zorgaxa
 		Hagima Ingimima
 	}
 
-	#TODO: Create dwarven graphics
 	graphics = european
 	ethnicities = {
 		1 = dwarven
