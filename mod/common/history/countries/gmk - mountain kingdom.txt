@@ -7,9 +7,7 @@
 		effect_starting_pop_wealth_high = yes
 
 		# Technology
-		add_technology_researched = magic_understanding_production
-		add_technology_researched = magic_understanding_society
-		add_technology_researched = magic_understanding_military
+		learn_magic = yes
 		add_technology_researched = magic_dwarf_murk # Dwarf specific
 		add_technology_researched = dwarven_gate_immigration # Dwarf specific
 		add_technology_researched = mage_infantry
@@ -36,6 +34,8 @@
 
         set_ruling_interest_groups = {
 			ig_industrialists
+			ig_magic_users
+			ig_petty_bourgeoisie
         }
 
 		# Institutions
@@ -46,13 +46,6 @@
 		set_institution_investment_level = {
 			institution = institution_police
 			level = 1
-		}
-
-		ig:ig_petty_bourgeoisie = {
-			add_ruling_interest_group = yes
-		}
-		ig:ig_armed_forces = {
-			add_ruling_interest_group = yes
 		}
 
 		add_journal_entry = {

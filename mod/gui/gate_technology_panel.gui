@@ -497,8 +497,7 @@ types gate_types {
     }
 
     ### Gate Technology
-    type gate_technology = button {
-
+    type gate_technology = flowcontainer {
         block "context" {
             #datacontext = "[GetTechnology('some_technology')]"
         }
@@ -507,184 +506,60 @@ types gate_types {
             visible = "[And3(ScriptedGui.IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End), Not(Technology.HasResearchedTech(GetPlayer.Self)), Or(Not(GetPlayer.MakeScope.Var('magic_research').IsSet), Not(ObjectsEqual(GetPlayer.MakeScope.Var('magic_research').GetTechnology.MakeScope, Technology.MakeScope))))]"
         }
 
-        # Technology done
-        # Only triggers when open
-        # Is triggered through hidden UI
-        # See: gate_research_trigger
-        state = {
-            trigger_when = "[And3(GetPlayer.MakeScope.Var('magic_research').IsSet, ObjectsEqual(GetPlayer.MakeScope.Var('magic_research').GetTechnology.MakeScope, Technology.MakeScope), GreaterThanOrEqualTo_CFixedPoint(GetPlayer.MakeScope.Var('magic_research_progress').GetValue, Technology.GetCost(GetPlayer.Self)))]"
-            on_finish = "[ScriptedGui.Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('technology', Technology.MakeScope).End)]"
-        }
-
-        using = technology_confirm_button_sound
-        tooltipwidget = {
-            magic_technology_tooltip = {}
-        }
-
-        block "button_style" {
-            using = default_button
-        }
-
-        block "onclick" {
-            onclick = "[GetScriptedGui('sgui_gate_window_execute_research').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('technology', Technology.MakeScope).End)]"
-        }
-
-        block "enabled" {
-            enabled = "[And(ScriptedGui.IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End), GetScriptedGui('sgui_gate_window_execute_research').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('technology', Technology.MakeScope).End))]"
-        }
-
-        block "background" {}
-
         flowcontainer = {
-            resizeparent = yes
-            direction = vertical
+            visible = "[Technology.HasResearchedTech(GetPlayer.Self)]"
 
-            block "minimumsize" {
-                minimumsize = { @panel_width -1 }
-            }
-            block "flowcontainer_properties" {
-                margin_left = 10
-                margin_right = 10
-                margin_bottom = 8
+            background = {
+                using = frame_small
             }
 
-            # Icons & Text
-            flowcontainer = {
-                margin_left = 5
+            tooltipwidget = {
+                FancyTooltip_Technology = {}
+            }
 
-                # Icons
-                flowcontainer = {
+            magic_technology_inner = {
+                blockoverride "flowcontainer_properties" {
                     margin_left = 10
-                    direction = vertical
-                    margin_top = 8
-
-                    # Technology Frame & Icon
-                    icon = {
-                        texture = "gfx/interface/backgrounds/round_frame_dec.dds"
-                        parentanchor = top|right
-                        size = { 60 60 }
-                        alwaystransparent = yes
-
-                        # Technology Icon
-                        flowcontainer = {
-                            margin = { 10 10 }
-                            icon = {
-                                texture = "[Technology.GetTexture]"
-                                block "iconsize" {
-                                    size = { 40 40 }
-                                }
-                            }
-                        }
-                    }
-
-                    # Add check mark when researched
-                    icon = {
-                        visible = "[Technology.HasResearchedTech(GetPlayer.Self)]"
-                        parentanchor = hcenter
-                        block "completing_iconsize" {
-                            size = { 20 20 }
-                        }
-                        texture = "gfx/interface/icons/generic_icons/green_checkmark.dds"
-                        tooltip = "gg_technology_in_research"
-                        using = shimmer
-
-                        icon = {
-                            parentanchor = center
-                            using = rotate_glow_animation_02
-                            size = { 300% 300% }
-                            alpha = 0.5
-                        }
-                    }
-                }
-
-                # Text
-                flowcontainer = {
-                    direction = vertical
-                    parentanchor = vcenter
-
-                    # Title
-                    textbox = {
-                        margin = { 15 10 }
-                        background = {
-                            using = fade_right_entry_fancy_header_colored
-                            using = dark_area
-                        }
-
-                        text = "[Technology.GetNameNoFormatting]"
-                        autoresize = yes
-                        align = left|nobaseline
-                        multiline = yes
-                        default_format = "#header"
-
-                        block "fontsize" {
-                            using = fontsize_large
-                        }
-
-                        block "textsize" {
-                            maximumsize = { 435 -1 }
-                            minimumsize = { 435 -1 }
-                        }
-                    }
-
-                    # Description
-                    textbox = {
-                        margin = { 15 0 }
-                        margin_bottom = 5
-                        text = "[Technology.GetDesc]"
-                        visible = "[Not(StringIsEmpty(Technology.GetDesc))]"
-                        autoresize = yes
-                        align = left|nobaseline
-                        multiline = yes
-                        block "textsize" {
-                            maximumsize = { 435 -1 }
-                            minimumsize = { 435 -1 }
-                        }
-                    }
+                    margin_right = 10
+                    margin_top = 10
+                    margin_bottom = 15
                 }
             }
+        }
 
-            # Unlocks
-            flowcontainer = {
-                margin_top = 0
-                margin_bottom = 5
-                margin_left = 5
-                margin_right = 5
-                parentanchor = bottom|right
-                spacing = 5
-                datamodel = "[Technology.GetUnlocks(GetPlayer.Self)]"
+        button = {
+            visible = "[Not(Technology.HasResearchedTech(GetPlayer.Self))]"
 
-                block "unlocks_alpha" {}
-
-                item = {
-                    icon = {
-                        size = { 25 25 }
-                        texture = "[TechnologyUnlock.GetTexture]"
-                        tooltip = "[TechnologyUnlock.GetTooltip]"
-                        using = tooltip_se
-
-                        modify_texture = {
-                            visible = "[TechnologyUnlock.HasFrame]"
-                            using = simple_frame_mask
-                        }
-                    }
-                }
+            tooltipwidget = {
+                magic_technology_tooltip = {}
             }
 
-            # progress bar
-            flowcontainer = {
-                visible = "[And(GetPlayer.MakeScope.Var('magic_research').IsSet, ObjectsEqual(GetPlayer.MakeScope.Var('magic_research').GetTechnology.MakeScope, Technology.MakeScope))]"
-                margin = { 10 10 }
-                default_progressbar_horizontal = {
-                    block "progressbar_size" {
-                        size = { 500 20 }
-                    }
-                    blockoverride "values" {
-                        value = "[GetPlayer.MakeScope.Var('magic_research_progress').GetValue]"
-                        min = 0
-                        max = "[Technology.GetCost(GetPlayer.Self)]"
-                    }
-                }
+            # Technology done
+            # Only triggers when open
+            # Is triggered through hidden UI
+            # See: gate_research_trigger
+            state = {
+                trigger_when = "[And3(GetPlayer.MakeScope.Var('magic_research').IsSet, ObjectsEqual(GetPlayer.MakeScope.Var('magic_research').GetTechnology.MakeScope, Technology.MakeScope), GreaterThanOrEqualTo_CFixedPoint(GetPlayer.MakeScope.Var('magic_research_progress').GetValue, Technology.GetCost(GetPlayer.Self)))]"
+                on_finish = "[ScriptedGui.Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('technology', Technology.MakeScope).End)]"
             }
+
+            using = technology_confirm_button_sound
+
+            block "button_style" {
+                using = default_button
+            }
+
+            block "onclick" {
+                onclick = "[GetScriptedGui('sgui_gate_window_execute_research').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('technology', Technology.MakeScope).End)]"
+            }
+
+            block "enabled" {
+                enabled = "[And(ScriptedGui.IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End), GetScriptedGui('sgui_gate_window_execute_research').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('technology', Technology.MakeScope).End))]"
+            }
+
+            block "background" {}
+
+            magic_technology_inner = {}
         }
     }
 
@@ -834,6 +709,132 @@ types gate_types {
             custom_tooltip_textbox = {
                 margin_top = 10
                 text = gg_magic_innovation_warning_tooltip
+            }
+        }
+    }
+
+    type magic_technology_inner = flowcontainer {
+        resizeparent = yes
+        direction = vertical
+
+        block "minimumsize" {
+            minimumsize = { @panel_width -1 }
+        }
+        block "flowcontainer_properties" {
+            margin_left = 10
+            margin_right = 10
+            margin_bottom = 8
+        }
+
+        # Icons & Text
+        flowcontainer = {
+            margin_left = 5
+
+            # Icons
+            flowcontainer = {
+                margin_left = 10
+                direction = vertical
+                margin_top = 8
+
+                # Technology Frame & Icon
+                icon = {
+                    texture = "gfx/interface/backgrounds/round_frame_dec.dds"
+                    parentanchor = top|right
+                    size = { 60 60 }
+                    alwaystransparent = yes
+
+                    # Technology Icon
+                    flowcontainer = {
+                        margin = { 10 10 }
+                        icon = {
+                            texture = "[Technology.GetTexture]"
+                            block "iconsize" {
+                                size = { 40 40 }
+                            }
+                        }
+                    }
+                }
+            }
+
+            # Text
+            flowcontainer = {
+                direction = vertical
+                parentanchor = vcenter
+
+                # Title
+                textbox = {
+                    margin = { 15 10 }
+                    background = {
+                        using = fade_right_entry_fancy_header_colored
+                        using = dark_area
+                    }
+
+                    text = "[Technology.GetNameNoFormatting]"
+                    autoresize = yes
+                    align = left|nobaseline
+                    multiline = yes
+                    default_format = "#header"
+
+                    block "fontsize" {
+                        using = fontsize_large
+                    }
+
+                    block "textsize" {
+                        maximumsize = { 435 -1 }
+                        minimumsize = { 435 -1 }
+                    }
+                }
+
+                # Description
+                textbox = {
+                    margin = { 15 0 }
+                    margin_bottom = 5
+                    text = "[Technology.GetDesc]"
+                    visible = "[Not(StringIsEmpty(Technology.GetDesc))]"
+                    autoresize = yes
+                    align = left|nobaseline
+                    multiline = yes
+                    block "textsize" {
+                        maximumsize = { 435 -1 }
+                        minimumsize = { 435 -1 }
+                    }
+                }
+            }
+        }
+
+        # Unlocks
+        flowcontainer = {
+            margin_top = 0
+            margin_bottom = 5
+            margin_left = 5
+            margin_right = 5
+            parentanchor = right
+            spacing = 5
+            datamodel = "[Technology.GetUnlocks(GetPlayer.Self)]"
+
+            item = {
+                icon = {
+                    size = { 25 25 }
+                    texture = "[TechnologyUnlock.GetTexture]"
+                    tooltip = "[TechnologyUnlock.GetTooltip]"
+                    using = tooltip_se
+                }
+            }
+        }
+
+        # progress bar
+        flowcontainer = {
+            visible = "[And(GetPlayer.MakeScope.Var('magic_research').IsSet, ObjectsEqual(GetPlayer.MakeScope.Var('magic_research').GetTechnology.MakeScope, Technology.MakeScope))]"
+            margin = { 10 10 }
+            default_progressbar_horizontal = {
+                block "progressbar_size" {
+                    size = { 500 20 }
+                }
+                blockoverride "values" {
+                    value = "[GetPlayer.MakeScope.Var('magic_research_progress').GetValue]"
+                    min = 0
+                    max = "[Technology.GetCost(GetPlayer.Self)]"
+                }
             }
         }
     }
