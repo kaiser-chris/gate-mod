@@ -1,4 +1,6 @@
 types gate_shared {
+
+    # Green progressbar that indicates an upward trend
     type changed_value_increased_progressbar_horizontal_green = progressbar_properties {
         blockoverride "progressbar" {
             progressbar = {
@@ -120,6 +122,7 @@ types gate_shared {
         }
     }
 
+    # Red progressbar that indicates an downward trend
     type changed_value_decreased_progressbar_horizontal_bad = progressbar_properties {
 
         blockoverride "progressbar" {
