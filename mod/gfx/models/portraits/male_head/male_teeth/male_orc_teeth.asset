@@ -1,0 +1,111 @@
+pdxmesh = {
+	name = "male_orc_teeth_tusk_big_mesh"
+	file = "male_orc_teeth_tusk_big.mesh"
+
+	meshsettings = {
+		name = "male_teethShape"
+		index = 0
+		texture_diffuse = "male_teeth_diffuse.dds"
+		texture_normal = "male_teeth_normal.dds"
+		texture_specular = "male_teeth_properties.dds"
+		shader = "portrait_attachment_pattern"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_orc_teeth_tusk_big_entity"
+	pdxmesh = "male_orc_teeth_tusk_big_mesh"
+
+	game_data = {
+		portrait_entity_user_data = {
+			color_mask_remap_interval = {
+				interval = {0.0 1.0}
+			}
+		}
+	}
+}
+
+pdxmesh = {
+	name = "male_orc_teeth_tusk_left_mesh"
+	file = "male_orc_teeth_tusk_left.mesh"
+
+	meshsettings = {
+		name = "male_teethShape"
+		index = 0
+		texture_diffuse = "male_teeth_diffuse.dds"
+		texture_normal = "male_teeth_normal.dds"
+		texture_specular = "male_teeth_properties.dds"
+		shader = "portrait_attachment_pattern"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_orc_teeth_tusk_left_entity"
+	pdxmesh = "male_orc_teeth_tusk_left_mesh"
+
+	game_data = {
+		portrait_entity_user_data = {
+			color_mask_remap_interval = {
+				interval = {0.0 1.0}
+			}
+		}
+	}
+}
+
+pdxmesh = {
+	name = "male_orc_teeth_tusk_right_mesh"
+	file = "male_orc_teeth_tusk_right.mesh"
+
+	meshsettings = {
+		name = "male_teethShape"
+		index = 0
+		texture_diffuse = "male_teeth_diffuse.dds"
+		texture_normal = "male_teeth_normal.dds"
+		texture_specular = "male_teeth_properties.dds"
+		shader = "portrait_attachment_pattern"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_orc_teeth_tusk_right_entity"
+	pdxmesh = "male_orc_teeth_tusk_right_mesh"
+
+	game_data = {
+		portrait_entity_user_data = {
+			color_mask_remap_interval = {
+				interval = {0.0 1.0}
+			}
+		}
+	}
+}
+
+pdxmesh = {
+	name = "male_orc_teeth_tusk_small_mesh"
+	file = "male_orc_teeth_tusk_small.mesh"
+
+	meshsettings = {
+		name = "male_teethShape"
+		index = 0
+		texture_diffuse = "male_teeth_diffuse.dds"
+		texture_normal = "male_teeth_normal.dds"
+		texture_specular = "male_teeth_properties.dds"
+		shader = "portrait_attachment_pattern"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_orc_teeth_tusk_small_entity"
+	pdxmesh = "male_orc_teeth_tusk_small_mesh"
+
+	game_data = {
+		portrait_entity_user_data = {
+			color_mask_remap_interval = {
+				interval = {0.0 1.0}
+			}
+		}
+	}
+}

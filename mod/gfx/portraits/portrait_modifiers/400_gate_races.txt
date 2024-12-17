@@ -1,8 +1,6 @@
 ﻿gate_races = {
     usage = game
 
-    # TODO: These race portrait modifiers are very early and need further work
-
     orcish_race = {
         dna_modifiers = {
             morph = {
@@ -19,27 +17,6 @@
                 OR = {
                     orcish_portrait_trigger = yes
                     orcish_portrait_pop_trigger = yes
-                }
-            }
-        }
-    }
-
-    dwarven_race = {
-        dna_modifiers = {
-            morph = {
-                mode = add
-                gene = dwarven_height
-                template = normal_height
-                value = 1
-            }
-        }
-        weight = {
-            base = 0
-            modifier = {
-                add = 100
-                OR = {
-                    dwarven_portrait_trigger = yes
-                    dwarven_portrait_pop_trigger = yes
                 }
             }
         }

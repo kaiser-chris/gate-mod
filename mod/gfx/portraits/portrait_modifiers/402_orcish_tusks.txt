@@ -1,0 +1,96 @@
+﻿orcish_tusks = {
+    usage = game
+    selection_behavior = weighted_random
+    fallback = no_tusks
+
+    no_tusks = {
+        weight = {
+            base = 1
+        }
+    }
+
+    orc_teeth_tusk_big = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = gene_tusks_and_teeth
+                template = orc_teeth_tusk_big
+                range = { 1 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 40
+                OR = {
+                    orcish_portrait_trigger = yes
+                    orcish_portrait_pop_trigger = yes
+                }
+            }
+        }
+    }
+
+    orc_teeth_tusk_left = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = gene_tusks_and_teeth
+                template = orc_teeth_tusk_left
+                range = { 1 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 10
+                OR = {
+                    orcish_portrait_trigger = yes
+                    orcish_portrait_pop_trigger = yes
+                }
+            }
+        }
+    }
+
+    orc_teeth_tusk_right = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = gene_tusks_and_teeth
+                template = orc_teeth_tusk_right
+                range = { 1 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 10
+                OR = {
+                    orcish_portrait_trigger = yes
+                    orcish_portrait_pop_trigger = yes
+                }
+            }
+        }
+    }
+
+    orc_teeth_tusk_small = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = gene_tusks_and_teeth
+                template = orc_teeth_tusk_small
+                range = { 1 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 30
+                OR = {
+                    orcish_portrait_trigger = yes
+                    orcish_portrait_pop_trigger = yes
+                }
+            }
+        }
+    }
+
+}
