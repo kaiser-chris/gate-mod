@@ -1,10 +1,10 @@
 ﻿l_english:
  gate_button_main: "gate_button_main"
  gate_button_main_desc: "$gg_panel_main_title$"
- gate_button_main_tooltip: "#header $gg_panel_main_title$#!"
+ gate_button_main_tooltip: "#header $gg_panel_main_title$#!\nShortcut: #V Magic#! (#V CTRL + G#!)"
  gate_button_technology: "gate_button_technology"
  gate_button_technology_desc: "$gg_panel_technology_title$"
- gate_button_technology_tooltip: "#header $gg_panel_technology_title$#!\n[SelectLocalization(GetPlayer.MakeScope.Var('magic_research').IsSet, 'gate_button_technology_magic_research', 'gate_button_technology_no_research')]"
+ gate_button_technology_tooltip: "#header $gg_panel_technology_title$#!\n[SelectLocalization(GetPlayer.MakeScope.Var('magic_research').IsSet, 'gate_button_technology_magic_research', 'gate_button_technology_no_research')]\nShortcut: #V Magic Technology#! (#V CTRL + T#!)"
  gate_button_technology_magic_research: "We are currently researching [GetPlayer.MakeScope.Var('magic_research').GetTechnology.GetName]."
  gate_button_technology_no_research: "We are currently not researching any [concept_magic_technology]."
  gate_tab_magic_overview: "Overview"
@@ -40,3 +40,6 @@
  gg_cancel_magic_research_text: "Are you sure you want want to cancel the research of [GetPlayer.MakeScope.Var('magic_research').GetTechnology.GetName]?\n\nAny invested [concept_magic_innovation] will be #v lost#!!"
  gg_magic_technology_tooltip_cost: "#title Cost:#! @magic_innovation! "
  gg_magic_technology_tooltip_duration: " Magical Innovation."
+# Shortcuts
+ SETTING_INPUT_ACTION_CTRL_G: "$gg_panel_main_title$"
+ SETTING_INPUT_ACTION_CTRL_T: "$gg_panel_technology_title$"

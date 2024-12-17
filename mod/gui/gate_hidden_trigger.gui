@@ -2,7 +2,7 @@
 # This allows triggering state events
 # Specifically when a research is done
 widget = {
-    name = gate_research_trigger
+    name = gate_hidden_trigger
     allow_outside = yes
     alpha = 0
 
@@ -15,6 +15,21 @@ widget = {
         }
     }
 
+    # Support custom shortcuts
+    flowcontainer = {
+        button = {
+            enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
+            input_action = "input_ctrl_g"
+            onclick = "[GetVariableSystem.Set('com_open_window', 'gate_button_main')]"
+        }
+        button = {
+            enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
+            input_action = "input_ctrl_t"
+            onclick = "[GetVariableSystem.Set('com_open_window', 'gate_button_technology')]"
+        }
+    }
+
+    # Trigger completed magic research
     flowcontainer = {
         parentanchor = bottom|left
         gate_technologies_production = {
