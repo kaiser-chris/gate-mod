@@ -1,0 +1,13 @@
+﻿sgui_gate_enable_debug = {
+    scope = country
+
+    is_valid = {
+        NOT = {
+            has_global_variable = gate_debug
+        }
+    }
+
+    effect = {
+        set_global_variable = gate_debug
+    }
+}

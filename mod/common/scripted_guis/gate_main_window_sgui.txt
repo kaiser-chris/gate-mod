@@ -1,0 +1,55 @@
+﻿gate_button_main = {
+    scope = country
+
+    is_shown = {
+        always = yes
+    }
+
+    is_valid = {
+        always = yes
+    }
+
+    # Cycle through tabs or close window
+    effect = {
+        cycle_tabs = {
+            tab_count = 2
+            tab_variable = gate_main_window_active_tab
+        }
+    }
+}
+
+sgui_gate_window_tab_statistics = {
+    scope = country
+
+    is_shown = {
+        AND = {
+            has_variable = gate_main_window_active_tab
+            var:gate_main_window_active_tab = 1
+        }
+    }
+
+    effect = {
+        set_variable = {
+            name = gate_main_window_active_tab
+            value = 1
+        }
+    }
+}
+
+sgui_gate_window_tab_countries = {
+    scope = country
+
+    is_shown = {
+        AND = {
+            has_variable = gate_main_window_active_tab
+            var:gate_main_window_active_tab = 2
+        }
+    }
+
+    effect = {
+        set_variable = {
+            name = gate_main_window_active_tab
+            value = 2
+        }
+    }
+}
