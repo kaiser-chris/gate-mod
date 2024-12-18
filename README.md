@@ -30,7 +30,7 @@ Below is a list of the currently implemented content:
  - 2 new Goods
  - 2 new Combat Unit Types
  - 1 new Diplomatic Action
- - 651 new Localization Keys
+ - 659 new Localization Keys
 
 [//]: # (CONTENT-END)
 

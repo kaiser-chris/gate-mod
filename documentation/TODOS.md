@@ -22,9 +22,7 @@ Below is a table with all currently open ToDos.
 | ./.config/vic3/effects.cwt | 1098 |  market? |
 | ./.config/vic3/links.cwt | 40 |  market goods vs goods |
 | ./mod/common/cultures/400_elven.txt | 2 |  Define custom culture (Currently copy of german) |
-| ./mod/common/cultures/401_dwarven.txt | 59 |  Create dwarven graphics |
 | ./mod/common/cultures/402_orcish.txt | 2 |  Define custom culture (Currently copy of dwarven) |
-| ./mod/common/cultures/402_orcish.txt | 55 |  Create dwarven graphics |
 | ./mod/common/history/buildings/400_dominion.txt | 17 |  Add GAD buildings in STATE_NORTH_ANGOLA |
 | ./mod/common/history/buildings/400_dominion.txt | 22 |  Add GAD buildings in STATE_EAST_ANGOLA |
 | ./mod/common/history/buildings/400_dominion.txt | 32 |  Add GAD buildings in STATE_SOUTH_ANGOLA |
@@ -76,11 +74,6 @@ Below is a table with all currently open ToDos.
 | ./mod/localization/english/gate_objective_l_english.yml | 11 |  Flesh out objective_magic_dominance_desc_GBR (Great Britain) |
 | ./mod/localization/english/gate_objective_l_english.yml | 18 |  Flesh out a proper description for je_obj_magic_knowledge_desc |
 | ./mod/localization/english/gate_objective_l_english.yml | 21 |  Flesh out a proper description for je_obj_magic_academy_desc |
-| ./mod/localization/english/gate_orcish_social_hierarchy_l_english.yml | 11 |  Add orc_citizens_desc |
-| ./mod/localization/english/gate_orcish_social_hierarchy_l_english.yml | 13 |  Add orc_soldiers_desc |
-| ./mod/localization/english/gate_orcish_social_hierarchy_l_english.yml | 15 |  Add orc_lowers_desc |
-| ./mod/localization/english/gate_orcish_social_hierarchy_l_english.yml | 7 |  Add orc_shamans_desc |
-| ./mod/localization/english/gate_orcish_social_hierarchy_l_english.yml | 9 |  Add orc_lords_desc |
 | ./mod/localization/english/gate_religion_l_english.yml | 5 |  Find better name for blood_god |
 | ./mod/localization/english/gate_technology_l_english.yml | 14 |  Write description for magic_golems |
 | ./mod/localization/english/gate_technology_l_english.yml | 16 |  Write description for magic_steam_golems |
