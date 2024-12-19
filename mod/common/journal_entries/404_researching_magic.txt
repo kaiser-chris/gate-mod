@@ -1,18 +1,18 @@
-﻿je_magic_research = {
+﻿je_researching_magic = {
 	icon = "gfx/interface/icons/event_icons/event_magic_knowledge.dds"
 
 	group = je_group_magical_affairs
 
-	scripted_button = je_magic_research_button_focus_academia
-	scripted_button = je_magic_research_button_cancel_focus_academia
+	scripted_button = je_researching_magic_button_focus_academia
+	scripted_button = je_researching_magic_button_cancel_focus_academia
 
 	complete = {
 		trigger_if = {
 			custom_tooltip = {
-				text = je_magic_research_goal_tt
+				text = je_researching_magic_goal_tt
 				scope:journal_entry = {
 					scripted_bar_progress = {
-						name = pb_gate_magic_research
+						name = pb_gate_researching_magic
 						value >= 100
 					}
 				}
@@ -40,7 +40,7 @@
 
 	progressbar = no
 
-	scripted_progress_bar = pb_gate_magic_research
+	scripted_progress_bar = pb_gate_researching_magic
 
 	transferable = no
 	can_revolution_inherit = yes

@@ -44,13 +44,13 @@ research_magic_decision = {
 	possible = {
 		is_magic_country = no
 		hidden_trigger = {
-			NOT = { has_journal_entry = je_magic_research }
+			NOT = { has_journal_entry = je_researching_magic }
 		}
 	}
 
 	when_taken = {
 		add_journal_entry = {
-			type = je_magic_research
+			type = je_researching_magic
 		}
 	}
 

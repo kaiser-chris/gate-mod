@@ -1,16 +1,16 @@
-﻿namespace = magic_research
+﻿namespace = researching_magic
 
-magic_research.1 = {
+researching_magic.1 = {
 	type = country_event
 	dlc = dlc_magic_gate
 	placement = scope:monster_attack_state
 	
-	title = magic_research.1.t
-	desc = magic_research.1.d
-	flavor = magic_research.1.f
+	title = researching_magic.1.t
+	desc = researching_magic.1.d
+	flavor = researching_magic.1.f
 
 	trigger = {
-		has_journal_entry = je_magic_research
+		has_journal_entry = je_researching_magic
 	}
 
 	event_image = {
@@ -24,13 +24,13 @@ magic_research.1 = {
 	duration = 3
 
 	option = {
-		name = magic_research.1.a
+		name = researching_magic.1.a
 		default_option = yes
 		custom_tooltip = {
-			text = magic_research.1.tt
-			je:je_magic_research = {
+			text = researching_magic.1.tt
+			je:je_researching_magic = {
 				add_progress = {
-					name = pb_gate_magic_research
+					name = pb_gate_researching_magic
 					value = 10
 				}
 			}

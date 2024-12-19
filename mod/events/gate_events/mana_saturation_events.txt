@@ -865,12 +865,12 @@ mana_saturation.12 = {
 		}
 		hidden_effect = {
 			trigger_event = {
-				id = magic_research.1
+				id = researching_magic.1
 				months = 3
 			}
 		}
 		trigger = {
-			has_journal_entry = je_magic_research
+			has_journal_entry = je_researching_magic
 			NOT = {
 				owner = scope:monster_attack_country
 			}
@@ -940,11 +940,11 @@ mana_saturation.13 = {
 			add_organization = -50
 		}
 		trigger_event = {
-			id = magic_research.1
+			id = researching_magic.1
 			months = 3
 		}
 		trigger = {
-			has_journal_entry = je_magic_research
+			has_journal_entry = je_researching_magic
 		}
 	}
 }

@@ -26,7 +26,7 @@ has_not_started_research_of_magic_alert = {
 		AND = {
 			is_magic_country = no
 			NOT = {
-				has_journal_entry = je_magic_research
+				has_journal_entry = je_researching_magic
 			}
 		}
 	}

@@ -1,13 +1,13 @@
-﻿pb_gate_magic_research = {
- 	name = pb_gate_magic_research_name
- 	desc = pb_gate_magic_research_desc
+﻿pb_gate_researching_magic = {
+ 	name = pb_gate_researching_magic_name
+ 	desc = pb_gate_researching_magic_desc
 
 	default = yes
 
 	monthly_progress = {
 		# Base Value
 		add = {
-			desc = pb_gate_magic_research_base_value
+			desc = pb_gate_researching_magic_base_value
 			value = 1
 		}
 		# Focused Efforts
@@ -16,7 +16,7 @@
 				has_modifier = focus_magic_research_cost_modifier
 			}
 			add = {
-				desc = pb_gate_magic_research_focused_efforts
+				desc = pb_gate_researching_magic_focused_efforts
 				value = 2
 			}
 		}
@@ -26,7 +26,7 @@
 				has_building = building_gate
 			}
 			add = {
-				desc = pb_gate_magic_research_magic_gate
+				desc = pb_gate_researching_magic_magic_gate
 				value = 2
 			}
 		}
