@@ -19,13 +19,6 @@ ideology_orcish_slavery = {
         law_legacy_slavery = approve
         law_slavery_banned = strongly_disapprove
     }
-
-    country_trigger = {
-        country_has_primary_culture = cu:orcish
-        NOT = {
-            has_law = law_type:law_slavery_banned
-        }
-    }
 }
 
 ideology_orchish_patriarchal = {
@@ -43,9 +36,5 @@ ideology_orchish_patriarchal = {
         law_censorship = approve
         law_right_of_assembly = neutral
         law_protected_speech = disapprove
-    }
-
-    country_trigger = {
-        country_has_primary_culture = cu:orcish
     }
 }
