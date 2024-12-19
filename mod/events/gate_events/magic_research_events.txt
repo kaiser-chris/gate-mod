@@ -28,9 +28,11 @@ magic_research.1 = {
 		default_option = yes
 		custom_tooltip = {
 			text = magic_research.1.tt
-			change_variable = {
-				name = je_research_magic_progess
-				add = 10
+			je:je_magic_research = {
+				add_progress = {
+					name = pb_gate_magic_research
+					value = 10
+				}
 			}
 		}
 	}

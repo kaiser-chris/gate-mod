@@ -1,5 +1,5 @@
 ﻿je_magic_research = {
-	icon = "gfx/interface/icons/event_icons/event_world.dds"
+	icon = "gfx/interface/icons/event_icons/event_magic_knowledge.dds"
 
 	group = je_group_magical_affairs
 
@@ -7,46 +7,21 @@
 	scripted_button = je_magic_research_button_cancel_focus_academia
 
 	complete = {
-		scope:journal_entry = {
-			is_goal_complete = yes
-		}
-	}
-
-	immediate = {
-		set_variable = {
-			name = je_research_magic_progess
-			value = 0
+		trigger_if = {
+			custom_tooltip = {
+				text = je_magic_research_goal_tt
+				scope:journal_entry = {
+					scripted_bar_progress = {
+						name = pb_gate_magic_research
+						value >= 100
+					}
+				}
+			}
 		}
 	}
 
 	invalid = {
 		is_magic_country = yes
-	}
-
-	on_monthly_pulse = {
-		effect = {
-			change_variable = {
-				name = je_research_magic_progess
-				add = {
-					# Base
-					value = 1
-					if = {
-						limit = {
-							has_modifier = focus_magic_research_cost_modifier
-						}
-						# Focused Efforts
-						add = 2
-					}
-					if = {
-						limit = {
-							has_building = building_gate
-						}
-						# Magic Gate in a controlled State
-						add = 2
-					}
-				}
-			}
-		}
 	}
 
 
@@ -61,18 +36,11 @@
 		hidden_effect = {
 			remove_modifier = focus_magic_research_cost_modifier
 		}
-		remove_variable = je_research_magic_progess
 	}
 
-	current_value = {
-		value = root.var:je_research_magic_progess
-	}
+	progressbar = no
 
-	goal_add_value = {
-		add = 120
-	}
-
-	progressbar = yes
+	scripted_progress_bar = pb_gate_magic_research
 
 	transferable = no
 	can_revolution_inherit = yes

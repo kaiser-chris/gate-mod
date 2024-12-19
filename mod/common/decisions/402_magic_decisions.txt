@@ -44,7 +44,7 @@ research_magic_decision = {
 	possible = {
 		is_magic_country = no
 		hidden_trigger = {
-			NOT = { has_variable = je_research_magic_progess }
+			NOT = { has_journal_entry = je_magic_research }
 		}
 	}
 

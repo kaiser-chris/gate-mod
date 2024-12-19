@@ -1,0 +1,38 @@
+﻿pb_gate_magic_research = {
+ 	name = pb_gate_magic_research_name
+ 	desc = pb_gate_magic_research_desc
+
+	default = yes
+
+	monthly_progress = {
+		# Base Value
+		add = {
+			desc = pb_gate_magic_research_base_value
+			value = 1
+		}
+		# Focused Efforts
+		if = {
+			limit = {
+				has_modifier = focus_magic_research_cost_modifier
+			}
+			add = {
+				desc = pb_gate_magic_research_focused_efforts
+				value = 2
+			}
+		}
+		# Magic Gate in a controlled State
+		if = {
+			limit = {
+				has_building = building_gate
+			}
+			add = {
+				desc = pb_gate_magic_research_magic_gate
+				value = 2
+			}
+		}
+	}
+
+ 	start_value = 0
+ 	min_value = 0
+ 	max_value = 100
+}
