@@ -108,10 +108,16 @@ state_building_dwarven_gold_mine_max_level_add = {
 	percent = no
 }
 
-country_weekly_magic_innovation_add={
-	decimals=1
-	color=good
-	game_data={
-		ai_value=1000
-	}
+# Produces an error we need to ignore
+country_weekly_magic_innovation_add = {
+	decimals = 1
+	color = good
+	percent = no
+}
+
+# Produces an error we need to ignore
+country_monthly_dwarven_immigration_add = {
+	decimals = 0
+	color = good
+	percent = no
 }

@@ -38,8 +38,6 @@ Below is a table with all currently open ToDos.
 | ./mod/common/history/military_formations/402_orcish_kingdom.txt | 72 |  Create character |
 | ./mod/common/production_method_groups/401_gate_production_method_groups.txt | 24 |  Add proper production method to pmg_mana_extraction |
 | ./mod/common/production_method_groups/401_gate_production_method_groups.txt | 8 |  Add proper production method to pmg_magic_gate_exploitation |
-| ./mod/common/production_methods/400_gate_production_methods.txt | 26 |  Can we add something like custom tooltip here? |
-| ./mod/common/production_methods/400_gate_production_methods.txt | 44 |  Can we add something like custom tooltip here? |
 | ./mod/common/production_methods/406_magic_academy_production_methods.txt | 100 |  Find proper logo for pm_university_simple_magic_research |
 | ./mod/common/production_methods/406_magic_academy_production_methods.txt | 127 |  Find proper logo for pm_university_advanced_magic_research |
 | ./mod/common/production_methods/406_magic_academy_production_methods.txt | 29 |  Find proper logo for pm_magic_academy_partial_support |
@@ -56,8 +54,6 @@ Below is a table with all currently open ToDos.
 | ./mod/common/production_methods/408_golem_depot_production_methods.txt | 7 |  Create icon for pm_golem_depot_no_golems |
 | ./mod/common/production_methods/409_mage_tower_production_methods.txt | 2 |  Find proper logo for pm_magic_academy_no_support |
 | ./mod/common/religions/gate_religion.txt | 2 |  Add proper icon |
-| ./mod/common/scripted_effects/401_gate_immigration.txt | 55 |  Balance trait state_trait_dwarven_immigration |
-| ./mod/common/scripted_effects/401_gate_immigration.txt | 65 |  Balance trait state_trait_dwarven_mass_immigration |
 | ./mod/common/technology/technologies/401_magic_production.txt | 133 |  Add proper logo for magic_and_electricity |
 | ./mod/common/technology/technologies/401_magic_production.txt | 19 |  Add proper logo for mana_extraction |
 | ./mod/common/technology/technologies/401_magic_production.txt | 35 |  Add proper logo for magic_farming |

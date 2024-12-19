@@ -22,8 +22,17 @@ pm_gate_immigration_dwarves = {
 		dwarven_gate_immigration
 	}
 
+	country_modifiers = {
+		level_scaled = {
+			country_monthly_dwarven_immigration_add = 10000
+		}
+	}
+
 	building_modifiers = {
-		#TODO: Can we add something like custom tooltip here?
+		workforce_scaled = {
+			# output goods
+			goods_output_mana_add = 20
+		}
 		level_scaled = {
 			building_employment_mages_add = 100
 			building_employment_bureaucrats_add = 1000
@@ -40,8 +49,17 @@ pm_gate_mass_immigration_dwarves = {
 		dwarven_gate_immigration
 	}
 
+	country_modifiers = {
+		level_scaled = {
+			country_monthly_dwarven_immigration_add = 30000
+		}
+	}
+
 	building_modifiers = {
-		#TODO: Can we add something like custom tooltip here?
+		workforce_scaled = {
+			# output goods
+			goods_output_mana_add = 20
+		}
 		level_scaled = {
 			building_employment_mages_add = 100
 			building_employment_bureaucrats_add = 2000
