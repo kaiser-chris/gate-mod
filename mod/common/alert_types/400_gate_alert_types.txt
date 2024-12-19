@@ -17,3 +17,25 @@
 
 	color = green
 }
+
+has_not_started_research_of_magic_alert = {
+	script_context = player_country
+	texture = gfx/interface/icons/alert_icons/has_no_magic_research.dds
+
+	valid = {
+		AND = {
+			is_magic_country = no
+			NOT = {
+				has_journal_entry = je_magic_research
+			}
+		}
+	}
+
+	open_panel = journal
+
+	type = alert
+
+	alert_group = gate_alerts
+
+	color = red
+}

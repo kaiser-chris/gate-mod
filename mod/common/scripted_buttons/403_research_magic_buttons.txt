@@ -1,0 +1,43 @@
+﻿je_magic_research_button_focus_academia = {
+	name = "je_investigate_gate_button_focus_academia"
+	desc = "je_investigate_gate_button_focus_academia_desc"
+
+	possible = {
+		NOT = {
+			has_modifier = focus_magic_research_cost_modifier
+		}
+	}
+
+	ai_chance = {
+		base = 100
+	}
+
+	effect = {
+		# Maybe a cleaner solution is possible:
+		# Modifier looks like a permanent one but gets
+		# removed after end of journal entry.
+		add_modifier = {
+			name = focus_magic_research_cost_modifier
+		}
+		custom_tooltip = {
+			text = je_investigate_gate_button_focus_academia_result_tt
+		}
+	}
+}
+
+je_magic_research_button_cancel_focus_academia = {
+	name = "je_investigate_gate_button_focus_academia"
+	desc = "je_investigate_gate_button_focus_academia_desc"
+
+	possible = {
+		has_modifier = focus_magic_research_cost_modifier
+	}
+
+	ai_chance = {
+		base = 100
+	}
+
+	effect = {
+		remove_modifier = focus_magic_research_cost_modifier
+	}
+}

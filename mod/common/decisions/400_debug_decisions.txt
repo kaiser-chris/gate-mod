@@ -149,3 +149,23 @@ debug_magic_growing_decision = {
 		base = 0
 	}
 }
+
+debug_monster_attack_decision = {
+	is_shown = {
+		has_global_variable = gate_debug
+		is_player = yes
+		NOT = {
+			has_global_variable = monster_attack_in_progress
+		}
+	}
+
+	when_taken = {
+		trigger_event = {
+			id = mana_saturation.12
+		}
+	}
+
+	ai_chance = {
+		base = 0
+	}
+}

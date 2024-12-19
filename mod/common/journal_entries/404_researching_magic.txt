@@ -1,0 +1,82 @@
+﻿je_magic_research = {
+	icon = "gfx/interface/icons/event_icons/event_world.dds"
+
+	group = je_group_magical_affairs
+
+	scripted_button = je_magic_research_button_focus_academia
+	scripted_button = je_magic_research_button_cancel_focus_academia
+
+	complete = {
+		scope:journal_entry = {
+			is_goal_complete = yes
+		}
+	}
+
+	immediate = {
+		set_variable = {
+			name = je_research_magic_progess
+			value = 0
+		}
+	}
+
+	invalid = {
+		is_magic_country = yes
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			change_variable = {
+				name = je_research_magic_progess
+				add = {
+					# Base
+					value = 1
+					if = {
+						limit = {
+							has_modifier = focus_magic_research_cost_modifier
+						}
+						# Focused Efforts
+						add = 2
+					}
+					if = {
+						limit = {
+							has_building = building_gate
+						}
+						# Magic Gate in a controlled State
+						add = 2
+					}
+				}
+			}
+		}
+	}
+
+
+	on_complete = {
+		hidden_effect = {
+			remove_modifier = focus_magic_research_cost_modifier
+		}
+		learn_magic = yes
+	}
+
+	on_invalid = {
+		hidden_effect = {
+			remove_modifier = focus_magic_research_cost_modifier
+		}
+		remove_variable = je_research_magic_progess
+	}
+
+	current_value = {
+		value = root.var:je_research_magic_progess
+	}
+
+	goal_add_value = {
+		add = 120
+	}
+
+	progressbar = yes
+
+	transferable = no
+	can_revolution_inherit = yes
+
+	weight = 200
+	should_be_pinned_by_default = yes
+}

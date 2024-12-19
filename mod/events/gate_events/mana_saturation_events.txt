@@ -721,6 +721,20 @@ mana_saturation.11 = {
 		}
 	}
 
+	# Our state
+	option = {
+		name = mana_saturation.11.b
+		default_option = yes
+		scope:magic_growing_state.state_region = {
+			add_state_trait = state_trait_magic_soil
+		}
+		trigger = {
+			scope:magic_growing_state = {
+				owner = this
+			}
+		}
+	}
+
 	# Other countries state
 	option = {
 		name = mana_saturation.11.a
@@ -733,20 +747,6 @@ mana_saturation.11 = {
 				NOT = {
 					owner = this
 				}
-			}
-		}
-	}
-
-	# Our state
-	option = {
-		name = mana_saturation.11.b
-		default_option = yes
-		scope:magic_growing_state.state_region = {
-			add_state_trait = state_trait_magic_soil
-		}
-		trigger = {
-			scope:magic_growing_state = {
-				owner = this
 			}
 		}
 	}
@@ -773,6 +773,7 @@ mana_saturation.12 = {
 
 	trigger = {
 		is_player = yes
+		has_global_variable = gate_mana_saturation_progress
 		global_var:gate_mana_saturation_progress >= 30
 		NOT = {
 			has_global_variable = monster_attack_in_progress
@@ -780,30 +781,113 @@ mana_saturation.12 = {
 	}
 
 	immediate = {
-		set_global_variable = monster_attack_in_progress
+		set_global_variable = {
+			name = monster_attack_in_progress
+			months = 6
+		}
 		random_state = {
 			save_scope_as = monster_attack_state
+			owner = {
+				save_scope_as = monster_attack_country
+			}
 		}
-	}
-
-	option = {
-		name = mana_saturation.12.a
-		hidden_effect = {
-			trigger_event = {
-				id = mana_saturation.13
-				months = 1
+		scope:monster_attack_country = {
+			random_military_formation = {
+				save_scope_as = monster_attack_formation
+			}
+			random_scope_general = {
+				save_scope_as = monster_attack_general
 			}
 		}
 	}
 
+	# Our State
 	option = {
-		name = mana_saturation.12.b
+		name = mana_saturation.12.a1
+		hidden_effect = {
+			trigger_event = {
+				id = mana_saturation.13
+				months = 3
+			}
+		}
+		scope:monster_attack_general = {
+			set_character_busy_and_immortal = yes
+		}
+		trigger = {
+			owner = scope:monster_attack_country
+		}
+	}
+	option = {
+		name = mana_saturation.12.b1
 		default_option = yes
 		hidden_effect = {
 			# Fuck around
 			trigger_event = {
 				id = mana_saturation.14
-				months = 1
+				months = 3
+			}
+		}
+		trigger = {
+			owner = scope:monster_attack_country
+		}
+	}
+
+	# Other countries state
+	option = {
+		name = mana_saturation.12.a2
+		change_relations = {
+			country = scope:monster_attack_country
+			value = 20
+		}
+		add_modifier = {
+			name = monster_attack_cost_modifier
+			months = 7
+			multiplier = money_amount_multiplier_very_small
+		}
+		remove_global_variable = monster_attack_in_progress
+		trigger = {
+			NOT = {
+				owner = scope:monster_attack_country
+			}
+		}
+	}
+	option = {
+		name = mana_saturation.12.b2
+		default_option = yes
+		change_relations = {
+			country = scope:monster_attack_country
+			value = 10
+		}
+		add_modifier = {
+			name = monster_attack_cost_modifier
+			months = 7
+			multiplier = money_amount_multiplier_small
+		}
+		hidden_effect = {
+			trigger_event = {
+				id = magic_research.1
+				months = 3
+			}
+		}
+		trigger = {
+			has_journal_entry = je_magic_research
+			NOT = {
+				owner = scope:monster_attack_country
+			}
+		}
+	}
+	option = {
+		name = mana_saturation.12.c2
+		default_option = yes
+		change_relations = {
+			country = scope:monster_attack_country
+			value = -30
+		}
+		remove_global_variable = monster_attack_in_progress
+		change_infamy = 5
+		trigger = {
+			NOT = {
+				owner = scope:monster_attack_country
 			}
 		}
 	}
@@ -818,18 +902,13 @@ mana_saturation.13 = {
 		video = "southamerica_war_civilians"
 	}
 
-	immediate = {
-		random_scope_general = {
-			save_scope_as = monster_attack_general
-		}
-	}
-
 	title = mana_saturation.13.t
 	desc = mana_saturation.13.d
 	flavor = mana_saturation.13.f
 
 	option = {
 		name = mana_saturation.13.a
+		default_option = yes
 		scope:monster_attack_state = {
 			state_region = {
 				add_devastation = 10
@@ -838,8 +917,35 @@ mana_saturation.13 = {
 		scope:monster_attack_general = {
 			add_trait = monster_killer
 			add_trait = wounded
+			set_character_busy_and_immortal = no
 		}
-		remove_global_variable = monster_attack_in_progress
+		scope:monster_attack_formation = {
+			add_organization = -50
+		}
+	}
+
+	option = {
+		name = mana_saturation.13.b
+		scope:monster_attack_state = {
+			state_region = {
+				add_devastation = 10
+			}
+		}
+		scope:monster_attack_general = {
+			add_trait = monster_killer
+			add_trait = wounded
+			set_character_busy_and_immortal = no
+		}
+		scope:monster_attack_formation = {
+			add_organization = -50
+		}
+		trigger_event = {
+			id = magic_research.1
+			months = 3
+		}
+		trigger = {
+			has_journal_entry = je_magic_research
+		}
 	}
 }
 
@@ -867,6 +973,11 @@ mana_saturation.14 = {
 				percent = 0.3
 			}
 			every_neighbouring_state = {
+				limit = {
+					NOT = {
+						this = scope:monster_attack_state
+					}
+				}
 				state_region = {
 					add_devastation = 50
 				}
@@ -875,7 +986,6 @@ mana_saturation.14 = {
 				}
 			}
 		}
-		remove_global_variable = monster_attack_in_progress
 
 		# Public outrage
 		capital = {
@@ -887,5 +997,4 @@ mana_saturation.14 = {
 		# World Wide outrage
 		change_infamy = 5
 	}
-
 }

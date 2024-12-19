@@ -11,45 +11,43 @@
 		}
 	}
 
+	immediate = {
+		set_variable = {
+			name = je_investigate_gate_progress
+			value = 0
+		}
+	}
+
 	invalid = {
-		OR = {
-			AND = {
-				is_magic_country = yes
+		AND = {
+			hidden_trigger = {
+				is_gate_planet_country = no
 			}
 			NOT = {
-				any_scope_state = {
-					has_building = building_gate
-				}
+				has_building = building_gate
 			}
 		}
 	}
 
 	on_monthly_pulse = {
 		effect = {
-			# Base
 			if = {
 				limit = {
-					NOT = {
-						is_magic_country = yes
-					}
-					any_scope_state = {
-						has_building = building_gate
-					}
+					has_building = building_gate
 				}
 				change_variable = {
-					name = investigate_gate_var
-					add = 1
-				}
-			}
-
-			# Focused Efforts
-			if = {
-				limit = {
-					has_modifier = focus_investigate_gate_cost_modifier
-				}
-				change_variable = {
-					name = investigate_gate_var
-					add = 2
+					name = je_investigate_gate_progress
+					add = {
+						# Base
+						value = 1
+						if = {
+							limit = {
+								has_modifier = focus_investigate_gate_cost_modifier
+							}
+							# Focused Efforts
+							add = 2
+						}
+					}
 				}
 			}
 		}
@@ -60,9 +58,19 @@
 		hidden_effect = {
 			remove_modifier = focus_investigate_gate_cost_modifier
 		}
+		remove_variable = je_investigate_gate_progress
 		trigger_event = {
 			id = investigate_gate.1
 			popup = yes
+		}
+		if = {
+			limit = {
+				has_journal_entry = je_magic_research
+			}
+			change_variable = {
+				name = je_research_magic_progess
+				add = 10
+			}
 		}
 	}
 
@@ -70,11 +78,11 @@
 		hidden_effect = {
 			remove_modifier = focus_investigate_gate_cost_modifier
 		}
-		remove_variable = investigate_gate_var
+		remove_variable = je_investigate_gate_progress
 	}
 
 	current_value = {
-		value = root.var:investigate_gate_var
+		value = root.var:je_investigate_gate_progress
 	}
 
 	goal_add_value = {

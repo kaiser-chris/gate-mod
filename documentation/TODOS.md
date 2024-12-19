@@ -63,8 +63,10 @@ Below is a table with all currently open ToDos.
 | ./mod/common/technology/technologies/401_magic_production.txt | 35 |  Add proper logo for magic_farming |
 | ./mod/common/technology/technologies/402_magic_military.txt | 18 |  Add proper logo for mage_infantry |
 | ./mod/common/technology/technologies/402_magic_military.txt | 35 |  Add proper logo for mage_artillery |
-| ./mod/common/technology/technologies/403_magic_society.txt | 28 |  Add proper logo for formalized_magic |
-| ./mod/common/technology/technologies/403_magic_society.txt | 49 |  Add proper logo for magic_technology_integration |
+| ./mod/common/technology/technologies/403_magic_society.txt | 14 |  Implement gate_expeditions technology |
+| ./mod/common/technology/technologies/403_magic_society.txt | 17 |  Add proper logo for gate_expeditions |
+| ./mod/common/technology/technologies/403_magic_society.txt | 41 |  Add proper logo for formalized_magic |
+| ./mod/common/technology/technologies/403_magic_society.txt | 62 |  Add proper logo for magic_technology_integration |
 | ./mod/events/gate_events/dwarven_alps_events.txt | 52 |  Create custom video for event dwarven_alps.2 (Digging Dwarven Tunnels) |
 | ./mod/gui/gate_overwrites.gui | 1 |  Fix this |
 | ./mod/localization/english/gate_countries_l_english.yml | 13 |  Add proper flavor text GNG_FLAVOR_TEXT (New Samadore) |

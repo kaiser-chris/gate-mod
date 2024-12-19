@@ -11,6 +11,19 @@ dwarven_gate_immigration = {
 	}
 }
 
+#TODO: Implement gate_expeditions technology
+gate_expeditions = {
+	era = era_1
+	#TODO: Add proper logo for gate_expeditions
+	texture = "gfx/interface/icons/invention_icons/gate_migration.dds"
+	category = society
+	can_research = no
+
+	ai_weight = {
+		value = 1
+	}
+}
+
 magic_understanding_society = {
 	# Unlocks all magic society research
 	era = era_1

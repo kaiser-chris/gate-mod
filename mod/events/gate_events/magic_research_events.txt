@@ -1,0 +1,37 @@
+﻿namespace = magic_research
+
+magic_research.1 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:monster_attack_state
+	
+	title = magic_research.1.t
+	desc = magic_research.1.d
+	flavor = magic_research.1.f
+
+	trigger = {
+		has_journal_entry = je_magic_research
+	}
+
+	event_image = {
+		video = "southamerica_aristocrats"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds"
+	
+	duration = 3
+
+	option = {
+		name = magic_research.1.a
+		default_option = yes
+		custom_tooltip = {
+			text = magic_research.1.tt
+			change_variable = {
+				name = je_research_magic_progess
+				add = 10
+			}
+		}
+	}
+}

@@ -13,6 +13,11 @@ dragon_cost_modifier = {
 	country_expenses_add = 1
 }
 
+monster_attack_cost_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	country_expenses_add = 1
+}
+
 dwarven_help_germans = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
 	country_expenses_add = 1
@@ -24,6 +29,11 @@ dwarven_german_work_program = {
 }
 
 focus_investigate_gate_cost_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	building_university_throughput_add = -0.5
+}
+
+focus_magic_research_cost_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
 	building_university_throughput_add = -0.5
 }

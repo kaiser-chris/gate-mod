@@ -6,3 +6,13 @@ is_magic_country = {
 		has_technology_researched = magic_understanding_military
 	}
 }
+
+# Trigger to check whether a country originated from
+# the other side of the gate
+is_gate_planet_country = {
+	OR = {
+		country_has_primary_culture = cu:dwarven
+		country_has_primary_culture = cu:orcish
+		country_has_primary_culture = cu:elven
+	}
+}

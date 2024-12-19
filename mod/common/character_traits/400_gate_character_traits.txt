@@ -1,8 +1,7 @@
 ﻿monster_killer = {
     type = skill
 
-    # TODO: Create icon for monster_killer character trait
-    texture = gfx/interface/icons/character_trait_icons/stalwart_defender.dds
+    texture = gfx/interface/icons/character_trait_icons/convoy_raider_commander.dds
 
     command_modifier = {
         character_popularity_add = 25
@@ -22,10 +21,11 @@
     possible = {
         NOT = { age < define:NCharacters|ADULT_AGE }
         has_role = general
+        has_global_variable = gate_mana_saturation_progress
         global_var:gate_mana_saturation_progress >= 30
     }
 
-    weight = 10
+    weight = 0
 
     replace = {
 

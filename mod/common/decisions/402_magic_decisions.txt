@@ -8,24 +8,49 @@
 	possible = {
 		is_diplomatic_play_committed_participant = no
 		is_at_war = no
-		NOT = {
-			is_magic_country = yes
+		is_magic_country = no
+		custom_tooltip = {
+			text = is_gate_planet_country_tt
+			is_gate_planet_country = no
 		}
-		any_scope_state = {
-			has_building = building_gate
-		}
+		has_building = building_gate
 		hidden_trigger = {
-			NOT = { has_variable = investigate_gate_var }
+			NOT = { has_variable = je_investigate_gate_progress }
 		}
 	}
 
 	when_taken = {
 		set_variable = {
-			name = investigate_gate_var
+			name = je_investigate_gate_progress
 			value = 0
 		}
 		add_journal_entry = {
 			type = je_investigate_gate
+		}
+	}
+
+	ai_chance = {
+		base = 100
+	}
+}
+
+research_magic_decision = {
+	is_shown = {
+		NOT = {
+			is_magic_country = yes
+		}
+	}
+
+	possible = {
+		is_magic_country = no
+		hidden_trigger = {
+			NOT = { has_variable = je_research_magic_progess }
+		}
+	}
+
+	when_taken = {
+		add_journal_entry = {
+			type = je_magic_research
 		}
 	}
 

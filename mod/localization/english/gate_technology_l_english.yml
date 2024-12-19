@@ -5,11 +5,11 @@
  mana_extraction: "Mana Extraction"
  mana_extraction_desc: "Mana extraction is the age old art of mages condensing atmospheric mana into crystals that can be used for multiple applications."
  magic_farming: "Druid Magic"
- magic_farming_desc: "$magic_farming$ is an old tradition for increasing crop yields. This practice has allowed for a population explosion in almost all nations of the planet $gate_planet$."
+ magic_farming_desc: "$magic_farming$ is an old tradition for increasing crop yields. This practice has allowed for a population explosion in almost all nations of [concept_gate_planet]."
  magic_dwarf_murk: "Murk Travel"
- magic_dwarf_murk_desc: "Dwarves are able to travel trough the $building_murk_ways$. The $building_murk_ways$ are a type of magical portal specifically linked to mountains. They can only be built in states with mountains."
+ magic_dwarf_murk_desc: "Dwarves are able to travel trough the [GetBuildingType('building_murk_ways').GetName]. The [GetBuildingType('building_murk_ways').GetName] are a type of magical portal specifically linked to mountains. They can only be built in states with mountains."
  magic_dwarf_murk_railways: "Murk Railways"
- magic_dwarf_murk_railways_desc: "Using Railways in the $building_murk_ways$ allow for more throughput. But getting modern trains to work in the chaotic and unstable portals of the $building_murk_ways$ is an art in itself."
+ magic_dwarf_murk_railways_desc: "Using Railways in the [GetBuildingType('building_murk_ways').GetName] allow for more throughput. But getting modern trains to work in the chaotic and unstable portals of the [GetBuildingType('building_murk_ways').GetName] is an art in itself."
  magic_golems: "Magic Golems"
  magic_golems_desc: "TODO" #TODO: Write description for magic_golems
  magic_steam_golems: "Steam Magic Golems"
@@ -29,6 +29,8 @@
  formalized_magic_desc: "TODO" #TODO: Write description for formalized_magic
  magic_science: "Magic & Science"
  magic_science_desc: "TODO" #TODO: Write description for magic_science
+ gate_expeditions: "Expedition into the Gate"
+ gate_expeditions_desc: "Your country has learned to control the [GetBuildingType('building_gate').GetName] and can now explore [concept_gate_planet]."
 # Military
  magic_understanding_military: "Magic Military"
  magic_understanding_military_desc: "Your country has a fundamental understanding of using magic for military purposes."
