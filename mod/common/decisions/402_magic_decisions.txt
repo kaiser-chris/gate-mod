@@ -6,6 +6,10 @@
 	}
 
 	possible = {
+		OR = {
+			is_country_type = recognized
+			is_country_type = colonial
+		}
 		is_diplomatic_play_committed_participant = no
 		is_at_war = no
 		is_magic_country = no
@@ -42,6 +46,10 @@ research_magic_decision = {
 	}
 
 	possible = {
+		OR = {
+			is_country_type = recognized
+			is_country_type = colonial
+		}
 		is_magic_country = no
 		hidden_trigger = {
 			NOT = { has_journal_entry = je_researching_magic }
