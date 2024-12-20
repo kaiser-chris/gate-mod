@@ -43,7 +43,7 @@
 
 	on_complete = {
 		hidden_effect = {
-			remove_modifier = focus_magic_research_cost_modifier
+			remove_modifier = focus_researching_magic_cost_modifier
 			var:magic_researcher = {
 				set_character_immortal = no
 			}
@@ -53,7 +53,7 @@
 
 	on_invalid = {
 		hidden_effect = {
-			remove_modifier = focus_magic_research_cost_modifier
+			remove_modifier = focus_researching_magic_cost_modifier
 			var:magic_researcher = {
 				set_character_immortal = no
 			}
