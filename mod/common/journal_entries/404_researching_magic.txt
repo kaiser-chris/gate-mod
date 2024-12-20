@@ -24,10 +24,29 @@
 		is_magic_country = yes
 	}
 
+	immediate = {
+		create_character = {
+			template = magic_researcher_template
+			save_scope_as = magic_researcher
+		}
+		set_variable = {
+			name = magic_researcher
+			value = scope:magic_researcher
+		}
+		scope:journal_entry = {
+			add_to_variable_list = {
+				name = com_journal_characters
+				target = scope:magic_researcher
+			}
+		}
+	}
 
 	on_complete = {
 		hidden_effect = {
 			remove_modifier = focus_magic_research_cost_modifier
+			var:magic_researcher = {
+				set_character_immortal = no
+			}
 		}
 		learn_magic = yes
 	}
@@ -35,6 +54,9 @@
 	on_invalid = {
 		hidden_effect = {
 			remove_modifier = focus_magic_research_cost_modifier
+			var:magic_researcher = {
+				set_character_immortal = no
+			}
 		}
 	}
 
