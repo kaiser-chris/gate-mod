@@ -44,6 +44,9 @@ Below is a table with all currently open ToDos.
 | ./mod/common/interest_groups/400_magic_users.txt | 3 | # TODO: Create icon for magic users interest group |
 | ./mod/common/interest_groups/400_magic_users.txt | 42 | # TODO: Create elven dominion magic user ig traits |
 | ./mod/common/interest_groups/400_magic_users.txt | 48 | # TODO: Create elven magic user ig traits |
+| ./mod/common/laws/401_monster_hunting.txt | 136 | # TODO: Define institution modifier for law_militarized_monster_hunters |
+| ./mod/common/laws/401_monster_hunting.txt | 29 | # TODO: Define institution modifier for law_private_monster_hunters |
+| ./mod/common/laws/401_monster_hunting.txt | 84 | # TODO: Define institution modifier for law_dedicated_monster_hunters |
 | ./mod/common/pop_types/mages.txt | 2 | # TODO: Update mages pop icon |
 | ./mod/common/production_method_groups/401_gate_production_method_groups.txt | 24 |  Add proper production method to pmg_mana_extraction |
 | ./mod/common/production_method_groups/401_gate_production_method_groups.txt | 8 |  Add proper production method to pmg_magic_gate_exploitation |
@@ -77,9 +80,6 @@ Below is a table with all currently open ToDos.
 | ./mod/localization/english/gate_countries_l_english.yml | 13 |  Add proper flavor text GNG_FLAVOR_TEXT (New Samadore) |
 | ./mod/localization/english/gate_interest_groups_l_english.yml | 3 | # TODO: Write ig_magic_users_desc |
 | ./mod/localization/english/gate_interest_groups_l_english.yml | 4 | # TODO: Create icon for magic users interest group |
-| ./mod/localization/english/gate_laws_l_english.yml | 3 |  Add lawgroup_orcish_hegemony_desc |
-| ./mod/localization/english/gate_laws_l_english.yml | 5 |  Add law_orcish_hegemony_enforced_desc |
-| ./mod/localization/english/gate_laws_l_english.yml | 7 |  Add law_orcish_hegemony_not_enforced_desc |
 | ./mod/localization/english/gate_objective_l_english.yml | 11 | #lore TODO#!"  Flesh out objective_magic_dominance_desc_GBR (Great Britain) |
 | ./mod/localization/english/gate_objective_l_english.yml | 18 |  Flesh out a proper description for je_obj_magic_knowledge_desc |
 | ./mod/localization/english/gate_objective_l_english.yml | 21 |  Flesh out a proper description for je_obj_magic_academy_desc |
