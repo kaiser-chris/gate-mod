@@ -781,6 +781,14 @@ mana_saturation.12 = {
 	}
 
 	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = monster_attack_happened
+				}
+			}
+			set_global_variable = monster_attack_happened
+		}
 		set_global_variable = {
 			name = monster_attack_in_progress
 			months = 6
