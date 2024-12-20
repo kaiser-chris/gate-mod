@@ -1,0 +1,30 @@
+﻿je_monster_congress_button_start = {
+	name = je_monster_congress_button_start
+	desc = je_monster_congress_button_start_desc
+
+	possible = {
+		custom_tooltip = {
+			text = je_monster_congress_button_start_block
+			NOT = {
+				has_global_variable = monster_attack_in_progress
+			}
+		}
+		custom_tooltip = {
+			text = je_monster_congress_button_start_block_started
+			NOT = {
+				has_variable = monster_congress_in_progress
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 100
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = je_monster_congress_button_start_effect
+			set_variable = monster_congress_in_progress
+		}
+	}
+}

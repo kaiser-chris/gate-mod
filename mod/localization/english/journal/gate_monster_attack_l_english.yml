@@ -1,0 +1,40 @@
+﻿l_english:
+# Monster Congress
+ je_monster_congress: "National Congress on Monsters"
+ je_monster_congress_custom_goal: "The Congress has concluded."
+ je_monster_congress_reason: "The grand hall buzzed with tension as the National Congress on Monsters convened, bringing together politicians, researchers, and military leaders under one roof. Charts filled the walls, displaying the devastation of past attacks. Researchers spoke urgently of patterns and anomalies in monster behavior, their voices laced with unease. Military commanders outlined new strategies, their plans bristling with firepower and precision. Politicians argued fiercely, torn between allocating resources for defense and investing in research to uncover the root cause."
+ je_monster_congress_in_progress: "The Congress is in progress"
+ je_monster_congress_not_started: "The Congress has not started"
+ je_monster_congress_button_start: "Start Congress"
+ je_monster_congress_button_start_desc: "Starts our Congress on how to handle future monster attacks"
+ je_monster_congress_button_start_block: "Our Congress can only start after the latest monster attack has concluded"
+ je_monster_congress_button_start_block_started: "The Congress has not started"
+ je_monster_congress_button_start_effect: "Starts the Congress"
+ pb_monster_congress_name: "Congress Progress"
+ pb_monster_congress_desc: "Progress: #v [Multiply_float(JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self), '(float)6')|0]#! of 6 months"
+ pb_monster_congress_block: "the Congress has not Started"
+ pb_monster_congress_progress: "the Congress is in Progress"
+# Modifiers
+ monster_attack_cost_modifier: "Monster Attack Help"
+# Events
+ monster_attack.1.t: "The first Monsters"
+ monster_attack.1.d: "Monsters spawned form the rising [concept_mana_saturation] on earth, attack people in [SCOPE.sState('monster_attack_state').GetName]."
+ monster_attack.1.f: "As mana seeped into the earth, it unleashed a torrent of ancient, forgotten horrors. From the cracks in the ground, a horde of monstrous creatures erupted, their eyes glowing with the wild, untamed energy of the arcane."
+ monster_attack.1.a1: "Send the Army!"
+ monster_attack.1.b1: "Probably some peasants illusions."
+ monster_attack.1.a2: "We shall help with all we have."
+ monster_attack.1.b2: "Send help and researchers."
+ monster_attack.1.c2: "There is nothing we can do."
+ monster_attack.2.t: "The Army was Victorious"
+ monster_attack.2.d: "TODO" # TODO: Write monster_attack.2.d
+ monster_attack.2.f: "TODO" # TODO: Write monster_attack.2.f
+ monster_attack.2.a: "Congratulate them."
+ monster_attack.2.b: "Investigate the Aftermath."
+ monster_attack.3.t: "Civilians defended Themself"
+ monster_attack.3.d: "TODO" # TODO: Write monster_attack.3.d
+ monster_attack.3.f: "TODO" # TODO: Write monster_attack.3.f
+ monster_attack.3.a: "Devastating."
+ monster_attack.4.t: "Congress on Monsters has Concluded"
+ monster_attack.4.d: "We can now enact laws in the [concept_law_group] [GetLawGroup('lawgroup_monster_hunting').GetName]." # TODO: Write monster_attack.3.d
+ monster_attack.4.f: "The debates at the National Congress on Monsters grew more heated as the hours passed, each faction vying for their vision of survival. Researchers called for deeper understanding, urging caution and investment in studying the monsters’ origins and weaknesses. The military demanded immediate action, proposing preemptive strikes and bolstered defenses, while politicians struggled to balance these strategies with the needs of a shaken populace."
+ monster_attack.4.a: "Good now we can combat this Problem."

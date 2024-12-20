@@ -6,6 +6,44 @@
 	scripted_button = je_researching_magic_button_focus_academia
 	scripted_button = je_researching_magic_button_cancel_focus_academia
 
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = je_researching_magic_low_progress
+				trigger = {
+					scope:journal_entry = {
+						scripted_bar_progress = {
+							name = gate_mana_saturation_progress_bar
+							value < 30
+						}
+					}
+				}
+			}
+			triggered_desc = {
+				desc = je_researching_magic_medium_progress
+				trigger = {
+					scope:journal_entry = {
+						scripted_bar_progress = {
+							name = gate_mana_saturation_progress_bar
+							value < 60
+						}
+					}
+				}
+			}
+			triggered_desc = {
+				desc = je_researching_magic_high_progress
+				trigger = {
+					scope:journal_entry = {
+						scripted_bar_progress = {
+							name = gate_mana_saturation_progress_bar
+							value <= 100
+						}
+					}
+				}
+			}
+		}
+	}
+
 	complete = {
 		trigger_if = {
 			custom_tooltip = {
@@ -21,7 +59,11 @@
 	}
 
 	invalid = {
-		is_magic_country = yes
+		trigger_if = {
+			hidden_trigger = {
+				is_magic_country = yes
+			}
+		}
 	}
 
 	immediate = {

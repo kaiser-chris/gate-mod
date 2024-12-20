@@ -1,0 +1,55 @@
+﻿je_monster_congress = {
+	icon = "gfx/interface/icons/event_icons/event_magic_knowledge.dds"
+
+	group = je_group_magical_affairs
+
+	scripted_button = je_monster_congress_button_start
+
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = je_monster_congress_in_progress
+				trigger = {
+					has_variable = monster_congress_in_progress
+				}
+			}
+			triggered_desc = {
+				desc = je_monster_congress_not_started
+			}
+		}
+	}
+
+	complete = {
+		trigger_if = {
+			custom_tooltip = {
+				text = je_monster_congress_not_started
+				scope:journal_entry = {
+					scripted_bar_progress = {
+						name = pb_monster_congress
+						value >= 6 # Months
+					}
+				}
+			}
+		}
+	}
+
+	invalid = {
+		is_gate_planet_country = yes
+	}
+
+	on_complete = {
+		set_global_variable = monster_congress_happened
+		remove_variable = monster_congress_in_progress
+		trigger_event = monster_attack.4
+	}
+
+	progressbar = no
+
+	scripted_progress_bar = pb_monster_congress
+
+	transferable = no
+	can_revolution_inherit = yes
+
+	weight = 200
+	should_be_pinned_by_default = yes
+}

@@ -91,9 +91,9 @@ Below is a table with all currently open ToDos.
 | ./mod/localization/english/gate_technology_l_english.yml | 22 |  Write description for magic_and_electricity |
 | ./mod/localization/english/gate_technology_l_english.yml | 29 |  Write description for formalized_magic |
 | ./mod/localization/english/gate_technology_l_english.yml | 31 |  Write description for magic_science |
-| ./mod/localization/english/journal/gate_mana_saturation_l_english.yml | 59 | # TODO: Write mana_saturation.13.d |
-| ./mod/localization/english/journal/gate_mana_saturation_l_english.yml | 60 | # TODO: Write mana_saturation.13.f |
-| ./mod/localization/english/journal/gate_mana_saturation_l_english.yml | 64 | # TODO: Write mana_saturation.14.d |
-| ./mod/localization/english/journal/gate_mana_saturation_l_english.yml | 65 | # TODO: Write mana_saturation.14.f |
+| ./mod/localization/english/journal/gate_mana_saturation_l_english.yml | 59 | # TODO: Write monster_attack.2.d |
+| ./mod/localization/english/journal/gate_mana_saturation_l_english.yml | 60 | # TODO: Write monster_attack.2.f |
+| ./mod/localization/english/journal/gate_mana_saturation_l_english.yml | 64 | # TODO: Write monster_attack.3.d |
+| ./mod/localization/english/journal/gate_mana_saturation_l_english.yml | 65 | # TODO: Write monster_attack.3.f |
 
 [//]: # (TODO-END)

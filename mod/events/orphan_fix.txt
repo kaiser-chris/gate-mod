@@ -23,6 +23,7 @@ orphan_fix.1 = {
 			limit = {
 				global_var:gate_mana_saturation_progress < 0
 				var:weekly_magic_innovation < 0
+				flag:character_opinion_magic_researcher = yes
 			}
 			every_in_global_list = {
 				variable = magic_countries

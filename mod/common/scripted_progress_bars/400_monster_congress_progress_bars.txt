@@ -1,0 +1,30 @@
+﻿pb_monster_congress = {
+ 	name = pb_monster_congress_name
+ 	desc = pb_monster_congress_desc
+
+	default = yes
+
+	monthly_progress = {
+		if = {
+			limit = {
+				has_variable = monster_congress_in_progress
+			}
+			add = {
+				value = 1
+				max = 6
+				desc = pb_monster_congress_progress
+			}
+		}
+		else = {
+			add = {
+				value = 0
+				max = 6
+				desc = pb_monster_congress_block
+			}
+		}
+	}
+
+ 	start_value = 0
+ 	min_value = 0
+ 	max_value = 6
+}
