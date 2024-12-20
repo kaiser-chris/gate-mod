@@ -6,7 +6,7 @@
 # be used to count content.
 countContent() {
   count=0
-  for filename in ./mod/"$1"/*.txt; do
+  for filename in `find ./mod/"$1"/ -name "*.txt" -type f`; do
     count=$((count+$(strings "$filename" | grep -c '^\w.*=.*{')))
   done
   printf '%s' "$count"
@@ -15,7 +15,7 @@ countContent() {
 # Counts all lines in .yml files that represent localization keys.
 countTranslation() {
   count=0
-  for filename in ./mod/"$1"/*.yml; do
+  for filename in `find ./mod/"$1"/ -name "*.yml" -type f`; do
     count=$((count+$(strings "$filename" | grep -c '^\s\w.*:\s\".*\"')))
   done
   printf '%s' "$count"
