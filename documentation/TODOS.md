@@ -19,7 +19,6 @@ Below is a table with all currently open ToDos.
 
 | File | Line | ToDo |
 | ---- | ---- | ---- |
-| ./mod/common/character_traits/400_gate_character_traits.txt | 45 | # TODO: Find better interest_group_modifier for magic_researcher |
 | ./mod/common/cultures/400_elven.txt | 2 |  Define custom culture (Currently copy of german) |
 | ./mod/common/cultures/402_orcish.txt | 2 |  Define custom culture (Currently copy of dwarven) |
 | ./mod/common/history/buildings/400_dominion.txt | 17 |  Add GAD buildings in STATE_NORTH_ANGOLA |

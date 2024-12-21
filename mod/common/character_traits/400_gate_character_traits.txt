@@ -1,7 +1,7 @@
 ﻿monster_killer = {
     type = skill
 
-    texture = gfx/interface/icons/character_trait_icons/convoy_raider_commander.dds
+    texture = "gfx/interface/icons/character_trait_icons/convoy_raider_commander.dds"
 
     command_modifier = {
         character_popularity_add = 25
@@ -33,7 +33,7 @@
 magic_researcher = {
     type = personality
 
-    texture = gfx/interface/icons/character_trait_icons/convoy_raider_commander.dds
+    texture = "gfx/interface/icons/character_trait_icons/convoy_raider_commander.dds"
 
     # Reminder: this would only come into effect if this character is or becomes a Ruler
     country_modifier = {
@@ -42,8 +42,7 @@ magic_researcher = {
 
     # Reminder: this would only come into effect if this character is or becomes an Interest Group Leader
     interest_group_modifier = {
-        # TODO: Find better interest_group_modifier for magic_researcher
-        country_weekly_innovation_mult = 0.05
+        country_weekly_magic_innovation_add = 1
     }
 
     possible = {

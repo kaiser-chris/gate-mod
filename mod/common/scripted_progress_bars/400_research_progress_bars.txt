@@ -30,6 +30,31 @@
 				value = 2
 			}
 		}
+		# Interest Group Leaders
+		# with Magic Researcher traits
+		if = {
+			limit = {
+				any_interest_group = {
+					leader = {
+						has_trait = magic_researcher
+					}
+				}
+			}
+			add = {
+				desc = pb_gate_researching_magic_interest_group_leader
+				value = 0
+				every_interest_group = {
+					if = {
+						limit = {
+							leader = {
+								has_trait = magic_researcher
+							}
+						}
+						add = 1
+					}
+				}
+			}
+		}
 	}
 
  	start_value = 0
