@@ -1,5 +1,6 @@
 ﻿namespace = researching_magic
 
+# Monster Attack Investigation
 researching_magic.1 = {
 	type = country_event
 	dlc = dlc_magic_gate
@@ -14,7 +15,7 @@ researching_magic.1 = {
 	}
 
 	event_image = {
-		video = "southamerica_aristocrats"
+		texture = "gfx/event_pictures/magic_phenomena.dds"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -38,6 +39,7 @@ researching_magic.1 = {
 	}
 }
 
+# Plant Growth Investigation
 researching_magic.2 = {
 	type = country_event
 	dlc = dlc_magic_gate
@@ -52,7 +54,7 @@ researching_magic.2 = {
 	}
 
 	event_image = {
-		video = "southamerica_aristocrats"
+		texture = "gfx/event_pictures/magic_phenomena.dds"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
