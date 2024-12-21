@@ -1,6 +1,4 @@
-﻿
-#TODO: Fix gate immigration
-add_gate_immigration = {
+﻿add_gate_immigration = {
 	every_state = {
 		limit = {
 			is_production_method_active = {
@@ -9,10 +7,10 @@ add_gate_immigration = {
 			}
 		}
 		# Create pop throws errors after game start
-		# create_pop = {
-		# 	culture = dwarven
-		# 	size = 10000
-		# }
+		create_pop = {
+			culture = dwarven
+			size = 10000
+		}
 	}
 	every_state = {
 		limit = {
@@ -22,9 +20,9 @@ add_gate_immigration = {
 			}
 		}
 		# Create pop throws errors after game start
-		# create_pop = {
-		# 	culture = dwarven
-		# 	size = 30000
-		# }
+		create_pop = {
+			culture = dwarven
+			size = 30000
+		}
 	}
 }

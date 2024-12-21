@@ -66,7 +66,6 @@ Below is a table with all currently open ToDos.
 | ./mod/common/production_methods/408_golem_depot_production_methods.txt | 7 |  Create icon for pm_golem_depot_no_golems |
 | ./mod/common/production_methods/409_mage_tower_production_methods.txt | 2 |  Find proper logo for pm_magic_academy_no_support |
 | ./mod/common/religions/gate_religion.txt | 2 |  Add proper icon |
-| ./mod/common/scripted_effects/401_gate_immigration.txt | 2 |  Fix gate immigration |
 | ./mod/common/technology/technologies/401_magic_production.txt | 133 |  Add proper logo for magic_and_electricity |
 | ./mod/common/technology/technologies/401_magic_production.txt | 19 |  Add proper logo for mana_extraction |
 | ./mod/common/technology/technologies/401_magic_production.txt | 35 |  Add proper logo for magic_farming |

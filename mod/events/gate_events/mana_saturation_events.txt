@@ -730,9 +730,7 @@ mana_saturation.11 = {
 			add_state_trait = state_trait_magic_soil
 		}
 		trigger = {
-			scope:magic_growing_state = {
-				owner = root
-			}
+			scope:magic_growing_state.owner = scope:player_country
 		}
 	}
 	option = {
@@ -749,9 +747,7 @@ mana_saturation.11 = {
 		}
 		trigger = {
 			AND = {
-				scope:magic_growing_state = {
-					owner = root
-				}
+				scope:magic_growing_state.owner = scope:player_country
 				has_journal_entry = je_researching_magic
 			}
 		}
@@ -767,7 +763,7 @@ mana_saturation.11 = {
 		trigger = {
 			scope:magic_growing_state = {
 				NOT = {
-					owner = scope:player_country
+					scope:magic_growing_state.owner = scope:player_country
 				}
 			}
 		}
@@ -787,19 +783,17 @@ mana_saturation.11 = {
 		trigger = {
 			scope:magic_growing_state = {
 				AND = {
+					# We are researching magic
 					scope:player_country = {
 						has_journal_entry = je_researching_magic
 					}
-					region = {
-						save_temporary_scope_as = magic_growing_strategic
-					}
+					# Country is in a region we have interest in
 					scope:player_country = {
-						has_interest_marker_in_region = scope:magic_growing_strategic
+						has_interest_marker_in_region = scope:magic_growing_state.region
 					}
+					# Country does not hate us
 					scope:player_country.relations:owner >= relations_threshold:neutral
-					NOT = {
-						owner = scope:player_country
-					}
+					scope:magic_growing_state.owner = scope:player_country
 				}
 			}
 		}
