@@ -34,7 +34,7 @@ Below is a list of the currently implemented content:
 
 [//]: # (CONTENT-END)
 
-## Credit
+## Credits
 
  - The new races were created by [Realms of Exether](https://steamcommunity.com/sharedfiles/filedetails/?id=3279217222) and are used with permission
 
@@ -42,22 +42,3 @@ Below is a list of the currently implemented content:
 
 This mod uses AI generated art from [DeviantArt DreamUp](https://www.deviantart.com/dreamup).
 According to their TOS full copy right is with the generating person so publication and changes are not a problem.
-
-This should be a temporary measure since I am not able to create proper art for the mod myself.
-I would love to have other people contribute art to the mod. 
-
-## Problems & Incompatibilities
-
-## Wishlist
-
-Below are wishes for the future that are currently unrealistic because of engine and time limitations.
-
- - Add the planet of Athora as a fully playable world to the game
-   - Not as a replacement but both planets at once
-   - With fog of war mechanic like EU4
-
-# How to contribute
-
-See [Contribution Notes](https://github.com/kaiser-chris/gate-mod/wiki/Contribution-Notes)
-
-See [Open ToDo](./documentation/TODOS.md)
