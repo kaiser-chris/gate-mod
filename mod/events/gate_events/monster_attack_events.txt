@@ -51,11 +51,19 @@ monster_attack.1 = {
                 save_scope_as = monster_attack_general
             }
         }
+        # For five years after the first attack no more monster attacks will happen
+        every_country = {
+            set_variable = {
+                name = monster_attack_grace_period
+                years = 5
+            }
+        }
     }
 
     # Our State
     option = {
         name = monster_attack.1.a1
+        default_option = yes
         hidden_effect = {
             trigger_event = {
                 id = monster_attack.2
@@ -71,7 +79,6 @@ monster_attack.1 = {
     }
     option = {
         name = monster_attack.1.b1
-        default_option = yes
         hidden_effect = {
             # Fuck around
             trigger_event = {
@@ -105,7 +112,6 @@ monster_attack.1 = {
     }
     option = {
         name = monster_attack.1.b2
-        default_option = yes
         change_relations = {
             country = scope:monster_attack_country
             value = 10
@@ -274,5 +280,104 @@ monster_attack.4 = {
 
     option = {
         name = monster_attack.4.a
+    }
+}
+
+monster_attack.5 = {
+    type = country_event
+    dlc = dlc_magic_gate
+    placement = scope:monster_attack_state
+
+    title = monster_attack.5.t
+    desc = monster_attack.5.d
+    flavor = monster_attack.5.f
+
+    event_image = {
+        video = "southamerica_war_civilians"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+    duration = 3
+
+    trigger = {
+        AND = {
+            has_global_variable = monster_attack_happened
+            NOT = {
+                has_variable = monster_attack_grace_period
+            }
+        }
+    }
+
+    immediate = {
+        set_global_variable = monster_attack_happened
+        add_journal_entry = {
+            type = je_monster_congress
+        }
+        set_global_variable = {
+            name = monster_attack_in_progress
+            months = 3
+        }
+        random_scope_state = {
+            save_scope_as = monster_attack_state
+        }
+    }
+
+    # Has Monster Hunters
+    option = {
+        name = monster_attack.5.a1
+        default_option = yes
+        scope:monster_attack_state = {
+            add_devastation = 5
+        }
+        set_variable = {
+            name = monster_attack_grace_period
+            months = 6
+        }
+        trigger = {
+            NOT = {
+                has_law = law_type:law_no_organized_monster_hunting
+            }
+        }
+    }
+    option = {
+        name = monster_attack.5.b1
+        scope:monster_attack_state = {
+            add_devastation = 5
+        }
+        set_variable = {
+            name = monster_attack_grace_period
+            months = 6
+        }
+        trigger_event = {
+            id = researching_magic.1
+            months = 3
+        }
+        trigger = {
+            AND = {
+                NOT = {
+                    has_law = law_type:law_no_organized_monster_hunting
+                }
+                has_journal_entry = je_researching_magic
+            }
+        }
+    }
+
+    # Has no Monster Hunters
+    option = {
+        name = monster_attack.5.a2
+        default_option = yes
+        scope:monster_attack_state = {
+            add_devastation = 10
+        }
+        set_variable = {
+            name = monster_attack_grace_period
+            months = 3
+        }
+        trigger = {
+            has_law = law_type:law_no_organized_monster_hunting
+        }
     }
 }

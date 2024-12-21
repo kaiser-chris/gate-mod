@@ -10,6 +10,14 @@ on_yearly_mana_saturation_other_events = {
         chance_of_no_event = 40
         60 = mana_saturation.11 # Magic Soils
     }
+    effect = {
+        if = {
+            limit = {
+                global_var:gate_mana_saturation_progress >= 30
+            }
+            trigger_event = monster_attack.1
+        }
+    }
 }
 
 on_yearly_mana_saturation_dragon_events = {
@@ -19,6 +27,5 @@ on_yearly_mana_saturation_dragon_events = {
         1 = mana_saturation.5 # Dragon - California
         1 = mana_saturation.7 # Dragon - Siberia
         1 = mana_saturation.9 # Dragon - Himalayas
-        1 = monster_attack.1 # Monster Attack
     }
 }

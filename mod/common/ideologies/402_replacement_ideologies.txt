@@ -1,0 +1,231 @@
+﻿# Modification of base game ideologies
+# These are replaced by the scripted event add_monster_hunting_ideologies
+
+ideology_liberal_gate = {
+    icon = "gfx/interface/icons/ideology_icons/liberal.dds"
+
+    lawgroup_citizenship = {
+        law_multicultural = disapprove
+        law_ethnostate = disapprove
+        law_national_supremacy = disapprove
+        law_racial_segregation = neutral
+        law_cultural_exclusion = approve
+    }
+
+    lawgroup_policing = {
+        law_no_police = neutral
+        law_dedicated_police = neutral
+        law_local_police = disapprove
+        law_militarized_police = strongly_disapprove
+    }
+
+    lawgroup_internal_security = {
+        law_guaranteed_liberties = strongly_approve
+        law_no_home_affairs = neutral
+        law_national_guard = disapprove
+        law_secret_police = disapprove
+    }
+
+    lawgroup_free_speech = {
+        law_protected_speech = strongly_approve
+        law_right_of_assembly = approve
+        law_censorship = neutral
+        law_outlawed_dissent = disapprove
+    }
+
+    lawgroup_rights_of_women = {
+        law_no_womens_rights = disapprove
+        law_women_own_property = approve
+        law_women_in_the_workplace = neutral
+        law_womens_suffrage = neutral
+    }
+
+    # Gate specific
+    lawgroup_monster_hunting = {
+        law_no_organized_monster_hunting = neutral
+        law_dedicated_monster_hunters = neutral
+        law_private_monster_hunters = disapprove
+        law_militarized_monster_hunters = disapprove
+    }
+}
+
+
+ideology_patriotic_gate = {
+    icon = "gfx/interface/icons/ideology_icons/patriotic.dds"
+
+    lawgroup_policing = {
+        law_militarized_police = strongly_approve
+        law_dedicated_police = approve
+        law_local_police = neutral
+        law_no_police = disapprove
+    }
+
+    lawgroup_internal_security = {
+        law_secret_police = approve
+        law_national_guard = approve
+        law_no_home_affairs = disapprove
+        law_guaranteed_liberties = strongly_disapprove
+    }
+
+    lawgroup_free_speech = {
+        law_outlawed_dissent = approve
+        law_censorship = approve
+        law_right_of_assembly = neutral
+        law_protected_speech = disapprove
+    }
+
+    # Gate specific
+    lawgroup_monster_hunting = {
+        law_no_organized_monster_hunting = disapprove
+        law_dedicated_monster_hunters = approve
+        law_private_monster_hunters = neutral
+        law_militarized_monster_hunters = strongly_approve
+    }
+}
+
+ideology_paternalistic_gate = {
+    icon = "gfx/interface/icons/ideology_icons/paternalistic.dds"
+
+    lawgroup_governance_principles = {
+        law_monarchy = strongly_approve
+        law_theocracy = approve
+        law_presidential_republic = neutral
+        law_parliamentary_republic = neutral
+        law_corporate_state = neutral
+        law_council_republic = strongly_disapprove
+    }
+
+    lawgroup_distribution_of_power = {
+        law_single_party_state = neutral
+        law_landed_voting = strongly_approve
+        law_autocracy = strongly_approve
+        law_oligarchy = approve
+        law_wealth_voting = neutral
+        law_census_voting = disapprove
+        law_universal_suffrage = strongly_disapprove
+        law_anarchy = strongly_disapprove
+        law_technocracy = strongly_disapprove
+    }
+
+    lawgroup_bureaucracy = {
+        law_hereditary_bureaucrats = approve
+        law_appointed_bureaucrats = neutral
+        law_elected_bureaucrats = disapprove
+    }
+
+    lawgroup_policing = {
+        law_local_police = approve
+        law_dedicated_police = neutral
+        law_militarized_police = neutral
+        law_no_police = disapprove
+    }
+
+    lawgroup_economic_system = {
+        law_traditionalism = strongly_approve
+        law_agrarianism = approve
+        law_interventionism = neutral
+        law_industry_banned = disapprove
+        law_laissez_faire = disapprove
+        law_cooperative_ownership = strongly_disapprove
+        law_command_economy = strongly_disapprove
+        law_extraction_economy = disapprove
+    }
+
+    lawgroup_trade_policy = {
+        law_isolationism = approve
+        law_mercantilism = approve
+        law_protectionism = neutral
+        law_free_trade = disapprove
+    }
+
+    # Gate specific
+    lawgroup_monster_hunting = {
+        law_no_organized_monster_hunting = disapprove
+        law_dedicated_monster_hunters = neutral
+        law_private_monster_hunters = approve
+        law_militarized_monster_hunters = neutral
+    }
+}
+
+ideology_particularist_gate = {
+    icon = "gfx/interface/icons/ideology_icons/particularist.dds"
+
+    lawgroup_policing = {
+        law_militarized_police = strongly_disapprove
+        law_local_police = disapprove
+        law_dedicated_police = neutral
+        law_no_police = approve
+    }
+
+    lawgroup_army_model = {
+        law_national_militia = strongly_approve
+        law_professional_army = neutral
+        law_mass_conscription = disapprove
+        law_peasant_levies = disapprove
+    }
+
+    lawgroup_slavery = {
+        law_slavery_banned = neutral
+        law_legacy_slavery = neutral
+        law_debt_slavery = strongly_disapprove
+        law_slave_trade = neutral
+    }
+
+    # Gate specific
+    lawgroup_monster_hunting = {
+        law_no_organized_monster_hunting = approve
+        law_dedicated_monster_hunters = neutral
+        law_private_monster_hunters = disapprove
+        law_militarized_monster_hunters = strongly_disapprove
+    }
+}
+
+ideology_laissez_faire_gate = {
+    icon = "gfx/interface/icons/ideology_icons/laissez_faire.dds"
+
+    lawgroup_economic_system = {
+        law_laissez_faire = strongly_approve
+        law_interventionism = approve
+        law_agrarianism = neutral
+        law_traditionalism = disapprove
+        law_cooperative_ownership = strongly_disapprove
+        law_command_economy = strongly_disapprove
+        law_industry_banned = strongly_disapprove
+        law_extraction_economy = strongly_disapprove
+    }
+
+    lawgroup_trade_policy = {
+        law_free_trade = approve
+        law_mercantilism = neutral
+        law_protectionism = disapprove
+        law_isolationism = strongly_disapprove
+    }
+
+    lawgroup_childrens_rights = {
+        law_child_labor_allowed = approve
+        law_restricted_child_labor = neutral
+        law_compulsory_primary_school = disapprove
+    }
+
+    lawgroup_labor_rights = {
+        law_no_workers_rights = neutral
+        law_regulatory_bodies = disapprove
+        law_worker_protections = strongly_disapprove
+    }
+
+    lawgroup_land_reform = {
+        law_collectivized_agriculture = strongly_disapprove
+        law_serfdom = disapprove
+        law_tenant_farmers = neutral
+        law_homesteading = neutral
+        law_commercialized_agriculture = approve
+    }
+
+    # Gate specific
+    lawgroup_monster_hunting = {
+        law_no_organized_monster_hunting = strongly_disapprove
+        law_dedicated_monster_hunters = neutral
+        law_private_monster_hunters = strongly_approve
+        law_militarized_monster_hunters = neutral
+    }
+}

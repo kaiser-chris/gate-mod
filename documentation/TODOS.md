@@ -36,7 +36,7 @@ Below is a table with all currently open ToDos.
 | ./mod/common/history/military_formations/402_orcish_kingdom.txt | 22 |  Create character |
 | ./mod/common/history/military_formations/402_orcish_kingdom.txt | 72 |  Create character |
 | ./mod/common/ideologies/401_gate_ideologies.txt | 2 | # TODO: Create icon for ideology_militarist |
-| ./mod/common/ideologies/401_gate_ideologies.txt | 45 | # TODO: Add wanted laws to ideology_magic_hopeful |
+| ./mod/common/ideologies/401_gate_ideologies.txt | 52 | # TODO: Add wanted laws to ideology_magic_hopeful |
 | ./mod/common/interest_group_traits/400_magic_users_traits.txt | 12 | # TODO: Create icon for ig_trait_military_support |
 | ./mod/common/interest_group_traits/400_magic_users_traits.txt | 23 | # TODO: Create icon for ig_trait_annoyed_masters |
 | ./mod/common/interest_group_traits/400_magic_users_traits.txt | 2 | # TODO: Create icon for ig_trait_slave_masters |
@@ -44,9 +44,6 @@ Below is a table with all currently open ToDos.
 | ./mod/common/interest_groups/400_magic_users.txt | 3 | # TODO: Create icon for magic users interest group |
 | ./mod/common/interest_groups/400_magic_users.txt | 42 | # TODO: Create elven dominion magic user ig traits |
 | ./mod/common/interest_groups/400_magic_users.txt | 48 | # TODO: Create elven magic user ig traits |
-| ./mod/common/laws/401_monster_hunting.txt | 136 | # TODO: Define institution modifier for law_militarized_monster_hunters |
-| ./mod/common/laws/401_monster_hunting.txt | 29 | # TODO: Define institution modifier for law_private_monster_hunters |
-| ./mod/common/laws/401_monster_hunting.txt | 84 | # TODO: Define institution modifier for law_dedicated_monster_hunters |
 | ./mod/common/pop_types/mages.txt | 2 | # TODO: Update mages pop icon |
 | ./mod/common/production_method_groups/401_gate_production_method_groups.txt | 24 |  Add proper production method to pmg_mana_extraction |
 | ./mod/common/production_method_groups/401_gate_production_method_groups.txt | 8 |  Add proper production method to pmg_magic_gate_exploitation |

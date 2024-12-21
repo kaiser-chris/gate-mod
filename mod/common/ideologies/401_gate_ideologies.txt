@@ -1,4 +1,4 @@
-﻿ideology_militarist = {
+﻿ideology_magic_militarist = {
     # TODO: Create icon for ideology_militarist
     icon = "gfx/interface/icons/ideology_icons/jingoist.dds"
 
@@ -7,6 +7,13 @@
         law_mass_conscription = approve
         law_national_militia = disapprove
         law_peasant_levies = disapprove
+    }
+
+    lawgroup_monster_hunting = {
+        law_no_organized_monster_hunting = strongly_disapprove
+        law_dedicated_monster_hunters = approve
+        law_private_monster_hunters = neutral
+        law_militarized_monster_hunters = strongly_approve
     }
 }
 
