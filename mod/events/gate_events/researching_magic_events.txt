@@ -5,8 +5,8 @@ researching_magic.1 = {
 	dlc = dlc_magic_gate
 	placement = scope:monster_attack_state
 	
-	title = researching_magic.1.t
-	desc = researching_magic.1.d
+	title = researching_magic_discovery.t
+	desc = researching_magic_discovery.d
 	flavor = researching_magic.1.f
 
 	trigger = {
@@ -19,7 +19,7 @@ researching_magic.1 = {
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds"
+	icon = "gfx/interface/icons/generic_icons/innovation.dds"
 	
 	duration = 3
 
@@ -27,7 +27,45 @@ researching_magic.1 = {
 		name = researching_magic.1.a
 		default_option = yes
 		custom_tooltip = {
-			text = researching_magic.1.tt
+			text = researching_magic_discovery.result
+			je:je_researching_magic = {
+				add_progress = {
+					name = pb_gate_researching_magic
+					value = 5
+				}
+			}
+		}
+	}
+}
+
+researching_magic.2 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:magic_growing_state
+
+	title = researching_magic_discovery.t
+	desc = researching_magic_discovery.d
+	flavor = researching_magic.2.f
+
+	trigger = {
+		has_journal_entry = je_researching_magic
+	}
+
+	event_image = {
+		video = "southamerica_aristocrats"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/generic_icons/innovation.dds"
+
+	duration = 3
+
+	option = {
+		name = researching_magic.2.a
+		default_option = yes
+		custom_tooltip = {
+			text = researching_magic_discovery.result
 			je:je_researching_magic = {
 				add_progress = {
 					name = pb_gate_researching_magic

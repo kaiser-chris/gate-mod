@@ -66,6 +66,7 @@ Below is a table with all currently open ToDos.
 | ./mod/common/production_methods/408_golem_depot_production_methods.txt | 7 |  Create icon for pm_golem_depot_no_golems |
 | ./mod/common/production_methods/409_mage_tower_production_methods.txt | 2 |  Find proper logo for pm_magic_academy_no_support |
 | ./mod/common/religions/gate_religion.txt | 2 |  Add proper icon |
+| ./mod/common/scripted_effects/401_gate_immigration.txt | 2 |  Fix gate immigration |
 | ./mod/common/technology/technologies/401_magic_production.txt | 133 |  Add proper logo for magic_and_electricity |
 | ./mod/common/technology/technologies/401_magic_production.txt | 19 |  Add proper logo for mana_extraction |
 | ./mod/common/technology/technologies/401_magic_production.txt | 35 |  Add proper logo for magic_farming |
@@ -91,9 +92,10 @@ Below is a table with all currently open ToDos.
 | ./mod/localization/english/gate_technology_l_english.yml | 22 |  Write description for magic_and_electricity |
 | ./mod/localization/english/gate_technology_l_english.yml | 29 |  Write description for formalized_magic |
 | ./mod/localization/english/gate_technology_l_english.yml | 31 |  Write description for magic_science |
-| ./mod/localization/english/journal/gate_mana_saturation_l_english.yml | 59 | # TODO: Write monster_attack.2.d |
-| ./mod/localization/english/journal/gate_mana_saturation_l_english.yml | 60 | # TODO: Write monster_attack.2.f |
-| ./mod/localization/english/journal/gate_mana_saturation_l_english.yml | 64 | # TODO: Write monster_attack.3.d |
-| ./mod/localization/english/journal/gate_mana_saturation_l_english.yml | 65 | # TODO: Write monster_attack.3.f |
+| ./mod/localization/english/journal/gate_monster_attack_l_english.yml | 29 | # TODO: Write monster_attack.2.d |
+| ./mod/localization/english/journal/gate_monster_attack_l_english.yml | 30 | # TODO: Write monster_attack.2.f |
+| ./mod/localization/english/journal/gate_monster_attack_l_english.yml | 34 | # TODO: Write monster_attack.3.d |
+| ./mod/localization/english/journal/gate_monster_attack_l_english.yml | 35 | # TODO: Write monster_attack.3.f |
+| ./mod/localization/english/journal/gate_monster_attack_l_english.yml | 38 | # TODO: Write monster_attack.3.d |
 
 [//]: # (TODO-END)

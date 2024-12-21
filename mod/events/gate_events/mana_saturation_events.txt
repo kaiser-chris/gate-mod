@@ -719,25 +719,47 @@ mana_saturation.11 = {
 			}
 			save_scope_as = magic_growing_state
 		}
+		save_scope_as = player_country
 	}
 
 	# Our state
 	option = {
-		name = mana_saturation.11.b
+		name = mana_saturation.11.a1
 		default_option = yes
 		scope:magic_growing_state.state_region = {
 			add_state_trait = state_trait_magic_soil
 		}
 		trigger = {
 			scope:magic_growing_state = {
-				owner = this
+				owner = root
+			}
+		}
+	}
+	option = {
+		name = mana_saturation.11.b
+		default_option = yes
+		scope:magic_growing_state.state_region = {
+			add_state_trait = state_trait_magic_soil
+		}
+		hidden_effect = {
+			trigger_event = {
+				id = researching_magic.2
+				months = 3
+			}
+		}
+		trigger = {
+			AND = {
+				scope:magic_growing_state = {
+					owner = root
+				}
+				has_journal_entry = je_researching_magic
 			}
 		}
 	}
 
 	# Other countries state
 	option = {
-		name = mana_saturation.11.a
+		name = mana_saturation.11.a2
 		default_option = yes
 		scope:magic_growing_state.state_region = {
 			add_state_trait = state_trait_magic_soil
@@ -745,7 +767,39 @@ mana_saturation.11 = {
 		trigger = {
 			scope:magic_growing_state = {
 				NOT = {
-					owner = this
+					owner = scope:player_country
+				}
+			}
+		}
+	}
+	option = {
+		name = mana_saturation.11.b
+		default_option = yes
+		scope:magic_growing_state.state_region = {
+			add_state_trait = state_trait_magic_soil
+		}
+		hidden_effect = {
+			trigger_event = {
+				id = researching_magic.2
+				months = 3
+			}
+		}
+		trigger = {
+			scope:magic_growing_state = {
+				AND = {
+					scope:player_country = {
+						has_journal_entry = je_researching_magic
+					}
+					region = {
+						save_temporary_scope_as = magic_growing_strategic
+					}
+					scope:player_country = {
+						has_interest_marker_in_region = scope:magic_growing_strategic
+					}
+					scope:player_country.relations:owner >= relations_threshold:neutral
+					NOT = {
+						owner = scope:player_country
+					}
 				}
 			}
 		}

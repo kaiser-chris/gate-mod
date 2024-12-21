@@ -15,7 +15,7 @@ monster_attack.1 = {
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-    icon = "gfx/interface/icons/event_icons/event_growing.dds"
+    icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
     duration = 3
 
@@ -155,6 +155,8 @@ monster_attack.2 = {
         video = "southamerica_war_civilians"
     }
 
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
+
     title = monster_attack.2.t
     desc = monster_attack.2.d
     flavor = monster_attack.2.f
@@ -213,6 +215,8 @@ monster_attack.3 = {
     event_image = {
         video = "southamerica_war_civilians"
     }
+
+    icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
     title = monster_attack.3.t
     desc = monster_attack.3.d
