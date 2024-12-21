@@ -15,7 +15,7 @@ jobs:
     
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4.2.2
 
       - name: Checkout tags
         run: |
@@ -28,7 +28,7 @@ jobs:
 
       - name: Increment release version
         id: increment-version
-        uses: christian-draeger/increment-semantic-version@1.0.2
+        uses: christian-draeger/increment-semantic-version@1.2.1
         with:
           current-version: ${{ steps.project.outputs.last-version }}
           version-fragment: ${{ inputs.release-type }}
@@ -55,6 +55,8 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          draft: false
+          prerelease: false
           files: mod/release-${{ steps.increment-version.outputs.next-version }}.zip
           tag_name	: ${{ steps.increment-version.outputs.next-version }}
           name: ${{ steps.increment-version.outputs.next-version }}
@@ -63,5 +65,3 @@ jobs:
             
             Changes:
             ${{ steps.commits.outputs.markdown }}
-          draft: false
-          prerelease: false
