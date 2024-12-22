@@ -96,16 +96,20 @@ researching_magic.3 = {
 
 	icon = "gfx/interface/icons/generic_icons/innovation.dds"
 
-	duration = 3
-
-	option = {
-		name = researching_magic.3.a
-		default_option = yes
+	immediate = {
+		# Researcher stops complaining
 		scope:magic_researcher = {
 			set_variable = {
 				name = com_opinion
 				value = flag:character_opinion_magic_researcher
 			}
 		}
+	}
+
+	duration = 3
+
+	option = {
+		name = researching_magic.3.a
+		default_option = yes
 	}
 }
