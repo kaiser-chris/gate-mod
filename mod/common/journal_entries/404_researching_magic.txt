@@ -9,6 +9,16 @@
 	status_desc = {
 		first_valid = {
 			triggered_desc = {
+				desc = je_researching_magic_missing_institute
+				trigger = {
+					NOT = {
+						capital = {
+							has_building = building_magic_research_institute
+						}
+					}
+				}
+			}
+			triggered_desc = {
 				desc = je_researching_magic_low_progress
 				trigger = {
 					scope:journal_entry = {
@@ -70,6 +80,13 @@
 		create_character = {
 			template = magic_researcher_template
 			save_scope_as = magic_researcher
+		}
+		# Our researcher complaining about the missing institute
+		scope:magic_researcher = {
+			set_variable = {
+				name = com_opinion
+				value = flag:character_opinion_magic_researcher_missing_institute
+			}
 		}
 		set_variable = {
 			name = magic_researcher

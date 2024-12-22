@@ -1,0 +1,19 @@
+﻿# Root = Building
+on_building_built = {
+    on_actions = {
+        on_research_institute_built
+    }
+}
+
+on_research_institute_built = {
+    effect = {
+        if = {
+            limit = {
+                is_building_type = building_magic_research_institute
+            }
+            owner = {
+                trigger_event = researching_magic.3
+            }
+        }
+    }
+}

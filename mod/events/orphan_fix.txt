@@ -24,6 +24,7 @@ orphan_fix.1 = {
 				global_var:gate_mana_saturation_progress < 0
 				var:weekly_magic_innovation < 0
 				flag:character_opinion_magic_researcher = yes
+				flag:character_opinion_magic_researcher_missing_institute = yes
 			}
 			every_in_global_list = {
 				variable = magic_countries

@@ -4,6 +4,7 @@ GLOBAL = {
 		name = magic_growing_var
 		value = 0
 	}
+
 	# Mana Saturation through gates.
 	# Without further input will lead to full saturation in 1890s
 	set_global_variable = {
@@ -51,5 +52,13 @@ GLOBAL = {
 	every_in_global_list = {
 		variable = magic_countries
 		add_monster_hunting_ideologies = yes
+		every_scope_state = {
+			limit = {
+				is_capital = yes
+			}
+			create_building = {
+				building = building_magic_research_institute
+			}
+		}
 	}
 }

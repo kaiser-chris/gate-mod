@@ -5,52 +5,67 @@
 	default = yes
 
 	monthly_progress = {
-		# Base Value
-		add = {
-			desc = pb_gate_researching_magic_base_value
-			value = 1
-		}
-		# Focused Efforts
 		if = {
 			limit = {
-				has_modifier = focus_researching_magic_cost_modifier
-			}
-			add = {
-				desc = pb_gate_researching_magic_focused_efforts
-				value = 2
-			}
-		}
-		# Magic Gate in a controlled State
-		if = {
-			limit = {
-				has_building = building_gate
-			}
-			add = {
-				desc = pb_gate_researching_magic_magic_gate
-				value = 2
-			}
-		}
-		# Interest Group Leaders
-		# with Magic Researcher traits
-		if = {
-			limit = {
-				any_interest_group = {
-					leader = {
-						has_trait = magic_researcher
+				capital = {
+					NOT = {
+						has_building = building_magic_research_institute
 					}
 				}
 			}
 			add = {
-				desc = pb_gate_researching_magic_interest_group_leader
+				desc = pb_gate_researching_magic_missing_institute
 				value = 0
-				every_interest_group = {
-					if = {
-						limit = {
-							leader = {
-								has_trait = magic_researcher
-							}
+			}
+		}
+		else = {
+			# Base Value
+			add = {
+				desc = pb_gate_researching_magic_base_value
+				value = 1
+			}
+			# Focused Efforts
+			if = {
+				limit = {
+					has_modifier = focus_researching_magic_cost_modifier
+				}
+				add = {
+					desc = pb_gate_researching_magic_focused_efforts
+					value = 2
+				}
+			}
+			# Magic Gate in a controlled State
+			if = {
+				limit = {
+					has_building = building_gate
+				}
+				add = {
+					desc = pb_gate_researching_magic_magic_gate
+					value = 2
+				}
+			}
+			# Interest Group Leaders
+			# with Magic Researcher traits
+			if = {
+				limit = {
+					any_interest_group = {
+						leader = {
+							has_trait = magic_researcher
 						}
-						add = 1
+					}
+				}
+				add = {
+					desc = pb_gate_researching_magic_interest_group_leader
+					value = 0
+					every_interest_group = {
+						if = {
+							limit = {
+								leader = {
+									has_trait = magic_researcher
+								}
+							}
+							add = 1
+						}
 					}
 				}
 			}

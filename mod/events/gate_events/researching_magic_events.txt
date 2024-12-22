@@ -77,3 +77,35 @@ researching_magic.2 = {
 		}
 	}
 }
+
+# Research Institute Established
+researching_magic.3 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:monster_attack_state
+
+	title = researching_magic.3.t
+	desc = researching_magic.3.d
+	flavor = researching_magic.3.f
+
+	event_image = {
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/generic_icons/innovation.dds"
+
+	duration = 3
+
+	option = {
+		name = researching_magic.3.a
+		default_option = yes
+		scope:magic_researcher = {
+			set_variable = {
+				name = com_opinion
+				value = flag:character_opinion_magic_researcher
+			}
+		}
+	}
+}
