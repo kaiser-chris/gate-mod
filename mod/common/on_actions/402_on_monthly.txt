@@ -5,6 +5,7 @@ on_monthly_pulse = {
         on_monthly_add_gate_immigration
         on_monthly_add_mage_towers
         on_monthly_statistics
+        on_monthly_cleanup
     }
 }
 
@@ -32,6 +33,12 @@ on_monthly_statistics = {
     }
 }
 
+on_monthly_cleanup = {
+    effect = {
+        cleanup_research_institutes = yes
+    }
+}
+
 # Root = country
 on_monthly_pulse_country = {
     on_actions = {
@@ -46,85 +53,8 @@ on_monthly_calculate_magic_research = {
     }
 }
 
-# Monster Attacks
-# Modified through institution_monster_hunting
-#   0 = 100%
-#   1 = 80%
-#   2 = 60%
-#   3 = 40%
-#   4 = 20%
-#   5 = No Attacks
 on_monthly_trigger_monster_attack = {
     effect = {
-        if = {
-            limit = {
-                AND = {
-                    has_global_variable = monster_attack_happened
-                    NOT = {
-                        has_variable = monster_attack_grace_period
-                    }
-                    NOT = {
-                        institution_investment_level = {
-                            institution = institution_monster_hunting
-                            value = 5
-                        }
-                    }
-                }
-            }
-        }
-        if = {
-            limit = {
-                has_law = law_type:law_no_organized_monster_hunting
-            }
-            trigger_event = monster_attack.5
-        }
-        else_if = {
-            limit = {
-                institution_investment_level = {
-                    institution = institution_monster_hunting
-                    value = 1
-                }
-            }
-            random = {
-                chance = 80
-                trigger_event = monster_attack.5
-            }
-        }
-        else_if = {
-            limit = {
-                institution_investment_level = {
-                    institution = institution_monster_hunting
-                    value = 2
-                }
-            }
-            random = {
-                chance = 60
-                trigger_event = monster_attack.5
-            }
-        }
-        else_if = {
-            limit = {
-                institution_investment_level = {
-                    institution = institution_monster_hunting
-                    value = 3
-                }
-            }
-            random = {
-                chance = 40
-                trigger_event = monster_attack.5
-            }
-        }
-        else_if = {
-            limit = {
-                institution_investment_level = {
-                    institution = institution_monster_hunting
-                    value = 4
-                }
-            }
-            random = {
-                chance = 20
-                trigger_event = monster_attack.5
-            }
-        }
+        trigger_monster_attack = yes
     }
 }

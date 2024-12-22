@@ -1,0 +1,120 @@
+﻿add_monster_hunting_ideologies = {
+    every_interest_group = {
+        if = {
+            limit = {
+                has_ideology = ideology:ideology_liberal
+            }
+            remove_ideology = ideology_liberal
+            add_ideology = ideology_liberal_gate
+        }
+        if = {
+            limit = {
+                has_ideology = ideology:ideology_particularist
+            }
+            remove_ideology = ideology_particularist
+            add_ideology = ideology_particularist_gate
+        }
+        if = {
+            limit = {
+                has_ideology = ideology:ideology_paternalistic
+            }
+            remove_ideology = ideology_paternalistic
+            add_ideology = ideology_paternalistic_gate
+        }
+        if = {
+            limit = {
+                has_ideology = ideology:ideology_patriotic
+            }
+            remove_ideology = ideology_patriotic
+            add_ideology = ideology_patriotic_gate
+        }
+        if = {
+            limit = {
+                has_ideology = ideology:ideology_laissez_faire
+            }
+            remove_ideology = ideology_laissez_faire
+            add_ideology = ideology_laissez_faire_gate
+        }
+    }
+}
+
+# Monster Attacks
+# Modified through institution_monster_hunting
+#   0 = 100%
+#   1 = 80%
+#   2 = 60%
+#   3 = 40%
+#   4 = 20%
+#   5 = No Attacks
+trigger_monster_attack = {
+    if = {
+        limit = {
+            AND = {
+                has_global_variable = monster_attack_happened
+                NOT = {
+                    has_variable = monster_attack_grace_period
+                }
+                NOT = {
+                    institution_investment_level = {
+                        institution = institution_monster_hunting
+                        value = 5
+                    }
+                }
+            }
+        }
+    }
+    if = {
+        limit = {
+            has_law = law_type:law_no_organized_monster_hunting
+        }
+        trigger_event = monster_attack.5
+    }
+    else_if = {
+        limit = {
+            institution_investment_level = {
+                institution = institution_monster_hunting
+                value = 1
+            }
+        }
+        random = {
+            chance = 80
+            trigger_event = monster_attack.5
+        }
+    }
+    else_if = {
+        limit = {
+            institution_investment_level = {
+                institution = institution_monster_hunting
+                value = 2
+            }
+        }
+        random = {
+            chance = 60
+            trigger_event = monster_attack.5
+        }
+    }
+    else_if = {
+        limit = {
+            institution_investment_level = {
+                institution = institution_monster_hunting
+                value = 3
+            }
+        }
+        random = {
+            chance = 40
+            trigger_event = monster_attack.5
+        }
+    }
+    else_if = {
+        limit = {
+            institution_investment_level = {
+                institution = institution_monster_hunting
+                value = 4
+            }
+        }
+        random = {
+            chance = 20
+            trigger_event = monster_attack.5
+        }
+    }
+}
