@@ -3,8 +3,13 @@
 	
 	texture = "gfx/interface/icons/war_goals/humiliation.dds"
 	
-	possible = {	
-		aggressive_diplomatic_plays_permitted = yes		
+	possible = {
+		is_magic_country = no
+		scope:target_country = {
+			NOT = { is_country_type = decentralized }
+			is_magic_country = yes
+		}
+		aggressive_diplomatic_plays_permitted = yes
 	}
 	
 	on_weekly_pulse = {}

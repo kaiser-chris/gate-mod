@@ -28,26 +28,7 @@ orphan_fix.1 = {
 			}
 			every_in_global_list = {
 				variable = magic_countries
-				change_infamy = 0
 			}
-			every_in_global_list = {
-				variable = com_custom_war_goals
-			}
-			every_in_global_list = {
-				variable = com_custom_war_goals_types
-			}
-			every_in_global_list = {
-				variable = com_active_war_goals_pressed
-			}
-			set_variable = com_custom_war_goal_cost
-			remove_variable = com_custom_war_goal_cost
-			set_global_variable = gate_war_goal_demand_magic_cost
-			remove_global_variable = gate_war_goal_demand_magic_cost
-			set_global_variable = gate_war_goal_demand_magic_cost_primary
-			remove_global_variable = gate_war_goal_demand_magic_cost_primary
-			set_global_variable = gate_war_goal_demand_magic_infamy
-			remove_global_variable = gate_war_goal_demand_magic_infamy
-			save_scope_as = war_goal
 		}
 	}
 	

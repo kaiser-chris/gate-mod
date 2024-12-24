@@ -11,6 +11,11 @@
  demand_magic_knowledge_action_notification_name: "[TARGET_COUNTRY.GetName] provided us [concept_magic_knowledge]"
  demand_magic_knowledge_action_notification_desc: "We forced [TARGET_COUNTRY.GetName] to share their [concept_magic_knowledge] with us."
  demand_magic_knowledge_action_notification_effects_desc: "$demand_magic_knowledge_desc$"
+ demand_magic_knowledge_action_propose_name: "TODO" #TODO: Create demand_magic_knowledge_action_propose_name
+ demand_magic_knowledge_action_break_name: "TODO" #TODO: Create demand_magic_knowledge_action_break_name
+ demand_magic_knowledge_action_notification_break_name: "TODO" #TODO: Create demand_magic_knowledge_action_notification_break_name
+ demand_magic_knowledge_action_notification_break_desc: "TODO" #TODO: Create demand_magic_knowledge_action_notification_break_desc
+ demand_magic_knowledge_pact_desc: "TODO" #TODO: Create demand_magic_knowledge_pact_desc
  demand_magic_knowledge_proposal_third_party_accepted_name: "$demand_magic_knowledge_proposal_accepted_name$"
  demand_magic_knowledge_proposal_third_party_accepted_desc: "[TARGET_COUNTRY.GetName] accepted demand for sharing [concept_magic_knowledge] with [INITIATOR_COUNTRY.GetName]."
  demand_magic_knowledge_proposal_third_party_declined_name: "$demand_magic_knowledge_proposal_declined_name$"
@@ -29,18 +34,9 @@
  gate_war_goal_type_magic: "gate_war_goal_type_magic" # Unused but shuts up error log
  gate_war_goal_type_magic_name: "Magic War Goals"
  gate_war_goal_type_magic_type_name: "magic_war_goals"
- gate_war_goal_type_magic_tooltip: "#header $gg_panel_main_title$#!\nShortcut: #V Magic#! (#V CTRL + G#!)"
+ gate_war_goal_type_magic_tooltip: "These war goals pertain to magic and it's usage."
  gate_war_goal_demand_magic: "gate_war_goal_demand_magic" # Unused but shuts up error log
  gate_war_goal_demand_magic_name: "Demand [concept_magic_knowledge]"
- gate_war_goal_demand_magic_infamy: "gate_war_goal_demand_magic_infamy"
- gate_war_goal_demand_magic_primary: "gate_war_goal_demand_magic_primary"
  gate_war_goal_demand_magic_effects_desc: "[DiplomaticPlay.GetInitiator.GetName] forces [DiplomaticPlay.GetTarget.GetName] to give them [concept_magic_knowledge]."
  gate_war_goal_demand_magic_type_name: "magic_war_goals"
- gate_war_goal_demand_magic_tooltip: "#header $gg_panel_main_title$#!\nShortcut: #V Magic#! (#V CTRL + G#!)"
- gate_war_goal_demand_magic_cost_tooltip: "TODO" #TODO: Create gate_war_goal_demand_magic_cost_tooltip
- gate_war_goal_demand_magic_infamy_tooltip: "TODO" #TODO: Create gate_war_goal_demand_magic_infamy_tooltip
- demand_magic_knowledge_action_propose_name: "TODO" #TODO: Create demand_magic_knowledge_action_propose_name
- demand_magic_knowledge_action_break_name: "TODO" #TODO: Create demand_magic_knowledge_action_break_name
- demand_magic_knowledge_pact_desc: "TODO" #TODO: Create demand_magic_knowledge_pact_desc
- demand_magic_knowledge_action_notification_break_name: "TODO" #TODO: Create demand_magic_knowledge_action_notification_break_name
- demand_magic_knowledge_action_notification_break_desc: "TODO" #TODO: Create demand_magic_knowledge_action_notification_break_desc
+ gate_war_goal_demand_magic_tooltip: "Forces another nation to give use their [concept_magic_knowledge]."
