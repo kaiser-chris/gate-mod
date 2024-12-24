@@ -1,0 +1,50 @@
+﻿pm_classic_magic_seed = {
+	texture = "gfx/interface/icons/production_method_icons/plantation_production.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = -20
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_mana_add = 10
+			goods_output_magic_seed_add = 20
+		}
+
+		level_scaled = {
+			building_employment_druids_add = 1000
+			building_employment_farmers_add = 2000
+		}
+	}
+}
+
+pm_industrial_magic_seed = {
+	texture = "gfx/interface/icons/production_method_icons/automatic_irrigation.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = -15
+		}
+	}
+
+	unlocking_technologies = {
+		pumpjacks
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_engines_add = 5
+			goods_input_mana_add = 15
+			goods_output_magic_seed_add = 40
+		}
+
+		level_scaled = {
+			building_employment_druids_add = 1500
+			building_employment_farmers_add = 2500
+			building_employment_laborers_add = 1000
+			building_employment_machinists_add = 500
+		}
+	}
+}

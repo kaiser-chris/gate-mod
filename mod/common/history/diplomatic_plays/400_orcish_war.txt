@@ -9,8 +9,16 @@
 			
 			type = dp_conquer_state
 
-			add_target_backers = {
-				c:GBR
+			add_war_goal = {
+				holder = c:MEX
+				type = return_state
+				target_state = s:STATE_CHIAPAS.region_state:GOK
+			}
+
+			add_war_goal = {
+				holder = c:MEX
+				type = conquer_state
+				target_state = s:STATE_GUATEMALA.region_state:GOK
 			}
 
 			add_war_goal = {
@@ -29,20 +37,6 @@
 				holder = c:GOK
 				type = conquer_state
 				target_state = s:STATE_OAXACA.region_state:MEX
-			}
-
-			add_war_goal = {
-				holder = c:MEX
-				type = ban_slavery
-				target_country = c:GOK
-				primary_demand = yes
-			}
-
-			add_war_goal = {
-				holder = c:GBR
-				type = conquer_state
-				target_state = s:STATE_SAN_SALVADOR.region_state:GOK
-				primary_demand = yes
 			}
 		}
 	}

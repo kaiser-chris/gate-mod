@@ -17,8 +17,8 @@ combat_unit_type_mage_infantry = {
     }
 
     battle_modifier = {
-        unit_offense_add = 25
-        unit_defense_add = 15
+        unit_offense_add = 20
+        unit_defense_add = 10
         unit_morale_loss_add = 10
     }
 
@@ -69,16 +69,15 @@ combat_unit_type_mage_artillery = {
     }
 
     battle_modifier = {
-        unit_offense_add = 30
-        unit_defense_add = 10
-        unit_morale_loss_add = 10
+        unit_offense_add = 20
+        unit_defense_add = 5
+        unit_morale_loss_add = 5
         unit_kill_rate_add = 0.1
         unit_devastation_mult = 0.1
     }
 
     formation_modifier = {
-        military_formation_mobilization_speed_mult = -0.2
-        military_formation_movement_speed_mult = -0.2
+        military_formation_mobilization_speed_mult = -0.4
     }
 
     unlocking_technologies = {

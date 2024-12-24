@@ -237,3 +237,29 @@ building_golem_depot = {
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_magic.dds"
 }
+
+building_druid_groove = {
+	building_group = bg_druid_grooves
+	icon = "gfx/interface/icons/building_icons/building_druid_groove.dds"
+	city_type = none
+	levels_per_mesh = 5
+
+	unlocking_technologies = {
+		magic_farming
+	}
+
+	potential = {
+		owner = {
+			is_magic_country = yes
+		}
+	}
+	ownership_type = self
+
+	production_method_groups = {
+		pmg_druid_groove
+	}
+
+	required_construction = construction_cost_medium
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_magic.dds"
+}

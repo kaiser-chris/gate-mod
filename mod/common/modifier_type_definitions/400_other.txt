@@ -48,6 +48,23 @@ goods_input_golem_add = {
 	}
 }
 
+goods_output_magic_seed_add = {
+	decimals = 1
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
+	}
+}
+
+goods_input_magic_seed_add = {
+	decimals = 1
+	color = bad
+	game_data = {
+		ai_value = 0
+	}
+}
+
 state_golden_religion_standard_of_living_add = {
 	decimals = 1
 	color = good

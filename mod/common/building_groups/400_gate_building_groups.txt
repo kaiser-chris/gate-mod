@@ -52,3 +52,12 @@ bg_mage_tower = {
     urbanization = 5
     infrastructure_usage_per_level = 0.1
 }
+
+bg_druid_grooves = {
+    parent_group = bg_agriculture
+    always_possible = yes
+
+    default_building = building_druid_groove
+
+    cash_reserves_max = 25000
+}

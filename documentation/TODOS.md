@@ -33,8 +33,6 @@ Below is a table with all currently open ToDos.
 | ./mod/common/history/characters/gad - dominion.txt | 1 |  Add proper characters |
 | ./mod/common/history/countries/gad - dominion.txt | 3 |  Define laws and technology for GAD |
 | ./mod/common/history/countries/gns - new samadore.txt | 3 |  Define laws and technology for GNS |
-| ./mod/common/history/military_formations/402_orcish_kingdom.txt | 22 |  Create character |
-| ./mod/common/history/military_formations/402_orcish_kingdom.txt | 72 |  Create character |
 | ./mod/common/ideologies/401_gate_ideologies.txt | 2 | # TODO: Create icon for ideology_militarist |
 | ./mod/common/ideologies/401_gate_ideologies.txt | 52 | # TODO: Add wanted laws to ideology_magic_hopeful |
 | ./mod/common/interest_group_traits/400_magic_users_traits.txt | 12 | # TODO: Create icon for ig_trait_military_support |
@@ -61,11 +59,10 @@ Below is a table with all currently open ToDos.
 | ./mod/common/production_methods/408_golem_depot_production_methods.txt | 44 |  Create icon for pm_golem_depot_mining_steam_golems |
 | ./mod/common/production_methods/408_golem_depot_production_methods.txt | 78 |  Create icon for pm_golem_depot_mining_electric_golems |
 | ./mod/common/production_methods/408_golem_depot_production_methods.txt | 7 |  Create icon for pm_golem_depot_no_golems |
-| ./mod/common/production_methods/409_mage_tower_production_methods.txt | 2 |  Find proper logo for pm_magic_academy_no_support |
+| ./mod/common/production_methods/409_mage_tower_production_methods.txt | 2 |  Find proper logo for pm_basic_mage_tower |
 | ./mod/common/religions/gate_religion.txt | 2 |  Add proper icon |
-| ./mod/common/technology/technologies/401_magic_production.txt | 133 |  Add proper logo for magic_and_electricity |
+| ./mod/common/technology/technologies/401_magic_production.txt | 132 |  Add proper logo for magic_and_electricity |
 | ./mod/common/technology/technologies/401_magic_production.txt | 19 |  Add proper logo for mana_extraction |
-| ./mod/common/technology/technologies/401_magic_production.txt | 35 |  Add proper logo for magic_farming |
 | ./mod/common/technology/technologies/402_magic_military.txt | 18 |  Add proper logo for mage_infantry |
 | ./mod/common/technology/technologies/402_magic_military.txt | 35 |  Add proper logo for mage_artillery |
 | ./mod/common/technology/technologies/403_magic_society.txt | 14 |  Implement gate_expeditions technology |
