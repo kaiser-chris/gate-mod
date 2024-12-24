@@ -98,7 +98,7 @@ researching_magic.3 = {
 
 	immediate = {
 		# Researcher stops complaining
-		scope:magic_researcher = {
+		var:magic_researcher = {
 			set_variable = {
 				name = com_opinion
 				value = flag:character_opinion_magic_researcher
