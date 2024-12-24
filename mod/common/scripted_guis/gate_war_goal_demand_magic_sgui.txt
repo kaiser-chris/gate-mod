@@ -1,0 +1,78 @@
+﻿# Root: Diplomatic play where war goal is considered
+# scope:war_goal ideology that represents the war goal
+# scope:target diplomatic play target
+# scope:initiator diplomatic play initiator
+gate_war_goal_demand_magic = {
+    scope = diplomatic_play
+
+    is_shown = {
+        # scope:target = {
+        #     is_magic_country = yes
+        # }
+        always = yes
+    }
+
+    is_valid = {
+        always = yes
+    }
+
+    effect = {
+
+    }
+}
+
+# Root: Diplomatic play where war goal is considered
+# scope:war_goal ideology that represents the war goal
+# scope:target diplomatic play target
+# scope:initiator diplomatic play initiator
+gate_war_goal_demand_magic_add = {
+    scope = diplomatic_play
+
+    effect = {
+        change_variable = {
+            name = com_cost
+            add = global_var:gate_war_goal_demand_magic_cost
+        }
+        scope:initiator = {
+            change_infamy = global_var:gate_war_goal_demand_magic_infamy
+        }
+    }
+}
+
+# Root: Diplomatic play where war goal is considered
+# scope:war_goal ideology that represents the war goal
+# scope:target diplomatic play target
+# scope:initiator diplomatic play initiator
+gate_war_goal_demand_magic_make_primary = {
+    scope = diplomatic_play
+
+    effect = {
+        change_variable = {
+            name = com_cost
+            add = global_var:gate_war_goal_demand_magic_cost_primary
+        }
+    }
+}
+
+# Root: Diplomatic play where war goal type is considered
+# scope:war_goal ideology that represents the war goal type
+# scope:target diplomatic play target
+# scope:initiator diplomatic play initiator
+gate_war_goal_type_magic = {
+    scope = diplomatic_play
+
+    is_shown = {
+        # scope:target = {
+        #     is_magic_country = yes
+        # }
+        always = yes
+    }
+
+    is_valid = {
+        always = yes
+    }
+
+    effect = {
+
+    }
+}

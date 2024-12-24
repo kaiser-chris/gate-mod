@@ -58,11 +58,30 @@ GLOBAL = {
 			}
 			create_building = {
 				building = building_magic_research_institute
-			}
-		}
 				level = 1
 			}
 		}
 	}
+
+	# Custom War Goals
+	add_to_global_variable_list = {
+		name = com_custom_war_goals_types
+		target = bt:gate_war_goal_type_magic
+	}
+	add_to_global_variable_list = {
+		name = com_custom_war_goals
+		target = bt:gate_war_goal_demand_magic
+	}
+	set_global_variable = {
+		name = gate_war_goal_demand_magic_cost
+		value = 10
+	}
+	set_global_variable = {
+		name = gate_war_goal_demand_magic_cost_primary
+		value = 5
+	}
+	set_global_variable = {
+		name = gate_war_goal_demand_magic_infamy
+		value = 5
 	}
 }
