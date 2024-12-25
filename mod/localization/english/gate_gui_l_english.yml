@@ -40,3 +40,6 @@
  gg_cancel_magic_research_text: "Are you sure you want want to cancel the research of [GetPlayer.MakeScope.Var('magic_research').GetTechnology.GetName]?\n\nAny invested [concept_magic_innovation] will be #v lost#!!"
  gg_magic_technology_tooltip_cost: "#title Cost:#! @magic_innovation! "
  gg_magic_technology_tooltip_duration: " Magical Innovation."
+# Map Marker
+ gg_map_marker_mana_density: "[State.MakeScope.Var('mana_density').GetValue|0]"
+ gg_map_marker_mana_density_tooltip: "The [concept_mana_density] in [State.GetName] is [State.MakeScope.Var('mana_density').GetValue|0]%."

@@ -26,13 +26,17 @@ types gate_types {
                 name = _show
                 # Close open panel before showing this one
                 on_start = "[InformationPanelBar.ClosePanel]"
+                on_start = "[GetVariableSystem.Set('gate_map_mode', 'mana_density')]"
                 start_sound = {
                     soundeffect = "event:/SFX/UI/SideBar/markets"
                 }
+                on_finish = "[SetTempMapModeByKey('mm_state_mana_density')]"
             }
 
             state = {
                 name = _hide
+                on_start = "[RemoveTempMapMode]"
+                on_finish = "[GetVariableSystem.Clear('gate_map_mode')]"
                 start_sound = {
                     soundeffect = "event:/SFX/UI/SideBar/markets_stop"
                 }
