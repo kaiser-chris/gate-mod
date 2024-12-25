@@ -38,10 +38,9 @@ Below is a table with all currently open ToDos.
 | ./mod/common/interest_group_traits/400_magic_users_traits.txt | 12 | # TODO: Create icon for ig_trait_military_support |
 | ./mod/common/interest_group_traits/400_magic_users_traits.txt | 23 | # TODO: Create icon for ig_trait_annoyed_masters |
 | ./mod/common/interest_group_traits/400_magic_users_traits.txt | 2 | # TODO: Create icon for ig_trait_slave_masters |
-| ./mod/common/interest_groups/400_magic_users.txt | 239 | # TODO: Add leader in magic check |
-| ./mod/common/interest_groups/400_magic_users.txt | 3 | # TODO: Create icon for magic users interest group |
-| ./mod/common/interest_groups/400_magic_users.txt | 42 | # TODO: Create elven dominion magic user ig traits |
-| ./mod/common/interest_groups/400_magic_users.txt | 48 | # TODO: Create elven magic user ig traits |
+| ./mod/common/interest_groups/400_magic_users.txt | 238 | # TODO: Add leader in magic check |
+| ./mod/common/interest_groups/400_magic_users.txt | 41 | # TODO: Create elven dominion magic user ig traits |
+| ./mod/common/interest_groups/400_magic_users.txt | 47 | # TODO: Create elven magic user ig traits |
 | ./mod/common/pop_types/mages.txt | 2 | # TODO: Update mages pop icon |
 | ./mod/common/production_method_groups/401_gate_production_method_groups.txt | 24 |  Add proper production method to pmg_mana_extraction |
 | ./mod/common/production_method_groups/401_gate_production_method_groups.txt | 8 |  Add proper production method to pmg_magic_gate_exploitation |
@@ -70,19 +69,15 @@ Below is a table with all currently open ToDos.
 | ./mod/common/technology/technologies/403_magic_society.txt | 41 |  Add proper logo for formalized_magic |
 | ./mod/common/technology/technologies/403_magic_society.txt | 62 |  Add proper logo for magic_technology_integration |
 | ./mod/events/gate_events/dwarven_alps_events.txt | 52 |  Create custom video for event dwarven_alps.2 (Digging Dwarven Tunnels) |
-| ./mod/localization/english/gate_concepts_l_english.yml | 3 | # TODO: Write concept_gate_planet_desc |
 | ./mod/localization/english/gate_countries_l_english.yml | 13 |  Add proper flavor text GNG_FLAVOR_TEXT (New Samadore) |
 | ./mod/localization/english/gate_diplomacy_l_english.yml | 14 |  Create demand_magic_knowledge_action_propose_name |
 | ./mod/localization/english/gate_diplomacy_l_english.yml | 15 |  Create demand_magic_knowledge_action_break_name |
 | ./mod/localization/english/gate_diplomacy_l_english.yml | 16 |  Create demand_magic_knowledge_action_notification_break_name |
 | ./mod/localization/english/gate_diplomacy_l_english.yml | 17 |  Create demand_magic_knowledge_action_notification_break_desc |
 | ./mod/localization/english/gate_diplomacy_l_english.yml | 18 |  Create demand_magic_knowledge_pact_desc |
-| ./mod/localization/english/gate_interest_groups_l_english.yml | 3 | # TODO: Write ig_magic_users_desc |
-| ./mod/localization/english/gate_interest_groups_l_english.yml | 4 | # TODO: Create icon for magic users interest group |
 | ./mod/localization/english/gate_objective_l_english.yml | 11 | #lore TODO#!"  Flesh out objective_magic_dominance_desc_GBR (Great Britain) |
 | ./mod/localization/english/gate_objective_l_english.yml | 18 |  Flesh out a proper description for je_obj_magic_knowledge_desc |
 | ./mod/localization/english/gate_objective_l_english.yml | 21 |  Flesh out a proper description for je_obj_magic_academy_desc |
-| ./mod/localization/english/gate_religion_l_english.yml | 5 |  Find better name for blood_god |
 | ./mod/localization/english/gate_technology_l_english.yml | 14 |  Write description for magic_golems |
 | ./mod/localization/english/gate_technology_l_english.yml | 16 |  Write description for magic_steam_golems |
 | ./mod/localization/english/gate_technology_l_english.yml | 18 |  Write description for magic_electric_golems |

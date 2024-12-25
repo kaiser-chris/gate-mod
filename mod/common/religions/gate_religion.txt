@@ -7,12 +7,13 @@
 	color = rgb{ 133 121 101 }
 }
 
-mountain_protestant = {
-	# Dwarven variant of christianity
-	texture = "gfx/interface/icons/religion_icons/protestant.dds"
+mountain_faith = {
+	texture = "gfx/interface/icons/religion_icons/mountain_faith.dds"
 	traits = {
 		gate_religion
-		christian
+	}
+	taboos = {
+		tea
 	}
 	color = rgb{ 109 127 63 }
 }
