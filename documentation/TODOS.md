@@ -72,13 +72,11 @@ Below is a table with all currently open ToDos.
 | ./mod/events/gate_events/dwarven_alps_events.txt | 52 |  Create custom video for event dwarven_alps.2 (Digging Dwarven Tunnels) |
 | ./mod/localization/english/gate_concepts_l_english.yml | 3 | # TODO: Write concept_gate_planet_desc |
 | ./mod/localization/english/gate_countries_l_english.yml | 13 |  Add proper flavor text GNG_FLAVOR_TEXT (New Samadore) |
-| ./mod/localization/english/gate_diplomacy_l_english.yml | 40 |  Create gate_war_goal_demand_magic_cost_tooltip |
-| ./mod/localization/english/gate_diplomacy_l_english.yml | 41 |  Create gate_war_goal_demand_magic_infamy_tooltip |
-| ./mod/localization/english/gate_diplomacy_l_english.yml | 42 |  Create demand_magic_knowledge_action_propose_name |
-| ./mod/localization/english/gate_diplomacy_l_english.yml | 43 |  Create demand_magic_knowledge_action_break_name |
-| ./mod/localization/english/gate_diplomacy_l_english.yml | 44 |  Create demand_magic_knowledge_pact_desc |
-| ./mod/localization/english/gate_diplomacy_l_english.yml | 45 |  Create demand_magic_knowledge_action_notification_break_name |
-| ./mod/localization/english/gate_diplomacy_l_english.yml | 46 |  Create demand_magic_knowledge_action_notification_break_desc |
+| ./mod/localization/english/gate_diplomacy_l_english.yml | 14 |  Create demand_magic_knowledge_action_propose_name |
+| ./mod/localization/english/gate_diplomacy_l_english.yml | 15 |  Create demand_magic_knowledge_action_break_name |
+| ./mod/localization/english/gate_diplomacy_l_english.yml | 16 |  Create demand_magic_knowledge_action_notification_break_name |
+| ./mod/localization/english/gate_diplomacy_l_english.yml | 17 |  Create demand_magic_knowledge_action_notification_break_desc |
+| ./mod/localization/english/gate_diplomacy_l_english.yml | 18 |  Create demand_magic_knowledge_pact_desc |
 | ./mod/localization/english/gate_interest_groups_l_english.yml | 3 | # TODO: Write ig_magic_users_desc |
 | ./mod/localization/english/gate_interest_groups_l_english.yml | 4 | # TODO: Create icon for magic users interest group |
 | ./mod/localization/english/gate_objective_l_english.yml | 11 | #lore TODO#!"  Flesh out objective_magic_dominance_desc_GBR (Great Britain) |
