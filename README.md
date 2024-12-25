@@ -1,11 +1,9 @@
 # Overview
-
 **Manaflow: Ankaris Arrival** is a mod for Victoria 3.
 
 **THIS MOD IS IN ALPHA AND UNFINISHED!**
 
 ## Story
-
 In 1814, a series of Magic Gates to the planet **Ankaris** appeared across Earth,
 forever altering the course of history.
 
@@ -38,11 +36,13 @@ Below is a list of the currently implemented content:
 
 [//]: # (CONTENT-END)
 
-## Credits
+## Compatibility
+The mod is currently meant to be played without other mods.
+In the future, there'll be plans to make compatibility patches for other mods such as Morgenröte. 
 
+## Credits
  - The new races were created by [Realms of Exether](https://steamcommunity.com/sharedfiles/filedetails/?id=3279217222) and are used with permission
 
 ## Art
-
 This mod uses AI generated art from [DeviantArt DreamUp](https://www.deviantart.com/dreamup).
 According to their TOS full copy right is with the generating person so publication and changes are not a problem.
