@@ -26,9 +26,8 @@ orphan_fix.1 = {
 				flag:character_opinion_magic_researcher = yes
 				flag:character_opinion_magic_researcher_missing_institute = yes
 			}
-			every_in_global_list = {
-				variable = magic_countries
-			}
+			set_variable = mana_density
+			remove_variable = mana_density
 		}
 	}
 	
