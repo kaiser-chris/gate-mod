@@ -90,8 +90,20 @@ mana_saturation.3 = {
 	duration = 3
 
 	trigger = {
+		# Player gets the event but could
+		# happen in any state.
 		is_player = yes
+
+		# We do not want every state
+		# to have this trait so we
+		# limit it to 20 states.
 		global_var:magic_growing_var <= 20
+
+		# We wait a while before giving
+		# out this trait so non magic
+		# countries have a chance to
+		# get them through propagated
+		# mana density.
 		game_date > 1845.1.1
 	}
 
@@ -108,9 +120,10 @@ mana_saturation.3 = {
 					has_state_trait = state_trait_arctic_whaling
 					has_state_trait = state_trait_good_soils
 					has_state_trait = state_trait_black_soil
-					arable_land >= 5
-					var:mana_density >= 50
+					has_state_trait = state_trait_magic_soil
 				}
+				arable_land >= 5
+				var:mana_density >= 50
 			}
 			save_scope_as = magic_growing_state
 		}
