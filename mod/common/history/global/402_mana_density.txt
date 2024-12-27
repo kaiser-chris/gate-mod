@@ -7,14 +7,14 @@ GLOBAL = {
 		name = state_count
 		value = 0
 	}
-	every_state = {
+	every_state_region = {
 		change_global_variable = {
 			name = state_count
 			add = 1
 		}
 	}
 
-	every_state = {
+	every_state_region = {
 		set_variable = {
 			name = mana_density
 			value = 0
@@ -26,33 +26,47 @@ GLOBAL = {
 		limit = {
 			has_building = building_gate
 		}
-		set_variable = {
-			name = mana_density
-			value = 100
+		state_region = {
+			set_variable = {
+				name = mana_density
+				value = 100
+			}
 		}
 		every_neighbouring_state = {
 			limit = {
-				var:mana_density < 100
+				state_region = {
+					var:mana_density < 100
+				}
 			}
-			set_variable = {
-				name = mana_density
-				value = 70
+			state_region = {
+				set_variable = {
+					name = mana_density
+					value = 70
+				}
 			}
 			every_neighbouring_state = {
 				limit = {
-					var:mana_density < 70
+					state_region = {
+						var:mana_density < 70
+					}
 				}
-				set_variable = {
-					name = mana_density
-					value = 40
+				state_region = {
+					set_variable = {
+						name = mana_density
+						value = 40
+					}
 				}
 				every_neighbouring_state = {
 					limit = {
-						var:mana_density < 40
+						state_region = {
+							var:mana_density < 40
+						}
 					}
-					set_variable = {
-						name = mana_density
-						value = 10
+					state_region = {
+						set_variable = {
+							name = mana_density
+							value = 10
+						}
 					}
 				}
 			}
@@ -64,7 +78,7 @@ GLOBAL = {
 		name = global_mana_density_cache
 		value = {
 			value = 0
-			every_state = {
+			every_state_region = {
 				limit = {
 					var:mana_density > 0
 				}

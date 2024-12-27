@@ -22,11 +22,9 @@
 	}
 
 	effect = {
-		# Maybe a cleaner solution is possible:
-		# Modifier looks like a permanent one but gets
-		# removed after end of journal entry.
 		add_modifier = {
 			name = focus_researching_magic_cost_modifier
+			years = 1
 		}
 	}
 }

@@ -30,6 +30,7 @@ mana_saturation.1 = {
 mana_saturation.2 = {
 	type = country_event
 	dlc = dlc_magic_gate
+	placement = scope:ritual_state
 
 	title = mana_saturation.2.t
 	desc = mana_saturation.2.d
@@ -41,7 +42,7 @@ mana_saturation.2 = {
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/event_icons/event_default.dds"
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
 	duration = 3
 
@@ -49,18 +50,39 @@ mana_saturation.2 = {
 	}
 
 	immediate = {
+		random_scope_state = {
+			limit = {
+				state_region = {
+					var:mana_density < 100
+				}
+			}
+			save_scope_as = ritual_state
+			state_region = {
+				save_scope_as = ritual_state_region
+			}
+		}
 	}
 
 	option = {
 		name = mana_saturation.2.a
+		change_infamy = 10
 		kill_population = {
 			value = 10000
 			pop_type = slaves
 		}
-		change_infamy = 10
 		custom_tooltip = {
 			text = mana_saturation.2.a_progress_tt
-			# TODO: Add effect
+			scope:ritual_state_region = {
+				change_variable = {
+					name = mana_density
+					add = 50
+					max = 100
+				}
+			}
+		}
+		set_variable = {
+			name = slave_ritual_cooldown
+			years = 1
 		}
 	}
 

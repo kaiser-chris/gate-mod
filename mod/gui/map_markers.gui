@@ -83,20 +83,20 @@ flowcontainer = {
 			align = center
 
 			background = {
-				visible = "[LessThan_CFixedPoint(State.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('medium_mana_density_threshhold'))]"
+				visible = "[LessThan_CFixedPoint(State.AccessStateRegion.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('medium_mana_density_threshhold'))]"
 				texture = "gfx/interface/icons/gui_icons/low_mana_density.dds"
 			}
 
 			background = {
 				visible = "[And(
-								GreaterThanOrEqualTo_CFixedPoint(State.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('medium_mana_density_threshhold')),
-								LessThan_CFixedPoint(State.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('high_mana_density_threshhold'))
+								GreaterThanOrEqualTo_CFixedPoint(State.AccessStateRegion.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('medium_mana_density_threshhold')),
+								LessThan_CFixedPoint(State.AccessStateRegion.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('high_mana_density_threshhold'))
 							)]"
 				texture = "gfx/interface/icons/gui_icons/mid_mana_density.dds"
 			}
 
 			background = {
-				visible = "[GreaterThanOrEqualTo_CFixedPoint(State.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('high_mana_density_threshhold'))]"
+				visible = "[GreaterThanOrEqualTo_CFixedPoint(State.AccessStateRegion.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('high_mana_density_threshhold'))]"
 				texture = "gfx/interface/icons/gui_icons/high_mana_density.dds"
 			}
 		}
@@ -111,20 +111,20 @@ flowcontainer = {
 			align = center
 
 			background = {
-				visible = "[LessThan_CFixedPoint(State.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('medium_mana_density_threshhold'))]"
+				visible = "[LessThan_CFixedPoint(State.AccessStateRegion.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('medium_mana_density_threshhold'))]"
 				texture = "gfx/interface/icons/gui_icons/low_mana_density.dds"
 			}
 
 			background = {
 				visible = "[And(
-								GreaterThanOrEqualTo_CFixedPoint(State.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('medium_mana_density_threshhold')),
+								GreaterThanOrEqualTo_CFixedPoint(State.AccessStateRegion.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('medium_mana_density_threshhold')),
 								LessThan_CFixedPoint(State.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('high_mana_density_threshhold'))
 							)]"
 				texture = "gfx/interface/icons/gui_icons/mid_mana_density.dds"
 			}
 
 			background = {
-				visible = "[GreaterThanOrEqualTo_CFixedPoint(State.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('high_mana_density_threshhold'))]"
+				visible = "[GreaterThanOrEqualTo_CFixedPoint(State.AccessStateRegion.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('high_mana_density_threshhold'))]"
 				texture = "gfx/interface/icons/gui_icons/high_mana_density.dds"
 			}
 		}

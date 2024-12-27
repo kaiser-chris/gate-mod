@@ -9,20 +9,24 @@
 }
 
 propogate_mana_density = {
-	every_state = {
+	every_state_region = {
 		limit = {
 			has_variable = mana_density
 			var:mana_density >= 30
 		}
 		every_neighbouring_state = {
 			limit = {
-				has_variable = mana_density
-				var:mana_density < 100
+				state_region = {
+					has_variable = mana_density
+					var:mana_density < 100
+				}
 			}
-			# Propagation
-			change_variable = {
-				name = mana_density
-				add = 1
+			state_region = {
+				# Propagation
+				change_variable = {
+					name = mana_density
+					add = 1
+				}
 			}
 			# Cache update
 			change_global_variable = {

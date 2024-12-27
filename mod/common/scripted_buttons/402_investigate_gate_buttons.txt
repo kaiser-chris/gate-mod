@@ -1,6 +1,12 @@
 ﻿je_investigate_gate_button_focus_academia = {
-	name = "je_investigate_gate_button_focus_academia"
-	desc = "je_investigate_gate_button_focus_academia_desc"
+	name = je_investigate_gate_button_focus_academia
+	desc = je_investigate_gate_button_focus_academia_desc
+
+	visible = {
+		NOT = {
+			has_modifier = focus_investigate_gate_cost_modifier
+		}
+	}
 
 	possible = {
 		NOT = {
@@ -13,14 +19,30 @@
 	}
 
 	effect = {
-		# Maybe a cleaner solution is possible:
-		# Modifier looks like a permanent one but gets
-		# removed after end of journal entry.
 		add_modifier = {
 			name = focus_investigate_gate_cost_modifier
+			years = 1
 		}
-		custom_tooltip = {
-			text = je_investigate_gate_button_focus_academia_result_tt
-		}
+	}
+}
+
+je_investigate_gate_button_cancel_focus_academia = {
+	name = je_researching_magic_button_cancel_focus_academia
+	desc = je_researching_magic_button_cancel_focus_academia_desc
+
+	visible = {
+		has_modifier = focus_investigate_gate_cost_modifier
+	}
+
+	possible = {
+		has_modifier = focus_investigate_gate_cost_modifier
+	}
+
+	ai_chance = {
+		base = 50
+	}
+
+	effect = {
+		remove_modifier = focus_investigate_gate_cost_modifier
 	}
 }
