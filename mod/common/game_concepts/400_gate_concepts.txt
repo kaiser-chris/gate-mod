@@ -4,7 +4,12 @@
 }
 
 concept_mana_saturation = {
-	texture = "gfx/interface/icons/war_goals/gate_world.dds"
+	texture = "gfx/interface/icons/event_icons/event_magic_world.dds"
+	is_loading_tip = yes
+}
+
+concept_mana_density = {
+	texture = "gfx/interface/icons/event_icons/event_magic_world.dds"
 	is_loading_tip = yes
 }
 
@@ -30,10 +35,5 @@ concept_monster_attack = {
 
 concept_monster_attacks = {
 	texture = "gfx/interface/icons/institution_icons/monster_hunting.dds"
-	is_loading_tip = yes
-}
-
-concept_mana_density = {
-	texture = "gfx/interface/icons/war_goals/gate_world.dds"
 	is_loading_tip = yes
 }

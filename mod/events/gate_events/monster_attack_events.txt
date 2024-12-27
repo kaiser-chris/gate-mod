@@ -21,8 +21,8 @@ monster_attack.1 = {
 
     trigger = {
         is_player = yes
-        has_global_variable = gate_mana_saturation_progress
-        global_var:gate_mana_saturation_progress >= 30
+        has_global_variable = global_mana_saturation
+        global_var:global_mana_saturation >= 30
         NOT = {
             has_global_variable = monster_attack_in_progress
         }

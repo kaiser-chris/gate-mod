@@ -5,14 +5,6 @@ GLOBAL = {
 		value = 0
 	}
 
-	# Mana Saturation through gates.
-	# Without further input will lead to full saturation in 1890s
-	set_global_variable = {
-		name = gate_mana_saturation_progress_var
-		value = 1.5
-	}
-	calculate_monthly_mana_saturation = yes
-
 	# Every country has a journal entry for mana saturation
 	# since some countries can interact with the journal entry
 	every_country = {
@@ -71,28 +63,5 @@ GLOBAL = {
 	add_to_global_variable_list = {
 		name = wgf_custom_war_goals
 		target = bt:gate_war_goal_demand_magic
-	}
-
-	every_state = {
-		set_variable = {
-			name = mana_density
-			value = 0
-		}
-	}
-
-	every_state = {
-		limit = {
-			has_building = building_gate
-		}
-		every_neighbouring_state = {
-			set_variable = {
-				name = mana_density
-				value = 70
-			}
-		}
-		set_variable = {
-			name = mana_density
-			value = 100
-		}
 	}
 }

@@ -4,7 +4,7 @@
  concept_magic_knowledge: "Magic Knowledge"
  concept_magic_knowledge_desc: "$concept_magic_knowledge$ is a collection of technologies that can not be researched directly but only be acquired by already having them or through [concept_diplomatic_action].\n\nThese technologies are:\n[GetTechnology('magic_understanding_production').GetName]\n[GetTechnology('magic_understanding_society').GetName]\n[GetTechnology('magic_understanding_military').GetName]"
  concept_mana_saturation: "Mana Saturation"
- concept_mana_saturation_desc: "Since the Magic Gates opened, mana is spewing onto Earth. Applications of [concept_magic_knowledge] on Earth has further increased the amount of mana in the atmosphere. Should the $concept_mana_saturation$ reach its maximum most humans should be able apply mana. Until then different levels of $concept_mana_saturation$ will lead to unpredictable changes on Earth."
+ concept_mana_saturation_desc: "Mana Saturation is the average [concept_mana_density] around the world."
  concept_magic_innovation: "Magic Innovation"
  concept_magic_innovation_desc: "@magic_innovation!$concept_magic_innovation$ is produced by [GetBuildingType('building_gate').GetName], [GetBuildingType('building_mage_tower').GetName], [GetBuildingType('building_magic_academy').GetName] and [GetBuildingType('building_university').GetName] $concept_buildings$ and contributes to active research progress for [concept_magic_technology]."
  concept_magic_technology: "Magic Technology"

@@ -21,7 +21,7 @@ orphan_fix.1 = {
 	immediate = {
 		if = {
 			limit = {
-				global_var:gate_mana_saturation_progress < 0
+				global_var:global_mana_saturation < 0
 				var:weekly_magic_innovation < 0
 				flag:character_opinion_magic_researcher = yes
 				flag:character_opinion_magic_researcher_missing_institute = yes

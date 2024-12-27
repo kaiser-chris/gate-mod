@@ -23,7 +23,7 @@
 				trigger = {
 					scope:journal_entry = {
 						scripted_bar_progress = {
-							name = gate_mana_saturation_progress_bar
+							name = pb_gate_researching_magic
 							value < 30
 						}
 					}
@@ -34,7 +34,7 @@
 				trigger = {
 					scope:journal_entry = {
 						scripted_bar_progress = {
-							name = gate_mana_saturation_progress_bar
+							name = pb_gate_researching_magic
 							value < 60
 						}
 					}
@@ -45,7 +45,7 @@
 				trigger = {
 					scope:journal_entry = {
 						scripted_bar_progress = {
-							name = gate_mana_saturation_progress_bar
+							name = pb_gate_researching_magic
 							value <= 100
 						}
 					}

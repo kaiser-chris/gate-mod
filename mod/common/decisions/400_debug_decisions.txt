@@ -10,7 +10,7 @@
 			name = gate_mana_saturation_full
 		}
 		set_global_variable = {
-			name = gate_mana_saturation_progress
+			name = global_mana_saturation
 			value = 100
 		}
 	}
@@ -66,7 +66,7 @@ debug_dragon_greenland_decision = {
 	when_taken = {
 		every_country = {
 			trigger_event = {
-				id = mana_saturation.3
+				id = dragon.1
 			}
 		}
 	}
@@ -86,7 +86,7 @@ debug_dragon_california_decision = {
 	when_taken = {
 		every_country = {
 			trigger_event = {
-				id = mana_saturation.5
+				id = dragon.3
 			}
 		}
 	}
@@ -106,7 +106,7 @@ debug_dragon_kolyma_decision = {
 	when_taken = {
 		every_country = {
 			trigger_event = {
-				id = mana_saturation.7
+				id = dragon.5
 			}
 		}
 	}
@@ -126,7 +126,7 @@ debug_dragon_himalaya_decision = {
 	when_taken = {
 		every_country = {
 			trigger_event = {
-				id = mana_saturation.9
+				id = dragon.7
 			}
 		}
 	}
@@ -145,7 +145,7 @@ debug_magic_growing_decision = {
 
 	when_taken = {
 		trigger_event = {
-			id = mana_saturation.11
+			id = mana_saturation.3
 		}
 	}
 
@@ -183,7 +183,7 @@ debug_increase_mana_saturation = {
 
 	when_taken = {
 		change_global_variable = {
-			name = gate_mana_saturation_progress
+			name = global_mana_saturation
 			add = 10
 		}
 	}

@@ -1,96 +1,34 @@
-﻿calculate_monthly_mana_saturation = {
+﻿calculate_mana_saturation = {
 	set_global_variable = {
-		name = gate_mana_saturation_progress_ritual_var
-		value = 0
-	}
-	
-	# Every month we calculate new
-	set_global_variable = {
-		name = gate_mana_saturation_progress_mages_var
-		value = 0
-	}
-	set_global_variable = {
-		name = gate_mana_saturation_progress_buildings_var
-		value = 0
-	}
-
-	every_country = {
-		calculate_monthly_mages_mana_satuaration = yes
-		calculate_monthly_building_mana_satuaration = yes
-	}
-
-	# Every building level and mage has only a small
-	# influence on global mana saturation
-	change_global_variable = {
-		name = gate_mana_saturation_progress_buildings_var
-		divide = 100
-	}
-	change_global_variable = {
-		name = gate_mana_saturation_progress_mages_var
-		divide = 100
-	}
-}
-
-calculate_monthly_building_mana_satuaration = {
-	# Inherently magic buildings
-	every_scope_building = {
-		limit = {
-			OR = {
-				is_building_type = building_murk_ways
-				is_building_type = building_mana_extractor
-			}
-			occupancy >= 0.5
-		}
-		change_global_variable = {
-			name = gate_mana_saturation_progress_buildings_var
-			add = level
-		}
-	}
-
-	# Magic production methods
-	every_scope_building = {
-		limit = {
-			OR = {
-				has_active_production_method = pm_crystal_explosives_building_gold_mine
-				has_active_production_method = pm_crystal_explosives_building_lead_mine
-				has_active_production_method = pm_crystal_explosives_building_sulfur_mine
-				has_active_production_method = pm_crystal_explosives_building_iron_mine
-				has_active_production_method = pm_crystal_explosives_building_coal_mine
-			}
-			occupancy >= 0.5
-		}
-		change_global_variable = {
-			name = gate_mana_saturation_progress_buildings_var
-			add = level
+		name = global_mana_saturation
+		value = {
+			value = global_var:global_mana_density_cache
+			divide = global_var:state_count
 		}
 	}
 }
 
-calculate_monthly_mages_mana_satuaration = {
-	# When a country has more than one percent mages it contributes to mana saturation
-	if = {
+propogate_mana_density = {
+	every_state = {
 		limit = {
-			pop_type_percent_country = {
-				percent > 0.01
-				pop_type = mages
+			has_variable = mana_density
+			var:mana_density >= 30
+		}
+		every_neighbouring_state = {
+			limit = {
+				has_variable = mana_density
+				var:mana_density < 100
 			}
-		}
-		change_global_variable = {
-			name = gate_mana_saturation_progress_mages_var
-			add = 1
-		}
-	}
-	# When a country has more than ten percent mages it contributes even more to mana saturation
-	if = {
-		limit = {
-			pop_type_percent_country = {
-				percent > 0.10
-				pop_type = mages
+			# Propagation
+			change_variable = {
+				name = mana_density
+				add = 1
 			}
-		}
-		change_global_variable = {
-			name = gate_mana_saturation_progress_mages_var
-			add = 2
+			# Cache update
+			change_global_variable = {
+				name = global_mana_density_cache
+				add = 1
+			}
 		}
 	}
 }
