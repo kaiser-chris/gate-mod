@@ -325,17 +325,12 @@ types gate_types {
                                             spacing = 5
 
                                             ### Magic Diplomatic Actions
-                                            gate_diplo_button = {
-                                                blockoverride "datacontext" {
-                                                    datacontext = "[GetPlayer.GetDiplomaticAction('damage_relations', Country.Self)]"
-                                                }
-                                            }
-
-                                            gate_diplo_button = {
-                                                blockoverride "datacontext" {
-                                                    datacontext = "[GetPlayer.GetDiplomaticAction('damage_relations', Country.Self)]"
-                                                }
-                                            }
+                                            # TODO: Add magic diplomatic actions here
+                                            # gate_diplo_button = {
+                                            #     blockoverride "datacontext" {
+                                            #         datacontext = "[GetPlayer.GetDiplomaticAction('damage_relations', Country.Self)]"
+                                            #     }
+                                            # }
                                         }
                                     }
                                 }

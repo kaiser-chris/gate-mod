@@ -36,14 +36,15 @@ GLOBAL = {
 	# Statistics GUI
 	collect_magic_countries = yes
 
-	# Set Debug
-	set_global_variable = gate_debug
-
-	# Set Monster Hunting ideologies to
-	# existing interest groups
 	every_in_global_list = {
 		variable = magic_countries
+
+		# Set Monster Hunting ideologies to
+		# existing interest groups
 		add_monster_hunting_ideologies = yes
+
+		# Add research institute to all magic
+		# countries
 		every_scope_state = {
 			limit = {
 				is_capital = yes

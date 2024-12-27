@@ -6,15 +6,6 @@ widget = {
     allow_outside = yes
     alpha = 0
 
-    # TODO: Debug trigger does not work
-    flowcontainer = {
-        visible = "[InDebugMode]"
-        state = {
-            trigger_when = "[GetScriptedGui('sgui_gate_enable_debug').IsValid(GetPlayer.Self)]"
-            on_finish = "[GetScriptedGui('sgui_gate_enable_debug').Execute(GetPlayer.Self)]"
-        }
-    }
-
     # Support custom shortcuts
     flowcontainer = {
         button = {

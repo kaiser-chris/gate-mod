@@ -1,28 +1,6 @@
-﻿debug_mana_saturation_decision = {
+﻿debug_complete_sg_magic_knowledge = {
 	is_shown = {
-		has_global_variable = gate_debug
-		is_player = yes
-		NOT = { has_global_variable = gate_mana_saturation_full }
-	}
-
-	when_taken = {
-		set_global_variable = {
-			name = gate_mana_saturation_full
-		}
-		set_global_variable = {
-			name = global_mana_saturation
-			value = 100
-		}
-	}
-
-	ai_chance = {
-		base = 0
-	}
-}
-
-debug_complete_sg_magic_knowledge = {
-	is_shown = {
-		has_global_variable = gate_debug
+		has_global_variable = com_debug
 		is_player = yes
 		NOT = {
 			has_completed_subgoal = sg_magic_knowledge
@@ -40,7 +18,7 @@ debug_complete_sg_magic_knowledge = {
 
 debug_complete_sg_magic_academy = {
 	is_shown = {
-		has_global_variable = gate_debug
+		has_global_variable = com_debug
 		is_player = yes
 		NOT = {
 			has_completed_subgoal = sg_magic_academy
@@ -58,7 +36,7 @@ debug_complete_sg_magic_academy = {
 
 debug_dragon_greenland_decision = {
 	is_shown = {
-		has_global_variable = gate_debug
+		has_global_variable = com_debug
 		is_player = yes
 		NOT = { has_global_variable = dragon_greenland_var }
 	}
@@ -78,7 +56,7 @@ debug_dragon_greenland_decision = {
 
 debug_dragon_california_decision = {
 	is_shown = {
-		has_global_variable = gate_debug
+		has_global_variable = com_debug
 		is_player = yes
 		NOT = { has_global_variable = dragon_california_var }
 	}
@@ -98,7 +76,7 @@ debug_dragon_california_decision = {
 
 debug_dragon_kolyma_decision = {
 	is_shown = {
-		has_global_variable = gate_debug
+		has_global_variable = com_debug
 		is_player = yes
 		NOT = { has_global_variable = dragon_kolyma_var }
 	}
@@ -118,7 +96,7 @@ debug_dragon_kolyma_decision = {
 
 debug_dragon_himalaya_decision = {
 	is_shown = {
-		has_global_variable = gate_debug
+		has_global_variable = com_debug
 		is_player = yes
 		NOT = { has_global_variable = dragon_himalaya_var }
 	}
@@ -138,7 +116,7 @@ debug_dragon_himalaya_decision = {
 
 debug_magic_growing_decision = {
 	is_shown = {
-		has_global_variable = gate_debug
+		has_global_variable = com_debug
 		is_player = yes
 		global_var:magic_growing_var <= 20
 	}
@@ -156,7 +134,7 @@ debug_magic_growing_decision = {
 
 debug_monster_attack_decision = {
 	is_shown = {
-		has_global_variable = gate_debug
+		has_global_variable = com_debug
 		is_player = yes
 		NOT = {
 			has_global_variable = monster_attack_in_progress
@@ -174,17 +152,24 @@ debug_monster_attack_decision = {
 	}
 }
 
-debug_increase_mana_saturation = {
+debug_mana_saturation_decision = {
 	is_shown = {
-		has_global_variable = gate_debug
+		has_global_variable = com_debug
 		is_player = yes
-		NOT = { has_global_variable = gate_mana_saturation_full }
+		NOT = {
+			has_global_variable = gate_mana_saturation_full
+		}
 	}
 
 	when_taken = {
-		change_global_variable = {
-			name = global_mana_saturation
-			add = 10
+		every_state_region = {
+			set_variable = {
+				name = mana_density
+				value = 100
+			}
+		}
+		set_global_variable = {
+			name = gate_mana_saturation_full
 		}
 	}
 

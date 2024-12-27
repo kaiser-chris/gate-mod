@@ -40,11 +40,10 @@ building_mana_extractor = {
 	}
 
 	possible = {
-		OR = {
-			has_building = building_gate
-			has_global_variable = gate_mana_saturation_full
-			any_neighbouring_state = {
-				has_building = building_gate
+		custom_tooltip = {
+			text = building_mana_extractor_mana_density
+			state_region = {
+				var:mana_density >= medium_mana_density_threshhold
 			}
 		}
 	}
