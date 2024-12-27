@@ -59,7 +59,6 @@ Below is a table with all currently open ToDos.
 | ./mod/common/production_methods/408_golem_depot_production_methods.txt | 78 |  Create icon for pm_golem_depot_mining_electric_golems |
 | ./mod/common/production_methods/408_golem_depot_production_methods.txt | 7 |  Create icon for pm_golem_depot_no_golems |
 | ./mod/common/production_methods/409_mage_tower_production_methods.txt | 2 |  Find proper logo for pm_basic_mage_tower |
-| ./mod/common/religions/gate_religion.txt | 2 |  Add proper icon |
 | ./mod/common/technology/technologies/401_magic_production.txt | 132 |  Add proper logo for magic_and_electricity |
 | ./mod/common/technology/technologies/401_magic_production.txt | 19 |  Add proper logo for mana_extraction |
 | ./mod/common/technology/technologies/402_magic_military.txt | 18 |  Add proper logo for mage_infantry |
