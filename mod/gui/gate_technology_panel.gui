@@ -19,13 +19,14 @@ types gate_types {
     type gate_technology_panel = default_block_window {
         name = "gate_technology_panel"
 
-        visible = "[GetVariableSystem.HasValue('com_open_window', 'gate_button_technology')]"
+        visible = "[Or(GetVariableSystem.HasValue('com_open_window', 'gate_button_technology'), GetVariableSystem.HasValue('com_alert_action', 'Magic Technology Panel'))]"
 
         blockoverride "animation_state_block" {
             state = {
                 name = _show
                 # Close open panel before showing this one
                 on_start = "[InformationPanelBar.ClosePanel]"
+                on_start = "[MapListPanelManager.CloseCurrentPanel]"
                 start_sound = {
                     soundeffect = "event:/SFX/UI/SideBar/technology"
                 }
@@ -47,10 +48,12 @@ types gate_types {
 
         blockoverride "header_back_button" {
             onclick = "[GetVariableSystem.Clear('com_open_window')]"
+            onclick = "[GetVariableSystem.Clear('com_alert_action')]"
         }
 
         blockoverride "header_close_button" {
             onclick = "[GetVariableSystem.Clear('com_open_window')]"
+            onclick = "[GetVariableSystem.Clear('com_alert_action')]"
         }
 
         blockoverride "fixed_top"
