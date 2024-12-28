@@ -8,6 +8,7 @@
  gate_button_technology_magic_research: "We are currently researching [GetPlayer.MakeScope.Var('magic_research').GetTechnology.GetName]."
  gate_button_technology_no_research: "We are currently not researching any [concept_magic_technology]."
 # Magic Main Panel
+ gg_panel_main_action: "Magic Panel"
  gg_tab_magic_statistics: "Statistics"
  gg_tab_magic_countries: "Magic Countries"
  gg_panel_main_title: "Magic"
@@ -19,6 +20,7 @@
  gg_header_magic_countries: "Magic Countries"
  gg_magic_countries_relations_region: "#header [DiplomaticAction.GetName]#!\n@red_cross! Can only be done when you have [concept_interest] in their [concept_strategic_region]."
 # Magic Technology Panel
+ gg_panel_technology_action: "Magic Technology Panel"
  gg_panel_technology_title: "Magic Technology"
  gg_header_magic_innovation: "Magic Innovation"
  gg_header_active_research: "Active Magic Research"
@@ -41,5 +43,5 @@
  gg_magic_technology_tooltip_cost: "#title Cost:#! @magic_innovation! "
  gg_magic_technology_tooltip_duration: " Magical Innovation."
 # Map Marker
- gg_map_marker_mana_density: "[State.AccessStateRegion.MakeScope.Var('mana_density').GetValue|0]"
- gg_map_marker_mana_density_tooltip: "The [concept_mana_density] in [State.GetName] is [State.AccessStateRegion.MakeScope.Var('mana_density').GetValue|0]%."
+ gg_map_marker_mana_density: "[State.AccessStateRegion.MakeScope.Var('mana_density').GetValue|0]%"
+ gg_map_marker_mana_density_tooltip: "The [concept_mana_density] in [State.AccessStateRegion.GetName] is [State.AccessStateRegion.MakeScope.Var('mana_density').GetValue|0]%."

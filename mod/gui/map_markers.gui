@@ -73,59 +73,89 @@ flowcontainer = {
 	flowcontainer = {
 		direction = vertical
 		visible = "[And(ObjectsEqual(State.AccessSelf, State.AccessStateRegion.GetLargestStateInRegion), GetVariableSystem.HasValue('gate_map_mode', 'mana_density'))]"
+		onmousehierarchyenter = "[AccessHighlightManager.HighlightStateRegion(State.AccessStateRegion.Self)]"
+		onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
 
-		textbox = {
-			visible = "[Or(IsZoomLevelMid, IsZoomLevelNear)]"
-			size = { 40 40 }
-			using = default_list_position
-			text = gg_map_marker_mana_density
-			tooltip = gg_map_marker_mana_density_tooltip
-			align = center
-
-			background = {
-				visible = "[LessThan_CFixedPoint(State.AccessStateRegion.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('medium_mana_density_threshhold'))]"
-				texture = "gfx/interface/icons/gui_icons/low_mana_density.dds"
+		widget = {
+			visible = "[IsZoomLevelNear]"
+			size = { 70 45 }
+			gate_mana_density = {
+				blockoverride "visibility" {
+					visible = "[LessThan_CFixedPoint(State.AccessStateRegion.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('medium_mana_density_threshhold'))]"
+				}
+				blockoverride "background_color" {
+					texture = "gfx/interface/icons/gui_icons/low_mana_density.dds"
+					tintcolor = { 0.6 0.6 0.6 1 }
+				}
 			}
 
-			background = {
-				visible = "[And(
-								GreaterThanOrEqualTo_CFixedPoint(State.AccessStateRegion.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('medium_mana_density_threshhold')),
-								LessThan_CFixedPoint(State.AccessStateRegion.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('high_mana_density_threshhold'))
-							)]"
-				texture = "gfx/interface/icons/gui_icons/mid_mana_density.dds"
-			}
-
-			background = {
-				visible = "[GreaterThanOrEqualTo_CFixedPoint(State.AccessStateRegion.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('high_mana_density_threshhold'))]"
-				texture = "gfx/interface/icons/gui_icons/high_mana_density.dds"
-			}
-		}
-
-		textbox = {
-			visible = "[IsZoomLevelFar]"
-			size = { 30 30 }
-			using = fontsize_small
-			using = default_list_position
-			text = gg_map_marker_mana_density
-			tooltip = gg_map_marker_mana_density_tooltip
-			align = center
-
-			background = {
-				visible = "[LessThan_CFixedPoint(State.AccessStateRegion.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('medium_mana_density_threshhold'))]"
-				texture = "gfx/interface/icons/gui_icons/low_mana_density.dds"
-			}
-
-			background = {
-				visible = "[And(
+			gate_mana_density = {
+				blockoverride "visibility" {
+					visible = "[And(
 								GreaterThanOrEqualTo_CFixedPoint(State.AccessStateRegion.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('medium_mana_density_threshhold')),
 								LessThan_CFixedPoint(State.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('high_mana_density_threshhold'))
 							)]"
-				texture = "gfx/interface/icons/gui_icons/mid_mana_density.dds"
+				}
+				blockoverride "background_color" {
+					texture = "gfx/interface/icons/gui_icons/mid_mana_density.dds"
+					tintcolor = { 0.6 0.6 0.6 1 }
+				}
 			}
 
-			background = {
-				visible = "[GreaterThanOrEqualTo_CFixedPoint(State.AccessStateRegion.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('high_mana_density_threshhold'))]"
-				texture = "gfx/interface/icons/gui_icons/high_mana_density.dds"
+			gate_mana_density = {
+				blockoverride "visibility" {
+					visible = "[GreaterThanOrEqualTo_CFixedPoint(State.AccessStateRegion.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('high_mana_density_threshhold'))]"
+				}
+				blockoverride "background_color" {
+					texture = "gfx/interface/icons/gui_icons/high_mana_density.dds"
+					tintcolor = { 0.6 0.6 0.6 1 }
+				}
+			}
+		}
+
+		widget = {
+			visible = "[IsZoomLevelMid]"
+			size = { 65 40 }
+			gate_mana_density = {
+				blockoverride "visibility" {
+					visible = "[LessThan_CFixedPoint(State.AccessStateRegion.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('medium_mana_density_threshhold'))]"
+				}
+				blockoverride "background_color" {
+					texture = "gfx/interface/icons/gui_icons/low_mana_density.dds"
+					tintcolor = { 0.6 0.6 0.6 1 }
+				}
+				blockoverride "font_size" {
+					using = fontsize_small
+				}
+			}
+
+			gate_mana_density = {
+				blockoverride "visibility" {
+					visible = "[And(
+								GreaterThanOrEqualTo_CFixedPoint(State.AccessStateRegion.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('medium_mana_density_threshhold')),
+								LessThan_CFixedPoint(State.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('high_mana_density_threshhold'))
+							)]"
+				}
+				blockoverride "background_color" {
+					texture = "gfx/interface/icons/gui_icons/mid_mana_density.dds"
+					tintcolor = { 0.6 0.6 0.6 1 }
+				}
+				blockoverride "font_size" {
+					using = fontsize_small
+				}
+			}
+
+			gate_mana_density = {
+				blockoverride "visibility" {
+					visible = "[GreaterThanOrEqualTo_CFixedPoint(State.AccessStateRegion.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('high_mana_density_threshhold'))]"
+				}
+				blockoverride "background_color" {
+					texture = "gfx/interface/icons/gui_icons/high_mana_density.dds"
+					tintcolor = { 0.6 0.6 0.6 1 }
+				}
+				blockoverride "font_size" {
+					using = fontsize_small
+				}
 			}
 		}
 	}

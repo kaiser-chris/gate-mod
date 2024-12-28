@@ -19,7 +19,7 @@ types gate_types {
     type gate_main_panel = default_block_window {
         name = "gate_main_panel"
 
-        visible = "[GetVariableSystem.HasValue('com_open_window', 'gate_button_main')]"
+        visible = "[Or(GetVariableSystem.HasValue('com_open_window', 'gate_button_main'), GetVariableSystem.HasValue('com_alert_action', Localize('gg_panel_main_action')))]"
 
         blockoverride "animation_state_block" {
             state = {
@@ -52,10 +52,12 @@ types gate_types {
 
         blockoverride "header_back_button" {
             onclick = "[GetVariableSystem.Clear('com_open_window')]"
+            onclick = "[GetVariableSystem.Clear('com_alert_action')]"
         }
 
         blockoverride "header_close_button" {
             onclick = "[GetVariableSystem.Clear('com_open_window')]"
+            onclick = "[GetVariableSystem.Clear('com_alert_action')]"
         }
 
         blockoverride "fixed_top"

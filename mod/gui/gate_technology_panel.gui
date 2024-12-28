@@ -19,7 +19,7 @@ types gate_types {
     type gate_technology_panel = default_block_window {
         name = "gate_technology_panel"
 
-        visible = "[Or(GetVariableSystem.HasValue('com_open_window', 'gate_button_technology'), GetVariableSystem.HasValue('com_alert_action', 'Magic Technology Panel'))]"
+        visible = "[Or(GetVariableSystem.HasValue('com_open_window', 'gate_button_technology'), GetVariableSystem.HasValue('com_alert_action', Localize('gg_panel_technology_action')))]"
 
         blockoverride "animation_state_block" {
             state = {

@@ -1,5 +1,54 @@
 types gate_shared {
 
+    type gate_mana_density = widget {
+        size = { 100% 100% }
+        tooltip = gg_map_marker_mana_density_tooltip
+        using = clickthrough_blocker
+
+        block "visibility" {}
+
+        textbox = {
+            using = frame_small
+            size = { 100% 100% }
+            text = gg_map_marker_mana_density
+            align = center
+            default_format = "#header"
+            block "font_size" {}
+        }
+
+        background = {
+            using = frame_small_mask
+            spriteType = CorneredTiled
+            spriteborder = { 48 48 }
+            texture_density = 2
+            block "background_color" {
+                texture = "gfx/interface/tooltip/tooltip_bg.dds"
+            }
+
+            modify_texture = {
+                texture = "gfx/interface/backgrounds/default_bg_shading.dds"
+                spriteType = Corneredstretched
+                spriteborder = { 0 0 }
+                blend_mode = overlay
+            }
+            modify_texture = {
+                texture = "gfx/interface/textures/velvet_texture.dds"
+                spriteType = Corneredtiled
+                texture_density = 2
+                spriteborder = { 0 0 }
+                blend_mode = overlay
+            }
+            modify_texture = {
+                texture = "gfx/interface/textures/cloth_texture.dds"
+                spriteType = Corneredtiled
+                texture_density = 2
+                spriteborder = { 0 0 }
+                blend_mode = overlay
+                alpha = 0.15
+            }
+        }
+    }
+
     # Green progressbar that indicates an upward trend
     type changed_value_increased_progressbar_horizontal_green = progressbar_properties {
         blockoverride "progressbar" {
