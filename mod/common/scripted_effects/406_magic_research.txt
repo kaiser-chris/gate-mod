@@ -119,3 +119,23 @@ cleanup_research_institutes = {
 		remove_building = building_magic_research_institute
 	}
 }
+
+make_magic_researcher_busy = {
+	var:magic_researcher = {
+		set_character_busy_and_immortal = yes
+		set_variable = {
+			name = com_opinion
+			value = flag:character_opinion_magic_researcher_busy
+		}
+	}
+}
+
+make_magic_researcher_not_busy = {
+	var:magic_researcher = {
+		set_character_busy_and_immortal = no
+		set_variable = {
+			name = com_opinion
+			value = flag:character_opinion_magic_researcher
+		}
+	}
+}

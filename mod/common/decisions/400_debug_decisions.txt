@@ -177,3 +177,29 @@ debug_mana_saturation_decision = {
 		base = 0
 	}
 }
+
+debug_toggle_busy_researcher_decision = {
+	is_shown = {
+		has_global_variable = com_debug
+		is_player = yes
+		has_variable = magic_researcher
+	}
+
+	when_taken = {
+		if = {
+			limit = {
+				var:magic_researcher = {
+					is_busy = no
+				}
+			}
+			make_magic_researcher_busy = yes
+		}
+		else = {
+			make_magic_researcher_not_busy = yes
+		}
+	}
+
+	ai_chance = {
+		base = 0
+	}
+}

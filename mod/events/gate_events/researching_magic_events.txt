@@ -1,10 +1,10 @@
 ﻿namespace = researching_magic
 
-# Monster Attack Investigation
+# Monster Horde Investigation
 researching_magic.1 = {
 	type = country_event
 	dlc = dlc_magic_gate
-	placement = scope:monster_attack_state
+	placement = scope:monster_horde_state
 	
 	title = researching_magic_discovery.t
 	desc = researching_magic_discovery.d
@@ -36,6 +36,7 @@ researching_magic.1 = {
 				}
 			}
 		}
+		make_magic_researcher_not_busy = yes
 	}
 }
 
@@ -75,6 +76,7 @@ researching_magic.2 = {
 				}
 			}
 		}
+		make_magic_researcher_not_busy = yes
 	}
 }
 
@@ -82,7 +84,7 @@ researching_magic.2 = {
 researching_magic.3 = {
 	type = country_event
 	dlc = dlc_magic_gate
-	placement = scope:monster_attack_state
+	placement = scope:monster_horde_state
 
 	title = researching_magic.3.t
 	desc = researching_magic.3.d

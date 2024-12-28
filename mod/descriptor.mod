@@ -1,9 +1,5 @@
 version="1.0"
-tags={
-    "Alternative History"
-    "Cultures And Religions"
-    "New Nations"
-}
+tags={}
 name="Magic Gate"
-supported_version="1.7.*"
+supported_version="1.8.*"
 picture="thumbnail.png"

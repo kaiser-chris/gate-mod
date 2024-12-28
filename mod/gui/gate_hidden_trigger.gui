@@ -9,7 +9,6 @@ widget = {
 
     # Support custom shortcuts
     flowcontainer = {
-        size = { 0 0 }
         button = {
             enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
             input_action = "input_ctrl_g"
@@ -24,7 +23,6 @@ widget = {
 
     # Trigger completed magic research
     flowcontainer = {
-        size = { 0 0 }
         parentanchor = bottom|left
         gate_technologies_production = {
             blockoverride "container_spacing" {}

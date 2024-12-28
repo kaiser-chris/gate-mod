@@ -18,6 +18,17 @@
 				value = 0
 			}
 		}
+		else_if = {
+			limit = {
+				var:magic_researcher = {
+					is_busy = yes
+				}
+			}
+			add = {
+				desc = pb_gate_researching_magic_missing_institute
+				value = 0
+			}
+		}
 		else = {
 			# Base Value
 			add = {

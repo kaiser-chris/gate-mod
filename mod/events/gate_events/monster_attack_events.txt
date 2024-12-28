@@ -3,7 +3,7 @@
 monster_attack.1 = {
     type = country_event
     dlc = dlc_magic_gate
-    placement = scope:monster_attack_state
+    placement = scope:monster_horde_state
 
     title = monster_attack.1.t
     desc = monster_attack.1.d
@@ -38,12 +38,12 @@ monster_attack.1 = {
             months = 3
         }
         random_state = {
-            save_scope_as = monster_attack_state
+            save_scope_as = monster_horde_state
             owner = {
-                save_scope_as = monster_attack_country
+                save_scope_as = monster_horde_country
             }
         }
-        scope:monster_attack_country = {
+        scope:monster_horde_country = {
             random_military_formation = {
                 save_scope_as = monster_attack_formation
             }
@@ -74,7 +74,7 @@ monster_attack.1 = {
             set_character_busy_and_immortal = yes
         }
         trigger = {
-            owner = scope:monster_attack_country
+            owner = scope:monster_horde_country
         }
     }
     option = {
@@ -87,7 +87,7 @@ monster_attack.1 = {
             }
         }
         trigger = {
-            owner = scope:monster_attack_country
+            owner = scope:monster_horde_country
         }
     }
 
@@ -95,7 +95,7 @@ monster_attack.1 = {
     option = {
         name = monster_attack.1.a2
         change_relations = {
-            country = scope:monster_attack_country
+            country = scope:monster_horde_country
             value = 20
         }
         add_modifier = {
@@ -106,14 +106,14 @@ monster_attack.1 = {
         remove_global_variable = monster_attack_in_progress
         trigger = {
             NOT = {
-                owner = scope:monster_attack_country
+                owner = scope:monster_horde_country
             }
         }
     }
     option = {
         name = monster_attack.1.b2
         change_relations = {
-            country = scope:monster_attack_country
+            country = scope:monster_horde_country
             value = 10
         }
         add_modifier = {
@@ -127,11 +127,12 @@ monster_attack.1 = {
                 months = 3
             }
         }
+        make_magic_researcher_busy = yes
         remove_global_variable = monster_attack_in_progress
         trigger = {
             has_journal_entry = je_researching_magic
             NOT = {
-                owner = scope:monster_attack_country
+                owner = scope:monster_horde_country
             }
         }
     }
@@ -139,14 +140,14 @@ monster_attack.1 = {
         name = monster_attack.1.c2
         default_option = yes
         change_relations = {
-            country = scope:monster_attack_country
+            country = scope:monster_horde_country
             value = -30
         }
         remove_global_variable = monster_attack_in_progress
         change_infamy = 5
         trigger = {
             NOT = {
-                owner = scope:monster_attack_country
+                owner = scope:monster_horde_country
             }
         }
     }
@@ -155,7 +156,7 @@ monster_attack.1 = {
 monster_attack.2 = {
     type = country_event
     dlc = dlc_magic_gate
-    placement = scope:monster_attack_state
+    placement = scope:monster_horde_state
 
     event_image = {
         video = "southamerica_war_civilians"
@@ -170,7 +171,7 @@ monster_attack.2 = {
     option = {
         name = monster_attack.2.a
         default_option = yes
-        scope:monster_attack_state = {
+        scope:monster_horde_state = {
             state_region = {
                 add_devastation = 10
             }
@@ -188,7 +189,7 @@ monster_attack.2 = {
 
     option = {
         name = monster_attack.2.b
-        scope:monster_attack_state = {
+        scope:monster_horde_state = {
             state_region = {
                 add_devastation = 10
             }
@@ -205,6 +206,7 @@ monster_attack.2 = {
             id = researching_magic.1
             months = 3
         }
+        make_magic_researcher_busy = yes
         remove_global_variable = monster_attack_in_progress
         trigger = {
             has_journal_entry = je_researching_magic
@@ -216,7 +218,7 @@ monster_attack.2 = {
 monster_attack.3 = {
     type = country_event
     dlc = dlc_magic_gate
-    placement = scope:monster_attack_state
+    placement = scope:monster_horde_state
 
     event_image = {
         video = "southamerica_war_civilians"
@@ -230,7 +232,7 @@ monster_attack.3 = {
 
     option = {
         name = monster_attack.3.a
-        scope:monster_attack_state = {
+        scope:monster_horde_state = {
             state_region = {
                 add_devastation = 80
             }
@@ -240,7 +242,7 @@ monster_attack.3 = {
             every_neighbouring_state = {
                 limit = {
                     NOT = {
-                        this = scope:monster_attack_state
+                        this = scope:monster_horde_state
                     }
                 }
                 state_region = {
@@ -286,7 +288,7 @@ monster_attack.4 = {
 monster_attack.5 = {
     type = country_event
     dlc = dlc_magic_gate
-    placement = scope:monster_attack_state
+    placement = scope:monster_horde_state
 
     title = monster_attack.5.t
     desc = monster_attack.5.d
@@ -312,16 +314,8 @@ monster_attack.5 = {
     }
 
     immediate = {
-        set_global_variable = monster_attack_happened
-        add_journal_entry = {
-            type = je_monster_congress
-        }
-        set_global_variable = {
-            name = monster_attack_in_progress
-            months = 3
-        }
         random_scope_state = {
-            save_scope_as = monster_attack_state
+            save_scope_as = monster_horde_state
         }
     }
 
@@ -329,12 +323,14 @@ monster_attack.5 = {
     option = {
         name = monster_attack.5.a1
         default_option = yes
-        scope:monster_attack_state = {
-            add_devastation = 5
+        scope:monster_horde_state = {
+            state_region = {
+                start_harvest_condition = monster_attack
+            }
         }
         set_variable = {
             name = monster_attack_grace_period
-            months = 6
+            months = 9
         }
         trigger = {
             NOT = {
@@ -344,17 +340,20 @@ monster_attack.5 = {
     }
     option = {
         name = monster_attack.5.b1
-        scope:monster_attack_state = {
-            add_devastation = 5
+        scope:monster_horde_state = {
+            state_region = {
+                start_harvest_condition = monster_attack
+            }
         }
         set_variable = {
             name = monster_attack_grace_period
-            months = 6
+            months = 9
         }
         trigger_event = {
             id = researching_magic.1
             months = 3
         }
+        make_magic_researcher_busy = yes
         trigger = {
             AND = {
                 NOT = {
@@ -369,12 +368,14 @@ monster_attack.5 = {
     option = {
         name = monster_attack.5.a2
         default_option = yes
-        scope:monster_attack_state = {
-            add_devastation = 10
+        scope:monster_horde_state = {
+            state_region = {
+                start_harvest_condition = monster_attack
+            }
         }
         set_variable = {
             name = monster_attack_grace_period
-            months = 3
+            months = 6
         }
         trigger = {
             has_law = law_type:law_no_organized_monster_hunting

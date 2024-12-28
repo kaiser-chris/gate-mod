@@ -1,0 +1,43 @@
+﻿calculate_mana_saturation = {
+	set_global_variable = {
+		name = global_mana_saturation
+		value = {
+			value = global_var:global_mana_density_cache
+			divide = global_var:state_count
+		}
+	}
+}
+
+propogate_mana_density = {
+	every_state_region = {
+		limit = {
+			has_variable = mana_density
+			var:mana_density >= 30
+		}
+		every_neighbouring_state = {
+			limit = {
+				state_region = {
+					has_variable = mana_density
+					var:mana_density < 100
+				}
+			}
+			state_region = {
+				# Propagation
+				change_variable = {
+					name = mana_density
+					add = 1
+				}
+				clamp_variable = {
+					name = mana_density
+					max = 100
+					min = 0
+				}
+			}
+			# Cache update
+			change_global_variable = {
+				name = global_mana_density_cache
+				add = 1
+			}
+		}
+	}
+}
