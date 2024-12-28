@@ -1,13 +1,16 @@
 ﻿pb_gate_german_integration = {
- 	name = "pb_gate_german_integration_name"
- 	desc = "pb_gate_german_integration_desc"
+ 	name = pb_gate_german_integration_name
+ 	desc = pb_gate_german_integration_desc
 
 	default = yes
 
 	# Integration will take approximately 8,3 years
 	# This can be modified by events
  	monthly_progress = {
-		add = 1
+		add = {
+			value = 1
+			desc = pb_gate_german_integration_support_progess
+		}
  	}
 
  	start_value = 0
@@ -16,35 +19,49 @@
 }
 
 pb_gate_german_integration_support = {
-	name = "pb_gate_german_integration_support_name"
-	desc = "pb_gate_german_integration_support_desc_pro"
-	second_desc = "pb_gate_german_integration_support_desc_anti"
+	name = pb_gate_german_integration_support_name
+	desc = pb_gate_german_integration_support_desc_pro
+	second_desc = pb_gate_german_integration_support_desc_anti
 
-	# Every month check whether there are radicals or loyalists
-	# Worst case = -3
-	# Best case = +3
+	# Every month check whether there is turmoil in incorporated states
 	monthly_progress = {
-		every_scope_pop = {
+		if = {
 			limit = {
-				OR = {
-					culture = cu:south_german
-					culture = cu:north_german
-					culture = cu:alemannic
+				any_scope_state = {
+					is_incorporated = yes
+					turmoil <= 0.2
 				}
-				pop_radical_fraction >= large_radicals
 			}
-			subtract = 1
+			add = {
+				value = 0
+				desc = pb_gate_german_integration_support_state_peace
+				every_scope_state = {
+					limit = {
+						is_incorporated = yes
+						turmoil <= 0.2
+					}
+					add = 1
+				}
+			}
 		}
-		every_scope_pop = {
+		if = {
 			limit = {
-				OR = {
-					culture = cu:south_german
-					culture = cu:north_german
-					culture = cu:alemannic
+				any_scope_state = {
+					is_incorporated = yes
+					turmoil > 0.2
 				}
-				pop_loyalist_fraction >= large_radicals
 			}
-			add = 1
+			subtract = {
+				value = 0
+				desc = pb_gate_german_integration_support_state_turmoil
+				every_scope_state = {
+					limit = {
+						is_incorporated = yes
+						turmoil > 0.2
+					}
+					add = 1
+				}
+			}
 		}
 	}
 

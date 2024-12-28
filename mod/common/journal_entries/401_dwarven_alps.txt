@@ -97,8 +97,9 @@ je_dwarven_integration_of_germans = {
 
 	on_monthly_pulse = {
 		random_events = {
-			50 = 0
+			chance_of_no_event = 80
 			1 = dwarven_german_integration.1
+			1 = dwarven_german_integration.2
 		}
 	}
 
