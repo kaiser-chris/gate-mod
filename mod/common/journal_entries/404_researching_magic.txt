@@ -88,6 +88,7 @@
 				name = com_opinion
 				value = flag:character_opinion_magic_researcher_missing_institute
 			}
+			place_character_in_void = 10000
 		}
 		set_variable = {
 			name = magic_researcher
@@ -102,16 +103,21 @@
 	}
 
 	on_complete = {
+		learn_magic = yes
 		hidden_effect = {
 			remove_modifier = focus_researching_magic_cost_modifier
 		}
-		learn_magic = yes
 	}
 
 	on_invalid = {
 		hidden_effect = {
 			remove_modifier = focus_researching_magic_cost_modifier
+		}
+	}
 
+	on_fail = {
+		hidden_effect = {
+			remove_modifier = focus_researching_magic_cost_modifier
 		}
 	}
 

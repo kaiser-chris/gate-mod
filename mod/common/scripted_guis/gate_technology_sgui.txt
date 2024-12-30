@@ -139,6 +139,7 @@ sgui_gate_has_researcher = {
 	is_valid = {
 		AND = {
 			has_variable = magic_researcher
+			exists = var:magic_researcher
 			var:magic_researcher = {
 				is_character_alive = yes
 			}

@@ -10,10 +10,14 @@
 	
 	character_ideologies = {
 		ideology_moderate
+		ideology_magic_hopeful
 	}
 
 	enable = {
-		always = yes
+		OR = {
+			is_magic_country = yes
+			is_gate_planet_country = yes
+		}
 	}
 
 	traits = {
@@ -24,7 +28,7 @@
 
 	on_enable = {
 		ig:ig_magic_users = {
-			# Orcish Supremacy
+			# Orkish Supremacy
 			if = {
 				limit = {
 					owner = { c:GOK ?= this }
@@ -32,6 +36,8 @@
 				set_ig_trait = ig_trait:ig_trait_slave_masters
 				set_ig_trait = ig_trait:ig_trait_military_support
 				set_ig_trait = ig_trait:ig_trait_annoyed_masters
+				add_ideology = ideology_orcish_slavery
+				add_ideology = ideology_orchish_patriarchal
 			}
 			# Arcturian Dominion
 			else_if = {
@@ -130,7 +136,7 @@
 				literacy_rate >= 0.50
 			}
 			add = {
-				desc = "POP_LITERACY"
+				desc = POP_LITERACY
 				value = literacy_rate
 				multiply = 20
 			}

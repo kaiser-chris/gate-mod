@@ -3,13 +3,12 @@
 		NOT = {
 			is_magic_country = yes
 		}
+		NOT = {
+			is_country_type = decentralized
+		}
 	}
 
 	possible = {
-		OR = {
-			is_country_type = recognized
-			is_country_type = colonial
-		}
 		is_diplomatic_play_committed_participant = no
 		is_at_war = no
 		is_magic_country = no
@@ -41,13 +40,15 @@
 research_magic_decision = {
 	is_shown = {
 		is_magic_country = no
+		NOT = {
+			has_journal_entry = je_researching_magic
+		}
+		NOT = {
+			is_country_type = decentralized
+		}
 	}
 
 	possible = {
-		OR = {
-			is_country_type = recognized
-			is_country_type = colonial
-		}
 		is_magic_country = no
 		hidden_trigger = {
 			NOT = { has_journal_entry = je_researching_magic }
@@ -70,6 +71,9 @@ magic_researcher_decision = {
 		OR = {
 			is_magic_country = yes
 			has_journal_entry = je_researching_magic
+		}
+		NOT = {
+			is_country_type = decentralized
 		}
 	}
 
@@ -108,19 +112,24 @@ magic_researcher_decision = {
 				save_scope_as = magic_researcher
 			}
 		}
-		set_variable = {
-			name = magic_researcher
-			value = scope:magic_researcher
-		}
-		if = {
-			limit = {
-				has_journal_entry = je_researching_magic
+		hidden_effect = {
+			scope:magic_researcher = {
+				place_character_in_void = 10000
 			}
-			je:je_researching_magic = {
-				clear_variable_list = com_journal_characters
-				add_to_variable_list = {
-					name = com_journal_characters
-					target = scope:magic_researcher
+			set_variable = {
+				name = magic_researcher
+				value = scope:magic_researcher
+			}
+			if = {
+				limit = {
+					has_journal_entry = je_researching_magic
+				}
+				je:je_researching_magic = {
+					clear_variable_list = com_journal_characters
+					add_to_variable_list = {
+						name = com_journal_characters
+						target = scope:magic_researcher
+					}
 				}
 			}
 		}

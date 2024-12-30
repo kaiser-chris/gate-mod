@@ -20,9 +20,25 @@
 		}
 		else_if = {
 			limit = {
-				NOT = {
-					has_variable = magic_researcher
+				OR = {
+					NOT = {
+						has_variable = magic_researcher
+					}
+					NOT = {
+						exists = var:magic_researcher
+					}
+					var:magic_researcher = {
+						is_character_alive = no
+					}
 				}
+			}
+			add = {
+				desc = pb_gate_researching_magic_researcher_dead
+				value = 0
+			}
+		}
+		else_if = {
+			limit = {
 				var:magic_researcher = {
 					is_busy = yes
 				}
