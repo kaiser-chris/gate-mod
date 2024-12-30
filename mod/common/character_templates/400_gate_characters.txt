@@ -1,5 +1,4 @@
 ﻿magic_researcher_template = {
-	interest_group = ig_intelligentsia
 	ideology = ideology_magic_hopeful
 
 	traits = {
@@ -7,7 +6,10 @@
 	}
 
 	on_created = {
-		# We don't want our researcher to die while on the job
-		set_character_immortal = yes
+		set_variable = is_magic_researcher
+		set_variable = {
+			name = com_opinion
+			value = flag:character_opinion_magic_researcher
+		}
 	}
 }

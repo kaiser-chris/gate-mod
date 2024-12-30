@@ -1,20 +1,16 @@
 ﻿gate_button_technology = {
 	scope = country
 
-	is_valid = {
-		is_magic_country = yes
-	}
-
 	# Cycle through tabs or close window
 	effect = {
 		cycle_tabs = {
-			tab_count = 3
+			tab_count = 4
 			tab_variable = gate_main_technology_active_tab
 		}
 	}
 }
 
-sgui_gate_technology_tab_production = {
+sgui_gate_technology_tab_researcher = {
 	scope = country
 
 	is_shown = {
@@ -32,7 +28,7 @@ sgui_gate_technology_tab_production = {
 	}
 }
 
-sgui_gate_technology_tab_military = {
+sgui_gate_technology_tab_production = {
 	scope = country
 
 	is_shown = {
@@ -40,6 +36,10 @@ sgui_gate_technology_tab_military = {
 			has_variable = gate_main_technology_active_tab
 			var:gate_main_technology_active_tab = 2
 		}
+	}
+
+	is_valid = {
+		is_magic_country = yes
 	}
 
 	effect = {
@@ -50,7 +50,7 @@ sgui_gate_technology_tab_military = {
 	}
 }
 
-sgui_gate_technology_tab_society = {
+sgui_gate_technology_tab_military = {
 	scope = country
 
 	is_shown = {
@@ -60,10 +60,36 @@ sgui_gate_technology_tab_society = {
 		}
 	}
 
+	is_valid = {
+		is_magic_country = yes
+	}
+
 	effect = {
 		set_variable = {
 			name = gate_main_technology_active_tab
 			value = 3
+		}
+	}
+}
+
+sgui_gate_technology_tab_society = {
+	scope = country
+
+	is_shown = {
+		AND = {
+			has_variable = gate_main_technology_active_tab
+			var:gate_main_technology_active_tab = 4
+		}
+	}
+
+	is_valid = {
+		is_magic_country = yes
+	}
+
+	effect = {
+		set_variable = {
+			name = gate_main_technology_active_tab
+			value = 4
 		}
 	}
 }
@@ -103,4 +129,19 @@ sgui_gate_window_cancel_research = {
 
 	confirm_title = gg_cancel_magic_research
 	confirm_text = gg_cancel_magic_research_text
+}
+
+# THIS = country
+# scope:technology = technology
+sgui_gate_has_researcher = {
+	scope = country
+
+	is_valid = {
+		AND = {
+			has_variable = magic_researcher
+			var:magic_researcher = {
+				is_character_alive = yes
+			}
+		}
+	}
 }

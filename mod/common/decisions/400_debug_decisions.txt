@@ -203,3 +203,27 @@ debug_toggle_busy_researcher_decision = {
 		base = 0
 	}
 }
+
+debug_kill_researcher_decision = {
+	is_shown = {
+		has_global_variable = com_debug
+		is_player = yes
+		AND = {
+			has_variable = magic_researcher
+			exists = var:magic_researcher
+			var:magic_researcher = {
+				is_character_alive = yes
+			}
+		}
+	}
+
+	when_taken = {
+		var:magic_researcher = {
+			kill_character = yes
+		}
+	}
+
+	ai_chance = {
+		base = 0
+	}
+}

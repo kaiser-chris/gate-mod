@@ -1,0 +1,3 @@
+﻿l_english:
+ gg_map_marker_mana_density: "[State.AccessStateRegion.MakeScope.Var('mana_density').GetValue|0]%"
+ gg_map_marker_mana_density_tooltip: "The [concept_mana_density] in [State.AccessStateRegion.GetName] is [State.AccessStateRegion.MakeScope.Var('mana_density').GetValue|0]%.\n\n#header Levels:#!\nUnder #v [TopScope.ScriptValue('medium_mana_density_threshhold')]%#! no [concept_magical_phenomena] occur\nBetween #v [TopScope.ScriptValue('medium_mana_density_threshhold')]%#! & #v [TopScope.ScriptValue('high_mana_density_threshhold')]%#! [concept_magical_phenomena] can happen\nStarting from #v [TopScope.ScriptValue('high_mana_density_threshhold')]%#! [concept_magical_phenomena] are common place"

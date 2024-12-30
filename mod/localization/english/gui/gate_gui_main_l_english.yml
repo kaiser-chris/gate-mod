@@ -1,0 +1,17 @@
+﻿l_english:
+# Button
+ gate_button_main: "gate_button_main"
+ gate_button_main_desc: "$gg_panel_main_title$"
+ gate_button_main_tooltip: "#header $gg_panel_main_title$#!\nShortcut: #V Magic#! (#V CTRL + G#!)"
+# Main Panel
+ gg_panel_main_action: "Magic Panel"
+ gg_tab_magic_statistics: "Statistics"
+ gg_tab_magic_countries: "Magic Countries"
+ gg_panel_main_title: "Magic"
+ gg_mana_saturation: "Mana Saturation"
+ gg_mana_saturation_statistic: "The current world wide [concept_mana_saturation] is currently [GetGlobalVariable('global_mana_saturation').GetValue|1]%"
+ gg_magic_countries: "Magic Countries"
+ gg_magic_countries_statistic: "Currently [GetDataModelSize(GetGlobalList('magic_countries'))] countries have access to [concept_magic_knowledge]."
+ gg_header_magic_state: "State of Magic in the World"
+ gg_header_magic_countries: "Magic Countries"
+ gg_magic_countries_relations_region: "#header [DiplomaticAction.GetName]#!\n@red_cross! Can only be done when you have [concept_interest] in their [concept_strategic_region]."

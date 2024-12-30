@@ -40,7 +40,8 @@ GLOBAL = {
 		variable = magic_countries
 
 		# Set Monster Hunting ideologies to
-		# existing interest groups
+		# existing interest groups for all
+		# magic countries
 		add_monster_hunting_ideologies = yes
 
 		# Add research institute to all magic
@@ -53,6 +54,18 @@ GLOBAL = {
 				building = building_magic_research_institute
 				level = 1
 			}
+		}
+
+		# Add magic researcher to all magic
+		# countries
+		create_character = {
+			template = magic_researcher_template
+			interest_group = ig_magic_users
+			save_scope_as = magic_researcher
+		}
+		set_variable = {
+			name = magic_researcher
+			value = scope:magic_researcher
 		}
 	}
 

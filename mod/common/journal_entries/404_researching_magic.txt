@@ -78,6 +78,7 @@
 
 	immediate = {
 		create_character = {
+			interest_group = ig_intelligentsia
 			template = magic_researcher_template
 			save_scope_as = magic_researcher
 		}
@@ -103,9 +104,6 @@
 	on_complete = {
 		hidden_effect = {
 			remove_modifier = focus_researching_magic_cost_modifier
-			var:magic_researcher = {
-				set_character_immortal = no
-			}
 		}
 		learn_magic = yes
 	}
@@ -113,9 +111,7 @@
 	on_invalid = {
 		hidden_effect = {
 			remove_modifier = focus_researching_magic_cost_modifier
-			var:magic_researcher = {
-				set_character_immortal = no
-			}
+
 		}
 	}
 

@@ -51,6 +51,7 @@ on_monthly_pulse_country = {
     on_actions = {
         on_monthly_calculate_magic_research
         on_monthly_trigger_monster_attack
+        on_monthly_cleanup_researcher
     }
 }
 
@@ -63,5 +64,34 @@ on_monthly_calculate_magic_research = {
 on_monthly_trigger_monster_attack = {
     effect = {
         trigger_monster_attack = yes
+    }
+}
+
+on_monthly_cleanup_researcher = {
+    effect = {
+        if = {
+            limit = {
+                has_variable = magic_researcher
+            }
+            if = {
+                limit = {
+                    var:magic_researcher = {
+                        is_character_alive = no
+                    }
+                }
+                if = {
+                    limit = {
+                        has_journal_entry = je_researching_magic
+                    }
+                    je:je_researching_magic = {
+                        remove_list_variable = {
+                            name = com_journal_characters
+                            target = var:magic_researcher
+                        }
+                    }
+                }
+                remove_variable = magic_researcher
+            }
+        }
     }
 }

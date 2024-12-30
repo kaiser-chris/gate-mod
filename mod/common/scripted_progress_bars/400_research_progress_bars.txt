@@ -20,12 +20,15 @@
 		}
 		else_if = {
 			limit = {
+				NOT = {
+					has_variable = magic_researcher
+				}
 				var:magic_researcher = {
 					is_busy = yes
 				}
 			}
 			add = {
-				desc = pb_gate_researching_magic_missing_institute
+				desc = pb_gate_researching_magic_researcher_busy
 				value = 0
 			}
 		}
