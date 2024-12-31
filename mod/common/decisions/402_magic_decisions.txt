@@ -59,6 +59,14 @@ research_magic_decision = {
 		add_journal_entry = {
 			type = je_researching_magic
 		}
+		trigger_event = {
+			id = researching_magic.4
+			weeks = 1
+		}
+		set_variable = {
+			name = actively_hiring_magic_researcher
+			weeks = 1
+		}
 	}
 
 	ai_chance = {
@@ -91,47 +99,23 @@ magic_researcher_decision = {
 					has_variable = magic_researcher
 				}
 			}
+			custom_tooltip = {
+				text = magic_researcher_decision_actively_searching_tooltip
+				NOT = {
+					has_variable = actively_hiring_magic_researcher
+				}
+			}
 		}
 	}
 
 	when_taken = {
-		if = {
-			limit = {
-				is_magic_country = yes
-			}
-			create_character = {
-				template = magic_researcher_template
-				interest_group = ig_magic_users
-				save_scope_as = magic_researcher
-			}
+		trigger_event = {
+			id = researching_magic.4
+			weeks = 1
 		}
-		else = {
-			create_character = {
-				template = magic_researcher_template
-				interest_group = ig_intelligentsia
-				save_scope_as = magic_researcher
-			}
-		}
-		hidden_effect = {
-			scope:magic_researcher = {
-				place_character_in_void = 10000
-			}
-			set_variable = {
-				name = magic_researcher
-				value = scope:magic_researcher
-			}
-			if = {
-				limit = {
-					has_journal_entry = je_researching_magic
-				}
-				je:je_researching_magic = {
-					clear_variable_list = com_journal_characters
-					add_to_variable_list = {
-						name = com_journal_characters
-						target = scope:magic_researcher
-					}
-				}
-			}
+		set_variable = {
+			name = actively_hiring_magic_researcher
+			weeks = 1
 		}
 	}
 

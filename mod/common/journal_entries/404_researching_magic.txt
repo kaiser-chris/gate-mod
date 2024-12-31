@@ -9,6 +9,14 @@
 	status_desc = {
 		first_valid = {
 			triggered_desc = {
+				desc = je_researching_magic_missing_researcher
+				trigger = {
+					NOT = {
+						has_variable = magic_researcher
+					}
+				}
+			}
+			triggered_desc = {
 				desc = je_researching_magic_missing_institute
 				trigger = {
 					NOT = {
@@ -72,32 +80,6 @@
 		trigger_if = {
 			hidden_trigger = {
 				is_magic_country = yes
-			}
-		}
-	}
-
-	immediate = {
-		create_character = {
-			interest_group = ig_intelligentsia
-			template = magic_researcher_template
-			save_scope_as = magic_researcher
-		}
-		# Our researcher complaining about the missing institute
-		scope:magic_researcher = {
-			set_variable = {
-				name = com_opinion
-				value = flag:character_opinion_magic_researcher_missing_institute
-			}
-			place_character_in_void = 10000
-		}
-		set_variable = {
-			name = magic_researcher
-			value = scope:magic_researcher
-		}
-		scope:journal_entry = {
-			add_to_variable_list = {
-				name = com_journal_characters
-				target = scope:magic_researcher
 			}
 		}
 	}
