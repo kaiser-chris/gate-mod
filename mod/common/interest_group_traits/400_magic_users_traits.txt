@@ -1,30 +1,46 @@
-﻿ig_trait_slave_masters = {
-	# TODO: Create icon for ig_trait_slave_masters
-	icon = "gfx/interface/icons/ig_trait_icons/propagandists.dds"
+﻿# Orkish Supremacy
+# = Magic Users traits
+ig_trait_slave_masters = {
+	icon = "gfx/interface/icons/ig_trait_icons/slave_masters.dds"
 	min_approval = loyal
 	
 	modifier = {
 		state_slaves_mortality_mult = -0.1
 	}
 }
-
-ig_trait_military_support = {
-	# TODO: Create icon for ig_trait_military_support
-	icon = "gfx/interface/icons/ig_trait_icons/avant_garde.dds"
-	min_approval = happy
+ig_trait_annoyed_masters = {
+	icon = "gfx/interface/icons/ig_trait_icons/annoyed_masters.dds"
+	max_approval = unhappy
 	
+	modifier = {
+		state_slaves_mortality_mult = 0.1
+	}
+}
+
+# General
+# = Magic Users traits
+ig_trait_patriotic_research = {
+	icon = "gfx/interface/icons/ig_trait_icons/patriotic_research.dds"
+	min_approval = loyal
+
+	modifier = {
+		country_magical_innovation_mult = 0.1
+	}
+}
+ig_trait_military_support = {
+	icon = "gfx/interface/icons/ig_trait_icons/military_support.dds"
+	min_approval = happy
+
 	modifier = {
 		unit_offense_mult = 0.05
 		unit_defense_mult = 0.05
 	}
 }
-
-ig_trait_annoyed_masters = {
-	# TODO: Create icon for ig_trait_annoyed_masters
-	icon = "gfx/interface/icons/ig_trait_icons/social_criticism.dds"
+ig_trait_hidden_research = {
+	icon = "gfx/interface/icons/ig_trait_icons/hidden_research.dds"
 	max_approval = unhappy
-	
+
 	modifier = {
-		state_slaves_mortality_mult = 0.1
+		country_magical_innovation_mult = -0.1
 	}
 }

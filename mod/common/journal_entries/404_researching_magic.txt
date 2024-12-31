@@ -9,6 +9,12 @@
 	status_desc = {
 		first_valid = {
 			triggered_desc = {
+				desc = je_researching_magic_hiring_researcher
+				trigger = {
+					has_variable = actively_hiring_magic_researcher
+				}
+			}
+			triggered_desc = {
 				desc = je_researching_magic_missing_researcher
 				trigger = {
 					NOT = {
