@@ -19,7 +19,7 @@ Below is a table with all currently open ToDos.
 
 | File | Line | ToDo |
 | ---- | ---- | ---- |
-| ./mod/common/buildings/400_gate_buildings.txt | 160 | # TODO: Create Production Methods for building_magic_research_institute |
+| ./mod/common/buildings/400_gate_buildings.txt | 159 | # TODO: Create Production Methods for building_magic_research_institute |
 | ./mod/common/cultures/400_elven.txt | 2 |  Define custom culture (Currently copy of german) |
 | ./mod/common/cultures/402_orcish.txt | 2 |  Define custom culture (Currently copy of dwarven) |
 | ./mod/common/history/buildings/400_dominion.txt | 17 |  Add GAD buildings in STATE_NORTH_ANGOLA |
@@ -35,12 +35,8 @@ Below is a table with all currently open ToDos.
 | ./mod/common/history/countries/gns - new samadore.txt | 3 |  Define laws and technology for GNS |
 | ./mod/common/ideologies/401_gate_ideologies.txt | 2 | # TODO: Create icon for ideology_militarist |
 | ./mod/common/ideologies/401_gate_ideologies.txt | 52 | # TODO: Add wanted laws to ideology_magic_hopeful |
-| ./mod/common/interest_group_traits/400_magic_users_traits.txt | 12 | # TODO: Create icon for ig_trait_military_support |
-| ./mod/common/interest_group_traits/400_magic_users_traits.txt | 23 | # TODO: Create icon for ig_trait_annoyed_masters |
-| ./mod/common/interest_group_traits/400_magic_users_traits.txt | 2 | # TODO: Create icon for ig_trait_slave_masters |
-| ./mod/common/interest_groups/400_magic_users.txt | 238 | # TODO: Add leader in magic check |
-| ./mod/common/interest_groups/400_magic_users.txt | 41 | # TODO: Create elven dominion magic user ig traits |
-| ./mod/common/interest_groups/400_magic_users.txt | 47 | # TODO: Create elven magic user ig traits |
+| ./mod/common/interest_groups/400_magic_users.txt | 244 | # TODO: Add leader in magic check |
+| ./mod/common/interest_groups/400_magic_users.txt | 47 | # TODO: Create elven dominion magic user ig traits |
 | ./mod/common/pop_types/mages.txt | 2 | # TODO: Update mages pop icon |
 | ./mod/common/production_method_groups/401_gate_production_method_groups.txt | 24 |  Add proper production method to pmg_mana_extraction |
 | ./mod/common/production_method_groups/401_gate_production_method_groups.txt | 8 |  Add proper production method to pmg_magic_gate_exploitation |
@@ -68,7 +64,6 @@ Below is a table with all currently open ToDos.
 | ./mod/common/technology/technologies/403_magic_society.txt | 41 |  Add proper logo for formalized_magic |
 | ./mod/common/technology/technologies/403_magic_society.txt | 62 |  Add proper logo for magic_technology_integration |
 | ./mod/events/gate_events/dwarven_alps_events.txt | 52 |  Create custom video for event dwarven_alps.2 (Digging Dwarven Tunnels) |
-| ./mod/events/gate_events/mana_saturation_events.txt | 63 | # TODO: Add effect |
 | ./mod/localization/english/gate_countries_l_english.yml | 13 |  Add proper flavor text GNG_FLAVOR_TEXT (New Samadore) |
 | ./mod/localization/english/gate_diplomacy_l_english.yml | 14 |  Create demand_magic_knowledge_action_propose_name |
 | ./mod/localization/english/gate_diplomacy_l_english.yml | 15 |  Create demand_magic_knowledge_action_break_name |
