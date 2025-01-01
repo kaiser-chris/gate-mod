@@ -100,35 +100,22 @@ sgui_gate_window_execute_research = {
 	scope = country
 
 	effect = {
-		set_variable = {
-			name = magic_research
-			value = scope:technology
+		change_variable = {
+			name = magic_innovation
+			subtract = scope:cost
 		}
-		set_variable = {
-			name = magic_research_progress
-			value = 0
+		clamp_variable = {
+			name = magic_innovation
+			min = 0
+			max = global_var:magic_innovation_bank_max
 		}
 	}
 
 	is_valid = {
-		AND = {
-			NOT = { has_variable = magic_research }
-			NOT = { has_technology_researched = scope:technology }
+		NOT = {
+			has_technology_researched = scope:technology
 		}
 	}
-}
-
-# THIS = country
-# scope:technology = technology
-sgui_gate_window_cancel_research = {
-	scope = country
-
-	effect = {
-		remove_magic_research = yes
-	}
-
-	confirm_title = gg_cancel_magic_research
-	confirm_text = gg_cancel_magic_research_text
 }
 
 # THIS = country

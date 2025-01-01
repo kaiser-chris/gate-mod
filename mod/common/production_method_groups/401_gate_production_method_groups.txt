@@ -111,3 +111,15 @@ pmg_druid_groove = {
 		pm_industrial_magic_seed
 	}
 }
+
+pmg_magic_researcher = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_no_researcher
+		pm_novice_researcher
+		pm_experienced_researcher
+		pm_archmage_researcher
+	}
+}

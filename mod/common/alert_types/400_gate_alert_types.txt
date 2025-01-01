@@ -3,19 +3,14 @@
 	texture = gfx/interface/icons/alert_icons/has_no_magic_research.dds
 
 	valid = {
-		AND = {
-			is_magic_country = yes
-			NOT = {
-				has_variable = magic_research
-			}
-		}
+		var:magic_innovation >= global_var:magic_innovation_bank_max
 	}
 
 	type = alert
 
 	alert_group = gate_alerts
 
-	color = green
+	color = red
 }
 
 has_not_started_research_of_magic_alert = {

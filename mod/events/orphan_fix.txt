@@ -22,7 +22,7 @@ orphan_fix.1 = {
 		if = {
 			limit = {
 				global_var:global_mana_saturation < 0
-				var:weekly_magic_innovation < 0
+				var:monthly_magic_innovation < 0
 				flag:character_opinion_magic_researcher = yes
 				flag:character_opinion_magic_researcher_missing_institute = yes
 				flag:character_opinion_magic_researcher_busy = yes

@@ -2,6 +2,12 @@
 	#TODO: Find proper logo for pm_basic_mage_tower
 	texture = "gfx/interface/icons/production_method_icons/ownership_academics.dds"
 
+	country_modifiers = {
+		workforce_scaled = {
+			country_magical_innovation_add = 20
+		}
+	}
+
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_mana_add = 10

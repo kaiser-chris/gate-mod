@@ -6,10 +6,22 @@
 	}
 
 	on_created = {
+		place_character_in_void = 10000
 		set_variable = is_magic_researcher
 		set_variable = {
 			name = com_opinion
 			value = flag:character_opinion_magic_researcher
+		}
+		set_variable = {
+			name = magic_experience
+			value = { 0 20 }
+		}
+		home_country = {
+			set_variable = {
+				name = magic_researcher
+				value = root
+			}
+			reset_research_institute_pm = yes
 		}
 	}
 }

@@ -3,110 +3,24 @@
 		limit = {
 			is_magic_country = yes
 		}
-		# Mage Gate Innovation
-		set_variable = {
-			name = weekly_magic_innovation_magic_gate
-			value = {
-				value = 0
-				every_scope_building = {
-					limit = {
-						is_building_type = building_gate
-					}
-					add = 10
-				}
-			}
-		}
-
-		# Mage Tower Innovation
-		set_variable = {
-			name = weekly_magic_innovation_mage_tower
-			value = {
-				value = 0
-				every_scope_building = {
-					limit = {
-						is_building_type = building_mage_tower
-					}
-					add = 5
-				}
-			}
-		}
-
-		# Magic Academy Innovation
-		set_variable = {
-			name = weekly_magic_innovation_magic_academy
-			value = {
-				value = 0
-				every_scope_building = {
-					limit = {
-						is_building_type = building_magic_academy
-					}
-					add = 20
-				}
-			}
-		}
-
-		# University Innovation
-		set_variable = {
-			name = weekly_magic_innovation_university
-			value = {
-				value = 0
-				every_scope_building = {
-					limit = {
-						is_building_type = building_university
-					}
-					if = {
-						limit = {
-							has_active_production_method = pm_university_simple_magic_research
-						}
-						add = {
-							value = 2
-							multiply = level
-						}
-					}
-					else_if = {
-						limit = {
-							has_active_production_method = pm_university_advanced_magic_research
-						}
-						add = {
-							value = 4
-							multiply = level
-						}
-					}
-				}
-			}
-		}
 
 		# Total Innovation
 		set_variable = {
-			name = weekly_magic_innovation
-			value = {
-				value = global_var:weekly_magic_innovation_base
-				add = var:weekly_magic_innovation_magic_gate
-				add = var:weekly_magic_innovation_mage_tower
-				add = var:weekly_magic_innovation_magic_academy
-				add = var:weekly_magic_innovation_university
-			}
+			name = monthly_magic_innovation
+			value = modifier:country_magical_innovation_add
 		}
 
-		if = {
-			limit = {
-				has_variable = magic_research
-				has_variable = magic_research_progress
-			}
-			change_variable = {
-				name = magic_research_progress
-				add = {
-					value = var:weekly_magic_innovation
-					multiply = 4
-				}
-			}
+		# Banking
+		change_variable = {
+			name = magic_innovation
+			add = modifier:country_magical_innovation_add
+		}
+
+		clamp_variable = {
+			name = magic_innovation
+			max = global_var:magic_innovation_bank_max
 		}
 	}
-}
-
-remove_magic_research = {
-	remove_variable = magic_research
-	remove_variable = magic_research_progress
 }
 
 # Research Institutes can only exist in capital states
@@ -117,6 +31,57 @@ cleanup_research_institutes = {
 			has_building = building_magic_research_institute
 		}
 		remove_building = building_magic_research_institute
+	}
+}
+
+reset_research_institute_pm = {
+	if = {
+		limit = {
+			capital = {
+				has_building = building_magic_research_institute
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_variable = magic_researcher
+				}
+			}
+			activate_production_method = {
+				building_type = building_magic_research_institute
+				production_method = pm_no_researcher
+			}
+		}
+		else_if = {
+			limit = {
+				var:magic_researcher = {
+					has_variable = magic_experience
+					var:magic_experience >= character_master_threshhold
+				}
+			}
+			activate_production_method = {
+				building_type = building_magic_research_institute
+				production_method = pm_archmage_researcher
+			}
+		}
+		else_if = {
+			limit = {
+				var:magic_researcher = {
+					has_variable = magic_experience
+					var:magic_experience >= character_experienced_threshhold
+				}
+			}
+			activate_production_method = {
+				building_type = building_magic_research_institute
+				production_method = pm_experienced_researcher
+			}
+		}
+		else = {
+			activate_production_method = {
+				building_type = building_magic_research_institute
+				production_method = pm_novice_researcher
+			}
+		}
 	}
 }
 
@@ -136,6 +101,59 @@ make_magic_researcher_not_busy = {
 		set_variable = {
 			name = com_opinion
 			value = flag:character_opinion_magic_researcher
+		}
+	}
+}
+
+cleanup_researchers = {
+	if = {
+		limit = {
+			has_variable = magic_researcher
+			NOT = {
+				exists = var:magic_researcher
+			}
+		}
+		if = {
+			limit = {
+				has_journal_entry = je_researching_magic
+			}
+			je:je_researching_magic = {
+				clear_variable_list = com_journal_characters
+			}
+		}
+		activate_production_method = {
+			building_type = building_magic_research_institute
+			production_method = pm_no_researcher
+		}
+		remove_variable = magic_researcher
+	}
+	else_if = {
+		limit = {
+			has_variable = magic_researcher
+			exists = var:magic_researcher
+		}
+		if = {
+			limit = {
+				var:magic_researcher = {
+					is_character_alive = no
+				}
+			}
+			if = {
+				limit = {
+					has_journal_entry = je_researching_magic
+				}
+				je:je_researching_magic = {
+					remove_list_variable = {
+						name = com_journal_characters
+						target = var:magic_researcher
+					}
+				}
+			}
+			activate_production_method = {
+				building_type = building_magic_research_institute
+				production_method = pm_no_researcher
+			}
+			remove_variable = magic_researcher
 		}
 	}
 }

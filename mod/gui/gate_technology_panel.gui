@@ -205,8 +205,48 @@ types gate_types {
                 }
             }
 
-            current_magic_research = {
-                visible = "[Not(GetScriptedGui('sgui_gate_technology_tab_researcher').IsShown(GuiScope.SetRoot(Country.MakeScope).End))]"
+            flowcontainer = {
+                direction = vertical
+                default_header = {
+                    blockoverride "text" {
+                        text = gg_header_magic_innovation
+                    }
+                }
+                flowcontainer = {
+                    direction = vertical
+                    margin = { 15 0 }
+                    textbox = {
+                        margin = { 0 10 }
+                        minimumsize = { @panel_width_minus_30 -1 }
+                        text = gg_magic_innovation_total
+                        autoresize = yes
+                        align = left
+                        using = fontsize_large
+                    }
+
+                    divider_light = {
+                        size = { @panel_width_minus_30 2 }
+                    }
+
+                    flowcontainer = {
+                        margin = { 0 10 }
+                        direction = vertical
+                        textbox = {
+                            text = gg_monthly_magic_innovation
+                            autoresize = yes
+                            align = left
+                        }
+                    }
+
+                    divider_decorative = {
+                        size = { @panel_width_minus_30 2 }
+                        alpha = 0.7
+                    }
+
+                    widget = {
+                        size = { 10 10 }
+                    }
+                }
             }
         }
 
@@ -217,7 +257,6 @@ types gate_types {
                 using = default_list_position
                 direction = vertical
                 margin_top = 10
-
 
                 default_header = {
                     blockoverride "text" {
@@ -566,15 +605,6 @@ types gate_types {
                 magic_technology_tooltip = {}
             }
 
-            # Technology done
-            # Only triggers when open
-            # Is triggered through hidden UI
-            # See: gate_research_trigger
-            state = {
-                trigger_when = "[And3(Country.MakeScope.Var('magic_research').IsSet, ObjectsEqual(Country.MakeScope.Var('magic_research').GetTechnology.MakeScope, Technology.MakeScope), GreaterThanOrEqualTo_CFixedPoint(Country.MakeScope.Var('magic_research_progress').GetValue, Technology.GetCost(Country.Self)))]"
-                on_finish = "[ScriptedGui.Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('technology', Technology.MakeScope).End)]"
-            }
-
             using = technology_confirm_button_sound
 
             block "button_style" {
@@ -582,11 +612,21 @@ types gate_types {
             }
 
             block "onclick" {
-                onclick = "[GetScriptedGui('sgui_gate_window_execute_research').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('technology', Technology.MakeScope).End)]"
+                onclick = "[GetScriptedGui('sgui_gate_window_execute_research').Execute(GuiScope
+                                .SetRoot(Country.MakeScope)
+                                .AddScope('technology', Technology.MakeScope)
+                                .AddScope('cost', MakeScopeValue(Technology.GetCost(Country.Self)))
+                                .End
+                            )]"
+                onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('technology', Technology.MakeScope).End)]"
             }
 
             block "enabled" {
-                enabled = "[And(ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End), GetScriptedGui('sgui_gate_window_execute_research').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('technology', Technology.MakeScope).End))]"
+                enabled = "[And3(
+                                ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End),
+                                GetScriptedGui('sgui_gate_window_execute_research').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('technology', Technology.MakeScope).End),
+                                GreaterThanOrEqualTo_CFixedPoint(Country.MakeScope.Var('magic_innovation').GetValue, Technology.GetCost(Country.Self))
+                            )]"
             }
 
             block "background" {}
@@ -698,50 +738,6 @@ types gate_types {
 
         blockoverride "type" {
             text = "TOOLTIP_TYPE_TECHNOLOGY"
-        }
-    }
-
-    type magic_innovation_tooltip = FancyTooltipWidgetType {
-        blockoverride "name" {
-            raw_text = "[concept_magic_innovation]"
-        }
-
-        blockoverride "icon_texture" {
-            texture = "gfx/interface/icons/generic_icons/innovation.dds"
-        }
-
-        blockoverride "type" {
-            visible = no
-        }
-
-        blockoverride "text" {
-            text = gg_magic_innovation_tooltip
-        }
-
-        blockoverride "tooltip_content_after" {
-            custom_tooltip_textbox = {
-                text = "[Concatenate('    ', Localize('gg_magic_innovation_base'))]"
-            }
-            custom_tooltip_textbox = {
-                visible = "[GreaterThan_CFixedPoint(Country.MakeScope.Var('weekly_magic_innovation_magic_gate').GetValue, '(CFixedPoint)0')]"
-                text = "[Concatenate('    ', Localize('gg_magic_innovation_magic_gate_tooltip'))]"
-            }
-            custom_tooltip_textbox = {
-                visible = "[GreaterThan_CFixedPoint(Country.MakeScope.Var('weekly_magic_innovation_mage_tower').GetValue, '(CFixedPoint)0')]"
-                text = "[Concatenate('    ', Localize('gg_magic_innovation_mage_tower_tooltip'))]"
-            }
-            custom_tooltip_textbox = {
-                visible = "[GreaterThan_CFixedPoint(Country.MakeScope.Var('weekly_magic_innovation_magic_academy').GetValue, '(CFixedPoint)0')]"
-                text = "[Concatenate('    ', Localize('gg_magic_innovation_magic_academy_tooltip'))]"
-            }
-            custom_tooltip_textbox = {
-                visible = "[GreaterThan_CFixedPoint(Country.MakeScope.Var('weekly_magic_innovation_university').GetValue, '(CFixedPoint)0')]"
-                text = "[Concatenate('    ', Localize('gg_magic_innovation_university_tooltip'))]"
-            }
-            custom_tooltip_textbox = {
-                margin_top = 10
-                text = gg_magic_innovation_warning_tooltip
-            }
         }
     }
 
@@ -871,95 +867,6 @@ types gate_types {
         }
     }
 
-    type current_magic_research = flowcontainer {
-        direction = vertical
-        spacing = 5
-        margin_top = 10
-        margin_bottom = 10
-
-        default_header_2texts = {
-            blockoverride "text1" {
-                text = gg_header_active_research
-            }
-            blockoverride "text2" {
-                raw_text = "#variable @magic_innovation![Country.MakeScope.Var('weekly_magic_innovation').GetValue|0+=]#!"
-
-                # Explanation Tooltip
-                tooltipwidget = {
-                    magic_innovation_tooltip = {}
-                }
-            }
-        }
-
-        gate_technologies_production = {
-            blockoverride "container_spacing" {}
-            blockoverride "enabled" {
-                enabled = yes
-            }
-            blockoverride "onclick" {
-                onclick = "[GetScriptedGui('sgui_gate_window_cancel_research').Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
-            }
-            blockoverride "visibility" {
-                visible = "[And(Country.MakeScope.Var('magic_research').IsSet, ObjectsEqual(Country.MakeScope.Var('magic_research').GetTechnology.MakeScope, Technology.MakeScope))]"
-            }
-        }
-        gate_technologies_military = {
-            blockoverride "container_spacing" {}
-            blockoverride "enabled" {
-                enabled = yes
-            }
-            blockoverride "onclick" {
-                onclick = "[GetScriptedGui('sgui_gate_window_cancel_research').Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
-            }
-            blockoverride "visibility" {
-                visible = "[And(Country.MakeScope.Var('magic_research').IsSet, ObjectsEqual(Country.MakeScope.Var('magic_research').GetTechnology.MakeScope, Technology.MakeScope))]"
-            }
-        }
-        gate_technologies_society = {
-            blockoverride "container_spacing" {}
-            blockoverride "enabled" {
-                enabled = yes
-            }
-            blockoverride "onclick" {
-                onclick = "[GetScriptedGui('sgui_gate_window_cancel_research').Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
-            }
-            blockoverride "visibility" {
-                visible = "[And(Country.MakeScope.Var('magic_research').IsSet, ObjectsEqual(Country.MakeScope.Var('magic_research').GetTechnology.MakeScope, Technology.MakeScope))]"
-            }
-        }
-
-        textbox = {
-            visible = "[Not(Country.MakeScope.Var('magic_research').IsSet)]"
-            text = gg_technology_no_research
-            autoresize = yes
-            align = center|nobaseline
-            using = fontsize_large
-            parentanchor = top|hcenter
-            margin_bottom = 0
-            margin_top = 25
-            alpha = 0.5
-            minimumsize = { @panel_width -1 }
-        }
-
-        textbox = {
-            visible = "[Not(Country.MakeScope.Var('magic_research').IsSet)]"
-            text = gg_technology_no_research_blink
-            autoresize = yes
-            align = center|nobaseline
-            using = fontsize_xxl
-            using = look_at_me_text_animation
-            parentanchor = top|hcenter
-            margin_bottom = 35
-            margin_top = 0
-            minimumsize = { @panel_width -1 }
-        }
-
-        divider_light = {
-            size = { @panel_width 2 }
-            alpha = 0.5
-        }
-    }
-
     type gate_building_details = flowcontainer {
         direction = vertical
         using = default_list_position
@@ -1011,6 +918,7 @@ types gate_types {
             }
 
             vbox = {
+                margin = { 0 20 }
                 ### DOWNSIZE / EXPAND
                 building_level_controls = {
                     blockoverride "controller_size" {
@@ -1031,6 +939,12 @@ types gate_types {
                             min = 0
                             max = 1
                         }
+                    }
+                }
+
+                building_progressbars = {
+                    blockoverride "progressbar_size" {
+                        size = { 200 26 }
                     }
                 }
             }

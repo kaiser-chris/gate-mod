@@ -81,47 +81,6 @@ on_monthly_trigger_monster_attack = {
 
 on_monthly_cleanup_researcher = {
     effect = {
-        if = {
-            limit = {
-                has_variable = magic_researcher
-                NOT = {
-                    exists = var:magic_researcher
-                }
-            }
-            if = {
-                limit = {
-                    has_journal_entry = je_researching_magic
-                }
-                je:je_researching_magic = {
-                    clear_variable_list = com_journal_characters
-                }
-            }
-            remove_variable = magic_researcher
-        }
-        else_if = {
-            limit = {
-                has_variable = magic_researcher
-                exists = var:magic_researcher
-            }
-            if = {
-                limit = {
-                    var:magic_researcher = {
-                        is_character_alive = no
-                    }
-                }
-                if = {
-                    limit = {
-                        has_journal_entry = je_researching_magic
-                    }
-                    je:je_researching_magic = {
-                        remove_list_variable = {
-                            name = com_journal_characters
-                            target = var:magic_researcher
-                        }
-                    }
-                }
-                remove_variable = magic_researcher
-            }
-        }
+        cleanup_researchers = yes
     }
 }

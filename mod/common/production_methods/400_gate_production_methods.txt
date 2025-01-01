@@ -1,6 +1,12 @@
 ﻿pm_gate_closed = {
 	texture = "gfx/interface/icons/production_method_icons/gate_barred.dds"
 
+	country_modifiers = {
+		level_scaled = {
+			country_magical_innovation_add = 50
+		}
+	}
+
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
@@ -25,6 +31,7 @@ pm_gate_immigration_dwarves = {
 	country_modifiers = {
 		level_scaled = {
 			country_monthly_dwarven_immigration_add = 10000
+			country_magical_innovation_add = 50
 		}
 	}
 
@@ -52,6 +59,7 @@ pm_gate_mass_immigration_dwarves = {
 	country_modifiers = {
 		level_scaled = {
 			country_monthly_dwarven_immigration_add = 30000
+			country_magical_innovation_add = 50
 		}
 	}
 

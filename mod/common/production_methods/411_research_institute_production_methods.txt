@@ -1,0 +1,88 @@
+﻿pm_no_researcher = {
+	texture = "gfx/interface/icons/production_method_icons/no_researcher.dds"
+	is_default = yes
+
+	unlocking_production_methods = {
+		pm_no_researcher
+	}
+
+	is_hidden_when_unavailable = yes
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_magical_innovation_add = 20
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_mages_add = 1000
+		}
+	}
+}
+
+pm_novice_researcher = {
+	texture = "gfx/interface/icons/production_method_icons/magic_researcher.dds"
+
+	unlocking_production_methods = {
+		pm_novice_researcher
+	}
+
+	is_hidden_when_unavailable = yes
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_magical_innovation_add = 80
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_mages_add = 1000
+		}
+	}
+}
+
+pm_experienced_researcher = {
+	texture = "gfx/interface/icons/production_method_icons/magic_researcher.dds"
+
+	unlocking_production_methods = {
+		pm_experienced_researcher
+	}
+
+	is_hidden_when_unavailable = yes
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_magical_innovation_add = 140
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_mages_add = 1000
+		}
+	}
+}
+
+pm_archmage_researcher = {
+	texture = "gfx/interface/icons/production_method_icons/magic_researcher.dds"
+
+	unlocking_production_methods = {
+		pm_archmage_researcher
+	}
+
+	is_hidden_when_unavailable = yes
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_magical_innovation_add = 200
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_mages_add = 1000
+		}
+	}
+}

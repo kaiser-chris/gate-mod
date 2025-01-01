@@ -11,7 +11,10 @@ researching_magic.1 = {
 	flavor = researching_magic.1.f
 
 	trigger = {
-		has_journal_entry = je_researching_magic
+		OR = {
+			has_journal_entry = je_researching_magic
+			is_magic_country = yes
+		}
 	}
 
 	event_image = {
@@ -37,6 +40,27 @@ researching_magic.1 = {
 			}
 		}
 		make_magic_researcher_not_busy = yes
+		trigger = {
+			has_journal_entry = je_researching_magic
+		}
+	}
+
+	option = {
+		name = researching_magic.1.a
+		default_option = yes
+		custom_tooltip = {
+			text = researching_magic_discovery.experience
+			var:magic_researcher = {
+				change_variable = {
+					name = magic_experience
+					add = { 10 20 }
+				}
+			}
+		}
+		make_magic_researcher_not_busy = yes
+		trigger = {
+			is_magic_country = yes
+		}
 	}
 }
 
@@ -51,7 +75,10 @@ researching_magic.2 = {
 	flavor = researching_magic.2.f
 
 	trigger = {
-		has_journal_entry = je_researching_magic
+		OR = {
+			has_journal_entry = je_researching_magic
+			is_magic_country = yes
+		}
 	}
 
 	event_image = {
@@ -77,6 +104,24 @@ researching_magic.2 = {
 			}
 		}
 		make_magic_researcher_not_busy = yes
+	}
+
+	option = {
+		name = researching_magic.1.a
+		default_option = yes
+		custom_tooltip = {
+			text = researching_magic_discovery.experience
+			var:magic_researcher = {
+				change_variable = {
+					name = magic_experience
+					add = { 10 20 }
+				}
+			}
+		}
+		make_magic_researcher_not_busy = yes
+		trigger = {
+			is_magic_country = yes
+		}
 	}
 }
 
@@ -126,6 +171,13 @@ researching_magic.4 = {
 	desc = researching_magic.4.d
 	flavor = researching_magic.4.f
 
+	trigger = {
+		OR = {
+			has_journal_entry = je_researching_magic
+			is_magic_country = yes
+		}
+	}
+
 	event_image = {
 		video = "europenorthamerica_capitalists_meeting"
 	}
@@ -155,17 +207,6 @@ researching_magic.4 = {
 				interest_group = ig_intelligentsia
 				save_scope_as = magic_researcher
 			}
-		}
-		scope:magic_researcher = {
-			set_variable = {
-				name = com_opinion
-				value = flag:character_opinion_magic_researcher
-			}
-			place_character_in_void = 10000
-		}
-		set_variable = {
-			name = magic_researcher
-			value = scope:magic_researcher
 		}
 		if = {
 			limit = {
