@@ -25,3 +25,12 @@ mage_artillery = {
 		add_technology_researched = mage_artillery
 	}
 }
+
+ritual_magic = {
+	is_valid = {
+		has_technology_researched = mage_artillery
+	}
+	effect = {
+		add_technology_researched = ritual_magic
+	}
+}

@@ -527,6 +527,13 @@ types gate_types {
                 datacontext = "[GetScriptedGui('mage_artillery')]"
             }
         }
+
+        gate_technology = {
+            blockoverride "context" {
+                datacontext = "[GetTechnology('ritual_magic')]"
+                datacontext = "[GetScriptedGui('ritual_magic')]"
+            }
+        }
     }
 
     type gate_technologies_society = flowcontainer {
