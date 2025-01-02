@@ -10,6 +10,7 @@ orcish_portrait_pop_trigger = {
         culture = cu:orcish
     }
 }
+
 dwarven_portrait_trigger = {
     exists = scope:character
     scope:character = {
@@ -20,5 +21,36 @@ dwarven_portrait_pop_trigger = {
     exists = scope:pop
     scope:pop = {
         culture = cu:dwarven
+    }
+}
+
+gnomish_portrait_trigger = {
+    exists = scope:character
+    scope:character = {
+        has_culture = cu:gnomish
+    }
+}
+gnomish_court_portrait_trigger = {
+    exists = scope:character
+    scope:character = {
+        NOT = {
+            AND = {
+                exists = home_country
+                is_ruler = yes
+                home_country = {
+                    OR = {
+                        has_law = law_type:law_monarchy
+                        has_law = law_type:law_theocracy
+                    }
+                }
+            }
+        }
+        has_culture = cu:gnomish
+    }
+}
+gnomish_portrait_pop_trigger = {
+    exists = scope:pop
+    scope:pop = {
+        culture = cu:gnomish
     }
 }

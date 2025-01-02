@@ -48,4 +48,31 @@
             }
         }
     }
+
+    gnomish_race = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = outfits
+                template = no_outfit
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = gene_nudity
+                template = hide_nudity
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                OR = {
+                    gnomish_portrait_trigger = yes
+                    gnomish_portrait_pop_trigger = yes
+                }
+            }
+        }
+    }
 }
