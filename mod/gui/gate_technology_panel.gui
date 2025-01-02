@@ -554,6 +554,13 @@ types gate_types {
 
         gate_technology = {
             blockoverride "context" {
+                datacontext = "[GetTechnology('orc_clan_support')]"
+                datacontext = "[GetScriptedGui('orc_clan_support')]"
+            }
+        }
+
+        gate_technology = {
+            blockoverride "context" {
                 datacontext = "[GetTechnology('formalized_magic')]"
                 datacontext = "[GetScriptedGui('formalized_magic')]"
             }
@@ -768,18 +775,38 @@ types gate_types {
                 icon = {
                     texture = "gfx/interface/backgrounds/round_frame_dec.dds"
                     parentanchor = top|right
-                    size = { 60 60 }
+                    size = { 70 70 }
                     alwaystransparent = yes
 
                     # Technology Icon
                     flowcontainer = {
+                        direction = vertical
                         margin = { 10 10 }
                         icon = {
                             texture = "[Technology.GetTexture]"
                             block "iconsize" {
-                                size = { 40 40 }
+                                size = { 50 50 }
+                            }
+
+                            ### ERA
+                            widget = {
+                                size = { 25 25 }
+                                position = { 0 18 }
+                                parentanchor = hcenter|bottom
+
+                                icon = {
+                                    size = { 100% 100% }
+                                    texture = "gfx/interface/backgrounds/round_button_bg.dds"
+                                }
+
+                                textbox = {
+                                    text = "TECHNOLOGY_TYPE_DESCRIPTION"
+                                    align = center|nobaseline
+                                    parentanchor = center
+                                }
                             }
                         }
+
                     }
                 }
             }

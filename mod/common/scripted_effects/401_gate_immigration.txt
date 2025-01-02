@@ -1,30 +1,34 @@
 ﻿add_gate_immigration = {
-	every_state = {
+	if = {
 		limit = {
-			is_production_method_active = {
-				building_type = building_gate
-				production_method = pm_gate_immigration_dwarves
+			has_technology_researched = dwarven_gate_immigration
+		}
+		every_scope_state = {
+			limit = {
+				has_building = building_gate
+				modifier:state_monthly_dwarven_immigration_add > 0
+			}
+			# Create pop throws errors after game start
+			# but still works
+			if = {
+				limit = {
+					modifier:state_monthly_dwarven_immigration_add = 10000
+				}
+				create_pop = {
+					culture = dwarven
+					size = 10000
+				}
+			}
+			else_if = {
+				limit = {
+					modifier:state_monthly_dwarven_immigration_add = 30000
+				}
+				create_pop = {
+					culture = dwarven
+					size = 30000
+				}
 			}
 		}
-		# Create pop throws errors after game start
-		# but still works
-		create_pop = {
-			culture = dwarven
-			size = 10000
-		}
 	}
-	every_state = {
-		limit = {
-			is_production_method_active = {
-				building_type = building_gate
-				production_method = pm_gate_mass_immigration_dwarves
-			}
-		}
-		# Create pop throws errors after game start
-		# but still works
-		create_pop = {
-			culture = dwarven
-			size = 30000
-		}
-	}
+
 }

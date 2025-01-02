@@ -11,6 +11,21 @@ dwarven_gate_immigration = {
 	}
 }
 
+orc_clan_support = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/gate_orc.dds"
+	category = society
+	can_research = no
+
+	modifier = {
+		country_orc_soldiers_qualification_growth_add = 1
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
 #TODO: Implement gate_expeditions technology
 gate_expeditions = {
 	era = era_1
@@ -38,8 +53,7 @@ magic_understanding_society = {
 
 formalized_magic = {
 	era = era_2
-	#TODO: Add proper logo for formalized_magic
-	texture = "gfx/interface/icons/invention_icons/magic_understanding.dds"
+	texture = "gfx/interface/icons/invention_icons/formalized_magic.dds"
 	category = society
 	can_research = no
 

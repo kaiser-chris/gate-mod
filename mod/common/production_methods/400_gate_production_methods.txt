@@ -28,9 +28,14 @@ pm_gate_immigration_dwarves = {
 		dwarven_gate_immigration
 	}
 
+	state_modifiers = {
+		level_scaled = {
+			state_monthly_dwarven_immigration_add = 10000
+		}
+	}
+
 	country_modifiers = {
 		level_scaled = {
-			country_monthly_dwarven_immigration_add = 10000
 			country_magical_innovation_add = 50
 		}
 	}
@@ -40,6 +45,7 @@ pm_gate_immigration_dwarves = {
 			# output goods
 			goods_output_mana_add = 20
 		}
+
 		level_scaled = {
 			building_employment_mages_add = 100
 			building_employment_bureaucrats_add = 1000
@@ -56,9 +62,14 @@ pm_gate_mass_immigration_dwarves = {
 		dwarven_gate_immigration
 	}
 
+	state_modifiers = {
+		level_scaled = {
+			state_monthly_dwarven_immigration_add = 30000
+		}
+	}
+
 	country_modifiers = {
 		level_scaled = {
-			country_monthly_dwarven_immigration_add = 30000
 			country_magical_innovation_add = 50
 		}
 	}
@@ -71,6 +82,40 @@ pm_gate_mass_immigration_dwarves = {
 		level_scaled = {
 			building_employment_mages_add = 100
 			building_employment_bureaucrats_add = 2000
+		}
+	}
+}
+
+pm_gate_support_orcs = {
+	texture = "gfx/interface/icons/production_method_icons/gate_military_support.dds"
+
+	is_hidden_when_unavailable = yes
+
+	unlocking_technologies = {
+		orc_clan_support
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			unit_offense_mult = 0.2
+			unit_defense_mult = 0.2
+			unit_morale_loss_mult = -0.1
+		}
+
+		level_scaled = {
+			country_magical_innovation_add = 50
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_output_mana_add = 20
+		}
+		level_scaled = {
+			building_employment_mages_add = 100
+			building_employment_bureaucrats_add = 500
+			building_employment_officers_add = 500
 		}
 	}
 }

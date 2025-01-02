@@ -2,7 +2,6 @@
 on_monthly_pulse = {
     on_actions = {
         on_monthly_calculate_mana_saturation
-        on_monthly_add_gate_immigration
         on_monthly_add_mage_towers
         on_monthly_statistics
         on_monthly_cleanup
@@ -13,12 +12,6 @@ on_monthly_pulse = {
 on_monthly_calculate_mana_saturation = {
     effect = {
         calculate_mana_saturation = yes
-    }
-}
-
-on_monthly_add_gate_immigration = {
-    effect = {
-        add_gate_immigration = yes
     }
 }
 
@@ -64,6 +57,13 @@ on_monthly_pulse_country = {
         on_monthly_calculate_magic_research
         on_monthly_trigger_monster_attack
         on_monthly_cleanup_researcher
+        on_monthly_add_gate_immigration
+    }
+}
+
+on_monthly_add_gate_immigration = {
+    effect = {
+        add_gate_immigration = yes
     }
 }
 
