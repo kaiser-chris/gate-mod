@@ -1,0 +1,22 @@
+﻿CHARACTERS = {
+	c:GNS = {
+		create_character = {
+			# TODO: Add gnomish name here
+			first_name = "Krimok"
+			last_name = "of_Topax"
+			historical = no
+			ruler = yes
+			age = 34
+			culture = cu:gnomish
+			interest_group = ig_intelligentsia
+			ig_leader = yes
+			ideology = ideology_humanitarian
+			traits = {
+				charismatic
+			}
+			on_created = {
+				set_variable = is_married
+			}
+		}
+	}
+}

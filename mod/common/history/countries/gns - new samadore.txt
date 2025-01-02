@@ -2,13 +2,29 @@
 	c:GNS = {
 		#TODO: Define laws and technology for GNS
 
-		effect_starting_technology_tier_3_tech = yes
-		effect_starting_politics_conservative = yes
-		effect_starting_pop_literacy_very_high = yes
-		effect_starting_pop_wealth_high = yes
+		effect_starting_technology_tier_4_tech = yes
+		effect_starting_politics_liberal = yes
+		effect_starting_pop_literacy_high = yes
+		effect_starting_pop_wealth_medium = yes
 
 		# Technology
 		learn_magic = yes
+		add_technology_researched = gnomish_support # Gnomish specific
+		add_technology_researched = magic_farming
+		add_technology_researched = mana_extraction
+		add_technology_researched = academia
+		add_technology_researched = urban_planning
+		add_technology_researched = law_enforcement
 
+		activate_law = law_type:law_gnomish_harmony
+		activate_law = law_type:law_freedom_of_conscience
+		activate_law = law_type:law_land_based_taxation
+		activate_law = law_type:law_right_of_assembly
+		activate_law = law_type:law_women_own_property
+
+		set_ruling_interest_groups = {
+			ig_intelligentsia
+			ig_magic_users
+		}
 	}
 }

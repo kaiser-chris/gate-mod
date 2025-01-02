@@ -575,6 +575,13 @@ types gate_types {
 
         gate_technology = {
             blockoverride "context" {
+                datacontext = "[GetTechnology('gnomish_support')]"
+                datacontext = "[GetScriptedGui('gnomish_support')]"
+            }
+        }
+
+        gate_technology = {
+            blockoverride "context" {
                 datacontext = "[GetTechnology('formalized_magic')]"
                 datacontext = "[GetScriptedGui('formalized_magic')]"
             }

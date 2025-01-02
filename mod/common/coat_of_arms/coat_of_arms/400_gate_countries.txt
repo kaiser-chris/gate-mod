@@ -37,3 +37,28 @@ GOK = {
 		}
 	}
 }
+
+GNS = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb{ 82 170 138 }
+	color2 = rgb{ 56 134 89 }
+	color3 = rgb{ 58 174 216 }
+	color4 = rgb{ 207 153 95 }
+
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = color2
+		instance = {
+			scale = { 1.5 1.5 }
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_hand_flame.dds"
+		color1 = color3
+		color2 = color4
+		instance = {
+			scale = { 0.8 0.8 }
+		}
+	}
+}
