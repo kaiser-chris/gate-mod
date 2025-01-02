@@ -80,6 +80,21 @@ magic_dwarf_murk_railways = {
 	}
 }
 
+mana_cores = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/mana_core.dds"
+	category = production
+	can_research = no
+
+	unlocking_technologies = {
+		mana_extraction
+	}
+
+	ai_weight = {
+		value = 2 # Important tech for everyone
+	}
+}
+
 magic_golems = {
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/magic_golems.dds"
@@ -87,7 +102,7 @@ magic_golems = {
 	can_research = no
 
 	unlocking_technologies = {
-		mana_extraction
+		mana_cores
 	}
 
 	ai_weight = {

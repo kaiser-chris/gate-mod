@@ -464,6 +464,13 @@ types gate_types {
 
         gate_technology = {
             blockoverride "context" {
+                datacontext = "[GetTechnology('mana_cores')]"
+                datacontext = "[GetScriptedGui('mana_cores')]"
+            }
+        }
+
+        gate_technology = {
+            blockoverride "context" {
                 datacontext = "[GetTechnology('magic_golems')]"
                 datacontext = "[GetScriptedGui('magic_golems')]"
             }

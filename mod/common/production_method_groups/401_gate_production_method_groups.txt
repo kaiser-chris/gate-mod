@@ -62,6 +62,16 @@ pmg_university_magic_research = {
 	}
 }
 
+pmg_core_workshop_production = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	# TODO: Create pms for pmg_core_workshop_production
+	production_methods = {
+		pm_dummy
+	}
+}
+
 pmg_golem_workshop_production = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive

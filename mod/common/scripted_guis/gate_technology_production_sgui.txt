@@ -19,15 +19,6 @@ mana_extraction = {
 	}
 }
 
-magic_golems = {
-	is_valid = {
-		has_technology_researched = magic_understanding_production
-	}
-	effect = {
-		add_technology_researched = magic_golems
-	}
-}
-
 magic_farming = {
 	is_valid = {
 		has_technology_researched = magic_understanding_production
@@ -58,6 +49,24 @@ magic_dwarf_murk_railways = {
 	}
 	effect = {
 		add_technology_researched = magic_dwarf_murk_railways
+	}
+}
+
+mana_cores = {
+	is_valid = {
+		has_technology_researched = mana_extraction
+	}
+	effect = {
+		add_technology_researched = mana_cores
+	}
+}
+
+magic_golems = {
+	is_valid = {
+		has_technology_researched = mana_cores
+	}
+	effect = {
+		add_technology_researched = magic_golems
 	}
 }
 

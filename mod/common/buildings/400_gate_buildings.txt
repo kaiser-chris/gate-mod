@@ -182,6 +182,30 @@ building_mage_tower = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_magic.dds"
 }
 
+building_core_workshop = {
+	building_group = bg_light_industry
+	icon = "gfx/interface/icons/building_icons/building_golem_workshop.dds"
+	city_type = city
+
+	potential = {
+		owner = {
+			is_magic_country = yes
+		}
+	}
+
+	unlocking_technologies = {
+		mana_cores
+	}
+
+	production_method_groups = {
+		pmg_core_workshop_production
+	}
+
+	required_construction = construction_cost_high
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_magic.dds"
+}
+
 building_golem_workshop = {
 	building_group = bg_light_industry
 	icon = "gfx/interface/icons/building_icons/building_golem_workshop.dds"
