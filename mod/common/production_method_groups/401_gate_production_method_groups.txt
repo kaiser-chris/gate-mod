@@ -62,13 +62,14 @@ pmg_university_magic_research = {
 	}
 }
 
-pmg_core_workshop_production = {
+pmg_mana_core_workshop_production = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
 
-	# TODO: Create pms for pmg_core_workshop_production
 	production_methods = {
-		pm_dummy
+		pm_mana_core_workshop_no_production
+		pm_mana_core_workshop_artisan_production
+		pm_mana_core_workshop_formalized_production
 	}
 }
 
@@ -77,6 +78,7 @@ pmg_golem_workshop_production = {
 	ai_selection = most_productive
 
 	production_methods = {
+		pm_golem_workshop_no_production
 		pm_golem_workshop_artisan_production
 		pm_golem_workshop_steam_production
 		pm_golem_workshop_electric_production

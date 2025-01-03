@@ -1,5 +1,17 @@
 ﻿### ERA 1
 
+magic_understanding_society = {
+	# Unlocks all magic society research
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/magic_understanding.dds"
+	category = society
+	can_research = no
+
+	ai_weight = {
+		value = 1
+	}
+}
+
 dwarven_gate_immigration = {
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/gate_migration.dds"
@@ -61,18 +73,6 @@ gate_expeditions = {
 	}
 }
 
-magic_understanding_society = {
-	# Unlocks all magic society research
-	era = era_1
-	texture = "gfx/interface/icons/invention_icons/magic_understanding.dds"
-	category = society
-	can_research = no
-
-	ai_weight = {
-		value = 1
-	}
-}
-
 formalized_magic = {
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/formalized_magic.dds"
@@ -89,7 +89,7 @@ formalized_magic = {
 	}
 
 	ai_weight = {
-		value = 1.5 # Important in general
+		value = 2 # Important for everyone
 	}
 }
 
@@ -101,7 +101,8 @@ magic_science = {
 	can_research = no
 
 	modifier = {
-		country_weekly_innovation_add = 10
+		country_weekly_innovation_add = 5
+		country_magical_innovation_add = 10
 	}
 
 	unlocking_technologies = {

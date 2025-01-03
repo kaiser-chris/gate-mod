@@ -1,0 +1,60 @@
+﻿pm_mana_core_workshop_no_production = {
+	texture = "gfx/interface/icons/production_method_icons/no_cores.dds"
+
+	replacement_if_valid = pm_mana_core_workshop_artisan_production
+
+	is_default = yes
+}
+
+pm_mana_core_workshop_artisan_production = {
+	texture = "gfx/interface/icons/production_method_icons/artisan_cores.dds"
+
+	unlocking_technologies = {
+		mana_cores
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_paper_add = 10
+			goods_input_glass_add = 20
+			goods_input_lead_add = 5
+			goods_input_mana_add = 10
+
+			# output goods
+			goods_output_mana_core_add = 20
+		}
+
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_mages_add = 3000
+			building_employment_laborers_add = 1000
+		}
+	}
+}
+
+pm_mana_core_workshop_formalized_production = {
+	texture = "gfx/interface/icons/production_method_icons/formalized_cores.dds"
+
+	unlocking_technologies = {
+		formalized_magic
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_glass_add = 20
+			goods_input_lead_add = 5
+			goods_input_mana_add = 20
+
+			# output goods
+			goods_output_mana_core_add = 40
+		}
+
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_mages_add = 2500
+			building_employment_laborers_add = 500
+		}
+	}
+}

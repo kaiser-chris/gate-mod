@@ -38,9 +38,7 @@ Below is a table with all currently open ToDos.
 | ./mod/common/ideologies/401_gate_ideologies.txt | 52 | # TODO: Add wanted laws to ideology_magic_hopeful |
 | ./mod/common/interest_groups/400_magic_users.txt | 244 | # TODO: Add leader in magic check |
 | ./mod/common/interest_groups/400_magic_users.txt | 47 | # TODO: Create elven dominion magic user ig traits |
-| ./mod/common/pop_types/mages.txt | 2 | # TODO: Update mages pop icon |
 | ./mod/common/production_method_groups/401_gate_production_method_groups.txt | 25 |  Add proper production method to pmg_mana_extraction |
-| ./mod/common/production_method_groups/401_gate_production_method_groups.txt | 69 | # TODO: Create pms for pmg_core_workshop_production |
 | ./mod/common/production_method_groups/401_gate_production_method_groups.txt | 8 |  Add proper production method to pmg_magic_gate_exploitation |
 | ./mod/common/production_methods/406_magic_academy_production_methods.txt | 100 |  Find proper logo for pm_university_simple_magic_research |
 | ./mod/common/production_methods/406_magic_academy_production_methods.txt | 127 |  Find proper logo for pm_university_advanced_magic_research |
@@ -48,8 +46,8 @@ Below is a table with all currently open ToDos.
 | ./mod/common/production_methods/406_magic_academy_production_methods.txt | 2 |  Find proper logo for pm_magic_academy_no_support |
 | ./mod/common/production_methods/406_magic_academy_production_methods.txt | 62 |  Find proper logo for pm_magic_academy_full_support |
 | ./mod/common/production_methods/406_magic_academy_production_methods.txt | 95 |  Find proper logo for pm_university_no_magic_research |
-| ./mod/common/technology/technologies/403_magic_society.txt | 51 |  Implement gate_expeditions technology |
-| ./mod/common/technology/technologies/403_magic_society.txt | 54 |  Add proper logo for gate_expeditions |
+| ./mod/common/technology/technologies/403_magic_society.txt | 63 |  Implement gate_expeditions technology |
+| ./mod/common/technology/technologies/403_magic_society.txt | 66 |  Add proper logo for gate_expeditions |
 | ./mod/common/technology/technologies/403_magic_society.txt | 98 |  Add proper logo for magic_technology_integration |
 | ./mod/events/gate_events/dwarven_alps_events.txt | 52 |  Create custom video for event dwarven_alps.2 (Digging Dwarven Tunnels) |
 | ./mod/localization/english/gate_countries_l_english.yml | 13 |  Add proper flavor text GNG_FLAVOR_TEXT (New Samadore) |

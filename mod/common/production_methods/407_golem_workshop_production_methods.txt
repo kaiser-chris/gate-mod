@@ -1,5 +1,17 @@
-﻿pm_golem_workshop_artisan_production = {
+﻿pm_golem_workshop_no_production = {
+	texture = "gfx/interface/icons/production_method_icons/no_golems.dds"
+
+	replacement_if_valid = pm_golem_workshop_artisan_production
+
+	is_default = yes
+}
+
+pm_golem_workshop_artisan_production = {
 	texture = "gfx/interface/icons/production_method_icons/normal_golems.dds"
+
+	unlocking_technologies = {
+		magic_golems
+	}
 
 	building_modifiers = {
 		workforce_scaled = {
