@@ -109,23 +109,7 @@ magic_golems = {
 	}
 }
 
-magic_and_steam = {
-	era = era_2
-	texture = "gfx/interface/icons/invention_icons/magic_and_steam.dds"
-	category = production
-	can_research = no
-
-	unlocking_technologies = {
-		atmospheric_engine
-		mana_extraction
-	}
-
-	ai_weight = {
-		value = 1
-	}
-}
-
-magic_steam_golems = {
+mechanical_golems = {
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/magic_steam_golems.dds"
 	category = production
@@ -133,24 +117,7 @@ magic_steam_golems = {
 
 	unlocking_technologies = {
 		magic_golems
-		magic_and_steam
-	}
-
-	ai_weight = {
-		value = 1
-	}
-}
-
-magic_and_electricity = {
-	era = era_3
-	#TODO: Add proper logo for magic_and_electricity
-	texture = "gfx/interface/icons/invention_icons/magic_understanding.dds"
-	category = production
-	can_research = no
-
-	unlocking_technologies = {
-		electrical_generation
-		magic_and_steam
+		atmospheric_engine
 	}
 
 	ai_weight = {
@@ -165,8 +132,8 @@ magic_electric_golems = {
 	can_research = no
 
 	unlocking_technologies = {
-		magic_steam_golems
-		magic_and_electricity
+		mechanical_golems
+		electrical_generation
 	}
 
 	ai_weight = {

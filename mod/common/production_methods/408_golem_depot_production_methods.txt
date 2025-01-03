@@ -1,24 +1,14 @@
-﻿pm_golem_depot_agriculture_none = {
-	#TODO: Create icon for pm_golem_depot_no_golems
-	texture = "gfx/interface/icons/production_method_icons/gate_barred.dds"
+﻿# Agriculture
+pm_golem_depot_agriculture_none = {
+	texture = "gfx/interface/icons/production_method_icons/no_golems.dds"
 }
 
-pm_golem_depot_mining_none = {
-	#TODO: Create icon for pm_golem_depot_no_golems
-	texture = "gfx/interface/icons/production_method_icons/gate_barred.dds"
-}
-
-pm_golem_depot_mining_normal_golems = {
-	#TODO: Create icon for pm_golem_depot_mining_normal_golems
-	texture = "gfx/interface/icons/production_method_icons/gate_mass_immigration.dds"
+pm_golem_depot_agriculture_normal_golems = {
+	texture = "gfx/interface/icons/production_method_icons/normal_golems.dds"
 
 	state_modifiers = {
 		workforce_scaled = {
-			building_coal_mine_throughput_add = 0.1
-			building_iron_mine_throughput_add = 0.1
-			building_gold_mine_throughput_add = 0.1
-			building_lead_mine_throughput_add = 0.1
-			building_sulfur_mine_throughput_add = 0.1
+			building_group_bg_agriculture_throughput_add = 0.1
 		}
 	}
 
@@ -30,6 +20,7 @@ pm_golem_depot_mining_normal_golems = {
 		workforce_scaled = {
 			# input goods
 			goods_input_golem_add = 20
+			goods_input_mana_core_add = 20
 		}
 
 		level_scaled = {
@@ -40,22 +31,17 @@ pm_golem_depot_mining_normal_golems = {
 	}
 }
 
-pm_golem_depot_mining_steam_golems = {
-	#TODO: Create icon for pm_golem_depot_mining_steam_golems
-	texture = "gfx/interface/icons/production_method_icons/gate_mass_immigration.dds"
+pm_golem_depot_agriculture_steam_golems = {
+	texture = "gfx/interface/icons/production_method_icons/mechanical_golems.dds"
 
 	state_modifiers = {
 		workforce_scaled = {
-			building_coal_mine_throughput_add = 0.2
-			building_iron_mine_throughput_add = 0.2
-			building_gold_mine_throughput_add = 0.2
-			building_lead_mine_throughput_add = 0.2
-			building_sulfur_mine_throughput_add = 0.2
+			building_group_bg_agriculture_throughput_add = 0.2
 		}
 	}
 
 	unlocking_technologies = {
-		magic_steam_golems
+		mechanical_golems
 	}
 
 	building_modifiers = {
@@ -64,6 +50,7 @@ pm_golem_depot_mining_steam_golems = {
 			goods_input_golem_add = 30
 			goods_input_engines_add = 10
 			goods_input_coal_add = 10
+			goods_input_mana_core_add = 30
 		}
 
 		level_scaled = {
@@ -74,17 +61,12 @@ pm_golem_depot_mining_steam_golems = {
 	}
 }
 
-pm_golem_depot_mining_electric_golems = {
-	#TODO: Create icon for pm_golem_depot_mining_electric_golems
-	texture = "gfx/interface/icons/production_method_icons/gate_mass_immigration.dds"
+pm_golem_depot_agriculture_electric_golems = {
+	texture = "gfx/interface/icons/production_method_icons/electrical_golems.dds"
 
 	state_modifiers = {
 		workforce_scaled = {
-			building_coal_mine_throughput_add = 0.4
-			building_iron_mine_throughput_add = 0.4
-			building_gold_mine_throughput_add = 0.4
-			building_lead_mine_throughput_add = 0.4
-			building_sulfur_mine_throughput_add = 0.4
+			building_group_bg_agriculture_throughput_add = 0.4
 		}
 	}
 
@@ -98,6 +80,102 @@ pm_golem_depot_mining_electric_golems = {
 			goods_input_golem_add = 50
 			goods_input_engines_add = 5
 			goods_input_electricity_add = 50
+			goods_input_mana_core_add = 50
+		}
+
+		level_scaled = {
+			building_employment_mages_add = 4000
+			building_employment_machinists_add = 6000
+			building_employment_clerks_add = 750
+		}
+	}
+
+	required_input_goods = electricity
+}
+
+# Mining
+pm_golem_depot_mining_none = {
+	texture = "gfx/interface/icons/production_method_icons/no_golems.dds"
+}
+
+pm_golem_depot_mining_normal_golems = {
+	texture = "gfx/interface/icons/production_method_icons/normal_golems.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_group_bg_mining_throughput_add = 0.1
+		}
+	}
+
+	unlocking_technologies = {
+		magic_golems
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_golem_add = 20
+			goods_input_mana_core_add = 20
+		}
+
+		level_scaled = {
+			building_employment_mages_add = 2000
+			building_employment_machinists_add = 2000
+			building_employment_clerks_add = 750
+		}
+	}
+}
+
+pm_golem_depot_mining_steam_golems = {
+	texture = "gfx/interface/icons/production_method_icons/mechanical_golems.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_group_bg_mining_throughput_add = 0.2
+		}
+	}
+
+	unlocking_technologies = {
+		mechanical_golems
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_golem_add = 30
+			goods_input_engines_add = 10
+			goods_input_coal_add = 10
+			goods_input_mana_core_add = 30
+		}
+
+		level_scaled = {
+			building_employment_mages_add = 3000
+			building_employment_machinists_add = 4000
+			building_employment_clerks_add = 750
+		}
+	}
+}
+
+pm_golem_depot_mining_electric_golems = {
+	texture = "gfx/interface/icons/production_method_icons/electrical_golems.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_group_bg_mining_throughput_add = 0.4
+		}
+	}
+
+	unlocking_technologies = {
+		magic_electric_golems
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_golem_add = 50
+			goods_input_engines_add = 5
+			goods_input_electricity_add = 50
+			goods_input_mana_core_add = 50
 		}
 
 		level_scaled = {

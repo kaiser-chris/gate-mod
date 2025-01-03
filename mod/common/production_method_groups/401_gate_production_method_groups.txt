@@ -23,9 +23,9 @@ pmg_mana_extraction = {
 
 	production_methods = {
 		#TODO: Add proper production method to pmg_mana_extraction
-        # Ritual extraction
         # Magitech extraction
 		pm_mage_mana_extraction
+		pm_mage_ritual_extraction
 	}
 }
 
@@ -101,6 +101,9 @@ pmg_golem_depot_agriculture = {
 
 	production_methods = {
 		pm_golem_depot_agriculture_none
+		pm_golem_depot_agriculture_normal_golems
+		pm_golem_depot_agriculture_steam_golems
+		pm_golem_depot_agriculture_electric_golems
 	}
 }
 

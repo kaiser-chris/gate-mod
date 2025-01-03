@@ -70,47 +70,23 @@ magic_golems = {
 	}
 }
 
-magic_and_steam = {
+mechanical_golems = {
 	is_valid = {
 		AND = {
-			has_technology_researched = mana_extraction
+			has_technology_researched = magic_golems
 			has_technology_researched = atmospheric_engine
 		}
 	}
 	effect = {
-		add_technology_researched = magic_and_steam
-	}
-}
-
-magic_steam_golems = {
-	is_valid = {
-		AND = {
-			has_technology_researched = magic_golems
-			has_technology_researched = magic_and_steam
-		}
-	}
-	effect = {
-		add_technology_researched = magic_steam_golems
-	}
-}
-
-magic_and_electricity = {
-	is_valid = {
-		AND = {
-			has_technology_researched = electrical_generation
-			has_technology_researched = magic_and_steam
-		}
-	}
-	effect = {
-		add_technology_researched = magic_and_electricity
+		add_technology_researched = mechanical_golems
 	}
 }
 
 magic_electric_golems = {
 	is_valid = {
 		AND = {
-			has_technology_researched = magic_and_electricity
-			has_technology_researched = magic_steam_golems
+			has_technology_researched = electrical_generation
+			has_technology_researched = mechanical_golems
 		}
 	}
 	effect = {

@@ -1,0 +1,190 @@
+# = From Base Game
+# Panel Constants
+@panel_width_minus_10 = 530
+@panel_width_minus_30 = 510
+@panel_width = 540
+@panel_width_half = 270
+@panel_width_plus_10 = 550
+@panel_width_plus_14 = 554
+@panel_width_plus_14_half = 277
+@panel_width_plus_20 = 560
+@panel_width_plus_30 = 570
+@panel_width_plus_70 = 610
+# Tooltip Constants
+@tooltip_max_width = 550
+@tooltip_max_width_plus_margin = 580
+
+types gate_technologies {
+
+    type gate_technologies_production = flowcontainer {
+        direction = vertical
+        parentanchor = top|left
+        margin_left = 8
+        block "container_spacing" {
+            spacing = 5
+            margin_top = 10
+            margin_bottom = 10
+        }
+
+        gate_technology = {
+            blockoverride "context" {
+                datacontext = "[GetTechnology('magic_understanding_production')]"
+                datacontext = "[GetScriptedGui('magic_understanding_production')]"
+            }
+        }
+
+        gate_technology = {
+            blockoverride "context" {
+                datacontext = "[GetTechnology('mana_extraction')]"
+                datacontext = "[GetScriptedGui('mana_extraction')]"
+            }
+        }
+
+        gate_technology = {
+            blockoverride "context" {
+                datacontext = "[GetTechnology('magic_farming')]"
+                datacontext = "[GetScriptedGui('magic_farming')]"
+            }
+        }
+
+        gate_technology = {
+            blockoverride "context" {
+                datacontext = "[GetTechnology('magic_dwarf_murk')]"
+                datacontext = "[GetScriptedGui('magic_dwarf_murk')]"
+            }
+        }
+
+        gate_technology = {
+            blockoverride "context" {
+                datacontext = "[GetTechnology('magic_dwarf_murk_railways')]"
+                datacontext = "[GetScriptedGui('magic_dwarf_murk_railways')]"
+            }
+        }
+
+        gate_technology = {
+            blockoverride "context" {
+                datacontext = "[GetTechnology('mana_cores')]"
+                datacontext = "[GetScriptedGui('mana_cores')]"
+            }
+        }
+
+        gate_technology = {
+            blockoverride "context" {
+                datacontext = "[GetTechnology('magic_golems')]"
+                datacontext = "[GetScriptedGui('magic_golems')]"
+            }
+        }
+
+        gate_technology = {
+            blockoverride "context" {
+                datacontext = "[GetTechnology('mechanical_golems')]"
+                datacontext = "[GetScriptedGui('mechanical_golems')]"
+            }
+        }
+
+        gate_technology = {
+            blockoverride "context" {
+                datacontext = "[GetTechnology('magic_electric_golems')]"
+                datacontext = "[GetScriptedGui('magic_electric_golems')]"
+            }
+        }
+    }
+
+    type gate_technologies_military = flowcontainer {
+        direction = vertical
+        margin_left = 8
+        block "container_spacing" {
+            spacing = 5
+            margin_top = 10
+            margin_bottom = 10
+        }
+
+        gate_technology = {
+            blockoverride "context" {
+                datacontext = "[GetTechnology('magic_understanding_military')]"
+                datacontext = "[GetScriptedGui('magic_understanding_military')]"
+            }
+        }
+
+        gate_technology = {
+            blockoverride "context" {
+                datacontext = "[GetTechnology('mage_infantry')]"
+                datacontext = "[GetScriptedGui('mage_infantry')]"
+            }
+        }
+
+        gate_technology = {
+            blockoverride "context" {
+                datacontext = "[GetTechnology('mage_artillery')]"
+                datacontext = "[GetScriptedGui('mage_artillery')]"
+            }
+        }
+
+        gate_technology = {
+            blockoverride "context" {
+                datacontext = "[GetTechnology('ritual_magic')]"
+                datacontext = "[GetScriptedGui('ritual_magic')]"
+            }
+        }
+    }
+
+    type gate_technologies_society = flowcontainer {
+        direction = vertical
+        margin_left = 8
+        block "container_spacing" {
+            spacing = 5
+            margin_top = 10
+            margin_bottom = 10
+        }
+
+        gate_technology = {
+            blockoverride "context" {
+                datacontext = "[GetTechnology('magic_understanding_society')]"
+                datacontext = "[GetScriptedGui('magic_understanding_society')]"
+            }
+        }
+
+        gate_technology = {
+            blockoverride "context" {
+                datacontext = "[GetTechnology('dwarven_gate_immigration')]"
+                datacontext = "[GetScriptedGui('dwarven_gate_immigration')]"
+            }
+        }
+
+        gate_technology = {
+            blockoverride "context" {
+                datacontext = "[GetTechnology('orc_clan_support')]"
+                datacontext = "[GetScriptedGui('orc_clan_support')]"
+            }
+        }
+
+        gate_technology = {
+            blockoverride "context" {
+                datacontext = "[GetTechnology('gnomish_support')]"
+                datacontext = "[GetScriptedGui('gnomish_support')]"
+            }
+        }
+
+        gate_technology = {
+            blockoverride "context" {
+                datacontext = "[GetTechnology('gnomish_harmony')]"
+                datacontext = "[GetScriptedGui('gnomish_harmony')]"
+            }
+        }
+
+        gate_technology = {
+            blockoverride "context" {
+                datacontext = "[GetTechnology('formalized_magic')]"
+                datacontext = "[GetScriptedGui('formalized_magic')]"
+            }
+        }
+
+        gate_technology = {
+            blockoverride "context" {
+                datacontext = "[GetTechnology('magic_science')]"
+                datacontext = "[GetScriptedGui('magic_science')]"
+            }
+        }
+    }
+
+}

@@ -1,6 +1,5 @@
 ﻿pm_mage_mana_extraction = {
-    #TODO Add proper icon
-	texture = "gfx/interface/icons/production_method_icons/base_1.dds"
+	texture = "gfx/interface/icons/production_method_icons/mage_extraction.dds"
 
 	unlocking_technologies = {
 		mana_extraction
@@ -9,12 +8,32 @@
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
-			goods_output_mana_add = 10
+			goods_output_mana_add = 20
 		}
 
 		level_scaled = {
 			# profit
 			building_employment_mages_add = 1000
+		}
+	}
+}
+
+pm_mage_ritual_extraction = {
+	texture = "gfx/interface/icons/production_method_icons/ritual_extraction.dds"
+
+	unlocking_technologies = {
+		ritual_magic
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_output_mana_add = 45
+		}
+
+		level_scaled = {
+			# profit
+			building_employment_mages_add = 2000
 		}
 	}
 }

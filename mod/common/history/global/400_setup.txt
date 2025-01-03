@@ -18,8 +18,6 @@ GLOBAL = {
 		}
 	}
 
-	add_mage_towers = yes
-
 	# Add custom buttons
 	add_magic_main_button = yes
 	add_magic_technology_button = yes
@@ -49,6 +47,8 @@ GLOBAL = {
 		# magic countries
 		add_monster_hunting_ideologies = yes
 
+		save_temporary_scope_as = magic_country
+
 		# Add magic researcher to all magic
 		# countries
 		create_character = {
@@ -64,6 +64,15 @@ GLOBAL = {
 				level = 1
 				reserves = 1
 				activate_production_methods = { pm_novice_researcher }
+			}
+		}
+
+		# Established Magic Countries
+		# should have a Mage Tower in every state
+		every_scope_state = {
+			create_mage_tower = {
+				country = scope:magic_country
+				level = 1
 			}
 		}
 	}

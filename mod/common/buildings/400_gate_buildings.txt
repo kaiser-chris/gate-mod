@@ -41,7 +41,7 @@ building_mana_extractor = {
 
 	possible = {
 		custom_tooltip = {
-			text = building_mana_extractor_mana_density
+			text = building_requirement_mana_density
 			state_region = {
 				var:mana_density >= medium_mana_density_threshhold
 			}
@@ -167,7 +167,7 @@ building_magic_research_institute = {
 
 building_mage_tower = {
 	building_group = bg_mage_tower
-	icon = "gfx/interface/icons/building_icons/building_magic_academy.dds"
+	icon = "gfx/interface/icons/building_icons/building_mage_tower.dds"
 	city_type = city
 
 	buildable = no
@@ -276,6 +276,15 @@ building_druid_groove = {
 		}
 	}
 	ownership_type = self
+
+	possible = {
+		custom_tooltip = {
+			text = building_requirement_mana_density
+			state_region = {
+				var:mana_density >= medium_mana_density_threshhold
+			}
+		}
+	}
 
 	production_method_groups = {
 		pmg_druid_groove

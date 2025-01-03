@@ -1,16 +1,19 @@
 ﻿add_mage_towers = {
-	every_state = {
+	if = {
 		limit = {
-			any_scope_pop = {
-				is_pop_type = mages
-			}
+			is_magic_country = yes
 		}
-
-		if = {
+		save_temporary_scope_as = magic_country
+		every_scope_state = {
 			limit = {
-				AND = {
+				any_scope_pop = {
+					is_pop_type = mages
+				}
+			}
+			if = {
+				limit = {
 					pop_type_percent_state = {
-						target  = pop_type:mages
+						target = pop_type:mages
 						value < 0.1
 					}
 					NOT = {
@@ -20,29 +23,20 @@
 						}
 					}
 				}
-			}
-			if = {
-				limit = {
-					has_building = building_mage_tower
+				create_mage_tower = {
+					country = root
+					level = 1
 				}
-				remove_building = building_mage_tower
 			}
-			create_building = {
-				building = building_mage_tower
-				level = 1
-				reserves = 1
-			}
-		}
-		else_if = {
-			limit = {
-				AND = {
-					pop_type_percent_state = {
-						target = pop_type:mages
-						value < 0.2
-					}
+			else_if = {
+				limit = {
 					pop_type_percent_state = {
 						target = pop_type:mages
 						value >= 0.1
+					}
+					pop_type_percent_state = {
+						target = pop_type:mages
+						value < 0.2
 					}
 					NOT = {
 						state_has_building_type_levels = {
@@ -51,29 +45,42 @@
 						}
 					}
 				}
-			}
-			if = {
-				limit = {
-					has_building = building_mage_tower
+				create_mage_tower = {
+					country = root
+					level = 2
 				}
-				remove_building = building_mage_tower
 			}
-			create_building = {
-				building = building_mage_tower
-				level = 2
-				reserves = 1
-			}
-		}
-		else_if = {
-			limit = {
-				AND = {
+			else_if = {
+				limit = {
+					pop_type_percent_state = {
+						target = pop_type:mages
+						value >= 0.2
+					}
 					pop_type_percent_state = {
 						target = pop_type:mages
 						value < 0.3
 					}
+					NOT = {
+						state_has_building_type_levels = {
+							target = bt:building_mage_tower
+							value = 3
+						}
+					}
+				}
+				create_mage_tower = {
+					country = root
+					level = 3
+				}
+			}
+			else_if = {
+				limit = {
 					pop_type_percent_state = {
 						target = pop_type:mages
-						value >= 0.2
+						value >= 0.3
+					}
+					pop_type_percent_state = {
+						target = pop_type:mages
+						value < 0.4
 					}
 					NOT = {
 						state_has_building_type_levels = {
@@ -82,53 +89,13 @@
 						}
 					}
 				}
+				create_mage_tower = {
+					country = root
+					level = 4
+				}
 			}
-			if = {
+			else_if = {
 				limit = {
-					has_building = building_mage_tower
-				}
-				remove_building = building_mage_tower
-			}
-			create_building = {
-				building = building_mage_tower
-				level = 4
-				reserves = 1
-			}
-		}
-		else_if = {
-			limit = {
-				AND = {
-					pop_type_percent_state = {
-						target = pop_type:mages
-						value < 0.4
-					}
-					pop_type_percent_state = {
-						target = pop_type:mages
-						value >= 0.3
-					}
-					NOT = {
-						state_has_building_type_levels = {
-							target = bt:building_mage_tower
-							value = 6
-						}
-					}
-				}
-			}
-			if = {
-				limit = {
-					has_building = building_mage_tower
-				}
-				remove_building = building_mage_tower
-			}
-			create_building = {
-				building = building_mage_tower
-				level = 6
-				reserves = 1
-			}
-		}
-		else_if = {
-			limit = {
-				AND = {
 					pop_type_percent_state = {
 						target = pop_type:mages
 						value >= 0.4
@@ -136,22 +103,35 @@
 					NOT = {
 						state_has_building_type_levels = {
 							target = bt:building_mage_tower
-							value = 10
+							value = 5
 						}
 					}
 				}
-			}
-			if = {
-				limit = {
-					has_building = building_mage_tower
+				create_mage_tower = {
+					country = root
+					level = 5
 				}
-				remove_building = building_mage_tower
-			}
-			create_building = {
-				building = building_mage_tower
-				level = 10
-				reserves = 1
 			}
 		}
+	}
+}
+
+# Root = state
+create_mage_tower = {
+	if = {
+		limit = {
+			has_building = building_mage_tower
+		}
+		remove_building = building_mage_tower
+	}
+	create_building = {
+		building = building_mage_tower
+		add_ownership = {
+			country = {
+				country = $country$
+				levels = $level$
+			}
+		}
+		reserves = 1
 	}
 }

@@ -48,20 +48,9 @@ Below is a table with all currently open ToDos.
 | ./mod/common/production_methods/406_magic_academy_production_methods.txt | 2 |  Find proper logo for pm_magic_academy_no_support |
 | ./mod/common/production_methods/406_magic_academy_production_methods.txt | 62 |  Find proper logo for pm_magic_academy_full_support |
 | ./mod/common/production_methods/406_magic_academy_production_methods.txt | 95 |  Find proper logo for pm_university_no_magic_research |
-| ./mod/common/production_methods/407_golem_workshop_production_methods.txt | 25 |  Create icon for pm_golem_workshop_steam_production |
-| ./mod/common/production_methods/407_golem_workshop_production_methods.txt | 2 |  Create icon for pm_golem_workshop_artisan_production |
-| ./mod/common/production_methods/407_golem_workshop_production_methods.txt | 57 |  Create icon for pm_golem_workshop_electric_production |
-| ./mod/common/production_methods/408_golem_depot_production_methods.txt | 12 |  Create icon for pm_golem_depot_mining_normal_golems |
-| ./mod/common/production_methods/408_golem_depot_production_methods.txt | 2 |  Create icon for pm_golem_depot_no_golems |
-| ./mod/common/production_methods/408_golem_depot_production_methods.txt | 44 |  Create icon for pm_golem_depot_mining_steam_golems |
-| ./mod/common/production_methods/408_golem_depot_production_methods.txt | 78 |  Create icon for pm_golem_depot_mining_electric_golems |
-| ./mod/common/production_methods/408_golem_depot_production_methods.txt | 7 |  Create icon for pm_golem_depot_no_golems |
-| ./mod/common/production_methods/409_mage_tower_production_methods.txt | 2 |  Find proper logo for pm_basic_mage_tower |
-| ./mod/common/technology/technologies/401_magic_production.txt | 146 |  Add proper logo for magic_and_electricity |
-| ./mod/common/technology/technologies/403_magic_society.txt | 31 |  Add proper logo for gate_expeditions |
-| ./mod/common/technology/technologies/403_magic_society.txt | 41 |  Implement gate_expeditions technology |
-| ./mod/common/technology/technologies/403_magic_society.txt | 44 |  Add proper logo for gate_expeditions |
-| ./mod/common/technology/technologies/403_magic_society.txt | 88 |  Add proper logo for magic_technology_integration |
+| ./mod/common/technology/technologies/403_magic_society.txt | 51 |  Implement gate_expeditions technology |
+| ./mod/common/technology/technologies/403_magic_society.txt | 54 |  Add proper logo for gate_expeditions |
+| ./mod/common/technology/technologies/403_magic_society.txt | 98 |  Add proper logo for magic_technology_integration |
 | ./mod/events/gate_events/dwarven_alps_events.txt | 52 |  Create custom video for event dwarven_alps.2 (Digging Dwarven Tunnels) |
 | ./mod/localization/english/gate_countries_l_english.yml | 13 |  Add proper flavor text GNG_FLAVOR_TEXT (New Samadore) |
 | ./mod/localization/english/gate_diplomacy_l_english.yml | 14 |  Create demand_magic_knowledge_action_propose_name |
@@ -69,14 +58,9 @@ Below is a table with all currently open ToDos.
 | ./mod/localization/english/gate_diplomacy_l_english.yml | 16 |  Create demand_magic_knowledge_action_notification_break_name |
 | ./mod/localization/english/gate_diplomacy_l_english.yml | 17 |  Create demand_magic_knowledge_action_notification_break_desc |
 | ./mod/localization/english/gate_diplomacy_l_english.yml | 18 |  Create demand_magic_knowledge_pact_desc |
-| ./mod/localization/english/gate_laws_l_english.yml | 11 |  Write description for law_gnomish_harmony_desc |
 | ./mod/localization/english/gate_objective_l_english.yml | 13 | #lore TODO#!"  Flesh out objective_magic_dominance_desc_GBR (Great Britain) |
 | ./mod/localization/english/gate_objective_l_english.yml | 20 |  Flesh out a proper description for je_obj_magic_knowledge_desc |
 | ./mod/localization/english/gate_objective_l_english.yml | 23 |  Flesh out a proper description for je_obj_magic_academy_desc |
-| ./mod/localization/english/gate_technology_l_english.yml | 18 |  Write description for magic_steam_golems |
-| ./mod/localization/english/gate_technology_l_english.yml | 20 |  Write description for magic_electric_golems |
-| ./mod/localization/english/gate_technology_l_english.yml | 22 |  Write description for magic_and_steam |
-| ./mod/localization/english/gate_technology_l_english.yml | 24 |  Write description for magic_and_electricity |
-| ./mod/localization/english/gate_technology_l_english.yml | 33 |  Write description for gnomish_support_desc |
+| ./mod/localization/english/gate_technology_l_english.yml | 31 |  Write description for gnomish_support_desc |
 
 [//]: # (TODO-END)

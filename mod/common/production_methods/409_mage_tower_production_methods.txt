@@ -1,10 +1,9 @@
 ﻿pm_basic_mage_tower = {
-	#TODO: Find proper logo for pm_basic_mage_tower
-	texture = "gfx/interface/icons/production_method_icons/ownership_academics.dds"
+	texture = "gfx/interface/icons/production_method_icons/private_mages.dds"
 
 	country_modifiers = {
 		workforce_scaled = {
-			country_magical_innovation_add = 20
+			country_magical_innovation_add = 5
 		}
 	}
 
@@ -14,7 +13,7 @@
 		}
 
 		level_scaled = {
-			building_employment_bureaucrats_add = 100
+			building_employment_clerks_add = 100
 		}
 	}
 }

@@ -1,11 +1,10 @@
 ﻿pm_golem_workshop_artisan_production = {
-	#TODO: Create icon for pm_golem_workshop_artisan_production
-	texture = "gfx/interface/icons/production_method_icons/gate_barred.dds"
+	texture = "gfx/interface/icons/production_method_icons/normal_golems.dds"
 
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_mana_add = 10
+			goods_input_mana_core_add = 10
 			goods_input_hardwood_add = 20
 			goods_input_fabric_add = 20
 
@@ -22,17 +21,16 @@
 }
 
 pm_golem_workshop_steam_production = {
-	#TODO: Create icon for pm_golem_workshop_steam_production
-	texture = "gfx/interface/icons/production_method_icons/gate_barred.dds"
+	texture = "gfx/interface/icons/production_method_icons/mechanical_golems.dds"
 
 	unlocking_technologies = {
-		magic_steam_golems
+		mechanical_golems
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_mana_add = 20
+			goods_input_mana_core_add = 20
 			goods_input_hardwood_add = 10
 			goods_input_fabric_add = 20
 			goods_input_steel_add = 10
@@ -54,8 +52,7 @@ pm_golem_workshop_steam_production = {
 }
 
 pm_golem_workshop_electric_production = {
-	#TODO: Create icon for pm_golem_workshop_electric_production
-	texture = "gfx/interface/icons/production_method_icons/gate_barred.dds"
+	texture = "gfx/interface/icons/production_method_icons/electrical_golems.dds"
 
 	unlocking_technologies = {
 		magic_electric_golems
@@ -64,7 +61,7 @@ pm_golem_workshop_electric_production = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_mana_add = 20
+			goods_input_mana_core_add = 20
 			goods_input_fabric_add = 20
 			goods_input_steel_add = 30
 			goods_input_engines_add = 5
