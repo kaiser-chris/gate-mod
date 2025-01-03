@@ -40,12 +40,9 @@ Below is a table with all currently open ToDos.
 | ./mod/common/interest_groups/400_magic_users.txt | 47 | # TODO: Create elven dominion magic user ig traits |
 | ./mod/common/production_method_groups/401_gate_production_method_groups.txt | 25 |  Add proper production method to pmg_mana_extraction |
 | ./mod/common/production_method_groups/401_gate_production_method_groups.txt | 8 |  Add proper production method to pmg_magic_gate_exploitation |
-| ./mod/common/production_methods/406_magic_academy_production_methods.txt | 100 |  Find proper logo for pm_university_simple_magic_research |
-| ./mod/common/production_methods/406_magic_academy_production_methods.txt | 127 |  Find proper logo for pm_university_advanced_magic_research |
-| ./mod/common/production_methods/406_magic_academy_production_methods.txt | 29 |  Find proper logo for pm_magic_academy_partial_support |
-| ./mod/common/production_methods/406_magic_academy_production_methods.txt | 2 |  Find proper logo for pm_magic_academy_no_support |
-| ./mod/common/production_methods/406_magic_academy_production_methods.txt | 62 |  Find proper logo for pm_magic_academy_full_support |
-| ./mod/common/production_methods/406_magic_academy_production_methods.txt | 95 |  Find proper logo for pm_university_no_magic_research |
+| ./mod/common/production_methods/406_magic_academy_production_methods.txt | 124 |  Find proper logo for pm_university_advanced_magic_research |
+| ./mod/common/production_methods/406_magic_academy_production_methods.txt | 92 |  Find proper logo for pm_university_no_magic_research |
+| ./mod/common/production_methods/406_magic_academy_production_methods.txt | 97 |  Find proper logo for pm_university_simple_magic_research |
 | ./mod/common/technology/technologies/403_magic_society.txt | 63 |  Implement gate_expeditions technology |
 | ./mod/common/technology/technologies/403_magic_society.txt | 66 |  Add proper logo for gate_expeditions |
 | ./mod/common/technology/technologies/403_magic_society.txt | 98 |  Add proper logo for magic_technology_integration |
