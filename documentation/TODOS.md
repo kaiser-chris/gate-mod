@@ -20,7 +20,6 @@ Below is a table with all currently open ToDos.
 | File | Line | ToDo |
 | ---- | ---- | ---- |
 | ./mod/common/cultures/400_elven.txt | 2 |  Define custom culture (Currently copy of german) |
-| ./mod/common/cultures/402_orcish.txt | 2 |  Define custom culture (Currently copy of dwarven) |
 | ./mod/common/cultures/403_gnomish.txt | 2 |  Define custom culture (Currently copy of dwarven) |
 | ./mod/common/history/buildings/400_dominion.txt | 17 |  Add GAD buildings in STATE_NORTH_ANGOLA |
 | ./mod/common/history/buildings/400_dominion.txt | 22 |  Add GAD buildings in STATE_EAST_ANGOLA |
