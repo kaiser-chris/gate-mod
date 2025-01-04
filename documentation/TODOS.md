@@ -43,7 +43,6 @@ Below is a table with all currently open ToDos.
 | ./mod/common/technology/technologies/403_magic_society.txt | 63 |  Implement gate_expeditions technology |
 | ./mod/common/technology/technologies/403_magic_society.txt | 66 |  Add proper logo for gate_expeditions |
 | ./mod/events/gate_events/dwarven_alps_events.txt | 52 |  Create custom video for event dwarven_alps.2 (Digging Dwarven Tunnels) |
-| ./mod/localization/english/gate_countries_l_english.yml | 13 |  Add proper flavor text GNG_FLAVOR_TEXT (New Samadore) |
 | ./mod/localization/english/gate_diplomacy_l_english.yml | 14 |  Create demand_magic_knowledge_action_propose_name |
 | ./mod/localization/english/gate_diplomacy_l_english.yml | 15 |  Create demand_magic_knowledge_action_break_name |
 | ./mod/localization/english/gate_diplomacy_l_english.yml | 16 |  Create demand_magic_knowledge_action_notification_break_name |
