@@ -75,6 +75,19 @@
 			if = {
 				limit = {
 					state = {
+						owner = {
+							has_building = building_magic_academy
+						}
+					}
+				}
+				multiply = {
+					value = 5
+					desc = mages_qualifications_academy
+				}
+			}
+			if = {
+				limit = {
+					state = {
 						state_cultural_acceptance = {
 							target = PREV.culture
 							value < acceptance_status_4
