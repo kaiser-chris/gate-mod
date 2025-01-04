@@ -1,7 +1,7 @@
 ﻿monster_attack = {
 	# Monster attacks can happen in any state
 	trigger = {
-		always = yes
+		var:mana_density >= medium_mana_density_threshhold
 	}
 
 	range = {
