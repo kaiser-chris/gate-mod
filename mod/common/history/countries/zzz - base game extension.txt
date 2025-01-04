@@ -1,0 +1,71 @@
+﻿COUNTRIES = {
+	# Great Qing
+	c:CHI = {
+		# Magic Research Institute
+		s:STATE_BEIJING = {
+			region_state:CHI = {
+				create_building = {
+					building = building_magic_research_institute
+					level = 1
+					reserves = 1
+					activate_production_methods = {
+						pm_novice_researcher
+					}
+				}
+			}
+		}
+
+		# Create Magic Gate in the middle of China
+		s:STATE_ALXA = {
+			region_state:CHI = {
+				create_building = {
+					building = building_gate
+					add_ownership = {
+						country = {
+							country = c:CHI
+							levels = 1
+						}
+					}
+					reserves = 1
+					activate_production_methods = {
+						pm_gate_defend
+					}
+				}
+			}
+		}
+	}
+
+	# Great Britain
+	c:GBR = {
+		# Magic Research Institute
+		s:STATE_HOME_COUNTIES = {
+			region_state:GBR = {
+				create_building = {
+					building = building_magic_research_institute
+					level = 1
+					reserves = 1
+					activate_production_methods = {
+						pm_novice_researcher
+					}
+				}
+			}
+		}
+	}
+
+	# Mexico
+	c:MEX = {
+		# Magic Research Institute
+		s:STATE_MEXICO = {
+			region_state:MEX = {
+				create_building = {
+					building = building_magic_research_institute
+					level = 1
+					reserves = 1
+					activate_production_methods = {
+						pm_novice_researcher
+					}
+				}
+			}
+		}
+	}
+}

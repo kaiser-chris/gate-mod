@@ -2,40 +2,9 @@
 GLOBAL = {
 	# Great Qing
 	c:CHI = {
-		# Create Magic Gate in the middle of China
-		s:STATE_ALXA = {
-			region_state:CHI = {
-				create_building = {
-					building = building_gate
-					add_ownership = {
-						country = {
-							country = c:CHI
-							levels = 1
-						}
-					}
-					reserves = 1
-					activate_production_methods = {
-						pm_gate_defend
-					}
-				}
-			}
-		}
-
 		# Add Researching Magic journal entry
 		add_journal_entry = {
 			type = je_researching_magic
-		}
-
-		# Add Magic Research Institute
-		capital = {
-			create_building = {
-				building = building_magic_research_institute
-				level = 1
-				reserves = 1
-				activate_production_methods = {
-					pm_novice_researcher
-				}
-			}
 		}
 
 		# Add progress to magic research since they have
@@ -60,18 +29,6 @@ GLOBAL = {
 		# Add Researching Magic journal entry
 		add_journal_entry = {
 			type = je_researching_magic
-		}
-
-		# Add Magic Research Institute
-		capital = {
-			create_building = {
-				building = building_magic_research_institute
-				level = 1
-				reserves = 1
-				activate_production_methods = {
-					pm_novice_researcher
-				}
-			}
 		}
 
 		# Add progress to magic research since they have

@@ -37,12 +37,11 @@ Below is a table with all currently open ToDos.
 | ./mod/common/ideologies/401_gate_ideologies.txt | 52 | # TODO: Add wanted laws to ideology_magic_hopeful |
 | ./mod/common/interest_groups/400_magic_users.txt | 244 | # TODO: Add leader in magic check |
 | ./mod/common/interest_groups/400_magic_users.txt | 47 | # TODO: Create elven dominion magic user ig traits |
-| ./mod/common/production_methods/406_magic_academy_production_methods.txt | 124 |  Find proper logo for pm_university_advanced_magic_research |
-| ./mod/common/production_methods/406_magic_academy_production_methods.txt | 92 |  Find proper logo for pm_university_no_magic_research |
-| ./mod/common/production_methods/406_magic_academy_production_methods.txt | 97 |  Find proper logo for pm_university_simple_magic_research |
+| ./mod/common/production_methods/406_magic_academy_production_methods.txt | 100 |  Find proper logo for pm_university_simple_magic_research |
+| ./mod/common/production_methods/406_magic_academy_production_methods.txt | 127 |  Find proper logo for pm_university_advanced_magic_research |
+| ./mod/common/production_methods/406_magic_academy_production_methods.txt | 95 |  Find proper logo for pm_university_no_magic_research |
 | ./mod/common/technology/technologies/403_magic_society.txt | 63 |  Implement gate_expeditions technology |
 | ./mod/common/technology/technologies/403_magic_society.txt | 66 |  Add proper logo for gate_expeditions |
-| ./mod/common/technology/technologies/403_magic_society.txt | 98 |  Add proper logo for magic_technology_integration |
 | ./mod/events/gate_events/dwarven_alps_events.txt | 52 |  Create custom video for event dwarven_alps.2 (Digging Dwarven Tunnels) |
 | ./mod/localization/english/gate_countries_l_english.yml | 13 |  Add proper flavor text GNG_FLAVOR_TEXT (New Samadore) |
 | ./mod/localization/english/gate_diplomacy_l_english.yml | 14 |  Create demand_magic_knowledge_action_propose_name |
@@ -50,8 +49,6 @@ Below is a table with all currently open ToDos.
 | ./mod/localization/english/gate_diplomacy_l_english.yml | 16 |  Create demand_magic_knowledge_action_notification_break_name |
 | ./mod/localization/english/gate_diplomacy_l_english.yml | 17 |  Create demand_magic_knowledge_action_notification_break_desc |
 | ./mod/localization/english/gate_diplomacy_l_english.yml | 18 |  Create demand_magic_knowledge_pact_desc |
-| ./mod/localization/english/gate_objective_l_english.yml | 22 |  Flesh out a proper description for je_obj_magic_knowledge_desc |
-| ./mod/localization/english/gate_objective_l_english.yml | 25 |  Flesh out a proper description for je_obj_magic_academy_desc |
 | ./mod/localization/english/gate_technology_l_english.yml | 31 |  Write description for gnomish_support_desc |
 
 [//]: # (TODO-END)
