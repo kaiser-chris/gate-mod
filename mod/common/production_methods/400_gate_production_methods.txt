@@ -1,5 +1,28 @@
-﻿pm_gate_closed = {
+﻿pm_gate_defend = {
+	texture = "gfx/interface/icons/production_method_icons/gate_defend.dds"
+
+	replacement_if_valid = pm_gate_closed
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_small_arms_add = 25
+		}
+
+		level_scaled = {
+			building_employment_officers_add = 1000
+			building_employment_soldiers_add = 5000
+		}
+	}
+}
+
+pm_gate_closed = {
 	texture = "gfx/interface/icons/production_method_icons/gate_barred.dds"
+
+	is_hidden_when_unavailable = yes
+
+	unlocking_technologies = {
+		magic_understanding_society
+	}
 
 	country_modifiers = {
 		level_scaled = {

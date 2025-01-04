@@ -37,8 +37,6 @@ Below is a table with all currently open ToDos.
 | ./mod/common/ideologies/401_gate_ideologies.txt | 52 | # TODO: Add wanted laws to ideology_magic_hopeful |
 | ./mod/common/interest_groups/400_magic_users.txt | 244 | # TODO: Add leader in magic check |
 | ./mod/common/interest_groups/400_magic_users.txt | 47 | # TODO: Create elven dominion magic user ig traits |
-| ./mod/common/production_method_groups/401_gate_production_method_groups.txt | 25 |  Add proper production method to pmg_mana_extraction |
-| ./mod/common/production_method_groups/401_gate_production_method_groups.txt | 8 |  Add proper production method to pmg_magic_gate_exploitation |
 | ./mod/common/production_methods/406_magic_academy_production_methods.txt | 124 |  Find proper logo for pm_university_advanced_magic_research |
 | ./mod/common/production_methods/406_magic_academy_production_methods.txt | 92 |  Find proper logo for pm_university_no_magic_research |
 | ./mod/common/production_methods/406_magic_academy_production_methods.txt | 97 |  Find proper logo for pm_university_simple_magic_research |
@@ -52,9 +50,8 @@ Below is a table with all currently open ToDos.
 | ./mod/localization/english/gate_diplomacy_l_english.yml | 16 |  Create demand_magic_knowledge_action_notification_break_name |
 | ./mod/localization/english/gate_diplomacy_l_english.yml | 17 |  Create demand_magic_knowledge_action_notification_break_desc |
 | ./mod/localization/english/gate_diplomacy_l_english.yml | 18 |  Create demand_magic_knowledge_pact_desc |
-| ./mod/localization/english/gate_objective_l_english.yml | 13 | #lore TODO#!"  Flesh out objective_magic_dominance_desc_GBR (Great Britain) |
-| ./mod/localization/english/gate_objective_l_english.yml | 20 |  Flesh out a proper description for je_obj_magic_knowledge_desc |
-| ./mod/localization/english/gate_objective_l_english.yml | 23 |  Flesh out a proper description for je_obj_magic_academy_desc |
+| ./mod/localization/english/gate_objective_l_english.yml | 22 |  Flesh out a proper description for je_obj_magic_knowledge_desc |
+| ./mod/localization/english/gate_objective_l_english.yml | 25 |  Flesh out a proper description for je_obj_magic_academy_desc |
 | ./mod/localization/english/gate_technology_l_english.yml | 31 |  Write description for gnomish_support_desc |
 
 [//]: # (TODO-END)

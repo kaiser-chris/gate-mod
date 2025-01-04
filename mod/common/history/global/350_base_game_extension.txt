@@ -1,0 +1,128 @@
+﻿# These scripts are run after all other history scripts were run
+GLOBAL = {
+	# Great Qing
+	c:CHI = {
+		# Create Magic Gate in the middle of China
+		s:STATE_ALXA = {
+			region_state:CHI = {
+				create_building = {
+					building = building_gate
+					add_ownership = {
+						country = {
+							country = c:CHI
+							levels = 1
+						}
+					}
+					reserves = 1
+					activate_production_methods = {
+						pm_gate_defend
+					}
+				}
+			}
+		}
+
+		# Add Researching Magic journal entry
+		add_journal_entry = {
+			type = je_researching_magic
+		}
+
+		# Add Magic Research Institute
+		capital = {
+			create_building = {
+				building = building_magic_research_institute
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					pm_novice_researcher
+				}
+			}
+		}
+
+		# Add progress to magic research since they have
+		# had access to a gate for years
+		je:je_researching_magic = {
+			add_progress = {
+				name = pb_gate_researching_magic
+				value = 63
+			}
+		}
+
+		# Add Magic Researcher
+		create_character = {
+			template = magic_researcher_template
+			interest_group = ig_intelligentsia
+			ig_leader = yes
+		}
+	}
+
+	# Great Britain
+	c:GBR = {
+		# Add Researching Magic journal entry
+		add_journal_entry = {
+			type = je_researching_magic
+		}
+
+		# Add Magic Research Institute
+		capital = {
+			create_building = {
+				building = building_magic_research_institute
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					pm_novice_researcher
+				}
+			}
+		}
+
+		# Add progress to magic research since they have
+		# had access to a gate for years
+		je:je_researching_magic = {
+			add_progress = {
+				name = pb_gate_researching_magic
+				value = 13
+			}
+		}
+
+		# Add Magic Researcher
+		create_character = {
+			template = magic_researcher_template
+			interest_group = ig_intelligentsia
+			ig_leader = yes
+		}
+	}
+
+	# Mexico
+	c:MEX = {
+		# Add Researching Magic journal entry
+		add_journal_entry = {
+			type = je_researching_magic
+		}
+
+		# Add Magic Research Institute
+		capital = {
+			create_building = {
+				building = building_magic_research_institute
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					pm_novice_researcher
+				}
+			}
+		}
+
+		# Add progress to magic research since they have
+		# had access to a gate for years
+		je:je_researching_magic = {
+			add_progress = {
+				name = pb_gate_researching_magic
+				value = 18
+			}
+		}
+
+		# Add Magic Researcher
+		create_character = {
+			template = magic_researcher_template
+			interest_group = ig_intelligentsia
+		}
+	}
+}
