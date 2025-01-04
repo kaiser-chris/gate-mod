@@ -24,6 +24,12 @@
 
     dwarven_race = {
         dna_modifiers = {
+            morph = {
+                mode = add
+                gene = dwarven_height
+                template = normal_height
+                value = 1
+            }
             accessory = {
                 mode = add
                 gene = outfits
@@ -51,6 +57,12 @@
 
     gnomish_race = {
         dna_modifiers = {
+            morph = {
+                mode = add
+                gene = dwarven_height
+                template = normal_height
+                value = 1
+            }
             accessory = {
                 mode = add
                 gene = outfits

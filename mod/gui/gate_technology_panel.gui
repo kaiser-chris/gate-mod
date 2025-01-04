@@ -298,7 +298,7 @@ types gate_technology_panel_types {
                 }
 
                 # Researcher
-                com_journal_entry_character = {
+                gate_character = {
                     visible = "[GetScriptedGui('sgui_gate_has_researcher').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
                     blockoverride "character_context" {
                         datacontext = "[Country.MakeScope.Var('magic_researcher').GetCharacter]"
@@ -716,22 +716,6 @@ types gate_technology_panel_types {
                     texture = "[TechnologyUnlock.GetTexture]"
                     tooltip = "[TechnologyUnlock.GetTooltip]"
                     using = tooltip_se
-                }
-            }
-        }
-
-        # progress bar
-        flowcontainer = {
-            visible = "[And(Country.MakeScope.Var('magic_research').IsSet, ObjectsEqual(Country.MakeScope.Var('magic_research').GetTechnology.MakeScope, Technology.MakeScope))]"
-            margin = { 10 10 }
-            default_progressbar_horizontal = {
-                block "progressbar_size" {
-                    size = { 500 20 }
-                }
-                blockoverride "values" {
-                    value = "[Country.MakeScope.Var('magic_research_progress').GetValue]"
-                    min = 0
-                    max = "[Technology.GetCost(Country.Self)]"
                 }
             }
         }

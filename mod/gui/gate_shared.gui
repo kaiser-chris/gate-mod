@@ -1,4 +1,210 @@
+@panel_width_half = 270				# used to be 230
+@tooltip_max_width = 550            # copied from tooltip.gui
+
 types gate_shared {
+
+    type gate_character = widget {
+        block "character_context" {}
+
+        block "character_size" {
+            size = { @panel_width_half 290 }
+        }
+
+        widget = {
+            size = { @panel_width_half 290 }
+            parentanchor = hcenter
+
+            # Character Tooltip
+            tooltipwidget = {
+                FancyTooltip_Character_Gate = {}
+            }
+
+            # Character Portrait
+            character_portrait_large_torso = {
+                position = { 0 0 }
+                parentanchor = hcenter
+                blockoverride "show_hat" {}
+                blockoverride "tooltip" {}
+                blockoverride "portrait_icons" {}
+                blockoverride "portrait_button" {}
+            }
+
+            # Character Name
+            default_header_clean_faded = {
+                size = { 250 40 }
+                position = { 0 256 }
+                blockoverride "text" {}
+                parentanchor = hcenter
+                textbox = {
+                    text = "[Character.GetFullNameNoFormatting]"
+                    parentanchor = vcenter|hcenter
+                    position = { 0 -2 }
+                    autoresize = yes
+                    max_width = @panel_width_half
+                    using = fontsize_large
+                }
+            }
+
+            # Character Opinion
+            flowcontainer = {
+                position = { 180 50 }
+                margin = { 10 10 }
+                tooltipwidget = {
+                    RegularTooltip = {
+                        blockoverride "text" {
+                            text = "[Character.MakeScope.Var('com_opinion').GetFlagName]"
+                        }
+                    }
+                }
+
+                icon = {
+                    size = { 40 40 }
+                    texture = "gfx/interface/icons/ai_strategy_icons/progressive_agenda.dds"
+                }
+
+                background = {
+                    texture = "gfx/interface/backgrounds/round_button_bg.dds"
+                }
+            }
+        }
+    }
+
+    type FancyTooltip_Character_Gate = FancyTooltipWidgetType {
+        blockoverride "text" {
+            text = gg_character_tooltip
+        }
+
+        blockoverride "name" {
+            text = CHARACTER_TOOLTIP_HEADER_NAME
+        }
+
+        blockoverride "type" {
+            text = TOOLTIP_TYPE_CHARACTER
+        }
+
+        blockoverride "replace_icon" {
+            character_portrait_small2 = {
+                blockoverride "tooltip" {}
+                blockoverride "portrait_frame" {}
+                blockoverride "rank_icon" {
+                    rank_icon = {
+                        visible = "[Character.IsCommander]"
+                        parentanchor = bottom|right
+                        blockoverride "icon_size" {
+                            size = { 26 26 }
+                        }
+                    }
+                }
+                parentanchor = center
+            }
+        }
+
+        blockoverride "go_to_button_visibility" {
+            visible = no
+        }
+
+        blockoverride "go_to_button_tooltip" {
+            tooltip = "GO_TO_BUTTON_CHARACTER"
+        }
+
+        blockoverride "go_to_button_properties" {
+            onclick = "[InformationPanelBar.OpenCommanderPanel(Character.AccessSelf)]"
+        }
+
+        blockoverride "go_to_button_properties" {
+            onclick = "[InformationPanelBar.OpenCommanderPanel(Character.AccessSelf)]"
+        }
+
+        blockoverride "tooltip_content_after" {
+            flowcontainer = {
+                visible = "[Character.MakeScope.Var('magic_experience').IsSet]"
+                direction = vertical
+                spacing = 5
+                margin_top = 10
+
+                textbox = {
+                    size = { 100% 20 }
+                    text = gg_character_experience_header
+                }
+                # Novice
+                default_progressbar_horizontal = {
+                    visible = "[LessThan_CFixedPoint(Character.MakeScope.Var('magic_experience').GetValue, Character.MakeScope.ScriptValue('character_experienced_threshhold'))]"
+                    tooltip = gg_character_experience_novice_tooltip
+
+                    block "progressbar_size" {
+                        minimumsize = { -1 20 }
+                        maximumsize = { -1 20 }
+                    }
+                    blockoverride "values" {
+                        value = "[FixedPointToFloat(Character.MakeScope.Var('magic_experience').GetValue)]"
+                        min = 0
+                        max = "[FixedPointToFloat(Character.MakeScope.ScriptValue('character_experienced_threshhold'))]"
+                    }
+                    block "on_top_of_the_progressbar" {
+                        textbox = {
+                            size = { 100% 20 }
+                            text = gg_character_experience_novice
+                            align = center
+                        }
+                    }
+                }
+                # Experienced
+                default_progressbar_horizontal = {
+                    visible = "[GreaterThanOrEqualTo_CFixedPoint(Character.MakeScope.Var('magic_experience').GetValue, Character.MakeScope.ScriptValue('character_experienced_threshhold'))]"
+                    tooltip = gg_character_experience_experienced_tooltip
+
+                    block "progressbar_size" {
+                        minimumsize = { -1 20 }
+                        maximumsize = { -1 20 }
+                    }
+                    blockoverride "values" {
+                        value = "[Character.MakeScope.Var('magic_experience').GetValue]"
+                        min = "[Character.MakeScope.ScriptValue('character_experienced_threshhold')]"
+                        max = "[Character.MakeScope.ScriptValue('character_master_threshhold')]"
+                    }
+                    block "on_top_of_the_progressbar" {
+                        textbox = {
+                            size = { 100% 20 }
+                            text = gg_character_experience_experienced
+                            align = center
+                        }
+                    }
+                }
+                # Master
+                default_progressbar_horizontal = {
+                    visible = "[GreaterThanOrEqualTo_CFixedPoint(Character.MakeScope.Var('magic_experience').GetValue, Character.MakeScope.ScriptValue('character_master_threshhold'))]"
+                    tooltip = gg_character_experience_master_tooltip
+
+                    block "progressbar_size" {
+                        minimumsize = { -1 20 }
+                        maximumsize = { -1 20 }
+                    }
+                    blockoverride "values" {
+                        value = 100
+                        min = 0
+                        max = 100
+                    }
+                    block "on_top_of_the_progressbar" {
+                        textbox = {
+                            size = { 100% 20 }
+                            text = gg_character_experience_master
+                            align = center
+                        }
+                    }
+                }
+            }
+
+            DefaultTooltipTextBox = {
+                visible = "[InDebugMode]"
+                text = "[Character.GetDebugDesc]"
+                margin_bottom = 0
+                autoresize = yes
+                multiline = yes
+                maximumsize = { 550 -1 }
+                fonttintcolor = "[TooltipInfo.GetTintColor]"
+            }
+        }
+    }
 
     type gate_mana_density = widget {
         size = { 100% 100% }
