@@ -23,7 +23,9 @@ dragon.1 = {
 		NOT = { has_global_variable = dragon_greenland_var }
 		any_scope_state = {
 			state_region = s:STATE_GREENLAND
-			var:mana_density > 50
+			state_region = {
+				var:mana_density > medium_mana_density_threshhold
+			}
 		}
 	}
 
@@ -172,7 +174,9 @@ dragon.3 = {
 		NOT = { has_global_variable = dragon_california_var }
 		any_scope_state = {
 			state_region = s:STATE_CALIFORNIA
-			var:mana_density > 50
+			state_region = {
+				var:mana_density > medium_mana_density_threshhold
+			}
 		}
 	}
 
@@ -321,7 +325,9 @@ dragon.5 = {
 		NOT = { has_global_variable = dragon_kolyma_var }
 		any_scope_state = {
 			state_region = s:STATE_KOLYMA
-			var:mana_density > 50
+			state_region = {
+				var:mana_density > medium_mana_density_threshhold
+			}
 		}
 	}
 
@@ -470,7 +476,9 @@ dragon.7 = {
 		NOT = { has_global_variable = dragon_himalaya_var }
 		any_scope_state = {
 			state_region = s:STATE_HIMALAYAS
-			var:mana_density > 50
+			state_region = {
+				var:mana_density > medium_mana_density_threshhold
+			}
 		}
 	}
 
