@@ -374,6 +374,12 @@
                 activate_production_methods = { "pm_gate_support_orcs" }
             }
             create_building = {
+                building = building_magic_research_institute
+                level = 1
+                reserves = 1
+                activate_production_methods = { pm_novice_researcher }
+            }
+            create_building = {
                 building = "building_druid_groove"
                 add_ownership = {
                     building = {

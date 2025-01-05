@@ -185,4 +185,23 @@
             }
         }
     }
+
+    gnomish_magic_users_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = outfits
+                template = outfit_indian_buddhist
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 1000
+                gnomish_portrait_pop_trigger = yes
+                magic_users_clothes_pop_trigger = yes
+            }
+        }
+    }
 }

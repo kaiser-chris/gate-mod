@@ -1,4 +1,14 @@
-﻿orcish_portrait_trigger = {
+﻿magic_users_clothes_pop_trigger = {
+    exists = scope:pop
+    scope:pop = {
+        OR = {
+            is_pop_type = mages
+            is_pop_type = druids
+        }
+    }
+}
+
+orcish_portrait_trigger = {
     exists = scope:character
     scope:character = {
         has_culture = cu:orcish

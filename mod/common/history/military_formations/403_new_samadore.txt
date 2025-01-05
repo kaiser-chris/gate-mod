@@ -1,0 +1,31 @@
+﻿MILITARY_FORMATIONS = {
+	c:GNS = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_indonesia
+			combat_unit = {
+				type = unit_type:combat_unit_type_mage_infantry
+				state_region = s:STATE_EASTERN_NEW_GUINEA
+				count = 5
+			}
+			save_scope_as = gns_army
+		}
+
+		create_character = {
+			birth_date = 1794.2.21
+			culture = gnomish
+			hq = region_indonesia
+			is_general = yes
+			interest_group = ig_armed_forces
+			commander_rank = commander_rank_1
+			traits = {
+
+			}
+			save_scope_as = gns_commander
+		}
+
+		scope:gns_commander = {
+			transfer_to_formation = scope:gns_army
+		}
+	}
+}

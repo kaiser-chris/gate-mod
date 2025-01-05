@@ -1,5 +1,11 @@
 ﻿# This scripts are run after all other history scripts were run
 GLOBAL = {
+
+	# Fixes colonization issues
+	c:GNS = {
+		activate_law = law_type:law_gnomish_integration
+	}
+
 	set_global_variable = {
 		name = magic_growing_var
 		value = 0
@@ -54,17 +60,6 @@ GLOBAL = {
 		create_character = {
 			template = magic_researcher_template
 			interest_group = ig_magic_users
-		}
-
-		# Add research institute to all magic
-		# countries
-		capital = {
-			create_building = {
-				building = building_magic_research_institute
-				level = 1
-				reserves = 1
-				activate_production_methods = { pm_novice_researcher }
-			}
 		}
 
 		# Established Magic Countries
