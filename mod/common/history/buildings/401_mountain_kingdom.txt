@@ -9,85 +9,107 @@
         }
         region_state:GMK = {
             create_building = {
-                building = "building_government_administration"
+                building = building_government_administration
                 add_ownership = {
                     country = {
-                        country = "c:GMK"
+                        country = c:GMK
                         levels = 1
                     }
                 }
                 reserves = 1
-                activate_production_methods = { "pm_vertical_filing_cabinets" "pm_professional_bureaucrats" "pm_religious_bureaucrats" }
+                activate_production_methods = {
+                    pm_vertical_filing_cabinets
+                    pm_professional_bureaucrats
+                    pm_religious_bureaucrats
+                }
             }
             create_building = {
-                building = "building_university"
+                building = building_university
                 add_ownership = {
                     country = {
-                        country = "c:GMK"
+                        country = c:GMK
                         levels = 2
                     }
                 }
                 reserves = 1
-                activate_production_methods = { "pm_scholastic_education" "pm_secular_academia" pm_university_simple_magic_research }
+                activate_production_methods = {
+                    pm_scholastic_education
+                    pm_secular_academia
+                    pm_university_simple_magic_research
+                }
             }
             create_building = {
-                building = "building_arms_industry"
+                building = building_arms_industry
                 add_ownership = {
                     country = {
-                        country = "c:GMK"
+                        country = c:GMK
                         levels = 3
                     }
                 }
                 reserves = 2
-                activate_production_methods = { "pm_muskets" "pm_automation_disabled" }
+                activate_production_methods = {
+                    pm_muskets
+                    pm_automation_disabled
+                }
             }
             create_building = {
-                building = "building_artillery_foundries"
+                building = building_artillery_foundries
                 add_ownership = {
                     country = {
-                        country = "c:GMK"
+                        country = c:GMK
                         levels = 2
                     }
                 }
                 reserves = 1
-                activate_production_methods = { "pm_cannons" "pm_automation_disabled" }
+                activate_production_methods = {
+                    pm_cannons
+                    pm_automation_disabled
+                }
             }
             create_building = {
-                building = "building_furniture_manufacturies"
+                building = building_furniture_manufacturies
                 add_ownership = {
                     building = {
-                        type = "building_financial_district"
-                        country = "c:GMK"
+                        type = building_financial_district
+                        country = c:GMK
                         levels = 1
-                        region = "STATE_TYROL"
+                        region = STATE_TYROL
                     }
                 }
                 reserves = 1
-                activate_production_methods = { "pm_lathe" "pm_automation_disabled" "pm_luxury_furniture" }
+                activate_production_methods = {
+                    pm_lathe
+                    pm_automation_disabled
+                    pm_luxury_furniture
+                }
             }
             create_building = {
-                building = "building_chemical_plants"
+                building = building_chemical_plants
                 add_ownership = {
                     building = {
-                        type = "building_financial_district"
-                        country = "c:GMK"
+                        type = building_financial_district
+                        country = c:GMK
                         levels = 2
-                        region = "STATE_TYROL"
+                        region = STATE_TYROL
                     }
                 }
                 reserves = 1
-                activate_production_methods = { "pm_artificial_fertilizers" }
+                activate_production_methods = {
+                    pm_artificial_fertilizers
+                }
             }
             create_building = {
-                building = "building_gate"
+                building = building_gate
                 add_ownership = {
                     country = {
-                        country = "c:GMK"
+                        country = c:GMK
                         levels = 1
                     }
                 }
                 reserves = 1
-                activate_production_methods = { "pm_gate_immigration_dwarves" }
+                activate_production_methods = {
+                    pm_gate_immigration_dwarves
+                }
             }
             create_building = {
                 building = building_magic_research_institute
@@ -96,113 +118,147 @@
                 activate_production_methods = { pm_novice_researcher }
             }
             create_building = {
-                building = "building_murk_ways"
+                building = building_murk_ways
                 add_ownership = {
                     country = {
-                        country = "c:GMK"
+                        country = c:GMK
                         levels = 2
                     }
                 }
                 reserves = 1
-                activate_production_methods = { "pm_murk_transportation" }
+                activate_production_methods = {
+                    pm_murk_transportation
+                }
             }
             create_building = {
-                building = "building_mana_extractor"
+                building = building_mana_extractor
                 add_ownership = {
                     country = {
-                        country = "c:GMK"
+                        country = c:GMK
                         levels = 6
                     }
                 }
                 reserves = 1
-                activate_production_methods = { "pm_mage_mana_extraction" }
+                activate_production_methods = {
+                    pm_mage_mana_extraction
+                }
             }
             create_building = {
-                building = "building_iron_mine"
+                building = building_iron_mine
                 add_ownership = {
                     building = {
-                        type = "building_financial_district"
-                        country = "c:GMK"
+                        type = building_financial_district
+                        country = c:GMK
                         levels = 4
-                        region = "STATE_TYROL"
+                        region = STATE_TYROL
                     }
                 }
                 reserves = 1
-                activate_production_methods = { "pm_picks_and_shovels_building_iron_mine" "pm_crystal_explosives_building_iron_mine" "pm_no_steam_automation" "pm_road_carts" }
+                activate_production_methods = {
+                    pm_picks_and_shovels_building_iron_mine
+                    pm_crystal_explosives_building_iron_mine
+                    pm_no_steam_automation
+                    pm_road_carts
+                }
             }
             create_building = {
-                building = "building_dwarven_coal_mine"
+                building = building_dwarven_coal_mine
                 add_ownership = {
                     building = {
-                        type = "building_financial_district"
-                        country = "c:GMK"
+                        type = building_financial_district
+                        country = c:GMK
                         levels = 2
-                        region = "STATE_TYROL"
+                        region = STATE_TYROL
                     }
                 }
                 reserves = 1
-                activate_production_methods = { "pm_picks_and_shovels_building_coal_mine" "pm_crystal_explosives_building_coal_mine" "pm_no_steam_automation" "pm_road_carts" }
+                activate_production_methods = {
+                    pm_picks_and_shovels_building_coal_mine
+                    pm_crystal_explosives_building_coal_mine
+                    pm_no_steam_automation
+                    pm_road_carts
+                }
             }
             create_building = {
-                building = "building_gold_mine"
+                building = building_gold_mine
                 add_ownership = {
                     country = {
-                        country = "c:GMK"
+                        country = c:GMK
                         levels = 2
                     }
                 }
                 reserves = 1
-                activate_production_methods = { "pm_picks_and_shovels_building_gold_mine" "pm_crystal_explosives_building_gold_mine" "pm_no_steam_automation" "pm_road_carts" }
+                activate_production_methods = {
+                    pm_picks_and_shovels_building_gold_mine
+                    pm_crystal_explosives_building_gold_mine
+                    pm_no_steam_automation
+                    pm_road_carts
+                }
             }
             create_building = {
-                building = "building_livestock_ranch"
+                building = building_livestock_ranch
                 add_ownership = {
                     building = {
-                        type = "building_financial_district"
-                        country = "c:GMK"
+                        type = building_financial_district
+                        country = c:GMK
                         levels = 5
-                        region = "STATE_TYROL"
+                        region = STATE_TYROL
                     }
                 }
                 reserves = 1
-                activate_production_methods = { "pm_butchering_tools" "pm_sheep_farms" "pm_standard_fences" "pm_unrefrigerated" }
+                activate_production_methods = {
+                    pm_butchering_tools
+                    pm_sheep_farms
+                    pm_standard_fences
+                    pm_unrefrigerated
+                }
             }
             create_building = {
-                building = "building_tooling_workshops"
+                building = building_tooling_workshops
                 add_ownership = {
                     building = {
-                        type = "building_financial_district"
-                        country = "c:GMK"
+                        type = building_financial_district
+                        country = c:GMK
                         levels = 3
-                        region = "STATE_TYROL"
+                        region = STATE_TYROL
                     }
                 }
                 reserves = 1
-                activate_production_methods = { "pm_steel" "pm_automation_disabled" }
+                activate_production_methods = {
+                    pm_steel
+                    pm_automation_disabled
+                }
             }
             create_building = {
-                building = "building_textile_mills"
+                building = building_textile_mills
                 add_ownership = {
                     building = {
-                        type = "building_financial_district"
-                        country = "c:GMK"
+                        type = building_financial_district
+                        country = c:GMK
                         levels = 1
-                        region = "STATE_SOUTH_TYROL"
+                        region = STATE_SOUTH_TYROL
                     }
                 }
                 reserves = 1
-                activate_production_methods = { "pm_dye_workshops" "pm_traditional_looms" "pm_no_luxury_clothes" }
+                activate_production_methods = {
+                    pm_dye_workshops
+                    pm_traditional_looms
+                    pm_no_luxury_clothes
+                }
             }
             create_building = {
-                building = "building_paper_mills"
+                building = building_paper_mills
                 add_ownership = {
                     country = {
-                        country = "c:GMK"
+                        country = c:GMK
                         levels = 1
                     }
                 }
                 reserves = 1
-                activate_production_methods = { "pm_sulfite_pulping" "pm_automation_disabled" }
+                activate_production_methods = {
+                    pm_sulfite_pulping
+                    pm_automation_disabled
+                }
             }
         }
     }
@@ -213,191 +269,249 @@
         }
         region_state:GMK = {
             create_building = {
-                building = "building_government_administration"
+                building = building_government_administration
                 add_ownership = {
                     country = {
-                        country = "c:GMK"
+                        country = c:GMK
                         levels = 1
                     }
                 }
                 reserves = 1
-                activate_production_methods = { "pm_vertical_filing_cabinets" "pm_professional_bureaucrats" "pm_religious_bureaucrats" }
+                activate_production_methods = {
+                    pm_vertical_filing_cabinets
+                    pm_professional_bureaucrats
+                    pm_religious_bureaucrats
+                }
             }
             create_building = {
-                building = "building_mana_extractor"
+                building = building_mana_extractor
                 add_ownership = {
                     country = {
-                        country = "c:GMK"
+                        country = c:GMK
                         levels = 2
                     }
                 }
                 reserves = 1
-                activate_production_methods = { "pm_mage_mana_extraction" }
+                activate_production_methods = {
+                    pm_mage_mana_extraction
+                }
             }
             create_building = {
-                building = "building_murk_ways"
+                building = building_murk_ways
                 add_ownership = {
                     country = {
-                        country = "c:GMK"
+                        country = c:GMK
                         levels = 2
                     }
                 }
                 reserves = 1
-                activate_production_methods = { "pm_murk_transportation" }
+                activate_production_methods = {
+                    pm_murk_transportation
+                }
             }
             create_building = {
-                building = "building_food_industry"
+                building = building_food_industry
                 add_ownership = {
                     building = {
-                        type = "building_financial_district"
-                        country = "c:GMK"
+                        type = building_financial_district
+                        country = c:GMK
                         levels = 1
-                        region = "STATE_SOUTH_TYROL"
+                        region = STATE_SOUTH_TYROL
                     }
                 }
                 reserves = 1
-                activate_production_methods = { "pm_pot_stills" "pm_disabled_canning" "pm_sweeteners" "pm_manual_dough_processing" }
+                activate_production_methods = {
+                    pm_pot_stills
+                    pm_disabled_canning
+                    pm_sweeteners
+                    pm_manual_dough_processing
+                }
             }
             create_building = {
-                building = "building_textile_mills"
+                building = building_textile_mills
                 add_ownership = {
                     building = {
-                        type = "building_financial_district"
-                        country = "c:GMK"
+                        type = building_financial_district
+                        country = c:GMK
                         levels = 2
-                        region = "STATE_SOUTH_TYROL"
+                        region = STATE_SOUTH_TYROL
                     }
                 }
                 reserves = 1
-                activate_production_methods = { "pm_dye_workshops" "pm_traditional_looms" "pm_no_luxury_clothes" }
+                activate_production_methods = {
+                    pm_dye_workshops
+                    pm_traditional_looms
+                    pm_no_luxury_clothes
+                }
             }
             create_building = {
-                building = "building_glassworks"
+                building = building_glassworks
                 add_ownership = {
                     building = {
-                        type = "building_financial_district"
-                        country = "c:GMK"
+                        type = building_financial_district
+                        country = c:GMK
                         levels = 1
-                        region = "STATE_SOUTH_TYROL"
+                        region = STATE_SOUTH_TYROL
                     }
                 }
                 reserves = 1
-                activate_production_methods = { "pm_disabled_ceramics" "pm_leaded_glass" "pm_manual_glassblowing" }
+                activate_production_methods = {
+                    pm_disabled_ceramics
+                    pm_leaded_glass
+                    pm_manual_glassblowing
+                }
             }
             create_building = {
-                building = "building_steel_mills"
+                building = building_steel_mills
                 add_ownership = {
                     building = {
-                        type = "building_financial_district"
-                        country = "c:GMK"
+                        type = building_financial_district
+                        country = c:GMK
                         levels = 2
-                        region = "STATE_SOUTH_TYROL"
+                        region = STATE_SOUTH_TYROL
                     }
                 }
                 reserves = 1
-                activate_production_methods = { "pm_blister_steel_process" "pm_automation_disabled" }
+                activate_production_methods = {
+                    pm_blister_steel_process
+                    pm_automation_disabled
+                }
             }
             create_building = {
-                building = "building_tooling_workshops"
+                building = building_tooling_workshops
                 add_ownership = {
                     building = {
-                        type = "building_financial_district"
-                        country = "c:GMK"
+                        type = building_financial_district
+                        country = c:GMK
                         levels = 1
-                        region = "STATE_SOUTH_TYROL"
+                        region = STATE_SOUTH_TYROL
                     }
                 }
                 reserves = 1
-                activate_production_methods = { "pm_steel" "pm_automation_disabled" }
+                activate_production_methods = {
+                    pm_steel
+                    pm_automation_disabled
+                }
             }
             create_building = {
-                building = "building_logging_camp"
+                building = building_logging_camp
                 add_ownership = {
                     building = {
-                        type = "building_logging_camp"
-                        country = "c:GMK"
+                        type = building_logging_camp
+                        country = c:GMK
                         levels = 3
-                        region = "STATE_SOUTH_TYROL"
+                        region = STATE_SOUTH_TYROL
                     }
                 }
                 reserves = 1
-                activate_production_methods = { "pm_saw_mills" "pm_no_equipment" "pm_road_carts" "pm_hardwood" }
+                activate_production_methods = {
+                    pm_saw_mills
+                    pm_no_equipment
+                    pm_road_carts
+                    pm_hardwood
+                }
             }
             create_building = {
-                building = "building_dwarven_iron_mine"
+                building = building_dwarven_iron_mine
                 add_ownership = {
                     building = {
-                        type = "building_financial_district"
-                        country = "c:GMK"
+                        type = building_financial_district
+                        country = c:GMK
                         levels = 2
-                        region = "STATE_SOUTH_TYROL"
+                        region = STATE_SOUTH_TYROL
                     }
                 }
                 reserves = 1
-                activate_production_methods = { "pm_picks_and_shovels_building_iron_mine" "pm_crystal_explosives_building_iron_mine" "pm_no_steam_automation" "pm_road_carts" }
+                activate_production_methods = {
+                    pm_picks_and_shovels_building_iron_mine
+                    pm_crystal_explosives_building_iron_mine
+                    pm_no_steam_automation
+                    pm_road_carts
+                }
             }
             create_building = {
-                building = "building_dwarven_lead_mine"
+                building = building_dwarven_lead_mine
                 add_ownership = {
                     building = {
-                        type = "building_financial_district"
-                        country = "c:GMK"
+                        type = building_financial_district
+                        country = c:GMK
                         levels = 1
-                        region = "STATE_SOUTH_TYROL"
+                        region = STATE_SOUTH_TYROL
                     }
                 }
                 reserves = 1
-                activate_production_methods = { "pm_picks_and_shovels_building_lead_mine" "pm_crystal_explosives_building_lead_mine" "pm_no_steam_automation" "pm_road_carts" }
+                activate_production_methods = {
+                    pm_picks_and_shovels_building_lead_mine
+                    pm_crystal_explosives_building_lead_mine
+                    pm_no_steam_automation
+                    pm_road_carts
+                }
             }
             create_building = {
-                building = "building_dwarven_sulfur_mine"
+                building = building_dwarven_sulfur_mine
                 add_ownership = {
                     building = {
-                        type = "building_financial_district"
-                        country = "c:GMK"
+                        type = building_financial_district
+                        country = c:GMK
                         levels = 2
-                        region = "STATE_SOUTH_TYROL"
+                        region = STATE_SOUTH_TYROL
                     }
                 }
                 reserves = 1
-                activate_production_methods = { "pm_picks_and_shovels_building_sulfur_mine" "pm_crystal_explosives_building_sulfur_mine" "pm_no_steam_automation" "pm_road_carts" }
+                activate_production_methods = {
+                    pm_picks_and_shovels_building_sulfur_mine
+                    pm_crystal_explosives_building_sulfur_mine
+                    pm_no_steam_automation
+                    pm_road_carts
+                }
             }
             create_building = {
-                building = "building_dwarven_coal_mine"
+                building = building_dwarven_coal_mine
                 add_ownership = {
                     building = {
-                        type = "building_financial_district"
-                        country = "c:GMK"
+                        type = building_financial_district
+                        country = c:GMK
                         levels = 2
-                        region = "STATE_SOUTH_TYROL"
+                        region = STATE_SOUTH_TYROL
                     }
                 }
                 reserves = 1
-                activate_production_methods = { "pm_picks_and_shovels_building_coal_mine" "pm_crystal_explosives_building_coal_mine" "pm_no_steam_automation" "pm_road_carts" }
+                activate_production_methods = {
+                    pm_picks_and_shovels_building_coal_mine
+                    pm_crystal_explosives_building_coal_mine
+                    pm_no_steam_automation
+                    pm_road_carts
+                }
             }
             create_building = {
-                building = "building_construction_sector"
+                building = building_construction_sector
                 add_ownership = {
                     country = {
-                        country = "c:GMK"
+                        country = c:GMK
                         levels = 2
                     }
                 }
                 reserves = 1
-                activate_production_methods = { "pm_iron_frame_buildings" }
+                activate_production_methods = {
+                    pm_iron_frame_buildings
+                }
             }
             create_building = {
-                building = "building_wheat_farm"
+                building = building_wheat_farm
                 add_ownership = {
                     building = {
-                        type = "building_financial_district"
-                        country = "c:GMK"
+                        type = building_financial_district
+                        country = c:GMK
                         levels = 14
-                        region = "STATE_SOUTH_TYROL"
+                        region = STATE_SOUTH_TYROL
                     }
                 }
                 reserves = 1
-                activate_production_methods = { "pm_soil_enriching_farming" "pm_citrus_orchards" "pm_tools" }
+                activate_production_methods = {
+                    pm_soil_enriching_farming
+                    pm_citrus_orchards
+                    pm_tools
+                }
             }
         }
     }
@@ -406,37 +520,49 @@
     s:STATE_BAVARIA = {
         region_state:BAV = {
             create_building = {
-                building = "building_paper_mills"
+                building = building_paper_mills
                 add_ownership = {
                     country = {
-                        country = "c:GMK"
+                        country = c:GMK
                         levels = 2
                     }
                 }
                 reserves = 1
-                activate_production_methods = { "pm_sulfite_pulping" "pm_automation_disabled" }
+                activate_production_methods = {
+                    pm_sulfite_pulping
+                    pm_automation_disabled
+                }
             }
             create_building = {
-                building = "building_wheat_farm"
+                building = building_wheat_farm
                 add_ownership = {
                     country = {
-                        country = "c:GMK"
+                        country = c:GMK
                         levels = 2
                     }
                 }
                 reserves = 1
-                activate_production_methods = { "pm_soil_enriching_farming" "pm_citrus_orchards" "pm_tools" }
+                activate_production_methods = {
+                    pm_soil_enriching_farming
+                    pm_citrus_orchards
+                    pm_tools
+                }
             }
             create_building = {
-                building = "building_logging_camp"
+                building = building_logging_camp
                 add_ownership = {
                     country = {
-                        country = "c:GMK"
+                        country = c:GMK
                         levels = 3
                     }
                 }
                 reserves = 1
-                activate_production_methods = { "pm_saw_mills" "pm_no_equipment" "pm_road_carts" "pm_hardwood" }
+                activate_production_methods = {
+                    pm_saw_mills
+                    pm_hardwood
+                    pm_no_equipment
+                    pm_road_carts
+                }
             }
         }
     }
