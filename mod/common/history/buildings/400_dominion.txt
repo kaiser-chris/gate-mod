@@ -1,19 +1,39 @@
-﻿BUILDINGS={
+﻿BUILDINGS = {
 
-	s:STATE_ZAMBIA={
-		region_state:GAD={
-			#TODO: Add GAD buildings in STATE_ZAMBIA
-		}
-	}
-	s:STATE_EAST_ANGOLA = {
-		region_state:GAD = {
-			#TODO: Add GAD buildings in STATE_EAST_ANGOLA
-		}
-	}
-	s:STATE_BOTSWANA = {
-		region_state:GAD = {
-			#TODO: Add GAD buildings in STATE_BOTSWANA
-		}
-	}
+    s:STATE_ZAMBIA = {
+        region_state:GAD = {
+            create_building = {
+                building = building_gate
+                add_ownership = {
+                    country = {
+                        country = c:GAD
+                        levels = 1
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_gate_closed
+                }
+            }
+            create_building = {
+                building = building_magic_research_institute
+                level = 1
+                reserves = 1
+                activate_production_methods = {
+                    pm_novice_researcher
+                }
+            }
+        }
+    }
+    s:STATE_EAST_ANGOLA = {
+        region_state:GAD = {
+            #TODO: Add GAD buildings in STATE_EAST_ANGOLA
+        }
+    }
+    s:STATE_BOTSWANA = {
+        region_state:GAD = {
+            #TODO: Add GAD buildings in STATE_BOTSWANA
+        }
+    }
 
 }

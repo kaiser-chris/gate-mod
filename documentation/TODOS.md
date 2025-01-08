@@ -21,17 +21,16 @@ Below is a table with all currently open ToDos.
 | ---- | ---- | ---- |
 | ./mod/common/cultures/400_elven.txt | 2 |  Define custom culture (Currently copy of german) |
 | ./mod/common/cultures/403_gnomish.txt | 2 |  Define custom culture (Currently copy of dwarven) |
-| ./mod/common/history/buildings/400_dominion.txt | 10 |  Add GAD buildings in STATE_EAST_ANGOLA |
-| ./mod/common/history/buildings/400_dominion.txt | 15 |  Add GAD buildings in STATE_BOTSWANA |
-| ./mod/common/history/buildings/400_dominion.txt | 5 |  Add GAD buildings in STATE_ZAMBIA |
+| ./mod/common/history/buildings/400_dominion.txt | 30 |  Add GAD buildings in STATE_EAST_ANGOLA |
+| ./mod/common/history/buildings/400_dominion.txt | 35 |  Add GAD buildings in STATE_BOTSWANA |
 | ./mod/common/history/characters/gad - dominion.txt | 1 |  Add proper characters |
-| ./mod/common/history/characters/gns - new samadore.txt | 4 | # TODO: Add gnomish name here |
+| ./mod/common/history/characters/gns - new samadore.txt | 4 |  Add gnomish name here |
 | ./mod/common/history/countries/gad - dominion.txt | 3 |  Define laws and technology for GAD |
 | ./mod/common/history/countries/gns - new samadore.txt | 3 |  Define laws and technology for GNS |
-| ./mod/common/ideologies/401_gate_ideologies.txt | 2 | # TODO: Create icon for ideology_militarist |
-| ./mod/common/ideologies/401_gate_ideologies.txt | 52 | # TODO: Add wanted laws to ideology_magic_hopeful |
-| ./mod/common/interest_groups/400_magic_users.txt | 244 | # TODO: Add leader in magic check |
-| ./mod/common/interest_groups/400_magic_users.txt | 47 | # TODO: Create elven dominion magic user ig traits |
+| ./mod/common/ideologies/401_gate_ideologies.txt | 2 |  Create icon for ideology_militarist |
+| ./mod/common/ideologies/401_gate_ideologies.txt | 52 |  Add wanted laws to ideology_magic_hopeful |
+| ./mod/common/interest_groups/400_magic_users.txt | 244 |  Add leader in magic check |
+| ./mod/common/interest_groups/400_magic_users.txt | 47 |  Create elven dominion magic user ig traits |
 | ./mod/common/production_methods/406_magic_academy_production_methods.txt | 100 |  Find proper logo for pm_university_simple_magic_research |
 | ./mod/common/production_methods/406_magic_academy_production_methods.txt | 127 |  Find proper logo for pm_university_advanced_magic_research |
 | ./mod/common/production_methods/406_magic_academy_production_methods.txt | 95 |  Find proper logo for pm_university_no_magic_research |

@@ -25,7 +25,7 @@
 		add_technology_researched = mass_communication
 
 		# Laws
-		activate_law = law_type:law_no_colonial_affairs
+		activate_law = law_type:law_no_colonial_affairs # Overwritten later
 		activate_law = law_type:law_local_police
 		activate_law = law_type:law_slavery_banned
 		activate_law = law_type:law_religious_schools
@@ -36,11 +36,9 @@
 		activate_law = law_type:law_isolationism
 
         set_ruling_interest_groups = {
-        	ig_landowners
+			ig_devout
+			ig_landowners
         }
-		ig:ig_devout = {
-			add_ruling_interest_group = yes
-		}
 
 		# Institutions
 		set_institution_investment_level = {

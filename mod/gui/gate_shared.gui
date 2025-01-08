@@ -206,10 +206,54 @@ types gate_shared {
         }
     }
 
-    type gate_mana_density = widget {
-        size = { 100% 100% }
-        tooltip = gg_map_marker_mana_density_tooltip
+    type gate_mana_density_colored = widget {
         using = clickthrough_blocker
+        tooltip = gg_map_marker_mana_density_tooltip
+
+        block "mana_density_size" {
+            size = { 70 45 }
+        }
+
+        block "mana_density_visibility" {
+            visible = no
+        }
+
+        gate_mana_density = {
+            blockoverride "visibility" {
+                visible = "[LessThan_CFixedPoint(State.AccessStateRegion.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('medium_mana_density_threshhold'))]"
+            }
+            blockoverride "background_color" {
+                texture = "gfx/interface/icons/gui_icons/low_mana_density.dds"
+                tintcolor = { 0.6 0.6 0.6 1 }
+            }
+        }
+        gate_mana_density = {
+            blockoverride "visibility" {
+                visible = "[And(
+								GreaterThanOrEqualTo_CFixedPoint(State.AccessStateRegion.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('medium_mana_density_threshhold')),
+								LessThan_CFixedPoint(State.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('high_mana_density_threshhold'))
+							)]"
+            }
+            blockoverride "background_color" {
+                texture = "gfx/interface/icons/gui_icons/mid_mana_density.dds"
+                tintcolor = { 0.6 0.6 0.6 1 }
+            }
+        }
+        gate_mana_density = {
+            blockoverride "visibility" {
+                visible = "[GreaterThanOrEqualTo_CFixedPoint(State.AccessStateRegion.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('high_mana_density_threshhold'))]"
+            }
+            blockoverride "background_color" {
+                texture = "gfx/interface/icons/gui_icons/high_mana_density.dds"
+                tintcolor = { 0.6 0.6 0.6 1 }
+            }
+        }
+    }
+
+    type gate_mana_density = widget {
+        block "size" {
+            size = { 100% 100% }
+        }
 
         block "visibility" {}
 

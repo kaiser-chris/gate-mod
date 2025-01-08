@@ -76,86 +76,25 @@ flowcontainer = {
 		onmousehierarchyenter = "[AccessHighlightManager.HighlightStateRegion(State.AccessStateRegion.Self)]"
 		onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
 
-		widget = {
-			visible = "[IsZoomLevelNear]"
-			size = { 70 45 }
-			gate_mana_density = {
-				blockoverride "visibility" {
-					visible = "[LessThan_CFixedPoint(State.AccessStateRegion.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('medium_mana_density_threshhold'))]"
-				}
-				blockoverride "background_color" {
-					texture = "gfx/interface/icons/gui_icons/low_mana_density.dds"
-					tintcolor = { 0.6 0.6 0.6 1 }
-				}
-			}
 
-			gate_mana_density = {
-				blockoverride "visibility" {
-					visible = "[And(
-								GreaterThanOrEqualTo_CFixedPoint(State.AccessStateRegion.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('medium_mana_density_threshhold')),
-								LessThan_CFixedPoint(State.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('high_mana_density_threshhold'))
-							)]"
-				}
-				blockoverride "background_color" {
-					texture = "gfx/interface/icons/gui_icons/mid_mana_density.dds"
-					tintcolor = { 0.6 0.6 0.6 1 }
-				}
+		gate_mana_density_colored = {
+			blockoverride "mana_density_size" {
+				size = { 70 45 }
 			}
-
-			gate_mana_density = {
-				blockoverride "visibility" {
-					visible = "[GreaterThanOrEqualTo_CFixedPoint(State.AccessStateRegion.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('high_mana_density_threshhold'))]"
-				}
-				blockoverride "background_color" {
-					texture = "gfx/interface/icons/gui_icons/high_mana_density.dds"
-					tintcolor = { 0.6 0.6 0.6 1 }
-				}
+			blockoverride "mana_density_visibility" {
+				visible = "[IsZoomLevelNear]"
 			}
 		}
 
-		widget = {
-			visible = "[IsZoomLevelMid]"
-			size = { 65 40 }
-			gate_mana_density = {
-				blockoverride "visibility" {
-					visible = "[LessThan_CFixedPoint(State.AccessStateRegion.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('medium_mana_density_threshhold'))]"
-				}
-				blockoverride "background_color" {
-					texture = "gfx/interface/icons/gui_icons/low_mana_density.dds"
-					tintcolor = { 0.6 0.6 0.6 1 }
-				}
-				blockoverride "font_size" {
-					using = fontsize_small
-				}
+		gate_mana_density_colored = {
+			blockoverride "mana_density_size" {
+				size = { 65 40 }
 			}
-
-			gate_mana_density = {
-				blockoverride "visibility" {
-					visible = "[And(
-								GreaterThanOrEqualTo_CFixedPoint(State.AccessStateRegion.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('medium_mana_density_threshhold')),
-								LessThan_CFixedPoint(State.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('high_mana_density_threshhold'))
-							)]"
-				}
-				blockoverride "background_color" {
-					texture = "gfx/interface/icons/gui_icons/mid_mana_density.dds"
-					tintcolor = { 0.6 0.6 0.6 1 }
-				}
-				blockoverride "font_size" {
-					using = fontsize_small
-				}
+			blockoverride "mana_density_visibility" {
+				visible = "[IsZoomLevelMid]"
 			}
-
-			gate_mana_density = {
-				blockoverride "visibility" {
-					visible = "[GreaterThanOrEqualTo_CFixedPoint(State.AccessStateRegion.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('high_mana_density_threshhold'))]"
-				}
-				blockoverride "background_color" {
-					texture = "gfx/interface/icons/gui_icons/high_mana_density.dds"
-					tintcolor = { 0.6 0.6 0.6 1 }
-				}
-				blockoverride "font_size" {
-					using = fontsize_small
-				}
+			blockoverride "font_size" {
+				using = fontsize_small
 			}
 		}
 	}
