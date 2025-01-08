@@ -1,107 +1,4 @@
 ﻿COUNTRIES = {
-	# Great Qing
-	c:CHI = {
-		# Magic Research Institute
-		s:STATE_BEIJING = {
-			region_state:CHI = {
-				create_building = {
-					building = building_magic_research_institute
-					level = 1
-					reserves = 1
-					activate_production_methods = {
-						pm_novice_researcher
-					}
-				}
-			}
-		}
-
-		# Create Magic Gate in the middle of China
-		s:STATE_ALXA = {
-			region_state:CHI = {
-				create_building = {
-					building = building_gate
-					add_ownership = {
-						country = {
-							country = c:CHI
-							levels = 1
-						}
-					}
-					reserves = 1
-					activate_production_methods = {
-						pm_gate_defend
-					}
-				}
-			}
-		}
-	}
-
-	# Joseon / Korea
-	c:KOR = {
-		# Magic Research Institute
-		s:STATE_SEOUL = {
-			region_state:KOR = {
-				create_building = {
-					building = building_magic_research_institute
-					level = 1
-					reserves = 1
-					activate_production_methods = {
-						pm_novice_researcher
-					}
-				}
-			}
-		}
-	}
-
-	# Great Britain
-	c:GBR = {
-		# Magic Research Institute
-		s:STATE_HOME_COUNTIES = {
-			region_state:GBR = {
-				create_building = {
-					building = building_magic_research_institute
-					level = 1
-					reserves = 1
-					activate_production_methods = {
-						pm_novice_researcher
-					}
-				}
-			}
-		}
-	}
-
-	# Portugal
-	c:POR = {
-		# Magic Research Institute
-		s:STATE_ESTREMADURA = {
-			region_state:POR = {
-				create_building = {
-					building = building_magic_research_institute
-					level = 1
-					reserves = 1
-					activate_production_methods = {
-						pm_novice_researcher
-					}
-				}
-			}
-		}
-	}
-
-	# Mexico
-	c:MEX = {
-		# Magic Research Institute
-		s:STATE_MEXICO = {
-			region_state:MEX = {
-				create_building = {
-					building = building_magic_research_institute
-					level = 1
-					reserves = 1
-					activate_production_methods = {
-						pm_novice_researcher
-					}
-				}
-			}
-		}
-	}
 
 	# Arcturian Dominion
 	# = Subject Countries in Africa
@@ -126,8 +23,13 @@
 		set_country_type = unrecognized
 	}
 	c:TSW = {
+		# As protectorate got some technology from Arthurian Dominion
 		effect_starting_technology_tier_5_tech = yes
 		add_technology_researched = distillation
+		add_technology_researched = prospecting
+		add_technology_researched = urban_planning
+		add_technology_researched = law_enforcement
+		add_technology_researched = currency_standards
 		activate_law = law_type:law_monarchy
 		set_country_type = unrecognized
 	}

@@ -19,10 +19,6 @@ Below is a table with all currently open ToDos.
 
 | File | Line | ToDo |
 | ---- | ---- | ---- |
-| ./mod/common/cultures/400_elven.txt | 2 |  Define custom culture (Currently copy of german) |
-| ./mod/common/cultures/403_gnomish.txt | 2 |  Define custom culture (Currently copy of dwarven) |
-| ./mod/common/history/characters/gad - dominion.txt | 4 |  Add elven name here |
-| ./mod/common/history/characters/gns - new samadore.txt | 4 |  Add gnomish name here |
 | ./mod/common/ideologies/401_gate_ideologies.txt | 2 |  Create icon for ideology_militarist |
 | ./mod/common/ideologies/401_gate_ideologies.txt | 52 |  Add wanted laws to ideology_magic_hopeful |
 | ./mod/common/interest_groups/400_magic_users.txt | 244 |  Add leader in magic check |
