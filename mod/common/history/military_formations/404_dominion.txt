@@ -1,0 +1,43 @@
+﻿MILITARY_FORMATIONS = {
+	c:GAD = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_congo
+
+			mobilization_options = {
+				mobilization_option:mobilization_option_ritual_magic
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mage_infantry
+				state_region = s:STATE_ZAMBIA
+				count = 10
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mage_artillery
+				state_region = s:STATE_ZAMBIA
+				count = 5
+			}
+			save_scope_as = gad_army
+		}
+
+		create_character = {
+			birth_date = 1799.7.13
+			culture = elven
+			hq = region_congo
+			is_general = yes
+			interest_group = ig_devout
+			commander_rank = commander_rank_1
+			traits = {
+				ambitious
+				basic_offensive_planner
+			}
+			save_scope_as = gad_commander
+		}
+
+		scope:gad_commander = {
+			transfer_to_formation = scope:gad_army
+		}
+	}
+}

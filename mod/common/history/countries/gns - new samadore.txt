@@ -1,7 +1,5 @@
 ﻿COUNTRIES = {
 	c:GNS = {
-		#TODO: Define laws and technology for GNS
-
 		effect_starting_technology_tier_4_tech = yes
 		effect_starting_politics_liberal = yes
 		effect_starting_pop_literacy_high = yes
@@ -18,6 +16,8 @@
 		add_technology_researched = urban_planning
 		add_technology_researched = law_enforcement
 
+		# Laws
+		activate_law = law_type:law_no_colonial_affairs # Overwritten later
 		activate_law = law_type:law_gnomish_harmony
 		activate_law = law_type:law_freedom_of_conscience
 		activate_law = law_type:law_land_based_taxation

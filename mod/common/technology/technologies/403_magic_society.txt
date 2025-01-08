@@ -38,6 +38,37 @@ orc_clan_support = {
 	}
 }
 
+elven_support = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/gnomish_harmony.dds"
+	category = society
+	can_research = no
+
+	modifier = {
+		# Basic Support
+		country_minting_add = 500
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+elven_forests = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/gnomish_harmony.dds"
+	category = society
+	can_research = no
+
+	modifier = {
+		state_infrastructure_mult = 0.15
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
 gnomish_harmony = {
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/gnomish_harmony.dds"

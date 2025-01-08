@@ -5,48 +5,8 @@ GLOBAL = {
 	c:GNS = {
 		activate_law = law_type:law_gnomish_integration
 	}
-
 	c:GAD = {
 		activate_law = law_type:law_frontier_colonization
-		set_institution_investment_level = {
-			institution = institution_colonial_affairs
-			level = 2
-		}
-		create_diplomatic_pact = {
-			country = c:CHK
-			type = puppet
-		}
-		create_diplomatic_pact = {
-			country = c:KZM
-			type = puppet
-		}
-		create_diplomatic_pact = {
-			country = c:KSN
-			type = puppet
-		}
-		create_diplomatic_pact = {
-			country = c:LND
-			type = puppet
-		}
-		create_diplomatic_pact = {
-			country = c:TSW
-			type = protectorate
-		}
-	}
-	c:KZM = {
-		add_liberty_desire = 15
-	}
-	c:LND = {
-		add_liberty_desire = 15
-	}
-	c:KSN = {
-		add_liberty_desire = 15
-	}
-	c:CHK = {
-		add_liberty_desire = 15
-	}
-	c:TSW = {
-		add_liberty_desire = -5
 	}
 
 	set_global_variable = {
@@ -103,15 +63,6 @@ GLOBAL = {
 		create_character = {
 			template = magic_researcher_template
 			interest_group = ig_magic_users
-		}
-
-		# Established Magic Countries
-		# should have a Mage Tower in every state
-		every_scope_state = {
-			create_mage_tower = {
-				country = scope:magic_country
-				level = 1
-			}
 		}
 	}
 

@@ -1,0 +1,154 @@
+﻿elven_clothes = {
+    usage = game
+    selection_behavior = weighted_random
+    fallback = default_clothes
+
+    default_clothes = {
+        weight = {
+            base = 1
+        }
+    }
+
+    elven_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = outfits
+                template = siamese_outfits
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = peasants_legwear
+                range = { 0 0.5 } # For the randomness to work correctly
+            }
+        }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                elven_portrait_trigger = yes
+            }
+        }
+    }
+
+    elven_royal_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = outfits
+                template = siamese_royal_outfits
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = european_legwear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 1200
+                elven_portrait_trigger = yes
+                AND = {
+                    exists = scope:character
+                    scope:character = {
+                        exists = owner
+                        OR = {
+                            is_ruler = yes
+                            is_heir = yes
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    elven_poor_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = outfits
+                template = indian_common_outfits
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                elven_portrait_pop_trigger = yes
+                OR = {
+                    poor_clothes_pop_trigger = yes
+                    AND = {
+                        exists = scope:pop
+                        scope:pop = {
+                            is_pop_type = soldiers
+                        }
+                    }
+                }
+            }
+        }
+    }
+    elven_middle_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = outfits
+                template = indian_high_outfits
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+
+                elven_portrait_pop_trigger = yes
+                middle_clothes_pop_trigger = yes
+            }
+        }
+    }
+
+    elven_upper_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = outfits
+                template = siamese_outfits
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = peasants_legwear
+                range = { 0 0.5 } # For the randomness to work correctly
+            }
+        }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 1200
+                elven_portrait_pop_trigger = yes
+                OR = {
+                    upper_clothes_pop_trigger = yes
+                    magic_users_clothes_pop_trigger = yes
+                    AND = {
+                        exists = scope:pop
+                        scope:pop = {
+                            is_pop_type = officers
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

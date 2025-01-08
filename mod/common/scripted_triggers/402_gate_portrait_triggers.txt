@@ -34,6 +34,19 @@ dwarven_portrait_pop_trigger = {
     }
 }
 
+elven_portrait_trigger = {
+    exists = scope:character
+    scope:character = {
+        has_culture = cu:elven
+    }
+}
+elven_portrait_pop_trigger = {
+    exists = scope:pop
+    scope:pop = {
+        culture = cu:elven
+    }
+}
+
 gnomish_portrait_trigger = {
     exists = scope:character
     scope:character = {

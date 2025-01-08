@@ -142,3 +142,76 @@ pm_gate_support_orcs = {
 		}
 	}
 }
+
+pm_gate_support_elves = {
+	texture = "gfx/interface/icons/production_method_icons/elven_gold_support.dds"
+
+	is_hidden_when_unavailable = yes
+
+	unlocking_technologies = {
+		elven_support
+	}
+
+	disallowing_laws = {
+		law_freedom_of_conscience
+		law_total_separation
+		law_state_atheism
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_minting_add = 1500
+		}
+
+		level_scaled = {
+			country_magical_innovation_add = 50
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_output_mana_add = 20
+		}
+		level_scaled = {
+			building_employment_mages_add = 100
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+pm_gate_support_elves_plus = {
+	texture = "gfx/interface/icons/production_method_icons/elven_gold_support_plus.dds"
+
+	is_hidden_when_unavailable = yes
+
+	unlocking_technologies = {
+		elven_support
+	}
+
+	disallowing_laws = {
+		law_total_separation
+		law_state_atheism
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_minting_add = 3000
+		}
+
+		level_scaled = {
+			country_magical_innovation_add = 50
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_output_mana_add = 20
+		}
+		level_scaled = {
+			building_employment_mages_add = 100
+			building_employment_clergymen_add = 500
+		}
+	}
+}

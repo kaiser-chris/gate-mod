@@ -72,23 +72,34 @@ GLOBAL = {
 		}
 	}
 
-	# Mexico
-	c:MEX = {
+	# Portugal
+	c:POR = {
 		# Add Researching Magic journal entry
 		add_journal_entry = {
 			type = je_researching_magic
 		}
 
-		# Add Magic Research Institute
-		capital = {
-			create_building = {
-				building = building_magic_research_institute
-				level = 1
-				reserves = 1
-				activate_production_methods = {
-					pm_novice_researcher
-				}
+		# Add progress to magic research since they have
+		# had access to a gate for years
+		je:je_researching_magic = {
+			add_progress = {
+				name = pb_gate_researching_magic
+				value = 7
 			}
+		}
+
+		# Add Magic Researcher
+		create_character = {
+			template = magic_researcher_template
+			interest_group = ig_intelligentsia
+		}
+	}
+
+	# Mexico
+	c:MEX = {
+		# Add Researching Magic journal entry
+		add_journal_entry = {
+			type = je_researching_magic
 		}
 
 		# Add progress to magic research since they have
@@ -109,19 +120,41 @@ GLOBAL = {
 
 	# Arcturian Dominion
 	# = Subject Countries in Africa
-	c:CHK = {
-		set_country_type = unrecognized
+	c:GAD = {
+		create_diplomatic_pact = {
+			country = c:CHK
+			type = puppet
+		}
+		create_diplomatic_pact = {
+			country = c:KZM
+			type = puppet
+		}
+		create_diplomatic_pact = {
+			country = c:KSN
+			type = puppet
+		}
+		create_diplomatic_pact = {
+			country = c:LND
+			type = puppet
+		}
+		create_diplomatic_pact = {
+			country = c:TSW
+			type = protectorate
+		}
 	}
 	c:KZM = {
-		set_country_type = unrecognized
-	}
-	c:KSN = {
-		set_country_type = unrecognized
+		add_liberty_desire = 15
 	}
 	c:LND = {
-		set_country_type = unrecognized
+		add_liberty_desire = 15
+	}
+	c:KSN = {
+		add_liberty_desire = 15
+	}
+	c:CHK = {
+		add_liberty_desire = 15
 	}
 	c:TSW = {
-		set_country_type = unrecognized
+		add_liberty_desire = -5
 	}
 }

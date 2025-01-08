@@ -1,0 +1,79 @@
+﻿elven_upper_class = {
+	social_hierarchy = elven_supremacy
+	strata = upper
+
+	pop_criteria = {
+		culture = cu:elven
+	}
+
+	allowed_professions = {
+		aristocrats
+		clergymen
+		mages
+		druids
+	}
+}
+
+elven_middle_class = {
+	social_hierarchy = elven_supremacy
+	strata = middle
+
+	pop_criteria = {
+		culture = cu:elven
+	}
+
+	allowed_professions = {
+		clergymen
+		mages
+		druids
+	}
+}
+
+elven_human_upper_class = {
+	social_hierarchy = elven_supremacy
+	strata = upper
+
+	pop_criteria = {
+		always = yes
+	}
+
+	allowed_professions = {
+		capitalists
+	}
+}
+
+elven_human_middle_class = {
+	social_hierarchy = elven_supremacy
+	strata = middle
+
+	pop_criteria = {
+		always = yes
+	}
+
+	allowed_professions = {
+		academics
+		bureaucrats
+		engineers
+		farmers
+		officers
+		shopkeepers
+	}
+}
+
+elven_human_lower_class = {
+	social_hierarchy = elven_supremacy
+	strata = lower
+
+	pop_criteria = {
+		always = yes
+	}
+
+	allowed_professions = {
+		clerks
+		laborers
+		machinists
+		peasants
+		slaves
+		soldiers
+	}
+}

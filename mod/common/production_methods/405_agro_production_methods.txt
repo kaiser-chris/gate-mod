@@ -1,10 +1,6 @@
 ﻿pm_magic_farming = {
 	texture = "gfx/interface/icons/production_method_icons/magic_farming.dds"
 
-	unlocking_technologies = {
-		magic_farming
-	}
-
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
@@ -16,8 +12,8 @@
 
 		level_scaled = {
 			# earnings
-			building_employment_laborers_add = 3500
-			building_employment_farmers_add = 1000
+			building_employment_laborers_add = 1000
+			building_employment_farmers_add = 3000
 			building_employment_druids_add = 500
 		}
 	}
@@ -25,10 +21,6 @@
 
 pm_magic_farming_building_rice_farm = {
 	texture = "gfx/interface/icons/production_method_icons/magic_farming.dds"
-
-	unlocking_technologies = {
-		magic_farming
-	}
 
 	building_modifiers = {
 		workforce_scaled = {
@@ -41,8 +33,8 @@ pm_magic_farming_building_rice_farm = {
 
 		level_scaled = {
 			# earnings
-			building_employment_laborers_add = 7000
-			building_employment_farmers_add = 2000
+			building_employment_laborers_add = 3000
+			building_employment_farmers_add = 4000
 			building_employment_druids_add = 1000
 		}
 	}

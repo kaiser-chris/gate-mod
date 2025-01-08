@@ -91,7 +91,7 @@ flowcontainer = {
 				size = { 65 40 }
 			}
 			blockoverride "mana_density_visibility" {
-				visible = "[IsZoomLevelMid]"
+				visible = "[Or(IsZoomLevelMid, IsZoomLevelFar)]"
 			}
 			blockoverride "font_size" {
 				using = fontsize_small

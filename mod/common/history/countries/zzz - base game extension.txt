@@ -35,11 +35,45 @@
 		}
 	}
 
+	# Joseon / Korea
+	c:KOR = {
+		# Magic Research Institute
+		s:STATE_SEOUL = {
+			region_state:KOR = {
+				create_building = {
+					building = building_magic_research_institute
+					level = 1
+					reserves = 1
+					activate_production_methods = {
+						pm_novice_researcher
+					}
+				}
+			}
+		}
+	}
+
 	# Great Britain
 	c:GBR = {
 		# Magic Research Institute
 		s:STATE_HOME_COUNTIES = {
 			region_state:GBR = {
+				create_building = {
+					building = building_magic_research_institute
+					level = 1
+					reserves = 1
+					activate_production_methods = {
+						pm_novice_researcher
+					}
+				}
+			}
+		}
+	}
+
+	# Portugal
+	c:POR = {
+		# Magic Research Institute
+		s:STATE_ESTREMADURA = {
+			region_state:POR = {
 				create_building = {
 					building = building_magic_research_institute
 					level = 1
@@ -68,4 +102,34 @@
 			}
 		}
 	}
+
+	# Arcturian Dominion
+	# = Subject Countries in Africa
+	c:CHK = {
+		effect_starting_technology_tier_5_tech = yes
+		activate_law = law_type:law_monarchy
+		set_country_type = unrecognized
+	}
+	c:KZM = {
+		effect_starting_technology_tier_5_tech = yes
+		activate_law = law_type:law_monarchy
+		set_country_type = unrecognized
+	}
+	c:KSN = {
+		effect_starting_technology_tier_5_tech = yes
+		activate_law = law_type:law_monarchy
+		set_country_type = unrecognized
+	}
+	c:LND = {
+		effect_starting_technology_tier_5_tech = yes
+		activate_law = law_type:law_monarchy
+		set_country_type = unrecognized
+	}
+	c:TSW = {
+		effect_starting_technology_tier_5_tech = yes
+		add_technology_researched = distillation
+		activate_law = law_type:law_monarchy
+		set_country_type = unrecognized
+	}
+
 }

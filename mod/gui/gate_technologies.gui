@@ -167,6 +167,20 @@ types gate_technologies {
 
         gate_technology = {
             blockoverride "context" {
+                datacontext = "[GetTechnology('elven_support')]"
+                datacontext = "[GetScriptedGui('elven_support')]"
+            }
+        }
+
+        gate_technology = {
+            blockoverride "context" {
+                datacontext = "[GetTechnology('elven_forests')]"
+                datacontext = "[GetScriptedGui('elven_forests')]"
+            }
+        }
+
+        gate_technology = {
+            blockoverride "context" {
                 datacontext = "[GetTechnology('gnomish_harmony')]"
                 datacontext = "[GetScriptedGui('gnomish_harmony')]"
             }

@@ -49,15 +49,8 @@ on_monthly_pulse_country = {
     on_actions = {
         on_monthly_calculate_magic_research
         on_monthly_trigger_monster_attack
-        on_monthly_add_mage_towers
         on_monthly_cleanup_researcher
         on_monthly_add_gate_immigration
-    }
-}
-
-on_monthly_add_mage_towers = {
-    effect = {
-        add_mage_towers = yes
     }
 }
 

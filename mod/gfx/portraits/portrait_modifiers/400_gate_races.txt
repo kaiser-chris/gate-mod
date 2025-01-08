@@ -9,6 +9,18 @@
                 template = "skin_color_hue_pos"
                 range = { 0.4 0.4 }
             }
+            accessory = {
+                mode = add
+                gene = outfits
+                template = no_outfit
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = gene_nudity
+                template = hide_nudity
+                range = { 0 1 }
+            }
         }
         weight = {
             base = 0
@@ -34,13 +46,13 @@
                 mode = add
                 gene = outfits
                 template = no_outfit
-                range = { 0 1 } # For the randomness to work correctly
+                range = { 0 1 }
             }
             accessory = {
                 mode = add
                 gene = gene_nudity
                 template = hide_nudity
-                range = { 0 1 } # For the randomness to work correctly
+                range = { 0 1 }
             }
         }
         weight = {
@@ -67,13 +79,13 @@
                 mode = add
                 gene = outfits
                 template = no_outfit
-                range = { 0 1 } # For the randomness to work correctly
+                range = { 0 1 }
             }
             accessory = {
                 mode = add
                 gene = gene_nudity
                 template = hide_nudity
-                range = { 0 1 } # For the randomness to work correctly
+                range = { 0 1 }
             }
         }
         weight = {
@@ -83,6 +95,33 @@
                 OR = {
                     gnomish_portrait_trigger = yes
                     gnomish_portrait_pop_trigger = yes
+                }
+            }
+        }
+    }
+
+    elven_race = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = outfits
+                template = no_outfit
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = gene_nudity
+                template = hide_nudity
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                OR = {
+                    elven_portrait_trigger = yes
+                    elven_portrait_pop_trigger = yes
                 }
             }
         }

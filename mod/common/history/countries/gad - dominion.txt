@@ -1,16 +1,17 @@
 ﻿COUNTRIES = {
 	c:GAD = {
-		#TODO: Define laws and technology for GAD
-
 		effect_starting_technology_tier_5_tech = yes
 		effect_starting_politics_conservative = yes
-		effect_starting_pop_literacy_very_high = yes
-		effect_starting_pop_wealth_high = yes
 
 		# Technology
 		learn_magic = yes
+		add_technology_researched = elven_forests # Elven specific
+		add_technology_researched = elven_support # Elven specific
 		add_technology_researched = mana_extraction
 		add_technology_researched = magic_farming
+		add_technology_researched = mage_infantry
+		add_technology_researched = mage_artillery
+		add_technology_researched = ritual_magic
 		add_technology_researched = distillation
 		add_technology_researched = prospecting
 		add_technology_researched = drydocks
@@ -23,6 +24,10 @@
 		add_technology_researched = currency_standards
 		add_technology_researched = academia
 		add_technology_researched = mass_communication
+		add_technology_researched = lathe
+		add_technology_researched = steelworking
+		add_technology_researched = cotton_gin
+		add_technology_researched = medical_degrees
 
 		# Laws
 		activate_law = law_type:law_no_colonial_affairs # Overwritten later
@@ -34,21 +39,17 @@
 		activate_law = law_type:law_autocracy
 		activate_law = law_type:law_land_based_taxation
 		activate_law = law_type:law_isolationism
+		activate_law = law_type:law_private_monster_hunters
+		activate_law = law_type:law_elven_supremacy_religious_preaching
+		activate_law = law_type:law_charitable_health_system
 
         set_ruling_interest_groups = {
 			ig_devout
-			ig_landowners
         }
 
-		# Institutions
-		set_institution_investment_level = {
-			institution = institution_schools
-			level = 2
+		set_variable = {
+			name = custom_social_hieracy
+			value = active_law:lawgroup_elven_supremacy
 		}
-		set_institution_investment_level = {
-			institution = institution_police
-			level = 1
-		}
-
 	}
 }

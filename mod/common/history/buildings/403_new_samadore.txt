@@ -146,6 +146,21 @@ BUILDINGS = {
 				activate_production_methods = { pm_novice_researcher }
 			}
 			create_building = {
+				building = building_university
+				add_ownership = {
+					country = {
+						country = c:GNS
+						levels = 1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_scholastic_education
+					pm_secular_academia
+					pm_university_simple_magic_research
+				}
+			}
+			create_building = {
 				building = building_textile_mills
 				add_ownership = {
 					country = {
