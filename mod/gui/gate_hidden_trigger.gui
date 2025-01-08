@@ -20,4 +20,48 @@ widget = {
             onclick = "[GetVariableSystem.Set('com_open_window', 'gate_button_technology')]"
         }
     }
+
+    widget = {
+        visible = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
+        datacontext = "[GetMetaPlayer.GetPlayedOrObservedCountry]"
+
+        gate_technologies_production = {
+            blockoverride "tech_state" {
+                state = {
+                    trigger_when = "[And3(
+                                        ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End),
+                                        GetScriptedGui('sgui_gate_window_execute_research').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('technology', Technology.MakeScope).End),
+                                        GreaterThanOrEqualTo_CFixedPoint(Country.MakeScope.Var('magic_innovation').GetValue, Technology.GetCost(Country.Self))
+                                    )]"
+                    on_finish = "[GetScriptedGui('sgui_gate_can_research').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('technology', Technology.MakeScope).End)]"
+                }
+            }
+        }
+
+        gate_technologies_military = {
+            blockoverride "tech_state" {
+                state = {
+                    trigger_when = "[And3(
+                                        ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End),
+                                        GetScriptedGui('sgui_gate_window_execute_research').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('technology', Technology.MakeScope).End),
+                                        GreaterThanOrEqualTo_CFixedPoint(Country.MakeScope.Var('magic_innovation').GetValue, Technology.GetCost(Country.Self))
+                                    )]"
+                    on_finish = "[GetScriptedGui('sgui_gate_can_research').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('technology', Technology.MakeScope).End)]"
+                }
+            }
+        }
+
+        gate_technologies_society = {
+            blockoverride "tech_state" {
+                state = {
+                    trigger_when = "[And3(
+                                        ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End),
+                                        GetScriptedGui('sgui_gate_window_execute_research').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('technology', Technology.MakeScope).End),
+                                        GreaterThanOrEqualTo_CFixedPoint(Country.MakeScope.Var('magic_innovation').GetValue, Technology.GetCost(Country.Self))
+                                    )]"
+                    on_finish = "[GetScriptedGui('sgui_gate_can_research').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('technology', Technology.MakeScope).End)]"
+                }
+            }
+        }
+    }
 }

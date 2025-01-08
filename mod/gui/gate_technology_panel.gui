@@ -423,6 +423,8 @@ types gate_technology_panel_types {
             #datacontext = "[GetTechnology('some_technology')]"
         }
 
+        block "tech_state" {}
+
         block "visibility" {
             visible = "[And3(ScriptedGui.IsShown(GuiScope.SetRoot(Country.MakeScope).End), Not(Technology.HasResearchedTech(Country.Self)), Or(Not(Country.MakeScope.Var('magic_research').IsSet), Not(ObjectsEqual(Country.MakeScope.Var('magic_research').GetTechnology.MakeScope, Technology.MakeScope))))]"
         }

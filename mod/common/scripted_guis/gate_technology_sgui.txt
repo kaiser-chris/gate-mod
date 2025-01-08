@@ -109,6 +109,7 @@ sgui_gate_window_execute_research = {
 			min = 0
 			max = global_var:magic_innovation_bank_max
 		}
+		remove_variable = can_research_magic
 	}
 
 	is_valid = {
@@ -131,5 +132,15 @@ sgui_gate_has_researcher = {
 				is_character_alive = yes
 			}
 		}
+	}
+}
+
+# THIS = country
+# scope:technology = technology
+sgui_gate_can_research = {
+	scope = country
+
+	effect = {
+		set_variable = can_research_magic
 	}
 }

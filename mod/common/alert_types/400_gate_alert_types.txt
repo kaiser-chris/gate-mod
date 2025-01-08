@@ -1,4 +1,4 @@
-﻿has_no_magic_research_alert = {
+﻿has_maximum_magic_innovation_alert = {
 	script_context = player_country
 	texture = gfx/interface/icons/alert_icons/has_no_magic_research.dds
 
@@ -11,6 +11,21 @@
 	alert_group = gate_alerts
 
 	color = red
+}
+
+can_unlock_magic_technology_alert = {
+	script_context = player_country
+	texture = gfx/interface/icons/alert_icons/has_no_magic_research.dds
+
+	valid = {
+		has_variable = can_research_magic
+	}
+
+	type = alert
+
+	alert_group = gate_alerts
+
+	color = green
 }
 
 has_not_started_research_of_magic_alert = {
