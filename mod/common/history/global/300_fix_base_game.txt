@@ -7,27 +7,38 @@ GLOBAL = {
 	# Arcturian Dominion
 	s:STATE_ZAMBIA = {
 		set_owner_of_provinces = {
-			country = c:GAD
-			provinces = { x0F41AA x31BEE9 }
+			country = c:BMB
+			provinces = {
+				x5B459D
+			}
 		}
 	}
-	s:STATE_NORTH_ANGOLA = {
+	s:STATE_ZAMBIA = {
 		set_owner_of_provinces = {
 			country = c:GAD
-			provinces = { xC02050 }
+			provinces = {
+				x0F41AA
+				x31BEE9
+			}
 		}
+	}
+	s:STATE_BOTSWANA = {
+		set_owner_of_provinces = {
+			country = c:GAD
+			provinces = {
+				x4401C5
+			}
+		}
+		add_homeland = cu:elven
 	}
 	s:STATE_EAST_ANGOLA = {
 		set_owner_of_provinces = {
 			country = c:GAD
-			provinces = { xFE2EC3 xAE2519 x7F4B2D xB5F875 }
+			provinces = {
+				x52FB3B
+			}
 		}
-	}
-	s:STATE_SOUTH_ANGOLA = {
-		set_owner_of_provinces = {
-			country = c:GAD
-			provinces = { x57F834 x80A69F }
-		}
+		add_homeland = cu:elven
 	}
 
 	# Mountain Kingdom

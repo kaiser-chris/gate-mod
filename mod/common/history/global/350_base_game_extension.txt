@@ -24,6 +24,30 @@ GLOBAL = {
 		}
 	}
 
+	# Joseon / Korea
+	c:KOR = {
+		# Add Researching Magic journal entry
+		add_journal_entry = {
+			type = je_researching_magic
+		}
+
+		# Add progress to magic research since they have
+		# had access to a gate for years
+		je:je_researching_magic = {
+			add_progress = {
+				name = pb_gate_researching_magic
+				value = 21
+			}
+		}
+
+		# Add Magic Researcher
+		create_character = {
+			template = magic_researcher_template
+			interest_group = ig_intelligentsia
+			ig_leader = yes
+		}
+	}
+
 	# Great Britain
 	c:GBR = {
 		# Add Researching Magic journal entry
@@ -81,5 +105,26 @@ GLOBAL = {
 			template = magic_researcher_template
 			interest_group = ig_intelligentsia
 		}
+	}
+
+	# Arcturian Dominion
+	# = Subject Countries in Africa
+	c:CHK = {
+		set_country_type = unrecognized
+	}
+	c:KZM = {
+		set_country_type = unrecognized
+	}
+	c:KSN = {
+		set_country_type = unrecognized
+	}
+	c:LND = {
+		set_country_type = unrecognized
+	}
+	c:LND = {
+		set_country_type = unrecognized
+	}
+	c:TSW = {
+		set_country_type = unrecognized
 	}
 }

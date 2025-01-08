@@ -1,6 +1,11 @@
 ﻿POPS = {
 	# Arcturian Dominion
 	s:STATE_ZAMBIA = {
+		region_state:LZO = {
+			kill_population_percent_in_state = {
+				percent = 1 # 100%
+			}
+		}
 		region_state:GAD = {
 			create_pop = {
 				culture = elven
@@ -8,72 +13,53 @@
 			}
 			create_pop = {
 				culture = lunda
-				religion = golden_religion
-				size = 35092
+				size = 32092
 			}
 			create_pop = {
 				culture = kavango_bantu
-				religion = golden_religion
-				size = 59000
+				size = 28000
 			}
 			create_pop = {
 				culture = chewa
-				religion = golden_religion
-				size = 11264
-			}
-		}
-	}
-	s:STATE_NORTH_ANGOLA = {
-		region_state:GAD = {
-			create_pop = {
-				culture = elven
-				size = 25000
-			}
-			create_pop = {
-				culture = bakongo
-				religion = golden_religion
-				size = 336404
-			}
-			create_pop = {
-				culture = kavango_bantu
-				religion = golden_religion
-				size = 111004
+				size = 12264
 			}
 		}
 	}
 	s:STATE_EAST_ANGOLA = {
-		region_state:GAD = {
-			create_pop = {
-				culture = elven
-				size = 95000
-			}
-			create_pop = {
-				culture = kavango_bantu
-				religion = golden_religion
-				size = 139400
-			}
-			create_pop = {
-				culture = bakongo
-				religion = golden_religion
-				size = 8000
-			}
-			create_pop = {
-				culture = lunda
-				religion = golden_religion
-				size = 160000
-			}
-			create_pop = {
-				culture = ovimbundu
-				religion = golden_religion
-				size = 113200
+		region_state:LZO = {
+			kill_population_percent_in_state = {
+				percent = 1 # 100%
 			}
 		}
-	}
-	s:STATE_SOUTH_ANGOLA = {
 		region_state:GAD = {
 			create_pop = {
 				culture = elven
 				size = 20000
+			}
+			create_pop = {
+				culture = kavango_bantu
+				size = 40600
+			}
+			create_pop = {
+				culture = kavango_bantu
+				size = 3400
+			}
+		}
+	}
+	s:STATE_BOTSWANA = {
+		region_state:LZO = {
+			kill_population_percent_in_state = {
+				percent = 1 # 100%
+			}
+		}
+		region_state:GAD = {
+			create_pop = {
+				culture = kavango_bantu
+				size = 14560
+			}
+			create_pop = {
+				culture = elven
+				size = 10000
 			}
 		}
 	}

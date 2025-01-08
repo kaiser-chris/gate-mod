@@ -5,31 +5,14 @@
 			#TODO: Add GAD buildings in STATE_ZAMBIA
 		}
 	}
-	s:STATE_NORTH_ANGOLA = {
-		region_state:POR={
-			# Clean up base game buildings
-			remove_building = building_millet_farm
-			remove_building = building_coffee_plantation
-			remove_building = building_dye_plantation
-			remove_building = building_port
-		}
-		region_state:GAD = {
-			#TODO: Add GAD buildings in STATE_NORTH_ANGOLA
-		}
-	}
 	s:STATE_EAST_ANGOLA = {
 		region_state:GAD = {
 			#TODO: Add GAD buildings in STATE_EAST_ANGOLA
 		}
 	}
-	s:STATE_SOUTH_ANGOLA = {
-		region_state:POR={
-			# Clean up base game buildings
-			remove_building = building_coffee_plantation
-			remove_building = building_millet_farm
-		}
+	s:STATE_BOTSWANA = {
 		region_state:GAD = {
-			#TODO: Add GAD buildings in STATE_SOUTH_ANGOLA
+			#TODO: Add GAD buildings in STATE_BOTSWANA
 		}
 	}
 
