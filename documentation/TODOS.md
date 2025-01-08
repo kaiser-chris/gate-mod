@@ -21,14 +21,9 @@ Below is a table with all currently open ToDos.
 | ---- | ---- | ---- |
 | ./mod/common/cultures/400_elven.txt | 2 |  Define custom culture (Currently copy of german) |
 | ./mod/common/cultures/403_gnomish.txt | 2 |  Define custom culture (Currently copy of dwarven) |
-| ./mod/common/history/buildings/400_dominion.txt | 17 |  Add GAD buildings in STATE_NORTH_ANGOLA |
-| ./mod/common/history/buildings/400_dominion.txt | 22 |  Add GAD buildings in STATE_EAST_ANGOLA |
-| ./mod/common/history/buildings/400_dominion.txt | 32 |  Add GAD buildings in STATE_SOUTH_ANGOLA |
+| ./mod/common/history/buildings/400_dominion.txt | 10 |  Add GAD buildings in STATE_EAST_ANGOLA |
+| ./mod/common/history/buildings/400_dominion.txt | 15 |  Add GAD buildings in STATE_BOTSWANA |
 | ./mod/common/history/buildings/400_dominion.txt | 5 |  Add GAD buildings in STATE_ZAMBIA |
-| ./mod/common/history/buildings/403_new_samadore.txt | 14 |  Add GNS buildings in STATE_WESTERN_NEW_GUINEA |
-| ./mod/common/history/buildings/403_new_samadore.txt | 19 |  Add GNS buildings in STATE_EASTERN_NEW_GUINEA |
-| ./mod/common/history/buildings/403_new_samadore.txt | 38 |  Add GNS buildings in STATE_MOLUCCAS |
-| ./mod/common/history/buildings/403_new_samadore.txt | 43 |  Add GNS buildings in STATE_BOUGAINVILLE |
 | ./mod/common/history/characters/gad - dominion.txt | 1 |  Add proper characters |
 | ./mod/common/history/characters/gns - new samadore.txt | 4 | # TODO: Add gnomish name here |
 | ./mod/common/history/countries/gad - dominion.txt | 3 |  Define laws and technology for GAD |
