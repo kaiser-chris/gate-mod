@@ -1,0 +1,27 @@
+﻿AI = {
+	c:GOK ?= {
+		set_strategy = ai_strategy_resource_expansion	
+		set_strategy = ai_strategy_territorial_expansion
+		set_strategy = ai_strategy_conservative_agenda
+	}
+	c:GMK ?= {
+		set_strategy = ai_strategy_resource_expansion
+		set_strategy = ai_strategy_economic_imperialism
+		set_strategy = ai_strategy_industrial_expansion
+	}
+	c:GAD ?= {
+		set_strategy = ai_strategy_colonial_expansion
+		set_strategy = ai_strategy_economic_imperialism
+		set_strategy = ai_strategy_industrial_expansion
+		set_strategy = ai_strategy_colonial_extraction
+	}
+	c:GNS ?= {
+		set_strategy = ai_strategy_egalitarian_agenda
+		set_strategy = ai_strategy_industrial_expansion
+		set_strategy = ai_strategy_anti_imperialism
+	}
+}
+
+
+
+

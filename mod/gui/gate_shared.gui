@@ -559,10 +559,7 @@ types gate_shared {
 
         block "visible" {
             visible = "[And4(
-                            Or(
-                                Not(GetScriptedGui('gate_dependency_cmf').IsValid(GuiScope.End)),
-                                Not(GetScriptedGui('gate_dependency_wgf').IsValid(GuiScope.End))
-                            ),
+                            Not(GetScriptedGui('gate_dependency_cmf').IsValid(GuiScope.End)),
                             IsInGame,
                             Not(IsPauseMenuShown),
                             Not(IsGameOverScreenShown)
