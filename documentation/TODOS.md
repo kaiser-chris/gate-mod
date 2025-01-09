@@ -23,9 +23,6 @@ Below is a table with all currently open ToDos.
 | ./mod/common/ideologies/401_gate_ideologies.txt | 52 |  Add wanted laws to ideology_magic_hopeful |
 | ./mod/common/interest_groups/400_magic_users.txt | 244 |  Add leader in magic check |
 | ./mod/common/interest_groups/400_magic_users.txt | 47 |  Create elven dominion magic user ig traits |
-| ./mod/common/production_methods/406_magic_academy_production_methods.txt | 100 |  Find proper logo for pm_university_simple_magic_research |
-| ./mod/common/production_methods/406_magic_academy_production_methods.txt | 127 |  Find proper logo for pm_university_advanced_magic_research |
-| ./mod/common/production_methods/406_magic_academy_production_methods.txt | 95 |  Find proper logo for pm_university_no_magic_research |
 | ./mod/common/technology/technologies/403_magic_society.txt | 94 |  Implement gate_expeditions technology |
 | ./mod/common/technology/technologies/403_magic_society.txt | 97 |  Add proper logo for gate_expeditions |
 | ./mod/events/gate_events/dwarven_alps_events.txt | 52 |  Create custom video for event dwarven_alps.2 (Digging Dwarven Tunnels) |
