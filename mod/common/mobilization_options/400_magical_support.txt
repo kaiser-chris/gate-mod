@@ -2,8 +2,7 @@
 	texture = "gfx/interface/icons/mobilization_options/ritual_magic.dds"
 
 	upkeep_modifier = {
-		goods_input_mana_add = 1
-		building_employment_mages_add = 50
+		goods_input_mana_add = 3
 	}
 
 	unlocking_technologies = {
@@ -26,6 +25,76 @@
 		unit_morale_loss_mult = -0.05
 		unit_offense_mult = 0.1
 		unit_defense_mult = 0.1
+	}
+
+	ai_weight = {
+		value = 1
+	}
+
+	group = magical_support
+}
+
+mobilization_option_battlefield_wards = {
+	#TODO: Find icon for mobilization_option_battlefield_wards
+	texture = "gfx/interface/icons/mobilization_options/ritual_magic.dds"
+
+	upkeep_modifier = {
+		goods_input_mana_add = 5
+	}
+
+	unlocking_technologies = {
+		battlefield_wards
+	}
+
+	on_deactivate_while_mobilized = {
+		custom_tooltip = {
+			text = mobilization_option_it_hurts_morale_when_you_remove_supplies_while_in_combat_tt
+			every_combat_unit = {
+				add_morale = {
+					value = morale
+					multiply = -0.5
+				}
+			}
+		}
+	}
+
+	unit_modifier = {
+		unit_defense_mult = 0.3
+	}
+
+	ai_weight = {
+		value = 1
+	}
+
+	group = magical_support
+}
+
+mobilization_option_healing_circles = {
+	#TODO: Find icon for mobilization_option_healing_circles
+	texture = "gfx/interface/icons/mobilization_options/ritual_magic.dds"
+
+	upkeep_modifier = {
+		goods_input_mana_add = 3
+	}
+
+	unlocking_technologies = {
+		healing_circles
+	}
+
+	on_deactivate_while_mobilized = {
+		custom_tooltip = {
+			text = mobilization_option_it_hurts_morale_when_you_remove_supplies_while_in_combat_tt
+			every_combat_unit = {
+				add_morale = {
+					value = morale
+					multiply = -0.5
+				}
+			}
+		}
+	}
+
+	unit_modifier = {
+		unit_recovery_rate_add = 0.20
 	}
 
 	ai_weight = {

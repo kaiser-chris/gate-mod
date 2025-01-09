@@ -17,6 +17,15 @@ mage_infantry = {
 	}
 }
 
+battlefield_wards = {
+	is_valid = {
+		has_technology_researched = mage_infantry
+	}
+	effect = {
+		add_technology_researched = battlefield_wards
+	}
+}
+
 mage_artillery = {
 	is_valid = {
 		has_technology_researched = magic_understanding_military

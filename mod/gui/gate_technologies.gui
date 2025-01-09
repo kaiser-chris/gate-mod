@@ -115,6 +115,13 @@ types gate_technologies {
 
         gate_technology = {
             blockoverride "context" {
+                datacontext = "[GetTechnology('battlefield_wards')]"
+                datacontext = "[GetScriptedGui('battlefield_wards')]"
+            }
+        }
+
+        gate_technology = {
+            blockoverride "context" {
                 datacontext = "[GetTechnology('mage_artillery')]"
                 datacontext = "[GetScriptedGui('mage_artillery')]"
             }
@@ -197,6 +204,13 @@ types gate_technologies {
             blockoverride "context" {
                 datacontext = "[GetTechnology('formalized_magic')]"
                 datacontext = "[GetScriptedGui('formalized_magic')]"
+            }
+        }
+
+        gate_technology = {
+            blockoverride "context" {
+                datacontext = "[GetTechnology('healing_circles')]"
+                datacontext = "[GetScriptedGui('healing_circles')]"
             }
         }
 

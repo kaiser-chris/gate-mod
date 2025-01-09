@@ -71,7 +71,7 @@ elven_forests = {
 mana_lanterns = {
 	is_valid = {
 		AND = {
-			has_technology_researched = urban_planing
+			has_technology_researched = urban_planning
 			has_technology_researched = magic_understanding_society
 		}
 	}
@@ -89,6 +89,18 @@ formalized_magic = {
 	}
 	effect = {
 		add_technology_researched = formalized_magic
+	}
+}
+
+healing_circles = {
+	is_valid = {
+		AND = {
+			has_technology_researched = formalized_magic
+			has_technology_researched = medical_degrees
+		}
+	}
+	effect = {
+		add_technology_researched = healing_circles
 	}
 }
 
