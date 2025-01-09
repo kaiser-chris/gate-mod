@@ -24,13 +24,6 @@ Below is a table with all currently open ToDos.
 | ./mod/common/interest_groups/400_magic_users.txt | 244 |  Add leader in magic check |
 | ./mod/common/interest_groups/400_magic_users.txt | 47 |  Create elven dominion magic user ig traits |
 | ./mod/common/technology/technologies/403_magic_society.txt | 94 |  Implement gate_expeditions technology |
-| ./mod/common/technology/technologies/403_magic_society.txt | 97 |  Add proper logo for gate_expeditions |
-| ./mod/events/gate_events/dwarven_alps_events.txt | 52 |  Create custom video for event dwarven_alps.2 (Digging Dwarven Tunnels) |
-| ./mod/localization/english/gate_diplomacy_l_english.yml | 14 |  Create demand_magic_knowledge_action_propose_name |
-| ./mod/localization/english/gate_diplomacy_l_english.yml | 15 |  Create demand_magic_knowledge_action_break_name |
-| ./mod/localization/english/gate_diplomacy_l_english.yml | 16 |  Create demand_magic_knowledge_action_notification_break_name |
-| ./mod/localization/english/gate_diplomacy_l_english.yml | 17 |  Create demand_magic_knowledge_action_notification_break_desc |
-| ./mod/localization/english/gate_diplomacy_l_english.yml | 18 |  Create demand_magic_knowledge_pact_desc |
 | ./mod/localization/english/gate_technology_l_english.yml | 31 |  Write description for elven_forests_desc |
 | ./mod/localization/english/gate_technology_l_english.yml | 35 |  Write description for gnomish_support_desc |
 
