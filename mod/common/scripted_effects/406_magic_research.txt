@@ -18,6 +18,7 @@
 
 		clamp_variable = {
 			name = magic_innovation
+			min = 0
 			max = global_var:magic_innovation_bank_max
 		}
 	}
@@ -154,6 +155,140 @@ cleanup_researchers = {
 				production_method = pm_no_researcher
 			}
 			remove_variable = magic_researcher
+		}
+	}
+}
+
+ai_unlock_magic_technology = {
+	if = {
+		limit = {
+			var:magic_innovation >= 15000
+			is_player = no
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_technology_researched = mana_extraction
+				}
+			}
+			add_technology_researched = mana_extraction
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_technology_researched = magic_farming
+				}
+			}
+			add_technology_researched = magic_farming
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_technology_researched = mage_infantry
+				}
+			}
+			add_technology_researched = mage_infantry
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_technology_researched = battlefield_wards
+				}
+			}
+			add_technology_researched = battlefield_wards
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_technology_researched = mana_lanterns
+				}
+			}
+			add_technology_researched = mana_lanterns
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_technology_researched = formalized_magic
+				}
+			}
+			add_technology_researched = formalized_magic
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_technology_researched = healing_circles
+				}
+			}
+			add_technology_researched = healing_circles
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_technology_researched = mage_artillery
+				}
+			}
+			add_technology_researched = mage_artillery
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_technology_researched = ritual_magic
+				}
+			}
+			add_technology_researched = ritual_magic
+		}
+		else_if = {
+			limit = {
+				this = c:GMK
+				NOT = {
+					has_technology_researched = magic_dwarf_murk_railways
+				}
+			}
+			add_technology_researched = magic_dwarf_murk_railways
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_technology_researched = mana_cores
+				}
+			}
+			add_technology_researched = mana_cores
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_technology_researched = magic_golems
+				}
+			}
+			add_technology_researched = magic_golems
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_technology_researched = magic_science
+				}
+			}
+			add_technology_researched = magic_science
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_technology_researched = mechanical_golems
+				}
+			}
+			add_technology_researched = mechanical_golems
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_technology_researched = magic_electric_golems
+				}
+			}
+			add_technology_researched = magic_electric_golems
+		}
+		set_variable = {
+			name = magic_innovation
+			value = 0
 		}
 	}
 }
