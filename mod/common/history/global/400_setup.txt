@@ -27,6 +27,12 @@ GLOBAL = {
 		}
 	}
 
+	# Make Mage Tower an owner building
+	add_to_global_variable_list = {
+		name = com_custom_owner_buildings
+		target = bt:building_mage_tower
+	}
+
 	# Add custom buttons
 	add_magic_main_button = yes
 	add_magic_technology_button = yes
