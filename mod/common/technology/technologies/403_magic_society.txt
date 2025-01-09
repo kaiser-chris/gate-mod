@@ -103,6 +103,23 @@ gate_expeditions = {
 	}
 }
 
+mana_lanterns = {
+	era = era_1
+	#TODO: Find icon for mana_lanterns
+	texture = "gfx/interface/icons/invention_icons/gate_invention_placeholder.dds"
+	category = society
+	can_research = no
+
+	unlocking_technologies = {
+		magic_understanding_society
+		urban_planning
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
 formalized_magic = {
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/formalized_magic.dds"
