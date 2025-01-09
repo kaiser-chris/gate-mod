@@ -1,5 +1,5 @@
 ﻿# Modification of base game ideologies
-# These are replaced by the scripted event add_monster_hunting_ideologies
+# These are replaced by the scripted event add_gate_ideologies
 
 ideology_liberal_gate = {
     icon = "gfx/interface/icons/ideology_icons/liberal.dds"
@@ -46,6 +46,104 @@ ideology_liberal_gate = {
         law_dedicated_monster_hunters = neutral
         law_private_monster_hunters = disapprove
         law_militarized_monster_hunters = disapprove
+    }
+}
+
+ideology_meritocratic_gate = {
+    icon = "gfx/interface/icons/ideology_icons/meritocratic.dds"
+
+    lawgroup_bureaucracy = {
+        law_elected_bureaucrats = approve
+        law_appointed_bureaucrats = neutral
+        law_hereditary_bureaucrats = disapprove
+    }
+
+    lawgroup_taxation = {
+        law_per_capita_based_taxation = approve
+        law_proportional_taxation = approve
+        law_consumption_based_taxation = neutral
+        law_graduated_taxation = disapprove
+        law_land_based_taxation = disapprove
+    }
+
+    lawgroup_caste_hegemony = {
+        law_hindu_caste_enforced = disapprove
+        law_hindu_caste_codified = disapprove
+        law_hindu_caste_not_enforced = neutral
+        law_affirmative_action = neutral
+    }
+
+    # Gate specific
+    lawgroup_elven_supremacy = {
+        law_elven_supremacy_religious_preaching = strongly_disapprove
+        law_elven_supremacy_enforced = neutral
+        law_elven_supremacy_not_enforced = approve
+    }
+}
+
+ideology_reactionary_gate = {
+    icon = "gfx/interface/icons/ideology_icons/reactionary.dds"
+
+    lawgroup_governance_principles = {
+        law_monarchy = approve
+        law_theocracy = approve
+        law_presidential_republic = neutral
+        law_parliamentary_republic = neutral
+        law_corporate_state = neutral
+        law_council_republic = disapprove
+    }
+
+    lawgroup_citizenship = {
+        law_ethnostate = approve
+        law_national_supremacy = strongly_approve
+        law_racial_segregation = approve
+        law_cultural_exclusion = neutral
+        law_multicultural = disapprove
+    }
+
+    lawgroup_migration = {
+        law_closed_borders = approve
+        law_migration_controls = strongly_approve
+        law_no_migration_controls = disapprove
+    }
+
+    # Gate specific
+    lawgroup_magic_users = {
+        law_free_magic_users = disapprove
+        law_registered_magic_users = approve
+        law_restricted_magic_users = neutral
+        law_noble_magic_users = strongly_disapprove
+    }
+}
+
+ideology_egalitarian_gate = {
+    icon = "gfx/interface/icons/ideology_icons/egalitarian.dds"
+
+    lawgroup_free_speech = {
+        law_protected_speech = strongly_approve
+        law_right_of_assembly = approve
+        law_censorship = neutral
+        law_outlawed_dissent = disapprove
+    }
+
+    lawgroup_childrens_rights = {
+        law_compulsory_primary_school = strongly_approve
+        law_restricted_child_labor = approve
+        law_child_labor_allowed = disapprove
+    }
+
+    lawgroup_labor_rights = {
+        law_worker_protections = strongly_approve
+        law_regulatory_bodies = approve
+        law_no_workers_rights = neutral
+    }
+
+    # Gate specific
+    lawgroup_magic_users = {
+        law_free_magic_users = strongly_approve
+        law_registered_magic_users = approve
+        law_restricted_magic_users = strongly_disapprove
+        law_noble_magic_users = strongly_disapprove
     }
 }
 
@@ -145,6 +243,13 @@ ideology_paternalistic_gate = {
         law_private_monster_hunters = approve
         law_militarized_monster_hunters = neutral
     }
+
+    lawgroup_magic_users = {
+        law_free_magic_users = disapprove
+        law_registered_magic_users = neutral
+        law_restricted_magic_users = strongly_disapprove
+        law_noble_magic_users = strongly_approve
+    }
 }
 
 ideology_particularist_gate = {
@@ -227,5 +332,12 @@ ideology_laissez_faire_gate = {
         law_dedicated_monster_hunters = neutral
         law_private_monster_hunters = strongly_approve
         law_militarized_monster_hunters = neutral
+    }
+
+    lawgroup_magic_users = {
+        law_free_magic_users = strongly_approve
+        law_registered_magic_users = neutral
+        law_restricted_magic_users = strongly_disapprove
+        law_noble_magic_users = disapprove
     }
 }

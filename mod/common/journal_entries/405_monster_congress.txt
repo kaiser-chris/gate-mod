@@ -41,12 +41,6 @@
 		set_global_variable = monster_congress_happened
 		remove_variable = monster_congress_in_progress
 		trigger_event = monster_attack.4
-
-		# Set Monster Hunting ideologies to
-		# existing interest groups for all countries
-		every_country = {
-			add_monster_hunting_ideologies = yes
-		}
 	}
 
 	progressbar = no

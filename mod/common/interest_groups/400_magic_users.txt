@@ -2,10 +2,11 @@
 	color = rgb{ 200 200 200 }
 	texture = "gfx/interface/icons/ig_icons/magic_users.dds"
 	layer = "revolution_dynamic_intelligentsia"
-	index = 3
+	index = 8
 
 	ideologies = {
 		ideology_magic_militarist
+		ideology_magic_supremacist
 	}
 	
 	character_ideologies = {
@@ -38,16 +39,7 @@
 				set_ig_trait = ig_trait:ig_trait_annoyed_masters
 				add_ideology = ideology_orcish_slavery
 				add_ideology = ideology_orchish_patriarchal
-			}
-			# Arcturian Dominion
-			else_if = {
-				limit = {
-					owner = { c:GAD ?= this }
-				}
-				# TODO: Create elven dominion magic user ig traits
-				set_ig_trait = ig_trait:ig_trait_crisis_of_identity
-				set_ig_trait = ig_trait:ig_trait_avant_garde
-				set_ig_trait = ig_trait:ig_trait_propagandists
+				remove_ideology = ideology_magic_supremacist
 			}
 			# Default Traits
 			else = {
@@ -230,18 +222,17 @@
 				value = 2
 			}
 		}
-		# Much more likely with Technocracy
+		# Much more likely with noble magic users
 		if = {
 			limit = {
 				owner = {
-					has_law = law_type:law_technocracy
+					has_law = law_type:law_noble_magic_users
 				}
 			}
 			multiply = {
 				value = 3
 			}
 		}
-		# TODO: Add leader in magic check
 	}
 
 	agitator_weight = {

@@ -1,44 +1,4 @@
-﻿add_monster_hunting_ideologies = {
-    every_interest_group = {
-        if = {
-            limit = {
-                has_ideology = ideology:ideology_liberal
-            }
-            remove_ideology = ideology_liberal
-            add_ideology = ideology_liberal_gate
-        }
-        if = {
-            limit = {
-                has_ideology = ideology:ideology_particularist
-            }
-            remove_ideology = ideology_particularist
-            add_ideology = ideology_particularist_gate
-        }
-        if = {
-            limit = {
-                has_ideology = ideology:ideology_paternalistic
-            }
-            remove_ideology = ideology_paternalistic
-            add_ideology = ideology_paternalistic_gate
-        }
-        if = {
-            limit = {
-                has_ideology = ideology:ideology_patriotic
-            }
-            remove_ideology = ideology_patriotic
-            add_ideology = ideology_patriotic_gate
-        }
-        if = {
-            limit = {
-                has_ideology = ideology:ideology_laissez_faire
-            }
-            remove_ideology = ideology_laissez_faire
-            add_ideology = ideology_laissez_faire_gate
-        }
-    }
-}
-
-# Monster Attacks
+﻿# Monster Attacks
 # Modified through institution_monster_hunting
 #   0 = 100%
 #   1 = 80%
