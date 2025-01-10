@@ -22,10 +22,6 @@ Below is a table with all currently open ToDos.
 | ./mod/common/ideologies/401_gate_ideologies.txt | 114 |  Find icon for ideology_magic_sceptic |
 | ./mod/common/ideologies/401_gate_ideologies.txt | 165 |  Find icon for ideology_magic_cynic |
 | ./mod/common/ideologies/401_gate_ideologies.txt | 67 |  Find icon for ideology_magic_hopeful |
-| ./mod/common/laws/404_magic_users.txt | 128 |  Create icon for law_noble_magic_users |
-| ./mod/common/laws/404_magic_users.txt | 38 |  Create icon for law_registered_magic_users |
-| ./mod/common/laws/404_magic_users.txt | 3 |  Create icon for law_free_magic_users |
-| ./mod/common/laws/404_magic_users.txt | 87 |  Create icon for law_restricted_magic_users |
 | ./mod/common/mobilization_options/400_magical_support.txt | 38 |  Find icon for mobilization_option_battlefield_wards |
 | ./mod/common/mobilization_options/400_magical_support.txt | 73 |  Find icon for mobilization_option_healing_circles |
 | ./mod/common/technology/technologies/402_magic_military.txt | 32 |  Find icon for battlefield_wards |
