@@ -10,6 +10,7 @@ ideology_liberal_gate = {
         law_national_supremacy = disapprove
         law_racial_segregation = neutral
         law_cultural_exclusion = approve
+        law_gnomish_harmony = approve
     }
 
     lawgroup_policing = {
@@ -46,6 +47,100 @@ ideology_liberal_gate = {
         law_dedicated_monster_hunters = neutral
         law_private_monster_hunters = disapprove
         law_militarized_monster_hunters = disapprove
+    }
+}
+
+ideology_plutocratic_gate = {
+    icon = "gfx/interface/icons/ideology_icons/plutocratic.dds"
+
+    lawgroup_distribution_of_power = {
+        law_oligarchy = approve
+        law_wealth_voting = approve
+        law_technocracy = neutral
+        law_landed_voting = neutral
+        law_census_voting = neutral
+        law_single_party_state = neutral
+        law_autocracy = disapprove
+        law_universal_suffrage = strongly_disapprove
+        law_anarchy = strongly_disapprove
+    }
+
+    lawgroup_governance_principles = {
+        law_monarchy = neutral
+        law_presidential_republic = neutral
+        law_parliamentary_republic = neutral
+        law_corporate_state = disapprove
+        law_theocracy = disapprove
+        law_council_republic = strongly_disapprove
+    }
+
+    lawgroup_taxation = {
+        law_per_capita_based_taxation = approve
+        law_consumption_based_taxation = neutral
+        law_land_based_taxation = neutral
+        law_proportional_taxation = neutral
+        law_graduated_taxation = disapprove
+    }
+
+    lawgroup_colonization = {
+        law_gnomish_integration = approve
+        law_colonial_exploitation = approve
+        law_no_colonial_affairs = neutral
+        law_colonial_resettlement = neutral
+        law_frontier_colonization = neutral
+    }
+}
+
+ideology_isolationist_gate = {
+    icon = "gfx/interface/icons/ideology_icons/isolationist.dds"
+
+    lawgroup_colonization = {
+        law_gnomish_integration = neutral
+        law_frontier_colonization = strongly_approve
+        law_no_colonial_affairs = approve
+        law_colonial_resettlement = disapprove
+        law_colonial_exploitation = disapprove
+    }
+
+    lawgroup_migration = {
+        law_closed_borders = strongly_approve
+        law_migration_controls = approve
+        law_no_migration_controls = disapprove
+    }
+
+    lawgroup_trade_policy = {
+        law_isolationism = approve
+        law_protectionism = approve
+        law_mercantilism = neutral
+        law_free_trade = disapprove
+    }
+
+    lawgroup_citizenship = {
+        law_ethnostate = disapprove
+        law_national_supremacy = neutral
+        law_racial_segregation = approve
+        law_cultural_exclusion = neutral
+        law_multicultural = strongly_disapprove
+        law_gnomish_harmony = disapprove
+    }
+}
+
+ideology_jingoist_gate = {
+    icon = "gfx/interface/icons/ideology_icons/jingoist.dds"
+
+    lawgroup_army_model = {
+        law_professional_army = strongly_approve
+        law_mass_conscription = approve
+        law_national_militia = disapprove
+        law_peasant_levies = disapprove
+    }
+
+    lawgroup_colonization = {
+        law_gnomish_integration = approve
+        law_colonial_resettlement = approve
+        law_colonial_exploitation = approve
+        law_frontier_colonization = approve
+        law_no_colonial_affairs = neutral
     }
 }
 
@@ -99,6 +194,7 @@ ideology_reactionary_gate = {
         law_racial_segregation = approve
         law_cultural_exclusion = neutral
         law_multicultural = disapprove
+        law_gnomish_harmony = disapprove
     }
 
     lawgroup_migration = {

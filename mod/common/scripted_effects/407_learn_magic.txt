@@ -63,5 +63,26 @@ add_gate_ideologies = {
             remove_ideology = ideology_egalitarian
             add_ideology = ideology_egalitarian_gate
         }
+        if = {
+            limit = {
+                has_ideology = ideology:ideology_isolationist
+            }
+            remove_ideology = ideology_isolationist
+            add_ideology = ideology_isolationist_gate
+        }
+        if = {
+            limit = {
+                has_ideology = ideology:ideology_plutocratic
+            }
+            remove_ideology = ideology_plutocratic
+            add_ideology = ideology_plutocratic_gate
+        }
+        if = {
+            limit = {
+                has_ideology = ideology:ideology_jingoist
+            }
+            remove_ideology = ideology_jingoist
+            add_ideology = ideology_jingoist_gate
+        }
     }
 }
