@@ -1,0 +1,184 @@
+﻿ideology_magic_supremacist_character = {
+    icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_magic_supremacy.dds"
+
+    lawgroup_magic_users = {
+        law_free_magic_users = approve
+        law_registered_magic_users = disapprove
+        law_restricted_magic_users = strongly_disapprove
+        law_noble_magic_users = strongly_approve
+    }
+
+    interest_group_leader_trigger = {
+        is_interest_group_type = ig_magic_users
+    }
+
+    non_interest_group_leader_trigger = {
+        # Agitators should have an ideology at odds with current laws
+        NAND = {
+            has_role = agitator
+            owner = {
+                has_law = law_type:law_noble_magic_users
+            }
+        }
+        interest_group = {
+            OR = {
+                is_interest_group_type = ig_intelligentsia
+                is_interest_group_type = ig_magic_users
+            }
+        }
+    }
+
+    interest_group_leader_weight = {
+        value = 50
+    }
+
+    non_interest_group_leader_weight = {
+        value = 50
+    }
+
+    character_ideology = yes
+}
+
+ideology_magic_hopeful = {
+    icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_magic_hopeful.dds"
+
+    lawgroup_magic_users = {
+        law_free_magic_users = strongly_approve
+        law_registered_magic_users = neutral
+        law_restricted_magic_users = strongly_disapprove
+        law_noble_magic_users = approve
+    }
+
+    interest_group_leader_trigger = {
+        OR = {
+            is_interest_group_type = ig_intelligentsia
+            is_interest_group_type = ig_industrialists
+            is_interest_group_type = ig_magic_users
+        }
+    }
+
+    non_interest_group_leader_trigger = {
+        # Agitators should have an ideology at odds with current laws
+        NAND = {
+            has_role = agitator
+            owner = {
+                has_law = law_type:law_free_magic_users
+            }
+        }
+        interest_group = {
+            OR = {
+                is_interest_group_type = ig_intelligentsia
+                is_interest_group_type = ig_industrialists
+                is_interest_group_type = ig_magic_users
+            }
+        }
+    }
+
+    interest_group_leader_weight = {
+        value = 80
+    }
+
+    non_interest_group_leader_weight = {
+        value = 80
+    }
+
+    character_ideology = yes
+}
+
+ideology_magic_sceptic = {
+    icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_magic_cynic.dds"
+
+    lawgroup_magic_users = {
+        law_free_magic_users = neutral
+        law_registered_magic_users = strongly_approve
+        law_restricted_magic_users = approve
+        law_noble_magic_users = strongly_disapprove
+    }
+
+    country_trigger = {
+        is_magic_country = yes
+    }
+
+    interest_group_leader_trigger = {
+        OR = {
+            is_interest_group_type = ig_petty_bourgeoisie
+            is_interest_group_type = ig_rural_folk
+            is_interest_group_type = ig_armed_forces
+        }
+    }
+
+    non_interest_group_leader_trigger = {
+        # Agitators should have an ideology at odds with current laws
+        NAND = {
+            has_role = agitator
+            owner = {
+                has_law = law_type:law_registered_magic_users
+            }
+        }
+        interest_group = {
+            OR = {
+                is_interest_group_type = ig_petty_bourgeoisie
+                is_interest_group_type = ig_rural_folk
+                is_interest_group_type = ig_armed_forces
+            }
+        }
+    }
+
+    interest_group_leader_weight = {
+        value = 80
+    }
+
+    non_interest_group_leader_weight = {
+        value = 80
+    }
+
+    character_ideology = yes
+}
+
+ideology_magic_cynic = {
+    icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_magic_cynic.dds"
+
+    lawgroup_magic_users = {
+        law_free_magic_users = disapprove
+        law_registered_magic_users = approve
+        law_restricted_magic_users = strongly_approve
+        law_noble_magic_users = strongly_disapprove
+    }
+
+    interest_group_leader_trigger = {
+        OR = {
+            is_interest_group_type = ig_devout
+            is_interest_group_type = ig_landowners
+        }
+    }
+
+    country_trigger = {
+        is_magic_country = yes
+    }
+
+    non_interest_group_leader_trigger = {
+        # Agitators should have an ideology at odds with current laws
+        NAND = {
+            has_role = agitator
+            owner = {
+                has_law = law_type:law_restricted_magic_users
+            }
+        }
+        interest_group = {
+            OR = {
+                is_interest_group_type = ig_devout
+                is_interest_group_type = ig_landowners
+            }
+        }
+    }
+
+    interest_group_leader_weight = {
+        value = 80
+    }
+
+    non_interest_group_leader_weight = {
+        value = 80
+    }
+
+    character_ideology = yes
+}

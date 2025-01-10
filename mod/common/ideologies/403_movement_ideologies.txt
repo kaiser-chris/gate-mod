@@ -1,0 +1,17 @@
+﻿ideology_magic_supremacist_movement = {
+    icon = "gfx/interface/icons/ideology_icons/magic_supremacist.dds"
+
+    lawgroup_magic_users = {
+        law_free_magic_users = approve
+        law_registered_magic_users = disapprove
+        law_restricted_magic_users = strongly_disapprove
+        law_noble_magic_users = strongly_approve
+    }
+
+    lawgroup_monster_hunting = {
+        law_no_organized_monster_hunting = strongly_disapprove
+        law_dedicated_monster_hunters = approve
+        law_private_monster_hunters = disapprove
+        law_militarized_monster_hunters = strongly_approve
+    }
+}
