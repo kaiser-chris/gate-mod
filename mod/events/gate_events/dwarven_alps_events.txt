@@ -43,6 +43,7 @@ dwarven_alps.1 = {
 dwarven_alps.2 = {
 	type = country_event
 	dlc = dlc_magic_gate
+	placement = scope:digging_state
 
 	title = dwarven_alps.2.t
 	desc = dwarven_alps.2.d
@@ -54,7 +55,7 @@ dwarven_alps.2 = {
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+	icon = "gfx/interface/icons/event_icons/event_dwarven_pickaxe.dds"
 
 	duration = 3
 
@@ -62,22 +63,39 @@ dwarven_alps.2 = {
 	}
 
 	immediate = {
-		every_scope_state = {
+		random_scope_state = {
 			limit = {
 				is_mountainous_state = yes
 				NOT = {
 					has_state_trait = state_trait_dwarven_tunnels
 				}
 			}
-			state_region = {
-				add_state_trait = state_trait_dwarven_tunnels
+			save_scope_as = digging_state
+		}
+		if = {
+			limit = {
+				NOT = {
+					exists = scope:digging_state
+				}
 			}
+			capital = {
+				save_scope_as = digging_state
+			}
+		}
+		set_variable = {
+			name = dwarven_tunnels_cooldown
+			months = 6
 		}
 	}
 
 	option = {
 		name = dwarven_alps.2.a
 		default_option = yes
+		scope:digging_state = {
+			state_region = {
+				add_state_trait = state_trait_dwarven_tunnels
+			}
+		}
 	}
 }
 

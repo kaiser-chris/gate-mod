@@ -11,8 +11,15 @@
 		any_scope_state = {
 			# Murk Ways can only be build in mountains.
 			is_mountainous_state = yes
+			is_incorporated = yes
 			NOT = {
 				has_state_trait = state_trait_dwarven_tunnels
+			}
+		}
+		custom_tooltip = {
+			text = dwarven_tunnels_decision_cooldown_tt
+			NOT = {
+				has_variable = dwarven_tunnels_cooldown
 			}
 		}
 	}
