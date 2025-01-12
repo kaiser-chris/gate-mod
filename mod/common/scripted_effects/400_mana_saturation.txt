@@ -75,7 +75,7 @@ add_mana_density = {
 initial_propogate_mana_density = {
 	every_state_region = {
 		limit = {
-			has_building = building_gate
+			has_magic_gate = yes
 		}
 		set_variable = {
 			name = mana_density

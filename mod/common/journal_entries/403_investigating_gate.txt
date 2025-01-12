@@ -25,7 +25,7 @@
 				is_gate_planet_country = no
 			}
 			NOT = {
-				has_building = building_gate
+				has_magic_gate = yes
 			}
 		}
 	}
@@ -34,7 +34,7 @@
 		effect = {
 			if = {
 				limit = {
-					has_building = building_gate
+					has_magic_gate = yes
 				}
 				change_variable = {
 					name = je_investigate_gate_progress

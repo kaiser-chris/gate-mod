@@ -1,4 +1,14 @@
-﻿pmg_magic_gate_exploitation = {
+﻿pmg_magic_gate_exploitation_alxa = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_gate_defend
+		pm_gate_closed
+	}
+}
+
+pmg_magic_gate_exploitation_tyrol = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
 
@@ -7,142 +17,38 @@
 		pm_gate_closed
 		pm_gate_immigration_dwarves
 		pm_gate_mass_immigration_dwarves
-		pm_gate_support_orcs
+	}
+}
+
+pmg_magic_gate_exploitation_zambia = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_gate_defend
+		pm_gate_closed
 		pm_gate_support_elves
 		pm_gate_support_elves_plus
 	}
 }
 
-pmg_mana_extraction = {
+pmg_magic_gate_exploitation_san_salvador = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
 
 	production_methods = {
-		pm_mage_mana_extraction
-		pm_mage_ritual_extraction
+		pm_gate_defend
+		pm_gate_closed
+		pm_gate_support_orcs
 	}
 }
 
-pmg_murk_transportation = {
+pmg_magic_gate_exploitation_eastern_new_guinea = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
 
 	production_methods = {
-		pm_murk_unused
-		pm_murk_transportation
-		pm_murk_rail_transportation
-	}
-}
-
-pmg_magic_academy_support = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	ai_selection = most_productive
-
-	production_methods = {
-		pm_magic_academy_no_support
-		pm_magic_academy_partial_support
-		pm_magic_academy_full_support
-	}
-}
-
-pmg_university_magic_research = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	ai_selection = most_productive
-
-	production_methods = {
-		pm_university_no_magic_research
-		pm_university_simple_magic_research
-		pm_university_advanced_magic_research
-	}
-}
-
-pmg_mana_core_workshop_production = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	ai_selection = most_productive
-
-	production_methods = {
-		pm_mana_core_workshop_no_production
-		pm_mana_core_workshop_artisan_production
-		pm_mana_core_workshop_formalized_production
-	}
-}
-
-pmg_golem_workshop_production = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	ai_selection = most_productive
-
-	production_methods = {
-		pm_golem_workshop_no_production
-		pm_golem_workshop_artisan_production
-		pm_golem_workshop_steam_production
-		pm_golem_workshop_electric_production
-	}
-}
-
-pmg_golem_depot_mining = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	ai_selection = most_productive
-
-	production_methods = {
-		pm_golem_depot_mining_none
-		pm_golem_depot_mining_normal_golems
-		pm_golem_depot_mining_steam_golems
-		pm_golem_depot_mining_electric_golems
-	}
-}
-
-pmg_golem_depot_agriculture = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	ai_selection = most_productive
-
-	production_methods = {
-		pm_golem_depot_agriculture_none
-		pm_golem_depot_agriculture_normal_golems
-		pm_golem_depot_agriculture_steam_golems
-		pm_golem_depot_agriculture_electric_golems
-	}
-}
-
-pmg_golem_depot_plantation = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	ai_selection = most_productive
-
-	production_methods = {
-		pm_golem_depot_plantation_none
-		pm_golem_depot_plantation_normal_golems
-		pm_golem_depot_plantation_steam_golems
-		pm_golem_depot_plantation_electric_golems
-	}
-}
-
-pmg_mage_tower = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	ai_selection = most_productive
-
-	production_methods = {
-		pm_basic_mage_tower
-		pm_cooperative_mage_tower
-	}
-}
-
-pmg_druid_groove = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	ai_selection = most_productive
-
-	production_methods = {
-		pm_classic_magic_seed
-		pm_industrial_magic_seed
-	}
-}
-
-pmg_magic_researcher = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	ai_selection = most_productive
-
-	production_methods = {
-		pm_no_researcher
-		pm_novice_researcher
-		pm_experienced_researcher
-		pm_archmage_researcher
+		pm_gate_defend
+		pm_gate_closed
 	}
 }

@@ -18,6 +18,17 @@ is_gate_planet_country = {
 	}
 }
 
+# Trigger to check for a gate in a state or country
+has_magic_gate = {
+	OR = {
+		has_building = building_gate_alxa
+		has_building = building_gate_tyrol
+		has_building = building_gate_zambia
+		has_building = building_gate_san_salvador
+		has_building = building_gate_eastern_new_guinea
+	}
+}
+
 # Trigger to check whether a state has mountains or not
 # Used to check for dwarven murk buildings
 is_mountainous_state = {

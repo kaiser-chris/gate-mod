@@ -1,4 +1,4 @@
-﻿building_gate = {
+﻿building_gate_alxa = {
 	building_group = bg_monuments
 	icon = "gfx/interface/icons/building_icons/building_gate.dds"
 	buildable = no
@@ -6,14 +6,107 @@
 	downsizeable = no
 
 	production_method_groups = {
-		pmg_magic_gate_exploitation
+		pmg_magic_gate_exploitation_alxa
+	}
+
+	possible = {
+		state_region = s:STATE_ALXA
+	}
+
+	can_build_private = {
+		always = no
+	}
+
+	required_construction = construction_cost_monument
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_magic.dds"
+}
+
+building_gate_tyrol = {
+	building_group = bg_monuments
+	icon = "gfx/interface/icons/building_icons/building_gate.dds"
+	buildable = no
+	expandable = no
+	downsizeable = no
+
+	production_method_groups = {
+		pmg_magic_gate_exploitation_tyrol
+	}
+
+	possible = {
+		state_region = s:STATE_TYROL
+	}
+
+	can_build_private = {
+		always = no
+	}
+
+	required_construction = construction_cost_monument
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_magic.dds"
+}
+
+building_gate_zambia = {
+	building_group = bg_monuments
+	icon = "gfx/interface/icons/building_icons/building_gate.dds"
+	buildable = no
+	expandable = no
+	downsizeable = no
+
+	production_method_groups = {
+		pmg_magic_gate_exploitation_zambia
 	}
 
 	possible = {
 		state_region = s:STATE_ZAMBIA
-		state_region = s:STATE_TYROL
+	}
+
+	can_build_private = {
+		always = no
+	}
+
+	required_construction = construction_cost_monument
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_magic.dds"
+}
+
+building_gate_san_salvador = {
+	building_group = bg_monuments
+	icon = "gfx/interface/icons/building_icons/building_gate.dds"
+	buildable = no
+	expandable = no
+	downsizeable = no
+
+	production_method_groups = {
+		pmg_magic_gate_exploitation_san_salvador
+	}
+
+	possible = {
 		state_region = s:STATE_SAN_SALVADOR
-		state_region = s:STATE_ALXA
+	}
+
+	can_build_private = {
+		always = no
+	}
+
+	required_construction = construction_cost_monument
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_magic.dds"
+}
+
+building_gate_eastern_new_guinea = {
+	building_group = bg_monuments
+	icon = "gfx/interface/icons/building_icons/building_gate.dds"
+	buildable = no
+	expandable = no
+	downsizeable = no
+
+	production_method_groups = {
+		pmg_magic_gate_exploitation_eastern_new_guinea
+	}
+
+	possible = {
+		state_region = s:STATE_EASTERN_NEW_GUINEA
 	}
 
 	can_build_private = {
