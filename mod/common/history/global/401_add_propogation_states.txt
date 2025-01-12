@@ -1,0 +1,319 @@
+﻿# This scripts are run after all other history scripts were run
+GLOBAL = {
+
+	s:STATE_FRENCH_LOW_COUNTRIES = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_HOME_COUNTIES
+		}
+	}
+
+	s:STATE_HIGHLANDS = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_ICELAND
+		}
+	}
+
+	s:STATE_ICELAND = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_GREENLAND
+		}
+	}
+
+	s:STATE_NUNAVUT = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_GREENLAND
+		}
+	}
+
+	s:STATE_GREENLAND = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_NUNAVUT
+		}
+	}
+
+	s:STATE_YUCATAN = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_CUBA
+		}
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_JAMAICA
+		}
+	}
+
+	s:STATE_CUBA = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_BAHAMAS
+		}
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_FLORIDA
+		}
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_HAITI
+		}
+	}
+
+	s:STATE_SANTO_DOMINGO = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_PUERTO_RICO
+		}
+	}
+
+	s:STATE_PUERTO_RICO = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_WEST_INDIES
+		}
+	}
+
+	s:STATE_BOLIVAR = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_WEST_INDIES
+		}
+	}
+
+	s:STATE_PATAGONIA = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_SOUTH_ATLANTIC_ISLANDS
+		}
+	}
+
+	s:STATE_TUSCANY = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_CORSICA
+		}
+	}
+
+	s:STATE_SICILY = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_MALTA
+		}
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_TUNISIA
+		}
+	}
+
+	s:STATE_VALENCIA = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_BALEARES
+		}
+	}
+
+	s:STATE_ADANA = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_CYPRUS
+		}
+	}
+
+	s:STATE_ERITREA = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_YEMEN
+		}
+	}
+
+	s:STATE_MOCAMBIQUE = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_SOUTH_MADAGASCAR
+		}
+	}
+
+	s:STATE_NORTH_MADAGASCAR = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_INDIAN_OCEAN_TERRITORY
+		}
+	}
+
+	s:STATE_BAHAMAS = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_BERMUDA
+		}
+	}
+
+	s:STATE_WESTERN_NEW_GUINEA = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_MOLUCCAS
+		}
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_NORTHERN_TERRITORY
+		}
+	}
+
+	s:STATE_EASTERN_NEW_GUINEA = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_QUEENSLAND
+		}
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_BOUGAINVILLE
+		}
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_WEST_MICRONESIA
+		}
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_EAST_MICRONESIA
+		}
+	}
+
+	s:STATE_BOUGAINVILLE = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_SOLOMON_ISLANDS
+		}
+	}
+
+	s:STATE_SOLOMON_ISLANDS = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_KANAK
+		}
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_FIJI
+		}
+	}
+
+	s:STATE_WEST_MICRONESIA = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_KYUSHU
+		}
+	}
+
+	s:STATE_BUSAN = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_KYUSHU
+		}
+	}
+
+	s:STATE_OUTER_MANCHURIA = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_SAKHALIN
+		}
+	}
+
+	s:STATE_KYUSHU = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_FORMOSA
+		}
+	}
+
+	s:STATE_FUJIAN = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_FORMOSA
+		}
+	}
+
+	s:STATE_FORMOSA = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_LUZON
+		}
+	}
+
+	s:STATE_CHUKOTKA = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_ALASKA
+		}
+	}
+
+	s:STATE_EAST_MICRONESIA = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_NAURU
+		}
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_TONGA
+		}
+	}
+
+	s:STATE_FIJI = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_TONGA
+		}
+	}
+
+	s:STATE_TONGA = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_TAHITI
+		}
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_NORTH_ISLAND
+		}
+	}
+
+	s:STATE_VICTORIA = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_TASMANIA
+		}
+	}
+
+	s:STATE_TASMANIA = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_SOUTH_ISLAND
+		}
+	}
+
+	s:STATE_SVEALAND = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_ALAND
+		}
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_GOTLAND
+		}
+	}
+
+	s:STATE_CELEBES = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_MINDANAO
+		}
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_EAST_BORNEO
+		}
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_SUNDA_ISLANDS
+		}
+	}
+
+}

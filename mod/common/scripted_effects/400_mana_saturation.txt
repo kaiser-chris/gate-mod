@@ -12,31 +12,129 @@ propogate_mana_density = {
 	every_state_region = {
 		limit = {
 			has_variable = mana_density
-			var:mana_density >= 30
+			var:mana_density >= medium_mana_density_threshhold
+		}
+		save_temporary_scope_value_as = {
+			name = origin_density
+			value = var:mana_density
 		}
 		every_neighbouring_state = {
 			limit = {
 				state_region = {
-					has_variable = mana_density
-					var:mana_density < 100
+					var:mana_density < maximum_mana_density
+					var:mana_density < scope:origin_density
 				}
 			}
 			state_region = {
-				# Propagation
-				change_variable = {
-					name = mana_density
-					add = 1
-				}
-				clamp_variable = {
-					name = mana_density
-					max = 100
-					min = 0
+				add_mana_density = {
+					amount = 1
 				}
 			}
-			# Cache update
-			change_global_variable = {
-				name = global_mana_density_cache
-				add = 1
+		}
+		if = {
+			limit = {
+				has_variable_list = mana_propogation_states
+			}
+			every_in_list = {
+				variable = mana_propogation_states
+				limit = {
+					var:mana_density < maximum_mana_density
+					var:mana_density < scope:origin_density
+				}
+				add_mana_density = {
+					amount = 1
+				}
+			}
+		}
+	}
+}
+
+add_mana_density = {
+	if = {
+		limit = {
+			has_variable = mana_density
+		}
+		# Propagation
+		change_variable = {
+			name = mana_density
+			add = $amount$
+		}
+		clamp_variable = {
+			name = mana_density
+			max = maximum_mana_density
+			min = minimum_mana_density
+		}
+		# Cache update
+		change_global_variable = {
+			name = global_mana_density_cache
+			add = $amount$
+		}
+	}
+}
+
+initial_propogate_mana_density = {
+	every_state_region = {
+		limit = {
+			has_building = building_gate
+		}
+		set_variable = {
+			name = mana_density
+			value = maximum_mana_density
+		}
+		propogate_from_state_region = {
+			amount = 70
+		}
+	}
+	every_state_region = {
+		limit = {
+			var:mana_density = 70
+		}
+		propogate_from_state_region = {
+			amount = 40
+		}
+	}
+	every_state_region = {
+		limit = {
+			var:mana_density = 40
+		}
+		propogate_from_state_region = {
+			amount = 10
+		}
+	}
+}
+
+propogate_from_state_region = {
+	save_temporary_scope_value_as = {
+		name = origin_density
+		value = var:mana_density
+	}
+	every_neighbouring_state = {
+		limit = {
+			state_region = {
+				var:mana_density < maximum_mana_density
+				var:mana_density < scope:origin_density
+			}
+		}
+		state_region = {
+			set_variable = {
+				name = mana_density
+				value = $amount$
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable_list = mana_propogation_states
+		}
+		every_in_list = {
+			variable = mana_propogation_states
+			limit = {
+				var:mana_density < maximum_mana_density
+				var:mana_density < scope:origin_density
+			}
+			set_variable = {
+				name = mana_density
+				value = $amount$
 			}
 		}
 	}
