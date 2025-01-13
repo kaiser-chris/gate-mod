@@ -61,7 +61,7 @@ jobs:
           tag_name	: ${{ steps.increment-version.outputs.next-version }}
           name: ${{ steps.increment-version.outputs.next-version }}
           body: |
-            Released a new version of the Magic Gate mod.
+            Released a new version of the **Manaflow: Ankaris Arrival** mod.
             
-            Changes:
+            ### Changes:
             ${{ steps.commits.outputs.markdown }}
