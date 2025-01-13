@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       release-type:
-        description: 'Release Type (major, feature or minor)'
+        description: 'Release Type (major, feature or patch)'
         default: 'feature'
         required: false
         type: string
