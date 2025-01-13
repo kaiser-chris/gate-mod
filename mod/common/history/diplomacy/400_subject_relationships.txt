@@ -10,4 +10,44 @@
 	c:BAV = {
 		add_liberty_desire = -30
 	}
+
+	# Arcturian Dominion
+	# = Subject Countries in Africa
+	c:GAD = {
+		create_diplomatic_pact = {
+			country = c:CHK
+			type = colony
+		}
+		create_diplomatic_pact = {
+			country = c:KZM
+			type = colony
+		}
+		create_diplomatic_pact = {
+			country = c:KSN
+			type = colony
+		}
+		create_diplomatic_pact = {
+			country = c:LND
+			type = colony
+		}
+		create_diplomatic_pact = {
+			country = c:TSW
+			type = protectorate
+		}
+	}
+	c:KZM = {
+		add_liberty_desire = 15
+	}
+	c:LND = {
+		add_liberty_desire = 15
+	}
+	c:KSN = {
+		add_liberty_desire = 15
+	}
+	c:CHK = {
+		add_liberty_desire = 15
+	}
+	c:TSW = {
+		add_liberty_desire = -5
+	}
 }

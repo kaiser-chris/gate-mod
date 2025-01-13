@@ -4,23 +4,43 @@
 	# = Subject Countries in Africa
 	c:CHK = {
 		effect_starting_technology_tier_5_tech = yes
-		activate_law = law_type:law_monarchy
-		set_country_type = unrecognized
+		add_technology_researched = centralization
+		add_technology_researched = international_relations
+		add_technology_researched = colonization
+		set_country_type = colonial
+		activate_law = law_type:law_oligarchy
+		activate_law = law_type:law_extraction_economy
+		set_state_religion = rel:golden_religion
 	}
 	c:KZM = {
 		effect_starting_technology_tier_5_tech = yes
-		activate_law = law_type:law_monarchy
-		set_country_type = unrecognized
+		add_technology_researched = centralization
+		add_technology_researched = international_relations
+		add_technology_researched = colonization
+		set_country_type = colonial
+		activate_law = law_type:law_oligarchy
+		activate_law = law_type:law_extraction_economy
+		set_state_religion = rel:golden_religion
 	}
 	c:KSN = {
 		effect_starting_technology_tier_5_tech = yes
-		activate_law = law_type:law_monarchy
-		set_country_type = unrecognized
+		add_technology_researched = centralization
+		add_technology_researched = international_relations
+		add_technology_researched = colonization
+		set_country_type = colonial
+		activate_law = law_type:law_oligarchy
+		activate_law = law_type:law_extraction_economy
+		set_state_religion = rel:golden_religion
 	}
 	c:LND = {
 		effect_starting_technology_tier_5_tech = yes
-		activate_law = law_type:law_monarchy
-		set_country_type = unrecognized
+		add_technology_researched = centralization
+		add_technology_researched = international_relations
+		add_technology_researched = colonization
+		set_country_type = colonial
+		activate_law = law_type:law_oligarchy
+		activate_law = law_type:law_extraction_economy
+		set_state_religion = rel:golden_religion
 	}
 	c:TSW = {
 		# As protectorate got some technology from Arthurian Dominion
@@ -30,8 +50,12 @@
 		add_technology_researched = urban_planning
 		add_technology_researched = law_enforcement
 		add_technology_researched = currency_standards
-		activate_law = law_type:law_monarchy
+		add_technology_researched = centralization
+		add_technology_researched = international_relations
+		add_technology_researched = colonization
 		set_country_type = unrecognized
+		activate_law = law_type:law_monarchy
+		set_state_religion = rel:golden_religion
 	}
 
 }

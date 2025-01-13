@@ -42,7 +42,10 @@ magic_dwarf_murk = {
 
 magic_dwarf_murk_railways = {
 	is_valid = {
-		has_technology_researched = magic_dwarf_murk
+		AND = {
+			has_technology_researched = magic_dwarf_murk
+			has_technology_researched = railways
+		}
 	}
 	is_shown = {
 		has_technology_researched = magic_dwarf_murk
