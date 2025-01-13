@@ -1,0 +1,79 @@
+# Manaflow: Ankaris Arrival
+
+## Story
+In 1814, a series of Magic Gates to the planet **Ankaris** appeared across Earth,
+forever altering the course of history.
+
+Ankaris, a mystical world inhabited by Dwarves, Elves, and other fantastical races, brought both wonder and conflict.
+Some arrivals unleashed chaos, such as the Orkish hordes that swept through Central America or the Arcturian Dominion,
+whose conquest reshaped parts of Africa.
+
+Others sought cooperation, like the Dwarves of Min Raetia,
+who settled in the Alps and formed a unique Personal Union with Bavaria,
+blending their ancient traditions with Earthly governance.
+
+## Content
+This mod is currently in **early access** and not finished.
+
+### 4 new Countries, 5 Magic Gates and new Races
+ - Arcturian Dominion (Elven, Africa)
+ - Orkish Supremacy (Orkish, Central America)
+ - Min Raetia (Dwarven, Europe)
+ - New Samadore (Gnomish, South East Asia)
+ - Great Qing (Prevented Invasion)
+
+### New Buildings, Technologies and Goods
+ - Mana Crystals 
+ - Magic Farming
+ - Golems
+ - Ritual Magic
+ - Race specific Technologies and Buildings
+ - Reaching into the Mid-game
+
+### New Journal Entries
+ - Dwarven Claims to the Alps
+ - Investigating the Gates
+ - Learning Magic (for vanilla countries)
+
+### 2 new Pop Types and a new Interest Group
+ - Magic Users Interest Group
+ - Mages (Learned Magic Users)
+ - Druids (Instinctive Magic Users)
+
+### Dynamic System of Mana Density in States
+ - New Map mode to show Mana Density
+ - Includes Magical Phenomena
+ - Monster Attacks
+ - Manastorms
+ - and more...
+
+### Separate System for Researching Magic
+ - Magic Innovation is separate from normal Innovation
+ - A Magic Researcher leads your country's efforts
+ - New UI for Magic Research
+
+
+## Planed Content
+
+### General
+ - Many more Journal Entries and Events
+ - Expeditions into the Gate
+ - Colonization of the Planet Ankaris
+ - More Magic Technologies that reach into the late game
+ - More magic Buildings and Goods
+ - More ways for the player to interact with magic
+ - More influence of magic on international relations
+
+### More Races
+ - Variations of existing Races
+ - Halfling
+ - Goblins
+ - Mole based Races
+ - Dragon/Serpent based Races
+
+# Compatibility
+The mod is currently meant to be played without other mods.
+In the future, there'll be plans to make compatibility patches for other mods such as Morgenröte.
+
+# Credits
+- The new races were created by [Realms of Exether](https://steamcommunity.com/sharedfiles/filedetails/?id=3279217222) and are used with permission
