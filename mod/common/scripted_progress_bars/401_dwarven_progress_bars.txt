@@ -31,6 +31,12 @@ pb_gate_german_integration_support = {
 					is_incorporated = yes
 					turmoil <= 0.2
 				}
+				scope:journal_entry = {
+					scripted_bar_progress = {
+						name = pb_gate_german_integration_support
+						value < 80
+					}
+				}
 			}
 			add = {
 				value = 0
