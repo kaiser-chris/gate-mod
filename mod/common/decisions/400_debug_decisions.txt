@@ -225,3 +225,20 @@ debug_kill_researcher_decision = {
 		base = 0
 	}
 }
+
+debug_trigger_ethics_decision = {
+	is_shown = {
+		has_global_variable = com_debug
+		is_player = yes
+	}
+
+	when_taken = {
+		trigger_event = {
+			id = magic_ethic.1
+		}
+	}
+
+	ai_chance = {
+		base = 0
+	}
+}

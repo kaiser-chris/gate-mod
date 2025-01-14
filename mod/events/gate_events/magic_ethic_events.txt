@@ -1,0 +1,57 @@
+﻿namespace = magic_ethic
+
+magic_ethic.1 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	
+	title = magic_ethic.1.t
+	desc = magic_ethic.1.d
+	flavor = magic_ethic.1.f
+
+	event_image = {
+		texture = gfx/event_pictures/magic_phenomena.dds
+	}
+
+	gui_window = event_window_ethics
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/ethic_icons/ethic_neutral.dds
+	
+	duration = 3
+
+	option = {
+		name = magic_ethic.1.neutral
+		add_modifier = {
+			name = ethic_neutral
+		}
+	}
+
+	option = {
+		name = magic_ethic.1.war
+		add_modifier = {
+			name = ethic_war
+		}
+	}
+
+	option = {
+		name = magic_ethic.1.diplomacy
+		add_modifier = {
+			name = ethic_diplomacy
+		}
+	}
+
+	option = {
+		name = magic_ethic.1.economy
+		add_modifier = {
+			name = ethic_economy
+		}
+	}
+
+	option = {
+		name = magic_ethic.1.environment
+		add_modifier = {
+			name = ethic_environment
+		}
+	}
+}

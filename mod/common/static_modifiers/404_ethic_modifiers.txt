@@ -1,0 +1,27 @@
+﻿ethic_neutral = {
+	icon = gfx/interface/icons/ethic_icons/ethic_neutral.dds
+	country_magical_innovation_mult = 0.1
+}
+
+ethic_war = {
+	icon = gfx/interface/icons/ethic_icons/ethic_war.dds
+	unit_offense_mult = 0.1
+	unit_defense_mult = 0.1
+	unit_morale_loss_mult = -0.05
+}
+
+ethic_economy = {
+	icon = gfx/interface/icons/ethic_icons/ethic_economy.dds
+	country_minting_add = 1000
+}
+
+ethic_environment = {
+	icon = gfx/interface/icons/ethic_icons/ethic_environment.dds
+	state_pollution_generation_add = -100
+}
+
+ethic_diplomacy = {
+	icon = gfx/interface/icons/ethic_icons/ethic_diplomacy.dds
+	country_leverage_resistance_mult = 0.5
+	country_leverage_generation_mult = 0.5
+}
