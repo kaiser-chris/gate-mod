@@ -1,4 +1,9 @@
 ﻿institution_monster_hunting = {
     icon = "gfx/interface/icons/institution_icons/monster_hunting.dds"
     background_texture = "gfx/interface/illustrations/institutions/monster_hunting.dds"
+
+    modifier = {
+        state_harvest_condition_monster_attack_impact_mult = -0.10
+        state_harvest_condition_monster_horde_impact_mult = -0.15
+    }
 }

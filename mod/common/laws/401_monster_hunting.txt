@@ -26,13 +26,11 @@ law_private_monster_hunters = {
 
     institution = institution_monster_hunting
     institution_modifier = {
-        country_monster_attack_chance_add = -0.2
-        state_harvest_condition_monster_attack_impact_mult = -0.2
+        interest_group_ig_industrialists_pol_str_mult = 0.05
     }
 
     modifier = {
         country_institution_monster_hunting_max_investment_add = 2
-        interest_group_ig_industrialists_pol_str_mult = 0.05
     }
 
     # Only visible to gate countries
@@ -81,10 +79,6 @@ law_dedicated_monster_hunters = {
     progressiveness = 0
 
     institution = institution_monster_hunting
-    institution_modifier = {
-        country_monster_attack_chance_add = -0.2
-        state_harvest_condition_monster_attack_impact_mult = -0.2
-    }
 
     unlocking_technologies = {
         law_enforcement
@@ -135,8 +129,7 @@ law_militarized_monster_hunters = {
 
     institution = institution_monster_hunting
     institution_modifier = {
-        country_monster_attack_chance_add = -0.2
-        state_harvest_condition_monster_attack_impact_mult = -0.2
+        interest_group_ig_armed_forces_pol_str_mult = 0.20
     }
 
     unlocking_technologies = {
@@ -145,7 +138,6 @@ law_militarized_monster_hunters = {
 
     modifier = {
         country_institution_monster_hunting_max_investment_add = 3
-        interest_group_ig_armed_forces_pol_str_mult = 0.20
     }
 
     # Only visible to gate countries
