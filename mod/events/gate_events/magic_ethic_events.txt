@@ -21,37 +21,231 @@ magic_ethic.1 = {
 	duration = 3
 
 	option = {
+		name = magic_ethic.1.all
+		custom_tooltip = magic_ethic.1.all.tooltip
+		trigger = {
+			hidden_trigger = {
+				has_all_ethics = yes
+			}
+		}
+	}
+
+	## Neutral START
+	option = {
 		name = magic_ethic.1.neutral
 		add_modifier = {
 			name = ethic_neutral
 		}
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_modifier = ethic_neutral
+				}
+			}
+		}
 	}
+	option = {
+		name = magic_ethic.1.neutral
+		highlighted_option = yes
+		hidden_effect = {
+			trigger_event = magic_ethic.1
+		}
+		custom_tooltip = magic_ethic.1.done.tooltip
+		trigger = {
+			has_modifier = ethic_neutral
+			hidden_trigger = {
+				has_all_ethics = no
+			}
+		}
+	}
+	## Neutral END
 
+	## War START
 	option = {
 		name = magic_ethic.1.war
 		add_modifier = {
 			name = ethic_war
 		}
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_modifier = ethic_war
+				}
+				NOT = {
+					has_modifier = ethic_diplomacy
+				}
+				has_all_ethics = no
+			}
+		}
 	}
+	option = {
+		name = magic_ethic.1.war
+		highlighted_option = yes
+		hidden_effect = {
+			trigger_event = magic_ethic.1
+		}
+		custom_tooltip = magic_ethic.1.done.tooltip
+		trigger = {
+			has_modifier = ethic_war
+			hidden_trigger = {
+				has_all_ethics = no
+			}
+		}
+	}
+	option = {
+		name = magic_ethic.1.forbidden
+		highlighted_option = yes
+		hidden_effect = {
+			trigger_event = magic_ethic.1
+		}
+		custom_tooltip = magic_ethic.1.forbidden.tooltip
+		trigger = {
+			has_modifier = ethic_diplomacy
+			hidden_trigger = {
+				has_all_ethics = no
+			}
+		}
+	}
+	## War END
 
+	## Diplomacy START
 	option = {
 		name = magic_ethic.1.diplomacy
 		add_modifier = {
 			name = ethic_diplomacy
 		}
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_modifier = ethic_war
+				}
+				NOT = {
+					has_modifier = ethic_diplomacy
+				}
+				has_all_ethics = no
+			}
+		}
 	}
+	option = {
+		name = magic_ethic.1.diplomacy
+		highlighted_option = yes
+		hidden_effect = {
+			trigger_event = magic_ethic.1
+		}
+		custom_tooltip = magic_ethic.1.done.tooltip
+		trigger = {
+			has_modifier = ethic_diplomacy
+			hidden_trigger = {
+				has_all_ethics = no
+			}
+		}
+	}
+	option = {
+		name = magic_ethic.1.forbidden
+		hidden_effect = {
+			trigger_event = magic_ethic.1
+		}
+		custom_tooltip = magic_ethic.1.forbidden.tooltip
+		trigger = {
+			has_modifier = ethic_war
+			hidden_trigger = {
+				has_all_ethics = no
+			}
+		}
+	}
+	## Diplomacy END
 
+	## Economy START
 	option = {
 		name = magic_ethic.1.economy
 		add_modifier = {
 			name = ethic_economy
 		}
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_modifier = ethic_economy
+				}
+				NOT = {
+					has_modifier = ethic_environment
+				}
+				has_all_ethics = no
+			}
+		}
 	}
+	option = {
+		name = magic_ethic.1.economy
+		highlighted_option = yes
+		hidden_effect = {
+			trigger_event = magic_ethic.1
+		}
+		custom_tooltip = magic_ethic.1.done.tooltip
+		trigger = {
+			has_modifier = ethic_economy
+			hidden_trigger = {
+				has_all_ethics = no
+			}
+		}
+	}
+	option = {
+		name = magic_ethic.1.forbidden
+		hidden_effect = {
+			trigger_event = magic_ethic.1
+		}
+		custom_tooltip = magic_ethic.1.forbidden.tooltip
+		trigger = {
+			has_modifier = ethic_environment
+			hidden_trigger = {
+				has_all_ethics = no
+			}
+		}
+	}
+	## Economy END
 
+	## Environment START
 	option = {
 		name = magic_ethic.1.environment
 		add_modifier = {
 			name = ethic_environment
 		}
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_modifier = ethic_environment
+				}
+				NOT = {
+					has_modifier = ethic_economy
+				}
+				has_all_ethics = no
+			}
+		}
 	}
+	option = {
+		name = magic_ethic.1.environment
+		highlighted_option = yes
+		hidden_effect = {
+			trigger_event = magic_ethic.1
+		}
+		custom_tooltip = magic_ethic.1.done.tooltip
+		trigger = {
+			hidden_trigger = {
+				has_modifier = ethic_environment
+				has_all_ethics = no
+			}
+		}
+	}
+	option = {
+		name = magic_ethic.1.forbidden
+		hidden_effect = {
+			trigger_event = magic_ethic.1
+		}
+		custom_tooltip = magic_ethic.1.forbidden.tooltip
+		trigger = {
+			has_modifier = ethic_economy
+			hidden_trigger = {
+				has_all_ethics = no
+			}
+		}
+	}
+	## Environment END
 }

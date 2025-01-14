@@ -53,3 +53,17 @@ is_mountainous_state = {
 		has_state_trait = state_trait_great_dividing_range
 	}
 }
+
+has_all_ethics = {
+	AND = {
+		has_modifier = ethic_neutral
+		OR = {
+			has_modifier = ethic_war
+			has_modifier = ethic_diplomacy
+		}
+		OR = {
+			has_modifier = ethic_economy
+			has_modifier = ethic_environment
+		}
+	}
+}
