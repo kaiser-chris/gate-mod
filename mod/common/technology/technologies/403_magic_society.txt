@@ -173,6 +173,13 @@ magic_science = {
 		country_magical_innovation_add = 10
 	}
 
+	on_researched = {
+		custom_tooltip = {
+			text = add_magic_ethic_tooltip
+			trigger_event = magic_ethic.1
+		}
+	}
+
 	unlocking_technologies = {
 		formalized_magic
 	}

@@ -16,12 +16,13 @@ magic_ethic.1 = {
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = gfx/interface/icons/ethic_icons/ethic_neutral.dds
+	icon = gfx/interface/icons/event_icons/event_balanced.dds
 	
 	duration = 3
 
 	option = {
 		name = magic_ethic.1.all
+		default_option = yes
 		custom_tooltip = magic_ethic.1.all.tooltip
 		trigger = {
 			hidden_trigger = {
@@ -33,6 +34,7 @@ magic_ethic.1 = {
 	## Neutral START
 	option = {
 		name = magic_ethic.1.neutral
+		default_option = yes
 		add_modifier = {
 			name = ethic_neutral
 		}
@@ -46,6 +48,7 @@ magic_ethic.1 = {
 	}
 	option = {
 		name = magic_ethic.1.neutral
+		default_option = yes
 		highlighted_option = yes
 		hidden_effect = {
 			trigger_event = magic_ethic.1

@@ -12,16 +12,18 @@ ethic_war = {
 
 ethic_economy = {
 	icon = gfx/interface/icons/ethic_icons/ethic_economy.dds
-	country_minting_add = 1000
+	country_minting_add = 3000
+	country_minting_mult = 0.10
 }
 
 ethic_environment = {
 	icon = gfx/interface/icons/ethic_icons/ethic_environment.dds
 	state_pollution_generation_add = -100
+	state_pollution_reduction_health_mult = -0.25
 }
 
 ethic_diplomacy = {
 	icon = gfx/interface/icons/ethic_icons/ethic_diplomacy.dds
-	country_leverage_resistance_mult = 0.5
-	country_leverage_generation_mult = 0.5
+	country_improve_relations_speed_mult = 0.25
+	country_infamy_decay_mult = 0.25
 }
