@@ -42,10 +42,10 @@ law_private_monster_hunters = {
         OR = {
             is_gate_planet_country = yes
             AND = {
-                has_global_variable = monster_attack_happened
+                has_global_variable = monster_horde_happened
                 OR = {
                     is_player = no
-                    has_global_variable = monster_congress_happened
+                    has_variable = monster_congress_happened
                 }
             }
         }
@@ -101,10 +101,10 @@ law_dedicated_monster_hunters = {
         OR = {
             is_gate_planet_country = yes
             AND = {
-                has_global_variable = monster_attack_happened
+                has_global_variable = monster_horde_happened
                 OR = {
                     is_player = no
-                    has_global_variable = monster_congress_happened
+                    has_variable = monster_congress_happened
                 }
             }
         }
@@ -155,10 +155,10 @@ law_militarized_monster_hunters = {
         OR = {
             is_gate_planet_country = yes
             AND = {
-                has_global_variable = monster_attack_happened
+                has_global_variable = monster_horde_happened
                 OR = {
                     is_player = no
-                    has_global_variable = monster_congress_happened
+                    has_variable = monster_congress_happened
                 }
             }
         }

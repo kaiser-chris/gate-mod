@@ -1,6 +1,3 @@
-# Manaflow: Ankaris Arrival
-
-## Story
 In 1814, a series of Magic Gates to the planet **Ankaris** appeared across Earth,
 forever altering the course of history.
 
@@ -31,7 +28,7 @@ This mod is currently in **early access** and not finished.
  - Reaching into the Mid-game
 
 ### New Journal Entries
- - Dwarven Claims to the Alps
+ - Dwarven Claim to the Alps
  - Investigating the Gates
  - Learning Magic (for vanilla countries)
 

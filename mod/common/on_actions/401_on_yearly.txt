@@ -13,7 +13,12 @@ on_yearly_mana_saturation_other_events = {
     effect = {
         if = {
             limit = {
-                global_var:global_mana_saturation >= 20
+                AND = {
+                    global_var:global_mana_saturation >= 20
+                    NOT = {
+                        has_global_variable = monster_horde_grace_period
+                    }
+                }
             }
             trigger_event = monster_attack.1
         }

@@ -38,7 +38,7 @@
 	}
 
 	on_complete = {
-		set_global_variable = monster_congress_happened
+		set_variable = monster_congress_happened
 		remove_variable = monster_congress_in_progress
 		trigger_event = monster_attack.4
 	}

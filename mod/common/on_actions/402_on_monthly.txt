@@ -49,7 +49,6 @@ on_monthly_mana_density = {
 on_monthly_pulse_country = {
     on_actions = {
         on_monthly_calculate_magic_research
-        on_monthly_trigger_monster_attack
         on_monthly_cleanup_researcher
         on_monthly_add_gate_immigration
         on_monthly_ai_magic_technology
@@ -75,12 +74,6 @@ on_monthly_add_gate_immigration = {
 on_monthly_calculate_magic_research = {
     effect = {
         calculate_magic_research = yes
-    }
-}
-
-on_monthly_trigger_monster_attack = {
-    effect = {
-        trigger_monster_attack = yes
     }
 }
 

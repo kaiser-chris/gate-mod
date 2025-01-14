@@ -4,12 +4,6 @@
 
 	possible = {
 		custom_tooltip = {
-			text = je_monster_congress_button_start_block
-			NOT = {
-				has_global_variable = monster_attack_in_progress
-			}
-		}
-		custom_tooltip = {
 			text = je_monster_congress_button_start_block_started
 			NOT = {
 				has_variable = monster_congress_in_progress
