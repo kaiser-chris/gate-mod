@@ -67,7 +67,7 @@ reset_research_institute_pm = {
 		}
 		else_if = {
 			limit = {
-				var:magic_researcher = {
+				var:magic_researcher ?= {
 					has_variable = magic_experience
 					var:magic_experience >= character_master_threshhold
 				}
@@ -79,7 +79,7 @@ reset_research_institute_pm = {
 		}
 		else_if = {
 			limit = {
-				var:magic_researcher = {
+				var:magic_researcher ?= {
 					has_variable = magic_experience
 					var:magic_experience >= character_experienced_threshhold
 				}
@@ -99,7 +99,7 @@ reset_research_institute_pm = {
 }
 
 make_magic_researcher_busy = {
-	var:magic_researcher = {
+	var:magic_researcher ?= {
 		set_character_busy_and_immortal = yes
 		set_variable = {
 			name = com_opinion
@@ -109,7 +109,7 @@ make_magic_researcher_busy = {
 }
 
 make_magic_researcher_not_busy = {
-	var:magic_researcher = {
+	var:magic_researcher ?= {
 		set_character_busy_and_immortal = no
 		set_variable = {
 			name = com_opinion
@@ -322,11 +322,5 @@ ai_unlock_magic_technology = {
 			name = magic_innovation
 			value = 0
 		}
-	}
-}
-
-calculate_magic_research = {
-	if = {
-
 	}
 }
