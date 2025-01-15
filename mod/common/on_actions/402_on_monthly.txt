@@ -48,8 +48,8 @@ on_monthly_mana_density = {
 # Root = country
 on_monthly_pulse_country = {
     on_actions = {
-        on_monthly_calculate_magic_research
-        on_monthly_cleanup_researcher
+        on_monthly_magic_country
+        on_monthly_magic_researcher
         on_monthly_add_gate_immigration
         on_monthly_ai_magic_technology
     }
@@ -66,19 +66,29 @@ on_monthly_ai_magic_technology = {
 }
 
 on_monthly_add_gate_immigration = {
+    trigger = {
+        has_technology_researched = dwarven_gate_immigration
+    }
     effect = {
         add_gate_immigration = yes
     }
 }
 
-on_monthly_calculate_magic_research = {
+on_monthly_magic_country = {
+    trigger = {
+        is_magic_country = yes
+    }
     effect = {
         calculate_magic_research = yes
     }
 }
 
-on_monthly_cleanup_researcher = {
+on_monthly_magic_researcher = {
+    trigger = {
+        has_variable = magic_researcher
+    }
     effect = {
         cleanup_researchers = yes
+        calculate_researcher_experience = yes
     }
 }

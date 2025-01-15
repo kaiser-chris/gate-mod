@@ -118,6 +118,26 @@ make_magic_researcher_not_busy = {
 	}
 }
 
+calculate_researcher_experience = {
+	var:magic_researcher ?= {
+		if = {
+			limit = {
+				has_variable = magic_experience
+				var:magic_experience < character_experienced_maximum
+			}
+			change_variable = {
+				name = magic_experience
+				add = { 1 2 }
+			}
+			clamp_variable = {
+				name = magic_experience
+				min = character_experienced_minimum
+				max = character_experienced_maximum
+			}
+		}
+	}
+}
+
 cleanup_researchers = {
 	if = {
 		limit = {
@@ -302,5 +322,11 @@ ai_unlock_magic_technology = {
 			name = magic_innovation
 			value = 0
 		}
+	}
+}
+
+calculate_magic_research = {
+	if = {
+
 	}
 }
