@@ -20,15 +20,43 @@
 }
 
 add_magic_main_button = {
-    add_to_global_variable_list = {
-        name = custom_button_list
-        target = ideology:gate_button_main
+    if = {
+        limit = {
+            NOT = {
+                is_target_in_global_variable_list = {
+                    name = custom_button_list_flag
+                    target = flag:gate_button_main
+                }
+            }
+        }
+        add_to_global_variable_list = {
+            name = custom_button_list_flag
+            target = flag:gate_button_main
+        }
+        remove_list_global_variable = {
+            name = custom_button_list
+            target = ideology:gate_button_main
+        }
     }
 }
 
 add_magic_technology_button = {
-    add_to_global_variable_list = {
-        name = custom_button_list
-        target = ideology:gate_button_technology
+    if = {
+        limit = {
+            NOT = {
+                is_target_in_global_variable_list = {
+                    name = custom_button_list_flag
+                    target = flag:gate_button_technology
+                }
+            }
+        }
+        add_to_global_variable_list = {
+            name = custom_button_list_flag
+            target = flag:gate_button_technology
+        }
+        remove_list_global_variable = {
+            name = custom_button_list
+            target = ideology:gate_button_technology
+        }
     }
 }
