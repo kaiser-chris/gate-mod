@@ -11,6 +11,7 @@ blending their ancient traditions with Earthly governance.
 
 ## Content
 This mod is currently in **early access** and not finished.
+The following content is currently fully implemented.
 
 ### 4 new Countries, 5 Magic Gates and new Races
  - Arcturian Dominion (Elven, Africa)
