@@ -53,3 +53,19 @@ sgui_gate_window_tab_countries = {
         }
     }
 }
+
+sgui_has_one_ethic = {
+    scope = country
+
+    is_shown = {
+        var:magic_ethics >= 1
+    }
+}
+
+sgui_has_two_ethics = {
+    scope = country
+
+    is_shown = {
+        var:magic_ethics >= 2
+    }
+}

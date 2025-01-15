@@ -18,6 +18,7 @@ types gate_main_panel_types {
 
     type gate_main_panel = default_block_window {
         name = "gate_main_panel"
+        datacontext = "[GetMetaPlayer.GetPlayedOrObservedCountry]"
 
         visible = "[Or(GetVariableSystem.HasValue('com_open_window', 'gate_button_main'), GetVariableSystem.HasValue('com_alert_action', Localize('gg_panel_main_action')))]"
 
@@ -111,13 +112,54 @@ types gate_main_panel_types {
 
         blockoverride "scrollarea_content"
         {
-            # Statistics
             flowcontainer = {
                 visible = "[GetScriptedGui('sgui_gate_window_tab_statistics').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
                 using = default_list_position
                 margin_top = 10
                 direction = vertical
 
+                # Ethics
+                default_header = {
+                    blockoverride "text" {
+                        text = "gg_header_magic_ethic"
+                    }
+                }
+
+                flowcontainer = {
+                    flowcontainer = {
+                        datamodel = "[Country.GetTimedModifiers]"
+
+                        item = {
+                            gate_ethic = {}
+                        }
+                    }
+
+                    gate_ethic = {
+                        blockoverride "visible" {
+                            visible = "[Not(GetScriptedGui('sgui_has_one_ethic').IsShown(GuiScope.SetRoot(Country.MakeScope).End))]"
+                        }
+                        blockoverride "name" {
+                            text = gg_ethic_empty_slot
+                        }
+                        blockoverride "tooltip" {
+                            tooltip = gg_ethic_empty_slot_tooltip
+                        }
+                    }
+
+                    gate_ethic = {
+                        blockoverride "visible" {
+                            visible = "[Not(GetScriptedGui('sgui_has_two_ethics').IsShown(GuiScope.SetRoot(Country.MakeScope).End))]"
+                        }
+                        blockoverride "name" {
+                            text = gg_ethic_empty_slot
+                        }
+                        blockoverride "tooltip" {
+                            tooltip = gg_ethic_empty_slot_tooltip
+                        }
+                    }
+                }
+
+                # Statistics
                 default_header = {
                     blockoverride "text" {
                         text = "gg_header_magic_state"
@@ -514,14 +556,79 @@ types gate_main_panel_types {
             gate_diplo_button = {
                 parentanchor = vcenter
                 blockoverride "datacontext" {
-                    datacontext = "[GetPlayer.GetDiplomaticAction('increase_relations', Country.Self)]"
+                    datacontext = "[Country.GetDiplomaticAction('increase_relations', Country.Self)]"
                 }
             }
 
             gate_diplo_button = {
                 parentanchor = right|vcenter
                 blockoverride "datacontext" {
-                    datacontext = "[GetPlayer.GetDiplomaticAction('damage_relations', Country.Self)]"
+                    datacontext = "[Country.GetDiplomaticAction('damage_relations', Country.Self)]"
+                }
+            }
+        }
+    }
+
+    type gate_ethic = container {
+        minimumsize = { @panel_width_half -1 }
+        maximumsize = { @panel_width_half -1 }
+        block "visible" {
+            visible = "[Or5(
+                            EqualTo_string(TimedModifier.GetName, GetStaticModifier('ethic_neutral').GetName),
+                            EqualTo_string(TimedModifier.GetName, GetStaticModifier('ethic_war').GetName),
+                            EqualTo_string(TimedModifier.GetName, GetStaticModifier('ethic_diplomacy').GetName),
+                            EqualTo_string(TimedModifier.GetName, GetStaticModifier('ethic_economy').GetName),
+                            EqualTo_string(TimedModifier.GetName, GetStaticModifier('ethic_environment').GetName)
+                       )]"
+        }
+        flowcontainer = {
+            parentanchor = hcenter
+            margin = { 20 20 }
+            direction = vertical
+            minimumsize = { @panel_width_half -1 }
+            maximumsize = { @panel_width_half -1 }
+
+            flowcontainer = {
+                direction = vertical
+                minimumsize = { 230 -1 }
+                maximumsize = { 230 -1 }
+                margin = { 15 15 }
+                block "tooltip" {
+                    tooltip = "[TimedModifier.GetTooltip]"
+                }
+
+
+                widget = {
+                    size = { 230 30 }
+                    parentanchor = hcenter
+                    textbox = {
+                        block "name" {
+                            text = "[TimedModifier.GetName]"
+                        }
+                        align = center|nobaseline
+                        parentanchor = top|hcenter
+                        default_format = "#header"
+                        size = { 230 20 }
+                    }
+                }
+
+                widget = {
+                    size = { 200 200 }
+                    parentanchor = hcenter
+                    icon = {
+                        parentanchor = hcenter|vcenter
+                        size = { 120 120 }
+                        block "icon" {
+                            texture = "[TimedModifier.GetIcon]"
+                        }
+                    }
+                    background = {
+                        texture = "gfx/interface/backgrounds/round_frame_dec.dds"
+                    }
+                }
+
+                background = {
+                    using = entry_bg
                 }
             }
         }

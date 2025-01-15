@@ -12,6 +12,10 @@ magic_ethic.1 = {
 		texture = gfx/event_pictures/magic_phenomena.dds
 	}
 
+	trigger = {
+		var:magic_ethics < gate_max_ethics
+	}
+
 	gui_window = event_window_ethics
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -37,6 +41,10 @@ magic_ethic.1 = {
 		default_option = yes
 		add_modifier = {
 			name = ethic_neutral
+		}
+		change_variable = {
+			name = magic_ethics
+			add = 1
 		}
 		trigger = {
 			hidden_trigger = {
@@ -68,6 +76,10 @@ magic_ethic.1 = {
 		name = magic_ethic.1.war
 		add_modifier = {
 			name = ethic_war
+		}
+		change_variable = {
+			name = magic_ethics
+			add = 1
 		}
 		trigger = {
 			hidden_trigger = {
@@ -117,6 +129,10 @@ magic_ethic.1 = {
 		add_modifier = {
 			name = ethic_diplomacy
 		}
+		change_variable = {
+			name = magic_ethics
+			add = 1
+		}
 		trigger = {
 			hidden_trigger = {
 				NOT = {
@@ -164,6 +180,10 @@ magic_ethic.1 = {
 		add_modifier = {
 			name = ethic_economy
 		}
+		change_variable = {
+			name = magic_ethics
+			add = 1
+		}
 		trigger = {
 			hidden_trigger = {
 				NOT = {
@@ -210,6 +230,10 @@ magic_ethic.1 = {
 		name = magic_ethic.1.environment
 		add_modifier = {
 			name = ethic_environment
+		}
+		change_variable = {
+			name = magic_ethics
+			add = 1
 		}
 		trigger = {
 			hidden_trigger = {
