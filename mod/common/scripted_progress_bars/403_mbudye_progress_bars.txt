@@ -1,0 +1,87 @@
+﻿pb_gate_mbudye = {
+	name = pb_gate_mbudye_name
+	desc = pb_gate_mbudye_pro
+	second_desc = pb_gate_mbudye_anti
+
+	double_sided_bad = yes
+
+	start_value = 20
+	min_value = 0
+	max_value = 100
+}
+
+pb_gate_mbudye_lunda = {
+	name = pb_gate_mbudye_lunda_name
+	desc = pb_gate_mbudye_lunda_desc
+
+	default_green = yes
+
+	yearly_progress = {
+		add = {
+			value = 1
+			max = 100
+			desc = pb_gate_mbudye_passive_conversion_tooltip
+		}
+	}
+
+	start_value = 16
+	min_value = 0
+	max_value = 100
+}
+
+pb_gate_mbudye_chokwe = {
+	name = pb_gate_mbudye_chokwe_name
+	desc = pb_gate_mbudye_chokwe_desc
+
+	default_green = yes
+
+	yearly_progress = {
+		add = {
+			value = 1
+			max = 100
+			desc = pb_gate_mbudye_passive_conversion_tooltip
+		}
+	}
+
+	start_value = 15
+	min_value = 0
+	max_value = 100
+}
+
+pb_gate_mbudye_kazembe = {
+	name = pb_gate_mbudye_kazembe_name
+	desc = pb_gate_mbudye_kazembe_desc
+
+	default_green = yes
+
+	yearly_progress = {
+		add = {
+			value = 1
+			max = 100
+			desc = pb_gate_mbudye_passive_conversion_tooltip
+		}
+	}
+
+	start_value = 18
+	min_value = 0
+	max_value = 100
+}
+
+pb_gate_mbudye_kasanje = {
+	name = pb_gate_mbudye_kasanje_name
+	desc = pb_gate_mbudye_kasanje_desc
+
+	default_green = yes
+
+	yearly_progress = {
+		add = {
+			value = 1
+			max = 100
+			desc = pb_gate_mbudye_passive_conversion_tooltip
+		}
+	}
+
+	start_value = 13
+	min_value = 0
+	max_value = 100
+}

@@ -1,0 +1,85 @@
+﻿add_conversion_progress = {
+	hidden_effect = {
+		save_temporary_scope_value_as = {
+			name = support_change
+			value = $support_change$
+		}
+		save_temporary_scope_value_as = {
+			name = conversion_progress
+			value = $conversion_progress$
+		}
+		$country$ = {
+			save_temporary_scope_as = affected_country
+		}
+	}
+	custom_tooltip = {
+		text = je_gate_mbudye_change_support
+		je:je_gate_mbudye = {
+			add_progress = {
+				name = pb_gate_mbudye
+				value = $support_change$
+			}
+		}
+	}
+	custom_tooltip = {
+		text = je_gate_mbudye_change_conversion
+		je:je_gate_mbudye = {
+			if = {
+				limit = {
+					$country$ = c:LND
+				}
+				add_progress = {
+					name = pb_gate_mbudye_lunda
+					value = $conversion_progress$
+				}
+			}
+			else_if = {
+				limit = {
+					$country$ = c:CHK
+				}
+				add_progress = {
+					name = pb_gate_mbudye_chokwe
+					value = $conversion_progress$
+				}
+			}
+			else_if = {
+				limit = {
+					$country$ = c:KZM
+				}
+				add_progress = {
+					name = pb_gate_mbudye_kazembe
+					value = $conversion_progress$
+				}
+			}
+			else_if = {
+				limit = {
+					$country$ = c:KSN
+				}
+				add_progress = {
+					name = pb_gate_mbudye_kasanje
+					value = $conversion_progress$
+				}
+			}
+		}
+	}
+}
+
+scope_random_luba_state = {
+	random_subject_or_below = {
+		limit = {
+			OR = {
+				this = c:LND
+				this = c:CHK
+				this = c:KZM
+				this = c:KSN
+			}
+			is_subject_of = c:GAD
+		}
+		save_scope_as = mbudye_event_country
+	}
+	scope:mbudye_event_country = {
+		random_scope_state = {
+			save_scope_as = mbudye_event_state
+		}
+	}
+}

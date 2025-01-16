@@ -1,0 +1,185 @@
+﻿je_gate_mbudye = {
+	icon = "gfx/interface/icons/religion_icons/golden_faith.dds"
+
+	group = je_group_internal_affairs
+
+	#scripted_button = je_monster_congress_button_start
+
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = je_gate_mbudye_active_resistance
+				trigger = {
+					scope:journal_entry = {
+						scripted_bar_progress = {
+							name = pb_gate_mbudye
+							value <= 20
+						}
+					}
+				}
+			}
+			triggered_desc = {
+				desc = je_gate_mbudye_passive_resistance
+				trigger = {
+					scope:journal_entry = {
+						scripted_bar_progress = {
+							name = pb_gate_mbudye
+							value <= 40
+						}
+					}
+				}
+			}
+			triggered_desc = {
+				desc = je_gate_mbudye_ambivalent
+				trigger = {
+					scope:journal_entry = {
+						scripted_bar_progress = {
+							name = pb_gate_mbudye
+							value <= 60
+						}
+					}
+				}
+			}
+			triggered_desc = {
+				desc = je_gate_mbudye_engaging
+				trigger = {
+					scope:journal_entry = {
+						scripted_bar_progress = {
+							name = pb_gate_mbudye
+							value <= 80
+						}
+					}
+				}
+			}
+			triggered_desc = {
+				desc = je_gate_mbudye_accepting
+			}
+		}
+	}
+
+	immediate = {
+		c:LND = {
+			save_scope_as = gate_mbudye_lunda
+		}
+		c:CHK = {
+			save_scope_as = gate_mbudye_chokwe
+		}
+		c:KZM = {
+			save_scope_as = gate_mbudye_kazembe
+		}
+		c:KSN = {
+			save_scope_as = gate_mbudye_kasanje
+		}
+	}
+
+	on_monthly_pulse = {
+		random_events = {
+			chance_of_no_event = 90
+			1 = mbudye.3
+		}
+	}
+
+	complete = {
+		trigger_if = {
+			custom_tooltip = {
+				text = je_gate_mbudye_complete
+				AND = {
+					scope:journal_entry = {
+						scripted_bar_progress = {
+							name = pb_gate_mbudye
+							value < 100
+						}
+					}
+					OR = {
+						c:LND = {
+							NOT = {
+								is_subject_of = c:GAD
+							}
+						}
+						scope:journal_entry = {
+							scripted_bar_progress = {
+								name = pb_gate_mbudye_lunda
+								value >= 100
+							}
+						}
+					}
+					OR = {
+						c:CHK = {
+							NOT = {
+								is_subject_of = c:GAD
+							}
+						}
+						scope:journal_entry = {
+							scripted_bar_progress = {
+								name = pb_gate_mbudye_chokwe
+								value >= 100
+							}
+						}
+					}
+					OR = {
+						c:KZM = {
+							NOT = {
+								is_subject_of = c:GAD
+							}
+						}
+						scope:journal_entry = {
+							scripted_bar_progress = {
+								name = pb_gate_mbudye_kazembe
+								value >= 100
+							}
+						}
+					}
+					OR = {
+						c:KSN = {
+							NOT = {
+								is_subject_of = c:GAD
+							}
+						}
+						scope:journal_entry = {
+							scripted_bar_progress = {
+								name = pb_gate_mbudye_kasanje
+								value >= 100
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	fail = {
+		trigger_if = {
+			custom_tooltip = {
+				text = je_gate_mbudye_fail
+				scope:journal_entry = {
+					scripted_bar_progress = {
+						name = pb_gate_mbudye
+						value <= 0
+					}
+				}
+			}
+		}
+	}
+
+	on_complete = {
+		trigger_event = mbudye.1
+	}
+
+	on_fail = {
+		trigger_event = mbudye.2
+	}
+
+	progressbar = no
+
+	scripted_progress_bar = pb_gate_mbudye
+	scripted_progress_bar = pb_gate_mbudye_lunda
+	scripted_progress_bar = pb_gate_mbudye_chokwe
+	scripted_progress_bar = pb_gate_mbudye_kazembe
+	scripted_progress_bar = pb_gate_mbudye_kasanje
+
+	transferable = no
+	can_revolution_inherit = yes
+
+	weight = 200
+	should_be_pinned_by_default = yes
+}
