@@ -26,7 +26,6 @@ Below is a table with all currently open ToDos.
 | ./mod/common/technology/technologies/403_magic_society.txt | 108 |  Find icon for mana_lanterns |
 | ./mod/common/technology/technologies/403_magic_society.txt | 145 |  Find icon for healing_circles |
 | ./mod/common/technology/technologies/403_magic_society.txt | 94 |  Implement gate_expeditions technology |
-| ./mod/events/gate_events/mbudye_events.txt | 69 |  Create event image for mbudye.2 |
 | ./mod/localization/english/gate_technology_l_english.yml | 31 |  Write description for elven_forests_desc |
 | ./mod/localization/english/gate_technology_l_english.yml | 35 |  Write description for gnomish_support_desc |
 | ./mod/localization/english/journal/gate_mbudye_l_english.yml | 32 |  Write mbudye.2.desc |
