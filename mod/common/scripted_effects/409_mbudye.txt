@@ -263,6 +263,11 @@ trigger_luba_uprising = {
 				primary_demand = yes
 			}
 		}
+
+		# Mobilize Armies
+		every_military_formation = {
+			mobilize_army = yes
+		}
 	}
 
 	# Add additional war goals depending on circumstances
@@ -359,6 +364,13 @@ trigger_luba_uprising = {
 					target_state = s:STATE_NORTHERN_CAPE.region_state:GAD
 					target_country = c:GAD
 					primary_demand = yes
+				}
+			}
+
+			# Mobilize Armies
+			c:TSW = {
+				every_military_formation = {
+					mobilize_army = yes
 				}
 			}
 

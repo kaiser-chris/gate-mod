@@ -995,14 +995,17 @@ mbudye.15 = {
 	placement = scope:mbudye_event_state
 
 	immediate = {
-		every_combat_unit = {
+		every_military_formation = {
 			limit = {
 				organization > 50
+				country = c:GAD
 			}
 			add_organization = -50
-			add_morale = {
-				value = morale
-				multiply = -0.5
+			every_combat_unit = {
+				add_morale = {
+					value = morale
+					multiply = -0.5
+				}
 			}
 		}
 	}

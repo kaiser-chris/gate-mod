@@ -28,8 +28,5 @@ Below is a table with all currently open ToDos.
 | ./mod/common/technology/technologies/403_magic_society.txt | 94 |  Implement gate_expeditions technology |
 | ./mod/localization/english/gate_technology_l_english.yml | 31 |  Write description for elven_forests_desc |
 | ./mod/localization/english/gate_technology_l_english.yml | 35 |  Write description for gnomish_support_desc |
-| ./mod/localization/english/journal/gate_mbudye_l_english.yml | 32 |  Write mbudye.2.desc |
-| ./mod/localization/english/journal/gate_mbudye_l_english.yml | 33 |  Write mbudye.2.f |
-| ./mod/localization/english/journal/gate_mbudye_l_english.yml | 34 |  Write mbudye.2.a |
 
 [//]: # (TODO-END)
