@@ -12,59 +12,73 @@
 			save_temporary_scope_as = affected_country
 		}
 	}
-	custom_tooltip = {
-		text = je_gate_mbudye_change_support
-		je:je_gate_mbudye = {
-			add_progress = {
-				name = pb_gate_mbudye
-				value = $support_change$
+	if = {
+		limit = {
+			NOT = {
+				$support_change$ = 0
+			}
+		}
+		custom_tooltip = {
+			text = je_gate_mbudye_change_support
+			je:je_gate_mbudye = {
+				add_progress = {
+					name = pb_gate_mbudye
+					value = $support_change$
+				}
 			}
 		}
 	}
-	custom_tooltip = {
-		text = je_gate_mbudye_change_conversion
-		je:je_gate_mbudye = {
-			if = {
-				limit = {
-					$country$ = c:LND
-				}
-				add_progress = {
-					name = pb_gate_mbudye_lunda
-					value = $conversion_progress$
-				}
+	if = {
+		limit = {
+			NOT = {
+				$conversion_progress$ = 0
 			}
-			else_if = {
-				limit = {
-					$country$ = c:CHK
+		}
+		custom_tooltip = {
+			text = je_gate_mbudye_change_conversion
+			je:je_gate_mbudye = {
+				if = {
+					limit = {
+						$country$ = c:LND
+					}
+					add_progress = {
+						name = pb_gate_mbudye_lunda
+						value = $conversion_progress$
+					}
 				}
-				add_progress = {
-					name = pb_gate_mbudye_chokwe
-					value = $conversion_progress$
+				else_if = {
+					limit = {
+						$country$ = c:CHK
+					}
+					add_progress = {
+						name = pb_gate_mbudye_chokwe
+						value = $conversion_progress$
+					}
 				}
-			}
-			else_if = {
-				limit = {
-					$country$ = c:KZM
+				else_if = {
+					limit = {
+						$country$ = c:KZM
+					}
+					add_progress = {
+						name = pb_gate_mbudye_kazembe
+						value = $conversion_progress$
+					}
 				}
-				add_progress = {
-					name = pb_gate_mbudye_kazembe
-					value = $conversion_progress$
-				}
-			}
-			else_if = {
-				limit = {
-					$country$ = c:KSN
-				}
-				add_progress = {
-					name = pb_gate_mbudye_kasanje
-					value = $conversion_progress$
+				else_if = {
+					limit = {
+						$country$ = c:KSN
+					}
+					add_progress = {
+						name = pb_gate_mbudye_kasanje
+						value = $conversion_progress$
+					}
 				}
 			}
 		}
 	}
 }
 
-scope_random_luba_state = {
+scope_random_luba_subject = {
 	random_subject_or_below = {
 		limit = {
 			OR = {
@@ -80,6 +94,30 @@ scope_random_luba_state = {
 	scope:mbudye_event_country = {
 		random_scope_state = {
 			save_scope_as = mbudye_event_state
+		}
+	}
+}
+
+trigger_random_investigation_result = {
+	random = {
+		chance = $chance_success$
+		trigger_event = {
+			id = mbudye.5
+			days = $investigation_duration$
+			popup = yes
+		}
+		set_local_variable = picked_result
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_local_variable = picked_result
+			}
+		}
+		trigger_event = {
+			id = mbudye.6
+			days = $investigation_duration$
+			popup = yes
 		}
 	}
 }

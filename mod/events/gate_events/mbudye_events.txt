@@ -6,7 +6,7 @@ mbudye.1 = {
 	placement = capital
 	
 	title = mbudye.1.t
-	desc = mbudye.1.d
+	desc = mbudye.1.desc
 	flavor = mbudye.1.f
 
 	event_image = {
@@ -63,7 +63,7 @@ mbudye.2 = {
 	placement = capital
 
 	title = mbudye.2.t
-	desc = mbudye.2.d
+	desc = mbudye.2.desc
 	flavor = mbudye.2.f
 
 	#TODO: Create event image for mbudye.2
@@ -89,16 +89,15 @@ mbudye.3 = {
 	placement = scope:mbudye_event_state
 
 	immediate = {
-		scope_random_luba_state = yes
+		scope_random_luba_subject = yes
 	}
 
 	title = mbudye.3.t
-	desc = mbudye.3.d
+	desc = mbudye.3.desc
 	flavor = mbudye.3.f
 
-	#TODO: Create event image for mbudye.3
 	event_image = {
-		texture = "gfx/event_pictures/magic_phenomena.dds"
+		video = "africa_public_protest"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -113,6 +112,9 @@ mbudye.3 = {
 		add_radicals = {
 			religion = rel:animist
 			value = large_radicals
+		}
+		custom_tooltip = {
+			text = je_gate_mbudye_change_fear
 		}
 		add_conversion_progress = {
 			country = scope:mbudye_event_country
@@ -130,7 +132,7 @@ mbudye.3 = {
 		add_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = 1
-			support_change = -1
+			support_change = 0
 		}
 	}
 
@@ -154,16 +156,22 @@ mbudye.4 = {
 	placement = scope:mbudye_event_state
 
 	immediate = {
-		scope_random_luba_state = yes
+		scope_random_luba_subject = yes
+	}
+
+	trigger = {
+		# Only one crime at a time
+		NOT = {
+			has_variable = mbudye_investigation
+		}
 	}
 
 	title = mbudye.4.t
-	desc = mbudye.4.d
+	desc = mbudye.4.desc
 	flavor = mbudye.4.f
 
-	#TODO: Create event image for mbudye.4
 	event_image = {
-		texture = "gfx/event_pictures/magic_phenomena.dds"
+		video = "southamerica_public_figure_assassination"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -175,40 +183,161 @@ mbudye.4 = {
 	option = {
 		name = mbudye.4.a
 		default_option = yes
+		scope:mbudye_event_state = {
+			kill_population_percent_in_state = {
+				religion = rel:animist
+				percent = 0.01
+			}
+		}
 		add_radicals = {
 			religion = rel:animist
-			value = large_radicals
+			value = very_large_radicals
+		}
+		custom_tooltip = {
+			text = je_gate_mbudye_change_fear
 		}
 		add_conversion_progress = {
 			country = scope:mbudye_event_country
-			conversion_progress = 5
-			support_change = -5
+			conversion_progress = 10
+			support_change = -10
 		}
 	}
 
 	option = {
 		name = mbudye.4.b
-		add_radicals = {
-			religion = rel:animist
-			value = small_radicals
+		hidden_effect = {
+			trigger_event = {
+				id = mbudye.5
+				months = { 2 4 }
+			}
+			set_variable = {
+				name = mbudye_investigation
+				value = flag:mbudye_assassination_official_flag
+			}
 		}
-		add_conversion_progress = {
-			country = scope:mbudye_event_country
-			conversion_progress = 1
-			support_change = -1
+		trigger = {
+			has_law = law_type:law_secret_police
 		}
 	}
 
 	option = {
 		name = mbudye.4.c
-		add_radicals = {
-			religion = rel:golden_religion
-			value = small_radicals
-		}
 		add_conversion_progress = {
 			country = scope:mbudye_event_country
-			conversion_progress = -1
-			support_change = 5
+			conversion_progress = 0
+			support_change = 2
 		}
+		hidden_effect = {
+			trigger_random_investigation_result = {
+				chance_success = 30
+				investigation_duration = 3
+			}
+			set_variable = {
+				name = mbudye_investigation
+				value = flag:mbudye_assassination_official_flag
+			}
+		}
+	}
+
+	option = {
+		name = mbudye.4.d
+		add_conversion_progress = {
+			country = scope:mbudye_event_country
+			conversion_progress = 1
+			support_change = -1
+		}
+		trigger = {
+			has_law = law_type:law_censorship
+		}
+	}
+}
+
+mbudye.5 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:mbudye_event_state
+
+	immediate = {
+		save_scope_as = country_gad
+	}
+
+	title = mbudye.5.t
+	desc = mbudye.5.desc
+	flavor = mbudye.5.f
+
+	event_image = {
+		video = "middleeast_police_breaking_door"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/religion_icons/golden_faith.dds"
+
+	duration = 3
+
+	option = {
+		name = mbudye.5.a
+		default_option = yes
+		add_conversion_progress = {
+			country = scope:mbudye_event_country
+			conversion_progress = 5
+			support_change = -2
+		}
+		remove_variable = mbudye_investigation
+	}
+
+	option = {
+		name = mbudye.5.b
+		add_conversion_progress = {
+			country = scope:mbudye_event_country
+			conversion_progress = 1
+			support_change = 4
+		}
+		remove_variable = mbudye_investigation
+	}
+}
+
+mbudye.6 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:mbudye_event_state
+
+	immediate = {
+		save_scope_as = country_gad
+	}
+
+	title = mbudye.6.t
+	desc = mbudye.6.desc
+	flavor = mbudye.6.f
+
+	event_image = {
+		video = "europenorthamerica_london_center"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/religion_icons/golden_faith.dds"
+
+	duration = 3
+
+	option = {
+		name = mbudye.6.a
+		default_option = yes
+		add_conversion_progress = {
+			country = scope:mbudye_event_country
+			conversion_progress = 2
+			support_change = -5
+		}
+		remove_variable = mbudye_investigation
+	}
+
+	option = {
+		name = mbudye.6.b
+		add_conversion_progress = {
+			country = scope:mbudye_event_country
+			conversion_progress = -3
+			support_change = 0
+		}
+		remove_variable = mbudye_investigation
 	}
 }
