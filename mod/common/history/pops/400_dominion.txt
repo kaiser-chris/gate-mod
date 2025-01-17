@@ -9,19 +9,38 @@
 		region_state:GAD = {
 			create_pop = {
 				culture = elven
+				religion = golden_religion
 				size = 250000
 			}
 			create_pop = {
 				culture = lunda
-				size = 32092
+				religion = golden_religion
+				size = 10000
+			}
+			create_pop = {
+				culture = lunda
+				religion = animist
+				size = 22092
 			}
 			create_pop = {
 				culture = kavango_bantu
-				size = 28000
+				religion = golden_religion
+				size = 10000
+			}
+			create_pop = {
+				culture = kavango_bantu
+				religion = animist
+				size = 18000
 			}
 			create_pop = {
 				culture = chewa
-				size = 12264
+				religion = golden_religion
+				size = 6164
+			}
+			create_pop = {
+				culture = chewa
+				religion = animist
+				size = 6164
 			}
 		}
 	}
@@ -34,19 +53,28 @@
 		region_state:GAD = {
 			create_pop = {
 				culture = elven
+				religion = golden_religion
 				size = 50000
 			}
 			create_pop = {
 				culture = lunda
-				size = 20000
+				religion = golden_religion
+				size = 10000
 			}
 			create_pop = {
 				culture = kavango_bantu
-				size = 20000
+				religion = golden_religion
+				size = 10000
+			}
+			create_pop = {
+				culture = lunda
+				religion = animist
+				size = 10000
 			}
 			create_pop = {
 				culture = kavango_bantu
-				size = 3400
+				religion = animist
+				size = 13400
 			}
 		}
 	}
@@ -58,16 +86,19 @@
 		}
 		region_state:GAD = {
 			create_pop = {
+				culture = elven
+				religion = golden_religion
+				size = 30000
+			}
+			create_pop = {
 				culture = kavango_bantu
+				religion = golden_religion
 				size = 7560
 			}
 			create_pop = {
 				culture = lunda
+				religion = animist
 				size = 7000
-			}
-			create_pop = {
-				culture = elven
-				size = 30000
 			}
 		}
 	}
