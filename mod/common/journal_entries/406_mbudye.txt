@@ -3,10 +3,14 @@
 
 	group = je_group_internal_affairs
 
-	#scripted_button = je_monster_congress_button_start
-
 	status_desc = {
 		first_valid = {
+			triggered_desc = {
+				desc = je_gate_mbudye_active_investigation
+				trigger = {
+					has_variable = mbudye_investigation
+				}
+			}
 			triggered_desc = {
 				desc = je_gate_mbudye_active_resistance
 				trigger = {
@@ -58,6 +62,7 @@
 	}
 
 	immediate = {
+		save_scope_as = gate_mbudye_dominion
 		c:LND = {
 			save_scope_as = gate_mbudye_lunda
 		}
@@ -75,13 +80,22 @@
 	on_monthly_pulse = {
 		random_events = {
 			chance_of_no_event = 90
-			10 = mbudye.3
+			2 = mbudye.3
+			2 = mbudye.10
+			2 = mbudye.11
+			2 = mbudye.12
+			1 = mbudye.13
+			1 = mbudye.14
+		}
+	}
+
+	on_yearly_pulse = {
+		random_events = {
+			chance_of_no_event = 30
 			1 = mbudye.4
 			1 = mbudye.7
 			1 = mbudye.8
 			1 = mbudye.9
-			10 = mbudye.10
-			10 = mbudye.11
 		}
 	}
 
@@ -168,11 +182,21 @@
 	}
 
 	on_complete = {
-		trigger_event = mbudye.1
+		hidden_effect = {
+			trigger_event = {
+				id = mbudye.1
+				popup = yes
+			}
+		}
 	}
 
 	on_fail = {
-		trigger_event = mbudye.2
+		hidden_effect = {
+			trigger_event = {
+				id = mbudye.2
+				popup = yes
+			}
+		}
 	}
 
 	progressbar = no

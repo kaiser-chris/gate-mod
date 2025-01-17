@@ -79,6 +79,7 @@
 }
 
 scope_random_luba_subject = {
+	save_scope_as = gate_mbudye_dominion
 	random_subject_or_below = {
 		limit = {
 			OR = {
@@ -89,7 +90,67 @@ scope_random_luba_subject = {
 			}
 			is_subject_of = c:GAD
 		}
-		save_scope_as = mbudye_event_country
+		if = {
+			limit = {
+				this = c:LND
+				c:GAD = {
+					je:je_gate_mbudye = {
+						scripted_bar_progress = {
+							name = pb_gate_mbudye_lunda
+							value < 100
+						}
+					}
+				}
+			}
+			save_scope_as = mbudye_event_country
+		}
+		else_if = {
+			limit = {
+				this = c:CHK
+				c:GAD = {
+					je:je_gate_mbudye = {
+						scripted_bar_progress = {
+							name = pb_gate_mbudye_chokwe
+							value < 100
+						}
+					}
+				}
+			}
+			save_scope_as = mbudye_event_country
+		}
+		else_if = {
+			limit = {
+				this = c:KZM
+				c:GAD = {
+					je:je_gate_mbudye = {
+						scripted_bar_progress = {
+							name = pb_gate_mbudye_kazembe
+							value < 100
+						}
+					}
+				}
+			}
+			save_scope_as = mbudye_event_country
+		}
+		else_if = {
+			limit = {
+				this = c:KZM
+				c:GAD = {
+					je:je_gate_mbudye = {
+						scripted_bar_progress = {
+							name = pb_gate_mbudye_kasanje
+							value < 100
+						}
+					}
+				}
+			}
+			save_scope_as = mbudye_event_country
+		}
+		else = {
+			c:LND = {
+				save_scope_as = mbudye_event_country
+			}
+		}
 	}
 	scope:mbudye_event_country = {
 		random_scope_state = {
@@ -98,26 +159,231 @@ scope_random_luba_subject = {
 	}
 }
 
-trigger_random_investigation_result = {
+trigger_random_mbudye_investigation_result = {
 	random = {
 		chance = $chance_success$
-		trigger_event = {
-			id = mbudye.5
-			days = $investigation_duration$
-			popup = yes
-		}
-		set_local_variable = picked_result
+		set_variable = mbudye_investigation_success
 	}
 	if = {
 		limit = {
 			NOT = {
-				has_local_variable = picked_result
+				has_variable = mbudye_investigation_success
 			}
 		}
 		trigger_event = {
 			id = mbudye.6
 			days = $investigation_duration$
 			popup = yes
+		}
+	}
+	else = {
+		trigger_event = {
+			id = mbudye.5
+			days = $investigation_duration$
+			popup = yes
+		}
+	}
+	remove_variable = mbudye_investigation_success
+}
+
+form_luba_nation = {
+	set_global_variable = mbudye_unification
+
+	s:STATE_EAST_ANGOLA = {
+		add_claim = c:LND
+	}
+	s:STATE_KATANGA = {
+		add_claim = c:LND
+	}
+	s:STATE_KAZEMBE = {
+		add_claim = c:LND
+	}
+	s:STATE_ZAMBIA = {
+		add_claim = c:LND
+	}
+
+	c:LND = {
+		add_primary_culture = cu:luba
+
+		# Carry over magic nation status
+		if = {
+			limit = {
+				is_magic_country = no
+				c:CHK = {
+					is_magic_country = yes
+				}
+			}
+			learn_magic = yes
+		}
+		else_if = {
+			limit = {
+				is_magic_country = no
+				c:KZM = {
+					is_magic_country = yes
+				}
+			}
+			learn_magic = yes
+		}
+		else_if = {
+			limit = {
+				is_magic_country = no
+				c:KSN = {
+					is_magic_country = yes
+				}
+			}
+			learn_magic = yes
+		}
+		annex_with_incorporation = c:CHK
+		annex_with_incorporation = c:KZM
+		annex_with_incorporation = c:KSN
+	}
+}
+
+trigger_luba_uprising = {
+	c:LND = {
+		# Create basic diplomatic play
+		create_diplomatic_play = {
+			name = dp_luba_uprising
+			type = dp_independence
+			target_country = c:GAD
+			war = yes
+
+			add_war_goal = {
+				type = annex_country
+				holder = c:GAD
+				primary_demand = yes
+				target_country = c:LND
+			}
+
+			add_war_goal = {
+				type = return_state
+				holder = c:LND
+				target_state = s:STATE_ZAMBIA.region_state:GAD
+				target_country = c:GAD
+				primary_demand = yes
+			}
+		}
+	}
+
+	# Add additional war goals depending on circumstances
+	every_diplomatic_play = {
+		limit = {
+			initiator_is = c:LND
+			target_is = c:GAD
+			is_diplomatic_play_type = dp_independence
+		}
+
+		# For later identification
+		set_variable = luba_uprising
+
+		# Add states that could be owned by the Dominion
+		if = {
+			limit = {
+				exists = s:STATE_KATANGA.region_state:GAD
+			}
+			add_war_goal = {
+				type = return_state
+				holder = c:LND
+				target_state = s:STATE_KATANGA.region_state:GAD
+				target_country = c:GAD
+				primary_demand = yes
+			}
+		}
+		if = {
+			limit = {
+				exists = s:STATE_EAST_ANGOLA.region_state:GAD
+			}
+			add_war_goal = {
+				type = return_state
+				holder = c:LND
+				target_state = s:STATE_EAST_ANGOLA.region_state:GAD
+				target_country = c:GAD
+				primary_demand = yes
+			}
+		}
+		if = {
+			limit = {
+				exists = s:STATE_KAZEMBE.region_state:GAD
+			}
+			add_war_goal = {
+				type = return_state
+				holder = c:LND
+				target_state = s:STATE_KAZEMBE.region_state:GAD
+				target_country = c:GAD
+				primary_demand = yes
+			}
+		}
+
+		# Add Botswana to the mix if they do not like
+		# the Dominion
+		if = {
+			limit = {
+				c:TSW = {
+					this.relations:root < relations_threshold:cordial
+				}
+			}
+			s:STATE_BOTSWANA = {
+				add_claim = c:TSW
+			}
+			s:STATE_NORTHERN_CAPE = {
+				add_claim = c:TSW
+			}
+			add_initiator_backers = {
+				c:TSW
+			}
+			add_war_goal = {
+				type = independence
+				holder = c:TSW
+				target_country = c:GAD
+				primary_demand = yes
+			}
+			if = {
+				limit = {
+					exists = s:STATE_BOTSWANA.region_state:GAD
+				}
+				add_war_goal = {
+					type = return_state
+					holder = c:TSW
+					target_state = s:STATE_BOTSWANA.region_state:GAD
+					target_country = c:GAD
+					primary_demand = yes
+				}
+			}
+			if = {
+				limit = {
+					exists = s:STATE_NORTHERN_CAPE.region_state:GAD
+				}
+				add_war_goal = {
+					type = return_state
+					holder = c:TSW
+					target_state = s:STATE_NORTHERN_CAPE.region_state:GAD
+					target_country = c:GAD
+					primary_demand = yes
+				}
+			}
+
+			# Add reprimanding war goal by GAD
+			if = {
+				limit = {
+					c:TSW = {
+						is_subject_type = subject_type_puppet
+					}
+				}
+				add_war_goal = {
+					type = annex_country
+					holder = c:GAD
+					target_country = c:TSW
+					primary_demand = yes
+				}
+			}
+			else = {
+				add_war_goal = {
+					type = reduce_autonomy
+					holder = c:GAD
+					target_country = c:TSW
+					primary_demand = yes
+				}
+			}
 		}
 	}
 }

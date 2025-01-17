@@ -17,3 +17,22 @@ on_research_institute_built = {
         }
     }
 }
+
+# Root = Diplomatic Play
+# scope:actor = Initiator country
+# scope:target = Target country
+on_war_end = {
+    on_actions = {
+        on_luba_uprising_end
+    }
+}
+
+on_luba_uprising_end = {
+    trigger = {
+        has_variable = luba_uprising
+        exists = scope:actor
+    }
+    effect = {
+        set_global_variable = mbudye_unification_won
+    }
+}

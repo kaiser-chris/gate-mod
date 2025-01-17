@@ -1,0 +1,30 @@
+﻿LND = {
+	dynamic_country_name = {
+		name = dyn_c_luba_uprising
+		adjective = dyn_c_luba_adj
+
+		priority = 10000
+		is_main_tag_only = yes
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				has_global_variable = mbudye_unification
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_luba_empire
+		adjective = dyn_c_luba_adj
+
+		priority = 20000
+		is_main_tag_only = yes
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				has_global_variable = mbudye_unification_won
+			}
+		}
+	}
+}

@@ -16,8 +16,6 @@ mbudye.1 = {
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/religion_icons/golden_faith.dds"
-	
-	duration = 3
 
 	option = {
 		name = mbudye.1.a
@@ -67,14 +65,24 @@ mbudye.2 = {
 	flavor = mbudye.2.f
 
 	event_image = {
-		video = "africa_public_protest"
+		video = "europenorthamerica_political_extremism"
 	}
+
+	immediate = {
+		form_luba_nation = yes
+		trigger_luba_uprising = yes
+		trigger_event = {
+			id = mbudye.15
+			days = 7
+			popup = yes
+		}
+	}
+
+	duration = 3
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
-
-	duration = 3
 
 	option = {
 		name = mbudye.2.a
@@ -205,7 +213,7 @@ mbudye.4 = {
 	option = {
 		name = mbudye.4.b
 		hidden_effect = {
-			trigger_random_investigation_result = {
+			trigger_random_mbudye_investigation_result = {
 				chance_success = 80
 				investigation_duration = 3
 			}
@@ -227,7 +235,7 @@ mbudye.4 = {
 			support_change = 2
 		}
 		hidden_effect = {
-			trigger_random_investigation_result = {
+			trigger_random_mbudye_investigation_result = {
 				chance_success = 30
 				investigation_duration = 3
 			}
@@ -255,10 +263,6 @@ mbudye.5 = {
 	type = country_event
 	dlc = dlc_magic_gate
 	placement = scope:mbudye_event_state
-
-	immediate = {
-		save_scope_as = country_gad
-	}
 
 	title = mbudye.5.t
 	desc = mbudye.5.desc
@@ -307,10 +311,6 @@ mbudye.6 = {
 	type = country_event
 	dlc = dlc_magic_gate
 	placement = scope:mbudye_event_state
-
-	immediate = {
-		save_scope_as = country_gad
-	}
 
 	title = mbudye.6.t
 	desc = mbudye.6.desc
@@ -428,7 +428,7 @@ mbudye.7 = {
 	option = {
 		name = mbudye.7.b
 		hidden_effect = {
-			trigger_random_investigation_result = {
+			trigger_random_mbudye_investigation_result = {
 				chance_success = 80
 				investigation_duration = 3
 			}
@@ -450,7 +450,7 @@ mbudye.7 = {
 			support_change = 2
 		}
 		hidden_effect = {
-			trigger_random_investigation_result = {
+			trigger_random_mbudye_investigation_result = {
 				chance_success = 30
 				investigation_duration = 3
 			}
@@ -547,7 +547,7 @@ mbudye.8 = {
 	option = {
 		name = mbudye.8.b
 		hidden_effect = {
-			trigger_random_investigation_result = {
+			trigger_random_mbudye_investigation_result = {
 				chance_success = 80
 				investigation_duration = 3
 			}
@@ -569,7 +569,7 @@ mbudye.8 = {
 			support_change = 2
 		}
 		hidden_effect = {
-			trigger_random_investigation_result = {
+			trigger_random_mbudye_investigation_result = {
 				chance_success = 30
 				investigation_duration = 3
 			}
@@ -606,7 +606,6 @@ mbudye.9 = {
 				is_immortal = no
 				is_ruler = no
 				is_busy = no
-				is_agitator = no
 			}
 			save_scope_as = mbudye_event_character
 		}
@@ -625,7 +624,6 @@ mbudye.9 = {
 			is_immortal = no
 			is_ruler = no
 			is_busy = no
-			is_agitator = no
 		}
 	}
 
@@ -671,7 +669,7 @@ mbudye.9 = {
 	option = {
 		name = mbudye.9.b
 		hidden_effect = {
-			trigger_random_investigation_result = {
+			trigger_random_mbudye_investigation_result = {
 				chance_success = 80
 				investigation_duration = 3
 			}
@@ -693,7 +691,7 @@ mbudye.9 = {
 			support_change = 2
 		}
 		hidden_effect = {
-			trigger_random_investigation_result = {
+			trigger_random_mbudye_investigation_result = {
 				chance_success = 30
 				investigation_duration = 3
 			}
@@ -772,7 +770,7 @@ mbudye.10 = {
 			support_change = 2
 		}
 		hidden_effect = {
-			trigger_random_investigation_result = {
+			trigger_random_mbudye_investigation_result = {
 				chance_success = 90
 				investigation_duration = 3
 			}
@@ -860,5 +858,171 @@ mbudye.11 = {
 			conversion_progress = -1
 			support_change = -1
 		}
+	}
+}
+
+mbudye.12 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:mbudye_event_state
+
+	immediate = {
+		scope_random_luba_subject = yes
+	}
+
+	title = mbudye.12.t
+	desc = mbudye.12.desc
+	flavor = mbudye.12.f
+
+	event_image = {
+		video = "africa_public_protest"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/religion_icons/golden_faith.dds"
+
+	duration = 3
+
+	option = {
+		name = mbudye.12.a
+		default_option = yes
+		add_radicals = {
+			religion = rel:animist
+			value = large_radicals
+		}
+		custom_tooltip = {
+			text = je_gate_mbudye_change_fear
+		}
+		add_conversion_progress = {
+			country = scope:mbudye_event_country
+			conversion_progress = 5
+			support_change = -5
+		}
+	}
+
+	option = {
+		name = mbudye.12.b
+		add_radicals = {
+			religion = rel:golden_religion
+			value = small_radicals
+		}
+		add_conversion_progress = {
+			country = scope:mbudye_event_country
+			conversion_progress = -1
+			support_change = 5
+		}
+	}
+}
+
+mbudye.13 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:mbudye_event_state
+
+	immediate = {
+		scope_random_luba_subject = yes
+	}
+
+	title = mbudye.13.t
+	desc = mbudye.13.desc
+	flavor = mbudye.13.f
+
+	event_image = {
+		video = "africa_animism"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/religion_icons/golden_faith.dds"
+
+	duration = 3
+
+	option = {
+		name = mbudye.13.a
+		default_option = yes
+		add_loyalists = {
+			value = medium_radicals
+		}
+		add_conversion_progress = {
+			country = scope:mbudye_event_country
+			conversion_progress = 5
+			support_change = 5
+		}
+	}
+}
+
+mbudye.14 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:mbudye_event_state
+
+	immediate = {
+		scope_random_luba_subject = yes
+	}
+
+	title = mbudye.14.t
+	desc = mbudye.14.desc
+	flavor = mbudye.14.f
+
+	event_image = {
+		video = "africa_animism"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/religion_icons/golden_faith.dds"
+
+	duration = 3
+
+	option = {
+		name = mbudye.14.a
+		default_option = yes
+		add_loyalists = {
+			value = medium_radicals
+		}
+		add_conversion_progress = {
+			country = scope:mbudye_event_country
+			conversion_progress = 5
+			support_change = 5
+		}
+	}
+}
+
+mbudye.15 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:mbudye_event_state
+
+	immediate = {
+		every_combat_unit = {
+			limit = {
+				organization > 50
+			}
+			add_organization = -50
+			add_morale = {
+				value = morale
+				multiply = -0.5
+			}
+		}
+	}
+
+	title = mbudye.15.t
+	desc = mbudye.15.desc
+	flavor = mbudye.15.f
+
+	event_image = {
+		video = "unspecific_devastation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	duration = 3
+
+	option = {
+		name = mbudye.15.a
+		default_option = yes
 	}
 }
