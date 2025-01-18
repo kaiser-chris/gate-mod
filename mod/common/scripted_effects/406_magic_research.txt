@@ -248,6 +248,14 @@ ai_unlock_magic_technology = {
 		else_if = {
 			limit = {
 				NOT = {
+					has_technology_researched = monster_compendium
+				}
+			}
+			add_technology_researched = monster_compendium
+		}
+		else_if = {
+			limit = {
+				NOT = {
 					has_technology_researched = healing_circles
 				}
 			}

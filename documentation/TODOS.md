@@ -26,7 +26,6 @@ Below is a table with all currently open ToDos.
 | ./mod/common/technology/technologies/403_magic_society.txt | 108 |  Find icon for mana_lanterns |
 | ./mod/common/technology/technologies/403_magic_society.txt | 145 |  Find icon for healing_circles |
 | ./mod/common/technology/technologies/403_magic_society.txt | 94 |  Implement gate_expeditions technology |
-| ./mod/localization/english/gate_technology_l_english.yml | 31 |  Write description for elven_forests_desc |
 | ./mod/localization/english/gate_technology_l_english.yml | 35 |  Write description for gnomish_support_desc |
 
 [//]: # (TODO-END)

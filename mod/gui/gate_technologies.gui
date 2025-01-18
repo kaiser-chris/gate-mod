@@ -209,6 +209,13 @@ types gate_technologies {
 
         gate_technology = {
             blockoverride "context" {
+                datacontext = "[GetTechnology('monster_compendium')]"
+                datacontext = "[GetScriptedGui('monster_compendium')]"
+            }
+        }
+
+        gate_technology = {
+            blockoverride "context" {
                 datacontext = "[GetTechnology('healing_circles')]"
                 datacontext = "[GetScriptedGui('healing_circles')]"
             }

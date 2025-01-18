@@ -92,6 +92,17 @@ formalized_magic = {
 	}
 }
 
+monster_compendium = {
+	is_valid = {
+		AND = {
+			has_technology_researched = formalized_magic
+		}
+	}
+	effect = {
+		add_technology_researched = monster_compendium
+	}
+}
+
 healing_circles = {
 	is_valid = {
 		AND = {

@@ -162,6 +162,27 @@ healing_circles = {
 	}
 }
 
+monster_compendium = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/monster_compendium.dds"
+	category = society
+	can_research = no
+
+	modifier = {
+		country_institution_monster_hunting_max_investment_add = 1
+		state_harvest_condition_monster_attack_impact_mult = -0.1
+		state_harvest_condition_monster_horde_impact_mult = -0.1
+	}
+
+	unlocking_technologies = {
+		formalized_magic
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
 magic_science = {
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/magic_science.dds"
