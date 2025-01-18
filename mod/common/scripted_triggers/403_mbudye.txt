@@ -1,0 +1,40 @@
+﻿check_mbudye_support = {
+	OR = {
+		AND = {
+			$support_change$ < 0
+			je:je_gate_mbudye = {
+				scripted_bar_progress = {
+					name = pb_gate_mbudye
+					value > 20
+				}
+			}
+		}
+		AND = {
+			$support_change$ <= -5
+			je:je_gate_mbudye = {
+				scripted_bar_progress = {
+					name = pb_gate_mbudye
+					value > 30
+				}
+			}
+		}
+		AND = {
+			$support_change$ <= -10
+			je:je_gate_mbudye = {
+				scripted_bar_progress = {
+					name = pb_gate_mbudye
+					value > 40
+				}
+			}
+		}
+		AND = {
+			$support_change$ >= 0
+			je:je_gate_mbudye = {
+				scripted_bar_progress = {
+					name = pb_gate_mbudye
+					value <= 20
+				}
+			}
+		}
+	}
+}

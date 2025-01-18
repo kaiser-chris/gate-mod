@@ -23,18 +23,6 @@ dwarven_german_integration.1 = {
 	
 	duration = 3
 
-	immediate = {
-		random_scope_state = {
-			limit = {
-				any_scope_building = {
-					can_queue_building_levels = 1
-					is_building_group = bg_mining
-				}
-			}
-			save_scope_as = mine_state
-		}
-	}
-
 	option = {
 		name = dwarven_german_integration.1.a
 		default_option = yes
@@ -64,41 +52,6 @@ dwarven_german_integration.1 = {
 
 		ai_chance = {
 			base = 10
-		}
-	}
-
-	option = {
-		name = dwarven_german_integration.1.b
-
-		trigger = {
-			scope:mine_state = {
-				any_scope_building = {
-					can_queue_building_levels = 1
-					is_building_group = bg_mining
-				}
-			}
-		}
-		scope:journal_entry = {
-			add_progress = {
-				name = pb_gate_german_integration
-				value = 5
-			}
-		}
-		custom_tooltip = {
-			text = dwarven_german_integration.1.b.tt
-			scope:mine_state = {
-				build_random_mine_in_state = yes
-			}
-		}
-		# Increased cost because no building time
-		add_treasury = {
-			value = construction_cost_high
-			multiply = -1
-		}
-
-		# AI should prefer a new building
-		ai_chance = {
-			base = 200
 		}
 	}
 

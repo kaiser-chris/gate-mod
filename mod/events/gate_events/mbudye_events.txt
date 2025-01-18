@@ -17,6 +17,8 @@ mbudye.1 = {
 
 	icon = "gfx/interface/icons/religion_icons/golden_faith.dds"
 
+	duration = 3
+
 	option = {
 		name = mbudye.1.a
 		default_option = yes
@@ -128,6 +130,17 @@ mbudye.3 = {
 			conversion_progress = 5
 			support_change = -5
 		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					check_mbudye_support = {
+						support_change = -5
+					}
+				}
+				add = 90
+			}
+		}
 	}
 
 	option = {
@@ -141,6 +154,17 @@ mbudye.3 = {
 			conversion_progress = 1
 			support_change = 0
 		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					check_mbudye_support = {
+						support_change = 0
+					}
+				}
+				add = 90
+			}
+		}
 	}
 
 	option = {
@@ -153,6 +177,17 @@ mbudye.3 = {
 			country = scope:mbudye_event_country
 			conversion_progress = -1
 			support_change = 5
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					check_mbudye_support = {
+						support_change = 5
+					}
+				}
+				add = 90
+			}
 		}
 	}
 }
@@ -208,6 +243,17 @@ mbudye.4 = {
 			conversion_progress = 10
 			support_change = -10
 		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					check_mbudye_support = {
+						support_change = -10
+					}
+				}
+				add = 90
+			}
+		}
 	}
 
 	option = {
@@ -224,6 +270,9 @@ mbudye.4 = {
 		}
 		trigger = {
 			has_law = law_type:law_secret_police
+		}
+		ai_chance = {
+			base = 200
 		}
 	}
 
@@ -244,6 +293,17 @@ mbudye.4 = {
 				value = flag:mbudye_assassination_official_flag
 			}
 		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					check_mbudye_support = {
+						support_change = 2
+					}
+				}
+				add = 90
+			}
+		}
 	}
 
 	option = {
@@ -255,6 +315,17 @@ mbudye.4 = {
 		}
 		trigger = {
 			has_law = law_type:law_censorship
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					check_mbudye_support = {
+						support_change = -1
+					}
+				}
+				add = 90
+			}
 		}
 	}
 }
@@ -290,6 +361,17 @@ mbudye.5 = {
 			support_change = -2
 		}
 		remove_variable = mbudye_investigation
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					check_mbudye_support = {
+						support_change = -2
+					}
+				}
+				add = 90
+			}
+		}
 	}
 
 	option = {
@@ -304,6 +386,17 @@ mbudye.5 = {
 			support_change = 4
 		}
 		remove_variable = mbudye_investigation
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					check_mbudye_support = {
+						support_change = 4
+					}
+				}
+				add = 90
+			}
+		}
 	}
 }
 
@@ -338,6 +431,17 @@ mbudye.6 = {
 			support_change = -5
 		}
 		remove_variable = mbudye_investigation
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					check_mbudye_support = {
+						support_change = -5
+					}
+				}
+				add = 90
+			}
+		}
 	}
 
 	option = {
@@ -352,6 +456,17 @@ mbudye.6 = {
 			support_change = 0
 		}
 		remove_variable = mbudye_investigation
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					check_mbudye_support = {
+						support_change = 0
+					}
+				}
+				add = 90
+			}
+		}
 	}
 }
 
@@ -423,6 +538,17 @@ mbudye.7 = {
 			conversion_progress = 10
 			support_change = -10
 		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					check_mbudye_support = {
+						support_change = -10
+					}
+				}
+				add = 90
+			}
+		}
 	}
 
 	option = {
@@ -439,6 +565,17 @@ mbudye.7 = {
 		}
 		trigger = {
 			has_law = law_type:law_secret_police
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					check_mbudye_support = {
+						support_change = 0
+					}
+				}
+				add = 90
+			}
 		}
 	}
 
@@ -459,6 +596,17 @@ mbudye.7 = {
 				value = flag:mbudye_assassination_general_flag
 			}
 		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					check_mbudye_support = {
+						support_change = 2
+					}
+				}
+				add = 90
+			}
+		}
 	}
 
 	option = {
@@ -470,6 +618,17 @@ mbudye.7 = {
 		}
 		trigger = {
 			has_law = law_type:law_censorship
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					check_mbudye_support = {
+						support_change = -1
+					}
+				}
+				add = 90
+			}
 		}
 	}
 }
@@ -542,6 +701,17 @@ mbudye.8 = {
 			conversion_progress = 10
 			support_change = -10
 		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					check_mbudye_support = {
+						support_change = -10
+					}
+				}
+				add = 90
+			}
+		}
 	}
 
 	option = {
@@ -558,6 +728,17 @@ mbudye.8 = {
 		}
 		trigger = {
 			has_law = law_type:law_secret_police
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					check_mbudye_support = {
+						support_change = 0
+					}
+				}
+				add = 90
+			}
 		}
 	}
 
@@ -578,6 +759,17 @@ mbudye.8 = {
 				value = flag:mbudye_assassination_admiral_flag
 			}
 		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					check_mbudye_support = {
+						support_change = 2
+					}
+				}
+				add = 90
+			}
+		}
 	}
 
 	option = {
@@ -589,6 +781,17 @@ mbudye.8 = {
 		}
 		trigger = {
 			has_law = law_type:law_censorship
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					check_mbudye_support = {
+						support_change = -1
+					}
+				}
+				add = 90
+			}
 		}
 	}
 }
@@ -664,6 +867,17 @@ mbudye.9 = {
 			conversion_progress = 10
 			support_change = -10
 		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					check_mbudye_support = {
+						support_change = -10
+					}
+				}
+				add = 90
+			}
+		}
 	}
 
 	option = {
@@ -680,6 +894,17 @@ mbudye.9 = {
 		}
 		trigger = {
 			has_law = law_type:law_secret_police
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					check_mbudye_support = {
+						support_change = 0
+					}
+				}
+				add = 90
+			}
 		}
 	}
 
@@ -700,6 +925,17 @@ mbudye.9 = {
 				value = flag:mbudye_assassination_politician_flag
 			}
 		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					check_mbudye_support = {
+						support_change = 2
+					}
+				}
+				add = 90
+			}
+		}
 	}
 
 	option = {
@@ -711,6 +947,17 @@ mbudye.9 = {
 		}
 		trigger = {
 			has_law = law_type:law_censorship
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					check_mbudye_support = {
+						support_change = -1
+					}
+				}
+				add = 90
+			}
 		}
 	}
 }
@@ -760,6 +1007,17 @@ mbudye.10 = {
 			conversion_progress = 5
 			support_change = -5
 		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					check_mbudye_support = {
+						support_change = -5
+					}
+				}
+				add = 90
+			}
+		}
 	}
 
 	option = {
@@ -779,6 +1037,17 @@ mbudye.10 = {
 				value = flag:mbudye_defaced_temple_flag
 			}
 		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					check_mbudye_support = {
+						support_change = 2
+					}
+				}
+				add = 90
+			}
+		}
 	}
 
 	option = {
@@ -791,6 +1060,17 @@ mbudye.10 = {
 			country = scope:mbudye_event_country
 			conversion_progress = -1
 			support_change = 4
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					check_mbudye_support = {
+						support_change = 4
+					}
+				}
+				add = 90
+			}
 		}
 	}
 }
@@ -833,6 +1113,17 @@ mbudye.11 = {
 			conversion_progress = 5
 			support_change = -5
 		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					check_mbudye_support = {
+						support_change = -5
+					}
+				}
+				add = 90
+			}
+		}
 	}
 
 	option = {
@@ -844,6 +1135,17 @@ mbudye.11 = {
 		}
 		trigger = {
 			has_law = law_type:law_censorship
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					check_mbudye_support = {
+						support_change = 0
+					}
+				}
+				add = 90
+			}
 		}
 	}
 
@@ -857,6 +1159,17 @@ mbudye.11 = {
 			country = scope:mbudye_event_country
 			conversion_progress = -1
 			support_change = -1
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					check_mbudye_support = {
+						support_change = -1
+					}
+				}
+				add = 90
+			}
 		}
 	}
 }
@@ -899,6 +1212,17 @@ mbudye.12 = {
 			conversion_progress = 5
 			support_change = -5
 		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					check_mbudye_support = {
+						support_change = -5
+					}
+				}
+				add = 90
+			}
+		}
 	}
 
 	option = {
@@ -911,6 +1235,17 @@ mbudye.12 = {
 			country = scope:mbudye_event_country
 			conversion_progress = -1
 			support_change = 5
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					check_mbudye_support = {
+						support_change = 5
+					}
+				}
+				add = 90
+			}
 		}
 	}
 }
@@ -949,6 +1284,17 @@ mbudye.13 = {
 			conversion_progress = 5
 			support_change = 5
 		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					check_mbudye_support = {
+						support_change = 5
+					}
+				}
+				add = 90
+			}
+		}
 	}
 }
 
@@ -985,6 +1331,17 @@ mbudye.14 = {
 			country = scope:mbudye_event_country
 			conversion_progress = 5
 			support_change = 5
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					check_mbudye_support = {
+						support_change = 5
+					}
+				}
+				add = 90
+			}
 		}
 	}
 }
@@ -1027,5 +1384,108 @@ mbudye.15 = {
 	option = {
 		name = mbudye.15.a
 		default_option = yes
+	}
+}
+
+mbudye.16 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:mbudye_event_state
+
+	immediate = {
+		every_military_formation = {
+			limit = {
+				organization > 50
+				country = c:GAD
+			}
+			add_organization = -50
+			every_combat_unit = {
+				add_morale = {
+					value = morale
+					multiply = -0.5
+				}
+			}
+		}
+	}
+
+	title = mbudye.16.t
+	desc = mbudye.16.desc
+	flavor = mbudye.16.f
+
+	event_image = {
+		video = "africa_public_protest"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	duration = 3
+
+	option = {
+		name = mbudye.16.a
+		default_option = yes
+		add_radicals = {
+			religion = rel:golden_religion
+			value = medium_radicals
+		}
+		add_conversion_progress = {
+			country = scope:mbudye_event_country
+			conversion_progress = -2
+			support_change = -2
+		}
+		ai_chance = {
+			base = 30
+			modifier = {
+				trigger = {
+					check_mbudye_support = {
+						support_change = -2
+					}
+				}
+				add = 90
+			}
+		}
+	}
+
+	option = {
+		name = mbudye.16.b
+		default_option = yes
+		add_conversion_progress = {
+			country = scope:mbudye_event_country
+			conversion_progress = -5
+			support_change = -5
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					check_mbudye_support = {
+						support_change = -5
+					}
+				}
+				add = 90
+			}
+		}
+	}
+
+	option = {
+		name = mbudye.16.c
+		default_option = yes
+		add_conversion_progress = {
+			country = scope:mbudye_event_country
+			conversion_progress = -1
+			support_change = -1
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				trigger = {
+					check_mbudye_support = {
+						support_change = -1
+					}
+				}
+				add = 90
+			}
+		}
 	}
 }
