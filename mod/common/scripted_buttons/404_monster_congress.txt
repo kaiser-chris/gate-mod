@@ -20,5 +20,9 @@
 			text = je_monster_congress_button_start_effect
 			set_variable = monster_congress_in_progress
 		}
+		add_modifier = {
+			name = monster_congress_modifier
+			months = 7
+		}
 	}
 }

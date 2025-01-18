@@ -19,6 +19,20 @@
 		}
 	}
 
+	is_shown_when_inactive = {
+		AND = {
+			is_gate_planet_country = no
+			OR = {
+				has_global_variable = monster_horde_happened
+				any_scope_state = {
+					state_region = {
+						has_harvest_condition = monster_attack
+					}
+				}
+			}
+		}
+	}
+
 	complete = {
 		trigger_if = {
 			custom_tooltip = {

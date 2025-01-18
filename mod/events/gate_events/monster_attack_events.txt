@@ -31,14 +31,6 @@ monster_attack.1 = {
                 }
             }
             set_global_variable = monster_horde_happened
-            every_country = {
-                limit = {
-                    is_gate_planet_country = no
-                }
-                add_journal_entry = {
-                    type = je_monster_congress
-                }
-            }
         }
         random_state = {
             limit = {

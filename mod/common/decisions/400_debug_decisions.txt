@@ -132,7 +132,7 @@ debug_magic_growing_decision = {
 	}
 }
 
-debug_monster_attack_decision = {
+debug_monster_horde_decision = {
 	is_shown = {
 		has_global_variable = com_debug
 		is_player = yes
@@ -141,6 +141,28 @@ debug_monster_attack_decision = {
 	when_taken = {
 		trigger_event = {
 			id = monster_attack.1
+		}
+	}
+
+	ai_chance = {
+		base = 0
+	}
+}
+
+debug_monster_attack_decision = {
+	is_shown = {
+		has_global_variable = com_debug
+		is_player = yes
+	}
+
+	when_taken = {
+		random_scope_state = {
+			limit = {
+				is_capital = yes
+			}
+			state_region = {
+				start_harvest_condition = monster_attack
+			}
 		}
 	}
 
