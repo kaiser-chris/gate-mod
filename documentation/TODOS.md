@@ -20,10 +20,6 @@ Below is a table with all currently open ToDos.
 | File | Line | ToDo |
 | ---- | ---- | ---- |
 | ./mod/common/journal_entries/401_dwarven_alps.txt | 103 |  Add more integration events to je_dwarven_integration_of_germans |
-| ./mod/common/mobilization_options/400_magical_support.txt | 38 |  Find icon for mobilization_option_battlefield_wards |
-| ./mod/common/mobilization_options/400_magical_support.txt | 73 |  Find icon for mobilization_option_healing_circles |
-| ./mod/common/technology/technologies/402_magic_military.txt | 32 |  Find icon for battlefield_wards |
-| ./mod/common/technology/technologies/403_magic_society.txt | 144 |  Find icon for healing_circles |
 | ./mod/common/technology/technologies/403_magic_society.txt | 94 |  Implement gate_expeditions technology |
 | ./mod/localization/english/gate_technology_l_english.yml | 35 |  Write description for gnomish_support_desc |
 
