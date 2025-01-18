@@ -1,0 +1,134 @@
+﻿MILITARY_FORMATIONS = {
+
+	c:CHK = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_congo
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_EAST_ANGOLA
+				count = 2
+			}
+			save_scope_as = chk_army
+		}
+
+		create_character = {
+			culture = lunda
+			hq = region_congo
+			is_general = yes
+			interest_group = ig_landowners
+			commander_rank = commander_rank_1
+			save_scope_as = chk_commander
+		}
+
+		scope:chk_commander = {
+			transfer_to_formation = scope:chk_army
+		}
+	}
+	c:KZM = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_congo
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KAZEMBE
+				count = 2
+			}
+			save_scope_as = kzm_army
+		}
+
+		create_character = {
+			culture = lunda
+			hq = region_congo
+			is_general = yes
+			interest_group = ig_landowners
+			commander_rank = commander_rank_1
+			save_scope_as = kzm_commander
+		}
+
+		scope:kzm_commander = {
+			transfer_to_formation = scope:kzm_army
+		}
+	}
+	c:KSN = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_congo
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_EAST_ANGOLA
+				count = 2
+			}
+			save_scope_as = ksn_army
+		}
+
+		create_character = {
+			culture = lunda
+			hq = region_congo
+			is_general = yes
+			interest_group = ig_landowners
+			commander_rank = commander_rank_1
+			save_scope_as = ksn_commander
+		}
+
+		scope:ksn_commander = {
+			transfer_to_formation = scope:ksn_army
+		}
+	}
+	c:LND = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_congo
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_EAST_ANGOLA
+				count = 3
+			}
+			save_scope_as = lnd_army
+		}
+
+		create_character = {
+			culture = lunda
+			hq = region_congo
+			is_general = yes
+			interest_group = ig_landowners
+			commander_rank = commander_rank_1
+			save_scope_as = lnd_commander
+		}
+
+		scope:lnd_commander = {
+			transfer_to_formation = scope:lnd_army
+		}
+	}
+	c:TSW = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_southern_africa
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_BOTSWANA
+				count = 5
+			}
+			save_scope_as = tsw_army
+		}
+
+		create_character = {
+			culture = tswana
+			hq = region_southern_africa
+			is_general = yes
+			interest_group = ig_landowners
+			commander_rank = commander_rank_1
+			save_scope_as = tsw_commander
+		}
+
+		scope:tsw_commander = {
+			transfer_to_formation = scope:tsw_army
+		}
+	}
+
+}

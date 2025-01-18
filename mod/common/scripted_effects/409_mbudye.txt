@@ -266,6 +266,12 @@ trigger_lunda_uprising = {
 		every_military_formation = {
 			mobilize_army = yes
 		}
+
+		# Add uprising modifier
+		add_modifier = {
+			name = lunda_uprising_modifier
+			years = 3
+		}
 	}
 
 	# Add additional war goals depending on circumstances
