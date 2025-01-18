@@ -17,6 +17,9 @@ on_monthly_buttons = {
 }
 
 on_monthly_calculate_mana_saturation = {
+    trigger = {
+        global_var:global_mana_saturation <= 100
+    }
     effect = {
         calculate_mana_saturation = yes
     }

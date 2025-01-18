@@ -47,6 +47,34 @@ GLOBAL = {
 		}
 	}
 
+	s:STATE_INNER_MOROCCO = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_CANARY_ISLANDS
+		}
+	}
+
+	s:STATE_MARRAKECH = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_MADEIRA
+		}
+	}
+
+	s:STATE_MADEIRA = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_AZORES
+		}
+	}
+
+	s:STATE_SENEGAL = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_CAPE_VERDE
+		}
+	}
+
 	s:STATE_CUBA = {
 		add_to_variable_list = {
 			name = mana_propogation_states
@@ -259,6 +287,10 @@ GLOBAL = {
 		add_to_variable_list = {
 			name = mana_propogation_states
 			target = s:STATE_TONGA
+		}
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_HAWAIIAN_ISLANDS
 		}
 	}
 

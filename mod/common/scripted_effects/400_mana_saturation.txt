@@ -67,7 +67,10 @@ add_mana_density = {
 		# Cache update
 		change_global_variable = {
 			name = global_mana_density_cache
-			add = $amount$
+			add = {
+				value = 1
+				add = $amount$
+			}
 		}
 	}
 }
