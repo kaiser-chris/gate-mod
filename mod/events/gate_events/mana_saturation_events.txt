@@ -136,15 +136,15 @@ mana_saturation.3 = {
 		}
 		random_state = {
 			limit = {
+				NAND = {
+					has_state_trait = state_trait_northern_canadian_terrain
+					has_state_trait = state_trait_siberian_terrain
+					has_state_trait = state_trait_arctic_whaling
+					has_state_trait = state_trait_good_soils
+					has_state_trait = state_trait_black_soil
+					has_state_trait = state_trait_magic_soil
+				}
 				state_region = {
-					NAND = {
-						has_state_trait = state_trait_northern_canadian_terrain
-						has_state_trait = state_trait_siberian_terrain
-						has_state_trait = state_trait_arctic_whaling
-						has_state_trait = state_trait_good_soils
-						has_state_trait = state_trait_black_soil
-						has_state_trait = state_trait_magic_soil
-					}
 					var:mana_density >= medium_mana_density_threshhold
 				}
 				arable_land >= 5
