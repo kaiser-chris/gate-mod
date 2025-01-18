@@ -40,7 +40,7 @@ orc_clan_support = {
 
 elven_support = {
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/gnomish_harmony.dds"
+	texture = "gfx/interface/icons/invention_icons/elven_support.dds"
 	category = society
 	can_research = no
 
@@ -56,12 +56,12 @@ elven_support = {
 
 elven_forests = {
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/gnomish_harmony.dds"
+	texture = "gfx/interface/icons/invention_icons/elven_forests.dds"
 	category = society
 	can_research = no
 
 	modifier = {
-		state_infrastructure_mult = 0.15
+		state_building_elven_forest_max_level_add = 1
 	}
 
 	ai_weight = {

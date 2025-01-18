@@ -1,0 +1,40 @@
+﻿pm_unused_elven_forest = {
+	texture = "gfx/interface/icons/production_method_icons/plantation_production.dds"
+	replacement_if_valid = pm_elven_forest
+
+	state_modifiers = {
+		level_scaled = {
+			state_gate_arable_land_add = 5
+		}
+	}
+}
+
+pm_elven_forest = {
+	texture = "gfx/interface/icons/production_method_icons/plantation_production.dds"
+
+	unlocking_technologies = {
+		elven_forests
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = -20
+			state_infrastructure_mult = 0.15
+		}
+
+		level_scaled = {
+			state_gate_arable_land_add = 5
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_mana_add = 10
+			goods_output_magic_seed_add = 20
+		}
+
+		level_scaled = {
+			building_employment_druids_add = 500
+		}
+	}
+}
