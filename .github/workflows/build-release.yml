@@ -39,7 +39,9 @@ jobs:
 
       - name: Commit & Push Version
         run: |
-          git commit -m "Set latest release version"
+          git config --global user.name 'Chris Kaiser'
+          git config --global user.email 'kaiser-chris@users.noreply.github.com'
+          git commit -am "Set latest release version"
           git push origin
 
       - name: Create release artifact
