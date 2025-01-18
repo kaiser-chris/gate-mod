@@ -23,13 +23,13 @@ on_research_institute_built = {
 # scope:target = Target country
 on_war_end = {
     on_actions = {
-        on_luba_uprising_end
+        on_lunda_uprising_end
     }
 }
 
-on_luba_uprising_end = {
+on_lunda_uprising_end = {
     trigger = {
-        has_variable = luba_uprising
+        has_variable = lunda_uprising
         exists = scope:actor
     }
     effect = {

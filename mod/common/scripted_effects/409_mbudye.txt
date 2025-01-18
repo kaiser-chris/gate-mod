@@ -78,7 +78,7 @@
 	}
 }
 
-scope_random_luba_subject = {
+scope_random_lunda_subject = {
 	save_scope_as = gate_mbudye_dominion
 	random_subject_or_below = {
 		limit = {
@@ -186,7 +186,7 @@ trigger_random_mbudye_investigation_result = {
 	remove_variable = mbudye_investigation_success
 }
 
-form_luba_nation = {
+form_lunda_nation = {
 	set_global_variable = mbudye_unification
 
 	s:STATE_EAST_ANGOLA = {
@@ -203,8 +203,6 @@ form_luba_nation = {
 	}
 
 	c:LND = {
-		add_primary_culture = cu:luba
-
 		# Carry over magic nation status
 		if = {
 			limit = {
@@ -239,11 +237,11 @@ form_luba_nation = {
 	}
 }
 
-trigger_luba_uprising = {
+trigger_lunda_uprising = {
 	c:LND = {
 		# Create basic diplomatic play
 		create_diplomatic_play = {
-			name = dp_luba_uprising
+			name = dp_lunda_uprising
 			type = dp_independence
 			target_country = c:GAD
 			war = yes
@@ -279,7 +277,7 @@ trigger_luba_uprising = {
 		}
 
 		# For later identification
-		set_variable = luba_uprising
+		set_variable = lunda_uprising
 
 		# Add states that could be owned by the Dominion
 		if = {
