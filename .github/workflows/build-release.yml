@@ -35,7 +35,12 @@ jobs:
         
       - name: Set version
         run: |
-          sed -i 's/"version" : "automatically filled"/"version" : "${{ steps.increment-version.outputs.next-version }}"/g' mod/.metadata/metadata.json
+          sed -i 's/"version" : "${{ steps.project.outputs.last-version }}"/"version" : "${{ steps.increment-version.outputs.next-version }}"/g' mod/.metadata/metadata.json
+
+      - name: Commit & Push Version
+        run: |
+          git commit -m "Set latest release version"
+          git push origin
 
       - name: Create release artifact
         run: |
