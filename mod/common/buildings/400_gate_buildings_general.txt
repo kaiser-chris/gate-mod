@@ -380,6 +380,13 @@ building_elven_forest = {
 		}
 		# Are there even fields/forests
 		arable_land > 0
+		# Only one elven forest per state region
+		# to prevent split state abuse
+		state_region = {
+			NOT = {
+				has_building = building_elven_forest
+			}
+		}
 	}
 
 	possible = {
