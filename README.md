@@ -1,14 +1,15 @@
 # Overview
 **Manaflow: Ankaris Arrival** is a mod for Victoria 3.
 
-**THIS MOD IS IN ALPHA AND UNFINISHED!**
+## Steam Page
+ - https://steamcommunity.com/sharedfiles/filedetails/?id=3371719217
 
 ## Story
 In 1814, a series of Magic Gates to the planet **Ankaris** appeared across Earth,
 forever altering the course of history.
 
 Ankaris, a mystical world inhabited by Dwarves, Elves, and other fantastical races, brought both wonder and conflict.
-Some arrivals unleashed chaos, such as the Orcish hordes that swept through Central America or the Arcturian Dominion,
+Some arrivals unleashed chaos, such as the Orkish hordes that swept through Central America or the Arcturian Dominion
 whose conquest reshaped parts of Africa.
 
 Others sought cooperation, like the Dwarves of Min Raetia,
