@@ -50,3 +50,37 @@ on_lunda_uprising_end = {
         set_global_variable = mbudye_unification_won
     }
 }
+
+# Fires when a diplomatic play is started
+# root = The diplomatic play that has been started
+# scope:initiator = Initiator of the play
+# scope:target = Target of the play
+on_diplomatic_play_started = {
+    on_actions = {
+        on_lunda_uprising_start
+    }
+}
+
+on_lunda_uprising_start = {
+    trigger = {
+        AND = {
+            scope:initiator = c:GAD
+            OR = {
+                scope:target = c:LND
+                scope:target = c:CHK
+                scope:target = c:KSN
+                scope:target = c:KZM
+            }
+            is_diplomatic_play_type = dp_annex_subject
+        }
+    }
+    effect = {
+        end_play = yes
+        scope:initiator = {
+            trigger_event = {
+                id = mbudye.2
+                popup = yes
+            }
+        }
+    }
+}
