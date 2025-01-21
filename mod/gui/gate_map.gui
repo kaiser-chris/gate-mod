@@ -1,0 +1,626 @@
+types gate_map_types {
+    type map_container = zoomarea {
+        name = gate_map_container
+        allow_outside = yes
+        size = { 100% 100% }
+
+        state = {
+            name = "_zoom_changed"
+            duration = 0.15
+        }
+        scissor = yes
+
+        zoom = 0.15
+        zoom_step = 0.25
+        zoom_min = 0.15
+        zoom_max = 1.5
+        draggable_by = right # Do not add 'middle' click here, otherwise you will re-introduce PRCAL-16945
+
+        zoomwidget = {
+            container = {
+                widget = {
+                    parentanchor = top|left
+                    size = { 15360 7288 }
+                    background = {
+                        texture = gfx/ankaris/reytu/base.dds
+                    }
+
+                    gate_state = {
+                        blockoverride hidden_location {
+                            size = { 3329 3630 }
+                            position = { 3279 1852 }
+                        }
+                        blockoverride size {
+                            size = { 3129 3430 }
+                        }
+                        blockoverride state_mask {
+                            texture = gfx/ankaris/reytu/state_mask_01.dds
+                        }
+                        blockoverride state_mask_hidden {
+                            texture = gfx/ankaris/reytu/state_mask_01_hidden.dds
+                        }
+                        blockoverride hidden_enabled {
+                            enabled = no
+                        }
+                        blockoverride hidden_visible {
+                            visible = "[Not(GetVariableSystem.Exists('show_state_01'))]"
+                        }
+                        blockoverride hidden_onclick {
+                            onclick = "[GetVariableSystem.Toggle('show_state_01')]"
+                        }
+                    }
+
+                    gate_state = {
+                        blockoverride hidden_location {
+                            size = { 3111 1756 }
+                            position = { 4031 774 }
+                        }
+                        blockoverride size {
+                            size = { 2911 1556 }
+                        }
+                        blockoverride state_mask {
+                            texture = gfx/ankaris/reytu/state_mask_02.dds
+                        }
+                        blockoverride state_mask_hidden {
+                            texture = gfx/ankaris/reytu/state_mask_02_hidden.dds
+                        }
+                        blockoverride hidden_enabled {
+                            enabled = no
+                        }
+                        blockoverride hidden_visible {
+                            visible = "[Not(GetVariableSystem.Exists('show_state_02'))]"
+                        }
+                        blockoverride hidden_onclick {
+                            onclick = "[GetVariableSystem.Toggle('show_state_02')]"
+                        }
+                    }
+
+                    gate_state = {
+                        blockoverride hidden_location {
+                            size = { 2834 4122 }
+                            position = { 4323 2079 }
+                        }
+                        blockoverride size {
+                            size = { 2634 3922 }
+                        }
+                        blockoverride state_mask {
+                            texture = gfx/ankaris/reytu/state_mask_03.dds
+                        }
+                        blockoverride state_mask_hidden {
+                            texture = gfx/ankaris/reytu/state_mask_03_hidden.dds
+                        }
+                        blockoverride hidden_enabled {
+                            enabled = no
+                        }
+                        blockoverride hidden_visible {
+                            visible = "[Not(GetVariableSystem.Exists('show_state_03'))]"
+                        }
+                        blockoverride hidden_onclick {
+                            onclick = "[GetVariableSystem.Toggle('show_state_03')]"
+                        }
+                    }
+
+                    gate_state = {
+                        blockoverride hidden_location {
+                            size = { 2998 3131 }
+                            position = { 6115 1219 }
+                        }
+                        blockoverride size {
+                            size = { 2798 2931 }
+                        }
+                        blockoverride state_mask {
+                            texture = gfx/ankaris/reytu/state_mask_04.dds
+                        }
+                        blockoverride state_mask_hidden {
+                            texture = gfx/ankaris/reytu/state_mask_04_hidden.dds
+                        }
+                        blockoverride hidden_enabled {
+                            enabled = no
+                        }
+                        blockoverride hidden_visible {
+                            visible = "[Not(GetVariableSystem.Exists('show_state_04'))]"
+                        }
+                        blockoverride hidden_onclick {
+                            onclick = "[GetVariableSystem.Toggle('show_state_04')]"
+                        }
+                    }
+
+                    gate_state = {
+                        blockoverride hidden_location {
+                            size = { 2758 2834 }
+                            position = { 5751 3471 }
+                        }
+                        blockoverride size {
+                            size = { 2558 2634 }
+                        }
+                        blockoverride state_mask {
+                            texture = gfx/ankaris/reytu/state_mask_05.dds
+                        }
+                        blockoverride state_mask_hidden {
+                            texture = gfx/ankaris/reytu/state_mask_05_hidden.dds
+                        }
+                        blockoverride hidden_enabled {
+                            enabled = no
+                        }
+                        blockoverride hidden_visible {
+                            visible = "[Not(GetVariableSystem.Exists('show_state_05'))]"
+                        }
+                        blockoverride hidden_onclick {
+                            onclick = "[GetVariableSystem.Toggle('show_state_05')]"
+                        }
+                    }
+
+                    gate_state = {
+                        blockoverride hidden_location {
+                            size = { 2960 2525 }
+                            position = { 7907 3614 }
+                        }
+                        blockoverride size {
+                            size = { 2760 2325 }
+                        }
+                        blockoverride state_mask {
+                            texture = gfx/ankaris/reytu/state_mask_07.dds
+                        }
+                        blockoverride state_mask_hidden {
+                            texture = gfx/ankaris/reytu/state_mask_07_hidden.dds
+                        }
+                        blockoverride hidden_enabled {
+                            enabled = no
+                        }
+                        blockoverride hidden_visible {
+                            visible = "[Not(GetVariableSystem.Exists('show_state_07'))]"
+                        }
+                        blockoverride hidden_onclick {
+                            onclick = "[GetVariableSystem.Toggle('show_state_07')]"
+                        }
+                    }
+
+                    gate_state = {
+                        blockoverride hidden_location {
+                            size = { 4029 4815 }
+                            position = { 8512 1104 }
+                        }
+                        blockoverride size {
+                            size = { 3829 4615 }
+                        }
+                        blockoverride state_mask {
+                            texture = gfx/ankaris/reytu/state_mask_08.dds
+                        }
+                        blockoverride state_mask_hidden {
+                            texture = gfx/ankaris/reytu/state_mask_08_hidden.dds
+                        }
+                        blockoverride hidden_enabled {
+                            enabled = no
+                        }
+                        blockoverride hidden_visible {
+                            visible = "[Not(GetVariableSystem.Exists('show_state_08'))]"
+                        }
+                        blockoverride hidden_onclick {
+                            onclick = "[GetVariableSystem.Toggle('show_state_08')]"
+                        }
+                    }
+
+                    gate_state = {
+                        blockoverride hidden_location {
+                            size = { 1030 966 }
+                            position = { 10807 4368 }
+                        }
+                        blockoverride size {
+                            size = { 830 766 }
+                        }
+                        blockoverride state_mask {
+                            texture = gfx/ankaris/reytu/state_mask_09.dds
+                        }
+                        blockoverride state_mask_hidden {
+                            texture = gfx/ankaris/reytu/state_mask_09_hidden.dds
+                        }
+                        blockoverride hidden_enabled {
+                            enabled = no
+                        }
+                        blockoverride hidden_visible {
+                            visible = "[Not(GetVariableSystem.Exists('show_state_09'))]"
+                        }
+                        blockoverride hidden_onclick {
+                            onclick = "[GetVariableSystem.Toggle('show_state_09')]"
+                        }
+                    }
+
+                    gate_state = {
+                        blockoverride hidden_location {
+                            size = { 1053 1114 }
+                            position = { 11372 2681 }
+                        }
+                        blockoverride size {
+                            size = { 853 914 }
+                        }
+                        blockoverride state_mask {
+                            texture = gfx/ankaris/reytu/state_mask_10.dds
+                        }
+                        blockoverride state_mask_hidden {
+                            texture = gfx/ankaris/reytu/state_mask_10_hidden.dds
+                        }
+                        blockoverride hidden_enabled {
+                            enabled = no
+                        }
+                        blockoverride hidden_visible {
+                            visible = "[Not(GetVariableSystem.Exists('show_state_10'))]"
+                        }
+                        blockoverride hidden_onclick {
+                            onclick = "[GetVariableSystem.Toggle('show_state_10')]"
+                        }
+                    }
+
+                    gate_state = {
+                        blockoverride hidden_location {
+                            size = { 1882 2189 }
+                            position = { 7848 2151 }
+                        }
+                        blockoverride size {
+                            size = { 1682 1989 }
+                        }
+                        blockoverride state_mask {
+                            texture = gfx/ankaris/reytu/state_mask_06.dds
+                        }
+                        blockoverride state_mask_hidden {
+                            texture = gfx/ankaris/reytu/state_mask_06_hidden.dds
+                        }
+                        blockoverride hidden_enabled {
+                            enabled = yes
+                        }
+                        blockoverride hidden_visible {
+                            visible = no
+                        }
+                        blockoverride hidden_onclick {
+                            onclick = "[GetVariableSystem.Clear('show_state_01')]"
+                            onclick = "[GetVariableSystem.Clear('show_state_02')]"
+                            onclick = "[GetVariableSystem.Clear('show_state_03')]"
+                            onclick = "[GetVariableSystem.Clear('show_state_04')]"
+                            onclick = "[GetVariableSystem.Clear('show_state_05')]"
+                            onclick = "[GetVariableSystem.Clear('show_state_06')]"
+                            onclick = "[GetVariableSystem.Clear('show_state_07')]"
+                            onclick = "[GetVariableSystem.Clear('show_state_08')]"
+                            onclick = "[GetVariableSystem.Clear('show_state_09')]"
+                            onclick = "[GetVariableSystem.Clear('show_state_10')]"
+                        }
+                        block state_content {
+                            gate_button_map_marker = {
+                                blockoverride marker_location {
+                                    position = { 800 800 }
+                                }
+                                blockoverride icon {
+                                    texture = gfx/ankaris/markers/small_city.dds
+                                }
+                            }
+                            gate_button_map_marker = {
+                                blockoverride marker_location {
+                                    position = { 1000 1050 }
+                                }
+                                blockoverride icon {
+                                    texture = gfx/ankaris/markers/gate.dds
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    type gate_state = widget {
+        parentanchor = top|left
+        block hidden_location {
+            #size = { 3129 3430 }
+            #position = { 3379 1952 }
+        }
+
+        widget = {
+            parentanchor = top|left
+            block size {
+                #size = { 3129 3430 }
+            }
+            position = { 100 100 }
+
+            alwaystransparent = no
+
+            block state_content {}
+        }
+
+        button = {
+            parentanchor = top|left
+            position = { 0 0 }
+            size = { 100% 100% }
+
+            onmousehierarchyenter = "[PdxGuiWidget.FindChild('state_highlight').InterruptThenTriggerAnimation('hide_state_highlight','show_state_highlight')]"
+            onmousehierarchyleave = "[PdxGuiWidget.FindChild('state_highlight').InterruptThenTriggerAnimation('show_state_highlight','hide_state_highlight')]"
+
+            block hidden_enabled {
+                enabled = no
+            }
+
+            block hidden_visible {
+                visible = yes
+            }
+
+            block hidden_onclick {}
+
+            background = {
+                texture = "gfx/ankaris/hidden.dds"
+
+                modify_texture = {
+                    block state_mask_hidden {
+                        #texture = gfx/ankaris/reytu/state_mask_01_hidden.dds
+                    }
+                    spriteType = Corneredstretched
+                    blend_mode = alphamultiply
+                    texture_density = 2
+                }
+            }
+
+            widget = {
+                size = { 100% 100% }
+                name = state_highlight
+                alpha = 0
+
+                state = {
+                    name = show_state_highlight
+                    delay = 0.15
+                    alpha = 0.2
+                    duration = 0.15
+                    using = Animation_Curve_Default
+                }
+                state = {
+                    name = hide_state_highlight
+                    alpha = 0
+                    duration = 0
+                    using = Animation_Curve_Default
+                }
+
+                background = {
+                    block state_mask_hidden {
+                        #texture = gfx/ankaris/reytu/state_mask_01_hidden.dds
+                    }
+                }
+            }
+        }
+    }
+
+    type gate_button_map_marker = button {
+        parentanchor = top|left
+        size = { 120 120 }
+        block marker_location {
+            position = { 0 0 }
+        }
+        using = select_button_sound
+        effectname = "NoHighlight"
+
+        ### show
+        state = {
+            name = _show
+            on_start = "[PdxGuiWidget.AccessChild('icon').TriggerAnimation('show')]"
+            on_start = "[PdxGuiWidget.AccessChild('frame').TriggerAnimation('show')]"
+        }
+
+        ### enter
+        state = {
+            name = _mouse_enter
+            on_start = "[PdxGuiWidget.AccessChild('frame').TriggerAnimation('enter')]"
+        }
+
+        ### leave
+        state = {
+            name = _mouse_leave
+            on_start = "[PdxGuiWidget.AccessChild('icon').InterruptThenTriggerAnimation('enter','leave')]"
+            on_start = "[PdxGuiWidget.AccessChild('frame').InterruptThenTriggerAnimation('enter','leave')]"
+        }
+
+        ### press
+        state = {
+            name = _mouse_press
+            on_start = "[PdxGuiWidget.AccessChild('icon').TriggerAnimation('press')]"
+            on_start = "[PdxGuiWidget.AccessChild('frame').TriggerAnimation('press')]"
+        }
+
+        ### release
+        state = {
+            name = _mouse_release
+            on_start = "[PdxGuiWidget.AccessChild('icon').TriggerAnimation('release')]"
+            on_start = "[PdxGuiWidget.AccessChild('frame').TriggerAnimation('release')]"
+        }
+
+        icon = {
+            name = frame
+            size = { 100% 100% }
+            parentanchor = center
+            alwaystransparent = yes
+            spriteType = Corneredstretched
+            texture = gfx/ankaris/markers/marker_frame.dds
+
+            modify_texture = {
+                texture = "gfx/interface/backgrounds/default_bg_shading.dds"
+                spriteType = Corneredstretched
+                spriteborder = { 0 0 }
+                blend_mode = overlay
+            }
+            modify_texture = {
+                texture = "gfx/interface/textures/velvet_texture.dds"
+                spriteType = Corneredtiled
+                texture_density = 2
+                spriteborder = { 0 0 }
+                blend_mode = overlay
+            }
+            modify_texture = {
+                texture = "gfx/interface/textures/cloth_texture.dds"
+                spriteType = Corneredtiled
+                texture_density = 2
+                spriteborder = { 0 0 }
+                blend_mode = overlay
+                alpha = 0.15
+            }
+
+            ### hidden
+            modify_texture = {
+                name = "hidden"
+                texture = gfx/interface/masks/hidden.dds
+                spriteType = Corneredstretched
+                spriteborder = { 0 0 }
+                blend_mode = alphamultiply
+                alpha = 1
+            }
+
+            ### selected
+            modify_texture = {
+                name = "selected"
+                texture = "gfx/interface/buttons/round_button_selected_icon.dds"
+                spriteType = Corneredstretched
+                spriteborder = { 0 0 }
+                blend_mode = overlay
+                block "button_selected" {
+                    visible = no
+                }
+            }
+
+            ### animation textures
+            modify_texture = {
+                name = "mouse_press"
+                texture = "gfx/ankaris/markers/icon_marker_mouse_enter.dds"
+                spriteType = Corneredstretched
+                spriteborder = { 0 0 }
+                blend_mode = overlay
+                alpha = 0
+            }
+
+            ### show
+            state = {
+                name = show
+                position = { 0 0 }
+                using = button_animation_duration
+
+                modify_texture = {
+                    name = mouse_press
+                    alpha = 0
+                }
+                modify_texture = {
+                    name = hidden
+                    alpha = 1
+                }
+            }
+
+            ### enter
+            state = {
+                name = enter
+                position = { 0 0 }
+                using = button_animation_duration
+
+                modify_texture = {
+                    name = mouse_press
+                    alpha = 0
+                }
+                modify_texture = {
+                    name = hidden
+                    alpha = 0
+                }
+            }
+
+            ### leave
+            state = {
+                name = leave
+                position = { 0 0 }
+                using = button_animation_duration
+
+                modify_texture = {
+                    name = mouse_press
+                    alpha = 0
+                }
+                modify_texture = {
+                    name = hidden
+                    alpha = 1
+                }
+            }
+
+            ### press
+            state = {
+                name = press
+                position = { 1 2 }
+                using = button_animation_duration
+
+                modify_texture = {
+                    name = mouse_press
+                    alpha = 1
+                }
+                modify_texture = {
+                    name = hidden
+                    alpha = 0
+                }
+            }
+        }
+
+        icon = {
+            name = icon
+            block "icon" {}
+            size = { 100 100 }
+            parentanchor = center
+            alwaystransparent = yes
+
+            modify_texture = {
+                name = "mouse_press"
+                texture = "gfx/ankaris/markers/icon_marker_mouse_enter.dds"
+                spriteType = Corneredstretched
+                spriteborder = { 0 0 }
+                blend_mode = overlay
+                alpha = 0
+            }
+
+            ### show
+            state = {
+                name = show
+                position = { 0 0 }
+                using = button_animation_duration
+
+                modify_texture = {
+                    name = mouse_press
+                    alpha = 0
+                }
+                modify_texture = {
+                    name = mouse_enter
+                    alpha = 0
+                    rotate_uv = 0
+                }
+            }
+
+            ### press
+            state = {
+                name = press
+                position = { 1 2 }
+                using = button_animation_duration
+
+                modify_texture = {
+                    name = mouse_press
+                    alpha = 1
+                }
+                modify_texture = {
+                    name = mouse_enter
+                    alpha = 0
+                    rotate_uv = 0
+                }
+            }
+
+            ### release
+            state = {
+                position = { 0 0 }
+                name = release
+                using = button_animation_duration
+
+                modify_texture = {
+                    name = mouse_press
+                    alpha = 0
+                }
+                modify_texture = {
+                    name = mouse_enter
+                    alpha = 0
+                    rotate_uv = 0
+                }
+            }
+        }
+    }
+}

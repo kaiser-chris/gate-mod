@@ -70,3 +70,18 @@ has_no_magic_researcher_alert = {
 
 	alert_group = gate_alerts
 }
+
+expedition_alert = {
+	script_context = player_country
+	texture = gfx/interface/icons/alert_icons/has_no_magic_research.dds
+
+	valid = {
+		is_player = yes
+	}
+
+	open_panel = journal
+
+	type = important_action
+
+	alert_group = gate_alerts
+}
