@@ -19,6 +19,7 @@ Below is a table with all currently open ToDos.
 
 | File | Line | ToDo |
 | ---- | ---- | ---- |
+| ./mod/common/alert_types/400_gate_alert_types.txt | 80 |  Remove this debug check for expedition_alert |
 | ./mod/common/journal_entries/401_dwarven_alps.txt | 103 |  Add more integration events to je_dwarven_integration_of_germans |
 | ./mod/common/technology/technologies/403_magic_society.txt | 94 |  Implement gate_expeditions technology |
 | ./mod/localization/english/gate_alerts_l_english.yml | 25 |  Write alert_expedition_alert_name |
