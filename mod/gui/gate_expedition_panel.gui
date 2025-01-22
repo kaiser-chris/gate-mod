@@ -85,6 +85,24 @@ types gate_expedition_panel_types {
                 }
 
                 map_container = {}
+
+                map_sidebar = {}
+
+                container = {
+                    parentanchor = top|right
+                    position = { -20 20 }
+                    background = {
+                        using = entry_bg_fancy_dark
+                        alpha = 1
+                    }
+                    textbox = {
+                        autoresize = yes
+                        margin = { 20 12 }
+                        align = center
+                        text = gg_panel_expedition_drag_hint
+                        using = fontsize_large
+                    }
+                }
             }
         }
     }

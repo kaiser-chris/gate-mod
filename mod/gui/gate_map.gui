@@ -307,6 +307,34 @@ types gate_map_types {
         }
     }
 
+    type map_sidebar = widget {
+        size = { 500 100% }
+        parentanchor = top|left
+        position = { 0 0 }
+
+        visible = "[GetVariableSystem.Exists('expedition_sidebar')]"
+
+        background = {
+            texture = gfx/interface/misc/black.dds
+
+            modify_texture = {
+                texture = "gfx/interface/masks/fade_horizontal_right.dds"
+                blend_mode = alphamultiply
+                alpha = 1
+            }
+        }
+
+        background = {
+            using = default_bg_sidebar
+
+            modify_texture = {
+                texture = "gfx/interface/masks/fade_horizontal_left.dds"
+                blend_mode = alphamultiply
+                alpha = 0.08
+            }
+        }
+    }
+
     type gate_state = widget {
         parentanchor = top|left
         block hidden_location {
@@ -393,6 +421,8 @@ types gate_map_types {
         }
         using = select_button_sound
         effectname = "NoHighlight"
+
+        onclick = "[GetVariableSystem.Toggle('expedition_sidebar')]"
 
         ### show
         state = {
@@ -571,23 +601,6 @@ types gate_map_types {
                 alpha = 0
             }
 
-            ### show
-            state = {
-                name = show
-                position = { 0 0 }
-                using = button_animation_duration
-
-                modify_texture = {
-                    name = mouse_press
-                    alpha = 0
-                }
-                modify_texture = {
-                    name = mouse_enter
-                    alpha = 0
-                    rotate_uv = 0
-                }
-            }
-
             ### press
             state = {
                 name = press
@@ -597,11 +610,6 @@ types gate_map_types {
                 modify_texture = {
                     name = mouse_press
                     alpha = 1
-                }
-                modify_texture = {
-                    name = mouse_enter
-                    alpha = 0
-                    rotate_uv = 0
                 }
             }
 
@@ -614,11 +622,6 @@ types gate_map_types {
                 modify_texture = {
                     name = mouse_press
                     alpha = 0
-                }
-                modify_texture = {
-                    name = mouse_enter
-                    alpha = 0
-                    rotate_uv = 0
                 }
             }
         }
