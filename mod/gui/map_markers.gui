@@ -11,7 +11,16 @@ flowcontainer = {
 	flowcontainer = {
 		direction = vertical
 		tooltip = "STATE_PRODUCTION_MARKER_TOOLTIP"
-		visible = "[And(Or(IsZoomLevelNear, And(Not(IsZoomLevelNear), ObjectsEqual(State.AccessSelf, State.AccessStateRegion.GetLargestStateInRegion))), Not(GetVariableSystem.Exists('gate_map_mode')))]"
+		visible = "[And(
+						Or(
+							IsZoomLevelNear,
+							And(
+								Not(IsZoomLevelNear),
+								ObjectsEqual(State.AccessSelf, State.AccessStateRegion.GetLargestStateInRegion)
+							)
+						),
+						Not(IsMapModeSelected('mm_state_mana_density'))
+					)]"
 
 		background = {
 			visible = "[IsZoomLevelNear]"
@@ -72,7 +81,10 @@ flowcontainer = {
 	# == Mana Density
 	flowcontainer = {
 		direction = vertical
-		visible = "[And(ObjectsEqual(State.AccessSelf, State.AccessStateRegion.GetLargestStateInRegion), GetVariableSystem.HasValue('gate_map_mode', 'mana_density'))]"
+		visible = "[And(
+						ObjectsEqual(State.AccessSelf, State.AccessStateRegion.GetLargestStateInRegion),
+						IsMapModeSelected('mm_state_mana_density')
+					)]"
 		onmousehierarchyenter = "[AccessHighlightManager.HighlightStateRegion(State.AccessStateRegion.Self)]"
 		onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
 

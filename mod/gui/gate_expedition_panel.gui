@@ -14,7 +14,6 @@ types gate_expedition_panel_types {
                 on_start = "[MapListPanelManager.CloseCurrentPanel]"
                 # Fullscreen panels hide topbar
                 on_finish = "[GetVariableSystem.Set('com_fullscreen', 'com_fullscreen')]"
-
                 start_sound = {
                     soundeffect = "event:/SFX/UI/SideBar/markets"
                 }
