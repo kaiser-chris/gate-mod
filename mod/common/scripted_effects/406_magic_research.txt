@@ -127,7 +127,12 @@ calculate_researcher_experience = {
 			}
 			change_variable = {
 				name = magic_experience
-				add = { 1 2 }
+				add = {
+					integer_range = {
+						min = 1
+						max = 2
+					}
+				}
 			}
 			clamp_variable = {
 				name = magic_experience

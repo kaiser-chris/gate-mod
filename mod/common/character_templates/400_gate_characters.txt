@@ -14,7 +14,15 @@
 		}
 		set_variable = {
 			name = magic_experience
-			value = { 5 10 }
+			value = {
+				value = 0
+				add = {
+					integer_range = {
+						min = 5
+						max = 10
+					}
+				}
+			}
 		}
 		home_country = {
 			set_variable = {

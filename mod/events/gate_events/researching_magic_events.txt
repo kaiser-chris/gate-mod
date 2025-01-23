@@ -53,7 +53,12 @@ researching_magic.1 = {
 			var:magic_researcher = {
 				change_variable = {
 					name = magic_experience
-					add = { 10 20 }
+					add = {
+						integer_range = {
+							min = 10
+							max = 20
+						}
+					}
 				}
 			}
 		}
