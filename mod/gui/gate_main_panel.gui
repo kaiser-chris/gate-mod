@@ -28,7 +28,6 @@ types gate_main_panel_types {
                 # Close open panel before showing this one
                 on_start = "[InformationPanelBar.ClosePanel]"
                 on_start = "[MapListPanelManager.CloseCurrentPanel]"
-                on_start = "[GetVariableSystem.Set('gate_map_mode', 'mana_density')]"
                 start_sound = {
                     soundeffect = "event:/SFX/UI/SideBar/markets"
                 }
@@ -38,7 +37,6 @@ types gate_main_panel_types {
             state = {
                 name = _hide
                 on_start = "[RemoveTempMapMode]"
-                on_finish = "[GetVariableSystem.Clear('gate_map_mode')]"
                 start_sound = {
                     soundeffect = "event:/SFX/UI/SideBar/markets_stop"
                 }

@@ -375,10 +375,8 @@ widget = {
 				# Mana Density
 				gate_mana_density_colored = {
 					onmousehierarchyenter = "[AccessHighlightManager.HighlightStateRegion(State.AccessStateRegion.Self)]"
-					onmousehierarchyenter = "[GetVariableSystem.Set('gate_map_mode', 'mana_density')]"
 					onmousehierarchyenter = "[SetTempMapModeByKey('mm_state_mana_density')]"
 					onmousehierarchyleave = "[RemoveTempMapMode]"
-					onmousehierarchyleave = "[GetVariableSystem.Clear('gate_map_mode')]"
 					onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
 
 					blockoverride "mana_density_size" {
