@@ -5,6 +5,40 @@
 
 	double_sided_bad = yes
 
+	yearly_progress = {
+		if = {
+			limit = {
+				var:mbudye_conversion_type ?= mbudye_conversion_aggressive
+			}
+			subtract = {
+				value = 1
+				min = 0
+				desc = pb_gate_mbudye_passive_conversion_tooltip_aggressive
+			}
+		}
+		else_if = {
+			limit = {
+				var:mbudye_conversion_type ?= mbudye_conversion_balanced
+			}
+			add = {
+				value = 0
+				min = 0
+				max = 100
+				desc = pb_gate_mbudye_passive_conversion_tooltip_balanced
+			}
+		}
+		else_if = {
+			limit = {
+				var:mbudye_conversion_type ?= mbudye_conversion_passive
+			}
+			add = {
+				value = 1
+				max = 100
+				desc = pb_gate_mbudye_passive_conversion_tooltip_passive
+			}
+		}
+	}
+
 	start_value = 20
 	min_value = 0
 	max_value = 100
@@ -17,10 +51,35 @@ pb_gate_mbudye_lunda = {
 	default_green = yes
 
 	yearly_progress = {
-		add = {
-			value = 1
-			max = 100
-			desc = pb_gate_mbudye_passive_conversion_tooltip
+		if = {
+			limit = {
+				var:mbudye_conversion_type ?= mbudye_conversion_aggressive
+			}
+			add = {
+				value = 3
+				max = 100
+				desc = pb_gate_mbudye_passive_conversion_tooltip_aggressive
+			}
+		}
+		else_if = {
+			limit = {
+				var:mbudye_conversion_type ?= mbudye_conversion_balanced
+			}
+			add = {
+				value = 2
+				max = 100
+				desc = pb_gate_mbudye_passive_conversion_tooltip_balanced
+			}
+		}
+		else_if = {
+			limit = {
+				var:mbudye_conversion_type ?= mbudye_conversion_passive
+			}
+			add = {
+				value = 1
+				max = 100
+				desc = pb_gate_mbudye_passive_conversion_tooltip_passive
+			}
 		}
 	}
 
@@ -36,10 +95,35 @@ pb_gate_mbudye_chokwe = {
 	default_green = yes
 
 	yearly_progress = {
-		add = {
-			value = 1
-			max = 100
-			desc = pb_gate_mbudye_passive_conversion_tooltip
+		if = {
+			limit = {
+				var:mbudye_conversion_type ?= mbudye_conversion_aggressive
+			}
+			add = {
+				value = 3
+				max = 100
+				desc = pb_gate_mbudye_passive_conversion_tooltip_aggressive
+			}
+		}
+		else_if = {
+			limit = {
+				var:mbudye_conversion_type ?= mbudye_conversion_balanced
+			}
+			add = {
+				value = 2
+				max = 100
+				desc = pb_gate_mbudye_passive_conversion_tooltip_balanced
+			}
+		}
+		else_if = {
+			limit = {
+				var:mbudye_conversion_type ?= mbudye_conversion_passive
+			}
+			add = {
+				value = 1
+				max = 100
+				desc = pb_gate_mbudye_passive_conversion_tooltip_passive
+			}
 		}
 	}
 
@@ -55,10 +139,35 @@ pb_gate_mbudye_kazembe = {
 	default_green = yes
 
 	yearly_progress = {
-		add = {
-			value = 1
-			max = 100
-			desc = pb_gate_mbudye_passive_conversion_tooltip
+		if = {
+			limit = {
+				var:mbudye_conversion_type ?= mbudye_conversion_aggressive
+			}
+			add = {
+				value = 3
+				max = 100
+				desc = pb_gate_mbudye_passive_conversion_tooltip_aggressive
+			}
+		}
+		else_if = {
+			limit = {
+				var:mbudye_conversion_type ?= mbudye_conversion_balanced
+			}
+			add = {
+				value = 2
+				max = 100
+				desc = pb_gate_mbudye_passive_conversion_tooltip_balanced
+			}
+		}
+		else_if = {
+			limit = {
+				var:mbudye_conversion_type ?= mbudye_conversion_passive
+			}
+			add = {
+				value = 1
+				max = 100
+				desc = pb_gate_mbudye_passive_conversion_tooltip_passive
+			}
 		}
 	}
 
@@ -74,10 +183,35 @@ pb_gate_mbudye_kasanje = {
 	default_green = yes
 
 	yearly_progress = {
-		add = {
-			value = 1
-			max = 100
-			desc = pb_gate_mbudye_passive_conversion_tooltip
+		if = {
+			limit = {
+				var:mbudye_conversion_type ?= mbudye_conversion_aggressive
+			}
+			add = {
+				value = 3
+				max = 100
+				desc = pb_gate_mbudye_passive_conversion_tooltip_aggressive
+			}
+		}
+		else_if = {
+			limit = {
+				var:mbudye_conversion_type ?= mbudye_conversion_balanced
+			}
+			add = {
+				value = 2
+				max = 100
+				desc = pb_gate_mbudye_passive_conversion_tooltip_balanced
+			}
+		}
+		else_if = {
+			limit = {
+				var:mbudye_conversion_type ?= mbudye_conversion_passive
+			}
+			add = {
+				value = 1
+				max = 100
+				desc = pb_gate_mbudye_passive_conversion_tooltip_passive
+			}
 		}
 	}
 

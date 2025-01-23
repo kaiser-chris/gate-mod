@@ -75,6 +75,10 @@
 		c:KSN = {
 			save_scope_as = gate_mbudye_kasanje
 		}
+		set_variable = {
+			name = mbudye_conversion_type
+			value = mbudye_conversion_balanced
+		}
 	}
 
 	on_monthly_pulse = {
@@ -171,7 +175,7 @@
 	fail = {
 		trigger_if = {
 			custom_tooltip = {
-				text = je_gate_mbudye_fail
+				text = je_gate_mbudye_fail_support
 				scope:journal_entry = {
 					scripted_bar_progress = {
 						name = pb_gate_mbudye
@@ -179,8 +183,8 @@
 					}
 				}
 			}
-			hidden_trigger = {
-				# If they unify and rise the journal should fail
+			custom_tooltip = {
+				text = je_gate_mbudye_fail_annex
 				has_global_variable = mbudye_unification
 			}
 		}
@@ -204,8 +208,11 @@
 		}
 	}
 
-	progressbar = no
+	scripted_button = je_gate_mbudye_button_aggressive
+	scripted_button = je_gate_mbudye_button_balanced
+	scripted_button = je_gate_mbudye_button_passive
 
+	progressbar = no
 	scripted_progress_bar = pb_gate_mbudye
 	scripted_progress_bar = pb_gate_mbudye_lunda
 	scripted_progress_bar = pb_gate_mbudye_chokwe

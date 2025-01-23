@@ -1,0 +1,98 @@
+﻿je_gate_mbudye_button_aggressive = {
+	name = je_gate_mbudye_button_aggressive
+	desc = je_gate_mbudye_button_aggressive_desc
+
+	possible = {
+		custom_tooltip = {
+			text = je_gate_mbudye_button_aggressive_block
+			NOT = {
+				var:mbudye_conversion_type ?= mbudye_conversion_aggressive
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 50
+	}
+
+	effect = {
+		hidden_effect = {
+			set_variable = {
+				name = mbudye_conversion_type
+				value = mbudye_conversion_aggressive
+			}
+		}
+		custom_tooltip = {
+			text = je_gate_mbudye_button_aggressive_effect_support
+		}
+		custom_tooltip = {
+			text = je_gate_mbudye_button_aggressive_effect_conversion
+		}
+	}
+}
+
+je_gate_mbudye_button_balanced = {
+	name = je_gate_mbudye_button_balanced
+	desc = je_gate_mbudye_button_balanced_desc
+
+	possible = {
+		custom_tooltip = {
+			text = je_gate_mbudye_button_balanced_block
+			NOT = {
+				var:mbudye_conversion_type ?= mbudye_conversion_balanced
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 200
+	}
+
+	effect = {
+		hidden_effect = {
+			set_variable = {
+				name = mbudye_conversion_type
+				value = mbudye_conversion_balanced
+			}
+		}
+		custom_tooltip = {
+			text = je_gate_mbudye_button_balanced_effect_support
+		}
+		custom_tooltip = {
+			text = je_gate_mbudye_button_balanced_effect_conversion
+		}
+	}
+}
+
+je_gate_mbudye_button_passive = {
+	name = je_gate_mbudye_button_passive
+	desc = je_gate_mbudye_button_passive_desc
+
+	possible = {
+		custom_tooltip = {
+			text = je_gate_mbudye_button_passive_block
+			NOT = {
+				var:mbudye_conversion_type ?= mbudye_conversion_passive
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 100
+	}
+
+	effect = {
+		hidden_effect = {
+			set_variable = {
+				name = mbudye_conversion_type
+				value = mbudye_conversion_passive
+			}
+		}
+		custom_tooltip = {
+			text = je_gate_mbudye_button_passive_effect_support
+		}
+		custom_tooltip = {
+			text = je_gate_mbudye_button_passive_effect_conversion
+		}
+	}
+}

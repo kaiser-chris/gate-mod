@@ -172,14 +172,14 @@ trigger_random_mbudye_investigation_result = {
 		}
 		trigger_event = {
 			id = mbudye.6
-			days = $investigation_duration$
+			months = $investigation_duration$
 			popup = yes
 		}
 	}
 	else = {
 		trigger_event = {
 			id = mbudye.5
-			days = $investigation_duration$
+			months = $investigation_duration$
 			popup = yes
 		}
 	}
