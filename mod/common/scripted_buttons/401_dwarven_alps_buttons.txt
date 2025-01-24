@@ -81,34 +81,7 @@ je_dwarven_alps_integrate_germans = {
 		is_at_war = no
 		NOT = {
 			OR = {
-				country_has_primary_culture = cu:south_german
-				country_has_primary_culture = cu:alemannic
-			}
-			has_journal_entry = je_dwarven_integration_of_germans
-		}
-	}
-
-	ai_chance = {
-		base = 100
-	}
-
-	effect = {
-		add_journal_entry = {
-			type = je_dwarven_integration_of_germans
-		}
-	}
-}
-
-je_dwarven_alps_integrate_germans_stop = {
-	name = je_dwarven_alps_integrate_germans
-	desc = je_dwarven_alps_integrate_germans_desc
-
-	possible = {
-		is_diplomatic_play_committed_participant = no
-		is_at_war = no
-		NOT = {
-			OR = {
-				country_has_primary_culture = cu:south_german
+				country_has_primary_culture = cu:dwarven_south_german
 				country_has_primary_culture = cu:alemannic
 			}
 			has_journal_entry = je_dwarven_integration_of_germans
