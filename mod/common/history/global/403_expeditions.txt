@@ -1,0 +1,38 @@
+﻿# This scripts are run after all other history scripts were run
+GLOBAL = {
+
+	# Country Scope does not matter
+	c:GMK = {
+		# Magic Gate
+		create_struct = {
+			struct_scope = building
+			struct_type = expedition_location
+		}
+		scope:building = {
+			set_variable = {
+				name = flag
+				value = flag:expedition_gate
+			}
+		}
+		add_to_global_variable_list = {
+			name = reytu_state_01_locations
+			target = scope:building
+		}
+
+		create_struct = {
+			struct_scope = building
+			struct_type = expedition_location
+		}
+		scope:building = {
+			set_variable = {
+				name = flag
+				value = flag:expedition_village
+			}
+		}
+		add_to_global_variable_list = {
+			name = reytu_state_01_locations
+			target = scope:building
+		}
+	}
+
+}

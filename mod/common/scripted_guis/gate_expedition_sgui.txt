@@ -1,0 +1,18 @@
+﻿sgui_expedition_select_location = {
+	scope = country
+
+	effect = {
+		if = {
+			limit = {
+				var:expedition_active_location ?= scope:selected
+			}
+			remove_variable = expedition_active_location
+		}
+		else = {
+			set_variable = {
+				name = expedition_active_location
+				value = scope:selected
+			}
+		}
+	}
+}
