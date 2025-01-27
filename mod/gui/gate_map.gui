@@ -1,5 +1,6 @@
 types gate_map_types {
     type map_container = zoomarea {
+        datacontext = "[GetPlayer]"
         name = gate_map_container
         allow_outside = yes
         size = { 100% 100% }
@@ -237,33 +238,30 @@ types gate_map_types {
                         blockoverride hidden_visible {
                             visible = no
                         }
-                        blockoverride hidden_onclick {
-                            onclick = "[GetVariableSystem.Clear('show_state_01')]"
-                            onclick = "[GetVariableSystem.Clear('show_state_02')]"
-                            onclick = "[GetVariableSystem.Clear('show_state_03')]"
-                            onclick = "[GetVariableSystem.Clear('show_state_04')]"
-                            onclick = "[GetVariableSystem.Clear('show_state_05')]"
-                            onclick = "[GetVariableSystem.Clear('show_state_06')]"
-                            onclick = "[GetVariableSystem.Clear('show_state_07')]"
-                            onclick = "[GetVariableSystem.Clear('show_state_08')]"
-                            onclick = "[GetVariableSystem.Clear('show_state_09')]"
-                            onclick = "[GetVariableSystem.Clear('show_state_10')]"
-                        }
                         block state_content {
-                            gate_button_map_marker = {
-                                blockoverride marker_location {
-                                    position = { 800 800 }
-                                }
-                                blockoverride icon {
-                                    texture = gfx/map/ankaris/markers/small_city.dds
-                                }
-                            }
-                            gate_button_map_marker = {
-                                blockoverride marker_location {
-                                    position = { 1000 1050 }
-                                }
-                                blockoverride icon {
-                                    texture = gfx/map/ankaris/markers/gate.dds
+                            datamodel = "[GetGlobalList('reytu_state_01_locations')]"
+
+                            item = {
+                                widget = {
+                                    size = { 100% 100% }
+                                    gate_button_map_marker = {
+                                        visible = "[EqualTo_string(Scope.Var('flag').GetFlagName, 'expedition_village')]"
+                                        blockoverride marker_location {
+                                            position = { 800 800 }
+                                        }
+                                        blockoverride icon {
+                                            texture = gfx/map/ankaris/markers/small_city.dds
+                                        }
+                                    }
+                                    gate_button_map_marker = {
+                                        visible = "[EqualTo_string(Scope.Var('flag').GetFlagName, 'expedition_gate')]"
+                                        blockoverride marker_location {
+                                            position = { 1000 1050 }
+                                        }
+                                        blockoverride icon {
+                                            texture = gfx/map/ankaris/markers/gate.dds
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -275,19 +273,35 @@ types gate_map_types {
     }
 
     type map_sidebar = widget {
+        datacontext = "[GetPlayer]"
+        datacontext = "[Country.MakeScope.Var('expedition_active_location')]"
         size = { 500 100% }
         parentanchor = top|left
-        position = { 0 0 }
+        position = { -3 0 }
 
-        visible = "[GetVariableSystem.Exists('expedition_sidebar')]"
+        visible = "[Country.MakeScope.Var('expedition_active_location').IsSet]"
+
+        flowcontainer = {
+            direction = vertical
+            margin = { 7 20 }
+            default_header = {
+                blockoverride "size" {
+                    size = { 486 44 }
+                }
+                blockoverride "text" {
+                    raw_text = "[Localize(Concatenate(Scope.Var('flag').GetFlagName, '_name'))]"
+                    #raw_text = "[Country.MakeScope.Var('expedition_active_location').IsSet]"
+                }
+            }
+        }
 
         background = {
-            texture = gfx/interface/misc/black.dds
+            using = default_bg_sidebar
+            mirror = horizontal
 
             modify_texture = {
-                texture = "gfx/interface/masks/fade_horizontal_right.dds"
+                texture = "gfx/interface/masks/fade_horizontal_left.dds"
                 blend_mode = alphamultiply
-                alpha = 1
             }
         }
 
@@ -297,7 +311,6 @@ types gate_map_types {
             modify_texture = {
                 texture = "gfx/interface/masks/fade_horizontal_left.dds"
                 blend_mode = alphamultiply
-                alpha = 0.08
             }
         }
     }
@@ -389,7 +402,11 @@ types gate_map_types {
         using = select_button_sound
         effectname = "NoHighlight"
 
-        onclick = "[GetVariableSystem.Toggle('expedition_sidebar')]"
+        onclick = "[GetScriptedGui('sgui_expedition_select_location').Execute(GuiScope
+                        .SetRoot(Country.MakeScope)
+                        .AddScope('selected', Scope.GetCharacter.MakeScope)
+                        .End
+                    )]"
 
         ### show
         state = {
