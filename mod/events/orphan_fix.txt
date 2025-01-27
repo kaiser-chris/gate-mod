@@ -33,12 +33,23 @@ orphan_fix.1 = {
 				flag:mbudye_assassination_admiral_flag = yes
 				flag:mbudye_assassination_politician_flag = yes
 				flag:mbudye_defaced_temple_flag = yes
+				flag:expedition_gate = yes
+				flag:expedition_village = yes
 			}
 			set_variable = mana_density
 			remove_variable = mana_density
 			set_variable = is_magic_researcher
 			remove_variable = is_magic_researcher
 			save_scope_as = cost
+			save_scope_as = selected
+			set_variable = is_struct
+			remove_variable = is_struct
+			set_variable = com_type
+			remove_variable = com_type
+			set_variable = flag
+			remove_variable = flag
+			set_variable = reytu_state_01_locations
+			remove_variable = reytu_state_01_locations
 		}
 	}
 	
