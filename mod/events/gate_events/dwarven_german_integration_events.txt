@@ -1,10 +1,5 @@
 ﻿namespace = dwarven_german_integration
 
-# europenorthamerica_art_gallery
-# europenorthamerica_rich_and_poor
-# unspecific_politicians_arguing
-# unspecific_vandalized_storefront
-
 dwarven_german_integration.1 = {
 	type = country_event
 	dlc = dlc_magic_gate
@@ -171,6 +166,87 @@ dwarven_german_integration.2 = {
 			culture = cu:dwarven
 		}
 
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+dwarven_german_integration.3 = {
+	type = country_event
+	dlc = dlc_magic_gate
+
+	title = dwarven_german_integration.3.t
+	desc = dwarven_german_integration.3.d
+	flavor = dwarven_german_integration.3.f
+
+	event_image = {
+		video = "unspecific_world_fair"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	option = {
+		name = dwarven_german_integration.3.a
+		default_option = yes
+		scope:journal_entry = {
+			add_progress = {
+				name = pb_gate_german_integration
+				value = 5
+			}
+		}
+		add_loyalists = {
+			value = small_radicals
+			culture = cu:dwarven_south_german
+		}
+		add_loyalists = {
+			value = small_radicals
+			culture = cu:alemannic
+		}
+		add_loyalists = {
+			value = small_radicals
+			culture = cu:dwarven
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+dwarven_german_integration.4 = {
+	type = country_event
+	dlc = dlc_magic_gate
+
+	title = dwarven_german_integration.4.t
+	desc = dwarven_german_integration.4.d
+	flavor = dwarven_german_integration.4.f
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	option = {
+		name = dwarven_german_integration.4.a
+		default_option = yes
+		scope:journal_entry = {
+			add_progress = {
+				name = pb_gate_german_integration
+				value = 5
+			}
+		}
+		add_magic_innovation = {
+			amount = 200
+		}
 		ai_chance = {
 			base = 100
 		}

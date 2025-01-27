@@ -337,3 +337,22 @@ ai_unlock_magic_technology = {
 		}
 	}
 }
+
+add_magic_innovation = {
+	save_temporary_scope_value_as = {
+		name = added_innovation
+		value = $amount$
+	}
+	custom_tooltip = {
+		text = effect_add_magic_innovation
+		change_variable = {
+			name = magic_innovation
+			add = $amount$
+		}
+		clamp_variable = {
+			name = magic_innovation
+			min = 0
+			max = global_var:magic_innovation_bank_max
+		}
+	}
+}
