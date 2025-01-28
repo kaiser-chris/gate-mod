@@ -41,3 +41,47 @@ gate_button_technology = {
         always = no
     }
 }
+
+expedition_gate_icon = {
+    icon = "gfx/map/ankaris/markers/gate.dds"
+
+    show_in_list = no
+
+    priority = 0
+
+    character_ideology = yes
+
+    non_interest_group_leader_trigger = {
+        always = no
+    }
+
+    interest_group_leader_trigger = {
+        always = no
+    }
+
+    country_trigger = {
+        always = no
+    }
+}
+
+expedition_village_icon = {
+    icon = "gfx/map/ankaris/markers/small_city.dds"
+
+    show_in_list = no
+
+    priority = 0
+
+    character_ideology = yes
+
+    non_interest_group_leader_trigger = {
+        always = no
+    }
+
+    interest_group_leader_trigger = {
+        always = no
+    }
+
+    country_trigger = {
+        always = no
+    }
+}
