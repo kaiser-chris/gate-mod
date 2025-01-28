@@ -72,6 +72,47 @@ add_mana_density = {
 				add = $amount$
 			}
 		}
+		add_mana_density_modifier = yes
+	}
+}
+
+add_mana_density_modifier = {
+	every_scope_state = {
+		if = {
+			limit = {
+				state_region = {
+					var:mana_density >= medium_mana_density_threshhold
+					var:mana_density < high_mana_density_threshhold
+				}
+				NOT = {
+					has_modifier = medium_mana_density_modifier
+				}
+			}
+			if = {
+				limit = {
+					has_modifier = high_mana_density_modifier
+				}
+				remove_modifier = high_mana_density_modifier
+			}
+			add_modifier = medium_mana_density_modifier
+		}
+		else_if = {
+			limit = {
+				state_region = {
+					var:mana_density >= high_mana_density_threshhold
+				}
+				NOT = {
+					has_modifier = high_mana_density_modifier
+				}
+			}
+			if = {
+				limit = {
+					has_modifier = medium_mana_density_modifier
+				}
+				remove_modifier = medium_mana_density_modifier
+			}
+			add_modifier = high_mana_density_modifier
+		}
 	}
 }
 
@@ -84,6 +125,7 @@ initial_propogate_mana_density = {
 			name = mana_density
 			value = maximum_mana_density
 		}
+		add_mana_density_modifier = yes
 		propogate_from_state_region = {
 			amount = 70
 		}
@@ -123,6 +165,7 @@ propogate_from_state_region = {
 				name = mana_density
 				value = $amount$
 			}
+			add_mana_density_modifier = yes
 		}
 	}
 	if = {
@@ -139,6 +182,7 @@ propogate_from_state_region = {
 				name = mana_density
 				value = $amount$
 			}
+			add_mana_density_modifier = yes
 		}
 	}
 }

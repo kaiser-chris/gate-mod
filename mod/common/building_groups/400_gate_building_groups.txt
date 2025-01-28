@@ -65,3 +65,20 @@ bg_magic_technology = {
     parent_group = bg_technology
     economy_of_scale = no
 }
+
+bg_mana_extraction = {
+    category = rural
+    economy_of_scale = yes
+    always_possible = yes
+    cash_reserves_max = 25000
+    lens = mine
+    urbanization = 20
+    can_use_slaves = no
+    infrastructure_usage_per_level = 2
+    should_auto_expand = {
+        default_auto_expand_rule = yes
+    }
+    economy_of_scale_ai_factor = 2.0
+    foreign_investment_ai_factor = 1.0
+    default_building = building_mana_extractor
+}
