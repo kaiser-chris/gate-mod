@@ -12,6 +12,12 @@ dwarven_german_integration.1 = {
 		video = "unspecific_vandalized_storefront"
 	}
 
+	trigger = {
+		NOT = {
+			has_modifier = dwarven_help_germans
+		}
+	}
+
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
@@ -51,7 +57,7 @@ dwarven_german_integration.1 = {
 	}
 
 	option = {
-		name = dwarven_german_integration.1.c
+		name = dwarven_german_integration.1.b
 
 		scope:journal_entry = {
 			add_progress = {
@@ -249,6 +255,124 @@ dwarven_german_integration.4 = {
 		}
 		ai_chance = {
 			base = 100
+		}
+	}
+}
+
+dwarven_german_integration.5 = {
+	type = country_event
+	dlc = dlc_magic_gate
+
+	title = dwarven_german_integration.5.t
+	desc = dwarven_german_integration.5.d
+	flavor = dwarven_german_integration.5.f
+
+	event_image = {
+		video = "unspecific_vandalized_storefront"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	option = {
+		name = dwarven_german_integration.5.a
+		default_option = yes
+		scope:journal_entry = {
+			add_progress = {
+				name = pb_gate_german_integration
+				value = 2
+			}
+		}
+		add_loyalists = {
+			value = small_radicals
+			culture = cu:dwarven_south_german
+		}
+		add_loyalists = {
+			value = small_radicals
+			culture = cu:alemannic
+		}
+		add_radicals = {
+			value = small_radicals
+			culture = cu:dwarven
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	option = {
+		name = dwarven_german_integration.5.b
+		default_option = yes
+		scope:journal_entry = {
+			add_progress = {
+				name = pb_gate_german_integration
+				value = -2
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+dwarven_german_integration.6 = {
+	type = country_event
+	dlc = dlc_magic_gate
+
+	title = dwarven_german_integration.6.t
+	desc = dwarven_german_integration.6.d
+	flavor = dwarven_german_integration.6.f
+
+	event_image = {
+		video = "unspecific_vandalized_storefront"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	option = {
+		name = dwarven_german_integration.5.a
+		default_option = yes
+		scope:journal_entry = {
+			add_progress = {
+				name = pb_gate_german_integration
+				value = 2
+			}
+		}
+		add_radicals = {
+			value = small_radicals
+			culture = cu:dwarven_south_german
+		}
+		add_radicals = {
+			value = small_radicals
+			culture = cu:alemannic
+		}
+		add_loyalists = {
+			value = small_radicals
+			culture = cu:dwarven
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	option = {
+		name = dwarven_german_integration.6.b
+		default_option = yes
+		scope:journal_entry = {
+			add_progress = {
+				name = pb_gate_german_integration
+				value = -2
+			}
+		}
+		ai_chance = {
+			base = 50
 		}
 	}
 }
