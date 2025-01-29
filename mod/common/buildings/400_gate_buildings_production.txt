@@ -16,9 +16,9 @@
 
 	possible = {
 		custom_tooltip = {
-			text = building_requirement_mana_density
+			text = building_requirement_low_mana_density
 			state_region = {
-				var:mana_density >= medium_mana_density_threshhold
+				var:mana_density >= low_mana_density_threshhold
 			}
 		}
 	}
@@ -130,7 +130,7 @@ building_druid_groove = {
 
 	possible = {
 		custom_tooltip = {
-			text = building_requirement_mana_density
+			text = building_requirement_medium_mana_density
 			state_region = {
 				var:mana_density >= medium_mana_density_threshhold
 			}
