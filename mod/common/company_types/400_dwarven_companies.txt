@@ -1,0 +1,49 @@
+﻿# Friedrich Krupp AG
+company_dwarven_mining_guild = {
+	icon = "gfx/interface/icons/company_icons/dwarven_mining_guild.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_dwarven_coal_mine
+		building_dwarven_iron_mine
+		building_dwarven_gold_mine
+		building_dwarven_lead_mine
+		building_dwarven_sulfur_mine
+	}
+	
+	potential = {
+		this = c:GMK
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			this = c:GMK
+		}
+	}	
+	
+	possible = { 
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_dwarven_coal_mine
+					is_building_type = building_dwarven_iron_mine
+					is_building_type = building_dwarven_gold_mine
+					is_building_type = building_dwarven_lead_mine
+					is_building_type = building_dwarven_sulfur_mine
+				}
+				level >= 2
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_group_bg_mining_throughput_add = 0.05
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}

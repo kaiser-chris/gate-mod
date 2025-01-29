@@ -164,11 +164,10 @@
             create_building = {
                 building = building_dwarven_coal_mine
                 add_ownership = {
-                    building = {
-                        type = building_financial_district
+                    company = {
+                        type = company_dwarven_mining_guild
                         country = c:GMK
                         levels = 2
-                        region = STATE_TYROL
                     }
                 }
                 reserves = 1
@@ -414,11 +413,10 @@
             create_building = {
                 building = building_dwarven_iron_mine
                 add_ownership = {
-                    building = {
-                        type = building_financial_district
+                    company = {
+                        type = company_dwarven_mining_guild
                         country = c:GMK
                         levels = 2
-                        region = STATE_SOUTH_TYROL
                     }
                 }
                 reserves = 1
@@ -432,11 +430,10 @@
             create_building = {
                 building = building_dwarven_lead_mine
                 add_ownership = {
-                    building = {
-                        type = building_financial_district
+                    company = {
+                        type = company_dwarven_mining_guild
                         country = c:GMK
                         levels = 1
-                        region = STATE_SOUTH_TYROL
                     }
                 }
                 reserves = 1
@@ -450,11 +447,10 @@
             create_building = {
                 building = building_dwarven_sulfur_mine
                 add_ownership = {
-                    building = {
-                        type = building_financial_district
+                    company = {
+                        type = company_dwarven_mining_guild
                         country = c:GMK
                         levels = 2
-                        region = STATE_SOUTH_TYROL
                     }
                 }
                 reserves = 1
