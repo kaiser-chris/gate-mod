@@ -1,0 +1,24 @@
+﻿pm_no_runic_paper = {
+	texture = "gfx/interface/icons/production_method_icons/no_runic_paper.dds"
+}
+
+pm_simple_runic_paper = {
+	texture = "gfx/interface/icons/production_method_icons/runic_paper.dds"
+
+	unlocking_technologies = {
+		simple_rune_carving
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_output_paper_add = -20
+			goods_output_runic_paper_add = 20
+		}
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 2000
+			building_employment_mages_add = 500
+		}
+	}
+}

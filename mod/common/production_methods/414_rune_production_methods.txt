@@ -1,0 +1,26 @@
+﻿pm_no_rune_carving = {
+	texture = "gfx/interface/icons/production_method_icons/no_rune_carving.dds"
+}
+
+pm_simple_rune_carving_tools = {
+	texture = "gfx/interface/icons/production_method_icons/rune_carving.dds"
+
+	unlocking_technologies = {
+		simple_rune_carving
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_runic_paper_add = 20
+
+			# output goods
+			goods_output_tools_add = 20
+		}
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 2000
+			building_employment_mages_add = 500
+		}
+	}
+}

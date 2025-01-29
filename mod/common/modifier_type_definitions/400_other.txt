@@ -66,6 +66,23 @@ goods_input_mana_core_add = {
     }
 }
 
+goods_output_runic_paper_add = {
+    decimals = 1
+    color = good
+    percent = yes
+    game_data = {
+        ai_value = 0
+    }
+}
+
+goods_input_runic_paper_add = {
+    decimals = 1
+    color = bad
+    game_data = {
+        ai_value = 0
+    }
+}
+
 state_golden_religion_standard_of_living_add = {
     decimals = 1
     color = good

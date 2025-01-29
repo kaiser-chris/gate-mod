@@ -33,6 +33,22 @@ mana_extraction = {
 	}
 }
 
+simple_rune_carving = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/gate_invention_placeholder.dds"
+	category = production
+	can_research = no
+
+	unlocking_technologies = {
+		mana_extraction
+		mechanical_tools
+	}
+
+	ai_weight = {
+		value = 2 # Important tech for everyone
+	}
+}
+
 magic_farming = {
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/magic_farming.dds"

@@ -28,6 +28,16 @@ magic_farming = {
 	}
 }
 
+simple_rune_carving = {
+	is_valid = {
+		has_technology_researched = mana_extraction
+		has_technology_researched = mechanical_tools
+	}
+	effect = {
+		add_technology_researched = simple_rune_carving
+	}
+}
+
 magic_dwarf_murk = {
 	is_valid = {
 		always = no
