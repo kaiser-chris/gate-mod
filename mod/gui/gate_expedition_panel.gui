@@ -4,7 +4,11 @@ types gate_expedition_panel_types {
         name = "gate_expedition_panel"
         datacontext = "[GetMetaPlayer.GetPlayedOrObservedCountry]"
 
-        visible = "[Or(GetVariableSystem.HasValue('com_open_window', 'gate_button_expedition'), GetVariableSystem.HasValue('com_alert_action', Localize('gg_panel_expedition_action')))]"
+        visible = "[Or3(
+                        GetVariableSystem.HasValue('com_open_window', 'gate_button_expedition'),
+                        GetVariableSystem.HasValue('com_alert_action', Localize('gg_panel_expedition_action')),
+                        Country.MakeScope.Var('open_expedition_map_reytu').IsSet
+                   )]"
 
         blockoverride "animation_state_block" {
             state = {
@@ -28,6 +32,7 @@ types gate_expedition_panel_types {
             state = {
                 name = _hide
                 on_finish = "[GetVariableSystem.Clear('com_fullscreen')]"
+                on_finish = "[GetScriptedGui('sgui_expedition_close_map').Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
                 start_sound = {
                     soundeffect = "event:/SFX/UI/SideBar/markets_stop"
                 }
@@ -46,6 +51,7 @@ types gate_expedition_panel_types {
                 parentanchor = top|left
                 onclick = "[GetVariableSystem.Clear('com_open_window')]"
                 onclick = "[GetVariableSystem.Clear('com_alert_action')]"
+                onclick = "[GetScriptedGui('sgui_expedition_close_map').Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
                 input_action = "back"
             }
 
@@ -54,6 +60,7 @@ types gate_expedition_panel_types {
                 parentanchor = top|right
                 onclick = "[GetVariableSystem.Clear('com_open_window')]"
                 onclick = "[GetVariableSystem.Clear('com_alert_action')]"
+                onclick = "[GetScriptedGui('sgui_expedition_close_map').Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
                 shortcut = "close_window"
                 position = { -55 116 }
             }
