@@ -1,0 +1,107 @@
+﻿namespace = expedition_reytu
+
+expedition_reytu.1 = {
+    type = country_event
+    dlc = dlc_magic_gate
+    placement = capital
+
+    title = expedition_reytu.1.t
+    desc = expedition_reytu.1.d
+    flavor = expedition_reytu.1.f
+
+    event_image = {
+        video = "europenorthamerica_capitalists_meeting"
+    }
+
+    trigger = {
+        has_journal_entry = je_gate_expedition_reytu_preparation
+    }
+
+    immediate = {
+        create_character = {
+            template = expedition_leader_template
+            interest_group = ig_industrialists
+            on_created = {
+                set_variable = {
+                    name = com_opinion
+                    value = flag:expedition_opinion_industrialist
+                }
+            }
+            save_scope_as = expedition_industrialist
+        }
+        create_character = {
+            template = expedition_leader_template
+            interest_group = ig_armed_forces
+            on_created = {
+                set_variable = {
+                    name = com_opinion
+                    value = flag:expedition_opinion_militarist
+                }
+            }
+            save_scope_as = expedition_militarist
+        }
+        create_character = {
+            template = expedition_leader_template
+            interest_group = ROOT.ruler.interest_group
+            on_created = {
+                set_variable = {
+                    name = com_opinion
+                    value = flag:expedition_opinion_politician
+                }
+            }
+            save_scope_as = expedition_politician
+        }
+    }
+
+    left_icon = scope:expedition_militarist
+    center_icon = scope:expedition_politician
+    right_icon = scope:expedition_industrialist
+
+    gui_window = event_window_3char_selection
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+    duration = 3
+
+    option = {
+        name = expedition_reytu.1.a
+        custom_tooltip = {
+            text = expedition_opinion_militarist
+            var:expedition_reytu ?= {
+                set_variable = {
+                    name = leader
+                    value = scope:expedition_militarist
+                }
+            }
+        }
+    }
+
+    option = {
+        name = expedition_reytu.1.b
+        default_option = yes
+        custom_tooltip = {
+            text = expedition_opinion_politician
+            var:expedition_reytu ?= {
+                set_variable = {
+                    name = leader
+                    value = scope:expedition_politician
+                }
+            }
+        }
+    }
+
+    option = {
+        name = expedition_reytu.1.c
+        custom_tooltip = {
+            text = expedition_opinion_industrialist
+            var:expedition_reytu ?= {
+                set_variable = {
+                    name = leader
+                    value = scope:expedition_industrialist
+                }
+            }
+        }
+    }
+}

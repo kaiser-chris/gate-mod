@@ -1,0 +1,39 @@
+﻿je_gate_expedition_reytu_preparation = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_expeditions
+
+	immediate = {
+		save_scope_as = gate_expedition_reytu_country
+		create_struct = {
+			struct_scope = expedition
+			struct_type = expedition_progress
+		}
+		set_variable = {
+			name = expedition_reytu
+			value = scope:expedition
+		}
+	}
+
+	complete = {
+		always = no
+	}
+
+	fail = {
+		custom_tooltip = {
+			text = je_gate_expedition_reytu_preparation_fail_tooltip
+			has_building = building_gate_alxa
+		}
+	}
+
+	scripted_button = je_gate_expedition_reytu_preparation_button_hire_leader
+	scripted_button = je_gate_expedition_reytu_preparation_button_open_map
+
+	progressbar = no
+
+	transferable = no
+	can_revolution_inherit = yes
+
+	weight = 200
+	should_be_pinned_by_default = yes
+}

@@ -16,3 +16,11 @@
 		}
 	}
 }
+
+sgui_expedition_close_map = {
+	scope = country
+
+	effect = {
+		remove_variable = open_expedition_map_reytu
+	}
+}

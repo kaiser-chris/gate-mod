@@ -1,0 +1,69 @@
+﻿je_gate_expedition_reytu_preparation_button_hire_leader = {
+	name = je_gate_expedition_reytu_preparation_button_hire_leader
+	desc = je_gate_expedition_reytu_preparation_button_hire_leader_desc
+
+	possible = {
+		NAND = {
+			has_variable = expedition_reytu_preparation_hiring_leader
+			var:expedition_reytu ?= {
+				has_variable = leader
+			}
+		}
+	}
+
+	visible = {
+		NAND = {
+			has_variable = expedition_reytu_preparation_hiring_leader
+			var:expedition_reytu ?= {
+				has_variable = leader
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 100
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = je_gate_expedition_reytu_preparation_button_hire_leader_effect
+			set_variable = expedition_reytu_preparation_hiring_leader
+			trigger_event = {
+				id = expedition_reytu.1
+				months = 3
+				popup = yes
+			}
+		}
+	}
+}
+
+je_gate_expedition_reytu_preparation_button_open_map = {
+	name = je_gate_expedition_reytu_preparation_button_open_map
+	desc = je_gate_expedition_reytu_preparation_button_open_map_desc
+
+	possible = {
+		hidden_trigger = {
+			OR = {
+				has_global_variable = com_debug
+				has_variable = expedition_reytu_embarked
+			}
+		}
+	}
+
+	visible = {
+		OR = {
+			has_global_variable = com_debug
+			has_variable = expedition_reytu_embarked
+		}
+	}
+
+	ai_chance = {
+		base = 100
+	}
+
+	effect = {
+		hidden_effect = {
+			set_variable = open_expedition_map_reytu
+		}
+	}
+}

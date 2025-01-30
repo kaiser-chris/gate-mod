@@ -21,8 +21,6 @@ orphan_fix.1 = {
 	immediate = {
 		if = {
 			limit = {
-				global_var:global_mana_saturation < 0
-				var:monthly_magic_innovation < 0
 				flag:character_opinion_magic_researcher = flag:character_opinion_magic_researcher
 				flag:character_opinion_magic_researcher_missing_institute = flag:character_opinion_magic_researcher_missing_institute
 				flag:character_opinion_magic_researcher_busy = flag:character_opinion_magic_researcher_busy
@@ -35,11 +33,22 @@ orphan_fix.1 = {
 				flag:mbudye_defaced_temple_flag = flag:mbudye_defaced_temple_flag
                 flag:expedition_gate = flag:expedition_gate
                 flag:expedition_village = flag:expedition_village
+                flag:expedition_opinion_militarist = flag:expedition_opinion_militarist
+                flag:expedition_opinion_politician = flag:expedition_opinion_politician
+                flag:expedition_opinion_industrialist = flag:expedition_opinion_industrialist
 			}
+			set_variable = monthly_magic_innovation
+			remove_variable = monthly_magic_innovation
+			set_variable = global_mana_saturation
+			remove_variable = global_mana_saturation
 			set_variable = mana_density
 			remove_variable = mana_density
 			set_variable = is_magic_researcher
 			remove_variable = is_magic_researcher
+			set_variable = is_expedition_leader
+			remove_variable = is_expedition_leader
+			set_variable = expedition_reytu_embarked
+			remove_variable = expedition_reytu_embarked
 			save_scope_as = cost
 			save_scope_as = selected
 			set_variable = is_struct
