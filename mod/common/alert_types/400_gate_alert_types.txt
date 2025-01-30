@@ -34,7 +34,7 @@ has_not_started_research_of_magic_alert = {
 
 	valid = {
 		AND = {
-			is_magic_country = no
+			not_is_magic_country = yes
 			NOT = {
 				has_journal_entry = je_researching_magic
 			}

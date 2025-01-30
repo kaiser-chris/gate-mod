@@ -1,8 +1,11 @@
 ﻿learn_magic = {
-    add_technology_researched = magic_understanding_production
-    add_technology_researched = magic_understanding_society
-    add_technology_researched = magic_understanding_military
-    add_gate_ideologies = yes
+    custom_tooltip = {
+        text = effect_learn_magic
+        add_technology_researched = magic_understanding_production
+        add_technology_researched = magic_understanding_society
+        add_technology_researched = magic_understanding_military
+        add_gate_ideologies = yes
+    }
 }
 
 add_gate_ideologies = {

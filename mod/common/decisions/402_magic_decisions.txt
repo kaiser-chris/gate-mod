@@ -11,7 +11,9 @@
 	possible = {
 		is_diplomatic_play_committed_participant = no
 		is_at_war = no
-		is_magic_country = no
+		NOT = {
+			has_technology_researched = gate_expeditions
+		}
 		custom_tooltip = {
 			text = is_gate_planet_country_tt
 			is_gate_planet_country = no
@@ -39,7 +41,7 @@
 
 research_magic_decision = {
 	is_shown = {
-		is_magic_country = no
+		not_is_magic_country = yes
 		NOT = {
 			has_journal_entry = je_researching_magic
 		}
@@ -49,7 +51,7 @@ research_magic_decision = {
 	}
 
 	possible = {
-		is_magic_country = no
+		not_is_magic_country = yes
 		hidden_trigger = {
 			NOT = { has_journal_entry = je_researching_magic }
 		}

@@ -1,31 +1,52 @@
 ﻿# Trigger to check whether a country has magic unlocked
 is_magic_country = {
-	AND = {
-		has_technology_researched = magic_understanding_production
-		has_technology_researched = magic_understanding_society
-		has_technology_researched = magic_understanding_military
+	custom_tooltip = {
+		text = trigger_is_magic_country
+		AND = {
+			has_technology_researched = magic_understanding_production
+			has_technology_researched = magic_understanding_society
+			has_technology_researched = magic_understanding_military
+		}
+	}
+}
+not_is_magic_country = {
+	custom_tooltip = {
+		text = trigger_not_is_magic_country
+		is_magic_country = no
 	}
 }
 
 # Trigger to check whether a country originated from
 # the other side of the gate
 is_gate_planet_country = {
-	OR = {
-		country_has_primary_culture = cu:dwarven
-		country_has_primary_culture = cu:orcish
-		country_has_primary_culture = cu:elven
-		country_has_primary_culture = cu:gnomish
+	custom_tooltip = {
+		text = trigger_is_gate_planet_country
+		OR = {
+			country_has_primary_culture = cu:dwarven
+			country_has_primary_culture = cu:orcish
+			country_has_primary_culture = cu:elven
+			country_has_primary_culture = cu:gnomish
+		}
 	}
 }
 
 # Trigger to check for a gate in a state or country
 has_magic_gate = {
-	OR = {
-		has_building = building_gate_alxa
-		has_building = building_gate_tyrol
-		has_building = building_gate_zambia
-		has_building = building_gate_san_salvador
-		has_building = building_gate_eastern_new_guinea
+	custom_tooltip = {
+		text = trigger_has_magic_gate
+		OR = {
+			has_building = building_gate_alxa
+			has_building = building_gate_tyrol
+			has_building = building_gate_zambia
+			has_building = building_gate_san_salvador
+			has_building = building_gate_eastern_new_guinea
+		}
+	}
+}
+not_has_magic_gate = {
+	custom_tooltip = {
+		text = trigger_not_has_magic_gate
+		has_magic_gate = no
 	}
 }
 
