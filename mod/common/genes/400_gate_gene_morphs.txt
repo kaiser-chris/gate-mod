@@ -21,11 +21,11 @@ special_genes = {
                     }
                     setting = {
                         attribute = "body_bs_thin"
-                        value = 0
+                        value = { min = 0 max = 0 }
                     }
                     setting = {
                         attribute = "body_bs_thick"
-                        value = 1
+                        value = { min = 1 max = 1 }
                     }
                 }
                 female = male

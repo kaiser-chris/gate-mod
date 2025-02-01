@@ -109,14 +109,12 @@ je_dwarven_integration_of_germans = {
 
 	# Complete after the integration progress bar has reached 100
 	complete = {
-		trigger_if = {
-			custom_tooltip = {
-				text = je_dwarven_integration_of_germans_success
-				scope:journal_entry = {
-					scripted_bar_progress = {
-						name = pb_gate_german_integration
-						value >= 100
-					}
+		custom_tooltip = {
+			text = je_dwarven_integration_of_germans_success
+			scope:journal_entry = {
+				scripted_bar_progress = {
+					name = pb_gate_german_integration
+					value >= 100
 				}
 			}
 		}
@@ -124,14 +122,12 @@ je_dwarven_integration_of_germans = {
 
 	# Fail when there is no support for the integration
 	fail = {
-		trigger_if = {
-			custom_tooltip = {
-				text = je_dwarven_integration_of_germans_failure
-				scope:journal_entry = {
-					scripted_bar_progress = {
-						name = pb_gate_german_integration_support
-						value <= 0
-					}
+		custom_tooltip = {
+			text = je_dwarven_integration_of_germans_failure
+			scope:journal_entry = {
+				scripted_bar_progress = {
+					name = pb_gate_german_integration_support
+					value <= 0
 				}
 			}
 		}

@@ -34,14 +34,12 @@
 	}
 
 	complete = {
-		trigger_if = {
-			custom_tooltip = {
-				text = je_monster_congress_custom_goal
-				scope:journal_entry = {
-					scripted_bar_progress = {
-						name = pb_monster_congress
-						value >= 6 # Months
-					}
+		custom_tooltip = {
+			text = je_monster_congress_custom_goal
+			scope:journal_entry = {
+				scripted_bar_progress = {
+					name = pb_monster_congress
+					value >= 6 # Months
 				}
 			}
 		}

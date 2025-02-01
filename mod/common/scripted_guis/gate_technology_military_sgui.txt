@@ -1,4 +1,5 @@
 ﻿magic_understanding_military = {
+	scope = country
 	is_valid = {
 		always = no
 	}
@@ -9,6 +10,7 @@
 }
 
 mage_infantry = {
+	scope = country
 	is_valid = {
 		has_technology_researched = magic_understanding_military
 	}
@@ -18,6 +20,7 @@ mage_infantry = {
 }
 
 battlefield_wards = {
+	scope = country
 	is_valid = {
 		has_technology_researched = mage_infantry
 	}
@@ -27,6 +30,7 @@ battlefield_wards = {
 }
 
 mage_artillery = {
+	scope = country
 	is_valid = {
 		has_technology_researched = magic_understanding_military
 	}
@@ -36,6 +40,7 @@ mage_artillery = {
 }
 
 ritual_magic = {
+	scope = country
 	is_valid = {
 		has_technology_researched = mage_artillery
 	}

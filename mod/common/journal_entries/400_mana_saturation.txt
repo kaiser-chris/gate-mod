@@ -33,14 +33,12 @@
 	}
 
 	complete = {
-		trigger_if = {
-			OR = {
-				hidden_trigger = {
-					has_global_variable = gate_mana_saturation_full
-				}
-				scope:journal_entry = {
-					is_goal_complete = yes
-				}
+		OR = {
+			hidden_trigger = {
+				has_global_variable = gate_mana_saturation_full
+			}
+			scope:journal_entry = {
+				is_goal_complete = yes
 			}
 		}
 	}

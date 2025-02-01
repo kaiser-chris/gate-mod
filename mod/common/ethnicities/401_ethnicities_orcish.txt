@@ -36,7 +36,6 @@
 
 orcish = {
     template = "ethnicity_template"
-    using = "rahoru"
 
     skin_color = {
         10 = { 0.44 0.53 0.49 0.55 }
@@ -138,9 +137,9 @@ orcish = {
         10 = { name = chin_forward	range = { 0.5 0.7 }	}
 
         #Beauty Section
-        0 = { name = chin_forward	range = { 0.5 0.55 }	traits = { beauty_1 }	}
-        0 = { name = chin_forward	range = { 0.5 0.55 }	traits = { beauty_2 }	}
-        0 = { name = chin_forward	range = { 0.5 0.55 }	traits = { beauty_3 }	}
+        0 = { name = chin_forward	range = { 0.5 0.55 }	}
+        0 = { name = chin_forward	range = { 0.5 0.55 }	}
+        0 = { name = chin_forward	range = { 0.5 0.55 }	}
     }
 
     gene_chin_height = {
@@ -154,9 +153,9 @@ orcish = {
         10 = { name = chin_width	range = { 0.8 1.0  }	}
 
         #Beauty Section
-        0 = { name = chin_width	range = { 0.6 0.7  }	traits = { beauty_1 }	}
-        0 = { name = chin_width	range = { 0.6 0.7  }	traits = { beauty_2 }	}
-        0 = { name = chin_width	range = { 0.6 0.7  }	traits = { beauty_3 }	}
+        0 = { name = chin_width	range = { 0.6 0.7  }	}
+        0 = { name = chin_width	range = { 0.6 0.7  }	}
+        0 = { name = chin_width	range = { 0.6 0.7  }	}
     }
 
     gene_eye_angle = {
@@ -165,9 +164,9 @@ orcish = {
         10 = { name = eye_angle	range = { 0.75 0.9  }	}
 
         #Beauty Section
-        0 = { name = eye_angle	range = { 0.7 0.8  }	traits = { beauty_1 }	}
-        0 = { name = eye_angle	range = { 0.7 0.8  }	traits = { beauty_2 }	}
-        0 = { name = eye_angle	range = { 0.7 0.8  }	traits = { beauty_3 }	}
+        0 = { name = eye_angle	range = { 0.7 0.8  }	}
+        0 = { name = eye_angle	range = { 0.7 0.8  }	}
+        0 = { name = eye_angle	range = { 0.7 0.8  }	}
     }
 
     gene_eye_depth = {
@@ -175,9 +174,9 @@ orcish = {
         10 = { name = eye_depth	range = { 0.6 0.8 }	}
 
         #Beauty Section
-        0 = { name = eye_depth	range = { 0.6 0.7 }	traits = { beauty_1 }	}
-        0 = { name = eye_depth	range = { 0.6 0.7 }	traits = { beauty_2 }	}
-        0 = { name = eye_depth	range = { 0.6 0.7 }	traits = { beauty_3 }	}
+        0 = { name = eye_depth	range = { 0.6 0.7 }	}
+        0 = { name = eye_depth	range = { 0.6 0.7 }	}
+        0 = { name = eye_depth	range = { 0.6 0.7 }	}
     }
 
     gene_eye_distance = {
@@ -186,9 +185,9 @@ orcish = {
         10 = { name = eye_distance	range = { 0.65 0.7 }	}
 
         #Beauty Section
-        0 = { name = eye_distance	range = { 0.5 0.55 }	traits = { beauty_1 }	}
-        0 = { name = eye_distance	range = { 0.5 0.55 }	traits = { beauty_2 }	}
-        0 = { name = eye_distance	range = { 0.5 0.55 }	traits = { beauty_3 }	}
+        0 = { name = eye_distance	range = { 0.5 0.55 }	}
+        0 = { name = eye_distance	range = { 0.5 0.55 }	}
+        0 = { name = eye_distance	range = { 0.5 0.55 }	}
     }
 
     gene_eye_shut = {
@@ -223,18 +222,18 @@ orcish = {
         20 = { name = forehead_width	range = { 0.6 1.0 }	}
 
         #Beauty Section
-        0 = { name = forehead_width	range = { 0.75 0.9 }	traits = { beauty_1 }	}
-        0 = { name = forehead_width	range = { 0.75 0.9 }	traits = { beauty_2 }	}
-        0 = { name = forehead_width	range = { 0.75 0.9 }	traits = { beauty_3 }	}
+        0 = { name = forehead_width	range = { 0.75 0.9 }	}
+        0 = { name = forehead_width	range = { 0.75 0.9 }	}
+        0 = { name = forehead_width	range = { 0.75 0.9 }	}
     }
 
     gene_cheek_fat = {
         25 = { name = cheek_fat	range = { 0.3 1.0  }	}
 
         #Beauty Section
-        0 = { name = cheek_fat	range = { 0.2 0.5  }	traits = { beauty_1 }	}
-        0 = { name = cheek_fat	range = { 0.2 0.5  }	traits = { beauty_2 }	}
-        0 = { name = cheek_fat	range = { 0.2 0.5  }	traits = { beauty_3 }	}
+        0 = { name = cheek_fat	range = { 0.2 0.5  }	}
+        0 = { name = cheek_fat	range = { 0.2 0.5  }	}
+        0 = { name = cheek_fat	range = { 0.2 0.5  }	}
     }
 
     gene_jaw_forward = {
@@ -409,7 +408,6 @@ orcish = {
 
 race_orsimer_wood = {
     template = "orcish"
-    using = "nuzaptan"
 
     skin_color = {
         #green range
@@ -436,7 +434,6 @@ race_orsimer_wood = {
 
 race_orsimer_iron = {
     template = "orcish"
-    using = "buramog"
 
     skin_color = {
         #green range

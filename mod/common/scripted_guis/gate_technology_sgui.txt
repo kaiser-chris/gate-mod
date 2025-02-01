@@ -99,6 +99,11 @@ sgui_gate_technology_tab_society = {
 sgui_gate_window_execute_research = {
 	scope = country
 
+	saved_scopes = {
+		cost
+		technology
+	}
+
 	effect = {
 		change_variable = {
 			name = magic_innovation

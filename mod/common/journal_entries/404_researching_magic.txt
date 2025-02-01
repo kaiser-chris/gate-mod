@@ -69,24 +69,20 @@
 	}
 
 	complete = {
-		trigger_if = {
-			custom_tooltip = {
-				text = je_researching_magic_goal_tt
-				scope:journal_entry = {
-					scripted_bar_progress = {
-						name = pb_gate_researching_magic
-						value >= 100
-					}
+		custom_tooltip = {
+			text = je_researching_magic_goal_tt
+			scope:journal_entry = {
+				scripted_bar_progress = {
+					name = pb_gate_researching_magic
+					value >= 100
 				}
 			}
 		}
 	}
 
 	invalid = {
-		trigger_if = {
-			hidden_trigger = {
-				is_magic_country = yes
-			}
+		hidden_trigger = {
+			is_magic_country = yes
 		}
 	}
 

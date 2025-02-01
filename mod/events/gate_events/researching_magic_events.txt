@@ -17,6 +17,19 @@ researching_magic.1 = {
 		}
 	}
 
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					exists = scope:monster_horde_state
+				}
+			}
+			capital = {
+				save_scope_as = monster_horde_state
+			}
+		}
+	}
+
 	event_image = {
 		texture = "gfx/event_pictures/magic_phenomena.dds"
 	}
@@ -86,6 +99,19 @@ researching_magic.2 = {
 		}
 	}
 
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					exists = scope:magic_growing_state
+				}
+			}
+			capital = {
+				save_scope_as = magic_growing_state
+			}
+		}
+	}
+
 	event_image = {
 		texture = "gfx/event_pictures/magic_phenomena.dds"
 	}
@@ -134,7 +160,7 @@ researching_magic.2 = {
 researching_magic.3 = {
 	type = country_event
 	dlc = dlc_magic_gate
-	placement = scope:monster_horde_state
+	placement = capital
 
 	title = researching_magic.3.t
 	desc = researching_magic.3.d
