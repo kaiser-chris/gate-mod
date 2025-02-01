@@ -23,16 +23,16 @@ orphan_fix.1 = {
 			limit = {
 				global_var:global_mana_saturation < 0
 				var:monthly_magic_innovation < 0
-				flag:character_opinion_magic_researcher = yes
-				flag:character_opinion_magic_researcher_missing_institute = yes
-				flag:character_opinion_magic_researcher_busy = yes
-				flag:gate_button_main = yes
-				flag:gate_button_technology = yes
-				flag:mbudye_assassination_official_flag = yes
-				flag:mbudye_assassination_general_flag = yes
-				flag:mbudye_assassination_admiral_flag = yes
-				flag:mbudye_assassination_politician_flag = yes
-				flag:mbudye_defaced_temple_flag = yes
+				flag:character_opinion_magic_researcher = flag:character_opinion_magic_researcher
+				flag:character_opinion_magic_researcher_missing_institute = flag:character_opinion_magic_researcher_missing_institute
+				flag:character_opinion_magic_researcher_busy = flag:character_opinion_magic_researcher_busy
+				flag:gate_button_main = flag:gate_button_main
+				flag:gate_button_technology = flag:gate_button_technology
+				flag:mbudye_assassination_official_flag = flag:mbudye_assassination_official_flag
+				flag:mbudye_assassination_general_flag = flag:mbudye_assassination_general_flag
+				flag:mbudye_assassination_admiral_flag = flag:mbudye_assassination_admiral_flag
+				flag:mbudye_assassination_politician_flag = flag:mbudye_assassination_politician_flag
+				flag:mbudye_defaced_temple_flag = flag:mbudye_defaced_temple_flag
 			}
 			set_variable = mana_density
 			remove_variable = mana_density
