@@ -1,0 +1,20 @@
+﻿# A media alias is a way to refer to a media asset along with a fallback,
+# so that if the original asset is unavailable, the game uses the fallback asset.
+#
+# key = {
+#	texture = "texture path"
+#	video = "video path"
+#	audio = "audio event"
+#
+#	fallback = another_media_alias_key
+#}
+
+unspecified_magic_phenomena = {
+	video = "gfx/event_pictures/unspecified_magic_phenomena.bk2"
+	audio = "event:/SFX/Events/asia/sepoy_mutiny"
+}
+
+unspecified_magic_mines = {
+	video = "gfx/event_pictures/unspecified_magic_mines.bk2"
+	audio = "event:/SFX/Events/europenorthamerica/gold_prospectors"
+}
