@@ -18,7 +18,9 @@
 				create_pop = {
 					culture = dwarven
 					size = 10000
+					pop_type = officers # Fix illiterate pops
 				}
+
 			}
 			else_if = {
 				limit = {
@@ -27,6 +29,7 @@
 				create_pop = {
 					culture = dwarven
 					size = 30000
+					pop_type = officers # Fix illiterate pops
 				}
 			}
 		}
