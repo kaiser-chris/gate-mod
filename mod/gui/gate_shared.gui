@@ -128,17 +128,15 @@ types gate_shared {
                 }
                 # Novice
                 default_progressbar_horizontal = {
+                    minimumsize = { -1 20 }
+                    maximumsize = { -1 20 }
                     visible = "[LessThan_CFixedPoint(Character.MakeScope.Var('magic_experience').GetValue, Character.MakeScope.ScriptValue('character_experienced_threshhold'))]"
                     tooltip = gg_character_experience_novice_tooltip
 
-                    block "progressbar_size" {
-                        minimumsize = { -1 20 }
-                        maximumsize = { -1 20 }
-                    }
                     blockoverride "values" {
                         value = "[FixedPointToFloat(Character.MakeScope.Var('magic_experience').GetValue)]"
                         min = 0
-                        max = "[FixedPointToFloat(Character.MakeScope.ScriptValue('character_experienced_threshhold'))]"
+                        max = 50
                     }
                     block "on_top_of_the_progressbar" {
                         textbox = {
@@ -150,17 +148,18 @@ types gate_shared {
                 }
                 # Experienced
                 default_progressbar_horizontal = {
-                    visible = "[GreaterThanOrEqualTo_CFixedPoint(Character.MakeScope.Var('magic_experience').GetValue, Character.MakeScope.ScriptValue('character_experienced_threshhold'))]"
+                    minimumsize = { -1 20 }
+                    maximumsize = { -1 20 }
+                    visible = "[And(
+                                    GreaterThanOrEqualTo_CFixedPoint(Character.MakeScope.Var('magic_experience').GetValue, Character.MakeScope.ScriptValue('character_experienced_threshhold')),
+                                    Not(GreaterThanOrEqualTo_CFixedPoint(Character.MakeScope.Var('magic_experience').GetValue, Character.MakeScope.ScriptValue('character_master_threshhold')))
+                               )]"
                     tooltip = gg_character_experience_experienced_tooltip
 
-                    block "progressbar_size" {
-                        minimumsize = { -1 20 }
-                        maximumsize = { -1 20 }
-                    }
                     blockoverride "values" {
                         value = "[Character.MakeScope.Var('magic_experience').GetValue]"
-                        min = "[Character.MakeScope.ScriptValue('character_experienced_threshhold')]"
-                        max = "[Character.MakeScope.ScriptValue('character_master_threshhold')]"
+                        min = 50
+                        max = 100
                     }
                     block "on_top_of_the_progressbar" {
                         textbox = {
@@ -172,13 +171,11 @@ types gate_shared {
                 }
                 # Master
                 default_progressbar_horizontal = {
+                    minimumsize = { -1 20 }
+                    maximumsize = { -1 20 }
                     visible = "[GreaterThanOrEqualTo_CFixedPoint(Character.MakeScope.Var('magic_experience').GetValue, Character.MakeScope.ScriptValue('character_master_threshhold'))]"
                     tooltip = gg_character_experience_master_tooltip
 
-                    block "progressbar_size" {
-                        minimumsize = { -1 20 }
-                        maximumsize = { -1 20 }
-                    }
                     blockoverride "values" {
                         value = 100
                         min = 0

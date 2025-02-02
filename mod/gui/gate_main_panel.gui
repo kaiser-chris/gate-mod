@@ -546,13 +546,11 @@ types gate_main_panel_types {
         widget = {
             parentanchor = center
             visible = yes
-
-            block "buttons_widget_position_and_size" {
-                position = { 0 1 }
-            }
+            size = { 100% 100% }
 
             gate_diplo_button = {
                 parentanchor = vcenter
+                position = { 8 0 }
                 blockoverride "datacontext" {
                     datacontext = "[Country.GetDiplomaticAction('increase_relations', Country.Self)]"
                 }
@@ -560,6 +558,7 @@ types gate_main_panel_types {
 
             gate_diplo_button = {
                 parentanchor = right|vcenter
+                position = { -6 0 }
                 blockoverride "datacontext" {
                     datacontext = "[Country.GetDiplomaticAction('damage_relations', Country.Self)]"
                 }

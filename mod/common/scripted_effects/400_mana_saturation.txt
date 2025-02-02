@@ -68,8 +68,8 @@ add_mana_density = {
 		change_global_variable = {
 			name = global_mana_density_cache
 			add = {
-				value = 1
-				add = $amount$
+				value = $amount$
+				add = 0.1 # Add 100% so it is guaranteed to hit it
 			}
 		}
 		add_mana_density_modifier = yes
@@ -117,6 +117,8 @@ add_mana_density_modifier = {
 }
 
 initial_propogate_mana_density = {
+	# Every state with a gate starts with
+	# 100% mana density
 	every_state_region = {
 		limit = {
 			has_magic_gate = yes
@@ -126,6 +128,45 @@ initial_propogate_mana_density = {
 			value = maximum_mana_density
 		}
 		add_mana_density_modifier = yes
+	}
+
+	# Speed up propagation in America by
+	# setting some states surrounding the
+	# gate to 100% mana density as well
+	s:STATE_GUATEMALA = {
+		set_variable = {
+			name = mana_density
+			value = maximum_mana_density
+		}
+		add_mana_density_modifier = yes
+	}
+	s:STATE_HONDURAS = {
+		set_variable = {
+			name = mana_density
+			value = maximum_mana_density
+		}
+		add_mana_density_modifier = yes
+	}
+	s:STATE_NICARAGUA = {
+		set_variable = {
+			name = mana_density
+			value = maximum_mana_density
+		}
+		add_mana_density_modifier = yes
+	}
+	s:STATE_COSTA_RICA = {
+		set_variable = {
+			name = mana_density
+			value = maximum_mana_density
+		}
+		add_mana_density_modifier = yes
+	}
+
+	# Propagate initial mana density fall off
+	every_state_region = {
+		limit = {
+			var:mana_density = 100
+		}
 		propogate_from_state_region = {
 			amount = 70
 		}
