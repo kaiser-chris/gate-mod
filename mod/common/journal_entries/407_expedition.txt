@@ -3,15 +3,41 @@
 
 	group = je_group_expeditions
 
-	immediate = {
-		save_scope_as = gate_expedition_reytu_country
-		create_struct = {
-			struct_scope = expedition
-			struct_type = expedition_progress
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = je_gate_expedition_reytu_preparation_hiring_leader
+				trigger = {
+					has_variable = expedition_reytu_preparation_hiring_leader
+					NOT = {
+						var:expedition_reytu ?= {
+							has_variable = leader
+						}
+					}
+				}
+			}
+			triggered_desc = {
+				desc = je_gate_expedition_reytu_preparation_in_progess
+			}
 		}
-		set_variable = {
-			name = expedition_reytu
-			value = scope:expedition
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					has_variable = expedition_reytu
+				}
+			}
+			save_scope_as = gate_expedition_reytu_country
+			create_struct = {
+				struct_scope = expedition
+				struct_type = expedition_progress
+			}
+			set_variable = {
+				name = expedition_reytu
+				value = scope:expedition
+			}
 		}
 	}
 
@@ -22,7 +48,9 @@
 	fail = {
 		custom_tooltip = {
 			text = je_gate_expedition_reytu_preparation_fail_tooltip
-			has_building = building_gate_alxa
+			NOT = {
+				has_building = building_gate_alxa
+			}
 		}
 	}
 

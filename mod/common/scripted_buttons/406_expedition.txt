@@ -3,21 +3,24 @@
 	desc = je_gate_expedition_reytu_preparation_button_hire_leader_desc
 
 	possible = {
-		NAND = {
-			has_variable = expedition_reytu_preparation_hiring_leader
-			var:expedition_reytu ?= {
-				has_variable = leader
+		custom_tooltip = {
+			text = je_gate_expedition_reytu_preparation_button_hire_leader_trigger_done
+			NOT = {
+				var:expedition_reytu ?= {
+					has_variable = leader
+				}
+			}
+		}
+		custom_tooltip = {
+			text = je_gate_expedition_reytu_preparation_button_hire_leader_trigger_search
+			NOT = {
+				has_variable = expedition_reytu_preparation_hiring_leader
 			}
 		}
 	}
 
 	visible = {
-		NAND = {
-			has_variable = expedition_reytu_preparation_hiring_leader
-			var:expedition_reytu ?= {
-				has_variable = leader
-			}
-		}
+		always = yes
 	}
 
 	ai_chance = {

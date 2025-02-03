@@ -169,9 +169,7 @@ decision_start_expedition_reytu = {
 			limit = {
 				is_player = yes
 			}
-			add_journal_entry = {
-				type = je_gate_expedition_reytu_preparation
-			}
+			trigger_event = expedition_reytu.2
 		}
 		else = {
 			set_variable = AI_EXPEDITION_ANTARCTICA
