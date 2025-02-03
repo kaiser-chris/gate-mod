@@ -1,0 +1,8 @@
+﻿l_english:
+ expedition_opinion_industrialist: "We will create new trade opportunities and make $gate_planet$ resources ours!"
+ expedition_opinion_militarist: "Through force we will conquer $gate_planet$!"
+ expedition_opinion_politician: "Diplomacy will make $gate_planet$ ours!"
+ expedition_goods: "[GetGoods('tools').GetName], [GetGoods('small_arms').GetName], [GetGoods('fabric').GetName], [GetGoods('wood').GetName] and [GetGoods('groceries').GetName]"
+ expedition_small_tooltip: "Starts preparation for an expedition which requires [SCOPE.ScriptValue('expedition_cost_small')|0v] $expedition_goods$."
+ expedition_normal_tooltip: "Starts preparation for an expedition which requires [SCOPE.ScriptValue('expedition_cost_normal')|0v] $expedition_goods$."
+ expedition_large_tooltip: "Starts preparation for an expedition which requires [SCOPE.ScriptValue('expedition_cost_large')|0v] $expedition_goods$."

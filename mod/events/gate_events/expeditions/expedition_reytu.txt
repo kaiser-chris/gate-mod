@@ -75,6 +75,14 @@ expedition_reytu.1 = {
                     value = scope:expedition_militarist
                 }
             }
+            je:je_gate_expedition_reytu_preparation ?= {
+                clear_variable_list = com_journal_characters
+                add_to_variable_list = {
+                    name = com_journal_characters
+                    target = scope:expedition_militarist
+                }
+            }
+            remove_variable = expedition_reytu_preparation_hiring_leader
         }
     }
 
@@ -89,6 +97,14 @@ expedition_reytu.1 = {
                     value = scope:expedition_politician
                 }
             }
+            je:je_gate_expedition_reytu_preparation ?= {
+                clear_variable_list = com_journal_characters
+                add_to_variable_list = {
+                    name = com_journal_characters
+                    target = scope:expedition_politician
+                }
+            }
+            remove_variable = expedition_reytu_preparation_hiring_leader
         }
     }
 
@@ -102,6 +118,149 @@ expedition_reytu.1 = {
                     value = scope:expedition_industrialist
                 }
             }
+            je:je_gate_expedition_reytu_preparation ?= {
+                clear_variable_list = com_journal_characters
+                add_to_variable_list = {
+                    name = com_journal_characters
+                    target = scope:expedition_industrialist
+                }
+            }
+            remove_variable = expedition_reytu_preparation_hiring_leader
+        }
+    }
+}
+
+expedition_reytu.2 = {
+    type = country_event
+    dlc = dlc_magic_gate
+    placement = capital
+
+    title = expedition_reytu.2.t
+    desc = expedition_reytu.2.d
+    flavor = expedition_reytu.2.f
+
+    event_image = {
+        video = "ep1_power_blocs"
+    }
+
+    trigger = {
+        NOT = {
+            has_journal_entry = je_gate_expedition_reytu_preparation
+        }
+        has_building = building_gate_alxa
+    }
+
+    immediate = {
+        create_struct = {
+            struct_scope = expedition
+            struct_type = expedition_progress
+        }
+        set_variable = {
+            name = expedition_reytu
+            value = scope:expedition
+        }
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+    duration = 3
+
+    option = {
+        name = expedition_reytu.2.a
+        custom_tooltip = {
+            text = expedition_small_tooltip
+            var:expedition_reytu ?= {
+                set_variable = {
+                    name = max_tools
+                    value = expedition_cost_small
+                }
+                set_variable = {
+                    name = max_small_arms
+                    value = expedition_cost_small
+                }
+                set_variable = {
+                    name = max_fabric
+                    value = expedition_cost_small
+                }
+                set_variable = {
+                    name = max_groceries
+                    value = expedition_cost_small
+                }
+                set_variable = {
+                    name = max_wood
+                    value = expedition_cost_small
+                }
+            }
+        }
+        add_journal_entry = {
+            type = je_gate_expedition_reytu_preparation
+        }
+    }
+
+    option = {
+        name = expedition_reytu.2.b
+        default_option = yes
+        custom_tooltip = {
+            text = expedition_normal_tooltip
+            var:expedition_reytu ?= {
+                set_variable = {
+                    name = max_tools
+                    value = expedition_cost_normal
+                }
+                set_variable = {
+                    name = max_small_arms
+                    value = expedition_cost_normal
+                }
+                set_variable = {
+                    name = max_fabric
+                    value = expedition_cost_normal
+                }
+                set_variable = {
+                    name = max_groceries
+                    value = expedition_cost_normal
+                }
+                set_variable = {
+                    name = max_wood
+                    value = expedition_cost_normal
+                }
+            }
+        }
+        add_journal_entry = {
+            type = je_gate_expedition_reytu_preparation
+        }
+    }
+
+    option = {
+        name = expedition_reytu.2.c
+        custom_tooltip = {
+            text = expedition_large_tooltip
+            var:expedition_reytu ?= {
+                set_variable = {
+                    name = max_tools
+                    value = expedition_cost_large
+                }
+                set_variable = {
+                    name = max_small_arms
+                    value = expedition_cost_large
+                }
+                set_variable = {
+                    name = max_fabric
+                    value = expedition_cost_large
+                }
+                set_variable = {
+                    name = max_groceries
+                    value = expedition_cost_large
+                }
+                set_variable = {
+                    name = max_wood
+                    value = expedition_cost_large
+                }
+            }
+        }
+        add_journal_entry = {
+            type = je_gate_expedition_reytu_preparation
         }
     }
 }
