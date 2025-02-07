@@ -215,3 +215,90 @@ pm_gate_support_elves_plus = {
 		}
 	}
 }
+
+pm_gate_stockpiling_tools_no = {
+	texture = "gfx/interface/icons/production_method_icons/elven_gold_support_plus.dds"
+
+	is_hidden_when_unavailable = yes
+	is_default = yes
+
+	unlocking_production_methods = {
+		pm_gate_stockpiling_tools_no
+	}
+
+	unlocking_technologies = {
+		gate_expeditions
+	}
+}
+
+pm_gate_stockpiling_tools_slow = {
+	texture = "gfx/interface/icons/production_method_icons/elven_gold_support_plus.dds"
+
+	is_hidden_when_unavailable = yes
+
+	unlocking_production_methods = {
+		pm_gate_stockpiling_tools_slow
+	}
+
+	unlocking_technologies = {
+		gate_expeditions
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_input_tools_add = 50
+		}
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+		}
+	}
+}
+
+pm_gate_stockpiling_tools_normal = {
+	texture = "gfx/interface/icons/production_method_icons/elven_gold_support_plus.dds"
+
+	is_hidden_when_unavailable = yes
+
+	unlocking_production_methods = {
+		pm_gate_stockpiling_tools_normal
+	}
+
+	unlocking_technologies = {
+		gate_expeditions
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_input_tools_add = 100
+		}
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+		}
+	}
+}
+
+pm_gate_stockpiling_tools_fast = {
+	texture = "gfx/interface/icons/production_method_icons/elven_gold_support_plus.dds"
+
+	is_hidden_when_unavailable = yes
+
+	unlocking_production_methods = {
+		pm_gate_stockpiling_tools_fast
+	}
+
+	unlocking_technologies = {
+		gate_expeditions
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_input_tools_add = 200
+		}
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+		}
+	}
+}
