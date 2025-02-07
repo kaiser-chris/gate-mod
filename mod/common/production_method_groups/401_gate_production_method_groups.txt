@@ -52,3 +52,17 @@ pmg_magic_gate_exploitation_eastern_new_guinea = {
 		pm_gate_closed
 	}
 }
+
+pmg_magic_gate_stockpiling_tools = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	is_hidden_when_unavailable = yes
+
+	production_methods = {
+		pm_gate_stockpiling_tools_no
+		pm_gate_stockpiling_tools_slow
+		pm_gate_stockpiling_tools_normal
+		pm_gate_stockpiling_tools_fast
+	}
+}

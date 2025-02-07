@@ -39,6 +39,17 @@
 				value = scope:expedition
 			}
 		}
+		every_scope_building = {
+			limit = {
+				is_building_type = building_gate_alxa
+			}
+			root = {
+				set_variable = {
+					name = expedition_gate
+					value = prev
+				}
+			}
+		}
 	}
 
 	complete = {
@@ -56,6 +67,8 @@
 
 	scripted_button = je_gate_expedition_reytu_preparation_button_hire_leader
 	scripted_button = je_gate_expedition_reytu_preparation_button_open_map
+
+	scripted_progress_bar = pb_gate_expedition_tools
 
 	progressbar = no
 

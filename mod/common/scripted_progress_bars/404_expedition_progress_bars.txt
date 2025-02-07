@@ -1,0 +1,24 @@
+﻿pb_gate_expedition_tools = {
+	name = tools
+	desc = pb_gate_expedition_tools_progress
+
+	default_green = yes
+
+	monthly_progress = {
+		var:expedition_gate ?= {
+			if = {
+				limit = {
+					has_active_production_method =
+				}
+				add = {
+					desc = pb_gate_expedition_tools_pm_slow
+					value = modifier:goods_input_tools_add
+				}
+			}
+		}
+	}
+
+	start_value = 0
+	min_value = 0
+	max_value = 5000
+}
