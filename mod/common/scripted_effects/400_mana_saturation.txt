@@ -69,7 +69,7 @@ add_mana_density = {
 			name = global_mana_density_cache
 			add = {
 				value = $amount$
-				add = 0.1 # Add 100% so it is guaranteed to hit it
+				add = 0.01 # Add 1% so it is guaranteed to hit it
 			}
 		}
 		add_mana_density_modifier = yes
@@ -155,6 +155,27 @@ initial_propogate_mana_density = {
 		add_mana_density_modifier = yes
 	}
 	s:STATE_COSTA_RICA = {
+		set_variable = {
+			name = mana_density
+			value = maximum_mana_density
+		}
+		add_mana_density_modifier = yes
+	}
+	s:STATE_PANAMA = {
+		set_variable = {
+			name = mana_density
+			value = maximum_mana_density
+		}
+		add_mana_density_modifier = yes
+	}
+	s:STATE_ANTIOQUIA = {
+		set_variable = {
+			name = mana_density
+			value = maximum_mana_density
+		}
+		add_mana_density_modifier = yes
+	}
+	s:STATE_CHIAPAS = {
 		set_variable = {
 			name = mana_density
 			value = maximum_mana_density

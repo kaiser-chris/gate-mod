@@ -17,11 +17,11 @@ pm_golem_workshop_artisan_production = {
 		workforce_scaled = {
 			# input goods
 			goods_input_mana_core_add = 10
-			goods_input_hardwood_add = 20
-			goods_input_fabric_add = 20
+			goods_input_hardwood_add = 10
+			goods_input_fabric_add = 10
 
 			# output goods
-			goods_output_golem_add = 20
+			goods_output_golem_add = 40
 		}
 
 		level_scaled = {
@@ -42,15 +42,13 @@ pm_golem_workshop_steam_production = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_mana_core_add = 20
-			goods_input_hardwood_add = 10
-			goods_input_fabric_add = 20
+			goods_input_mana_core_add = 10
 			goods_input_steel_add = 10
 			goods_input_engines_add = 10
-			goods_input_coal_add = 10
+			goods_input_coal_add = 5
 
 			# output goods
-			goods_output_golem_add = 35
+			goods_output_golem_add = 70
 		}
 
 		level_scaled = {
@@ -73,14 +71,13 @@ pm_golem_workshop_electric_production = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_mana_core_add = 20
-			goods_input_fabric_add = 20
-			goods_input_steel_add = 30
-			goods_input_engines_add = 5
-			goods_input_electricity_add = 35
+			goods_input_mana_core_add = 15
+			goods_input_steel_add = 10
+			goods_input_engines_add = 10
+			goods_input_electricity_add = 20
 
 			# output goods
-			goods_output_golem_add = 60
+			goods_output_golem_add = 100
 		}
 
 		level_scaled = {
