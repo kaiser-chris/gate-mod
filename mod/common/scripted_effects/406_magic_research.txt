@@ -323,6 +323,14 @@ ai_unlock_magic_technology = {
 		else_if = {
 			limit = {
 				NOT = {
+					has_technology_researched = arcane_foundries
+				}
+			}
+			add_technology_researched = arcane_foundries
+		}
+		else_if = {
+			limit = {
+				NOT = {
 					has_technology_researched = magic_golems
 				}
 			}

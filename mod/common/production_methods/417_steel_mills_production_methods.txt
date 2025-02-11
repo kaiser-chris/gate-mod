@@ -1,0 +1,26 @@
+﻿pm_arcane_foundries = {
+	texture = "gfx/interface/icons/production_method_icons/thaumoforge_method.dds"
+
+	unlocking_technologies = {
+		arcane_foundries
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_iron_add = 90
+			goods_input_mana_core_add = 20
+
+			# output goods
+			goods_output_steel_add = 120
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 2500
+			building_employment_machinists_add = 1250
+			building_employment_mages_add = 750
+		}
+	}
+}

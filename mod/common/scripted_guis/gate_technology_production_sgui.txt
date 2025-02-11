@@ -81,10 +81,21 @@ mana_cores = {
 	}
 }
 
+arcane_foundries = {
+	scope = country
+	is_valid = {
+		has_technology_researched = mana_cores
+	}
+	effect = {
+		add_technology_researched = arcane_foundries
+	}
+}
+
 magic_golems = {
 	scope = country
 	is_valid = {
 		has_technology_researched = mana_cores
+		has_technology_researched = simple_rune_carving
 	}
 	effect = {
 		add_technology_researched = magic_golems

@@ -128,3 +128,15 @@ pmg_base_building_railway = {
 		pm_diesel_trains_principle_transport_3
 	}
 }
+
+# Industry
+pmg_steelmaking_process = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_blister_steel_process
+		pm_bessemer_process
+		pm_arcane_foundries
+		pm_open_hearth_process
+		pm_electric_arc_process
+	}
+}

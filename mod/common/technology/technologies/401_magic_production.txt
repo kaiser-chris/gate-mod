@@ -106,8 +106,23 @@ mana_cores = {
 	can_research = no
 
 	unlocking_technologies = {
-		railways
 		mana_extraction
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+arcane_foundries = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/mana_core.dds"
+	category = production
+	can_research = no
+
+	unlocking_technologies = {
+		bessemer_process
+		mana_cores
 	}
 
 	ai_weight = {
@@ -122,6 +137,7 @@ magic_golems = {
 	can_research = no
 
 	unlocking_technologies = {
+		simple_rune_carving
 		mana_cores
 	}
 
