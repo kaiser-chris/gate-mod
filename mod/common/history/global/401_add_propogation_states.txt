@@ -36,6 +36,13 @@ GLOBAL = {
 		}
 	}
 
+	s:STATE_PELOPONNESE = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_CRETE
+		}
+	}
+
 	s:STATE_YUCATAN = {
 		add_to_variable_list = {
 			name = mana_propogation_states
