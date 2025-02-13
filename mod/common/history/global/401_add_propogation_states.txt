@@ -29,10 +29,21 @@ GLOBAL = {
 		}
 	}
 
+	s:STATE_COURLAND = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_GOTLAND
+		}
+	}
+
 	s:STATE_GREENLAND = {
 		add_to_variable_list = {
 			name = mana_propogation_states
 			target = s:STATE_NUNAVUT
+		}
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_ICELAND
 		}
 	}
 
@@ -58,6 +69,34 @@ GLOBAL = {
 		add_to_variable_list = {
 			name = mana_propogation_states
 			target = s:STATE_CANARY_ISLANDS
+		}
+	}
+
+	s:STATE_TENASSERIM = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_ACEH
+		}
+	}
+
+	s:STATE_CHUKOTKA = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_ALASKA
+		}
+	}
+
+	s:STATE_WALES = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_LEINSTER
+		}
+	}
+
+	s:STATE_ESTREMADURA = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_AZORES
 		}
 	}
 
