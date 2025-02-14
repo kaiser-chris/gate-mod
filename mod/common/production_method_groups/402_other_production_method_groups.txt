@@ -152,3 +152,22 @@ pmg_runic_paper = {
 		pm_focus_runic_paper
 	}
 }
+
+# Farms
+pmg_gate_seeds = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+
+	production_methods = {
+		pm_gate_normal_seeds
+		pm_magic_seeds
+	}
+}
+
+pmg_gate_seeds_building_rice_farm = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+
+	production_methods = {
+		pm_gate_normal_seeds
+		pm_magic_seeds_building_rice_farm
+	}
+}

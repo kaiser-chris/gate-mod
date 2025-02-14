@@ -150,13 +150,29 @@ arcane_foundries = {
 ### ERA 3
 
 regenerative_timber = {
-	era = era_2
+	era = era_3
 	texture = "gfx/interface/icons/invention_icons/gate_invention_placeholder.dds"
 	category = production
 	can_research = no
 
 	unlocking_technologies = {
 		living_irrigation
+	}
+
+	ai_weight = {
+		value = 2 # Important tech for everyone
+	}
+}
+
+mana_infused_fertilizers = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/gate_invention_placeholder.dds"
+	category = production
+	can_research = no
+
+	unlocking_technologies = {
+		magic_farming
+		improved_fertilizer
 	}
 
 	ai_weight = {
