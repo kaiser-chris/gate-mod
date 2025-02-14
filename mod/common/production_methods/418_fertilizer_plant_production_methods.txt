@@ -1,0 +1,28 @@
+﻿pm_gate_normal_production = {
+	texture = "gfx/interface/icons/production_method_icons/gate_normal_seeds.dds"
+
+	is_default = yes
+}
+
+pm_magic_seed_fertilizer = {
+	texture = "gfx/interface/icons/production_method_icons/magic_seeds.dds"
+
+	unlocking_technologies = {
+		mana_infused_fertilizers
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_magic_seed_add = 10
+			goods_input_sulfur_add = -10
+
+			# output goods
+			goods_output_fertilizer_add = 50
+		}
+
+		level_scaled = {
+			building_employment_druids_add = 1000
+		}
+	}
+}

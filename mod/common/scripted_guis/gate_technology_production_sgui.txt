@@ -24,7 +24,7 @@ mana_extraction = {
 magic_farming = {
 	scope = country
 	is_valid = {
-		has_technology_researched = magic_understanding_production
+		has_technology_researched = mana_extraction
 	}
 	effect = {
 		add_technology_researched = magic_farming
@@ -108,6 +108,17 @@ regenerative_timber = {
 	}
 	effect = {
 		add_technology_researched = regenerative_timber
+	}
+}
+
+mana_infused_fertilizers = {
+	scope = country
+	is_valid = {
+		has_technology_researched = magic_farming
+		has_technology_researched = improved_fertilizer
+	}
+	effect = {
+		add_technology_researched = mana_infused_fertilizers
 	}
 }
 
