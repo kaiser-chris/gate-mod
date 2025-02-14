@@ -220,7 +220,7 @@ cleanup_researchers = {
 ai_unlock_magic_technology = {
 	if = {
 		limit = {
-			var:magic_innovation >= 15000
+			var:magic_innovation >= 12000
 			is_player = no
 		}
 		if = {
@@ -270,6 +270,14 @@ ai_unlock_magic_technology = {
 				}
 			}
 			add_technology_researched = formalized_magic
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_technology_researched = living_irrigation
+				}
+			}
+			add_technology_researched = living_irrigation
 		}
 		else_if = {
 			limit = {
@@ -331,6 +339,14 @@ ai_unlock_magic_technology = {
 		else_if = {
 			limit = {
 				NOT = {
+					has_technology_researched = regenerative_timber
+				}
+			}
+			add_technology_researched = regenerative_timber
+		}
+		else_if = {
+			limit = {
+				NOT = {
 					has_technology_researched = magic_golems
 				}
 			}
@@ -343,6 +359,14 @@ ai_unlock_magic_technology = {
 				}
 			}
 			add_technology_researched = magic_science
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_technology_researched = mana_infused_fertilizers
+				}
+			}
+			add_technology_researched = mana_infused_fertilizers
 		}
 		else_if = {
 			limit = {
