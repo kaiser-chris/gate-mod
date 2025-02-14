@@ -33,6 +33,23 @@ mana_extraction = {
 	}
 }
 
+magic_dwarf_murk = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/murk.dds"
+	category = production
+	can_research = no
+
+	modifier = {
+		state_building_murk_ways_max_level_add = 5
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+### ERA 2
+
 simple_rune_carving = {
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/simple_rune_carving.dds"
@@ -64,18 +81,18 @@ magic_farming = {
 	}
 }
 
-magic_dwarf_murk = {
-	era = era_1
-	texture = "gfx/interface/icons/invention_icons/murk.dds"
+living_irrigation = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/gate_invention_placeholder.dds"
 	category = production
 	can_research = no
 
-	modifier = {
-		state_building_murk_ways_max_level_add = 5
+	unlocking_technologies = {
+		magic_farming
 	}
 
 	ai_weight = {
-		value = 1
+		value = 2 # Important tech for everyone
 	}
 }
 
@@ -130,6 +147,23 @@ arcane_foundries = {
 	}
 }
 
+### ERA 3
+
+regenerative_timber = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/gate_invention_placeholder.dds"
+	category = production
+	can_research = no
+
+	unlocking_technologies = {
+		living_irrigation
+	}
+
+	ai_weight = {
+		value = 2 # Important tech for everyone
+	}
+}
+
 magic_golems = {
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/magic_golems.dds"
@@ -161,6 +195,8 @@ mechanical_golems = {
 		value = 1
 	}
 }
+
+### ERA 4
 
 magic_electric_golems = {
 	era = era_4

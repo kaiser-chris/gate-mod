@@ -26,6 +26,8 @@ types gate_technologies {
             margin_bottom = 10
         }
 
+        ### Era 1
+
         gate_technology = {
             blockoverride "context" {
                 datacontext = "[GetTechnology('magic_understanding_production')]"
@@ -42,6 +44,15 @@ types gate_technologies {
 
         gate_technology = {
             blockoverride "context" {
+                datacontext = "[GetTechnology('magic_dwarf_murk')]"
+                datacontext = "[GetScriptedGui('magic_dwarf_murk')]"
+            }
+        }
+
+        ### Era 2
+
+        gate_technology = {
+            blockoverride "context" {
                 datacontext = "[GetTechnology('magic_farming')]"
                 datacontext = "[GetScriptedGui('magic_farming')]"
             }
@@ -49,15 +60,15 @@ types gate_technologies {
 
         gate_technology = {
             blockoverride "context" {
-                datacontext = "[GetTechnology('simple_rune_carving')]"
-                datacontext = "[GetScriptedGui('simple_rune_carving')]"
+                datacontext = "[GetTechnology('living_irrigation')]"
+                datacontext = "[GetScriptedGui('living_irrigation')]"
             }
         }
 
         gate_technology = {
             blockoverride "context" {
-                datacontext = "[GetTechnology('magic_dwarf_murk')]"
-                datacontext = "[GetScriptedGui('magic_dwarf_murk')]"
+                datacontext = "[GetTechnology('simple_rune_carving')]"
+                datacontext = "[GetScriptedGui('simple_rune_carving')]"
             }
         }
 
@@ -82,6 +93,15 @@ types gate_technologies {
             }
         }
 
+        ### Era 3
+
+        gate_technology = {
+            blockoverride "context" {
+                datacontext = "[GetTechnology('regenerative_timber')]"
+                datacontext = "[GetScriptedGui('regenerative_timber')]"
+            }
+        }
+
         gate_technology = {
             blockoverride "context" {
                 datacontext = "[GetTechnology('magic_golems')]"
@@ -95,6 +115,8 @@ types gate_technologies {
                 datacontext = "[GetScriptedGui('mechanical_golems')]"
             }
         }
+
+        ### Era 4
 
         gate_technology = {
             blockoverride "context" {

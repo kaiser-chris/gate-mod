@@ -42,6 +42,16 @@ simple_rune_carving = {
 	}
 }
 
+living_irrigation = {
+	scope = country
+	is_valid = {
+		has_technology_researched = magic_farming
+	}
+	effect = {
+		add_technology_researched = living_irrigation
+	}
+}
+
 magic_dwarf_murk = {
 	scope = country
 	is_valid = {
@@ -88,6 +98,16 @@ arcane_foundries = {
 	}
 	effect = {
 		add_technology_researched = arcane_foundries
+	}
+}
+
+regenerative_timber = {
+	scope = country
+	is_valid = {
+		has_technology_researched = living_irrigation
+	}
+	effect = {
+		add_technology_researched = regenerative_timber
 	}
 }
 
