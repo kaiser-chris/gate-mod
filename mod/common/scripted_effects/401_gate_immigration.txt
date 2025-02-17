@@ -35,3 +35,79 @@
 		}
 	}
 }
+
+add_gate_immigration_orc = {
+	if = {
+		limit = {
+			has_technology_researched = orcish_gate_immigration
+		}
+		every_scope_state = {
+			limit = {
+				has_magic_gate = yes
+				modifier:state_monthly_orcish_immigration_add > 0
+			}
+			# Create pop throws errors after game start
+			# but still works
+			# Also size can not accept variables or modifiers
+			if = {
+				limit = {
+					modifier:state_monthly_orcish_immigration_add = 30000
+				}
+				create_pop = {
+					culture = orcish
+					size = 10000
+					pop_type = officers # Fix illiterate pops
+				}
+
+			}
+			else_if = {
+				limit = {
+					modifier:state_monthly_orcish_immigration_add = 60000
+				}
+				create_pop = {
+					culture = orcish
+					size = 30000
+					pop_type = officers # Fix illiterate pops
+				}
+			}
+		}
+	}
+}
+
+add_gate_immigration_elven = {
+	if = {
+		limit = {
+			has_technology_researched = elven_gate_immigration
+		}
+		every_scope_state = {
+			limit = {
+				has_magic_gate = yes
+				modifier:state_monthly_elven_immigration_add > 0
+			}
+			# Create pop throws errors after game start
+			# but still works
+			# Also size can not accept variables or modifiers
+			if = {
+				limit = {
+					modifier:state_monthly_elven_immigration_add = 10000
+				}
+				create_pop = {
+					culture = elven
+					size = 10000
+					pop_type = officers # Fix illiterate pops
+				}
+
+			}
+			else_if = {
+				limit = {
+					modifier:state_monthly_elven_immigration_add = 20000
+				}
+				create_pop = {
+					culture = elven
+					size = 30000
+					pop_type = officers # Fix illiterate pops
+				}
+			}
+		}
+	}
+}
