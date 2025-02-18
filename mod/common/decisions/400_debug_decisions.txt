@@ -264,3 +264,21 @@ debug_trigger_ethics_decision = {
 		base = 0
 	}
 }
+
+debug_increase_magical_innovation_decision = {
+	is_shown = {
+		has_global_variable = com_debug
+		is_player = yes
+	}
+
+	when_taken = {
+		change_variable = {
+			name = magic_innovation
+			add = 10000
+		}
+	}
+
+	ai_chance = {
+		base = 0
+	}
+}
