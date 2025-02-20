@@ -78,7 +78,7 @@ s:STATE_GUATEMALA = {
 `common/history/buildings`
 
 When adding buildings we need to remove existing ones from the original state owner,
-so when we later annex it properly we do not get their population.
+so when we later annex it properly we do not get their buildings without workforces.
 The removal and recreation leads to proper integration of pop workplaces.
 To find which buildings to remove see the base game history files.
 
@@ -120,9 +120,9 @@ s:STATE_GUATEMALA = {
 ## Annexing the State properly
 `common/history/global`
 
-Finally, we need to annex the now empty state by _stealing_ the last provinces.
+Finally, we need to annex the now empty states by _stealing_ the last provinces.
 
-This an example where we steal the last two provinces (GBR and UCA) for Guatemala:
+This is an example where we steal the last two provinces (GBR and UCA) for Guatemala:
 ```
 s:STATE_GUATEMALA = {
     set_owner_of_provinces = {
