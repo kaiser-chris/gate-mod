@@ -15,3 +15,23 @@ state_trait_magic_soil = {
 		building_group_bg_plantations_throughput_add = 0.2
 	}
 }
+
+state_trait_dwarven_mines_tyrol = {
+	icon = "gfx/interface/icons/state_trait_icons/resources_ore.dds"
+
+	modifier = {
+		state_building_dwarven_coal_mine_max_level_add = 70
+		state_building_dwarven_gold_mine_max_level_add = 8
+	}
+}
+
+state_trait_dwarven_mines_south_tyrol = {
+	icon = "gfx/interface/icons/state_trait_icons/resources_ore.dds"
+
+	modifier = {
+		state_building_dwarven_coal_mine_max_level_add = 32
+		state_building_dwarven_iron_mine_max_level_add = 20
+		state_building_dwarven_lead_mine_max_level_add = 15
+		state_building_dwarven_sulfur_mine_max_level_add = 15
+	}
+}

@@ -140,11 +140,11 @@ building_dwarven_gold_mine = {
     has_max_level = yes
 
     possible = {
-        has_modifier = dwarven_gold_mine_modifier
+        modifier:state_building_dwarven_gold_mine_max_level_add > 0
     }
 
     potential = {
-        has_modifier = dwarven_gold_mine_modifier
+        modifier:state_building_dwarven_gold_mine_max_level_add > 0
     }
 
     unlocking_technologies = {
