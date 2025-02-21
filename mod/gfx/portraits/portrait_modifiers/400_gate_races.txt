@@ -3,12 +3,6 @@
 
     orcish_race = {
         dna_modifiers = {
-            morph = {
-                mode = add
-                gene = skin_change
-                template = "skin_color_hue_pos"
-                range = { 0.4 0.4 }
-            }
             accessory = {
                 mode = add
                 gene = outfits
@@ -36,12 +30,6 @@
 
     dwarven_race = {
         dna_modifiers = {
-            morph = {
-                mode = add
-                gene = dwarven_height
-                template = normal_height
-                value = 1
-            }
             accessory = {
                 mode = add
                 gene = outfits
@@ -69,12 +57,6 @@
 
     gnomish_race = {
         dna_modifiers = {
-            morph = {
-                mode = add
-                gene = dwarven_height
-                template = normal_height
-                value = 1
-            }
             accessory = {
                 mode = add
                 gene = outfits
@@ -123,6 +105,158 @@
                     elven_portrait_trigger = yes
                     elven_portrait_pop_trigger = yes
                 }
+            }
+        }
+    }
+
+    # Hide everything for Races that are 2D
+    no_portrait_race = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = top_layer
+                template = no_top_layer
+                range = { 0 1 } # sovereign
+            }
+            accessory = {
+                mode = add
+                gene = epaulettes
+                template = no_epaulette # DID I STUTTER
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = necklaces
+                template = no_necklace
+                range = { 0 1 } # sovereign
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = no_beard
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = outfits
+                template = no_outfit
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = gene_nudity
+                template = hide_nudity
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = no_hairstyles
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = headgear
+                template = no_headgear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = replace
+                gene = props
+                template = no_prop
+                value = 1
+            }
+            accessory = {
+                mode = add
+                gene = outfits
+                template = no_outfit
+                value = 1
+            }
+            accessory = {
+                mode = replace
+                gene = sashes
+                template = no_sash
+                value = 1
+            }
+            accessory = {
+                mode = replace
+                gene = belts
+                template = no_belt
+                value = 1
+            }
+            accessory = {
+                mode = replace
+                gene = waistcoats
+                template = no_waistcoat
+                value = 1
+            }
+            accessory = {
+                mode = replace
+                gene = top_layer
+                template = no_top_layer
+                value = 1
+            }
+            accessory = {
+                mode = replace
+                gene = necklaces
+                template = no_necklace
+                value = 1
+            }
+            accessory = {
+                mode = replace
+                gene = legwear
+                template = no_legwear
+                value = 1
+            }
+            accessory = {
+                mode = add
+                gene = shirt
+                template = no_shirts
+                value = 1
+            }
+            accessory = {
+                mode = add
+                gene = aiguillettes
+                template = no_aiguillettes
+                value = 1
+            }
+            accessory = {
+                mode = replace
+                gene = eye_accessory
+                template = no_eyes
+                value = 1
+            }
+            accessory = {
+                mode = replace
+                gene = hairstyles
+                template = no_hairstyles
+                value = 1
+            }
+            accessory = {
+                mode = replace
+                gene = headgear
+                template = no_headgear
+                value = 1
+            }
+            accessory = {
+                mode = replace
+                gene = beards
+                template = no_beard
+                value = 1
+            }
+            morph = {
+                mode = replace
+                gene = gene_no_portrait
+                template = no_portrait
+                value = 1
+            }
+        }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 1000
+                no_portrait_trigger = yes
             }
         }
     }
