@@ -18,6 +18,7 @@ types gate_main_panel_types {
 
     type gate_main_panel = default_block_window {
         name = "gate_main_panel"
+        layer = layer_ingame_menu
         datacontext = "[GetMetaPlayer.GetPlayedOrObservedCountry]"
 
         visible = "[Or(GetVariableSystem.HasValue('com_open_window', 'gate_button_main'), GetVariableSystem.HasValue('com_alert_action', Localize('gg_panel_main_action')))]"
