@@ -20,6 +20,10 @@ Below is a table with all currently open ToDos.
 | File | Line | ToDo |
 | ---- | ---- | ---- |
 | ./mod/common/alert_types/400_gate_alert_types.txt | 84 |  Remove this debug check for expedition_alert |
+| ./mod/common/country_definitions/400_gate_countries.txt | 69 |  Define color for bear nation |
+| ./mod/common/country_definitions/400_gate_countries.txt | 86 |  Define color for bear nation |
+| ./mod/common/history/countries/gb1 - plundboelka.txt | 3 |  This is a copy of Mountain Kingdom and needs balancing |
+| ./mod/common/history/countries/gb2 - praprandgaw.txt | 3 |  This is a copy of Mountain Kingdom and needs balancing |
 | ./mod/common/technology/technologies/403_magic_society.txt | 94 |  Implement gate_expeditions technology |
 | ./mod/localization/english/gate_alerts_l_english.yml | 25 |  Write alert_expedition_alert_name |
 | ./mod/localization/english/gate_alerts_l_english.yml | 26 |  Write alert_expedition_alert_desc |
