@@ -44,4 +44,38 @@ BUILDINGS = {
         }
     }
 
+    s:STATE_WYOMING = {
+        # Base game states are empty
+        # So we do not need to remove existing buildings
+
+        region_state:GB2 = {
+            # Add buildings here
+        }
+    }
+    s:STATE_IDAHO = {
+        # Base game states are empty
+        # So we do not need to remove existing buildings
+
+        region_state:GB2 = {
+            # Add buildings here
+        }
+    }
+    s:STATE_OREGON = {
+        region_state:ORG = {
+            remove_building = building_logging_camp
+        }
+
+        region_state:GB2 = {
+            # Add buildings here
+        }
+    }
+    s:STATE_WASHINGTON = {
+        # Base game states are empty
+        # So we do not need to remove existing buildings
+
+        region_state:GB2 = {
+            # Add buildings here
+        }
+    }
+
 }
