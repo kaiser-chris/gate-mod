@@ -82,6 +82,15 @@ GLOBAL = {
 			interest_group = ig_intelligentsia
 			ig_leader = yes
 		}
+
+		set_secret_goal = {
+			country = c:GB1
+			secret_goal = dominate
+		}
+		set_secret_goal = {
+			country = c:GB2
+			secret_goal = dominate
+		}
 	}
 
 	# Portugal
@@ -119,7 +128,7 @@ GLOBAL = {
 		je:je_researching_magic = {
 			add_progress = {
 				name = pb_gate_researching_magic
-				value = 18
+				value = 11
 			}
 		}
 
@@ -127,6 +136,47 @@ GLOBAL = {
 		create_character = {
 			template = magic_researcher_template
 			interest_group = ig_intelligentsia
+		}
+
+		set_secret_goal = {
+			country = c:GB1
+			secret_goal = dominate
+		}
+		set_secret_goal = {
+			country = c:GB2
+			secret_goal = dominate
+		}
+	}
+
+	# United States
+	c:USA = {
+		# Add Researching Magic journal entry
+		add_journal_entry = {
+			type = je_researching_magic
+		}
+
+		# Add progress to magic research since they have
+		# had access to a gate for years
+		je:je_researching_magic = {
+			add_progress = {
+				name = pb_gate_researching_magic
+				value = 13
+			}
+		}
+
+		# Add Magic Researcher
+		create_character = {
+			template = magic_researcher_template
+			interest_group = ig_intelligentsia
+		}
+
+		set_secret_goal = {
+			country = c:GB1
+			secret_goal = dominate
+		}
+		set_secret_goal = {
+			country = c:GB2
+			secret_goal = dominate
 		}
 	}
 
