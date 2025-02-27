@@ -5,7 +5,12 @@ permissions:
   checks: write
 
 on:
-  workflow_dispatch:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
 
 jobs:
   validate:
