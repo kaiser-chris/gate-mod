@@ -1,0 +1,32 @@
+name: Validation
+permissions:
+  contents: read
+  packages: write
+  checks: write
+
+on:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          lfs: 'true'
+
+      - name: Checkout Validation
+        uses: actions/checkout@v4
+        with:
+          repository: kaiser-chris/tiger-action
+          ref: 'main'
+          path: 'validation'
+          token: ${{ secrets.VALIDATION_TOKEN }}
+
+      - name: Validate
+        uses: ./validation/
+        with:
+          mod-directory: 'mod'
+          action-directory: 'validation'
