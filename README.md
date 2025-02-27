@@ -4,6 +4,9 @@
 ## Steam Page
  - https://steamcommunity.com/sharedfiles/filedetails/?id=3371719217
 
+## Status
+[![Validation](https://github.com/kaiser-chris/gate-mod/actions/workflows/validate.yml/badge.svg)](https://github.com/kaiser-chris/gate-mod/actions/workflows/validate.yml)
+
 ## Story
 In 1814, a series of Magic Gates to the planet **Ankaris** appeared across Earth,
 forever altering the course of history.
@@ -32,7 +35,7 @@ Below is a list of the currently implemented content:
  - 2 new Pops
  - 5 new Goods
  - 2 new Combat Unit Types
- - 2588 new Localization Keys
+ - 2599 new Localization Keys
 
 [//]: # (CONTENT-END)
 
