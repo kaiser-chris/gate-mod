@@ -438,7 +438,7 @@ goblin = {
 
 }
 
-race_goblin_green = {
+goblin_green = {
     template = "goblin"
 
     eye_color = {
@@ -535,7 +535,7 @@ race_goblin_green = {
 
 
 goblin_yellow = {
-    template = "race_goblin_green"
+    template = "goblin_green"
 
     skin_color = {
         90 = { 0.29 0.57 0.37 0.62 }
@@ -571,7 +571,7 @@ goblin_yellow = {
 }
 
 hobgoblin = {
-    template = "race_goblin_green"
+    template = "goblin_green"
 
     skin_color = {
         90 = { 0.06 0.57 0.08 0.62 }
