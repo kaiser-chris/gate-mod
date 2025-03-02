@@ -181,6 +181,50 @@ monster_compendium = {
 	}
 }
 
+arcane_infrastructure = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/gate_invention_placeholder.dds"
+	category = society
+	can_research = no
+
+	modifier = {
+		state_infrastructure_from_population_add = 1
+		state_infrastructure_from_population_max_add = 20
+		country_construction_add = 5
+		country_max_weekly_construction_progress_add = 5
+	}
+
+	unlocking_technologies = {
+		mana_lanterns
+		modern_sewerage
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+ethereal_messaging = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/gate_invention_placeholder.dds"
+	category = society
+	can_research = no
+
+	modifier = {
+		state_tax_capacity_add = 25
+		military_formation_mobilization_speed_mult = 0.1
+	}
+
+	unlocking_technologies = {
+		formalized_magic
+		central_archives
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
 magic_science = {
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/magic_science.dds"
@@ -205,5 +249,65 @@ magic_science = {
 
 	ai_weight = {
 		value = 2 # Very important, increases research speed
+	}
+}
+
+mana_linked_education = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/gate_invention_placeholder.dds"
+	category = society
+	can_research = no
+
+	modifier = {
+		state_pop_qualifications_mult = 0.1
+	}
+
+	unlocking_technologies = {
+		magic_science
+		dialectics
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+thaumaturgic_courts = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/gate_invention_placeholder.dds"
+	category = society
+	can_research = no
+
+	unlocking_technologies = {
+		magic_science
+	}
+
+	modifier = {
+		political_movement_radicalism_add = -0.05
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+soulbound_currency = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/gate_invention_placeholder.dds"
+	category = society
+	can_research = no
+
+	modifier = {
+		country_minting_mult = 0.1
+		country_loan_interest_rate_add = -0.02
+	}
+
+	unlocking_technologies = {
+		international_exchange_standards
+		magic_science
+	}
+
+	ai_weight = {
+		value = 1
 	}
 }
