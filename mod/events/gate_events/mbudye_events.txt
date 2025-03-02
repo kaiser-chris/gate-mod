@@ -1497,3 +1497,102 @@ mbudye.16 = {
 		}
 	}
 }
+
+mbudye.17 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = capital
+
+	title = mbudye.17.t
+	desc = mbudye.17.desc
+	flavor = mbudye.17.f
+
+	event_image = {
+		video = "ep1_transfer_of_authority"
+	}
+
+	immediate = {
+		save_scope_as = gate_mbudye_dominion
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/religion_icons/golden_faith.dds"
+
+	duration = 3
+
+	option = {
+		name = mbudye.17.a
+		default_option = yes
+		if = {
+			limit = {
+				c:LND = {
+					is_subject_of = c:GAD
+				}
+			}
+			annex_with_incorporation = c:LND
+		}
+		if = {
+			limit = {
+				c:CHK = {
+					is_subject_of = c:GAD
+				}
+			}
+			annex_with_incorporation = c:CHK
+		}
+		if = {
+			limit = {
+				c:KZM = {
+					is_subject_of = c:GAD
+				}
+			}
+			annex_with_incorporation = c:KZM
+		}
+		if = {
+			limit = {
+				c:KSN = {
+					is_subject_of = c:GAD
+				}
+			}
+			annex_with_incorporation = c:KSN
+		}
+		add_primary_culture = cu:lunda
+		add_primary_culture = cu:ovimbundu
+	}
+
+	option = {
+		name = mbudye.17.b
+		if = {
+			limit = {
+				c:LND = {
+					is_subject_of = c:GAD
+				}
+			}
+			annex_with_incorporation = c:LND
+		}
+		if = {
+			limit = {
+				c:CHK = {
+					is_subject_of = c:GAD
+				}
+			}
+			annex_with_incorporation = c:CHK
+		}
+		if = {
+			limit = {
+				c:KZM = {
+					is_subject_of = c:GAD
+				}
+			}
+			annex_with_incorporation = c:KZM
+		}
+		if = {
+			limit = {
+				c:KSN = {
+					is_subject_of = c:GAD
+				}
+			}
+			annex_with_incorporation = c:KSN
+		}
+	}
+}

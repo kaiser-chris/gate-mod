@@ -96,3 +96,31 @@ je_gate_mbudye_button_passive = {
 		}
 	}
 }
+
+je_gate_mbudye_button_integration_start = {
+	name = je_gate_mbudye_button_integration_start
+	desc = je_gate_mbudye_button_integration_start_desc
+
+	possible = {
+		custom_tooltip = {
+			text = je_gate_mbudye_button_integration_start_block
+			scope:journal_entry = {
+				NOT = {
+					has_variable = mbudye_integration_started
+				}
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 100
+	}
+
+	effect = {
+		hidden_effect = {
+			scope:journal_entry = {
+				set_variable = mbudye_integration_started
+			}
+		}
+	}
+}
