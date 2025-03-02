@@ -229,7 +229,7 @@ pb_gate_mbudye_integration = {
 	monthly_progress = {
 		if = {
 			limit = {
-				scope:journal_entry = {
+				scope:journal_entry ?= {
 					has_variable = mbudye_integration_started
 				}
 			}
