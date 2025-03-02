@@ -30,6 +30,13 @@ jobs:
           path: 'validation'
           token: ${{ secrets.VALIDATION_TOKEN }}
 
+      - name: Checkout Community Mod Framework
+        uses: actions/checkout@v4
+        with:
+          repository: Victoria-3-Modding-Co-op/Community-Mod-Framework
+          ref: '1.7.0'
+          path: 'cmf'
+
       - name: Validate
         uses: ./validation/
         with:
