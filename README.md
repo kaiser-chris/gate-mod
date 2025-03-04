@@ -5,7 +5,8 @@
  - https://steamcommunity.com/sharedfiles/filedetails/?id=3371719217
 
 ## Status
-[![Validation](https://github.com/kaiser-chris/gate-mod/actions/workflows/validate.yml/badge.svg)](https://github.com/kaiser-chris/gate-mod/actions/workflows/validate.yml)
+[![Validation](https://github.com/kaiser-chris/gate-mod/actions/workflows/validate.yml/badge.svg)](https://github.com/kaiser-chris/gate-mod/actions/workflows/validate.yml) ![GitHub Release](https://img.shields.io/github/v/release/kaiser-chris/gate-mod?display_name=release&label=Mod%20Version&color=blue)
+![Static Badge](https://img.shields.io/badge/Game_Version-1.8-blue)
 
 ## Story
 In 1814, a series of Magic Gates to the planet **Ankaris** appeared across Earth,
