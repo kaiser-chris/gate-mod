@@ -36,7 +36,7 @@ Below is a list of the currently implemented content:
  - 2 new Pops
  - 5 new Goods
  - 2 new Combat Unit Types
- - 2648 new Localization Keys
+ - 2012 new Localization Keys
 
 [//]: # (CONTENT-END)
 
