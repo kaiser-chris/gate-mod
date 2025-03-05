@@ -20,8 +20,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4.2.2
-        with:
-          lfs: 'true'
 
       - name: Checkout tags
         run: |
