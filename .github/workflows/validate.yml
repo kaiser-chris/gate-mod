@@ -6,9 +6,13 @@ permissions:
 
 on:
   pull_request:
+    paths:
+      - '**mod/**'
     branches:
       - master
   push:
+    paths:
+      - '**mod/**'
     branches:
       - master
 
@@ -18,12 +22,12 @@ jobs:
     
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.2
         with:
           lfs: 'true'
 
       - name: Checkout Validation
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.2
         with:
           repository: kaiser-chris/tiger-action
           ref: 'main'
@@ -31,7 +35,7 @@ jobs:
           token: ${{ secrets.VALIDATION_TOKEN }}
 
       - name: Checkout Community Mod Framework
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.2
         with:
           repository: Victoria-3-Modding-Co-op/Community-Mod-Framework
           ref: '1.7.0'

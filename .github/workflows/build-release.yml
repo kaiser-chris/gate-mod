@@ -4,10 +4,14 @@ on:
   workflow_dispatch:
     inputs:
       release-type:
-        description: 'Release Type (major, feature or patch)'
+        description: 'Release Type'
         default: 'feature'
         required: false
-        type: string
+        type: choice
+        options:
+          - major
+          - feature
+          - patch
 
 jobs:
   build-release:
@@ -21,6 +25,8 @@ jobs:
 
       - name: Checkout tags
         run: |
+          git config --global user.name 'Chris Kaiser'
+          git config --global user.email 'kaiser-chris@users.noreply.github.com'
           git fetch --prune --unshallow --tags
 
       - name: Get latest version
@@ -34,21 +40,6 @@ jobs:
         with:
           current-version: ${{ steps.project.outputs.last-version }}
           version-fragment: ${{ inputs.release-type }}
-        
-      - name: Set version
-        run: |
-          sed -i 's/"version" : "${{ steps.project.outputs.last-version }}"/"version" : "${{ steps.increment-version.outputs.next-version }}"/g' mod/.metadata/metadata.json
-
-      - name: Commit & Push Version
-        run: |
-          git config --global user.name 'Chris Kaiser'
-          git config --global user.email 'kaiser-chris@users.noreply.github.com'
-          git commit -am "Set latest release version"
-          git push origin
-
-      - name: Create release artifact
-        run: |
-          (cd mod; zip -r release-${{ steps.increment-version.outputs.next-version }}.zip .)
 
       - name: Get changes since last tag
         id: commits
@@ -59,9 +50,34 @@ jobs:
             echo EOF
           } >> "$GITHUB_OUTPUT"
 
+      - name: Set version
+        run: |
+          sed -i 's/"version" : "${{ steps.project.outputs.last-version }}"/"version" : "${{ steps.increment-version.outputs.next-version }}"/g' mod/.metadata/metadata.json
+
+      - name: Commit Version
+        run: |
+          git commit -am "Set latest release version"
+
+      - name: Generate Localizations
+        shell: bash
+        run: |
+          (cd script; ./generate-localization.sh english ../mod/)
+
+      - name: Commit Localizations
+        run: |
+          git commit -am "Updated localizations" || echo "No Localization changes"
+
+      - name: Push Version and Localizations
+        run: |
+          git push origin
+
+      - name: Create release artifact
+        run: |
+          (cd mod; zip -r release-${{ steps.increment-version.outputs.next-version }}.zip .)
+
       - name: Create Release
         id: create_release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v2.2.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           draft: false
