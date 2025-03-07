@@ -30,6 +30,7 @@
 		add_technology_researched = steelworking
 		add_technology_researched = cotton_gin
 		add_technology_researched = medical_degrees
+		add_technology_researched = quinine
 
 		# Laws
 		activate_law = law_type:law_no_colonial_affairs # Overwritten later
@@ -55,7 +56,7 @@
 		}
 
 		set_variable = {
-			name = custom_social_hieracy
+			name = custom_social_hierarchy
 			value = active_law:lawgroup_elven_supremacy
 		}
 	}

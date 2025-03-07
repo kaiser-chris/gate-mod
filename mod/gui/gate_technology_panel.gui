@@ -437,7 +437,7 @@ types gate_technology_panel_types {
             }
 
             tooltipwidget = {
-                FancyTooltip_Technology = {}
+                magic_technology_tooltip = {}
             }
 
             magic_technology_inner = {
@@ -488,27 +488,28 @@ types gate_technology_panel_types {
     }
 
     type magic_technology_tooltip = FancyTooltipWidgetType {
-        blockoverride "text" {
-            # Does not modify size that is why we repeat it below
-            widget = {
-                layer = bottom
-                parentanchor = top|left
-                custom_tooltip_textbox = {
-                    text = DATA_TECHNOLOGY_NAME_TOOLTIP
-                }
-            }
-        }
-        blockoverride "tooltip_content_before" {
-        }
+        blockoverride "text" {}
+        blockoverride "tooltip_content_before" {}
         blockoverride "tooltip_content_after" {
-            # This widget will be layered over the original tooltip to overwrite the first line.
-            # This is needed because there is no way rebuild/modify the full technology tooltip.
-            # So we render the original tooltip and overwrite the first line to replace some text.
-            widget = {
+            flowcontainer = {
+                direction = vertical
+
                 flowcontainer = {
-                    margin = { 15 10 }
-                    position = { -15 -10 }
-                    min_width = @tooltip_max_width_plus_margin
+                    direction = vertical
+                    visible = "[And(
+                                    GreaterThan_CFixedPoint(Technology.GetCost(GetPlayer.Self), '(CFixedPoint)10000'),
+                                    Not(Technology.HasResearchedTech(GetPlayer.Self))
+                               )]"
+
+                    custom_tooltip_textbox = {
+                        text = gg_magic_technology_tooltip_ahead
+                        multiline = no
+                    }
+                }
+
+                flowcontainer = {
+                    visible = "[Not(Technology.HasResearchedTech(GetPlayer.Self))]"
+
                     custom_tooltip_textbox = {
                         text = gg_magic_technology_tooltip_cost
                         multiline = no
@@ -522,40 +523,82 @@ types gate_technology_panel_types {
                         text = gg_magic_technology_tooltip_duration
                         multiline = no
                     }
-
-                    background = {
-                        spriteType = CorneredTiled
-                        spriteborder = { 48 48 }
-                        texture = "gfx/interface/tooltip/tooltip_bg.dds"
-                        texture_density = 2
-                        tintcolor = "[TooltipInfo.GetTintColor]"
-                    }
                 }
-            }
-            # Invisible and just used for tooltip sizing
-            container = {
-                alpha = 0
-                layer = bottom
-                parentanchor = top|left
+
                 custom_tooltip_textbox = {
-                    text = DATA_TECHNOLOGY_NAME_TOOLTIP
+                    visible = "[Technology.HasResearchedTech(GetPlayer.Self)]"
+                    text = YOU_HAVE_RESEARCHED_THIS
+                    multiline = no
                 }
+
+                custom_tooltip_textbox = {
+                    raw_text = " "
+                    multiline = no
+                }
+
                 flowcontainer = {
-                    min_width = @tooltip_max_width
+                    direction = vertical
+                    visible = "[Not(IsDataModelEmpty(Technology.GetUnlocks(GetPlayer.Self)))]"
 
                     custom_tooltip_textbox = {
-                        text = gg_magic_technology_tooltip_cost
+                        text = TECHNOLOGY_TOOLTIP_UNLOCKS_LABEL
                         multiline = no
+                    }
+
+                    flowcontainer = {
+                        direction = vertical
+                        datamodel = "[Technology.GetUnlocks(GetPlayer.Self)]"
+
+                        item = {
+                            custom_tooltip_textbox = {
+                                raw_text = "[TechnologyUnlock.GetTooltip]"
+                                multiline = no
+                            }
+                        }
+
+                    }
+
+                    custom_tooltip_textbox = {
+                        raw_text = " "
+                        multiline = no
+                    }
+                }
+
+                flowcontainer = {
+                    visible = "[Not(Technology.HasResearchedTech(GetPlayer.Self))]"
+                    direction = vertical
+                    custom_tooltip_textbox = {
+                        text = gg_magic_technology_tooltip_requirements_label
+                        default_format = "#title"
+                        multiline = no
+                    }
+
+                    custom_tooltip_textbox = {
+                        visible = "[Not(ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End))]"
+                        raw_text = "[ScriptedGui.IsValidTooltip(GuiScope.SetRoot(Country.MakeScope).End)]"
+                        multiline = yes
                     }
                     custom_tooltip_textbox = {
-                        raw_text = "#v #tooltippable [Technology.GetCost(Country.Self)|K]#!#!"
+                        visible = "[ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
+                        text = gg_magic_technology_tooltip_requirements_done
                         multiline = no
-                        tooltip = "[Technology.GetCostDesc(Country.Self)]"
                     }
+
                     custom_tooltip_textbox = {
-                        text = gg_magic_technology_tooltip_duration
+                        raw_text = " "
                         multiline = no
                     }
+                }
+
+                custom_tooltip_textbox = {
+                    text = TOOLTIP_DELIMITER
+                    multiline = no
+                }
+
+                custom_tooltip_textbox = {
+                    raw_text = "[Technology.GetDesc]"
+                    default_format = "#lore"
+                    multiline = yes
                 }
             }
         }

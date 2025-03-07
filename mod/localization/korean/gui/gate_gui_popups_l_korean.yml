@@ -1,0 +1,14 @@
+﻿l_korean:
+# Missing Dependencies
+ gg_missing_dependency_header: "There are missing Mods"
+ gg_missing_dependency_body: "#bold Manaflow: Ankaris Arrival#! requires the following Mods to work:\n   - $gg_dependency_cmf$\n\nPlease download them either on their Steam or the GitHub Page.\n\nIf you can't find any of them, please look into the description of #bold Manaflow: Ankaris Arrival#! on the Steam Workshop. There will be a link for both the Steam and GitHub version."
+ gg_missing_dependency_tooltip: "We are sorry, but you #n have to#! download all Mods to play."
+ gg_missing_dependency_good: "@green_checkmark!"
+ gg_missing_dependency_bad: "@red_cross!"
+ gg_missing_dependency_mod_installed: "This Mod is installed and loaded!"
+ gg_missing_dependency_mod_missing: "This Mod is missing!"
+ gg_missing_dependency_good_tooltip: "#tooltippable #tooltip:gg_missing_dependency_mod_installed "
+ gg_missing_dependency_bad_tooltip: "#tooltippable #tooltip:gg_missing_dependency_mod_missing "
+ gg_dependency_cmf: "[SelectLocalization(GetScriptedGui('gate_dependency_cmf').IsValid(GuiScope.End), 'gg_missing_dependency_good_tooltip', 'gg_missing_dependency_bad_tooltip')]Community Mod Framework [SelectLocalization(GetScriptedGui('gate_dependency_cmf').IsValid(GuiScope.End), 'gg_missing_dependency_good', 'gg_missing_dependency_bad')]#!#!"
+ gg_dependency_wgf: "[SelectLocalization(GetScriptedGui('gate_dependency_wgf').IsValid(GuiScope.End), 'gg_missing_dependency_good_tooltip', 'gg_missing_dependency_bad_tooltip')]War Goal Framework [SelectLocalization(GetScriptedGui('gate_dependency_wgf').IsValid(GuiScope.End), 'gg_missing_dependency_good', 'gg_missing_dependency_bad')]#!#!"
+

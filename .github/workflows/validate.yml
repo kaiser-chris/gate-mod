@@ -1,0 +1,46 @@
+name: Validation
+permissions:
+  contents: read
+  packages: write
+  checks: write
+
+on:
+  pull_request:
+    paths:
+      - '**mod/**'
+    branches:
+      - master
+  push:
+    paths:
+      - '**mod/**'
+    branches:
+      - master
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+
+      - name: Checkout Validation
+        uses: actions/checkout@v4.2.2
+        with:
+          repository: kaiser-chris/tiger-action
+          ref: 'main'
+          path: 'validation'
+          token: ${{ secrets.VALIDATION_TOKEN }}
+
+      - name: Checkout Community Mod Framework
+        uses: actions/checkout@v4.2.2
+        with:
+          repository: Victoria-3-Modding-Co-op/Community-Mod-Framework
+          ref: '1.7.0'
+          path: 'cmf'
+
+      - name: Validate
+        uses: ./validation/
+        with:
+          mod-directory: 'mod'
+          action-directory: 'validation'

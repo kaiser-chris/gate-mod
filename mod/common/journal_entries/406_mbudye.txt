@@ -187,11 +187,12 @@
 	}
 
 	on_complete = {
-		hidden_effect = {
-			trigger_event = {
-				id = mbudye.1
-				popup = yes
-			}
+		trigger_event = {
+			id = mbudye.1
+			popup = yes
+		}
+		add_journal_entry = {
+			type = je_gate_mbudye_integration
 		}
 	}
 
@@ -214,6 +215,91 @@
 	scripted_progress_bar = pb_gate_mbudye_chokwe
 	scripted_progress_bar = pb_gate_mbudye_kazembe
 	scripted_progress_bar = pb_gate_mbudye_kasanje
+
+	transferable = no
+	can_revolution_inherit = yes
+
+	weight = 200
+	should_be_pinned_by_default = yes
+}
+
+je_gate_mbudye_integration = {
+	icon = "gfx/interface/icons/religion_icons/golden_faith.dds"
+
+	group = je_group_internal_affairs
+
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = je_gate_mbudye_integration_not_started
+				trigger = {
+					scope:journal_entry = {
+						NOT = {
+							has_variable = mbudye_integration_started
+						}
+					}
+				}
+			}
+			triggered_desc = {
+				desc = je_gate_mbudye_integration_in_progess
+				trigger = {
+					scope:journal_entry = {
+						has_variable = mbudye_integration_started
+					}
+				}
+			}
+		}
+	}
+
+	complete = {
+		custom_tooltip = {
+			text = je_gate_mbudye_integration_complete
+			scope:journal_entry = {
+				scripted_bar_progress = {
+					name = pb_gate_mbudye_integration
+					value >= 12
+				}
+			}
+		}
+	}
+
+
+	immediate = {
+		save_scope_as = gate_mbudye_dominion
+		c:LND = {
+			save_scope_as = gate_mbudye_lunda
+		}
+		c:CHK = {
+			save_scope_as = gate_mbudye_chokwe
+		}
+		c:KZM = {
+			save_scope_as = gate_mbudye_kazembe
+		}
+		c:KSN = {
+			save_scope_as = gate_mbudye_kasanje
+		}
+	}
+
+	on_complete = {
+		trigger_event = {
+			id = mbudye.17
+			popup = yes
+		}
+	}
+
+	on_fail = {
+		hidden_effect = {
+			trigger_event = {
+				id = mbudye.2
+				popup = yes
+			}
+		}
+	}
+
+	scripted_button = je_gate_mbudye_button_integration_start
+
+	progressbar = no
+	scripted_progress_bar = pb_gate_mbudye_integration
 
 	transferable = no
 	can_revolution_inherit = yes

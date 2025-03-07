@@ -1,0 +1,28 @@
+widget = {
+    name = gate_panels
+    layer = layer_ingame_menu
+    size = { 100% 100% }
+
+    gate_expedition_panel = {}
+
+    vbox = {
+        parentanchor = top|left
+        layoutpolicy_horizontal = expanding
+        layoutpolicy_vertical = expanding
+        margin_top = 85 #margin topbar
+
+        widget = {
+            layoutpolicy_horizontal = expanding
+            layoutpolicy_vertical = expanding
+
+            hbox = {
+                position = { -654 0 }
+                layoutpolicy_horizontal = expanding
+                layoutpolicy_vertical = expanding
+
+                gate_technology_panel = {}
+                gate_main_panel = {}
+            }
+        }
+    }
+}

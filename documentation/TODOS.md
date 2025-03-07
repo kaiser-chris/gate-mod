@@ -24,6 +24,6 @@ Below is a table with all currently open ToDos.
 | ./mod/localization/english/gate_alerts_l_english.yml | 25 |  Write alert_expedition_alert_name |
 | ./mod/localization/english/gate_alerts_l_english.yml | 26 |  Write alert_expedition_alert_desc |
 | ./mod/localization/english/gate_alerts_l_english.yml | 27 |  Write alert_expedition_alert_hint |
-| ./mod/localization/english/gate_technology_l_english.yml | 39 |  Write description for gnomish_support_desc |
+| ./mod/localization/english/gate_technology_l_english.yml | 45 |  Write description for gnomish_support_desc |
 
 [//]: # (TODO-END)

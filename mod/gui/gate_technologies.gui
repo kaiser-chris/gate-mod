@@ -266,8 +266,43 @@ types gate_technologies {
 
         gate_technology = {
             blockoverride "context" {
+                datacontext = "[GetTechnology('arcane_infrastructure')]"
+                datacontext = "[GetScriptedGui('arcane_infrastructure')]"
+            }
+        }
+
+        gate_technology = {
+            blockoverride "context" {
+                datacontext = "[GetTechnology('ethereal_messaging')]"
+                datacontext = "[GetScriptedGui('ethereal_messaging')]"
+            }
+        }
+
+        gate_technology = {
+            blockoverride "context" {
                 datacontext = "[GetTechnology('magic_science')]"
                 datacontext = "[GetScriptedGui('magic_science')]"
+            }
+        }
+
+        gate_technology = {
+            blockoverride "context" {
+                datacontext = "[GetTechnology('mana_linked_education')]"
+                datacontext = "[GetScriptedGui('mana_linked_education')]"
+            }
+        }
+
+        gate_technology = {
+            blockoverride "context" {
+                datacontext = "[GetTechnology('thaumaturgic_courts')]"
+                datacontext = "[GetScriptedGui('thaumaturgic_courts')]"
+            }
+        }
+
+        gate_technology = {
+            blockoverride "context" {
+                datacontext = "[GetTechnology('soulbound_currency')]"
+                datacontext = "[GetScriptedGui('soulbound_currency')]"
             }
         }
     }

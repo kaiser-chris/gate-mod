@@ -11,17 +11,7 @@ STATES = {
 
 		add_homeland = cu:dwarven
 		add_state_trait = state_trait_dwarven_tunnels
-
-		every_scope_state = {
-			add_modifier = {
-				name = dwarven_coal_mine_modifier
-				multiplier = 70
-			}
-			add_modifier = {
-				name = dwarven_gold_mine_modifier
-				multiplier = 8
-			}
-		}
+		add_state_trait = state_trait_dwarven_mines_tyrol
 	}
 	s:STATE_SOUTH_TYROL = {
 		create_state = {
@@ -31,25 +21,7 @@ STATES = {
 
 		add_homeland = cu:dwarven
 		add_state_trait = state_trait_dwarven_tunnels
-
-		every_scope_state = {
-			add_modifier = {
-				name = dwarven_coal_mine_modifier
-				multiplier = 32
-			}
-			add_modifier = {
-				name = dwarven_iron_mine_modifier
-				multiplier = 20
-			}
-			add_modifier = {
-				name = dwarven_lead_mine_modifier
-				multiplier = 15
-			}
-			add_modifier = {
-				name = dwarven_sulfur_mine_modifier
-				multiplier = 15
-			}
-		}
+		add_state_trait = state_trait_dwarven_mines_south_tyrol
 
 		# We don't want the dwarves be part of
 		# italy or italian events

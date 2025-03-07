@@ -4,6 +4,12 @@
 ## Steam Page
  - https://steamcommunity.com/sharedfiles/filedetails/?id=3371719217
 
+## Status
+[![Validation](https://github.com/kaiser-chris/gate-mod/actions/workflows/validate.yml/badge.svg)](https://github.com/kaiser-chris/gate-mod/actions/workflows/validate.yml)
+[![GitHub Release](https://img.shields.io/github/v/release/kaiser-chris/gate-mod?display_name=release&label=Mod%20Version&color=blue)](https://github.com/kaiser-chris/gate-mod/releases)
+[![Static Badge](https://img.shields.io/badge/Game_Version-1.8-blue)](https://vic3.paradoxwikis.com/Patches)
+[![Discord](https://img.shields.io/discord/1329045839619817543?label=Discord&color=blue)](https://discord.gg/9Yp22JMMv2)
+
 ## Story
 In 1814, a series of Magic Gates to the planet **Ankaris** appeared across Earth,
 forever altering the course of history.
@@ -21,18 +27,18 @@ Below is a list of the currently implemented content:
 
 [//]: # (CONTENT-START)
 
- - 29 new Technologies
+ - 37 new Technologies
  - 4 new Countries
  - 5 new Cultures
  - 4 new Religions
- - 25 new Buildings
- - 65 new Production Methods for new and old Buildings
- - 9 new Journal Entries
- - 46 new Events
+ - 32 new Buildings
+ - 80 new Production Methods for new and old Buildings
+ - 10 new Journal Entries
+ - 47 new Events
  - 2 new Pops
  - 5 new Goods
  - 2 new Combat Unit Types
- - 2556 new Localization Keys
+ - 2012 new Localization Keys
 
 [//]: # (CONTENT-END)
 

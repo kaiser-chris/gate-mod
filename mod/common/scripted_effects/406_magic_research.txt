@@ -17,13 +17,30 @@
 		}
 
 		# Banking
-		change_variable = {
-			name = magic_innovation
-			add = {
-				value = modifier:country_magical_innovation_add
-				multiply = {
-					value = 1
-					add = modifier:country_magical_innovation_mult
+		if = {
+			limit = {
+				has_variable = magic_innovation
+			}
+			change_variable = {
+				name = magic_innovation
+				add = {
+					value = modifier:country_magical_innovation_add
+					multiply = {
+						value = 1
+						add = modifier:country_magical_innovation_mult
+					}
+				}
+			}
+		}
+		else = {
+			set_variable = {
+				name = magic_innovation
+				value = {
+					value = modifier:country_magical_innovation_add
+					multiply = {
+						value = 1
+						add = modifier:country_magical_innovation_mult
+					}
 				}
 			}
 		}

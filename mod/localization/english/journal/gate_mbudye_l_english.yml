@@ -1,4 +1,5 @@
 ﻿l_english:
+# Conversion Journal Entry
  je_gate_mbudye: "Converting the [GetCulture('lunda').GetNameNoFormatting]"
  je_gate_mbudye_reason: "The elves of the Arcturian Dominion view the conversion of the Lunda as both a spiritual mission and a means of consolidating their theocratic rule. Their emissaries engage with the Mbudye, the venerated council of interpreters and historians, weaving the Dominion’s faith into the fabric of Lunda tradition. While the elves claim to offer divine enlightenment, the Mbudye remain cautious, recognizing the subtle erosion of their sovereignty hidden within the elven scriptures. The struggle is one of persuasion and resistance, as ancient Lunda principles clash with the Dominion's celestial decrees."
  je_gate_mbudye_complete: "The [GetCulture('lunda').GetName] nations are all converted to the [GetReligion('golden_religion').GetName]."
@@ -45,14 +46,30 @@
  pb_gate_mbudye_kazembe_desc: "Converted population of [SCOPE.sCountry('gate_mbudye_kazembe').GetNameNoFlag]"
  pb_gate_mbudye_kasanje_name: "[SCOPE.sCountry('gate_mbudye_kasanje').GetName] conversion"
  pb_gate_mbudye_kasanje_desc: "Converted population of [SCOPE.sCountry('gate_mbudye_kasanje').GetNameNoFlag]"
+# Integration Journal Entry
+ je_gate_mbudye_integration: "Integrating the [GetCulture('lunda').GetNameNoFormatting] countries"
+ je_gate_mbudye_integration_reason: "With the faith of the Golden Blessing firmly rooted in their lands, the Lunda states are drawn into the embrace of the Arcturian Dominion. Though the scars of the conversion still linger, shared devotion and careful diplomacy pave the way for a new era—one where unity is forged beneath the watchful gaze of the divine."
+ je_gate_mbudye_integration_complete: "The [GetCulture('lunda').GetName] nations are all integrated into the [SCOPE.sCountry('gate_mbudye_dominion').GetName]."
+ je_gate_mbudye_integration_not_started: "The integration process hasn't started."
+ je_gate_mbudye_integration_in_progess: "The integration process is in progress."
+ je_gate_mbudye_button_integration_start: "Start Integration"
+ je_gate_mbudye_button_integration_start_desc: "Starts the integration process"
+ je_gate_mbudye_button_integration_start_block: "Integration already in progress."
+ pb_gate_mbudye_integration_name: "Integration Progress"
+ pb_gate_mbudye_integration_desc: "Progress: #v [Multiply_float(JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self), '(float)12')|0]#! of 12 months"
+ pb_gate_mbudye_integration_block: "the integration process has not Started"
+ pb_gate_mbudye_integration_progress: "the integration process is in Progress"
+# Flags
  mbudye_assassination_official_flag: "the #v Assassination#! of our #v Official#!"
  mbudye_assassination_general_flag: "the #v Assassination#! of our #v General#!"
  mbudye_assassination_admiral_flag: "the #v Assassination#! of our #v Admiral#!"
  mbudye_assassination_politician_flag: "the #v Assassination#! of our #v Politician#!"
  mbudye_defaced_temple_flag: "the #v Defacing#! of our #v Temple#!"
+# Modifiers
  lunda_uprising_modifier: "Spirit of Revolution"
  lunda_bambudye_liberty_modifier: "The [concept_bambudye] Conspiracy"
  dp_lunda_uprising: "Lunda Uprising"
+# Events
  mbudye.1.t: "The Golden Conversion"
  mbudye.1.desc: "The [GetCulture('lunda').GetName] nations under our control convert to the [GetReligion('golden_religion').GetName]."
  mbudye.1.f: "After years of tireless preaching, political maneuvering, and bitter conflict, the Lunda have finally embraced the faith of the Golden Blessing. The Mbudye council, once staunch guardians of their ancestral traditions, now kneel in solemn prayer alongside elven priests. Yet the path to this moment was stained with blood and marred by strife—villages burned, families divided, and histories rewritten. As golden banners rise over Lunda lands, the question lingers: will this new faith bring unity, or will old wounds fester beneath the surface?"
@@ -140,3 +157,8 @@
  mbudye.16.a: "Publicly punish the priest."
  mbudye.16.b: "Privately punish the priest."
  mbudye.16.c: "Censor the whole thing."
+ mbudye.17.t: "Integrating the [GetCulture('lunda').GetNameNoFormatting]"
+ mbudye.17.desc: "We need to decide how we want to integrate the [GetCulture('lunda').GetName] [Concept('concept_country','$concept_countries$')]."
+ mbudye.17.f: "The scrolls are signed, binding the [GetCulture('lunda').GetNameNoFormatting] countries to the [SCOPE.sCountry('gate_mbudye_dominion').GetNameNoFormatting] in both faith and law. What began with missionaries and steel now culminates in solemn ceremony, as ancient kingdoms yield to a new order beneath the [GetReligion('golden_religion').GetNameNoFormatting]."
+ mbudye.17.a: "Fully integrate the [GetCulture('lunda').GetName] into our Country."
+ mbudye.17.b: "Only integrate the [GetCulture('lunda').GetName] states into our Country."

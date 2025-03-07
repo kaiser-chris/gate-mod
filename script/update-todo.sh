@@ -12,7 +12,7 @@ printf '| File | Line | ToDo |' >> TEMP.md
 printf '\n' >> TEMP.md
 printf '| ---- | ---- | ---- |' >> TEMP.md
 printf '\n' >> TEMP.md
-grep -roHn --include='*.txt' --include='*.yml' "\#.*TODO:.*$" . | sort | sed 's/\:/ \| /' | sed 's/\:/ \| /'  | sed 's/#.*TODO\://'| while read -r line; do
+grep -roHn --include='*.txt' --include='*l_english.yml' "\#.*TODO:.*$" . | sort | sed 's/\:/ \| /' | sed 's/\:/ \| /'  | sed 's/#.*TODO\://'| while read -r line; do
   printf '| %s |' "$(printf '%s' "$line" | sed 's/\r//')" >> TEMP.md
   printf '\n' >> TEMP.md
 done

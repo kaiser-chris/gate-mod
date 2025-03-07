@@ -1,5 +1,4 @@
-#!/bin/sh
-cd ..
+#!/bin/bash
 
 # Counts all lines in .txt files that start with a character and end with ' = {'.
 # This finds lines like: 'demand_magic_knowledge = {'.
@@ -7,18 +6,18 @@ cd ..
 # be used to count content.
 countContent() {
   count=0
-  for filename in `find ./mod/"$1"/ -name "*.txt" -type f`; do
-    count=$((count+$(strings "$filename" | grep -c '^\w.*=.*{')))
-  done
+  while IFS= read -r filename ; do
+    count=$((count+$(strings "../mod/$filename" | grep -c '^\w.*=.*{')))
+  done < <(find ../mod/ -wholename "*/$1/*.txt" -type f -printf "%P\n")
   printf '%s' "$count"
 }
 
-# Counts all lines in .yml files that represent localization keys.
+# Counts all lines in english .yml files that represent localization keys.
 countTranslation() {
   count=0
-  for filename in `find ./mod/"$1"/ -name "*.yml" -type f`; do
-    count=$((count+$(strings "$filename" | grep -c '^\s\w.*:\s\".*\"')))
-  done
+  while IFS= read -r filename ; do
+    count=$((count+$(strings "../mod/$filename" | grep -c '^\s\w.*:\s\".*\"')))
+  done < <(find ../mod/ -wholename "*$1*.yml" -type f -printf "%P\n")
   printf '%s' "$count"
 }
 
@@ -37,14 +36,13 @@ combatUnitTypesCount="$(countContent 'common/combat_unit_types')"
 
 # Localization
 locCount="$(countTranslation 'localization/english')"
-locCount="$((locCount+$(countTranslation 'localization/english/culture')))"
 
-TOTAL_LINES=$(cat < README.md | wc -l)
-BEGIN_LINE=$(grep -n -e '\[\/\/\]\:.*\(CONTENT\-START\)' README.md | cut -d : -f 1)
-END_LINE=$(grep -n -e '\[\/\/\]\:.*\(CONTENT\-END\)' README.md | cut -d : -f 1)
+TOTAL_LINES=$(cat < ../README.md | wc -l)
+BEGIN_LINE=$(grep -n -e '\[\/\/\]\:.*\(CONTENT\-START\)' ../README.md | cut -d : -f 1)
+END_LINE=$(grep -n -e '\[\/\/\]\:.*\(CONTENT\-END\)' ../README.md | cut -d : -f 1)
 TAIL_LINES=$((TOTAL_LINES-END_LINE+2))
 
-head -n "$BEGIN_LINE" README.md > TEMP.md
+head -n "$BEGIN_LINE" ../README.md > TEMP.md
 printf '\n' >> TEMP.md
 printf ' - %s new Technologies' "$technologyCount" >> TEMP.md
 printf '\n' >> TEMP.md
@@ -71,6 +69,6 @@ printf '\n' >> TEMP.md
 printf ' - %s new Localization Keys' "$locCount" >> TEMP.md
 printf '\n' >> TEMP.md
 printf '\n' >> TEMP.md
-tail -n $TAIL_LINES README.md >> TEMP.md
-mv TEMP.md README.md
+tail -n $TAIL_LINES ../README.md >> TEMP.md
+mv TEMP.md ../README.md
 echo 'Updated README.md'
