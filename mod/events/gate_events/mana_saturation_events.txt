@@ -178,10 +178,11 @@ mana_saturation.3 = {
 				months = 3
 			}
 		}
+		make_magic_researcher_busy = yes
 		trigger = {
 			AND = {
 				scope:magic_growing_state.owner = scope:player_country
-				has_journal_entry = je_researching_magic
+				has_variable = magic_researcher
 			}
 		}
 	}
@@ -214,17 +215,18 @@ mana_saturation.3 = {
 				months = 3
 			}
 		}
+		make_magic_researcher_busy = yes
 		trigger = {
 			scope:magic_growing_state = {
 				AND = {
-					# We are researching magic
-					scope:player_country = {
-						has_journal_entry = je_researching_magic
-					}
+					# We have a researcher
+					has_variable = magic_researcher
+
 					# Country is in a region we have interest in
 					scope:player_country = {
 						has_interest_marker_in_region = scope:magic_growing_state.region
 					}
+
 					# Country does not hate us
 					scope:player_country.relations:owner >= relations_threshold:neutral
 					NOT = {

@@ -185,8 +185,13 @@ cleanup_researchers = {
 	if = {
 		limit = {
 			has_variable = magic_researcher
-			NOT = {
-				exists = var:magic_researcher
+			OR = {
+				NOT = {
+					exists = var:magic_researcher
+				}
+				var:magic_researcher ?= {
+					is_character_alive = no
+				}
 			}
 		}
 		if = {
@@ -203,208 +208,173 @@ cleanup_researchers = {
 		}
 		remove_variable = magic_researcher
 	}
-	else_if = {
-		limit = {
-			has_variable = magic_researcher
-			exists = var:magic_researcher
-		}
-		if = {
-			limit = {
-				var:magic_researcher = {
-					is_character_alive = no
-				}
-			}
-			if = {
-				limit = {
-					has_journal_entry = je_researching_magic
-				}
-				je:je_researching_magic = {
-					remove_list_variable = {
-						name = com_journal_characters
-						target = var:magic_researcher
-					}
-				}
-			}
-			activate_production_method = {
-				building_type = building_magic_research_institute
-				production_method = pm_no_researcher
-			}
-			remove_variable = magic_researcher
-		}
-	}
 }
 
 ai_unlock_magic_technology = {
 	if = {
 		limit = {
-			var:magic_innovation >= 12000
-			is_player = no
-		}
-		if = {
-			limit = {
-				NOT = {
-					has_technology_researched = mana_extraction
-				}
+			NOT = {
+				has_technology_researched = mana_extraction
 			}
-			add_technology_researched = mana_extraction
 		}
-		else_if = {
-			limit = {
-				NOT = {
-					has_technology_researched = magic_farming
-				}
+		add_technology_researched = mana_extraction
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_technology_researched = magic_farming
 			}
-			add_technology_researched = magic_farming
 		}
-		else_if = {
-			limit = {
-				NOT = {
-					has_technology_researched = mage_infantry
-				}
+		add_technology_researched = magic_farming
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_technology_researched = mage_infantry
 			}
-			add_technology_researched = mage_infantry
 		}
-		else_if = {
-			limit = {
-				NOT = {
-					has_technology_researched = battlefield_wards
-				}
+		add_technology_researched = mage_infantry
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_technology_researched = battlefield_wards
 			}
-			add_technology_researched = battlefield_wards
 		}
-		else_if = {
-			limit = {
-				NOT = {
-					has_technology_researched = mana_lanterns
-				}
+		add_technology_researched = battlefield_wards
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_technology_researched = mana_lanterns
 			}
-			add_technology_researched = mana_lanterns
 		}
-		else_if = {
-			limit = {
-				NOT = {
-					has_technology_researched = formalized_magic
-				}
+		add_technology_researched = mana_lanterns
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_technology_researched = formalized_magic
 			}
-			add_technology_researched = formalized_magic
 		}
-		else_if = {
-			limit = {
-				NOT = {
-					has_technology_researched = living_irrigation
-				}
+		add_technology_researched = formalized_magic
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_technology_researched = living_irrigation
 			}
-			add_technology_researched = living_irrigation
 		}
-		else_if = {
-			limit = {
-				NOT = {
-					has_technology_researched = monster_compendium
-				}
+		add_technology_researched = living_irrigation
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_technology_researched = monster_compendium
 			}
-			add_technology_researched = monster_compendium
 		}
-		else_if = {
-			limit = {
-				NOT = {
-					has_technology_researched = healing_circles
-				}
+		add_technology_researched = monster_compendium
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_technology_researched = healing_circles
 			}
-			add_technology_researched = healing_circles
 		}
-		else_if = {
-			limit = {
-				NOT = {
-					has_technology_researched = mage_artillery
-				}
+		add_technology_researched = healing_circles
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_technology_researched = mage_artillery
 			}
-			add_technology_researched = mage_artillery
 		}
-		else_if = {
-			limit = {
-				NOT = {
-					has_technology_researched = ritual_magic
-				}
+		add_technology_researched = mage_artillery
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_technology_researched = ritual_magic
 			}
-			add_technology_researched = ritual_magic
 		}
-		else_if = {
-			limit = {
-				this = c:GMK
-				NOT = {
-					has_technology_researched = magic_dwarf_murk_railways
-				}
+		add_technology_researched = ritual_magic
+	}
+	else_if = {
+		limit = {
+			this = c:GMK
+			NOT = {
+				has_technology_researched = magic_dwarf_murk_railways
 			}
-			add_technology_researched = magic_dwarf_murk_railways
 		}
-		else_if = {
-			limit = {
-				NOT = {
-					has_technology_researched = mana_cores
-				}
+		add_technology_researched = magic_dwarf_murk_railways
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_technology_researched = mana_cores
 			}
-			add_technology_researched = mana_cores
 		}
-		else_if = {
-			limit = {
-				NOT = {
-					has_technology_researched = arcane_foundries
-				}
+		add_technology_researched = mana_cores
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_technology_researched = arcane_foundries
 			}
-			add_technology_researched = arcane_foundries
 		}
-		else_if = {
-			limit = {
-				NOT = {
-					has_technology_researched = regenerative_timber
-				}
+		add_technology_researched = arcane_foundries
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_technology_researched = regenerative_timber
 			}
-			add_technology_researched = regenerative_timber
 		}
-		else_if = {
-			limit = {
-				NOT = {
-					has_technology_researched = magic_golems
-				}
+		add_technology_researched = regenerative_timber
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_technology_researched = magic_golems
 			}
-			add_technology_researched = magic_golems
 		}
-		else_if = {
-			limit = {
-				NOT = {
-					has_technology_researched = magic_science
-				}
+		add_technology_researched = magic_golems
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_technology_researched = magic_science
 			}
-			add_technology_researched = magic_science
 		}
-		else_if = {
-			limit = {
-				NOT = {
-					has_technology_researched = mana_infused_fertilizers
-				}
+		add_technology_researched = magic_science
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_technology_researched = mana_infused_fertilizers
 			}
-			add_technology_researched = mana_infused_fertilizers
 		}
-		else_if = {
-			limit = {
-				NOT = {
-					has_technology_researched = mechanical_golems
-				}
+		add_technology_researched = mana_infused_fertilizers
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_technology_researched = mechanical_golems
 			}
-			add_technology_researched = mechanical_golems
 		}
-		else_if = {
-			limit = {
-				NOT = {
-					has_technology_researched = magic_electric_golems
-				}
+		add_technology_researched = mechanical_golems
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_technology_researched = magic_electric_golems
 			}
-			add_technology_researched = magic_electric_golems
 		}
-		set_variable = {
-			name = magic_innovation
-			value = 0
-		}
+		add_technology_researched = magic_electric_golems
+	}
+	set_variable = {
+		name = magic_innovation
+		value = 0
 	}
 }
 
