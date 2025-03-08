@@ -325,8 +325,10 @@ types gate_topbar_overwrites {
                         size = { 76 28 }
                         onclick = "[GetVariableSystem.Set('com_open_window', 'gate_button_main')]"
                         using = glow_button
-                        tooltip = concept_mana_saturation_desc
+                        tooltip = gg_mana_saturation_tooltip
                         using = tooltip_below
+                        onmousehierarchyenter = "[SetTempMapModeByKey('mm_state_mana_density')]"
+                        onmousehierarchyleave = "[RemoveTempMapMode]"
 
                         icon = {
                             size = { @secondary_icon_size @secondary_icon_size }
@@ -340,7 +342,7 @@ types gate_topbar_overwrites {
                             raw_text = "#v [GetGlobalVariable('global_mana_saturation').GetValue|0]%#!"
                             alpha = "[TransparentIfZero_int32(Country.GetBattalions)]"
                             autoresize = yes
-                            align = left|nobaselineða
+                            align = left|nobaseline
                             position = { 30 0 }
                         }
                     }
