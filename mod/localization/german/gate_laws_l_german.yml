@@ -1,45 +1,40 @@
 ﻿l_german:
-# Orcish Hegemony
- lawgroup_orcish_hegemony: "$orcish$ Hegemony"
- lawgroup_orcish_hegemony_desc: "The $lawgroup_orcish_hegemony$ is a brutal and unyielding system, where power and hierarchy defined every aspect of life. To the orcs, domination is not just a right but a creed, and all non-orcs are enslaved, stripped of identity and freedom, bound to serve their green-skinned masters. Yet even among the orcs, life is no simple matter of strength; they are stratified by profession, each role tightly controlled."
- law_orcish_hegemony_enforced: "Enforced Hegemony"
- law_orcish_hegemony_enforced_desc: "The social hegemony of $orcish$ [concept_culture] is enforced."
- law_orcish_hegemony_not_enforced: "Hegemony Not Enforced"
- law_orcish_hegemony_not_enforced_desc: "The social hegemony of $orcish$ [concept_culture] is not enforced and other cultures can enter our society."
-# Elven Supremacy
- lawgroup_elven_supremacy: "$elven$ Supremacy"
- lawgroup_elven_supremacy_desc: "Elven Supremacy enforces a rigid societal order where elves hold an unassailable monopoly on power, prestige, and magic. Other races are woven into the fabric of society but confined to lower echelons, barred from positions such as clergymen, aristocrats, or practitioners of magic. This system, rooted in the belief of elven inherent superiority, ensures the dominance of elves while exploiting the labor and skills of others."
- law_elven_supremacy_religious_preaching: "Religious Preaching of Supremacy"
- law_elven_supremacy_religious_preaching_desc: "$elven$ Supremacy is enforced through religious teachings."
- law_elven_supremacy_enforced: "Enforced Supremacy"
- law_elven_supremacy_enforced_desc: "$elven$ Supremacy is enforced by the state."
- law_elven_supremacy_not_enforced: "Supremacy Not Enforced"
- law_elven_supremacy_not_enforced_desc: "$elven$ Supremacy is not enforced."
-# New Samadore
- law_gnomish_harmony: "Gnomish Harmony"
- law_gnomish_harmony_desc: "Inspired by the gnomes’ talent for fostering unity amid diversity, this citizenship law embraces multiculturalism as a cornerstone of society. All religions and cultures are welcomed and integrated, creating a vibrant tapestry of traditions. In the spirit of cooperation and mutual respect, Gnomish Harmony turns differences into strengths, ensuring every voice finds its place in the chorus of the nation."
- EFFECTS_ON_ACCEPTANCE_law_gnomish_harmony: "#tooltippable #tooltip:$BREAKDOWN_TAG$ Pops will lead similar lives with only few negative consequences, even when they aren't as accepted#!#!"
- law_gnomish_integration: "Gnomish Integration"
- law_gnomish_integration_desc: "Rooted in respect and collaboration, Gnomish Integration eschews conquest for connection. This colonial policy emphasizes the voluntary inclusion of other cultures into the nation through dialogue, shared prosperity, and mutual respect. By prioritizing integration over domination, this approach seeks to build lasting bonds, turning colonies into thriving partners rather than subjugated lands. Though not without its complexities, Gnomish Integration represents a vision of colonization driven by harmony and shared growth."
-# Monster Hunting
- lawgroup_monster_hunting: "Monster Hunting"
- lawgroup_monster_hunting_desc: "The system of monster hunting to prevent [Concept('concept_monster_attack','$concept_monster_attacks$')]."
- law_no_organized_monster_hunting: "No Organized Monster Hunting"
- law_no_organized_monster_hunting_desc: "This country has no organized force hunting for monsters and [Concept('concept_monster_attack','$concept_monster_attacks$')] will occur frequently."
- law_private_monster_hunters: "Private Monster Hunters"
- law_private_monster_hunters_desc: "This country licenses and pays private individuals or companies to kill monsters."
- law_dedicated_monster_hunters: "Dedicated Monster Hunters"
- law_dedicated_monster_hunters_desc: "This country has a dedicated monster hunters with standardized training."
- law_militarized_monster_hunters: "Militarized Monster Hunters"
- law_militarized_monster_hunters_desc: "By giving your monster hunters military equipment and military training, their effectiveness at carrying out their job increases."
-# Arcane Touched in Society
- lawgroup_magic_users: "Arcane Touched in Society"
- lawgroup_magic_users_desc: "How do we treat [concept_gate_magic_users] in our society."
- law_free_magic_users: "Free Arcane Touched"
- law_free_magic_users_desc: "This country treats [concept_gate_magic_users] like any other citizen."
- law_registered_magic_users: "Registered Arcane Touched"
- law_registered_magic_users_desc: "This law makes [concept_gate_magic_users] register with the government else their use of magic is considered illegal."
- law_restricted_magic_users: "Restricted Arcane Touched"
- law_restricted_magic_users_desc: "This country threats [concept_gate_magic_users] as second class citizens and usage of magic outside of their jobs is considered illegal."
- law_noble_magic_users: "Noble Arcane Touched"
- law_noble_magic_users_desc: "This country threats [concept_gate_magic_users] as natural born nobels and offers them more rights than their average citizens."
+ EFFECTS_ON_ACCEPTANCE_law_gnomish_harmony: "#tooltippable #tooltip:$BREAKDOWN_TAG$ Pops führen ein ähnliches Leben mit nur wenigen negativen Konsequenzen, auch wenn sie nicht so akzeptiert werden#!#!" #deepl:1866093259
+ law_dedicated_monster_hunters: "Engagierte Monsterjäger" #deepl:2050591764
+ law_dedicated_monster_hunters_desc: "Dieses Land verfügt über engagierte Monsterjäger mit einer standardisierten Ausbildung." #deepl:2199958638
+ law_elven_supremacy_enforced: "Erzwungene Vorherrschaft" #deepl:1349776134
+ law_elven_supremacy_enforced_desc: "$elven$ Die Vorherrschaft wird vom Staat durchgesetzt." #deepl:3453300682
+ law_elven_supremacy_not_enforced: "Vorherrschaft nicht durchgesetzt" #deepl:217014304
+ law_elven_supremacy_not_enforced_desc: "$elven$ Die Vorrangstellung wird nicht durchgesetzt." #deepl:3995791709
+ law_elven_supremacy_religious_preaching: "Religiöse Predigt der Vorherrschaft" #deepl:383053274
+ law_elven_supremacy_religious_preaching_desc: "$elven$ Die Vorherrschaft wird durch religiöse Lehren durchgesetzt." #deepl:2766855590
+ law_free_magic_users: "Frei Arkane Berührt" #deepl:1578628553
+ law_free_magic_users_desc: "In diesem Land wird [concept_gate_magic_users] wie jeder andere Bürger behandelt." #deepl:32583836
+ law_gnomish_harmony: "Gnomische Harmonie" #deepl:3764768338
+ law_gnomish_harmony_desc: "Inspiriert durch das Talent der Zwerge, Einheit inmitten von Vielfalt zu fördern, umfasst dieses Staatsbürgerschaftsgesetz den Multikulturalismus als Eckpfeiler der Gesellschaft. Alle Religionen und Kulturen werden willkommen geheißen und integriert, wodurch ein lebendiges Geflecht von Traditionen entsteht. Im Geiste der Zusammenarbeit und des gegenseitigen Respekts verwandelt die gnomische Harmonie Unterschiede in Stärken und sorgt dafür, dass jede Stimme ihren Platz im Chor der Nation findet." #deepl:4062861475
+ law_gnomish_integration: "Gnomische Integration" #deepl:690380960
+ law_gnomish_integration_desc: "Die gnomische Integration, die auf Respekt und Zusammenarbeit beruht, verzichtet auf Eroberung und setzt stattdessen auf Verbindung. Diese koloniale Politik betont die freiwillige Einbeziehung anderer Kulturen in die Nation durch Dialog, gemeinsamen Wohlstand und gegenseitigen Respekt. Indem sie der Integration Vorrang vor der Beherrschung einräumt, will sie dauerhafte Bindungen aufbauen und Kolonien in blühende Partner statt in unterjochte Länder verwandeln. Obwohl die gnomische Integration nicht unproblematisch ist, stellt sie eine Vision der Kolonisierung dar, die von Harmonie und gemeinsamem Wachstum geprägt ist." #deepl:2047348424
+ law_militarized_monster_hunters: "Militarisierte Monsterjäger" #deepl:976492007
+ law_militarized_monster_hunters_desc: "Wenn Sie Ihre Monsterjäger mit militärischer Ausrüstung und militärischem Training ausstatten, erhöht sich ihre Effektivität bei der Erfüllung ihrer Aufgabe." #deepl:1743703329
+ law_no_organized_monster_hunting: "Keine organisierte Monsterjagd" #deepl:3363287864
+ law_no_organized_monster_hunting_desc: "In diesem Land gibt es keine organisierte Truppe, die nach Monstern jagt, und [Concept('concept_monster_attack','$concept_monster_attacks$')] wird häufig vorkommen." #deepl:2235162294
+ law_noble_magic_users: "Edler Arkan berührt" #deepl:1184807664
+ law_noble_magic_users_desc: "Dieses Land bedroht [concept_gate_magic_users] als natürlich geborene Adlige und bietet ihnen mehr Rechte als den Durchschnittsbürgern." #deepl:3650339933
+ law_orcish_hegemony_enforced: "Erzwungene Hegemonie" #deepl:891062246
+ law_orcish_hegemony_enforced_desc: "Die soziale Hegemonie von $orcish$ [concept_culture] wird durchgesetzt." #deepl:2235038345
+ law_orcish_hegemony_not_enforced: "Hegemonie nicht durchgesetzt" #deepl:3415917689
+ law_orcish_hegemony_not_enforced_desc: "Die soziale Hegemonie von $orcish$ [concept_culture] wird nicht durchgesetzt und andere Kulturen können in unsere Gesellschaft eindringen." #deepl:173048060
+ law_private_monster_hunters: "Private Monsterjäger" #deepl:4183403945
+ law_private_monster_hunters_desc: "Dieses Land vergibt Lizenzen und bezahlt Privatpersonen oder Unternehmen dafür, Monster zu töten." #deepl:1513633388
+ law_registered_magic_users: "Registriert Arcane Berührt" #deepl:1068430729
+ law_registered_magic_users_desc: "Nach diesem Gesetz muss sich [concept_gate_magic_users] bei der Regierung registrieren lassen, andernfalls gilt die Anwendung von Magie als illegal." #deepl:3339319522
+ law_restricted_magic_users: "Eingeschränkte arkane Berührung" #deepl:3898638927
+ law_restricted_magic_users_desc: "Dieses Land bedroht [concept_gate_magic_users] als Bürger zweiter Klasse und die Verwendung von Magie außerhalb ihrer Arbeit wird als illegal angesehen." #deepl:3496678298
+ lawgroup_elven_supremacy: "$elven$ Vormachtstellung" #deepl:3321457681
+ lawgroup_elven_supremacy_desc: "Die Vorherrschaft der Elfen setzt eine strenge gesellschaftliche Ordnung durch, in der die Elfen ein unanfechtbares Monopol auf Macht, Prestige und Magie besitzen. Andere Ethnien sind in das gesellschaftliche Gefüge eingebunden, aber auf untere Ränge beschränkt und von Positionen wie Geistlichen, Aristokraten oder Magieanwendern ausgeschlossen. Dieses System, das im Glauben an die angeborene Überlegenheit der Elfen verwurzelt ist, sichert die Vorherrschaft der Elfen und beutet gleichzeitig die Arbeitskraft und die Fähigkeiten der anderen aus." #deepl:4168647767
+ lawgroup_magic_users: "Arkane Berührungen in der Gesellschaft" #deepl:1482932589
+ lawgroup_magic_users_desc: "Wie gehen wir in unserer Gesellschaft mit [concept_gate_magic_users] um." #deepl:1399958968
+ lawgroup_monster_hunting: "Monsterjagd" #deepl:976278123
+ lawgroup_monster_hunting_desc: "Das System der Monsterjagd zu verhindern [Concept('concept_monster_attack','$concept_monster_attacks$')]." #deepl:1743280833
+ lawgroup_orcish_hegemony: "$orcish$ Hegemonie" #deepl:326626184
+ lawgroup_orcish_hegemony_desc: "Die $lawgroup_orcish_hegemony$ ist ein brutales und unnachgiebiges System, in dem Macht und Hierarchie jeden Aspekt des Lebens bestimmen. Für die Orks ist Herrschaft nicht nur ein Recht, sondern ein Glaubensbekenntnis, und alle Nicht-Orks sind versklavt, ihrer Identität und Freiheit beraubt und verpflichtet, ihren grünhäutigen Herren zu dienen. Doch selbst unter den Orks ist das Leben keine einfache Frage der Stärke; sie sind nach Berufen geschichtet, und jede Rolle wird streng kontrolliert." #deepl:3175376002

@@ -1,164 +1,159 @@
 ﻿l_german:
-# Conversion Journal Entry
- je_gate_mbudye: "Converting the [GetCulture('lunda').GetNameNoFormatting]"
- je_gate_mbudye_reason: "The elves of the Arcturian Dominion view the conversion of the Lunda as both a spiritual mission and a means of consolidating their theocratic rule. Their emissaries engage with the Mbudye, the venerated council of interpreters and historians, weaving the Dominion’s faith into the fabric of Lunda tradition. While the elves claim to offer divine enlightenment, the Mbudye remain cautious, recognizing the subtle erosion of their sovereignty hidden within the elven scriptures. The struggle is one of persuasion and resistance, as ancient Lunda principles clash with the Dominion's celestial decrees."
- je_gate_mbudye_complete: "The [GetCulture('lunda').GetName] nations are all converted to the [GetReligion('golden_religion').GetName]."
- je_gate_mbudye_fail_support: "We loose all support with the [GetCulture('lunda').GetName] nations."
- je_gate_mbudye_fail_annex: "We try to annex one of the [GetCulture('lunda').GetName] nations."
- je_gate_mbudye_active_resistance: "The natives offer active resistance against our preaching."
- je_gate_mbudye_passive_resistance: "The natives offer passive resistance against our preaching."
- je_gate_mbudye_ambivalent: "The natives are ambivalent about our preaching."
- je_gate_mbudye_engaging: "The natives are engaging with our preaching."
- je_gate_mbudye_accepting: "The natives are accepting our preaching."
- je_gate_mbudye_active_investigation: "We are currently investigating [SCOPE.sCountry('gate_mbudye_dominion').MakeScope.Var('mbudye_investigation').GetFlagName]."
- je_gate_mbudye_change_fear: "The [GetCulture('lunda').GetName] will convert through fear."
- je_gate_mbudye_change_support: "Support for conversion will change by [SCOPE.GetValue('support_change')|v+=]%."
- je_gate_mbudye_change_conversion: "Conversion in [SCOPE.sCountry('affected_country').GetName] will change by [SCOPE.GetValue('conversion_progress')|v+=]%."
- je_gate_mbudye_button_aggressive: "Aggressive Conversion"
- je_gate_mbudye_button_aggressive_desc: "We will take an aggressive approach to converting the [GetCulture('lunda').GetName]."
- je_gate_mbudye_button_aggressive_block: "We are not already taking an aggressive approach to the conversion."
- je_gate_mbudye_button_aggressive_effect_support: "#n -1#! to the yearly support of [GetCulture('lunda').GetName] states."
- je_gate_mbudye_button_aggressive_effect_conversion: "#p +3#! to the yearly conversion of [GetCulture('lunda').GetName] states."
- je_gate_mbudye_button_balanced: "Balanced Conversion"
- je_gate_mbudye_button_balanced_desc: "We will take a balanced approach to converting the [GetCulture('lunda').GetName]."
- je_gate_mbudye_button_balanced_block: "We are not already taking an aggressive approach to the conversion."
- je_gate_mbudye_button_balanced_effect_support: "#z No#! change to the yearly support of [GetCulture('lunda').GetName] states."
- je_gate_mbudye_button_balanced_effect_conversion: "#p +2#! to the yearly conversion of [GetCulture('lunda').GetName] states."
- je_gate_mbudye_button_passive: "Passive Conversion"
- je_gate_mbudye_button_passive_desc: "We will take a passive approach to converting the [GetCulture('lunda').GetName]."
- je_gate_mbudye_button_passive_block: "We are not already taking an aggressive approach to the conversion."
- je_gate_mbudye_button_passive_effect_support: "#p +1#! to the yearly support of [GetCulture('lunda').GetName] states."
- je_gate_mbudye_button_passive_effect_conversion: "#p +1#! to the yearly conversion of [GetCulture('lunda').GetName] states."
- pb_gate_mbudye_name: "Support for Conversion"
- pb_gate_mbudye_pro: "Support"
- pb_gate_mbudye_anti: "Resistance"
- pb_gate_mbudye_passive_conversion_tooltip_aggressive: "conversion through our #v aggressive#! approach"
- pb_gate_mbudye_passive_conversion_tooltip_balanced: "conversion through our #v balanced#! approach"
- pb_gate_mbudye_passive_conversion_tooltip_passive: "conversion through our #v passive#! approach"
- pb_gate_mbudye_passive_support_tooltip_aggressive: "support from our #v aggressive#! approach"
- pb_gate_mbudye_passive_support_tooltip_balanced: "support from our #v balanced#! approach"
- pb_gate_mbudye_passive_support_tooltip_passive: "support from our #v passive#! approach"
- pb_gate_mbudye_lunda_name: "[SCOPE.sCountry('gate_mbudye_lunda').GetName] conversion"
- pb_gate_mbudye_lunda_desc: "Converted population of [SCOPE.sCountry('gate_mbudye_lunda').GetNameNoFlag]"
- pb_gate_mbudye_chokwe_name: "[SCOPE.sCountry('gate_mbudye_chokwe').GetName] conversion"
- pb_gate_mbudye_chokwe_desc: "Converted population of [SCOPE.sCountry('gate_mbudye_chokwe').GetNameNoFlag]"
- pb_gate_mbudye_kazembe_name: "[SCOPE.sCountry('gate_mbudye_kazembe').GetName] conversion"
- pb_gate_mbudye_kazembe_desc: "Converted population of [SCOPE.sCountry('gate_mbudye_kazembe').GetNameNoFlag]"
- pb_gate_mbudye_kasanje_name: "[SCOPE.sCountry('gate_mbudye_kasanje').GetName] conversion"
- pb_gate_mbudye_kasanje_desc: "Converted population of [SCOPE.sCountry('gate_mbudye_kasanje').GetNameNoFlag]"
-# Integration Journal Entry
- je_gate_mbudye_integration: "Integrating the [GetCulture('lunda').GetNameNoFormatting] countries"
- je_gate_mbudye_integration_reason: "With the faith of the Golden Blessing firmly rooted in their lands, the Lunda states are drawn into the embrace of the Arcturian Dominion. Though the scars of the conversion still linger, shared devotion and careful diplomacy pave the way for a new era—one where unity is forged beneath the watchful gaze of the divine."
- je_gate_mbudye_integration_complete: "The [GetCulture('lunda').GetName] nations are all integrated into the [SCOPE.sCountry('gate_mbudye_dominion').GetName]."
- je_gate_mbudye_integration_not_started: "The integration process hasn't started."
- je_gate_mbudye_integration_in_progess: "The integration process is in progress."
- je_gate_mbudye_button_integration_start: "Start Integration"
- je_gate_mbudye_button_integration_start_desc: "Starts the integration process"
- je_gate_mbudye_button_integration_start_block: "Integration already in progress."
- pb_gate_mbudye_integration_name: "Integration Progress"
- pb_gate_mbudye_integration_desc: "Progress: #v [Multiply_float(JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self), '(float)12')|0]#! of 12 months"
- pb_gate_mbudye_integration_block: "the integration process has not Started"
- pb_gate_mbudye_integration_progress: "the integration process is in Progress"
-# Flags
- mbudye_assassination_official_flag: "the #v Assassination#! of our #v Official#!"
- mbudye_assassination_general_flag: "the #v Assassination#! of our #v General#!"
- mbudye_assassination_admiral_flag: "the #v Assassination#! of our #v Admiral#!"
- mbudye_assassination_politician_flag: "the #v Assassination#! of our #v Politician#!"
- mbudye_defaced_temple_flag: "the #v Defacing#! of our #v Temple#!"
-# Modifiers
- lunda_uprising_modifier: "Spirit of Revolution"
- lunda_bambudye_liberty_modifier: "The [concept_bambudye] Conspiracy"
- dp_lunda_uprising: "Lunda Uprising"
-# Events
- mbudye.1.t: "The Golden Conversion"
- mbudye.1.desc: "The [GetCulture('lunda').GetName] nations under our control convert to the [GetReligion('golden_religion').GetName]."
- mbudye.1.f: "After years of tireless preaching, political maneuvering, and bitter conflict, the Lunda have finally embraced the faith of the Golden Blessing. The Mbudye council, once staunch guardians of their ancestral traditions, now kneel in solemn prayer alongside elven priests. Yet the path to this moment was stained with blood and marred by strife—villages burned, families divided, and histories rewritten. As golden banners rise over Lunda lands, the question lingers: will this new faith bring unity, or will old wounds fester beneath the surface?"
- mbudye.1.a: "Finally."
- mbudye.2.t: "The Drums of Unity"
- mbudye.2.desc: "The [GetCulture('lunda').GetName] nations unify and start an uprising against us."
- mbudye.2.f: "In an unprecedented act of defiance, the Lunda nations set aside their differences, forging an alliance to confront the dominion of the Arcturian elves. Across the land, the drums of unity echoed, rallying warriors and leaders alike. For the first time, the fragmented states presented a unified front, their resolve sharpened by shared grievances and a collective yearning for freedom from their otherworldly occupiers."
- mbudye.2.a: "We will crush them."
- mbudye.3.t: "Priest Turned Away"
- mbudye.3.desc: "A priest of the [GetReligion('golden_religion').GetName] has been turned away from a village in the state of [SCOPE.sState('mbudye_event_state').GetName] in [SCOPE.sCountry('mbudye_event_country').GetNameNoFlag]."
- mbudye.3.f: "An elven priest, adorned in the shimmering vestments of the Arcturian Dominion, approached a Lunda village, intent on spreading the celestial faith. However, the villagers, united in their resolve, stood firm at the entrance, barring the priest’s path. “We honor our ancestors and their wisdom,” the village elder declared. The priest, though outwardly composed, returned with a heavy heart—and a report to the Dominion leaders, who now must decide how to handle this act of defiance."
- mbudye.3.a: "Burn down that Village"
- mbudye.3.b: "Send a stern missive to the [SCOPE.sCountry('mbudye_event_country').GetNameNoFlag] [concept_mbudye_council]."
- mbudye.3.c: "It is just one village."
- mbudye.4.t: "Elven Official Assassinated"
- mbudye.4.desc: "An elven official has been assassinated when visiting the state of [SCOPE.sState('mbudye_event_state').GetName] in [SCOPE.sCountry('mbudye_event_country').GetNameNoFlag]."
- mbudye.4.f: "Tensions in the Lunda lands erupted as news spread of the assassination of a prominent elven official by a shadowy [concept_bambudye] operative. The strike was precise and deliberate, a clear message from the secret society determined to free their people from Arcturian dominion. While the Dominion's priests condemned the act as barbaric, whispers among the Lunda spoke of defiance and hope. The balance between rebellion and retaliation now hangs perilously, threatening to plunge the region into chaos."
- mbudye.4.a: "Make an Example in [SCOPE.sState('mbudye_event_state').GetName]."
- mbudye.4.b: "Send in our secret police."
- mbudye.4.c: "Start an official investigation."
- mbudye.4.d: "Censor the whole thing."
- mbudye.5.t: "Culprits Unveiled"
- mbudye.5.desc: "We have found the people responsible for [SCOPE.sCountry('gate_mbudye_dominion').MakeScope.Var('mbudye_investigation').GetFlagName]."
- mbudye.5.f: "After weeks of meticulous inquiry, the elven authorities have identified the individuals responsible for the heinous act. The investigation, conducted with the precision and zeal characteristic of the Dominion, has traced the threads of conspiracy back to a hidden cell of Bambudye operatives. This revelation sends ripples through the region, promising both retribution and escalating tensions. Will the Dominion's response restore order—or ignite further rebellion?"
- mbudye.5.a: "Execute them publicly."
- mbudye.5.b: "Give them a fair trial."
- mbudye.6.t: "Shadows Without Faces"
- mbudye.6.desc: "We could not find the people responsible for [SCOPE.sCountry('gate_mbudye_dominion').MakeScope.Var('mbudye_investigation').GetFlagName]."
- mbudye.6.f: "Despite the efforts of the Dominion's most skilled investigators, the trail has gone cold. Evidence points to the Bambudye, yet no culprits have been apprehended. The elusive nature of the resistance casts doubt on the Dominion's control, leaving frustration among officials and unease among the populace. Whispers of defiance grow louder, as the unanswered crime becomes a symbol of rebellion."
- mbudye.6.a: "Randomly arrest people."
- mbudye.6.b: "Nothing we can do."
- mbudye.7.t: "A Blade in the Shadows"
- mbudye.7.desc: "Our general [SCOPE.sCharacter('mbudye_event_character').GetFullName] has been assassinated when visiting the state of [SCOPE.sState('mbudye_event_state').GetName] in [SCOPE.sCountry('mbudye_event_country').GetNameNoFlag]."
- mbudye.7.f: "Tragedy struck as one of our esteemed generals was ambushed and assassinated during a diplomatic visit to a Lunda subject state. The assailants melted into the crowd, leaving behind shock and outrage. Tensions with the local populace simmer as accusations fly, and the Dominion vows swift retribution. The loss of such a prominent figure shakes our forces and casts a shadow over the fragile peace."
- mbudye.7.a: "Make an Example in [SCOPE.sState('mbudye_event_state').GetName]."
- mbudye.7.b: "Send in our secret police."
- mbudye.7.c: "Start an official investigation."
- mbudye.7.d: "Censor the whole thing."
- mbudye.8.t: "Tides of Treachery"
- mbudye.8.desc: "Our admiral [SCOPE.sCharacter('mbudye_event_character').GetFullName] has been assassinated when visiting the state of [SCOPE.sState('mbudye_event_state').GetName] in [SCOPE.sCountry('mbudye_event_country').GetNameNoFlag]."
- mbudye.8.f: "Our nation mourns as word spreads of the assassination of a respected admiral during a visit to a Lunda subject state. Struck down far from the safety of our shores, the act has sent shockwaves through the Dominion’s naval ranks. Suspicion and anger swell, threatening to spill into harsh reprisals. The tragic loss of this figurehead of our maritime strength is a stark reminder of the volatility within our rule."
- mbudye.8.a: "Make an Example in [SCOPE.sState('mbudye_event_state').GetName]."
- mbudye.8.b: "Send in our secret police."
- mbudye.8.c: "Start an official investigation."
- mbudye.8.d: "Censor the whole thing."
- mbudye.9.t: "Shadows in the Heartland"
- mbudye.9.desc: "Our politician [SCOPE.sCharacter('mbudye_event_character').GetFullName] has been assassinated when visiting the state of [SCOPE.sState('mbudye_event_state').GetName] in [SCOPE.sCountry('mbudye_event_country').GetNameNoFlag]."
- mbudye.9.f: "Tragedy strikes as one of our prominent politicians is assassinated while visiting a Lunda subject state. The shocking act has sent ripples through the Dominion, igniting debates about security and the precarious nature of our governance in the region. Tensions rise as the political fallout threatens to disrupt the fragile order we’ve established."
- mbudye.9.a: "Make an Example in [SCOPE.sState('mbudye_event_state').GetName]."
- mbudye.9.b: "Send in our secret police."
- mbudye.9.c: "Start an official investigation."
- mbudye.9.d: "Censor the whole thing."
- mbudye.10.t: "Temple Vandalism"
- mbudye.10.desc: "A newly built [GetReligion('golden_religion').GetName] temple was defaced with Lunda symbols overnight in the state of [SCOPE.sState('mbudye_event_state').GetName] in [SCOPE.sCountry('mbudye_event_country').GetNameNoFlag]."
- mbudye.10.f: "Under the shroud of night, the pristine walls of a newly erected Golden Blessing temple were desecrated with bold, defiant Lunda symbols. The act has left the elven clergy outraged and local villagers uneasy, each accusing the other of sabotage. The temple now stands as a stark symbol of the tension simmering between tradition and conversion."
- mbudye.10.a: "Burn down that Village"
- mbudye.10.b: "Start an official investigation."
- mbudye.10.c: "Just some kids."
- mbudye.11.t: "Rumors of Abolition"
- mbudye.11.desc: "A malicious rumor is going around in the state of [SCOPE.sState('mbudye_event_state').GetName] in [SCOPE.sCountry('mbudye_event_country').GetNameNoFlag]."
- mbudye.11.f: "Whispers spread like wildfire: the Dominion allegedly plans to dissolve the cherished Lunda village councils. Though unfounded, the rumor sows widespread unease among the Lunda populace, prompting protests and urgent pleas for clarification. The Arcturian administration scrambles to contain the fallout, but suspicion lingers in the air."
- mbudye.11.a: "Quash those rumors by force."
- mbudye.11.b: "Censor the rumors."
- mbudye.11.c: "Let these barbarian think what they want."
- mbudye.12.t: "Cultural Misstep"
- mbudye.12.desc: "A public in the state of [SCOPE.sState('mbudye_event_state').GetName] in [SCOPE.sCountry('mbudye_event_country').GetNameNoFlag] goes awry."
- mbudye.12.f: "A public ceremony meant to honor shared harmony descends into chaos as elven clergy misinterpret a Lunda ritual as heretical. The misunderstanding sparks a heated dispute, with voices raised on both sides. What began as an opportunity for unity now threatens to deepen the divide, forcing Dominion officials to act swiftly to prevent further escalation."
- mbudye.12.a: "Punish those heretics."
- mbudye.12.b: "Scold the clergy."
- mbudye.13.t: "Harmony in Healing"
- mbudye.13.desc: "A public healing ceremony in the state of [SCOPE.sState('mbudye_event_state').GetName] in [SCOPE.sCountry('mbudye_event_country').GetNameNoFlag] impresses the public."
- mbudye.13.f: "In a rare display of unity, an elven priest and a renowned Lunda healer joined forces for a public healing ritual in the heart of a Lunda village. Combining the priest's arcane chants with the healer's traditional methods, the ceremony drew a crowd that watched in awe as the sick and injured found relief. The event became a symbol of what collaboration could achieve, fostering mutual respect and hope for a more harmonious future."
- mbudye.13.a: "Good."
- mbudye.14.t: "Bridging the Past"
- mbudye.14.desc: "Elven translation of Lunda histories in the state of [SCOPE.sState('mbudye_event_state').GetName] in [SCOPE.sCountry('mbudye_event_country').GetNameNoFlag] impresses the public."
- mbudye.14.f: "Elven scholars, after months of meticulous work, unveiled a translated version of a revered Lunda historical text. The project preserved the rich heritage of the Lunda people while making it accessible to the Dominion's wider audience. This gesture of respect and preservation earned gratitude from Lunda leaders and admiration from both cultures, becoming a rare example of shared intellectual and cultural pride."
- mbudye.14.a: "Good."
- mbudye.15.t: "Sabotage in the Shadows"
- mbudye.15.desc: "[concept_bambudye] operatives sabotaged our armies supplies reducing our [concept_organization] and [concept_morale]."
- mbudye.15.f: "As the uprising erupted, the Bambudye struck swiftly and decisively. Under the cover of darkness, their operatives infiltrated Arcturian supply depots, setting stores of food, weapons, and mana crystals ablaze. The Dominion’s forces awoke to chaos, their supply lines severed and their morale shaken by the shadowy hand of rebellion."
- mbudye.15.a: "These barbarians will pay for this."
- mbudye.16.t: "A Grievous Misstep"
- mbudye.16.desc: "A priest of the [GetReligion('golden_religion').GetName] killed a local for defying him."
- mbudye.16.f: "Tensions reached a breaking point when an elven priest, frustrated by a villager's open defiance, resorted to lethal force. The act sent shock waves through the region, fueling outrage among the Lunda and deepening the divide between the Dominion and its subjects. What was meant to be a mission of faith now teetered on the edge of violent backlash."
- mbudye.16.a: "Publicly punish the priest."
- mbudye.16.b: "Privately punish the priest."
- mbudye.16.c: "Censor the whole thing."
- mbudye.17.t: "Integrating the [GetCulture('lunda').GetNameNoFormatting]"
- mbudye.17.desc: "We need to decide how we want to integrate the [GetCulture('lunda').GetName] [Concept('concept_country','$concept_countries$')]."
- mbudye.17.f: "The scrolls are signed, binding the [GetCulture('lunda').GetNameNoFormatting] countries to the [SCOPE.sCountry('gate_mbudye_dominion').GetNameNoFormatting] in both faith and law. What began with missionaries and steel now culminates in solemn ceremony, as ancient kingdoms yield to a new order beneath the [GetReligion('golden_religion').GetNameNoFormatting]."
- mbudye.17.a: "Fully integrate the [GetCulture('lunda').GetName] into our Country."
- mbudye.17.b: "Only integrate the [GetCulture('lunda').GetName] states into our Country."
+ dp_lunda_uprising: "Lunda-Aufstand" #deepl:3356900361
+ je_gate_mbudye: "Umwandlung der [GetCulture('lunda').GetNameNoFormatting]" #deepl:3928575615
+ je_gate_mbudye_accepting: "Die Einheimischen nehmen unsere Predigten an." #deepl:811616953
+ je_gate_mbudye_active_investigation: "Wir untersuchen derzeit [SCOPE.sCountry('gate_mbudye_dominion').MakeScope.Var('mbudye_investigation').GetFlagName]." #deepl:799304425
+ je_gate_mbudye_active_resistance: "Die Einheimischen leisten aktiven Widerstand gegen unsere Predigten." #deepl:3977268473
+ je_gate_mbudye_ambivalent: "Die Einheimischen stehen unseren Predigten zwiespältig gegenüber." #deepl:2553409644
+ je_gate_mbudye_button_aggressive: "Aggressive Umstellung" #deepl:3925221649
+ je_gate_mbudye_button_aggressive_block: "Wir gehen bei der Umstellung nicht schon aggressiv vor." #deepl:1035146556
+ je_gate_mbudye_button_aggressive_desc: "Wir werden aggressiv an die Umwandlung der [GetCulture('lunda').GetName] herangehen." #deepl:2906407932
+ je_gate_mbudye_button_aggressive_effect_conversion: "#p +3#! zur jährlichen Umrechnung von [GetCulture('lunda').GetName] Staaten." #deepl:710387857
+ je_gate_mbudye_button_aggressive_effect_support: "#n -1#! auf die jährliche Unterstützung der [GetCulture('lunda').GetName] Staaten." #deepl:1662376947
+ je_gate_mbudye_button_balanced: "Ausgewogene Konvertierung" #deepl:3635635450
+ je_gate_mbudye_button_balanced_block: "Wir gehen bei der Umstellung nicht schon aggressiv vor." #deepl:1035146556
+ je_gate_mbudye_button_balanced_desc: "Wir werden einen ausgewogenen Ansatz für die Umwandlung der [GetCulture('lunda').GetName] wählen." #deepl:959734784
+ je_gate_mbudye_button_balanced_effect_conversion: "#p +2#! zur jährlichen Umrechnung von [GetCulture('lunda').GetName] Staaten." #deepl:3121573552
+ je_gate_mbudye_button_balanced_effect_support: "#z Nein#! Änderung der jährlichen Unterstützung von [GetCulture('lunda').GetName] Staaten." #deepl:2306124696
+ je_gate_mbudye_button_integration_start: "Beginn der Integration" #deepl:164965936
+ je_gate_mbudye_button_integration_start_block: "Die Integration ist bereits im Gange." #deepl:147677739
+ je_gate_mbudye_button_integration_start_desc: "Startet den Integrationsprozess" #deepl:1279228514
+ je_gate_mbudye_button_passive: "Passive Umwandlung" #deepl:4269233733
+ je_gate_mbudye_button_passive_block: "Wir gehen bei der Umstellung nicht schon aggressiv vor." #deepl:1035146556
+ je_gate_mbudye_button_passive_desc: "Wir werden einen passiven Ansatz für die Umwandlung der [GetCulture('lunda').GetName] wählen." #deepl:671493161
+ je_gate_mbudye_button_passive_effect_conversion: "#p +1#! zur jährlichen Umrechnung von [GetCulture('lunda').GetName] Staaten." #deepl:2716017104
+ je_gate_mbudye_button_passive_effect_support: "#p +1#! auf die jährliche Unterstützung von [GetCulture('lunda').GetName] Staaten." #deepl:2876369827
+ je_gate_mbudye_change_conversion: "Die Umrechnung in [SCOPE.sCountry('affected_country').GetName] wird um [SCOPE.GetValue('conversion_progress')|v+=]% geändert." #deepl:98560052
+ je_gate_mbudye_change_fear: "Die Website [GetCulture('lunda').GetName] wird durch Angst bekehrt." #deepl:650259051
+ je_gate_mbudye_change_support: "Die Unterstützung für die Umstellung wird sich um [SCOPE.GetValue('support_change')|v+=]% ändern." #deepl:4066869271
+ je_gate_mbudye_complete: "Die [GetCulture('lunda').GetName] Nationen sind alle zur [GetReligion('golden_religion').GetName] bekehrt." #deepl:1839779040
+ je_gate_mbudye_engaging: "Die Einheimischen lassen sich auf unsere Predigten ein." #deepl:2714250076
+ je_gate_mbudye_fail_annex: "Wir versuchen, eine der [GetCulture('lunda').GetName] Nationen zu annektieren." #deepl:1312363920
+ je_gate_mbudye_fail_support: "Wir verlieren jegliche Unterstützung durch die [GetCulture('lunda').GetName] Nationen." #deepl:1836029215
+ je_gate_mbudye_integration: "Die Integration der Länder [GetCulture('lunda').GetNameNoFormatting] " #deepl:536701752
+ je_gate_mbudye_integration_complete: "Die [GetCulture('lunda').GetName] Nationen sind alle in die [SCOPE.sCountry('gate_mbudye_dominion').GetName] integriert." #deepl:3924985126
+ je_gate_mbudye_integration_in_progess: "Der Integrationsprozess ist im Gange." #deepl:3492244278
+ je_gate_mbudye_integration_not_started: "Der Integrationsprozess hat noch nicht begonnen." #deepl:3376676760
+ je_gate_mbudye_integration_reason: "Mit dem Glauben an den Goldenen Segen fest in ihren Ländern verwurzelt, werden die Lunda-Staaten in die Umarmung des Arkturianischen Dominions gezogen. Obwohl die Narben der Bekehrung noch nicht verheilt sind, ebnen gemeinsame Hingabe und vorsichtige Diplomatie den Weg für eine neue Ära - eine, in der Einheit unter dem wachsamen Blick des Göttlichen geschmiedet wird." #deepl:4209411995
+ je_gate_mbudye_passive_resistance: "Die Einheimischen leisten passiven Widerstand gegen unsere Predigten." #deepl:1985282144
+ je_gate_mbudye_reason: "Die Elfen des arkturianischen Dominions betrachten die Bekehrung der Lunda sowohl als spirituelle Mission als auch als Mittel zur Festigung ihrer theokratischen Herrschaft. Ihre Abgesandten arbeiten mit den Mbudye, dem verehrten Rat der Dolmetscher und Historiker, zusammen und weben den Glauben des Dominions in die Tradition der Lunda ein. Während die Elfen behaupten, göttliche Erleuchtung zu bieten, bleiben die Mbudye vorsichtig, da sie die subtile Aushöhlung ihrer Souveränität erkennen, die in den elfischen Schriften verborgen ist. Der Kampf ist ein Kampf der Überzeugung und des Widerstands, da die alten Prinzipien der Lunda mit den himmlischen Dekreten des Dominion kollidieren." #deepl:297623880
+ lunda_bambudye_liberty_modifier: "Die [concept_bambudye] Verschwörung" #deepl:1252766707
+ lunda_uprising_modifier: "Geist der Revolution" #deepl:116156328
+ mbudye.1.a: "Endlich." #deepl:4054877442
+ mbudye.1.desc: "Die [GetCulture('lunda').GetName] Nationen unter unserer Kontrolle konvertieren zur [GetReligion('golden_religion').GetName]." #deepl:1594395427
+ mbudye.1.f: "Nach Jahren unermüdlicher Predigten, politischer Manöver und erbitterter Konflikte haben die Lunda endlich den Glauben an den Goldenen Segen angenommen. Der Rat der Mbudye, einst standhafte Hüter der Traditionen ihrer Vorfahren, kniet nun in feierlichem Gebet neben den Priestern der Elfen. Doch der Weg dorthin war blutig und von Unruhen gezeichnet - Dörfer wurden niedergebrannt, Familien entzweit und die Geschichte umgeschrieben. Während sich goldene Banner über den Lunda-Ländern erheben, stellt sich die Frage: Wird dieser neue Glaube Einheit bringen, oder werden alte Wunden unter der Oberfläche weiter schwären?" #deepl:1295943435
+ mbudye.1.t: "Die Goldene Konversion" #deepl:552743900
+ mbudye.10.a: "Brennt das Dorf nieder" #deepl:548230620
+ mbudye.10.b: "Leiten Sie eine offizielle Untersuchung ein." #deepl:472688273
+ mbudye.10.c: "Nur ein paar Kinder." #deepl:3470954141
+ mbudye.10.desc: "Ein neu errichteter [GetReligion('golden_religion').GetName] Tempel wurde über Nacht im Bundesstaat [SCOPE.sState('mbudye_event_state').GetName] mit Lunda-Symbolen verunstaltet [SCOPE.sCountry('mbudye_event_country').GetNameNoFlag]." #deepl:2527703595
+ mbudye.10.f: "Im Schutz der Nacht wurden die unberührten Mauern eines neu errichteten Tempels der Goldenen Segnung mit kühnen, trotzigen Lunda-Symbolen geschändet. Die Tat hat den elfischen Klerus empört und die Dorfbewohner verunsichert, die sich gegenseitig der Sabotage beschuldigen. Der Tempel ist nun ein deutliches Symbol für die Spannung zwischen Tradition und Konversion." #deepl:3765794858
+ mbudye.10.t: "Tempel-Vandalismus" #deepl:1612520953
+ mbudye.11.a: "Zerschlagen Sie diese Gerüchte mit Gewalt." #deepl:204440174
+ mbudye.11.b: "Zensieren Sie die Gerüchte." #deepl:3327216654
+ mbudye.11.c: "Sollen diese Barbaren doch denken, was sie wollen." #deepl:1687605225
+ mbudye.11.desc: "Ein böses Gerücht geht um im Staat [SCOPE.sState('mbudye_event_state').GetName] in [SCOPE.sCountry('mbudye_event_country').GetNameNoFlag]." #deepl:379751605
+ mbudye.11.f: "Gerüchte verbreiten sich wie ein Lauffeuer: Angeblich plant das Dominion, die geschätzten Lunda-Dorfräte aufzulösen. Obwohl das Gerücht unbegründet ist, sorgt es für große Unruhe unter der Lunda-Bevölkerung, was zu Protesten und dringenden Bitten um Aufklärung führt. Die arkturianische Verwaltung bemüht sich, die Auswirkungen einzudämmen, aber der Verdacht liegt in der Luft." #deepl:1558397207
+ mbudye.11.t: "Gerüchte über die Abschaffung" #deepl:3505884102
+ mbudye.12.a: "Bestrafen Sie diese Ketzer." #deepl:1947287734
+ mbudye.12.b: "Schimpfen Sie mit dem Klerus." #deepl:909383387
+ mbudye.12.desc: "Ein Publikum im Zustand von [SCOPE.sState('mbudye_event_state').GetName] in [SCOPE.sCountry('mbudye_event_country').GetNameNoFlag] geht schief." #deepl:568927268
+ mbudye.12.f: "Eine öffentliche Zeremonie zu Ehren der gemeinsamen Harmonie versinkt im Chaos, als elfische Kleriker ein Ritual der Lunda als ketzerisch missverstehen. Das Missverständnis entfacht einen hitzigen Streit, bei dem auf beiden Seiten die Stimmen laut werden. Was als Gelegenheit zur Einigung begann, droht nun die Kluft zu vertiefen und zwingt die Beamten des Dominion zu schnellem Handeln, um eine weitere Eskalation zu verhindern." #deepl:3228075376
+ mbudye.12.t: "Kultureller Fehltritt" #deepl:1474215821
+ mbudye.13.a: "Gut." #deepl:3593588592
+ mbudye.13.desc: "Eine öffentliche Heilungszeremonie im Staat [SCOPE.sState('mbudye_event_state').GetName] in [SCOPE.sCountry('mbudye_event_country').GetNameNoFlag] beeindruckt die Öffentlichkeit." #deepl:2400243936
+ mbudye.13.f: "In einem seltenen Fall von Einigkeit haben sich ein Elfenpriester und ein bekannter Lunda-Heiler zu einem öffentlichen Heilungsritual im Herzen eines Lunda-Dorfes zusammengetan. Die Zeremonie, bei der die arkanen Gesänge des Priesters mit den traditionellen Methoden des Heilers kombiniert wurden, zog eine Menge Menschen an, die gebannt zusahen, wie die Kranken und Verletzten Linderung erfuhren. Die Veranstaltung wurde zu einem Symbol dafür, was Zusammenarbeit erreichen kann, indem sie gegenseitigen Respekt und die Hoffnung auf eine harmonischere Zukunft fördert." #deepl:3114871254
+ mbudye.13.t: "Harmonie beim Heilen" #deepl:1201974678
+ mbudye.14.a: "Gut." #deepl:3593588592
+ mbudye.14.desc: "Elfenübersetzung der Lunda-Geschichten im Staat [SCOPE.sState('mbudye_event_state').GetName] in [SCOPE.sCountry('mbudye_event_country').GetNameNoFlag] beeindruckt das Publikum." #deepl:2191018299
+ mbudye.14.f: "Elfengelehrte haben nach monatelanger akribischer Arbeit eine übersetzte Fassung eines verehrten historischen Textes der Lunda vorgelegt. Das Projekt bewahrte das reiche Erbe des Lunda-Volkes und machte es gleichzeitig einem breiteren Publikum im Dominion zugänglich. Diese Geste des Respekts und der Bewahrung erntete die Dankbarkeit der Lunda-Führer und die Bewunderung beider Kulturen und wurde zu einem seltenen Beispiel für gemeinsamen intellektuellen und kulturellen Stolz." #deepl:1153212932
+ mbudye.14.t: "Eine Brücke in die Vergangenheit" #deepl:3067004030
+ mbudye.15.a: "Diese Barbaren werden dafür bezahlen." #deepl:1544735610
+ mbudye.15.desc: "[concept_bambudye] Agenten sabotierten den Nachschub unserer Armeen und reduzierten unsere [concept_organization] und [concept_morale]." #deepl:3283717390
+ mbudye.15.f: "Als der Aufstand ausbrach, schlugen die Bambudye schnell und entschlossen zu. Im Schutze der Dunkelheit infiltrierten ihre Agenten arkturianische Versorgungslager und setzten Vorräte an Lebensmitteln, Waffen und Manakristallen in Brand. Die Streitkräfte des Dominion erwachten im Chaos, ihre Versorgungslinien waren unterbrochen und ihre Moral durch die schattenhafte Hand der Rebellion erschüttert." #deepl:2442865322
+ mbudye.15.t: "Sabotage im Verborgenen" #deepl:1775829490
+ mbudye.16.a: "Bestrafen Sie den Priester öffentlich." #deepl:3728316568
+ mbudye.16.b: "Bestrafen Sie den Priester heimlich." #deepl:4081768022
+ mbudye.16.c: "Zensieren Sie die ganze Sache." #deepl:2821660072
+ mbudye.16.desc: "Ein Priester der [GetReligion('golden_religion').GetName] tötete einen Einheimischen, weil er sich ihm widersetzte." #deepl:1206914009
+ mbudye.16.f: "Die Spannungen erreichten einen Wendepunkt, als ein Elfenpriester, frustriert über den offenen Widerstand eines Dorfbewohners, zu tödlicher Gewalt griff. Die Tat schlug Schockwellen durch die Region, schürte die Empörung unter den Lunda und vertiefte die Kluft zwischen dem Dominion und seinen Untertanen. Was als Glaubensmission gedacht war, stand nun am Rande einer gewalttätigen Gegenreaktion." #deepl:2568845913
+ mbudye.16.t: "Ein schwerwiegender Fehler" #deepl:2943156908
+ mbudye.17.a: "Vollständige Integration der [GetCulture('lunda').GetName] in unser Land." #deepl:541646885
+ mbudye.17.b: "Integrieren Sie nur die Staaten von [GetCulture('lunda').GetName] in unser Land." #deepl:169507704
+ mbudye.17.desc: "Wir müssen entscheiden, wie wir die Website [GetCulture('lunda').GetName] integrieren wollen. [Concept('concept_country','$concept_countries$')]." #deepl:707607904
+ mbudye.17.f: "Die Schriftrollen werden unterzeichnet und binden die Länder von [GetCulture('lunda').GetNameNoFormatting] in Glauben und Recht an die [SCOPE.sCountry('gate_mbudye_dominion').GetNameNoFormatting]. Was mit Missionaren und Stahl begann, gipfelt nun in einer feierlichen Zeremonie, bei der die alten Königreiche einer neuen Ordnung unter [GetReligion('golden_religion').GetNameNoFormatting] weichen." #deepl:1328834613
+ mbudye.17.t: "Die Integration der [GetCulture('lunda').GetNameNoFormatting]" #deepl:936313455
+ mbudye.2.a: "Wir werden sie vernichten." #deepl:3205304652
+ mbudye.2.desc: "Die [GetCulture('lunda').GetName] Nationen vereinigen sich und beginnen einen Aufstand gegen uns." #deepl:2595625035
+ mbudye.2.f: "In einem beispiellosen Akt des Trotzes legten die Lunda-Nationen ihre Differenzen beiseite und schmiedeten ein Bündnis, um sich der Herrschaft der arkturianischen Elfen entgegenzustellen. Im ganzen Land hallten die Trommeln der Einheit wider und riefen Krieger und Anführer gleichermaßen zusammen. Zum ersten Mal präsentierten die zersplitterten Staaten eine einheitliche Front, deren Entschlossenheit durch gemeinsame Beschwerden und die kollektive Sehnsucht nach Freiheit von ihren jenseitigen Besatzern geschärft wurde." #deepl:2569723675
+ mbudye.2.t: "Die Trommeln der Einheit" #deepl:2178826131
+ mbudye.3.a: "Brennt das Dorf nieder" #deepl:548230620
+ mbudye.3.b: "Senden Sie ein strenges Schreiben an [SCOPE.sCountry('mbudye_event_country').GetNameNoFlag] [concept_mbudye_council] ." #deepl:86206412
+ mbudye.3.c: "Es ist nur ein Dorf." #deepl:4143180907
+ mbudye.3.desc: "Ein Priester der [GetReligion('golden_religion').GetName] ist aus einem Dorf im Bundesstaat [SCOPE.sState('mbudye_event_state').GetName] in [SCOPE.sCountry('mbudye_event_country').GetNameNoFlag] abgewiesen worden." #deepl:663751561
+ mbudye.3.f: "Ein Elfenpriester in den schimmernden Gewändern des arkturianischen Dominions näherte sich einem Lunda-Dorf, in der Absicht, den himmlischen Glauben zu verbreiten. Doch die Dorfbewohner blieben entschlossen am Eingang stehen und versperrten dem Priester den Weg. "Wir ehren unsere Vorfahren und ihre Weisheit", erklärte der Dorfälteste. Der Priester, obwohl äußerlich gefasst, kehrte mit schwerem Herzen zurück - und mit einem Bericht an die Führer des Dominion, die nun entscheiden müssen, wie sie mit diesem Akt der Missachtung umgehen sollen." #deepl:4135514001
+ mbudye.3.t: "Abgewandter Priester" #deepl:1544671732
+ mbudye.4.a: "Machen Sie ein Beispiel in [SCOPE.sState('mbudye_event_state').GetName]." #deepl:1775792892
+ mbudye.4.b: "Schicken Sie unsere Geheimpolizei rein." #deepl:948829720
+ mbudye.4.c: "Leiten Sie eine offizielle Untersuchung ein." #deepl:472688273
+ mbudye.4.d: "Zensieren Sie die ganze Sache." #deepl:2821660072
+ mbudye.4.desc: "Ein elfischer Beamter wurde bei einem Besuch des Staates [SCOPE.sState('mbudye_event_state').GetName] in [SCOPE.sCountry('mbudye_event_country').GetNameNoFlag] ermordet." #deepl:3086421051
+ mbudye.4.f: "Die Spannungen in den Lunda-Ländern brachen aus, als sich die Nachricht von der Ermordung eines prominenten elfischen Beamten durch einen zwielichtigen [concept_bambudye] -Agenten verbreitete. Der Anschlag war präzise und überlegt, eine klare Botschaft des Geheimbundes, der entschlossen ist, sein Volk von der arkturianischen Herrschaft zu befreien. Während die Priester des Dominion die Tat als barbarisch verurteilten, flüsterte man unter den Lunda von Trotz und Hoffnung. Das Gleichgewicht zwischen Rebellion und Vergeltung steht nun auf dem Spiel und droht, die Region ins Chaos zu stürzen." #deepl:3723883217
+ mbudye.4.t: "Elfen-Beamter ermordet" #deepl:3619028707
+ mbudye.5.a: "Führen Sie sie öffentlich aus." #deepl:3152215348
+ mbudye.5.b: "Geben Sie ihnen ein faires Verfahren." #deepl:2985984273
+ mbudye.5.desc: "Wir haben die Verantwortlichen für [SCOPE.sCountry('gate_mbudye_dominion').MakeScope.Var('mbudye_investigation').GetFlagName] gefunden." #deepl:2448712232
+ mbudye.5.f: "Nach wochenlangen akribischen Ermittlungen haben die elfischen Behörden die für die abscheuliche Tat verantwortlichen Personen identifiziert. Die Ermittlungen, die mit der für das Dominion typischen Präzision und Eifer geführt wurden, haben die Fäden der Verschwörung zu einer versteckten Zelle von Bambudye-Agenten zurückverfolgt. Diese Enthüllung schlägt Wellen in der Region und verspricht sowohl Vergeltung als auch eine Eskalation der Spannungen. Wird die Reaktion des Dominion die Ordnung wiederherstellen - oder eine weitere Rebellion entfachen?" #deepl:3925575442
+ mbudye.5.t: "Schuldige entlarvt" #deepl:4208291645
+ mbudye.6.a: "Nehmen Sie wahllos Leute fest." #deepl:847983164
+ mbudye.6.b: "Wir können nichts tun." #deepl:1601246099
+ mbudye.6.desc: "Wir konnten die für [SCOPE.sCountry('gate_mbudye_dominion').MakeScope.Var('mbudye_investigation').GetFlagName] verantwortlichen Personen nicht finden." #deepl:138394137
+ mbudye.6.f: "Trotz der Bemühungen der fähigsten Ermittler des Dominion ist die Spur kalt geworden. Die Beweise deuten auf die Bambudye hin, doch bisher wurden keine Schuldigen gefasst. Die schwer fassbare Natur des Widerstands lässt Zweifel an der Kontrolle durch das Dominion aufkommen und sorgt für Frustration bei den Beamten und Unbehagen in der Bevölkerung. Das Geflüster über den Widerstand wird immer lauter, und das ungeklärte Verbrechen wird zum Symbol der Rebellion." #deepl:2543937487
+ mbudye.6.t: "Schatten ohne Gesichter" #deepl:2763480839
+ mbudye.7.a: "Machen Sie ein Beispiel in [SCOPE.sState('mbudye_event_state').GetName]." #deepl:1775792892
+ mbudye.7.b: "Schicken Sie unsere Geheimpolizei rein." #deepl:948829720
+ mbudye.7.c: "Leiten Sie eine offizielle Untersuchung ein." #deepl:472688273
+ mbudye.7.d: "Zensieren Sie die ganze Sache." #deepl:2821660072
+ mbudye.7.desc: "Unser General [SCOPE.sCharacter('mbudye_event_character').GetFullName] wurde bei einem Besuch des Staates [SCOPE.sState('mbudye_event_state').GetName] in [SCOPE.sCountry('mbudye_event_country').GetNameNoFlag] ermordet." #deepl:2709046714
+ mbudye.7.f: "Eine Tragödie ereignete sich, als einer unserer geschätzten Generäle während eines diplomatischen Besuchs in einem Lunda-Untertanenstaat in einen Hinterhalt geriet und ermordet wurde. Die Angreifer verschwanden in der Menge und hinterließen Schock und Empörung. Die Spannungen mit der einheimischen Bevölkerung schwelen, Anschuldigungen fliegen, und das Dominion schwört rasche Vergeltung. Der Verlust einer so prominenten Persönlichkeit erschüttert unsere Streitkräfte und wirft einen Schatten auf den brüchigen Frieden." #deepl:2498513866
+ mbudye.7.t: "Eine Klinge im Schatten" #deepl:882430656
+ mbudye.8.a: "Machen Sie ein Beispiel in [SCOPE.sState('mbudye_event_state').GetName]." #deepl:1775792892
+ mbudye.8.b: "Schicken Sie unsere Geheimpolizei rein." #deepl:948829720
+ mbudye.8.c: "Leiten Sie eine offizielle Untersuchung ein." #deepl:472688273
+ mbudye.8.d: "Zensieren Sie die ganze Sache." #deepl:2821660072
+ mbudye.8.desc: "Unser Admiral [SCOPE.sCharacter('mbudye_event_character').GetFullName] wurde bei einem Besuch des Staates [SCOPE.sState('mbudye_event_state').GetName] in [SCOPE.sCountry('mbudye_event_country').GetNameNoFlag] ermordet." #deepl:2296962633
+ mbudye.8.f: "Unsere Nation trauert, als sich die Nachricht von der Ermordung eines angesehenen Admirals während eines Besuchs in einem Lunda-Untertanenstaat verbreitet. Die Tat, die weit entfernt von der Sicherheit unserer Küsten verübt wurde, hat Schockwellen in den Reihen der Marine des Dominion ausgelöst. Misstrauen und Wut schwellen an und drohen, in harte Repressalien umzuschlagen. Der tragische Verlust dieses Aushängeschilds unserer maritimen Stärke ist eine deutliche Erinnerung an die Unbeständigkeit unserer Herrschaft." #deepl:4218507608
+ mbudye.8.t: "Gezeiten des Verrats" #deepl:599021209
+ mbudye.9.a: "Machen Sie ein Beispiel in [SCOPE.sState('mbudye_event_state').GetName]." #deepl:1775792892
+ mbudye.9.b: "Schicken Sie unsere Geheimpolizei rein." #deepl:948829720
+ mbudye.9.c: "Leiten Sie eine offizielle Untersuchung ein." #deepl:472688273
+ mbudye.9.d: "Zensieren Sie die ganze Sache." #deepl:2821660072
+ mbudye.9.desc: "Unser Politiker [SCOPE.sCharacter('mbudye_event_character').GetFullName] wurde bei einem Besuch des Staates [SCOPE.sState('mbudye_event_state').GetName] in [SCOPE.sCountry('mbudye_event_country').GetNameNoFlag] ermordet." #deepl:536633975
+ mbudye.9.f: "Eine Tragödie ereignet sich, als einer unserer prominenten Politiker bei einem Besuch in einem Lunda-Untertanenstaat ermordet wird. Die schockierende Tat schlägt Wellen durch das Dominion und entfacht Debatten über die Sicherheit und die prekäre Natur unserer Regierungsführung in der Region. Die Spannungen nehmen zu, da die politischen Auswirkungen die fragile Ordnung, die wir aufgebaut haben, zu stören drohen." #deepl:1017070564
+ mbudye.9.t: "Schatten im Kernland" #deepl:97236505
+ mbudye_assassination_admiral_flag: "die Ermordung unseres #v Admirals#!" #deepl:348972183
+ mbudye_assassination_general_flag: "das #v Attentat#! auf unseren #v General#!" #deepl:1013228629
+ mbudye_assassination_official_flag: "das #v Attentat#! auf unseren #v Beamten#!" #deepl:356968404
+ mbudye_assassination_politician_flag: "das #v Attentat#! auf unseren #v Politiker#!" #deepl:2832402493
+ mbudye_defaced_temple_flag: "die #v Verunstaltung#! unseres #v Tempels#!" #deepl:625563090
+ pb_gate_mbudye_anti: "Widerstand" #deepl:2511959046
+ pb_gate_mbudye_chokwe_desc: "Umgerechnete Bevölkerung von [SCOPE.sCountry('gate_mbudye_chokwe').GetNameNoFlag]" #deepl:2800186506
+ pb_gate_mbudye_chokwe_name: "[SCOPE.sCountry('gate_mbudye_chokwe').GetName] Umwandlung" #deepl:1368531861
+ pb_gate_mbudye_integration_block: "der Integrationsprozess ist noch nicht angelaufen" #deepl:3525240349
+ pb_gate_mbudye_integration_desc: "Fortschritt: #v [Multiply_float(JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self), '(float)12')|0]#! von 12 Monaten" #deepl:1438837665
+ pb_gate_mbudye_integration_name: "Fortschritte bei der Integration" #deepl:28376807
+ pb_gate_mbudye_integration_progress: "der Integrationsprozess ist im Gange" #deepl:3878610061
+ pb_gate_mbudye_kasanje_desc: "Umgerechnete Bevölkerung von [SCOPE.sCountry('gate_mbudye_kasanje').GetNameNoFlag]" #deepl:129792407
+ pb_gate_mbudye_kasanje_name: "[SCOPE.sCountry('gate_mbudye_kasanje').GetName] Umwandlung" #deepl:8432562
+ pb_gate_mbudye_kazembe_desc: "Umgerechnete Bevölkerung von [SCOPE.sCountry('gate_mbudye_kazembe').GetNameNoFlag]" #deepl:433704203
+ pb_gate_mbudye_kazembe_name: "[SCOPE.sCountry('gate_mbudye_kazembe').GetName] Umwandlung" #deepl:625096839
+ pb_gate_mbudye_lunda_desc: "Umgerechnete Bevölkerung von [SCOPE.sCountry('gate_mbudye_lunda').GetNameNoFlag]" #deepl:732921250
+ pb_gate_mbudye_lunda_name: "[SCOPE.sCountry('gate_mbudye_lunda').GetName] Umwandlung" #deepl:2385179534
+ pb_gate_mbudye_name: "Unterstützung für die Konvertierung" #deepl:2414774012
+ pb_gate_mbudye_passive_conversion_tooltip_aggressive: "Konvertierung durch unseren Ansatz #v aggressive#!" #deepl:2984689246
+ pb_gate_mbudye_passive_conversion_tooltip_balanced: "Umstellung durch unseren Ansatz #v balanced#!" #deepl:4211450765
+ pb_gate_mbudye_passive_conversion_tooltip_passive: "Umstellung durch unseren Ansatz #v passiv#!" #deepl:1631481407
+ pb_gate_mbudye_passive_support_tooltip_aggressive: "Unterstützung durch unseren Ansatz #v aggressive#!" #deepl:265521192
+ pb_gate_mbudye_passive_support_tooltip_balanced: "Unterstützung durch unseren Ansatz #v balanced#!" #deepl:721639199
+ pb_gate_mbudye_passive_support_tooltip_passive: "Unterstützung durch unseren Ansatz #v passiv#!" #deepl:525755317
+ pb_gate_mbudye_pro: "Unterstützung" #deepl:3673295989
