@@ -63,7 +63,7 @@ researching_magic.1 = {
 		default_option = yes
 		custom_tooltip = {
 			text = researching_magic_discovery.experience
-			var:magic_researcher = {
+			var:magic_researcher ?= {
 				change_variable = {
 					name = magic_experience
 					add = {
@@ -74,6 +74,9 @@ researching_magic.1 = {
 					}
 				}
 			}
+		}
+		add_magic_innovation = {
+			amount = 200
 		}
 		make_magic_researcher_not_busy = yes
 		trigger = {
@@ -142,12 +145,15 @@ researching_magic.2 = {
 		default_option = yes
 		custom_tooltip = {
 			text = researching_magic_discovery.experience
-			var:magic_researcher = {
+			var:magic_researcher ?= {
 				change_variable = {
 					name = magic_experience
 					add = { 10 20 }
 				}
 			}
+		}
+		add_magic_innovation = {
+			amount = 200
 		}
 		make_magic_researcher_not_busy = yes
 		trigger = {

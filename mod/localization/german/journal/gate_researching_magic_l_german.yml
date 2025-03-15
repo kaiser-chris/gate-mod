@@ -1,50 +1,50 @@
 ﻿l_german:
- magic_researcher_decision: "Hire a new Magic Researcher"
- magic_researcher_decision_desc: "A [concept_magic_researcher] is needed to lead our [GetBuildingType('building_magic_research_institute').GetName]."
- magic_researcher_decision_no_researcher_tooltip: "We do not have a [concept_magic_researcher]"
- magic_researcher_decision_actively_searching_tooltip: "We are not already searching for a [concept_magic_researcher]"
- research_magic_decision: "Hire a [concept_magic_researcher] and establish our Magic Research Institute"
- research_magic_decision_desc: "Research Magic to learn [concept_magic_knowledge]."
- je_researching_magic: "Researching Magic"
- je_researching_magic_reason: "As mana seeped into the earth, strange disturbances rippled across the land, altering weather patterns and warping the natural world. In response, the country's brightest minds gathered, determined to unravel the mystery behind this newfound force. Researchers, scientists, and mystics alike studied the arcane energy that pulsed beneath the surface, racing against time to comprehend its power."
- je_researching_magic_goal_tt: "Our research has concluded"
- je_researching_magic_missing_researcher: "We do not have a [concept_magic_researcher]."
- je_researching_magic_missing_institute: "We need to construct a [GetBuildingType('building_magic_research_institute').GetName] in our capital."
- je_researching_magic_hiring_researcher: "We are still searching for a [concept_magic_researcher]."
- je_researching_magic_low_progress: "Our Research is in its early stages."
- je_researching_magic_medium_progress: "Our Research is bearing fruit."
- je_researching_magic_high_progress: "We are close to understanding Magic."
- je_researching_magic_button_focus_academia: "Focus all our Efforts"
- je_researching_magic_button_focus_academia_desc: "We will focus all our efforts on this research, even if it hurts our technological progress."
- je_researching_magic_button_cancel_focus_academia: "Cancel our focus on Magic"
- je_researching_magic_button_cancel_focus_academia_desc: "We can not continue to focus all our efforts on researching magic."
- pb_gate_researching_magic_name: "Research Progress"
- pb_gate_researching_magic_desc: "Progress: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]/100)"
- pb_gate_researching_magic_missing_institute: "missing [GetBuildingType('building_magic_research_institute').GetName]"
- pb_gate_researching_magic_researcher_busy: "busy [concept_magic_researcher]"
- pb_gate_researching_magic_researcher_dead: "no [concept_magic_researcher]"
- pb_gate_researching_magic_base_value: "our [GetBuildingType('building_magic_research_institute').GetName]"
- pb_gate_researching_magic_focused_efforts: "Focused Efforts"
- pb_gate_researching_magic_magic_gate: "Researching captured [GetBuildingType('building_gate').GetName]"
- pb_gate_researching_magic_interest_group_leader: "Interest Group Leaders that are Magic Researchers"
- focus_researching_magic_cost_modifier: "Focused Research"
- character_opinion_magic_researcher: "Magic is our future!"
- character_opinion_magic_researcher_busy: "I am currently on a research expedition."
- character_opinion_magic_researcher_missing_institute: "We need a [GetBuildingType('building_magic_research_institute').GetName]!"
- researching_magic_discovery.t: "An Amazing Discovery"
- researching_magic_discovery.d: "Our understanding of [concept_magic_knowledge] is increasing."
- researching_magic_discovery.result: "We have learned more about magic."
- researching_magic_discovery.experience: "Our [concept_magic_researcher] has earned some experience."
- researching_magic.1.f: "In the wake of the monster horde's devastation, the researchers sifted through the wreckage, desperate for answers. Amid the scorched earth and shattered cities, they uncovered strange, glowing sigils burned into the ground—symbols not seen for centuries. As they studied the remnants, they realized these markings were tied to an ancient form of magic, one that had been awakened by the surge of mana."
- researching_magic.1.a: "Fascinating and Horrifying."
- researching_magic.2.f: "In the aftermath of a bizarre event where a forest sprouted overnight, researchers flocked to the site, intrigued by the rapid growth. The air was thick with mana, a shimmering haze that pulsed with life. Examining the plants, they found leaves etched with glowing veins and roots that delved impossibly deep, drawing from a source beyond the natural world."
- researching_magic.2.a: "Fascinating."
- researching_magic.3.t: "Research Institute Established"
- researching_magic.3.d: "We have established our [GetBuildingType('building_magic_research_institute').GetName]."
- researching_magic.3.f: "Amid the rising tides of arcane energy and the mysteries of mana reshaping the world, the Magic Institute was founded—a beacon of hope and understanding in uncertain times. Its grand halls, built of stone etched with glowing runes, stood as a testament to humanity's determination to master the forces now coursing through the earth."
- researching_magic.3.a: "We will conquer Magic."
- researching_magic.4.t: "Magic Researcher Hired"
- researching_magic.4.d: "We have hired a new [concept_magic_researcher]."
- researching_magic.4.f: "In a move poised to shape the future of magical discovery, our nation has appointed a new lead magic researcher to head the Magic Research Institute. Renowned for their groundbreaking work on mana-flow dynamics and interdimensional theory, the researcher brings a bold, ambitious vision to the forefront of magical study. Scholars buzz with anticipation, while skeptics question whether their unorthodox methods will yield results—or chaos. As the first experiments begin, the nation watches closely, hoping this appointment will unlock secrets to secure prosperity and power in an increasingly magical world."
- researching_magic.4.a: "Start work immediately."
- researching_magic.4.a.tt: "[SCOPE.sCharacter('magic_researcher').GetFullName] will become our new [concept_magic_researcher]."
+ character_opinion_magic_researcher: "Magie ist unsere Zukunft!" #deepl:3683707924
+ character_opinion_magic_researcher_busy: "Ich befinde mich derzeit auf einer Forschungsexpedition." #deepl:1472568666
+ character_opinion_magic_researcher_missing_institute: "Wir brauchen eine [GetBuildingType('building_magic_research_institute').GetName]!" #deepl:1996575179
+ focus_researching_magic_cost_modifier: "Gezielte Forschung" #deepl:3497957968
+ je_researching_magic: "Magie erforschen" #deepl:3465134924
+ je_researching_magic_button_cancel_focus_academia: "Aufhebung der Konzentration auf Magie" #deepl:2543699194
+ je_researching_magic_button_cancel_focus_academia_desc: "Wir können nicht weiterhin alle unsere Bemühungen auf die Erforschung der Magie konzentrieren." #deepl:1429631169
+ je_researching_magic_button_focus_academia: "Alle unsere Bemühungen konzentrieren" #deepl:2187213691
+ je_researching_magic_button_focus_academia_desc: "Wir werden alle unsere Anstrengungen auf diese Forschung konzentrieren, auch wenn sie unseren technologischen Fortschritt beeinträchtigt." #deepl:1596788657
+ je_researching_magic_goal_tt: "Unsere Forschung hat ergeben" #deepl:931819186
+ je_researching_magic_high_progress: "Wir sind kurz davor, die Magie zu verstehen." #deepl:3016113877
+ je_researching_magic_hiring_researcher: "Wir sind immer noch auf der Suche nach einer [concept_magic_researcher]." #deepl:431101831
+ je_researching_magic_low_progress: "Unsere Forschung befindet sich in einem frühen Stadium." #deepl:1442510597
+ je_researching_magic_medium_progress: "Unsere Forschung trägt Früchte." #deepl:566234148
+ je_researching_magic_missing_institute: "Wir müssen eine [GetBuildingType('building_magic_research_institute').GetName] in unserer Hauptstadt errichten." #deepl:1578172121
+ je_researching_magic_missing_researcher: "Wir haben keine [concept_magic_researcher]." #deepl:3107583744
+ je_researching_magic_reason: "Als das Mana in die Erde eindrang, zogen seltsame Störungen über das Land, veränderten das Wetter und brachten die natürliche Welt durcheinander. Als Reaktion darauf versammelten sich die klügsten Köpfe des Landes, entschlossen, das Geheimnis hinter dieser neu entdeckten Kraft zu lüften. Forscher, Wissenschaftler und Mystiker untersuchten die geheimnisvolle Energie, die unter der Oberfläche pulsierte, und versuchten in einem Wettlauf mit der Zeit, ihre Macht zu verstehen." #deepl:1898163161
+ magic_researcher_decision: "Einstellen eines neuen Magieforschers" #deepl:1456890493
+ magic_researcher_decision_actively_searching_tooltip: "Wir sind nicht bereits auf der Suche nach einem [concept_magic_researcher]" #deepl:1500151522
+ magic_researcher_decision_desc: "Eine [concept_magic_researcher] wird benötigt, um unsere [GetBuildingType('building_magic_research_institute').GetName] zu leiten." #deepl:3651799352
+ magic_researcher_decision_no_researcher_tooltip: "Wir haben keine [concept_magic_researcher]" #deepl:2118957639
+ pb_gate_researching_magic_base_value: "unser [GetBuildingType('building_magic_research_institute').GetName]" #deepl:553674222
+ pb_gate_researching_magic_desc: "Fortschritt: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]/100)" #deepl:2140447107
+ pb_gate_researching_magic_focused_efforts: "Gezielte Anstrengungen" #deepl:2734662740
+ pb_gate_researching_magic_interest_group_leader: "Leiter von Interessengruppen, die Magieforscher sind" #deepl:1296903989
+ pb_gate_researching_magic_magic_gate: "Erfasstes recherchieren [GetBuildingType('building_gate').GetName]" #deepl:1547700603
+ pb_gate_researching_magic_missing_institute: "fehlt [GetBuildingType('building_magic_research_institute').GetName]" #deepl:812413303
+ pb_gate_researching_magic_name: "Fortschritte in der Forschung" #deepl:2773787237
+ pb_gate_researching_magic_researcher_busy: "beschäftigt [concept_magic_researcher]" #deepl:3465074220
+ pb_gate_researching_magic_researcher_dead: "keine [concept_magic_researcher]" #deepl:2408539210
+ research_magic_decision: "Stellen Sie ein [concept_magic_researcher] ein und gründen Sie unser Magieforschungsinstitut." #deepl:2676798465
+ research_magic_decision_desc: "Forschung Magie zu lernen [concept_magic_knowledge]." #deepl:1568027954
+ researching_magic.1.a: "Faszinierend und erschreckend." #deepl:3635689909
+ researching_magic.1.f: "Nach der Verwüstung durch die Monsterhorde durchforsteten die Forscher die Trümmer, verzweifelt auf der Suche nach Antworten. Inmitten der verbrannten Erde und der zerstörten Städte entdeckten sie seltsame, leuchtende Siegel, die in den Boden eingebrannt waren - Symbole, die seit Jahrhunderten nicht mehr gesehen wurden. Als sie die Überreste untersuchten, erkannten sie, dass diese Zeichen mit einer uralten Form der Magie zusammenhingen, die durch die Flut des Manas geweckt worden war." #deepl:4107044328
+ researching_magic.2.a: "Faszinierend." #deepl:654744515
+ researching_magic.2.f: "Nach einem bizarren Ereignis, bei dem über Nacht ein Wald wuchs, strömten die Forscher an den Ort, fasziniert von dem schnellen Wachstum. Die Luft war dick mit Mana, ein schimmernder Dunst, der vor Leben pulsierte. Als sie die Pflanzen untersuchten, entdeckten sie Blätter mit leuchtenden Adern und Wurzeln, die unvorstellbar tief reichten und aus einer Quelle jenseits der natürlichen Welt stammten." #deepl:228414351
+ researching_magic.3.a: "Wir werden die Magie erobern." #deepl:1481710928
+ researching_magic.3.d: "Wir haben unsere [GetBuildingType('building_magic_research_institute').GetName] eingerichtet." #deepl:832027418
+ researching_magic.3.f: "Inmitten der steigenden Fluten arkaner Energie und der Mysterien des Manas, die die Welt neu gestalten, wurde das Magische Institut gegründet - ein Leuchtfeuer der Hoffnung und des Verständnisses in unsicheren Zeiten. Seine großen Hallen aus Stein, in die leuchtende Runen geätzt waren, zeugten von der Entschlossenheit der Menschheit, die Kräfte zu beherrschen, die jetzt die Erde durchströmen." #deepl:3179919721
+ researching_magic.3.t: "Forschungsinstitut gegründet" #deepl:3522009529
+ researching_magic.4.a: "Beginnen Sie sofort mit der Arbeit." #deepl:3601646
+ researching_magic.4.a.tt: "[SCOPE.sCharacter('magic_researcher').GetFullName] wird unsere neue [concept_magic_researcher]." #deepl:2329965114
+ researching_magic.4.d: "Wir haben eine neue [concept_magic_researcher] eingestellt." #deepl:814995599
+ researching_magic.4.f: "Unsere Nation hat einen neuen führenden Magieforscher an die Spitze des Magieforschungsinstituts berufen, der die Zukunft der magischen Forschung prägen wird. Der Forscher, der für seine bahnbrechenden Arbeiten über die Dynamik des Manaflusses und die interdimensionale Theorie bekannt ist, bringt eine kühne, ehrgeizige Vision in die vorderste Reihe der Magieforschung ein. Die Gelehrten sind voller Vorfreude, während Skeptiker bezweifeln, dass ihre unorthodoxen Methoden zu Ergebnissen führen werden - oder zu Chaos. Während die ersten Experimente beginnen, schaut die Nation genau hin, in der Hoffnung, dass diese Ernennung Geheimnisse lüften wird, die Wohlstand und Macht in einer zunehmend magischen Welt sichern." #deepl:2467131367
+ researching_magic.4.t: "Magieforscher eingestellt" #deepl:2961267826
+ researching_magic_discovery.d: "Unser Verständnis von [concept_magic_knowledge] nimmt zu." #deepl:1866704684
+ researching_magic_discovery.experience: "Unsere [concept_magic_researcher] hat einige Erfahrungen gesammelt." #deepl:1592125481
+ researching_magic_discovery.result: "Wir haben mehr über Magie gelernt." #deepl:2036374611
+ researching_magic_discovery.t: "Eine verblüffende Entdeckung" #deepl:2664619996

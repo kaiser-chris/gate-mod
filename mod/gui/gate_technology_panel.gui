@@ -256,7 +256,6 @@ types gate_technology_panel_types {
                 visible = "[GetScriptedGui('sgui_gate_technology_tab_researcher').IsShown(GuiScope.SetRoot(Country.MakeScope).End)]"
                 using = default_list_position
                 direction = vertical
-                margin_top = 10
 
                 default_header = {
                     blockoverride "text" {

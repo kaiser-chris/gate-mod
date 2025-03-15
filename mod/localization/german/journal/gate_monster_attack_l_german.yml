@@ -1,47 +1,44 @@
 ﻿l_german:
-# Monster Congress
- je_monster_congress: "National Congress on Monsters"
- je_monster_congress_custom_goal: "The Congress has concluded."
- je_monster_congress_reason: "The grand hall buzzed with tension as the National Congress on Monsters convened, bringing together politicians, researchers, and military leaders under one roof. Charts filled the walls, displaying the devastation of past attacks. Researchers spoke urgently of patterns and anomalies in monster behavior, their voices laced with unease. Military commanders outlined new strategies, their plans bristling with firepower and precision. Politicians argued fiercely, torn between allocating resources for defense and investing in research to uncover the root cause."
- je_monster_congress_in_progress: "The Congress is in progress."
- je_monster_congress_not_started: "The Congress has not started."
- je_monster_congress_button_start: "Start Congress"
- je_monster_congress_button_start_desc: "Starts our Congress on how to handle future monster attacks."
- je_monster_congress_button_start_block_started: "The Congress has not started."
- je_monster_congress_button_start_effect: "Starts the Congress."
- pb_monster_congress_name: "Congress Progress"
- pb_monster_congress_desc: "Progress: #v [Multiply_float(JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self), '(float)6')|0]#! of 6 months"
- pb_monster_congress_block: "the Congress has not Started"
- pb_monster_congress_progress: "the Congress is in Progress"
-# Modifiers
- monster_horde_cost_modifier: "Monster Horde Help"
- monster_congress_modifier: "Monster Congress in Progress"
-# Events
- monster_attack.1.t: "A Horde of Monsters"
- monster_attack.1.d: "A horde of Monsters spawned form the rising [concept_mana_density] in [SCOPE.sState('monster_horde_state').GetName]."
- monster_attack.1.f: "As mana seeped into the earth, it unleashed a torrent of ancient, forgotten horrors. From the cracks in the ground, a horde of monstrous creatures erupted, their eyes glowing with the wild, untamed energy of the arcane."
- monster_attack.1.a1: "We shall help with all we have."
- monster_attack.1.b1: "Send help and researchers."
- monster_attack.1.c1: "There is nothing we can do."
- monster_attack.1.a2: "We shall help with all we have."
- monster_attack.1.b2: "Send help and researchers."
- monster_attack.1.c2: "There is nothing we can do."
- monster_attack.2.t: "The Army was Victorious"
- monster_attack.2.d: "Our army defended our civilians with minimal casualties."
- monster_attack.2.f: "As the beasts descended upon the countryside, chaos erupted in the villages. Yet, amidst the panic, the army held their ground. Soldiers in splendid uniforms and polished boots formed disciplined lines, muskets at the ready. Cannons roared, their thunder shaking the earth as grapeshot tore into the monstrous horde. Bayonets gleamed in the torchlight as cavalry swept in, sabers flashing against the night."
- monster_attack.2.a: "Congratulate them."
- monster_attack.2.b: "Investigate the Aftermath."
- monster_attack.3.t: "Civilians defended Themself"
- monster_attack.3.d: "Local civilians were forced to defend themself, which lead to major casualties and destruction."
- monster_attack.3.f: "The monsters came as the civilians had long feared, tearing through homes and fields under a blood-red sky. Their pleas for protection had been dismissed, their warnings ignored. Left to their own devices, they fought back with whatever they could muster—makeshift barricades, hunting rifles, torches, and sheer desperation. The battle was chaotic and grim, courage born from necessity as they stood against the beasts. Though some managed to fell the creatures with fire and steel, the cost was staggering. Entire towns were left in ruins, and countless lives were lost."
- monster_attack.3.a: "Devastating."
- monster_attack.4.t: "Congress on Monsters has Concluded"
- monster_attack.4.d: "We can now enact laws in the [concept_law_group] [GetLawGroup('lawgroup_monster_hunting').GetName]."
- monster_attack.4.f: "The debates at the National Congress on Monsters grew more heated as the hours passed, each faction vying for their vision of survival. Researchers called for deeper understanding, urging caution and investment in studying the monsters’ origins and weaknesses. The military demanded immediate action, proposing preemptive strikes and bolstered defenses, while politicians struggled to balance these strategies with the needs of a shaken populace."
- monster_attack.4.a: "Good now we can combat this Problem."
- monster_attack.5.t: "Monsters Attack"
- monster_attack.5.d: "Monsters attack our civilians."
- monster_attack.5.f: "As mana seeped into the earth, it unleashed a torrent of ancient, forgotten horrors. From the cracks in the ground, a horde of monstrous creatures erupted, their eyes glowing with the wild, untamed energy of the arcane."
- monster_attack.5.a1: "Thankfully we have monster hunters."
- monster_attack.5.a2: "We should setup a system for monster hunting."
- monster_attack.5.b1: "Send some Researchers."
+ je_monster_congress: "Nationaler Kongress über Monster" #deepl:1976123507
+ je_monster_congress_button_start: "Start Kongress" #deepl:3169281530
+ je_monster_congress_button_start_block_started: "Der Kongress hat noch nicht begonnen." #deepl:3048554545
+ je_monster_congress_button_start_desc: "Startet unseren Kongress mit der Frage, wie wir mit künftigen Monsterangriffen umgehen sollen." #deepl:1604072552
+ je_monster_congress_button_start_effect: "Eröffnet den Kongress." #deepl:1253112261
+ je_monster_congress_custom_goal: "Der Kongress ist abgeschlossen." #deepl:1613369695
+ je_monster_congress_in_progress: "Der Kongress ist im Gange." #deepl:878801234
+ je_monster_congress_not_started: "Der Kongress hat noch nicht begonnen." #deepl:3048554545
+ je_monster_congress_reason: "In der großen Halle herrschte große Spannung, als der Nationale Monsterkongress zusammentrat, der Politiker, Forscher und militärische Führer unter einem Dach versammelte. An den Wänden hingen Schaubilder, die die Verwüstungen vergangener Angriffe zeigten. Forscher sprachen eindringlich über Muster und Anomalien im Verhalten von Monstern, ihre Stimmen waren von Unbehagen geprägt. Militärische Befehlshaber skizzierten neue Strategien, ihre Pläne strotzten vor Feuerkraft und Präzision. Politiker diskutierten heftig, hin- und hergerissen zwischen der Zuweisung von Ressourcen für die Verteidigung und Investitionen in die Forschung, um die Ursache aufzudecken." #deepl:1168039375
+ monster_attack.1.a1: "Wir werden mit allem, was wir haben, helfen." #deepl:2444909786
+ monster_attack.1.a2: "Wir werden mit allem, was wir haben, helfen." #deepl:2444909786
+ monster_attack.1.b1: "Senden Sie Hilfe und Forscher." #deepl:2865930560
+ monster_attack.1.b2: "Senden Sie Hilfe und Forscher." #deepl:2865930560
+ monster_attack.1.c1: "Es gibt nichts, was wir tun können." #deepl:3092756725
+ monster_attack.1.c2: "Es gibt nichts, was wir tun können." #deepl:3092756725
+ monster_attack.1.d: "Eine Horde von Ungeheuern hat sich aus dem aufsteigenden [concept_mana_density] in [SCOPE.sState('monster_horde_state').GetName] gebildet." #deepl:1683511959
+ monster_attack.1.f: "Als das Mana in die Erde sickerte, setzte es eine Flut uralter, vergessener Schrecken frei. Aus den Rissen im Boden brach eine Horde monströser Kreaturen hervor, deren Augen mit der wilden, ungezähmten Energie des Arkanen glühten." #deepl:1712104880
+ monster_attack.1.t: "Eine Horde von Monstern" #deepl:1619751511
+ monster_attack.2.a: "Gratulieren Sie ihnen." #deepl:2963281742
+ monster_attack.2.b: "Untersuchen Sie die Nachwirkungen." #deepl:3994044051
+ monster_attack.2.d: "Unsere Armee hat unsere Zivilisten mit minimalen Verlusten verteidigt." #deepl:251075387
+ monster_attack.2.f: "Als die Bestien über das Land herfielen, brach in den Dörfern das Chaos aus. Doch inmitten der Panik hielt die Armee ihre Stellung. Soldaten in prächtigen Uniformen und polierten Stiefeln bildeten disziplinierte Reihen, die Musketen im Anschlag. Die Kanonen dröhnten, ihr Donner erschütterte die Erde, als die Schrotkugeln in die monströse Horde einschlugen. Bajonette glitzerten im Fackelschein, als die Kavallerie heranritt und Säbel in der Nacht aufblitzten." #deepl:15543450
+ monster_attack.2.t: "Die Armee war siegreich" #deepl:3364591548
+ monster_attack.3.a: "Verheerend." #deepl:3482830678
+ monster_attack.3.d: "Die örtliche Zivilbevölkerung war gezwungen, sich selbst zu verteidigen, was zu großen Verlusten und Zerstörungen führte." #deepl:1131330730
+ monster_attack.3.f: "Die Monster kamen, wie es die Zivilbevölkerung schon lange befürchtet hatte, und zogen unter einem blutroten Himmel durch Häuser und Felder. Ihre Bitten um Schutz wurden abgewiesen, ihre Warnungen ignoriert. Auf sich allein gestellt, wehrten sie sich mit allem, was sie auftreiben konnten - behelfsmäßige Barrikaden, Jagdgewehre, Fackeln und schiere Verzweiflung. Der Kampf war chaotisch und erbittert, der Mut aus der Not geboren, als sie sich den Bestien entgegenstellten. Zwar gelang es einigen, die Kreaturen mit Feuer und Stahl zu besiegen, doch der Preis dafür war enorm. Ganze Städte wurden in Schutt und Asche gelegt, und unzählige Menschen verloren ihr Leben." #deepl:460135206
+ monster_attack.3.t: "Zivilisten verteidigten sich selbst" #deepl:2552214085
+ monster_attack.4.a: "Gut, dass wir dieses Problem jetzt bekämpfen können." #deepl:3568559336
+ monster_attack.4.d: "Wir können jetzt Gesetze in der [concept_law_group] [GetLawGroup('lawgroup_monster_hunting').GetName] erlassen." #deepl:3732234904
+ monster_attack.4.f: "Die Debatten auf dem Nationalen Monsterkongress wurden im Laufe der Stunden immer hitziger, und jede Fraktion kämpfte für ihre Vision des Überlebens. Die Forscher forderten ein tieferes Verständnis und mahnten zur Vorsicht und zu Investitionen in die Erforschung der Ursprünge und Schwächen der Monster. Das Militär forderte sofortiges Handeln und schlug Präventivschläge und verstärkte Verteidigungsmaßnahmen vor, während die Politiker darum rangen, diese Strategien mit den Bedürfnissen einer erschütterten Bevölkerung in Einklang zu bringen." #deepl:2538625397
+ monster_attack.4.t: "Der Kongress über Monster ist abgeschlossen" #deepl:4132548999
+ monster_attack.5.a1: "Zum Glück haben wir Monsterjäger." #deepl:815690023
+ monster_attack.5.a2: "Wir sollten ein System für die Monsterjagd einrichten." #deepl:2660456345
+ monster_attack.5.b1: "Schicken Sie einige Forscher." #deepl:2373657228
+ monster_attack.5.d: "Monster greifen unsere Zivilisten an." #deepl:452892113
+ monster_attack.5.f: "Als das Mana in die Erde sickerte, setzte es eine Flut uralter, vergessener Schrecken frei. Aus den Rissen im Boden brach eine Horde monströser Kreaturen hervor, deren Augen mit der wilden, ungezähmten Energie des Arkanen glühten." #deepl:1712104880
+ monster_attack.5.t: "Monster greifen an" #deepl:1830028971
+ monster_congress_modifier: "Monsterkongress im Gange" #deepl:4122085941
+ monster_horde_cost_modifier: "Monsterhorden-Hilfe" #deepl:4278962805
+ pb_monster_congress_block: "der Kongress hat nicht begonnen" #deepl:1703468592
+ pb_monster_congress_desc: "Fortschritt: #v [Multiply_float(JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self), '(float)6')|0]#! von 6 Monaten" #deepl:3179089928
+ pb_monster_congress_name: "Kongress Fortschritte" #deepl:2342159062
+ pb_monster_congress_progress: "der Kongress ist im Gange" #deepl:2430811871

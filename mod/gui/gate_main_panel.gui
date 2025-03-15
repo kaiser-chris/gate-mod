@@ -33,6 +33,7 @@ types gate_main_panel_types {
                     soundeffect = "event:/SFX/UI/SideBar/markets"
                 }
                 on_finish = "[SetTempMapModeByKey('mm_state_mana_density')]"
+                on_finish = "[GetScriptedGui('sgui_gate_window_tab_statistics').Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
             }
 
             state = {

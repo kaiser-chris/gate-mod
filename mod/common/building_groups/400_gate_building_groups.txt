@@ -30,6 +30,38 @@ bg_dwarven_sulfur_mining = {
     default_building = building_dwarven_sulfur_mine
 }
 
+bg_magic_mining = {
+    parent_group = bg_mining
+    capped_by_resources = yes
+    always_possible = yes
+    can_use_slaves = yes
+}
+
+bg_magic_gold_mining = {
+    parent_group = bg_magic_mining
+    default_building = building_magic_gold_mine
+}
+
+bg_magic_coal_mining = {
+    parent_group = bg_magic_mining
+    default_building = building_magic_coal_mine
+}
+
+bg_magic_iron_mining = {
+    parent_group = bg_magic_mining
+    default_building = building_magic_iron_mine
+}
+
+bg_magic_lead_mining = {
+    parent_group = bg_magic_mining
+    default_building = building_magic_lead_mine
+}
+
+bg_magic_sulfur_mining = {
+    parent_group = bg_magic_mining
+    default_building = building_magic_sulfur_mine
+}
+
 bg_mage_tower = {
     parent_group = bg_owner_buildings
     default_building = building_mage_tower

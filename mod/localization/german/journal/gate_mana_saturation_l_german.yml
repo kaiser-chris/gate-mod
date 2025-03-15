@@ -1,31 +1,31 @@
 ﻿l_german:
- je_mana_saturation: "Global Mana Saturation"
- je_mana_saturation_goal: "[concept_mana_saturation] has reached its maximum"
- je_mana_saturation_reason: "As the veil between realms thins, mana begins to seep into our world, its presence growing stronger with each passing day. The air hums with newfound energy, and the very fabric of reality seems to shimmer with potential. This steady influx of mana promises to reshape our understanding of magic and power, heralding an era of unprecedented change and opportunity."
- je_mana_saturation_low_progress: "Average [concept_mana_density] around the world is low."
- je_mana_saturation_medium_progress: "Average [concept_mana_density] around the world is getting higher."
- je_mana_saturation_high_progress: "Average [concept_mana_density] around the world is high."
- je_mana_saturation_button_slave_ritual: "Sacrifice Slaves"
- je_mana_saturation_button_slave_ritual_desc: "Sacrifice [GetPopType('slaves').GetName] to increase [concept_mana_density] in one of our states."
- je_mana_saturation_button_slave_ritual_infamy: "Infamy of [SCOPE.sCountry('loc_country_scope').GetName] is less than 100."
- je_mana_saturation_button_slave_ritual_mana_density: "[concept_mana_density] of one of our states is less than 100%."
- je_mana_saturation_button_slave_ritual_cooldown: "Has not executed a slave ritual for one year"
- gate_mana_saturation_buildings_progress_bar_balance: "$mana$ usage in buildings"
- gate_mana_saturation_mages_progress_bar_balance: "[GetPopType('mages').GetName]"
- gate_mana_saturation_ritual_progress_bar_balance: "Rituals"
- mana_saturation.1.t: "A World of Magic"
- mana_saturation.1.d: "[concept_mana_saturation] has reached its maximum."
- mana_saturation.1.f: "The world now thrums with a constant, low vibration, the air thick with the shimmer of unseen forces. Every stone, every leaf, every breath hums with the raw, pulsing energy of mana. The oceans glow with an eerie light, and the sky dances with colors never before seen by human eyes. The earth has become a living conduit of power, its very core saturated with magic."
- mana_saturation.1.a: "Nothing will ever be the same."
- mana_saturation.2.t: "Heinous Ritual"
- mana_saturation.2.d: "Increase [concept_mana_density] through ritual sacrifices."
- mana_saturation.2.f: "In the shadow of towering spires, whispers of dark rituals filled the air. The council decreed that to saturate the earth with mana, the blood of the enslaved would be spilled. Beneath a blood-red moon, the condemned were led to ancient altars, their lives exchanged for the promise of arcane power. The earth drank deeply, its veins pulsing with new energy, as the price of power was paid in the currency of despair."
- mana_saturation.2.a: "This world needs more magic whatever the price."
- mana_saturation.2.a_progress_tt: "Increases [concept_mana_density] by 50% in [SCOPE.sStateRegion('ritual_state_region').GetName]."
- mana_saturation.2.b: "We need to stop this madness."
- mana_saturation.3.t: "Mana Bloom"
- mana_saturation.3.d: "Through increased [concept_mana_density] plants are growing faster in [SCOPE.sState('magic_growing_state').GetName]."
- mana_saturation.3.f: "As the veil between worlds thinned, mana seeped into the earth like a whispered secret. Overnight, seeds burst into bloom, vines spiraled skyward, and ancient trees unfurled leaves of radiant green. The land hummed with newfound life, a vibrant pulse in every root and branch, as nature thrived in this enchanted dawn."
- mana_saturation.3.a1: "This will change how we grow crops."
- mana_saturation.3.a2: "Interesting."
- mana_saturation.3.b: "Send Researchers."
+ gate_mana_saturation_buildings_progress_bar_balance: "$mana$ Verwendung in Gebäuden" #deepl:169250752
+ gate_mana_saturation_mages_progress_bar_balance: "[GetPopType('mages').GetName]" #deepl:1162434282
+ gate_mana_saturation_ritual_progress_bar_balance: "Rituale" #deepl:100301908
+ je_mana_saturation: "Globale Mana-Sättigung" #deepl:171745877
+ je_mana_saturation_button_slave_ritual: "Sklaven opfern" #deepl:2127545356
+ je_mana_saturation_button_slave_ritual_cooldown: "seit einem Jahr kein Sklavenritual durchgeführt hat" #deepl:1814410812
+ je_mana_saturation_button_slave_ritual_desc: "Opfern Sie [GetPopType('slaves').GetName], um [concept_mana_density] in einem unserer Bundesländer zu erweitern." #deepl:322364928
+ je_mana_saturation_button_slave_ritual_infamy: "Infamie von [SCOPE.sCountry('loc_country_scope').GetName] ist weniger als 100." #deepl:2238047500
+ je_mana_saturation_button_slave_ritual_mana_density: "[concept_mana_density] eines unserer Staaten weniger als 100 % beträgt." #deepl:3005232554
+ je_mana_saturation_goal: "[concept_mana_saturation] sein Maximum erreicht hat" #deepl:1477263753
+ je_mana_saturation_high_progress: "Die durchschnittliche [concept_mana_density] ist weltweit hoch." #deepl:2852144250
+ je_mana_saturation_low_progress: "Die durchschnittliche [concept_mana_density] ist weltweit niedrig." #deepl:3789019862
+ je_mana_saturation_medium_progress: "Die durchschnittliche [concept_mana_density] wird weltweit immer höher." #deepl:2004107105
+ je_mana_saturation_reason: "Während sich der Schleier zwischen den Welten lichtet, beginnt das Mana in unsere Welt zu sickern, und seine Präsenz wird mit jedem Tag stärker. Die Luft summt vor neu gewonnener Energie, und das Gewebe der Realität scheint vor Potenzial zu schimmern. Dieser stetige Zustrom von Mana verspricht, unser Verständnis von Magie und Macht neu zu gestalten, und läutet eine Ära nie dagewesener Veränderungen und Möglichkeiten ein." #deepl:455482982
+ mana_saturation.1.a: "Nichts wird mehr so sein, wie es einmal war." #deepl:1335579824
+ mana_saturation.1.d: "[concept_mana_saturation] sein Maximum erreicht hat." #deepl:1296295592
+ mana_saturation.1.f: "Die Welt vibriert jetzt mit einer konstanten, niedrigen Vibration, die Luft ist dick mit dem Schimmer unsichtbarer Kräfte. Jeder Stein, jedes Blatt, jeder Atemzug summt mit der rohen, pulsierenden Energie des Manas. Die Ozeane glühen in einem unheimlichen Licht, und der Himmel tanzt in Farben, die Menschen noch nie gesehen haben. Die Erde ist zu einem lebendigen Kanal der Macht geworden, ihr Innerstes ist von Magie durchdrungen." #deepl:2147041176
+ mana_saturation.1.t: "Eine Welt voller Magie" #deepl:4128974867
+ mana_saturation.2.a: "Diese Welt braucht mehr Magie, egal zu welchem Preis." #deepl:1164052970
+ mana_saturation.2.a_progress_tt: "Erhöht [concept_mana_density] um 50% in [SCOPE.sStateRegion('ritual_state_region').GetName]." #deepl:244781240
+ mana_saturation.2.b: "Wir müssen diesen Wahnsinn stoppen." #deepl:2329030879
+ mana_saturation.2.d: "Erhöhen Sie [concept_mana_density] durch rituelle Opfergaben." #deepl:1576332777
+ mana_saturation.2.f: "Im Schatten der hoch aufragenden Türme flüsterte man von dunklen Ritualen. Der Rat verfügte, dass das Blut der Versklavten vergossen werden sollte, um die Erde mit Mana zu sättigen. Unter dem blutroten Mond wurden die Verurteilten zu uralten Altären geführt und ihr Leben gegen das Versprechen arkaner Macht eingetauscht. Die Erde trank tief, ihre Adern pulsierten mit neuer Energie, als der Preis der Macht mit der Währung der Verzweiflung bezahlt wurde." #deepl:3821037183
+ mana_saturation.2.t: "Schreckliches Ritual" #deepl:2873681427
+ mana_saturation.3.a1: "Dies wird die Art und Weise, wie wir Pflanzen anbauen, verändern." #deepl:3474751687
+ mana_saturation.3.a2: "Interessant." #deepl:942969263
+ mana_saturation.3.b: "Forscher senden." #deepl:1781155197
+ mana_saturation.3.d: "Durch die Zunahme von [concept_mana_density] wachsen die Pflanzen auf [SCOPE.sState('magic_growing_state').GetName] schneller." #deepl:1155858691
+ mana_saturation.3.f: "Als sich der Schleier zwischen den Welten lichtete, sickerte das Mana wie ein geflüstertes Geheimnis in die Erde. Über Nacht blühten die Samen auf, die Reben schraubten sich in den Himmel und uralte Bäume entfalteten ihre Blätter in strahlendem Grün. Das Land summte vor neu gefundenem Leben, ein pulsierender Puls in jeder Wurzel und jedem Zweig, während die Natur in dieser verzauberten Dämmerung gedieh." #deepl:2192891470
+ mana_saturation.3.t: "Mana-Blüte" #deepl:1564168140
