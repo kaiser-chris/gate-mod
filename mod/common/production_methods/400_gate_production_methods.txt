@@ -71,7 +71,7 @@ pm_gate_immigration_dwarves = {
 
 		level_scaled = {
 			building_employment_mages_add = 100
-			building_employment_bureaucrats_add = 1000
+			building_employment_bureaucrats_add = 500
 		}
 	}
 }
@@ -100,11 +100,11 @@ pm_gate_mass_immigration_dwarves = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
-			goods_output_mana_add = 20
+			goods_output_mana_add = 30
 		}
 		level_scaled = {
 			building_employment_mages_add = 100
-			building_employment_bureaucrats_add = 2000
+			building_employment_bureaucrats_add = 1000
 		}
 	}
 }
@@ -140,7 +140,7 @@ pm_gate_immigration_orcish = {
 
 		level_scaled = {
 			building_employment_mages_add = 100
-			building_employment_bureaucrats_add = 1000
+			building_employment_bureaucrats_add = 500
 		}
 	}
 }
@@ -173,7 +173,7 @@ pm_gate_mass_immigration_orcish = {
 		}
 		level_scaled = {
 			building_employment_mages_add = 100
-			building_employment_bureaucrats_add = 2000
+			building_employment_bureaucrats_add = 1000
 		}
 	}
 }
@@ -245,7 +245,7 @@ pm_gate_immigration_elven = {
 
 		level_scaled = {
 			building_employment_mages_add = 100
-			building_employment_bureaucrats_add = 1000
+			building_employment_bureaucrats_add = 500
 		}
 	}
 }
@@ -274,11 +274,11 @@ pm_gate_mass_immigration_elven = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
-			goods_output_mana_add = 20
+			goods_output_mana_add = 30
 		}
 		level_scaled = {
 			building_employment_mages_add = 100
-			building_employment_bureaucrats_add = 2000
+			building_employment_bureaucrats_add = 1000
 		}
 	}
 }
@@ -302,7 +302,7 @@ pm_gate_support_elves = {
 
 	country_modifiers = {
 		workforce_scaled = {
-			country_minting_add = 1500
+			country_loan_interest_rate_mult = -0.15
 		}
 
 		level_scaled = {
@@ -313,43 +313,7 @@ pm_gate_support_elves = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
-			goods_output_mana_add = 20
-		}
-		level_scaled = {
-			building_employment_mages_add = 100
-			building_employment_clergymen_add = 500
-		}
-	}
-}
-
-pm_gate_support_elves_plus = {
-	texture = "gfx/interface/icons/production_method_icons/elven_gold_support_plus.dds"
-
-	is_hidden_when_unavailable = yes
-
-	unlocking_technologies = {
-		elven_support
-	}
-
-	disallowing_laws = {
-		law_total_separation
-		law_state_atheism
-	}
-
-	country_modifiers = {
-		workforce_scaled = {
-			country_minting_add = 3000
-		}
-
-		level_scaled = {
-			country_magical_innovation_add = 50
-		}
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			# output goods
-			goods_output_mana_add = 20
+			goods_output_mana_add = 25
 		}
 		level_scaled = {
 			building_employment_mages_add = 100

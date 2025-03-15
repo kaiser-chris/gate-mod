@@ -25,13 +25,33 @@ GLOBAL = {
 	}
 	s:STATE_EAST_ANGOLA = {
 		set_owner_of_provinces = {
-			country = c:GAD
+			country = c:CHK
 			provinces = {
-				x52FB3B
+				x52FB3B xB5F875 x2156A2 x1BFAF4 xC0DF70
 			}
 		}
 		add_homeland = cu:elven
 	}
+	s:STATE_ZAMBEZI = {
+		set_owner_of_provinces = {
+			country = c:GAD
+			provinces = {
+				x86AC48 x9641D5 xF75223 
+			}
+		}
+		add_homeland = cu:elven
+	}
+
+	s:STATE_BOTSWANA = {
+		set_owner_of_provinces = {
+			country = c:TSW
+			provinces = {
+			   x4401C5 x773A13 x0DDFB8 x3D4350 x6001D0
+			}
+		}
+		add_homeland = cu:elven
+	}
+
 
 	# Mountain Kingdom
 	s:STATE_TYROL = {
