@@ -2,17 +2,17 @@
 on_monthly_pulse = {
     on_actions = {
         on_monthly_calculate_mana_saturation
-        on_monthly_statistics
-        on_monthly_cleanup
+        on_gate_monthly_statistics
+        on_gate_monthly_cleanup
         on_monthly_mana_density
-        on_monthly_buttons
+        on_gate_monthly_buttons
     }
 }
 
-on_monthly_buttons = {
+on_gate_monthly_buttons = {
     effect = {
-        add_magic_main_button = yes
-        add_magic_technology_button = yes
+        add_gate_magic_main_button = yes
+        add_gate_magic_technology_button = yes
     }
 }
 
@@ -25,13 +25,13 @@ on_monthly_calculate_mana_saturation = {
     }
 }
 
-on_monthly_statistics = {
+on_gate_monthly_statistics = {
     effect = {
         collect_magic_countries = yes
     }
 }
 
-on_monthly_cleanup = {
+on_gate_monthly_cleanup = {
     effect = {
         cleanup_research_institutes = yes
     }

@@ -21,6 +21,10 @@ monster_attack.1 = {
 
     trigger = {
         is_player = yes
+        global_var:global_mana_saturation >= 20
+        NOT = {
+            has_global_variable = monster_horde_grace_period
+        }
     }
 
     immediate = {

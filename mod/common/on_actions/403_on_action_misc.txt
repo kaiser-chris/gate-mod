@@ -1,12 +1,12 @@
 ﻿# Root = Building
 on_building_built = {
     on_actions = {
-        on_research_institute_built
-        on_elven_forest_built
+        on_gate_research_institute_built
+        on_gate_elven_forest_built
     }
 }
 
-on_research_institute_built = {
+on_gate_research_institute_built = {
     effect = {
         if = {
             limit = {
@@ -19,7 +19,7 @@ on_research_institute_built = {
     }
 }
 
-on_elven_forest_built = {
+on_gate_elven_forest_built = {
     effect = {
         if = {
             limit = {
@@ -37,11 +37,11 @@ on_elven_forest_built = {
 # scope:target = Target country
 on_war_end = {
     on_actions = {
-        on_lunda_uprising_end
+        on_gate_lunda_uprising_end
     }
 }
 
-on_lunda_uprising_end = {
+on_gate_lunda_uprising_end = {
     trigger = {
         has_variable = lunda_uprising
         exists = scope:actor
@@ -57,11 +57,11 @@ on_lunda_uprising_end = {
 # scope:target = Target of the play
 on_diplomatic_play_started = {
     on_actions = {
-        on_lunda_uprising_start
+        on_gate_lunda_uprising_start
     }
 }
 
-on_lunda_uprising_start = {
+on_gate_lunda_uprising_start = {
     trigger = {
         AND = {
             scope:initiator = c:GAD
