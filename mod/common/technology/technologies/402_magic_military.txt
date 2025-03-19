@@ -42,6 +42,86 @@ battlefield_wards = {
 	}
 }
 
+gate_arcane_warfare_doctrine = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/gate_invention_placeholder.dds"
+	category = military
+	can_research = no
+
+	unlocking_technologies = {
+		mage_infantry
+		line_infantry
+	}
+
+	ai_weight = {
+		value = 2 # Important tech for everyone
+	}
+}
+
+gate_mana_weaponization = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/gate_invention_placeholder.dds"
+	category = military
+	can_research = no
+
+	unlocking_technologies = {
+		general_staff
+		gate_arcane_warfare_doctrine
+	}
+
+	ai_weight = {
+		value = 2 # Important tech for everyone
+	}
+}
+
+gate_runic_armor_forging = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/gate_invention_placeholder.dds"
+	category = military
+	can_research = no
+
+	unlocking_technologies = {
+		trench_works
+		gate_mana_weaponization
+	}
+
+	ai_weight = {
+		value = 2 # Important tech for everyone
+	}
+}
+
+gate_shadow_infiltration_tactics = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/gate_invention_placeholder.dds"
+	category = military
+	can_research = no
+
+	unlocking_technologies = {
+		trench_works
+		gate_mana_weaponization
+	}
+
+	ai_weight = {
+		value = 2 # Important tech for everyone
+	}
+}
+
+gate_commando_thaumaturgy = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/gate_invention_placeholder.dds"
+	category = military
+	can_research = no
+
+	unlocking_technologies = {
+		nco_training
+		gate_shadow_infiltration_tactics
+	}
+
+	ai_weight = {
+		value = 2 # Important tech for everyone
+	}
+}
+
 mage_artillery = {
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/mage_artillery.dds"

@@ -142,6 +142,8 @@ types gate_technologies {
             margin_bottom = 10
         }
 
+        ### Era 1
+
         gate_technology = {
             blockoverride "context" {
                 datacontext = "[GetTechnology('magic_understanding_military')]"
@@ -163,6 +165,22 @@ types gate_technologies {
             }
         }
 
+        ### Era 2
+
+        gate_technology = {
+            blockoverride "context" {
+                datacontext = "[GetTechnology('gate_arcane_warfare_doctrine')]"
+                datacontext = "[GetScriptedGui('gate_arcane_warfare_doctrine')]"
+            }
+        }
+
+        gate_technology = {
+            blockoverride "context" {
+                datacontext = "[GetTechnology('gate_mana_weaponization')]"
+                datacontext = "[GetScriptedGui('gate_mana_weaponization')]"
+            }
+        }
+
         gate_technology = {
             blockoverride "context" {
                 datacontext = "[GetTechnology('mage_artillery')]"
@@ -174,6 +192,31 @@ types gate_technologies {
             blockoverride "context" {
                 datacontext = "[GetTechnology('ritual_magic')]"
                 datacontext = "[GetScriptedGui('ritual_magic')]"
+            }
+        }
+
+        ### Era 4
+
+        gate_technology = {
+            blockoverride "context" {
+                datacontext = "[GetTechnology('gate_runic_armor_forging')]"
+                datacontext = "[GetScriptedGui('gate_runic_armor_forging')]"
+            }
+        }
+
+        gate_technology = {
+            blockoverride "context" {
+                datacontext = "[GetTechnology('gate_shadow_infiltration_tactics')]"
+                datacontext = "[GetScriptedGui('gate_shadow_infiltration_tactics')]"
+            }
+        }
+
+        ### Era 5
+
+        gate_technology = {
+            blockoverride "context" {
+                datacontext = "[GetTechnology('gate_commando_thaumaturgy')]"
+                datacontext = "[GetScriptedGui('gate_commando_thaumaturgy')]"
             }
         }
     }
