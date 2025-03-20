@@ -74,14 +74,13 @@ gate_mana_weaponization = {
 	}
 }
 
-gate_runic_armor_forging = {
-	era = era_4
+gate_shadow_infiltration_tactics = {
+	era = era_3
 	texture = "gfx/interface/icons/invention_icons/gate_invention_placeholder.dds"
 	category = military
 	can_research = no
 
 	unlocking_technologies = {
-		trench_works
 		gate_mana_weaponization
 	}
 
@@ -90,7 +89,7 @@ gate_runic_armor_forging = {
 	}
 }
 
-gate_shadow_infiltration_tactics = {
+gate_runic_armor_forging = {
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/gate_invention_placeholder.dds"
 	category = military

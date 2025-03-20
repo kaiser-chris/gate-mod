@@ -72,7 +72,6 @@ combat_unit_type_irregular_infantry = {
         combat_unit_type_skirmish_infantry
         combat_unit_type_mana_rifle_infantry
         combat_unit_type_trench_infantry
-        combat_unit_type_wraithwalkers
         combat_unit_type_rune_guard_infantry
         combat_unit_type_squad_infantry
         combat_unit_type_thaumaturgic_commandos
@@ -128,7 +127,6 @@ combat_unit_type_mage_infantry = {
         combat_unit_type_skirmish_infantry
         combat_unit_type_mana_rifle_infantry
         combat_unit_type_trench_infantry
-        combat_unit_type_wraithwalkers
         combat_unit_type_rune_guard_infantry
         combat_unit_type_squad_infantry
         combat_unit_type_thaumaturgic_commandos
@@ -189,7 +187,6 @@ combat_unit_type_line_infantry = {
         combat_unit_type_skirmish_infantry
         combat_unit_type_mana_rifle_infantry
         combat_unit_type_trench_infantry
-        combat_unit_type_wraithwalkers
         combat_unit_type_rune_guard_infantry
         combat_unit_type_squad_infantry
         combat_unit_type_thaumaturgic_commandos
@@ -222,7 +219,6 @@ combat_unit_type_arcane_vangard = {
         combat_unit_type_skirmish_infantry
         combat_unit_type_mana_rifle_infantry
         combat_unit_type_trench_infantry
-        combat_unit_type_wraithwalkers
         combat_unit_type_rune_guard_infantry
         combat_unit_type_squad_infantry
         combat_unit_type_thaumaturgic_commandos
@@ -282,7 +278,6 @@ combat_unit_type_skirmish_infantry = {
 	upgrades = {
         combat_unit_type_mana_rifle_infantry
         combat_unit_type_trench_infantry
-        combat_unit_type_wraithwalkers
         combat_unit_type_rune_guard_infantry
         combat_unit_type_squad_infantry
         combat_unit_type_thaumaturgic_commandos
@@ -313,7 +308,6 @@ combat_unit_type_mana_rifle_infantry = {
 
     upgrades = {
         combat_unit_type_trench_infantry
-        combat_unit_type_wraithwalkers
         combat_unit_type_rune_guard_infantry
         combat_unit_type_squad_infantry
         combat_unit_type_thaumaturgic_commandos
@@ -368,37 +362,6 @@ combat_unit_type_trench_infantry = {
     combat_unit_image = {
 		# fallback
         texture = "gfx/unit_illustrations/infantry_eu_trench.dds"
-    }
-
-    upgrades = {
-        combat_unit_type_wraithwalkers
-        combat_unit_type_rune_guard_infantry
-        combat_unit_type_squad_infantry
-        combat_unit_type_thaumaturgic_commandos
-        combat_unit_type_mechanized_infantry
-    }
-}
-
-combat_unit_type_wraithwalkers = {
-    group = combat_unit_group_infantry
-
-    upkeep_modifier = {
-        goods_input_small_arms_add = 1
-        goods_input_mana_core_add = 1
-        goods_input_ammunition_add = 1
-    }
-
-    battle_modifier = {
-        unit_offense_add = 40
-        unit_defense_add = 5
-        unit_morale_loss_add = 4
-    }
-
-    unlocking_technologies = { gate_shadow_infiltration_tactics }
-
-    combat_unit_image = {
-        # fallback
-        texture = "gfx/unit_illustrations/gate_placeholder.dds"
     }
 
     upgrades = {
@@ -496,6 +459,12 @@ combat_unit_type_squad_infantry = {
 combat_unit_type_thaumaturgic_commandos = {
     group = combat_unit_group_infantry
 
+    can_build_conscript = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
+
     upkeep_modifier = {
         goods_input_small_arms_add = 3
         goods_input_ammunition_add = 3
@@ -503,9 +472,9 @@ combat_unit_type_thaumaturgic_commandos = {
     }
 
     battle_modifier = {
-        unit_offense_add = 20
-        unit_defense_add = 25
-        unit_morale_loss_add = 10
+        unit_offense_add = 50
+        unit_defense_add = 50
+        unit_morale_loss_add = 4
     }
 
     unlocking_technologies = { gate_commando_thaumaturgy }
@@ -1006,6 +975,8 @@ combat_unit_type_hussars = {
         combat_unit_type_dragoons
         combat_unit_type_cuirassiers
         combat_unit_type_lancers
+        combat_unit_type_wraithwalkers
+        combat_unit_type_light_tanks
     }
 }
 
@@ -1069,6 +1040,8 @@ combat_unit_type_dragoons = {
     upgrades = {
         combat_unit_type_cuirassiers
         combat_unit_type_lancers
+        combat_unit_type_wraithwalkers
+        combat_unit_type_light_tanks
     }
 }
 
@@ -1129,8 +1102,9 @@ combat_unit_type_cuirassiers = {
     }
 
     upgrades = {
-        combat_unit_type_dragoons
         combat_unit_type_lancers
+        combat_unit_type_wraithwalkers
+        combat_unit_type_light_tanks
     }
 }
 
@@ -1194,8 +1168,43 @@ combat_unit_type_lancers = {
     }
 
     upgrades = {
-        combat_unit_type_dragoons
-        combat_unit_type_cuirassiers
+        combat_unit_type_wraithwalkers
+        combat_unit_type_light_tanks
+    }
+}
+
+combat_unit_type_wraithwalkers = {
+    group = combat_unit_group_cavalry
+
+    can_build_conscript = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
+
+    upkeep_modifier = {
+        goods_input_small_arms_add = 2
+        goods_input_mana_core_add = 2
+        goods_input_ammunition_add = 1
+    }
+
+    battle_modifier = {
+        unit_offense_add = 40
+        unit_defense_add = 20
+        unit_morale_loss_add = 6
+        unit_kill_rate_add = 0.05
+        unit_occupation_mult = 0.3
+    }
+
+    unlocking_technologies = { gate_shadow_infiltration_tactics }
+
+    combat_unit_image = {
+        # fallback
+        texture = "gfx/unit_illustrations/gate_placeholder.dds"
+    }
+
+    upgrades = {
+        combat_unit_type_light_tanks
     }
 }
 

@@ -195,19 +195,21 @@ types gate_technologies {
             }
         }
 
+        ### Era 3
+
+        gate_technology = {
+            blockoverride "context" {
+                datacontext = "[GetTechnology('gate_shadow_infiltration_tactics')]"
+                datacontext = "[GetScriptedGui('gate_shadow_infiltration_tactics')]"
+            }
+        }
+
         ### Era 4
 
         gate_technology = {
             blockoverride "context" {
                 datacontext = "[GetTechnology('gate_runic_armor_forging')]"
                 datacontext = "[GetScriptedGui('gate_runic_armor_forging')]"
-            }
-        }
-
-        gate_technology = {
-            blockoverride "context" {
-                datacontext = "[GetTechnology('gate_shadow_infiltration_tactics')]"
-                datacontext = "[GetScriptedGui('gate_shadow_infiltration_tactics')]"
             }
         }
 
