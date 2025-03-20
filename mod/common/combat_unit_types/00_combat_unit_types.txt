@@ -61,6 +61,27 @@ combat_unit_type_irregular_infantry = {
     }
 
     combat_unit_image = {
+        trigger = {
+            has_culture_graphics = orcish
+        }
+        texture = "gfx/unit_illustrations/gate_infantry_orc_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = elven
+        }
+        texture = "gfx/unit_illustrations/gate_infantry_elven_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = dwarven
+        }
+        texture = "gfx/unit_illustrations/gate_infantry_dwarven_irregular.dds"
+    }
+
+    combat_unit_image = {
 		# fallback
         texture = "gfx/unit_illustrations/infantry_eu_irregular.dds"
     }
@@ -98,27 +119,27 @@ combat_unit_type_mage_infantry = {
 
     combat_unit_image = {
         trigger = {
-            this = cu:elven
+            has_culture_graphics = elven
         }
-        texture = "gfx/unit_illustrations/infantry_mage_elven.dds"
+        texture = "gfx/unit_illustrations/gate_infantry_elven_mage.dds"
     }
 
     combat_unit_image = {
         trigger = {
-            this = cu:dwarven
+            has_culture_graphics = dwarven
         }
-        texture = "gfx/unit_illustrations/infantry_mage_dwarf.dds"
+        texture = "gfx/unit_illustrations/gate_infantry_dwarven_mage.dds"
     }
 
     combat_unit_image = {
         trigger = {
-            this = cu:orcish
+            has_culture_graphics = orcish
         }
-        texture = "gfx/unit_illustrations/infantry_mage_orc.dds"
+        texture = gfx/unit_illustrations/gate_infantry_orc_mage.dds
     }
 
     combat_unit_image = {
-        texture = "gfx/unit_illustrations/infantry_mage.dds"
+        texture = "gfx/unit_illustrations/gate_infantry_european_mage.dds"
     }
 
     upgrades = {
@@ -175,6 +196,20 @@ combat_unit_type_line_infantry = {
             has_culture_graphics = arabic
         }
         texture = "gfx/unit_illustrations/infantry_arabic_line.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = dwarven
+        }
+        texture = "gfx/unit_illustrations/gate_infantry_dwarven_line.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = orcish
+        }
+        texture = "gfx/unit_illustrations/gate_infantry_orc_line.dds"
     }
 
     combat_unit_image = {
@@ -271,6 +306,20 @@ combat_unit_type_skirmish_infantry = {
     }
 
     combat_unit_image = {
+        trigger = {
+            has_culture_graphics = dwarven
+        }
+        texture = "gfx/unit_illustrations/gate_infantry_dwarven_skirmish.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = orcish
+        }
+        texture = "gfx/unit_illustrations/gate_infantry_orc_skirmish.dds"
+    }
+
+    combat_unit_image = {
 		# fallback
         texture = "gfx/unit_illustrations/infantry_eu_skirmish.dds"
     }
@@ -360,6 +409,20 @@ combat_unit_type_trench_infantry = {
     }
 
     combat_unit_image = {
+        trigger = {
+            has_culture_graphics = dwarven
+        }
+        texture = "gfx/unit_illustrations/gate_infantry_dwarven_trench.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = orcish
+        }
+        texture = "gfx/unit_illustrations/gate_infantry_orc_trench.dds"
+    }
+
+    combat_unit_image = {
 		# fallback
         texture = "gfx/unit_illustrations/infantry_eu_trench.dds"
     }
@@ -443,6 +506,20 @@ combat_unit_type_squad_infantry = {
             has_culture_graphics = arabic
         }
         texture = "gfx/unit_illustrations/infantry_arabic_squad.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = dwarven
+        }
+        texture = "gfx/unit_illustrations/gate_infantry_dwarven_squad.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = orcish
+        }
+        texture = "gfx/unit_illustrations/gate_infantry_orc_squad.dds"
     }
 
     combat_unit_image = {
@@ -578,25 +655,25 @@ combat_unit_type_mage_artillery = {
         trigger = {
             this = cu:elven
         }
-        texture = "gfx/unit_illustrations/artillery_mage_elven.dds"
+        texture = "gfx/unit_illustrations/gate_artillery_elven_mage.dds"
     }
 
     combat_unit_image = {
         trigger = {
             this = cu:dwarven
         }
-        texture = "gfx/unit_illustrations/artillery_mage_dwarf.dds"
+        texture = "gfx/unit_illustrations/gate_artillery_dwarven_mage.dds"
     }
 
     combat_unit_image = {
         trigger = {
             this = cu:orcish
         }
-        texture = "gfx/unit_illustrations/artillery_mage_orc.dds"
+        texture = "gfx/unit_illustrations/gate_artillery_orc_mage.dds"
     }
 
     combat_unit_image = {
-        texture = "gfx/unit_illustrations/artillery_mage.dds"
+        texture = "gfx/unit_illustrations/gate_artillery_european_mage.dds"
     }
 
     upgrades = {
@@ -660,6 +737,20 @@ combat_unit_type_cannon_artillery = {
             has_culture_graphics = arabic
         }
         texture = "gfx/unit_illustrations/artillery_arabic_cannon.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = dwarven
+        }
+        texture = "gfx/unit_illustrations/gate_artillery_dwarven_cannon.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = orcish
+        }
+        texture = "gfx/unit_illustrations/gate_artillery_orc_cannon.dds"
     }
 
     combat_unit_image = {
@@ -731,6 +822,20 @@ combat_unit_type_mobile_artillery = {
     }
 
     combat_unit_image = {
+        trigger = {
+            has_culture_graphics = dwarven
+        }
+        texture = "gfx/unit_illustrations/gate_artillery_dwarven_mobile.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = orcish
+        }
+        texture = "gfx/unit_illustrations/gate_artillery_orc_mobile.dds"
+    }
+
+    combat_unit_image = {
         # fallback
         texture = "gfx/unit_illustrations/artillery_eu_mobile.dds"
     }
@@ -796,6 +901,13 @@ combat_unit_type_shrapnel_artillery = {
             has_culture_graphics = arabic
         }
         texture = "gfx/unit_illustrations/artillery_arabic_shrapnel.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = orcish
+        }
+        texture = "gfx/unit_illustrations/gate_artillery_orc_shrapnel.dds"
     }
 
     combat_unit_image = {
@@ -1200,7 +1312,7 @@ combat_unit_type_wraithwalkers = {
 
     combat_unit_image = {
         # fallback
-        texture = "gfx/unit_illustrations/gate_placeholder.dds"
+        texture = "gfx/unit_illustrations/gate_wraithwalkers.dds"
     }
 
     upgrades = {
