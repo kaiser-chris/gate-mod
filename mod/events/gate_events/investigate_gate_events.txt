@@ -1,12 +1,12 @@
-﻿namespace = investigate_gate
+﻿namespace = gate_investigate_gate
 
-investigate_gate.1 = {
+gate_investigate_gate.1 = {
 	type = country_event
 	dlc = dlc_magic_gate
 	
-	title = investigate_gate.1.t
-	desc = investigate_gate.1.d
-	flavor = investigate_gate.1.f
+	title = gate_investigate_gate.1.t
+	desc = gate_investigate_gate.1.d
+	flavor = gate_investigate_gate.1.f
 	
 	event_image = {
 		video = "asia_confucianism_shinto"
@@ -19,7 +19,7 @@ investigate_gate.1 = {
 	duration = 3
 
 	option = {
-		name = investigate_gate.1.a
+		name = gate_investigate_gate.1.a
 		default_option = yes
 		add_technology_researched = gate_expeditions
 	}

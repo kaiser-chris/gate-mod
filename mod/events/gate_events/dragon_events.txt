@@ -1,13 +1,13 @@
-﻿namespace = dragon
+﻿namespace = gate_dragon
 
-dragon.1 = {
+gate_dragon.1 = {
 	type = country_event
 	dlc = dlc_magic_gate
-	placement = scope:dragon_greenland_state
+	placement = scope:gate_dragon_greenland_state
 
-	title = dragon.t
-	desc = dragon_greenland.d
-	flavor = dragon_greenland.f
+	title = gate_dragon.t
+	desc = gate_dragon_greenland.d
+	flavor = gate_dragon_greenland.f
 
 	event_image = {
 		video = "unspecific_devastation"
@@ -20,7 +20,7 @@ dragon.1 = {
 	duration = 3
 
 	trigger = {
-		NOT = { has_global_variable = dragon_greenland_var }
+		NOT = { has_global_variable = gate_dragon_greenland_var }
 		any_scope_state = {
 			state_region = s:STATE_GREENLAND
 			state_region = {
@@ -30,42 +30,42 @@ dragon.1 = {
 	}
 
 	immediate = {
-		set_global_variable = dragon_greenland_var
+		set_global_variable = gate_dragon_greenland_var
 		random_scope_state = {
 			limit = {
 				state_region = s:STATE_GREENLAND
 			}
-			save_scope_as = dragon_greenland_state
+			save_scope_as = gate_dragon_greenland_state
 			owner = {
-				save_scope_as = dragon_greenland_country
-				set_variable = dragon_greenland_country_var
+				save_scope_as = gate_dragon_greenland_country
+				set_variable = gate_dragon_greenland_country_var
 			}
 		}
 		every_country = {
 			limit = {
 				is_player = yes
-				NOT = { has_variable = dragon_greenland_country_var }
+				NOT = { has_variable = gate_dragon_greenland_country_var }
 			}
-			trigger_event = { id = dragon.2 } #notification event
+			trigger_event = { id = gate_dragon.2 } #notification event
 		}
 	}
 
 	option = { #help our people
-		name = dragon.victim.a
+		name = gate_dragon.victim.a
 		default_option = yes
-		scope:dragon_greenland_state = {
+		scope:gate_dragon_greenland_state = {
 			add_modifier = {
-				name = dragon_help_modifier
+				name = gate_dragon_help_modifier
 				months = short_modifier_time
 			}
 		}
-		scope:dragon_greenland_state.state_region = {
+		scope:gate_dragon_greenland_state.state_region = {
 			add_devastation = 50
 		}
 		every_state = {
 			limit = {
 				any_neighbouring_state = {
-					this = scope:dragon_greenland_state
+					this = scope:gate_dragon_greenland_state
 				}
 			}
 			state_region = {
@@ -73,27 +73,27 @@ dragon.1 = {
 			}
 		}
 		add_modifier = {
-			name = dragon_cost_modifier
+			name = gate_dragon_cost_modifier
 			months = short_modifier_time
 			multiplier = money_amount_multiplier_small
 		}
 	}
 
 	option = { #nothing we can do
-		name = dragon.victim.b
-		scope:dragon_greenland_state = {
+		name = gate_dragon.victim.b
+		scope:gate_dragon_greenland_state = {
 			add_modifier = {
-				name = dragon_no_help_modifier
+				name = gate_dragon_no_help_modifier
 				months = short_modifier_time
 			}
 		}
-		scope:dragon_greenland_state.state_region = {
+		scope:gate_dragon_greenland_state.state_region = {
 			add_devastation = 80
 		}
 		every_state = {
 			limit = {
 				any_neighbouring_state = {
-					this = scope:dragon_greenland_state
+					this = scope:gate_dragon_greenland_state
 				}
 			}
 			state_region = {
@@ -108,14 +108,14 @@ dragon.1 = {
 	}
 }
 
-dragon.2 = {
+gate_dragon.2 = {
 	type = country_event
 	dlc = dlc_magic_gate
-	placement = scope:dragon_greenland_state
+	placement = scope:gate_dragon_greenland_state
 
-	title = dragon.t
-	desc = dragon_greenland.d
-	flavor = dragon_greenland.f
+	title = gate_dragon.t
+	desc = gate_dragon_greenland.d
+	flavor = gate_dragon_greenland.f
 
 	event_image = {
 		video = "unspecific_devastation"
@@ -128,37 +128,37 @@ dragon.2 = {
 	duration = 3
 
 	option = { #send some humanitarian help
-		name = dragon.other.a
+		name = gate_dragon.other.a
 		change_relations = {
-			country = scope:dragon_greenland_country
+			country = scope:gate_dragon_greenland_country
 			value = 30
 		}
 		add_modifier = {
-			name = dragon_cost_modifier
+			name = gate_dragon_cost_modifier
 			months = short_modifier_time
 			multiplier = money_amount_multiplier_small
 		}
 	}
 
 	option = { #it doesn't affect us that much
-		name = dragon.other.b
+		name = gate_dragon.other.b
 		default_option = yes
 		change_relations = {
-			country = scope:dragon_greenland_country
+			country = scope:gate_dragon_greenland_country
 			value = -30
 		}
 		change_infamy = 5
 	}
 }
 
-dragon.3 = {
+gate_dragon.3 = {
 	type = country_event
 	dlc = dlc_magic_gate
-	placement = scope:dragon_california_state
+	placement = scope:gate_dragon_california_state
 
-	title = dragon.t
-	desc = dragon_california.d
-	flavor = dragon_california.f
+	title = gate_dragon.t
+	desc = gate_dragon_california.d
+	flavor = gate_dragon_california.f
 
 	event_image = {
 		video = "unspecific_devastation"
@@ -171,7 +171,7 @@ dragon.3 = {
 	duration = 3
 
 	trigger = {
-		NOT = { has_global_variable = dragon_california_var }
+		NOT = { has_global_variable = gate_dragon_california_var }
 		any_scope_state = {
 			state_region = s:STATE_CALIFORNIA
 			state_region = {
@@ -181,42 +181,42 @@ dragon.3 = {
 	}
 
 	immediate = {
-		set_global_variable = dragon_california_var
+		set_global_variable = gate_dragon_california_var
 		random_scope_state = {
 			limit = {
 				state_region = s:STATE_CALIFORNIA
 			}
-			save_scope_as = dragon_california_state
+			save_scope_as = gate_dragon_california_state
 			owner = {
-				save_scope_as = dragon_california_country
-				set_variable = dragon_california_country_var
+				save_scope_as = gate_dragon_california_country
+				set_variable = gate_dragon_california_country_var
 			}
 		}
 		every_country = {
 			limit = {
 				is_player = yes
-				NOT = { has_variable = dragon_california_country_var }
+				NOT = { has_variable = gate_dragon_california_country_var }
 			}
-			trigger_event = { id = dragon.4 } #notification event
+			trigger_event = { id = gate_dragon.4 } #notification event
 		}
 	}
 
 	option = { #help our people
-		name = dragon.victim.a
+		name = gate_dragon.victim.a
 		default_option = yes
-		scope:dragon_california_state = {
+		scope:gate_dragon_california_state = {
 			add_modifier = {
-				name = dragon_help_modifier
+				name = gate_dragon_help_modifier
 				months = short_modifier_time
 			}
 		}
-		scope:dragon_california_state.state_region = {
+		scope:gate_dragon_california_state.state_region = {
 			add_devastation = 50
 		}
 		every_state = {
 			limit = {
 				any_neighbouring_state = {
-					this = scope:dragon_california_state
+					this = scope:gate_dragon_california_state
 				}
 			}
 			state_region = {
@@ -224,27 +224,27 @@ dragon.3 = {
 			}
 		}
 		add_modifier = {
-			name = dragon_cost_modifier
+			name = gate_dragon_cost_modifier
 			months = short_modifier_time
 			multiplier = money_amount_multiplier_small
 		}
 	}
 
 	option = { #nothing we can do
-		name = dragon.victim.b
-		scope:dragon_california_state = {
+		name = gate_dragon.victim.b
+		scope:gate_dragon_california_state = {
 			add_modifier = {
-				name = dragon_no_help_modifier
+				name = gate_dragon_no_help_modifier
 				months = short_modifier_time
 			}
 		}
-		scope:dragon_california_state.state_region = {
+		scope:gate_dragon_california_state.state_region = {
 			add_devastation = 80
 		}
 		every_state = {
 			limit = {
 				any_neighbouring_state = {
-					this = scope:dragon_california_state
+					this = scope:gate_dragon_california_state
 				}
 			}
 			state_region = {
@@ -259,14 +259,14 @@ dragon.3 = {
 	}
 }
 
-dragon.4 = {
+gate_dragon.4 = {
 	type = country_event
 	dlc = dlc_magic_gate
-	placement = scope:dragon_california_state
+	placement = scope:gate_dragon_california_state
 
-	title = dragon.t
-	desc = dragon_california.d
-	flavor = dragon_california.f
+	title = gate_dragon.t
+	desc = gate_dragon_california.d
+	flavor = gate_dragon_california.f
 
 	event_image = {
 		video = "unspecific_devastation"
@@ -279,37 +279,37 @@ dragon.4 = {
 	duration = 3
 
 	option = { #send some humanitarian help
-		name = dragon.other.a
+		name = gate_dragon.other.a
 		change_relations = {
-			country = scope:dragon_california_country
+			country = scope:gate_dragon_california_country
 			value = 30
 		}
 		add_modifier = {
-			name = dragon_cost_modifier
+			name = gate_dragon_cost_modifier
 			months = short_modifier_time
 			multiplier = money_amount_multiplier_small
 		}
 	}
 
 	option = { #it doesn't affect us that much
-		name = dragon.other.b
+		name = gate_dragon.other.b
 		default_option = yes
 		change_relations = {
-			country = scope:dragon_california_country
+			country = scope:gate_dragon_california_country
 			value = -30
 		}
 		change_infamy = 5
 	}
 }
 
-dragon.5 = {
+gate_dragon.5 = {
 	type = country_event
 	dlc = dlc_magic_gate
-	placement = scope:dragon_kolyma_state
+	placement = scope:gate_dragon_kolyma_state
 
-	title = dragon.t
-	desc = dragon_kolyma.d
-	flavor = dragon_kolyma.f
+	title = gate_dragon.t
+	desc = gate_dragon_kolyma.d
+	flavor = gate_dragon_kolyma.f
 
 	event_image = {
 		video = "unspecific_devastation"
@@ -322,7 +322,7 @@ dragon.5 = {
 	duration = 3
 
 	trigger = {
-		NOT = { has_global_variable = dragon_kolyma_var }
+		NOT = { has_global_variable = gate_dragon_kolyma_var }
 		any_scope_state = {
 			state_region = s:STATE_KOLYMA
 			state_region = {
@@ -332,42 +332,42 @@ dragon.5 = {
 	}
 
 	immediate = {
-		set_global_variable = dragon_kolyma_var
+		set_global_variable = gate_dragon_kolyma_var
 		random_scope_state = {
 			limit = {
 				state_region = s:STATE_KOLYMA
 			}
-			save_scope_as = dragon_kolyma_state
+			save_scope_as = gate_dragon_kolyma_state
 			owner = {
-				save_scope_as = dragon_kolyma_country
-				set_variable = dragon_kolyma_country_var
+				save_scope_as = gate_dragon_kolyma_country
+				set_variable = gate_dragon_kolyma_country_var
 			}
 		}
 		every_country = {
 			limit = {
 				is_player = yes
-				NOT = { has_variable = dragon_kolyma_country_var }
+				NOT = { has_variable = gate_dragon_kolyma_country_var }
 			}
-			trigger_event = { id = dragon.6 } #notification event
+			trigger_event = { id = gate_dragon.6 } #notification event
 		}
 	}
 
 	option = { #help our people
-		name = dragon.victim.a
+		name = gate_dragon.victim.a
 		default_option = yes
-		scope:dragon_kolyma_state = {
+		scope:gate_dragon_kolyma_state = {
 			add_modifier = {
-				name = dragon_help_modifier
+				name = gate_dragon_help_modifier
 				months = short_modifier_time
 			}
 		}
-		scope:dragon_kolyma_state.state_region = {
+		scope:gate_dragon_kolyma_state.state_region = {
 			add_devastation = 50
 		}
 		every_state = {
 			limit = {
 				any_neighbouring_state = {
-					this = scope:dragon_kolyma_state
+					this = scope:gate_dragon_kolyma_state
 				}
 			}
 			state_region = {
@@ -375,27 +375,27 @@ dragon.5 = {
 			}
 		}
 		add_modifier = {
-			name = dragon_cost_modifier
+			name = gate_dragon_cost_modifier
 			months = short_modifier_time
 			multiplier = money_amount_multiplier_small
 		}
 	}
 
 	option = { #nothing we can do
-		name = dragon.victim.b
-		scope:dragon_kolyma_state = {
+		name = gate_dragon.victim.b
+		scope:gate_dragon_kolyma_state = {
 			add_modifier = {
-				name = dragon_no_help_modifier
+				name = gate_dragon_no_help_modifier
 				months = short_modifier_time
 			}
 		}
-		scope:dragon_kolyma_state.state_region = {
+		scope:gate_dragon_kolyma_state.state_region = {
 			add_devastation = 80
 		}
 		every_state = {
 			limit = {
 				any_neighbouring_state = {
-					this = scope:dragon_kolyma_state
+					this = scope:gate_dragon_kolyma_state
 				}
 			}
 			state_region = {
@@ -410,14 +410,14 @@ dragon.5 = {
 	}
 }
 
-dragon.6 = {
+gate_dragon.6 = {
 	type = country_event
 	dlc = dlc_magic_gate
-	placement = scope:dragon_kolyma_state
+	placement = scope:gate_dragon_kolyma_state
 
-	title = dragon.t
-	desc = dragon_kolyma.d
-	flavor = dragon_kolyma.f
+	title = gate_dragon.t
+	desc = gate_dragon_kolyma.d
+	flavor = gate_dragon_kolyma.f
 
 	event_image = {
 		video = "unspecific_devastation"
@@ -430,37 +430,37 @@ dragon.6 = {
 	duration = 3
 
 	option = { #send some humanitarian help
-		name = dragon.other.a
+		name = gate_dragon.other.a
 		change_relations = {
-			country = scope:dragon_kolyma_country
+			country = scope:gate_dragon_kolyma_country
 			value = 30
 		}
 		add_modifier = {
-			name = dragon_cost_modifier
+			name = gate_dragon_cost_modifier
 			months = short_modifier_time
 			multiplier = money_amount_multiplier_small
 		}
 	}
 
 	option = { #it doesn't affect us that much
-		name = dragon.other.b
+		name = gate_dragon.other.b
 		default_option = yes
 		change_relations = {
-			country = scope:dragon_kolyma_country
+			country = scope:gate_dragon_kolyma_country
 			value = -30
 		}
 		change_infamy = 5
 	}
 }
 
-dragon.7 = {
+gate_dragon.7 = {
 	type = country_event
 	dlc = dlc_magic_gate
-	placement = scope:dragon_himalaya_state
+	placement = scope:gate_dragon_himalaya_state
 
-	title = dragon.t
-	desc = dragon_himalaya.d
-	flavor = dragon_himalaya.f
+	title = gate_dragon.t
+	desc = gate_dragon_himalaya.d
+	flavor = gate_dragon_himalaya.f
 
 	event_image = {
 		video = "unspecific_devastation"
@@ -473,7 +473,7 @@ dragon.7 = {
 	duration = 3
 
 	trigger = {
-		NOT = { has_global_variable = dragon_himalaya_var }
+		NOT = { has_global_variable = gate_dragon_himalaya_var }
 		any_scope_state = {
 			state_region = s:STATE_HIMALAYAS
 			state_region = {
@@ -483,42 +483,42 @@ dragon.7 = {
 	}
 
 	immediate = {
-		set_global_variable = dragon_himalaya_var
+		set_global_variable = gate_dragon_himalaya_var
 		random_scope_state = {
 			limit = {
 				state_region = s:STATE_HIMALAYAS
 			}
-			save_scope_as = dragon_himalaya_state
+			save_scope_as = gate_dragon_himalaya_state
 			owner = {
-				save_scope_as = dragon_himalaya_country
-				set_variable = dragon_himalaya_country_var
+				save_scope_as = gate_dragon_himalaya_country
+				set_variable = gate_dragon_himalaya_country_var
 			}
 		}
 		every_country = {
 			limit = {
 				is_player = yes
-				NOT = { has_variable = dragon_himalaya_country_var }
+				NOT = { has_variable = gate_dragon_himalaya_country_var }
 			}
-			trigger_event = { id = dragon.8 } #notification event
+			trigger_event = { id = gate_dragon.8 } #notification event
 		}
 	}
 
 	option = { #help our people
-		name = dragon.victim.a
+		name = gate_dragon.victim.a
 		default_option = yes
-		scope:dragon_himalaya_state = {
+		scope:gate_dragon_himalaya_state = {
 			add_modifier = {
-				name = dragon_help_modifier
+				name = gate_dragon_help_modifier
 				months = short_modifier_time
 			}
 		}
-		scope:dragon_himalaya_state.state_region = {
+		scope:gate_dragon_himalaya_state.state_region = {
 			add_devastation = 50
 		}
 		every_state = {
 			limit = {
 				any_neighbouring_state = {
-					this = scope:dragon_himalaya_state
+					this = scope:gate_dragon_himalaya_state
 				}
 			}
 			state_region = {
@@ -526,27 +526,27 @@ dragon.7 = {
 			}
 		}
 		add_modifier = {
-			name = dragon_cost_modifier
+			name = gate_dragon_cost_modifier
 			months = short_modifier_time
 			multiplier = money_amount_multiplier_small
 		}
 	}
 
 	option = { #nothing we can do
-		name = dragon.victim.b
-		scope:dragon_himalaya_state = {
+		name = gate_dragon.victim.b
+		scope:gate_dragon_himalaya_state = {
 			add_modifier = {
-				name = dragon_no_help_modifier
+				name = gate_dragon_no_help_modifier
 				months = short_modifier_time
 			}
 		}
-		scope:dragon_himalaya_state.state_region = {
+		scope:gate_dragon_himalaya_state.state_region = {
 			add_devastation = 80
 		}
 		every_state = {
 			limit = {
 				any_neighbouring_state = {
-					this = scope:dragon_himalaya_state
+					this = scope:gate_dragon_himalaya_state
 				}
 			}
 			state_region = {
@@ -561,14 +561,14 @@ dragon.7 = {
 	}
 }
 
-dragon.8 = {
+gate_dragon.8 = {
 	type = country_event
 	dlc = dlc_magic_gate
-	placement = scope:dragon_himalaya_state
+	placement = scope:gate_dragon_himalaya_state
 
-	title = dragon.t
-	desc = dragon_himalaya.d
-	flavor = dragon_himalaya.f
+	title = gate_dragon.t
+	desc = gate_dragon_himalaya.d
+	flavor = gate_dragon_himalaya.f
 
 	event_image = {
 		video = "unspecific_devastation"
@@ -581,23 +581,23 @@ dragon.8 = {
 	duration = 3
 
 	option = { #send some humanitarian help
-		name = dragon.other.a
+		name = gate_dragon.other.a
 		change_relations = {
-			country = scope:dragon_himalaya_country
+			country = scope:gate_dragon_himalaya_country
 			value = 30
 		}
 		add_modifier = {
-			name = dragon_cost_modifier
+			name = gate_dragon_cost_modifier
 			months = short_modifier_time
 			multiplier = money_amount_multiplier_small
 		}
 	}
 
 	option = { #it doesn't affect us that much
-		name = dragon.other.b
+		name = gate_dragon.other.b
 		default_option = yes
 		change_relations = {
-			country = scope:dragon_himalaya_country
+			country = scope:gate_dragon_himalaya_country
 			value = -30
 		}
 		change_infamy = 5

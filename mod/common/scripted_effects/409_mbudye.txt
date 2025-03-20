@@ -171,14 +171,14 @@ trigger_random_mbudye_investigation_result = {
 			}
 		}
 		trigger_event = {
-			id = mbudye.6
+			id = gate_mbudye.6
 			months = $investigation_duration$
 			popup = yes
 		}
 	}
 	else = {
 		trigger_event = {
-			id = mbudye.5
+			id = gate_mbudye.5
 			months = $investigation_duration$
 			popup = yes
 		}

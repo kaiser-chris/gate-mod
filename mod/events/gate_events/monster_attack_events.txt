@@ -1,13 +1,13 @@
-﻿namespace = monster_attack
+﻿namespace = gate_monster_attack
 
-monster_attack.1 = {
+gate_monster_attack.1 = {
     type = country_event
     dlc = dlc_magic_gate
     placement = scope:monster_horde_state
 
-    title = monster_attack.1.t
-    desc = monster_attack.1.d
-    flavor = monster_attack.1.f
+    title = gate_monster_attack.1.t
+    desc = gate_monster_attack.1.d
+    flavor = gate_monster_attack.1.f
 
     event_image = {
         video = "southamerica_war_civilians"
@@ -62,7 +62,7 @@ monster_attack.1 = {
 
     # Our countries state
     option = {
-        name = monster_attack.1.a1
+        name = gate_monster_attack.1.a1
         add_loyalists = {
             value = very_large_radicals
         }
@@ -76,7 +76,7 @@ monster_attack.1 = {
         }
     }
     option = {
-        name = monster_attack.1.b1
+        name = gate_monster_attack.1.b1
         add_loyalists = {
             value = very_large_radicals
         }
@@ -101,7 +101,7 @@ monster_attack.1 = {
         }
     }
     option = {
-        name = monster_attack.1.c1
+        name = gate_monster_attack.1.c1
         default_option = yes
         add_radicals = {
             value = very_large_radicals
@@ -113,7 +113,7 @@ monster_attack.1 = {
 
     # Other countries state
     option = {
-        name = monster_attack.1.a2
+        name = gate_monster_attack.1.a2
         change_relations = {
             country = scope:monster_horde_country
             value = 20
@@ -130,7 +130,7 @@ monster_attack.1 = {
         }
     }
     option = {
-        name = monster_attack.1.b2
+        name = gate_monster_attack.1.b2
         change_relations = {
             country = scope:monster_horde_country
             value = 10
@@ -158,7 +158,7 @@ monster_attack.1 = {
         }
     }
     option = {
-        name = monster_attack.1.c2
+        name = gate_monster_attack.1.c2
         default_option = yes
         change_relations = {
             country = scope:monster_horde_country
@@ -173,7 +173,7 @@ monster_attack.1 = {
     }
 }
 
-monster_attack.4 = {
+gate_monster_attack.4 = {
     type = country_event
     dlc = dlc_magic_gate
     placement = capital
@@ -182,11 +182,11 @@ monster_attack.4 = {
         video = "southamerica_aristocrats"
     }
 
-    title = monster_attack.4.t
-    desc = monster_attack.4.d
-    flavor = monster_attack.4.f
+    title = gate_monster_attack.4.t
+    desc = gate_monster_attack.4.d
+    flavor = gate_monster_attack.4.f
 
     option = {
-        name = monster_attack.4.a
+        name = gate_monster_attack.4.a
     }
 }

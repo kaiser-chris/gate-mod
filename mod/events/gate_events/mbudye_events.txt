@@ -1,13 +1,13 @@
-﻿namespace = mbudye
+﻿namespace = gate_mbudye
 
-mbudye.1 = {
+gate_mbudye.1 = {
 	type = country_event
 	dlc = dlc_magic_gate
 	placement = capital
 	
-	title = mbudye.1.t
-	desc = mbudye.1.desc
-	flavor = mbudye.1.f
+	title = gate_mbudye.1.t
+	desc = gate_mbudye.1.desc
+	flavor = gate_mbudye.1.f
 
 	event_image = {
 		video = "asia_confucianism_shinto"
@@ -20,7 +20,7 @@ mbudye.1 = {
 	duration = 3
 
 	option = {
-		name = mbudye.1.a
+		name = gate_mbudye.1.a
 		default_option = yes
 		c:LND = {
 			if = {
@@ -61,14 +61,14 @@ mbudye.1 = {
 	}
 }
 
-mbudye.2 = {
+gate_mbudye.2 = {
 	type = country_event
 	dlc = dlc_magic_gate
 	placement = capital
 
-	title = mbudye.2.t
-	desc = mbudye.2.desc
-	flavor = mbudye.2.f
+	title = gate_mbudye.2.t
+	desc = gate_mbudye.2.desc
+	flavor = gate_mbudye.2.f
 
 	event_image = {
 		video = "europenorthamerica_political_extremism"
@@ -81,7 +81,7 @@ mbudye.2 = {
 			remove_modifier = lunda_bambudye_liberty_modifier
 		}
 		trigger_event = {
-			id = mbudye.15
+			id = gate_mbudye.15
 			days = 7
 			popup = yes
 		}
@@ -94,12 +94,12 @@ mbudye.2 = {
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
 	option = {
-		name = mbudye.2.a
+		name = gate_mbudye.2.a
 		default_option = yes
 	}
 }
 
-mbudye.3 = {
+gate_mbudye.3 = {
 	type = country_event
 	dlc = dlc_magic_gate
 	placement = scope:mbudye_event_state
@@ -108,9 +108,9 @@ mbudye.3 = {
 		scope_random_lunda_subject = yes
 	}
 
-	title = mbudye.3.t
-	desc = mbudye.3.desc
-	flavor = mbudye.3.f
+	title = gate_mbudye.3.t
+	desc = gate_mbudye.3.desc
+	flavor = gate_mbudye.3.f
 
 	event_image = {
 		video = "africa_public_protest"
@@ -123,7 +123,7 @@ mbudye.3 = {
 	duration = 3
 
 	option = {
-		name = mbudye.3.a
+		name = gate_mbudye.3.a
 		default_option = yes
 		add_radicals = {
 			religion = rel:animist
@@ -151,7 +151,7 @@ mbudye.3 = {
 	}
 
 	option = {
-		name = mbudye.3.b
+		name = gate_mbudye.3.b
 		add_radicals = {
 			religion = rel:animist
 			value = small_radicals
@@ -175,7 +175,7 @@ mbudye.3 = {
 	}
 
 	option = {
-		name = mbudye.3.c
+		name = gate_mbudye.3.c
 		add_radicals = {
 			religion = rel:golden_religion
 			value = small_radicals
@@ -199,7 +199,7 @@ mbudye.3 = {
 	}
 }
 
-mbudye.4 = {
+gate_mbudye.4 = {
 	type = country_event
 	dlc = dlc_magic_gate
 	placement = scope:mbudye_event_state
@@ -215,9 +215,9 @@ mbudye.4 = {
 		}
 	}
 
-	title = mbudye.4.t
-	desc = mbudye.4.desc
-	flavor = mbudye.4.f
+	title = gate_mbudye.4.t
+	desc = gate_mbudye.4.desc
+	flavor = gate_mbudye.4.f
 
 	event_image = {
 		video = "southamerica_public_figure_assassination"
@@ -230,7 +230,7 @@ mbudye.4 = {
 	duration = 3
 
 	option = {
-		name = mbudye.4.a
+		name = gate_mbudye.4.a
 		default_option = yes
 		scope:mbudye_event_state = {
 			kill_population_percent_in_state = {
@@ -264,7 +264,7 @@ mbudye.4 = {
 	}
 
 	option = {
-		name = mbudye.4.b
+		name = gate_mbudye.4.b
 		hidden_effect = {
 			trigger_random_mbudye_investigation_result = {
 				chance_success = 80
@@ -284,7 +284,7 @@ mbudye.4 = {
 	}
 
 	option = {
-		name = mbudye.4.c
+		name = gate_mbudye.4.c
 		add_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = 0
@@ -314,7 +314,7 @@ mbudye.4 = {
 	}
 
 	option = {
-		name = mbudye.4.d
+		name = gate_mbudye.4.d
 		add_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = 3
@@ -337,14 +337,14 @@ mbudye.4 = {
 	}
 }
 
-mbudye.5 = {
+gate_mbudye.5 = {
 	type = country_event
 	dlc = dlc_magic_gate
 	placement = scope:mbudye_event_state
 
-	title = mbudye.5.t
-	desc = mbudye.5.desc
-	flavor = mbudye.5.f
+	title = gate_mbudye.5.t
+	desc = gate_mbudye.5.desc
+	flavor = gate_mbudye.5.f
 
 	event_image = {
 		video = "middleeast_police_breaking_door"
@@ -357,7 +357,7 @@ mbudye.5 = {
 	duration = 3
 
 	option = {
-		name = mbudye.5.a
+		name = gate_mbudye.5.a
 		default_option = yes
 		custom_tooltip = {
 			text = je_gate_mbudye_change_fear
@@ -382,7 +382,7 @@ mbudye.5 = {
 	}
 
 	option = {
-		name = mbudye.5.b
+		name = gate_mbudye.5.b
 		add_radicals = {
 			culture = cu:elven
 			value = medium_radicals
@@ -407,14 +407,14 @@ mbudye.5 = {
 	}
 }
 
-mbudye.6 = {
+gate_mbudye.6 = {
 	type = country_event
 	dlc = dlc_magic_gate
 	placement = scope:mbudye_event_state
 
-	title = mbudye.6.t
-	desc = mbudye.6.desc
-	flavor = mbudye.6.f
+	title = gate_mbudye.6.t
+	desc = gate_mbudye.6.desc
+	flavor = gate_mbudye.6.f
 
 	event_image = {
 		video = "europenorthamerica_london_center"
@@ -427,7 +427,7 @@ mbudye.6 = {
 	duration = 3
 
 	option = {
-		name = mbudye.6.a
+		name = gate_mbudye.6.a
 		default_option = yes
 		custom_tooltip = {
 			text = je_gate_mbudye_change_fear
@@ -452,7 +452,7 @@ mbudye.6 = {
 	}
 
 	option = {
-		name = mbudye.6.b
+		name = gate_mbudye.6.b
 		add_radicals = {
 			culture = cu:elven
 			value = large_radicals
@@ -477,7 +477,7 @@ mbudye.6 = {
 	}
 }
 
-mbudye.7 = {
+gate_mbudye.7 = {
 	type = country_event
 	dlc = dlc_magic_gate
 	placement = scope:mbudye_event_state
@@ -510,9 +510,9 @@ mbudye.7 = {
 
 	minor_left_icon = scope:mbudye_event_character
 
-	title = mbudye.7.t
-	desc = mbudye.7.desc
-	flavor = mbudye.7.f
+	title = gate_mbudye.7.t
+	desc = gate_mbudye.7.desc
+	flavor = gate_mbudye.7.f
 
 	event_image = {
 		video = "southamerica_public_figure_assassination"
@@ -525,7 +525,7 @@ mbudye.7 = {
 	duration = 3
 
 	option = {
-		name = mbudye.7.a
+		name = gate_mbudye.7.a
 		default_option = yes
 		scope:mbudye_event_state = {
 			kill_population_percent_in_state = {
@@ -559,7 +559,7 @@ mbudye.7 = {
 	}
 
 	option = {
-		name = mbudye.7.b
+		name = gate_mbudye.7.b
 		hidden_effect = {
 			trigger_random_mbudye_investigation_result = {
 				chance_success = 80
@@ -587,7 +587,7 @@ mbudye.7 = {
 	}
 
 	option = {
-		name = mbudye.7.c
+		name = gate_mbudye.7.c
 		add_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = 0
@@ -617,7 +617,7 @@ mbudye.7 = {
 	}
 
 	option = {
-		name = mbudye.7.d
+		name = gate_mbudye.7.d
 		add_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = 1
@@ -640,7 +640,7 @@ mbudye.7 = {
 	}
 }
 
-mbudye.8 = {
+gate_mbudye.8 = {
 	type = country_event
 	dlc = dlc_magic_gate
 	placement = scope:mbudye_event_state
@@ -673,9 +673,9 @@ mbudye.8 = {
 
 	minor_left_icon = scope:mbudye_event_character
 
-	title = mbudye.8.t
-	desc = mbudye.8.desc
-	flavor = mbudye.8.f
+	title = gate_mbudye.8.t
+	desc = gate_mbudye.8.desc
+	flavor = gate_mbudye.8.f
 
 	event_image = {
 		video = "southamerica_public_figure_assassination"
@@ -688,7 +688,7 @@ mbudye.8 = {
 	duration = 3
 
 	option = {
-		name = mbudye.8.a
+		name = gate_mbudye.8.a
 		default_option = yes
 		scope:mbudye_event_state = {
 			kill_population_percent_in_state = {
@@ -722,7 +722,7 @@ mbudye.8 = {
 	}
 
 	option = {
-		name = mbudye.8.b
+		name = gate_mbudye.8.b
 		hidden_effect = {
 			trigger_random_mbudye_investigation_result = {
 				chance_success = 80
@@ -750,7 +750,7 @@ mbudye.8 = {
 	}
 
 	option = {
-		name = mbudye.8.c
+		name = gate_mbudye.8.c
 		add_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = 0
@@ -780,7 +780,7 @@ mbudye.8 = {
 	}
 
 	option = {
-		name = mbudye.7.d
+		name = gate_mbudye.7.d
 		add_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = 1
@@ -803,7 +803,7 @@ mbudye.8 = {
 	}
 }
 
-mbudye.9 = {
+gate_mbudye.9 = {
 	type = country_event
 	dlc = dlc_magic_gate
 	placement = scope:mbudye_event_state
@@ -839,9 +839,9 @@ mbudye.9 = {
 
 	minor_left_icon = scope:mbudye_event_character
 
-	title = mbudye.9.t
-	desc = mbudye.9.desc
-	flavor = mbudye.9.f
+	title = gate_mbudye.9.t
+	desc = gate_mbudye.9.desc
+	flavor = gate_mbudye.9.f
 
 	event_image = {
 		video = "southamerica_public_figure_assassination"
@@ -854,7 +854,7 @@ mbudye.9 = {
 	duration = 3
 
 	option = {
-		name = mbudye.9.a
+		name = gate_mbudye.9.a
 		default_option = yes
 		scope:mbudye_event_state = {
 			kill_population_percent_in_state = {
@@ -888,7 +888,7 @@ mbudye.9 = {
 	}
 
 	option = {
-		name = mbudye.9.b
+		name = gate_mbudye.9.b
 		hidden_effect = {
 			trigger_random_mbudye_investigation_result = {
 				chance_success = 80
@@ -916,7 +916,7 @@ mbudye.9 = {
 	}
 
 	option = {
-		name = mbudye.9.c
+		name = gate_mbudye.9.c
 		add_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = 0
@@ -946,7 +946,7 @@ mbudye.9 = {
 	}
 
 	option = {
-		name = mbudye.7.d
+		name = gate_mbudye.7.d
 		add_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = 1
@@ -969,7 +969,7 @@ mbudye.9 = {
 	}
 }
 
-mbudye.10 = {
+gate_mbudye.10 = {
 	type = country_event
 	dlc = dlc_magic_gate
 	placement = scope:mbudye_event_state
@@ -985,9 +985,9 @@ mbudye.10 = {
 		}
 	}
 
-	title = mbudye.10.t
-	desc = mbudye.10.desc
-	flavor = mbudye.10.f
+	title = gate_mbudye.10.t
+	desc = gate_mbudye.10.desc
+	flavor = gate_mbudye.10.f
 
 	event_image = {
 		video = "africa_public_protest"
@@ -1000,7 +1000,7 @@ mbudye.10 = {
 	duration = 3
 
 	option = {
-		name = mbudye.10.a
+		name = gate_mbudye.10.a
 		default_option = yes
 		add_radicals = {
 			religion = rel:animist
@@ -1028,7 +1028,7 @@ mbudye.10 = {
 	}
 
 	option = {
-		name = mbudye.10.b
+		name = gate_mbudye.10.b
 		add_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = 0
@@ -1058,7 +1058,7 @@ mbudye.10 = {
 	}
 
 	option = {
-		name = mbudye.10.c
+		name = gate_mbudye.10.c
 		add_radicals = {
 			religion = rel:golden_religion
 			value = small_radicals
@@ -1082,7 +1082,7 @@ mbudye.10 = {
 	}
 }
 
-mbudye.11 = {
+gate_mbudye.11 = {
 	type = country_event
 	dlc = dlc_magic_gate
 	placement = scope:mbudye_event_state
@@ -1091,9 +1091,9 @@ mbudye.11 = {
 		scope_random_lunda_subject = yes
 	}
 
-	title = mbudye.11.t
-	desc = mbudye.11.desc
-	flavor = mbudye.11.f
+	title = gate_mbudye.11.t
+	desc = gate_mbudye.11.desc
+	flavor = gate_mbudye.11.f
 
 	event_image = {
 		video = "africa_public_protest"
@@ -1106,7 +1106,7 @@ mbudye.11 = {
 	duration = 3
 
 	option = {
-		name = mbudye.11.a
+		name = gate_mbudye.11.a
 		default_option = yes
 		add_radicals = {
 			religion = rel:animist
@@ -1134,7 +1134,7 @@ mbudye.11 = {
 	}
 
 	option = {
-		name = mbudye.11.b
+		name = gate_mbudye.11.b
 		add_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = 4
@@ -1157,7 +1157,7 @@ mbudye.11 = {
 	}
 
 	option = {
-		name = mbudye.11.c
+		name = gate_mbudye.11.c
 		add_radicals = {
 			religion = rel:golden_religion
 			value = small_radicals
@@ -1181,7 +1181,7 @@ mbudye.11 = {
 	}
 }
 
-mbudye.12 = {
+gate_mbudye.12 = {
 	type = country_event
 	dlc = dlc_magic_gate
 	placement = scope:mbudye_event_state
@@ -1190,9 +1190,9 @@ mbudye.12 = {
 		scope_random_lunda_subject = yes
 	}
 
-	title = mbudye.12.t
-	desc = mbudye.12.desc
-	flavor = mbudye.12.f
+	title = gate_mbudye.12.t
+	desc = gate_mbudye.12.desc
+	flavor = gate_mbudye.12.f
 
 	event_image = {
 		video = "africa_public_protest"
@@ -1205,7 +1205,7 @@ mbudye.12 = {
 	duration = 3
 
 	option = {
-		name = mbudye.12.a
+		name = gate_mbudye.12.a
 		default_option = yes
 		add_radicals = {
 			religion = rel:animist
@@ -1233,7 +1233,7 @@ mbudye.12 = {
 	}
 
 	option = {
-		name = mbudye.12.b
+		name = gate_mbudye.12.b
 		add_radicals = {
 			religion = rel:golden_religion
 			value = small_radicals
@@ -1257,7 +1257,7 @@ mbudye.12 = {
 	}
 }
 
-mbudye.13 = {
+gate_mbudye.13 = {
 	type = country_event
 	dlc = dlc_magic_gate
 	placement = scope:mbudye_event_state
@@ -1266,9 +1266,9 @@ mbudye.13 = {
 		scope_random_lunda_subject = yes
 	}
 
-	title = mbudye.13.t
-	desc = mbudye.13.desc
-	flavor = mbudye.13.f
+	title = gate_mbudye.13.t
+	desc = gate_mbudye.13.desc
+	flavor = gate_mbudye.13.f
 
 	event_image = {
 		video = "africa_animism"
@@ -1281,7 +1281,7 @@ mbudye.13 = {
 	duration = 3
 
 	option = {
-		name = mbudye.13.a
+		name = gate_mbudye.13.a
 		default_option = yes
 		add_loyalists = {
 			value = medium_radicals
@@ -1305,7 +1305,7 @@ mbudye.13 = {
 	}
 }
 
-mbudye.14 = {
+gate_mbudye.14 = {
 	type = country_event
 	dlc = dlc_magic_gate
 	placement = scope:mbudye_event_state
@@ -1314,9 +1314,9 @@ mbudye.14 = {
 		scope_random_lunda_subject = yes
 	}
 
-	title = mbudye.14.t
-	desc = mbudye.14.desc
-	flavor = mbudye.14.f
+	title = gate_mbudye.14.t
+	desc = gate_mbudye.14.desc
+	flavor = gate_mbudye.14.f
 
 	event_image = {
 		video = "africa_animism"
@@ -1329,7 +1329,7 @@ mbudye.14 = {
 	duration = 3
 
 	option = {
-		name = mbudye.14.a
+		name = gate_mbudye.14.a
 		default_option = yes
 		add_loyalists = {
 			value = medium_radicals
@@ -1353,7 +1353,7 @@ mbudye.14 = {
 	}
 }
 
-mbudye.15 = {
+gate_mbudye.15 = {
 	type = country_event
 	dlc = dlc_magic_gate
 	placement = capital
@@ -1374,9 +1374,9 @@ mbudye.15 = {
 		}
 	}
 
-	title = mbudye.15.t
-	desc = mbudye.15.desc
-	flavor = mbudye.15.f
+	title = gate_mbudye.15.t
+	desc = gate_mbudye.15.desc
+	flavor = gate_mbudye.15.f
 
 	event_image = {
 		video = "unspecific_devastation"
@@ -1389,12 +1389,12 @@ mbudye.15 = {
 	duration = 3
 
 	option = {
-		name = mbudye.15.a
+		name = gate_mbudye.15.a
 		default_option = yes
 	}
 }
 
-mbudye.16 = {
+gate_mbudye.16 = {
 	type = country_event
 	dlc = dlc_magic_gate
 	placement = capital
@@ -1416,9 +1416,9 @@ mbudye.16 = {
 		}
 	}
 
-	title = mbudye.16.t
-	desc = mbudye.16.desc
-	flavor = mbudye.16.f
+	title = gate_mbudye.16.t
+	desc = gate_mbudye.16.desc
+	flavor = gate_mbudye.16.f
 
 	event_image = {
 		video = "africa_public_protest"
@@ -1431,7 +1431,7 @@ mbudye.16 = {
 	duration = 3
 
 	option = {
-		name = mbudye.16.a
+		name = gate_mbudye.16.a
 		default_option = yes
 		add_radicals = {
 			religion = rel:golden_religion
@@ -1456,7 +1456,7 @@ mbudye.16 = {
 	}
 
 	option = {
-		name = mbudye.16.b
+		name = gate_mbudye.16.b
 		default_option = yes
 		add_conversion_progress = {
 			country = scope:mbudye_event_country
@@ -1477,7 +1477,7 @@ mbudye.16 = {
 	}
 
 	option = {
-		name = mbudye.16.c
+		name = gate_mbudye.16.c
 		default_option = yes
 		add_conversion_progress = {
 			country = scope:mbudye_event_country
@@ -1498,14 +1498,14 @@ mbudye.16 = {
 	}
 }
 
-mbudye.17 = {
+gate_mbudye.17 = {
 	type = country_event
 	dlc = dlc_magic_gate
 	placement = capital
 
-	title = mbudye.17.t
-	desc = mbudye.17.desc
-	flavor = mbudye.17.f
+	title = gate_mbudye.17.t
+	desc = gate_mbudye.17.desc
+	flavor = gate_mbudye.17.f
 
 	event_image = {
 		video = "ep1_transfer_of_authority"
@@ -1522,7 +1522,7 @@ mbudye.17 = {
 	duration = 3
 
 	option = {
-		name = mbudye.17.a
+		name = gate_mbudye.17.a
 		default_option = yes
 		if = {
 			limit = {
@@ -1561,7 +1561,7 @@ mbudye.17 = {
 	}
 
 	option = {
-		name = mbudye.17.b
+		name = gate_mbudye.17.b
 		if = {
 			limit = {
 				c:LND = {

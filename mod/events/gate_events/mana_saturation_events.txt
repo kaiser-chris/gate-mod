@@ -1,12 +1,12 @@
-﻿namespace = mana_saturation
+﻿namespace = gate_mana_saturation
 
-mana_saturation.1 = {
+gate_mana_saturation.1 = {
 	type = country_event
 	dlc = dlc_magic_gate
 	
-	title = mana_saturation.1.t
-	desc = mana_saturation.1.d
-	flavor = mana_saturation.1.f
+	title = gate_mana_saturation.1.t
+	desc = gate_mana_saturation.1.d
+	flavor = gate_mana_saturation.1.f
 	
 	event_image = {
 		video = "asia_confucianism_shinto"
@@ -22,19 +22,19 @@ mana_saturation.1 = {
 	}
 
 	option = {
-		name = mana_saturation.1.a
+		name = gate_mana_saturation.1.a
 		default_option = yes
 	}
 }
 
-mana_saturation.2 = {
+gate_mana_saturation.2 = {
 	type = country_event
 	dlc = dlc_magic_gate
 	placement = scope:ritual_state
 
-	title = mana_saturation.2.t
-	desc = mana_saturation.2.d
-	flavor = mana_saturation.2.f
+	title = gate_mana_saturation.2.t
+	desc = gate_mana_saturation.2.d
+	flavor = gate_mana_saturation.2.f
 
 	event_image = {
 		video = "southamerica_slave_chains"
@@ -64,14 +64,14 @@ mana_saturation.2 = {
 	}
 
 	option = {
-		name = mana_saturation.2.a
+		name = gate_mana_saturation.2.a
 		change_infamy = 10
 		kill_population = {
 			value = 10000
 			pop_type = slaves
 		}
 		custom_tooltip = {
-			text = mana_saturation.2.a_progress_tt
+			text = gate_mana_saturation.2.a_progress_tt
 			scope:ritual_state_region = {
 				change_variable = {
 					name = mana_density
@@ -87,19 +87,19 @@ mana_saturation.2 = {
 	}
 
 	option = {
-		name = mana_saturation.2.b
+		name = gate_mana_saturation.2.b
 		default_option = yes
 	}
 }
 
-mana_saturation.3 = {
+gate_mana_saturation.3 = {
 	type = country_event
 	dlc = dlc_magic_gate
 	placement = scope:magic_growing_state
 
-	title = mana_saturation.3.t
-	desc = mana_saturation.3.d
-	flavor = mana_saturation.3.f
+	title = gate_mana_saturation.3.t
+	desc = gate_mana_saturation.3.d
+	flavor = gate_mana_saturation.3.f
 
 	event_image = {
 		video = "africa_prosperous_farm"
@@ -156,7 +156,7 @@ mana_saturation.3 = {
 
 	# Our state
 	option = {
-		name = mana_saturation.3.a1
+		name = gate_mana_saturation.3.a1
 		default_option = yes
 		scope:magic_growing_state.state_region = {
 			add_state_trait = state_trait_magic_soil
@@ -167,7 +167,7 @@ mana_saturation.3 = {
 		}
 	}
 	option = {
-		name = mana_saturation.3.b
+		name = gate_mana_saturation.3.b
 		scope:magic_growing_state.state_region = {
 			add_state_trait = state_trait_magic_soil
 			add_arable_land = 5
@@ -189,7 +189,7 @@ mana_saturation.3 = {
 
 	# Other countries state
 	option = {
-		name = mana_saturation.3.a2
+		name = gate_mana_saturation.3.a2
 		default_option = yes
 		scope:magic_growing_state.state_region = {
 			add_state_trait = state_trait_magic_soil
@@ -204,7 +204,7 @@ mana_saturation.3 = {
 		}
 	}
 	option = {
-		name = mana_saturation.3.b
+		name = gate_mana_saturation.3.b
 		scope:magic_growing_state.state_region = {
 			add_state_trait = state_trait_magic_soil
 			add_arable_land = 5
@@ -237,7 +237,7 @@ mana_saturation.3 = {
 		}
 	}
 	option = {
-		name = mana_saturation.3.a1
+		name = gate_mana_saturation.3.a1
 		trigger = {
 			NOT = {
 				exists = scope:magic_growing_state

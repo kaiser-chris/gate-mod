@@ -34,17 +34,17 @@ debug_complete_sg_magic_academy = {
 	}
 }
 
-debug_dragon_greenland_decision = {
+debug_gate_dragon_greenland_decision = {
 	is_shown = {
 		has_global_variable = com_debug
 		is_player = yes
-		NOT = { has_global_variable = dragon_greenland_var }
+		NOT = { has_global_variable = gate_dragon_greenland_var }
 	}
 
 	when_taken = {
 		every_country = {
 			trigger_event = {
-				id = dragon.1
+				id = gate_dragon.1
 			}
 		}
 	}
@@ -54,17 +54,17 @@ debug_dragon_greenland_decision = {
 	}
 }
 
-debug_dragon_california_decision = {
+debug_gate_dragon_california_decision = {
 	is_shown = {
 		has_global_variable = com_debug
 		is_player = yes
-		NOT = { has_global_variable = dragon_california_var }
+		NOT = { has_global_variable = gate_dragon_california_var }
 	}
 
 	when_taken = {
 		every_country = {
 			trigger_event = {
-				id = dragon.3
+				id = gate_dragon.3
 			}
 		}
 	}
@@ -74,17 +74,17 @@ debug_dragon_california_decision = {
 	}
 }
 
-debug_dragon_kolyma_decision = {
+debug_gate_dragon_kolyma_decision = {
 	is_shown = {
 		has_global_variable = com_debug
 		is_player = yes
-		NOT = { has_global_variable = dragon_kolyma_var }
+		NOT = { has_global_variable = gate_dragon_kolyma_var }
 	}
 
 	when_taken = {
 		every_country = {
 			trigger_event = {
-				id = dragon.5
+				id = gate_dragon.5
 			}
 		}
 	}
@@ -94,17 +94,17 @@ debug_dragon_kolyma_decision = {
 	}
 }
 
-debug_dragon_himalaya_decision = {
+debug_gate_dragon_himalaya_decision = {
 	is_shown = {
 		has_global_variable = com_debug
 		is_player = yes
-		NOT = { has_global_variable = dragon_himalaya_var }
+		NOT = { has_global_variable = gate_dragon_himalaya_var }
 	}
 
 	when_taken = {
 		every_country = {
 			trigger_event = {
-				id = dragon.7
+				id = gate_dragon.7
 			}
 		}
 	}
@@ -123,7 +123,7 @@ debug_magic_growing_decision = {
 
 	when_taken = {
 		trigger_event = {
-			id = mana_saturation.3
+			id = gate_mana_saturation.3
 		}
 	}
 
@@ -140,7 +140,7 @@ debug_monster_horde_decision = {
 
 	when_taken = {
 		trigger_event = {
-			id = monster_attack.1
+			id = gate_monster_attack.1
 		}
 	}
 
