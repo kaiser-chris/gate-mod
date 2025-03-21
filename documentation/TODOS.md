@@ -20,6 +20,16 @@ Below is a table with all currently open ToDos.
 | File | Line | ToDo |
 | ---- | ---- | ---- |
 | ./mod/common/alert_types/400_gate_alert_types.txt | 84 |  Remove this debug check for expedition_alert |
+| ./mod/common/technology/technologies/402_magic_military.txt | 114 |  Create icon for gate_commando_thaumaturgy |
+| ./mod/common/technology/technologies/402_magic_military.txt | 47 |  Create icon for gate_arcane_warfare_doctrine |
+| ./mod/common/technology/technologies/402_magic_military.txt | 64 |  Create icon for gate_mana_weaponization |
+| ./mod/common/technology/technologies/402_magic_military.txt | 81 |  Create icon for gate_shadow_infiltration_tactics |
+| ./mod/common/technology/technologies/402_magic_military.txt | 97 |  Create icon for gate_runic_armor_forging |
+| ./mod/common/technology/technologies/403_magic_society.txt | 186 |  Create icon for arcane_infrastructure |
+| ./mod/common/technology/technologies/403_magic_society.txt | 210 |  Create icon for ethereal_messaging |
+| ./mod/common/technology/technologies/403_magic_society.txt | 259 |  Create icon for mana_linked_education |
+| ./mod/common/technology/technologies/403_magic_society.txt | 280 |  Create icon for thaumaturgic_courts |
+| ./mod/common/technology/technologies/403_magic_society.txt | 300 |  Create icon for soulbound_currency |
 | ./mod/common/technology/technologies/403_magic_society.txt | 94 |  Implement gate_expeditions technology |
 | ./mod/localization/english/gate_alerts_l_english.yml | 25 |  Write alert_expedition_alert_name |
 | ./mod/localization/english/gate_alerts_l_english.yml | 26 |  Write alert_expedition_alert_desc |

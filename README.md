@@ -27,18 +27,18 @@ Below is a list of the currently implemented content:
 
 [//]: # (CONTENT-START)
 
- - 37 new Technologies
+ - 42 new Technologies
  - 4 new Countries
  - 5 new Cultures
  - 4 new Religions
- - 32 new Buildings
+ - 37 new Buildings
  - 80 new Production Methods for new and old Buildings
  - 10 new Journal Entries
  - 47 new Events
  - 2 new Pops
  - 5 new Goods
- - 2 new Combat Unit Types
- - 2012 new Localization Keys
+ - 35 new Combat Unit Types
+ - 2061 new Localization Keys
 
 [//]: # (CONTENT-END)
 
@@ -47,7 +47,8 @@ The mod is currently meant to be played without other mods.
 In the future, there'll be plans to make compatibility patches for other mods such as Morgenröte. 
 
 ## Credits
- - The new races were created by [Realms of Exether](https://steamcommunity.com/sharedfiles/filedetails/?id=3279217222) and are used with permission
+ - Thank you to [Realms of Exether](https://steamcommunity.com/sharedfiles/filedetails/?id=3279217222) for giving permission to use their races in Manaflow
+ - Thank you to [Dotti Locari](https://steamcommunity.com/profiles/76561198060636122) for giving permission to use their unit images in Manaflow
 
 ## Art
 This mod uses AI generated art from [DeviantArt DreamUp](https://www.deviantart.com/dreamup).
