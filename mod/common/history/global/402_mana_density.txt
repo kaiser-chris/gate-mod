@@ -22,7 +22,7 @@ GLOBAL = {
 	}
 
 	# Build initial Mana Density around gates
-	initial_propogate_mana_density = yes
+	initial_gate_propogate_mana_density = yes
 
 	# Mana Density Cache
 	set_global_variable = {
@@ -42,19 +42,19 @@ GLOBAL = {
 	# so every start is a little different
 	random = {
 		chance = 50
-		propogate_mana_density = yes
+		gate_propogate_mana_density = yes
 	}
 	random = {
 		chance = 50
-		propogate_mana_density = yes
+		gate_propogate_mana_density = yes
 	}
 	random = {
 		chance = 50
-		propogate_mana_density = yes
+		gate_propogate_mana_density = yes
 	}
 	random = {
 		chance = 50
-		propogate_mana_density = yes
+		gate_propogate_mana_density = yes
 	}
 
 	# After random propagation calculate saturation

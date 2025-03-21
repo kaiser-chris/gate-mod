@@ -8,7 +8,7 @@
 	}
 }
 
-propogate_mana_density = {
+gate_propogate_mana_density = {
 	every_state_region = {
 		limit = {
 			has_variable = mana_density
@@ -116,7 +116,7 @@ add_mana_density_modifier = {
 	}
 }
 
-initial_propogate_mana_density = {
+initial_gate_propogate_mana_density = {
 	# Every state with a gate starts with
 	# 100% mana density
 	every_state_region = {

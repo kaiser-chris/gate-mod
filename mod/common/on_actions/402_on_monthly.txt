@@ -1,22 +1,22 @@
 ﻿# Root = any
 on_monthly_pulse = {
     on_actions = {
-        on_monthly_calculate_mana_saturation
-        on_gate_monthly_statistics
-        on_gate_monthly_cleanup
-        on_monthly_mana_density
-        on_gate_monthly_buttons
+        on_monthly_gate_calculate_mana_saturation
+        on_monthly_gate_statistics
+        on_monthly_gate_cleanup
+        on_monthly_gate_mana_density
+        on_monthly_gate_buttons
     }
 }
 
-on_gate_monthly_buttons = {
+on_monthly_gate_buttons = {
     effect = {
         add_gate_magic_main_button = yes
         add_gate_magic_technology_button = yes
     }
 }
 
-on_monthly_calculate_mana_saturation = {
+on_monthly_gate_calculate_mana_saturation = {
     trigger = {
         global_var:global_mana_saturation <= 100
     }
@@ -25,33 +25,33 @@ on_monthly_calculate_mana_saturation = {
     }
 }
 
-on_gate_monthly_statistics = {
+on_monthly_gate_statistics = {
     effect = {
-        collect_magic_countries = yes
+        gate_collect_magic_countries = yes
     }
 }
 
-on_gate_monthly_cleanup = {
+on_monthly_gate_cleanup = {
     effect = {
-        cleanup_research_institutes = yes
+        gate_cleanup_research_institutes = yes
     }
 }
 
-on_monthly_mana_density = {
+on_monthly_gate_mana_density = {
     effect = {
         # Between 1 and 4 times
-        propogate_mana_density = yes
+        gate_propogate_mana_density = yes
         random = {
             chance = 20
-            propogate_mana_density = yes
+            gate_propogate_mana_density = yes
         }
         random = {
             chance = 20
-            propogate_mana_density = yes
+            gate_propogate_mana_density = yes
         }
         random = {
             chance = 20
-            propogate_mana_density = yes
+            gate_propogate_mana_density = yes
         }
     }
 }
@@ -59,14 +59,14 @@ on_monthly_mana_density = {
 # Root = country
 on_monthly_pulse_country = {
     on_actions = {
-        on_monthly_magic_country
-        on_monthly_magic_researcher
-        on_monthly_add_gate_immigration
-        on_monthly_ai_magic_technology
+        on_monthly_gate_magic_country
+        on_monthly_gate_magic_researcher
+        on_monthly_gate_add_immigration
+        on_monthly_gate_ai_magic_technology
     }
 }
 
-on_monthly_ai_magic_technology = {
+on_monthly_gate_ai_magic_technology = {
     trigger = {
         is_player = no
         var:magic_innovation >= 15000
@@ -77,7 +77,7 @@ on_monthly_ai_magic_technology = {
     }
 }
 
-on_monthly_add_gate_immigration = {
+on_monthly_gate_add_immigration = {
     trigger = {
         has_technology_researched = dwarven_gate_immigration
     }
@@ -86,7 +86,7 @@ on_monthly_add_gate_immigration = {
     }
 }
 
-on_monthly_magic_country = {
+on_monthly_gate_magic_country = {
     trigger = {
         is_magic_country = yes
     }
@@ -95,7 +95,7 @@ on_monthly_magic_country = {
     }
 }
 
-on_monthly_magic_researcher = {
+on_monthly_gate_magic_researcher = {
     trigger = {
         has_variable = magic_researcher
     }

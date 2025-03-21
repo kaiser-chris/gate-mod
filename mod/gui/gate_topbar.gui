@@ -282,7 +282,7 @@ types gate_topbar_overwrites {
 
                             textbox = {
                                 parentanchor = vcenter
-                                raw_text = "[Multiply_CFixedPoint(Country.AccessModifier.GetBreakdownFor('country_magical_innovation_add').GetRawValue, Add_CFixedPoint(Country.AccessModifier.GetBreakdownFor('country_magical_innovation_mult').GetRawValue, '(CFixedPoint)1'))|0v]"
+                                raw_text = "[Multiply_CFixedPoint(Country.AccessModifier.GetBreakdownFor('country_gate_magical_innovation_add').GetRawValue, Add_CFixedPoint(Country.AccessModifier.GetBreakdownFor('country_gate_magical_innovation_mult').GetRawValue, '(CFixedPoint)1'))|0v]"
                                 alpha = "[TransparentIfZero_int32(Country.GetWeeklyInnovation)]"
                                 autoresize = yes
                                 align = left|nobaseline

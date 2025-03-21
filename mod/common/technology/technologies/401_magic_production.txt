@@ -1,6 +1,6 @@
 ﻿### ERA 1
 
-magic_understanding_production = {
+gate_magic_understanding_production = {
 	# Unlocks all magic production research
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/magic_understanding.dds"
@@ -12,7 +12,7 @@ magic_understanding_production = {
 	}
 }
 
-mana_extraction = {
+gate_mana_extraction = {
 	# Unlocks Mana Extractor
 	# Unlocks Mage Mana Extraction PM
 	era = era_1
@@ -25,7 +25,7 @@ mana_extraction = {
 	}
 
 	unlocking_technologies = {
-		magic_understanding_production
+		gate_magic_understanding_production
 	}
 
 	ai_weight = {
@@ -57,7 +57,7 @@ simple_rune_carving = {
 	can_research = no
 
 	unlocking_technologies = {
-		mana_extraction
+		gate_mana_extraction
 		mechanical_tools
 	}
 
@@ -73,7 +73,7 @@ magic_farming = {
 	can_research = no
 
 	unlocking_technologies = {
-		mana_extraction
+		gate_mana_extraction
 	}
 
 	ai_weight = {
@@ -123,7 +123,7 @@ mana_cores = {
 	can_research = no
 
 	unlocking_technologies = {
-		mana_extraction
+		gate_mana_extraction
 	}
 
 	ai_weight = {

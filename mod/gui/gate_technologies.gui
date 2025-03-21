@@ -30,15 +30,15 @@ types gate_technologies {
 
         gate_technology = {
             blockoverride "context" {
-                datacontext = "[GetTechnology('magic_understanding_production')]"
-                datacontext = "[GetScriptedGui('magic_understanding_production')]"
+                datacontext = "[GetTechnology('gate_magic_understanding_production')]"
+                datacontext = "[GetScriptedGui('gate_magic_understanding_production')]"
             }
         }
 
         gate_technology = {
             blockoverride "context" {
-                datacontext = "[GetTechnology('mana_extraction')]"
-                datacontext = "[GetScriptedGui('mana_extraction')]"
+                datacontext = "[GetTechnology('gate_mana_extraction')]"
+                datacontext = "[GetScriptedGui('gate_mana_extraction')]"
             }
         }
 
