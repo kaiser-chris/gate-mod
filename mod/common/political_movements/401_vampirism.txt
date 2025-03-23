@@ -9,10 +9,29 @@
 	
 	creation_trigger = {
 		has_variable = vampires_accepted
+		is_gate_planet_country = no
 	}
 
 	creation_weight = {
-		value = 1000
+		value = 100
+
+		if = {
+			limit = {
+				OR = {
+					ruler ?= {
+						culture ?= cu:vampire
+					}
+					has_ruling_interest_group = ig_landowners
+					AND = {
+						has_ruling_interest_group = ig_industrialists
+						has_law = law_type:law_oligarchy
+					}
+				}
+			}
+			multiply = {
+				value = 20
+			}
+		}
 	}
 
 	on_created = {
@@ -141,7 +160,7 @@
 				is_pop_type = farmers
 			}
 			add = {
-				value = 10
+				value = 5
 				desc = POP_FARMERS
 			}
 		}
@@ -150,17 +169,8 @@
 				is_pop_type = peasants
 			}
 			add = {
-				value = 10
+				value = 5
 				desc = POP_PEASANTS
-			}
-		}			
-		else_if = {
-			limit = {
-				is_pop_type = clergymen
-			}
-			add = {
-				value = -10
-				desc = POP_CLERGYMEN
 			}
 		}
 		else_if = {
@@ -181,7 +191,7 @@
 			}
 			multiply = {
 				value = 1.25
-				desc = "COUNTRY_IS_AUTOCRATIC"
+				desc = COUNTRY_IS_AUTOCRATIC
 			}
 		}
 
@@ -199,6 +209,15 @@
 			multiply = {
 				desc = culture_vampire
 				value = 5
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = clergymen
+			}
+			multiply = {
+				desc = POP_CLERGYMEN
+				value = 0.01
 			}
 		}
 	}
