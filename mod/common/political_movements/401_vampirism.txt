@@ -1,0 +1,221 @@
+﻿movement_gate_vampirism = {
+	category = movement_category_ideological
+	
+	ideology = ideology_gate_vampire_movement
+	character_ideologies = {
+		ideology_gate_vampirism
+		ideology_gate_vampirism_interested
+	}
+	
+	creation_trigger = {
+		has_variable = vampires_accepted
+	}
+
+	creation_weight = {
+		value = 1000
+	}
+
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+		owner = {
+			ig:ig_landowners ?= {
+				add_ideology = ideology_gate_vampire_movement
+			}
+			ig:ig_industrialists ?= {
+				add_ideology = ideology_gate_vampire_movement
+			}
+		}
+	}
+	
+	character_support_trigger = {
+		interest_group ?= {
+			OR = {
+				is_interest_group_type = ig_landowners
+				is_interest_group_type = ig_industrialists
+				is_interest_group_type = ig_petty_bourgeoisie
+				is_interest_group_type = ig_magic_users
+			}
+		}
+	}
+	character_support_weight = {
+		value = 200
+		if = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_gate_vampirism
+					has_ideology = ideology:ideology_slaver
+					has_ideology = ideology:ideology_pro_slavery
+				}
+			}
+			multiply = {
+				value = 5
+			}
+		}
+	}
+	
+	pop_support_trigger = {
+		NOT = {
+			is_pop_type = slaves
+			is_pop_type = clergymen
+		}
+	}
+
+	pop_support_factors = {
+		movement_support_ruler_unpopular
+		movement_support_aristocrats
+		movement_support_engineers
+		movement_support_capitalists
+		movement_support_clerks
+		movement_support_country_is_autocratic
+	}
+	
+	pop_support_weight = {
+		if = {
+			limit = {
+				strata = upper
+			}
+			add = {
+				value = 10
+				desc = UPPER_NO_ICON
+			}
+		}
+		else_if = {
+			limit = {
+				strata = middle
+			}
+			add = {
+				value = 7
+				desc = MIDDLE_NO_ICON
+			}
+		}
+		else_if = {
+			limit = {
+				strata = lower
+			}
+			add = {
+				value = 5
+				desc = LOWER_NO_ICON
+			}
+		}
+
+		if = {
+			limit = {
+				is_pop_type = aristocrats
+			}
+			add = {
+				value = 200
+				desc = POP_ARISTOCRATS
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = capitalists
+			}
+			add = {
+				value = 100
+				desc = POP_CAPITALISTS
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = clerks
+			}
+			add = {
+				value = 50
+				desc = POP_CLERKS
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = farmers
+			}
+			add = {
+				value = 10
+				desc = POP_FARMERS
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = peasants
+			}
+			add = {
+				value = 10
+				desc = POP_PEASANTS
+			}
+		}			
+		else_if = {
+			limit = {
+				is_pop_type = clergymen
+			}
+			add = {
+				value = -10
+				desc = POP_CLERGYMEN
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = officers
+			}
+			add = {
+				value = 10
+				desc = POP_OFFICERS
+			}
+		}
+
+		if = {
+			limit = {
+				owner ?= {
+					country_has_voting_franchise = no
+				}
+			}
+			multiply = {
+				value = 1.25
+				desc = "COUNTRY_IS_AUTOCRATIC"
+			}
+		}
+
+		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
+			desc = POP_LITERACY
+			value = literacy_rate
+			add = 0.3
+			max = 0.9
+		}
+	}
+	
+	secession = {
+		possible = {
+			political_movement_support >= 0.05
+			scope:clout <= 0
+		}
+		
+		weight = {
+			value = 1000
+		}
+
+		state_weight = {
+			value = 0
+			
+			add = state_urbanization_rate
+			
+			if = {
+				limit = { is_capital = yes }
+				if = {
+					limit = {
+						owner ?= {
+							OR = {
+								has_law = law_type:law_council_republic
+								has_law = law_type:law_oligarchy
+								has_law = law_type:law_theocracy
+								has_law = law_type:law_presidential_republic
+							}
+						}
+					}
+					multiply = 10.0
+				}
+				else = {
+					multiply = 0.1
+				}
+			}			
+		}
+	}
+}

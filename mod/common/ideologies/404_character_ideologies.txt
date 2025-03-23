@@ -182,3 +182,121 @@ ideology_magic_cynic = {
 
     character_ideology = yes
 }
+
+ideology_gate_vampirism = {
+    icon = "gfx/interface/icons/ideology_icons/ideology_leader/gate_vampire_culture.dds"
+
+    lawgroup_governance_principles = {
+        law_monarchy = strongly_disapprove
+        law_presidential_republic = strongly_disapprove
+        law_theocracy = strongly_disapprove
+        law_council_republic = strongly_disapprove
+        law_corporate_state = strongly_disapprove
+        law_gate_vampire_monarchy = strongly_approve
+    }
+
+    interest_group_leader_trigger = {
+        has_variable = vampires_accepted
+        OR = {
+            is_interest_group_type = ig_landowners
+            is_interest_group_type = ig_industrialists
+            is_interest_group_type = ig_petty_bourgeoisie
+            is_interest_group_type = ig_magic_users
+        }
+    }
+
+    non_interest_group_leader_trigger = {
+        has_variable = vampires_accepted
+        # Agitators should have an ideology at odds with current laws
+        NAND = {
+            has_role = agitator
+            owner = {
+                OR = {
+                    has_law = law_type:law_chiefdom
+                    has_law = law_type:law_monarchy
+                    has_law = law_type:law_presidential_republic
+                    has_law = law_type:law_theocracy
+                    has_law = law_type:law_council_republic
+                    has_law = law_type:law_corporate_state
+                }
+            }
+        }
+        interest_group = {
+            OR = {
+                is_interest_group_type = ig_landowners
+                is_interest_group_type = ig_industrialists
+                is_interest_group_type = ig_petty_bourgeoisie
+                is_interest_group_type = ig_magic_users
+            }
+        }
+    }
+
+    interest_group_leader_weight = {
+        value = 100
+    }
+
+    non_interest_group_leader_weight = {
+        value = 100
+    }
+
+    character_ideology = yes
+}
+
+ideology_gate_vampirism_interested = {
+    icon = "gfx/interface/icons/ideology_icons/ideology_leader/gate_vampire_culture.dds"
+
+    lawgroup_governance_principles = {
+        law_monarchy = approve
+        law_presidential_republic = neutral
+        law_theocracy = neutral
+        law_council_republic = neutral
+        law_corporate_state = neutral
+        law_gate_vampire_monarchy = strongly_approve
+    }
+
+    interest_group_leader_trigger = {
+        has_variable = vampires_accepted
+        OR = {
+            is_interest_group_type = ig_landowners
+            is_interest_group_type = ig_industrialists
+            is_interest_group_type = ig_petty_bourgeoisie
+            is_interest_group_type = ig_magic_users
+        }
+    }
+
+    non_interest_group_leader_trigger = {
+        has_variable = vampires_accepted
+        # Agitators should have an ideology at odds with current laws
+        NAND = {
+            has_role = agitator
+            owner = {
+                OR = {
+                    has_law = law_type:law_chiefdom
+                    has_law = law_type:law_monarchy
+                    has_law = law_type:law_presidential_republic
+                    has_law = law_type:law_theocracy
+                    has_law = law_type:law_council_republic
+                    has_law = law_type:law_corporate_state
+                }
+            }
+        }
+        interest_group = {
+            OR = {
+                is_interest_group_type = ig_landowners
+                is_interest_group_type = ig_industrialists
+                is_interest_group_type = ig_petty_bourgeoisie
+                is_interest_group_type = ig_magic_users
+            }
+        }
+    }
+
+    interest_group_leader_weight = {
+        value = 100
+    }
+
+    non_interest_group_leader_weight = {
+        value = 100
+    }
+
+    character_ideology = yes
+}

@@ -282,3 +282,21 @@ debug_increase_magical_innovation_decision = {
 		base = 0
 	}
 }
+
+debug_gate_accept_vampires = {
+	is_shown = {
+		has_global_variable = com_debug
+		is_player = yes
+		NOT = {
+			has_variable = vampires_accepted
+		}
+	}
+
+	when_taken = {
+		set_variable = vampires_accepted
+	}
+
+	ai_chance = {
+		base = 0
+	}
+}

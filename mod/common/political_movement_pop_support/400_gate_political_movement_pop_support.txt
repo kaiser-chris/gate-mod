@@ -1,0 +1,13 @@
+﻿# root = political_movement
+
+## STATE FACTORS ##
+
+movement_support_ruler_unpopular = {
+	name = RULER_POPULARITY
+
+	visible = {
+		owner.ruler ?= {
+			popularity < 10
+		}
+	}
+}

@@ -17,13 +17,27 @@
     }
 
     on_activate = {
-        #TODO: Convert leaders to vampirism
+        every_scope_character = {
+            limit = {
+                NOT = {
+                    culture = cu:vampire
+                }
+            }
+            change_character_culture = cu:vampire
+        }
+        every_character_in_void = {
+            limit = {
+                owner ?= root
+                NOT = {
+                    culture = cu:vampire
+                }
+            }
+            change_character_culture = cu:vampire
+        }
     }
 
     is_visible = {
-        any_political_movement = {
-            has_ideology = ideology:ideology_gate_vampire_movement
-        }
+        has_variable = vampires_accepted
     }
 
     modifier = {
