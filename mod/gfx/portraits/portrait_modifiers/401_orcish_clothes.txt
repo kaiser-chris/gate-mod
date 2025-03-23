@@ -164,9 +164,7 @@
                 has_dlc_feature = ep1_cosmetics
                 OR = {
                     scope:pop ?= {
-                        OR = {
-                            culture = cu:orcish
-                        }
+                        culture = cu:orcish
                         OR = {
                             is_pop_type = mages
                             is_pop_type = druids
@@ -178,9 +176,7 @@
                     scope:character ?={
                         has_role = general
                         is_ruler = no
-                        OR = {
-                            has_culture = cu:orcish
-                        }
+                        has_culture = cu:orcish
                     }
                 }
             }

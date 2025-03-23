@@ -78,10 +78,8 @@ elven_forests = {
 mana_lanterns = {
 	scope = country
 	is_valid = {
-		AND = {
-			has_technology_researched = urban_planning
-			has_technology_researched = magic_understanding_society
-		}
+		has_technology_researched = urban_planning
+		has_technology_researched = magic_understanding_society
 	}
 	effect = {
 		add_technology_researched = mana_lanterns
@@ -91,10 +89,8 @@ mana_lanterns = {
 formalized_magic = {
 	scope = country
 	is_valid = {
-		AND = {
-			has_technology_researched = academia
-			has_technology_researched = magic_understanding_society
-		}
+		has_technology_researched = academia
+		has_technology_researched = magic_understanding_society
 	}
 	effect = {
 		add_technology_researched = formalized_magic
@@ -104,9 +100,7 @@ formalized_magic = {
 monster_compendium = {
 	scope = country
 	is_valid = {
-		AND = {
-			has_technology_researched = formalized_magic
-		}
+		has_technology_researched = formalized_magic
 	}
 	effect = {
 		add_technology_researched = monster_compendium
@@ -116,10 +110,8 @@ monster_compendium = {
 arcane_infrastructure = {
 	scope = country
 	is_valid = {
-		AND = {
-			has_technology_researched = mana_lanterns
-			has_technology_researched = modern_sewerage
-		}
+		has_technology_researched = mana_lanterns
+		has_technology_researched = modern_sewerage
 	}
 	effect = {
 		add_technology_researched = arcane_infrastructure
@@ -129,10 +121,8 @@ arcane_infrastructure = {
 ethereal_messaging = {
 	scope = country
 	is_valid = {
-		AND = {
-			has_technology_researched = formalized_magic
-			has_technology_researched = central_archives
-		}
+		has_technology_researched = formalized_magic
+		has_technology_researched = central_archives
 	}
 	effect = {
 		add_technology_researched = ethereal_messaging
@@ -142,10 +132,8 @@ ethereal_messaging = {
 healing_circles = {
 	scope = country
 	is_valid = {
-		AND = {
-			has_technology_researched = formalized_magic
-			has_technology_researched = medical_degrees
-		}
+		has_technology_researched = formalized_magic
+		has_technology_researched = medical_degrees
 	}
 	effect = {
 		add_technology_researched = healing_circles
@@ -155,9 +143,7 @@ healing_circles = {
 magic_science = {
 	scope = country
 	is_valid = {
-		AND = {
-			has_technology_researched = formalized_magic
-		}
+		has_technology_researched = formalized_magic
 	}
 	effect = {
 		add_technology_researched = magic_science
@@ -167,10 +153,8 @@ magic_science = {
 mana_linked_education = {
 	scope = country
 	is_valid = {
-		AND = {
-			has_technology_researched = magic_science
-			has_technology_researched = dialectics
-		}
+		has_technology_researched = magic_science
+		has_technology_researched = dialectics
 	}
 	effect = {
 		add_technology_researched = mana_linked_education
@@ -180,9 +164,7 @@ mana_linked_education = {
 thaumaturgic_courts = {
 	scope = country
 	is_valid = {
-		AND = {
-			has_technology_researched = magic_science
-		}
+		has_technology_researched = magic_science
 	}
 	effect = {
 		add_technology_researched = thaumaturgic_courts
@@ -192,10 +174,8 @@ thaumaturgic_courts = {
 soulbound_currency = {
 	scope = country
 	is_valid = {
-		AND = {
-			has_technology_researched = magic_science
-			has_technology_researched = international_exchange_standards
-		}
+		has_technology_researched = magic_science
+		has_technology_researched = international_exchange_standards
 	}
 	effect = {
 		add_technology_researched = soulbound_currency
