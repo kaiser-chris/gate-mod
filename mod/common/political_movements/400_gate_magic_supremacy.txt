@@ -1,0 +1,215 @@
+﻿movement_gate_magic_supremacy = {
+	category = movement_category_ideological
+	
+	ideology = ideology_magic_supremacist_movement
+	character_ideologies = {
+		ideology_magic_hopeful
+		ideology_magic_supremacist_character
+	}
+
+	disband_trigger = {
+		AND = {
+			has_law = law_type:law_multicultural
+			has_law = law_type:law_universal_suffrage
+			NOT = {
+				has_law = law_type:law_noble_magic_users
+			}
+		}
+	}
+	
+	creation_trigger = {
+		is_magic_country = yes
+		country_has_voting_franchise = no
+	}	
+	creation_weight = {
+		value = 100
+	}	
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+	
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_magic_supremacist_character
+			interest_group ?= {
+				law_stance = {
+					law = law_type:law_noble_magic_users
+					value > neutral
+				}
+			}
+		}
+	}
+	character_support_weight = {
+		value = 200
+		if = {
+			limit = {
+				has_ideology = ideology:ideology_magic_supremacist_character
+			}
+			multiply = {
+				value = 5
+			}
+		}
+	}
+	
+	pop_support_trigger = {
+		NOT = {
+			is_pop_type = slaves
+		}
+	}
+
+	pop_support_factors = {
+		movement_support_ruler_popularity
+		movement_support_low_urbanization
+		movement_support_high_literacy
+		movement_support_aristocrats
+		movement_support_farmers
+		movement_support_peasants
+		movement_support_clergymen
+		movement_support_officers
+	}
+	
+	pop_support_weight = {	
+		add = {
+			desc = URBAN_STATE # Increases support in rural states, decreases in urban
+			value = 0.5
+			subtract = state.state_urbanization_rate
+			multiply = 10
+		}
+
+		add = {
+			value = 5
+			desc = POP_BASE_SUPPORT
+		}
+
+		if = {
+			limit = {
+				is_pop_type = aristocrats
+			}
+			add = {
+				value = 50
+				desc = POP_ARISTOCRATS
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = mages
+			}
+			add = {
+				value = 100
+				desc = pop_mages
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = druids
+			}
+			add = {
+				value = 100
+				desc = pop_druids
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = farmers
+			}
+			add = {
+				value = 10
+				desc = POP_FARMERS
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = peasants
+			}
+			add = {
+				value = 10
+				desc = POP_PEASANTS
+			}
+		}			
+		else_if = {
+			limit = {
+				is_pop_type = clergymen
+			}
+			add = {
+				value = 10
+				desc = POP_CLERGYMEN
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = officers
+			}
+			add = {
+				value = 10
+				desc = POP_OFFICERS
+			}
+		}
+
+		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
+			desc = POP_LITERACY
+			value = literacy_rate
+			add = 0.2
+			max = 0.7 # Starts more powerful but caps out early
+		}
+	}
+	
+	revolution = {
+		weight = {
+			value = 100
+		}	
+	
+		state_weight = {
+			value = 1
+			
+			subtract = state_urbanization_rate
+			
+			if = {
+				limit = { is_capital = yes }
+				if = {
+					limit = { owner ?= { has_law = law_type:law_restricted_magic_users } }
+					multiply = 10.0
+				}
+				else = {
+					multiply = 0.1
+				}
+			}			
+		}
+	}
+	
+	secession = {
+		possible = {
+			political_movement_support >= 0.05
+			scope:clout <= 0
+		}
+		
+		weight = {
+			value = 1000
+		}
+
+		state_weight = {
+			value = 1
+			
+			subtract = state_urbanization_rate
+			
+			if = {
+				limit = { is_capital = yes }
+				if = {
+					limit = { owner ?= { has_law = law_type:law_restricted_magic_users } }
+					multiply = 10.0
+				}
+				else = {
+					multiply = 0.1
+				}
+			}			
+		}	
+		
+		forced_tags = {
+			BHT = {
+				trigger = {
+					owner ?= { c:BIC ?= this }
+				}
+				weight = 1000
+			}
+		}
+	}
+}
