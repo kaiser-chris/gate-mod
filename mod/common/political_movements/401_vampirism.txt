@@ -28,13 +28,16 @@
 	}
 	
 	character_support_trigger = {
-		interest_group ?= {
-			OR = {
-				is_interest_group_type = ig_landowners
-				is_interest_group_type = ig_industrialists
-				is_interest_group_type = ig_petty_bourgeoisie
-				is_interest_group_type = ig_magic_users
+		OR = {
+			interest_group ?= {
+				OR = {
+					is_interest_group_type = ig_landowners
+					is_interest_group_type = ig_industrialists
+					is_interest_group_type = ig_petty_bourgeoisie
+					is_interest_group_type = ig_magic_users
+				}
 			}
+			culture ?= cu:vampire
 		}
 	}
 	character_support_weight = {
@@ -46,6 +49,14 @@
 					has_ideology = ideology:ideology_slaver
 					has_ideology = ideology:ideology_pro_slavery
 				}
+			}
+			multiply = {
+				value = 5
+			}
+		}
+		if = {
+			limit = {
+				culture ?= cu:vampire
 			}
 			multiply = {
 				value = 5
@@ -179,6 +190,16 @@
 			value = literacy_rate
 			add = 0.3
 			max = 0.9
+		}
+
+		if = {
+			limit = {
+				culture ?= cu:vampire
+			}
+			multiply = {
+				desc = culture_vampire
+				value = 5
+			}
 		}
 	}
 	
