@@ -294,6 +294,25 @@ debug_gate_accept_vampires = {
 
 	when_taken = {
 		set_variable = vampires_accepted
+		create_political_movement = {
+			type = movement_gate_vampirism
+		}
+	}
+
+	ai_chance = {
+		base = 0
+	}
+}
+
+debug_gate_enact_vampire_monarchy = {
+	is_shown = {
+		has_global_variable = com_debug
+		is_player = yes
+		has_variable = vampires_accepted
+	}
+
+	when_taken = {
+		activate_law = law_type:law_gate_vampire_monarchy
 	}
 
 	ai_chance = {

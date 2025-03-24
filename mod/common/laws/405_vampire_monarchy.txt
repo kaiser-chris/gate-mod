@@ -7,44 +7,57 @@
         OR = {
             has_ruling_interest_group = ig_landowners
             has_ruling_interest_group = ig_industrialists
-            AND = {
-                exists = ruler
-                ruler = {
-                    OR = {
-                        has_culture = cu:vampire
-                        has_religion = rel:lunar_masquerade
-                    }
+            ruler ?= {
+                OR = {
+                    culture = cu:vampire
+                    religion = rel:lunar_masquerade
                 }
             }
         }
     }
 
     on_activate = {
-        every_scope_character = {
-            limit = {
-                NOT = {
-                    culture = cu:vampire
-                }
-            }
-            change_character_culture = cu:vampire
-            change_character_religion = rel:lunar_masquerade
+        hidden_effect = {
+            clear_variable_list = gate_previous_cultures
+            remove_variable = gate_previous_religion
         }
-        every_character_in_void = {
-            limit = {
-                owner ?= root
-                NOT = {
-                    culture = cu:vampire
+        custom_tooltip = {
+            text = effect_characters_embrace_vampirism
+            every_scope_character = {
+                limit = {
+                    NOT = {
+                        culture = cu:vampire
+                    }
                 }
+                change_character_culture = cu:vampire
+                change_character_religion = rel:lunar_masquerade
             }
-            change_character_culture = cu:vampire
-            change_character_religion = rel:lunar_masquerade
+            every_character_in_void = {
+                limit = {
+                    owner ?= root
+                    NOT = {
+                        culture = cu:vampire
+                    }
+                }
+                change_character_culture = cu:vampire
+                change_character_religion = rel:lunar_masquerade
+            }
         }
         every_primary_culture = {
             root = {
                 remove_primary_culture = prev
+                add_to_variable_list = {
+                    name = gate_previous_cultures
+                    target = prev
+                }
             }
         }
         add_primary_culture = cu:vampire
+        set_variable = {
+            name = gate_previous_religion
+            value = religion
+        }
+        set_state_religion = rel:lunar_masquerade
         ig:ig_industrialists ?= {
             if = {
                 limit = {
@@ -65,6 +78,17 @@
                 add_ideology = ideology_gate_vampire_movement
             }
         }
+    }
+
+    on_deactivate = {
+        remove_primary_culture = cu:vampire
+        every_in_list = {
+            variable = gate_previous_cultures
+            root ?= {
+                add_primary_culture = prev
+            }
+        }
+        set_state_religion = var:gate_previous_religion
     }
 
     is_visible = {
