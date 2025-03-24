@@ -10,7 +10,10 @@
             AND = {
                 exists = ruler
                 ruler = {
-                    has_culture = cu:vampire
+                    OR = {
+                        has_culture = cu:vampire
+                        has_religion = rel:lunar_masquerade
+                    }
                 }
             }
         }
@@ -24,6 +27,7 @@
                 }
             }
             change_character_culture = cu:vampire
+            change_character_religion = rel:lunar_masquerade
         }
         every_character_in_void = {
             limit = {
@@ -33,6 +37,33 @@
                 }
             }
             change_character_culture = cu:vampire
+            change_character_religion = rel:lunar_masquerade
+        }
+        every_primary_culture = {
+            root = {
+                remove_primary_culture = prev
+            }
+        }
+        add_primary_culture = cu:vampire
+        ig:ig_industrialists ?= {
+            if = {
+                limit = {
+                    NOT = {
+                        has_ideology = ideology:ideology_gate_vampire_movement
+                    }
+                }
+                add_ideology = ideology_gate_vampire_movement
+            }
+        }
+        ig:ig_petty_bourgeoisie ?= {
+            if = {
+                limit = {
+                    NOT = {
+                        has_ideology = ideology:ideology_gate_vampire_movement
+                    }
+                }
+                add_ideology = ideology_gate_vampire_movement
+            }
         }
     }
 
