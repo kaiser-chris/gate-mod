@@ -141,10 +141,10 @@
                 OR = {
                     upper_clothes_pop_trigger = yes
                     magic_users_clothes_pop_trigger = yes
-                    AND = {
-                        exists = scope:pop
-                        scope:pop = {
+                    scope:pop ?= {
+                        OR = {
                             is_pop_type = officers
+                            is_pop_type = clergymen
                         }
                     }
                 }
