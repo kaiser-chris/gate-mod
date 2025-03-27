@@ -24,6 +24,21 @@ GATE_MK = {
 	}
 }
 
+GATE_ME = {
+	pattern = "pattern_solid.tga"
+	color1 = "light_blue"
+	color2 = "grey"
+	color3 = "yellow"
+	color4 = "grey"
+
+	colored_emblem = {
+		texture = "ce_gate_mountain_sun.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color4
+	}
+}
+
 GATE_OK = {
 	pattern = "pattern_per_bend.dds"
 	color1 = rgb{ 119  32  29 }
