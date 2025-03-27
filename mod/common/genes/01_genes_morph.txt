@@ -274,12 +274,10 @@ age_presets = {
         }
     }
     age_preset_aging_elf = {
-        mode = multiply
+        mode = add
         curve = {
             { 0.0 0.0 }
-            { 0.0 0.0 }
-            { 0.0 0.2 }
-            { 0.0 1.0 }
+            { 0.7 0.0 }
         }
     }
     age_preset_eyebrows_fullness_elf = {
@@ -288,8 +286,6 @@ age_presets = {
             { 0.0 0.5 }
             { 0.15 0.75 }
             { 0.2 1.0 }
-            { 0.5 1.0 }
-            { 0.9 0.2 }
         }
     }
 }

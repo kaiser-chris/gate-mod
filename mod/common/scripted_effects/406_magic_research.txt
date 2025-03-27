@@ -301,7 +301,7 @@ ai_unlock_magic_technology = {
 	}
 	else_if = {
 		limit = {
-			this = c:GMK
+			this = c:GATE_MK
 			NOT = {
 				has_technology_researched = magic_dwarf_murk_railways
 			}

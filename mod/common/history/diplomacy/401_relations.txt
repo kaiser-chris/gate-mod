@@ -2,28 +2,28 @@
 
 	# Mountain Kingdom
 	# Has positive relationships with major european countries
-	c:GMK = {
+	c:GATE_MK = {
 		set_relations = { country = c:PRU value = 20 }
 		set_relations = { country = c:FRA value = 5 }
 		set_relations = { country = c:AUS value = -15 }
 		set_relations = { country = c:BAV value = 50 }
 	}
 	c:AUS = {
-		set_relations = { country = c:GMK value = -15 }
+		set_relations = { country = c:GATE_MK value = -15 }
 	}
 	c:BAV = {
-		set_relations = { country = c:GMK value = 50 }
+		set_relations = { country = c:GATE_MK value = 50 }
 	}
 	c:FRA = {
-		set_relations = { country = c:GMK value = 5 }
+		set_relations = { country = c:GATE_MK value = 5 }
 	}
 	c:PRU = {
-		set_relations = { country = c:GMK value = 20 }
+		set_relations = { country = c:GATE_MK value = 20 }
 	}
 
 	# Orcish Kingdom
 	# No one likes slaving orcs
-	c:GOK = {
+	c:GATE_OK = {
 		set_relations = { country = c:USA value = -50 }
 		set_relations = { country = c:MEX value = -50 }
 		set_relations = { country = c:GBR value = -50 }
@@ -33,22 +33,22 @@
 
 	}
 	c:USA = {
-		set_relations = { country = c:GOK value = -50 }
+		set_relations = { country = c:GATE_OK value = -50 }
 	}
 	c:MEX = {
-		set_relations = { country = c:GOK value = -50 }
+		set_relations = { country = c:GATE_OK value = -50 }
 	}
 	c:GBR = {
-		set_relations = { country = c:GOK value = -50 }
+		set_relations = { country = c:GATE_OK value = -50 }
 	}
 	c:CUB = {
-		set_relations = { country = c:GOK value = -50 }
+		set_relations = { country = c:GATE_OK value = -50 }
 	}
 	c:CLM = {
-		set_relations = { country = c:GOK value = -50 }
+		set_relations = { country = c:GATE_OK value = -50 }
 	}
 	c:HAI = {
-		set_relations = { country = c:GOK value = -50 }
+		set_relations = { country = c:GATE_OK value = -50 }
 	}
 
 }

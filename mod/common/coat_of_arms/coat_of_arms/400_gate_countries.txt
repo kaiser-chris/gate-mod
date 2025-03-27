@@ -1,15 +1,15 @@
-﻿GAD = {
+﻿GATE_AD = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	color2 = "yellow"
 
 	colored_emblem = {
-		texture = "ce_dominion.dds"
+		texture = "ce_gate_dominion.dds"
 		color1 = color2
 	}
 }
 
-GMK = {
+GATE_MK = {
 	pattern = "pattern_solid.tga"
 	color1 = "light_blue"
 	color2 = "grey"
@@ -17,20 +17,20 @@ GMK = {
 	color4 = "grey"
 
 	colored_emblem = {
-		texture = "ce_mountain.dds"
+		texture = "ce_gate_mountain.dds"
 		color1 = color2
 		color2 = color3
 		color3 = color4
 	}
 }
 
-GOK = {
+GATE_OK = {
 	pattern = "pattern_per_bend.dds"
 	color1 = rgb{ 119  32  29 }
 	color2 = "black"
 
 	textured_emblem = {
-		texture = "te_coa_skull.dds"
+		texture = "te_gate_coa_skull.dds"
 		instance = {
 			scale = { 0.6 0.6 }
 			position = { 0.7 0.3 }
@@ -38,7 +38,7 @@ GOK = {
 	}
 }
 
-GNS = {
+GATE_NS = {
 	pattern = "pattern_solid.tga"
 	color1 = rgb{ 82 170 138 }
 	color2 = rgb{ 56 134 89 }

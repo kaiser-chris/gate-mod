@@ -88,12 +88,12 @@ scope_random_lunda_subject = {
 				this = c:KZM
 				this = c:KSN
 			}
-			is_subject_of = c:GAD
+			is_subject_of = c:GATE_AD
 		}
 		if = {
 			limit = {
 				this = c:LND
-				c:GAD = {
+				c:GATE_AD = {
 					je:je_gate_mbudye = {
 						scripted_bar_progress = {
 							name = pb_gate_mbudye_lunda
@@ -107,7 +107,7 @@ scope_random_lunda_subject = {
 		else_if = {
 			limit = {
 				this = c:CHK
-				c:GAD = {
+				c:GATE_AD = {
 					je:je_gate_mbudye = {
 						scripted_bar_progress = {
 							name = pb_gate_mbudye_chokwe
@@ -121,7 +121,7 @@ scope_random_lunda_subject = {
 		else_if = {
 			limit = {
 				this = c:KZM
-				c:GAD = {
+				c:GATE_AD = {
 					je:je_gate_mbudye = {
 						scripted_bar_progress = {
 							name = pb_gate_mbudye_kazembe
@@ -135,7 +135,7 @@ scope_random_lunda_subject = {
 		else_if = {
 			limit = {
 				this = c:KSN
-				c:GAD = {
+				c:GATE_AD = {
 					je:je_gate_mbudye = {
 						scripted_bar_progress = {
 							name = pb_gate_mbudye_kasanje
@@ -243,12 +243,12 @@ trigger_lunda_uprising = {
 		create_diplomatic_play = {
 			name = dp_lunda_uprising
 			type = dp_independence
-			target_country = c:GAD
+			target_country = c:GATE_AD
 			war = yes
 
 			add_war_goal = {
 				type = annex_country
-				holder = c:GAD
+				holder = c:GATE_AD
 				primary_demand = yes
 				target_country = c:LND
 			}
@@ -256,8 +256,8 @@ trigger_lunda_uprising = {
 			add_war_goal = {
 				type = return_state
 				holder = c:LND
-				target_state = s:STATE_ZAMBIA.region_state:GAD
-				target_country = c:GAD
+				target_state = s:STATE_ZAMBIA.region_state:GATE_AD
+				target_country = c:GATE_AD
 				primary_demand = yes
 			}
 		}
@@ -278,7 +278,7 @@ trigger_lunda_uprising = {
 	every_diplomatic_play = {
 		limit = {
 			initiator_is = c:LND
-			target_is = c:GAD
+			target_is = c:GATE_AD
 			is_diplomatic_play_type = dp_independence
 		}
 
@@ -288,37 +288,37 @@ trigger_lunda_uprising = {
 		# Add states that could be owned by the Dominion
 		if = {
 			limit = {
-				exists = s:STATE_KATANGA.region_state:GAD
+				exists = s:STATE_KATANGA.region_state:GATE_AD
 			}
 			add_war_goal = {
 				type = return_state
 				holder = c:LND
-				target_state = s:STATE_KATANGA.region_state:GAD
-				target_country = c:GAD
+				target_state = s:STATE_KATANGA.region_state:GATE_AD
+				target_country = c:GATE_AD
 				primary_demand = yes
 			}
 		}
 		if = {
 			limit = {
-				exists = s:STATE_EAST_ANGOLA.region_state:GAD
+				exists = s:STATE_EAST_ANGOLA.region_state:GATE_AD
 			}
 			add_war_goal = {
 				type = return_state
 				holder = c:LND
-				target_state = s:STATE_EAST_ANGOLA.region_state:GAD
-				target_country = c:GAD
+				target_state = s:STATE_EAST_ANGOLA.region_state:GATE_AD
+				target_country = c:GATE_AD
 				primary_demand = yes
 			}
 		}
 		if = {
 			limit = {
-				exists = s:STATE_KAZEMBE.region_state:GAD
+				exists = s:STATE_KAZEMBE.region_state:GATE_AD
 			}
 			add_war_goal = {
 				type = return_state
 				holder = c:LND
-				target_state = s:STATE_KAZEMBE.region_state:GAD
-				target_country = c:GAD
+				target_state = s:STATE_KAZEMBE.region_state:GATE_AD
+				target_country = c:GATE_AD
 				primary_demand = yes
 			}
 		}
@@ -343,30 +343,30 @@ trigger_lunda_uprising = {
 			add_war_goal = {
 				type = independence
 				holder = c:TSW
-				target_country = c:GAD
+				target_country = c:GATE_AD
 				primary_demand = yes
 			}
 			if = {
 				limit = {
-					exists = s:STATE_BOTSWANA.region_state:GAD
+					exists = s:STATE_BOTSWANA.region_state:GATE_AD
 				}
 				add_war_goal = {
 					type = return_state
 					holder = c:TSW
-					target_state = s:STATE_BOTSWANA.region_state:GAD
-					target_country = c:GAD
+					target_state = s:STATE_BOTSWANA.region_state:GATE_AD
+					target_country = c:GATE_AD
 					primary_demand = yes
 				}
 			}
 			if = {
 				limit = {
-					exists = s:STATE_NORTHERN_CAPE.region_state:GAD
+					exists = s:STATE_NORTHERN_CAPE.region_state:GATE_AD
 				}
 				add_war_goal = {
 					type = return_state
 					holder = c:TSW
-					target_state = s:STATE_NORTHERN_CAPE.region_state:GAD
-					target_country = c:GAD
+					target_state = s:STATE_NORTHERN_CAPE.region_state:GATE_AD
+					target_country = c:GATE_AD
 					primary_demand = yes
 				}
 			}
@@ -378,7 +378,7 @@ trigger_lunda_uprising = {
 				}
 			}
 
-			# Add reprimanding war goal by GAD
+			# Add reprimanding war goal by GATE_AD
 			if = {
 				limit = {
 					c:TSW = {
@@ -387,7 +387,7 @@ trigger_lunda_uprising = {
 				}
 				add_war_goal = {
 					type = annex_country
-					holder = c:GAD
+					holder = c:GATE_AD
 					target_country = c:TSW
 					primary_demand = yes
 				}
@@ -395,7 +395,7 @@ trigger_lunda_uprising = {
 			else = {
 				add_war_goal = {
 					type = reduce_autonomy
-					holder = c:GAD
+					holder = c:GATE_AD
 					target_country = c:TSW
 					primary_demand = yes
 				}

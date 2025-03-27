@@ -14,11 +14,11 @@ The first thing we do is create a new file.
 In this file we add all **except** one province **per country** that owns the state.
 This creates a new split state that is totally empty, and it does not annex the existing state.
 
-Here is an example where I gave Guatemala to GOK:
+Here is an example where I gave Guatemala to GATE_OK:
 ```
 s:STATE_GUATEMALA = {
     create_state = {
-        country = c:GOK
+        country = c:GATE_OK
         owned_provinces = {
             x02073E x7D333F x464F6A x0F5049
             xBD8628 xA9090A x78C465 xD9BEFE
@@ -55,7 +55,7 @@ s:STATE_GUATEMALA = {
             percent = 1 # 100%
         }
     }
-    region_state:GOK = {
+    region_state:GATE_OK = {
         create_pop = {
             culture = orcish
             size = 200000
@@ -100,12 +100,12 @@ s:STATE_GUATEMALA = {
         # Clean up base game buildings
         remove_building = building_port
     }
-    region_state:GOK = {
+    region_state:GATE_OK = {
         create_building = {
             building = "building_port"
             add_ownership = {
                 country = {
-                    country = "c:GOK"
+                    country = "c:GATE_OK"
                     levels = 2
                 }
             }
@@ -126,7 +126,7 @@ This is an example where we steal the last two provinces (GBR and UCA) for Guate
 ```
 s:STATE_GUATEMALA = {
     set_owner_of_provinces = {
-        country = c:GOK
+        country = c:GATE_OK
         provinces = {
             xDEC8D3
             xD0B040

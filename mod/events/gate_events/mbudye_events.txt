@@ -25,7 +25,7 @@ gate_mbudye.1 = {
 		c:LND = {
 			if = {
 				limit = {
-					is_subject_of = c:GAD
+					is_subject_of = c:GATE_AD
 				}
 				set_state_religion = rel:golden_religion
 			}
@@ -34,7 +34,7 @@ gate_mbudye.1 = {
 		c:CHK = {
 			if = {
 				limit = {
-					is_subject_of = c:GAD
+					is_subject_of = c:GATE_AD
 				}
 				set_state_religion = rel:golden_religion
 			}
@@ -43,7 +43,7 @@ gate_mbudye.1 = {
 		c:KZM = {
 			if = {
 				limit = {
-					is_subject_of = c:GAD
+					is_subject_of = c:GATE_AD
 				}
 				set_state_religion = rel:golden_religion
 			}
@@ -52,7 +52,7 @@ gate_mbudye.1 = {
 		c:KSN = {
 			if = {
 				limit = {
-					is_subject_of = c:GAD
+					is_subject_of = c:GATE_AD
 				}
 				set_state_religion = rel:golden_religion
 			}
@@ -1362,7 +1362,7 @@ gate_mbudye.15 = {
 		every_military_formation = {
 			limit = {
 				organization > 50
-				country = c:GAD
+				country = c:GATE_AD
 			}
 			add_organization = -50
 			every_combat_unit = {
@@ -1404,7 +1404,7 @@ gate_mbudye.16 = {
 		every_military_formation = {
 			limit = {
 				organization > 50
-				country = c:GAD
+				country = c:GATE_AD
 			}
 			add_organization = -50
 			every_combat_unit = {
@@ -1527,7 +1527,7 @@ gate_mbudye.17 = {
 		if = {
 			limit = {
 				c:LND = {
-					is_subject_of = c:GAD
+					is_subject_of = c:GATE_AD
 				}
 			}
 			annex_with_incorporation = c:LND
@@ -1535,7 +1535,7 @@ gate_mbudye.17 = {
 		if = {
 			limit = {
 				c:CHK = {
-					is_subject_of = c:GAD
+					is_subject_of = c:GATE_AD
 				}
 			}
 			annex_with_incorporation = c:CHK
@@ -1543,7 +1543,7 @@ gate_mbudye.17 = {
 		if = {
 			limit = {
 				c:KZM = {
-					is_subject_of = c:GAD
+					is_subject_of = c:GATE_AD
 				}
 			}
 			annex_with_incorporation = c:KZM
@@ -1551,7 +1551,7 @@ gate_mbudye.17 = {
 		if = {
 			limit = {
 				c:KSN = {
-					is_subject_of = c:GAD
+					is_subject_of = c:GATE_AD
 				}
 			}
 			annex_with_incorporation = c:KSN
@@ -1565,7 +1565,7 @@ gate_mbudye.17 = {
 		if = {
 			limit = {
 				c:LND = {
-					is_subject_of = c:GAD
+					is_subject_of = c:GATE_AD
 				}
 			}
 			annex_with_incorporation = c:LND
@@ -1573,7 +1573,7 @@ gate_mbudye.17 = {
 		if = {
 			limit = {
 				c:CHK = {
-					is_subject_of = c:GAD
+					is_subject_of = c:GATE_AD
 				}
 			}
 			annex_with_incorporation = c:CHK
@@ -1581,7 +1581,7 @@ gate_mbudye.17 = {
 		if = {
 			limit = {
 				c:KZM = {
-					is_subject_of = c:GAD
+					is_subject_of = c:GATE_AD
 				}
 			}
 			annex_with_incorporation = c:KZM
@@ -1589,7 +1589,7 @@ gate_mbudye.17 = {
 		if = {
 			limit = {
 				c:KSN = {
-					is_subject_of = c:GAD
+					is_subject_of = c:GATE_AD
 				}
 			}
 			annex_with_incorporation = c:KSN

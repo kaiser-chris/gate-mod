@@ -1,5 +1,5 @@
 ﻿DIPLOMATIC_PLAYS = {
-	c:GOK = {
+	c:GATE_OK = {
 		create_diplomatic_play = {
 			name = gok_war
 		
@@ -12,29 +12,29 @@
 			add_war_goal = {
 				holder = c:MEX
 				type = return_state
-				target_state = s:STATE_CHIAPAS.region_state:GOK
+				target_state = s:STATE_CHIAPAS.region_state:GATE_OK
 			}
 
 			add_war_goal = {
 				holder = c:MEX
 				type = conquer_state
-				target_state = s:STATE_GUATEMALA.region_state:GOK
+				target_state = s:STATE_GUATEMALA.region_state:GATE_OK
 			}
 
 			add_war_goal = {
-				holder = c:GOK
+				holder = c:GATE_OK
 				type = conquer_state
 				target_state = s:STATE_CHIAPAS.region_state:MEX
 			}
 
 			add_war_goal = {
-				holder = c:GOK
+				holder = c:GATE_OK
 				type = conquer_state
 				target_state = s:STATE_VERACRUZ.region_state:MEX
 			}
 
 			add_war_goal = {
-				holder = c:GOK
+				holder = c:GATE_OK
 				type = conquer_state
 				target_state = s:STATE_OAXACA.region_state:MEX
 			}

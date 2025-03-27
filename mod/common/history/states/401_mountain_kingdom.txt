@@ -5,7 +5,7 @@ STATES = {
 
 	s:STATE_TYROL = {
 		create_state = {
-			country = c:GMK
+			country = c:GATE_MK
 			owned_provinces = { x4A9C68 xEC6873 xC74CD7 xF061C0 xAB7EB0 x5D4166 xD0C0E0 xF0E0C0 }
 		}
 
@@ -15,7 +15,7 @@ STATES = {
 	}
 	s:STATE_SOUTH_TYROL = {
 		create_state = {
-			country = c:GMK
+			country = c:GATE_MK
 			owned_provinces = { x1120FF xD040E0 x039D0F }
 		}
 
@@ -31,13 +31,13 @@ STATES = {
 	# The dwarves claim the whole Alps
 	# (All states with Alps as state trait)
 	s:STATE_EAST_SWITZERLAND = {
-		add_claim = c:GMK
+		add_claim = c:GATE_MK
 	}
 	s:STATE_WEST_SWITZERLAND = {
-		add_claim = c:GMK
+		add_claim = c:GATE_MK
 	}
 	s:STATE_SAVOY = {
-		add_claim = c:GMK
+		add_claim = c:GATE_MK
 	}
 
 }

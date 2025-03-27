@@ -15,7 +15,7 @@
 			relations:ROOT >= relations_threshold:amicable
 			NOT = {
 				OR = {
-					is_subject_of = c:GMK
+					is_subject_of = c:GATE_MK
 					has_diplomatic_pact = {
 						who = ROOT
 						type = alliance
@@ -55,7 +55,7 @@ je_dwarven_alps_button_switzerland_integrate = {
 					who = ROOT
 					type = alliance
 				}
-				is_subject_of = c:GMK
+				is_subject_of = c:GATE_MK
 			}
 		}
 	}

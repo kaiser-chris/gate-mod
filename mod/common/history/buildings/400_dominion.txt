@@ -1,12 +1,12 @@
 ﻿BUILDINGS = {
 
     s:STATE_ZAMBIA = {
-        region_state:GAD = {
+        region_state:GATE_AD = {
             create_building = {
                 building = building_gate_zambia
                 add_ownership = {
                     country = {
-                        country = c:GAD
+                        country = c:GATE_AD
                         levels = 1
                     }
                 }
@@ -25,7 +25,7 @@
                 add_ownership = {
                     building = {
                         type = building_millet_farm
-                        country = c:GAD
+                        country = c:GATE_AD
                         levels = 4
                         region = STATE_ZAMBIA
                     }
@@ -50,7 +50,7 @@
                 building = building_university
                 add_ownership = {
                     country = {
-                        country = c:GAD
+                        country = c:GATE_AD
                         levels = 1
                     }
                 }
@@ -66,12 +66,12 @@
                 add_ownership = {
                     building = {
                         type = building_mage_tower
-                        country = c:GAD
+                        country = c:GATE_AD
                         levels = 1
                         region = STATE_ZAMBIA
                     }
                     country = {
-                        country = c:GAD
+                        country = c:GATE_AD
                         levels = 2
                     }
                 }
@@ -84,7 +84,7 @@
                 building = building_tooling_workshops
                 add_ownership = {
                     country = {
-                        country = c:GAD
+                        country = c:GATE_AD
                         levels = 1
                     }
                 }
@@ -98,7 +98,7 @@
                 building = building_textile_mills
                 add_ownership = {
                     country = {
-                        country = c:GAD
+                        country = c:GATE_AD
                         levels = 2
                     }
                 }
@@ -113,7 +113,7 @@
                 building = building_glassworks
                 add_ownership = {
                     country = {
-                        country = c:GAD
+                        country = c:GATE_AD
                         levels = 1
                     }
                 }
@@ -128,7 +128,7 @@
                 building = building_government_administration
                 add_ownership = {
                     country = {
-                        country = c:GAD
+                        country = c:GATE_AD
                         levels = 1
                     }
                 }
@@ -143,7 +143,7 @@
                 building = building_druid_groove
                 add_ownership = {
                     country = {
-                        country = c:GAD
+                        country = c:GATE_AD
                         levels = 1
                     }
                 }
@@ -156,7 +156,7 @@
                 building = building_logging_camp
                 add_ownership = {
                     country = {
-                        country = c:GAD
+                        country = c:GATE_AD
                         levels = 1
                     }
                 }
@@ -172,7 +172,7 @@
                 building = building_food_industry
                 add_ownership = {
                     country = {
-                        country = c:GAD
+                        country = c:GATE_AD
                         levels = 1
                     }
                 }
@@ -187,13 +187,13 @@
         }
     }
     s:STATE_EAST_ANGOLA = {
-        region_state:GAD = {
+        region_state:GATE_AD = {
             create_building = {
                 building = building_druid_groove
                 add_ownership = {
                     building = {
                         type = building_mage_tower
-                        country = c:GAD
+                        country = c:GATE_AD
                         levels = 1
                         region = STATE_EAST_ANGOLA
                     }
@@ -208,7 +208,7 @@
                 add_ownership = {
                     building = {
                         type = building_millet_farm
-                        country = c:GAD
+                        country = c:GATE_AD
                         levels = 1
                         region = STATE_ZAMBIA
                     }
@@ -225,7 +225,7 @@
                 building = building_paper_mills
                 add_ownership = {
                     country = {
-                        country = c:GAD
+                        country = c:GATE_AD
                         levels = 1
                     }
                 }
@@ -238,13 +238,13 @@
         }
     }
     s:STATE_BOTSWANA = {
-        region_state:GAD = {
+        region_state:GATE_AD = {
             create_building = {
                 building = building_furniture_manufacturies
                 add_ownership = {
                     building = {
                         type = building_furniture_manufacturies
-                        country = c:GAD
+                        country = c:GATE_AD
                         levels = 1
                         region = STATE_BOTSWANA
                     }
@@ -267,7 +267,7 @@
                 add_ownership = {
                     building = {
                         type = building_mage_tower
-                        country = c:GAD
+                        country = c:GATE_AD
                         levels = 2
                         region = STATE_ZAMBIA
                     }
@@ -285,7 +285,7 @@
                 add_ownership = {
                     building = {
                         type = building_manor_house
-                        country = c:GAD
+                        country = c:GATE_AD
                         levels = 2
                         region = STATE_ZAMBIA
                     }
@@ -303,7 +303,7 @@
                 add_ownership = {
                     building = {
                         type = building_manor_house
-                        country = c:GAD
+                        country = c:GATE_AD
                         levels = 1
                         region = STATE_ZAMBIA
                     }
@@ -318,7 +318,7 @@
                 building = building_coffee_plantation
                 add_ownership = {
                     country = {
-                        country = c:GAD
+                        country = c:GATE_AD
                         levels = 1
                     }
                 }
@@ -332,7 +332,7 @@
                 building = building_cotton_plantation
                 add_ownership = {
                     country = {
-                        country = c:GAD
+                        country = c:GATE_AD
                         levels = 1
                     }
                 }
@@ -346,7 +346,7 @@
                 building = building_livestock_ranch
                 add_ownership = {
                     country = {
-                        country = c:GAD
+                        country = c:GATE_AD
                         levels = 1
                     }
                 }
@@ -365,7 +365,7 @@
                 add_ownership = {
                     building = {
                         type = building_mage_tower
-                        country = c:GAD
+                        country = c:GATE_AD
                         levels = 2
                         region = STATE_ZAMBIA
                     }
@@ -382,7 +382,7 @@
                 building = building_livestock_ranch
                 add_ownership = {
                     country = {
-                        country = c:GAD
+                        country = c:GATE_AD
                         levels = 1
                     }
                 }
@@ -401,7 +401,7 @@
                 add_ownership = {
                     building = {
                         type = building_manor_house
-                        country = c:GAD
+                        country = c:GATE_AD
                         levels = 5
                         region = STATE_ZAMBIA
                     }
@@ -419,7 +419,7 @@
                 add_ownership = {
                     building = {
                         type = building_manor_house
-                        country = c:GAD
+                        country = c:GATE_AD
                         levels = 1
                         region = STATE_ZAMBIA
                     }
@@ -435,7 +435,7 @@
                 add_ownership = {
                     building = {
                         type = building_mage_tower
-                        country = c:GAD
+                        country = c:GATE_AD
                         levels = 3
                         region = STATE_ZAMBIA
                     }
@@ -453,7 +453,7 @@
                 add_ownership = {
                     building = {
                         type = building_mage_tower
-                        country = c:GAD
+                        country = c:GATE_AD
                         levels = 1
                         region = STATE_EAST_ANGOLA
                     }
@@ -475,7 +475,7 @@
                 add_ownership = {
                     building = {
                         type = building_manor_house
-                        country = c:GAD
+                        country = c:GATE_AD
                         levels = 1
                         region = STATE_BOTSWANA
                     }
@@ -490,7 +490,7 @@
                 building = building_banana_plantation
                 add_ownership = {
                     country = {
-                        country = c:GAD
+                        country = c:GATE_AD
                         levels = 1
                     }
                 }
@@ -504,7 +504,7 @@
                 building = building_tea_plantation
                 add_ownership = {
                     country = {
-                        country = c:GAD
+                        country = c:GATE_AD
                         levels = 1
                     }
                 }
@@ -519,7 +519,7 @@
                 add_ownership = {
                     building = {
                         type = building_manor_house
-                        country = c:GAD
+                        country = c:GATE_AD
                         levels = 2
                         region = STATE_ZAMBIA
                     }
@@ -535,7 +535,7 @@
                 add_ownership = {
                     building = {
                         type = building_manor_house
-                        country = c:GAD
+                        country = c:GATE_AD
                         levels = 3
                         region = STATE_ZAMBIA
                     }
@@ -555,7 +555,7 @@
                 add_ownership = {
                     building = {
                         type = building_mage_tower
-                        country = c:GAD
+                        country = c:GATE_AD
                         levels = 2
                         region = STATE_EAST_ANGOLA
                     }
@@ -572,7 +572,7 @@
                 building = building_millet_farm
                 add_ownership = {
                     country = {
-                        country = c:GAD
+                        country = c:GATE_AD
                         levels = 1
                     }
                 }
@@ -588,7 +588,7 @@
                 building = building_banana_plantation
                 add_ownership = {
                     country = {
-                        country = c:GAD
+                        country = c:GATE_AD
                         levels = 1
                     }
                 }
@@ -607,12 +607,12 @@
                 add_ownership = {
                     building = {
                         type = building_mage_tower
-                        country = c:GAD
+                        country = c:GATE_AD
                         levels = 2
                         region = STATE_ZAMBIA
                     }
                     country = {
-                        country = c:GAD
+                        country = c:GATE_AD
                         levels = 1
                     }
                 }
@@ -629,7 +629,7 @@
                 add_ownership = {
                     building = {
                         type = building_manor_house
-                        country = c:GAD
+                        country = c:GATE_AD
                         levels = 1
                         region = STATE_BOTSWANA
                     }
@@ -652,7 +652,7 @@
                         levels = 1
                     }
                     country = {
-                        country = c:GAD
+                        country = c:GATE_AD
                         levels = 2
                     }
                 }
@@ -709,7 +709,7 @@
                             levels = 1
                         }
                         country = {
-                            country = c:GAD
+                            country = c:GATE_AD
                             levels = 1
                         }
                     }
@@ -740,7 +740,7 @@
                     add_ownership = {
                         building = {
                             type = building_manor_house
-                            country = c:GAD
+                            country = c:GATE_AD
                             levels = 2
                             region = STATE_ZAMBIA
                         }
