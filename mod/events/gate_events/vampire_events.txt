@@ -25,7 +25,7 @@ gate_vampire.1 = {
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/religion_icons/gate_bloody_coins.dds"
+	icon = gfx/interface/icons/event_icons/event_gate_bat.dds
 
 	duration = 3
 
@@ -36,12 +36,6 @@ gate_vampire.1 = {
 	option = {
 		name = gate_vampire.1.a
 		default_option = yes
-		ruler = {
-			add_modifier = {
-				name = popular_authoritarian
-				months = normal_modifier_time
-			}
-		}
 	}
 }
 
@@ -60,7 +54,7 @@ gate_vampire.2 = {
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/religion_icons/gate_bloody_coins.dds"
+	icon = gfx/interface/icons/event_icons/event_gate_bat.dds
 
 	duration = 3
 
@@ -71,5 +65,9 @@ gate_vampire.2 = {
 	option = {
 		name = gate_vampire.2.a
 		default_option = yes
+		kill_population = {
+			culture = cu:vampire
+			value = 1
+		}
 	}
 }

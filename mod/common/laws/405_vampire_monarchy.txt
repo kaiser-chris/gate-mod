@@ -43,6 +43,41 @@
                 change_character_religion = rel:lunar_masquerade
             }
         }
+        custom_tooltip = {
+            text = effect_pops_embrace_vampirism
+            every_scope_pop = {
+                limit = {
+                    pop_has_primary_culture = no
+                    OR = {
+                        has_ongoing_conversion = yes
+                        has_ongoing_assimilation = yes
+                    }
+                }
+                change_pop_culture = {
+                    target = cu:vampire
+                    value = 1
+                }
+            }
+            every_scope_pop = {
+                limit = {
+                    pop_has_primary_culture = yes
+                }
+                change_pop_culture = {
+                    target = cu:vampire
+                    value = 0.2
+                }
+            }
+            every_scope_pop = {
+                limit = {
+                    culture = cu:vampire
+                }
+                change_pop_religion = {
+                    target = rel:lunar_masquerade
+                    value = 1
+                }
+            }
+        }
+
         every_primary_culture = {
             root = {
                 remove_primary_culture = prev
@@ -52,6 +87,7 @@
                 }
             }
         }
+
         add_primary_culture = cu:vampire
         set_variable = {
             name = gate_previous_religion

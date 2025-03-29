@@ -1,7 +1,7 @@
 ﻿monster_killer = {
     type = skill
 
-    texture = "gfx/interface/icons/character_trait_icons/convoy_raider_commander.dds"
+    texture = gfx/interface/icons/character_trait_icons/convoy_raider_commander.dds
 
     command_modifier = {
         character_popularity_add = 25
@@ -33,7 +33,7 @@
 magic_researcher = {
     type = personality
 
-    texture = "gfx/interface/icons/character_trait_icons/convoy_raider_commander.dds"
+    texture = gfx/interface/icons/character_trait_icons/innovative.dds
 
     # Reminder: this would only come into effect if this character is or becomes a Ruler
     country_modifier = {
@@ -42,11 +42,39 @@ magic_researcher = {
 
     # Reminder: this would only come into effect if this character is or becomes an Interest Group Leader
     interest_group_modifier = {
-        country_gate_magical_innovation_add = 10
+        country_gate_magical_innovation_add = 20
     }
 
     possible = {
         NOT = { age < define:NCharacters|ADULT_AGE }
+    }
+
+    weight = 0
+
+    replace = {
+
+    }
+}
+
+gate_eternal_monarch = {
+    type = condition
+
+    texture = gfx/interface/icons/character_trait_icons/imperious.dds
+
+    character_modifier = {
+        character_gate_immortal = yes
+        character_popularity_add = 50
+    }
+
+    country_modifier = {
+        country_assimilation_cultural_erasure_mult = 0.2
+    }
+
+    possible = {
+        owner ?= {
+            has_law = law_type:law_gate_vampire_monarchy
+        }
+        is_ruler = yes
     }
 
     weight = 0

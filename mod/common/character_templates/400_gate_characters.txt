@@ -57,10 +57,11 @@ gate_vampire_ruler_template = {
 
 	#TODO
 	traits = {
-		magic_researcher
+		gate_eternal_monarch
 	}
 
 	on_created = {
-		#TODO
+		# This character should be immortal
+		set_character_immortal = yes
 	}
 }

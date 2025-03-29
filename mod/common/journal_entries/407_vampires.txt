@@ -1,27 +1,7 @@
 ﻿je_gate_vampire_emergence = {
-	icon = gfx/interface/icons/religion_icons/gate_bloody_coins.dds
+	icon = gfx/interface/icons/religion_icons/gate_opera_mask.dds
 
 	group = je_group_internal_affairs
-
-	immediate = {
-		save_scope_as = gate_mbudye_dominion
-		c:LND = {
-			save_scope_as = gate_mbudye_lunda
-		}
-		c:CHK = {
-			save_scope_as = gate_mbudye_chokwe
-		}
-		c:KZM = {
-			save_scope_as = gate_mbudye_kazembe
-		}
-		c:KSN = {
-			save_scope_as = gate_mbudye_kasanje
-		}
-		set_variable = {
-			name = mbudye_conversion_type
-			value = mbudye_conversion_balanced
-		}
-	}
 
 	complete = {
 		custom_tooltip = {
@@ -49,22 +29,13 @@
 	on_fail = {
 		hidden_effect = {
 			trigger_event = {
-				id = gate_mbudye.2
+				id = gate_vampire.2
 				popup = yes
 			}
 		}
 	}
 
-	scripted_button = je_gate_mbudye_button_aggressive
-	scripted_button = je_gate_mbudye_button_balanced
-	scripted_button = je_gate_mbudye_button_passive
-
 	progressbar = no
-	scripted_progress_bar = pb_gate_mbudye
-	scripted_progress_bar = pb_gate_mbudye_lunda
-	scripted_progress_bar = pb_gate_mbudye_chokwe
-	scripted_progress_bar = pb_gate_mbudye_kazembe
-	scripted_progress_bar = pb_gate_mbudye_kasanje
 
 	transferable = no
 	can_revolution_inherit = yes
