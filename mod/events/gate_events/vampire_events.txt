@@ -1,0 +1,75 @@
+﻿namespace = gate_vampire
+
+gate_vampire.1 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = capital
+
+	title = gate_vampire.1.t
+	desc = gate_vampire.1.d
+	flavor = gate_vampire.1.f
+
+	event_image = {
+		video = "unspecific_ruler_speaking_to_people"
+	}
+
+	immediate = {
+		create_character = {
+			template = gate_vampire_ruler_template
+
+		}
+		ruler = {
+			save_scope_as = gate_vampire_ruler
+		}
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/religion_icons/gate_bloody_coins.dds"
+
+	duration = 3
+
+	trigger = {
+		has_law = law_type:law_gate_vampire_monarchy
+	}
+
+	option = {
+		name = gate_vampire.1.a
+		default_option = yes
+		ruler = {
+			add_modifier = {
+				name = popular_authoritarian
+				months = normal_modifier_time
+			}
+		}
+	}
+}
+
+gate_vampire.2 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = capital
+
+	title = gate_vampire.2.t
+	desc = gate_vampire.2.d
+	flavor = gate_vampire.2.f
+
+	event_image = {
+		video = "unspecific_ruler_speaking_to_people"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/religion_icons/gate_bloody_coins.dds"
+
+	duration = 3
+
+	trigger = {
+		has_variable = gate_rejected_vampirism
+	}
+
+	option = {
+		name = gate_vampire.2.a
+		default_option = yes
+	}
+}

@@ -1,0 +1,74 @@
+﻿je_gate_vampire_emergence = {
+	icon = gfx/interface/icons/religion_icons/gate_bloody_coins.dds
+
+	group = je_group_internal_affairs
+
+	immediate = {
+		save_scope_as = gate_mbudye_dominion
+		c:LND = {
+			save_scope_as = gate_mbudye_lunda
+		}
+		c:CHK = {
+			save_scope_as = gate_mbudye_chokwe
+		}
+		c:KZM = {
+			save_scope_as = gate_mbudye_kazembe
+		}
+		c:KSN = {
+			save_scope_as = gate_mbudye_kasanje
+		}
+		set_variable = {
+			name = mbudye_conversion_type
+			value = mbudye_conversion_balanced
+		}
+	}
+
+	complete = {
+		custom_tooltip = {
+			text = je_gate_vampire_emergence_complete
+			has_law = law_type:law_gate_vampire_monarchy
+		}
+	}
+
+	fail = {
+		custom_tooltip = {
+			text = je_gate_vampire_emergence_fail
+			has_variable = gate_rejected_vampirism
+		}
+	}
+
+	on_complete = {
+		hidden_effect = {
+			trigger_event = {
+				id = gate_vampire.1
+				popup = yes
+			}
+		}
+	}
+
+	on_fail = {
+		hidden_effect = {
+			trigger_event = {
+				id = gate_mbudye.2
+				popup = yes
+			}
+		}
+	}
+
+	scripted_button = je_gate_mbudye_button_aggressive
+	scripted_button = je_gate_mbudye_button_balanced
+	scripted_button = je_gate_mbudye_button_passive
+
+	progressbar = no
+	scripted_progress_bar = pb_gate_mbudye
+	scripted_progress_bar = pb_gate_mbudye_lunda
+	scripted_progress_bar = pb_gate_mbudye_chokwe
+	scripted_progress_bar = pb_gate_mbudye_kazembe
+	scripted_progress_bar = pb_gate_mbudye_kasanje
+
+	transferable = no
+	can_revolution_inherit = yes
+
+	weight = 200
+	should_be_pinned_by_default = yes
+}

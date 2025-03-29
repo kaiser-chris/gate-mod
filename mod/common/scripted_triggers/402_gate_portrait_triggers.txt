@@ -76,6 +76,19 @@ dwarven_portrait_pop_trigger = {
     }
 }
 
+vampire_portrait_trigger = {
+    exists = scope:character
+    scope:character = {
+        has_culture = cu:vampire
+    }
+}
+vampire_portrait_pop_trigger = {
+    exists = scope:pop
+    scope:pop = {
+        culture = cu:vampire
+    }
+}
+
 elven_portrait_trigger = {
     exists = scope:character
     scope:character = {

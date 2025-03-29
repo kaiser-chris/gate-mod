@@ -1,0 +1,15 @@
+﻿l_english:
+# Conversion Journal Entry
+ je_gate_vampire_emergence: "[GetReligion('lunar_masquerade').GetNameNoFormatting]"
+ je_gate_vampire_emergence_reason: "je_gate_vampire_reason"
+ je_gate_vampire_emergence_fail: "je_gate_vampire_emergence_fail"
+ je_gate_vampire_emergence_complete: "je_gate_vampire_emergence_complete"
+ # Events
+ gate_vampire.1.t: "Our Rule will be Eternal"
+ gate_vampire.1.d: "[SCOPE.sCharacter('gate_vampire_ruler').GetFullName] will bring eternal live and prosperity."
+ gate_vampire.1.f: "TODO" #TODO: Define gate_vampire.1.f
+ gate_vampire.1.a: "May his reign never end!"
+ gate_vampire.2.t: "Scourge Exterminated"
+ gate_vampire.2.d: "We have purged the [GetCulture('vampire').GetName] plague from our lands."
+ gate_vampire.2.f: "TODO" #TODO: Define gate_vampire.2.f
+ gate_vampire.2.a: "Finally!"

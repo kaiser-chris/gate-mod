@@ -55,6 +55,33 @@
         }
     }
 
+    vampire_race = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = outfits
+                template = no_outfit
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = gene_nudity
+                template = hide_nudity
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                OR = {
+                    vampire_portrait_trigger = yes
+                    vampire_portrait_pop_trigger = yes
+                }
+            }
+        }
+    }
+
     gnomish_race = {
         dna_modifiers = {
             accessory = {

@@ -45,3 +45,22 @@
 		}
 	}
 }
+
+gate_vampire_ruler_template = {
+	ideology = ideology_gate_vampirism
+	dna = dna_gate_vampire_ruler
+	ruler = yes
+	female = no
+
+	culture = cu:vampire
+	religion = rel:lunar_masquerade
+
+	#TODO
+	traits = {
+		magic_researcher
+	}
+
+	on_created = {
+		#TODO
+	}
+}

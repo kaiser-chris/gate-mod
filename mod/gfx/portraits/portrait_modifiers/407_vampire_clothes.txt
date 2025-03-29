@@ -1,0 +1,869 @@
+﻿vampire_clothes = {
+    usage = game
+    selection_behavior = weighted_random
+    fallback = default_clothes
+
+    default_clothes = {
+        weight = {
+            base = 1
+        }
+    }
+
+    vampire_agitator_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = outfits
+                template = european_outfits_agitator
+                range = { 0 1.0 } # For the randomness to work correctly
+            }
+
+            accessory = {
+                mode = add
+                gene = legwear
+                template = european_legwear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                AND = {
+                    vampire_portrait_trigger = yes
+                    agitator_character_trigger = yes
+                }
+            }
+        }
+    }
+
+    vampire_child_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = outfits
+                template = children_outfit_royal
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 25000
+
+                vampire_portrait_trigger = yes
+                scope:character ?= {
+                    age <= define:NCharacters|ADULT_AGE
+                }
+            }
+        }
+    }
+
+    vampire_shopkeepers_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = shirt
+                template = european_shirt
+                range = { 0 0.2 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = european_legwear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = outfits
+                template = european_working_class_outfits
+                range = { 0 0.5 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 10000
+                shopkeepers_clothes_pop_trigger = yes
+                vampire_portrait_pop_trigger = yes
+            }
+        }
+    }
+
+    european_royal_clothes = { #Currently only includes and checks for female clothes.
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = outfits
+                template = european_royal_outfits
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 10000
+                AND = {
+                    vampire_portrait_trigger = yes
+                    AND = {
+                        exists = scope:character
+                        scope:character = {
+                            is_female = yes
+                            is_ruler = yes
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    european_ruler_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = coats
+                template = european_coats
+                range = { 0 0.27 } # limiting the set to single-breasted coats, so aiguillettes work
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = european_legwear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 1000
+                vampire_portrait_trigger = yes
+                AND = {
+                    monarchy_clothes_trigger = yes
+                    scope:character ?= {
+                        age >= define:NCharacters|ADULT_AGE
+                    }
+                }
+            }
+        }
+    }
+
+    european_ruler_republic_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = waistcoats
+                template = european_waistcoats
+                range = { 0 0.67 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = civilian_coats
+                template = european_civilian_coats
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = european_legwear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 1000
+                scope:character ?= {
+                    is_female = no
+                    age >= define:NCharacters|ADULT_AGE
+                    owner ?= {
+                        OR = {
+                            is_in_power_bloc = no
+                            AND = {
+                                is_in_power_bloc = yes
+                                power_bloc ?= {
+                                    NOT = { has_identity = identity:identity_military_treaty_organization }
+                                }
+                            }
+                        }
+                    }
+                }
+                vampire_portrait_trigger = yes
+                ruler_clothes_trigger = yes
+                republic_clothes_trigger = yes
+            }
+        }
+    }
+
+    vampire_ruler_republic_pb_military_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = coats
+                template = european_coats
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = european_legwear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 10000
+                exists = scope:character
+                scope:character = {
+                    is_female = no
+                    owner ?= {
+                        is_in_power_bloc = yes
+                        power_bloc ?= {
+                            has_identity = identity:identity_military_treaty_organization
+                        }
+                    }
+                }
+                vampire_portrait_trigger = yes
+                ruler_clothes_trigger = yes
+                republic_clothes_trigger = yes
+            }
+        }
+    }
+
+    vampire_ruler_republic_clothes_female = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = outfits
+                template = european_common_outfits
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 1000
+                AND = {
+                    vampire_portrait_trigger = yes
+                    ruler_clothes_trigger = yes
+                    republic_clothes_trigger = yes
+                    AND = {
+                        exists = scope:character
+                        scope:character = {
+                            is_female = yes
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    european_military_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = coats
+                template = european_coats
+                range = { 0 0.27 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = aiguillettes
+                template = all_aiguillettes
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = european_legwear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 1000
+                vampire_portrait_trigger = yes
+                OR = {
+                    military_clothes_trigger = yes
+                    AND = {
+                        armed_forces_clothes_trigger = yes
+                        politician_clothes_trigger = yes
+                    }
+                }
+            }
+        }
+    }
+
+    vampire_late_military_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = coats
+                template = european_late_military_coats
+                range = { 0 1 }
+            }
+
+            accessory = {
+                mode = add
+                gene = epaulettes
+                template = late_military_epaulettes
+                accessory = male_epaulettes_military_01
+            }
+
+            accessory = {
+                mode = add
+                gene = legwear
+                template = european_late_military_legwear
+                range = { 0 1 }
+            }
+
+            accessory = {
+                mode = add
+                gene = belts
+                template = late_military_belts
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 2000
+                vampire_portrait_trigger = yes
+                OR = {
+                    scope:character ?= {
+                        has_role = general
+                    }
+                    AND = {
+                        armed_forces_clothes_trigger = yes
+                        politician_clothes_trigger = yes
+                        monarchy_clothes_trigger = no
+                    }
+                }
+            }
+        }
+    }
+
+    vampire_military_female_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = coats
+                template = vivandiere_coats
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = vivandiere_legwear
+                range = { 0 1 }
+            }
+        }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 10000
+                vampire_portrait_trigger = yes
+                scope:character = {
+                    is_female = yes
+                    exists = owner
+                    owner ?= {
+                        NOT = { has_technology_researched = bolt_action_rifles }
+                    }
+                    OR = {
+                        has_role = general
+                        has_role = admiral
+                        AND = {
+                            is_interest_group_type = ig_armed_forces
+                            has_role = politician
+                            OR = {  # A monarch shouldn't wear this, but a republican ruler can
+                                AND = {
+                                    is_ruler = no
+                                    home_country ?= {
+                                        has_law = law_type:law_monarchy
+                                    }
+                                }
+                                AND = {
+                                    is_ruler = yes
+                                    home_country ?= {
+                                        NOT = { has_law = law_type:law_monarchy }
+                                    }
+                                }
+                            }
+                        }
+                        AND = {
+                            has_role = agitator
+                            is_interest_group_type = ig_armed_forces
+                        }
+                    }
+                    owner ?= {
+                        NOT = { has_technology_researched = bolt_action_rifles }
+                    }
+                }
+            }
+        }
+    }
+
+    vampire_military_late_female_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = coats
+                template = female_coat_european_military_01
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = european_late_military_female_legwear
+                range = { 0 1 }
+            }
+        }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 10000
+                vampire_portrait_trigger = yes
+                scope:character = {
+                    is_female = yes
+                    exists = owner
+                    owner ?= {
+                        has_technology_researched = bolt_action_rifles
+                    }
+                    OR = {
+                        has_role = general
+                        has_role = admiral
+                        AND = {
+                            is_interest_group_type = ig_armed_forces
+                            has_role = politician
+                            OR = {  # A monarch shouldn't wear this, but a republican ruler can
+                                AND = {
+                                    is_ruler = no
+                                    home_country ?= {
+                                        has_law = law_type:law_monarchy
+                                    }
+                                }
+                                AND = {
+                                    is_ruler = yes
+                                    home_country ?= {
+                                        NOT = { has_law = law_type:law_monarchy }
+                                    }
+                                }
+                            }
+                        }
+                        AND = {
+                            has_role = agitator
+                            is_interest_group_type = ig_armed_forces
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    vampire_eternal_ruler_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = belts
+                template = male_belt_saber
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = epaulettes
+                template = prussian_epaulettes
+                accessory = male_epaulettes_02
+            }
+            accessory = {
+                mode = add
+                gene = top_layer
+                template = male_belt_saber
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = coats
+                template = agitator_blanqui
+                range = { 0 0.1 }
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = european_legwear_colors
+                accessory = male_legwear_european_01_black
+            }
+        }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 10000
+                vampire_portrait_trigger = yes
+                scope:character = {
+                    is_ruler = yes
+                    home_country ?= {
+                        has_law = law_type:law_gate_vampire_monarchy
+                    }
+                }
+            }
+        }
+    }
+
+    vampire_fancy_politician_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = waistcoats
+                template = european_waistcoats
+                range = { 0 0.66 } # Omitting male_waistcoat_european_03
+            }
+
+            accessory = {
+                mode = add
+                gene = civilian_coats
+                template = european_civilian_coats
+                range = { 0 1 } # For the randomness to work correctly
+            }
+
+            accessory = {
+                mode = add
+                gene = legwear
+                template = european_legwear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+
+            accessory = {
+                mode = add
+                gene = props
+                template = gene_lences
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                AND = {
+                    vampire_portrait_trigger = yes
+                    politician_clothes_trigger = yes
+                    scope:character ?= {
+                        age >= define:NCharacters|ADULT_AGE
+                        NOR = {
+                            is_interest_group_type = ig_intelligentsia
+                            is_interest_group_type = ig_rural_folk
+                            is_interest_group_type = ig_trade_unions
+                        }
+                    }
+                }
+            }
+            modifier = { #If we want rulers to dress like politicians later.
+                add = 100
+                AND = {
+                    vampire_portrait_trigger = yes
+                    ruler_clothes_trigger = yes
+                    monarchy_clothes_trigger = no
+                }
+            }
+        }
+    }
+
+    vampire_common_politician_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = waistcoats
+                template = european_waistcoats
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = civilian_coats
+                template = european_civilian_coats
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = european_legwear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = props
+                template = gene_lences
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                AND = {
+                    vampire_portrait_trigger = yes
+                    politician_clothes_trigger = yes
+                    armed_forces_clothes_trigger = no
+                    scope:character ?= {
+                        OR = {
+                            is_interest_group_type = ig_intelligentsia
+                            is_interest_group_type = ig_rural_folk
+                            is_interest_group_type = ig_trade_unions
+                        }
+                    }
+                }
+            }
+            modifier = { #If we want rulers to dress like politicians later.
+                add = 100
+                AND = {
+                    vampire_portrait_trigger = yes
+                    ruler_clothes_trigger = yes
+                    monarchy_clothes_trigger = no
+                }
+            }
+        }
+    }
+
+    vampire_poor_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = shirt
+                template = working_class_shirt
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = european_legwear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = outfits
+                template = european_working_class_outfits
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                AND = {
+                    vampire_portrait_pop_trigger = yes
+                    slaves_clothes_pop_trigger = no
+                }
+            }
+        }
+    }
+
+    vampire_middle_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = shirt
+                template = european_shirt
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = european_legwear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = outfits
+                template = european_working_class_outfits
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 500
+                AND = {
+                    vampire_portrait_pop_trigger = yes
+                    middle_clothes_pop_trigger = yes
+                }
+            }
+        }
+    }
+    vampire_upper_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = waistcoats
+                template = european_waistcoats
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = european_legwear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = civilian_coats
+                template = european_civilian_coats
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 500
+                AND = {
+                    vampire_portrait_pop_trigger = yes
+                    upper_clothes_pop_trigger = yes
+                }
+            }
+        }
+    }
+
+    vampire_soldier_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = coats
+                template = european_coats
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = european_legwear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = epaulettes
+                template = all_epaulettes
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 1100
+                AND = {
+                    vampire_portrait_pop_trigger = yes
+                    OR = {
+                        soldier_clothes_pop_trigger = yes
+                        officers_clothes_pop_trigger = yes
+                    }
+                }
+            }
+        }
+    }
+
+    enslaved_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = outfits
+                template = peasant_outfits
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = peasants_legwear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                AND = {
+                    vampire_portrait_pop_trigger = yes
+                    slaves_clothes_pop_trigger = yes
+                }
+            }
+        }
+    }
+
+    vampire_semitic_religious_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = outfits
+                template = semitic_upper_outfits
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 1000
+                AND = {
+                    vampire_portrait_pop_trigger = yes
+                    jewish_clothes_pop_trigger = yes
+                    clergy_clothes_pop_trigger = yes
+                }
+            }
+        }
+    }
+
+    vampire_greatcoat = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = civilian_coats
+                template = greatcoat
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = legwear
+                template = brazilian_white_legwear
+                accessory = male_legwear_south_american_01_brazilian
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 10000
+                has_dlc_feature = ep1_cosmetics
+                vampire_portrait_trigger = yes
+                politician_clothes_trigger = yes
+                NOR = {
+                    military_clothes_trigger = yes
+                    armed_forces_clothes_trigger = yes
+                }
+                scope:character ?= {
+                    OR = {
+                        is_interest_group_type = ig_landowners
+                        is_interest_group_type = ig_industrialists
+                        is_interest_group_type = ig_intelligentsia
+                        is_interest_group_type = ig_petty_bourgeoisie
+                    }
+                    OR = {
+                        is_ruler = no
+                        AND = {
+                            is_ruler = yes
+                            republic_clothes_trigger = yes
+                        }
+                    }
+                    is_heir = no
+                    OR = {  # November to February
+                        month < 3
+                        month > 10
+                    }
+                }
+            }
+        }
+    }
+
+}
