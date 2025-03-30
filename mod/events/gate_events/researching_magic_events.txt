@@ -233,14 +233,14 @@ researching_magic.4 = {
 				is_magic_country = yes
 			}
 			create_character = {
-				template = magic_researcher_template
+				template = gate_magic_researcher_template
 				interest_group = ig_magic_users
 				save_scope_as = magic_researcher
 			}
 		}
 		else = {
 			create_character = {
-				template = magic_researcher_template
+				template = gate_magic_researcher_template
 				interest_group = ig_intelligentsia
 				save_scope_as = magic_researcher
 			}

@@ -1,8 +1,8 @@
-﻿magic_researcher_template = {
+﻿gate_magic_researcher_template = {
 	ideology = ideology_magic_hopeful
 
 	traits = {
-		magic_researcher
+		gate_magic_researcher
 	}
 
 	on_created = {
@@ -54,8 +54,8 @@ gate_vampire_ruler_template = {
 
 	culture = cu:vampire
 	religion = rel:lunar_masquerade
+	interest_group = ig_petty_bourgeoisie
 
-	#TODO
 	traits = {
 		gate_eternal_monarch
 	}
