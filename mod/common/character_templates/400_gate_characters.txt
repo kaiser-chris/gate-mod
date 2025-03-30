@@ -50,7 +50,7 @@ gate_vampire_ruler_template = {
 	dna = dna_gate_vampire_ruler
 	first_name = Constantin
 	last_name = de_Reuss-Mirza
-	ruler = yes
+	ruler = no
 	noble = yes
 	female = no
 
@@ -66,5 +66,28 @@ gate_vampire_ruler_template = {
 	on_created = {
 		# This character should be immortal
 		set_character_immortal = yes
+		set_variable = {
+			name = com_opinion
+			value = flag:gate_vampire_cult_flag
+		}
+		home_country ?= {
+			var:gate_character_vampire ?= {
+				kill_character = {
+					value = yes
+					hidden = yes
+				}
+			}
+			je:je_gate_vampire_emergence ?= {
+				clear_variable_list = com_journal_characters
+				add_to_variable_list = {
+					name = com_journal_characters
+					target = root
+				}
+			}
+			set_variable = {
+				name = gate_character_vampire
+				value = root
+			}
+		}
 	}
 }

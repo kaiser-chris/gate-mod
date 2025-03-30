@@ -293,9 +293,15 @@ debug_gate_accept_vampires = {
 	}
 
 	when_taken = {
-		set_variable = vampires_accepted
-		create_political_movement = {
-			type = movement_gate_vampirism
+		add_journal_entry = {
+			type = je_gate_vampire_emergence
+		}
+		create_character = {
+			template = gate_vampire_ruler_template
+			save_scope_as = gate_vampire_leader
+		}
+		scope:gate_vampire_leader ?= {
+			place_character_in_void = 10000
 		}
 	}
 

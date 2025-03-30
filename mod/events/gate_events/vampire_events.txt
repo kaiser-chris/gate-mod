@@ -13,12 +13,18 @@ gate_vampire.1 = {
 		video = "unspecific_ruler_speaking_to_people"
 	}
 
+	trigger = {
+		has_law = law_type:law_gate_vampire_monarchy
+		has_variable = gate_character_vampire
+	}
+
 	immediate = {
-		create_character = {
-			template = gate_vampire_ruler_template
-		}
-		ruler = {
+		var:gate_character_vampire ?= {
+			set_character_as_ruler = yes
 			save_scope_as = gate_vampire_ruler
+		}
+		heir ?= {
+			disinherit_character = yes
 		}
 	}
 
@@ -31,10 +37,6 @@ gate_vampire.1 = {
 	icon = gfx/interface/icons/event_icons/event_gate_bat.dds
 
 	duration = 3
-
-	trigger = {
-		has_law = law_type:law_gate_vampire_monarchy
-	}
 
 	option = {
 		name = gate_vampire.1.a
@@ -71,6 +73,131 @@ gate_vampire.2 = {
 		kill_population = {
 			culture = cu:vampire
 			value = 1
+		}
+		var:gate_character_vampire ?= {
+			kill_character = yes
+		}
+	}
+}
+
+gate_vampire.3 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = capital
+
+	title = gate_vampire.3.t
+	desc = gate_vampire.3.d
+	flavor = gate_vampire.3.f
+
+	event_image = {
+		video = "europenorthamerica_judaism"
+	}
+
+	trigger = {
+		is_gate_planet_country = no
+	}
+
+	immediate = {
+		remove_variable = gate_rejected_vampirism
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/event_icons/event_gate_bat.dds
+
+	duration = 3
+
+	option = {
+		name = gate_vampire.3.a
+		default_option = yes
+		hidden_effect = {
+			trigger_event = {
+				id = gate_vampire.4
+				months = { 8 16 }
+			}
+		}
+	}
+}
+
+gate_vampire.4 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = capital
+
+	title = gate_vampire.4.t
+	desc = gate_vampire.4.d
+	flavor = gate_vampire.4.f
+
+	event_image = {
+		video = "europenorthamerica_judaism"
+	}
+
+	immediate = {
+		add_journal_entry = {
+			type = je_gate_vampire_emergence
+		}
+		create_character = {
+			template = gate_vampire_ruler_template
+			save_scope_as = gate_vampire_leader
+		}
+		scope:gate_vampire_leader ?= {
+			place_character_in_void = 10000
+		}
+		every_scope_pop = {
+			limit = {
+				NOR = {
+					is_pop_type = clergymen
+					is_pop_type = slaves
+				}
+			}
+			change_pop_culture = {
+				target = cu:vampire
+				value = 0.05
+			}
+		}
+		every_scope_pop = {
+			limit = {
+				culture = cu:vampire
+			}
+			change_pop_religion = {
+				target = rel:lunar_masquerade
+				value = 1
+			}
+		}
+	}
+
+	gui_window = event_window_1char_propaganda
+
+	left_icon = scope:gate_vampire_leader
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/event_icons/event_gate_bat.dds
+
+	duration = 3
+
+	option = {
+		name = gate_vampire.4.a
+		default_option = yes
+		ig:ig_devout ?= {
+			add_modifier = {
+				name = rejected_petition
+				months = 12
+				is_decaying = yes
+			}
+		}
+	}
+
+	option = {
+		name = gate_vampire.4.b
+		set_variable = gate_rejected_vampirism
+		trigger = {
+			OR = {
+				ig:ig_devout ?= {
+					is_powerful = yes
+				}
+				has_law = law_type:law_state_religion
+			}
 		}
 	}
 }

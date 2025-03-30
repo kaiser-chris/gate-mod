@@ -8,40 +8,20 @@
 	}
 	
 	creation_trigger = {
-		has_variable = vampires_accepted
+		has_variable = gate_character_vampire
 		is_gate_planet_country = no
 	}
 
 	creation_weight = {
-		value = 100
-
-		if = {
-			limit = {
-				OR = {
-					ruler ?= {
-						culture ?= cu:vampire
-					}
-					has_ruling_interest_group = ig_landowners
-					AND = {
-						has_ruling_interest_group = ig_industrialists
-						has_law = law_type:law_oligarchy
-					}
-				}
-			}
-			multiply = {
-				value = 20
-			}
-		}
+		value = 10000
 	}
 
 	on_created = {
 		add_movement_enthusiasm_modifier = yes
-		owner = {
-			ig:ig_landowners ?= {
-				add_ideology = ideology_gate_vampire_movement
-			}
-			ig:ig_industrialists ?= {
-				add_ideology = ideology_gate_vampire_movement
+		owner ?= {
+			create_character = {
+				template = gate_vampire_ruler_template
+				is_agitator = yes
 			}
 		}
 	}
@@ -65,6 +45,7 @@
 			limit = {
 				OR = {
 					has_ideology = ideology:ideology_gate_vampirism
+					has_ideology = ideology:ideology_gate_vampirism_interested
 					has_ideology = ideology:ideology_slaver
 					has_ideology = ideology:ideology_pro_slavery
 				}
@@ -80,6 +61,14 @@
 			multiply = {
 				value = 5
 			}
+		}
+
+		# Ensure vampire cult leader supports his own movement
+		if = {
+			limit = {
+				has_template = gate_vampire_ruler_template
+			}
+			add = 10000
 		}
 	}
 	
@@ -208,7 +197,7 @@
 			}
 			multiply = {
 				desc = culture_vampire
-				value = 5
+				value = 50
 			}
 		}
 		else_if = {
