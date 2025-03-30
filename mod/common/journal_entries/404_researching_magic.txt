@@ -1,21 +1,21 @@
-﻿je_researching_magic = {
+﻿je_gate_researching_magic = {
 	icon = "gfx/interface/icons/event_icons/event_magic_knowledge.dds"
 
 	group = je_group_magical_affairs
 
-	scripted_button = je_researching_magic_button_focus_academia
-	scripted_button = je_researching_magic_button_cancel_focus_academia
+	scripted_button = je_gate_researching_magic_button_focus_academia
+	scripted_button = je_gate_researching_magic_button_cancel_focus_academia
 
 	status_desc = {
 		first_valid = {
 			triggered_desc = {
-				desc = je_researching_magic_hiring_researcher
+				desc = je_gate_researching_magic_hiring_researcher
 				trigger = {
 					has_variable = actively_hiring_magic_researcher
 				}
 			}
 			triggered_desc = {
-				desc = je_researching_magic_missing_researcher
+				desc = je_gate_researching_magic_missing_researcher
 				trigger = {
 					NOT = {
 						has_variable = magic_researcher
@@ -23,7 +23,7 @@
 				}
 			}
 			triggered_desc = {
-				desc = je_researching_magic_missing_institute
+				desc = je_gate_researching_magic_missing_institute
 				trigger = {
 					NOT = {
 						capital = {
@@ -33,7 +33,7 @@
 				}
 			}
 			triggered_desc = {
-				desc = je_researching_magic_low_progress
+				desc = je_gate_researching_magic_low_progress
 				trigger = {
 					scope:journal_entry = {
 						scripted_bar_progress = {
@@ -44,7 +44,7 @@
 				}
 			}
 			triggered_desc = {
-				desc = je_researching_magic_medium_progress
+				desc = je_gate_researching_magic_medium_progress
 				trigger = {
 					scope:journal_entry = {
 						scripted_bar_progress = {
@@ -55,7 +55,7 @@
 				}
 			}
 			triggered_desc = {
-				desc = je_researching_magic_high_progress
+				desc = je_gate_researching_magic_high_progress
 				trigger = {
 					scope:journal_entry = {
 						scripted_bar_progress = {
@@ -70,7 +70,7 @@
 
 	complete = {
 		custom_tooltip = {
-			text = je_researching_magic_goal_tt
+			text = je_gate_researching_magic_goal_tt
 			scope:journal_entry = {
 				scripted_bar_progress = {
 					name = pb_gate_researching_magic

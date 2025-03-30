@@ -43,7 +43,7 @@ research_magic_decision = {
 	is_shown = {
 		not_is_magic_country = yes
 		NOT = {
-			has_journal_entry = je_researching_magic
+			has_journal_entry = je_gate_researching_magic
 		}
 		NOT = {
 			is_country_type = decentralized
@@ -53,13 +53,13 @@ research_magic_decision = {
 	possible = {
 		not_is_magic_country = yes
 		hidden_trigger = {
-			NOT = { has_journal_entry = je_researching_magic }
+			NOT = { has_journal_entry = je_gate_researching_magic }
 		}
 	}
 
 	when_taken = {
 		add_journal_entry = {
-			type = je_researching_magic
+			type = je_gate_researching_magic
 		}
 		trigger_event = {
 			id = researching_magic.4
@@ -80,7 +80,7 @@ magic_researcher_decision = {
 	is_shown = {
 		OR = {
 			is_magic_country = yes
-			has_journal_entry = je_researching_magic
+			has_journal_entry = je_gate_researching_magic
 		}
 		NOT = {
 			is_country_type = decentralized
@@ -92,7 +92,7 @@ magic_researcher_decision = {
 			hidden_trigger = {
 				OR = {
 					is_magic_country = yes
-					has_journal_entry = je_researching_magic
+					has_journal_entry = je_gate_researching_magic
 				}
 			}
 			custom_tooltip = {

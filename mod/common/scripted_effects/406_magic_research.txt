@@ -196,9 +196,9 @@ cleanup_researchers = {
 		}
 		if = {
 			limit = {
-				has_journal_entry = je_researching_magic
+				has_journal_entry = je_gate_researching_magic
 			}
-			je:je_researching_magic = {
+			je:je_gate_researching_magic = {
 				clear_variable_list = com_journal_characters
 			}
 		}

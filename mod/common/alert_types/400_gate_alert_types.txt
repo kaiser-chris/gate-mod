@@ -40,7 +40,7 @@ has_not_started_research_of_magic_alert = {
 		AND = {
 			not_is_magic_country = yes
 			NOT = {
-				has_journal_entry = je_researching_magic
+				has_journal_entry = je_gate_researching_magic
 			}
 		}
 	}
@@ -61,7 +61,7 @@ has_no_magic_researcher_alert = {
 	valid = {
 		OR = {
 			is_magic_country = yes
-			has_journal_entry = je_researching_magic
+			has_journal_entry = je_gate_researching_magic
 		}
 		NOT = {
 			has_variable = magic_researcher

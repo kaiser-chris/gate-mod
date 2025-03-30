@@ -1,4 +1,4 @@
-﻿monster_killer = {
+﻿gate_monster_killer = {
     type = skill
 
     texture = gfx/interface/icons/character_trait_icons/convoy_raider_commander.dds
@@ -23,6 +23,7 @@
         has_role = general
         has_global_variable = global_mana_saturation
         global_var:global_mana_saturation >= 30
+        has_global_variable = monster_horde_happened
     }
 
     weight = 0

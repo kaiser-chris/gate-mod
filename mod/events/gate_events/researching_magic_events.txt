@@ -12,7 +12,7 @@ researching_magic.1 = {
 
 	trigger = {
 		OR = {
-			has_journal_entry = je_researching_magic
+			has_journal_entry = je_gate_researching_magic
 			is_magic_country = yes
 		}
 	}
@@ -45,7 +45,7 @@ researching_magic.1 = {
 		default_option = yes
 		custom_tooltip = {
 			text = researching_magic_discovery.result
-			je:je_researching_magic = {
+			je:je_gate_researching_magic = {
 				add_progress = {
 					name = pb_gate_researching_magic
 					value = { 5 10 }
@@ -54,7 +54,7 @@ researching_magic.1 = {
 		}
 		make_magic_researcher_not_busy = yes
 		trigger = {
-			has_journal_entry = je_researching_magic
+			has_journal_entry = je_gate_researching_magic
 		}
 	}
 
@@ -97,7 +97,7 @@ researching_magic.2 = {
 
 	trigger = {
 		OR = {
-			has_journal_entry = je_researching_magic
+			has_journal_entry = je_gate_researching_magic
 			is_magic_country = yes
 		}
 	}
@@ -130,7 +130,7 @@ researching_magic.2 = {
 		default_option = yes
 		custom_tooltip = {
 			text = researching_magic_discovery.result
-			je:je_researching_magic = {
+			je:je_gate_researching_magic = {
 				add_progress = {
 					name = pb_gate_researching_magic
 					value = { 5 10 }
@@ -210,7 +210,7 @@ researching_magic.4 = {
 
 	trigger = {
 		OR = {
-			has_journal_entry = je_researching_magic
+			has_journal_entry = je_gate_researching_magic
 			is_magic_country = yes
 		}
 	}
@@ -247,9 +247,9 @@ researching_magic.4 = {
 		}
 		if = {
 			limit = {
-				has_journal_entry = je_researching_magic
+				has_journal_entry = je_gate_researching_magic
 			}
-			je:je_researching_magic = {
+			je:je_gate_researching_magic = {
 				clear_variable_list = com_journal_characters
 				add_to_variable_list = {
 					name = com_journal_characters

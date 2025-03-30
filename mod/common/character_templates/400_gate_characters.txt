@@ -27,9 +27,9 @@
 		home_country = {
 			if = {
 				limit = {
-					has_journal_entry = je_researching_magic
+					has_journal_entry = je_gate_researching_magic
 				}
-				je:je_researching_magic = {
+				je:je_gate_researching_magic = {
 					clear_variable_list = com_journal_characters
 					add_to_variable_list = {
 						name = com_journal_characters
@@ -47,11 +47,14 @@
 }
 
 gate_vampire_ruler_template = {
-	ideology = ideology_gate_vampirism
 	dna = dna_gate_vampire_ruler
+	first_name = Constantin
+	last_name = de_Reuss-Mirza
 	ruler = yes
+	noble = yes
 	female = no
 
+	ideology = ideology_gate_vampirism
 	culture = cu:vampire
 	religion = rel:lunar_masquerade
 	interest_group = ig_petty_bourgeoisie

@@ -16,12 +16,15 @@ gate_vampire.1 = {
 	immediate = {
 		create_character = {
 			template = gate_vampire_ruler_template
-
 		}
 		ruler = {
 			save_scope_as = gate_vampire_ruler
 		}
 	}
+
+	gui_window = event_window_1char_propaganda
+
+	left_icon = scope:gate_vampire_ruler
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
