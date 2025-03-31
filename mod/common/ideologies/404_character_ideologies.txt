@@ -196,7 +196,12 @@ ideology_gate_vampirism = {
     }
 
     interest_group_leader_trigger = {
-        has_variable = vampires_accepted
+        owner = {
+            OR = {
+                has_journal_entry = je_gate_vampire_emergence
+                has_law = law_type:law_gate_vampire_monarchy
+            }
+        }
         OR = {
             is_interest_group_type = ig_landowners
             is_interest_group_type = ig_industrialists
@@ -206,7 +211,12 @@ ideology_gate_vampirism = {
     }
 
     non_interest_group_leader_trigger = {
-        has_variable = vampires_accepted
+        owner = {
+            OR = {
+                has_journal_entry = je_gate_vampire_emergence
+                has_law = law_type:law_gate_vampire_monarchy
+            }
+        }
         # Agitators should have an ideology at odds with current laws
         NAND = {
             has_role = agitator
@@ -255,7 +265,12 @@ ideology_gate_vampirism_interested = {
     }
 
     interest_group_leader_trigger = {
-        has_variable = vampires_accepted
+        owner = {
+            OR = {
+                has_journal_entry = je_gate_vampire_emergence
+                has_law = law_type:law_gate_vampire_monarchy
+            }
+        }
         OR = {
             is_interest_group_type = ig_landowners
             is_interest_group_type = ig_industrialists
@@ -265,7 +280,12 @@ ideology_gate_vampirism_interested = {
     }
 
     non_interest_group_leader_trigger = {
-        has_variable = vampires_accepted
+        owner = {
+            OR = {
+                has_journal_entry = je_gate_vampire_emergence
+                has_law = law_type:law_gate_vampire_monarchy
+            }
+        }
         # Agitators should have an ideology at odds with current laws
         NAND = {
             has_role = agitator

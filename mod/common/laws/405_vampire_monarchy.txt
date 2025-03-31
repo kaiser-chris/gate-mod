@@ -20,6 +20,7 @@
         hidden_effect = {
             clear_variable_list = gate_previous_cultures
             remove_variable = gate_previous_religion
+            set_variable = gate_had_eternal_monarchy
         }
         custom_tooltip = {
             text = effect_characters_embrace_vampirism
@@ -128,14 +129,17 @@
     }
 
     is_visible = {
-        has_variable = vampires_accepted
+        OR = {
+            has_journal_entry = je_gate_vampire_emergence
+            has_variable = gate_had_eternal_monarchy
+        }
     }
 
     modifier = {
-        country_aristocrats_pol_str_mult = 1
-        country_capitalists_pol_str_mult = 0.5
-        state_aristocrats_investment_pool_contribution_add = 0.5
-        state_capitalists_investment_pool_contribution_add = 0.5
+        country_aristocrats_pol_str_mult = 0.25
+        country_capitalists_pol_str_mult = 0.25
+        state_aristocrats_investment_pool_contribution_add = 0.1
+        state_capitalists_investment_pool_contribution_add = 0.1
         country_legitimacy_headofstate_add = 30
         country_legitimacy_ideological_incoherence_mult = 0.1
         country_authority_add = 300

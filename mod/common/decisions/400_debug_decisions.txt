@@ -288,7 +288,7 @@ debug_gate_accept_vampires = {
 		has_global_variable = com_debug
 		is_player = yes
 		NOT = {
-			has_variable = vampires_accepted
+			has_variable = gate_character_vampire
 		}
 	}
 
@@ -314,7 +314,7 @@ debug_gate_enact_vampire_monarchy = {
 	is_shown = {
 		has_global_variable = com_debug
 		is_player = yes
-		has_variable = vampires_accepted
+		has_variable = gate_character_vampire
 	}
 
 	when_taken = {

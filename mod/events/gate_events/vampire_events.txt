@@ -54,7 +54,7 @@ gate_vampire.2 = {
 	flavor = gate_vampire.2.f
 
 	event_image = {
-		video = "unspecific_ruler_speaking_to_people"
+		video = "middleeast_police_breaking_door"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -74,7 +74,10 @@ gate_vampire.2 = {
 			culture = cu:vampire
 			value = 1
 		}
-		var:gate_character_vampire ?= {
+		every_scope_character = {
+			limit = {
+				culture ?= cu:vampire
+			}
 			kill_character = yes
 		}
 	}
@@ -133,16 +136,6 @@ gate_vampire.4 = {
 	}
 
 	immediate = {
-		add_journal_entry = {
-			type = je_gate_vampire_emergence
-		}
-		create_character = {
-			template = gate_vampire_ruler_template
-			save_scope_as = gate_vampire_leader
-		}
-		scope:gate_vampire_leader ?= {
-			place_character_in_void = 10000
-		}
 		every_scope_pop = {
 			limit = {
 				NOR = {
@@ -179,6 +172,22 @@ gate_vampire.4 = {
 	option = {
 		name = gate_vampire.4.a
 		default_option = yes
+		hidden_effect = {
+			add_journal_entry = {
+				type = je_gate_vampire_emergence
+			}
+			create_character = {
+				template = gate_vampire_ruler_template
+				save_scope_as = gate_vampire_leader
+			}
+			scope:gate_vampire_leader ?= {
+				place_character_in_void = 10000
+			}
+			trigger_event = {
+				id = gate_vampire.5
+				months = { 6 12 }
+			}
+		}
 		ig:ig_devout ?= {
 			add_modifier = {
 				name = rejected_petition
@@ -199,5 +208,77 @@ gate_vampire.4 = {
 				has_law = law_type:law_state_religion
 			}
 		}
+	}
+}
+
+gate_vampire.5 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = capital
+
+	title = gate_vampire.5.t
+	desc = gate_vampire.5.d
+	flavor = gate_vampire.5.f
+
+	event_image = {
+		video = "southamerica_election"
+	}
+
+	immediate = {
+		set_variable = gate_vampire_truth
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/event_icons/event_gate_bat.dds
+
+	duration = 3
+
+	option = {
+		name = gate_vampire.5.a
+		default_option = yes
+		hidden_effect = {
+			every_scope_pop = {
+				limit = {
+					NOR = {
+						is_pop_type = clergymen
+						is_pop_type = slaves
+					}
+				}
+				change_pop_culture = {
+					target = cu:vampire
+					value = 0.05
+				}
+			}
+			every_scope_pop = {
+				limit = {
+					culture = cu:vampire
+				}
+				change_pop_religion = {
+					target = rel:lunar_masquerade
+					value = 1
+				}
+			}
+		}
+		ig:ig_devout ?= {
+			add_modifier = {
+				name = rejected_petition
+				multiplier = 5
+				months = 24
+				is_decaying = yes
+			}
+		}
+		add_radicals = {
+			value = 0.1
+		}
+		add_radicals = {
+			interest_group = ig:ig_devout
+			value = 0.4
+		}
+	}
+
+	option = {
+		name = gate_vampire.5.b
+		set_variable = gate_rejected_vampirism
 	}
 }

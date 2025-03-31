@@ -3,6 +3,26 @@
 
 	group = je_group_internal_affairs
 
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = je_gate_vampire_emergence_truth_known
+				trigger = {
+					has_variable = gate_vampire_truth
+				}
+			}
+			triggered_desc = {
+				desc = je_gate_vampire_emergence_allure
+			}
+		}
+	}
+
+	possible = {
+		NOT = {
+			has_variable = gate_rejected_vampirism
+		}
+	}
+
 	complete = {
 		custom_tooltip = {
 			text = je_gate_vampire_emergence_complete
