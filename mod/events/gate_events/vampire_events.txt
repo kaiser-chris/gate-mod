@@ -20,8 +20,10 @@ gate_vampire.1 = {
 
 	immediate = {
 		var:gate_character_vampire ?= {
+			set_home_country = root
 			set_character_as_ruler = yes
 			save_scope_as = gate_vampire_ruler
+			remove_trait = ruthless
 		}
 		heir ?= {
 			disinherit_character = yes
@@ -157,6 +159,13 @@ gate_vampire.4 = {
 				value = 1
 			}
 		}
+		create_character = {
+			template = gate_vampire_ruler_template
+			save_scope_as = gate_vampire_leader
+		}
+		scope:gate_vampire_leader ?= {
+			place_character_in_void = 10000
+		}
 	}
 
 	gui_window = event_window_1char_propaganda
@@ -172,20 +181,20 @@ gate_vampire.4 = {
 	option = {
 		name = gate_vampire.4.a
 		default_option = yes
+		add_journal_entry = {
+			type = je_gate_vampire_emergence
+		}
 		hidden_effect = {
-			add_journal_entry = {
-				type = je_gate_vampire_emergence
-			}
-			create_character = {
-				template = gate_vampire_ruler_template
-				save_scope_as = gate_vampire_leader
-			}
-			scope:gate_vampire_leader ?= {
-				place_character_in_void = 10000
-			}
 			trigger_event = {
 				id = gate_vampire.5
 				months = { 6 12 }
+			}
+			je:je_gate_vampire_emergence ?= {
+				clear_variable_list = com_journal_characters
+				add_to_variable_list = {
+					name = com_journal_characters
+					target = scope:gate_vampire_leader
+				}
 			}
 		}
 		ig:ig_devout ?= {
@@ -260,6 +269,9 @@ gate_vampire.5 = {
 				}
 			}
 		}
+		var:gate_character_vampire ?= {
+			add_trait = ruthless
+		}
 		ig:ig_devout ?= {
 			add_modifier = {
 				name = rejected_petition
@@ -275,6 +287,7 @@ gate_vampire.5 = {
 			interest_group = ig:ig_devout
 			value = 0.4
 		}
+		change_infamy = 5
 	}
 
 	option = {

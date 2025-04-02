@@ -22,7 +22,17 @@
 			create_character = {
 				template = gate_vampire_ruler_template
 				is_agitator = yes
+				save_scope_as = gate_vampire_leader
 			}
+			if = {
+				limit = {
+					has_variable = gate_vampire_truth
+				}
+				scope:gate_vampire_leader ?= {
+					add_trait = ruthless
+				}
+			}
+
 		}
 	}
 	

@@ -1,48 +1,41 @@
 ﻿no_portrait_trigger = {
     OR = {
-        AND = {
-            exists = scope:character
-            scope:character = {
-                culture = {
-                    OR = {
-                        has_discrimination_trait = bird_heritage
-                        has_discrimination_trait = lizardfolk_heritage
-                        has_discrimination_trait = mechanical_heritage
-                        has_discrimination_trait = gate_dragon_heritage
-                        has_discrimination_trait = beast
-                        has_discrimination_trait = gnoll
-                        has_discrimination_trait = naga
-                        has_discrimination_trait = mouse_heritage
-                        has_discrimination_trait = awakened_heritage
-                    }
+        scope:character ?= {
+            culture = {
+                OR = {
+                    has_discrimination_trait = bird_heritage
+                    has_discrimination_trait = lizardfolk_heritage
+                    has_discrimination_trait = mechanical_heritage
+                    has_discrimination_trait = gate_dragon_heritage
+                    has_discrimination_trait = beast
+                    has_discrimination_trait = gnoll
+                    has_discrimination_trait = naga
+                    has_discrimination_trait = mouse_heritage
+                    has_discrimination_trait = awakened_heritage
                 }
             }
         }
-        AND = {
-            exists = scope:pop
-            scope:pop = {
-                culture = {
-                    OR = {
-                        has_discrimination_trait = gate_dragon_heritage
-                        has_discrimination_trait = lizardfolk_heritage
-                        has_discrimination_trait = mechanical_heritage
-                        has_discrimination_trait = bird_heritage
-                        has_discrimination_trait = beast
-                        has_discrimination_trait = gnoll
-                        has_discrimination_trait = naga
-                        has_discrimination_trait = mouse_heritage
-                        has_discrimination_trait = awakened_heritage
-                    }
-
+        scope:pop ?= {
+            culture = {
+                OR = {
+                    has_discrimination_trait = gate_dragon_heritage
+                    has_discrimination_trait = lizardfolk_heritage
+                    has_discrimination_trait = mechanical_heritage
+                    has_discrimination_trait = bird_heritage
+                    has_discrimination_trait = beast
+                    has_discrimination_trait = gnoll
+                    has_discrimination_trait = naga
+                    has_discrimination_trait = mouse_heritage
+                    has_discrimination_trait = awakened_heritage
                 }
+
             }
         }
     }
 }
 
 magic_users_clothes_pop_trigger = {
-    exists = scope:pop
-    scope:pop = {
+    scope:pop ?= {
         OR = {
             is_pop_type = mages
             is_pop_type = druids
@@ -51,66 +44,56 @@ magic_users_clothes_pop_trigger = {
 }
 
 orcish_portrait_trigger = {
-    exists = scope:character
-    scope:character = {
+    scope:character ?= {
         has_culture = cu:orcish
     }
 }
 orcish_portrait_pop_trigger = {
-    exists = scope:pop
-    scope:pop = {
+    scope:pop ?= {
         culture = cu:orcish
     }
 }
 
 dwarven_portrait_trigger = {
-    exists = scope:character
-    scope:character = {
+    scope:character ?= {
         has_culture = cu:dwarven
     }
 }
 dwarven_portrait_pop_trigger = {
-    exists = scope:pop
-    scope:pop = {
+    scope:pop ?= {
         culture = cu:dwarven
     }
 }
 
 vampire_portrait_trigger = {
-    exists = scope:character
-    scope:character = {
+    scope:character ?= {
         has_culture = cu:vampire
     }
 }
 vampire_portrait_pop_trigger = {
-    exists = scope:pop
-    scope:pop = {
+    scope:pop ?= {
         culture = cu:vampire
     }
 }
 
 elven_portrait_trigger = {
-    exists = scope:character
-    scope:character = {
+    scope:character ?= {
         has_culture = cu:elven
     }
 }
 elven_portrait_pop_trigger = {
-    exists = scope:pop
-    scope:pop = {
+    scope:pop ?= {
         culture = cu:elven
     }
 }
 
 gnomish_portrait_trigger = {
-    exists = scope:character
-    scope:character = {
+    scope:character ?= {
         has_culture = cu:gnomish
     }
 }
 gnomish_court_portrait_trigger = {
-    exists = scope:character
-    scope:character = {
+    scope:character ?= {
         NOT = {
             AND = {
                 exists = home_country
@@ -127,15 +110,13 @@ gnomish_court_portrait_trigger = {
     }
 }
 gnomish_portrait_pop_trigger = {
-    exists = scope:pop
-    scope:pop = {
+    scope:pop ?= {
         culture = cu:gnomish
     }
 }
 
 human_portrait_trigger = {
-    exists = scope:character
-    scope:character = {
+    scope:character ?= {
         NOR = {
             has_culture = cu:elven
             has_culture = cu:gnomish
@@ -145,8 +126,7 @@ human_portrait_trigger = {
     }
 }
 human_portrait_pop_trigger = {
-    exists = scope:pop
-    scope:pop = {
+    scope:pop ?= {
         NOR = {
             culture = cu:elven
             culture = cu:gnomish
