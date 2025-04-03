@@ -320,3 +320,44 @@ ideology_gate_vampirism_interested = {
 
     character_ideology = yes
 }
+
+ideology_gate_vampirism_purge = {
+    icon = "gfx/interface/icons/ideology_icons/ideology_leader/gate_vampire_purge.dds"
+
+    lawgroup_governance_principles = {
+        law_gate_vampire_monarchy = strongly_disapprove
+    }
+
+    interest_group_leader_trigger = {
+        owner = {
+            OR = {
+                has_journal_entry = je_gate_vampire_emergence
+                has_law = law_type:law_gate_vampire_monarchy
+            }
+        }
+        is_interest_group_type = ig_devout
+    }
+
+    non_interest_group_leader_trigger = {
+        # Agitators should have an ideology at odds with current laws
+        AND = {
+            has_role = agitator
+            owner = {
+                has_law = law_type:law_gate_vampire_monarchy
+            }
+        }
+        interest_group = {
+            is_interest_group_type = ig_devout
+        }
+    }
+
+    interest_group_leader_weight = {
+        value = 100
+    }
+
+    non_interest_group_leader_weight = {
+        value = 100
+    }
+
+    character_ideology = yes
+}

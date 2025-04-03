@@ -17,9 +17,24 @@
 		}
 	}
 
+	immediate = {
+		save_scope_as = gate_vampire_country
+	}
+
+	on_yearly_pulse = {
+		random_events = {
+			chance_of_no_event = 50
+			20 = gate_vampire.5
+			20 = gate_vampire.6
+			20 = gate_vampire.7
+			20 = gate_vampire.8
+		}
+	}
+
 	possible = {
-		NOT = {
-			has_variable = gate_rejected_vampirism
+		custom_tooltip = {
+			text = je_gate_vampire_emergence_activate
+			has_variable = gate_character_vampire
 		}
 	}
 

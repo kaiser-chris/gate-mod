@@ -76,6 +76,16 @@ gate_vampire.2 = {
 			culture = cu:vampire
 			value = 1
 		}
+		kill_population = {
+			religion = rel:lunar_masquerade
+			value = 1
+		}
+		var:gate_character_vampire ?= {
+			hidden_effect = {
+				set_character_immortal = no
+			}
+			kill_character = yes
+		}
 		every_scope_character = {
 			limit = {
 				culture ?= cu:vampire
@@ -185,10 +195,6 @@ gate_vampire.4 = {
 			type = je_gate_vampire_emergence
 		}
 		hidden_effect = {
-			trigger_event = {
-				id = gate_vampire.5
-				months = { 6 12 }
-			}
 			je:je_gate_vampire_emergence ?= {
 				clear_variable_list = com_journal_characters
 				add_to_variable_list = {
@@ -233,6 +239,12 @@ gate_vampire.5 = {
 		video = "southamerica_election"
 	}
 
+	trigger = {
+		NOT = {
+			has_variable = gate_vampire_truth
+		}
+	}
+
 	immediate = {
 		set_variable = gate_vampire_truth
 	}
@@ -275,9 +287,12 @@ gate_vampire.5 = {
 		ig:ig_devout ?= {
 			add_modifier = {
 				name = rejected_petition
-				multiplier = 5
+				multiplier = 10
 				months = 24
 				is_decaying = yes
+			}
+			leader ?= {
+				set_ideology = ideology:ideology_gate_vampirism_purge
 			}
 		}
 		add_radicals = {
@@ -285,13 +300,139 @@ gate_vampire.5 = {
 		}
 		add_radicals = {
 			interest_group = ig:ig_devout
-			value = 0.4
+			value = 0.5
 		}
 		change_infamy = 5
 	}
 
 	option = {
 		name = gate_vampire.5.b
-		set_variable = gate_rejected_vampirism
+		show_as_tooltip = {
+			trigger_event = gate_vampire.2
+		}
+		hidden_effect = {
+			set_variable = gate_rejected_vampirism
+		}
+	}
+}
+
+gate_vampire.6 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = capital
+
+	title = gate_vampire.6.t
+	desc = gate_vampire.6.d
+	flavor = gate_vampire.6.f
+
+	event_image = {
+		video = "southamerica_election"
+	}
+
+	trigger = {
+		NOT = {
+			ig:ig_petty_bourgeoisie.leader ?= var:gate_character_vampire
+		}
+	}
+
+	immediate = {
+		var:gate_character_vampire ?= {
+			set_as_interest_group_leader = yes
+			save_scope_as = gate_vampire_leader
+		}
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/event_icons/event_gate_bat.dds
+
+	duration = 3
+
+	option = {
+		name = gate_vampire.6.a
+		default_option = yes
+
+	}
+}
+
+gate_vampire.7 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = capital
+
+	title = gate_vampire.7.t
+	desc = gate_vampire.7.d
+	flavor = gate_vampire.7.f
+
+	event_image = {
+		video = "southamerica_election"
+	}
+
+	trigger = {
+		NOT = {
+			ig:ig_industrialists.leader.culture = cu:vampire
+		}
+	}
+
+	immediate = {
+		ig:ig_industrialists ?= {
+			leader ?= {
+				change_character_culture = cu:vampire
+				set_ideology = ideology:ideology_gate_vampirism_interested
+				save_scope_as = gate_industrialist_leader
+			}
+		}
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/event_icons/event_gate_bat.dds
+
+	duration = 3
+
+	option = {
+		name = gate_vampire.7.a
+		default_option = yes
+	}
+}
+
+gate_vampire.8 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = capital
+
+	title = gate_vampire.8.t
+	desc = gate_vampire.8.d
+	flavor = gate_vampire.8.f
+
+	event_image = {
+		video = "southamerica_election"
+	}
+
+	trigger = {
+		NOT = {
+			ig:ig_landowners.leader.culture = cu:vampire
+		}
+	}
+
+	immediate = {
+		ig:ig_landowners ?= {
+			leader ?= {
+				change_character_culture = cu:vampire
+				set_ideology = ideology:ideology_gate_vampirism
+				save_scope_as = gate_landowner_leader
+			}
+		}
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/event_icons/event_gate_bat.dds
+
+	duration = 3
+
+	option = {
+		name = gate_vampire.8.a
+		default_option = yes
 	}
 }

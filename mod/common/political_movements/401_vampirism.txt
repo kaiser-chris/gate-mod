@@ -19,20 +19,26 @@
 	on_created = {
 		add_movement_enthusiasm_modifier = yes
 		owner ?= {
-			create_character = {
-				template = gate_vampire_ruler_template
-				is_agitator = yes
-				save_scope_as = gate_vampire_leader
-			}
 			if = {
 				limit = {
-					has_variable = gate_vampire_truth
+					NOT = {
+						ig:ig_petty_bourgeoisie.leader ?= var:gate_character_vampire
+					}
 				}
-				scope:gate_vampire_leader ?= {
-					add_trait = ruthless
+				create_character = {
+					template = gate_vampire_ruler_template
+					is_agitator = yes
+					save_scope_as = gate_vampire_leader
+				}
+				if = {
+					limit = {
+						has_variable = gate_vampire_truth
+					}
+					scope:gate_vampire_leader ?= {
+						add_trait = ruthless
+					}
 				}
 			}
-
 		}
 	}
 	
