@@ -218,10 +218,11 @@ types gate_topbar_overwrites {
 
             ### EXTRA INFO
             flowcontainer = {
-                visible = "[And(Not(Or3(
+                visible = "[And(Not(Or4(
                 					InformationPanelBar.IsAnyPanelOpen,
                 					MapListPanelManager.IsVisible,
-                					GetVariableSystem.Exists('com_open_window')
+                					GetVariableSystem.Exists('com_open_window'),
+                					GetVariableSystem.Exists('com_alert_action')
                 				)),
                 				GetMetaPlayer.GetPlayedOrObservedCountry.IsValid
                 			)]"
