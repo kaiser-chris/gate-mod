@@ -19,11 +19,17 @@ gate_vampire.1 = {
 	}
 
 	immediate = {
+		# create_character = {
+		# 	interest_group = ig_petty_bourgeoisie
+		# 	culture = cu:vampire
+		# 	religion = rel:lunar_masquerade
+		# 	ig_leader = yes
+		# }
 		var:gate_character_vampire ?= {
+			free_character_from_void = yes
 			set_home_country = root
 			set_character_as_ruler = yes
 			save_scope_as = gate_vampire_ruler
-			remove_trait = ruthless
 		}
 		heir ?= {
 			disinherit_character = yes
@@ -426,6 +432,7 @@ gate_vampire.7 = {
 				change_character_culture = cu:vampire
 				set_ideology = ideology:ideology_gate_vampirism_interested
 				save_scope_as = gate_industrialist_leader
+				add_trait = gate_vampire
 			}
 		}
 	}
@@ -467,6 +474,7 @@ gate_vampire.8 = {
 				change_character_culture = cu:vampire
 				set_ideology = ideology:ideology_gate_vampirism
 				save_scope_as = gate_landowner_leader
+				add_trait = gate_vampire
 			}
 		}
 	}

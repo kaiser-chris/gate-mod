@@ -27,7 +27,8 @@
             every_scope_character = {
                 limit = {
                     NOT = {
-                        culture = cu:vampire
+                        culture ?= cu:vampire
+                        interest_group ?= ig:ig_devout
                     }
                 }
                 change_character_culture = cu:vampire
