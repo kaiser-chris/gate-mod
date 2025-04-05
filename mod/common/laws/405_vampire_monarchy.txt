@@ -32,6 +32,14 @@
                 }
                 change_character_culture = cu:vampire
                 change_character_religion = rel:lunar_masquerade
+                if = {
+                    limit = {
+                        NOT = {
+                            has_trait = gate_vampire
+                        }
+                    }
+                    add_trait = gate_vampire
+                }
             }
             every_character_in_void = {
                 limit = {
@@ -42,6 +50,14 @@
                 }
                 change_character_culture = cu:vampire
                 change_character_religion = rel:lunar_masquerade
+                if = {
+                    limit = {
+                        NOT = {
+                            has_trait = gate_vampire
+                        }
+                    }
+                    add_trait = gate_vampire
+                }
             }
         }
         custom_tooltip = {
@@ -99,20 +115,60 @@
             if = {
                 limit = {
                     NOT = {
-                        has_ideology = ideology:ideology_gate_vampire_movement
+                        has_ideology = ideology:ideology_gate_vampire_embrace
                     }
                 }
-                add_ideology = ideology_gate_vampire_movement
+                add_ideology = ideology_gate_vampire_surpremacists
+            }
+        }
+        ig:ig_intelligentsia ?= {
+            if = {
+                limit = {
+                    NOT = {
+                        has_ideology = ideology:ideology_gate_vampire_acceptance
+                    }
+                }
+                add_ideology = ideology_gate_vampire_acceptance
+            }
+        }
+        ig:ig_rural_folk ?= {
+            if = {
+                limit = {
+                    NOT = {
+                        has_ideology = ideology:ideology_gate_vampire_acceptance
+                    }
+                }
+                add_ideology = ideology_gate_vampire_acceptance
+            }
+        }
+        ig:ig_trade_unions ?= {
+            if = {
+                limit = {
+                    NOT = {
+                        has_ideology = ideology:ideology_gate_vampire_acceptance
+                    }
+                }
+                add_ideology = ideology_gate_vampire_acceptance
             }
         }
         ig:ig_petty_bourgeoisie ?= {
             if = {
                 limit = {
                     NOT = {
-                        has_ideology = ideology:ideology_gate_vampire_movement
+                        has_ideology = ideology:ideology_gate_vampire_surpremacists
                     }
                 }
-                add_ideology = ideology_gate_vampire_movement
+                add_ideology = ideology_gate_vampire_surpremacists
+            }
+        }
+        ig:ig_landowners ?= {
+            if = {
+                limit = {
+                    NOT = {
+                        has_ideology = ideology:ideology_gate_vampire_surpremacists
+                    }
+                }
+                add_ideology = ideology_gate_vampire_surpremacists
             }
         }
     }

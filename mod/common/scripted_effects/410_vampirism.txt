@@ -1,0 +1,41 @@
+﻿gate_start_vampirism = {
+	random_country = {
+		limit = {
+			is_player = yes
+			is_gate_planet_country = no
+			NOT = {
+				has_variable = gate_rejected_vampirism
+			}
+		}
+		save_temporary_scope_as = player_vampire_target
+	}
+	if = {
+		limit = {
+			exists = scope:player_vampire_target
+		}
+		scope:player_vampire_target ?= {
+			trigger_event = {
+				id = gate_vampire.3
+				months = { 60 120 }
+			}
+		}
+	}
+	else = {
+		random_country = {
+			limit = {
+				is_player = no
+				is_gate_planet_country = no
+				NOT = {
+					has_variable = gate_rejected_vampirism
+				}
+			}
+			save_temporary_scope_as = ai_vampire_target
+		}
+		scope:ai_vampire_target ?= {
+			trigger_event = {
+				id = gate_vampire.3
+				months = { 60 120 }
+			}
+		}
+	}
+}

@@ -5,8 +5,8 @@
  je_gate_vampire_emergence_fail: "We purge the [GetReligion('lunar_masquerade').GetName] sect from out country."
  je_gate_vampire_emergence_complete: "We have embraced [concept_gate_vampirism]."
  je_gate_vampire_emergence_activate: "[SCOPE.sCountry('gate_vampire_country').MakeScope.Var('gate_character_vampire').GetCharacter.GetFullName] has founded the [GetReligion('lunar_masquerade').GetName]."
- je_gate_vampire_emergence_allure: "People yearn for immortality."
- je_gate_vampire_emergence_truth_known: "People know the truth about Vampires."
+ je_gate_vampire_emergence_allure: "People yearn for immortality and flock to the [GetReligion('lunar_masquerade').GetNameNoFormatting]."
+ je_gate_vampire_emergence_truth_known: "People know the truth about Vampires, but some are still interested in the [GetReligion('lunar_masquerade').GetNameNoFormatting]."
 # Flags
  gate_vampire_cult_flag: "Let the [GetReligion('lunar_masquerade').GetNameNoFormatting] begin."
 # Events

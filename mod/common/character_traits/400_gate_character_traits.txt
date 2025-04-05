@@ -51,10 +51,6 @@ gate_magic_researcher = {
     }
 
     weight = 0
-
-    replace = {
-
-    }
 }
 
 gate_eternal_monarch = {
@@ -86,6 +82,38 @@ gate_eternal_monarch = {
     weight = 0
 
     replace = {
+        cancer
+        scarred
+        senile
+        syphilis
+        wounded
+        kidney_stones
+        sickly
+    }
+}
 
+gate_vampire = {
+    type = condition
+
+    texture = gfx/interface/icons/character_trait_icons/imperious.dds
+
+    character_modifier = {
+        character_health_add = 0.5
+    }
+
+    possible = {
+        culture ?= cu:vampire
+    }
+
+    weight = 0
+
+    replace = {
+        cancer
+        scarred
+        senile
+        syphilis
+        wounded
+        kidney_stones
+        sickly
     }
 }

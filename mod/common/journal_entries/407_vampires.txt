@@ -22,6 +22,50 @@
 	}
 
 	on_yearly_pulse = {
+		# Convert 1-2% of pops to vampires every year
+		effect = {
+			if = {
+				limit = {
+					has_variable = gate_vampire_truth
+				}
+				every_scope_pop = {
+					limit = {
+						NOR = {
+							is_pop_type = clergymen
+							is_pop_type = slaves
+						}
+					}
+					change_pop_culture = {
+						target = cu:vampire
+						value = 0.01
+					}
+				}
+			}
+			else = {
+				every_scope_pop = {
+					limit = {
+						NOR = {
+							is_pop_type = clergymen
+							is_pop_type = slaves
+						}
+					}
+					change_pop_culture = {
+						target = cu:vampire
+						value = 0.02
+					}
+				}
+			}
+			every_scope_pop = {
+				limit = {
+					culture = cu:vampire
+				}
+				change_pop_religion = {
+					target = rel:lunar_masquerade
+					value = 1
+				}
+			}
+		}
+		# Trigger vampire events
 		random_events = {
 			chance_of_no_event = 50
 			20 = gate_vampire.5

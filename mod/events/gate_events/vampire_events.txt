@@ -59,6 +59,10 @@ gate_vampire.2 = {
 		video = "middleeast_police_breaking_door"
 	}
 
+	immediate = {
+		gate_start_vampirism = yes
+	}
+
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = gfx/interface/icons/event_icons/event_gate_bat.dds
@@ -210,17 +214,40 @@ gate_vampire.4 = {
 				is_decaying = yes
 			}
 		}
+		trigger = {
+			NOT = {
+				has_law = law_type:law_theocracy
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
 	}
 
 	option = {
 		name = gate_vampire.4.b
-		set_variable = gate_rejected_vampirism
+		hidden_effect = {
+			set_variable = gate_rejected_vampirism
+			gate_start_vampirism = yes
+		}
 		trigger = {
 			OR = {
 				ig:ig_devout ?= {
 					is_powerful = yes
 				}
 				has_law = law_type:law_state_religion
+				has_law = law_type:law_theocracy
+			}
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				trigger = {
+					ig:ig_devout ?= {
+						is_in_government = yes
+					}
+				}
+				add = 100
 			}
 		}
 	}
@@ -303,6 +330,14 @@ gate_vampire.5 = {
 			value = 0.5
 		}
 		change_infamy = 5
+		trigger = {
+			NOT = {
+				has_law = law_type:law_theocracy
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
 	}
 
 	option = {
@@ -312,6 +347,17 @@ gate_vampire.5 = {
 		}
 		hidden_effect = {
 			set_variable = gate_rejected_vampirism
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				trigger = {
+					ig:ig_devout ?= {
+						is_in_government = yes
+					}
+				}
+				add = 100
+			}
 		}
 	}
 }
