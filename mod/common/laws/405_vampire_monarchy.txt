@@ -28,7 +28,9 @@
                 limit = {
                     NOT = {
                         culture ?= cu:vampire
-                        interest_group ?= ig:ig_devout
+                        interest_group = {
+                            is_interest_group_type = ig_devout
+                        }
                     }
                 }
                 change_character_culture = cu:vampire
