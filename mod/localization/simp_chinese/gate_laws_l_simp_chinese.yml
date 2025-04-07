@@ -1,48 +1,42 @@
 ﻿l_simp_chinese:
-# Orcish Hegemony
- lawgroup_orcish_hegemony: "$orcish$ Hegemony"
- lawgroup_orcish_hegemony_desc: "The $lawgroup_orcish_hegemony$ is a brutal and unyielding system, where power and hierarchy defined every aspect of life. To the orcs, domination is not just a right but a creed, and all non-orcs are enslaved, stripped of identity and freedom, bound to serve their green-skinned masters. Yet even among the orcs, life is no simple matter of strength; they are stratified by profession, each role tightly controlled."
- law_orcish_hegemony_enforced: "Enforced Hegemony"
- law_orcish_hegemony_enforced_desc: "The social hegemony of $orcish$ [concept_culture] is enforced."
- law_orcish_hegemony_not_enforced: "Hegemony Not Enforced"
- law_orcish_hegemony_not_enforced_desc: "The social hegemony of $orcish$ [concept_culture] is not enforced and other cultures can enter our society."
-# Elven Supremacy
- lawgroup_elven_supremacy: "$elven$ Supremacy"
- lawgroup_elven_supremacy_desc: "Elven Supremacy enforces a rigid societal order where elves hold an unassailable monopoly on power, prestige, and magic. Other races are woven into the fabric of society but confined to lower echelons, barred from positions such as clergymen, aristocrats, or practitioners of magic. This system, rooted in the belief of elven inherent superiority, ensures the dominance of elves while exploiting the labor and skills of others."
- law_elven_supremacy_religious_preaching: "Religious Preaching of Supremacy"
- law_elven_supremacy_religious_preaching_desc: "$elven$ Supremacy is enforced through religious teachings."
- law_elven_supremacy_enforced: "Enforced Supremacy"
- law_elven_supremacy_enforced_desc: "$elven$ Supremacy is enforced by the state."
- law_elven_supremacy_not_enforced: "Supremacy Not Enforced"
- law_elven_supremacy_not_enforced_desc: "$elven$ Supremacy is not enforced."
-# New Samadore
- law_gnomish_harmony: "Gnomish Harmony"
- law_gnomish_harmony_desc: "Inspired by the gnomes’ talent for fostering unity amid diversity, this citizenship law embraces multiculturalism as a cornerstone of society. All religions and cultures are welcomed and integrated, creating a vibrant tapestry of traditions. In the spirit of cooperation and mutual respect, Gnomish Harmony turns differences into strengths, ensuring every voice finds its place in the chorus of the nation."
- EFFECTS_ON_ACCEPTANCE_law_gnomish_harmony: "#tooltippable #tooltip:$BREAKDOWN_TAG$ Pops will lead similar lives with only few negative consequences, even when they aren't as accepted#!#!"
- law_gnomish_integration: "Gnomish Integration"
- law_gnomish_integration_desc: "Rooted in respect and collaboration, Gnomish Integration eschews conquest for connection. This colonial policy emphasizes the voluntary inclusion of other cultures into the nation through dialogue, shared prosperity, and mutual respect. By prioritizing integration over domination, this approach seeks to build lasting bonds, turning colonies into thriving partners rather than subjugated lands. Though not without its complexities, Gnomish Integration represents a vision of colonization driven by harmony and shared growth."
-# Monster Hunting
- lawgroup_monster_hunting: "Monster Hunting"
- lawgroup_monster_hunting_desc: "The system of monster hunting to prevent [Concept('concept_monster_attack','$concept_monster_attacks$')]."
- law_no_organized_monster_hunting: "No Organized Monster Hunting"
- law_no_organized_monster_hunting_desc: "This country has no organized force hunting for monsters and [Concept('concept_monster_attack','$concept_monster_attacks$')] will occur frequently."
- law_private_monster_hunters: "Private Monster Hunters"
- law_private_monster_hunters_desc: "This country licenses and pays private individuals or companies to kill monsters."
- law_dedicated_monster_hunters: "Dedicated Monster Hunters"
- law_dedicated_monster_hunters_desc: "This country has a dedicated monster hunters with standardized training."
- law_militarized_monster_hunters: "Militarized Monster Hunters"
- law_militarized_monster_hunters_desc: "By giving your monster hunters military equipment and military training, their effectiveness at carrying out their job increases."
-# Arcane Touched in Society
- lawgroup_magic_users: "Arcane Touched in Society"
- lawgroup_magic_users_desc: "How do we treat [concept_gate_magic_users] in our society."
- law_free_magic_users: "Free Arcane Touched"
- law_free_magic_users_desc: "This country treats [concept_gate_magic_users] like any other citizen."
- law_registered_magic_users: "Registered Arcane Touched"
- law_registered_magic_users_desc: "This law makes [concept_gate_magic_users] register with the government else their use of magic is considered illegal."
- law_restricted_magic_users: "Restricted Arcane Touched"
- law_restricted_magic_users_desc: "This country threats [concept_gate_magic_users] as second class citizens and usage of magic outside of their jobs is considered illegal."
- law_noble_magic_users: "Noble Arcane Touched"
- law_noble_magic_users_desc: "This country threats [concept_gate_magic_users] as natural born nobels and offers them more rights than their average citizens."
-# Vampirism
- law_gate_vampire_monarchy: "Eternal Monarchy"
- law_gate_vampire_monarchy_desc: "This country has embraced [concept_gate_vampirism] and its monarch is considered eternal."
+ EFFECTS_ON_ACCEPTANCE_law_gnomish_harmony: "#tooltippable #tooltip:$BREAKDOWN_TAG$ 持久性有机污染物会过着类似的生活，只有很少的负面影响，即使他们没有被接受#!#!" #deepl:1866093259
+ law_dedicated_monster_hunters: "专职怪物猎人" #deepl:2050591764
+ law_dedicated_monster_hunters_desc: "这个国家有专门的怪物猎人，他们接受过标准化的训练。" #deepl:2199958638
+ law_elven_supremacy_enforced: "强制至上" #deepl:1349776134
+ law_elven_supremacy_enforced_desc: "$elven$ 至高无上的地位由国家强制执行。" #deepl:3453300682
+ law_elven_supremacy_not_enforced: "未执行至上原则" #deepl:217014304
+ law_elven_supremacy_not_enforced_desc: "$elven$ 至高无上的权利没有得到执行。" #deepl:3995791709
+ law_elven_supremacy_religious_preaching: "宣扬至高无上的宗教" #deepl:383053274
+ law_elven_supremacy_religious_preaching_desc: "$elven$ 至高无上的地位是通过宗教教义来实现的。" #deepl:2766855590
+ law_free_magic_users: "免费的 "奥术感动" #deepl:1578628553
+ law_free_magic_users_desc: "这个国家对待[concept_gate_magic_users] 与对待其他公民一样。" #deepl:32583836
+ law_gate_vampire_monarchy: "永恒的君主制" #deepl:587188793
+ law_gate_vampire_monarchy_desc: "这个国家接受[concept_gate_vampirism] ，其君主被认为是永恒的。" #deepl:1675059292
+ law_gnomish_harmony: "侏儒的和谐" #deepl:3764768338
+ law_gnomish_harmony_desc: "受侏儒在多样性中促进团结的天赋启发，这部公民法将多元文化作为社会的基石。所有宗教和文化都受到欢迎和融合，形成了一个充满活力的传统织锦。本着合作与相互尊重的精神，侏儒和谐将差异转化为力量，确保每个人都能在国家的大合唱中找到自己的位置。" #deepl:4062861475
+ law_gnomish_integration: "糯米一体化" #deepl:690380960
+ law_gnomish_integration_desc: "根植于尊重与合作，糯米人的融合摒弃了征服，转而追求联系。这种殖民政策强调通过对话、共同繁荣和相互尊重，让其他文化自愿融入国家。通过优先考虑融合而不是统治，这种方法寻求建立持久的联系，将殖民地变成繁荣的合作伙伴而不是被征服的土地。糯米人融合 "并非没有复杂性，但它代表了一种以和谐与共同发展为动力的殖民愿景。" #deepl:2047348424
+ law_militarized_monster_hunters: "军事化的怪物猎人" #deepl:976492007
+ law_militarized_monster_hunters_desc: "为怪物猎人提供军事装备和军事训练，可以提高他们执行任务的效率。" #deepl:1743703329
+ law_no_organized_monster_hunting: "没有有组织的怪物狩猎活动" #deepl:3363287864
+ law_no_organized_monster_hunting_desc: "这个国家没有有组织的力量来猎杀怪物，[Concept('concept_monster_attack','$concept_monster_attacks$')] 。" #deepl:2235162294
+ law_noble_magic_users: "高贵的奥术感动" #deepl:1184807664
+ law_noble_magic_users_desc: "这个国家将[concept_gate_magic_users] 视为天生的贵族，并为他们提供比普通公民更多的权利。" #deepl:3650339933
+ law_orcish_hegemony_enforced: "强制霸权" #deepl:891062246
+ law_orcish_hegemony_enforced_desc: "$orcish$ [concept_culture] 的社会霸权得以实施。" #deepl:2235038345
+ law_orcish_hegemony_not_enforced: "霸权未得到执行" #deepl:3415917689
+ law_orcish_hegemony_not_enforced_desc: "$orcish$ [concept_culture] 的社会霸权并没有强制执行，其他文化也可以进入我们的社会。" #deepl:173048060
+ law_private_monster_hunters: "私人怪物猎人" #deepl:4183403945
+ law_private_monster_hunters_desc: "这个国家授权并付钱给私人或公司去杀死怪物。" #deepl:1513633388
+ law_registered_magic_users: "已登记的 "奥术感动" #deepl:1068430729
+ law_registered_magic_users_desc: "这项法律要求[concept_gate_magic_users] 向政府登记，否则他们使用魔法将被视为非法。" #deepl:3339319522
+ law_restricted_magic_users: "受限奥术触碰" #deepl:3898638927
+ law_restricted_magic_users_desc: "这个国家威胁[concept_gate_magic_users] 为二等公民，在工作之外使用魔法被视为非法。" #deepl:3496678298
+ lawgroup_elven_supremacy: "$elven$ 至高无上" #deepl:3321457681
+ lawgroup_elven_supremacy_desc: "精灵至高无上的地位强制推行一种严格的社会秩序，在这种秩序中，精灵在权力、声望和魔法方面拥有不可动摇的垄断地位。其他种族被纳入社会结构，但被限制在较低层次，不得担任牧师、贵族或魔法师等职位。这种制度植根于精灵与生俱来的优越感，确保了精灵的统治地位，同时也剥削了其他种族的劳动和技能。" #deepl:4168647767
+ lawgroup_magic_users: "社会中的奥术触觉" #deepl:1482932589
+ lawgroup_magic_users_desc: "在我们的社会中，我们如何对待[concept_gate_magic_users] 。" #deepl:1399958968
+ lawgroup_monster_hunting: "怪物狩猎" #deepl:976278123
+ lawgroup_monster_hunting_desc: "防止怪物狩猎系统[Concept('concept_monster_attack','$concept_monster_attacks$')]." #deepl:1743280833
+ lawgroup_orcish_hegemony: "$orcish$ 霸权" #deepl:326626184
+ lawgroup_orcish_hegemony_desc: "$lawgroup_orcish_hegemony$ 是一个残酷无情的体系，权力和等级制度决定了生活的方方面面。对兽人来说，统治不仅是一种权利，更是一种信条，所有非兽人都是奴隶，被剥夺了身份和自由，必须为绿皮肤的主人服务。然而，即使在兽人中，生活也不是简单的实力问题；他们按职业分层，每个角色都受到严格控制。" #deepl:3175376002

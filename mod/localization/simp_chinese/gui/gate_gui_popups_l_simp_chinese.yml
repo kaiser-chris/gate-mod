@@ -1,14 +1,12 @@
 ﻿l_simp_chinese:
-# Missing Dependencies
- gg_missing_dependency_header: "There are missing Mods"
- gg_missing_dependency_body: "#bold Manaflow: Ankaris Arrival#! requires the following Mods to work:\n   - $gg_dependency_cmf$\n\nPlease download them either on their Steam or the GitHub Page.\n\nIf you can't find any of them, please look into the description of #bold Manaflow: Ankaris Arrival#! on the Steam Workshop. There will be a link for both the Steam and GitHub version."
- gg_missing_dependency_tooltip: "We are sorry, but you #n have to#! download all Mods to play."
- gg_missing_dependency_good: "@green_checkmark!"
- gg_missing_dependency_bad: "@red_cross!"
- gg_missing_dependency_mod_installed: "This Mod is installed and loaded!"
- gg_missing_dependency_mod_missing: "This Mod is missing!"
- gg_missing_dependency_good_tooltip: "#tooltippable #tooltip:gg_missing_dependency_mod_installed "
- gg_missing_dependency_bad_tooltip: "#tooltippable #tooltip:gg_missing_dependency_mod_missing "
- gg_dependency_cmf: "[SelectLocalization(GetScriptedGui('gate_dependency_cmf').IsValid(GuiScope.End), 'gg_missing_dependency_good_tooltip', 'gg_missing_dependency_bad_tooltip')]Community Mod Framework [SelectLocalization(GetScriptedGui('gate_dependency_cmf').IsValid(GuiScope.End), 'gg_missing_dependency_good', 'gg_missing_dependency_bad')]#!#!"
- gg_dependency_wgf: "[SelectLocalization(GetScriptedGui('gate_dependency_wgf').IsValid(GuiScope.End), 'gg_missing_dependency_good_tooltip', 'gg_missing_dependency_bad_tooltip')]War Goal Framework [SelectLocalization(GetScriptedGui('gate_dependency_wgf').IsValid(GuiScope.End), 'gg_missing_dependency_good', 'gg_missing_dependency_bad')]#!#!"
-
+ gg_dependency_cmf: "[SelectLocalization(GetScriptedGui('gate_dependency_cmf').IsValid(GuiScope.End), 'gg_missing_dependency_good_tooltip', 'gg_missing_dependency_bad_tooltip')]社区模式框架[SelectLocalization(GetScriptedGui('gate_dependency_cmf').IsValid(GuiScope.End), 'gg_missing_dependency_good', 'gg_missing_dependency_bad')]#!#!" #deepl:1639990124
+ gg_dependency_wgf: "[SelectLocalization(GetScriptedGui('gate_dependency_wgf').IsValid(GuiScope.End), 'gg_missing_dependency_good_tooltip', 'gg_missing_dependency_bad_tooltip')]战争目标框架[SelectLocalization(GetScriptedGui('gate_dependency_wgf').IsValid(GuiScope.End), 'gg_missing_dependency_good', 'gg_missing_dependency_bad')]#!#!" #deepl:2342607885
+ gg_missing_dependency_bad: "@red_cross!" #deepl:624267138
+ gg_missing_dependency_bad_tooltip: "#tooltippable #tooltip:gg_missing_dependency_mod_missing " #deepl:2315780110
+ gg_missing_dependency_body: "#bold Manaflow：Ankaris Arrival#! 需要以下 Mods 才能运行：\n -$gg_dependency_cmf$\n/n请在 Steam 或 GitHub 页面上下载它们。\n/n如果您找不到其中任何一个，请查看#bold Manaflow 的说明：Ankaris Arrival#! 的描述。Steam 和 GitHub 版本都会有一个链接。" #deepl:4283818505
+ gg_missing_dependency_good: "@green_checkmark!" #deepl:2911936338
+ gg_missing_dependency_good_tooltip: "#tooltippable #tooltip:gg_missing_dependency_mod_installed " #deepl:426814544
+ gg_missing_dependency_header: "缺少模块" #deepl:3383449814
+ gg_missing_dependency_mod_installed: "此模块已安装并加载!" #deepl:4202840492
+ gg_missing_dependency_mod_missing: "此模块丢失!" #deepl:849260326
+ gg_missing_dependency_tooltip: "我们很抱歉，但您#n 必须#! 下载所有 Mod 才能进行游戏。" #deepl:2895244609

@@ -1,33 +1,31 @@
 ﻿l_simp_chinese:
-# Button
- gate_button_technology: "gate_button_technology"
- gate_button_technology_desc: "$gg_panel_technology_title$"
- gate_button_technology_tooltip: "#header $gg_panel_technology_title$#!\n[SelectLocalization(GetPlayer.MakeScope.Var('magic_research').IsSet, 'gate_button_technology_magic_research', 'gate_button_technology_no_research')]\nShortcut: #V Magic Technology#! (#V CTRL + T#!)"
- gate_button_technology_magic_research: "We are currently researching [GetPlayer.MakeScope.Var('magic_research').GetTechnology.GetName]."
- gate_button_technology_no_research: "We are currently not researching any [concept_magic_technology]."
-# Technology Panel
- gg_panel_technology_action: "Magic Technology Panel"
- gg_panel_technology_title: "Magic Technology"
- gg_header_magic_innovation: "Magic Innovation"
- gg_magic_innovation_total: "Currently banked [concept_magic_innovation]: #v @magic_innovation![GetPlayer.MakeScope.Var('magic_innovation').GetValue|0] / [GetGlobalVariable('magic_innovation_bank_max').GetValue|0]#!"
- gg_tab_technology_researcher: "Researcher"
- gg_header_magic_researcher: "Magic Researcher"
- gg_technology_no_researcher: "No Current Magic Researcher"
- gg_technology_no_researcher_blink: "#BOLD Hire a New Researcher#!"
- gg_header_active_research: "Active Magic Research"
- gg_technology_in_research: "@green_checkmark! #bold This Technology has already been researched#!"
- gg_monthly_magic_innovation: "We are generating #tooltippable #tooltip:gg_monthly_magic_innovation_tooltip @magic_innovation!$gg_monthly_magic_innovation_value$#!#! [concept_magic_innovation] each month."
- gg_monthly_magic_innovation_value: "[Multiply_CFixedPoint(Country.AccessModifier.GetBreakdownFor('country_gate_magical_innovation_add').GetRawValue, Add_CFixedPoint(Country.AccessModifier.GetBreakdownFor('country_gate_magical_innovation_mult').GetRawValue, '(CFixedPoint)1'))|+=]"
- gg_monthly_magic_innovation_tooltip: "#header [concept_magic_innovation]#!\nWe are generating $gg_monthly_magic_innovation_value$ [concept_magic_innovation] each month:\n[Country.AccessModifier.GetBreakdownFor('country_gate_magical_innovation_add').GetBreakdown]\n\nWith a multiplier of [Country.AccessModifier.GetValueWithBreakdownFor('country_gate_magical_innovation_mult')]"
- gg_magic_innovation_warning_calc: "Any [concept_magic_innovation] we are not using will be #v lost#!."
- gg_header_research_list_production_open: "Open Production Research"
- gg_header_research_list_military_open: "Open Military Research"
- gg_header_research_list_society_open: "Open Society Research"
- gg_header_research_list_done: "Already Researched"
- gg_execute_magic_research: "Magic Research"
- gg_execute_magic_research_text: "Are you sure you want to research this technology?"
- gg_magic_technology_tooltip_cost: "#title Cost:#! @magic_innovation! "
- gg_magic_technology_tooltip_duration: " Magical Innovation."
- gg_magic_technology_tooltip_ahead: "#r This technology is ahead of your current technology level#!"
- gg_magic_technology_tooltip_requirements_label: "Requirements"
- gg_magic_technology_tooltip_requirements_done: "#darker_white #italic You have researched all required technologies#!#!"
+ gate_button_technology: "网关按钮技术" #deepl:2083682236
+ gate_button_technology_desc: "$gg_panel_technology_title$" #deepl:2841196262
+ gate_button_technology_magic_research: "我们目前正在研究[GetPlayer.MakeScope.Var('magic_research').GetTechnology.GetName] 。" #deepl:763795740
+ gate_button_technology_no_research: "我们目前没有研究任何[concept_magic_technology] 。" #deepl:574586928
+ gate_button_technology_tooltip: "#header $gg_panel_technology_title$#!\n[SelectLocalization(GetPlayer.MakeScope.Var('magic_research').IsSet, 'gate_button_technology_magic_research', 'gate_button_technology_no_research')]\nShortcut：#V 魔术技术#! (#V CTRL + T#!)" #deepl:635050924
+ gg_execute_magic_research: "魔法研究" #deepl:1221300167
+ gg_execute_magic_research_text: "你确定要研究这项技术吗？" #deepl:3952370387
+ gg_header_active_research: "积极的魔法研究" #deepl:2430806466
+ gg_header_magic_innovation: "魔法创新" #deepl:2673158403
+ gg_header_magic_researcher: "魔法研究员" #deepl:2227864323
+ gg_header_research_list_done: "已研究" #deepl:2967120475
+ gg_header_research_list_military_open: "开放式军事研究" #deepl:963767225
+ gg_header_research_list_production_open: "开放式生产研究" #deepl:2357955026
+ gg_header_research_list_society_open: "开放社会研究" #deepl:1487542627
+ gg_magic_innovation_total: "目前已存入[concept_magic_innovation] ：#v @magic_innovation![GetPlayer.MakeScope.Var('magic_innovation').GetValue|0] /[GetGlobalVariable('magic_innovation_bank_max').GetValue|0]#!" #deepl:3971030187
+ gg_magic_innovation_warning_calc: "我们没有使用的[concept_magic_innovation] 将被#v 丢失#! 。" #deepl:2904895195
+ gg_magic_technology_tooltip_ahead: "#r 该技术领先于您当前的技术水平#!" #deepl:4088020872
+ gg_magic_technology_tooltip_cost: "#title 成本：#! @magic_innovation! " #deepl:1731674150
+ gg_magic_technology_tooltip_duration: "神奇的创新" #deepl:2860200797
+ gg_magic_technology_tooltip_requirements_done: "#darker_white #italic 您已经研究了所有必要的技术#!#!" #deepl:1598640078
+ gg_magic_technology_tooltip_requirements_label: "要求" #deepl:613501034
+ gg_monthly_magic_innovation: "我们每月生成#tooltippable #tooltip:gg_monthly_magic_innovation_tooltip @magic_innovation!$gg_monthly_magic_innovation_value$#! #! [concept_magic_innovation] 。" #deepl:2159595007
+ gg_monthly_magic_innovation_tooltip: "#header [concept_magic_innovation]#!\n 我们每月产生$gg_monthly_magic_innovation_value$ [concept_magic_innovation] ：[Country.AccessModifier.GetBreakdownFor('country_gate_magical_innovation_add').GetBreakdown]\n \n乘数为[Country.AccessModifier.GetValueWithBreakdownFor('country_gate_magical_innovation_mult')]" #deepl:1034299495
+ gg_monthly_magic_innovation_value: "[Multiply_CFixedPoint(Country.AccessModifier.GetBreakdownFor('country_gate_magical_innovation_add').GetRawValue, Add_CFixedPoint(Country.AccessModifier.GetBreakdownFor('country_gate_magical_innovation_mult').GetRawValue, '(CFixedPoint)1'))|+=]" #deepl:4066877224
+ gg_panel_technology_action: "魔术技术小组" #deepl:1895263503
+ gg_panel_technology_title: "魔术技术" #deepl:2743819916
+ gg_tab_technology_researcher: "研究员" #deepl:2640845178
+ gg_technology_in_research: "@green_checkmark!#bold 该技术已被研究#!" #deepl:3777344079
+ gg_technology_no_researcher: "没有现任魔术研究员" #deepl:2543811700
+ gg_technology_no_researcher_blink: "#BOLD 聘请新研究员#!" #deepl:2759089566

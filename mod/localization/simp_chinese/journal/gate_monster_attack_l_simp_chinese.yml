@@ -1,47 +1,44 @@
 ﻿l_simp_chinese:
-# Monster Congress
- je_monster_congress: "National Congress on Monsters"
- je_monster_congress_custom_goal: "The Congress has concluded."
- je_monster_congress_reason: "The grand hall buzzed with tension as the National Congress on Monsters convened, bringing together politicians, researchers, and military leaders under one roof. Charts filled the walls, displaying the devastation of past attacks. Researchers spoke urgently of patterns and anomalies in monster behavior, their voices laced with unease. Military commanders outlined new strategies, their plans bristling with firepower and precision. Politicians argued fiercely, torn between allocating resources for defense and investing in research to uncover the root cause."
- je_monster_congress_in_progress: "The Congress is in progress."
- je_monster_congress_not_started: "The Congress has not started."
- je_monster_congress_button_start: "Start Congress"
- je_monster_congress_button_start_desc: "Starts our Congress on how to handle future monster attacks."
- je_monster_congress_button_start_block_started: "The Congress has not started."
- je_monster_congress_button_start_effect: "Starts the Congress."
- pb_monster_congress_name: "Congress Progress"
- pb_monster_congress_desc: "Progress: #v [Multiply_float(JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self), '(float)6')|0]#! of 6 months"
- pb_monster_congress_block: "the Congress has not Started"
- pb_monster_congress_progress: "the Congress is in Progress"
-# Modifiers
- monster_horde_cost_modifier: "Monster Horde Help"
- monster_congress_modifier: "Monster Congress in Progress"
-# Events
- gate_monster_attack.1.t: "A Horde of Monsters"
- gate_monster_attack.1.d: "A horde of Monsters spawned form the rising [concept_mana_density] in [SCOPE.sState('monster_horde_state').GetName]."
- gate_monster_attack.1.f: "As mana seeped into the earth, it unleashed a torrent of ancient, forgotten horrors. From the cracks in the ground, a horde of monstrous creatures erupted, their eyes glowing with the wild, untamed energy of the arcane."
- gate_monster_attack.1.a1: "We shall help with all we have."
- gate_monster_attack.1.b1: "Send help and researchers."
- gate_monster_attack.1.c1: "There is nothing we can do."
- gate_monster_attack.1.a2: "We shall help with all we have."
- gate_monster_attack.1.b2: "Send help and researchers."
- gate_monster_attack.1.c2: "There is nothing we can do."
- gate_monster_attack.2.t: "The Army was Victorious"
- gate_monster_attack.2.d: "Our army defended our civilians with minimal casualties."
- gate_monster_attack.2.f: "As the beasts descended upon the countryside, chaos erupted in the villages. Yet, amidst the panic, the army held their ground. Soldiers in splendid uniforms and polished boots formed disciplined lines, muskets at the ready. Cannons roared, their thunder shaking the earth as grapeshot tore into the monstrous horde. Bayonets gleamed in the torchlight as cavalry swept in, sabers flashing against the night."
- gate_monster_attack.2.a: "Congratulate them."
- gate_monster_attack.2.b: "Investigate the Aftermath."
- gate_monster_attack.3.t: "Civilians defended Themself"
- gate_monster_attack.3.d: "Local civilians were forced to defend themself, which lead to major casualties and destruction."
- gate_monster_attack.3.f: "The monsters came as the civilians had long feared, tearing through homes and fields under a blood-red sky. Their pleas for protection had been dismissed, their warnings ignored. Left to their own devices, they fought back with whatever they could muster—makeshift barricades, hunting rifles, torches, and sheer desperation. The battle was chaotic and grim, courage born from necessity as they stood against the beasts. Though some managed to fell the creatures with fire and steel, the cost was staggering. Entire towns were left in ruins, and countless lives were lost."
- gate_monster_attack.3.a: "Devastating."
- gate_monster_attack.4.t: "Congress on Monsters has Concluded"
- gate_monster_attack.4.d: "We can now enact laws in the [concept_law_group] [GetLawGroup('lawgroup_monster_hunting').GetName]."
- gate_monster_attack.4.f: "The debates at the National Congress on Monsters grew more heated as the hours passed, each faction vying for their vision of survival. Researchers called for deeper understanding, urging caution and investment in studying the monsters’ origins and weaknesses. The military demanded immediate action, proposing preemptive strikes and bolstered defenses, while politicians struggled to balance these strategies with the needs of a shaken populace."
- gate_monster_attack.4.a: "Good now we can combat this Problem."
- gate_monster_attack.5.t: "Monsters Attack"
- gate_monster_attack.5.d: "Monsters attack our civilians."
- gate_monster_attack.5.f: "As mana seeped into the earth, it unleashed a torrent of ancient, forgotten horrors. From the cracks in the ground, a horde of monstrous creatures erupted, their eyes glowing with the wild, untamed energy of the arcane."
- gate_monster_attack.5.a1: "Thankfully we have monster hunters."
- gate_monster_attack.5.a2: "We should setup a system for monster hunting."
- gate_monster_attack.5.b1: "Send some Researchers."
+ gate_monster_attack.1.a1: "我们将竭尽全力提供帮助。" #deepl:2444909786
+ gate_monster_attack.1.a2: "我们将竭尽全力提供帮助。" #deepl:2444909786
+ gate_monster_attack.1.b1: "派出帮助和研究人员。" #deepl:2865930560
+ gate_monster_attack.1.b2: "派出帮助和研究人员。" #deepl:2865930560
+ gate_monster_attack.1.c1: "我们无能为力。" #deepl:3092756725
+ gate_monster_attack.1.c2: "我们无能为力。" #deepl:3092756725
+ gate_monster_attack.1.d: "在[SCOPE.sState('monster_horde_state').GetName] 中，一群怪物从不断上升的[concept_mana_density] 中诞生。" #deepl:1683511959
+ gate_monster_attack.1.f: "当法力渗入大地时，它释放出一股古老而被遗忘的恐怖洪流。从地面的裂缝中，爆发出一大群怪物，它们的眼睛闪烁着狂野、桀骜不驯的奥术能量。" #deepl:1712104880
+ gate_monster_attack.1.t: "怪物部落" #deepl:1619751511
+ gate_monster_attack.2.a: "祝贺他们" #deepl:2963281742
+ gate_monster_attack.2.b: "事后调查" #deepl:3994044051
+ gate_monster_attack.2.d: "我们的军队以最小的伤亡保卫了我们的平民。" #deepl:251075387
+ gate_monster_attack.2.f: "当野兽降临乡村时，村庄里一片混乱。然而，在恐慌中，军队坚守阵地。士兵们身着华丽的军服，脚蹬锃亮的军靴，排成纪律严明的队列，火枪随时待命。大炮轰鸣，雷声震撼大地，霰弹射向骇人的部落。刺刀在火炬的照耀下熠熠生辉，骑兵席卷而来，马刀在夜色中闪闪发光。" #deepl:15543450
+ gate_monster_attack.2.t: "军队取得胜利" #deepl:3364591548
+ gate_monster_attack.3.a: "毁灭性。" #deepl:3482830678
+ gate_monster_attack.3.d: "当地平民被迫自卫，导致重大伤亡和破坏。" #deepl:1131330730
+ gate_monster_attack.3.f: "怪物的到来正如平民们长期以来所担心的那样，在血红的天空下肆虐着家园和田野。他们的保护请求被置之不理，他们的警告被置若罔闻。他们只能靠自己的力量，用一切可以利用的东西进行反击--临时搭建的路障、猎枪、火把，以及纯粹的绝望。战斗是混乱而残酷的，当他们站在野兽面前时，勇气源于需要。虽然有些人成功地用火焰和钢铁击倒了野兽，但付出的代价也是惊人的。整个城镇成为废墟，无数人丧生。" #deepl:460135206
+ gate_monster_attack.3.t: "平民自卫" #deepl:2552214085
+ gate_monster_attack.4.a: "现在好了，我们可以解决这个问题了。" #deepl:3568559336
+ gate_monster_attack.4.d: "我们现在可以在[concept_law_group] [GetLawGroup('lawgroup_monster_hunting').GetName] 上制定法律。" #deepl:3732234904
+ gate_monster_attack.4.f: "随着时间的推移，全国怪物大会上的辩论越来越激烈，每个派别都在争夺自己的生存空间。研究人员呼吁加深了解，敦促谨慎行事，并投资研究怪兽的起源和弱点。军方要求立即采取行动，提出先发制人的打击和加强防御的建议，而政治家们则努力在这些战略与动荡的民众需求之间取得平衡。" #deepl:2538625397
+ gate_monster_attack.4.t: "怪兽大会闭幕" #deepl:4132548999
+ gate_monster_attack.5.a1: "幸好我们有怪物猎人。" #deepl:815690023
+ gate_monster_attack.5.a2: "我们应该建立一个怪物狩猎系统。" #deepl:2660456345
+ gate_monster_attack.5.b1: "派一些研究人员去" #deepl:2373657228
+ gate_monster_attack.5.d: "怪物袭击我们的平民。" #deepl:452892113
+ gate_monster_attack.5.f: "当法力渗入大地时，它释放出一股古老而被遗忘的恐怖洪流。从地面的裂缝中，爆发出一大群怪物，它们的眼睛闪烁着狂野、桀骜不驯的奥术能量。" #deepl:1712104880
+ gate_monster_attack.5.t: "怪物来袭" #deepl:1830028971
+ je_monster_congress: "全国怪兽大会" #deepl:1976123507
+ je_monster_congress_button_start: "启动国会" #deepl:3169281530
+ je_monster_congress_button_start_block_started: "大会尚未开始。" #deepl:3048554545
+ je_monster_congress_button_start_desc: "让我们的国会开始研究如何应对未来的怪物袭击。" #deepl:1604072552
+ je_monster_congress_button_start_effect: "开始大会。" #deepl:1253112261
+ je_monster_congress_custom_goal: "大会已经结束。" #deepl:1613369695
+ je_monster_congress_in_progress: "大会正在进行中。" #deepl:878801234
+ je_monster_congress_not_started: "大会尚未开始。" #deepl:3048554545
+ je_monster_congress_reason: "随着全国怪物大会的召开，政界人士、研究人员和军事领导人齐聚一堂，大礼堂里热闹非凡。墙上挂满了图表，展示着过去袭击造成的破坏。研究人员急切地谈论着怪物行为的模式和反常现象，他们的声音中夹杂着不安。军事指挥官们概述了新的战略，他们的计划充满火力和精确性。政治家们激烈地争论着，在分配资源用于防御和投资研究以找出根源之间纠结不已。" #deepl:1168039375
+ monster_congress_modifier: "怪物大会进行时" #deepl:4122085941
+ monster_horde_cost_modifier: "怪物部落帮助" #deepl:4278962805
+ pb_monster_congress_block: "国会没有开始" #deepl:1703468592
+ pb_monster_congress_desc: "进展情况：#v [Multiply_float(JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self), '(float)6')|0] #! of 6 months" #deepl:3179089928
+ pb_monster_congress_name: "国会进展" #deepl:2342159062
+ pb_monster_congress_progress: "大会正在进行中" #deepl:2430811871

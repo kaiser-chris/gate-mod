@@ -1,31 +1,31 @@
 ﻿l_simp_chinese:
- je_mana_saturation: "Global Mana Saturation"
- je_mana_saturation_goal: "[concept_mana_saturation] has reached its maximum"
- je_mana_saturation_reason: "As the veil between realms thins, mana begins to seep into our world, its presence growing stronger with each passing day. The air hums with newfound energy, and the very fabric of reality seems to shimmer with potential. This steady influx of mana promises to reshape our understanding of magic and power, heralding an era of unprecedented change and opportunity."
- je_mana_saturation_low_progress: "Average [concept_mana_density] around the world is low."
- je_mana_saturation_medium_progress: "Average [concept_mana_density] around the world is getting higher."
- je_mana_saturation_high_progress: "Average [concept_mana_density] around the world is high."
- je_mana_saturation_button_slave_ritual: "Sacrifice Slaves"
- je_mana_saturation_button_slave_ritual_desc: "Sacrifice [GetPopType('slaves').GetName] to increase [concept_mana_density] in one of our states."
- je_mana_saturation_button_slave_ritual_infamy: "Infamy of [SCOPE.sCountry('loc_country_scope').GetName] is less than 100."
- je_mana_saturation_button_slave_ritual_mana_density: "[concept_mana_density] of one of our states is less than 100%."
- je_mana_saturation_button_slave_ritual_cooldown: "Has not executed a slave ritual for one year"
- gate_mana_saturation_buildings_progress_bar_balance: "$mana$ usage in buildings"
- gate_mana_saturation_mages_progress_bar_balance: "[GetPopType('mages').GetName]"
- gate_mana_saturation_ritual_progress_bar_balance: "Rituals"
- gate_mana_saturation.1.t: "A World of Magic"
- gate_mana_saturation.1.d: "[concept_mana_saturation] has reached its maximum."
- gate_mana_saturation.1.f: "The world now thrums with a constant, low vibration, the air thick with the shimmer of unseen forces. Every stone, every leaf, every breath hums with the raw, pulsing energy of mana. The oceans glow with an eerie light, and the sky dances with colors never before seen by human eyes. The earth has become a living conduit of power, its very core saturated with magic."
- gate_mana_saturation.1.a: "Nothing will ever be the same."
- gate_mana_saturation.2.t: "Heinous Ritual"
- gate_mana_saturation.2.d: "Increase [concept_mana_density] through ritual sacrifices."
- gate_mana_saturation.2.f: "In the shadow of towering spires, whispers of dark rituals filled the air. The council decreed that to saturate the earth with mana, the blood of the enslaved would be spilled. Beneath a blood-red moon, the condemned were led to ancient altars, their lives exchanged for the promise of arcane power. The earth drank deeply, its veins pulsing with new energy, as the price of power was paid in the currency of despair."
- gate_mana_saturation.2.a: "This world needs more magic whatever the price."
- gate_mana_saturation.2.a_progress_tt: "Increases [concept_mana_density] by 50% in [SCOPE.sStateRegion('ritual_state_region').GetName]."
- gate_mana_saturation.2.b: "We need to stop this madness."
- gate_mana_saturation.3.t: "Mana Bloom"
- gate_mana_saturation.3.d: "Through increased [concept_mana_density] plants are growing faster in [SCOPE.sState('magic_growing_state').GetName]."
- gate_mana_saturation.3.f: "As the veil between worlds thinned, mana seeped into the earth like a whispered secret. Overnight, seeds burst into bloom, vines spiraled skyward, and ancient trees unfurled leaves of radiant green. The land hummed with newfound life, a vibrant pulse in every root and branch, as nature thrived in this enchanted dawn."
- gate_mana_saturation.3.a1: "This will change how we grow crops."
- gate_mana_saturation.3.a2: "Interesting."
- gate_mana_saturation.3.b: "Send Researchers."
+ gate_mana_saturation.1.a: "一切都不一样了。" #deepl:1335579824
+ gate_mana_saturation.1.d: "[concept_mana_saturation] 已达到最大值。" #deepl:1296295592
+ gate_mana_saturation.1.f: "现在，整个世界都在持续而低沉地震动，空气中弥漫着看不见的力量的光泽。每一块石头、每一片树叶、每一次呼吸都在嗡嗡作响，蕴含着原始、脉动的法力能量。海洋闪烁着阴森的光芒，天空舞动着人类从未见过的色彩。地球已成为一个充满活力的通道，其核心充满了魔力。" #deepl:2147041176
+ gate_mana_saturation.1.t: "魔法世界" #deepl:4128974867
+ gate_mana_saturation.2.a: "这个世界需要更多的魔法，无论代价如何。" #deepl:1164052970
+ gate_mana_saturation.2.a_progress_tt: "[concept_mana_density] 中增加 50%[SCOPE.sStateRegion('ritual_state_region').GetName] 。" #deepl:244781240
+ gate_mana_saturation.2.b: "我们必须停止这种疯狂的行为。" #deepl:2329030879
+ gate_mana_saturation.2.d: "通过祭祀增加[concept_mana_density] 。" #deepl:1576332777
+ gate_mana_saturation.2.f: "在高耸尖塔的阴影下，空气中弥漫着黑暗仪式的低语。议会下令，为了让大地充满法力，必须洒下被奴役者的鲜血。在血红的月亮下，被定罪的人被带到古老的祭坛前，用他们的生命换取奥术力量的承诺。大地深深地汲取着，它的血管里涌动着新的能量，因为力量的代价是用绝望的货币来支付的。" #deepl:3821037183
+ gate_mana_saturation.2.t: "令人发指的仪式" #deepl:2873681427
+ gate_mana_saturation.3.a1: "这将改变我们种植作物的方式。" #deepl:3474751687
+ gate_mana_saturation.3.a2: "有意思" #deepl:942969263
+ gate_mana_saturation.3.b: "派遣研究人员。" #deepl:1781155197
+ gate_mana_saturation.3.d: "通过增加[concept_mana_density] ，植物在[SCOPE.sState('magic_growing_state').GetName] 中生长得更快。" #deepl:1155858691
+ gate_mana_saturation.3.f: "随着世界之间的纱幕逐渐变薄，法力像耳语般渗入大地。一夜之间，种子竞相绽放，藤蔓盘旋向天，古树展开了翠绿的叶子。大地焕发出新的生机，每一根树根和树枝都充满活力，大自然在这迷人的黎明中茁壮成长。" #deepl:2192891470
+ gate_mana_saturation.3.t: "玛娜绽放" #deepl:1564168140
+ gate_mana_saturation_buildings_progress_bar_balance: "$mana$ 建筑使用" #deepl:169250752
+ gate_mana_saturation_mages_progress_bar_balance: "[GetPopType('mages').GetName]" #deepl:1162434282
+ gate_mana_saturation_ritual_progress_bar_balance: "仪式" #deepl:100301908
+ je_mana_saturation: "全球法力饱和度" #deepl:171745877
+ je_mana_saturation_button_slave_ritual: "牺牲奴隶" #deepl:2127545356
+ je_mana_saturation_button_slave_ritual_cooldown: "一年内未执行奴隶仪式" #deepl:1814410812
+ je_mana_saturation_button_slave_ritual_desc: "牺牲[GetPopType('slaves').GetName] 来增加我们其中一个州的[concept_mana_density] 。" #deepl:322364928
+ je_mana_saturation_button_slave_ritual_infamy: "[SCOPE.sCountry('loc_country_scope').GetName] 的 Infamy 不到 100。" #deepl:2238047500
+ je_mana_saturation_button_slave_ritual_mana_density: "[concept_mana_density] 在我们的一个州中，该比例低于 100%。" #deepl:3005232554
+ je_mana_saturation_goal: "[concept_mana_saturation] 已达到最大值" #deepl:1477263753
+ je_mana_saturation_high_progress: "全世界的平均[concept_mana_density] 很高。" #deepl:2852144250
+ je_mana_saturation_low_progress: "全世界的平均[concept_mana_density] 很低。" #deepl:3789019862
+ je_mana_saturation_medium_progress: "世界各地的平均[concept_mana_density] 越来越高。" #deepl:2004107105
+ je_mana_saturation_reason: "随着界与界之间的隔膜逐渐变薄，法力开始渗入我们的世界，其存在感与日俱增。空气中弥漫着新发现的能量，现实的结构似乎也在闪烁着潜能。法力的不断涌入有望重塑我们对魔法和力量的理解，预示着一个前所未有的变革和机遇时代的到来。" #deepl:455482982

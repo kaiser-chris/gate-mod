@@ -1,25 +1,24 @@
 ﻿l_simp_chinese:
- objective_magic_dominance: "Magic Dominance"
- objective_magic_dominance_desc: "The world has changed in 1814 with the opening of Magic Gates to $gate_planet$. Since then mana is spewing from the gates and invaders are changing the political landscape of Earth. Now go forth and claim dominance of magic and technology."
- objective_magic_dominance_name_GATE_MK: "#v $GATE_MK$#!"
- objective_magic_dominance_desc_GATE_MK: "#lore $GATE_MK_FLAVOR_TEXT$#!"
- objective_magic_dominance_name_GATE_AD: "#v $GATE_AD$#!"
- objective_magic_dominance_desc_GATE_AD: "#lore $GATE_AD_FLAVOR_TEXT$#!"
- objective_magic_dominance_name_GATE_OK: "#v $GATE_OK$#!"
- objective_magic_dominance_desc_GATE_OK: "#lore $GATE_OK_FLAVOR_TEXT$#!"
- objective_magic_dominance_name_GATE_NS: "#v $GATE_NS$#!"
- objective_magic_dominance_desc_GATE_NS: "#lore $GATE_NS_FLAVOR_TEXT$#!"
- objective_magic_dominance_name_GBR: "#v $GBR$#!"
- objective_magic_dominance_desc_GBR: "#lore Between 1814 and 1836, Great Britain faced sporadic clashes with otherworldly forces in its African colonies, bolstering its resolve to master the arcane. The empire, captivated by the allure of magic, has become a hub of exploration and innovation, determined to unlock the secrets of the gates. With a thirst for power and profit, Britain’s eyes are firmly set on exploiting the wonders—and the dangers—that lie on the other side of the portals.#!"
- objective_magic_dominance_name_CHI: "#v $dyn_c_great_qing$#!"
- objective_magic_dominance_desc_CHI: "#lore In 1814, a magic gate erupted in the remote Alxa region, unleashing invaders from beyond. The Qing Empire, through resilience and strategy, repelled the otherworldly assault and fortified the gate, securing their sovereignty. Qing scholars lead the nations of Earth in researching magic while the military stands vigilant. Whispers grow of expeditions into the unknown—ventures that could bring unparalleled glory or unspeakable peril.#!"
- objective_magic_dominance_idle_header: "Continue on your path"
- objective_magic_dominance_idle_hint: "More challenges will appear eventually"
- magic_dominance_welcome: "Magic Dominance"
- magic_dominance_welcome_desc: "Welcome to the $objective_magic_dominance$ Player Objective. In this objective you will be given a series of [Concept('concept_journal_entry', '$concept_journal_entries$')] to complete that will guide you down a path towards dominating magic and technology."
- # Journal Entries
- je_obj_magic_knowledge: "Learn Magic Knowledge"
- je_obj_magic_knowledge_reason: "The mysteries of magic have upended the natural order, and our nation stands at a crossroads. To harness this newfound power, we must dedicate ourselves to studying its phenomena. From deciphering the nature of mana to understanding its interaction with the physical world, gaining a basic grasp of magic is crucial. Only through research and discipline can we unlock its potential and lay the groundwork for practical applications that could shape our future."
- je_obj_magic_knowledge_goal_tt: "Learned [concept_magic_knowledge]"
- je_obj_magic_academy: "Build Magic Academy"
- je_obj_magic_academy_reason: "To cultivate a new generation of mages, we must move beyond scattered study and experimentation. A dedicated Magic Academy will formalize the understanding of arcane arts, offering structured training to harness mana efficiently and safely. With such an institution, we can accelerate the development of skilled practitioners, ensuring our nation remains at the forefront of magical advancement."
+ je_obj_magic_academy: "建设魔法学院" #deepl:3993713733
+ je_obj_magic_academy_reason: "为了培养新一代的法师，我们必须超越零散的学习和实验。专门的魔法学院将使人们对奥术的理解正规化，为高效、安全地利用法力提供系统的培训。有了这样一个机构，我们就能加快培养熟练的从业人员，确保我们的国家始终走在魔法进步的前沿。" #deepl:2748730537
+ je_obj_magic_knowledge: "学习魔法知识" #deepl:4288289565
+ je_obj_magic_knowledge_goal_tt: "了解到[concept_magic_knowledge]" #deepl:2267194163
+ je_obj_magic_knowledge_reason: "魔法的奥秘颠覆了自然秩序，我们的国家正站在十字路口。要驾驭这股新发现的力量，我们必须潜心研究魔法现象。从破译法力的本质到了解它与物理世界的相互作用，掌握魔法的基本知识至关重要。只有通过研究和严谨的态度，我们才能释放魔法的潜能，为实际应用奠定基础，从而塑造我们的未来。" #deepl:3013278948
+ magic_dominance_welcome: "魔法统治" #deepl:2545267591
+ magic_dominance_welcome_desc: "欢迎来到$objective_magic_dominance$ 玩家目标。在这个目标中，您将完成一系列[Concept('concept_journal_entry', '$concept_journal_entries$')] ，这些目标将引导您走上一条主宰魔法和科技的道路。" #deepl:536229679
+ objective_magic_dominance: "魔法统治" #deepl:2545267591
+ objective_magic_dominance_desc: "1814 年，随着$gate_planet$ 魔法之门的开启，世界发生了变化。从那时起，法力从魔法之门喷涌而出，入侵者正在改变地球的政治格局。现在，请前去夺取魔法和科技的统治权。" #deepl:3246385879
+ objective_magic_dominance_desc_CHI: "#lore 1814 年，偏远的阿拉善地区爆发了一场魔门之战，来自天外的入侵者汹涌而至。大清帝国凭借坚韧不拔的精神和战略，击退了异世界的进攻，并加固了魔法门，确保了自己的主权。清朝学者带领地球上的国家研究魔法，而军队则保持警惕。关于远征未知世界的传闻不绝于耳--这些远征可能带来无与伦比的荣耀，也可能带来难以言喻的危险。#!" #deepl:1857154794
+ objective_magic_dominance_desc_GATE_AD: "#lore $GATE_AD_FLAVOR_TEXT$#!" #deepl:1549403571
+ objective_magic_dominance_desc_GATE_MK: "#lore $GATE_MK_FLAVOR_TEXT$#!" #deepl:2590262260
+ objective_magic_dominance_desc_GATE_NS: "#lore $GATE_NS_FLAVOR_TEXT$#!" #deepl:3318295855
+ objective_magic_dominance_desc_GATE_OK: "#lore $GATE_OK_FLAVOR_TEXT$#!" #deepl:3558628174
+ objective_magic_dominance_desc_GBR: "#lore 1814 年至 1836 年间，大不列颠在其非洲殖民地与异世界势力发生了零星冲突，这坚定了其掌握奥秘的决心。这个帝国被魔法的诱惑所吸引，成为探索和创新的中心，决心解开大门的秘密。怀着对权力和利益的渴求，英国将目光牢牢地投向了探索大门另一端的奇迹和危险。#!" #deepl:906953331
+ objective_magic_dominance_idle_header: "继续前行" #deepl:1353931723
+ objective_magic_dominance_idle_hint: "更多挑战终将出现" #deepl:1128828900
+ objective_magic_dominance_name_CHI: "#v $dyn_c_great_qing$#!" #deepl:918343777
+ objective_magic_dominance_name_GATE_AD: "#v $GATE_AD$#!" #deepl:2793308819
+ objective_magic_dominance_name_GATE_MK: "#v $GATE_MK$#!" #deepl:1190364416
+ objective_magic_dominance_name_GATE_NS: "#v $GATE_NS$#!" #deepl:2840693287
+ objective_magic_dominance_name_GATE_OK: "#v $GATE_OK$#!" #deepl:3332003203
+ objective_magic_dominance_name_GBR: "#v $GBR$#!" #deepl:3124859693

@@ -1,138 +1,136 @@
 ﻿l_simp_chinese:
- orcish_slave_system: "$orcish$ Slave System"
- orcish_slave_system_desc: "Orcs rule over every other culture and control all of society."
- orcish_slave_system_trigger_desc: "Every one is ruled by the system"
-# Classes
- orc_shamans: "Ork Shamans"
- orc_shamans_desc: "Ork Shamans are a mystical and revered social class within ork societies, blending spirituality with powerful elemental magic. These individuals serve as the spiritual leaders, healers, and seers of their tribes, wielding great influence and respect. Ork Shamans are believed to communicate with ancient spirits, elemental forces, and the primal energies of the natural world. They often act as mediators between the physical and spiritual realms, offering guidance during times of war, famine, or important rituals."
- orc_lords: "Ork Lords"
- orc_lords_desc: "Ork Lords are the dominant and commanding social class within ork societies, embodying the strength, authority, and martial prowess that are central to ork culture. These individuals are powerful warlords, rulers, and military leaders who command respect and fear across their tribes or clans. Ork Lords are typically larger, more battle-hardened, and more cunning than other members of their society, rising to prominence through their ability to lead their warriors to victory in brutal combat."
- orc_citizens: "Ork Citizens"
- orc_citizens_desc: "Ork Citizens are the everyday members of ork society, forming the backbone of their communities. While they may not hold the same power or prestige as Ork Lords or Shamans, Ork Citizens are essential to the functioning of ork tribes and settlements. They include a wide variety of roles, from skilled craftsmen and farmers to warriors and traders, each contributing to the tribe's survival and prosperity. Known for their resilience, hardworking nature, and loyalty to their leaders, Ork Citizens are often the ones who maintain the infrastructure, gather resources, and support their more powerful counterparts. While their lives may be shaped by the constant demands of survival and war, Ork Citizens enjoy a strong sense of community and pride in their heritage."
- orc_soldiers: "Ork Soldiers"
- orc_soldiers_desc: "Ork Soldiers are the fierce and disciplined warriors at the heart of ork society, trained for battle from a young age. They serve as the primary fighting force in wars and raids, loyal to their Ork Lords and driven by a thirst for combat and glory. Known for their brute strength, raw aggression, and relentless determination, Ork Soldiers are often armed with heavy weaponry, crude but effective armor, and a deep sense of camaraderie. Though they may not hold high ranks, their valor on the battlefield earns them respect, and their role is crucial in expanding and defending ork territories. Through bloodshed and conquest, Ork Soldiers embody the warrior spirit that defines their people."
- orc_lowers: "Ork Lowers"
- orc_lowers_desc: "Ork Lowers are the lowest social class in ork society, often tasked with menial labor and serving the needs of higher-ranking orks. This group includes those who perform essential but less prestigious roles, such as laborers, servitors, and apprentices. While they may not have the same rights or respect as Ork Citizens or Soldiers, their work is vital to the survival and functioning of the tribe. Ork Lowers often live in harsh conditions, with limited opportunities for advancement, yet they are known for their resilience, determination, and strong sense of community. Despite their low status, they are essential to ork society’s day-to-day operations and often form tight-knit bonds with one another."
- orc_slaves: "Slaves"
- orc_slaves_desc: "Every non Ork is enslaved."
-# Modifiers
- country_orc_shamans_qualification_growth_same_class_mult: "Qualification Growth within $orc_shamans$ [concept_social_class]"
- country_orc_shamans_qualification_growth_same_class_mult_desc: "A percentage increase or decrease to Qualification Growth for the $orc_shamans$ [concept_social_class] towards [Concept('concept_profession', '$concept_professions$')] in the $orc_shamans$ $concept_social_class$"
- country_orc_lords_qualification_growth_same_class_mult: "Qualification Growth within $orc_lords$ [concept_social_class]"
- country_orc_lords_qualification_growth_same_class_mult_desc: "A percentage increase or decrease to Qualification Growth for the $orc_lords$ [concept_social_class] towards [Concept('concept_profession', '$concept_professions$')] in the $orc_lords$ $concept_social_class$"
- country_orc_citizens_qualification_growth_same_class_mult: "Qualification Growth within $orc_citizens$ [concept_social_class]"
- country_orc_citizens_qualification_growth_same_class_mult_desc: "A percentage increase or decrease to Qualification Growth for the $orc_citizens$ [concept_social_class] towards [Concept('concept_profession', '$concept_professions$')] in the $orc_citizens$ $concept_social_class$"
- country_orc_soldiers_qualification_growth_same_class_mult: "Qualification Growth within $orc_soldiers$ [concept_social_class]"
- country_orc_soldiers_qualification_growth_same_class_mult_desc: "A percentage increase or decrease to Qualification Growth for the $orc_soldiers$ [concept_social_class] towards [Concept('concept_profession', '$concept_professions$')] in the $orc_soldiers$ $concept_social_class$"
- country_orc_lowers_qualification_growth_same_class_mult: "Qualification Growth within $orc_lowers$ [concept_social_class]"
- country_orc_lowers_qualification_growth_same_class_mult_desc: "A percentage increase or decrease to Qualification Growth for the $orc_lowers$ [concept_social_class] towards [Concept('concept_profession', '$concept_professions$')] in the $orc_lowers$ $concept_social_class$"
- country_orc_slaves_qualification_growth_same_class_mult: "Qualification Growth within $orc_slaves$ [concept_social_class]"
- country_orc_slaves_qualification_growth_same_class_mult_desc: "A percentage increase or decrease to Qualification Growth for the $orc_slaves$ [concept_social_class] towards [Concept('concept_profession', '$concept_professions$')] in the $orc_slaves$ $concept_social_class$"
- country_orc_shamans_education_access_mult: "[concept_education_access] for the $orc_shamans$ [concept_social_class]"
- country_orc_shamans_education_access_mult_desc: "A percentage increase or decrease to [concept_education_access] for the $orc_shamans$ [concept_social_class]"
- country_orc_lords_education_access_mult: "[concept_education_access] for the $orc_lords$ [concept_social_class]"
- country_orc_lords_education_access_mult_desc: "A percentage increase or decrease to [concept_education_access] for the $orc_lords$ [concept_social_class]"
- country_orc_citizens_education_access_mult: "[concept_education_access] for the $orc_citizens$ [concept_social_class]"
- country_orc_citizens_education_access_mult_desc: "A percentage increase or decrease to [concept_education_access] for the $orc_citizens$ [concept_social_class]"
- country_orc_soldiers_education_access_mult: "[concept_education_access] for the $orc_soldiers$ [concept_social_class]"
- country_orc_soldiers_education_access_mult_desc: "A percentage increase or decrease to [concept_education_access] for the $orc_soldiers$ [concept_social_class]"
- country_orc_lowers_education_access_mult: "[concept_education_access] for the $orc_lowers$ [concept_social_class]"
- country_orc_lowers_education_access_mult_desc: "A percentage increase or decrease to [concept_education_access] for the $orc_lowers$ [concept_social_class]"
- country_orc_slaves_education_access_mult: "[concept_education_access] for the $orc_slaves$ [concept_social_class]"
- country_orc_slaves_education_access_mult_desc: "A percentage increase or decrease to [concept_education_access] for the $orc_slaves$ [concept_social_class]"
- country_orc_shamans_qualification_growth_add: "Qualification Growth for the $orc_shamans$ [concept_social_class]"
- country_orc_shamans_qualification_growth_add_desc: "A flat increase or decrease to Qualification Growth for the $orc_shamans$ [concept_social_class]"
- country_orc_lords_qualification_growth_add: "Qualification Growth for the $orc_lords$ [concept_social_class]"
- country_orc_lords_qualification_growth_add_desc: "A flat increase or decrease to Qualification Growth for the $orc_lords$ [concept_social_class]"
- country_orc_citizens_qualification_growth_add: "Qualification Growth for the $orc_citizens$ [concept_social_class]"
- country_orc_citizens_qualification_growth_add_desc: "A flat increase or decrease to Qualification Growth for the $orc_citizens$ [concept_social_class]"
- country_orc_soldiers_qualification_growth_add: "Qualification Growth for the $orc_soldiers$ [concept_social_class]"
- country_orc_soldiers_qualification_growth_add_desc: "A flat increase or decrease to Qualification Growth for the $orc_soldiers$ [concept_social_class]"
- country_orc_lowers_qualification_growth_add: "Qualification Growth for the $orc_lowers$ [concept_social_class]"
- country_orc_lowers_qualification_growth_add_desc: "A flat increase or decrease to Qualification Growth for the $orc_lowers$ [concept_social_class]"
- country_orc_slaves_qualification_growth_add: "Qualification Growth for the $orc_slaves$ [concept_social_class]"
- country_orc_slaves_qualification_growth_add_desc: "A flat increase or decrease to Qualification Growth for the $orc_slaves$ [concept_social_class]"
- country_orc_shamans_qualification_growth_mult: "Qualification Growth for the $orc_shamans$ [concept_social_class]"
- country_orc_shamans_qualification_growth_mult_desc: "A percentage increase or decrease to Qualification Growth for the $orc_shamans$ [concept_social_class]"
- country_orc_lords_qualification_growth_mult: "Qualification Growth for the $orc_lords$ [concept_social_class]"
- country_orc_lords_qualification_growth_mult_desc: "A percentage increase or decrease to Qualification Growth for the $orc_lords$ [concept_social_class]"
- country_orc_citizens_qualification_growth_mult: "Qualification Growth for the $orc_citizens$ [concept_social_class]"
- country_orc_citizens_qualification_growth_mult_desc: "A percentage increase or decrease to Qualification Growth for the $orc_citizens$ [concept_social_class]"
- country_orc_soldiers_qualification_growth_mult: "Qualification Growth for the $orc_soldiers$ [concept_social_class]"
- country_orc_soldiers_qualification_growth_mult_desc: "A percentage increase or decrease to Qualification Growth for the $orc_soldiers$ [concept_social_class]"
- country_orc_lowers_qualification_growth_mult: "Qualification Growth for the $orc_lowers$ [concept_social_class]"
- country_orc_lowers_qualification_growth_mult_desc: "A percentage increase or decrease to Qualification Growth for the $orc_lowers$ [concept_social_class]"
- country_orc_slaves_qualification_growth_mult: "Qualification Growth for the $orc_slaves$ [concept_social_class]"
- country_orc_slaves_qualification_growth_mult_desc: "A percentage increase or decrease to Qualification Growth for the $orc_slaves$ [concept_social_class]"
- country_orc_shamans_qualification_growth_other_class_mult: "Qualification Growth outside the $orc_shamans$ [concept_social_class] for $orc_shamans$"
- country_orc_shamans_qualification_growth_other_class_mult_desc: "A percentage increase or decrease to Qualification Growth for the $orc_shamans$ towards [Concept('concept_profession', '$concept_professions$')] in other [Concept('concept_social_class', '$concept_social_classes$')]"
- country_orc_lords_qualification_growth_other_class_mult: "Qualification Growth outside the $orc_lords$ [concept_social_class] for $orc_lords$"
- country_orc_lords_qualification_growth_other_class_mult_desc: "A percentage increase or decrease to Qualification Growth for the $orc_lords$ towards [Concept('concept_profession', '$concept_professions$')] in other [Concept('concept_social_class', '$concept_social_classes$')]"
- country_orc_citizens_qualification_growth_other_class_mult: "Qualification Growth outside the $orc_citizens$ [concept_social_class] for $orc_citizens$"
- country_orc_citizens_qualification_growth_other_class_mult_desc: "A percentage increase or decrease to Qualification Growth for the $orc_citizens$ towards [Concept('concept_profession', '$concept_professions$')] in other [Concept('concept_social_class', '$concept_social_classes$')]"
- country_orc_soldiers_qualification_growth_other_class_mult: "Qualification Growth outside the $orc_soldiers$ [concept_social_class] for $orc_soldiers$"
- country_orc_soldiers_qualification_growth_other_class_mult_desc: "A percentage increase or decrease to Qualification Growth for the $orc_soldiers$ towards [Concept('concept_profession', '$concept_professions$')] in other [Concept('concept_social_class', '$concept_social_classes$')]"
- country_orc_lowers_qualification_growth_other_class_mult: "Qualification Growth outside the $orc_lowers$ [concept_social_class] for $orc_lowers$"
- country_orc_lowers_qualification_growth_other_class_mult_desc: "A percentage increase or decrease to Qualification Growth for the $orc_lowers$ towards [Concept('concept_profession', '$concept_professions$')] in other [Concept('concept_social_class', '$concept_social_classes$')]"
- country_orc_slaves_qualification_growth_other_class_mult: "Qualification Growth outside the $orc_slaves$ [concept_social_class] for $orc_slaves$"
- country_orc_slaves_qualification_growth_other_class_mult_desc: "A percentage increase or decrease to Qualification Growth for the $orc_slaves$ towards [Concept('concept_profession', '$concept_professions$')] in other [Concept('concept_social_class', '$concept_social_classes$')]"
- country_orc_shamans_education_access_add: "[concept_education_access] for the $orc_shamans$ [concept_social_class]"
- country_orc_shamans_education_access_add_desc: "A flat increase or decrease to [concept_education_access] for the $orc_shamans$ [concept_social_class]"
- country_orc_lords_education_access_add: "[concept_education_access] for the $orc_lords$ [concept_social_class]"
- country_orc_lords_education_access_add_desc: "A flat increase or decrease to [concept_education_access] for the $orc_lords$ [concept_social_class]"
- country_orc_citizens_education_access_add: "[concept_education_access] for the $orc_citizens$ [concept_social_class]"
- country_orc_citizens_education_access_add_desc: "A flat increase or decrease to [concept_education_access] for the $orc_citizens$ [concept_social_class]"
- country_orc_soldiers_education_access_add: "[concept_education_access] for the $orc_soldiers$ [concept_social_class]"
- country_orc_soldiers_education_access_add_desc: "A flat increase or decrease to [concept_education_access] for the $orc_soldiers$ [concept_social_class]"
- country_orc_lowers_education_access_add: "[concept_education_access] for the $orc_lowers$ [concept_social_class]"
- country_orc_lowers_education_access_add_desc: "A flat increase or decrease to [concept_education_access] for the $orc_lowers$ [concept_social_class]"
- country_orc_slaves_education_access_add: "[concept_education_access] for the $orc_slaves$ [concept_social_class]"
- country_orc_slaves_education_access_add_desc: "A flat increase or decrease to [concept_education_access] for the $orc_slaves$ [concept_social_class]"
- country_orc_shamans_cultural_acceptance_mult: "Cultural [concept_acceptance] for the $orc_shamans$ [concept_social_class]"
- country_orc_shamans_cultural_acceptance_mult_desc: "A percentage increase or decrease to cultural [concept_acceptance] for the $orc_shamans$ [concept_social_class]"
- country_orc_lords_cultural_acceptance_mult: "Cultural [concept_acceptance] for the $orc_lords$ [concept_social_class]"
- country_orc_lords_cultural_acceptance_mult_desc: "A percentage increase or decrease to cultural [concept_acceptance] for the $orc_lords$ [concept_social_class]"
- country_orc_citizens_cultural_acceptance_mult: "Cultural [concept_acceptance] for the $orc_citizens$ [concept_social_class]"
- country_orc_citizens_cultural_acceptance_mult_desc: "A percentage increase or decrease to cultural [concept_acceptance] for the $orc_citizens$ [concept_social_class]"
- country_orc_soldiers_cultural_acceptance_mult: "Cultural [concept_acceptance] for the $orc_soldiers$ [concept_social_class]"
- country_orc_soldiers_cultural_acceptance_mult_desc: "A percentage increase or decrease to cultural [concept_acceptance] for the $orc_soldiers$ [concept_social_class]"
- country_orc_lowers_cultural_acceptance_mult: "Cultural [concept_acceptance] for the $orc_lowers$ [concept_social_class]"
- country_orc_lowers_cultural_acceptance_mult_desc: "A percentage increase or decrease to cultural [concept_acceptance] for the $orc_lowers$ [concept_social_class]"
- country_orc_slaves_cultural_acceptance_mult: "Cultural [concept_acceptance] for the $orc_slaves$ [concept_social_class]"
- country_orc_slaves_cultural_acceptance_mult_desc: "A percentage increase or decrease to cultural [concept_acceptance] for the $orc_slaves$ [concept_social_class]"
- country_orc_shamans_cultural_acceptance_add: "Cultural [concept_acceptance] for the $orc_shamans$ [concept_social_class]"
- country_orc_shamans_cultural_acceptance_add_desc: "A flat increase or decrease to cultural [concept_acceptance] for the $orc_shamans$ [concept_social_class]"
- country_orc_lords_cultural_acceptance_add: "Cultural [concept_acceptance] for the $orc_lords$ [concept_social_class]"
- country_orc_lords_cultural_acceptance_add_desc: "A flat increase or decrease to cultural [concept_acceptance] for the $orc_lords$ [concept_social_class]"
- country_orc_citizens_cultural_acceptance_add: "Cultural [concept_acceptance] for the $orc_citizens$ [concept_social_class]"
- country_orc_citizens_cultural_acceptance_add_desc: "A flat increase or decrease to cultural [concept_acceptance] for the $orc_citizens$ [concept_social_class]"
- country_orc_soldiers_cultural_acceptance_add: "Cultural [concept_acceptance] for the $orc_soldiers$ [concept_social_class]"
- country_orc_soldiers_cultural_acceptance_add_desc: "A flat increase or decrease to cultural [concept_acceptance] for the $orc_soldiers$ [concept_social_class]"
- country_orc_lowers_cultural_acceptance_add: "Cultural [concept_acceptance] for the $orc_lowers$ [concept_social_class]"
- country_orc_lowers_cultural_acceptance_add_desc: "A flat increase or decrease to cultural [concept_acceptance] for the $orc_lowers$ [concept_social_class]"
- country_orc_slaves_cultural_acceptance_add: "Cultural [concept_acceptance] for the $orc_slaves$ [concept_social_class]"
- country_orc_slaves_cultural_acceptance_add_desc: "A flat increase or decrease to cultural [concept_acceptance] for the $orc_slaves$ [concept_social_class]"
- country_orc_shamans_acceptance_max_add: "Maximum [concept_acceptance] for the $orc_shamans$ [concept_social_class]"
- country_orc_shamans_acceptance_max_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $orc_shamans$ [concept_social_class] won't be able to exceed"
- country_orc_lords_acceptance_max_add: "Maximum [concept_acceptance] for the $orc_lords$ [concept_social_class]"
- country_orc_lords_acceptance_max_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $orc_lords$ [concept_social_class] won't be able to exceed"
- country_orc_citizens_acceptance_max_add: "Maximum [concept_acceptance] for the $orc_citizens$ [concept_social_class]"
- country_orc_citizens_acceptance_max_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $orc_citizens$ [concept_social_class] won't be able to exceed"
- country_orc_soldiers_acceptance_max_add: "Maximum [concept_acceptance] for the $orc_soldiers$ [concept_social_class]"
- country_orc_soldiers_acceptance_max_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $orc_soldiers$ [concept_social_class] won't be able to exceed"
- country_orc_lowers_acceptance_max_add: "Maximum [concept_acceptance] for the $orc_lowers$ [concept_social_class]"
- country_orc_lowers_acceptance_max_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $orc_slaves$ [concept_social_class] won't be able to exceed"
- country_orc_slaves_acceptance_max_add: "Maximum [concept_acceptance] for the $orc_slaves$ [concept_social_class]"
- country_orc_slaves_acceptance_max_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $orc_slaves$ [concept_social_class] won't be able to exceed"
- country_orc_shamans_acceptance_min_add: "Minimum [concept_acceptance] for the $orc_shamans$ [concept_social_class]"
- country_orc_shamans_acceptance_min_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $orc_shamans$ [concept_social_class] won't be able to fall below"
- country_orc_lords_acceptance_min_add: "Minimum [concept_acceptance] for the $orc_lords$ [concept_social_class]"
- country_orc_lords_acceptance_min_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $orc_lords$ [concept_social_class] won't be able to fall below"
- country_orc_citizens_acceptance_min_add: "Minimum [concept_acceptance] for the $orc_citizens$ [concept_social_class]"
- country_orc_citizens_acceptance_min_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $orc_citizens$ [concept_social_class] won't be able to fall below"
- country_orc_soldiers_acceptance_min_add: "Minimum [concept_acceptance] for the $orc_soldiers$ [concept_social_class]"
- country_orc_soldiers_acceptance_min_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $orc_soldiers$ [concept_social_class] won't be able to fall below"
- country_orc_lowers_acceptance_min_add: "Minimum [concept_acceptance] for the $orc_lowers$ [concept_social_class]"
- country_orc_lowers_acceptance_min_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $orc_lowers$ [concept_social_class] won't be able to fall below"
- country_orc_slaves_acceptance_min_add: "Minimum [concept_acceptance] for the $orc_slaves$ [concept_social_class]"
- country_orc_slaves_acceptance_min_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $orc_slaves$ [concept_social_class] won't be able to fall below"
+ country_orc_citizens_acceptance_max_add: "$orc_citizens$ 的最大[concept_acceptance] [concept_social_class]" #deepl:436421965
+ country_orc_citizens_acceptance_max_add_desc: "描述[concept_acceptance] 值的阈值，$orc_citizens$ [concept_social_class] 中的[Concept('concept_pop', '$concept_pops$')] 不能超过该值" #deepl:3160572729
+ country_orc_citizens_acceptance_min_add: "$orc_citizens$ 的最低[concept_acceptance] [concept_social_class]" #deepl:678688917
+ country_orc_citizens_acceptance_min_add_desc: "描述[concept_acceptance] 值的临界值，$orc_citizens$ [concept_social_class] 中的[Concept('concept_pop', '$concept_pops$')] 不能低于该值。" #deepl:1120433434
+ country_orc_citizens_cultural_acceptance_add: "文化[concept_acceptance] for the$orc_citizens$ [concept_social_class]" #deepl:1254353878
+ country_orc_citizens_cultural_acceptance_add_desc: "$orc_citizens$ 的文化[concept_acceptance] 的增减持平[concept_social_class]" #deepl:3777668294
+ country_orc_citizens_cultural_acceptance_mult: "文化[concept_acceptance] for the$orc_citizens$ [concept_social_class]" #deepl:1254353878
+ country_orc_citizens_cultural_acceptance_mult_desc: "$orc_citizens$ 的文化[concept_acceptance] 的增减百分比[concept_social_class]" #deepl:1367637090
+ country_orc_citizens_education_access_add: "[concept_education_access] 为$orc_citizens$ [concept_social_class]" #deepl:2850876119
+ country_orc_citizens_education_access_add_desc: "$orc_citizens$ 与[concept_education_access] 的增减持平[concept_social_class]" #deepl:1299451958
+ country_orc_citizens_education_access_mult: "[concept_education_access] 为$orc_citizens$ [concept_social_class]" #deepl:2850876119
+ country_orc_citizens_education_access_mult_desc: "[concept_education_access] 的增减百分比$orc_citizens$ [concept_social_class]" #deepl:499029708
+ country_orc_citizens_qualification_growth_add: "$orc_citizens$ [concept_social_class]" #deepl:2937840371
+ country_orc_citizens_qualification_growth_add_desc: "$orc_citizens$ 资格增长的增减持平[concept_social_class]" #deepl:917553840
+ country_orc_citizens_qualification_growth_mult: "$orc_citizens$ [concept_social_class]" #deepl:2937840371
+ country_orc_citizens_qualification_growth_mult_desc: "$orc_citizens$ 资格增长的百分比增减[concept_social_class]" #deepl:869618408
+ country_orc_citizens_qualification_growth_other_class_mult: "$orc_citizens$ [concept_social_class] 之外的资格增长。$orc_citizens$" #deepl:3114346506
+ country_orc_citizens_qualification_growth_other_class_mult_desc: "$orc_citizens$ 对[Concept('concept_profession', '$concept_professions$')] 在其他方面的资格增长的增减百分比[Concept('concept_social_class', '$concept_social_classes$')]" #deepl:4277454402
+ country_orc_citizens_qualification_growth_same_class_mult: "$orc_citizens$ [concept_social_class]" #deepl:2076931467
+ country_orc_citizens_qualification_growth_same_class_mult_desc: "$orc_citizens$ [concept_social_class] 对[Concept('concept_profession', '$concept_professions$')] 的资格增长的百分比增减$orc_citizens$ $concept_social_class$" #deepl:4197906347
+ country_orc_lords_acceptance_max_add: "$orc_lords$ 的最大[concept_acceptance] [concept_social_class]" #deepl:1099694474
+ country_orc_lords_acceptance_max_add_desc: "描述[concept_acceptance] 值的阈值，$orc_lords$ [concept_social_class] 中的[Concept('concept_pop', '$concept_pops$')] 不能超过该值" #deepl:2698710801
+ country_orc_lords_acceptance_min_add: "$orc_lords$ 的最低[concept_acceptance] [concept_social_class]" #deepl:3819049827
+ country_orc_lords_acceptance_min_add_desc: "描述[concept_acceptance] 值的临界值，$orc_lords$ [concept_social_class] 中的[Concept('concept_pop', '$concept_pops$')] 不能低于该值。" #deepl:2427581421
+ country_orc_lords_cultural_acceptance_add: "文化[concept_acceptance] for the$orc_lords$ [concept_social_class]" #deepl:4101179630
+ country_orc_lords_cultural_acceptance_add_desc: "$orc_lords$ 的文化[concept_acceptance] 的增减持平[concept_social_class]" #deepl:3468724340
+ country_orc_lords_cultural_acceptance_mult: "文化[concept_acceptance] for the$orc_lords$ [concept_social_class]" #deepl:4101179630
+ country_orc_lords_cultural_acceptance_mult_desc: "$orc_lords$ 的文化[concept_acceptance] 的增减百分比[concept_social_class]" #deepl:2651459214
+ country_orc_lords_education_access_add: "[concept_education_access] 为$orc_lords$ [concept_social_class]" #deepl:873824362
+ country_orc_lords_education_access_add_desc: "$orc_lords$ 与[concept_education_access] 的增减持平[concept_social_class]" #deepl:314013941
+ country_orc_lords_education_access_mult: "[concept_education_access] 为$orc_lords$ [concept_social_class]" #deepl:873824362
+ country_orc_lords_education_access_mult_desc: "[concept_education_access] 的增减百分比$orc_lords$ [concept_social_class]" #deepl:2305910638
+ country_orc_lords_qualification_growth_add: "$orc_lords$ [concept_social_class]" #deepl:4025296273
+ country_orc_lords_qualification_growth_add_desc: "$orc_lords$ 资格增长的增减持平[concept_social_class]" #deepl:1362829493
+ country_orc_lords_qualification_growth_mult: "$orc_lords$ [concept_social_class]" #deepl:4025296273
+ country_orc_lords_qualification_growth_mult_desc: "$orc_lords$ 资格增长的百分比增减[concept_social_class]" #deepl:1207303674
+ country_orc_lords_qualification_growth_other_class_mult: "$orc_lords$ [concept_social_class] 之外的资格增长。$orc_lords$" #deepl:1205523689
+ country_orc_lords_qualification_growth_other_class_mult_desc: "$orc_lords$ 对[Concept('concept_profession', '$concept_professions$')] 在其他方面的资格增长的增减百分比[Concept('concept_social_class', '$concept_social_classes$')]" #deepl:1687128426
+ country_orc_lords_qualification_growth_same_class_mult: "$orc_lords$ [concept_social_class]" #deepl:3580330431
+ country_orc_lords_qualification_growth_same_class_mult_desc: "$orc_lords$ [concept_social_class] 对[Concept('concept_profession', '$concept_professions$')] 的资格增长的百分比增减$orc_lords$ $concept_social_class$" #deepl:1971480905
+ country_orc_lowers_acceptance_max_add: "$orc_lowers$ 的最大[concept_acceptance] [concept_social_class]" #deepl:1909969815
+ country_orc_lowers_acceptance_max_add_desc: "描述[concept_acceptance] 值的阈值，$orc_slaves$ [concept_social_class] 中的[Concept('concept_pop', '$concept_pops$')] 不能超过该值" #deepl:239771929
+ country_orc_lowers_acceptance_min_add: "$orc_lowers$ 的最低[concept_acceptance] [concept_social_class]" #deepl:2512831679
+ country_orc_lowers_acceptance_min_add_desc: "描述[concept_acceptance] 值的临界值，$orc_lowers$ [concept_social_class] 中的[Concept('concept_pop', '$concept_pops$')] 不能低于该值。" #deepl:2719132237
+ country_orc_lowers_cultural_acceptance_add: "文化[concept_acceptance] for the$orc_lowers$ [concept_social_class]" #deepl:3747971891
+ country_orc_lowers_cultural_acceptance_add_desc: "$orc_lowers$ 的文化[concept_acceptance] 的增减持平[concept_social_class]" #deepl:2679414557
+ country_orc_lowers_cultural_acceptance_mult: "文化[concept_acceptance] for the$orc_lowers$ [concept_social_class]" #deepl:3747971891
+ country_orc_lowers_cultural_acceptance_mult_desc: "$orc_lowers$ 的文化[concept_acceptance] 的增减百分比[concept_social_class]" #deepl:3933166229
+ country_orc_lowers_education_access_add: "[concept_education_access] 为$orc_lowers$ [concept_social_class]" #deepl:2436917303
+ country_orc_lowers_education_access_add_desc: "$orc_lowers$ 与[concept_education_access] 的增减持平[concept_social_class]" #deepl:3547359854
+ country_orc_lowers_education_access_mult: "[concept_education_access] 为$orc_lowers$ [concept_social_class]" #deepl:2436917303
+ country_orc_lowers_education_access_mult_desc: "[concept_education_access] 的增减百分比$orc_lowers$ [concept_social_class]" #deepl:177865693
+ country_orc_lowers_qualification_growth_add: "$orc_lowers$ [concept_social_class]" #deepl:2106236830
+ country_orc_lowers_qualification_growth_add_desc: "$orc_lowers$ 资格增长的增减持平[concept_social_class]" #deepl:1819289079
+ country_orc_lowers_qualification_growth_mult: "$orc_lowers$ [concept_social_class]" #deepl:2106236830
+ country_orc_lowers_qualification_growth_mult_desc: "$orc_lowers$ 资格增长的百分比增减[concept_social_class]" #deepl:3559012858
+ country_orc_lowers_qualification_growth_other_class_mult: "$orc_lowers$ [concept_social_class] 之外的资格增长。$orc_lowers$" #deepl:1659634775
+ country_orc_lowers_qualification_growth_other_class_mult_desc: "$orc_lowers$ 对[Concept('concept_profession', '$concept_professions$')] 在其他方面的资格增长的增减百分比[Concept('concept_social_class', '$concept_social_classes$')]" #deepl:2973849909
+ country_orc_lowers_qualification_growth_same_class_mult: "$orc_lowers$ [concept_social_class]" #deepl:1762551624
+ country_orc_lowers_qualification_growth_same_class_mult_desc: "$orc_lowers$ [concept_social_class] 对[Concept('concept_profession', '$concept_professions$')] 的资格增长的百分比增减$orc_lowers$ $concept_social_class$" #deepl:4060473760
+ country_orc_shamans_acceptance_max_add: "$orc_shamans$ 的最大[concept_acceptance] [concept_social_class]" #deepl:945844099
+ country_orc_shamans_acceptance_max_add_desc: "描述[concept_acceptance] 值的阈值，$orc_shamans$ [concept_social_class] 中的[Concept('concept_pop', '$concept_pops$')] 不能超过该值" #deepl:3924515096
+ country_orc_shamans_acceptance_min_add: "$orc_shamans$ 的最低[concept_acceptance] [concept_social_class]" #deepl:795608812
+ country_orc_shamans_acceptance_min_add_desc: "描述[concept_acceptance] 值的临界值，$orc_shamans$ [concept_social_class] 中的[Concept('concept_pop', '$concept_pops$')] 不能低于该值。" #deepl:1717981637
+ country_orc_shamans_cultural_acceptance_add: "文化[concept_acceptance] for the$orc_shamans$ [concept_social_class]" #deepl:4228395838
+ country_orc_shamans_cultural_acceptance_add_desc: "$orc_shamans$ 的文化[concept_acceptance] 的增减持平[concept_social_class]" #deepl:3908472912
+ country_orc_shamans_cultural_acceptance_mult: "文化[concept_acceptance] for the$orc_shamans$ [concept_social_class]" #deepl:4228395838
+ country_orc_shamans_cultural_acceptance_mult_desc: "$orc_shamans$ 的文化[concept_acceptance] 的增减百分比[concept_social_class]" #deepl:2697646605
+ country_orc_shamans_education_access_add: "[concept_education_access] 为$orc_shamans$ [concept_social_class]" #deepl:1730222552
+ country_orc_shamans_education_access_add_desc: "$orc_shamans$ 与[concept_education_access] 的增减持平[concept_social_class]" #deepl:1289929265
+ country_orc_shamans_education_access_mult: "[concept_education_access] 为$orc_shamans$ [concept_social_class]" #deepl:1730222552
+ country_orc_shamans_education_access_mult_desc: "[concept_education_access] 的增减百分比$orc_shamans$ [concept_social_class]" #deepl:2191720332
+ country_orc_shamans_qualification_growth_add: "$orc_shamans$ [concept_social_class]" #deepl:1010641364
+ country_orc_shamans_qualification_growth_add_desc: "$orc_shamans$ 资格增长的增减持平[concept_social_class]" #deepl:220031189
+ country_orc_shamans_qualification_growth_mult: "$orc_shamans$ [concept_social_class]" #deepl:1010641364
+ country_orc_shamans_qualification_growth_mult_desc: "$orc_shamans$ 资格增长的百分比增减[concept_social_class]" #deepl:2459119327
+ country_orc_shamans_qualification_growth_other_class_mult: "$orc_shamans$ [concept_social_class] 之外的资格增长。$orc_shamans$" #deepl:3603144522
+ country_orc_shamans_qualification_growth_other_class_mult_desc: "$orc_shamans$ 对[Concept('concept_profession', '$concept_professions$')] 在其他方面的资格增长的增减百分比[Concept('concept_social_class', '$concept_social_classes$')]" #deepl:733674961
+ country_orc_shamans_qualification_growth_same_class_mult: "$orc_shamans$ [concept_social_class]" #deepl:3308115287
+ country_orc_shamans_qualification_growth_same_class_mult_desc: "$orc_shamans$ [concept_social_class] 对[Concept('concept_profession', '$concept_professions$')] 的资格增长的百分比增减$orc_shamans$ $concept_social_class$" #deepl:363329361
+ country_orc_slaves_acceptance_max_add: "$orc_slaves$ 的最大[concept_acceptance] [concept_social_class]" #deepl:969457118
+ country_orc_slaves_acceptance_max_add_desc: "描述[concept_acceptance] 值的阈值，$orc_slaves$ [concept_social_class] 中的[Concept('concept_pop', '$concept_pops$')] 不能超过该值" #deepl:239771929
+ country_orc_slaves_acceptance_min_add: "$orc_slaves$ 的最低[concept_acceptance] [concept_social_class]" #deepl:3722029814
+ country_orc_slaves_acceptance_min_add_desc: "描述[concept_acceptance] 值的临界值，$orc_slaves$ [concept_social_class] 中的[Concept('concept_pop', '$concept_pops$')] 不能低于该值。" #deepl:2987853219
+ country_orc_slaves_cultural_acceptance_add: "文化[concept_acceptance] for the$orc_slaves$ [concept_social_class]" #deepl:2541415802
+ country_orc_slaves_cultural_acceptance_add_desc: "$orc_slaves$ 的文化[concept_acceptance] 的增减持平[concept_social_class]" #deepl:3618369876
+ country_orc_slaves_cultural_acceptance_mult: "文化[concept_acceptance] for the$orc_slaves$ [concept_social_class]" #deepl:2541415802
+ country_orc_slaves_cultural_acceptance_mult_desc: "$orc_slaves$ 的文化[concept_acceptance] 的增减百分比[concept_social_class]" #deepl:2725262556
+ country_orc_slaves_education_access_add: "[concept_education_access] 为$orc_slaves$ [concept_social_class]" #deepl:3646883454
+ country_orc_slaves_education_access_add_desc: "$orc_slaves$ 与[concept_education_access] 的增减持平[concept_social_class]" #deepl:2607744039
+ country_orc_slaves_education_access_mult: "[concept_education_access] 为$orc_slaves$ [concept_social_class]" #deepl:3646883454
+ country_orc_slaves_education_access_mult_desc: "[concept_education_access] 的增减百分比$orc_slaves$ [concept_social_class]" #deepl:1116040596
+ country_orc_slaves_qualification_growth_add: "$orc_slaves$ [concept_social_class]" #deepl:899019223
+ country_orc_slaves_qualification_growth_add_desc: "$orc_slaves$ 资格增长的增减持平[concept_social_class]" #deepl:611273662
+ country_orc_slaves_qualification_growth_mult: "$orc_slaves$ [concept_social_class]" #deepl:899019223
+ country_orc_slaves_qualification_growth_mult_desc: "$orc_slaves$ 资格增长的百分比增减[concept_social_class]" #deepl:2621265843
+ country_orc_slaves_qualification_growth_other_class_mult: "$orc_slaves$ [concept_social_class] 之外的资格增长。$orc_slaves$" #deepl:1828029278
+ country_orc_slaves_qualification_growth_other_class_mult_desc: "$orc_slaves$ 对[Concept('concept_profession', '$concept_professions$')] 在其他方面的资格增长的增减百分比[Concept('concept_social_class', '$concept_social_classes$')]" #deepl:1805485423
+ country_orc_slaves_qualification_growth_same_class_mult: "$orc_slaves$ [concept_social_class]" #deepl:554764545
+ country_orc_slaves_qualification_growth_same_class_mult_desc: "$orc_slaves$ [concept_social_class] 对[Concept('concept_profession', '$concept_professions$')] 的资格增长的百分比增减$orc_slaves$ $concept_social_class$" #deepl:2225314469
+ country_orc_soldiers_acceptance_max_add: "$orc_soldiers$ 的最大[concept_acceptance] [concept_social_class]" #deepl:1089274815
+ country_orc_soldiers_acceptance_max_add_desc: "描述[concept_acceptance] 值的阈值，$orc_soldiers$ [concept_social_class] 中的[Concept('concept_pop', '$concept_pops$')] 不能超过该值" #deepl:2475947426
+ country_orc_soldiers_acceptance_min_add: "$orc_soldiers$ 的最低[concept_acceptance] [concept_social_class]" #deepl:1922940519
+ country_orc_soldiers_acceptance_min_add_desc: "描述[concept_acceptance] 值的临界值，$orc_soldiers$ [concept_social_class] 中的[Concept('concept_pop', '$concept_pops$')] 不能低于该值。" #deepl:1999306907
+ country_orc_soldiers_cultural_acceptance_add: "文化[concept_acceptance] for the$orc_soldiers$ [concept_social_class]" #deepl:271428900
+ country_orc_soldiers_cultural_acceptance_add_desc: "$orc_soldiers$ 的文化[concept_acceptance] 的增减持平[concept_social_class]" #deepl:3150242356
+ country_orc_soldiers_cultural_acceptance_mult: "文化[concept_acceptance] for the$orc_soldiers$ [concept_social_class]" #deepl:271428900
+ country_orc_soldiers_cultural_acceptance_mult_desc: "$orc_soldiers$ 的文化[concept_acceptance] 的增减百分比[concept_social_class]" #deepl:191511184
+ country_orc_soldiers_education_access_add: "[concept_education_access] 为$orc_soldiers$ [concept_social_class]" #deepl:4077038629
+ country_orc_soldiers_education_access_add_desc: "$orc_soldiers$ 与[concept_education_access] 的增减持平[concept_social_class]" #deepl:395990724
+ country_orc_soldiers_education_access_mult: "[concept_education_access] 为$orc_soldiers$ [concept_social_class]" #deepl:4077038629
+ country_orc_soldiers_education_access_mult_desc: "[concept_education_access] 的增减百分比$orc_soldiers$ [concept_social_class]" #deepl:1196478526
+ country_orc_soldiers_qualification_growth_add: "$orc_soldiers$ [concept_social_class]" #deepl:4126516225
+ country_orc_soldiers_qualification_growth_add_desc: "$orc_soldiers$ 资格增长的增减持平[concept_social_class]" #deepl:1818133570
+ country_orc_soldiers_qualification_growth_mult: "$orc_soldiers$ [concept_social_class]" #deepl:4126516225
+ country_orc_soldiers_qualification_growth_mult_desc: "$orc_soldiers$ 资格增长的百分比增减[concept_social_class]" #deepl:1765479450
+ country_orc_soldiers_qualification_growth_other_class_mult: "$orc_soldiers$ [concept_social_class] 之外的资格增长。$orc_soldiers$" #deepl:411033754
+ country_orc_soldiers_qualification_growth_other_class_mult_desc: "$orc_soldiers$ 对[Concept('concept_profession', '$concept_professions$')] 在其他方面的资格增长的增减百分比[Concept('concept_social_class', '$concept_social_classes$')]" #deepl:1705504354
+ country_orc_soldiers_qualification_growth_same_class_mult: "$orc_soldiers$ [concept_social_class]" #deepl:556086137
+ country_orc_soldiers_qualification_growth_same_class_mult_desc: "$orc_soldiers$ [concept_social_class] 对[Concept('concept_profession', '$concept_professions$')] 的资格增长的百分比增减$orc_soldiers$ $concept_social_class$" #deepl:964091554
+ orc_citizens: "奥克公民" #deepl:2316943306
+ orc_citizens_desc: "兽人公民是兽人社会的日常成员，是社区的中坚力量。虽然他们可能没有兽人领主或巫师那样的权力或声望，但兽人公民对兽人部落和定居点的运作至关重要。他们的角色多种多样，从熟练的工匠和农民到战士和商人，每个人都为部落的生存和繁荣做出了贡献。兽人公民以其坚韧、勤劳和对领袖的忠诚而闻名，他们通常负责维护基础设施、收集资源和支持更强大的同伴。虽然他们的生活可能会被不断的生存和战争需求所左右，但奥克公民享有强烈的社区意识，并以自己的传统为荣。" #deepl:1619518737
+ orc_lords: "兽人领主" #deepl:25877226
+ orc_lords_desc: "兽人领主是兽人社会中占统治地位的社会阶层，体现了兽人文化中的力量、权威和武艺。这些人是强大的军阀、统治者和军事领袖，他们在部落或氏族中赢得尊重和敬畏。兽人领主通常比其社会中的其他成员更加高大、更加善战、更加狡猾，他们通过领导自己的战士在残酷的战斗中取得胜利而崭露头角。" #deepl:24867279
+ orc_lowers: "兽人低地" #deepl:1067009172
+ orc_lowers_desc: "兽人低等人是兽人社会中最底层的社会阶层，他们通常从事低等劳动，并为高级兽人提供服务。这个群体包括那些从事基本工作但声望较低的角色，如工人、仆人和学徒。虽然他们可能不像兽人公民或士兵那样享有同等权利或受到同等尊重，但他们的工作对部落的生存和运作至关重要。奥克低等人通常生活在恶劣的环境中，晋升机会有限，但他们以坚韧、果断和强烈的社区意识而闻名。尽管他们的地位低下，但他们对兽人社会的日常运作却至关重要，他们之间通常会形成紧密的联系。" #deepl:864248027
+ orc_shamans: "奥克巫师" #deepl:1442442498
+ orc_shamans_desc: "兽人巫师是兽人社会中一个神秘而受人尊敬的社会阶层，他们将精神信仰与强大的元素魔法融为一体。他们是部落的精神领袖、治疗师和预言家，拥有巨大的影响力和崇高的威望。人们相信兽人巫师能与远古精灵、元素力量和自然界的原始能量沟通。他们经常充当物质和精神领域之间的调解人，在战争、饥荒或重要仪式期间提供指导。" #deepl:2458749407
+ orc_slaves: "奴隶" #deepl:2852073468
+ orc_slaves_desc: "所有非奥克人都成了奴隶。" #deepl:1245267721
+ orc_soldiers: "兽人士兵" #deepl:19732495
+ orc_soldiers_desc: "兽人士兵是兽人社会中凶猛而纪律严明的核心战士，从小就接受战斗训练。他们是战争和突袭中的主要战斗力量，忠于他们的兽人领主，渴望战斗和荣誉。兽人士兵以他们的蛮力、原始的侵略性和无情的决心而闻名，他们通常配备重型武器、简陋但有效的盔甲以及深厚的友情。虽然他们可能没有很高的军衔，但他们在战场上的英勇表现为他们赢得了尊重，他们在扩张和保卫兽人领地方面发挥着至关重要的作用。通过浴血奋战和征服，兽人士兵体现了他们民族的战士精神。" #deepl:2398292761
+ orcish_slave_system: "$orcish$ 从属系统" #deepl:967273353
+ orcish_slave_system_desc: "兽人统治着其他所有文化，控制着整个社会。" #deepl:642753410
+ orcish_slave_system_trigger_desc: "每个人都受制度支配" #deepl:2639333999

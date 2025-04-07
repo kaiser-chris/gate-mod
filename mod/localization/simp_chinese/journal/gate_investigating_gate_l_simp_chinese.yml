@@ -1,13 +1,13 @@
 ﻿l_simp_chinese:
- investigate_gate_decision: "Investigating $building_gate$"
- investigate_gate_decision_desc: "Investigate [GetBuildingType('building_gate').GetName] to learn how to control it."
- je_investigate_gate: "Investigating $building_gate$"
- je_investigate_gate_reason: "In the heart of our newly conquered territory, the magic gate stands as a relic of untold power. Its ancient runes glow with a mysterious light, whispering secrets of arcane knowledge. As our scholars gather around, the air thickens with anticipation. The gate holds the promise of wisdom and power, waiting to be unlocked. Now begins the arduous task of deciphering its mysteries, a journey that could reshape our understanding of magic and elevate our realm to new heights."
- je_investigate_gate_goal: "Successful Investigation"
- je_investigate_gate_button_focus_academia: "Focus all our Efforts"
- je_investigate_gate_button_focus_academia_desc: "We will focus all our efforts on this investigation, even if it hurts our technological progress."
- focus_investigate_gate_cost_modifier: "Focused Investigation"
- gate_investigate_gate.1.t: "Successful Investigation"
- gate_investigate_gate.1.d: "Our investigation of the [GetBuildingType('building_gate').GetName] has resulted in [GetTechnology('gate_expeditions').GetName]."
- gate_investigate_gate.1.f: "After months of relentless study and guarded whispers, our scholars finally unlocked the secrets of the captured magic gate. The ancient runes that once defied understanding now pulsed with life, revealing knowledge long lost to time. As the gate’s mysteries unfolded, streams of arcane energy flowed into our hands, reshaping our understanding of the world. With this newfound power, our country stands on the brink of a magical renaissance, poised to harness the forces that had eluded us for generations."
- gate_investigate_gate.1.a: "A whole new World to Explore."
+ focus_investigate_gate_cost_modifier: "重点调查" #deepl:4268882841
+ gate_investigate_gate.1.a: "探索一个全新的世界" #deepl:4008939930
+ gate_investigate_gate.1.d: "我们对[GetBuildingType('building_gate').GetName] 的调查结果显示，[GetTechnology('gate_expeditions').GetName] 。" #deepl:2319230727
+ gate_investigate_gate.1.f: "经过数月的不懈研究和严密的窃窃私语，我们的学者终于解开了魔法门的秘密。古老的符文曾经令人费解，如今却迸发出生命的活力，揭示出久已失传的知识。随着魔法门奥秘的揭开，一股股神秘的能量流向我们的双手，重塑了我们对世界的认识。凭借这股新发现的力量，我们的国家正站在魔法复兴的边缘，准备驾驭世世代代都无法驾驭的力量。" #deepl:2693459441
+ gate_investigate_gate.1.t: "成功调查" #deepl:2127363984
+ investigate_gate_decision: "调查$building_gate$" #deepl:557002480
+ investigate_gate_decision_desc: "调查[GetBuildingType('building_gate').GetName] ，学习如何控制它。" #deepl:3184520691
+ je_investigate_gate: "调查$building_gate$" #deepl:557002480
+ je_investigate_gate_button_focus_academia: "集中精力" #deepl:2187213691
+ je_investigate_gate_button_focus_academia_desc: "我们将全力以赴开展这项调查，即使这会损害我们的技术进步。" #deepl:1641920565
+ je_investigate_gate_goal: "成功调查" #deepl:2127363984
+ je_investigate_gate_reason: "在我们新征服的领土中心，魔法之门矗立在那里，蕴藏着无尽的力量。古老的符文闪烁着神秘的光芒，低语着神秘知识的秘密。当我们的学者聚集在一起时，空气中弥漫着浓浓的期待。这扇大门蕴含着智慧和力量，等待着我们去开启。现在，破译其奥秘的艰巨任务开始了，这次旅程可能会重塑我们对魔法的理解，并将我们的王国提升到新的高度。" #deepl:4096125176

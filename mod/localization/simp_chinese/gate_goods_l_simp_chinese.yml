@@ -1,41 +1,36 @@
 ﻿l_simp_chinese:
-# Mana Crystals
- mana: "Mana Crystals"
- goods_output_mana_add: "@mana! $mana$ output"
- goods_output_mana_add_desc: "The amount of @mana! $mana$ produced by buildings"
- goods_input_mana_add: "@mana! $mana$ input"
- goods_input_mana_add_desc: "The amount of @mana! $mana$ consumed by buildings"
- trade_route_import_lens_option_mana_tooltip:0 "Establish an $mana$ import trade route"
- trade_route_export_lens_option_mana_tooltip:0 "Establish an $mana$ export trade route"
-# Mana Cores
- mana_core: "Mana Cores"
- goods_output_mana_core_add: "@mana_core! $mana_core$ output"
- goods_output_mana_core_add_desc: "The amount of @mana_core! $mana_core$ produced by buildings"
- goods_input_mana_core_add: "@mana_core! $mana_core$ input"
- goods_input_mana_core_add_desc: "The amount of @mana_core! $mana_core$ consumed by buildings"
- trade_route_import_lens_option_mana_core_tooltip:0 "Establish an $mana_core$ import trade route"
- trade_route_export_lens_option_mana_core_tooltip:0 "Establish an $mana_core$ export trade route"
-# Golems
- golem: "Golems"
- goods_output_golem_add: "@golem! $golem$ output"
- goods_output_golem_add_desc: "The amount of @golem! $golem$ produced by buildings"
- goods_input_golem_add: "@golem! $golem$ input"
- goods_input_golem_add_desc: "The amount of @golem! $golem$ consumed by buildings"
- trade_route_import_lens_option_golem_tooltip:0 "Establish an $golem$ import trade route"
- trade_route_export_lens_option_golem_tooltip:0 "Establish an $golem$ export trade route"
-# Magic Seeds
- magic_seed: "Magic Seeds"
- goods_output_magic_seed_add: "@magic_seed! $magic_seed$ output"
- goods_output_magic_seed_add_desc: "The amount of @magic_seed! $magic_seed$ produced by buildings"
- goods_input_magic_seed_add: "@magic_seed! $magic_seed$ input"
- goods_input_magic_seed_add_desc: "The amount of @magic_seed! $magic_seed$ consumed by buildings"
- trade_route_import_lens_option_magic_seed_tooltip:0 "Establish an $magic_seed$ import trade route"
- trade_route_export_lens_option_magic_seed_tooltip:0 "Establish an $magic_seed$ export trade route"
-# Rune Etched Paper
- runic_paper: "Rune Etched Paper"
- goods_output_runic_paper_add: "@runic_paper! $runic_paper$ output"
- goods_output_runic_paper_add_desc: "The amount of @runic_paper! $runic_paper$ produced by buildings"
- goods_input_runic_paper_add: "@runic_paper! $runic_paper$ input"
- goods_input_runic_paper_add_desc: "The amount of @runic_paper! $runic_paper$ consumed by buildings"
- trade_route_import_lens_option_runic_paper_tooltip:0 "Establish an $runic_paper$ import trade route"
- trade_route_export_lens_option_runic_paper_tooltip:0 "Establish an $runic_paper$ export trade route"
+ golem: "Golems" #deepl:680133882
+ goods_input_golem_add: "@golem!$golem$ input" #deepl:3737692877
+ goods_input_golem_add_desc: "建筑物消耗的 @golem!$golem$ 数量" #deepl:3143039365
+ goods_input_magic_seed_add: "@magic_seed!$magic_seed$ input" #deepl:2116409603
+ goods_input_magic_seed_add_desc: "建筑物消耗的 @magic_seed!$magic_seed$ 数量" #deepl:4059257086
+ goods_input_mana_add: "@mana!$mana$ input" #deepl:3200839206
+ goods_input_mana_add_desc: "建筑物消耗的 @mana!$mana$ 量" #deepl:821851764
+ goods_input_mana_core_add: "@mana_core!$mana_core$ 输入" #deepl:104647377
+ goods_input_mana_core_add_desc: "建筑物消耗的 @mana_core!$mana_core$ 数量" #deepl:3908114597
+ goods_input_runic_paper_add: "@runic_paper!$runic_paper$ input" #deepl:1010244827
+ goods_input_runic_paper_add_desc: "建筑物消耗的 @runic_paper!$runic_paper$ 数量" #deepl:448859270
+ goods_output_golem_add: "@golem!$golem$ 输出" #deepl:2476888162
+ goods_output_golem_add_desc: "建筑物产生的 @golem!$golem$ 量" #deepl:1850805114
+ goods_output_magic_seed_add: "@magic_seed!$magic_seed$ 输出" #deepl:1734274370
+ goods_output_magic_seed_add_desc: "建筑物产生的 @magic_seed!$magic_seed$ 数量" #deepl:620014081
+ goods_output_mana_add: "@mana!$mana$ 输出" #deepl:4013976603
+ goods_output_mana_add_desc: "建筑物产生的 @mana!$mana$ 量" #deepl:3858465931
+ goods_output_mana_core_add: "@mana_core!$mana_core$ 输出" #deepl:88441639
+ goods_output_mana_core_add_desc: "建筑物产生的 @mana_core!$mana_core$ 量" #deepl:1039592026
+ goods_output_runic_paper_add: "@runic_paper!$runic_paper$ 输出" #deepl:8754927
+ goods_output_runic_paper_add_desc: "建筑物产生的 @runic_paper!$runic_paper$ 量" #deepl:3485924985
+ magic_seed: "神奇种子" #deepl:392237414
+ mana: "法力水晶" #deepl:1460345836
+ mana_core: "法力核心" #deepl:596367649
+ runic_paper: "符文刻纸" #deepl:2772252626
+ trade_route_export_lens_option_golem_tooltip: "建立$golem$ 出口贸易路线" #deepl:2768385360
+ trade_route_export_lens_option_magic_seed_tooltip: "建立$magic_seed$ 出口贸易路线" #deepl:4261330702
+ trade_route_export_lens_option_mana_core_tooltip: "建立$mana_core$ 出口贸易路线" #deepl:2095252357
+ trade_route_export_lens_option_mana_tooltip: "建立$mana$ 出口贸易路线" #deepl:3878060393
+ trade_route_export_lens_option_runic_paper_tooltip: "建立$runic_paper$ 出口贸易路线" #deepl:2321591252
+ trade_route_import_lens_option_golem_tooltip: "建立$golem$ 进口贸易路线" #deepl:3524884315
+ trade_route_import_lens_option_magic_seed_tooltip: "建立$magic_seed$ 进口贸易路线" #deepl:2330328325
+ trade_route_import_lens_option_mana_core_tooltip: "建立$mana_core$ 进口贸易路线" #deepl:200819086
+ trade_route_import_lens_option_mana_tooltip: "建立$mana$ 进口贸易路线" #deepl:2419966818
+ trade_route_import_lens_option_runic_paper_tooltip: "建立$runic_paper$ 进口贸易路线" #deepl:4252756447

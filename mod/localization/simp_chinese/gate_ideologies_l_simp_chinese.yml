@@ -1,58 +1,57 @@
 ﻿l_simp_chinese:
- ideology_orcish_slavery: "$ideology_pro_slavery$"
- ideology_orcish_slavery_desc: "$ideology_pro_slavery_desc$"
- ideology_orchish_patriarchal: "$ideology_patriarchal$"
- ideology_orchish_patriarchal_desc: "$ideology_patriarchal_desc$"
- ideology_magic_militarist: "Militarists"
- ideology_magic_militarist_desc: "$ideology_jingoist_desc$"
- ideology_magic_supremacist: "Magic Supremacist"
- ideology_magic_supremacist_desc: "#lore This group believes in the supremacy of [concept_gate_magic_users].#!"
- ideology_magic_supremacist_character: "$ideology_magic_supremacist$"
- ideology_magic_supremacist_character_desc: "#lore This leader believes into the inherent supremacy of [concept_gate_magic_users].#!"
- ideology_magic_hopeful: "Magic Hopeful"
- ideology_magic_hopeful_desc: "#lore This leader hopes that magic will bring a better future.#!"
- ideology_magic_sceptic: "Magic Sceptic"
- ideology_magic_sceptic_desc: "#lore This leader believes that magic may lead to problems in society and should be kept [concept_gate_magic_users] in check.#!"
- ideology_magic_cynic: "Magic Cynic"
- ideology_magic_cynic_desc: "#lore This leader believes that magic is something that should not exist.#!"
- ideology_gate_vampirism: "Lunar Masquerade"
- ideology_gate_vampirism_desc: "#lore This leader believes that the country should embrace [concept_gate_vampirism] and convert to the [GetCulture('vampire').GetName] culture.#!"
- ideology_gate_vampirism_interested: "Lunar Supporter"
- ideology_gate_vampirism_interested_desc: "#lore This leader is interested in [concept_gate_vampirism] and the [GetCulture('vampire').GetName] culture.#!"
- ideology_gate_vampirism_purge: "Lunar Purge"
- ideology_gate_vampirism_purge_desc: "#lore This leader despises [concept_gate_vampirism] and the [GetCulture('vampire').GetName] culture.#!"
- ideology_magic_supremacist_movement: "Magic Supremacy"
- ideology_magic_supremacist_movement_desc: "#lore This movement believes in the supremacy of [concept_gate_magic_users], above all others.#!"
- ideology_gate_vampire_movement: "Lunar Masquerade"
- ideology_gate_vampire_movement_desc: "#lore This movement believes that the country should embrace [concept_gate_vampirism] and convert to the [GetCulture('vampire').GetName] culture.#!"
- ideology_gate_vampire_surpremacists: "Vampire Supremacists"
- ideology_gate_vampire_surpremacists_desc: "#lore This group believes that the country should continue to embrace [concept_gate_vampirism] and believes it should never be repealed.#!"
- ideology_gate_vampire_embrace: "Vampire Embrace"
- ideology_gate_vampire_embrace_desc: "#lore This group believes that the country should continue to embrace [concept_gate_vampirism].#!"
- ideology_gate_vampire_acceptance: "Vampire Acceptance"
- ideology_gate_vampire_acceptance_desc: "#lore This group has accepted that the country has embraced [concept_gate_vampirism].#!"
- ideology_gate_vampire_extremists: "Vampire Extremists"
- ideology_gate_vampire_extremists_desc: "#lore This group believes that the country should end its embracing of [concept_gate_vampirism].#!"
-# Replacements of original Ideologies
- ideology_liberal_gate: "$ideology_liberal$"
- ideology_liberal_gate_desc: "$ideology_liberal_desc$"
- ideology_plutocratic_gate: "$ideology_plutocratic$"
- ideology_plutocratic_gate_desc: "$ideology_plutocratic_desc$"
- ideology_isolationist_gate: "$ideology_isolationist$"
- ideology_isolationist_gate_desc: "$ideology_isolationist_desc$"
- ideology_jingoist_gate: "$ideology_jingoist$"
- ideology_jingoist_gate_desc: "$ideology_jingoist_desc$"
- ideology_meritocratic_gate: "$ideology_meritocratic$"
- ideology_meritocratic_gate_desc: "$ideology_meritocratic_desc$"
- ideology_reactionary_gate: "$ideology_reactionary$"
- ideology_reactionary_gate_desc: "$ideology_reactionary_desc$"
- ideology_egalitarian_gate: "$ideology_egalitarian$"
- ideology_egalitarian_gate_desc: "$ideology_egalitarian_desc$"
- ideology_patriotic_gate: "$ideology_patriotic$"
- ideology_patriotic_gate_desc: "$ideology_patriotic_desc$"
- ideology_paternalistic_gate: "$ideology_paternalistic$"
- ideology_paternalistic_gate_desc: "$ideology_paternalistic_desc$"
- ideology_particularist_gate: "$ideology_particularist$"
- ideology_particularist_gate_desc: "$ideology_particularist_desc$"
- ideology_laissez_faire_gate: "$ideology_laissez_faire$"
- ideology_laissez_faire_gate_desc: "$ideology_laissez_faire_desc$"
+ ideology_egalitarian_gate: "$ideology_egalitarian$" #deepl:152279322
+ ideology_egalitarian_gate_desc: "$ideology_egalitarian_desc$" #deepl:3044356560
+ ideology_gate_vampire_acceptance: "接受吸血鬼" #deepl:3902587025
+ ideology_gate_vampire_acceptance_desc: "#lore 这部分人接受了国家已接受[concept_gate_vampirism] 的说法。#!" #deepl:1872794060
+ ideology_gate_vampire_embrace: "吸血鬼的拥抱" #deepl:3339505951
+ ideology_gate_vampire_embrace_desc: "#lore 这部分人认为，国家应继续拥抱[concept_gate_vampirism] 。#!" #deepl:2062771477
+ ideology_gate_vampire_extremists: "吸血鬼极端分子" #deepl:982659821
+ ideology_gate_vampire_extremists_desc: "#lore 这部分人认为，国家应该停止对[concept_gate_vampirism] 的拥护。#!" #deepl:4282872636
+ ideology_gate_vampire_movement: "月球化妆舞会" #deepl:312992387
+ ideology_gate_vampire_movement_desc: "#lore 这一运动认为，国家应该接受[concept_gate_vampirism] ，并皈依[GetCulture('vampire').GetName] 文化。#!" #deepl:880116476
+ ideology_gate_vampire_surpremacists: "吸血鬼至上主义者" #deepl:2440203009
+ ideology_gate_vampire_surpremacists_desc: "#lore 这部分人认为，国家应继续接受[concept_gate_vampirism] ，并认为永远不应废除它。#!" #deepl:4200070817
+ ideology_gate_vampirism: "月球化妆舞会" #deepl:312992387
+ ideology_gate_vampirism_desc: "#lore 这位领导人认为，国家应该接受[concept_gate_vampirism] ，并皈依[GetCulture('vampire').GetName] 文化。#!" #deepl:1236887
+ ideology_gate_vampirism_interested: "月球支持者" #deepl:4275981689
+ ideology_gate_vampirism_interested_desc: "#lore 这位领导人对[concept_gate_vampirism] 和[GetCulture('vampire').GetName] 文化很感兴趣。#!" #deepl:4115960398
+ ideology_gate_vampirism_purge: "月球清洗" #deepl:3727342279
+ ideology_gate_vampirism_purge_desc: "#lore 这位领导人鄙视[concept_gate_vampirism] 和[GetCulture('vampire').GetName] 文化。#!" #deepl:4271475766
+ ideology_isolationist_gate: "$ideology_isolationist$" #deepl:123263144
+ ideology_isolationist_gate_desc: "$ideology_isolationist_desc$" #deepl:1683558845
+ ideology_jingoist_gate: "$ideology_jingoist$" #deepl:1559783281
+ ideology_jingoist_gate_desc: "$ideology_jingoist_desc$" #deepl:781913897
+ ideology_laissez_faire_gate: "$ideology_laissez_faire$" #deepl:2442402447
+ ideology_laissez_faire_gate_desc: "$ideology_laissez_faire_desc$" #deepl:3084778206
+ ideology_liberal_gate: "$ideology_liberal$" #deepl:269897838
+ ideology_liberal_gate_desc: "$ideology_liberal_desc$" #deepl:3604671697
+ ideology_magic_cynic: "魔法愤青" #deepl:299064424
+ ideology_magic_cynic_desc: "#lore 这位领导人认为，魔法是不应该存在的东西。#!" #deepl:4218734724
+ ideology_magic_hopeful: "魔法希望" #deepl:632805805
+ ideology_magic_hopeful_desc: "#lore 这位领导人希望魔法能带来更美好的未来。#!" #deepl:1034866537
+ ideology_magic_militarist: "军国主义者" #deepl:3586939340
+ ideology_magic_militarist_desc: "$ideology_jingoist_desc$" #deepl:781913897
+ ideology_magic_sceptic: "魔法怀疑论者" #deepl:3853646876
+ ideology_magic_sceptic_desc: "#lore 这位领导人认为，魔法可能会给社会带来问题，应[concept_gate_magic_users] 加以控制。#!" #deepl:1928982369
+ ideology_magic_supremacist: "魔法至上主义者" #deepl:4127640511
+ ideology_magic_supremacist_character: "$ideology_magic_supremacist$" #deepl:2723168559
+ ideology_magic_supremacist_character_desc: "#lore 这位领导人坚信[concept_gate_magic_users] 与生俱来的至高无上的地位。#!" #deepl:572561557
+ ideology_magic_supremacist_desc: "#lore 这个团体相信[concept_gate_magic_users] 的至高无上性。#!" #deepl:106323263
+ ideology_magic_supremacist_movement: "魔法至尊" #deepl:1700061562
+ ideology_magic_supremacist_movement_desc: "#lore 这一运动信奉[concept_gate_magic_users] 至高无上的地位。#!" #deepl:264091820
+ ideology_meritocratic_gate: "$ideology_meritocratic$" #deepl:3183116002
+ ideology_meritocratic_gate_desc: "$ideology_meritocratic_desc$" #deepl:2067709794
+ ideology_orchish_patriarchal: "$ideology_patriarchal$" #deepl:3996961499
+ ideology_orchish_patriarchal_desc: "$ideology_patriarchal_desc$" #deepl:3893911147
+ ideology_orcish_slavery: "$ideology_pro_slavery$" #deepl:264925675
+ ideology_orcish_slavery_desc: "$ideology_pro_slavery_desc$" #deepl:1340424377
+ ideology_particularist_gate: "$ideology_particularist$" #deepl:3994890274
+ ideology_particularist_gate_desc: "$ideology_particularist_desc$" #deepl:1527293698
+ ideology_paternalistic_gate: "$ideology_paternalistic$" #deepl:1707526466
+ ideology_paternalistic_gate_desc: "$ideology_paternalistic_desc$" #deepl:988982678
+ ideology_patriotic_gate: "$ideology_patriotic$" #deepl:58402324
+ ideology_patriotic_gate_desc: "$ideology_patriotic_desc$" #deepl:544135692
+ ideology_plutocratic_gate: "$ideology_plutocratic$" #deepl:1782296259
+ ideology_plutocratic_gate_desc: "$ideology_plutocratic_desc$" #deepl:2429153648
+ ideology_reactionary_gate: "$ideology_reactionary$" #deepl:2528333408
+ ideology_reactionary_gate_desc: "$ideology_reactionary_desc$" #deepl:3895697019
