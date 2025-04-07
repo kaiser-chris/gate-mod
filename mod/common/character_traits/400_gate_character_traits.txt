@@ -92,13 +92,13 @@ gate_eternal_monarch = {
     }
 }
 
-gate_vampire = {
+gate_race_trait_vampire = {
     type = condition
 
     texture = gfx/interface/icons/character_trait_icons/reserved.dds
 
     character_modifier = {
-        character_health_add = 0.5
+        character_health_add = 6
     }
 
     possible = {
@@ -116,4 +116,36 @@ gate_vampire = {
         kidney_stones
         sickly
     }
+}
+
+gate_race_trait_dwarven = {
+    type = condition
+
+    texture = gfx/interface/icons/character_trait_icons/reserved.dds
+
+    character_modifier = {
+        character_health_add = 5
+    }
+
+    possible = {
+        culture ?= cu:dwarven
+    }
+
+    weight = 0
+}
+
+gate_race_trait_elven = {
+    type = condition
+
+    texture = gfx/interface/icons/character_trait_icons/reserved.dds
+
+    character_modifier = {
+        character_health_add = 10
+    }
+
+    possible = {
+        culture ?= cu:elven
+    }
+
+    weight = 0
 }

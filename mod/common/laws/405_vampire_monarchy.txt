@@ -38,10 +38,10 @@
                 if = {
                     limit = {
                         NOT = {
-                            has_trait = gate_vampire
+                            has_trait = gate_race_trait_vampire
                         }
                     }
-                    add_trait = gate_vampire
+                    add_trait = gate_race_trait_vampire
                 }
             }
             every_character_in_void = {
@@ -56,10 +56,10 @@
                 if = {
                     limit = {
                         NOT = {
-                            has_trait = gate_vampire
+                            has_trait = gate_race_trait_vampire
                         }
                     }
-                    add_trait = gate_vampire
+                    add_trait = gate_race_trait_vampire
                 }
             }
         }

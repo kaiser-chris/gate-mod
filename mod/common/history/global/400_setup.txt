@@ -68,4 +68,41 @@ GLOBAL = {
 			interest_group = ig_magic_users
 		}
 	}
+
+	every_character = {
+		limit = {
+			OR = {
+				culture ?= cu:dwarven
+				culture ?= cu:elven
+				culture ?= cu:vampire
+			}
+		}
+		if = {
+			limit = {
+				culture ?= cu:dwarven
+				NOT = {
+					has_trait = gate_race_trait_dwarven
+				}
+			}
+			add_trait = gate_race_trait_dwarven
+		}
+		if = {
+			limit = {
+				culture ?= cu:elven
+				NOT = {
+					has_trait = gate_race_trait_elven
+				}
+			}
+			add_trait = gate_race_trait_elven
+		}
+		if = {
+			limit = {
+				culture ?= cu:vampire
+				NOT = {
+					has_trait = gate_race_trait_vampire
+				}
+			}
+			add_trait = gate_race_trait_vampire
+		}
+	}
 }

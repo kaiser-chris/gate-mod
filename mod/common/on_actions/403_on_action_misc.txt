@@ -89,6 +89,8 @@ on_gate_lunda_uprising_start = {
 on_character_creation = {
     on_actions = {
         on_gate_vampire_created
+        on_gate_elf_created
+        on_gate_dwarf_created
     }
 }
 
@@ -97,6 +99,24 @@ on_gate_vampire_created = {
         culture ?= cu:vampire
     }
     effect = {
-        add_trait = gate_vampire
+        add_trait = gate_race_trait_vampire
+    }
+}
+
+on_gate_elf_created = {
+    trigger = {
+        culture ?= cu:elven
+    }
+    effect = {
+        add_trait = gate_race_trait_elven
+    }
+}
+
+on_gate_dwarf_created = {
+    trigger = {
+        culture ?= cu:dwarven
+    }
+    effect = {
+        add_trait = gate_race_trait_dwarven
     }
 }
