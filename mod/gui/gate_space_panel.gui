@@ -1,0 +1,108 @@
+types gate_space_panel_types {
+
+    type gate_space_panel = fullscreen_block_window {
+        name = "gate_space_panel"
+        datacontext = "[GetMetaPlayer.GetPlayedOrObservedCountry]"
+
+        visible = "[Or(GetVariableSystem.HasValue('com_open_window', 'gate_button_space'), GetVariableSystem.HasValue('com_alert_action', Localize('gg_panel_space_action')))]"
+
+        blockoverride "animation_state_block" {
+            state = {
+                name = _show
+                # Close open panel before showing this one
+                on_start = "[InformationPanelBar.ClosePanel]"
+                on_start = "[MapListPanelManager.CloseCurrentPanel]"
+                # Fullscreen panels hide topbar
+                on_finish = "[GetVariableSystem.Set('com_fullscreen', 'com_fullscreen')]"
+                start_sound = {
+                    soundeffect = "event:/SFX/UI/SideBar/markets"
+                }
+                start_sound = {
+                    soundeffect = "snapshot:/Dynamic/mute_world_80"
+                }
+                start_sound = {
+                    soundeffect = "snapshot:/Dynamic/mute_vfx_war_100"
+                }
+            }
+
+            state = {
+                name = _hide
+                on_finish = "[GetVariableSystem.Clear('com_fullscreen')]"
+                start_sound = {
+                    soundeffect = "event:/SFX/UI/SideBar/markets_stop"
+                }
+            }
+        }
+
+        blockoverride "window_header_name"
+        {
+            text = gg_panel_space_title
+            default_format = "#bold"
+        }
+
+        block "back_button_fullscreen" {
+            back_button_large = {
+                position = { 11 15 }
+                parentanchor = top|left
+                onclick = "[GetVariableSystem.Clear('com_open_window')]"
+                onclick = "[GetVariableSystem.Clear('com_alert_action')]"
+                input_action = "back"
+            }
+
+            close_button_large = {
+                name = "tutorial_highlight_close_button"
+                parentanchor = top|right
+                onclick = "[GetVariableSystem.Clear('com_open_window')]"
+                onclick = "[GetVariableSystem.Clear('com_alert_action')]"
+                shortcut = "close_window"
+                position = { -55 116 }
+            }
+        }
+
+        blockoverride "close_button_position" {
+            visible = no
+        }
+
+        blockoverride "fixed_top" {
+            # Later
+        }
+
+        blockoverride "scrollarea_content" {
+            widget = {
+                size = { 100% 100% }
+
+                background = {
+                    spriteType = CorneredTiled
+                    texture = gfx/map/gate/space/background.dds
+
+                    modify_texture = {
+                        texture = "gfx/interface/masks/fade_horizontal_center_map.dds"
+                        spriteType = Corneredstretched
+                        spriteborder = { 0 0 }
+                        blend_mode = alphamultiply
+                    }
+                }
+
+                moon_map_container = {}
+
+                moon_map_sidebar = {}
+
+                container = {
+                    parentanchor = top|right
+                    position = { -20 20 }
+                    background = {
+                        using = entry_bg_fancy_dark
+                        alpha = 1
+                    }
+                    textbox = {
+                        autoresize = yes
+                        margin = { 20 12 }
+                        align = center
+                        text = gg_panel_map_drag_hint
+                        using = fontsize_large
+                    }
+                }
+            }
+        }
+    }
+}

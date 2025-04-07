@@ -1,0 +1,305 @@
+types gate_map_types {
+    type moon_map_container = zoomarea {
+        name = gate_map_container
+        allow_outside = yes
+        size = { 100% 100% }
+
+        state = {
+            name = "_zoom_changed"
+            duration = 0.15
+        }
+        scissor = yes
+
+        zoom = 0.15
+        zoom_step = 0.25
+        zoom_min = 0.15
+        zoom_max = 1.5
+        draggable_by = right # Do not add 'middle' click here, otherwise you will re-introduce PRCAL-16945
+
+        zoomwidget = {
+            container = {
+                widget = {
+                    parentanchor = top|left
+                    size = { 2580 2452 }
+                    background = {
+                        texture = gfx/map/gate/space/moon.dds
+                        spriteType = Corneredstretched
+                    }
+
+                    widget = {
+                        position = { 1436 328 }
+                        size = { 60 60 }
+                        widget = {
+                            parentanchor = hcenter|bottom
+                            position = { 0 -10 }
+                            textbox = {
+                                text = gg_space_moon_plato
+                                background = {
+                                    using = paper_bg
+                                }
+                                parentanchor = hcenter
+                                autoresize = yes
+                                margin = { 20 10 }
+                            }
+                        }
+                        button_icon_round = {
+                            tooltip = gg_space_moon_plato_desc
+                            size = { 60 60 }
+                            blockoverride "icon" {
+                                icon = {
+                                    size = { 60 60 }
+                                    texture = gfx/map/gate/markers/empty_flag.dds
+                                    scale = 0.8
+                                    parentanchor = hcenter|vcenter
+                                }
+                            }
+                            onclick = "[GetVariableSystem.Toggle('gate_space_sidebar')]"
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    type moon_map_sidebar = widget {
+        size = { 500 100% }
+        parentanchor = top|left
+        position = { 0 0 }
+
+        visible = "[GetVariableSystem.Exists('gate_space_sidebar')]"
+
+        background = {
+            texture = gfx/interface/misc/black.dds
+
+            modify_texture = {
+                texture = "gfx/interface/masks/fade_horizontal_right.dds"
+                blend_mode = alphamultiply
+                alpha = 1
+            }
+        }
+
+        background = {
+            using = default_bg_sidebar
+
+            modify_texture = {
+                texture = "gfx/interface/masks/fade_horizontal_left.dds"
+                blend_mode = alphamultiply
+                alpha = 0.08
+            }
+        }
+    }
+
+    type gate_button_space = button {
+        parentanchor = top|left
+        size = { 120 120 }
+        block marker_location {
+            position = { 0 0 }
+        }
+        using = select_button_sound
+        effectname = "NoHighlight"
+
+        onclick = "[GetVariableSystem.Toggle('gate_space_sidebar')]"
+
+        ### show
+        state = {
+            name = _show
+            on_start = "[PdxGuiWidget.AccessChild('icon').TriggerAnimation('show')]"
+            on_start = "[PdxGuiWidget.AccessChild('frame').TriggerAnimation('show')]"
+        }
+
+        ### enter
+        state = {
+            name = _mouse_enter
+            on_start = "[PdxGuiWidget.AccessChild('frame').TriggerAnimation('enter')]"
+        }
+
+        ### leave
+        state = {
+            name = _mouse_leave
+            on_start = "[PdxGuiWidget.AccessChild('icon').InterruptThenTriggerAnimation('enter','leave')]"
+            on_start = "[PdxGuiWidget.AccessChild('frame').InterruptThenTriggerAnimation('enter','leave')]"
+        }
+
+        ### press
+        state = {
+            name = _mouse_press
+            on_start = "[PdxGuiWidget.AccessChild('icon').TriggerAnimation('press')]"
+            on_start = "[PdxGuiWidget.AccessChild('frame').TriggerAnimation('press')]"
+        }
+
+        ### release
+        state = {
+            name = _mouse_release
+            on_start = "[PdxGuiWidget.AccessChild('icon').TriggerAnimation('release')]"
+            on_start = "[PdxGuiWidget.AccessChild('frame').TriggerAnimation('release')]"
+        }
+
+        icon = {
+            name = frame
+            size = { 100% 100% }
+            parentanchor = center
+            alwaystransparent = yes
+            spriteType = Corneredstretched
+            texture = gfx/map/gate/markers/marker_frame.dds
+
+            modify_texture = {
+                texture = "gfx/interface/backgrounds/default_bg_shading.dds"
+                spriteType = Corneredstretched
+                spriteborder = { 0 0 }
+                blend_mode = overlay
+            }
+            modify_texture = {
+                texture = "gfx/interface/textures/velvet_texture.dds"
+                spriteType = Corneredtiled
+                texture_density = 2
+                spriteborder = { 0 0 }
+                blend_mode = overlay
+            }
+            modify_texture = {
+                texture = "gfx/interface/textures/cloth_texture.dds"
+                spriteType = Corneredtiled
+                texture_density = 2
+                spriteborder = { 0 0 }
+                blend_mode = overlay
+                alpha = 0.15
+            }
+
+            ### hidden
+            modify_texture = {
+                name = "hidden"
+                texture = gfx/interface/masks/hidden.dds
+                spriteType = Corneredstretched
+                spriteborder = { 0 0 }
+                blend_mode = alphamultiply
+                alpha = 1
+            }
+
+            ### selected
+            modify_texture = {
+                name = "selected"
+                texture = "gfx/interface/buttons/round_button_selected_icon.dds"
+                spriteType = Corneredstretched
+                spriteborder = { 0 0 }
+                blend_mode = overlay
+                block "button_selected" {
+                    visible = no
+                }
+            }
+
+            ### animation textures
+            modify_texture = {
+                name = "mouse_press"
+                texture = "gfx/map/gate/markers/icon_marker_mouse_enter.dds"
+                spriteType = Corneredstretched
+                spriteborder = { 0 0 }
+                blend_mode = overlay
+                alpha = 0
+            }
+
+            ### show
+            state = {
+                name = show
+                position = { 0 0 }
+                using = button_animation_duration
+
+                modify_texture = {
+                    name = mouse_press
+                    alpha = 0
+                }
+                modify_texture = {
+                    name = hidden
+                    alpha = 1
+                }
+            }
+
+            ### enter
+            state = {
+                name = enter
+                position = { 0 0 }
+                using = button_animation_duration
+
+                modify_texture = {
+                    name = mouse_press
+                    alpha = 0
+                }
+                modify_texture = {
+                    name = hidden
+                    alpha = 0
+                }
+            }
+
+            ### leave
+            state = {
+                name = leave
+                position = { 0 0 }
+                using = button_animation_duration
+
+                modify_texture = {
+                    name = mouse_press
+                    alpha = 0
+                }
+                modify_texture = {
+                    name = hidden
+                    alpha = 1
+                }
+            }
+
+            ### press
+            state = {
+                name = press
+                position = { 1 2 }
+                using = button_animation_duration
+
+                modify_texture = {
+                    name = mouse_press
+                    alpha = 1
+                }
+                modify_texture = {
+                    name = hidden
+                    alpha = 0
+                }
+            }
+        }
+
+        icon = {
+            name = icon
+            block "icon" {}
+            size = { 100 100 }
+            parentanchor = center
+            alwaystransparent = yes
+
+            modify_texture = {
+                name = "mouse_press"
+                texture = "gfx/map/gate/markers/icon_marker_mouse_enter.dds"
+                spriteType = Corneredstretched
+                spriteborder = { 0 0 }
+                blend_mode = overlay
+                alpha = 0
+            }
+
+            ### press
+            state = {
+                name = press
+                position = { 1 2 }
+                using = button_animation_duration
+
+                modify_texture = {
+                    name = mouse_press
+                    alpha = 1
+                }
+            }
+
+            ### release
+            state = {
+                position = { 0 0 }
+                name = release
+                using = button_animation_duration
+
+                modify_texture = {
+                    name = mouse_press
+                    alpha = 0
+                }
+            }
+        }
+    }
+}

@@ -256,7 +256,7 @@ types gate_map_types {
                                     position = { 800 800 }
                                 }
                                 blockoverride icon {
-                                    texture = gfx/map/ankaris/markers/small_city.dds
+                                    texture = gfx/map/gate/markers/small_city.dds
                                 }
                             }
                             gate_button_map_marker = {
@@ -264,7 +264,7 @@ types gate_map_types {
                                     position = { 1000 1050 }
                                 }
                                 blockoverride icon {
-                                    texture = gfx/map/ankaris/markers/gate.dds
+                                    texture = gfx/map/gate/markers/gate.dds
                                 }
                             }
                         }
@@ -432,7 +432,7 @@ types gate_map_types {
             parentanchor = center
             alwaystransparent = yes
             spriteType = Corneredstretched
-            texture = gfx/map/ankaris/markers/marker_frame.dds
+            texture = gfx/map/gate/markers/marker_frame.dds
 
             modify_texture = {
                 texture = "gfx/interface/backgrounds/default_bg_shading.dds"
@@ -481,7 +481,7 @@ types gate_map_types {
             ### animation textures
             modify_texture = {
                 name = "mouse_press"
-                texture = "gfx/map/ankaris/markers/icon_marker_mouse_enter.dds"
+                texture = "gfx/map/gate/markers/icon_marker_mouse_enter.dds"
                 spriteType = Corneredstretched
                 spriteborder = { 0 0 }
                 blend_mode = overlay
@@ -562,7 +562,7 @@ types gate_map_types {
 
             modify_texture = {
                 name = "mouse_press"
-                texture = "gfx/map/ankaris/markers/icon_marker_mouse_enter.dds"
+                texture = "gfx/map/gate/markers/icon_marker_mouse_enter.dds"
                 spriteType = Corneredstretched
                 spriteborder = { 0 0 }
                 blend_mode = overlay

@@ -8,8 +8,6 @@
 
 	type = alert
 
-	open_panel = magic_technology
-
 	alert_group = gate_alerts
 
 	color = red
@@ -24,8 +22,6 @@ can_unlock_magic_technology_alert = {
 	}
 
 	type = alert
-
-	open_panel = magic_technology
 
 	alert_group = gate_alerts
 
@@ -85,7 +81,20 @@ expedition_alert = {
 		has_global_variable = com_debug
 	}
 
-	open_panel = journal
+	type = important_action
+
+	alert_group = gate_alerts
+}
+
+gate_space_alert = {
+	script_context = player_country
+	texture = gfx/interface/icons/alert_icons/has_no_magic_research.dds
+
+	valid = {
+		is_player = yes
+		#TODO: Remove this debug check for expedition_alert
+		has_global_variable = com_debug
+	}
 
 	type = important_action
 
