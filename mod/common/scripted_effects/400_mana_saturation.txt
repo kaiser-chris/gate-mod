@@ -53,26 +53,34 @@ add_mana_density = {
 	if = {
 		limit = {
 			has_variable = mana_density
+			var:mana_density < maximum_mana_density
 		}
-		# Propagation
-		change_variable = {
-			name = mana_density
-			add = $amount$
+		save_temporary_scope_value_as = {
+			name = added_mana_density
+			value = $amount$
 		}
-		clamp_variable = {
-			name = mana_density
-			max = maximum_mana_density
-			min = minimum_mana_density
-		}
-		# Cache update
-		change_global_variable = {
-			name = global_mana_density_cache
-			add = {
-				value = $amount$
-				add = 0.45 # Add 45% so it is guaranteed to hit it
+		custom_tooltip = {
+			text = effect_add_mana_density
+			# Propagation
+			change_variable = {
+				name = mana_density
+				add = $amount$
 			}
+			clamp_variable = {
+				name = mana_density
+				max = maximum_mana_density
+				min = minimum_mana_density
+			}
+			# Cache update
+			change_global_variable = {
+				name = global_mana_density_cache
+				add = {
+					value = $amount$
+					add = 0.55 # Add 55% so it is guaranteed to hit it
+				}
+			}
+			add_mana_density_modifier = yes
 		}
-		add_mana_density_modifier = yes
 	}
 }
 

@@ -271,7 +271,9 @@ gate_mana_saturation.4 = {
 		owns_entire_state_region = STATE_WEST_COUNTRY
 		any_scope_state = {
 			state_region ?= s:STATE_WEST_COUNTRY
-			has_state_trait = state_trait_stonehenge
+			NOT = {
+				has_state_trait = state_trait_gate_stonehenge
+			}
 		}
 		s:STATE_WEST_COUNTRY ?= {
 			var:mana_density >= high_mana_density_threshhold
@@ -290,13 +292,128 @@ gate_mana_saturation.4 = {
 	option = {
 		name = gate_mana_saturation.4.a
 		s:STATE_WEST_COUNTRY ?= {
-			add_state_trait = state_trait_stonehenge
+			add_state_trait = state_trait_gate_stonehenge
 			hidden_effect = {
 				add_arable_land = 10
 			}
+			add_mana_density = {
+				amount = 50
+			}
 		}
 		add_magic_innovation = {
-			amount = 400
+			amount = 500
+		}
+	}
+}
+
+gate_mana_saturation.5 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:gate_ise_shrine_state
+
+	title = gate_mana_saturation.5.t
+	desc = gate_mana_saturation.5.d
+	flavor = gate_mana_saturation.5.f
+
+	event_image = {
+		video = "gate_unspecified_magic_phenomena"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_magic_knowledge.dds"
+
+	duration = 3
+
+	trigger = {
+		is_magic_country = yes
+		owns_entire_state_region = STATE_KANSAI
+		any_scope_state = {
+			state_region ?= s:STATE_KANSAI
+			NOT = {
+				has_state_trait = state_trait_gate_ise_shrine
+			}
+		}
+		s:STATE_KANSAI ?= {
+			var:mana_density >= high_mana_density_threshhold
+		}
+	}
+
+	immediate = {
+		every_scope_state = {
+			limit = {
+				state_region ?= s:STATE_KANSAI
+			}
+			save_scope_as = gate_ise_shrine_state
+		}
+	}
+
+	option = {
+		name = gate_mana_saturation.5.a
+		s:STATE_KANSAI ?= {
+			add_state_trait = state_trait_gate_ise_shrine
+			add_mana_density = {
+				amount = 50
+			}
+		}
+		add_magic_innovation = {
+			amount = 500
+		}
+	}
+}
+
+gate_mana_saturation.6 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:gate_qin_mausoleum_state
+
+	title = gate_mana_saturation.6.t
+	desc = gate_mana_saturation.6.d
+	flavor = gate_mana_saturation.6.f
+
+	event_image = {
+		video = "gate_unspecified_magic_phenomena"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_magic_knowledge.dds"
+
+	duration = 3
+
+	trigger = {
+		is_magic_country = yes
+		owns_entire_state_region = STATE_XIAN
+		any_scope_state = {
+			state_region ?= s:STATE_XIAN
+			NOT = {
+				has_state_trait = state_trait_gate_qin_mausoleum
+			}
+		}
+		s:STATE_XIAN ?= {
+			var:mana_density >= high_mana_density_threshhold
+		}
+	}
+
+	immediate = {
+		every_scope_state = {
+			limit = {
+				state_region ?= s:STATE_XIAN
+			}
+			save_scope_as = gate_qin_mausoleum_state
+		}
+	}
+
+	option = {
+		name = gate_mana_saturation.6.a
+		s:STATE_XIAN ?= {
+			add_state_trait = state_trait_gate_qin_mausoleum
+			add_mana_density = {
+				amount = 50
+			}
+		}
+		add_magic_innovation = {
+			amount = 500
 		}
 	}
 }
