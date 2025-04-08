@@ -84,6 +84,7 @@ gate_mana_saturation.2 = {
 			name = slave_ritual_cooldown
 			years = 1
 		}
+
 	}
 
 	option = {
@@ -242,6 +243,60 @@ gate_mana_saturation.3 = {
 			NOT = {
 				exists = scope:magic_growing_state
 			}
+		}
+	}
+}
+
+gate_mana_saturation.4 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:gate_stonehenge_state
+
+	title = gate_mana_saturation.4.t
+	desc = gate_mana_saturation.4.d
+	flavor = gate_mana_saturation.4.f
+
+	event_image = {
+		video = "gate_unspecified_magic_phenomena"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_magic_knowledge.dds"
+
+	duration = 3
+
+	trigger = {
+		is_magic_country = yes
+		owns_entire_state_region = STATE_WEST_COUNTRY
+		any_scope_state = {
+			state_region ?= s:STATE_WEST_COUNTRY
+			has_state_trait = state_trait_stonehenge
+		}
+		s:STATE_WEST_COUNTRY ?= {
+			var:mana_density >= high_mana_density_threshhold
+		}
+	}
+
+	immediate = {
+		every_scope_state = {
+			limit = {
+				state_region ?= s:STATE_WEST_COUNTRY
+			}
+			save_scope_as = gate_stonehenge_state
+		}
+	}
+
+	option = {
+		name = gate_mana_saturation.4.a
+		s:STATE_WEST_COUNTRY ?= {
+			add_state_trait = state_trait_stonehenge
+			hidden_effect = {
+				add_arable_land = 10
+			}
+		}
+		add_magic_innovation = {
+			amount = 400
 		}
 	}
 }
