@@ -542,3 +542,83 @@ gate_mana_saturation.8 = {
 	}
 }
 
+gate_mana_saturation.9 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:gate_rok_rune_stone_state
+
+	title = gate_mana_saturation.9.t
+	desc = gate_mana_saturation.9.d
+	flavor = gate_mana_saturation.9.f
+
+	event_image = {
+		video = "gate_unspecified_magic_phenomena"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_magic_knowledge.dds"
+
+	duration = 3
+
+	trigger = {
+		is_magic_country = yes
+		owns_entire_state_region = STATE_GOTALAND
+		any_scope_state = {
+			state_region ?= s:STATE_GOTALAND
+			NOT = {
+				has_state_trait = state_trait_gate_roek_rune_stone
+			}
+		}
+		s:STATE_GOTALAND ?= {
+			var:mana_density >= medium_mana_density_threshhold
+		}
+	}
+
+	immediate = {
+		every_scope_state = {
+			limit = {
+				state_region ?= s:STATE_GOTALAND
+			}
+			save_scope_as = gate_rok_rune_stone_state
+		}
+	}
+
+	option = {
+		name = gate_mana_saturation.9.a
+		s:STATE_GOTALAND ?= {
+			add_state_trait = state_trait_gate_roek_rune_stone
+			add_mana_density = {
+				amount = 50
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_technology_researched = simple_rune_carving
+				}
+			}
+			add_technology_researched = simple_rune_carving
+		}
+		if = {
+			limit = {
+				c:NOR ?= {
+					NOT = {
+						has_technology_researched = simple_rune_carving
+					}
+				}
+				has_diplomatic_pact = {
+					type = personal_union
+					is_initiator = yes
+					who = c:NOR
+				}
+			}
+			c:NOR ?= {
+				add_technology_researched = simple_rune_carving
+			}
+		}
+		add_magic_innovation = {
+			amount = 1000
+		}
+	}
+}
