@@ -418,3 +418,62 @@ gate_mana_saturation.6 = {
 	}
 }
 
+gate_mana_saturation.7 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:gate_uluru_state
+
+	title = gate_mana_saturation.7.t
+	desc = gate_mana_saturation.7.d
+	flavor = gate_mana_saturation.7.f
+
+	event_image = {
+		video = "gate_unspecified_magic_phenomena"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_magic_knowledge.dds"
+
+	duration = 3
+
+	trigger = {
+		is_magic_country = yes
+		owns_entire_state_region = STATE_NORTHERN_TERRITORY
+		any_scope_state = {
+			state_region ?= s:STATE_NORTHERN_TERRITORY
+			NOT = {
+				has_state_trait = state_trait_gate_uluru
+			}
+		}
+		s:STATE_NORTHERN_TERRITORY ?= {
+			var:mana_density >= high_mana_density_threshhold
+		}
+	}
+
+	immediate = {
+		every_scope_state = {
+			limit = {
+				state_region ?= s:STATE_NORTHERN_TERRITORY
+			}
+			save_scope_as = gate_uluru_state
+		}
+	}
+
+	option = {
+		name = gate_mana_saturation.7.a
+		s:STATE_NORTHERN_TERRITORY ?= {
+			add_state_trait = state_trait_gate_uluru
+			hidden_effect = {
+				add_arable_land = 10
+			}
+			add_mana_density = {
+				amount = 50
+			}
+		}
+		add_magic_innovation = {
+			amount = 500
+		}
+	}
+}
+
