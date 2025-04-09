@@ -14,6 +14,7 @@ state_trait_gate_stonehenge = {
 		building_group_bg_druid_grooves_throughput_add = 0.5
 		state_building_mana_extractor_max_level_add = 5
 		state_gate_arable_land_add = 10
+		state_pollution_generation_add = -50
 	}
 }
 
@@ -26,6 +27,7 @@ state_trait_gate_ise_shrine = {
 		building_group_bg_agriculture_throughput_add = 0.2
 		building_group_bg_light_industry_throughput_add = 0.2
 		building_group_bg_heavy_industry_throughput_add = 0.1
+		state_pollution_generation_add = -50
 	}
 }
 
@@ -51,5 +53,19 @@ state_trait_gate_uluru = {
 		building_group_bg_agriculture_throughput_add = 0.2
 		building_arts_academy_throughput_add = 0.2
 		state_mortality_mult = -0.1
+	}
+}
+
+state_trait_gate_donareiche = {
+	icon = "gfx/interface/icons/state_trait_icons/gate_ley_line_nexus.dds"
+
+	modifier = {
+		building_group_bg_druid_grooves_throughput_add = 0.5
+		state_building_mana_extractor_max_level_add = 5
+		state_gate_arable_land_add = 10
+		state_pollution_generation_add = -50
+		state_gate_germanic_standard_of_living_add = 2
+		state_catholic_standard_of_living_add = -2
+		state_protestant_standard_of_living_add = -2
 	}
 }

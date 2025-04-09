@@ -477,3 +477,68 @@ gate_mana_saturation.7 = {
 	}
 }
 
+gate_mana_saturation.8 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:gate_donareiche_state
+
+	title = gate_mana_saturation.8.t
+	desc = gate_mana_saturation.8.d
+	flavor = gate_mana_saturation.8.f
+
+	event_image = {
+		video = "gate_unspecified_magic_phenomena"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_magic_knowledge.dds"
+
+	duration = 3
+
+	trigger = {
+		is_magic_country = yes
+		owns_entire_state_region = STATE_HESSE
+		any_scope_state = {
+			state_region ?= s:STATE_HESSE
+			NOT = {
+				has_state_trait = state_trait_gate_donareiche
+			}
+		}
+		s:STATE_HESSE ?= {
+			var:mana_density >= high_mana_density_threshhold
+		}
+	}
+
+	immediate = {
+		every_scope_state = {
+			limit = {
+				state_region ?= s:STATE_HESSE
+			}
+			save_scope_as = gate_donareiche_state
+		}
+	}
+
+	option = {
+		name = gate_mana_saturation.8.a
+		s:STATE_HESSE ?= {
+			add_state_trait = state_trait_gate_donareiche
+			hidden_effect = {
+				add_arable_land = 10
+			}
+			add_mana_density = {
+				amount = 50
+			}
+		}
+		scope:gate_donareiche_state ?= {
+			convert_population = {
+				value = 0.5
+				target = rel:gate_germanic
+			}
+		}
+		add_magic_innovation = {
+			amount = 500
+		}
+	}
+}
+

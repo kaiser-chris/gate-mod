@@ -35,3 +35,35 @@
 		base = 100
 	}
 }
+
+gate_germanic_decision = {
+	is_shown = {
+		any_primary_culture = {
+			has_discrimination_trait = german_speaking
+		}
+		any_scope_state = {
+			has_state_trait = state_trait_gate_donareiche
+		}
+	}
+
+	possible = {
+		is_diplomatic_play_committed_participant = no
+		is_at_war = no
+		is_magic_country = yes
+		owns_entire_state_region = STATE_HESSE
+	}
+
+	when_taken = {
+		set_state_religion = rel:gate_germanic
+		every_scope_state = {
+			convert_population = {
+				target = rel:gate_germanic
+				value = 0.2
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 100
+	}
+}
