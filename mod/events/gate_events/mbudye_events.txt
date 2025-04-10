@@ -34,7 +34,9 @@ gate_mbudye.1 = {
 		c:CHK = {
 			if = {
 				limit = {
-					is_subject_of = c:GATE_AD
+					OR = {
+						is_subject_of = c:GATE_AD
+					}
 				}
 				set_state_religion = rel:golden_religion
 			}

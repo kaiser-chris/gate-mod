@@ -10,6 +10,8 @@
 [![Static Badge](https://img.shields.io/badge/Game_Version-1.8-blue)](https://vic3.paradoxwikis.com/Patches)
 [![Discord](https://img.shields.io/discord/1329045839619817543?label=Discord&color=blue)](https://discord.gg/9Yp22JMMv2)
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/C1C41D8BNV)
+
 ## Story
 In 1814, a series of Magic Gates to the planet **Ankaris** appeared across Earth,
 forever altering the course of history.
