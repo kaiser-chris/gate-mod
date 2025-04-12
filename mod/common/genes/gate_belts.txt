@@ -1,0 +1,44 @@
+﻿
+    #############
+    # By Lord R #
+    #############
+
+special_genes = {
+	accessory_genes = {
+
+	#########################################
+	#										#
+	# 			   GATE BELTS			    #
+	#										#
+	#########################################
+
+		gate_belts = {
+			inheritable = no
+
+			gate_no_belts = {
+				index = 0
+				male = {
+					1 = empty
+				}
+				female = male
+				boy = male
+				girl = male
+			}	
+			
+			gate_all_belts = {
+				index = 1
+				male = {
+					1 = gate_male_belt_generic_02_red
+					1 = gate_male_belt_generic_02_yellow
+					1 = gate_male_belt_generic_02_grey
+					1 = gate_male_belt_generic_02_purple
+				}
+
+				female = {
+				}
+				boy = male
+				girl = female
+			}
+		}
+	}
+}

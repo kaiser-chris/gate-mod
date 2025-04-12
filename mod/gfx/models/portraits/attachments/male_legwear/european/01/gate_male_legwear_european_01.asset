@@ -1,0 +1,115 @@
+
+    #############
+    # By Lord R #
+    #############
+
+#Removed the color from the diffuse and made it generally lighter
+pdxmesh = {
+	name = "gate_male_special_legwear_european_01_greyscale_base_mesh"
+	file = "male_legwear_european_01.mesh"
+
+	blend_shape = { id = "male_legwear_european_01_bs_fat"			type = "male_legwear_european_01_bs_fat.mesh" }
+	blend_shape = { id = "male_legwear_european_01_bs_gaunt"		type = "male_legwear_european_01_bs_gaunt.mesh" }
+	blend_shape = { id = "male_legwear_european_01_bs_old"			type = "male_legwear_european_01_bs_old.mesh" }
+	blend_shape = { id = "male_legwear_european_01_bs_infant"		type = "male_legwear_european_01_bs_infant.mesh" }
+	blend_shape = { id = "male_legwear_european_01_bs_thick"		type = "male_legwear_european_01_bs_thick.mesh" }
+	blend_shape = { id = "male_legwear_european_01_bs_thin"		type = "male_legwear_european_01_bs_thin.mesh" }
+	
+	meshsettings = {
+		name = "male_legwear_european_01Shape"
+		index = 0
+		texture_diffuse = "gate_male_legwear_european_01_diffuse_greyscale.dds"
+		texture_normal = "male_legwear_european_01_normal.dds"
+		texture_specular = "male_legwear_european_01_properties.dds"
+		shader = "portrait_attachment_pattern"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "gate_male_legwear_european_dark_blue_red_stripe_thin_entity"
+	pdxmesh = "gate_male_special_legwear_european_01_greyscale_base_mesh"
+
+		attribute = { name = "body_bs_fat"					blend_shape = "male_legwear_european_01_bs_fat" }
+		attribute = { name = "body_bs_gaunt"				blend_shape = "male_legwear_european_01_bs_gaunt" }
+		attribute = { name = "body_bs_old"					blend_shape = "male_legwear_european_01_bs_old" }
+		attribute = { name = "body_bs_infant"				blend_shape = "male_legwear_european_01_bs_infant" }
+		attribute = { name = "body_bs_thick"				blend_shape = "male_legwear_european_01_bs_thick" }
+		attribute = { name = "body_bs_thin"					blend_shape = "male_legwear_european_01_bs_thin" }
+		
+	game_data = {
+			portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/male_legwear/european/01/gate_male_legwear_european_01_shoes_stripe_seperate_masks.dds"	
+				#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "gate_male_legwear_european_dark_blue_red_stripe_thin"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+		}
+	}
+}
+
+entity = {
+	name = "gate_male_legwear_european_dark_blue_yellow_stripe_thin_entity"
+	pdxmesh = "gate_male_special_legwear_european_01_greyscale_base_mesh"
+
+		attribute = { name = "body_bs_fat"					blend_shape = "male_legwear_european_01_bs_fat" }
+		attribute = { name = "body_bs_gaunt"				blend_shape = "male_legwear_european_01_bs_gaunt" }
+		attribute = { name = "body_bs_old"					blend_shape = "male_legwear_european_01_bs_old" }
+		attribute = { name = "body_bs_infant"				blend_shape = "male_legwear_european_01_bs_infant" }
+		attribute = { name = "body_bs_thick"				blend_shape = "male_legwear_european_01_bs_thick" }
+		attribute = { name = "body_bs_thin"					blend_shape = "male_legwear_european_01_bs_thin" }
+		
+	game_data = {
+			portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/male_legwear/european/01/gate_male_legwear_european_01_shoes_stripe_seperate_masks.dds"	
+				#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "gate_male_legwear_european_dark_blue_yellow_stripe_thin"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+		}
+	}
+}
+
+entity = {
+	name = "gate_male_legwear_european_dark_blue_grey_stripe_thin_entity"
+	pdxmesh = "gate_male_special_legwear_european_01_greyscale_base_mesh"
+
+		attribute = { name = "body_bs_fat"					blend_shape = "male_legwear_european_01_bs_fat" }
+		attribute = { name = "body_bs_gaunt"				blend_shape = "male_legwear_european_01_bs_gaunt" }
+		attribute = { name = "body_bs_old"					blend_shape = "male_legwear_european_01_bs_old" }
+		attribute = { name = "body_bs_infant"				blend_shape = "male_legwear_european_01_bs_infant" }
+		attribute = { name = "body_bs_thick"				blend_shape = "male_legwear_european_01_bs_thick" }
+		attribute = { name = "body_bs_thin"					blend_shape = "male_legwear_european_01_bs_thin" }
+		
+	game_data = {
+			portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/male_legwear/european/01/gate_male_legwear_european_01_shoes_stripe_seperate_masks.dds"	
+				#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "gate_male_legwear_european_dark_blue_grey_stripe_thin"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+		}
+	}
+}
+
+entity = {
+	name = "gate_male_legwear_european_dark_blue_purple_stripe_thin_entity"
+	pdxmesh = "gate_male_special_legwear_european_01_greyscale_base_mesh"
+
+		attribute = { name = "body_bs_fat"					blend_shape = "male_legwear_european_01_bs_fat" }
+		attribute = { name = "body_bs_gaunt"				blend_shape = "male_legwear_european_01_bs_gaunt" }
+		attribute = { name = "body_bs_old"					blend_shape = "male_legwear_european_01_bs_old" }
+		attribute = { name = "body_bs_infant"				blend_shape = "male_legwear_european_01_bs_infant" }
+		attribute = { name = "body_bs_thick"				blend_shape = "male_legwear_european_01_bs_thick" }
+		attribute = { name = "body_bs_thin"					blend_shape = "male_legwear_european_01_bs_thin" }
+		
+	game_data = {
+			portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/male_legwear/european/01/gate_male_legwear_european_01_shoes_stripe_seperate_masks.dds"	
+				#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "gate_male_legwear_european_dark_blue_purple_stripe_thin"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+		}
+	}
+}

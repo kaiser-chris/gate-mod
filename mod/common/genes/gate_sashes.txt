@@ -1,0 +1,60 @@
+﻿
+    #############
+    # By Lord R #
+    #############
+
+special_genes = {
+	accessory_genes = {
+
+	#####################################
+	#									#
+	# 			   SASHES 			    #
+	#									#
+	#####################################
+
+		gate_sashes = {
+			inheritable = no
+			
+			gate_no_sashes = {
+				index = 0
+				male = {
+					1 = empty
+				}		   
+				female = male
+				boy = male
+				girl = male
+			}
+
+			gate_all_sashes = {
+				index = 1
+				male = {
+					1 = gate_male_sash_european_gold
+					1 = gate_male_sash_GATE_MK_1
+					1 = gate_male_sash_GATE_MK_2
+				}
+
+				female = {
+					1 = empty
+				}
+				boy = male
+				girl = female
+			}
+
+			gate_GATE_MK_sashes = {
+				index = 2
+				male = {
+					2 = 0
+					2 = gate_male_sash_european_gold
+					3 = gate_male_sash_GATE_MK_1
+					3 = gate_male_sash_GATE_MK_2
+				}
+
+				female = {
+					1 = empty
+				}
+				boy = male
+				girl = female
+			}
+		}
+	}
+}

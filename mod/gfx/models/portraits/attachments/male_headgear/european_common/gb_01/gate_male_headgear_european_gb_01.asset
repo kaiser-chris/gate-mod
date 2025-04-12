@@ -1,0 +1,67 @@
+
+    #############
+    # By Lord R #
+    #############
+
+	pdxmesh = {
+	name = "gate_male_headgear_european_gb_01_mesh"
+	file = "male_headgear_european_gb_01.mesh"
+
+	meshsettings = {
+		name = "male_headgear_european_gb_01Shape"
+		index = 0
+		texture_diffuse = "male_headgear_european_gb_01_diffuse.dds"
+		texture_normal = "male_headgear_european_gb_01_normal.dds"
+		texture_specular = "male_headgear_european_gb_01_properties.dds"
+		shader = "portrait_attachment_pattern_alpha_to_coverage"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "gate_male_headgear_european_shako_dark_blue_red_entity"
+	pdxmesh = "gate_male_headgear_european_gb_01_mesh"
+
+		game_data = {
+			portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/male_headgear/european_common/gb_01/male_headgear_european_gb_01_masks.dds"	
+	
+			
+				variation = "gate_male_headgear_european_shako_dark_blue_red"	
+			}
+		}
+	}
+}
+
+entity = {
+	name = "gate_male_headgear_european_shako_dark_blue_yellow_entity"
+	pdxmesh = "gate_male_headgear_european_gb_01_mesh"
+
+		game_data = {
+			portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/male_headgear/european_common/gb_01/male_headgear_european_gb_01_masks.dds"	
+	
+			
+				variation = "gate_male_headgear_european_shako_dark_blue_yellow"	
+			}
+		}
+	}
+}
+
+entity = {
+	name = "gate_male_headgear_european_shako_dark_blue_grey_entity"
+	pdxmesh = "gate_male_headgear_european_gb_01_mesh"
+
+		game_data = {
+			portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/male_headgear/european_common/gb_01/male_headgear_european_gb_01_masks.dds"	
+	
+			
+				variation = "gate_male_headgear_european_shako_dark_blue_grey"	
+			}
+		}
+	}
+}

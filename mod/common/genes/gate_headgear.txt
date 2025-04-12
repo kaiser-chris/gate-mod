@@ -1,0 +1,46 @@
+﻿
+	#############
+    # By Lord R #
+    #############
+
+special_genes = {
+	accessory_genes = {
+
+	#########################################
+	#										#
+	# 			   GATE HEADGEAR 		    #
+	#										#
+	#########################################
+
+		gate_headgear = {
+			inheritable = no
+
+			gate_no_headgear = {
+				index = 0
+				male = {
+					1 = empty
+				}		   
+				female = male
+				boy = male
+				girl = male
+			}	
+			
+			gate_all_headgear = {
+				index = 1
+				male = {
+					1 = gate_male_headgear_european_shako_dark_blue_red
+					1 = gate_male_headgear_european_shako_dark_blue_yellow
+					1 = gate_male_headgear_european_shako_dark_blue_grey
+					1 = gate_male_headgear_european_military_05_red_cockade
+					1 = gate_male_headgear_european_military_05_yellow_cockade
+					1 = gate_male_headgear_european_military_05_grey_cockade
+				}
+				female = {
+					1 = empty
+				}
+				boy = male
+				girl = female
+			}
+		}
+	}
+}

@@ -1,0 +1,989 @@
+﻿
+    #############
+    # By Lord R #
+    #############
+
+GATE_clothes = {
+	usage = game
+	selection_behavior = weighted_random
+
+    #Clothes for the Min Raetia Royals
+    GATE_MK_royal_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = gate_military_coats
+                template = gate_GATE_MK_military_coats
+                accessory = gate_male_military_coat_10_dark_blue_purple
+            }
+            accessory = {
+                mode = add
+                gene = gate_legwear
+                template = gate_all_legwear
+                accessory = gate_male_legwear_european_dark_blue_purple_stripe_thin
+            }
+            accessory = {
+                mode = add
+                gene = gate_sashes
+                template = gate_GATE_MK_sashes
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = medals
+                template = generic_medals
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = gate_belts
+                template = gate_all_belts
+                accessory = gate_male_belt_generic_02_purple
+            }
+            accessory = {
+                mode = add
+                gene = gate_epaulettes
+                template = gate_all_epaulettes
+                accessory = gate_male_epaulettes_04_purple_top
+            }
+
+            #Remove
+            accessory = {
+                mode = add
+                gene = coats
+                template = no_coat
+                range = { 0 0.27 } # limiting the set to single-breasted coats, so aiguillettes work
+            }
+            accessory = {
+                mode = add
+                gene = aiguillettes
+                template = no_aiguillettes
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = epaulettes
+                template = no_epaulette
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = belts
+                template = no_belt
+                range = { 0.1 0.7 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = top_layer
+                template = no_top_layer
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = no_legwear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = headgear
+                template = no_headgear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = sashes
+                template = no_sash
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 500
+                
+                scope:character ?= {
+                    is_female = no
+                    owner ?= {
+                        OR = {
+                            c:GATE_MK ?= this
+                            was_formed_from = GATE_MK
+                        }
+                    }
+                    monarchy_clothes_trigger = yes
+                    age >= 16
+                }
+            }
+        }
+    }
+
+    #########################################
+    # Outfits for Generals and Soldier Pops #
+    #########################################
+
+    #Outfit Early Min Raetia General Characters
+    GATE_MK_early_general_outfit = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = gate_military_coats
+                template = gate_GATE_MK_military_coats
+                accessory = gate_male_military_coat_10_dark_blue_red
+            }
+            accessory = {
+                mode = add
+                gene = gate_legwear
+                template = gate_all_legwear
+                accessory = gate_male_legwear_european_dark_blue_red_stripe_thin
+            }
+            accessory = {
+                mode = add
+                gene = medals
+                template = generic_medals
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = gate_belts
+                template = gate_all_belts
+                accessory = gate_male_belt_generic_02_red
+            }
+            accessory = {
+                mode = add
+                gene = gate_epaulettes
+                template = gate_all_epaulettes
+                accessory = gate_male_epaulettes_04_red_top
+            }
+            accessory = {
+                mode = add
+                gene = gate_headgear
+                template = gate_all_headgear
+                accessory = gate_male_headgear_european_military_05_red_cockade
+            }
+
+            #Remove
+            accessory = {
+                mode = add
+                gene = coats
+                template = no_coat
+                range = { 0 0.27 } # limiting the set to single-breasted coats, so aiguillettes work
+            }
+            accessory = {
+                mode = add
+                gene = top_layer
+                template = no_top_layer
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = no_legwear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = sashes
+                template = no_sash
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = headgear
+                template = no_headgear
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = outfits
+                template = no_outfit
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 500
+
+                scope:character ?= {
+                    is_female = no
+                    exists = home_country
+                    NOT = {
+                        home_country = {
+                            has_technology_researched = bolt_action_rifles
+                        }
+                    }
+                    OR = {
+                        AND = {
+                            exists = c:GATE_MK
+                            home_country = c:GATE_MK
+                        }
+                        home_country = {
+                            was_formed_from = GATE_MK
+                        }
+                    }
+                    OR = {
+                        AND = {
+                            has_role = politician
+                            is_ruler = no
+                            is_heir = no
+                            is_interest_group_type = ig_armed_forces
+                            mr_gate_special_character_blocker = yes
+                        }
+                        has_role = general
+                        has_role = admiral
+                    }
+                }
+            }
+        }
+    }
+
+    #Outfit Early Min Raetia General Artillery Characters
+    GATE_MK_early_general_artillery_outfit = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = gate_military_coats
+                template = gate_GATE_MK_military_coats
+                accessory = gate_male_military_coat_10_dark_blue_grey
+            }
+            accessory = {
+                mode = add
+                gene = gate_legwear
+                template = gate_all_legwear
+                accessory = gate_male_legwear_european_dark_blue_grey_stripe_thin
+            }
+            accessory = {
+                mode = add
+                gene = medals
+                template = generic_medals
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = gate_belts
+                template = gate_all_belts
+                accessory = gate_male_belt_generic_02_grey
+            }
+            accessory = {
+                mode = add
+                gene = gate_epaulettes
+                template = gate_all_epaulettes
+                accessory = gate_male_epaulettes_04_grey_top
+            }
+            accessory = {
+                mode = add
+                gene = gate_headgear
+                template = gate_all_headgear
+                accessory = gate_male_headgear_european_military_05_grey_cockade
+            }
+
+            #Remove
+            accessory = {
+                mode = add
+                gene = coats
+                template = no_coat
+                range = { 0 0.27 } # limiting the set to single-breasted coats, so aiguillettes work
+            }
+            accessory = {
+                mode = add
+                gene = top_layer
+                template = no_top_layer
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = no_legwear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = sashes
+                template = no_sash
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = headgear
+                template = no_headgear
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = outfits
+                template = no_outfit
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 501
+
+                scope:character ?= {
+                    is_female = no
+                    exists = home_country
+                    NOT = {
+                        home_country = {
+                            has_technology_researched = bolt_action_rifles
+                        }
+                    }
+                    OR = {
+                        has_trait = basic_artillery_commander
+                        has_trait = experienced_artillery_commander
+                        has_trait = expert_artillery_commander
+                    }
+                    OR = {
+                        AND = {
+                            exists = c:GATE_MK
+                            home_country = c:GATE_MK
+                        }
+                        home_country = {
+                            was_formed_from = GATE_MK
+                        }
+                    }
+                    OR = {
+                        AND = {
+                            has_role = politician
+                            is_ruler = no
+                            is_heir = no
+                            is_interest_group_type = ig_armed_forces
+                            mr_gate_special_character_blocker = yes
+                        }
+                        has_role = general
+                    }
+                }
+            }
+        }
+    }
+
+    #Outfit Early Min Raetia Officer Pops
+    GATE_MK_early_officer_outfit = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = gate_military_coats
+                template = gate_GATE_MK_military_coats
+                range = { 0 0.09 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = gate_legwear
+                template = gate_all_legwear
+                accessory = gate_male_legwear_european_dark_blue_red_stripe_thin
+            }
+            accessory = {
+                mode = add
+                gene = medals
+                template = generic_medals
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = gate_belts
+                template = gate_all_belts
+                accessory = gate_male_belt_generic_02_red
+            }
+            accessory = {
+                mode = add
+                gene = gate_epaulettes
+                template = gate_all_epaulettes
+                accessory = gate_male_epaulettes_04_red_top
+            }
+            accessory = {
+                mode = add
+                gene = gate_headgear
+                template = gate_all_headgear
+                accessory = gate_male_headgear_european_shako_dark_blue_red
+            }
+
+            #Remove
+            accessory = {
+                mode = add
+                gene = coats
+                template = no_coat
+                range = { 0 0.27 } # limiting the set to single-breasted coats, so aiguillettes work
+            }
+            accessory = {
+                mode = add
+                gene = top_layer
+                template = no_top_layer
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = no_legwear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = sashes
+                template = no_sash
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = aiguillettes
+                template = no_aiguillettes
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 500
+
+                exists = scope:pop
+                scope:pop = {
+                    is_pop_type = officers
+                    exists = home_country
+                    NOT = {
+                        home_country = {
+                            has_technology_researched = bolt_action_rifles
+                        }
+                    }
+                    OR = {
+                        home_country = {
+                            was_formed_from = GATE_MK
+                        }
+                        AND = {
+                            exists = c:GATE_MK
+                            home_country = c:GATE_MK
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #Outfit Early Min Raetia Officer Cavalry Pops
+    GATE_MK_early_officer_cavalry_outfit = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = gate_military_coats
+                template = gate_GATE_MK_military_coats
+                range = { 0.17 0.24 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = gate_legwear
+                template = gate_all_legwear
+                accessory = gate_male_legwear_european_dark_blue_yellow_stripe_thin
+            }
+            accessory = {
+                mode = add
+                gene = medals
+                template = generic_medals
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = gate_belts
+                template = gate_all_belts
+                accessory = gate_male_belt_generic_02_yellow
+            }
+            accessory = {
+                mode = add
+                gene = gate_epaulettes
+                template = gate_all_epaulettes
+                accessory = gate_male_epaulettes_04_yellow_top
+            }
+            accessory = {
+                mode = add
+                gene = gate_headgear
+                template = gate_all_headgear
+                accessory = gate_male_headgear_european_shako_dark_blue_yellow
+            }
+
+            #Remove
+            accessory = {
+                mode = add
+                gene = coats
+                template = no_coat
+                range = { 0 0.27 } # limiting the set to single-breasted coats, so aiguillettes work
+            }
+            accessory = {
+                mode = add
+                gene = top_layer
+                template = no_top_layer
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = no_legwear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = sashes
+                template = no_sash
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = aiguillettes
+                template = no_aiguillettes
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 501
+
+                exists = scope:pop
+                scope:pop = {
+                    is_pop_type = officers
+                    exists = home_country
+                    NOT = {
+                        home_country = {
+                            has_technology_researched = bolt_action_rifles
+                        }
+                    }
+                    OR = {
+                        home_country = {
+                            was_formed_from = GATE_MK
+                        }
+                        AND = {
+                            exists = c:GATE_MK
+                            home_country = c:GATE_MK
+                        }
+                    }
+                    workplace ?= {
+                        any_combat_unit = {
+                            OR = {
+                                has_unit_type = unit_type:combat_unit_type_hussars
+                                has_unit_type = unit_type:combat_unit_type_dragoons
+                                has_unit_type = unit_type:combat_unit_type_cuirassiers
+                                has_unit_type = unit_type:combat_unit_type_lancers
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #Outfit Early Min Raetia Officer Artillery Pops
+    GATE_MK_early_officer_artillery_outfit = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = gate_military_coats
+                template = gate_GATE_MK_military_coats
+                range = { 0.3 0.39 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = gate_legwear
+                template = gate_all_legwear
+                accessory = gate_male_legwear_european_dark_blue_grey_stripe_thin
+            }
+            accessory = {
+                mode = add
+                gene = medals
+                template = generic_medals
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = gate_belts
+                template = gate_all_belts
+                accessory = gate_male_belt_generic_02_grey
+            }
+            accessory = {
+                mode = add
+                gene = gate_epaulettes
+                template = gate_all_epaulettes
+                accessory = gate_male_epaulettes_04_grey_top
+            }
+            accessory = {
+                mode = add
+                gene = gate_headgear
+                template = gate_all_headgear
+                accessory = gate_male_headgear_european_shako_dark_blue_grey
+            }
+
+            #Remove
+            accessory = {
+                mode = add
+                gene = coats
+                template = no_coat
+                range = { 0 0.27 } # limiting the set to single-breasted coats, so aiguillettes work
+            }
+            accessory = {
+                mode = add
+                gene = top_layer
+                template = no_top_layer
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = no_legwear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = sashes
+                template = no_sash
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = aiguillettes
+                template = no_aiguillettes
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 501
+
+                exists = scope:pop
+                scope:pop = {
+                    is_pop_type = officers
+                    exists = home_country
+                    NOT = {
+                        home_country = {
+                            has_technology_researched = bolt_action_rifles
+                        }
+                    }
+                    OR = {
+                        home_country = {
+                            was_formed_from = GATE_MK
+                        }
+                        AND = {
+                            exists = c:GATE_MK
+                            home_country = c:GATE_MK
+                        }
+                    }
+                    workplace ?= {
+                        any_combat_unit = {
+                            OR = {
+                                has_unit_type = unit_type:combat_unit_type_cannon_artillery
+                                has_unit_type = unit_type:combat_unit_type_mobile_artillery
+                                has_unit_type = unit_type:combat_unit_type_shrapnel_artillery
+                                has_unit_type = unit_type:combat_unit_type_siege_artillery
+                                has_unit_type = unit_type:combat_unit_type_heavy_tank
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #Outfit Early Min Raetia Soldier Pops
+    GATE_MK_early_soldier_outfit = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = gate_military_coats
+                template = gate_GATE_MK_military_coats
+                range = { 0 0.09 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = gate_legwear
+                template = gate_all_legwear
+                accessory = gate_male_legwear_european_dark_blue_red_stripe_thin
+            }
+            accessory = {
+                mode = add
+                gene = gate_belts
+                template = gate_all_belts
+                accessory = gate_male_belt_generic_02_red
+            }
+            accessory = {
+                mode = add
+                gene = gate_epaulettes
+                template = gate_all_epaulettes
+                accessory = gate_male_epaulettes_04_red_top
+            }
+            accessory = {
+                mode = add
+                gene = gate_headgear
+                template = gate_all_headgear
+                accessory = gate_male_headgear_european_shako_dark_blue_red
+            }
+
+            #Remove
+            accessory = {
+                mode = add
+                gene = coats
+                template = no_coat
+                range = { 0 0.27 } # limiting the set to single-breasted coats, so aiguillettes work
+            }
+            accessory = {
+                mode = add
+                gene = top_layer
+                template = no_top_layer
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = no_legwear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = sashes
+                template = no_sash
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = epaulettes
+                template = no_epaulette
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 500
+
+                exists = scope:pop
+                scope:pop = {
+                    is_pop_type = soldiers
+                    exists = home_country
+                    NOT = {
+                        home_country = {
+                            has_technology_researched = bolt_action_rifles
+                        }
+                    }
+                    OR = {
+                        home_country = {
+                            was_formed_from = GATE_MK
+                        }
+                        AND = {
+                            exists = c:GATE_MK
+                            home_country = c:GATE_MK
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #Outfit Early Min Raetia Cavalry Pops
+    GATE_MK_early_cavalry_outfit = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = gate_military_coats
+                template = gate_GATE_MK_military_coats
+                range = { 0.17 0.24 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = gate_legwear
+                template = gate_all_legwear
+                accessory = gate_male_legwear_european_dark_blue_yellow_stripe_thin
+            }
+            accessory = {
+                mode = add
+                gene = medals
+                template = generic_medals
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = gate_belts
+                template = gate_all_belts
+                accessory = gate_male_belt_generic_02_yellow
+            }
+            accessory = {
+                mode = add
+                gene = gate_epaulettes
+                template = gate_all_epaulettes
+                accessory = gate_male_epaulettes_04_yellow_top
+            }
+            accessory = {
+                mode = add
+                gene = gate_headgear
+                template = gate_all_headgear
+                accessory = gate_male_headgear_european_shako_dark_blue_yellow
+            }
+
+            #Remove
+            accessory = {
+                mode = add
+                gene = coats
+                template = no_coat
+                range = { 0 0.27 } # limiting the set to single-breasted coats, so aiguillettes work
+            }
+            accessory = {
+                mode = add
+                gene = top_layer
+                template = no_top_layer
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = no_legwear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = sashes
+                template = no_sash
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = epaulettes
+                template = no_epaulette
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 501
+
+                exists = scope:pop
+                scope:pop = {
+                    is_pop_type = soldiers
+                    exists = home_country
+                    NOT = {
+                        home_country = {
+                            has_technology_researched = bolt_action_rifles
+                        }
+                    }
+                    OR = {
+                        home_country = {
+                            was_formed_from = GATE_MK
+                        }
+                        AND = {
+                            exists = c:GATE_MK
+                            home_country = c:GATE_MK
+                        }
+                    }
+                    workplace ?= {
+                        any_combat_unit = {
+                            OR = {
+                                has_unit_type = unit_type:combat_unit_type_hussars
+                                has_unit_type = unit_type:combat_unit_type_dragoons
+                                has_unit_type = unit_type:combat_unit_type_cuirassiers
+                                has_unit_type = unit_type:combat_unit_type_lancers
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #Outfit Early Min Raetia Artillery Pops
+    GATE_MK_early_artillery_outfit = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = gate_military_coats
+                template = gate_GATE_MK_military_coats
+                range = { 0.3 0.39 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = gate_legwear
+                template = gate_all_legwear
+                accessory = gate_male_legwear_european_dark_blue_grey_stripe_thin
+            }
+            accessory = {
+                mode = add
+                gene = gate_belts
+                template = gate_all_belts
+                accessory = gate_male_belt_generic_02_grey
+            }
+            accessory = {
+                mode = add
+                gene = gate_epaulettes
+                template = gate_all_epaulettes
+                accessory = gate_male_epaulettes_04_grey_top
+            }
+            accessory = {
+                mode = add
+                gene = gate_headgear
+                template = gate_all_headgear
+                accessory = gate_male_headgear_european_shako_dark_blue_grey
+            }
+
+            #Remove
+            accessory = {
+                mode = add
+                gene = coats
+                template = no_coat
+                range = { 0 0.27 } # limiting the set to single-breasted coats, so aiguillettes work
+            }
+            accessory = {
+                mode = add
+                gene = top_layer
+                template = no_top_layer
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = no_legwear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = sashes
+                template = no_sash
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = epaulettes
+                template = no_epaulette
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 501
+
+                exists = scope:pop
+                scope:pop = {
+                    is_pop_type = soldiers
+                    exists = home_country
+                    NOT = {
+                        home_country = {
+                            has_technology_researched = bolt_action_rifles
+                        }
+                    }
+                    OR = {
+                        home_country = {
+                            was_formed_from = GATE_MK
+                        }
+                        AND = {
+                            exists = c:GATE_MK
+                            home_country = c:GATE_MK
+                        }
+                    }
+                    workplace ?= {
+                        any_combat_unit = {
+                            OR = {
+                                has_unit_type = unit_type:combat_unit_type_cannon_artillery
+                                has_unit_type = unit_type:combat_unit_type_mobile_artillery
+                                has_unit_type = unit_type:combat_unit_type_shrapnel_artillery
+                                has_unit_type = unit_type:combat_unit_type_siege_artillery
+                                has_unit_type = unit_type:combat_unit_type_heavy_tank
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
