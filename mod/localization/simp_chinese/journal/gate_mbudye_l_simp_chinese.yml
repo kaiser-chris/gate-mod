@@ -1,13 +1,13 @@
 ﻿l_simp_chinese:
  dp_lunda_uprising: "隆达起义" #deepl:3356900361
  gate_mbudye.1.a: "最后" #deepl:4054877442
- gate_mbudye.1.desc: "在我们控制下的[GetCulture('lunda').GetName] 国家皈依了[GetReligion('golden_religion').GetName] 。" #deepl:1594395427
+ gate_mbudye.1.desc: "在我们控制下的[GetCulture('lunda').GetName] 国家皈依了[GetReligion('gate_golden_religion').GetName] 。" #deepl:1743557973
  gate_mbudye.1.f: "经过多年不懈的布道、政治操纵和激烈冲突，隆达人终于接受了黄金祝福的信仰。曾经是祖先传统坚定守护者的姆布德耶理事会，如今与精灵祭司一起跪地庄严祈祷。然而，通往这一刻的道路充满了血腥和纷争--村庄被烧毁，家庭被拆散，历史被改写。当金色的旗帜在隆达大陆上升起时，问题依然挥之不去：新的信仰会带来团结，还是旧的创伤会在表面之下发酵？" #deepl:1295943435
  gate_mbudye.1.t: "黄金转换" #deepl:552743900
  gate_mbudye.10.a: "烧毁村庄" #deepl:548230620
  gate_mbudye.10.b: "开始正式调查。" #deepl:472688273
  gate_mbudye.10.c: "只是一些孩子。" #deepl:3470954141
- gate_mbudye.10.desc: "[SCOPE.sCountry('mbudye_event_country').GetNameNoFlag] [SCOPE.sState('mbudye_event_state').GetName] ，一座新建的[GetReligion('golden_religion').GetName] 寺庙一夜之间被涂上了隆达符号。" #deepl:2527703595
+ gate_mbudye.10.desc: "[SCOPE.sCountry('mbudye_event_country').GetNameNoFlag] [SCOPE.sState('mbudye_event_state').GetName] ，一座新建的[GetReligion('gate_golden_religion').GetName] 寺庙一夜之间被涂上了隆达符号。" #deepl:1440364903
  gate_mbudye.10.f: "在夜幕的笼罩下，一座新落成的黄金祝福神庙的纯净墙壁被亵渎，上面刻满了大胆、挑衅的隆达符号。这一行为让精灵神职人员感到愤怒，也让当地村民感到不安，双方都指责对方进行了破坏。现在，这座神庙成了传统与皈依之间紧张关系的鲜明象征。" #deepl:3765794858
  gate_mbudye.10.t: "寺庙破坏" #deepl:1612520953
  gate_mbudye.11.a: "用武力粉碎谣言" #deepl:204440174
@@ -36,13 +36,13 @@
  gate_mbudye.16.a: "公开惩罚牧师" #deepl:3728316568
  gate_mbudye.16.b: "私下惩罚牧师" #deepl:4081768022
  gate_mbudye.16.c: "审查整个事件。" #deepl:2821660072
- gate_mbudye.16.desc: "[GetReligion('golden_religion').GetName] 的一名牧师杀死了一名反抗他的当地人。" #deepl:1206914009
+ gate_mbudye.16.desc: "[GetReligion('gate_golden_religion').GetName] 的一名牧师杀死了一名反抗他的当地人。" #deepl:4030860497
  gate_mbudye.16.f: "一名精灵祭司因不满村民的公然反抗而诉诸致命武力，紧张局势达到了爆发点。这一举动在当地引起了轩然大波，激起了隆达人的愤怒，加深了统治者与其臣民之间的隔阂。原本是信仰的使命，现在却徘徊在暴力反击的边缘。" #deepl:2568845913
  gate_mbudye.16.t: "严重失误" #deepl:2943156908
  gate_mbudye.17.a: "让[GetCulture('lunda').GetName] 完全融入我们的国家。" #deepl:541646885
  gate_mbudye.17.b: "只将[GetCulture('lunda').GetName] 州纳入我们的国家。" #deepl:169507704
  gate_mbudye.17.desc: "我们需要决定如何整合[GetCulture('lunda').GetName] [Concept('concept_country','$concept_countries$')] 。" #deepl:707607904
- gate_mbudye.17.f: "卷轴上的签名，使[GetCulture('lunda').GetNameNoFormatting] 国家在信仰和法律上都与[SCOPE.sCountry('gate_mbudye_dominion').GetNameNoFormatting] 绑定。从传教士和钢铁开始的一切，如今在庄严的仪式中达到高潮，古老的王国屈服于[GetReligion('golden_religion').GetNameNoFormatting] 下的新秩序。" #deepl:1328834613
+ gate_mbudye.17.f: "卷轴上的签名，使[GetCulture('lunda').GetNameNoFormatting] 国家在信仰和法律上都与[SCOPE.sCountry('gate_mbudye_dominion').GetNameNoFormatting] 绑定。从传教士和钢铁开始的一切，如今在庄严的仪式中达到高潮，古老的王国屈服于[GetReligion('gate_golden_religion').GetNameNoFormatting] 下的新秩序。" #deepl:1482194067
  gate_mbudye.17.t: "整合[GetCulture('lunda').GetNameNoFormatting]" #deepl:936313455
  gate_mbudye.2.a: "我们将粉碎他们。" #deepl:3205304652
  gate_mbudye.2.desc: "[GetCulture('lunda').GetName] 各国联合起来，发动起义反对我们。" #deepl:2595625035
@@ -51,7 +51,7 @@
  gate_mbudye.3.a: "烧毁村庄" #deepl:548230620
  gate_mbudye.3.b: "向[SCOPE.sCountry('mbudye_event_country').GetNameNoFlag] [concept_mbudye_council] 发送一封严厉的信。" #deepl:86206412
  gate_mbudye.3.c: "这只是一个村庄。" #deepl:4143180907
- gate_mbudye.3.desc: "[GetReligion('golden_religion').GetName] 的一名牧师被拒之于[SCOPE.sCountry('mbudye_event_country').GetNameNoFlag] [SCOPE.sState('mbudye_event_state').GetName] 州的一个村庄之外。" #deepl:663751561
+ gate_mbudye.3.desc: "[GetReligion('gate_golden_religion').GetName] 的一名牧师被拒之于[SCOPE.sCountry('mbudye_event_country').GetNameNoFlag] [SCOPE.sState('mbudye_event_state').GetName] 州的一个村庄之外。" #deepl:4238747768
  gate_mbudye.3.f: "一位精灵祭司身着亚克图里亚统治者的闪亮法衣，走近一个隆达村庄，意图传播天神的信仰。然而，村民们众志成城，坚守在村口，阻挡了牧师的去路。"村里的长者宣称："我们尊敬我们的祖先和他们的智慧。牧师虽然表面上镇定自若，却带着沉重的心情回来了，并向多米尼克领袖提交了一份报告，后者现在必须决定如何处理这一反抗行为。" #deepl:4135514001
  gate_mbudye.3.t: "被拒之门外的牧师" #deepl:1544671732
  gate_mbudye.4.a: "在[SCOPE.sState('mbudye_event_state').GetName] 中树立榜样。" #deepl:1775792892
@@ -118,7 +118,7 @@
  je_gate_mbudye_change_conversion: "[SCOPE.sCountry('affected_country').GetName] 中的换算将改变[SCOPE.GetValue('conversion_progress')|v+=]%。" #deepl:98560052
  je_gate_mbudye_change_fear: "[GetCulture('lunda').GetName] 会因恐惧而皈依。" #deepl:650259051
  je_gate_mbudye_change_support: "支持转换的变化幅度为[SCOPE.GetValue('support_change')|v+=]%。" #deepl:4066869271
- je_gate_mbudye_complete: "[GetCulture('lunda').GetName] 国家都皈依了[GetReligion('golden_religion').GetName] 。" #deepl:1839779040
+ je_gate_mbudye_complete: "[GetCulture('lunda').GetName] 国家都皈依了[GetReligion('gate_golden_religion').GetName] 。" #deepl:2381368596
  je_gate_mbudye_engaging: "当地人正在参与我们的宣讲。" #deepl:2714250076
  je_gate_mbudye_fail_annex: "我们试图吞并[GetCulture('lunda').GetName] 中的一个国家。" #deepl:1312363920
  je_gate_mbudye_fail_support: "我们将失去对[GetCulture('lunda').GetName] 国家的所有支持。" #deepl:1836029215

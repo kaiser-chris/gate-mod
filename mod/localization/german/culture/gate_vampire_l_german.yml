@@ -6,7 +6,7 @@
  gate_vampire.1.t: "Die ewige Herrschaft von Blut und Herrlichkeit" #deepl:255980031
  gate_vampire.2.a: "Gut!" #deepl:3510034017
  gate_vampire.2.d: "Wir vertreiben die [GetCulture('vampire').GetName] Plage aus unserem Land." #deepl:1336570896
- gate_vampire.2.f: "Im Schutze der Dunkelheit schlagen die Gläubigen mit kalkulierter Präzision zu. Die Jagd auf die [GetReligion('lunar_masquerade').GetNameNoFormatting] und ihre [GetCulture('vampire').GetNameNoFormatting] Verwandten entwickelt sich zu einer stillen, aber rücksichtslosen Inquisition. Mit versilberten Klingen und geflüsterten Segenssprüchen bewaffnet, ziehen Eiferer und heilige Vollstrecker durch die Städte und das Land, um diejenigen aufzuspüren, die die verfluchten Gaben der Nacht für sich beanspruchen." #deepl:3754065764
+ gate_vampire.2.f: "Im Schutze der Dunkelheit schlagen die Gläubigen mit kalkulierter Präzision zu. Die Jagd auf die [GetReligion('gate_lunar_masquerade').GetNameNoFormatting] und ihre [GetCulture('vampire').GetNameNoFormatting] Verwandten entwickelt sich zu einer stillen, aber rücksichtslosen Inquisition. Mit versilberten Klingen und geflüsterten Segenssprüchen bewaffnet, ziehen Eiferer und heilige Vollstrecker durch die Städte und das Land, um diejenigen aufzuspüren, die die verfluchten Gaben der Nacht für sich beanspruchen." #deepl:3426233870
  gate_vampire.2.t: "Das Verstummen der Maskerade" #deepl:2110274134
  gate_vampire.3.a: "Neugierig." #deepl:91441796
  gate_vampire.3.d: "Ein örtlicher Geistlicher wurde von einem monströsen geflügelten Tier angegriffen." #deepl:3718190505
@@ -14,8 +14,8 @@
  gate_vampire.3.t: "Ein Omen in der Abenddämmerung" #deepl:901633665
  gate_vampire.4.a: "Lassen Sie sie in Ruhe." #deepl:635822238
  gate_vampire.4.b: "Wir müssen diese Sekte stoppen!" #deepl:1453921064
- gate_vampire.4.d: "Der örtliche Geistliche [SCOPE.sCharacter('gate_vampire_leader').GetFullName] hat eine Sekte gegründet, die sich [GetReligion('lunar_masquerade').GetName] nennt. Die Leute behaupten auch, dass er nicht länger ein Mensch ist, sondern zu einem [GetCulture('vampire').GetName] aufgestiegen ist." #deepl:1741774408
- gate_vampire.4.f: "Was als geflüsterte Gerüchte begann, hat nun in kerzenbeleuchteten Hallen und mondbeschienenen Versammlungen Gestalt angenommen. Der einst bescheidene Geistliche, der auf wundersame Weise von seinen grausamen Wunden geheilt wurde, predigt nun über seine neu gewonnene Stärke und die göttliche Widerstandsfähigkeit, die ihm durch seine Tortur zuteil wurde. Er spricht von einer höheren Berufung, einem Segen, der in der Dunkelheit verborgen ist, und bietet seinen Anhängern einen Weg an, um an seinen geheimnisvollen Gaben teilzuhaben. Eine Sekte, die sich selbst [GetReligion('lunar_masquerade').GetNameNoFormatting] nennt, ist entstanden, und ihre Mitglieder sind ihrem rätselhaften Anführer und seinen Versprechen der Transformation treu ergeben. Ist dies eine Offenbarung des Glaubens - oder der erste Schritt zu etwas viel Unheilvollerem?" #deepl:616138941
+ gate_vampire.4.d: "Der örtliche Geistliche [SCOPE.sCharacter('gate_vampire_leader').GetFullName] hat eine Sekte gegründet, die sich [GetReligion('gate_lunar_masquerade').GetName] nennt. Die Leute behaupten auch, dass er nicht länger ein Mensch ist, sondern zu einem [GetCulture('vampire').GetName] aufgestiegen ist." #deepl:432979240
+ gate_vampire.4.f: "Was als geflüsterte Gerüchte begann, hat nun in kerzenbeleuchteten Hallen und mondbeschienenen Versammlungen Gestalt angenommen. Der einst bescheidene Geistliche, der auf wundersame Weise von seinen grausamen Wunden geheilt wurde, predigt nun über seine neu gewonnene Stärke und die göttliche Widerstandsfähigkeit, die ihm durch seine Tortur zuteil wurde. Er spricht von einer höheren Berufung, einem Segen, der in der Dunkelheit verborgen ist, und bietet seinen Anhängern einen Weg an, um an seinen geheimnisvollen Gaben teilzuhaben. Eine Sekte, die sich selbst [GetReligion('gate_lunar_masquerade').GetNameNoFormatting] nennt, ist entstanden, und ihre Mitglieder sind ihrem rätselhaften Anführer und seinen Versprechen der Transformation treu ergeben. Ist dies eine Offenbarung des Glaubens - oder der erste Schritt zu etwas viel Unheilvollerem?" #deepl:68403536
  gate_vampire.4.t: "Die Mondmaskerade" #deepl:158721519
  gate_vampire.5.a: "Die Ewigkeit ist es wert!" #deepl:12607464
  gate_vampire.5.b: "Diese Bestien müssen ausgemerzt werden!" #deepl:3192572604
@@ -34,12 +34,12 @@
  gate_vampire.8.d: "Der Anführer der [SCOPE.sCharacter('gate_landowner_leader').GetInterestGroup.GetNameWithCountryVariant], [SCOPE.sCharacter('gate_landowner_leader').GetFullName] hat sich bekehrt und [concept_gate_vampirism] umarmt." #deepl:3221801249
  gate_vampire.8.f: "Die großen #v [SCOPE.sCharacter('gate_landowner_leader').GetInterestGroup.GetNameWithCountryVariant] #! haben schon immer über riesige Ländereien geherrscht, aber #v [SCOPE.sCharacter('gate_landowner_leader').GetFullNameNoFormatting] #! hat ihre Herrschaft zu neuen, beunruhigenden Höhen geführt. Einst nur ein gewiefter Aristokrat, sind sie aus ihrem abgelegenen Herrenhaus mit einer seltsamen neuen Vitalität zurückgekehrt - ihre einst müde Haltung ist nun königlich, ihre einst gealterten Gesichtszüge sind nun von der Zeit unberührt." #deepl:3170070533
  gate_vampire.8.t: "Die Bluternte" #deepl:2514360014
- gate_vampire_cult_flag: "Lasst die [GetReligion('lunar_masquerade').GetNameNoFormatting] beginnen." #deepl:4097176093
- je_gate_vampire_emergence: "[GetReligion('lunar_masquerade').GetNameNoFormatting]" #deepl:2428623012
- je_gate_vampire_emergence_activate: "[SCOPE.sCountry('gate_vampire_country').MakeScope.Var('gate_character_vampire').GetCharacter.GetFullName] hat die [GetReligion('lunar_masquerade').GetName] gegründet." #deepl:2599820101
- je_gate_vampire_emergence_allure: "Die Menschen sehnen sich nach Unsterblichkeit und strömen auf die [GetReligion('lunar_masquerade').GetNameNoFormatting]." #deepl:3058560796
+ gate_vampire_cult_flag: "Lasst die [GetReligion('gate_lunar_masquerade').GetNameNoFormatting] beginnen." #deepl:3937286745
+ je_gate_vampire_emergence: "[GetReligion('gate_lunar_masquerade').GetNameNoFormatting]" #deepl:3860346585
+ je_gate_vampire_emergence_activate: "[SCOPE.sCountry('gate_vampire_country').MakeScope.Var('gate_character_vampire').GetCharacter.GetFullName] hat die [GetReligion('gate_lunar_masquerade').GetName] gegründet." #deepl:4204343519
+ je_gate_vampire_emergence_allure: "Die Menschen sehnen sich nach Unsterblichkeit und strömen auf die [GetReligion('gate_lunar_masquerade').GetNameNoFormatting]." #deepl:2188732153
  je_gate_vampire_emergence_complete: "Wir haben uns [concept_gate_vampirism] zu eigen gemacht." #deepl:3617232718
- je_gate_vampire_emergence_fail: "Wir säubern die Sekte [GetReligion('lunar_masquerade').GetName] aus unserem Land." #deepl:1911544537
+ je_gate_vampire_emergence_fail: "Wir säubern die Sekte [GetReligion('gate_lunar_masquerade').GetName] aus unserem Land." #deepl:1622777019
  je_gate_vampire_emergence_reason: "je_gate_vampire_reason" #deepl:2562521266
- je_gate_vampire_emergence_truth_known: "Die Menschen kennen die Wahrheit über Vampire, aber einige sind immer noch an der [GetReligion('lunar_masquerade').GetNameNoFormatting] interessiert." #deepl:1987523740
+ je_gate_vampire_emergence_truth_known: "Die Menschen kennen die Wahrheit über Vampire, aber einige sind immer noch an der [GetReligion('gate_lunar_masquerade').GetNameNoFormatting] interessiert." #deepl:4113550510
  vampire: "Vampir" #deepl:267049285

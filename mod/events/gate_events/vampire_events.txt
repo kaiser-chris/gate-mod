@@ -22,7 +22,7 @@ gate_vampire.1 = {
 		# create_character = {
 		# 	interest_group = ig_petty_bourgeoisie
 		# 	culture = cu:vampire
-		# 	religion = rel:lunar_masquerade
+		# 	religion = rel:gate_lunar_masquerade
 		# 	ig_leader = yes
 		# }
 		var:gate_character_vampire ?= {
@@ -87,7 +87,7 @@ gate_vampire.2 = {
 			value = 1
 		}
 		kill_population = {
-			religion = rel:lunar_masquerade
+			religion = rel:gate_lunar_masquerade
 			value = 1
 		}
 		var:gate_character_vampire ?= {
@@ -175,7 +175,7 @@ gate_vampire.4 = {
 				culture = cu:vampire
 			}
 			change_pop_religion = {
-				target = rel:lunar_masquerade
+				target = rel:gate_lunar_masquerade
 				value = 1
 			}
 		}
@@ -309,7 +309,7 @@ gate_vampire.5 = {
 					culture = cu:vampire
 				}
 				change_pop_religion = {
-					target = rel:lunar_masquerade
+					target = rel:gate_lunar_masquerade
 					value = 1
 				}
 			}

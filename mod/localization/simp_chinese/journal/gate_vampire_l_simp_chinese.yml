@@ -5,7 +5,7 @@
  gate_vampire.1.t: "血与荣耀的永恒统治" #deepl:255980031
  gate_vampire.2.a: "很好!" #deepl:3510034017
  gate_vampire.2.d: "我们将[GetCulture('vampire').GetName] 瘟疫从我们的土地上清除出去。" #deepl:1336570896
- gate_vampire.2.f: "在黑暗的掩护下，忠实的信徒们精确地实施打击。对[GetReligion('lunar_masquerade').GetNameNoFormatting] 及其[GetCulture('vampire').GetNameNoFormatting] 亲属的追捕就像一场安静而无情的宗教裁判所。狂热者和神圣执法者手持银色利刃和低语祝福，穿梭于城市和乡村，铲除那些声称拥有黑夜诅咒天赋的人。" #deepl:3754065764
+ gate_vampire.2.f: "在黑暗的掩护下，忠实的信徒们精确地实施打击。对[GetReligion('gate_lunar_masquerade').GetNameNoFormatting] 及其[GetCulture('vampire').GetNameNoFormatting] 亲属的追捕就像一场安静而无情的宗教裁判所。狂热者和神圣执法者手持银色利刃和低语祝福，穿梭于城市和乡村，铲除那些声称拥有黑夜诅咒天赋的人。" #deepl:3426233870
  gate_vampire.2.t: "化妆舞会的沉默" #deepl:2110274134
  gate_vampire.3.a: "很好奇。" #deepl:91441796
  gate_vampire.3.d: "当地一位牧师被一只长着翅膀的怪兽袭击。" #deepl:3718190505
@@ -13,8 +13,8 @@
  gate_vampire.3.t: "黄昏的预兆" #deepl:901633665
  gate_vampire.4.a: "让他们去吧。" #deepl:635822238
  gate_vampire.4.b: "我们必须阻止这个邪教!" #deepl:1453921064
- gate_vampire.4.d: "当地的神职人员[SCOPE.sCharacter('gate_vampire_leader').GetFullName] 组建了一个名为[GetReligion('lunar_masquerade').GetName] 的教派。人们还声称，他已不再是人类，而是升格为[GetCulture('vampire').GetName] 。" #deepl:1741774408
- gate_vampire.4.f: "最初只是耳语的传闻，如今已在烛光闪烁的大厅和月光下的聚会中逐渐成形。曾经谦逊的牧师奇迹般地从野蛮的创伤中痊愈，现在他宣扬新发现的力量和经历磨难后获得的神圣复原力。一个自称为 "[GetReligion('lunar_masquerade').GetNameNoFormatting] "的教派崛起了，它的成员们全心全意地追随着他们神秘的领袖和他关于转变的承诺。这是信仰的启示，还是迈向更为邪恶的东西的第一步？" #deepl:616138941
+ gate_vampire.4.d: "当地的神职人员[SCOPE.sCharacter('gate_vampire_leader').GetFullName] 组建了一个名为[GetReligion('gate_lunar_masquerade').GetName] 的教派。人们还声称，他已不再是人类，而是升格为[GetCulture('vampire').GetName] 。" #deepl:432979240
+ gate_vampire.4.f: "最初只是耳语的传闻，如今已在烛光闪烁的大厅和月光下的聚会中逐渐成形。曾经谦逊的牧师奇迹般地从野蛮的创伤中痊愈，现在他宣扬新发现的力量和经历磨难后获得的神圣复原力。一个自称为 "[GetReligion('gate_lunar_masquerade').GetNameNoFormatting] "的教派崛起了，它的成员们全心全意地追随着他们神秘的领袖和他关于转变的承诺。这是信仰的启示，还是迈向更为邪恶的东西的第一步？" #deepl:68403536
  gate_vampire.4.t: "月球化妆舞会" #deepl:158721519
  gate_vampire.5.a: "永恒值得" #deepl:12607464
  gate_vampire.5.b: "这些野兽必须被清除!" #deepl:3192572604
@@ -33,11 +33,11 @@
  gate_vampire.8.d: "[SCOPE.sCharacter('gate_landowner_leader').GetInterestGroup.GetNameWithCountryVariant] 的首领[SCOPE.sCharacter('gate_landowner_leader').GetFullName] 已改信并接受[concept_gate_vampirism] 。" #deepl:3221801249
  gate_vampire.8.f: "伟大的#v [SCOPE.sCharacter('gate_landowner_leader').GetInterestGroup.GetNameWithCountryVariant] #! 一直统治着庞大的庄园，但#v [SCOPE.sCharacter('gate_landowner_leader').GetFullNameNoFormatting] #! 已经将他们的统治推向了令人不安的新高度。他们曾经只是精明的贵族，如今从隐居的庄园归来，却焕发出奇异的新活力--他们曾经疲惫的身姿如今变得威严，他们曾经衰老的五官如今已不受岁月的侵蚀。" #deepl:3170070533
  gate_vampire.8.t: "收获鲜血" #deepl:2514360014
- gate_vampire_cult_flag: "让[GetReligion('lunar_masquerade').GetNameNoFormatting] 开始吧。" #deepl:4097176093
- je_gate_vampire_emergence: "[GetReligion('lunar_masquerade').GetNameNoFormatting]" #deepl:2428623012
- je_gate_vampire_emergence_activate: "[SCOPE.sCountry('gate_vampire_country').MakeScope.Var('gate_character_vampire').GetCharacter.GetFullName] 建立了 。[GetReligion('lunar_masquerade').GetName]" #deepl:2599820101
- je_gate_vampire_emergence_allure: "人们渴望长生不老，涌向[GetReligion('lunar_masquerade').GetNameNoFormatting] 。" #deepl:3058560796
+ gate_vampire_cult_flag: "让[GetReligion('gate_lunar_masquerade').GetNameNoFormatting] 开始吧。" #deepl:3937286745
+ je_gate_vampire_emergence: "[GetReligion('gate_lunar_masquerade').GetNameNoFormatting]" #deepl:3860346585
+ je_gate_vampire_emergence_activate: "[SCOPE.sCountry('gate_vampire_country').MakeScope.Var('gate_character_vampire').GetCharacter.GetFullName] 建立了 。[GetReligion('gate_lunar_masquerade').GetName]" #deepl:4204343519
+ je_gate_vampire_emergence_allure: "人们渴望长生不老，涌向[GetReligion('gate_lunar_masquerade').GetNameNoFormatting] 。" #deepl:2188732153
  je_gate_vampire_emergence_complete: "我们已经接受了[concept_gate_vampirism] 。" #deepl:3617232718
- je_gate_vampire_emergence_fail: "我们将[GetReligion('lunar_masquerade').GetName] 教派清除出国。" #deepl:1911544537
+ je_gate_vampire_emergence_fail: "我们将[GetReligion('gate_lunar_masquerade').GetName] 教派清除出国。" #deepl:1622777019
  je_gate_vampire_emergence_reason: "je_gate_吸血鬼的理由" #deepl:2562521266
- je_gate_vampire_emergence_truth_known: "人们知道吸血鬼的真相，但有些人仍然对[GetReligion('lunar_masquerade').GetNameNoFormatting] 感兴趣。" #deepl:1987523740
+ je_gate_vampire_emergence_truth_known: "人们知道吸血鬼的真相，但有些人仍然对[GetReligion('gate_lunar_masquerade').GetNameNoFormatting] 感兴趣。" #deepl:4113550510
