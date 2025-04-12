@@ -10,7 +10,7 @@
             ruler ?= {
                 OR = {
                     culture = cu:vampire
-                    religion = rel:lunar_masquerade
+                    religion = rel:gate_lunar_masquerade
                 }
             }
         }
@@ -34,7 +34,7 @@
                     }
                 }
                 change_character_culture = cu:vampire
-                change_character_religion = rel:lunar_masquerade
+                change_character_religion = rel:gate_lunar_masquerade
                 if = {
                     limit = {
                         NOT = {
@@ -52,7 +52,7 @@
                     }
                 }
                 change_character_culture = cu:vampire
-                change_character_religion = rel:lunar_masquerade
+                change_character_religion = rel:gate_lunar_masquerade
                 if = {
                     limit = {
                         NOT = {
@@ -92,7 +92,7 @@
                     culture = cu:vampire
                 }
                 change_pop_religion = {
-                    target = rel:lunar_masquerade
+                    target = rel:gate_lunar_masquerade
                     value = 1
                 }
             }
@@ -113,7 +113,7 @@
             name = gate_previous_religion
             value = religion
         }
-        set_state_religion = rel:lunar_masquerade
+        set_state_religion = rel:gate_lunar_masquerade
         ig:ig_industrialists ?= {
             if = {
                 limit = {
