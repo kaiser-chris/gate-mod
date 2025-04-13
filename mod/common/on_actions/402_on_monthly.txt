@@ -69,11 +69,15 @@ on_monthly_pulse_country = {
 on_monthly_gate_ai_magic_technology = {
     trigger = {
         is_player = no
-        var:magic_innovation >= 15000
         is_magic_country = yes
     }
     effect = {
-        ai_unlock_magic_technology = yes
+        if = {
+            limit = {
+                var:magic_innovation >= 15000
+            }
+            ai_unlock_magic_technology = yes
+        }
     }
 }
 

@@ -38,8 +38,10 @@
  je_gate_vampire_emergence: "[GetReligion('gate_lunar_masquerade').GetNameNoFormatting]" #deepl:3860346585
  je_gate_vampire_emergence_activate: "[SCOPE.sCountry('gate_vampire_country').MakeScope.Var('gate_character_vampire').GetCharacter.GetFullName] hat die [GetReligion('gate_lunar_masquerade').GetName] gegründet." #deepl:4204343519
  je_gate_vampire_emergence_allure: "Die Menschen sehnen sich nach Unsterblichkeit und strömen auf die [GetReligion('gate_lunar_masquerade').GetNameNoFormatting]." #deepl:2188732153
+ je_gate_vampire_emergence_button_purge: "Beseitigen Sie diese Ungeheuer" #deepl:1381176758
+ je_gate_vampire_emergence_button_purge_desc: "Diese [GetCulture('vampire').GetName] Ungeheuer müssen aus unserem Land entfernt werden!" #deepl:3608770772
  je_gate_vampire_emergence_complete: "Wir haben uns [concept_gate_vampirism] zu eigen gemacht." #deepl:3617232718
  je_gate_vampire_emergence_fail: "Wir säubern die Sekte [GetReligion('gate_lunar_masquerade').GetName] aus unserem Land." #deepl:1622777019
- je_gate_vampire_emergence_reason: "je_gate_vampire_reason" #deepl:2562521266
+ je_gate_vampire_emergence_reason: "Geflüster verbreitet sich wie Seide in den Salons und Gassen - die Mondmaskerade wächst. Jedes Jahr werden mehr Seelen von ihrem geheimnisvollen Reiz angezogen. Im silbernen Mondlicht und bei Kerzenschein spricht der rätselhafte Constantin de Reuss-Mirza von der Befreiung vom Verfall, von der Schönheit, die von der Zeit unbefleckt bleibt, von der Kraft, die im Blut erwacht. Was einst nur am Rande vorkam, stößt heute bei den Desillusionierten und Ehrgeizigen auf offene Ohren. Adlige tarnen ihre Besuche als Neugier, Kaufleute nennen es eine Gelegenheit, und Bürgerliche flüstern dem silbernen Schleier Gebete zu. Die Maskerade ist kein Gerücht mehr - sie ist eine Bewegung. Und ihr Tanz hat gerade erst begonnen." #deepl:99740704
  je_gate_vampire_emergence_truth_known: "Die Menschen kennen die Wahrheit über Vampire, aber einige sind immer noch an der [GetReligion('gate_lunar_masquerade').GetNameNoFormatting] interessiert." #deepl:4113550510
  vampire: "Vampir" #deepl:267049285
