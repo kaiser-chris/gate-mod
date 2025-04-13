@@ -8,16 +8,16 @@
 	scripted_button = je_dwarven_alps_button_switzerland_integrate
 
 	immediate = {
-		c:SWI = {
+		c:SWI ?= {
 			save_scope_as = loc_swiss_scope
 		}
-		c:GATE_MK = {
+		c:GATE_MK ?= {
 			save_scope_as = loc_raetia_scope
 		}
-		cu:alemannic = {
+		cu:alemannic ?= {
 			save_scope_as = loc_alemannic_scope
 		}
-		cu:dwarven_south_german = {
+		cu:dwarven_south_german ?= {
 			save_scope_as = loc_south_german_scope
 		}
 	}
@@ -81,16 +81,16 @@ je_dwarven_integration_of_germans = {
 	group = je_group_internal_affairs
 
 	immediate = {
-		c:SWI = {
+		c:SWI ?= {
 			save_scope_as = loc_swiss_scope
 		}
-		c:GATE_MK = {
+		c:GATE_MK ?= {
 			save_scope_as = loc_raetia_scope
 		}
-		cu:alemannic = {
+		cu:alemannic ?= {
 			save_scope_as = loc_alemannic_scope
 		}
-		cu:dwarven_south_german = {
+		cu:dwarven_south_german ?= {
 			save_scope_as = loc_south_german_scope
 		}
 	}

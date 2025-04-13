@@ -21,7 +21,7 @@ dwarven_alps.1 = {
 	option = {
 		name = dwarven_alps.1.a
 		default_option = yes
-		c:SWI = {
+		c:SWI ?= {
 			learn_magic = yes
 			set_variable = {
 				name = swiss_magic_var
@@ -88,7 +88,7 @@ dwarven_alps.2 = {
 	option = {
 		name = dwarven_alps.2.a
 		default_option = yes
-		scope:digging_state = {
+		scope:digging_state ?= {
 			state_region = {
 				add_state_trait = state_trait_dwarven_tunnels
 			}

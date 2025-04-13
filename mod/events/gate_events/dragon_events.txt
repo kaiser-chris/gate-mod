@@ -133,23 +133,33 @@ gate_dragon.2 = {
 
 	option = { #send some humanitarian help
 		name = gate_dragon.other.a
-		change_relations = {
-			country = scope:gate_dragon_greenland_country
-			value = 30
-		}
-		add_modifier = {
-			name = gate_dragon_cost_modifier
-			months = short_modifier_time
-			multiplier = money_amount_multiplier_small
+		if = {
+			limit = {
+				exists = scope:gate_dragon_greenland_country
+			}
+			change_relations = {
+				country = scope:gate_dragon_greenland_country
+				value = 30
+			}
+			add_modifier = {
+				name = gate_dragon_cost_modifier
+				months = short_modifier_time
+				multiplier = money_amount_multiplier_small
+			}
 		}
 	}
 
 	option = { #it doesn't affect us that much
 		name = gate_dragon.other.b
 		default_option = yes
-		change_relations = {
-			country = scope:gate_dragon_greenland_country
-			value = -30
+		if = {
+			limit = {
+				exists = scope:gate_dragon_greenland_country
+			}
+			change_relations = {
+				country = scope:gate_dragon_greenland_country
+				value = -30
+			}
 		}
 		change_infamy = 5
 	}
@@ -208,19 +218,21 @@ gate_dragon.3 = {
 	option = { #help our people
 		name = gate_dragon.victim.a
 		default_option = yes
-		scope:gate_dragon_california_state = {
+		scope:gate_dragon_california_state ?= {
 			add_modifier = {
 				name = gate_dragon_help_modifier
 				months = short_modifier_time
 			}
 		}
-		scope:gate_dragon_california_state.state_region = {
-			add_devastation = 50
+		scope:gate_dragon_california_state ?= {
+			state_region = {
+				add_devastation = 50
+			}
 		}
 		every_state = {
 			limit = {
 				any_neighbouring_state = {
-					this = scope:gate_dragon_california_state
+					scope:gate_dragon_california_state ?= this
 				}
 			}
 			state_region = {
@@ -236,19 +248,21 @@ gate_dragon.3 = {
 
 	option = { #nothing we can do
 		name = gate_dragon.victim.b
-		scope:gate_dragon_california_state = {
+		scope:gate_dragon_california_state ?= {
 			add_modifier = {
 				name = gate_dragon_no_help_modifier
 				months = short_modifier_time
 			}
 		}
-		scope:gate_dragon_california_state.state_region = {
-			add_devastation = 80
+		scope:gate_dragon_california_state ?= {
+			state_region = {
+				add_devastation = 80
+			}
 		}
 		every_state = {
 			limit = {
 				any_neighbouring_state = {
-					this = scope:gate_dragon_california_state
+					scope:gate_dragon_california_state ?= this
 				}
 			}
 			state_region = {
@@ -284,23 +298,33 @@ gate_dragon.4 = {
 
 	option = { #send some humanitarian help
 		name = gate_dragon.other.a
-		change_relations = {
-			country = scope:gate_dragon_california_country
-			value = 30
-		}
-		add_modifier = {
-			name = gate_dragon_cost_modifier
-			months = short_modifier_time
-			multiplier = money_amount_multiplier_small
+		if = {
+			limit = {
+				exists = scope:gate_dragon_california_country
+			}
+			change_relations = {
+				country = scope:gate_dragon_california_country
+				value = 30
+			}
+			add_modifier = {
+				name = gate_dragon_cost_modifier
+				months = short_modifier_time
+				multiplier = money_amount_multiplier_small
+			}
 		}
 	}
 
 	option = { #it doesn't affect us that much
 		name = gate_dragon.other.b
 		default_option = yes
-		change_relations = {
-			country = scope:gate_dragon_california_country
-			value = -30
+		if = {
+			limit = {
+				exists = scope:gate_dragon_california_country
+			}
+			change_relations = {
+				country = scope:gate_dragon_california_country
+				value = -30
+			}
 		}
 		change_infamy = 5
 	}
@@ -359,19 +383,21 @@ gate_dragon.5 = {
 	option = { #help our people
 		name = gate_dragon.victim.a
 		default_option = yes
-		scope:gate_dragon_kolyma_state = {
+		scope:gate_dragon_kolyma_state ?= {
 			add_modifier = {
 				name = gate_dragon_help_modifier
 				months = short_modifier_time
 			}
 		}
-		scope:gate_dragon_kolyma_state.state_region = {
-			add_devastation = 50
+		scope:gate_dragon_kolyma_state ?= {
+			state_region = {
+				add_devastation = 50
+			}
 		}
 		every_state = {
 			limit = {
 				any_neighbouring_state = {
-					this = scope:gate_dragon_kolyma_state
+					scope:gate_dragon_kolyma_state ?= this
 				}
 			}
 			state_region = {
@@ -387,19 +413,21 @@ gate_dragon.5 = {
 
 	option = { #nothing we can do
 		name = gate_dragon.victim.b
-		scope:gate_dragon_kolyma_state = {
+		scope:gate_dragon_kolyma_state ?= {
 			add_modifier = {
 				name = gate_dragon_no_help_modifier
 				months = short_modifier_time
 			}
 		}
-		scope:gate_dragon_kolyma_state.state_region = {
-			add_devastation = 80
+		scope:gate_dragon_kolyma_state ?= {
+			state_region = {
+				add_devastation = 80
+			}
 		}
 		every_state = {
 			limit = {
 				any_neighbouring_state = {
-					this = scope:gate_dragon_kolyma_state
+					scope:gate_dragon_kolyma_state ?= this
 				}
 			}
 			state_region = {
@@ -435,23 +463,33 @@ gate_dragon.6 = {
 
 	option = { #send some humanitarian help
 		name = gate_dragon.other.a
-		change_relations = {
-			country = scope:gate_dragon_kolyma_country
-			value = 30
-		}
-		add_modifier = {
-			name = gate_dragon_cost_modifier
-			months = short_modifier_time
-			multiplier = money_amount_multiplier_small
+		if = {
+			limit = {
+				exists = scope:gate_dragon_kolyma_country
+			}
+			change_relations = {
+				country = scope:gate_dragon_kolyma_country
+				value = 30
+			}
+			add_modifier = {
+				name = gate_dragon_cost_modifier
+				months = short_modifier_time
+				multiplier = money_amount_multiplier_small
+			}
 		}
 	}
 
 	option = { #it doesn't affect us that much
 		name = gate_dragon.other.b
 		default_option = yes
-		change_relations = {
-			country = scope:gate_dragon_kolyma_country
-			value = -30
+		if = {
+			limit = {
+				exists = scope:gate_dragon_kolyma_country
+			}
+			change_relations = {
+				country = scope:gate_dragon_kolyma_country
+				value = -30
+			}
 		}
 		change_infamy = 5
 	}
@@ -510,19 +548,21 @@ gate_dragon.7 = {
 	option = { #help our people
 		name = gate_dragon.victim.a
 		default_option = yes
-		scope:gate_dragon_himalaya_state = {
+		scope:gate_dragon_himalaya_state ?= {
 			add_modifier = {
 				name = gate_dragon_help_modifier
 				months = short_modifier_time
 			}
 		}
-		scope:gate_dragon_himalaya_state.state_region = {
-			add_devastation = 50
+		scope:gate_dragon_himalaya_state ?= {
+			state_region = {
+				add_devastation = 50
+			}
 		}
 		every_state = {
 			limit = {
 				any_neighbouring_state = {
-					this = scope:gate_dragon_himalaya_state
+					scope:gate_dragon_himalaya_state ?= this
 				}
 			}
 			state_region = {
@@ -544,13 +584,15 @@ gate_dragon.7 = {
 				months = short_modifier_time
 			}
 		}
-		scope:gate_dragon_himalaya_state.state_region = {
-			add_devastation = 80
+		scope:gate_dragon_himalaya_state ?= {
+			state_region = {
+				add_devastation = 80
+			}
 		}
 		every_state = {
 			limit = {
 				any_neighbouring_state = {
-					this = scope:gate_dragon_himalaya_state
+					scope:gate_dragon_himalaya_state ?= this
 				}
 			}
 			state_region = {
@@ -586,23 +628,33 @@ gate_dragon.8 = {
 
 	option = { #send some humanitarian help
 		name = gate_dragon.other.a
-		change_relations = {
-			country = scope:gate_dragon_himalaya_country
-			value = 30
-		}
-		add_modifier = {
-			name = gate_dragon_cost_modifier
-			months = short_modifier_time
-			multiplier = money_amount_multiplier_small
+		if = {
+			limit = {
+				exists = scope:gate_dragon_himalaya_country
+			}
+			change_relations = {
+				country = scope:gate_dragon_himalaya_country
+				value = 30
+			}
+			add_modifier = {
+				name = gate_dragon_cost_modifier
+				months = short_modifier_time
+				multiplier = money_amount_multiplier_small
+			}
 		}
 	}
 
 	option = { #it doesn't affect us that much
 		name = gate_dragon.other.b
 		default_option = yes
-		change_relations = {
-			country = scope:gate_dragon_himalaya_country
-			value = -30
+		if = {
+			limit = {
+				exists = scope:gate_dragon_himalaya_country
+			}
+			change_relations = {
+				country = scope:gate_dragon_himalaya_country
+				value = -30
+			}
 		}
 		change_infamy = 5
 	}
