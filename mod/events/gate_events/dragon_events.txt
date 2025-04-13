@@ -53,19 +53,21 @@ gate_dragon.1 = {
 	option = { #help our people
 		name = gate_dragon.victim.a
 		default_option = yes
-		scope:gate_dragon_greenland_state = {
+		scope:gate_dragon_greenland_state ?= {
 			add_modifier = {
 				name = gate_dragon_help_modifier
 				months = short_modifier_time
 			}
 		}
-		scope:gate_dragon_greenland_state.state_region = {
-			add_devastation = 50
+		scope:gate_dragon_greenland_state ?= {
+			state_region = {
+				add_devastation = 50
+			}
 		}
 		every_state = {
 			limit = {
 				any_neighbouring_state = {
-					this = scope:gate_dragon_greenland_state
+					scope:gate_dragon_greenland_state ?= this
 				}
 			}
 			state_region = {
@@ -81,19 +83,21 @@ gate_dragon.1 = {
 
 	option = { #nothing we can do
 		name = gate_dragon.victim.b
-		scope:gate_dragon_greenland_state = {
+		scope:gate_dragon_greenland_state ?= {
 			add_modifier = {
 				name = gate_dragon_no_help_modifier
 				months = short_modifier_time
 			}
 		}
-		scope:gate_dragon_greenland_state.state_region = {
-			add_devastation = 80
+		scope:gate_dragon_greenland_state ?= {
+			state_region = {
+				add_devastation = 80
+			}
 		}
 		every_state = {
 			limit = {
 				any_neighbouring_state = {
-					this = scope:gate_dragon_greenland_state
+					scope:gate_dragon_greenland_state ?= this
 				}
 			}
 			state_region = {

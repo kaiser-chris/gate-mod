@@ -281,7 +281,7 @@ gate_mana_saturation.4 = {
 	}
 
 	immediate = {
-		every_scope_state = {
+		every_state = {
 			limit = {
 				state_region ?= s:STATE_WEST_COUNTRY
 			}
@@ -340,7 +340,7 @@ gate_mana_saturation.5 = {
 	}
 
 	immediate = {
-		every_scope_state = {
+		every_state = {
 			limit = {
 				state_region ?= s:STATE_KANSAI
 			}
@@ -396,7 +396,7 @@ gate_mana_saturation.6 = {
 	}
 
 	immediate = {
-		every_scope_state = {
+		every_state = {
 			limit = {
 				state_region ?= s:STATE_XIAN
 			}
@@ -452,7 +452,7 @@ gate_mana_saturation.7 = {
 	}
 
 	immediate = {
-		every_scope_state = {
+		every_state = {
 			limit = {
 				state_region ?= s:STATE_NORTHERN_TERRITORY
 			}
@@ -511,7 +511,7 @@ gate_mana_saturation.8 = {
 	}
 
 	immediate = {
-		every_scope_state = {
+		every_state = {
 			limit = {
 				state_region ?= s:STATE_HESSE
 			}
@@ -576,7 +576,7 @@ gate_mana_saturation.9 = {
 	}
 
 	immediate = {
-		every_scope_state = {
+		every_state = {
 			limit = {
 				state_region ?= s:STATE_GOTALAND
 			}
@@ -622,3 +622,63 @@ gate_mana_saturation.9 = {
 		}
 	}
 }
+
+gate_mana_saturation.10 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:gate_carnac_stones_state
+
+	title = gate_mana_saturation.10.t
+	desc = gate_mana_saturation.10.d
+	flavor = gate_mana_saturation.10.f
+
+	event_image = {
+		video = "gate_unspecified_magic_phenomena"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_magic_knowledge.dds"
+
+	duration = 3
+
+	trigger = {
+		is_magic_country = yes
+		owns_entire_state_region = STATE_BRITTANY
+		any_scope_state = {
+			state_region ?= s:STATE_BRITTANY
+			NOT = {
+				has_state_trait = state_trait_gate_carnac_stones
+			}
+		}
+		s:STATE_BRITTANY ?= {
+			var:mana_density >= medium_mana_density_threshhold
+		}
+	}
+
+	immediate = {
+		every_state = {
+			limit = {
+				state_region ?= s:STATE_BRITTANY
+			}
+			save_scope_as = gate_carnac_stones_state
+		}
+	}
+
+	option = {
+		name = gate_mana_saturation.10.a
+		s:STATE_BRITTANY ?= {
+			add_state_trait = state_trait_gate_carnac_stones
+			hidden_effect = {
+				add_arable_land = 10
+			}
+			add_mana_density = {
+				amount = 50
+			}
+		}
+		add_magic_innovation = {
+			amount = 500
+		}
+	}
+}
+
