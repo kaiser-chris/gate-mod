@@ -5,7 +5,11 @@
 	possible = {
 		is_diplomatic_play_committed_participant = no
 		is_at_war = no
-		c:SWI = {
+		custom_tooltip = {
+			text = je_dwarven_alps_button_switzerland_exists
+			exists = c:SWI
+		}
+		c:SWI ?= {
 			custom_tooltip = {
 				text = je_dwarven_alps_button_switzerland_magic_already
 				NOT = {
@@ -44,11 +48,15 @@ je_dwarven_alps_button_switzerland_integrate = {
 	possible = {
 		is_diplomatic_play_committed_participant = no
 		is_at_war = no
+		custom_tooltip = {
+			text = je_dwarven_alps_button_switzerland_exists
+			exists = c:SWI
+		}
 		OR = {
 			country_has_primary_culture = cu:alemannic
 			country_has_primary_culture = cu:francoprovencal
 		}
-		c:SWI = {
+		c:SWI ?= {
 			relations:ROOT >= relations_threshold:friendly
 			OR = {
 				has_diplomatic_pact = {
