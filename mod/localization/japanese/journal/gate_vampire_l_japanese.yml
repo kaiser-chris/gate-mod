@@ -1,12 +1,14 @@
 ﻿l_japanese:
 # Conversion Journal Entry
  je_gate_vampire_emergence: "[GetReligion('gate_lunar_masquerade').GetNameNoFormatting]"
- je_gate_vampire_emergence_reason: "je_gate_vampire_reason"
+ je_gate_vampire_emergence_reason: "Whispers spread like silk across the salons and alleyways alike—the Lunar Masquerade grows. Each passing year, more souls are drawn to its mysterious allure. Beneath silver moonlight and candlelit gatherings, the enigmatic Constantin de Reuss-Mirza speaks of liberation from decay, of beauty unblemished by time, of strength awakened in the blood. What once seemed fringe now finds eager ears among the disillusioned and ambitious. Nobles mask their visits as curiosity, merchants call it opportunity, and commoners whisper prayers to the silver veil. The Masquerade is no longer a rumor—it is a movement. And its dance is just beginning."
  je_gate_vampire_emergence_fail: "We purge the [GetReligion('gate_lunar_masquerade').GetName] sect from out country."
  je_gate_vampire_emergence_complete: "We have embraced [concept_gate_vampirism]."
  je_gate_vampire_emergence_activate: "[SCOPE.sCountry('gate_vampire_country').MakeScope.Var('gate_character_vampire').GetCharacter.GetFullName] has founded the [GetReligion('gate_lunar_masquerade').GetName]."
  je_gate_vampire_emergence_allure: "People yearn for immortality and flock to the [GetReligion('gate_lunar_masquerade').GetNameNoFormatting]."
  je_gate_vampire_emergence_truth_known: "People know the truth about Vampires, but some are still interested in the [GetReligion('gate_lunar_masquerade').GetNameNoFormatting]."
+ je_gate_vampire_emergence_button_purge: "Purge these Monsters"
+ je_gate_vampire_emergence_button_purge_desc: "These [GetCulture('vampire').GetName] monsters need to be removed from our country!"
 # Flags
  gate_vampire_cult_flag: "Let the [GetReligion('gate_lunar_masquerade').GetNameNoFormatting] begin."
 # Events

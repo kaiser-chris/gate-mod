@@ -19,12 +19,6 @@ gate_vampire.1 = {
 	}
 
 	immediate = {
-		# create_character = {
-		# 	interest_group = ig_petty_bourgeoisie
-		# 	culture = cu:vampire
-		# 	religion = rel:gate_lunar_masquerade
-		# 	ig_leader = yes
-		# }
 		var:gate_character_vampire ?= {
 			free_character_from_void = yes
 			set_home_country = root
@@ -95,6 +89,9 @@ gate_vampire.2 = {
 				set_character_immortal = no
 			}
 			kill_character = yes
+		}
+		je:je_gate_vampire_emergence ?= {
+			clear_variable_list = com_journal_characters
 		}
 		every_scope_character = {
 			limit = {

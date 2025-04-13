@@ -3,6 +3,8 @@
 
 	group = je_group_internal_affairs
 
+	scripted_button = je_gate_vampire_emergence_button_purge
+
 	status_desc = {
 		first_valid = {
 			triggered_desc = {
@@ -65,13 +67,16 @@
 				}
 			}
 		}
+	}
+
+	on_monthly_pulse = {
 		# Trigger vampire events
 		random_events = {
-			chance_of_no_event = 50
-			20 = gate_vampire.5
-			20 = gate_vampire.6
-			20 = gate_vampire.7
-			20 = gate_vampire.8
+			chance_of_no_event = 80
+			1 = gate_vampire.5
+			1 = gate_vampire.6
+			1 = gate_vampire.7
+			1 = gate_vampire.8
 		}
 	}
 
