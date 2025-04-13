@@ -12,79 +12,74 @@ add_gate_ideologies = {
     every_interest_group = {
         if = {
             limit = {
+                NOT = {
+                    has_ideology = ideology:ideology_liberal_gate
+                }
                 has_ideology = ideology:ideology_liberal
             }
-            remove_ideology = ideology_liberal
             add_ideology = ideology_liberal_gate
         }
         if = {
             limit = {
-                has_ideology = ideology:ideology_particularist
-            }
-            remove_ideology = ideology_particularist
-            add_ideology = ideology_particularist_gate
-        }
-        if = {
-            limit = {
+                NOT = {
+                    has_ideology = ideology:ideology_paternalistic_gate
+                }
                 has_ideology = ideology:ideology_paternalistic
             }
-            remove_ideology = ideology_paternalistic
             add_ideology = ideology_paternalistic_gate
         }
         if = {
             limit = {
-                has_ideology = ideology:ideology_patriotic
+                NOT = {
+                    has_ideology = ideology:ideology_pious_gate
+                }
+                has_ideology = ideology:ideology_pious
             }
-            remove_ideology = ideology_patriotic
-            add_ideology = ideology_patriotic_gate
+            add_ideology = ideology_pious_gate
         }
         if = {
             limit = {
+                NOT = {
+                    has_ideology = ideology:ideology_laissez_faire_gate
+                }
                 has_ideology = ideology:ideology_laissez_faire
             }
-            remove_ideology = ideology_laissez_faire
             add_ideology = ideology_laissez_faire_gate
         }
         if = {
             limit = {
-                has_ideology = ideology:ideology_meritocratic
-            }
-            remove_ideology = ideology_meritocratic
-            add_ideology = ideology_meritocratic_gate
-        }
-        if = {
-            limit = {
+                NOT = {
+                    has_ideology = ideology:ideology_reactionary_gate
+                }
                 has_ideology = ideology:ideology_reactionary
             }
-            remove_ideology = ideology_reactionary
             add_ideology = ideology_reactionary_gate
         }
         if = {
             limit = {
+                NOT = {
+                    has_ideology = ideology:ideology_egalitarian_gate
+                }
                 has_ideology = ideology:ideology_egalitarian
             }
-            remove_ideology = ideology_egalitarian
             add_ideology = ideology_egalitarian_gate
         }
         if = {
             limit = {
+                NOT = {
+                    has_ideology = ideology:ideology_isolationist_gate
+                }
                 has_ideology = ideology:ideology_isolationist
             }
-            remove_ideology = ideology_isolationist
             add_ideology = ideology_isolationist_gate
         }
         if = {
             limit = {
-                has_ideology = ideology:ideology_plutocratic
-            }
-            remove_ideology = ideology_plutocratic
-            add_ideology = ideology_plutocratic_gate
-        }
-        if = {
-            limit = {
+                NOT = {
+                    has_ideology = ideology:ideology_jingoist_gate
+                }
                 has_ideology = ideology:ideology_jingoist
             }
-            remove_ideology = ideology_jingoist
             add_ideology = ideology_jingoist_gate
         }
     }

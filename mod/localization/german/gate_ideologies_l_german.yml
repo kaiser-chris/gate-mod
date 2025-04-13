@@ -1,6 +1,18 @@
 ﻿l_german:
- ideology_egalitarian_gate: "$ideology_egalitarian$" #deepl:152279322
+ ideology_egalitarian_gate: "Arkane $ideology_egalitarian$" #deepl:383582592
  ideology_egalitarian_gate_desc: "$ideology_egalitarian_desc$" #deepl:3044356560
+ ideology_gate_magic_militarist: "Militaristen" #deepl:3586939340
+ ideology_gate_magic_militarist_desc: "$ideology_jingoist_desc$" #deepl:781913897
+ ideology_gate_magic_supremacist: "Magische Suprematisten" #deepl:3840758686
+ ideology_gate_magic_supremacist_character: "Magie Supremacist" #deepl:4127640511
+ ideology_gate_magic_supremacist_character_desc: "#Dieser Anführer glaubt an die inhärente Vormachtstellung von [concept_gate_magic_users]." #deepl:572561557
+ ideology_gate_magic_supremacist_desc: "#lore Diese Gruppe glaubt an die Vorherrschaft von [concept_gate_magic_users]. #!" #deepl:106323263
+ ideology_gate_magic_supremacist_movement: "Magische Vorherrschaft" #deepl:1700061562
+ ideology_gate_magic_supremacist_movement_desc: "#Diese Bewegung glaubt an die Vorrangstellung von [concept_gate_magic_users] vor allen anderen." #deepl:264091820
+ ideology_gate_orchish_patriarchal: "$ideology_patriarchal$" #deepl:3996961499
+ ideology_gate_orchish_patriarchal_desc: "$ideology_patriarchal_desc$" #deepl:3893911147
+ ideology_gate_orcish_slavery: "$ideology_pro_slavery$" #deepl:264925675
+ ideology_gate_orcish_slavery_desc: "$ideology_pro_slavery_desc$" #deepl:1340424377
  ideology_gate_vampire_acceptance: "Vampir-Akzeptanz" #deepl:3902587025
  ideology_gate_vampire_acceptance_desc: "#lore Diese Gruppe hat akzeptiert, dass das Land [concept_gate_vampirism] angenommen hat.#!" #deepl:1872794060
  ideology_gate_vampire_embrace: "Vampir-Umarmung" #deepl:3339505951
@@ -17,41 +29,31 @@
  ideology_gate_vampirism_interested_desc: "#lore Dieser Leiter interessiert sich für [concept_gate_vampirism] und die [GetCulture('vampire').GetName] Kultur.#!" #deepl:4115960398
  ideology_gate_vampirism_purge: "Lunare Säuberung" #deepl:3727342279
  ideology_gate_vampirism_purge_desc: "#lore Dieser Führer verachtet [concept_gate_vampirism] und die [GetCulture('vampire').GetName] Kultur.#!" #deepl:4271475766
- ideology_isolationist_gate: "$ideology_isolationist$" #deepl:123263144
+ ideology_isolationist_gate: "Arkane $ideology_isolationist$" #deepl:1202502046
  ideology_isolationist_gate_desc: "$ideology_isolationist_desc$" #deepl:1683558845
- ideology_jingoist_gate: "$ideology_jingoist$" #deepl:1559783281
+ ideology_jingoist_gate: "Arkane $ideology_jingoist$" #deepl:821439906
  ideology_jingoist_gate_desc: "$ideology_jingoist_desc$" #deepl:781913897
- ideology_laissez_faire_gate: "$ideology_laissez_faire$" #deepl:2442402447
+ ideology_laissez_faire_gate: "Arkane $ideology_laissez_faire$" #deepl:2285024436
  ideology_laissez_faire_gate_desc: "$ideology_laissez_faire_desc$" #deepl:3084778206
- ideology_liberal_gate: "$ideology_liberal$" #deepl:269897838
+ ideology_liberal_gate: "Arkane $ideology_liberal$" #deepl:1930024866
  ideology_liberal_gate_desc: "$ideology_liberal_desc$" #deepl:3604671697
  ideology_magic_cynic: "Magischer Zyniker" #deepl:299064424
  ideology_magic_cynic_desc: "#Dieser Anführer glaubt, dass Magie etwas ist, das nicht existieren sollte." #deepl:4218734724
  ideology_magic_hopeful: "Magie hoffnungsvoll" #deepl:632805805
  ideology_magic_hopeful_desc: "#Dieser Anführer hofft, dass die Magie eine bessere Zukunft bringen wird!" #deepl:1034866537
- ideology_magic_militarist: "Militaristen" #deepl:3586939340
- ideology_magic_militarist_desc: "$ideology_jingoist_desc$" #deepl:781913897
  ideology_magic_sceptic: "Magie-Skeptiker" #deepl:3853646876
  ideology_magic_sceptic_desc: "#lore Dieser Anführer glaubt, dass Magie zu Problemen in der Gesellschaft führen kann und [concept_gate_magic_users] in Schach gehalten werden sollte. #!" #deepl:1928982369
- ideology_magic_supremacist: "Magie Supremacist" #deepl:4127640511
- ideology_magic_supremacist_character: "$ideology_magic_supremacist$" #deepl:2723168559
- ideology_magic_supremacist_character_desc: "#Dieser Anführer glaubt an die inhärente Vormachtstellung von [concept_gate_magic_users]." #deepl:572561557
- ideology_magic_supremacist_desc: "#lore Diese Gruppe glaubt an die Vorherrschaft von [concept_gate_magic_users]. #!" #deepl:106323263
- ideology_magic_supremacist_movement: "Magische Vorherrschaft" #deepl:1700061562
- ideology_magic_supremacist_movement_desc: "#Diese Bewegung glaubt an die Vorrangstellung von [concept_gate_magic_users] vor allen anderen." #deepl:264091820
  ideology_meritocratic_gate: "$ideology_meritocratic$" #deepl:3183116002
  ideology_meritocratic_gate_desc: "$ideology_meritocratic_desc$" #deepl:2067709794
- ideology_orchish_patriarchal: "$ideology_patriarchal$" #deepl:3996961499
- ideology_orchish_patriarchal_desc: "$ideology_patriarchal_desc$" #deepl:3893911147
- ideology_orcish_slavery: "$ideology_pro_slavery$" #deepl:264925675
- ideology_orcish_slavery_desc: "$ideology_pro_slavery_desc$" #deepl:1340424377
  ideology_particularist_gate: "$ideology_particularist$" #deepl:3994890274
  ideology_particularist_gate_desc: "$ideology_particularist_desc$" #deepl:1527293698
- ideology_paternalistic_gate: "$ideology_paternalistic$" #deepl:1707526466
+ ideology_paternalistic_gate: "Arkane $ideology_paternalistic$" #deepl:2086692729
  ideology_paternalistic_gate_desc: "$ideology_paternalistic_desc$" #deepl:988982678
  ideology_patriotic_gate: "$ideology_patriotic$" #deepl:58402324
  ideology_patriotic_gate_desc: "$ideology_patriotic_desc$" #deepl:544135692
+ ideology_pious_gate: "Arkane $ideology_pious$" #deepl:4232291363
+ ideology_pious_gate_desc: "$ideology_pious_desc$" #deepl:615574445
  ideology_plutocratic_gate: "$ideology_plutocratic$" #deepl:1782296259
  ideology_plutocratic_gate_desc: "$ideology_plutocratic_desc$" #deepl:2429153648
- ideology_reactionary_gate: "$ideology_reactionary$" #deepl:2528333408
+ ideology_reactionary_gate: "Arkane $ideology_reactionary$" #deepl:2306725626
  ideology_reactionary_gate_desc: "$ideology_reactionary_desc$" #deepl:3895697019

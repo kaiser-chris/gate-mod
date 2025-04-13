@@ -1,4 +1,4 @@
-﻿ideology_magic_militarist = {
+﻿ideology_gate_magic_militarist = {
     icon = "gfx/interface/icons/ideology_icons/jingoist.dds"
 
     lawgroup_army_model = {
@@ -7,16 +7,9 @@
         law_national_militia = disapprove
         law_peasant_levies = disapprove
     }
-
-    lawgroup_monster_hunting = {
-        law_no_organized_monster_hunting = strongly_disapprove
-        law_dedicated_monster_hunters = approve
-        law_private_monster_hunters = neutral
-        law_militarized_monster_hunters = strongly_approve
-    }
 }
 
-ideology_magic_supremacist = {
+ideology_gate_magic_supremacist = {
     icon = "gfx/interface/icons/ideology_icons/magic_supremacist.dds"
 
     lawgroup_magic_users = {
@@ -27,7 +20,7 @@ ideology_magic_supremacist = {
     }
 }
 
-ideology_orcish_slavery = {
+ideology_gate_orcish_slavery = {
     icon = "gfx/interface/icons/ideology_icons/slaver.dds"
 
     lawgroup_slavery = {
@@ -38,7 +31,7 @@ ideology_orcish_slavery = {
     }
 }
 
-ideology_orchish_patriarchal = {
+ideology_gate_orchish_patriarchal = {
     icon = "gfx/interface/icons/ideology_icons/patriarchal.dds"
 
     lawgroup_rights_of_women = {
