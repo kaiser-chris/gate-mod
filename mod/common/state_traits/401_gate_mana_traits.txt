@@ -80,3 +80,15 @@ state_trait_gate_roek_rune_stone = {
 		building_group_bg_heavy_industry_throughput_add = 0.3
 	}
 }
+
+state_trait_gate_carnac_stones = {
+	icon = "gfx/interface/icons/state_trait_icons/gate_ley_line_nexus.dds"
+
+	modifier = {
+		state_building_mana_extractor_max_level_add = 5
+		building_group_bg_fishing_throughput_add = 0.2
+		building_livestock_ranch_throughput_add = 0.2
+		state_gate_arable_land_add = 10
+		state_pollution_generation_add = -50
+	}
+}
