@@ -682,3 +682,70 @@ gate_mana_saturation.10 = {
 	}
 }
 
+gate_mana_saturation.11 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:gate_beatus_state
+
+	title = gate_mana_saturation.11.t
+	desc = gate_mana_saturation.11.d
+	flavor = gate_mana_saturation.11.f
+
+	event_image = {
+		video = "gate_unspecified_magic_phenomena"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_magic_knowledge.dds"
+
+	gui_window = event_window_big_icon_center
+
+	center_icon = ideology:gate_artifact_beatus_dragon_heart
+
+	duration = 3
+
+	trigger = {
+		is_magic_country = yes
+		owns_entire_state_region = STATE_WEST_SWITZERLAND
+		any_scope_state = {
+			state_region ?= s:STATE_WEST_SWITZERLAND
+			NOT = {
+				has_state_trait = state_trait_gate_beatus_caves
+			}
+		}
+		s:STATE_WEST_SWITZERLAND ?= {
+			var:mana_density >= medium_mana_density_threshhold
+		}
+	}
+
+	immediate = {
+		every_state = {
+			limit = {
+				state_region ?= s:STATE_WEST_SWITZERLAND
+			}
+			save_scope_as = gate_beatus_state
+		}
+	}
+
+	option = {
+		name = gate_mana_saturation.11.a
+		s:STATE_WEST_SWITZERLAND ?= {
+			add_state_trait = state_trait_gate_beatus_caves
+			hidden_effect = {
+				add_arable_land = 10
+			}
+			add_mana_density = {
+				amount = 50
+			}
+		}
+		add_magic_innovation = {
+			amount = 500
+		}
+		scope:gate_beatus_state ?= {
+			owner = {
+				add_modifier = gate_artifact_beatus_dragon_heart
+			}
+		}
+	}
+}
