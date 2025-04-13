@@ -5,14 +5,15 @@
 	index = 8
 
 	ideologies = {
-		ideology_magic_militarist
-		ideology_magic_supremacist
+		ideology_gate_magic_militarist
+		ideology_gate_magic_supremacist
+		ideology_jingoist_gate
 	}
 	
 	character_ideologies = {
 		ideology_moderate
 		ideology_magic_hopeful
-		ideology_magic_supremacist_character
+		ideology_gate_magic_supremacist_character
 	}
 
 	enable = {
@@ -32,9 +33,9 @@
 				set_ig_trait = ig_trait:ig_trait_slave_masters
 				set_ig_trait = ig_trait:ig_trait_military_support
 				set_ig_trait = ig_trait:ig_trait_annoyed_masters
-				add_ideology = ideology_orcish_slavery
-				add_ideology = ideology_orchish_patriarchal
-				remove_ideology = ideology_magic_supremacist
+				add_ideology = ideology_gate_orcish_slavery
+				add_ideology = ideology_gate_orchish_patriarchal
+				remove_ideology = ideology_gate_magic_supremacist
 			}
 			# Default Traits
 			else = {

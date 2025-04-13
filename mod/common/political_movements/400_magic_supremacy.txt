@@ -1,10 +1,10 @@
 ﻿movement_gate_magic_supremacy = {
 	category = movement_category_ideological
 	
-	ideology = ideology_magic_supremacist_movement
+	ideology = ideology_gate_magic_supremacist_movement
 	character_ideologies = {
 		ideology_magic_hopeful
-		ideology_magic_supremacist_character
+		ideology_gate_magic_supremacist_character
 	}
 
 	disband_trigger = {
@@ -30,7 +30,7 @@
 	
 	character_support_trigger = {
 		OR = {
-			has_ideology = ideology:ideology_magic_supremacist_character
+			has_ideology = ideology:ideology_gate_magic_supremacist_character
 			interest_group ?= {
 				law_stance = {
 					law = law_type:law_noble_magic_users
@@ -43,7 +43,7 @@
 		value = 200
 		if = {
 			limit = {
-				has_ideology = ideology:ideology_magic_supremacist_character
+				has_ideology = ideology:ideology_gate_magic_supremacist_character
 			}
 			multiply = {
 				value = 5
