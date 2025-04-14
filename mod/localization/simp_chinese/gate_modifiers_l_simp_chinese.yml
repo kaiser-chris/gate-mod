@@ -1,29 +1,31 @@
 ﻿l_simp_chinese:
- character_gate_immortal: "不朽" #deepl:1782754612
- character_gate_immortal_desc: "[concept_character] 是不朽的。" #deepl:1627159641
- country_gate_magical_innovation_add: "神奇的创新" #deepl:1198585357
- country_gate_magical_innovation_add_desc: "\[concept_magic_innovation] 。" #deepl:4065252046
- country_gate_magical_innovation_mult: "魔法技术研究速度" #deepl:3803581211
- country_gate_magical_innovation_mult_desc: "\[concept_magic_innovation] 时，对[concept_magic_technology] 研究速度的奖励或惩罚。" #deepl:1325228852
- country_institution_magical_focus_max_investment_add: "最大$institution_magical_focus$ [concept_institution] 投资" #deepl:3424853376
- country_institution_magical_focus_max_investment_add_desc: "$institution_magical_focus$ [concept_institution] 最高投资额的奖励或惩罚。" #deepl:1753217962
- country_institution_monster_hunting_max_investment_add: "最大$institution_monster_hunting$ [concept_institution] 投资" #deepl:126299479
- country_institution_monster_hunting_max_investment_add_desc: "$institution_monster_hunting$ [concept_institution] 最高投资额的奖励或惩罚。" #deepl:3656319232
- dwarven_coal_mine_modifier: "矮人煤矿" #deepl:2368509502
- dwarven_gold_mine_modifier: "矮人金矿" #deepl:435594347
- dwarven_iron_mine_modifier: "矮人铁矿" #deepl:1140080328
- dwarven_lead_mine_modifier: "矮人铅矿" #deepl:3801737638
- dwarven_sulfur_mine_modifier: "矮人硫磺矿" #deepl:543331667
- high_mana_density_modifier: "高法力密度" #deepl:2154748921
+ character_gate_immortal: "Immortal"
+ character_gate_immortal_desc: "This [concept_character] is immortal."
+ country_gate_magical_innovation_add: "魔法创新力"
+ country_gate_magical_innovation_add_desc: "\n每周获得或失去多少@magic_innovation![concept_magic_innovation]"
+ country_gate_magical_innovation_mult: "魔法科技研究速度"
+ country_gate_magical_innovation_mult_desc: "\n对花费[concept_magic_innovation]研究[concept_magic_technology]时研究速度的增益或惩罚"
+ country_institution_gate_magical_focus_max_investment_add: "最大$institution_gate_magical_focus$ [concept_institution] 投资" #deepl:1782548353
+ country_institution_gate_magical_focus_max_investment_add_desc: "$institution_gate_magical_focus$ [concept_institution] 最高投资额的奖励或惩罚。" #deepl:1829967456
+ country_institution_gate_monster_hunting_max_investment_add: "最大$institution_gate_monster_hunting$ [concept_institution] 投资" #deepl:3754212322
+ country_institution_gate_monster_hunting_max_investment_add_desc: "$institution_gate_monster_hunting$ [concept_institution] 最高投资额的奖励或惩罚。" #deepl:387573991
+ country_institution_monster_hunting_max_investment_add: "最大$institution_monster_hunting$[concept_institution]投入等级"
+ country_institution_monster_hunting_max_investment_add_desc: "对$institution_monster_hunting$[concept_institution]的最大投入等级的增益或惩罚"
+ dwarven_coal_mine_modifier: "矮人煤矿"
+ dwarven_gold_mine_modifier: "矮人金矿"
+ dwarven_iron_mine_modifier: "矮人铁矿"
+ dwarven_lead_mine_modifier: "矮人铅矿"
+ dwarven_sulfur_mine_modifier: "矮人硫矿"
+ high_mana_density_modifier: "高魔力浓度"
  ig_variant_magic_users: "[GetInterestGroupVariant('ig_magic_users',GetPlayer).GetNameWithCountryVariant]" #deepl:601119086
  interest_group_ig_magic_users_pol_str_mult: "$ig_variant_magic_users$ [concept_political_strength]" #deepl:2069624553
  interest_group_ig_magic_users_pol_str_mult_desc: "总[concept_political_strength] 的奖励或惩罚$ig_variant_magic_users$ [concept_interest_group]" #deepl:772853015
- medium_mana_density_modifier: "中等法力密度" #deepl:3062542059
- state_gate_arable_land_add: "耕地" #deepl:3395429023
- state_gate_arable_land_add_desc: "[concept_state_region] 中[concept_arable_land] 数量的增减。" #deepl:842137069
- state_gate_monthly_dwarven_immigration_add: "矮人每月迁徙" #deepl:2913832152
- state_gate_monthly_dwarven_immigration_add_desc: "[GetCulture('dwarven').GetName] 每月的移民数量。" #deepl:3399433168
- state_harvest_condition_monster_attack_impact_mult: "影响[Concept('concept_monster_attack','$concept_monster_attacks$')]" #deepl:323783756
- state_harvest_condition_monster_attack_impact_mult_desc: "增加或减少[Concept('concept_monster_attack','$concept_monster_attacks$')] 的影响。" #deepl:1364344337
- state_harvest_condition_monster_horde_impact_mult: "影响[Concept('concept_monster_horde','$concept_monster_hordes$')]" #deepl:3330101656
- state_harvest_condition_monster_horde_impact_mult_desc: "增加或减少[Concept('concept_monster_horde','$concept_monster_hordes$')] 的影响。" #deepl:3730826781
+ medium_mana_density_modifier: "中等魔力浓度"
+ state_gate_arable_land_add: "可耕土地"
+ state_gate_arable_land_add_desc: "对[concept_state_region][concept_arable_land]的增益或惩罚"
+ state_gate_monthly_dwarven_immigration_add: "每月矮人移民"
+ state_gate_monthly_dwarven_immigration_add_desc: "每月[GetCulture('dwarven').GetName]移民的数量。"
+ state_harvest_condition_monster_attack_impact_mult: "[Concept('concept_monster_attack','$concept_monster_attacks$')]的影响"
+ state_harvest_condition_monster_attack_impact_mult_desc: "提高或降低[Concept('concept_monster_attack','$concept_monster_attacks$')]的影响。"
+ state_harvest_condition_monster_horde_impact_mult: "[Concept('concept_monster_horde','$concept_monster_hordes$')]的影响"
+ state_harvest_condition_monster_horde_impact_mult_desc: "提高或降低[Concept('concept_monster_horde','$concept_monster_hordes$')]的影响"

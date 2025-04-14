@@ -1,65 +1,65 @@
 ﻿l_simp_chinese:
- gate_germanic_decision: "皈依[GetReligion('gate_germanic').GetName] 宗教" #deepl:2103356438
- gate_germanic_decision_desc: "随着旧神的回归，我们需要决定是否要拥抱他们。" #deepl:1553253038
- gate_mana_saturation.1.a: "一切都不一样了。" #deepl:1335579824
- gate_mana_saturation.1.d: "[concept_mana_saturation] 已达到最大值。" #deepl:1296295592
- gate_mana_saturation.1.f: "现在，整个世界都在持续而低沉地震动，空气中弥漫着看不见的力量的光泽。每一块石头、每一片树叶、每一次呼吸都在嗡嗡作响，蕴含着原始、脉动的法力能量。海洋闪烁着阴森的光芒，天空舞动着人类从未见过的色彩。地球已成为一个充满活力的通道，其核心充满了魔力。" #deepl:2147041176
- gate_mana_saturation.1.t: "魔法世界" #deepl:4128974867
+ gate_germanic_decision: "Convert to the [GetReligion('gate_germanic').GetName] religion"
+ gate_germanic_decision_desc: "As the old gods are coming back we need to make a decision on whether we want to embrace them."
+ gate_mana_saturation.1.a: "Nothing will ever be the same."
+ gate_mana_saturation.1.d: "[concept_mana_saturation] has reached its maximum."
+ gate_mana_saturation.1.f: "The world now thrums with a constant, low vibration, the air thick with the shimmer of unseen forces. Every stone, every leaf, every breath hums with the raw, pulsing energy of mana. The oceans glow with an eerie light, and the sky dances with colors never before seen by human eyes. The earth has become a living conduit of power, its very core saturated with magic."
+ gate_mana_saturation.1.t: "A World of Magic"
  gate_mana_saturation.10.a: "这真是出乎意料。" #deepl:1647802493
  gate_mana_saturation.10.d: "当地[concept_mana_density] 的增加唤醒了卡纳克石下古老的[Concept('concept_gate_ley_lines','$concept_gate_ley_line$')] 联系。" #deepl:2118623845
  gate_mana_saturation.10.f: "随着法力在这片土地上汹涌澎湃，卡纳克石碑下的雷线炽热地燃烧起来，让古老的石碑散发出幽幽的光芒。在它们的身后，一些原始而狂野的东西蠢蠢欲动。当地人讲述了充满追逐和阴影的生动梦境，以及在森林和海岸漫游的新冲动。埋藏已久的本能再次苏醒，随之而来的是祖先狩猎采集者无声的呼唤。狩猎已回到布列塔尼。" #deepl:676709762
  gate_mana_saturation.10.t: "重新点燃的狩猎" #deepl:2942528049
  gate_mana_saturation.11.a: "国宝" #deepl:3066318378
  gate_mana_saturation.11.d: "随着当地[concept_mana_density] 的增加，圣贝阿图斯洞穴下的古老[Concept('concept_gate_ley_lines','$concept_gate_ley_line$')] 联系被唤醒。" #deepl:2510453501
- gate_mana_saturation.11.f: "在长期以来被视为传说和虔诚民间传说的圣贝亚图斯洞穴深处，新发现的法力让大地本身都在颤抖。在被唤醒的雷线的阴影中，探险家们发现了一个偎依在石头中的脉动遗迹--晶核，触感温暖，嗡嗡作响，蕴含着古老的力量。学者们现在相信它是龙之心，在被遗忘的年代里一直沉睡着。当它再次微弱跳动时，洞穴中就会充斥着原始的奥术能量，让人了解到原始魔法的奥秘。有一个事实变得清晰起来：龙的神话中可能不只有火焰和恐惧，还有知识。" #deepl:375314086
+ gate_mana_saturation.11.f: "在长期以来被视为传说和虔诚民间传说的圣贝亚图斯洞穴深处，大地本身都在为新发现的法力而颤抖。在被唤醒的雷线的阴影中，探险家们发现了一个偎依在石头中的脉动遗迹--晶核，触感温暖，嗡嗡作响，蕴含着古老的力量。学者们现在相信它是龙之心，在被遗忘的年代里一直沉睡着。当它再次微弱跳动时，洞穴中就会充斥着原始的奥术能量，让人了解到原始魔法的奥秘。有一个事实变得清晰起来：龙的神话中可能不只有火焰和恐惧，还有知识。" #deepl:375314086
  gate_mana_saturation.11.t: "龙心激荡" #deepl:554626291
- gate_mana_saturation.2.a: "这个世界需要更多的魔法，无论代价如何。" #deepl:1164052970
- gate_mana_saturation.2.a_progress_tt: "[concept_mana_density] 中增加 50%[SCOPE.sStateRegion('ritual_state_region').GetName] 。" #deepl:244781240
- gate_mana_saturation.2.b: "我们必须停止这种疯狂的行为。" #deepl:2329030879
- gate_mana_saturation.2.d: "通过祭祀增加[concept_mana_density] 。" #deepl:1576332777
- gate_mana_saturation.2.f: "在高耸尖塔的阴影下，空气中弥漫着黑暗仪式的低语。议会下令，为了让大地充满法力，必须洒下被奴役者的鲜血。在血红的月亮下，被定罪的人被带到古老的祭坛前，用他们的生命换取奥术力量的承诺。大地深深地汲取着，它的血管里涌动着新的能量，因为力量的代价是用绝望的货币来支付的。" #deepl:3821037183
- gate_mana_saturation.2.t: "令人发指的仪式" #deepl:2873681427
- gate_mana_saturation.3.a1: "这将改变我们种植作物的方式。" #deepl:3474751687
- gate_mana_saturation.3.a2: "有意思" #deepl:942969263
- gate_mana_saturation.3.b: "派遣研究人员。" #deepl:1781155197
- gate_mana_saturation.3.d: "通过增加[concept_mana_density] ，植物在[SCOPE.sState('magic_growing_state').GetName] 中生长得更快。" #deepl:1155858691
- gate_mana_saturation.3.f: "随着世界之间的纱幕逐渐变薄，法力像耳语般渗入大地。一夜之间，种子竞相绽放，藤蔓盘旋向天，古树展开了翠绿的叶子。大地焕发出新的生机，每一根树根和树枝都充满活力，大自然在这迷人的黎明中茁壮成长。" #deepl:2192891470
- gate_mana_saturation.3.t: "玛娜绽放" #deepl:1564168140
- gate_mana_saturation.4.a: "这真是出乎意料。" #deepl:1647802493
- gate_mana_saturation.4.d: "当地[concept_mana_density] 的增加唤醒了巨石阵中古老的[Concept('concept_gate_ley_lines','$concept_gate_ley_line$')] 联系。" #deepl:281306182
- gate_mana_saturation.4.f: "在西乡宁静的薄雾中，#v ，长期以来被认为沉寂的古老石头开始发出嗡嗡声#! 。随着整个地区法力密度的激增，巨石阵--曾经被遗忘的仪式的庄严纪念碑--#v ，在与地底神秘能量的共鸣中苏醒过来#! 。\流光溢彩的符文现在在其饱经风霜的表面上微弱地跳动着，奇怪的现象也开始在乡间荡漾：庄稼反季节开花，病人以不可思议的速度康复，动物们聚集在石头周围，发出令人毛骨悚然的寂静。德鲁伊、#v 蜂拥而至#! ，声称它是自然力量的神圣中心。随着时间一天天过去，周围的土地也越来越充满魔力--在这个瞬息万变的世界里，这里是原始能量的灯塔。" #deepl:1767941998
- gate_mana_saturation.4.t: "巨石阵" #deepl:445825544
- gate_mana_saturation.5.a: "这真是太好了！" #deepl:3289732063
- gate_mana_saturation.5.d: "当地[concept_mana_density] 的增加导致伊势神宫下古老的[Concept('concept_gate_ley_lines','$concept_gate_ley_line$')] 结点被唤醒。" #deepl:3769385386
- gate_mana_saturation.5.f: "随着法力密度在整个关西地区的膨胀，伊势神宫下方的雷系结点被古老的力量搅动着。在一束耀眼的天光中，天照大神本人在内殿中短暂现身。在祭司和朝圣者的见证下，她宣布神的沉睡时代已经结束，农业和工业女神丰后姬将引导工匠和劳动者的双手穿越魔法和机器时代。就像她出现时一样，天照很快就消失了，只留下一片圣洁的宁静，而各行各业都在报告着奇异的、灵感的进步。" #deepl:3491136693
- gate_mana_saturation.5.t: "伊势觉醒" #deepl:3766031496
- gate_mana_saturation.6.a: "这令人担忧。" #deepl:2714219379
- gate_mana_saturation.6.d: "当地[concept_mana_density] 的增加导致秦始皇陵下的古代[Concept('concept_gate_ley_lines','$concept_gate_ley_line$')] 网点被唤醒。" #deepl:4168663517
- gate_mana_saturation.6.f: "在古城西安，雷线涌动，唤醒了秦始皇陵下沉睡已久的结界。附近劳作的农民说，空气中弥漫着一种奇怪的压力，迫使他们不眠不休地劳作，地下深处回荡着微弱而有节奏的行军声。整个地区的耕种者都感觉到了一种深远的骚动，一种巨大而深埋的东西在蠢蠢欲动，但他们的探查却没有得到任何答案。" #deepl:1909395410
- gate_mana_saturation.6.t: "始皇帝的低语" #deepl:2384536619
- gate_mana_saturation.7.a: "这真是太好了！" #deepl:3289732063
- gate_mana_saturation.7.d: "当地[concept_mana_density] 的增加唤醒了乌鲁鲁地下古老的[Concept('concept_gate_ley_lines','$concept_gate_ley_line$')] 联系。" #deepl:1181954694
- gate_mana_saturation.7.f: "随着法力在北部地区的雷系中涌动，乌鲁鲁--神圣的红色巨石--以宁静庄严的姿态苏醒。清澈的泉水从它的底部开始流淌，形成了一片绿洲。这片土地不畏沙漠，绽放出祖先的记忆。夜幕降临，水面上飘浮着丝丝缕缕的亮光，跳动着异世界的色彩--当地人认为那是梦境中的精灵。这些祖先的光芒激起了灵魂深处的某种东西，整个地区的艺术家们开始创作充满憧憬、崇敬和古老歌声回响的作品。这片土地的心再次歌唱。" #deepl:1325170655
- gate_mana_saturation.7.t: "乌鲁鲁歌唱之心" #deepl:322475842
- gate_mana_saturation.8.a: "这令人担忧。" #deepl:2714219379
- gate_mana_saturation.8.d: "当地[concept_mana_density] 的增加导致了多纳雷切地下古老的[Concept('concept_gate_ley_lines','$concept_gate_ley_line$')] 联系的觉醒。" #deepl:2359637440
- gate_mana_saturation.8.f: "在黑森州的中心地带，古老的多纳雷切曾经屹立的地方，大地在颤抖，大橡树重新崛起。在被唤醒的雷线的滋养下，它的根部裂开了石缝，树冠伸展开来，迸发出祖先原始的力量。虽然周围的空气中弥漫着一种深深的背叛感，但这片土地却欣欣向荣：庄稼长得更饱满，动物生得更强壮，雨水也在需要时及时降下。当地人聚集在一起，肃然起敬，感受着被遗忘的誓言和古老存在的重量。古老神灵的低语激荡着人们的心，曾经被埋葬在数百年寂静中的祈祷再次升起。雷声再次响起--不是愤怒，而是审判。" #deepl:3215896656
- gate_mana_saturation.8.t: "雷霆橡树的回归" #deepl:3427693426
- gate_mana_saturation.9.a: "很好。" #deepl:3593588592
- gate_mana_saturation.9.d: "当地[concept_mana_density] 的增加导致罗克符文石下古老的[Concept('concept_gate_ley_lines','$concept_gate_ley_line$')] 联系点被唤醒。" #deepl:227296792
- gate_mana_saturation.9.f: "随着哥特兰空气中法力的增强，一股奥术共振的涟漪向北传播，唤醒了哥特兰古老的洛克符文石下方的雷系节点。其上雕刻的符文闪烁着璀璨的能量，在整个乡村投下闪烁的光芒。很快，斯堪的纳维亚半岛上的符文石也开始发光，发出沉睡已久的魔法的轻柔嗡嗡声。学者们争相破解这些神秘的图案，揭开失传已久的符文魔法原理。在哥特兰，当地的符文雕刻师成为抢手的工匠，他们的铭文加快了工业工作流程和魔法融合。古老的石头再次开口说话，不是用语言，而是用力量。" #deepl:2052796929
- gate_mana_saturation.9.t: "石头与火焰的低语" #deepl:2358393724
- gate_mana_saturation_buildings_progress_bar_balance: "$mana$ 建筑使用" #deepl:169250752
- gate_mana_saturation_mages_progress_bar_balance: "[GetPopType('mages').GetName]" #deepl:1162434282
- gate_mana_saturation_ritual_progress_bar_balance: "仪式" #deepl:100301908
- je_mana_saturation: "全球法力饱和度" #deepl:171745877
- je_mana_saturation_button_slave_ritual: "牺牲奴隶" #deepl:2127545356
- je_mana_saturation_button_slave_ritual_cooldown: "一年内未执行奴隶仪式" #deepl:1814410812
- je_mana_saturation_button_slave_ritual_desc: "牺牲[GetPopType('slaves').GetName] 来增加我们其中一个州的[concept_mana_density] 。" #deepl:322364928
- je_mana_saturation_button_slave_ritual_infamy: "[SCOPE.sCountry('loc_country_scope').GetName] 的 Infamy 不到 100。" #deepl:2238047500
- je_mana_saturation_button_slave_ritual_mana_density: "[concept_mana_density] 在我们的一个州中，该比例低于 100%。" #deepl:3005232554
- je_mana_saturation_goal: "[concept_mana_saturation] 已达到最大值" #deepl:1477263753
- je_mana_saturation_high_progress: "全世界的平均[concept_mana_density] 很高。" #deepl:2852144250
- je_mana_saturation_low_progress: "全世界的平均[concept_mana_density] 很低。" #deepl:3789019862
- je_mana_saturation_medium_progress: "世界各地的平均[concept_mana_density] 越来越高。" #deepl:2004107105
- je_mana_saturation_reason: "随着界与界之间的隔膜逐渐变薄，法力开始渗入我们的世界，其存在感与日俱增。空气中弥漫着新发现的能量，现实的结构似乎也在闪烁着潜能。法力的不断涌入有望重塑我们对魔法和力量的理解，预示着一个前所未有的变革和机遇时代的到来。" #deepl:455482982
+ gate_mana_saturation.2.a: "This world needs more magic whatever the price."
+ gate_mana_saturation.2.a_progress_tt: "Increases [concept_mana_density] by 50% in [SCOPE.sStateRegion('ritual_state_region').GetName]."
+ gate_mana_saturation.2.b: "We need to stop this madness."
+ gate_mana_saturation.2.d: "Increase [concept_mana_density] through ritual sacrifices."
+ gate_mana_saturation.2.f: "In the shadow of towering spires, whispers of dark rituals filled the air. The council decreed that to saturate the earth with mana, the blood of the enslaved would be spilled. Beneath a blood-red moon, the condemned were led to ancient altars, their lives exchanged for the promise of arcane power. The earth drank deeply, its veins pulsing with new energy, as the price of power was paid in the currency of despair."
+ gate_mana_saturation.2.t: "Heinous Ritual"
+ gate_mana_saturation.3.a1: "This will change how we grow crops."
+ gate_mana_saturation.3.a2: "Interesting."
+ gate_mana_saturation.3.b: "Send Researchers."
+ gate_mana_saturation.3.d: "Through increased [concept_mana_density] plants are growing faster in [SCOPE.sState('magic_growing_state').GetName]."
+ gate_mana_saturation.3.f: "As the veil between worlds thinned, mana seeped into the earth like a whispered secret. Overnight, seeds burst into bloom, vines spiraled skyward, and ancient trees unfurled leaves of radiant green. The land hummed with newfound life, a vibrant pulse in every root and branch, as nature thrived in this enchanted dawn."
+ gate_mana_saturation.3.t: "Mana Bloom"
+ gate_mana_saturation.4.a: "This is unexpected."
+ gate_mana_saturation.4.d: "An increase in the local [concept_mana_density] has lead to the awakening of the ancient [Concept('concept_gate_ley_lines','$concept_gate_ley_line$')] nexus in Stonehenge."
+ gate_mana_saturation.4.f: "In the quiet mists of the West Country, #v ancient stones long thought silent have begun to hum#!. As mana density surges across the region, Stonehenge—once a solemn monument to forgotten rites—#v awakens in resonance with the arcane energies beneath the earth#!.\n\nGlowing runes now pulse faintly across its weathered surface, and strange phenomena have begun to ripple through the countryside: crops bloom out of season, the sick recover with uncanny speed, and animals gather around the stones in eerie silence.\n\nDruids, #v flock to the site#!, claiming it as a sacred nexus of natural power. With each passing day, the surrounding land grows richer in magic—a beacon of primal energy in a rapidly changing world."
+ gate_mana_saturation.4.t: "Stonehenge Stirs"
+ gate_mana_saturation.5.a: "This is wonderful!"
+ gate_mana_saturation.5.d: "An increase in the local [concept_mana_density] has lead to the awakening of the ancient [Concept('concept_gate_ley_lines','$concept_gate_ley_line$')] nexus under the Ise Shrine."
+ gate_mana_saturation.5.f: "The ley line nexus beneath the Ise Shrine stirs with ancient force as mana density swells across Kansai. In a blinding cascade of celestial light, Amaterasu herself materializes briefly within the inner sanctum. Witnessed by priests and pilgrims alike, she proclaims that the time of divine slumber has ended—and that Toyouke-hime, goddess of agriculture and industry, shall now guide the hands of artisans and laborers through the age of magic and machines. As quickly as she appeared, Amaterasu vanishes, leaving behind a sanctified hush—and industries already reporting strange, inspired advancements."
+ gate_mana_saturation.5.t: "Awakening at Ise"
+ gate_mana_saturation.6.a: "This is concerning."
+ gate_mana_saturation.6.d: "An increase in the local [concept_mana_density] has lead to the awakening of the ancient [Concept('concept_gate_ley_lines','$concept_gate_ley_line$')] nexus under the Mausoleum of Qin Shi Huang."
+ gate_mana_saturation.6.f: "In the ancient city of Xian, the ley lines have surged—awakening the long-dormant nexus beneath the Mausoleum of Qin Shi Huang. Peasants laboring nearby speak of a strange pressure in the air, a compulsion to toil without rest, and the faint, rhythmic sound of distant marching echoing from deep underground. Cultivators across the region sense a profound disturbance, a stirring of something immense and buried, yet their scrying yields no answers."
+ gate_mana_saturation.6.t: "Whispers Beneath the First Emperor"
+ gate_mana_saturation.7.a: "This is wonderful!"
+ gate_mana_saturation.7.d: "An increase in the local [concept_mana_density] has lead to the awakening of the ancient [Concept('concept_gate_ley_lines','$concept_gate_ley_line$')] nexus under Uluru."
+ gate_mana_saturation.7.f: "As mana surges through the ley lines of the Northern Territories, Uluru—the sacred red monolith—awakens with quiet majesty. From its base, crystal-clear water begins to flow, forming an oasis where none existed. The land blossoms in defiance of the desert, blooming with ancestral memories. At night, luminous wisps drift above the waters, pulsing with otherworldly colors—believed by locals to be the spirits of the Dreaming. These ancestral lights stir something deep within the soul, and artists across the region begin creating works infused with vision, reverence, and the echo of ancient songs. The heart of the land sings once more."
+ gate_mana_saturation.7.t: "The Singing Heart of Uluru"
+ gate_mana_saturation.8.a: "This is concerning."
+ gate_mana_saturation.8.d: "An increase in the local [concept_mana_density] has lead to the awakening of the ancient [Concept('concept_gate_ley_lines','$concept_gate_ley_line$')] nexus under the Donareiche."
+ gate_mana_saturation.8.f: "In the heart of Hesse, where the ancient Donareiche once stood, the earth trembles—and the great oak rises anew. Fed by the awakened ley lines, its roots crack stone and its canopy stretches wide, pulsing with raw, ancestral power. Though the air around it hums with a deep sense of betrayal, the land flourishes: crops grow fuller, animals are born strong, and the rain falls just when needed. Locals gather in hushed reverence, feeling the weight of forgotten oaths and ancient presence. Whispers of the old gods stir, and prayers once buried under centuries of silence rise once more. The thunder returns—not in fury, but in judgment."
+ gate_mana_saturation.8.t: "The Return of the Thunder Oak"
+ gate_mana_saturation.9.a: "Good."
+ gate_mana_saturation.9.d: "An increase in the local [concept_mana_density] has lead to the awakening of the ancient [Concept('concept_gate_ley_lines','$concept_gate_ley_line$')] nexus under the Rök Rune Stone."
+ gate_mana_saturation.9.f: "As mana thickens in the air of Götaland, a ripple of arcane resonance travels north—awakening the ley line nexus beneath the ancient Rök Rune Stone in Götaland. Its carved runes shimmer with radiant energy, casting flickering light across the countryside. Soon, rune stones across Scandinavia begin to glow, humming softly with long-dormant enchantments. Scholars scramble to decipher the arcane patterns, unlocking long-lost principles of runic magic. In Götaland, local runecarvers become sought-after artisans, their empowered inscriptions accelerating industrial workflows and magical integration. The old stones speak once more, not with words—but with power."
+ gate_mana_saturation.9.t: "Whispers of Stone and Flame"
+ gate_mana_saturation_buildings_progress_bar_balance: "建筑内的$mana$使用者"
+ gate_mana_saturation_mages_progress_bar_balance: "[GetPopType('mages').GetName]"
+ gate_mana_saturation_ritual_progress_bar_balance: "仪式"
+ je_mana_saturation: "全球魔力饱和度"
+ je_mana_saturation_button_slave_ritual: "献祭奴隶"
+ je_mana_saturation_button_slave_ritual_cooldown: "一年没有执行过献祭仪式"
+ je_mana_saturation_button_slave_ritual_desc: "献祭[GetPopType('slaves').GetName]来增加我们某个地区的[concept_mana_density]。"
+ je_mana_saturation_button_slave_ritual_infamy: "[SCOPE.sCountry('loc_country_scope').GetName]的恶名低于100."
+ je_mana_saturation_button_slave_ritual_mana_density: "我们的某个地区[concept_mana_density]低于100%。"
+ je_mana_saturation_goal: "[concept_mana_saturation]已达到上限"
+ je_mana_saturation_high_progress: "全球平均[concept_mana_density]很高。"
+ je_mana_saturation_low_progress: "全球平均[concept_mana_density]较低。"
+ je_mana_saturation_medium_progress: "全球平均[concept_mana_density]越来越高。"
+ je_mana_saturation_reason: "随着不同位面之间的帷幕日渐稀薄，神秘的魔能开始渗入我们的世界，其存在感与日俱增。空气中充斥着新生的能量嗡鸣，现实的经纬线仿佛镀上了流转的辉光，每一道纹路都闪烁着无限可能。这股持续涌入的魔法能量注定要重塑我们对魔法与力量的认知，预示着一个充满空前变革与机遇的时代即将来临。"
