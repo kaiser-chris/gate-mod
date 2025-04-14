@@ -1,62 +1,62 @@
 ﻿l_simp_chinese:
- building_druids_fertility_mult: "[Concept('concept_pop_growth', '$concept_pop_growth_birthrate$')] 的$druids$" #deepl:1033383635
- building_druids_fertility_mult_desc: "[Concept('concept_pop_growth', '$concept_pop_growth_birthrate$')] 的增减$druids$" #deepl:1561776498
- building_druids_mortality_mult: "$state_druids_mortality_mult$" #deepl:1298812989
- building_druids_mortality_mult_desc: "$state_druids_mortality_mult_desc$" #deepl:2491529666
- building_druids_shares_add: "$druids$ [Concept('concept_ownership_share', '$concept_ownership_shares$')]" #deepl:934168350
- building_druids_shares_add_desc: "$druids$ 的增减[Concept('concept_ownership_share', '$concept_ownership_shares$')]" #deepl:2903384349
- building_druids_shares_mult: "$druids$ [Concept('concept_ownership_share', '$concept_ownership_shares$')]" #deepl:934168350
- building_druids_shares_mult_desc: "$druids$ 的增减[Concept('concept_ownership_share', '$concept_ownership_shares$')]" #deepl:2903384349
- building_employment_druids_add: "$druids$ 每级" #deepl:966414285
- building_employment_druids_add_desc: "修改$druids$ 每级可雇佣的建筑数量" #deepl:3309503400
- building_employment_druids_mult: "$building_employment_druids_add$" #deepl:3091057830
- building_employment_druids_mult_desc: "$building_employment_druids_add_desc$" #deepl:4010886121
- building_employment_mages_add: "$mages$ 每级" #deepl:74696181
- building_employment_mages_add_desc: "修改$mages$ 每级可雇佣的建筑数量" #deepl:1754950371
- building_employment_mages_mult: "$building_employment_mages_add$" #deepl:1545020735
- building_employment_mages_mult_desc: "$building_employment_mages_add_desc$" #deepl:1993346851
- building_mages_fertility_mult: "[Concept('concept_pop_growth', '$concept_pop_growth_birthrate$')] 的$mages$" #deepl:3731828144
- building_mages_fertility_mult_desc: "[Concept('concept_pop_growth', '$concept_pop_growth_birthrate$')] 的增减$mages$" #deepl:3471373671
- building_mages_mortality_mult: "$state_mages_mortality_mult$" #deepl:1938828501
- building_mages_mortality_mult_desc: "$state_mages_mortality_mult_desc$" #deepl:120306821
- building_mages_shares_add: "$mages$ [Concept('concept_ownership_share', '$concept_ownership_shares$')]" #deepl:2943544367
- building_mages_shares_add_desc: "$mages$ 的增减[Concept('concept_ownership_share', '$concept_ownership_shares$')]" #deepl:3273582376
- building_mages_shares_mult: "$mages$ [Concept('concept_ownership_share', '$concept_ownership_shares$')]" #deepl:2943544367
- building_mages_shares_mult_desc: "$mages$ 的增减[Concept('concept_ownership_share', '$concept_ownership_shares$')]" #deepl:3273582376
- country_druids_pol_str_mult: "[concept_political_strength] 的$druids$" #deepl:4100113047
- country_druids_pol_str_mult_desc: "[concept_political_strength] 的增减$druids$" #deepl:3023576798
- country_druids_voting_power_add: "[concept_political_strength] 从[concept_votes] $druids$" #deepl:2460341326
- country_druids_voting_power_add_desc: "选举中从[concept_votes] $druids$ 获得的[concept_political_strength] 数量的增加或减少" #deepl:3328528271
- country_mages_pol_str_mult: "[concept_political_strength] 的$mages$" #deepl:3125128204
- country_mages_pol_str_mult_desc: "[concept_political_strength] 的增减$mages$" #deepl:188107670
- country_mages_voting_power_add: "[concept_political_strength] 从[concept_votes] $mages$" #deepl:1329535191
- country_mages_voting_power_add_desc: "选举中从[concept_votes] $mages$ 获得的[concept_political_strength] 数量的增加或减少" #deepl:2677017598
- druids: "@druids!$druids_no_icon$" #deepl:91222811
- druids_desc: "自然[concept_gate_magic_users] ，通常出身于农家。他们的政治利益通常由[GetInterestGroupVariant('ig_magic_users',GetPlayer).GetNameWithCountryVariant] 代表。" #deepl:1664117675
- druids_no_icon: "德鲁伊" #deepl:952413689
- druids_only_icon: "@druids!" #deepl:1048814
- druids_qualifications_desc: ""任何流行语都可以成为#v $druids$ #! 。[concept_literacy] 和[concept_wealth] 的潜力越大。[concept_culture] 面孔的流行音乐[concept_discrimination] 需要更长的时间。#v $farmers$ #! 和#v $laborers$ #! 特别容易成为#v $druids$ #! 。" #deepl:3002345990
- mages: "@mages!$mages_no_icon$" #deepl:1098333916
- mages_desc: "受过教育的[concept_gate_magic_users] ，通常来自富裕的精英阶层。他们的政治利益通常由[GetInterestGroupVariant('ig_magic_users',GetPlayer).GetNameWithCountryVariant] 代表。" #deepl:2986204199
- mages_no_icon: "法师" #deepl:1773414191
- mages_only_icon: "@mages!" #deepl:2519370184
- mages_qualifications_academy: "从我们的[GetBuildingType('building_magic_academy').GetName]" #deepl:962771589
- mages_qualifications_desc: "只有拥有足够的[concept_literacy] 才能成为#v $mages$ #! 。[concept_literacy] 和[concept_wealth] 的潜力越大。[concept_culture] 面孔[concept_discrimination] 的 pop 需要更长的时间。#v $aristocrats$ #! 和#v $academics$ #! 特别容易成为#v $mages$ #! 。[GetBuildingType('building_magic_academy').GetName] [concept_building] 也更容易培养出新的#v $mages$ #! 。" #deepl:3355709172
- pop_druids: "$druids$ [concept_profession]" #deepl:285799728
- pop_mages: "$mages$ [concept_profession]" #deepl:4056154339
- state_druids_dependent_wage_mult: "$druids$ 受抚养人收入" #deepl:2275339931
- state_druids_dependent_wage_mult_desc: "$druids$ 受抚养人收入的增加或减少" #deepl:1162778457
- state_druids_investment_pool_contribution_add: "$druids$ [concept_investment_pool] 捐款" #deepl:3814937437
- state_druids_investment_pool_contribution_add_desc: "$druids$ 将投资多少利润" #deepl:508104452
- state_druids_investment_pool_efficiency_mult: "$druids$ [concept_investment_pool] 贡献效率" #deepl:3492865717
- state_druids_investment_pool_efficiency_mult_desc: "增加或减少$druids$ 投资利润的贡献额度[concept_investment_pool]" #deepl:2647914139
- state_druids_mortality_mult: "[Concept('concept_pop_growth', '$concept_pop_growth_mortality$')] 的$druids$" #deepl:2259569037
- state_druids_mortality_mult_desc: "[Concept('concept_pop_growth', '$concept_pop_growth_mortality$')] 的增减$druids$" #deepl:3860903468
- state_mages_dependent_wage_mult: "$mages$ 受抚养人收入" #deepl:2049646586
- state_mages_dependent_wage_mult_desc: "$mages$ 受抚养人收入的增加或减少" #deepl:3232244818
- state_mages_investment_pool_contribution_add: "$mages$ [concept_investment_pool] 捐款" #deepl:1043646275
- state_mages_investment_pool_contribution_add_desc: "$mages$ 将投资多少利润" #deepl:1807997170
- state_mages_investment_pool_efficiency_mult: "$mages$ [concept_investment_pool] 贡献效率" #deepl:1533412293
- state_mages_investment_pool_efficiency_mult_desc: "增加或减少$mages$ 投资利润的贡献额度[concept_investment_pool]" #deepl:306908312
- state_mages_mortality_mult: "[Concept('concept_pop_growth', '$concept_pop_growth_mortality$')] 的$mages$" #deepl:4207979001
- state_mages_mortality_mult_desc: "[Concept('concept_pop_growth', '$concept_pop_growth_mortality$')] 的增减$mages$" #deepl:3931599150
+ building_druids_fertility_mult: "$druids$[Concept('concept_pop_growth', '$concept_pop_growth_birthrate$')]"
+ building_druids_fertility_mult_desc: "对$druids$[Concept('concept_pop_growth', '$concept_pop_growth_birthrate$')]的增益或惩罚"
+ building_druids_mortality_mult: "$state_druids_mortality_mult$"
+ building_druids_mortality_mult_desc: "$state_druids_mortality_mult_desc$"
+ building_druids_shares_add: "$druids$[Concept('concept_ownership_share', '$concept_ownership_shares$')]"
+ building_druids_shares_add_desc: "对$druids$[Concept('concept_ownership_share', '$concept_ownership_shares$')]的增益或惩罚"
+ building_druids_shares_mult: "$druids$[Concept('concept_ownership_share', '$concept_ownership_shares$')]"
+ building_druids_shares_mult_desc: "对$druids$[Concept('concept_ownership_share', '$concept_ownership_shares$')]的增益或惩罚"
+ building_employment_druids_add: "$druids$/级"
+ building_employment_druids_add_desc: "修正建筑每等级可以雇佣的$druids$数量"
+ building_employment_druids_mult: "$building_employment_druids_add$"
+ building_employment_druids_mult_desc: "$building_employment_druids_add_desc$"
+ building_employment_mages_add: "$mages$/级"
+ building_employment_mages_add_desc: "修正建筑每等级可以雇佣的$mages$数量"
+ building_employment_mages_mult: "$building_employment_mages_add$"
+ building_employment_mages_mult_desc: "$building_employment_mages_add_desc$"
+ building_mages_fertility_mult: "$mages$[Concept('concept_pop_growth', '$concept_pop_growth_birthrate$')]"
+ building_mages_fertility_mult_desc: "对$mages$[Concept('concept_pop_growth', '$concept_pop_growth_birthrate$')]的增益或惩罚"
+ building_mages_mortality_mult: "$state_mages_mortality_mult$"
+ building_mages_mortality_mult_desc: "$state_mages_mortality_mult_desc$"
+ building_mages_shares_add: "$mages$[Concept('concept_ownership_share', '$concept_ownership_shares$')]"
+ building_mages_shares_add_desc: "对$mages$[Concept('concept_ownership_share', '$concept_ownership_shares$')]的增益或惩罚"
+ building_mages_shares_mult: "$mages$[Concept('concept_ownership_share', '$concept_ownership_shares$')]"
+ building_mages_shares_mult_desc: "对$mages$[Concept('concept_ownership_share', '$concept_ownership_shares$')]的增益或惩罚"
+ country_druids_pol_str_mult: "$druids$[concept_political_strength]"
+ country_druids_pol_str_mult_desc: "对$druids$[concept_political_strength]的增益或惩罚"
+ country_druids_voting_power_add: "$druids$[concept_votes]产生的[concept_political_strength]"
+ country_druids_voting_power_add_desc: "对选举时$druids$[concept_votes]提供的[concept_political_strength]的提高或降低"
+ country_mages_pol_str_mult: "$mages$[concept_political_strength]"
+ country_mages_pol_str_mult_desc: "对$mages$[concept_political_strength]的增益或惩罚"
+ country_mages_voting_power_add: "$mages$[concept_votes]产生的[concept_political_strength]"
+ country_mages_voting_power_add_desc: "对选举时$mages$[concept_votes]提供的[concept_political_strength]的提高或降低"
+ druids: "@druids!$druids_no_icon$"
+ druids_desc: "天生的[concept_gate_magic_users]，一般来自农民家庭。他们的政治利益通常由[GetInterestGroupVariant('ig_magic_users',GetPlayer).GetNameWithCountryVariant]代表。"
+ druids_no_icon: "德鲁伊"
+ druids_only_icon: "@druids!"
+ druids_qualifications_desc: "任何人群都可以成为#v $druids$#!。[concept_literacy]和[concept_wealth]越高，转变潜力就越高。[concept_culture]被[concept_discrimination]的人群转变需要更长时间。#v $farmers$#!和#v $laborers$#!特别容易成为#v $druids$#!。"
+ mages: "@mages!$mages_no_icon$"
+ mages_desc: "受过教育的[concept_gate_magic_users]，通常来自富裕的精英阶层。他们的政治利益通常由[GetInterestGroupVariant('ig_magic_users',GetPlayer).GetNameWithCountryVariant]代表。"
+ mages_no_icon: "法师"
+ mages_only_icon: "@mages!"
+ mages_qualifications_academy: "来自我们的[GetBuildingType('building_magic_academy').GetName]"
+ mages_qualifications_desc: "只有拥有足够[concept_literacy]的人群能成为#v $mages$#!。[concept_literacy]和[concept_wealth]越高，转变潜力就越高。[concept_culture]被[concept_discrimination]的人群转变需要更长时间。#v $aristocrats$#!和#v $academics$#!特别容易成为#v $mages$#!。[GetBuildingType('building_magic_academy').GetName][concept_building]也将使训练新#v $mages$#!更容易。"
+ pop_druids: "$druids$[concept_profession]"
+ pop_mages: "$mages$[concept_profession]"
+ state_druids_dependent_wage_mult: "$druids$受扶养人口收入"
+ state_druids_dependent_wage_mult_desc: "对$druids$受扶养人口收入的增益或惩罚"
+ state_druids_investment_pool_contribution_add: "$druids$[concept_investment_pool]贡献"
+ state_druids_investment_pool_contribution_add_desc: "$druids$会将多少收益用于投资"
+ state_druids_investment_pool_efficiency_mult: "$druids$[concept_investment_pool]贡献效率"
+ state_druids_investment_pool_efficiency_mult_desc: "提高或降低$druids$将自身收益贡献给[concept_investment_pool]的比重"
+ state_druids_mortality_mult: "$druids$[Concept('concept_pop_growth', '$concept_pop_growth_mortality$')]"
+ state_druids_mortality_mult_desc: "对$druids$[Concept('concept_pop_growth', '$concept_pop_growth_mortality$')]的增益或惩罚"
+ state_mages_dependent_wage_mult: "$mages$受扶养人口收入"
+ state_mages_dependent_wage_mult_desc: "对$mages$受扶养人口收入的增益或惩罚"
+ state_mages_investment_pool_contribution_add: "$mages$[concept_investment_pool]贡献"
+ state_mages_investment_pool_contribution_add_desc: "$mages$会将多少收益用于投资"
+ state_mages_investment_pool_efficiency_mult: "$mages$[concept_investment_pool]贡献效率"
+ state_mages_investment_pool_efficiency_mult_desc: "提高或降低$mages$将自身收益贡献给[concept_investment_pool]的比重"
+ state_mages_mortality_mult: "$mages$[Concept('concept_pop_growth', '$concept_pop_growth_mortality$')]"
+ state_mages_mortality_mult_desc: "对$mages$[Concept('concept_pop_growth', '$concept_pop_growth_mortality$')]的增益或惩罚"
