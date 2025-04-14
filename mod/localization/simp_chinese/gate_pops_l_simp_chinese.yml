@@ -32,7 +32,7 @@
  country_mages_voting_power_add: "$mages$[concept_votes]产生的[concept_political_strength]"
  country_mages_voting_power_add_desc: "对选举时$mages$[concept_votes]提供的[concept_political_strength]的提高或降低"
  druids: "@druids!$druids_no_icon$"
- druids_desc: "天生的[concept_gate_magic_users]，一般来自农民家庭。他们的政治利益通常由[GetInterestGroupVariant('ig_magic_users',GetPlayer).GetNameWithCountryVariant]代表。"
+ druids_desc: "天生的[concept_gate_magic_users]，一般来自农民家庭。他们的政治利益通常由[GetInterestGroupVariant('ig_gate_magic_users',GetPlayer).GetNameWithCountryVariant]代表。"
  druids_no_icon: "德鲁伊"
  druids_only_icon: "@druids!"
  druids_qualifications_desc: "任何人群都可以成为#v $druids$#!。[concept_literacy]和[concept_wealth]越高，转变潜力就越高。[concept_culture]被[concept_discrimination]的人群转变需要更长时间。#v $farmers$#!和#v $laborers$#!特别容易成为#v $druids$#!。"

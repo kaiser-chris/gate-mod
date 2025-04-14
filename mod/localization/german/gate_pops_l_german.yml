@@ -32,12 +32,12 @@
  country_mages_voting_power_add: "[concept_political_strength] von der [concept_votes] von $mages$" #deepl:1329535191
  country_mages_voting_power_add_desc: "Eine Erhöhung oder Verringerung des Betrages von [concept_political_strength], der durch die [concept_votes] von $mages$ in Wahlen gewonnen wurde" #deepl:2677017598
  druids: "@druids! $druids_no_icon$" #deepl:91222811
- druids_desc: "Natürlich [concept_gate_magic_users] die oft aus Bauernfamilien stammen. Ihre politischen Interessen werden zumeist von der [GetInterestGroupVariant('ig_magic_users',GetPlayer).GetNameWithCountryVariant] vertreten." #deepl:1664117675
+ druids_desc: "Natürlich [concept_gate_magic_users] die oft aus Bauernfamilien stammen. Ihre politischen Interessen werden zumeist von der [GetInterestGroupVariant('ig_gate_magic_users',GetPlayer).GetNameWithCountryVariant] vertreten." #deepl:3562442764
  druids_no_icon: "Druiden" #deepl:952413689
  druids_only_icon: "@druids!" #deepl:1048814
  druids_qualifications_desc: ""Jeder Pop kann #v $druids$#! werden. Das Potenzial steigt mit größerer [concept_literacy] und [concept_wealth]. Pops, deren [concept_culture] gegenüber [concept_discrimination] steht, brauchen viel länger. #v $farmers$#! und #v $laborers$#! haben es besonders leicht, #v $druids$#! zu werden." #deepl:3002345990
  mages: "@mages! $mages_no_icon$" #deepl:1098333916
- mages_desc: "Gebildete [concept_gate_magic_users], die oft der wohlhabenden Elite angehören. Ihre politischen Interessen werden am häufigsten von der [GetInterestGroupVariant('ig_magic_users',GetPlayer).GetNameWithCountryVariant] vertreten." #deepl:2986204199
+ mages_desc: "Gebildete [concept_gate_magic_users], die oft der wohlhabenden Elite angehören. Ihre politischen Interessen werden am häufigsten von der [GetInterestGroupVariant('ig_gate_magic_users',GetPlayer).GetNameWithCountryVariant] vertreten." #deepl:877185503
  mages_no_icon: "Magier" #deepl:1773414191
  mages_only_icon: "@mages!" #deepl:2519370184
  mages_qualifications_academy: "von unserem [GetBuildingType('building_magic_academy').GetName]" #deepl:962771589
