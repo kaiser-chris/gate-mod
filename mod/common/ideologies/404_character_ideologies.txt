@@ -2,10 +2,10 @@
     icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_magic_supremacy.dds"
 
     lawgroup_gate_magic_users = {
-        law_free_magic_users = approve
-        law_registered_magic_users = disapprove
-        law_restricted_magic_users = strongly_disapprove
-        law_noble_magic_users = strongly_approve
+        law_gate_free_magic_users = approve
+        law_gate_mage_guilds = disapprove
+        law_gate_restricted_magic_users = strongly_disapprove
+        law_gate_noble_magic_users = strongly_approve
     }
 
     interest_group_leader_trigger = {
@@ -17,7 +17,7 @@
         NAND = {
             has_role = agitator
             owner = {
-                has_law = law_type:law_noble_magic_users
+                has_law = law_type:law_gate_noble_magic_users
             }
         }
         interest_group = {
@@ -43,10 +43,10 @@ ideology_magic_hopeful = {
     icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_magic_hopeful.dds"
 
     lawgroup_gate_magic_users = {
-        law_free_magic_users = strongly_approve
-        law_registered_magic_users = neutral
-        law_restricted_magic_users = strongly_disapprove
-        law_noble_magic_users = approve
+        law_gate_free_magic_users = strongly_approve
+        law_gate_mage_guilds = neutral
+        law_gate_restricted_magic_users = strongly_disapprove
+        law_gate_noble_magic_users = approve
     }
 
     interest_group_leader_trigger = {
@@ -62,7 +62,7 @@ ideology_magic_hopeful = {
         NAND = {
             has_role = agitator
             owner = {
-                has_law = law_type:law_free_magic_users
+                has_law = law_type:law_gate_free_magic_users
             }
         }
         interest_group = {
@@ -89,10 +89,10 @@ ideology_magic_sceptic = {
     icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_magic_cynic.dds"
 
     lawgroup_gate_magic_users = {
-        law_free_magic_users = neutral
-        law_registered_magic_users = strongly_approve
-        law_restricted_magic_users = approve
-        law_noble_magic_users = strongly_disapprove
+        law_gate_free_magic_users = neutral
+        law_gate_mage_guilds = strongly_approve
+        law_gate_restricted_magic_users = approve
+        law_gate_noble_magic_users = strongly_disapprove
     }
 
     country_trigger = {
@@ -112,7 +112,7 @@ ideology_magic_sceptic = {
         NAND = {
             has_role = agitator
             owner = {
-                has_law = law_type:law_registered_magic_users
+                has_law = law_type:law_gate_mage_guilds
             }
         }
         interest_group = {
@@ -139,10 +139,10 @@ ideology_magic_cynic = {
     icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_magic_cynic.dds"
 
     lawgroup_gate_magic_users = {
-        law_free_magic_users = disapprove
-        law_registered_magic_users = approve
-        law_restricted_magic_users = strongly_approve
-        law_noble_magic_users = strongly_disapprove
+        law_gate_free_magic_users = disapprove
+        law_gate_mage_guilds = approve
+        law_gate_restricted_magic_users = strongly_approve
+        law_gate_noble_magic_users = strongly_disapprove
     }
 
     interest_group_leader_trigger = {
@@ -161,7 +161,7 @@ ideology_magic_cynic = {
         NAND = {
             has_role = agitator
             owner = {
-                has_law = law_type:law_restricted_magic_users
+                has_law = law_type:law_gate_restricted_magic_users
             }
         }
         interest_group = {

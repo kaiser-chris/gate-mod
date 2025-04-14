@@ -27,7 +27,7 @@
 		activate_law = law_type:law_guaranteed_liberties
 		activate_law = law_type:law_dedicated_monster_hunters
 		activate_law = law_type:law_appointed_bureaucrats
-		activate_law = law_type:law_registered_magic_users
+		activate_law = law_type:law_gate_mage_guilds
 
 		set_ruling_interest_groups = {
 			ig_intelligentsia
@@ -35,11 +35,11 @@
 		}
 
 		set_institution_investment_level = {
-			institution = institution_magical_focus
+			institution = institution_gate_magical_focus
 			level = 1
 		}
 		set_institution_investment_level = {
-			institution = institution_monster_hunting
+			institution = institution_gate_monster_hunting
 			level = 1
 		}
 	}

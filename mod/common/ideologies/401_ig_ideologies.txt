@@ -1,22 +1,43 @@
 ﻿ideology_gate_magic_militarist = {
     icon = "gfx/interface/icons/ideology_icons/jingoist.dds"
 
+    lawgroup_colonization = {
+        law_gnomish_integration = approve
+    }
+
     lawgroup_army_model = {
         law_professional_army = strongly_approve
         law_mass_conscription = approve
         law_national_militia = disapprove
         law_peasant_levies = disapprove
     }
+
+    lawgroup_gate_monster_hunting = {
+        law_no_organized_monster_hunting = disapprove
+        law_dedicated_monster_hunters = approve
+        law_private_monster_hunters = neutral
+        law_militarized_monster_hunters = strongly_approve
+    }
 }
 
 ideology_gate_magic_supremacist = {
     icon = "gfx/interface/icons/ideology_icons/magic_supremacist.dds"
 
+    lawgroup_governance_principles = {
+        law_gate_magocracy = strongly_approve
+    }
+
+    lawgroup_citizenship = {
+        law_gnomish_harmony = approve
+    }
+
     lawgroup_gate_magic_users = {
-        law_free_magic_users = approve
-        law_registered_magic_users = disapprove
-        law_restricted_magic_users = strongly_disapprove
-        law_noble_magic_users = strongly_approve
+        law_gate_free_magic_users = disapprove
+        law_gate_mage_guilds = approve
+        law_gate_druidic_circles = approve
+        law_gate_restricted_magic_users = strongly_disapprove
+        law_gate_arcane_bureau = approve
+        law_gate_noble_magic_users = strongly_approve
     }
 }
 
@@ -49,10 +70,10 @@ ideology_gate_orchish_patriarchal = {
     }
 
     lawgroup_gate_magic_users = {
-        law_free_magic_users = neutral
-        law_registered_magic_users = disapprove
-        law_restricted_magic_users = strongly_disapprove
-        law_noble_magic_users = strongly_approve
+        law_gate_free_magic_users = neutral
+        law_gate_mage_guilds = disapprove
+        law_gate_restricted_magic_users = strongly_disapprove
+        law_gate_noble_magic_users = strongly_approve
     }
 }
 

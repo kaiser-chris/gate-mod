@@ -44,6 +44,7 @@
 		activate_law = law_type:law_private_monster_hunters
 		activate_law = law_type:law_elven_supremacy_religious_preaching
 		activate_law = law_type:law_charitable_health_system
+		activate_law = law_type:law_gate_restricted_magic_users
 
         set_ruling_interest_groups = {
 			ig_devout
@@ -60,11 +61,11 @@
 		}
 
 		set_institution_investment_level = {
-			institution = institution_magical_focus
+			institution = institution_gate_magical_focus
 			level = 1
 		}
 		set_institution_investment_level = {
-			institution = institution_monster_hunting
+			institution = institution_gate_monster_hunting
 			level = 2
 		}
 	}

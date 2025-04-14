@@ -1,0 +1,217 @@
+﻿# Extensions of base game ideologies
+# These are added by the scripted effect add_gate_ideologies
+
+ideology_liberal_gate = {
+    icon = "gfx/interface/icons/ideology_icons/gate_liberal.dds"
+
+    lawgroup_citizenship = {
+        law_gnomish_harmony = approve
+    }
+
+    lawgroup_governance_principles = {
+        law_gate_magocracy = disapprove
+    }
+
+    lawgroup_gate_monster_hunting = {
+        law_no_organized_monster_hunting = neutral
+        law_dedicated_monster_hunters = neutral
+        law_private_monster_hunters = disapprove
+        law_militarized_monster_hunters = disapprove
+    }
+
+    lawgroup_gate_magic_users = {
+        law_gate_free_magic_users = strongly_approve
+        law_gate_mage_guilds = approve
+        law_gate_druidic_circles = approve
+        law_gate_restricted_magic_users = disapprove
+        law_gate_arcane_bureau = strongly_approve
+        law_gate_noble_magic_users = strongly_disapprove
+    }
+}
+
+ideology_isolationist_gate = {
+    icon = "gfx/interface/icons/ideology_icons/gate_isolationist.dds"
+
+    lawgroup_colonization = {
+        law_gnomish_integration = neutral
+    }
+
+    lawgroup_citizenship = {
+        law_gnomish_harmony = disapprove
+    }
+
+    lawgroup_gate_monster_hunting = {
+        law_no_organized_monster_hunting = strongly_disapprove
+        law_dedicated_monster_hunters = approve
+        law_private_monster_hunters = disapprove
+        law_militarized_monster_hunters = neutral
+    }
+
+    lawgroup_gate_magic_users = {
+        law_gate_free_magic_users = neutral
+        law_gate_mage_guilds = disapprove
+        law_gate_druidic_circles = strongly_approve
+        law_gate_restricted_magic_users = neutral
+        law_gate_arcane_bureau = approve
+        law_gate_noble_magic_users = disapprove
+    }
+}
+
+ideology_jingoist_gate = {
+    icon = "gfx/interface/icons/ideology_icons/gate_jingoist.dds"
+
+    lawgroup_colonization = {
+        law_gnomish_integration = approve
+    }
+
+    lawgroup_gate_monster_hunting = {
+        law_no_organized_monster_hunting = disapprove
+        law_dedicated_monster_hunters = approve
+        law_private_monster_hunters = neutral
+        law_militarized_monster_hunters = strongly_approve
+    }
+
+    lawgroup_gate_magic_users = {
+        law_gate_free_magic_users = disapprove
+        law_gate_mage_guilds = neutral
+        law_gate_druidic_circles = neutral
+        law_gate_restricted_magic_users = neutral
+        law_gate_arcane_bureau = approve
+        law_gate_noble_magic_users = neutral
+    }
+}
+
+ideology_pious_gate = {
+    icon = "gfx/interface/icons/ideology_icons/gate_pious.dds"
+
+    lawgroup_colonization = {
+        law_gnomish_integration = disapprove
+    }
+
+    lawgroup_citizenship = {
+        law_gnomish_harmony = approve
+    }
+
+    lawgroup_governance_principles = {
+        law_gate_magocracy = strongly_disapprove
+    }
+
+    lawgroup_gate_monster_hunting = {
+        law_no_organized_monster_hunting = disapprove
+        law_dedicated_monster_hunters = approve
+        law_private_monster_hunters = neutral
+        law_militarized_monster_hunters = neutral
+    }
+
+    lawgroup_gate_magic_users = {
+        law_gate_free_magic_users = strongly_disapprove
+        law_gate_mage_guilds = neutral
+        law_gate_druidic_circles = neutral
+        law_gate_restricted_magic_users = approve
+        law_gate_arcane_bureau = disapprove
+        law_gate_noble_magic_users = strongly_disapprove
+    }
+}
+
+ideology_reactionary_gate = {
+    icon = "gfx/interface/icons/ideology_icons/gate_reactionary.dds"
+
+    lawgroup_citizenship = {
+        law_gnomish_harmony = disapprove
+    }
+
+    lawgroup_governance_principles = {
+        law_gate_magocracy = approve
+    }
+
+    lawgroup_elven_supremacy = {
+        law_elven_supremacy_religious_preaching = strongly_disapprove
+        law_elven_supremacy_enforced = neutral
+        law_elven_supremacy_not_enforced = approve
+    }
+
+    lawgroup_gate_magic_users = {
+        law_gate_free_magic_users = disapprove
+        law_gate_mage_guilds = approve
+        law_gate_druidic_circles = approve
+        law_gate_restricted_magic_users = neutral
+        law_gate_arcane_bureau = approve
+        law_gate_noble_magic_users = strongly_disapprove
+    }
+}
+
+ideology_egalitarian_gate = {
+    icon = "gfx/interface/icons/ideology_icons/gate_egalitarian.dds"
+
+    lawgroup_governance_principles = {
+        law_gate_magocracy = strongly_disapprove
+    }
+
+    lawgroup_citizenship = {
+        law_gnomish_harmony = strongly_approve
+    }
+
+    lawgroup_gate_monster_hunting = {
+        law_no_organized_monster_hunting = neutral
+        law_dedicated_monster_hunters = approve
+        law_private_monster_hunters = disapprove
+        law_militarized_monster_hunters = disapprove
+    }
+
+    lawgroup_gate_magic_users = {
+        law_gate_free_magic_users = strongly_approve
+        law_gate_mage_guilds = approve
+        law_gate_druidic_circles = approve
+        law_gate_restricted_magic_users = disapprove
+        law_gate_arcane_bureau = approve
+        law_gate_noble_magic_users = strongly_disapprove
+    }
+}
+
+ideology_paternalistic_gate = {
+    icon = "gfx/interface/icons/ideology_icons/gate_paternalistic.dds"
+
+    lawgroup_governance_principles = {
+        law_gate_magocracy = strongly_approve
+    }
+
+    lawgroup_gate_monster_hunting = {
+        law_no_organized_monster_hunting = disapprove
+        law_dedicated_monster_hunters = neutral
+        law_private_monster_hunters = approve
+        law_militarized_monster_hunters = neutral
+    }
+
+    lawgroup_gate_magic_users = {
+        law_gate_free_magic_users = disapprove
+        law_gate_mage_guilds = approve
+        law_gate_druidic_circles = approve
+        law_gate_restricted_magic_users = strongly_disapprove
+        law_gate_arcane_bureau = approve
+        law_gate_noble_magic_users = strongly_approve
+    }
+}
+
+ideology_laissez_faire_gate = {
+    icon = "gfx/interface/icons/ideology_icons/gate_laissez_faire.dds"
+
+    lawgroup_colonization = {
+        law_gnomish_integration = approve
+    }
+
+    lawgroup_gate_monster_hunting = {
+        law_no_organized_monster_hunting = strongly_disapprove
+        law_dedicated_monster_hunters = neutral
+        law_private_monster_hunters = strongly_approve
+        law_militarized_monster_hunters = neutral
+    }
+
+    lawgroup_gate_magic_users = {
+        law_gate_free_magic_users = neutral
+        law_gate_mage_guilds = strongly_approve
+        law_gate_druidic_circles = approve
+        law_gate_restricted_magic_users = strongly_disapprove
+        law_gate_arcane_bureau = approve
+        law_gate_noble_magic_users = neutral
+    }
+}
