@@ -7,7 +7,6 @@
 	ideologies = {
 		ideology_gate_magic_militarist
 		ideology_gate_magic_supremacist
-		ideology_jingoist_gate
 	}
 	
 	character_ideologies = {
@@ -222,7 +221,7 @@
 		if = {
 			limit = {
 				owner = {
-					has_law = law_type:law_noble_magic_users
+					has_law = law_type:law_gate_noble_magic_users
 				}
 			}
 			multiply = {

@@ -12,7 +12,7 @@
 			has_law = law_type:law_multicultural
 			has_law = law_type:law_universal_suffrage
 			NOT = {
-				has_law = law_type:law_noble_magic_users
+				has_law = law_type:law_gate_noble_magic_users
 			}
 		}
 	}
@@ -33,7 +33,7 @@
 			has_ideology = ideology:ideology_gate_magic_supremacist_character
 			interest_group ?= {
 				law_stance = {
-					law = law_type:law_noble_magic_users
+					law = law_type:law_gate_noble_magic_users
 					value > neutral
 				}
 			}
@@ -166,7 +166,7 @@
 			if = {
 				limit = { is_capital = yes }
 				if = {
-					limit = { owner ?= { has_law = law_type:law_restricted_magic_users } }
+					limit = { owner ?= { has_law = law_type:law_gate_restricted_magic_users } }
 					multiply = 10.0
 				}
 				else = {
@@ -194,7 +194,7 @@
 			if = {
 				limit = { is_capital = yes }
 				if = {
-					limit = { owner ?= { has_law = law_type:law_restricted_magic_users } }
+					limit = { owner ?= { has_law = law_type:law_gate_restricted_magic_users } }
 					multiply = 10.0
 				}
 				else = {

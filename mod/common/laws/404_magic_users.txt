@@ -1,49 +1,247 @@
-﻿law_free_magic_users = {
+﻿law_gate_free_magic_users = {
     group = lawgroup_gate_magic_users
     icon = gfx/interface/icons/law_icons/gate_magic_users.dds
     progressiveness = 0
 
-    institution = institution_magical_focus
-
+    # AI will never abolish institutions entirely
     ai_will_do = {
-        OR = {
-            has_ruling_interest_group = ig_industrialists
-            AND = {
-                exists = ruler
-                ruler = {
-                    has_ideology = ideology:ideology_magic_hopeful
-                }
-            }
+        always = no
+    }
+
+    # Petitions
+    ai_enact_weight_modifier = {
+        value = 0
+
+        if = {
+            limit = { ai_has_enact_weight_modifier_journal_entries = yes }
+            add = 750
         }
+    }
+}
+
+law_gate_restricted_magic_users = {
+    group = lawgroup_gate_magic_users
+    icon = gfx/interface/icons/law_icons/gate_mage_hunters.dds
+    progressiveness = 0
+
+    institution = institution_gate_magical_focus
+    institution_modifier = {
+        country_mages_pol_str_mult = -0.15
+        country_druids_pol_str_mult = -0.15
+        state_mages_investment_pool_contribution_add = -0.15
+        state_druids_investment_pool_contribution_add = -0.15
+        country_authority_add = 50
     }
 
     modifier = {
+        country_institution_cost_institution_gate_magical_focus_mult = 0.1
+    }
+
+    is_visible = {
+        OR = {
+            is_gate_planet_country = yes
+            is_magic_country = yes
+        }
+    }
+
+    ai_will_do = {
+        ruler ?= {
+            NOR = {
+                has_ideology = ideology:ideology_magic_hopeful
+                has_ideology = ideology:ideology_gate_magic_supremacist_character
+            }
+        }
+        OR = {
+            ruler ?= {
+                interest_group ?= {
+                    is_interest_group_type = ig_devout
+                }
+            }
+            has_law = law_type:law_theocracy
+        }
+    }
+
+    # Petitions
+    ai_enact_weight_modifier = {
+        value = 0
+
+        if = {
+            limit = { ai_has_enact_weight_modifier_journal_entries = yes }
+            add = 750
+        }
+
+        if = {
+            limit = {
+                OR = {
+                    ruler ?= {
+                        interest_group ?= {
+                            is_interest_group_type = ig_devout
+                        }
+                    }
+                    has_law = law_type:law_theocracy
+                }
+            }
+            add = 1000
+        }
+    }
+}
+
+law_gate_mage_guilds = {
+    group = lawgroup_gate_magic_users
+    icon = gfx/interface/icons/law_icons/gate_mage_guilds.dds
+    progressiveness = 0
+
+    institution = institution_gate_magical_focus
+    institution_modifier = {
+        interest_group_ig_magic_users_pol_str_mult = 0.02
+        building_group_bg_gate_magic_industry_throughput_add = 0.02
+        country_mages_pol_str_mult = 0.10
+        state_mages_investment_pool_contribution_add = 0.05
+    }
+
+    modifier = {
+        country_institution_cost_institution_gate_magical_focus_mult = -0.1
+    }
+
+    disallowing_laws = {
+        law_industry_banned
+    }
+
+    is_visible = {
+        OR = {
+            is_gate_planet_country = yes
+            is_magic_country = yes
+        }
+    }
+
+    ai_will_do = {
+        ruler ?= {
+            has_ideology = ideology:ideology_magic_hopeful
+        }
+    }
+
+    # Petitions
+    ai_enact_weight_modifier = {
+        value = 0
+
+        if = {
+            limit = { ai_has_enact_weight_modifier_journal_entries = yes }
+            add = 750
+        }
+    }
+}
+
+law_gate_druidic_circles = {
+    group = lawgroup_gate_magic_users
+
+    icon = gfx/interface/icons/law_icons/gate_druidic_circles.dds
+
+    progressiveness = 25
+
+    unlocking_technologies = {
+        romanticism
+    }
+
+    disallowing_laws = {
+        law_laissez_faire
+    }
+
+    is_visible = {
+        OR = {
+            is_gate_planet_country = yes
+            is_magic_country = yes
+        }
+    }
+
+    institution = institution_gate_magical_focus
+    institution_modifier = {
+        interest_group_ig_magic_users_pol_str_mult = 0.02
+        building_group_bg_agriculture_throughput_add = 0.02
+        building_group_bg_plantations_throughput_add = 0.02
+        state_pollution_reduction_health_mult = -0.02
+        country_druids_pol_str_mult = 0.10
+        country_farmers_pol_str_mult = 0.10
+        state_druids_investment_pool_contribution_add = 0.05
+    }
+
+    modifier = {
+        country_institution_cost_institution_gate_magical_focus_mult = -0.1
+    }
+
+    ai_enact_weight_modifier = { #Petitions
+        value = 0
+
+        if = {
+            limit = { ai_has_enact_weight_modifier_journal_entries = yes }
+            add = 750
+        }
+    }
+}
+
+law_gate_arcane_bureau  = {
+    group = lawgroup_gate_magic_users
+
+    icon = gfx/interface/icons/law_icons/gate_arcane_bureau.dds
+
+    progressiveness = 25
+
+    unlocking_technologies = {
+        formalized_magic
+    }
+
+    disallowing_laws = {
+        law_anarchy
+    }
+
+    is_visible = {
+        OR = {
+            is_gate_planet_country = yes
+            is_magic_country = yes
+        }
+    }
+
+    institution = institution_gate_magical_focus
+    institution_modifier = {
+        interest_group_ig_magic_users_pol_str_mult = 0.02
+        state_pollution_reduction_health_mult = -0.01
+        building_group_bg_gate_magic_industry_throughput_add = 0.01
+        building_group_bg_agriculture_throughput_add = 0.01
+        building_group_bg_plantations_throughput_add = 0.01
+        country_druids_pol_str_mult = 0.05
+        country_mages_pol_str_mult = 0.05
+        state_druids_investment_pool_contribution_add = 0.05
+        state_mages_investment_pool_contribution_add = 0.05
+    }
+
+    ai_enact_weight_modifier = { #Petitions
+        value = 0
+
+        if = {
+            limit = { ai_has_enact_weight_modifier_journal_entries = yes }
+            add = 750
+        }
+    }
+}
+
+law_gate_noble_magic_users = {
+    group = lawgroup_gate_magic_users
+    icon = gfx/interface/icons/law_icons/gate_noble_magic_users.dds
+    progressiveness = 0
+
+    disallowing_laws = {
+        law_anarchy
+        law_theocracy
+        law_corporate_state
+        law_council_republic
+    }
+
+    institution = institution_gate_magical_focus
+    institution_modifier = {
+        interest_group_ig_magic_users_pol_str_mult = 0.05
         country_mages_pol_str_mult = 0.15
         country_druids_pol_str_mult = 0.15
-        state_mages_investment_pool_contribution_add = 0.25
-    }
-
-
-    # Petitions
-    ai_enact_weight_modifier = {
-        value = 0
-
-        if = {
-            limit = { ai_has_enact_weight_modifier_journal_entries = yes }
-            add = 750
-        }
-    }
-}
-
-law_registered_magic_users = {
-    group = lawgroup_gate_magic_users
-    icon = gfx/interface/icons/law_icons/gate_magic_users.dds
-    progressiveness = 0
-
-    institution = institution_magical_focus
-
-    modifier = {
-        state_mages_investment_pool_contribution_add = 0.10
+        state_mages_investment_pool_contribution_add = 0.1
+        state_druids_investment_pool_contribution_add = 0.1
     }
 
     is_visible = {
@@ -53,105 +251,12 @@ law_registered_magic_users = {
         }
     }
 
-    # Petty Bourgeoisie are afraid of
-    # magic users in daily life
     ai_will_do = {
-        AND = {
-            AND = {
-                has_ruling_interest_group = ig_petty_bourgeoisie
-                NOT = {
-                    has_ruling_interest_group = ig_magic_users
-                }
-            }
-            AND = {
-                exists = ruler
-                ruler = {
-                    NOT = {
-                        has_ideology = ideology:ideology_magic_hopeful
-                    }
-                }
-            }
-        }
-    }
-
-    # Petitions
-    ai_enact_weight_modifier = {
-        value = 0
-
-        if = {
-            limit = { ai_has_enact_weight_modifier_journal_entries = yes }
-            add = 750
-        }
-    }
-}
-
-law_restricted_magic_users = {
-    group = lawgroup_gate_magic_users
-    icon = gfx/interface/icons/law_icons/gate_magic_users.dds
-    progressiveness = 0
-
-    modifier = {
-        country_mages_pol_str_mult = -0.25
-        country_druids_pol_str_mult = -0.25
-        state_mages_investment_pool_contribution_add = -0.25
-    }
-
-    is_visible = {
-        OR = {
-            is_gate_planet_country = yes
-            is_magic_country = yes
-        }
-    }
-
-    # Petty Bourgeoisie are afraid of
-    # magic users in daily life
-    ai_will_do = {
-        exists = ruler
-        ruler = {
-            NOT = {
+        ruler ?= {
+            OR = {
                 has_ideology = ideology:ideology_magic_hopeful
+                has_ideology = ideology:ideology_gate_magic_supremacist_character
             }
-        }
-    }
-
-    # Petitions
-    ai_enact_weight_modifier = {
-        value = 0
-
-        if = {
-            limit = { ai_has_enact_weight_modifier_journal_entries = yes }
-            add = 750
-        }
-    }
-}
-
-law_noble_magic_users = {
-    group = lawgroup_gate_magic_users
-    icon = gfx/interface/icons/law_icons/gate_magic_users.dds
-    progressiveness = 0
-
-    institution = institution_magical_focus
-
-    modifier = {
-        country_mages_pol_str_mult = 0.50
-        country_druids_pol_str_mult = 0.50
-        state_mages_investment_pool_contribution_add = 0.50
-        state_druids_investment_pool_contribution_add = 0.25
-    }
-
-    is_visible = {
-        OR = {
-            is_gate_planet_country = yes
-            is_magic_country = yes
-        }
-    }
-
-    # Petty Bourgeoisie are afraid of
-    # magic users in daily life
-    ai_will_do = {
-        exists = ruler
-        ruler = {
-            has_ideology = ideology:ideology_magic_hopeful
         }
     }
 

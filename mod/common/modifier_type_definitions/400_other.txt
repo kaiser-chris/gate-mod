@@ -1,4 +1,4 @@
-﻿country_institution_monster_hunting_max_investment_add = {
+﻿country_institution_gate_monster_hunting_max_investment_add = {
     decimals = 0
     color = good
     game_data = {
@@ -6,9 +6,27 @@
     }
 }
 
-country_institution_magical_focus_max_investment_add = {
+country_institution_cost_institution_gate_monster_hunting_mult = {
+    decimals = 0
+    color = bad
+    percent = yes
+    game_data = {
+        ai_value = 0
+    }
+}
+
+country_institution_gate_magical_focus_max_investment_add = {
     decimals = 0
     color = good
+    game_data = {
+        ai_value = 0
+    }
+}
+
+country_institution_cost_institution_gate_magical_focus_mult = {
+    decimals = 0
+    color = bad
+    percent = yes
     game_data = {
         ai_value = 0
     }

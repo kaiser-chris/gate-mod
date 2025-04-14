@@ -1,4 +1,4 @@
-﻿institution_monster_hunting = {
+﻿institution_gate_monster_hunting = {
     icon = "gfx/interface/icons/institution_icons/gate_monster_hunting.dds"
     background_texture = "gfx/interface/illustrations/institutions/gate_monster_hunting.dds"
 
@@ -8,11 +8,10 @@
     }
 }
 
-institution_magical_focus = {
+institution_gate_magical_focus = {
     icon = "gfx/interface/icons/institution_icons/gate_magical_focus.dds"
     background_texture = "gfx/interface/illustrations/institutions/gate_magical_focus.dds"
     modifier = {
-        interest_group_ig_magic_users_pol_str_mult = 0.1
-        state_education_access_add = 0.1
+        state_education_access_add = 0.02
     }
 }

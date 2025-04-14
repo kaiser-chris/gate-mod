@@ -10,15 +10,19 @@
  law_elven_supremacy_religious_preaching_desc: "$elven$尊权是通过教义实现的。"
  law_free_magic_users: "自由奥秘接触者"
  law_free_magic_users_desc: "该国将[concept_gate_magic_users]视为普通公民对待。"
+ law_gate_arcane_bureau: "奥术局" #deepl:942969032
+ law_gate_arcane_bureau_desc: "一个由国家管理的局，将[GetPopType('mages').GetName] 和[GetPopType('druids').GetName] 统一在一个组织之下。" #deepl:2392864195
  law_gate_druidic_circles: "德鲁伊圈" #deepl:1668777127
- law_gate_druidic_circles_desc: "德鲁伊与大自然沟通，利用动植物的力量。通过神圣的丛林园，并与自然周期保持一致，他们可以治愈、保护和控制荒野。" #deepl:3297141010
+ law_gate_druidic_circles_desc: "[GetPopType('druids').GetName] 与大自然交流，利用动植物的力量。通过神圣的丛林园，并与自然周期保持一致，他们可以治愈、保护和控制荒野。" #deepl:358338620
  law_gate_free_magic_users: "无组织" #deepl:171229888
  law_gate_free_magic_users_desc: "这个国家将[GetInterestGroupVariant('ig_magic_users',GetPlayer).GetNameNoFormatting] 与普通公民同等对待，不对[concept_gate_magic] 进行监管。" #deepl:1696312389
  law_gate_mage_guilds: "法师公会" #deepl:2956300017
- law_gate_mage_guilds_desc: "这个魔法框架围绕着法师公会的专业技能展开，公会由技术高超的法师管理。通过熟练的练习、附魔工具和奥术法术，法师们促进了魔法产业的发展。" #deepl:1257259187
+ law_gate_mage_guilds_desc: "这个魔法框架围绕法师公会的专业技能展开，由熟练的[GetPopType('mages').GetName] 管理。通过熟练的练习、附魔工具和奥术法术，他们可以促进魔法产业的发展。" #deepl:3978805145
+ law_gate_magocracy: "魔法统治" #deepl:56400678
+ law_gate_magocracy_desc: "#lore 政府由[GetPopType('mages').GetName] 和[GetPopType('druids').GetName] 圈子统治。国家元首名义上是国家最强大的施法者，通过功绩、地位或出身选拔产生。#!" #deepl:3325477182
  law_gate_noble_magic_users: "奥术贵族" #deepl:1191407859
  law_gate_noble_magic_users_desc: "这个国家将[GetInterestGroupVariant('ig_magic_users',GetPlayer).GetNameNoFormatting] 视为天生的贵族，并为他们提供比普通公民更多的权利。" #deepl:3125650768
- law_gate_restricted_magic_users: "特许[GetInterestGroupVariant('ig_magic_users',GetPlayer).GetNameNoFormatting]" #deepl:3121992554
+ law_gate_restricted_magic_users: "严格的许可证制度" #deepl:844078504
  law_gate_restricted_magic_users_desc: "[concept_gate_magic] [GetInterestGroupVariant('ig_magic_users',GetPlayer).GetNameNoFormatting] 受到严密监控，只有持有政府颁发的执照的人才可执业。未经授权使用 会受到严厉惩罚，因为政府对所有神奇活动都进行严格控制，以防止对其权威造成任何威胁。[concept_gate_magic] " #deepl:172821861
  law_gate_vampire_monarchy: "永生君主制"
  law_gate_vampire_monarchy_desc: "This country has embraced [concept_gate_vampirism] and its monarch is considered eternal."

@@ -8,7 +8,7 @@ magic_understanding_society = {
 	can_research = no
 
 	modifier = {
-		country_institution_magical_focus_max_investment_add = 1
+		country_institution_gate_magical_focus_max_investment_add = 1
 	}
 
 	ai_weight = {
@@ -131,7 +131,7 @@ formalized_magic = {
 
 	modifier = {
 		state_education_access_wealth_add = 0.001
-		country_institution_magical_focus_max_investment_add = 2
+		country_institution_gate_magical_focus_max_investment_add = 2
 	}
 
 	unlocking_technologies = {
@@ -172,7 +172,7 @@ monster_compendium = {
 	can_research = no
 
 	modifier = {
-		country_institution_monster_hunting_max_investment_add = 1
+		country_institution_gate_monster_hunting_max_investment_add = 1
 		state_harvest_condition_monster_attack_impact_mult = -0.1
 		state_harvest_condition_monster_horde_impact_mult = -0.1
 	}
@@ -219,7 +219,7 @@ ethereal_messaging = {
 	modifier = {
 		state_tax_capacity_add = 25
 		military_formation_mobilization_speed_mult = 0.1
-		country_institution_magical_focus_max_investment_add = 1
+		country_institution_gate_magical_focus_max_investment_add = 1
 	}
 
 	unlocking_technologies = {
@@ -241,7 +241,7 @@ magic_science = {
 	modifier = {
 		country_weekly_innovation_add = 5
 		country_gate_magical_innovation_add = 10
-		country_institution_magical_focus_max_investment_add = 1
+		country_institution_gate_magical_focus_max_investment_add = 1
 	}
 
 	on_researched = {
