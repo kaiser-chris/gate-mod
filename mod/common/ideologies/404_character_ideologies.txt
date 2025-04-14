@@ -9,7 +9,7 @@
     }
 
     interest_group_leader_trigger = {
-        is_interest_group_type = ig_magic_users
+        is_interest_group_type = ig_gate_magic_users
     }
 
     non_interest_group_leader_trigger = {
@@ -23,7 +23,7 @@
         interest_group = {
             OR = {
                 is_interest_group_type = ig_intelligentsia
-                is_interest_group_type = ig_magic_users
+                is_interest_group_type = ig_gate_magic_users
             }
         }
     }
@@ -53,7 +53,7 @@ ideology_magic_hopeful = {
         OR = {
             is_interest_group_type = ig_intelligentsia
             is_interest_group_type = ig_industrialists
-            is_interest_group_type = ig_magic_users
+            is_interest_group_type = ig_gate_magic_users
         }
     }
 
@@ -69,7 +69,7 @@ ideology_magic_hopeful = {
             OR = {
                 is_interest_group_type = ig_intelligentsia
                 is_interest_group_type = ig_industrialists
-                is_interest_group_type = ig_magic_users
+                is_interest_group_type = ig_gate_magic_users
             }
         }
     }
@@ -201,7 +201,7 @@ ideology_gate_vampirism = {
             is_interest_group_type = ig_landowners
             is_interest_group_type = ig_industrialists
             is_interest_group_type = ig_petty_bourgeoisie
-            is_interest_group_type = ig_magic_users
+            is_interest_group_type = ig_gate_magic_users
         }
     }
 
@@ -231,7 +231,7 @@ ideology_gate_vampirism = {
                 is_interest_group_type = ig_landowners
                 is_interest_group_type = ig_industrialists
                 is_interest_group_type = ig_petty_bourgeoisie
-                is_interest_group_type = ig_magic_users
+                is_interest_group_type = ig_gate_magic_users
             }
         }
     }
@@ -265,7 +265,7 @@ ideology_gate_vampirism_interested = {
             is_interest_group_type = ig_landowners
             is_interest_group_type = ig_industrialists
             is_interest_group_type = ig_petty_bourgeoisie
-            is_interest_group_type = ig_magic_users
+            is_interest_group_type = ig_gate_magic_users
         }
     }
 
@@ -295,7 +295,7 @@ ideology_gate_vampirism_interested = {
                 is_interest_group_type = ig_landowners
                 is_interest_group_type = ig_industrialists
                 is_interest_group_type = ig_petty_bourgeoisie
-                is_interest_group_type = ig_magic_users
+                is_interest_group_type = ig_gate_magic_users
             }
         }
     }

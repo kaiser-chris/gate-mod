@@ -1,4 +1,4 @@
-﻿ig_magic_users = {
+﻿ig_gate_magic_users = {
 	color = rgb{ 200 200 200 }
 	texture = "gfx/interface/icons/ig_icons/magic_users.dds"
 	layer = "revolution_dynamic_intelligentsia"
@@ -23,7 +23,7 @@
 	}
 
 	on_enable = {
-		ig:ig_magic_users = {
+		ig:ig_gate_magic_users = {
 			# Orkish Supremacy
 			if = {
 				limit = {
@@ -54,6 +54,23 @@
 				}
 				remove_ideology = ideology_liberal
 				add_ideology = ideology_liberal_modern
+			}
+		}
+
+		# Cultivators (Asian)
+		if = {
+			limit = {
+				OR = {
+					country_has_primary_culture = cu:japanese
+					any_primary_culture = {
+						has_discrimination_trait = han_chinese
+					}
+					country_has_primary_culture = cu:korean
+					country_has_primary_culture = cu:tibetan
+				}
+			}
+			ig:ig_gate_magic_users = {
+				set_interest_group_name = ig_gate_cultivators
 			}
 		}
 	}
@@ -236,7 +253,7 @@
 		# Agitators will never be part of a marginalized IG
 		if = {
 			limit = {
-				owner.ig:ig_magic_users = {
+				owner.ig:ig_gate_magic_users = {
 					is_marginal = yes
 				}
 			}
