@@ -93,10 +93,9 @@ law_gate_mage_guilds = {
 
     institution = institution_gate_magical_focus
     institution_modifier = {
-        interest_group_ig_gate_magic_users_pol_str_mult = 0.02
-        building_group_bg_gate_magic_industry_throughput_add = 0.02
-        country_mages_pol_str_mult = 0.10
-        state_mages_investment_pool_contribution_add = 0.05
+        building_group_bg_gate_magic_industry_throughput_add = 0.05
+        country_mages_pol_str_mult = 0.1
+        state_mages_investment_pool_contribution_add = 0.1
     }
 
     modifier = {
@@ -155,12 +154,11 @@ law_gate_druidic_circles = {
 
     institution = institution_gate_magical_focus
     institution_modifier = {
-        interest_group_ig_gate_magic_users_pol_str_mult = 0.02
-        building_group_bg_agriculture_throughput_add = 0.02
-        building_group_bg_plantations_throughput_add = 0.02
-        state_pollution_reduction_health_mult = -0.02
-        country_druids_pol_str_mult = 0.10
-        country_farmers_pol_str_mult = 0.10
+        state_pollution_reduction_health_mult = -0.05
+        country_druids_pol_str_mult = 0.1
+        country_farmers_pol_str_mult = 0.05
+        building_group_bg_agriculture_throughput_add = 0.05
+        building_group_bg_plantations_throughput_add = 0.05
         state_druids_investment_pool_contribution_add = 0.05
     }
 
@@ -202,15 +200,10 @@ law_gate_arcane_bureau  = {
 
     institution = institution_gate_magical_focus
     institution_modifier = {
-        interest_group_ig_gate_magic_users_pol_str_mult = 0.02
-        state_pollution_reduction_health_mult = -0.01
-        building_group_bg_gate_magic_industry_throughput_add = 0.01
-        building_group_bg_agriculture_throughput_add = 0.01
-        building_group_bg_plantations_throughput_add = 0.01
-        country_druids_pol_str_mult = 0.05
-        country_mages_pol_str_mult = 0.05
-        state_druids_investment_pool_contribution_add = 0.05
-        state_mages_investment_pool_contribution_add = 0.05
+        interest_group_ig_gate_magic_users_pol_str_mult = 0.1
+        building_group_bg_gate_magic_industry_throughput_add = 0.05
+        building_group_bg_agriculture_throughput_add = 0.05
+        building_group_bg_plantations_throughput_add = 0.05
     }
 
     ai_enact_weight_modifier = { #Petitions
