@@ -1,6 +1,6 @@
 ﻿l_simp_chinese:
  effect_add_magic_innovation: "增加[SCOPE.GetValue('added_innovation')|+=0][concept_magic_innovation]"
- effect_add_mana_density: "Add [SCOPE.GetValue('added_mana_density')|+=0] [concept_mana_density]"
- effect_characters_embrace_vampirism: "Our leaders and politicians embrace [concept_gate_vampirism] and convert to the [GetCulture('vampire').GetName] culture and the [GetReligion('lunar_masquerade').GetName] religion."
  effect_learn_magic: "学习[concept_magic_knowledge]"
- effect_pops_embrace_vampirism: "A part of our population embrace [concept_gate_vampirism] and convert to the [GetCulture('vampire').GetName] culture and the [GetReligion('lunar_masquerade').GetName] religion."
+ effect_pops_embrace_vampirism: "我国部分人口接受了[concept_gate_vampirism]，并转变为[GetCulture('vampire').GetName]文化与[GetReligion('gate_lunar_masquerade').GetName]宗教。"
+ effect_characters_embrace_vampirism: "我们的领袖和政治家接受了[concept_gate_vampirism]，并转变为[GetCulture('vampire').GetName]文化与[GetReligion('gate_lunar_masquerade').GetName]宗教。"
+ effect_add_mana_density: "增加[SCOPE.GetValue('added_mana_density')|+=0][concept_mana_density]"
