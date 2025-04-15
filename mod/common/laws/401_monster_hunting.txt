@@ -31,6 +31,7 @@ law_private_monster_hunters = {
 
     modifier = {
         country_institution_gate_monster_hunting_max_investment_add = 2
+        country_institution_cost_institution_gate_monster_hunting_mult = -0.2
     }
 
     # Only visible to gate countries
@@ -129,15 +130,16 @@ law_militarized_monster_hunters = {
 
     institution = institution_gate_monster_hunting
     institution_modifier = {
-        interest_group_ig_armed_forces_pol_str_mult = 0.20
+        interest_group_ig_armed_forces_pol_str_mult = 0.15
     }
 
     unlocking_technologies = {
-        military_drill
+        logistics
     }
 
     modifier = {
         country_institution_gate_monster_hunting_max_investment_add = 3
+        country_institution_cost_institution_gate_monster_hunting_mult = 0.2
     }
 
     # Only visible to gate countries

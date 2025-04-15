@@ -102,3 +102,24 @@ state_trait_gate_beatus_caves = {
 		state_pollution_generation_add = -50
 	}
 }
+
+state_trait_gate_baba_gurgur = {
+	icon = "gfx/interface/icons/state_trait_icons/gate_ley_line_nexus.dds"
+
+	modifier = {
+		state_building_mana_extractor_max_level_add = 5
+		state_gate_arable_land_add = 10
+		state_pollution_generation_add = -50
+		building_group_bg_oil_extraction_throughput_add = 0.5
+	}
+}
+
+state_trait_gate_ateshgah = {
+	icon = "gfx/interface/icons/state_trait_icons/gate_ley_line_nexus.dds"
+
+	modifier = {
+		state_building_mana_extractor_max_level_add = 10
+		building_steel_mills_throughput_add = 0.5
+		building_glassworks_throughput_add = 0.2
+	}
+}
