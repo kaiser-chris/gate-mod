@@ -91,6 +91,8 @@ on_character_creation = {
         on_gate_vampire_created
         on_gate_elf_created
         on_gate_dwarf_created
+        on_gate_orc_created
+        on_gate_gnome_created
     }
 }
 
@@ -118,5 +120,23 @@ on_gate_dwarf_created = {
     }
     effect = {
         add_trait = gate_race_trait_dwarven
+    }
+}
+
+on_gate_orc_created = {
+    trigger = {
+        culture ?= cu:orcish
+    }
+    effect = {
+        add_trait = gate_race_trait_orcish
+    }
+}
+
+on_gate_gnome_created = {
+    trigger = {
+        culture ?= cu:gnomish
+    }
+    effect = {
+        add_trait = gate_race_trait_gnomish
     }
 }
