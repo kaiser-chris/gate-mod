@@ -396,3 +396,14 @@ add_magic_innovation = {
 		}
 	}
 }
+
+gate_hire_researcher = {
+	trigger_event = {
+		id = researching_magic.4
+		weeks = 1
+	}
+	set_variable = {
+		name = actively_hiring_magic_researcher
+		weeks = 1
+	}
+}

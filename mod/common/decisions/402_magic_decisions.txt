@@ -88,37 +88,11 @@ magic_researcher_decision = {
 	}
 
 	possible = {
-		AND = {
-			hidden_trigger = {
-				OR = {
-					is_magic_country = yes
-					has_journal_entry = je_gate_researching_magic
-				}
-			}
-			custom_tooltip = {
-				text = magic_researcher_decision_no_researcher_tooltip
-				NOT = {
-					has_variable = magic_researcher
-				}
-			}
-			custom_tooltip = {
-				text = magic_researcher_decision_actively_searching_tooltip
-				NOT = {
-					has_variable = actively_hiring_magic_researcher
-				}
-			}
-		}
+		gate_can_hire_researcher = yes
 	}
 
 	when_taken = {
-		trigger_event = {
-			id = researching_magic.4
-			weeks = 1
-		}
-		set_variable = {
-			name = actively_hiring_magic_researcher
-			weeks = 1
-		}
+		gate_hire_researcher = yes
 	}
 
 	ai_chance = {
