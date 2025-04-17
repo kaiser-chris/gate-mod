@@ -1,4 +1,13 @@
-﻿pm_gate_defend = {
+﻿pm_gate_mr_locked = {
+	texture = gfx/interface/icons/production_method_icons/gate_locked.dds
+	is_hidden_when_unavailable = yes
+
+	unlocking_production_methods = {
+		pm_gate_mr_locked
+	}
+}
+
+pm_gate_defend = {
 	texture = "gfx/interface/icons/production_method_icons/gate_defend.dds"
 
 	replacement_if_valid = pm_gate_closed

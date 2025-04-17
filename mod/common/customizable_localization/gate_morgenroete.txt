@@ -1,0 +1,60 @@
+﻿gg_mr_has_magic_researcher_custom_loc = {
+	type = country
+
+	# From top to bottom decides which name list is appropriate.
+	random_valid = no
+	
+	text = {
+		trigger = {
+			has_variable = magic_researcher
+		}
+		localization_key = gg_mr_has_magic_researcher_gui_loc
+	}
+
+	text = {
+		trigger = {
+			NOT = {
+				has_variable = magic_researcher
+			}
+		}
+		localization_key = gg_mr_has_no_magic_researcher_gui_loc
+	}
+}
+
+gg_mr_magic_researcher_experience_custom_loc = {
+	type = country
+
+	# From top to bottom decides which name list is appropriate.
+	random_valid = no
+
+	text = {
+		trigger = {
+			NOT = {
+				has_variable = magic_researcher
+			}
+		}
+		localization_key = gg_mr_no_magic_researcher_experience
+	}
+
+	text = {
+		trigger = {
+			var:magic_researcher ?= {
+				var:magic_experience >= character_master_threshhold
+			}
+		}
+		localization_key = gg_character_experience_master
+	}
+
+	text = {
+		trigger = {
+			var:magic_researcher ?= {
+				var:magic_experience >= character_experienced_threshhold
+			}
+		}
+		localization_key = gg_character_experience_experienced
+	}
+
+	text = {
+		localization_key = gg_character_experience_novice
+	}
+}
