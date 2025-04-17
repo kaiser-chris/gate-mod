@@ -1,5 +1,4 @@
 ﻿l_korean:
-# Conversion Journal Entry
  je_gate_vampire_emergence: "[GetReligion('gate_lunar_masquerade').GetNameNoFormatting]"
  je_gate_vampire_emergence_reason: "Whispers spread like silk across the salons and alleyways alike—the Lunar Masquerade grows. Each passing year, more souls are drawn to its mysterious allure. Beneath silver moonlight and candlelit gatherings, the enigmatic Constantin de Reuss-Mirza speaks of liberation from decay, of beauty unblemished by time, of strength awakened in the blood. What once seemed fringe now finds eager ears among the disillusioned and ambitious. Nobles mask their visits as curiosity, merchants call it opportunity, and commoners whisper prayers to the silver veil. The Masquerade is no longer a rumor—it is a movement. And its dance is just beginning."
  je_gate_vampire_emergence_fail: "We purge the [GetReligion('gate_lunar_masquerade').GetName] sect from out country."
@@ -9,9 +8,7 @@
  je_gate_vampire_emergence_truth_known: "People know the truth about Vampires, but some are still interested in the [GetReligion('gate_lunar_masquerade').GetNameNoFormatting]."
  je_gate_vampire_emergence_button_purge: "Purge these Monsters"
  je_gate_vampire_emergence_button_purge_desc: "These [GetCulture('vampire').GetName] monsters need to be removed from our country!"
-# Flags
  gate_vampire_cult_flag: "Let the [GetReligion('gate_lunar_masquerade').GetNameNoFormatting] begin."
-# Events
  gate_vampire.1.t: "The Eternal Reign of Blood and Glory"
  gate_vampire.1.d: "[SCOPE.sCharacter('gate_vampire_ruler').GetFullName] will bring eternal life and prosperity."
  gate_vampire.1.f: "In a grand ceremony beneath a sky bathed in crimson twilight, #v [SCOPE.sCharacter('gate_vampire_ruler').GetFullNameNoFormatting]#! ascends beyond mere mortality, crowned not just as ruler, but as the eternal sovereign of the nation. His words, steeped in both reverence and power, echo through the streets: #lore \"No more shall we be bound by frailty, no more shall time wither our strength. Under my rule, we shall endure—unyielding, eternal, triumphant!\"#!"
