@@ -79,9 +79,7 @@
 		# Shamans (Orcs)
 		if = {
 			limit = {
-				OR = {
-					country_has_primary_culture = cu:orcish
-				}
+				country_has_primary_culture = cu:orcish
 			}
 			ig:ig_gate_magic_users = {
 				set_interest_group_name = ig_gate_shamans
