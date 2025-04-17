@@ -5,7 +5,8 @@
 	index = 8
 
 	ideologies = {
-		ideology_gate_magic_militarist
+		ideology_anti_clerical
+		ideology_feminist_ig
 		ideology_gate_magic_supremacist
 	}
 	
@@ -35,6 +36,7 @@
 				add_ideology = ideology_gate_orcish_slavery
 				add_ideology = ideology_gate_orchish_patriarchal
 				remove_ideology = ideology_gate_magic_supremacist
+				remove_ideology = ideology_feminist_ig
 			}
 			# Default Traits
 			else = {
@@ -73,6 +75,18 @@
 				set_interest_group_name = ig_gate_cultivators
 			}
 		}
+
+		# Shamans (Orcs)
+		if = {
+			limit = {
+				OR = {
+					country_has_primary_culture = cu:orcish
+				}
+			}
+			ig:ig_gate_magic_users = {
+				set_interest_group_name = ig_gate_shamans
+			}
+		}
 	}
 	on_disable = {}
 
@@ -91,7 +105,10 @@
 	}
 
 	pop_weight = {
-		value = 0
+		add = {
+			desc = "POP_BASE_ATTRACTION"
+			value = 25
+		}
 
 		# Mages
 		add = {
