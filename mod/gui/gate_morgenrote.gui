@@ -17,6 +17,7 @@
 types gate_main_panel_types {
 
     type manaflow_placeholder = academics_widget_character_with_button {
+        datacontext = "[GetMetaPlayer.GetPlayedOrObservedCountry]"
         blockoverride "role_icon" {
             texture = gfx/interface/icons/mr_icons/gate_magic_researcher.dds
         }
@@ -62,8 +63,10 @@ types gate_main_panel_types {
         blockoverride "small_box_content" {
             flowcontainer = {
                 direction = vertical
-                margin = { 25 20 }
+                margin = { 25 0 }
+
                 textbox = {
+                    margin = { 0 20 }
                     text = gg_mr_magic_innovation_total
                     minimumsize = { 250 25 }
                     autoresize = yes
@@ -71,12 +74,18 @@ types gate_main_panel_types {
                     align = center
                     using = fontsize_large
                 }
+
+                divider_decorative = {
+                    size = { 250 2 }
+                }
+
                 textbox = {
-                    text = "gg_mr_monthly_magic_innovation"
+                    margin = { 0 20 }
+                    text = gg_mr_monthly_magic_innovation
                     minimumsize = { 250 25 }
                     autoresize = yes
                     multiline = yes
-                    align = center
+                    align = left
                     using = fontsize_large
                 }
             }
@@ -87,6 +96,23 @@ types gate_main_panel_types {
             enabled = "[GetScriptedGui('sgui_gate_technology_tab_production').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
         }
         blockoverride "big_box_content" {
+            flowcontainer = {
+                direction = vertical
+                margin = { 25 20 }
+
+                button = {
+                    #Sell Minerals Button
+                    using = default_button_primary_big_action
+                    size = { 250 40 }
+                    text = magic_researcher_decision
+                    using = fontsize_medium
+
+                    datacontext = "[GetScriptedGui('sgui_gate_mr_hire_researcher')]"
+                    onclick = "[ScriptedGui.Execute(GuiScope.SetRoot( GetPlayer.MakeScope).End )]"
+                    enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( GetPlayer.MakeScope).End )]"
+                    tooltip = magic_researcher_decision_desc
+                }
+            }
         }
     }
 }
