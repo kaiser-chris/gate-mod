@@ -1,0 +1,92 @@
+# = From Base Game
+# Panel Constants
+@panel_width_minus_10 = 530
+@panel_width_minus_30 = 510
+@panel_width = 540
+@panel_width_half = 270
+@panel_width_plus_10 = 550
+@panel_width_plus_14 = 554
+@panel_width_plus_14_half = 277
+@panel_width_plus_20 = 560
+@panel_width_plus_30 = 570
+@panel_width_plus_70 = 610
+# Tooltip Constants
+@tooltip_max_width = 550
+@tooltip_max_width_plus_margin = 580
+
+types gate_main_panel_types {
+
+    type manaflow_placeholder = academics_widget_character_with_button {
+        blockoverride "role_icon" {
+            texture = gfx/interface/icons/mr_icons/gate_magic_researcher.dds
+        }
+        blockoverride "role_tooltip" {
+            tooltip = "[concept_magic_researcher_desc]"
+        }
+        blockoverride "role_name" {
+            text = gg_mr_magic_research
+        }
+        blockoverride "character" {
+            datacontext = "[GetPlayer.MakeScope.Var('magic_researcher').GetCharacter]"
+        }
+        blockoverride "character_visible" {
+            visible = "[GetPlayer.MakeScope.Var('magic_researcher').IsSet]"
+        }
+        blockoverride "no_character_visible" {
+            visible = "[Not(GetPlayer.MakeScope.Var('magic_researcher').IsSet)]"
+        }
+        blockoverride "character_name" {
+            text = "[GetPlayer.GetCustom('gg_mr_has_magic_researcher_custom_loc')]"
+        }
+        blockoverride "achievements_icon_visibility" {
+            visible = no
+        }
+        blockoverride "character_traits" {
+            datacontext = "[GetPlayer.MakeScope.Var('magic_researcher').GetCharacter]"
+            datamodel = "[Character.AccessTraits]"
+        }
+        blockoverride "experience_bar_visibility" {
+            visible = yes
+        }
+        blockoverride "values" {
+            min = 0
+            max = 100
+            value = "[GetPlayer.MakeScope.Var('magic_researcher').Var('magic_experience').GetValue]"
+        }
+        blockoverride "experience_tooltip" {
+            tooltip = "concept_gate_character_experience_desc"
+        }
+        blockoverride "experience_bar_text" {
+            text = "[GetPlayer.GetCustom('gg_mr_magic_researcher_experience_custom_loc')]"
+        }
+        blockoverride "small_box_content" {
+            flowcontainer = {
+                direction = vertical
+                margin = { 25 20 }
+                textbox = {
+                    text = gg_mr_magic_innovation_total
+                    minimumsize = { 250 25 }
+                    autoresize = yes
+                    multiline = yes
+                    align = center
+                    using = fontsize_large
+                }
+                textbox = {
+                    text = "gg_mr_monthly_magic_innovation"
+                    minimumsize = { 250 25 }
+                    autoresize = yes
+                    multiline = yes
+                    align = center
+                    using = fontsize_large
+                }
+            }
+        }
+        blockoverride "visit_button" {
+            text = "gg_mr_visit_magic_technology"
+            onclick = "[GetVariableSystem.Set('com_open_window', 'gate_button_technology')]"
+            enabled = "[GetScriptedGui('sgui_gate_technology_tab_production').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
+        }
+        blockoverride "big_box_content" {
+        }
+    }
+}

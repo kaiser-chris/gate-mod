@@ -1,0 +1,8 @@
+﻿l_german:
+ gg_mr_has_magic_researcher_gui_loc: "Dr. [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetLastName]" #deepl:3547029862
+ gg_mr_has_no_magic_researcher_gui_loc: "Nein [concept_magic_researcher]" #deepl:2916215735
+ gg_mr_magic_innovation_total: "Banked [concept_magic_innovation]\n#v @magic_innovation! [GetPlayer.MakeScope.Var('magic_innovation').GetValue|0] / [GetGlobalVariable('magic_innovation_bank_max').GetValue|0]#!" #deepl:3665887191
+ gg_mr_magic_research: "Arkane" #deepl:3699366191
+ gg_mr_monthly_magic_innovation: "Wir erstellen #tooltippable #tooltip:gg_monthly_magic_innovation_tooltip @magic_innovation! $gg_monthly_magic_innovation_value$#! #! [concept_magic_innovation] jeden Monat." #deepl:3888873702
+ gg_mr_no_magic_researcher_experience: "Dies würde die [concept_gate_character_experience] der [concept_magic_researcher] anzeigen." #deepl:1519998633
+ gg_mr_visit_magic_technology: "Magische Technologie" #deepl:2743819916
