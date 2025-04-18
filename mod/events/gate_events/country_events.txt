@@ -1,0 +1,48 @@
+﻿namespace = gate_country_events
+
+gate_country_events.1 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	
+	title = gate_country_events.1.t
+	desc = gate_country_events.1.d
+	flavor = gate_country_events.1.f
+	
+	event_image = {
+		video = "ep1_transfer_of_authority"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+	
+	duration = 3
+	
+	immediate = {
+		save_scope_as = gate_germanic_country
+	}
+
+	option = {
+		name = gate_country_events.1.a
+		default_option = yes
+		every_country = {
+			limit = {
+				OR = {
+					has_interest_marker_in_region = region_north_germany
+					has_interest_marker_in_region = region_south_germany
+					has_interest_marker_in_region = region_rhine
+				}
+				religion ?= {
+					OR = {
+						has_discrimination_trait = christian
+						has_discrimination_trait = muslim
+					}
+				}
+			}
+			change_relations = {
+				country = root
+				value = -10
+			}
+		}
+	}
+}
