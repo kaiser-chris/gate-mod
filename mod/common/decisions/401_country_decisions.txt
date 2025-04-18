@@ -44,6 +44,9 @@ gate_germanic_decision = {
 		any_scope_state = {
 			has_state_trait = state_trait_gate_donareiche
 		}
+		NOT = {
+			country_has_state_religion = rel:gate_germanic
+		}
 	}
 
 	possible = {
@@ -51,16 +54,23 @@ gate_germanic_decision = {
 		is_at_war = no
 		is_magic_country = yes
 		owns_entire_state_region = STATE_HESSE
+		hidden_trigger = {
+			is_ai = no
+		}
 	}
 
 	when_taken = {
 		set_state_religion = rel:gate_germanic
-		every_scope_state = {
-			convert_population = {
-				target = rel:gate_germanic
-				value = 0.2
+		custom_tooltip = {
+			text = gate_germanic_decision_conversion_tooltip
+			every_scope_state = {
+				convert_population = {
+					target = rel:gate_germanic
+					value = 0.2
+				}
 			}
 		}
+		trigger_event = gate_country_events.1
 	}
 
 	ai_chance = {
