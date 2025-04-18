@@ -53,6 +53,13 @@ types gate_technologies {
 
         gate_technology = {
             blockoverride "context" {
+                datacontext = "[GetTechnology('gate_improved_extraction')]"
+                datacontext = "[GetScriptedGui('gate_improved_extraction')]"
+            }
+        }
+
+        gate_technology = {
+            blockoverride "context" {
                 datacontext = "[GetTechnology('magic_farming')]"
                 datacontext = "[GetScriptedGui('magic_farming')]"
             }
@@ -94,6 +101,13 @@ types gate_technologies {
         }
 
         ### Era 3
+
+        gate_technology = {
+            blockoverride "context" {
+                datacontext = "[GetTechnology('gate_ley_line_tap')]"
+                datacontext = "[GetScriptedGui('gate_ley_line_tap')]"
+            }
+        }
 
         gate_technology = {
             blockoverride "context" {
