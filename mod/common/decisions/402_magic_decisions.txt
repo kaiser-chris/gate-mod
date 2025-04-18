@@ -102,7 +102,7 @@ magic_researcher_decision = {
 
 decision_gate_start_expedition_reytu = {
 	is_shown = {
-		OR = {
+		AND = {
 			AND = {
 				has_technology_researched = gate_expeditions
 				OR = {
@@ -128,7 +128,7 @@ decision_gate_start_expedition_reytu = {
 	possible = {
 		custom_tooltip = {
 			text = decision_gate_start_expedition_reytu_possible
-			OR = {
+			AND = {
 				has_building = building_gate_alxa
 				AND = {
 					is_player = yes

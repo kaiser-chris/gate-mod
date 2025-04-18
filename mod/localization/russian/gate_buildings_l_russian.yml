@@ -2,6 +2,7 @@
 # General
  building_requirement_low_mana_density: "To build this [concept_building] a state needs to have a [concept_mana_density] of at least [TopScope.ScriptValue('low_mana_density_threshhold')]."
  building_requirement_medium_mana_density: "To build this [concept_building] a state needs to have a [concept_mana_density] of at least [TopScope.ScriptValue('medium_mana_density_threshhold')]."
+ building_gate_requirement_max_mana_density: "To build this [concept_building] a state needs to have a [concept_mana_density] of at least [TopScope.ScriptValue('maximum_mana_density')]."
 # Building Groups
  bg_dwarven_mining: "Dwarven Mines"
  bg_dwarven_gold_mining: "$building_dwarven_gold_mine$"
@@ -29,6 +30,7 @@
  building_gate_san_salvador: "$building_gate$"
  building_gate_eastern_new_guinea: "$building_gate$"
  building_mana_extractor: "Mana Extractor"
+ building_gate_mana_well: "Mana Well"
  building_murk_ways: "Murk Ways"
  building_magic_academy: "Magic Academy"
  building_mage_tower: "Mage Tower"
@@ -56,6 +58,7 @@
  pmg_magic_gate_exploitation_san_salvador: "$pmg_magic_gate_exploitation$"
  pmg_magic_gate_exploitation_eastern_new_guinea: "$pmg_magic_gate_exploitation$"
  pmg_mana_extraction: "Mana Extraction"
+ pmg_gate_mana_well: "Ley Line Tapping"
  pmg_murk_transportation: "Murk Way Transportation"
  pmg_magic_academy_support: "Public Support"
  pmg_university_magic_research: "Magic Research"
@@ -89,6 +92,7 @@
  pm_gate_support_elves_plus: "Fanatical Support from Believers"
  pm_mage_mana_extraction: "Simple Mana Extraction"
  pm_mage_ritual_extraction: "Ritual Mana Extraction"
+ pm_gate_simple_ley_line_tap: "Simple Ley Line Tap"
  pm_murk_unused: "Unused"
  pm_murk_transportation: "Personal Transportation Only"
  pm_murk_rail_transportation: "Rail Transportation"

@@ -1,10 +1,6 @@
 ﻿pm_mage_mana_extraction = {
 	texture = "gfx/interface/icons/production_method_icons/mage_extraction.dds"
 
-	unlocking_technologies = {
-		gate_mana_extraction
-	}
-
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
@@ -34,6 +30,22 @@ pm_mage_ritual_extraction = {
 		level_scaled = {
 			# profit
 			building_employment_mages_add = 2500
+		}
+	}
+}
+
+pm_gate_simple_ley_line_tap = {
+	texture = "gfx/interface/icons/production_method_icons/gate_simple_ley_line_tap.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_output_mana_add = 30
+		}
+
+		level_scaled = {
+			# profit
+			building_employment_mages_add = 1500
 		}
 	}
 }

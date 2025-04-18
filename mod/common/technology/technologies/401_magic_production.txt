@@ -50,6 +50,25 @@ magic_dwarf_murk = {
 
 ### ERA 2
 
+gate_improved_extraction = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/gate_invention_placeholder.dds"
+	category = production
+	can_research = no
+
+	modifier = {
+		state_building_mana_extractor_max_level_add = 3
+	}
+
+	unlocking_technologies = {
+		gate_mana_extraction
+	}
+
+	ai_weight = {
+		value = 2 # Important tech for everyone
+	}
+}
+
 simple_rune_carving = {
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/simple_rune_carving.dds"
@@ -148,6 +167,25 @@ arcane_foundries = {
 }
 
 ### ERA 3
+
+gate_ley_line_tap = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/gate_invention_placeholder.dds"
+	category = production
+	can_research = no
+
+	modifier = {
+		state_building_mana_extractor_max_level_add = 2
+	}
+
+	unlocking_technologies = {
+		gate_improved_extraction
+	}
+
+	ai_weight = {
+		value = 2 # Important tech for everyone
+	}
+}
 
 regenerative_timber = {
 	era = era_3
