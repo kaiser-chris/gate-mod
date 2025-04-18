@@ -1,0 +1,78 @@
+﻿je_gate_expedition_reytu_preparation = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_expeditions
+
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = je_gate_expedition_reytu_preparation_hiring_leader
+				trigger = {
+					has_variable = expedition_reytu_preparation_hiring_leader
+					NOT = {
+						var:expedition_reytu ?= {
+							has_variable = leader
+						}
+					}
+				}
+			}
+			triggered_desc = {
+				desc = je_gate_expedition_reytu_preparation_in_progess
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					has_variable = expedition_reytu
+				}
+			}
+			save_scope_as = gate_expedition_reytu_country
+			create_struct = {
+				struct_scope = expedition
+				struct_type = expedition_progress
+			}
+			set_variable = {
+				name = expedition_reytu
+				value = scope:expedition
+			}
+		}
+		every_scope_building = {
+			limit = {
+				is_building_type = building_gate_alxa
+			}
+			root = {
+				set_variable = {
+					name = expedition_gate
+					value = prev
+				}
+			}
+		}
+	}
+
+	complete = {
+		always = no
+	}
+
+	fail = {
+		custom_tooltip = {
+			text = je_gate_expedition_reytu_preparation_fail_tooltip
+			NOT = {
+				has_building = building_gate_alxa
+			}
+		}
+	}
+
+	scripted_button = je_gate_expedition_reytu_preparation_button_hire_leader
+	scripted_button = je_gate_expedition_reytu_preparation_button_open_map
+
+	progressbar = no
+
+	transferable = no
+	can_revolution_inherit = yes
+
+	weight = 200
+	should_be_pinned_by_default = yes
+}

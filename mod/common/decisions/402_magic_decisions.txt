@@ -99,3 +99,87 @@ magic_researcher_decision = {
 		base = 1000
 	}
 }
+
+decision_gate_start_expedition_reytu = {
+	is_shown = {
+		OR = {
+			AND = {
+				has_technology_researched = gate_expeditions
+				OR = {
+					is_ai = no
+					NOT = {
+						has_variable = ai_expedition_cooldown
+					}
+				}
+				NOT = {
+					has_journal_entry = je_gate_expedition_reytu_preparation
+				}
+				NOT = {
+					has_variable = reytu_expedition_active
+				}
+			}
+			AND = {
+				is_player = yes
+				has_global_variable = com_debug
+			}
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = decision_gate_start_expedition_reytu_possible
+			OR = {
+				has_building = building_gate_alxa
+				AND = {
+					is_player = yes
+					has_global_variable = com_debug
+				}
+			}
+		}
+	}
+
+	when_taken = {
+		if = {
+			limit = {
+				is_player = yes
+			}
+			trigger_event = gate_expedition_reytu.2
+		}
+		else = {
+			set_variable = AI_EXPEDITION_ANTARCTICA
+			ai_expedition_simulator_start = yes
+		}
+		hidden_effect = {
+			set_variable = reytu_expedition_active
+			set_variable = {
+				name = ai_expedition_cooldown
+				value = yes
+				days = 1825
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			trigger = {
+				weekly_net_fixed_income > money_amount_multiplier_medium
+				gold_reserves > 0
+			}
+			add = 1
+		}
+		modifier = {
+			trigger = {
+				has_strategy = ai_strategy_armed_isolationism
+			}
+			add = -1000
+		}
+		modifier = {
+			OR = {
+				is_diplomatic_play_committed_participant = yes
+				is_at_war = yes
+			}
+			add = -1000
+		}
+	}
+}

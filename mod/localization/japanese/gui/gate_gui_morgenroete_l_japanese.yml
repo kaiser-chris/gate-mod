@@ -1,0 +1,8 @@
+﻿l_japanese:
+ gg_mr_magic_research: "Arcanist"
+ gg_mr_has_magic_researcher_gui_loc: "Dr. [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetLastName]"
+ gg_mr_has_no_magic_researcher_gui_loc: "No [concept_magic_researcher]"
+ gg_mr_no_magic_researcher_experience: "0 / 100"
+ gg_mr_visit_magic_technology: "Magic Technology"
+ gg_mr_magic_innovation_total: "Banked [concept_magic_innovation]\n#v @magic_innovation! [GetPlayer.MakeScope.Var('magic_innovation').GetValue|0] / [GetGlobalVariable('magic_innovation_bank_max').GetValue|0]#!"
+ gg_mr_monthly_magic_innovation: "We are generating\n#tooltippable #tooltip:gg_monthly_magic_innovation_tooltip @magic_innovation!$gg_monthly_magic_innovation_value$#!#! [concept_magic_innovation]\neach month."
