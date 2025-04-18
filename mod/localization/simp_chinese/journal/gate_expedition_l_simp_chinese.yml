@@ -1,0 +1,45 @@
+﻿l_simp_chinese:
+ decision_gate_start_expedition_reytu: "开启前往安卡利斯的探险之旅" #deepl:2160589379
+ decision_gate_start_expedition_reytu_desc: "在[GetStateRegion('STATE_ALXA').GetName] 地区冒险进入[GetBuildingType('building_gate_alxa').GetName] 。" #deepl:819952118
+ decision_gate_start_expedition_reytu_possible: "控制[GetStateRegion('STATE_ALXA').GetName] 区域的魔法门。" #deepl:1282493707
+ expedition_reytu.1.a: "军国主义者：[SCOPE.sCharacter('expedition_militarist').GetFullName]" #deepl:1044047572
+ expedition_reytu.1.b: "政治家：[SCOPE.sCharacter('expedition_politician').GetFullName]" #deepl:3483610795
+ expedition_reytu.1.c: "实业家[SCOPE.sCharacter('expedition_industrialist').GetFullName]" #deepl:850030194
+ expedition_reytu.1.d: "我们已经找到了这三位潜在的探险队队长。现在我们必须选择一个。" #deepl:2541285372
+ expedition_reytu.1.f: "经过激烈的政治斡旋和幕后交易，三名候选人脱颖而出，成为我们进入魔法门探险的潜在领导人。其中一位是精明的实业家，与经济界有着深厚的关系，渴望开发门外的一切资源。另一位是功勋卓著的军官，专注于确保我们的立足点和统治地位。最后一位候选人是一位娴熟的政治家，主张谨慎外交和长期稳定。我们的选择将决定我们在$gate_planet$ 上的未来。" #deepl:1367357098
+ expedition_reytu.1.t: "选择探险队队长" #deepl:4173161503
+ expedition_reytu.2.a: "小型探险" #deepl:3219050420
+ expedition_reytu.2.b: "正常远征" #deepl:699000534
+ expedition_reytu.2.c: "远征" #deepl:4270572181
+ expedition_reytu.2.d: "我们需要选择对[GetBuildingType('building_gate_alxa').GetName] 进行多大规模的考察。" #deepl:3650601666
+ expedition_reytu.2.f: "决定冒险穿越神奇之门后，下一个挑战就是确定我们的探险规模。一个小规模、灵活的团队可以谨慎地进行探索，将风险和成本降到最低。一支由定居者、学者和士兵组成的均衡部队可以提供安全而灵活的方法。或者，一个拥有压倒性资源和人力的大型探险队可以提出无可争议的主张，但代价也是巨大的。我们这次冒险的命运就取决于这个关键的决定。" #deepl:1308442514
+ expedition_reytu.2.t: "规划安卡利斯探险" #deepl:548847908
+ gate_expedition_reytu.1.a: "军国主义者：[SCOPE.sCharacter('expedition_militarist').GetFullName]" #deepl:1044047572
+ gate_expedition_reytu.1.b: "政治家：[SCOPE.sCharacter('expedition_politician').GetFullName]" #deepl:3483610795
+ gate_expedition_reytu.1.c: "实业家[SCOPE.sCharacter('expedition_industrialist').GetFullName]" #deepl:850030194
+ gate_expedition_reytu.1.d: "我们已经找到了这三位潜在的探险队队长。现在我们必须选择一个。" #deepl:2541285372
+ gate_expedition_reytu.1.f: "经过激烈的政治斡旋和幕后交易，三名候选人脱颖而出，成为我们进入魔法门探险的潜在领导人。其中一位是精明的实业家，与经济界有着深厚的关系，渴望开发门外的一切资源。另一位是功勋卓著的军官，专注于确保我们的立足点和统治地位。最后一位候选人是一位娴熟的政治家，主张谨慎外交和长期稳定。我们的选择将决定我们在$gate_planet$ 上的未来。" #deepl:1367357098
+ gate_expedition_reytu.1.t: "选择探险队队长" #deepl:4173161503
+ gate_expedition_reytu.2.a: "小型探险" #deepl:3219050420
+ gate_expedition_reytu.2.b: "正常远征" #deepl:699000534
+ gate_expedition_reytu.2.c: "远征" #deepl:4270572181
+ gate_expedition_reytu.2.d: "我们需要选择对[GetBuildingType('building_gate_alxa').GetName] 进行多大规模的考察。" #deepl:3650601666
+ gate_expedition_reytu.2.f: "决定冒险穿越神奇之门后，下一个挑战就是确定我们的探险规模。一个小规模、灵活的团队可以谨慎地进行探索，将风险和成本降到最低。一支由定居者、学者和士兵组成的均衡部队可以提供安全而灵活的方法。或者，一个拥有压倒性资源和人力的大型探险队可以提出无可争议的主张，但代价也是巨大的。我们这次冒险的命运就取决于这个关键的决定。" #deepl:1308442514
+ gate_expedition_reytu.2.t: "规划安卡利斯探险" #deepl:548847908
+ je_gate_expedition_reytu_preparation: "准备远征" #deepl:1574306075
+ je_gate_expedition_reytu_preparation_button_hire_leader: "聘请探险队队长" #deepl:1543565473
+ je_gate_expedition_reytu_preparation_button_hire_leader_desc: "我们将寻找一名探险队队长。" #deepl:2118497909
+ je_gate_expedition_reytu_preparation_button_hire_leader_effect: "开始寻找探险队队长。" #deepl:675279365
+ je_gate_expedition_reytu_preparation_button_hire_leader_trigger_done: "没有探险队队长。" #deepl:4125505397
+ je_gate_expedition_reytu_preparation_button_hire_leader_trigger_search: "目前没有寻找探险队队长。" #deepl:1414086464
+ je_gate_expedition_reytu_preparation_button_open_map: "打开探险地图" #deepl:537625907
+ je_gate_expedition_reytu_preparation_button_open_map_desc: "打开探险地图。" #deepl:2776223579
+ je_gate_expedition_reytu_preparation_fail_tooltip: "不控制[GetStateRegion('STATE_ALXA').GetName] 区域的[GetBuildingType('building_gate_alxa').GetName] 。" #deepl:2492892956
+ je_gate_expedition_reytu_preparation_hiring_leader: "我们目前正在寻找一名探险队队长。" #deepl:1108601421
+ je_gate_expedition_reytu_preparation_in_progess: "我们需要为远征做准备。" #deepl:1036857002
+ je_gate_expedition_reytu_preparation_reason: "做出决定后，准备工作便紧锣密鼓地展开了。绘制地图，征用物资，热心的冒险家们主动请缨。学者们讨论着前方可能存在的危险和机遇，工程师和后勤人员则努力确保旅程装备齐全。魔法门就在前方，它是通往未知世界的入口--很快，就到了迈出第一步的时候了。" #deepl:3725050251
+ pb_gate_expedition_tools_pm_fast: "快速储存" #deepl:1542526306
+ pb_gate_expedition_tools_pm_no: "无库存" #deepl:1593032932
+ pb_gate_expedition_tools_pm_normal: "正常库存" #deepl:281036890
+ pb_gate_expedition_tools_pm_slow: "缓慢储存" #deepl:892870279
+ pb_gate_expedition_tools_progress: "进展情况： #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]/5000)" #deepl:4140396556

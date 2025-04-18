@@ -92,3 +92,29 @@ gate_vampire_ruler_template = {
 		}
 	}
 }
+
+gate_expedition_leader_template = {
+	ideology = ideology_magic_hopeful
+
+	#TODO: Create custom trait for expedition leaders
+	traits = {
+		gate_magic_researcher
+	}
+
+	on_created = {
+		place_character_in_void = 10000
+		set_variable = is_expedition_leader
+		set_variable = {
+			name = magic_experience
+			value = {
+				value = 0
+				add = {
+					integer_range = {
+						min = 5
+						max = 10
+					}
+				}
+			}
+		}
+	}
+}

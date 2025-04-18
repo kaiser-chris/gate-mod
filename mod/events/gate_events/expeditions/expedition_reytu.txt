@@ -1,0 +1,209 @@
+﻿namespace = gate_expedition_reytu
+
+gate_expedition_reytu.1 = {
+    type = country_event
+    dlc = dlc_magic_gate
+    placement = capital
+
+    title = gate_expedition_reytu.1.t
+    desc = gate_expedition_reytu.1.d
+    flavor = gate_expedition_reytu.1.f
+
+    event_image = {
+        video = "europenorthamerica_capitalists_meeting"
+    }
+
+    trigger = {
+        has_journal_entry = je_gate_expedition_reytu_preparation
+    }
+
+    immediate = {
+        create_character = {
+            template = gate_expedition_leader_template
+            interest_group = ig_industrialists
+            on_created = {
+                set_variable = {
+                    name = com_opinion
+                    value = flag:expedition_opinion_industrialist
+                }
+            }
+            save_scope_as = expedition_industrialist
+        }
+        create_character = {
+            template = gate_expedition_leader_template
+            interest_group = ig_armed_forces
+            on_created = {
+                set_variable = {
+                    name = com_opinion
+                    value = flag:expedition_opinion_militarist
+                }
+            }
+            save_scope_as = expedition_militarist
+        }
+        create_character = {
+            template = gate_expedition_leader_template
+            interest_group = ROOT.ruler.interest_group
+            on_created = {
+                set_variable = {
+                    name = com_opinion
+                    value = flag:expedition_opinion_politician
+                }
+            }
+            save_scope_as = expedition_politician
+        }
+    }
+
+    left_icon = scope:expedition_militarist
+    center_icon = scope:expedition_politician
+    right_icon = scope:expedition_industrialist
+
+    gui_window = event_window_3char_selection
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+    duration = 3
+
+    option = {
+        name = gate_expedition_reytu.1.a
+        custom_tooltip = {
+            text = expedition_opinion_militarist
+            var:expedition_reytu ?= {
+                set_variable = {
+                    name = leader
+                    value = scope:expedition_militarist
+                }
+            }
+            je:je_gate_expedition_reytu_preparation ?= {
+                clear_variable_list = com_journal_characters
+                add_to_variable_list = {
+                    name = com_journal_characters
+                    target = scope:expedition_militarist
+                }
+            }
+            remove_variable = expedition_reytu_preparation_hiring_leader
+        }
+    }
+
+    option = {
+        name = gate_expedition_reytu.1.b
+        default_option = yes
+        custom_tooltip = {
+            text = expedition_opinion_politician
+            var:expedition_reytu ?= {
+                set_variable = {
+                    name = leader
+                    value = scope:expedition_politician
+                }
+            }
+            je:je_gate_expedition_reytu_preparation ?= {
+                clear_variable_list = com_journal_characters
+                add_to_variable_list = {
+                    name = com_journal_characters
+                    target = scope:expedition_politician
+                }
+            }
+            remove_variable = expedition_reytu_preparation_hiring_leader
+        }
+    }
+
+    option = {
+        name = gate_expedition_reytu.1.c
+        custom_tooltip = {
+            text = expedition_opinion_industrialist
+            var:expedition_reytu ?= {
+                set_variable = {
+                    name = leader
+                    value = scope:expedition_industrialist
+                }
+            }
+            je:je_gate_expedition_reytu_preparation ?= {
+                clear_variable_list = com_journal_characters
+                add_to_variable_list = {
+                    name = com_journal_characters
+                    target = scope:expedition_industrialist
+                }
+            }
+            remove_variable = expedition_reytu_preparation_hiring_leader
+        }
+    }
+}
+
+gate_expedition_reytu.2 = {
+    type = country_event
+    dlc = dlc_magic_gate
+    placement = capital
+
+    title = gate_expedition_reytu.2.t
+    desc = gate_expedition_reytu.2.d
+    flavor = gate_expedition_reytu.2.f
+
+    event_image = {
+        video = "ep1_power_blocs"
+    }
+
+    trigger = {
+        NOT = {
+            has_journal_entry = je_gate_expedition_reytu_preparation
+        }
+        has_building = building_gate_alxa
+    }
+
+    immediate = {
+        save_scope_as = gate_expedition_reytu_country
+        create_struct = {
+            struct_scope = expedition
+            struct_type = expedition_progress
+        }
+        set_variable = {
+            name = expedition_reytu
+            value = scope:expedition
+        }
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+    duration = 3
+
+    option = {
+        name = gate_expedition_reytu.2.a
+        custom_tooltip = {
+            text = expedition_small_tooltip
+            var:expedition_reytu ?= {
+
+            }
+        }
+        add_journal_entry = {
+            type = je_gate_expedition_reytu_preparation
+        }
+    }
+
+    option = {
+        name = gate_expedition_reytu.2.b
+        default_option = yes
+        custom_tooltip = {
+            text = expedition_normal_tooltip
+            var:expedition_reytu ?= {
+            }
+        }
+        add_journal_entry = {
+            type = je_gate_expedition_reytu_preparation
+        }
+    }
+
+    option = {
+        name = gate_expedition_reytu.2.c
+        custom_tooltip = {
+            text = expedition_large_tooltip
+            var:expedition_reytu ?= {
+
+            }
+        }
+        add_journal_entry = {
+            type = je_gate_expedition_reytu_preparation
+        }
+    }
+}
