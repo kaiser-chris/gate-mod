@@ -1,8 +1,8 @@
 ﻿l_simp_chinese:
- expedition_goods: "[GetGoods('tools').GetName],[GetGoods('small_arms').GetName],[GetGoods('fabric').GetName],[GetGoods('wood').GetName] 和[GetGoods('groceries').GetName]" #deepl:113118691
- expedition_large_tooltip: "开始为需要[SCOPE.ScriptValue('expedition_cost_large')|0v] $expedition_goods$ 的远征做准备。" #deepl:3997872452
- expedition_normal_tooltip: "开始为需要[SCOPE.ScriptValue('expedition_cost_normal')|0v] $expedition_goods$ 的远征做准备。" #deepl:2121156610
- expedition_opinion_industrialist: "我们将创造新的贸易机会，使$gate_planet$ 资源为我所用！" #deepl:3801184300
- expedition_opinion_militarist: "通过武力，我们将征服$gate_planet$ ！" #deepl:1661851974
- expedition_opinion_politician: "通过外交手段，$gate_planet$ ！" #deepl:2048136580
- expedition_small_tooltip: "开始为需要[SCOPE.ScriptValue('expedition_cost_small')|0v] $expedition_goods$ 的远征做准备。" #deepl:2725186922
+ expedition_opinion_industrialist: "我们将开辟新的贸易渠道，让$gate_planet$的资源尽归我们掌控！"
+ expedition_opinion_militarist: "用武力征服$gate_planet$！"
+ expedition_opinion_politician: "靠外交手段使$gate_planet$归顺我们！"
+ expedition_goods: "[GetGoods('tools').GetName]、[GetGoods('small_arms').GetName]、[GetGoods('fabric').GetName]、[GetGoods('wood').GetName]和[GetGoods('groceries').GetName]"
+ expedition_small_tooltip: "开始为远征做准备，远征需要[SCOPE.ScriptValue('expedition_cost_small')|0v]$expedition_goods$。"
+ expedition_normal_tooltip: "开始为远征做准备，远征需要[SCOPE.ScriptValue('expedition_cost_normal')|0v]$expedition_goods$。"
+ expedition_large_tooltip: "开始为远征做准备，远征需要[SCOPE.ScriptValue('expedition_cost_large')|0v]$expedition_goods$。"
