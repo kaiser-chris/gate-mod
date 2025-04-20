@@ -21,6 +21,7 @@
  gg_magic_technology_tooltip_requirements_done: "#darker_white #italic 모든 필수 기술을 연구 완료했습니다#!#!"
  gg_magic_technology_tooltip_requirements_label: "요구 사항"
  gg_monthly_magic_innovation: "매월 #tooltippable #tooltip:gg_monthly_magic_innovation_tooltip @magic_innovation!$gg_monthly_magic_innovation_value$#!#! [concept_magic_innovation]을 생성하고 있습니다."
+ gg_monthly_magic_innovation_no_magic: "[concept_magic_innovation].\n 먼저 [concept_magic_knowledge] 을 조사해야 합니다." #deepl:1150311696
  gg_monthly_magic_innovation_tooltip: "우리의 [concept_magic_innovation] 생성량: $gg_monthly_magic_innovation_value$\n[Country.AccessModifier.GetBreakdownFor('country_magical_innovation_add').GetBreakdown]\n\n배수 효과: [Country.AccessModifier.GetValueWithBreakdownFor('country_magical_innovation_mult')]"
  gg_monthly_magic_innovation_value: "[Multiply_CFixedPoint(Country.AccessModifier.GetBreakdownFor('country_magical_innovation_add').GetRawValue, Add_CFixedPoint(Country.AccessModifier.GetBreakdownFor('country_magical_innovation_mult').GetRawValue, '(CFixedPoint)1'))|+=]"
  gg_panel_technology_action: "마법 기술 패널"

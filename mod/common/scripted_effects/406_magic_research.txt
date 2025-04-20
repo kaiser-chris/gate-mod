@@ -4,18 +4,6 @@
 			is_magic_country = yes
 		}
 
-		# Total Innovation
-		set_variable = {
-			name = monthly_magic_innovation
-			value = {
-				value = modifier:country_gate_magical_innovation_add
-				multiply = {
-					value = 1
-					add = modifier:country_gate_magical_innovation_mult
-				}
-			}
-		}
-
 		# Banking
 		if = {
 			limit = {
@@ -23,25 +11,13 @@
 			}
 			change_variable = {
 				name = magic_innovation
-				add = {
-					value = modifier:country_gate_magical_innovation_add
-					multiply = {
-						value = 1
-						add = modifier:country_gate_magical_innovation_mult
-					}
-				}
+				add = gate_magic_innovation
 			}
 		}
 		else = {
 			set_variable = {
 				name = magic_innovation
-				value = {
-					value = modifier:country_gate_magical_innovation_add
-					multiply = {
-						value = 1
-						add = modifier:country_gate_magical_innovation_mult
-					}
-				}
+				value = gate_magic_innovation
 			}
 		}
 
@@ -405,5 +381,32 @@ gate_hire_researcher = {
 	set_variable = {
 		name = actively_hiring_magic_researcher
 		weeks = 1
+	}
+}
+
+gate_add_researcher_experience = {
+	if = {
+		limit = {
+			has_variable = magic_researcher
+		}
+		save_temporary_scope_value_as = {
+			name = added_experience
+			value = $amount$
+		}
+		custom_tooltip = {
+			text = effect_gate_magic_experience
+			# Propagation
+			var:magic_researcher ?= {
+				change_variable = {
+					name = magic_experience
+					add = $amount$
+				}
+				clamp_variable = {
+					name = magic_experience
+					min = 0
+					max = character_experienced_maximum
+				}
+			}
+		}
 	}
 }

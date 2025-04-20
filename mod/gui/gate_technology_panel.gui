@@ -858,7 +858,7 @@ types gate_technology_panel_types {
             }
 
             flowcontainer = {
-                visible = "[GetScriptedGui('sgui_gate_has_magic').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
+                visible = "[GetScriptedGui('sgui_gate_has_researcher').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
                 parentanchor = vcenter|right
                 margin_left = 2
 

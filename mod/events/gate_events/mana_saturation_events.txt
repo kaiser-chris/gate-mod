@@ -300,8 +300,9 @@ gate_mana_saturation.4 = {
 				amount = 50
 			}
 		}
-		add_magic_innovation = {
-			amount = 500
+		trigger_event = {
+			id = researching_magic.5
+			months = 2
 		}
 	}
 }
@@ -359,6 +360,10 @@ gate_mana_saturation.5 = {
 		add_magic_innovation = {
 			amount = 500
 		}
+		trigger_event = {
+			id = researching_magic.5
+			months = 2
+		}
 	}
 }
 
@@ -414,6 +419,10 @@ gate_mana_saturation.6 = {
 		}
 		add_magic_innovation = {
 			amount = 500
+		}
+		trigger_event = {
+			id = researching_magic.5
+			months = 2
 		}
 	}
 }
@@ -473,6 +482,10 @@ gate_mana_saturation.7 = {
 		}
 		add_magic_innovation = {
 			amount = 500
+		}
+		trigger_event = {
+			id = researching_magic.5
+			months = 2
 		}
 	}
 }
@@ -538,6 +551,10 @@ gate_mana_saturation.8 = {
 		}
 		add_magic_innovation = {
 			amount = 500
+		}
+		trigger_event = {
+			id = researching_magic.5
+			months = 2
 		}
 	}
 }
@@ -620,6 +637,10 @@ gate_mana_saturation.9 = {
 		add_magic_innovation = {
 			amount = 1000
 		}
+		trigger_event = {
+			id = researching_magic.5
+			months = 2
+		}
 	}
 }
 
@@ -678,6 +699,10 @@ gate_mana_saturation.10 = {
 		}
 		add_magic_innovation = {
 			amount = 500
+		}
+		trigger_event = {
+			id = researching_magic.5
+			months = 2
 		}
 	}
 }
@@ -741,6 +766,10 @@ gate_mana_saturation.11 = {
 		}
 		add_magic_innovation = {
 			amount = 500
+		}
+		trigger_event = {
+			id = researching_magic.5
+			months = 2
 		}
 		scope:gate_beatus_state ?= {
 			owner = {
@@ -809,6 +838,10 @@ gate_mana_saturation.12 = {
 		add_magic_innovation = {
 			amount = 500
 		}
+		trigger_event = {
+			id = researching_magic.5
+			months = 2
+		}
 	}
 }
 
@@ -864,6 +897,10 @@ gate_mana_saturation.13 = {
 		}
 		add_magic_innovation = {
 			amount = 1000
+		}
+		trigger_event = {
+			id = researching_magic.5
+			months = 2
 		}
 	}
 }

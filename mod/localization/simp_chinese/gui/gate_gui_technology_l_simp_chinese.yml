@@ -21,6 +21,7 @@
  gg_magic_technology_tooltip_requirements_done: "#darker_white #italic 你已研究了所有必需的科技#!#!"
  gg_magic_technology_tooltip_requirements_label: "要求"
  gg_monthly_magic_innovation: "我们每月生成#tooltippable #tooltip:gg_monthly_magic_innovation_tooltip @magic_innovation!$gg_monthly_magic_innovation_value$#!#![concept_magic_innovation]。"
+ gg_monthly_magic_innovation_no_magic: "我们没有生产任何[concept_magic_innovation] 。我们需要先研究[concept_magic_knowledge] 。" #deepl:1150311696
  gg_monthly_magic_innovation_tooltip: "#header [concept_magic_innovation]#!\n我们每月生成$gg_monthly_magic_innovation_value$[concept_magic_innovation]：\n[Country.AccessModifier.GetBreakdownFor('country_gate_magical_innovation_add').GetBreakdown]\n\n其乘数为[Country.AccessModifier.GetValueWithBreakdownFor('country_gate_magical_innovation_mult')]"
  gg_monthly_magic_innovation_value: "[Multiply_CFixedPoint(Country.AccessModifier.GetBreakdownFor('country_gate_magical_innovation_add').GetRawValue, Add_CFixedPoint(Country.AccessModifier.GetBreakdownFor('country_gate_magical_innovation_mult').GetRawValue, '(CFixedPoint)1'))|+=]"
  gg_panel_technology_action: "魔法科技面板"
