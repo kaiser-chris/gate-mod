@@ -218,7 +218,6 @@ types gate_main_panel_types {
 
                     item = {
                         flowcontainer = {
-                            visible = "[Not(ObjectsEqual(Scope.GetCountry.MakeScope, GetPlayer.MakeScope))]"
                             datacontext = "[Scope.GetCountry]"
                             direction = vertical
                             parentanchor = hcenter

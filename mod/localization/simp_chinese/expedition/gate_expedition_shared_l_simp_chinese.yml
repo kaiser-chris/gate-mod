@@ -1,8 +1,8 @@
 ﻿l_simp_chinese:
+ expedition_goods: "[GetGoods('tools').GetName]、[GetGoods('small_arms').GetName]、[GetGoods('fabric').GetName]、[GetGoods('wood').GetName]和[GetGoods('groceries').GetName]"
+ expedition_large_tooltip: "开始为远征做准备，远征需要[SCOPE.ScriptValue('expedition_cost_large')|0v]$expedition_goods$。"
+ expedition_normal_tooltip: "开始为远征做准备，远征需要[SCOPE.ScriptValue('expedition_cost_normal')|0v]$expedition_goods$。"
  expedition_opinion_industrialist: "我们将开辟新的贸易渠道，让$gate_planet$的资源尽归我们掌控！"
  expedition_opinion_militarist: "用武力征服$gate_planet$！"
  expedition_opinion_politician: "靠外交手段使$gate_planet$归顺我们！"
- expedition_goods: "[GetGoods('tools').GetName]、[GetGoods('small_arms').GetName]、[GetGoods('fabric').GetName]、[GetGoods('wood').GetName]和[GetGoods('groceries').GetName]"
  expedition_small_tooltip: "开始为远征做准备，远征需要[SCOPE.ScriptValue('expedition_cost_small')|0v]$expedition_goods$。"
- expedition_normal_tooltip: "开始为远征做准备，远征需要[SCOPE.ScriptValue('expedition_cost_normal')|0v]$expedition_goods$。"
- expedition_large_tooltip: "开始为远征做准备，远征需要[SCOPE.ScriptValue('expedition_cost_large')|0v]$expedition_goods$。"

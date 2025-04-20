@@ -325,3 +325,18 @@ debug_gate_enact_vampire_monarchy = {
 		base = 0
 	}
 }
+
+debug_gate_reset_reytu = {
+	is_shown = {
+		has_global_variable = com_debug
+		is_player = yes
+	}
+
+	when_taken = {
+		gate_setup_reytu = yes
+	}
+
+	ai_chance = {
+		base = 0
+	}
+}

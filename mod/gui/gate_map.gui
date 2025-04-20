@@ -19,6 +19,7 @@ types gate_map_types {
         zoomwidget = {
             container = {
                 widget = {
+                    datacontext = "[GetGlobalVariable('gate_expedition_reytu').GetCharacter]"
                     parentanchor = top|left
                     size = { 15360 7288 }
                     background = {
@@ -27,244 +28,124 @@ types gate_map_types {
                     }
 
                     gate_state = {
+                        datacontext = "[Character.MakeScope.Var('state_01')]"
                         blockoverride hidden_location {
                             size = { 3329 3630 }
                             position = { 3279 1852 }
                         }
-                        blockoverride size {
-                            size = { 3129 3430 }
-                        }
                         blockoverride state_mask_hidden {
                             texture = gfx/map/ankaris/reytu/state_mask_01_hidden.dds
-                        }
-                        blockoverride hidden_enabled {
-                            enabled = no
-                        }
-                        blockoverride hidden_visible {
-                            visible = "[Not(GetVariableSystem.Exists('show_state_01'))]"
-                        }
-                        blockoverride hidden_onclick {
-                            onclick = "[GetVariableSystem.Toggle('show_state_01')]"
                         }
                     }
 
                     gate_state = {
+                        datacontext = "[Character.MakeScope.Var('state_02')]"
                         blockoverride hidden_location {
                             size = { 3111 1756 }
                             position = { 4031 774 }
                         }
-                        blockoverride size {
-                            size = { 2911 1556 }
-                        }
                         blockoverride state_mask_hidden {
                             texture = gfx/map/ankaris/reytu/state_mask_02_hidden.dds
-                        }
-                        blockoverride hidden_enabled {
-                            enabled = no
-                        }
-                        blockoverride hidden_visible {
-                            visible = "[Not(GetVariableSystem.Exists('show_state_02'))]"
-                        }
-                        blockoverride hidden_onclick {
-                            onclick = "[GetVariableSystem.Toggle('show_state_02')]"
                         }
                     }
 
                     gate_state = {
+                        datacontext = "[Character.MakeScope.Var('state_03')]"
                         blockoverride hidden_location {
                             size = { 2834 4122 }
                             position = { 4323 2079 }
                         }
-                        blockoverride size {
-                            size = { 2634 3922 }
-                        }
                         blockoverride state_mask_hidden {
                             texture = gfx/map/ankaris/reytu/state_mask_03_hidden.dds
-                        }
-                        blockoverride hidden_enabled {
-                            enabled = no
-                        }
-                        blockoverride hidden_visible {
-                            visible = "[Not(GetVariableSystem.Exists('show_state_03'))]"
-                        }
-                        blockoverride hidden_onclick {
-                            onclick = "[GetVariableSystem.Toggle('show_state_03')]"
                         }
                     }
 
                     gate_state = {
+                        datacontext = "[Character.MakeScope.Var('state_04')]"
                         blockoverride hidden_location {
                             size = { 2998 3131 }
                             position = { 6115 1219 }
                         }
-                        blockoverride size {
-                            size = { 2798 2931 }
-                        }
                         blockoverride state_mask_hidden {
                             texture = gfx/map/ankaris/reytu/state_mask_04_hidden.dds
-                        }
-                        blockoverride hidden_enabled {
-                            enabled = no
-                        }
-                        blockoverride hidden_visible {
-                            visible = "[Not(GetVariableSystem.Exists('show_state_04'))]"
-                        }
-                        blockoverride hidden_onclick {
-                            onclick = "[GetVariableSystem.Toggle('show_state_04')]"
                         }
                     }
 
                     gate_state = {
+                        datacontext = "[Character.MakeScope.Var('state_05')]"
                         blockoverride hidden_location {
                             size = { 2758 2834 }
                             position = { 5751 3471 }
                         }
-                        blockoverride size {
-                            size = { 2558 2634 }
-                        }
                         blockoverride state_mask_hidden {
                             texture = gfx/map/ankaris/reytu/state_mask_05_hidden.dds
-                        }
-                        blockoverride hidden_enabled {
-                            enabled = no
-                        }
-                        blockoverride hidden_visible {
-                            visible = "[Not(GetVariableSystem.Exists('show_state_05'))]"
-                        }
-                        blockoverride hidden_onclick {
-                            onclick = "[GetVariableSystem.Toggle('show_state_05')]"
                         }
                     }
 
                     gate_state = {
+                        datacontext = "[Character.MakeScope.Var('state_07')]"
                         blockoverride hidden_location {
                             size = { 2960 2525 }
                             position = { 7907 3614 }
                         }
-                        blockoverride size {
-                            size = { 2760 2325 }
-                        }
                         blockoverride state_mask_hidden {
                             texture = gfx/map/ankaris/reytu/state_mask_07_hidden.dds
-                        }
-                        blockoverride hidden_enabled {
-                            enabled = no
-                        }
-                        blockoverride hidden_visible {
-                            visible = "[Not(GetVariableSystem.Exists('show_state_07'))]"
-                        }
-                        blockoverride hidden_onclick {
-                            onclick = "[GetVariableSystem.Toggle('show_state_07')]"
                         }
                     }
 
                     gate_state = {
+                        datacontext = "[Character.MakeScope.Var('state_08')]"
                         blockoverride hidden_location {
                             size = { 4029 4815 }
                             position = { 8512 1104 }
                         }
-                        blockoverride size {
-                            size = { 3829 4615 }
-                        }
                         blockoverride state_mask_hidden {
                             texture = gfx/map/ankaris/reytu/state_mask_08_hidden.dds
-                        }
-                        blockoverride hidden_enabled {
-                            enabled = no
-                        }
-                        blockoverride hidden_visible {
-                            visible = "[Not(GetVariableSystem.Exists('show_state_08'))]"
-                        }
-                        blockoverride hidden_onclick {
-                            onclick = "[GetVariableSystem.Toggle('show_state_08')]"
                         }
                     }
 
                     gate_state = {
+                        datacontext = "[Character.MakeScope.Var('state_09')]"
                         blockoverride hidden_location {
                             size = { 1030 966 }
                             position = { 10807 4368 }
                         }
-                        blockoverride size {
-                            size = { 830 766 }
-                        }
                         blockoverride state_mask_hidden {
                             texture = gfx/map/ankaris/reytu/state_mask_09_hidden.dds
-                        }
-                        blockoverride hidden_enabled {
-                            enabled = no
-                        }
-                        blockoverride hidden_visible {
-                            visible = "[Not(GetVariableSystem.Exists('show_state_09'))]"
-                        }
-                        blockoverride hidden_onclick {
-                            onclick = "[GetVariableSystem.Toggle('show_state_09')]"
                         }
                     }
 
                     gate_state = {
+                        datacontext = "[Character.MakeScope.Var('state_10')]"
                         blockoverride hidden_location {
                             size = { 1053 1114 }
                             position = { 11372 2681 }
                         }
-                        blockoverride size {
-                            size = { 853 914 }
-                        }
                         blockoverride state_mask_hidden {
                             texture = gfx/map/ankaris/reytu/state_mask_10_hidden.dds
-                        }
-                        blockoverride hidden_enabled {
-                            enabled = no
-                        }
-                        blockoverride hidden_visible {
-                            visible = "[Not(GetVariableSystem.Exists('show_state_10'))]"
-                        }
-                        blockoverride hidden_onclick {
-                            onclick = "[GetVariableSystem.Toggle('show_state_10')]"
                         }
                     }
 
                     gate_state = {
+                        datacontext = "[Character.MakeScope.Var('state_06')]"
                         blockoverride hidden_location {
                             size = { 1882 2189 }
                             position = { 7848 2151 }
                         }
-                        blockoverride size {
-                            size = { 1682 1989 }
-                        }
                         blockoverride state_mask_hidden {
                             texture = gfx/map/ankaris/reytu/state_mask_06_hidden.dds
                         }
-                        blockoverride hidden_visible {
-                            visible = no
-                        }
-                        blockoverride hidden_onclick {
-                            onclick = "[GetVariableSystem.Clear('show_state_01')]"
-                            onclick = "[GetVariableSystem.Clear('show_state_02')]"
-                            onclick = "[GetVariableSystem.Clear('show_state_03')]"
-                            onclick = "[GetVariableSystem.Clear('show_state_04')]"
-                            onclick = "[GetVariableSystem.Clear('show_state_05')]"
-                            onclick = "[GetVariableSystem.Clear('show_state_06')]"
-                            onclick = "[GetVariableSystem.Clear('show_state_07')]"
-                            onclick = "[GetVariableSystem.Clear('show_state_08')]"
-                            onclick = "[GetVariableSystem.Clear('show_state_09')]"
-                            onclick = "[GetVariableSystem.Clear('show_state_10')]"
-                        }
-                        block state_content {
+                        blockoverride "state_content" {
                             gate_button_map_marker = {
-                                blockoverride marker_location {
-                                    position = { 800 800 }
-                                }
-                                blockoverride icon {
-                                    texture = gfx/map/gate/markers/small_city.dds
+                                datacontext = "[Scope.Var('location_01').GetCharacter]"
+                                blockoverride button_position {
+                                    position = { 900 800 }
                                 }
                             }
                             gate_button_map_marker = {
-                                blockoverride marker_location {
-                                    position = { 1000 1050 }
-                                }
-                                blockoverride icon {
-                                    texture = gfx/map/gate/markers/gate.dds
+                                datacontext = "[Scope.Var('location_02').GetCharacter]"
+                                blockoverride button_position {
+                                    position = { 750 1200 }
                                 }
                             }
                         }
@@ -276,11 +157,18 @@ types gate_map_types {
     }
 
     type map_sidebar = widget {
+        datacontext = "[GetGlobalVariable('gate_map_sidebar')]"
         size = { 500 100% }
         parentanchor = top|left
         position = { 0 0 }
 
-        visible = "[GetVariableSystem.Exists('expedition_sidebar')]"
+        visible = "[GetGlobalVariable('gate_map_sidebar').IsSet]"
+
+        textbox = {
+            raw_text = "[Scope.Var('name').GetFlagName]"
+            autoresize = yes
+            align = nobaseline
+        }
 
         background = {
             texture = gfx/interface/misc/black.dds
@@ -304,41 +192,26 @@ types gate_map_types {
     }
 
     type gate_state = widget {
-        parentanchor = top|left
+        #parentanchor = top|left
         block hidden_location {
             #size = { 3129 3430 }
             #position = { 3379 1952 }
         }
 
         widget = {
-            parentanchor = top|left
-            block size {
-                #size = { 3129 3430 }
-            }
-            position = { 100 100 }
+            size = { 100% 100% }
 
             alwaystransparent = no
 
-            block state_content {}
+            block "state_content" {}
         }
 
-        button = {
+        widget = {
             parentanchor = top|left
             position = { 0 0 }
             size = { 100% 100% }
 
-            onmousehierarchyenter = "[PdxGuiWidget.FindChild('state_highlight').InterruptThenTriggerAnimation('hide_state_highlight','show_state_highlight')]"
-            onmousehierarchyleave = "[PdxGuiWidget.FindChild('state_highlight').InterruptThenTriggerAnimation('show_state_highlight','hide_state_highlight')]"
-
-            block hidden_enabled {
-                enabled = no
-            }
-
-            block hidden_visible {
-                visible = yes
-            }
-
-            block hidden_onclick {}
+            visible = "[Scope.Var('hidden').IsSet]"
 
             background = {
                 texture = "gfx/map/ankaris/hidden.dds"
@@ -352,246 +225,45 @@ types gate_map_types {
                     texture_density = 2
                 }
             }
-
-            widget = {
-                size = { 100% 100% }
-                name = state_highlight
-                alpha = 0
-
-                state = {
-                    name = show_state_highlight
-                    delay = 0.15
-                    alpha = 0.2
-                    duration = 0.15
-                    using = Animation_Curve_Default
-                }
-                state = {
-                    name = hide_state_highlight
-                    alpha = 0
-                    duration = 0
-                    using = Animation_Curve_Default
-                }
-
-                background = {
-                    block state_mask_hidden {
-                        #texture = gfx/map/ankaris/reytu/state_mask_01_hidden.dds
-                    }
-                }
-            }
         }
     }
 
-    type gate_button_map_marker = button {
-        parentanchor = top|left
-        size = { 120 120 }
-        block marker_location {
+    type gate_button_map_marker = widget {
+        block "button_position" {
             position = { 0 0 }
         }
-        using = select_button_sound
-        effectname = "NoHighlight"
-
-        onclick = "[GetVariableSystem.Toggle('expedition_sidebar')]"
-
-        ### show
-        state = {
-            name = _show
-            on_start = "[PdxGuiWidget.AccessChild('icon').TriggerAnimation('show')]"
-            on_start = "[PdxGuiWidget.AccessChild('frame').TriggerAnimation('show')]"
-        }
-
-        ### enter
-        state = {
-            name = _mouse_enter
-            on_start = "[PdxGuiWidget.AccessChild('frame').TriggerAnimation('enter')]"
-        }
-
-        ### leave
-        state = {
-            name = _mouse_leave
-            on_start = "[PdxGuiWidget.AccessChild('icon').InterruptThenTriggerAnimation('enter','leave')]"
-            on_start = "[PdxGuiWidget.AccessChild('frame').InterruptThenTriggerAnimation('enter','leave')]"
-        }
-
-        ### press
-        state = {
-            name = _mouse_press
-            on_start = "[PdxGuiWidget.AccessChild('icon').TriggerAnimation('press')]"
-            on_start = "[PdxGuiWidget.AccessChild('frame').TriggerAnimation('press')]"
-        }
-
-        ### release
-        state = {
-            name = _mouse_release
-            on_start = "[PdxGuiWidget.AccessChild('icon').TriggerAnimation('release')]"
-            on_start = "[PdxGuiWidget.AccessChild('frame').TriggerAnimation('release')]"
-        }
-
-        icon = {
-            name = frame
-            size = { 100% 100% }
-            parentanchor = center
-            alwaystransparent = yes
-            spriteType = Corneredstretched
-            texture = gfx/map/gate/markers/marker_frame.dds
-
-            modify_texture = {
-                texture = "gfx/interface/backgrounds/default_bg_shading.dds"
-                spriteType = Corneredstretched
-                spriteborder = { 0 0 }
-                blend_mode = overlay
-            }
-            modify_texture = {
-                texture = "gfx/interface/textures/velvet_texture.dds"
-                spriteType = Corneredtiled
-                texture_density = 2
-                spriteborder = { 0 0 }
-                blend_mode = overlay
-            }
-            modify_texture = {
-                texture = "gfx/interface/textures/cloth_texture.dds"
-                spriteType = Corneredtiled
-                texture_density = 2
-                spriteborder = { 0 0 }
-                blend_mode = overlay
-                alpha = 0.15
-            }
-
-            ### hidden
-            modify_texture = {
-                name = "hidden"
-                texture = gfx/interface/masks/hidden.dds
-                spriteType = Corneredstretched
-                spriteborder = { 0 0 }
-                blend_mode = alphamultiply
-                alpha = 1
-            }
-
-            ### selected
-            modify_texture = {
-                name = "selected"
-                texture = "gfx/interface/buttons/round_button_selected_icon.dds"
-                spriteType = Corneredstretched
-                spriteborder = { 0 0 }
-                blend_mode = overlay
-                block "button_selected" {
-                    visible = no
+        size = { 60 60 }
+        widget = {
+            parentanchor = hcenter|bottom
+            position = { 0 -10 }
+            textbox = {
+                block "sub_text" {
+                    text = "[Character.MakeScope.Var('name').GetFlagName]"
                 }
-            }
-
-            ### animation textures
-            modify_texture = {
-                name = "mouse_press"
-                texture = "gfx/map/gate/markers/icon_marker_mouse_enter.dds"
-                spriteType = Corneredstretched
-                spriteborder = { 0 0 }
-                blend_mode = overlay
-                alpha = 0
-            }
-
-            ### show
-            state = {
-                name = show
-                position = { 0 0 }
-                using = button_animation_duration
-
-                modify_texture = {
-                    name = mouse_press
-                    alpha = 0
+                background = {
+                    using = paper_bg
                 }
-                modify_texture = {
-                    name = hidden
-                    alpha = 1
-                }
-            }
-
-            ### enter
-            state = {
-                name = enter
-                position = { 0 0 }
-                using = button_animation_duration
-
-                modify_texture = {
-                    name = mouse_press
-                    alpha = 0
-                }
-                modify_texture = {
-                    name = hidden
-                    alpha = 0
-                }
-            }
-
-            ### leave
-            state = {
-                name = leave
-                position = { 0 0 }
-                using = button_animation_duration
-
-                modify_texture = {
-                    name = mouse_press
-                    alpha = 0
-                }
-                modify_texture = {
-                    name = hidden
-                    alpha = 1
-                }
-            }
-
-            ### press
-            state = {
-                name = press
-                position = { 1 2 }
-                using = button_animation_duration
-
-                modify_texture = {
-                    name = mouse_press
-                    alpha = 1
-                }
-                modify_texture = {
-                    name = hidden
-                    alpha = 0
-                }
+                parentanchor = hcenter
+                autoresize = yes
+                margin = { 20 10 }
             }
         }
-
-        icon = {
-            name = icon
-            block "icon" {}
-            size = { 100 100 }
-            parentanchor = center
-            alwaystransparent = yes
-
-            modify_texture = {
-                name = "mouse_press"
-                texture = "gfx/map/gate/markers/icon_marker_mouse_enter.dds"
-                spriteType = Corneredstretched
-                spriteborder = { 0 0 }
-                blend_mode = overlay
-                alpha = 0
+        button_icon_round = {
+            block "tooltip" {
+                tooltip = "[Character.MakeScope.Var('desc').GetFlagName]"
             }
-
-            ### press
-            state = {
-                name = press
-                position = { 1 2 }
-                using = button_animation_duration
-
-                modify_texture = {
-                    name = mouse_press
-                    alpha = 1
+            size = { 60 60 }
+            blockoverride "icon" {
+                icon = {
+                    size = { 60 60 }
+                    block "icon_texture" {
+                        texture = gfx/map/gate/markers/empty_flag.dds
+                    }
+                    scale = 0.8
+                    parentanchor = hcenter|vcenter
                 }
             }
-
-            ### release
-            state = {
-                position = { 0 0 }
-                name = release
-                using = button_animation_duration
-
-                modify_texture = {
-                    name = mouse_press
-                    alpha = 0
-                }
-            }
+            onclick = "[GetScriptedGui('sgui_gate_map_choose_location').Execute(GuiScope.SetRoot(Character.MakeScope).End)]"
         }
     }
 }
