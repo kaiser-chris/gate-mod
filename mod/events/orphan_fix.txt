@@ -22,7 +22,6 @@ gate_orphan_fix.1 = {
 		if = {
 			limit = {
 				global_var:global_mana_saturation < 0
-				var:monthly_magic_innovation < 0
 				flag:character_opinion_magic_researcher = flag:character_opinion_magic_researcher
 				flag:character_opinion_magic_researcher_missing_institute = flag:character_opinion_magic_researcher_missing_institute
 				flag:character_opinion_magic_researcher_busy = flag:character_opinion_magic_researcher_busy

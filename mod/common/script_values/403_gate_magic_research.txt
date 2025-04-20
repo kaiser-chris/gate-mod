@@ -1,0 +1,41 @@
+﻿# Base game uses 50 weekly
+# Our innovation is monthly so 200 as a base value
+gate_magic_innovation_max_base = 200
+
+gate_magic_innovation = {
+    value = 0
+
+    if = {
+        limit = {
+            is_magic_country = yes
+        }
+        value = {
+            value = modifier:country_gate_magical_innovation_add
+            multiply = {
+                value = 1
+                add = modifier:country_gate_magical_innovation_mult
+            }
+            min = 0
+            max = gate_magic_innovation_max
+        }
+    }
+
+}
+
+gate_magic_innovation_max = {
+    value = gate_magic_innovation_max_base
+    add = gate_magic_innovation_max_literacy
+}
+
+gate_magic_innovation_max_literacy = {
+    value = literacy_rate
+
+    # Full percentages
+    multiply = 100
+
+    # Base Game uses 1.5 increase for every percent of literacy
+    multiply = 1.5
+
+    # We are calculating monthly not weekly
+    multiply = 4
+}

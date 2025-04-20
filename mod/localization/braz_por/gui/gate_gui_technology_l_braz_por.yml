@@ -17,7 +17,7 @@
  gg_header_active_research: "Active Magic Research"
  gg_technology_in_research: "@green_checkmark! #bold This Technology has already been researched#!"
  gg_monthly_magic_innovation: "We are generating #tooltippable #tooltip:gg_monthly_magic_innovation_tooltip @magic_innovation!$gg_monthly_magic_innovation_value$#!#! [concept_magic_innovation] each month."
- gg_monthly_magic_innovation_value: "[Multiply_CFixedPoint(Country.AccessModifier.GetBreakdownFor('country_gate_magical_innovation_add').GetRawValue, Add_CFixedPoint(Country.AccessModifier.GetBreakdownFor('country_gate_magical_innovation_mult').GetRawValue, '(CFixedPoint)1'))|+=]"
+ gg_monthly_magic_innovation_value: "[Country.MakeScope.ScriptValue('gate_magic_innovation')|+=]"
  gg_monthly_magic_innovation_tooltip: "#header [concept_magic_innovation]#!\nWe are generating $gg_monthly_magic_innovation_value$ [concept_magic_innovation] each month:\n[Country.AccessModifier.GetBreakdownFor('country_gate_magical_innovation_add').GetBreakdown]\n\nWith a multiplier of [Country.AccessModifier.GetValueWithBreakdownFor('country_gate_magical_innovation_mult')]"
  gg_magic_innovation_warning_calc: "Any [concept_magic_innovation] we are not using will be #v lost#!."
  gg_header_research_list_production_open: "Open Production Research"

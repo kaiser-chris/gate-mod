@@ -61,19 +61,8 @@ researching_magic.1 = {
 	option = {
 		name = researching_magic.1.a
 		default_option = yes
-		custom_tooltip = {
-			text = researching_magic_discovery.experience
-			var:magic_researcher ?= {
-				change_variable = {
-					name = magic_experience
-					add = {
-						integer_range = {
-							min = 10
-							max = 20
-						}
-					}
-				}
-			}
+		gate_add_researcher_experience = {
+			amount = 5
 		}
 		add_magic_innovation = {
 			amount = 200
@@ -143,14 +132,8 @@ researching_magic.2 = {
 	option = {
 		name = researching_magic.1.a
 		default_option = yes
-		custom_tooltip = {
-			text = researching_magic_discovery.experience
-			var:magic_researcher ?= {
-				change_variable = {
-					name = magic_experience
-					add = { 10 20 }
-				}
-			}
+		gate_add_researcher_experience = {
+			amount = 5
 		}
 		add_magic_innovation = {
 			amount = 200
@@ -282,6 +265,42 @@ researching_magic.4 = {
 		default_option = yes
 		custom_tooltip = {
 			text = researching_magic.4.a.tt
+		}
+	}
+}
+
+# General Phenomena Research
+researching_magic.5 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = capital
+
+	title = researching_magic.5.t
+	desc = researching_magic_discovery.d
+	flavor = researching_magic.5.f
+
+	trigger = {
+		is_magic_country = yes
+	}
+
+	event_image = {
+		video = "gate_unspecified_magic_phenomena"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/generic_icons/innovation.dds"
+
+	duration = 3
+
+	option = {
+		name = researching_magic.5.a
+		default_option = yes
+		gate_add_researcher_experience = {
+			amount = 5
+		}
+		add_magic_innovation = {
+			amount = 200
 		}
 	}
 }

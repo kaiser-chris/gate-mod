@@ -20,9 +20,10 @@
  gg_magic_technology_tooltip_duration: " Magische Innovation." #deepl:2860200797
  gg_magic_technology_tooltip_requirements_done: "#darker_white #italic Sie haben alle erforderlichen Technologien erforscht!" #deepl:1598640078
  gg_magic_technology_tooltip_requirements_label: "Anforderungen" #deepl:613501034
- gg_monthly_magic_innovation: "Wir erzeugen jeden Monat #tooltippable #tooltip:gg_monthly_magic_innovation_tooltip @magic_innovation!$gg_monthly_magic_innovation_value$#!#! [concept_magic_innovation]." #deepl:2159595007
- gg_monthly_magic_innovation_tooltip: "#header [concept_magic_innovation]#!\nWir generieren $gg_monthly_magic_innovation_value$ [concept_magic_innovation] jeden Monat:\n[Country.AccessModifier.GetBreakdownFor('country_gate_magical_innovation_add').GetBreakdown]\n\nMit einem Multiplikator von [Country.AccessModifier.GetValueWithBreakdownFor('country_gate_magical_innovation_mult')]" #deepl:1034299495
- gg_monthly_magic_innovation_value: "[Multiply_CFixedPoint(Country.AccessModifier.GetBreakdownFor('country_gate_magical_innovation_add').GetRawValue, Add_CFixedPoint(Country.AccessModifier.GetBreakdownFor('country_gate_magical_innovation_mult').GetRawValue, '(CFixedPoint)1'))|+=]" #deepl:4066877224
+ gg_monthly_magic_innovation: "Wir generieren #tooltip:gg_monthly_magic_innovation_tooltip @magic_innovation!$gg_monthly_magic_innovation_value$#! [concept_magic_innovation] jeden Monat." #deepl:2748831333
+ gg_monthly_magic_innovation_no_magic: "Wir produzieren keine [concept_magic_innovation]. \n Wir müssen zuerst [concept_magic_knowledge] recherchieren." #deepl:1150311696
+ gg_monthly_magic_innovation_tooltip: "#header [concept_magic_innovation]#!\nWir generieren $gg_monthly_magic_innovation_value$ [concept_magic_innovation] jeden Monat:\n[Country.AccessModifier.GetBreakdownFor('country_gate_magical_innovation_add').GetBreakdown]\n\nMit einem Multiplikator von [Country.AccessModifier.GetValueWithBreakdownFor('country_gate_magical_innovation_mult')]\n\nBis zu einem Maximum von [Country.MakeScope.ScriptValue('gate_magic_innovation_max')|v] [concept_magic_innovation] pro Monat:\n[Country.MakeScope.ScriptValue('gate_magic_innovation_max')|+=] [Country.GetName] \n [Country.MakeScope.ScriptValue('gate_magic_innovation_max_base')|+=] Basiswert\n [Country.MakeScope.ScriptValue('gate_magic_innovation_max_literacy')|+=] [concept_literacy]" #deepl:3812547032
+ gg_monthly_magic_innovation_value: "#bold [Country.MakeScope.ScriptValue('gate_magic_innovation')|g]#!" #deepl:1294646018
  gg_panel_technology_action: "Magisches Technologie-Panel" #deepl:1895263503
  gg_panel_technology_title: "Magische Technologie" #deepl:2743819916
  gg_tab_technology_researcher: "Forscher" #deepl:2640845178
