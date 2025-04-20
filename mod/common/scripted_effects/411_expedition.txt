@@ -1,0 +1,203 @@
+﻿gate_setup_reytu = {
+	### States
+	create_struct = {
+		struct_scope = state_01
+		struct_type = expedition_state
+	}
+	scope:state_01 = {
+		set_variable = {
+			name = id
+			value = 1
+		}
+		set_variable = hidden
+	}
+	create_struct = {
+		struct_scope = state_02
+		struct_type = expedition_state
+	}
+	scope:state_02 = {
+		set_variable = {
+			name = id
+			value = 2
+		}
+		set_variable = hidden
+	}
+	create_struct = {
+		struct_scope = state_03
+		struct_type = expedition_state
+	}
+	scope:state_03 = {
+		set_variable = {
+			name = id
+			value = 3
+		}
+		set_variable = hidden
+	}
+	create_struct = {
+		struct_scope = state_04
+		struct_type = expedition_state
+	}
+	scope:state_04 = {
+		set_variable = {
+			name = id
+			value = 4
+		}
+		set_variable = hidden
+	}
+	create_struct = {
+		struct_scope = state_05
+		struct_type = expedition_state
+	}
+	scope:state_05 = {
+		set_variable = {
+			name = id
+			value = 5
+		}
+		set_variable = hidden
+	}
+	create_struct = {
+		struct_scope = state_06
+		struct_type = expedition_state
+	}
+	create_struct = {
+		struct_scope = location_01
+		struct_type = expedition_location
+	}
+	create_struct = {
+		struct_scope = location_02
+		struct_type = expedition_location
+	}
+	scope:state_06 = {
+		set_variable = {
+			name = id
+			value = 6
+		}
+
+		# Locations
+		scope:location_01 = {
+			set_variable = {
+				name = name
+				value = flag:expedition_gate_name
+			}
+			set_variable = {
+				name = desc
+				value = flag:expedition_gate_desc
+			}
+		}
+		set_variable = {
+			name = location_01
+			value = scope:location_01
+		}
+		scope:location_02 = {
+			set_variable = {
+				name = name
+				value = flag:expedition_village_name
+			}
+			set_variable = {
+				name = desc
+				value = flag:expedition_village_desc
+			}
+		}
+		set_variable = {
+			name = location_02
+			value = scope:location_02
+		}
+	}
+	create_struct = {
+		struct_scope = state_07
+		struct_type = expedition_state
+	}
+	scope:state_07 = {
+		set_variable = {
+			name = id
+			value = 7
+		}
+		set_variable = hidden
+	}
+	create_struct = {
+		struct_scope = state_08
+		struct_type = expedition_state
+	}
+	scope:state_08 = {
+		set_variable = {
+			name = id
+			value = 8
+		}
+		set_variable = hidden
+	}
+	create_struct = {
+		struct_scope = state_09
+		struct_type = expedition_state
+	}
+	scope:state_09 = {
+		set_variable = {
+			name = id
+			value = 9
+		}
+		set_variable = hidden
+	}
+	create_struct = {
+		struct_scope = state_10
+		struct_type = expedition_state
+	}
+	scope:state_10 = {
+		# Properties
+		set_variable = {
+			name = id
+			value = 10
+		}
+		set_variable = hidden
+	}
+
+
+	create_struct = {
+		struct_scope = gate_reytu
+		struct_type = gate_expedition
+	}
+	set_global_variable = {
+		name = gate_expedition_reytu
+		value = scope:gate_reytu
+	}
+	scope:gate_reytu = {
+		set_variable = {
+			name = state_01
+			value = scope:state_01
+		}
+		set_variable = {
+			name = state_02
+			value = scope:state_02
+		}
+		set_variable = {
+			name = state_03
+			value = scope:state_03
+		}
+		set_variable = {
+			name = state_04
+			value = scope:state_04
+		}
+		set_variable = {
+			name = state_05
+			value = scope:state_05
+		}
+		set_variable = {
+			name = state_06
+			value = scope:state_06
+		}
+		set_variable = {
+			name = state_07
+			value = scope:state_07
+		}
+		set_variable = {
+			name = state_08
+			value = scope:state_08
+		}
+		set_variable = {
+			name = state_09
+			value = scope:state_09
+		}
+		set_variable = {
+			name = state_10
+			value = scope:state_10
+		}
+	}
+}

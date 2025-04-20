@@ -10,10 +10,11 @@ types gate_expedition_panel_types {
             state = {
                 name = _show
                 # Close open panel before showing this one
-                on_start = "[InformationPanelBar.ClosePanel]"
-                on_start = "[MapListPanelManager.CloseCurrentPanel]"
+                on_finish = "[InformationPanelBar.ClosePanel]"
+                on_finish = "[MapListPanelManager.CloseCurrentPanel]"
                 # Fullscreen panels hide topbar
                 on_finish = "[GetVariableSystem.Set('com_fullscreen', 'com_fullscreen')]"
+                on_finish = "[GetScriptedGui('sgui_gate_map_reset_location').Execute(GuiScope.End)]"
                 start_sound = {
                     soundeffect = "event:/SFX/UI/SideBar/markets"
                 }
@@ -28,6 +29,7 @@ types gate_expedition_panel_types {
             state = {
                 name = _hide
                 on_finish = "[GetVariableSystem.Clear('com_fullscreen')]"
+                on_finish = "[GetScriptedGui('sgui_gate_map_reset_location').Execute(GuiScope.End)]"
                 start_sound = {
                     soundeffect = "event:/SFX/UI/SideBar/markets_stop"
                 }
