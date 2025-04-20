@@ -15,10 +15,36 @@
 				limit = {
 					modifier:state_gate_monthly_dwarven_immigration_add = 10000
 				}
-				create_pop = {
-					culture = dwarven
-					size = 10000
-					pop_type = officers # Fix illiterate pops
+				if = {
+					limit = {
+						literacy_rate <= 0.5
+					}
+					create_pop = {
+						culture = dwarven
+						size = 10000
+						pop_type = officers # Fix illiterate pops
+					}
+				}
+				else_if = {
+					limit = {
+						literacy_rate > 0.5
+						literacy_rate <= 0.6
+					}
+					create_pop = {
+						culture = dwarven
+						size = 10000
+						pop_type = aristocrats # Fix illiterate pops
+					}
+				}
+				else_if = {
+					limit = {
+						literacy_rate > 0.6
+					}
+					create_pop = {
+						culture = dwarven
+						size = 10000
+						pop_type = academics # Fix illiterate pops
+					}
 				}
 
 			}
@@ -26,10 +52,36 @@
 				limit = {
 					modifier:state_gate_monthly_dwarven_immigration_add = 30000
 				}
-				create_pop = {
-					culture = dwarven
-					size = 30000
-					pop_type = officers # Fix illiterate pops
+				if = {
+					limit = {
+						literacy_rate <= 0.5
+					}
+					create_pop = {
+						culture = dwarven
+						size = 30000
+						pop_type = officers # Fix illiterate pops
+					}
+				}
+				else_if = {
+					limit = {
+						literacy_rate > 0.5
+						literacy_rate <= 0.6
+					}
+					create_pop = {
+						culture = dwarven
+						size = 30000
+						pop_type = aristocrats # Fix illiterate pops
+					}
+				}
+				else_if = {
+					limit = {
+						literacy_rate > 0.6
+					}
+					create_pop = {
+						culture = dwarven
+						size = 30000
+						pop_type = academics # Fix illiterate pops
+					}
 				}
 			}
 		}
