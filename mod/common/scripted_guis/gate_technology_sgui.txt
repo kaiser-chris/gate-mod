@@ -125,6 +125,15 @@ sgui_gate_window_execute_research = {
 }
 
 # THIS = country
+sgui_gate_has_magic = {
+	scope = country
+
+	is_valid = {
+		is_magic_country = yes
+	}
+}
+
+# THIS = country
 # scope:technology = technology
 sgui_gate_has_researcher = {
 	scope = country

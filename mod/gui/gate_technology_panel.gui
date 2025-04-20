@@ -104,7 +104,7 @@ types gate_technology_panel_types {
                     tooltip = "PRODUCTION_NO_CONCEPT"
                 }
                 blockoverride "second_button_click" {
-                    enabled = "[GetScriptedGui('sgui_gate_technology_tab_production').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
+                    enabled = "[GetScriptedGui('sgui_gate_has_magic').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
                     onclick = "[GetScriptedGui('sgui_gate_technology_tab_production').Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
                 }
                 blockoverride "second_button_visibility" {
@@ -140,7 +140,7 @@ types gate_technology_panel_types {
                     tooltip = "MILITARY"
                 }
                 blockoverride "third_button_click" {
-                    enabled = "[GetScriptedGui('sgui_gate_technology_tab_military').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
+                    enabled = "[GetScriptedGui('sgui_gate_has_magic').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
                     onclick = "[GetScriptedGui('sgui_gate_technology_tab_military').Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
                 }
                 blockoverride "third_button_visibility" {
@@ -176,7 +176,7 @@ types gate_technology_panel_types {
                     tooltip = "SOCIETY"
                 }
                 blockoverride "fourth_button_click" {
-                    enabled = "[GetScriptedGui('sgui_gate_technology_tab_society').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
+                    enabled = "[GetScriptedGui('sgui_gate_has_magic').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
                     onclick = "[GetScriptedGui('sgui_gate_technology_tab_society').Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
                 }
                 blockoverride "fourth_button_visibility" {
@@ -206,6 +206,7 @@ types gate_technology_panel_types {
             }
 
             flowcontainer = {
+                margin = { 0 10 }
                 direction = vertical
                 default_header = {
                     blockoverride "text" {
@@ -215,7 +216,9 @@ types gate_technology_panel_types {
                 flowcontainer = {
                     direction = vertical
                     margin = { 15 0 }
+
                     textbox = {
+                        visible = "[GetScriptedGui('sgui_gate_has_magic').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
                         margin = { 0 10 }
                         minimumsize = { @panel_width_minus_30 -1 }
                         text = gg_magic_innovation_total
@@ -225,26 +228,33 @@ types gate_technology_panel_types {
                     }
 
                     divider_light = {
+                        visible = "[GetScriptedGui('sgui_gate_has_magic').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
                         size = { @panel_width_minus_30 2 }
                     }
 
-                    flowcontainer = {
+                    textbox = {
                         margin = { 0 10 }
-                        direction = vertical
-                        textbox = {
-                            text = gg_monthly_magic_innovation
-                            autoresize = yes
-                            align = left
-                        }
+                        minimumsize = { @panel_width_minus_30 -1 }
+                        maximumsize = { @panel_width_minus_30 -1 }
+                        visible = "[GetScriptedGui('sgui_gate_has_magic').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
+                        text = gg_monthly_magic_innovation
+                        autoresize = yes
+                        align = left
+                    }
+                    textbox = {
+                        margin = { 0 10 }
+                        minimumsize = { @panel_width_minus_30 -1 }
+                        maximumsize = { @panel_width_minus_30 -1 }
+                        visible = "[Not(GetScriptedGui('sgui_gate_has_magic').IsValid(GuiScope.SetRoot(Country.MakeScope).End))]"
+                        text = gg_monthly_magic_innovation_no_magic
+                        multiline = yes
+                        autoresize = yes
+                        align = center
                     }
 
                     divider_decorative = {
                         size = { @panel_width_minus_30 2 }
                         alpha = 0.7
-                    }
-
-                    widget = {
-                        size = { 10 10 }
                     }
                 }
             }
@@ -848,6 +858,7 @@ types gate_technology_panel_types {
             }
 
             flowcontainer = {
+                visible = "[GetScriptedGui('sgui_gate_has_magic').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
                 parentanchor = vcenter|right
                 margin_left = 2
 
