@@ -268,21 +268,30 @@ types gate_main_panel_types {
                                         tooltip = "COUNTRY_RELATIONS_TOOLTIP"
                                         using = tooltip_se
 
-                                        textbox = {
-                                            parentanchor = vcenter
-                                            autoresize = yes
-                                            align = nobaseline
-                                            max_width = 100
-                                            fontsize_min = 12
-                                            elide = right
-                                            raw_text = "Relations: #v [Country.GetRelationsWithDesc(GetPlayer)]#!"
+                                        flowcontainer = {
+                                            visible = "[Not(ObjectsEqual(Scope.GetCountry.MakeScope, GetPlayer.MakeScope))]"
+                                            textbox = {
+                                                parentanchor = vcenter
+                                                autoresize = yes
+                                                align = nobaseline
+                                                max_width = 190
+                                                fontsize_min = 12
+                                                elide = right
+                                                text = gg_magic_countries_relations
+                                            }
                                         }
 
-                                        textbox = {
-                                            parentanchor = vcenter
-                                            autoresize = yes
-                                            align = nobaseline
-                                            raw_text = "(#v [Country.GetRelationsWith(GetPlayer)|0]#!)"
+                                        flowcontainer = {
+                                            visible = "[ObjectsEqual(Scope.GetCountry.MakeScope, GetPlayer.MakeScope)]"
+                                            textbox = {
+                                                parentanchor = vcenter
+                                                autoresize = yes
+                                                align = nobaseline
+                                                max_width = 100
+                                                fontsize_min = 12
+                                                elide = right
+                                                text = gg_magic_countries_us
+                                            }
                                         }
                                     }
                                 }
@@ -443,6 +452,7 @@ types gate_main_panel_types {
             size = { 307 52 }
 
             widget = {
+                visible = "[Not(ObjectsEqual(Scope.GetCountry.MakeScope, GetPlayer.MakeScope))]"
                 parentanchor = center
                 allow_outside = yes
 
@@ -546,10 +556,34 @@ types gate_main_panel_types {
         # Relation increase/damage buttons
         widget = {
             parentanchor = center
-            visible = yes
             size = { 100% 100% }
 
+            button_icon_round = {
+                blockoverride "wood_texture" {
+                    texture = "gfx/interface/buttons/round_button_small_wood_action.dds"
+                }
+                blockoverride "frame_visible" {}
+                size = { 38 38 }
+                position = { 8 0 }
+                enabled = no
+                visible = "[ObjectsEqual(Scope.GetCountry.MakeScope, GetPlayer.MakeScope)]"
+                parentanchor = vcenter
+            }
+
+            button_icon_round = {
+                blockoverride "wood_texture" {
+                    texture = "gfx/interface/buttons/round_button_small_wood_action.dds"
+                }
+                blockoverride "frame_visible" {}
+                size = { 38 38 }
+                position = { -6 0 }
+                enabled = no
+                visible = "[ObjectsEqual(Scope.GetCountry.MakeScope, GetPlayer.MakeScope)]"
+                parentanchor = right|vcenter
+            }
+
             gate_diplo_button = {
+                visible = "[Not(ObjectsEqual(Scope.GetCountry.MakeScope, GetPlayer.MakeScope))]"
                 parentanchor = vcenter
                 position = { 8 0 }
                 blockoverride "datacontext" {
@@ -558,6 +592,7 @@ types gate_main_panel_types {
             }
 
             gate_diplo_button = {
+                visible = "[Not(ObjectsEqual(Scope.GetCountry.MakeScope, GetPlayer.MakeScope))]"
                 parentanchor = right|vcenter
                 position = { -6 0 }
                 blockoverride "datacontext" {
