@@ -52,6 +52,14 @@ reset_research_institute_pm = {
 				NOT = {
 					has_variable = magic_researcher
 				}
+				capital = {
+					any_scope_building = {
+						is_building_type = building_magic_research_institute
+						NOT = {
+							has_active_production_method = pm_no_researcher
+						}
+					}
+				}
 			}
 			activate_production_method = {
 				building_type = building_magic_research_institute
@@ -63,6 +71,14 @@ reset_research_institute_pm = {
 				var:magic_researcher ?= {
 					has_variable = magic_experience
 					var:magic_experience >= character_master_threshhold
+				}
+				capital = {
+					any_scope_building = {
+						is_building_type = building_magic_research_institute
+						NOT = {
+							has_active_production_method = pm_archmage_researcher
+						}
+					}
 				}
 			}
 			activate_production_method = {
@@ -76,13 +92,31 @@ reset_research_institute_pm = {
 					has_variable = magic_experience
 					var:magic_experience >= character_experienced_threshhold
 				}
+				capital = {
+					any_scope_building = {
+						is_building_type = building_magic_research_institute
+						NOT = {
+							has_active_production_method = pm_experienced_researcher
+						}
+					}
+				}
 			}
 			activate_production_method = {
 				building_type = building_magic_research_institute
 				production_method = pm_experienced_researcher
 			}
 		}
-		else = {
+		else_if = {
+			limit = {
+				capital = {
+					any_scope_building = {
+						is_building_type = building_magic_research_institute
+						NOT = {
+							has_active_production_method = pm_novice_researcher
+						}
+					}
+				}
+			}
 			activate_production_method = {
 				building_type = building_magic_research_institute
 				production_method = pm_novice_researcher
