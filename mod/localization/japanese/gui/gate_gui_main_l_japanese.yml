@@ -18,4 +18,6 @@
  gg_ethic_empty_slot_tooltip: "This [concept_magic_ethic] slot is empty and can be filled by researching corresponding technologies.\n\n#title Technologies#!\n - [GetTechnology('magic_science').GetName]\n - Not implemented yet"
  gg_header_magic_state: "State of Magic in the World"
  gg_header_magic_countries: "Magic Countries"
+ gg_magic_countries_us: "Our Country"
+ gg_magic_countries_relations: "$concept_relations$: #v [Country.GetRelationsWithDesc(GetPlayer)]#! (#v [Country.GetRelationsWith(GetPlayer)|0]#!)"
  gg_magic_countries_relations_region: "#header [DiplomaticAction.GetName]#!\n@red_cross! Can only be done when you have [concept_interest] in their [concept_strategic_region]."
