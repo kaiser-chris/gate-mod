@@ -1,7 +1,7 @@
 ﻿building_mana_extractor = {
 	building_group = bg_mana_extraction
 	icon = "gfx/interface/icons/building_icons/building_mana_extractor.dds"
-	city_type = city
+	city_type = none
 	has_max_level = yes
 
 	unlocking_technologies = {
@@ -26,8 +26,13 @@
 	production_method_groups = {
 		pmg_mana_extraction
 	}
+	ai_value = {
+		# Mana Extractors are important
+		value = 2000
+	}
 
 	required_construction = construction_cost_medium
+	ownership_type = self
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_magic.dds"
 }
@@ -35,7 +40,7 @@
 building_gate_mana_well = {
 	building_group = bg_mana_extraction
 	icon = "gfx/interface/icons/building_icons/gate_building_mana_well.dds"
-	city_type = city
+	city_type = none
 
 	unlocking_technologies = {
 		gate_ley_line_tap
@@ -61,6 +66,7 @@ building_gate_mana_well = {
 	}
 
 	required_construction = construction_cost_very_high
+	ownership_type = self
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_magic.dds"
 }
@@ -85,6 +91,7 @@ building_mana_core_workshop = {
 	}
 
 	required_construction = construction_cost_high
+	ownership_type = self
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_magic.dds"
 }
@@ -109,6 +116,7 @@ building_golem_workshop = {
 	}
 
 	required_construction = construction_cost_very_high
+	ownership_type = self
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_magic.dds"
 }
@@ -159,7 +167,6 @@ building_druid_groove = {
 			is_magic_country = yes
 		}
 	}
-	ownership_type = self
 
 	possible = {
 		custom_tooltip = {
@@ -175,6 +182,7 @@ building_druid_groove = {
 	}
 
 	required_construction = construction_cost_medium
+	ownership_type = self
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_magic.dds"
 }
