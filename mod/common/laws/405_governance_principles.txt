@@ -18,7 +18,6 @@
 
     on_activate = {
         hidden_effect = {
-            clear_variable_list = gate_previous_cultures
             remove_variable = gate_previous_religion
             set_variable = gate_had_eternal_monarchy
         }
@@ -98,16 +97,6 @@
             }
         }
 
-        every_primary_culture = {
-            root = {
-                remove_primary_culture = prev
-                add_to_variable_list = {
-                    name = gate_previous_cultures
-                    target = prev
-                }
-            }
-        }
-
         add_primary_culture = cu:vampire
         set_variable = {
             name = gate_previous_religion
@@ -177,13 +166,6 @@
     }
 
     on_deactivate = {
-        remove_primary_culture = cu:vampire
-        every_in_list = {
-            variable = gate_previous_cultures
-            root ?= {
-                add_primary_culture = prev
-            }
-        }
         set_state_religion = var:gate_previous_religion
     }
 
