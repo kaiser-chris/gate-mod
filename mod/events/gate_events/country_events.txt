@@ -44,5 +44,25 @@ gate_country_events.1 = {
 				value = -10
 			}
 		}
+		ig:ig_devout ?= {
+			add_modifier = {
+				name = rejected_petition
+				multiplier = 10
+				months = 24
+				is_decaying = yes
+			}
+		}
+		add_radicals = {
+			value = 0.1
+		}
+		add_radicals = {
+			interest_group = ig:ig_devout
+			value = 0.5
+		}
+	}
+
+	option = {
+		name = gate_country_events.1.b
+		default_option = no
 	}
 }
