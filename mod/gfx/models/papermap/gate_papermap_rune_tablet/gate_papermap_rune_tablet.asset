@@ -1,0 +1,31 @@
+pdxmesh = {
+	name = "gate_papermap_rune_tablet_mesh"
+	file = "gate_papermap_rune_tablet.mesh"
+
+	meshsettings = {
+		name = "gate_papermap_rune_tablet_dropshadowShape"
+		index = 0
+		texture_diffuse = "gate_papermap_rune_tablet_dropshadow_diffuse.dds"
+		texture_normal = "noproperties.dds"
+		texture_specular = "noproperties.dds"
+		shader = "standard_alpha_blend"
+		additional_shader_defines = { "FLATLIGHT" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "gate_papermap_rune_tabletShape"
+		index = 0
+		texture_diffuse = "gate_papermap_rune_tablet_diffuse.dds"
+		texture_normal = "noproperties.dds"
+		texture_specular = "noproperties.dds"
+		shader = "standard"
+		additional_shader_defines = { "FLATLIGHT" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "gate_papermap_rune_tablet_entity"
+	pdxmesh = "gate_papermap_rune_tablet_mesh"
+}

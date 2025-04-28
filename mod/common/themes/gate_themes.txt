@@ -1,9 +1,19 @@
-﻿gg_skin_gate_elven = {
+﻿# GUI Themes
+gg_skin_gate_elven = {
 	category = ui_skin_theme
 	ui_skin = "gate_elven_theme"
 }
-
 gg_skin_gate_magic = {
 	category = ui_skin_theme
 	ui_skin = "gate_magic_theme"
+}
+
+# Papermap objects
+gg_papermap_rune_tablet = {
+	category = table_asset_1_theme
+
+	map_object = {
+		pdxmesh = gate_papermap_rune_tablet_mesh
+		locator = papermap_object_1_locator
+	}
 }
