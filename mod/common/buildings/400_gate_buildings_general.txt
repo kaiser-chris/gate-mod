@@ -4,6 +4,21 @@
 	buildable = no
 	expandable = no
 	downsizeable = no
+	unique = yes
+
+	locator = building_alxa_magic_gate_locator
+	entity_not_constructed = {}
+	entity_constructed = {
+		building_gate_magic_gate_entity
+	}
+	entity_under_construction = {
+		building_gate_magic_gate_entity
+	}
+
+	city_gfx_interactions = {
+		clear_size_area = yes
+		size = 5
+	}
 
 	production_method_groups = {
 		pmg_magic_gate_exploitation_alxa
@@ -28,6 +43,21 @@ building_gate_tyrol = {
 	buildable = no
 	expandable = no
 	downsizeable = no
+	unique = yes
+
+	locator = building_tyrol_magic_gate_locator
+	entity_not_constructed = {}
+	entity_constructed = {
+		building_gate_magic_gate_entity
+	}
+	entity_under_construction = {
+		building_gate_magic_gate_entity
+	}
+
+	city_gfx_interactions = {
+		clear_size_area = yes
+		size = 5
+	}
 
 	production_method_groups = {
 		pmg_magic_gate_exploitation_tyrol
@@ -52,6 +82,21 @@ building_gate_zambia = {
 	buildable = no
 	expandable = no
 	downsizeable = no
+	unique = yes
+
+	locator = building_zambia_magic_gate_locator
+	entity_not_constructed = {}
+	entity_constructed = {
+		building_gate_magic_gate_entity
+	}
+	entity_under_construction = {
+		building_gate_magic_gate_entity
+	}
+
+	city_gfx_interactions = {
+		clear_size_area = yes
+		size = 5
+	}
 
 	production_method_groups = {
 		pmg_magic_gate_exploitation_zambia
@@ -76,6 +121,21 @@ building_gate_san_salvador = {
 	buildable = no
 	expandable = no
 	downsizeable = no
+	unique = yes
+
+	locator = building_san_salvador_magic_gate_locator
+	entity_not_constructed = {}
+	entity_constructed = {
+		building_gate_magic_gate_entity
+	}
+	entity_under_construction = {
+		building_gate_magic_gate_entity
+	}
+
+	city_gfx_interactions = {
+		clear_size_area = yes
+		size = 5
+	}
 
 	production_method_groups = {
 		pmg_magic_gate_exploitation_san_salvador
@@ -100,6 +160,21 @@ building_gate_eastern_new_guinea = {
 	buildable = no
 	expandable = no
 	downsizeable = no
+	unique = yes
+
+	locator = building_eastern_new_guinea_magic_gate_locator
+	entity_not_constructed = {}
+	entity_constructed = {
+		building_gate_magic_gate_entity
+	}
+	entity_under_construction = {
+		building_gate_magic_gate_entity
+	}
+
+	city_gfx_interactions = {
+		clear_size_area = yes
+		size = 5
+	}
 
 	production_method_groups = {
 		pmg_magic_gate_exploitation_eastern_new_guinea

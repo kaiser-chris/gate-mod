@@ -1,0 +1,39 @@
+pdxmesh = {
+	name = "building_gate_magic_gate_mesh"
+	file = "building_gate_magic_gate.mesh"
+
+	meshsettings = {
+		name = "building_gate_magic_gateShape"
+		index = 0
+		texture_diffuse = "building_gate_magic_gate_diffuse.dds"
+		texture_normal = "building_gate_magic_gate_normal.dds"
+		texture_specular = "building_gate_magic_gate_properties.dds"
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN"  }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	meshsettings = {
+		name = "g_body_treesShape"
+		index = 0
+		texture_diffuse = "wonder_vatican_city_01_diffuse.dds"
+		texture_normal = "wonder_vatican_city_01_normal.dds"
+		texture_specular = "wonder_vatican_city_01_properties.dds"
+		shader = "tree_colormap"
+		shader_file = "gfx/FX/tree.shader"
+	}
+
+	meshsettings = {
+		name = "building_gate_magic_gate_decalShape"
+		index = 0
+		texture_diffuse = "building_gate_magic_gate_decal_diffuse.dds"
+		texture_normal = "building_gate_magic_gate_decal_normal.dds"
+		texture_specular = "building_gate_magic_gate_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+	}
+}
+
+entity = {
+	name = "building_gate_magic_gate_entity"
+	pdxmesh = "building_gate_magic_gate_mesh"
+}
