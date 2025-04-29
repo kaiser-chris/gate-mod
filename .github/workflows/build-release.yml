@@ -21,30 +21,32 @@ jobs:
   release:
     name: "Create GitHub Release"
     runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.increment-version.outputs.next-version }}
     
     steps:
       - name: Checkout
         uses: actions/checkout@v4.2.2
 
-      - name: Checkout tags
+      - name: Checkout Tags
         run: |
-          git config --global user.name 'Chris Kaiser'
-          git config --global user.email 'kaiser-chris@users.noreply.github.com'
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git fetch --prune --unshallow --tags
 
-      - name: Get latest version
+      - name: Get Version
         id: project
         run: |
           echo "last-version=$(git describe --tags $(git rev-list --tags --max-count=1))" >> $GITHUB_OUTPUT
 
-      - name: Increment release version
+      - name: Increment Version
         id: increment-version
         uses: christian-draeger/increment-semantic-version@1.2.1
         with:
           current-version: ${{ steps.project.outputs.last-version }}
           version-fragment: ${{ inputs.release-type }}
 
-      - name: Get changes since last tag
+      - name: Collect Changes
         id: commits
         run: |
           {
@@ -52,39 +54,35 @@ jobs:
             echo "$(git log ${{ steps.project.outputs.last-version }}..HEAD --no-merges --pretty=format:' - %s')"
             echo EOF
           } >> "$GITHUB_OUTPUT"
+          echo "# Commits" >> $GITHUB_STEP_SUMMARY
+          echo "$(git log ${{ steps.project.outputs.last-version }}..HEAD --no-merges --pretty=format:' - %s')" >> $GITHUB_STEP_SUMMARY
 
-      - name: Set version
+      - name: Update Version
         run: |
           sed -i 's/"version" : "${{ steps.project.outputs.last-version }}"/"version" : "${{ steps.increment-version.outputs.next-version }}"/g' mod/.metadata/metadata.json
-
-      - name: Commit Version
-        run: |
-          git commit -am "Set latest release version"
+          git commit -am "Updated version to ${{ steps.increment-version.outputs.next-version }}"
 
       - name: Generate Localizations
         shell: bash
         run: |
           (cd script; ./generate-localization.sh english ../mod/)
-
-      - name: Commit Localizations
-        run: |
           git commit -am "Updated localizations" || echo "No Localization changes"
 
       - name: Push Version and Localizations
         run: |
           git push origin
 
-      - name: Create release artifact
+      - name: Create Release Artifact
         run: |
           (cd mod; zip -r release-${{ steps.increment-version.outputs.next-version }}.zip .)
 
-      - name: Archive release artifact
+      - name: Upload Release Artifact
         uses: actions/upload-artifact@v4
         with:
           name: Release
           path: mod/release-${{ steps.increment-version.outputs.next-version }}.zip
 
-      - name: Create Release
+      - name: Publish GitHub Release
         id: create_release
         uses: softprops/action-gh-release@v2.2.1
         with:
@@ -108,9 +106,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4.2.2
-
-      - name: Setup SteamCMD
-        uses: buildalon/setup-steamcmd@v1.0.4
+        with:
+          ref: "${{ needs.release.outputs.version }}"
 
       - name: Create Workshop Metadata
         id: metadata
@@ -118,6 +115,13 @@ jobs:
         run: |
           (cd script; ./create-release-vdf.sh mod documentation/STEAM_PAGE.bbcode "$WORKSHOP_IDENTIFIER" "$WORKSHOP_VISIBILITY")
           echo "vdf=$(realpath workshop.vdf)" >> "$GITHUB_OUTPUT"
+          echo "# Workflow Metadata" >> $GITHUB_STEP_SUMMARY
+          echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+          echo "$(cat < workshop.vdf)" >> $GITHUB_STEP_SUMMARY
+          echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+
+      - name: Setup SteamCMD
+        uses: buildalon/setup-steamcmd@v1.0.4
 
       - name: Publish to Workshop
         shell: bash
