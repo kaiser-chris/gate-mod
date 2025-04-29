@@ -12,7 +12,6 @@ else
   printf 'Usage: ./create-release-vdf.sh MOD_DIR DESC_FILE [MOD_ID] [VISIBILITY]'
   exit 1
 fi
-
 # Check mod description
 if [ -f "$2" ]
 then
@@ -74,3 +73,5 @@ printf '\n' >> workshop.vdf
 printf '\t"changenote" "%s"' "$release_notes" >> workshop.vdf
 printf '\n' >> workshop.vdf
 printf '}' >> workshop.vdf
+
+cat workshop.vdf
