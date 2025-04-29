@@ -6,10 +6,21 @@ ideology_liberal_gate = {
 
     lawgroup_citizenship = {
         law_gnomish_harmony = approve
+        law_multicultural = disapprove
+        law_ethnostate = disapprove
+        law_national_supremacy = disapprove
+        law_racial_segregation = neutral
+        law_cultural_exclusion = approve
     }
 
     lawgroup_governance_principles = {
         law_gate_magocracy = disapprove
+        law_presidential_republic = strongly_approve
+        law_parliamentary_republic = approve
+        law_corporate_state = neutral
+        law_monarchy = neutral
+        law_theocracy = neutral
+        law_council_republic = disapprove
     }
 
     lawgroup_gate_monster_hunting = {
@@ -34,10 +45,19 @@ ideology_isolationist_gate = {
 
     lawgroup_colonization = {
         law_gnomish_integration = neutral
+        law_frontier_colonization = strongly_approve
+        law_no_colonial_affairs = approve
+        law_colonial_resettlement = disapprove
+        law_colonial_exploitation = disapprove
     }
 
     lawgroup_citizenship = {
         law_gnomish_harmony = disapprove
+        law_ethnostate = disapprove
+        law_national_supremacy = neutral
+        law_racial_segregation = approve
+        law_cultural_exclusion = neutral
+        law_multicultural = strongly_disapprove
     }
 
     lawgroup_gate_monster_hunting = {
@@ -62,6 +82,10 @@ ideology_jingoist_gate = {
 
     lawgroup_colonization = {
         law_gnomish_integration = approve
+        law_colonial_resettlement = approve
+        law_colonial_exploitation = approve
+        law_frontier_colonization = approve
+        law_no_colonial_affairs = neutral
     }
 
     lawgroup_gate_monster_hunting = {
@@ -94,6 +118,12 @@ ideology_pious_gate = {
 
     lawgroup_governance_principles = {
         law_gate_magocracy = strongly_disapprove
+        law_monarchy = strongly_approve
+        law_theocracy = approve
+        law_presidential_republic = neutral
+        law_parliamentary_republic = neutral
+        law_corporate_state = neutral
+        law_council_republic = strongly_disapprove
     }
 
     lawgroup_gate_monster_hunting = {
@@ -118,10 +148,21 @@ ideology_reactionary_gate = {
 
     lawgroup_citizenship = {
         law_gnomish_harmony = disapprove
+        law_ethnostate = approve
+        law_national_supremacy = strongly_approve
+        law_racial_segregation = approve
+        law_cultural_exclusion = neutral
+        law_multicultural = disapprove
     }
 
     lawgroup_governance_principles = {
         law_gate_magocracy = approve
+        law_monarchy = approve
+        law_theocracy = approve
+        law_presidential_republic = neutral
+        law_parliamentary_republic = neutral
+        law_corporate_state = neutral
+        law_council_republic = disapprove
     }
 
     lawgroup_elven_supremacy = {
@@ -173,6 +214,12 @@ ideology_paternalistic_gate = {
 
     lawgroup_governance_principles = {
         law_gate_magocracy = strongly_approve
+        law_monarchy = strongly_approve
+        law_theocracy = approve
+        law_presidential_republic = neutral
+        law_parliamentary_republic = neutral
+        law_corporate_state = neutral
+        law_council_republic = strongly_disapprove
     }
 
     lawgroup_gate_monster_hunting = {
@@ -197,6 +244,10 @@ ideology_laissez_faire_gate = {
 
     lawgroup_colonization = {
         law_gnomish_integration = approve
+        law_colonial_exploitation = approve
+        law_no_colonial_affairs = neutral
+        law_colonial_resettlement = neutral
+        law_frontier_colonization = neutral
     }
 
     lawgroup_gate_monster_hunting = {
