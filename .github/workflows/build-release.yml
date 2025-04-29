@@ -13,8 +13,13 @@ on:
           - feature
           - patch
 
+env:
+  WORKSHOP_IDENTIFIER: 3371719217
+  WORKSHOP_VISIBILITY: 0
+
 jobs:
-  build-release:
+  release:
+    name: "Create GitHub Release"
     runs-on: ubuntu-latest
     
     steps:
@@ -73,6 +78,12 @@ jobs:
         run: |
           (cd mod; zip -r release-${{ steps.increment-version.outputs.next-version }}.zip .)
 
+      - name: Archive release artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Release
+          path: mod/release-${{ steps.increment-version.outputs.next-version }}.zip
+
       - name: Create Release
         id: create_release
         uses: softprops/action-gh-release@v2.2.1
@@ -81,10 +92,34 @@ jobs:
           draft: false
           prerelease: false
           files: mod/release-${{ steps.increment-version.outputs.next-version }}.zip
-          tag_name	: ${{ steps.increment-version.outputs.next-version }}
+          tag_name: ${{ steps.increment-version.outputs.next-version }}
           name: ${{ steps.increment-version.outputs.next-version }}
           body: |
             Released a new version of the **Manaflow: Ankaris Arrival** mod.
-            
+
             ### Changes:
             ${{ steps.commits.outputs.markdown }}
+
+  publish:
+    name: "Publish to Workshop"
+    runs-on: ubuntu-latest
+    needs: release
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+
+      - name: Setup SteamCMD
+        uses: buildalon/setup-steamcmd@v1.0.4
+
+      - name: Create Workshop Metadata
+        id: metadata
+        shell: bash
+        run: |
+          (cd script; ./create-release-vdf.sh mod documentation/STEAM_PAGE.bbcode "$WORKSHOP_IDENTIFIER" "$WORKSHOP_VISIBILITY")
+          echo "vdf=$(realpath workshop.vdf)" >> "$GITHUB_OUTPUT"
+
+      - name: Publish to Workshop
+        shell: bash
+        run: |
+          steamcmd +login ${{ secrets.WORKSHOP_USERNAME }} ${{ secrets.WORKSHOP_PASSWORD }} +workshop_build_item ${{ steps.metadata.outputs.vdf }} +quit
