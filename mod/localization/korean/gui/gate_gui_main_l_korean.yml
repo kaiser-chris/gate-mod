@@ -8,10 +8,10 @@
  gg_header_magic_ethic: "[Concept('concept_magic_ethic','$concept_magic_ethics$')]"
  gg_header_magic_state: "전세계 마법 현황"
  gg_magic_countries: "[concept_magic_knowledge]을 보유한 국가"
- gg_magic_countries_relations: "$concept_relations$: #v [Country.GetRelationsWithDesc(GetPlayer)] #! (#v [Country.GetRelationsWith(GetPlayer)|0] #! )" #deepl:4253451336
+ gg_magic_countries_relations: "$concept_relations$: #v [Country.GetRelationsWithDesc(GetPlayer)]#! (#v [Country.GetRelationsWith(GetPlayer)|0]#!)"
  gg_magic_countries_relations_region: "#header [DiplomaticAction.GetName]#!\n@red_cross! 해당 국가의 [concept_strategic_region]에서 [concept_interest]을 보유해야 실행할 수 있습니다."
  gg_magic_countries_statistic: "현재 [GetDataModelSize(GetGlobalList('magic_countries'))]개국이 [concept_magic_knowledge]을 보유하고 있습니다."
- gg_magic_countries_us: "우리나라" #deepl:3262087796
+ gg_magic_countries_us: "우리 국가"
  gg_mana_saturation: "마나 포화"
  gg_mana_saturation_statistic: "현재 전 세계 [concept_mana_saturation]는 [GetGlobalVariable('global_mana_saturation').GetValue|1]%입니다."
  gg_mana_saturation_tooltip: "#header [concept_mana_saturation]#!\n현재 지구의 #v [GetGlobalVariable('global_mana_saturation').GetValue|1]%#!가 마나로 덮여 있습니다.\n\n마나는 모든 [concept_magical_phenomena]의 기초이며, [concept_magic_technology]에서 광범위하게 사용됩니다."
