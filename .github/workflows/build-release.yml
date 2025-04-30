@@ -9,9 +9,17 @@ on:
         required: false
         type: choice
         options:
-          - major
-          - feature
-          - patch
+          - 'major'
+          - 'feature'
+          - 'patch'
+      publish:
+        description: 'Publish on Workshop'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'true'
+          - 'false'
 
 env:
   WORKSHOP_IDENTIFIER: 3371719217
@@ -99,6 +107,7 @@ jobs:
             ${{ steps.commits.outputs.markdown }}
 
   publish:
+    if: ${{ inputs.publish == 'true' }}
     name: "Publish to Workshop"
     runs-on: ubuntu-latest
     needs: release
