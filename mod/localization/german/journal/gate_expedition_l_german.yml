@@ -2,44 +2,32 @@
  decision_gate_start_expedition_reytu: "Starten Sie eine Expedition nach Ankaris" #deepl:2160589379
  decision_gate_start_expedition_reytu_desc: "Besuchen Sie [GetBuildingType('building_gate_alxa').GetName] in der Region [GetStateRegion('STATE_ALXA').GetName]." #deepl:819952118
  decision_gate_start_expedition_reytu_possible: "Steuert das Magische Tor in der Region [GetStateRegion('STATE_ALXA').GetName]." #deepl:1282493707
- expedition_reytu.1.a: "Militarist: [SCOPE.sCharacter('expedition_militarist').GetFullName]" #deepl:1044047572
- expedition_reytu.1.b: "Politiker: [SCOPE.sCharacter('expedition_politician').GetFullName]" #deepl:3483610795
- expedition_reytu.1.c: "Industrieller: [SCOPE.sCharacter('expedition_industrialist').GetFullName]" #deepl:850030194
- expedition_reytu.1.d: "Wir haben diese drei potenziellen Expeditionsleiter gefunden. Jetzt müssen wir einen auswählen." #deepl:2541285372
- expedition_reytu.1.f: "Nach intensiven politischen Manövern und Hinterzimmerabsprachen haben sich drei Kandidaten als potenzielle Anführer für unsere Expedition zur Magischen Pforte herauskristallisiert. Einer von ihnen ist ein gewiefter Industrieller mit engen Beziehungen zur Wirtschaft, der die dortigen Ressourcen ausbeuten möchte. Ein anderer ist ein dekorierter Militäroffizier, der sich darauf konzentriert, Fuß zu fassen und unsere Vorherrschaft zu sichern. Der letzte Kandidat ist ein geschickter Politiker, der sich für vorsichtige Diplomatie und langfristige Stabilität einsetzt. Die Wahl, die wir treffen, wird über die Zukunft unserer Präsenz auf $gate_planet$ entscheiden." #deepl:1367357098
- expedition_reytu.1.t: "Auswahl eines Expeditionsleiters" #deepl:4173161503
- expedition_reytu.2.a: "Kleine Expedition" #deepl:3219050420
- expedition_reytu.2.b: "Normale Expedition" #deepl:699000534
- expedition_reytu.2.c: "Lange Expedition" #deepl:4270572181
- expedition_reytu.2.d: "Wir müssen entscheiden, wie groß unsere Expedition auf [GetBuildingType('building_gate_alxa').GetName] sein soll." #deepl:3650601666
- expedition_reytu.2.f: "Nachdem die Entscheidung gefallen war, die Magische Pforte zu durchschreiten, bestand die nächste Herausforderung darin, den Umfang unserer Expedition festzulegen. Eine kleine, wendige Gruppe könnte diskret erkunden und dabei Risiken und Kosten minimieren. Eine ausgewogene Truppe aus Siedlern, Gelehrten und Soldaten bietet eine sichere und dennoch flexible Vorgehensweise. Alternativ könnte eine große Expedition mit überwältigenden Ressourcen und Arbeitskräften einen unbestreitbaren Anspruch erheben - allerdings zu großen Kosten. Das Schicksal unseres Unternehmens hängt von dieser wichtigen Entscheidung ab." #deepl:1308442514
- expedition_reytu.2.t: "Planung der Ankaris-Expedition" #deepl:548847908
+ je_gate_expedition_reytu_preparation: "Vorbereitung der Expedition" #deepl:1574306075
+ je_gate_expedition_reytu_preparation_reason: "Nachdem die Entscheidung gefallen ist, beginnen die Vorbereitungen ernsthaft. Es werden Karten erstellt, Vorräte beschafft, und eifrige Abenteurer melden sich freiwillig. Gelehrte debattieren über die möglichen Gefahren und Chancen, die dahinter liegen, während Ingenieure und Logistiker dafür sorgen, dass die Reise gut ausgerüstet ist. Die magische Pforte liegt vor uns, ein Tor zum Unbekannten - bald wird es Zeit sein, den ersten Schritt zu tun." #deepl:3725050251
+ je_gate_expedition_reytu_preparation_hiring_leader: "Wir sind derzeit auf der Suche nach einem Expeditionsleiter." #deepl:1108601421
+ je_gate_expedition_reytu_preparation_in_progess: "Wir müssen uns auf unsere Expedition vorbereiten." #deepl:1036857002
+ je_gate_expedition_reytu_preparation_fail_tooltip: "Steuert nicht die [GetBuildingType('building_gate_alxa').GetName] in der Region [GetStateRegion('STATE_ALXA').GetName]." #deepl:2492892956
+ je_gate_expedition_reytu_preparation_button_hire_leader: "Expeditionsleiter anheuern" #deepl:1543565473
+ je_gate_expedition_reytu_preparation_button_hire_leader_desc: "Wir werden einen Leiter für die Expedition suchen." #deepl:2118497909
+ je_gate_expedition_reytu_preparation_button_hire_leader_trigger_search: "derzeit nicht auf der Suche nach einem Expeditionsleiter sind." #deepl:1414086464
+ je_gate_expedition_reytu_preparation_button_hire_leader_trigger_done: "Es gibt keinen Expeditionsleiter." #deepl:4125505397
+ je_gate_expedition_reytu_preparation_button_hire_leader_effect: "Beginnt die Suche nach einem Expeditionsleiter." #deepl:675279365
+ je_gate_expedition_reytu_preparation_button_open_map: "Expeditionskarte öffnen" #deepl:537625907
+ je_gate_expedition_reytu_preparation_button_open_map_desc: "Öffnet die Expeditionskarte." #deepl:2776223579
+ pb_gate_expedition_tools_progress: "Fortschritt: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]/5000)" #deepl:4140396556
+ pb_gate_expedition_tools_pm_no: "Keine Vorratshaltung" #deepl:1593032932
+ pb_gate_expedition_tools_pm_slow: "Langsame Bevorratung" #deepl:892870279
+ pb_gate_expedition_tools_pm_normal: "Normale Bevorratung" #deepl:281036890
+ pb_gate_expedition_tools_pm_fast: "Schnelle Bevorratung" #deepl:1542526306
+ gate_expedition_reytu.1.t: "Auswahl eines Expeditionsleiters" #deepl:4173161503
+ gate_expedition_reytu.1.d: "Wir haben diese drei potenziellen Expeditionsleiter gefunden. Jetzt müssen wir einen auswählen." #deepl:2541285372
+ gate_expedition_reytu.1.f: "Nach intensiven politischen Manövern und Hinterzimmerabsprachen haben sich drei Kandidaten als potenzielle Anführer für unsere Expedition zur Magischen Pforte herauskristallisiert. Einer von ihnen ist ein gewiefter Industrieller mit engen Beziehungen zur Wirtschaft, der die dortigen Ressourcen ausbeuten möchte. Ein anderer ist ein dekorierter Militäroffizier, der sich darauf konzentriert, Fuß zu fassen und unsere Vorherrschaft zu sichern. Der letzte Kandidat ist ein geschickter Politiker, der sich für vorsichtige Diplomatie und langfristige Stabilität einsetzt. Die Wahl, die wir treffen, wird über die Zukunft unserer Präsenz auf $gate_planet$ entscheiden." #deepl:1367357098
  gate_expedition_reytu.1.a: "Militarist: [SCOPE.sCharacter('expedition_militarist').GetFullName]" #deepl:1044047572
  gate_expedition_reytu.1.b: "Politiker: [SCOPE.sCharacter('expedition_politician').GetFullName]" #deepl:3483610795
  gate_expedition_reytu.1.c: "Industrieller: [SCOPE.sCharacter('expedition_industrialist').GetFullName]" #deepl:850030194
- gate_expedition_reytu.1.d: "Wir haben diese drei potenziellen Expeditionsleiter gefunden. Jetzt müssen wir einen auswählen." #deepl:2541285372
- gate_expedition_reytu.1.f: "Nach intensiven politischen Manövern und Hinterzimmerabsprachen haben sich drei Kandidaten als potenzielle Anführer für unsere Expedition zur Magischen Pforte herauskristallisiert. Einer von ihnen ist ein gewiefter Industrieller mit engen Beziehungen zur Wirtschaft, der die dortigen Ressourcen ausbeuten möchte. Ein anderer ist ein dekorierter Militäroffizier, der sich darauf konzentriert, Fuß zu fassen und unsere Vorherrschaft zu sichern. Der letzte Kandidat ist ein geschickter Politiker, der sich für vorsichtige Diplomatie und langfristige Stabilität einsetzt. Die Wahl, die wir treffen, wird über die Zukunft unserer Präsenz auf $gate_planet$ entscheiden." #deepl:1367357098
- gate_expedition_reytu.1.t: "Auswahl eines Expeditionsleiters" #deepl:4173161503
+ gate_expedition_reytu.2.t: "Planung der Ankaris-Expedition" #deepl:548847908
+ gate_expedition_reytu.2.d: "Wir müssen entscheiden, wie groß unsere Expedition auf [GetBuildingType('building_gate_alxa').GetName] sein soll." #deepl:3650601666
+ gate_expedition_reytu.2.f: "Nachdem die Entscheidung gefallen war, die Magische Pforte zu durchschreiten, bestand die nächste Herausforderung darin, den Umfang unserer Expedition festzulegen. Eine kleine, wendige Gruppe könnte diskret erkunden und dabei Risiken und Kosten minimieren. Eine ausgewogene Truppe aus Siedlern, Gelehrten und Soldaten bietet eine sichere und dennoch flexible Vorgehensweise. Alternativ könnte eine große Expedition mit überwältigenden Ressourcen und Arbeitskräften einen unbestreitbaren Anspruch erheben - allerdings zu großen Kosten. Das Schicksal unseres Unternehmens hängt von dieser wichtigen Entscheidung ab." #deepl:1308442514
  gate_expedition_reytu.2.a: "Kleine Expedition" #deepl:3219050420
  gate_expedition_reytu.2.b: "Normale Expedition" #deepl:699000534
  gate_expedition_reytu.2.c: "Lange Expedition" #deepl:4270572181
- gate_expedition_reytu.2.d: "Wir müssen entscheiden, wie groß unsere Expedition auf [GetBuildingType('building_gate_alxa').GetName] sein soll." #deepl:3650601666
- gate_expedition_reytu.2.f: "Nachdem die Entscheidung gefallen war, die Magische Pforte zu durchschreiten, bestand die nächste Herausforderung darin, den Umfang unserer Expedition festzulegen. Eine kleine, wendige Gruppe könnte diskret erkunden und dabei Risiken und Kosten minimieren. Eine ausgewogene Truppe aus Siedlern, Gelehrten und Soldaten bietet eine sichere und dennoch flexible Vorgehensweise. Alternativ könnte eine große Expedition mit überwältigenden Ressourcen und Arbeitskräften einen unbestreitbaren Anspruch erheben - allerdings zu großen Kosten. Das Schicksal unseres Unternehmens hängt von dieser wichtigen Entscheidung ab." #deepl:1308442514
- gate_expedition_reytu.2.t: "Planung der Ankaris-Expedition" #deepl:548847908
- je_gate_expedition_reytu_preparation: "Vorbereitung der Expedition" #deepl:1574306075
- je_gate_expedition_reytu_preparation_button_hire_leader: "Expeditionsleiter anheuern" #deepl:1543565473
- je_gate_expedition_reytu_preparation_button_hire_leader_desc: "Wir werden einen Leiter für die Expedition suchen." #deepl:2118497909
- je_gate_expedition_reytu_preparation_button_hire_leader_effect: "Beginnt die Suche nach einem Expeditionsleiter." #deepl:675279365
- je_gate_expedition_reytu_preparation_button_hire_leader_trigger_done: "Es gibt keinen Expeditionsleiter." #deepl:4125505397
- je_gate_expedition_reytu_preparation_button_hire_leader_trigger_search: "derzeit nicht auf der Suche nach einem Expeditionsleiter sind." #deepl:1414086464
- je_gate_expedition_reytu_preparation_button_open_map: "Expeditionskarte öffnen" #deepl:537625907
- je_gate_expedition_reytu_preparation_button_open_map_desc: "Öffnet die Expeditionskarte." #deepl:2776223579
- je_gate_expedition_reytu_preparation_fail_tooltip: "Steuert nicht die [GetBuildingType('building_gate_alxa').GetName] in der Region [GetStateRegion('STATE_ALXA').GetName]." #deepl:2492892956
- je_gate_expedition_reytu_preparation_hiring_leader: "Wir sind derzeit auf der Suche nach einem Expeditionsleiter." #deepl:1108601421
- je_gate_expedition_reytu_preparation_in_progess: "Wir müssen uns auf unsere Expedition vorbereiten." #deepl:1036857002
- je_gate_expedition_reytu_preparation_reason: "Nachdem die Entscheidung gefallen ist, beginnen die Vorbereitungen ernsthaft. Es werden Karten erstellt, Vorräte beschafft, und eifrige Abenteurer melden sich freiwillig. Gelehrte debattieren über die möglichen Gefahren und Chancen, die dahinter liegen, während Ingenieure und Logistiker dafür sorgen, dass die Reise gut ausgerüstet ist. Die magische Pforte liegt vor uns, ein Tor zum Unbekannten - bald wird es Zeit sein, den ersten Schritt zu tun." #deepl:3725050251
- pb_gate_expedition_tools_pm_fast: "Schnelle Bevorratung" #deepl:1542526306
- pb_gate_expedition_tools_pm_no: "Keine Vorratshaltung" #deepl:1593032932
- pb_gate_expedition_tools_pm_normal: "Normale Bevorratung" #deepl:281036890
- pb_gate_expedition_tools_pm_slow: "Langsame Bevorratung" #deepl:892870279
- pb_gate_expedition_tools_progress: "Fortschritt: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]/5000)" #deepl:4140396556

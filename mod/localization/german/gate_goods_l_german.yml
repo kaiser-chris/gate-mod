@@ -1,36 +1,41 @@
 ﻿l_german:
- golem: "Golems" #deepl:680133882
- goods_input_golem_add: "@golem! $golem$ Eingabe" #deepl:3737692877
- goods_input_golem_add_desc: "Die von den Gebäuden verbrauchte Menge an @golem! $golem$ " #deepl:3143039365
- goods_input_magic_seed_add: "@magic_seed! $magic_seed$ Beitrag" #deepl:2116409603
- goods_input_magic_seed_add_desc: "Die von den Gebäuden verbrauchte Menge an @magic_seed! $magic_seed$ " #deepl:4059257086
- goods_input_mana_add: "@mana! $mana$ Eingabe" #deepl:3200839206
- goods_input_mana_add_desc: "Die von den Gebäuden verbrauchte Menge an @mana! $mana$ " #deepl:821851764
- goods_input_mana_core_add: "@mana_core! $mana_core$ Eingabe" #deepl:104647377
- goods_input_mana_core_add_desc: "Die von den Gebäuden verbrauchte Menge an @mana_core! $mana_core$ " #deepl:3908114597
- goods_input_runic_paper_add: "@runic_paper! $runic_paper$ Eingabe" #deepl:1010244827
- goods_input_runic_paper_add_desc: "Die von den Gebäuden verbrauchte Menge an @runic_paper! $runic_paper$ " #deepl:448859270
- goods_output_golem_add: "@golem! $golem$ Ausgabe" #deepl:2476888162
- goods_output_golem_add_desc: "Die von den Gebäuden erzeugte Menge an @golem! $golem$ " #deepl:1850805114
- goods_output_magic_seed_add: "@magic_seed! $magic_seed$ Ausgabe" #deepl:1734274370
- goods_output_magic_seed_add_desc: "Die von den Gebäuden produzierte Menge an @magic_seed! $magic_seed$ " #deepl:620014081
+# Mana Crystals
+ mana: "Mana-Kristalle" #deepl:1460345836
  goods_output_mana_add: "@mana! $mana$ Ausgabe" #deepl:4013976603
  goods_output_mana_add_desc: "Die von den Gebäuden erzeugte Menge an @mana! $mana$ " #deepl:3858465931
+ goods_input_mana_add: "@mana! $mana$ Eingabe" #deepl:3200839206
+ goods_input_mana_add_desc: "Die von den Gebäuden verbrauchte Menge an @mana! $mana$ " #deepl:821851764
+ trade_route_import_lens_option_mana_tooltip: "Einrichtung einer $mana$ Importhandelsroute" #deepl:2419966818
+ trade_route_export_lens_option_mana_tooltip: "Einrichtung einer Exporthandelsroute $mana$ " #deepl:3878060393
+# Mana Cores
+ mana_core: "Mana-Kerne" #deepl:596367649
  goods_output_mana_core_add: "@mana_core! $mana_core$ Ausgabe" #deepl:88441639
  goods_output_mana_core_add_desc: "Die von den Gebäuden erzeugte Menge an @mana_core! $mana_core$ " #deepl:1039592026
+ goods_input_mana_core_add: "@mana_core! $mana_core$ Eingabe" #deepl:104647377
+ goods_input_mana_core_add_desc: "Die von den Gebäuden verbrauchte Menge an @mana_core! $mana_core$ " #deepl:3908114597
+ trade_route_import_lens_option_mana_core_tooltip: "Einrichtung einer $mana_core$ Importhandelsroute" #deepl:200819086
+ trade_route_export_lens_option_mana_core_tooltip: "Einrichtung einer Exporthandelsroute $mana_core$ " #deepl:2095252357
+# Golems
+ golem: "Golems" #deepl:680133882
+ goods_output_golem_add: "@golem! $golem$ Ausgabe" #deepl:2476888162
+ goods_output_golem_add_desc: "Die von den Gebäuden erzeugte Menge an @golem! $golem$ " #deepl:1850805114
+ goods_input_golem_add: "@golem! $golem$ Eingabe" #deepl:3737692877
+ goods_input_golem_add_desc: "Die von den Gebäuden verbrauchte Menge an @golem! $golem$ " #deepl:3143039365
+ trade_route_import_lens_option_golem_tooltip: "Einrichtung einer $golem$ Importhandelsroute" #deepl:3524884315
+ trade_route_export_lens_option_golem_tooltip: "Einrichtung einer Exporthandelsroute $golem$ " #deepl:2768385360
+# Magic Seeds
+ magic_seed: "Magisches Saatgut" #deepl:392237414
+ goods_output_magic_seed_add: "@magic_seed! $magic_seed$ Ausgabe" #deepl:1734274370
+ goods_output_magic_seed_add_desc: "Die von den Gebäuden produzierte Menge an @magic_seed! $magic_seed$ " #deepl:620014081
+ goods_input_magic_seed_add: "@magic_seed! $magic_seed$ Beitrag" #deepl:2116409603
+ goods_input_magic_seed_add_desc: "Die von den Gebäuden verbrauchte Menge an @magic_seed! $magic_seed$ " #deepl:4059257086
+ trade_route_import_lens_option_magic_seed_tooltip: "Einrichtung einer $magic_seed$ Importhandelsroute" #deepl:2330328325
+ trade_route_export_lens_option_magic_seed_tooltip: "Einrichtung einer Exporthandelsroute $magic_seed$ " #deepl:4261330702
+# Rune Etched Paper
+ runic_paper: "Runen geätztes Papier" #deepl:2772252626
  goods_output_runic_paper_add: "@runic_paper! $runic_paper$ Ausgabe" #deepl:8754927
  goods_output_runic_paper_add_desc: "Die von Gebäuden produzierte Menge an @runic_paper! $runic_paper$ " #deepl:3485924985
- magic_seed: "Magisches Saatgut" #deepl:392237414
- mana: "Mana-Kristalle" #deepl:1460345836
- mana_core: "Mana-Kerne" #deepl:596367649
- runic_paper: "Runen geätztes Papier" #deepl:2772252626
- trade_route_export_lens_option_golem_tooltip: "Einrichtung einer Exporthandelsroute $golem$ " #deepl:2768385360
- trade_route_export_lens_option_magic_seed_tooltip: "Einrichtung einer Exporthandelsroute $magic_seed$ " #deepl:4261330702
- trade_route_export_lens_option_mana_core_tooltip: "Einrichtung einer Exporthandelsroute $mana_core$ " #deepl:2095252357
- trade_route_export_lens_option_mana_tooltip: "Einrichtung einer Exporthandelsroute $mana$ " #deepl:3878060393
- trade_route_export_lens_option_runic_paper_tooltip: "Einrichtung einer Exporthandelsroute $runic_paper$ " #deepl:2321591252
- trade_route_import_lens_option_golem_tooltip: "Einrichtung einer $golem$ Importhandelsroute" #deepl:3524884315
- trade_route_import_lens_option_magic_seed_tooltip: "Einrichtung einer $magic_seed$ Importhandelsroute" #deepl:2330328325
- trade_route_import_lens_option_mana_core_tooltip: "Einrichtung einer $mana_core$ Importhandelsroute" #deepl:200819086
- trade_route_import_lens_option_mana_tooltip: "Einrichtung einer $mana$ Importhandelsroute" #deepl:2419966818
+ goods_input_runic_paper_add: "@runic_paper! $runic_paper$ Eingabe" #deepl:1010244827
+ goods_input_runic_paper_add_desc: "Die von den Gebäuden verbrauchte Menge an @runic_paper! $runic_paper$ " #deepl:448859270
  trade_route_import_lens_option_runic_paper_tooltip: "Einrichtung einer $runic_paper$ Importhandelsroute" #deepl:4252756447
+ trade_route_export_lens_option_runic_paper_tooltip: "Einrichtung einer Exporthandelsroute $runic_paper$ " #deepl:2321591252

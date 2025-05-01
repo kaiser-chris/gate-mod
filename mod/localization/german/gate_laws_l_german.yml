@@ -1,48 +1,54 @@
 ﻿l_german:
- EFFECTS_ON_ACCEPTANCE_law_gnomish_harmony: "#tooltippable #tooltip:$BREAKDOWN_TAG$ Pops führen ein ähnliches Leben mit nur wenigen negativen Konsequenzen, auch wenn sie nicht so akzeptiert werden#!#!" #deepl:1866093259
- law_dedicated_monster_hunters: "Engagierte Monsterjäger" #deepl:2050591764
- law_dedicated_monster_hunters_desc: "Dieses Land verfügt über engagierte Monsterjäger mit einer standardisierten Ausbildung." #deepl:2199958638
- law_elven_supremacy_enforced: "Erzwungene Vorherrschaft" #deepl:1349776134
- law_elven_supremacy_enforced_desc: "$elven$ Die Vorherrschaft wird vom Staat durchgesetzt." #deepl:3453300682
- law_elven_supremacy_not_enforced: "Vorherrschaft nicht durchgesetzt" #deepl:217014304
- law_elven_supremacy_not_enforced_desc: "$elven$ Die Vorrangstellung wird nicht durchgesetzt." #deepl:3995791709
- law_elven_supremacy_religious_preaching: "Religiöse Predigt der Vorherrschaft" #deepl:383053274
- law_elven_supremacy_religious_preaching_desc: "$elven$ Die Vorherrschaft wird durch religiöse Lehren durchgesetzt." #deepl:2766855590
- law_gate_arcane_bureau: "Büro für Arkanes" #deepl:942969032
- law_gate_arcane_bureau_desc: "Eine staatliche Behörde, die sowohl [GetPopType('mages').GetName] als auch [GetPopType('druids').GetName] unter einer Organisation vereint." #deepl:2392864195
- law_gate_druidic_circles: "Druidische Kreise" #deepl:1668777127
- law_gate_druidic_circles_desc: "[GetPopType('druids').GetName] mit der Natur kommunizieren, um die Kräfte von Flora und Fauna zu nutzen. Durch heilige Haine und die Ausrichtung auf natürliche Zyklen können sie die Wildnis heilen, schützen und kontrollieren." #deepl:358338620
- law_gate_free_magic_users: "Keine Organisation" #deepl:171229888
- law_gate_free_magic_users_desc: "Dieses Land behandelt [GetInterestGroupVariant('ig_gate_magic_users',GetPlayer).GetNameNoFormatting] wie normale Bürger und regelt [concept_gate_magic] nicht." #deepl:2366411658
- law_gate_mage_guilds: "Magiergilden" #deepl:2956300017
- law_gate_mage_guilds_desc: "Dieser magische Rahmen dreht sich um das Fachwissen von Magiergilden, die von erfahrenen [GetPopType('mages').GetName] geführt werden. Durch geschickte Praxis, verzauberte Werkzeuge und arkane Zauberei können sie die Magieindustrie ankurbeln." #deepl:3978805145
- law_gate_magocracy: "Magokratie" #deepl:56400678
- law_gate_magocracy_desc: "#lore Die Regierung wird von einem Kreis von [GetPopType('mages').GetName] und [GetPopType('druids').GetName] geführt. Das Staatsoberhaupt ist nominell der mächtigste Zauberwirker der Nation und wird nach Verdienst, Status oder Geburt ausgewählt.#!" #deepl:3325477182
- law_gate_noble_magic_users: "Arkaner Adel" #deepl:1191407859
- law_gate_noble_magic_users_desc: "Dieses Land bedroht [GetInterestGroupVariant('ig_gate_magic_users',GetPlayer).GetNameNoFormatting] als natürlich geborene Adlige und bietet ihnen mehr Rechte als den Durchschnittsbürgern." #deepl:3858097587
- law_gate_restricted_magic_users: "Strenge Lizenzvergabe" #deepl:844078504
- law_gate_restricted_magic_users_desc: "[concept_gate_magic] wird vom Staat streng reguliert. [GetInterestGroupVariant('ig_gate_magic_users',GetPlayer).GetNameNoFormatting] wird streng überwacht, und nur diejenigen, die eine von der Regierung ausgestellte Lizenz haben, dürfen praktizieren. Die unbefugte Nutzung von [concept_gate_magic] wird hart bestraft, da die Regierung alle magischen Aktivitäten streng kontrolliert, um jegliche Bedrohung ihrer Autorität zu verhindern." #deepl:976816042
- law_gate_vampire_monarchy: "Ewige Monarchie" #deepl:587188793
- law_gate_vampire_monarchy_desc: "Dieses Land hat sich [concept_gate_vampirism] zu eigen gemacht und sein Monarch gilt als ewig." #deepl:1675059292
- law_gnomish_harmony: "Gnomische Harmonie" #deepl:3764768338
- law_gnomish_harmony_desc: "Inspiriert durch das Talent der Zwerge, Einheit inmitten von Vielfalt zu fördern, umfasst dieses Staatsbürgerschaftsgesetz den Multikulturalismus als Eckpfeiler der Gesellschaft. Alle Religionen und Kulturen werden willkommen geheißen und integriert, wodurch ein lebendiges Geflecht von Traditionen entsteht. Im Geiste der Zusammenarbeit und des gegenseitigen Respekts verwandelt die gnomische Harmonie Unterschiede in Stärken und sorgt dafür, dass jede Stimme ihren Platz im Chor der Nation findet." #deepl:4062861475
- law_gnomish_integration: "Gnomische Integration" #deepl:690380960
- law_gnomish_integration_desc: "Die gnomische Integration, die auf Respekt und Zusammenarbeit beruht, verzichtet auf Eroberung und setzt stattdessen auf Verbindung. Diese koloniale Politik betont die freiwillige Einbeziehung anderer Kulturen in die Nation durch Dialog, gemeinsamen Wohlstand und gegenseitigen Respekt. Indem sie der Integration Vorrang vor der Beherrschung einräumt, will sie dauerhafte Bindungen aufbauen und Kolonien in blühende Partner statt in unterjochte Länder verwandeln. Obwohl die gnomische Integration nicht unproblematisch ist, stellt sie eine Vision der Kolonisierung dar, die von Harmonie und gemeinsamem Wachstum geprägt ist." #deepl:2047348424
- law_militarized_monster_hunters: "Militarisierte Monsterjäger" #deepl:976492007
- law_militarized_monster_hunters_desc: "Wenn Sie Ihre Monsterjäger mit militärischer Ausrüstung und militärischem Training ausstatten, erhöht sich ihre Effektivität bei der Erfüllung ihrer Aufgabe." #deepl:1743703329
- law_no_organized_monster_hunting: "Keine organisierte Monsterjagd" #deepl:3363287864
- law_no_organized_monster_hunting_desc: "In diesem Land gibt es keine organisierte Truppe, die nach Monstern jagt, und [Concept('concept_monster_attack','$concept_monster_attacks$')] wird häufig vorkommen." #deepl:2235162294
+# Orcish Hegemony
+ lawgroup_orcish_hegemony: "$orcish$ Hegemonie" #deepl:326626184
+ lawgroup_orcish_hegemony_desc: "Die $lawgroup_orcish_hegemony$ ist ein brutales und unnachgiebiges System, in dem Macht und Hierarchie jeden Aspekt des Lebens bestimmen. Für die Orks ist Herrschaft nicht nur ein Recht, sondern ein Glaubensbekenntnis, und alle Nicht-Orks sind versklavt, ihrer Identität und Freiheit beraubt und verpflichtet, ihren grünhäutigen Herren zu dienen. Doch selbst unter den Orks ist das Leben keine einfache Frage der Stärke; sie sind nach Berufen geschichtet, und jede Rolle wird streng kontrolliert." #deepl:3175376002
  law_orcish_hegemony_enforced: "Erzwungene Hegemonie" #deepl:891062246
  law_orcish_hegemony_enforced_desc: "Die soziale Hegemonie von $orcish$ [concept_culture] wird durchgesetzt." #deepl:2235038345
  law_orcish_hegemony_not_enforced: "Hegemonie nicht durchgesetzt" #deepl:3415917689
  law_orcish_hegemony_not_enforced_desc: "Die soziale Hegemonie von $orcish$ [concept_culture] wird nicht durchgesetzt und andere Kulturen können in unsere Gesellschaft eindringen." #deepl:173048060
- law_private_monster_hunters: "Private Monsterjäger" #deepl:4183403945
- law_private_monster_hunters_desc: "Dieses Land vergibt Lizenzen und bezahlt Privatpersonen oder Unternehmen dafür, Monster zu töten." #deepl:1513633388
+# Elven Supremacy
  lawgroup_elven_supremacy: "$elven$ Vormachtstellung" #deepl:3321457681
  lawgroup_elven_supremacy_desc: "Die Vorherrschaft der Elfen setzt eine strenge gesellschaftliche Ordnung durch, in der die Elfen ein unanfechtbares Monopol auf Macht, Prestige und Magie besitzen. Andere Ethnien sind in das gesellschaftliche Gefüge eingebunden, aber auf untere Ränge beschränkt und von Positionen wie Geistlichen, Aristokraten oder Magieanwendern ausgeschlossen. Dieses System, das im Glauben an die angeborene Überlegenheit der Elfen verwurzelt ist, sichert die Vorherrschaft der Elfen und beutet gleichzeitig die Arbeitskraft und die Fähigkeiten der anderen aus." #deepl:4168647767
- lawgroup_gate_magic_users: "Arkane Organisation" #deepl:3382922321
- lawgroup_gate_magic_users_desc: "Wie organisieren wir die Nutzung von [concept_gate_magic] in unserer Gesellschaft?" #deepl:3382453385
+ law_elven_supremacy_religious_preaching: "Religiöse Predigt der Vorherrschaft" #deepl:383053274
+ law_elven_supremacy_religious_preaching_desc: "$elven$ Die Vorherrschaft wird durch religiöse Lehren durchgesetzt." #deepl:2766855590
+ law_elven_supremacy_enforced: "Erzwungene Vorherrschaft" #deepl:1349776134
+ law_elven_supremacy_enforced_desc: "$elven$ Die Vorherrschaft wird vom Staat durchgesetzt." #deepl:3453300682
+ law_elven_supremacy_not_enforced: "Vorherrschaft nicht durchgesetzt" #deepl:217014304
+ law_elven_supremacy_not_enforced_desc: "$elven$ Die Vorrangstellung wird nicht durchgesetzt." #deepl:3995791709
+# New Samadore
+ law_gnomish_harmony: "Gnomische Harmonie" #deepl:3764768338
+ law_gnomish_harmony_desc: "Inspiriert durch das Talent der Zwerge, Einheit inmitten von Vielfalt zu fördern, umfasst dieses Staatsbürgerschaftsgesetz den Multikulturalismus als Eckpfeiler der Gesellschaft. Alle Religionen und Kulturen werden willkommen geheißen und integriert, wodurch ein lebendiges Geflecht von Traditionen entsteht. Im Geiste der Zusammenarbeit und des gegenseitigen Respekts verwandelt die gnomische Harmonie Unterschiede in Stärken und sorgt dafür, dass jede Stimme ihren Platz im Chor der Nation findet." #deepl:4062861475
+ EFFECTS_ON_ACCEPTANCE_law_gnomish_harmony: "#tooltippable #tooltip:$BREAKDOWN_TAG$ Pops führen ein ähnliches Leben mit nur wenigen negativen Konsequenzen, auch wenn sie nicht so akzeptiert werden#!#!" #deepl:1866093259
+ law_gnomish_integration: "Gnomische Integration" #deepl:690380960
+ law_gnomish_integration_desc: "Die gnomische Integration, die auf Respekt und Zusammenarbeit beruht, verzichtet auf Eroberung und setzt stattdessen auf Verbindung. Diese koloniale Politik betont die freiwillige Einbeziehung anderer Kulturen in die Nation durch Dialog, gemeinsamen Wohlstand und gegenseitigen Respekt. Indem sie der Integration Vorrang vor der Beherrschung einräumt, will sie dauerhafte Bindungen aufbauen und Kolonien in blühende Partner statt in unterjochte Länder verwandeln. Obwohl die gnomische Integration nicht unproblematisch ist, stellt sie eine Vision der Kolonisierung dar, die von Harmonie und gemeinsamem Wachstum geprägt ist." #deepl:2047348424
+# Monster Hunting
  lawgroup_gate_monster_hunting: "Monsterjagd" #deepl:976278123
  lawgroup_gate_monster_hunting_desc: "Das System der Monsterjagd zu verhindern [Concept('concept_monster_attack','$concept_monster_attacks$')]." #deepl:1743280833
- lawgroup_orcish_hegemony: "$orcish$ Hegemonie" #deepl:326626184
- lawgroup_orcish_hegemony_desc: "Die $lawgroup_orcish_hegemony$ ist ein brutales und unnachgiebiges System, in dem Macht und Hierarchie jeden Aspekt des Lebens bestimmen. Für die Orks ist Herrschaft nicht nur ein Recht, sondern ein Glaubensbekenntnis, und alle Nicht-Orks sind versklavt, ihrer Identität und Freiheit beraubt und verpflichtet, ihren grünhäutigen Herren zu dienen. Doch selbst unter den Orks ist das Leben keine einfache Frage der Stärke; sie sind nach Berufen geschichtet, und jede Rolle wird streng kontrolliert." #deepl:3175376002
+ law_no_organized_monster_hunting: "Keine organisierte Monsterjagd" #deepl:3363287864
+ law_no_organized_monster_hunting_desc: "In diesem Land gibt es keine organisierte Truppe, die nach Monstern jagt, und [Concept('concept_monster_attack','$concept_monster_attacks$')] wird häufig vorkommen." #deepl:2235162294
+ law_private_monster_hunters: "Private Monsterjäger" #deepl:4183403945
+ law_private_monster_hunters_desc: "Dieses Land vergibt Lizenzen und bezahlt Privatpersonen oder Unternehmen dafür, Monster zu töten." #deepl:1513633388
+ law_dedicated_monster_hunters: "Engagierte Monsterjäger" #deepl:2050591764
+ law_dedicated_monster_hunters_desc: "Dieses Land verfügt über engagierte Monsterjäger mit einer standardisierten Ausbildung." #deepl:2199958638
+ law_militarized_monster_hunters: "Militarisierte Monsterjäger" #deepl:976492007
+ law_militarized_monster_hunters_desc: "Wenn Sie Ihre Monsterjäger mit militärischer Ausrüstung und militärischem Training ausstatten, erhöht sich ihre Effektivität bei der Erfüllung ihrer Aufgabe." #deepl:1743703329
+# Arcane Organization
+ lawgroup_gate_magic_users: "Arkane Organisation" #deepl:3382922321
+ lawgroup_gate_magic_users_desc: "Wie organisieren wir die Nutzung von [concept_gate_magic] in unserer Gesellschaft?" #deepl:3382453385
+ law_gate_free_magic_users: "Keine Organisation" #deepl:171229888
+ law_gate_free_magic_users_desc: "Dieses Land behandelt [GetInterestGroupVariant('ig_gate_magic_users',GetPlayer).GetNameNoFormatting] wie normale Bürger und regelt [concept_gate_magic] nicht." #deepl:2366411658
+ law_gate_restricted_magic_users: "Strenge Lizenzvergabe" #deepl:844078504
+ law_gate_restricted_magic_users_desc: "[concept_gate_magic] wird vom Staat streng reguliert. [GetInterestGroupVariant('ig_gate_magic_users',GetPlayer).GetNameNoFormatting] wird streng überwacht, und nur diejenigen, die eine von der Regierung ausgestellte Lizenz haben, dürfen praktizieren. Die unbefugte Nutzung von [concept_gate_magic] wird hart bestraft, da die Regierung alle magischen Aktivitäten streng kontrolliert, um jegliche Bedrohung ihrer Autorität zu verhindern." #deepl:976816042
+ law_gate_noble_magic_users: "Arkaner Adel" #deepl:1191407859
+ law_gate_noble_magic_users_desc: "Dieses Land bedroht [GetInterestGroupVariant('ig_gate_magic_users',GetPlayer).GetNameNoFormatting] als natürlich geborene Adlige und bietet ihnen mehr Rechte als den Durchschnittsbürgern." #deepl:3858097587
+ law_gate_druidic_circles: "Druidische Kreise" #deepl:1668777127
+ law_gate_druidic_circles_desc: "[GetPopType('druids').GetName] mit der Natur kommunizieren, um die Kräfte von Flora und Fauna zu nutzen. Durch heilige Haine und die Ausrichtung auf natürliche Zyklen können sie die Wildnis heilen, schützen und kontrollieren." #deepl:358338620
+ law_gate_mage_guilds: "Magiergilden" #deepl:2956300017
+ law_gate_mage_guilds_desc: "Dieser magische Rahmen dreht sich um das Fachwissen von Magiergilden, die von erfahrenen [GetPopType('mages').GetName] geführt werden. Durch geschickte Praxis, verzauberte Werkzeuge und arkane Zauberei können sie die Magieindustrie ankurbeln." #deepl:3978805145
+ law_gate_arcane_bureau: "Büro für Arkanes" #deepl:942969032
+ law_gate_arcane_bureau_desc: "Eine staatliche Behörde, die sowohl [GetPopType('mages').GetName] als auch [GetPopType('druids').GetName] unter einer Organisation vereint." #deepl:2392864195
+# Government Principles
+ law_gate_vampire_monarchy: "Ewige Monarchie" #deepl:587188793
+ law_gate_vampire_monarchy_desc: "Dieses Land hat sich [concept_gate_vampirism] zu eigen gemacht und sein Monarch gilt als ewig." #deepl:1675059292
+ law_gate_magocracy: "Magokratie" #deepl:56400678
+ law_gate_magocracy_desc: "#lore Die Regierung wird von einem Kreis von [GetPopType('mages').GetName] und [GetPopType('druids').GetName] geführt. Das Staatsoberhaupt ist nominell der mächtigste Zauberwirker der Nation und wird nach Verdienst, Status oder Geburt ausgewählt.#!" #deepl:3325477182
