@@ -1,62 +1,64 @@
 ﻿l_german:
- building_druids_fertility_mult: "[Concept('concept_pop_growth', '$concept_pop_growth_birthrate$')] von $druids$" #deepl:1033383635
- building_druids_fertility_mult_desc: "Eine Zunahme oder Abnahme der [Concept('concept_pop_growth', '$concept_pop_growth_birthrate$')] von $druids$" #deepl:1561776498
- building_druids_mortality_mult: "$state_druids_mortality_mult$" #deepl:1298812989
- building_druids_mortality_mult_desc: "$state_druids_mortality_mult_desc$" #deepl:2491529666
- building_druids_shares_add: "$druids$ [Concept('concept_ownership_share', '$concept_ownership_shares$')]" #deepl:934168350
- building_druids_shares_add_desc: "Eine Zunahme oder Abnahme einer $druids$ [Concept('concept_ownership_share', '$concept_ownership_shares$')]" #deepl:2903384349
- building_druids_shares_mult: "$druids$ [Concept('concept_ownership_share', '$concept_ownership_shares$')]" #deepl:934168350
- building_druids_shares_mult_desc: "Eine Zunahme oder Abnahme einer $druids$ [Concept('concept_ownership_share', '$concept_ownership_shares$')]" #deepl:2903384349
- building_employment_druids_add: "$druids$ Pro Stufe" #deepl:966414285
- building_employment_druids_add_desc: "Ändert die Anzahl der $druids$, die ein Gebäude pro Level anheuern kann" #deepl:3309503400
- building_employment_druids_mult: "$building_employment_druids_add$" #deepl:3091057830
- building_employment_druids_mult_desc: "$building_employment_druids_add_desc$" #deepl:4010886121
+# Mages
+ mages: "@mages! $mages_no_icon$" #deepl:1098333916
+ mages_only_icon: "@mages!" #deepl:2519370184
+ mages_no_icon: "Magier" #deepl:1773414191
+ mages_desc: "Gebildete [concept_gate_magic_users], die oft der wohlhabenden Elite angehören. Ihre politischen Interessen werden am häufigsten von der [GetInterestGroupVariant('ig_gate_magic_users',GetPlayer).GetNameWithCountryVariant] vertreten." #deepl:877185503
+ mages_qualifications_desc: "Nur Pops mit ausreichender [concept_literacy] können #v $mages$#! werden. Das Potenzial steigt mit größerem [concept_literacy] und [concept_wealth]. Pops, deren [concept_culture] gegenüber [concept_discrimination] steht, brauchen viel länger. #v $aristocrats$#! und #v $academics$#! haben es besonders leicht, #v $mages$#! zu werden. Ein [GetBuildingType('building_magic_academy').GetName] [concept_building] erleichtert auch die Ausbildung neuer #v $mages$#!" #deepl:3355709172
+ mages_qualifications_academy: "von unserem [GetBuildingType('building_magic_academy').GetName]" #deepl:962771589
+ pop_mages: "$mages$ [concept_profession]" #deepl:4056154339
  building_employment_mages_add: "$mages$ Pro Stufe" #deepl:74696181
  building_employment_mages_add_desc: "Ändert die Anzahl der $mages$, die ein Gebäude pro Level anheuern kann" #deepl:1754950371
  building_employment_mages_mult: "$building_employment_mages_add$" #deepl:1545020735
  building_employment_mages_mult_desc: "$building_employment_mages_add_desc$" #deepl:1993346851
- building_mages_fertility_mult: "[Concept('concept_pop_growth', '$concept_pop_growth_birthrate$')] von $mages$" #deepl:3731828144
- building_mages_fertility_mult_desc: "Eine Zunahme oder Abnahme der [Concept('concept_pop_growth', '$concept_pop_growth_birthrate$')] von $mages$" #deepl:3471373671
- building_mages_mortality_mult: "$state_mages_mortality_mult$" #deepl:1938828501
- building_mages_mortality_mult_desc: "$state_mages_mortality_mult_desc$" #deepl:120306821
  building_mages_shares_add: "$mages$ [Concept('concept_ownership_share', '$concept_ownership_shares$')]" #deepl:2943544367
  building_mages_shares_add_desc: "Eine Zunahme oder Abnahme einer $mages$ [Concept('concept_ownership_share', '$concept_ownership_shares$')]" #deepl:3273582376
  building_mages_shares_mult: "$mages$ [Concept('concept_ownership_share', '$concept_ownership_shares$')]" #deepl:2943544367
  building_mages_shares_mult_desc: "Eine Zunahme oder Abnahme einer $mages$ [Concept('concept_ownership_share', '$concept_ownership_shares$')]" #deepl:3273582376
- country_druids_pol_str_mult: "[concept_political_strength] von $druids$" #deepl:4100113047
- country_druids_pol_str_mult_desc: "Eine Zunahme oder Abnahme der [concept_political_strength] von $druids$" #deepl:3023576798
- country_druids_voting_power_add: "[concept_political_strength] von der [concept_votes] von $druids$" #deepl:2460341326
- country_druids_voting_power_add_desc: "Eine Erhöhung oder Verringerung des Betrages von [concept_political_strength], der durch die [concept_votes] von $druids$ in Wahlen gewonnen wurde" #deepl:3328528271
- country_mages_pol_str_mult: "[concept_political_strength] von $mages$" #deepl:3125128204
- country_mages_pol_str_mult_desc: "Eine Zunahme oder Abnahme der [concept_political_strength] von $mages$" #deepl:188107670
- country_mages_voting_power_add: "[concept_political_strength] von der [concept_votes] von $mages$" #deepl:1329535191
- country_mages_voting_power_add_desc: "Eine Erhöhung oder Verringerung des Betrages von [concept_political_strength], der durch die [concept_votes] von $mages$ in Wahlen gewonnen wurde" #deepl:2677017598
- druids: "@druids! $druids_no_icon$" #deepl:91222811
- druids_desc: "Natürlich [concept_gate_magic_users] die oft aus Bauernfamilien stammen. Ihre politischen Interessen werden zumeist von der [GetInterestGroupVariant('ig_gate_magic_users',GetPlayer).GetNameWithCountryVariant] vertreten." #deepl:3562442764
- druids_no_icon: "Druiden" #deepl:952413689
- druids_only_icon: "@druids!" #deepl:1048814
- druids_qualifications_desc: ""Jeder Pop kann #v $druids$#! werden. Das Potenzial steigt mit größerer [concept_literacy] und [concept_wealth]. Pops, deren [concept_culture] gegenüber [concept_discrimination] steht, brauchen viel länger. #v $farmers$#! und #v $laborers$#! haben es besonders leicht, #v $druids$#! zu werden." #deepl:3002345990
- mages: "@mages! $mages_no_icon$" #deepl:1098333916
- mages_desc: "Gebildete [concept_gate_magic_users], die oft der wohlhabenden Elite angehören. Ihre politischen Interessen werden am häufigsten von der [GetInterestGroupVariant('ig_gate_magic_users',GetPlayer).GetNameWithCountryVariant] vertreten." #deepl:877185503
- mages_no_icon: "Magier" #deepl:1773414191
- mages_only_icon: "@mages!" #deepl:2519370184
- mages_qualifications_academy: "von unserem [GetBuildingType('building_magic_academy').GetName]" #deepl:962771589
- mages_qualifications_desc: "Nur Pops mit ausreichender [concept_literacy] können #v $mages$#! werden. Das Potenzial steigt mit größerem [concept_literacy] und [concept_wealth]. Pops, deren [concept_culture] gegenüber [concept_discrimination] steht, brauchen viel länger. #v $aristocrats$#! und #v $academics$#! haben es besonders leicht, #v $mages$#! zu werden. Ein [GetBuildingType('building_magic_academy').GetName] [concept_building] erleichtert auch die Ausbildung neuer #v $mages$#!" #deepl:3355709172
- pop_druids: "$druids$ [concept_profession]" #deepl:285799728
- pop_mages: "$mages$ [concept_profession]" #deepl:4056154339
- state_druids_dependent_wage_mult: "$druids$ Abhängige Einkommen" #deepl:2275339931
- state_druids_dependent_wage_mult_desc: "Eine Erhöhung oder Verringerung des Einkommens eines $druids$ Angehörigen" #deepl:1162778457
- state_druids_investment_pool_contribution_add: "$druids$ [concept_investment_pool] Beitrag" #deepl:3814937437
- state_druids_investment_pool_contribution_add_desc: "Wie viel von ihren Gewinnen $druids$ investieren werden" #deepl:508104452
- state_druids_investment_pool_efficiency_mult: "$druids$ [concept_investment_pool] Beitragseffizienz" #deepl:3492865717
- state_druids_investment_pool_efficiency_mult_desc: "Eine Erhöhung oder Verringerung des Anteils der investierten Gewinne von $druids$ an der [concept_investment_pool]" #deepl:2647914139
- state_druids_mortality_mult: "[Concept('concept_pop_growth', '$concept_pop_growth_mortality$')] von $druids$" #deepl:2259569037
- state_druids_mortality_mult_desc: "Eine Zunahme oder Abnahme der [Concept('concept_pop_growth', '$concept_pop_growth_mortality$')] von $druids$" #deepl:3860903468
+ building_mages_mortality_mult: "$state_mages_mortality_mult$" #deepl:1938828501
+ building_mages_mortality_mult_desc: "$state_mages_mortality_mult_desc$" #deepl:120306821
+ building_mages_fertility_mult: "[Concept('concept_pop_growth', '$concept_pop_growth_birthrate$')] von $mages$" #deepl:3731828144
+ building_mages_fertility_mult_desc: "Eine Zunahme oder Abnahme der [Concept('concept_pop_growth', '$concept_pop_growth_birthrate$')] von $mages$" #deepl:3471373671
  state_mages_dependent_wage_mult: "$mages$ Abhängige Einkommen" #deepl:2049646586
  state_mages_dependent_wage_mult_desc: "Eine Erhöhung oder Verringerung des Einkommens eines $mages$ Angehörigen" #deepl:3232244818
+ state_mages_mortality_mult: "[Concept('concept_pop_growth', '$concept_pop_growth_mortality$')] von $mages$" #deepl:4207979001
+ state_mages_mortality_mult_desc: "Eine Zunahme oder Abnahme der [Concept('concept_pop_growth', '$concept_pop_growth_mortality$')] von $mages$" #deepl:3931599150
  state_mages_investment_pool_contribution_add: "$mages$ [concept_investment_pool] Beitrag" #deepl:1043646275
  state_mages_investment_pool_contribution_add_desc: "Wie viel von ihren Gewinnen $mages$ investieren werden" #deepl:1807997170
  state_mages_investment_pool_efficiency_mult: "$mages$ [concept_investment_pool] Beitragseffizienz" #deepl:1533412293
  state_mages_investment_pool_efficiency_mult_desc: "Eine Erhöhung oder Verringerung des Anteils der investierten Gewinne von $mages$ an der [concept_investment_pool]" #deepl:306908312
- state_mages_mortality_mult: "[Concept('concept_pop_growth', '$concept_pop_growth_mortality$')] von $mages$" #deepl:4207979001
- state_mages_mortality_mult_desc: "Eine Zunahme oder Abnahme der [Concept('concept_pop_growth', '$concept_pop_growth_mortality$')] von $mages$" #deepl:3931599150
+ country_mages_pol_str_mult: "[concept_political_strength] von $mages$" #deepl:3125128204
+ country_mages_pol_str_mult_desc: "Eine Zunahme oder Abnahme der [concept_political_strength] von $mages$" #deepl:188107670
+ country_mages_voting_power_add: "[concept_political_strength] von der [concept_votes] von $mages$" #deepl:1329535191
+ country_mages_voting_power_add_desc: "Eine Erhöhung oder Verringerung des Betrages von [concept_political_strength], der durch die [concept_votes] von $mages$ in Wahlen gewonnen wurde" #deepl:2677017598
+# Druids
+ druids: "@druids! $druids_no_icon$" #deepl:91222811
+ druids_only_icon: "@druids!" #deepl:1048814
+ druids_no_icon: "Druiden" #deepl:952413689
+ druids_desc: "Natürlich [concept_gate_magic_users] die oft aus Bauernfamilien stammen. Ihre politischen Interessen werden zumeist von der [GetInterestGroupVariant('ig_gate_magic_users',GetPlayer).GetNameWithCountryVariant] vertreten." #deepl:3562442764
+ druids_qualifications_desc: ""Jeder Pop kann #v $druids$#! werden. Das Potenzial steigt mit größerer [concept_literacy] und [concept_wealth]. Pops, deren [concept_culture] gegenüber [concept_discrimination] steht, brauchen viel länger. #v $farmers$#! und #v $laborers$#! haben es besonders leicht, #v $druids$#! zu werden." #deepl:3002345990
+ pop_druids: "$druids$ [concept_profession]" #deepl:285799728
+ building_employment_druids_add: "$druids$ Pro Stufe" #deepl:966414285
+ building_employment_druids_add_desc: "Ändert die Anzahl der $druids$, die ein Gebäude pro Level anheuern kann" #deepl:3309503400
+ building_employment_druids_mult: "$building_employment_druids_add$" #deepl:3091057830
+ building_employment_druids_mult_desc: "$building_employment_druids_add_desc$" #deepl:4010886121
+ building_druids_shares_add: "$druids$ [Concept('concept_ownership_share', '$concept_ownership_shares$')]" #deepl:934168350
+ building_druids_shares_add_desc: "Eine Zunahme oder Abnahme einer $druids$ [Concept('concept_ownership_share', '$concept_ownership_shares$')]" #deepl:2903384349
+ building_druids_shares_mult: "$druids$ [Concept('concept_ownership_share', '$concept_ownership_shares$')]" #deepl:934168350
+ building_druids_shares_mult_desc: "Eine Zunahme oder Abnahme einer $druids$ [Concept('concept_ownership_share', '$concept_ownership_shares$')]" #deepl:2903384349
+ building_druids_mortality_mult: "$state_druids_mortality_mult$" #deepl:1298812989
+ building_druids_mortality_mult_desc: "$state_druids_mortality_mult_desc$" #deepl:2491529666
+ building_druids_fertility_mult: "[Concept('concept_pop_growth', '$concept_pop_growth_birthrate$')] von $druids$" #deepl:1033383635
+ building_druids_fertility_mult_desc: "Eine Zunahme oder Abnahme der [Concept('concept_pop_growth', '$concept_pop_growth_birthrate$')] von $druids$" #deepl:1561776498
+ state_druids_dependent_wage_mult: "$druids$ Abhängige Einkommen" #deepl:2275339931
+ state_druids_dependent_wage_mult_desc: "Eine Erhöhung oder Verringerung des Einkommens eines $druids$ Angehörigen" #deepl:1162778457
+ state_druids_mortality_mult: "[Concept('concept_pop_growth', '$concept_pop_growth_mortality$')] von $druids$" #deepl:2259569037
+ state_druids_mortality_mult_desc: "Eine Zunahme oder Abnahme der [Concept('concept_pop_growth', '$concept_pop_growth_mortality$')] von $druids$" #deepl:3860903468
+ state_druids_investment_pool_contribution_add: "$druids$ [concept_investment_pool] Beitrag" #deepl:3814937437
+ state_druids_investment_pool_contribution_add_desc: "Wie viel von ihren Gewinnen $druids$ investieren werden" #deepl:508104452
+ state_druids_investment_pool_efficiency_mult: "$druids$ [concept_investment_pool] Beitragseffizienz" #deepl:3492865717
+ state_druids_investment_pool_efficiency_mult_desc: "Eine Erhöhung oder Verringerung des Anteils der investierten Gewinne von $druids$ an der [concept_investment_pool]" #deepl:2647914139
+ country_druids_pol_str_mult: "[concept_political_strength] von $druids$" #deepl:4100113047
+ country_druids_pol_str_mult_desc: "Eine Zunahme oder Abnahme der [concept_political_strength] von $druids$" #deepl:3023576798
+ country_druids_voting_power_add: "[concept_political_strength] von der [concept_votes] von $druids$" #deepl:2460341326
+ country_druids_voting_power_add_desc: "Eine Erhöhung oder Verringerung des Betrages von [concept_political_strength], der durch die [concept_votes] von $druids$ in Wahlen gewonnen wurde" #deepl:3328528271

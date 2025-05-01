@@ -1,40 +1,39 @@
 ﻿l_german:
+# Culture Traits
  common_speaking: "$gate_planet$ Gemeinsame Sprachkenntnisse" #deepl:2936331750
- gate_eternal_monarch: "Ewiger Monarch" #deepl:3749613076
- gate_eternal_monarch_desc: "Dieser Herrscher ist ein unsterblicher [GetCulture('vampire').GetName]." #deepl:2407699848
  gate_heritage: "$gate_planet$ Erbe" #deepl:2438758773
- gate_magic_researcher: "Magie-Forscher" #deepl:2227864323
- gate_magic_researcher_desc: "Diese Person ist von der Magie und ihren Anwendungen fasziniert." #deepl:3786451216
- gate_monster_killer: "Monster-Killer" #deepl:1097831862
- gate_monster_killer_desc: "Dieser General hat die Bevölkerung erfolgreich vor Monstern verteidigt." #deepl:3384081390
- gate_race_trait_dwarven: "[GetCulture('dwarven').GetNameNoFormatting]" #deepl:1889171311
- gate_race_trait_dwarven_desc: "Dieser Charakter ist von der Ethnie [GetCulture('dwarven').GetName]." #deepl:8896573
- gate_race_trait_elven: "[GetCulture('elven').GetNameNoFormatting]" #deepl:2201609886
- gate_race_trait_elven_desc: "Dieser Charakter ist von der Ethnie [GetCulture('elven').GetName]." #deepl:3092247716
- gate_race_trait_gnomish: "[GetCulture('gnomish').GetNameNoFormatting]" #deepl:3691443020
- gate_race_trait_gnomish_desc: "Dieser Charakter ist von der Ethnie [GetCulture('gnomish').GetName]." #deepl:2858465470
- gate_race_trait_orcish: "[GetCulture('orcish').GetNameNoFormatting]" #deepl:1059555805
- gate_race_trait_orcish_desc: "Dieser Charakter ist von der Ethnie [GetCulture('orcish').GetName]." #deepl:3938758071
- gate_race_trait_vampire: "[GetCulture('vampire').GetNameNoFormatting]" #deepl:1399761123
- gate_race_trait_vampire_desc: "Dieser Charakter ist von der Ethnie [GetCulture('vampire').GetName]." #deepl:2654113793
- gate_trait_vampire: "Vampir" #deepl:267049285
- gate_vampire_desc: "Diese Figur ist eine [GetCulture('vampire').GetName]." #deepl:1452897739
- magic_researcher: "Magie-Forscher" #deepl:2227864323
- magic_researcher_desc: "Diese Person ist von der Magie und ihren Anwendungen fasziniert." #deepl:3786451216
- state_trait_dwarven_mines: "Zwergenminen" #deepl:3367745537
- state_trait_dwarven_mines_south_tyrol: "$state_trait_dwarven_mines$" #deepl:2480821584
- state_trait_dwarven_mines_tyrol: "$state_trait_dwarven_mines$" #deepl:2480821584
+# State Traits
  state_trait_dwarven_tunnels: "Zwergen-Tunnel" #deepl:3857724525
- state_trait_gate_ateshgah: "Ateshgah von Baku" #deepl:3107837097
- state_trait_gate_baba_gurgur: "Baba Gurgur" #deepl:4118891047
- state_trait_gate_beatus_caves: "St. Beatus-Höhlen" #deepl:2403236598
- state_trait_gate_carnac_stones: "Carnac-Steine" #deepl:3564179993
- state_trait_gate_donareiche: "Donareiche" #deepl:3400271183
+ state_trait_magic_soil: "Magische Böden" #deepl:3615280980
+ state_trait_gate_stonehenge: "Stonehenge" #deepl:1531882158
  state_trait_gate_ise_shrine: "Ise-Schrein" #deepl:2928491395
  state_trait_gate_qin_mausoleum: "Mausoleum von Qin Shi Huang" #deepl:2113611716
- state_trait_gate_roek_rune_stone: "Rök Runenstein" #deepl:1758115048
- state_trait_gate_stonehenge: "Stonehenge" #deepl:1531882158
  state_trait_gate_uluru: "Uluru" #deepl:1264092331
- state_trait_magic_soil: "Magische Böden" #deepl:3615280980
+ state_trait_gate_donareiche: "Donareiche" #deepl:3400271183
+ state_trait_gate_roek_rune_stone: "Rök Runenstein" #deepl:1758115048
+ state_trait_gate_carnac_stones: "Carnac-Steine" #deepl:3564179993
+ state_trait_gate_beatus_caves: "St. Beatus-Höhlen" #deepl:2403236598
+ state_trait_gate_baba_gurgur: "Baba Gurgur" #deepl:4118891047
+ state_trait_gate_ateshgah: "Ateshgah von Baku" #deepl:3107837097
+ state_trait_dwarven_mines: "Zwergenminen" #deepl:3367745537
+ state_trait_dwarven_mines_tyrol: "$state_trait_dwarven_mines$" #deepl:2480821584
+ state_trait_dwarven_mines_south_tyrol: "$state_trait_dwarven_mines$" #deepl:2480821584
  state_trait_mana_mines: "Arkane Minen" #deepl:3079041370
  state_trait_mana_mines_zambia: "$state_trait_mana_mines$" #deepl:303617700
+# Character Traits
+ gate_monster_killer: "Monster-Killer" #deepl:1097831862
+ gate_monster_killer_desc: "Dieser General hat die Bevölkerung erfolgreich vor Monstern verteidigt." #deepl:3384081390
+ gate_magic_researcher: "Magie-Forscher" #deepl:2227864323
+ gate_magic_researcher_desc: "Diese Person ist von der Magie und ihren Anwendungen fasziniert." #deepl:3786451216
+ gate_eternal_monarch: "Ewiger Monarch" #deepl:3749613076
+ gate_eternal_monarch_desc: "Dieser Herrscher ist ein unsterblicher [GetCulture('vampire').GetName]." #deepl:2407699848
+ gate_race_trait_vampire: "[GetCulture('vampire').GetNameNoFormatting]" #deepl:1399761123
+ gate_race_trait_vampire_desc: "Dieser Charakter ist von der Ethnie [GetCulture('vampire').GetName]." #deepl:2654113793
+ gate_race_trait_elven: "[GetCulture('elven').GetNameNoFormatting]" #deepl:2201609886
+ gate_race_trait_elven_desc: "Dieser Charakter ist von der Ethnie [GetCulture('elven').GetName]." #deepl:3092247716
+ gate_race_trait_dwarven: "[GetCulture('dwarven').GetNameNoFormatting]" #deepl:1889171311
+ gate_race_trait_dwarven_desc: "Dieser Charakter ist von der Ethnie [GetCulture('dwarven').GetName]." #deepl:8896573
+ gate_race_trait_orcish: "[GetCulture('orcish').GetNameNoFormatting]" #deepl:1059555805
+ gate_race_trait_orcish_desc: "Dieser Charakter ist von der Ethnie [GetCulture('orcish').GetName]." #deepl:3938758071
+ gate_race_trait_gnomish: "[GetCulture('gnomish').GetNameNoFormatting]" #deepl:3691443020
+ gate_race_trait_gnomish_desc: "Dieser Charakter ist von der Ethnie [GetCulture('gnomish').GetName]." #deepl:2858465470

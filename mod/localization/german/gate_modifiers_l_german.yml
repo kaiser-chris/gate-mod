@@ -1,33 +1,33 @@
 ﻿l_german:
- character_gate_immortal: "Unsterblich" #deepl:1782754612
- character_gate_immortal_desc: "Diese [concept_character] ist unsterblich." #deepl:1627159641
+ dwarven_coal_mine_modifier: "Zwergenkohlenbergwerk" #deepl:2368509502
+ dwarven_iron_mine_modifier: "Eisenbergwerk der Zwerge" #deepl:1140080328
+ dwarven_lead_mine_modifier: "Zwergen-Bleimine" #deepl:3801737638
+ dwarven_sulfur_mine_modifier: "Zwergen-Schwefelmine" #deepl:543331667
+ dwarven_gold_mine_modifier: "Goldmine der Zwerge" #deepl:435594347
+ medium_mana_density_modifier: "Mittlere Mana-Dichte" #deepl:3062542059
+ high_mana_density_modifier: "Hohe Mana-Dichte" #deepl:2154748921
  country_gate_magical_innovation_add: "Magische Innovation" #deepl:1198585357
  country_gate_magical_innovation_add_desc: "\nDie Menge an @magic_innovation![concept_magic_innovation], die jede Woche gewonnen oder verloren wird." #deepl:4065252046
  country_gate_magical_innovation_mult: "Magische Technologie Forschungsgeschwindigkeit" #deepl:3803581211
  country_gate_magical_innovation_mult_desc: "\nEin Bonus oder Malus auf die Geschwindigkeit, mit der [concept_magic_technology] erforscht wird, wenn man [concept_magic_innovation] ausgibt." #deepl:1325228852
- country_institution_cost_institution_gate_magical_focus_mult: "@bur![Nbsp][concept_bureaucracy] Kosten für [GetInstitutionType('institution_gate_magical_focus').GetName]" #deepl:3879610120
- country_institution_cost_institution_gate_magical_focus_mult_desc: "Eine Erhöhung oder Senkung der @bur![Nbsp][concept_bureaucracy] Kosten für die Bereitstellung von [GetInstitutionType('institution_gate_magical_focus').GetName] für die Bürger" #deepl:2565207131
+ state_gate_monthly_dwarven_immigration_add: "Monatliche Zwergenwanderung" #deepl:2913832152
+ state_gate_monthly_dwarven_immigration_add_desc: "Die Höhe der monatlichen Zuwanderung [GetCulture('dwarven').GetName]." #deepl:3399433168
+ country_institution_gate_monster_hunting_max_investment_add: "Max $institution_gate_monster_hunting$ [concept_institution] Investition" #deepl:3754212322
+ country_institution_gate_monster_hunting_max_investment_add_desc: "Ein Bonus oder ein Malus auf die maximale Investitionshöhe des $institution_gate_monster_hunting$. [concept_institution]." #deepl:387573991
  country_institution_cost_institution_gate_monster_hunting_mult: "@bur![Nbsp][concept_bureaucracy] Kosten für [GetInstitutionType('institution_gate_monster_hunting').GetName]" #deepl:858265553
  country_institution_cost_institution_gate_monster_hunting_mult_desc: "Eine Erhöhung oder Senkung der @bur![Nbsp][concept_bureaucracy] Kosten für die Bereitstellung von [GetInstitutionType('institution_gate_monster_hunting').GetName] für die Bürger" #deepl:347235714
  country_institution_gate_magical_focus_max_investment_add: "Max $institution_gate_magical_focus$ [concept_institution] Investition" #deepl:1782548353
  country_institution_gate_magical_focus_max_investment_add_desc: "Ein Bonus oder ein Malus auf die maximale Investitionshöhe des $institution_gate_magical_focus$. [concept_institution]." #deepl:1829967456
- country_institution_gate_monster_hunting_max_investment_add: "Max $institution_gate_monster_hunting$ [concept_institution] Investition" #deepl:3754212322
- country_institution_gate_monster_hunting_max_investment_add_desc: "Ein Bonus oder ein Malus auf die maximale Investitionshöhe des $institution_gate_monster_hunting$. [concept_institution]." #deepl:387573991
- dwarven_coal_mine_modifier: "Zwergenkohlenbergwerk" #deepl:2368509502
- dwarven_gold_mine_modifier: "Goldmine der Zwerge" #deepl:435594347
- dwarven_iron_mine_modifier: "Eisenbergwerk der Zwerge" #deepl:1140080328
- dwarven_lead_mine_modifier: "Zwergen-Bleimine" #deepl:3801737638
- dwarven_sulfur_mine_modifier: "Zwergen-Schwefelmine" #deepl:543331667
- high_mana_density_modifier: "Hohe Mana-Dichte" #deepl:2154748921
+ country_institution_cost_institution_gate_magical_focus_mult: "@bur![Nbsp][concept_bureaucracy] Kosten für [GetInstitutionType('institution_gate_magical_focus').GetName]" #deepl:3879610120
+ country_institution_cost_institution_gate_magical_focus_mult_desc: "Eine Erhöhung oder Senkung der @bur![Nbsp][concept_bureaucracy] Kosten für die Bereitstellung von [GetInstitutionType('institution_gate_magical_focus').GetName] für die Bürger" #deepl:2565207131
  ig_variant_magic_users: "[GetInterestGroupVariant('ig_gate_magic_users',GetPlayer).GetNameWithCountryVariant]" #deepl:2226626709
  interest_group_ig_gate_magic_users_pol_str_mult: "$ig_variant_magic_users$ [concept_political_strength]" #deepl:2069624553
  interest_group_ig_gate_magic_users_pol_str_mult_desc: "Ein Bonus oder eine Strafe auf die gesamte [concept_political_strength] der $ig_variant_magic_users$ [concept_interest_group]" #deepl:772853015
- medium_mana_density_modifier: "Mittlere Mana-Dichte" #deepl:3062542059
  state_gate_arable_land_add: "Ackerland" #deepl:3395429023
  state_gate_arable_land_add_desc: "Eine Erhöhung oder Verringerung der Menge von [concept_arable_land] in einer [concept_state_region]." #deepl:842137069
- state_gate_monthly_dwarven_immigration_add: "Monatliche Zwergenwanderung" #deepl:2913832152
- state_gate_monthly_dwarven_immigration_add_desc: "Die Höhe der monatlichen Zuwanderung [GetCulture('dwarven').GetName]." #deepl:3399433168
  state_harvest_condition_monster_attack_impact_mult: "Auswirkungen der [Concept('concept_monster_attack','$concept_monster_attacks$')]" #deepl:323783756
  state_harvest_condition_monster_attack_impact_mult_desc: "Eine Zunahme oder Abnahme der Auswirkungen von [Concept('concept_monster_attack','$concept_monster_attacks$')]." #deepl:1364344337
  state_harvest_condition_monster_horde_impact_mult: "Auswirkungen der [Concept('concept_monster_horde','$concept_monster_hordes$')]" #deepl:3330101656
  state_harvest_condition_monster_horde_impact_mult_desc: "Eine Zunahme oder Abnahme der Auswirkungen von [Concept('concept_monster_horde','$concept_monster_hordes$')]." #deepl:3730826781
+ character_gate_immortal: "Unsterblich" #deepl:1782754612
+ character_gate_immortal_desc: "Diese [concept_character] ist unsterblich." #deepl:1627159641

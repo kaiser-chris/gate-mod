@@ -1,193 +1,199 @@
 ﻿l_german:
- bg_druid_grooves: "Druiden-Rillen" #deepl:1217698149
- bg_dwarven_coal_mining: "$building_dwarven_coal_mine$" #deepl:3612569245
+# General
+ building_requirement_low_mana_density: "Um diese [concept_building] zu erstellen, muss ein Staat eine [concept_mana_density] von mindestens [TopScope.ScriptValue('low_mana_density_threshhold')] haben." #deepl:2217222028
+ building_requirement_medium_mana_density: "Um diese [concept_building] zu erstellen, muss ein Staat eine [concept_mana_density] von mindestens [TopScope.ScriptValue('medium_mana_density_threshhold')] haben." #deepl:3057879360
+ building_gate_requirement_max_mana_density: "Um diese [concept_building] zu erstellen, muss ein Staat eine [concept_mana_density] von mindestens [TopScope.ScriptValue('maximum_mana_density')] haben." #deepl:1165809799
+# Building Groups
+ bg_dwarven_mining: "Zwergenminen" #deepl:3367745537
  bg_dwarven_gold_mining: "$building_dwarven_gold_mine$" #deepl:4209658704
+ bg_dwarven_coal_mining: "$building_dwarven_coal_mine$" #deepl:3612569245
  bg_dwarven_iron_mining: "$building_dwarven_iron_mine$" #deepl:2763697455
  bg_dwarven_lead_mining: "$building_dwarven_lead_mine$" #deepl:266760523
- bg_dwarven_mining: "Zwergenminen" #deepl:3367745537
  bg_dwarven_sulfur_mining: "$building_dwarven_sulfur_mine$" #deepl:3142933424
- bg_elven_forests: "Elfenwälder" #deepl:2914399887
- bg_gate_magic_industry: "Magische Industrie" #deepl:2802295700
- bg_mage_tower: "Magiertürme" #deepl:1917586902
- bg_magic_coal_mining: "$building_magic_coal_mine$" #deepl:602137458
+ bg_magic_mining: "Arkane Minen" #deepl:3079041370
  bg_magic_gold_mining: "$building_magic_gold_mine$" #deepl:240830143
+ bg_magic_coal_mining: "$building_magic_coal_mine$" #deepl:602137458
  bg_magic_iron_mining: "$building_magic_iron_mine$" #deepl:1342841024
  bg_magic_lead_mining: "$building_magic_lead_mine$" #deepl:4216781988
- bg_magic_mining: "Arkane Minen" #deepl:3079041370
  bg_magic_sulfur_mining: "$building_magic_sulfur_mine$" #deepl:3954609396
+ bg_mage_tower: "Magiertürme" #deepl:1917586902
+ bg_druid_grooves: "Druiden-Rillen" #deepl:1217698149
  bg_magic_technology: "Magische Forschungsgebäude" #deepl:3635951142
+ bg_elven_forests: "Elfenwälder" #deepl:2914399887
  bg_mana_extraction: "Mana-Extraktoren" #deepl:3328393658
- building_druid_groove: "Druiden-Groove" #deepl:1970049758
+ bg_gate_magic_industry: "Magische Industrie" #deepl:2802295700
+# Buildings
+ building_gate: "Magische Pforte" #deepl:2962474901
+ building_gate_alxa: "$building_gate$" #deepl:4140431697
+ building_gate_tyrol: "$building_gate$" #deepl:4140431697
+ building_gate_zambia: "$building_gate$" #deepl:4140431697
+ building_gate_san_salvador: "$building_gate$" #deepl:4140431697
+ building_gate_eastern_new_guinea: "$building_gate$" #deepl:4140431697
+ building_mana_extractor: "Mana-Extraktor" #deepl:4039915511
+ building_gate_mana_well: "Mana-Brunnen" #deepl:2373238792
+ building_murk_ways: "Murksige Wege" #deepl:958880300
+ building_magic_academy: "Magische Akademie" #deepl:413804942
+ building_mage_tower: "Magierturm" #deepl:1753196195
+ building_elven_forest: "Elfenwald" #deepl:1342129972
+ building_golem_workshop: "Golem-Werkstatt" #deepl:2573384286
+ building_golem_depot: "Golem-Depot" #deepl:2170427951
  building_dwarven_coal_mine: "Kohle Zwergenminen" #deepl:3478149407
- building_dwarven_gold_mine: "Gold Zwergenminen" #deepl:2002084557
  building_dwarven_iron_mine: "Eisen Zwergen Minen" #deepl:116175383
  building_dwarven_lead_mine: "Zwergenminen aus Blei" #deepl:4162948775
  building_dwarven_sulfur_mine: "Schwefel Zwergenminen" #deepl:1642462414
- building_elven_forest: "Elfenwald" #deepl:1342129972
- building_gate: "Magische Pforte" #deepl:2962474901
- building_gate_alxa: "$building_gate$" #deepl:4140431697
- building_gate_eastern_new_guinea: "$building_gate$" #deepl:4140431697
- building_gate_mana_well: "Mana-Brunnen" #deepl:2373238792
- building_gate_requirement_max_mana_density: "Um diese [concept_building] zu erstellen, muss ein Staat eine [concept_mana_density] von mindestens [TopScope.ScriptValue('maximum_mana_density')] haben." #deepl:1165809799
- building_gate_san_salvador: "$building_gate$" #deepl:4140431697
- building_gate_tyrol: "$building_gate$" #deepl:4140431697
- building_gate_zambia: "$building_gate$" #deepl:4140431697
- building_golem_depot: "Golem-Depot" #deepl:2170427951
- building_golem_workshop: "Golem-Werkstatt" #deepl:2573384286
- building_group_bg_druid_grooves_throughput_add: "$bg_druid_grooves$ [concept_throughput]" #deepl:1209533225
- building_group_bg_druid_grooves_throughput_add_desc: "Ein Bonus oder ein Malus auf Input und Output von $bg_druid_grooves$" #deepl:1519217776
- building_group_bg_gate_magic_industry_throughput_add: "$bg_gate_magic_industry$ [concept_throughput]" #deepl:2957723725
- building_group_bg_gate_magic_industry_throughput_add_desc: "Ein Bonus oder ein Malus auf Input und Output von $bg_gate_magic_industry$" #deepl:2378222132
- building_mage_tower: "Magierturm" #deepl:1753196195
- building_magic_academy: "Magische Akademie" #deepl:413804942
+ building_dwarven_gold_mine: "Gold Zwergenminen" #deepl:2002084557
  building_magic_coal_mine: "Kohle Arkane Minen" #deepl:1534492245
- building_magic_gold_mine: "Gold Arkane Minen" #deepl:446659610
  building_magic_iron_mine: "Arkane Eisenminen" #deepl:2036052969
  building_magic_lead_mine: "Arkane Minen führen" #deepl:3071174960
- building_magic_research_institute: "Institut für Magieforschung" #deepl:4006775411
  building_magic_sulfur_mine: "Arkane Schwefelminen" #deepl:3917218353
+ building_magic_gold_mine: "Gold Arkane Minen" #deepl:446659610
+ building_magic_research_institute: "Institut für Magieforschung" #deepl:4006775411
+ building_druid_groove: "Druiden-Groove" #deepl:1970049758
  building_mana_core_workshop: "Mana Core Workshop" #deepl:45272183
- building_mana_extractor: "Mana-Extraktor" #deepl:4039915511
- building_murk_ways: "Murksige Wege" #deepl:958880300
- building_requirement_low_mana_density: "Um diese [concept_building] zu erstellen, muss ein Staat eine [concept_mana_density] von mindestens [TopScope.ScriptValue('low_mana_density_threshhold')] haben." #deepl:2217222028
- building_requirement_medium_mana_density: "Um diese [concept_building] zu erstellen, muss ein Staat eine [concept_mana_density] von mindestens [TopScope.ScriptValue('medium_mana_density_threshhold')] haben." #deepl:3057879360
- pm_arcane_foundries: "Thaumaforge-Methode" #deepl:3642964443
- pm_archmage_researcher: "Erzmagier-Forscher" #deepl:4106414520
- pm_basic_mage_tower: "Privater Magierturm" #deepl:4193805541
- pm_classic_magic_seed: "Grundlegende Produktion" #deepl:124186294
- pm_cooperative_mage_tower: "Kooperativer Magierturm" #deepl:2325140226
+# Production Method Groups
+ pmg_magic_gate_exploitation: "Tor-Ausbeutung" #deepl:778292210
+ pmg_magic_gate_exploitation_alxa: "$pmg_magic_gate_exploitation$" #deepl:3956666428
+ pmg_magic_gate_exploitation_tyrol: "$pmg_magic_gate_exploitation$" #deepl:3956666428
+ pmg_magic_gate_exploitation_zambia: "$pmg_magic_gate_exploitation$" #deepl:3956666428
+ pmg_magic_gate_exploitation_san_salvador: "$pmg_magic_gate_exploitation$" #deepl:3956666428
+ pmg_magic_gate_exploitation_eastern_new_guinea: "$pmg_magic_gate_exploitation$" #deepl:3956666428
+ pmg_mana_extraction: "Mana-Extraktion" #deepl:3537334183
+ pmg_gate_mana_well: "Anzapfen der Ley-Linie" #deepl:2901625908
+ pmg_murk_transportation: "Murk Way Transport" #deepl:3763197449
+ pmg_magic_academy_support: "Öffentliche Unterstützung" #deepl:19658190
+ pmg_university_magic_research: "Magische Forschung" #deepl:1221300167
+ pmg_mage_tower: "Magierturm Typ" #deepl:882454487
+ pmg_mana_core_workshop_production: "Mana-Kernproduktion" #deepl:2542239935
+ pmg_golem_workshop_production: "Golem Produktion" #deepl:2443541763
+ pmg_golem_depot_mining: "Bergbau-Golems" #deepl:2993051319
+ pmg_golem_depot_agriculture: "Landwirtschaft Golems" #deepl:2677791422
+ pmg_golem_depot_plantation: "Plantagen-Golems" #deepl:2194660379
+ pmg_druid_groove: "Saatgutproduktion" #deepl:3392572433
+ pmg_magic_researcher: "[concept_magic_researcher] Erleben Sie" #deepl:889837740
+ pmg_elven_forest: "Elfenwald" #deepl:1342129972
+ pmg_rune_carving: "Runenschnitzen" #deepl:1129105308
+ pmg_rune_carving_tools: "$pmg_rune_carving$" #deepl:3931273647
+ pmg_rune_carving_firearms: "$pmg_rune_carving$" #deepl:3931273647
+ pmg_rune_carving_artillery: "$pmg_rune_carving$" #deepl:3931273647
+ pmg_runic_paper: "$runic_paper$ Produktion" #deepl:264505405
+ pmg_gate_seeds: "Saatgut" #deepl:3236423925
+ pmg_gate_seeds_building_rice_farm: "$pmg_gate_seeds$" #deepl:2868746552
+ pmg_mana_fertilizer: "Mana-Infusion" #deepl:1042361227
+ pmg_gate_tree_regeneration: "Forstwirtschaft" #deepl:901467476
+ pmg_university_focus: "Morgenröte" #deepl:1759810906
+# Production Methods
+ pm_gate_mr_locked: "Abgeschlossen" #deepl:862343296
+ pm_gate_defend: "Verteidigtes Tor" #deepl:1978884887
+ pm_gate_closed: "Eingeschränktes Tor" #deepl:3414888401
+ pm_gate_immigration_dwarves: "Einwanderung von Zwergen" #deepl:2082146653
+ pm_gate_mass_immigration_dwarves: "Zwergen-Masseneinwanderung" #deepl:3180837978
+ pm_gate_support_orcs: "Unterstützung der Clans" #deepl:2391407104
+ pm_gate_support_elves: "Unterstützung durch Gläubige" #deepl:785896302
+ pm_gate_support_elves_plus: "Fanatische Unterstützung durch Gläubige" #deepl:877008664
+ pm_mage_mana_extraction: "Einfache Mana-Extraktion" #deepl:1265043425
+ pm_mage_ritual_extraction: "Rituelle Manaextraktion" #deepl:250534840
+ pm_gate_simple_ley_line_tap: "Einfacher Ley Line Tap" #deepl:3795377622
+ pm_murk_unused: "Unbenutzt" #deepl:2088548769
+ pm_murk_transportation: "Nur persönlicher Transport" #deepl:619256240
+ pm_murk_rail_transportation: "Schienenverkehr" #deepl:142739102
+ pm_magic_streetlights: "Magische Straßenlaternen" #deepl:3741854504
  pm_crystal_explosives_building_coal_mine: "Magische Sprengstoffe" #deepl:2568459229
- pm_crystal_explosives_building_gold_mine: "Magische Sprengstoffe" #deepl:2568459229
  pm_crystal_explosives_building_iron_mine: "Magische Sprengstoffe" #deepl:2568459229
  pm_crystal_explosives_building_lead_mine: "Magische Sprengstoffe" #deepl:2568459229
  pm_crystal_explosives_building_sulfur_mine: "Magische Sprengstoffe" #deepl:2568459229
- pm_early_mana_trains: "Experimentelle Mana-Züge" #deepl:1695897341
- pm_elven_forest: "Elfenwald" #deepl:1342129972
- pm_experienced_researcher: "Erfahrene Forscherin" #deepl:422097620
- pm_focus_runic_paper: "Gezielte $runic_paper$ Produktion" #deepl:4281065841
- pm_gate_closed: "Eingeschränktes Tor" #deepl:3414888401
- pm_gate_defend: "Verteidigtes Tor" #deepl:1978884887
- pm_gate_immigration_dwarves: "Einwanderung von Zwergen" #deepl:2082146653
- pm_gate_mass_immigration_dwarves: "Zwergen-Masseneinwanderung" #deepl:3180837978
- pm_gate_mr_locked: "Abgeschlossen" #deepl:862343296
- pm_gate_normal_production: "Normale Produktion" #deepl:668766066
+ pm_crystal_explosives_building_gold_mine: "Magische Sprengstoffe" #deepl:2568459229
  pm_gate_normal_seeds: "Normales Saatgut" #deepl:3030593412
- pm_gate_normal_tree_regeneration: "Normale Forstwirtschaft" #deepl:3134634953
- pm_gate_simple_ley_line_tap: "Einfacher Ley Line Tap" #deepl:3795377622
- pm_gate_support_elves: "Unterstützung durch Gläubige" #deepl:785896302
- pm_gate_support_elves_plus: "Fanatische Unterstützung durch Gläubige" #deepl:877008664
- pm_gate_support_orcs: "Unterstützung der Clans" #deepl:2391407104
- pm_golem_depot_agriculture_electric_golems: "Elektrische Landwirtschaft Golems" #deepl:2379321358
- pm_golem_depot_agriculture_none: "Keine Landwirtschaft Golems" #deepl:1745352350
- pm_golem_depot_agriculture_normal_golems: "Landwirtschaft Golems" #deepl:2677791422
- pm_golem_depot_agriculture_steam_golems: "Mechanische Landwirtschaftsgolems" #deepl:2519713926
- pm_golem_depot_mining_electric_golems: "Elektrische Bergbau-Golems" #deepl:3603876666
+ pm_magic_seeds: "Magisches Saatgut" #deepl:392237414
+ pm_magic_seeds_building_rice_farm: "$pm_magic_seeds$" #deepl:2618878455
+ pm_magic_academy_no_support: "Keine öffentliche Unterstützung" #deepl:1701033352
+ pm_magic_academy_partial_support: "Teilstipendien" #deepl:3418413515
+ pm_magic_academy_full_support: "Vollstipendien" #deepl:1566595458
+ pm_university_no_magic_research: "Keine magische Forschung" #deepl:746835841
+ pm_university_simple_magic_research: "Einfache Magieforschung" #deepl:1654901702
+ pm_university_advanced_magic_research: "Wissenschaftliche Magieforschung" #deepl:1505756323
+ pm_basic_mage_tower: "Privater Magierturm" #deepl:4193805541
+ pm_cooperative_mage_tower: "Kooperativer Magierturm" #deepl:2325140226
+ pm_mana_core_workshop_no_production: "Keine Produktion" #deepl:4057578998
+ pm_mana_core_workshop_artisan_production: "Kunsthandwerkliche Produktion" #deepl:1304227096
+ pm_mana_core_workshop_formalized_production: "Moderne Produktion" #deepl:3050761891
+ pm_golem_workshop_no_production: "Keine Produktion" #deepl:4057578998
+ pm_golem_workshop_artisan_production: "Magische Golems" #deepl:1827092150
+ pm_golem_workshop_steam_production: "Mechanische Golems" #deepl:612235157
+ pm_golem_workshop_electric_production: "Elektrische Golems" #deepl:3477138346
  pm_golem_depot_mining_none: "Keine Bergbau-Golems" #deepl:893743721
  pm_golem_depot_mining_normal_golems: "Bergbau-Golems" #deepl:2993051319
  pm_golem_depot_mining_steam_golems: "Mechanische Bergbau-Golems" #deepl:1769390968
- pm_golem_depot_plantation_electric_golems: "Elektrische Plantagengolems" #deepl:3672312377
+ pm_golem_depot_mining_electric_golems: "Elektrische Bergbau-Golems" #deepl:3603876666
+ pm_golem_depot_agriculture_none: "Keine Landwirtschaft Golems" #deepl:1745352350
+ pm_golem_depot_agriculture_normal_golems: "Landwirtschaft Golems" #deepl:2677791422
+ pm_golem_depot_agriculture_steam_golems: "Mechanische Landwirtschaftsgolems" #deepl:2519713926
+ pm_golem_depot_agriculture_electric_golems: "Elektrische Landwirtschaft Golems" #deepl:2379321358
  pm_golem_depot_plantation_none: "Keine Plantagen-Golems" #deepl:347710931
  pm_golem_depot_plantation_normal_golems: "Plantagen-Golems" #deepl:2194660379
  pm_golem_depot_plantation_steam_golems: "Mechanische Plantagengolems" #deepl:1072617226
- pm_golem_workshop_artisan_production: "Magische Golems" #deepl:1827092150
- pm_golem_workshop_electric_production: "Elektrische Golems" #deepl:3477138346
- pm_golem_workshop_no_production: "Keine Produktion" #deepl:4057578998
- pm_golem_workshop_steam_production: "Mechanische Golems" #deepl:612235157
+ pm_golem_depot_plantation_electric_golems: "Elektrische Plantagengolems" #deepl:3672312377
+ pm_classic_magic_seed: "Grundlegende Produktion" #deepl:124186294
  pm_industrial_magic_seed: "Automatische Bewässerung" #deepl:3526923294
+ pm_no_researcher: "Kein Forscher" #deepl:1684501446
+ pm_novice_researcher: "Neuling in der Forschung" #deepl:253921290
+ pm_experienced_researcher: "Erfahrene Forscherin" #deepl:422097620
+ pm_archmage_researcher: "Erzmagier-Forscher" #deepl:4106414520
+ pm_unused_elven_forest: "Unbenutzter Elfenwald" #deepl:3807147107
+ pm_elven_forest: "Elfenwald" #deepl:1342129972
+ pm_no_rune_carving: "Keine Runenschnitzerei" #deepl:455299236
+ pm_simple_rune_carving: "Einfache Runenschnitzerei" #deepl:4278402051
+ pm_simple_rune_carving_tools: "$pm_simple_rune_carving$" #deepl:1944670311
+ pm_simple_rune_carving_firearms: "$pm_simple_rune_carving$" #deepl:1944670311
+ pm_simple_rune_carving_artillery: "$pm_simple_rune_carving$" #deepl:1944670311
+ pm_no_runic_paper: "Nein $runic_paper$ Produktion" #deepl:3161531723
+ pm_runic_paper: "$runic_paper$ Produktion" #deepl:264505405
+ pm_focus_runic_paper: "Gezielte $runic_paper$ Produktion" #deepl:4281065841
+ pm_early_mana_trains: "Experimentelle Mana-Züge" #deepl:1695897341
+ pm_mana_trains: "Mana-Züge" #deepl:2067886008
+ pm_arcane_foundries: "Thaumaforge-Methode" #deepl:3642964443
+ pm_gate_normal_production: "Normale Produktion" #deepl:668766066
+ pm_magic_seed_fertilizer: "Mana-Infusion" #deepl:1042361227
  pm_living_irrigation: "Lebendige Bewässerung" #deepl:1663595349
- pm_living_irrigation_building_banana_plantation: "$pm_living_irrigation$" #deepl:3899608498
  pm_living_irrigation_building_coffee_plantation: "$pm_living_irrigation$" #deepl:3899608498
  pm_living_irrigation_building_cotton_plantation: "$pm_living_irrigation$" #deepl:3899608498
  pm_living_irrigation_building_dye_plantation: "$pm_living_irrigation$" #deepl:3899608498
  pm_living_irrigation_building_opium_plantation: "$pm_living_irrigation$" #deepl:3899608498
- pm_living_irrigation_building_silk_plantation: "$pm_living_irrigation$" #deepl:3899608498
- pm_living_irrigation_building_sugar_plantation: "$pm_living_irrigation$" #deepl:3899608498
  pm_living_irrigation_building_tea_plantation: "$pm_living_irrigation$" #deepl:3899608498
  pm_living_irrigation_building_tobacco_plantation: "$pm_living_irrigation$" #deepl:3899608498
+ pm_living_irrigation_building_sugar_plantation: "$pm_living_irrigation$" #deepl:3899608498
+ pm_living_irrigation_building_banana_plantation: "$pm_living_irrigation$" #deepl:3899608498
+ pm_living_irrigation_building_silk_plantation: "$pm_living_irrigation$" #deepl:3899608498
  pm_living_irrigation_building_vineyard_plantation: "$pm_living_irrigation$" #deepl:3899608498
- pm_mage_mana_extraction: "Einfache Mana-Extraktion" #deepl:1265043425
- pm_mage_ritual_extraction: "Rituelle Manaextraktion" #deepl:250534840
- pm_magic_academy_full_support: "Vollstipendien" #deepl:1566595458
- pm_magic_academy_no_support: "Keine öffentliche Unterstützung" #deepl:1701033352
- pm_magic_academy_partial_support: "Teilstipendien" #deepl:3418413515
- pm_magic_seed_fertilizer: "Mana-Infusion" #deepl:1042361227
- pm_magic_seeds: "Magisches Saatgut" #deepl:392237414
- pm_magic_seeds_building_rice_farm: "$pm_magic_seeds$" #deepl:2618878455
- pm_magic_streetlights: "Magische Straßenlaternen" #deepl:3741854504
+ pm_gate_normal_tree_regeneration: "Normale Forstwirtschaft" #deepl:3134634953
  pm_magic_tree_regeneration: "Regeneratives Holz" #deepl:2941077341
- pm_mana_core_workshop_artisan_production: "Kunsthandwerkliche Produktion" #deepl:1304227096
- pm_mana_core_workshop_formalized_production: "Moderne Produktion" #deepl:3050761891
- pm_mana_core_workshop_no_production: "Keine Produktion" #deepl:4057578998
- pm_mana_trains: "Mana-Züge" #deepl:2067886008
- pm_murk_rail_transportation: "Schienenverkehr" #deepl:142739102
- pm_murk_transportation: "Nur persönlicher Transport" #deepl:619256240
- pm_murk_unused: "Unbenutzt" #deepl:2088548769
- pm_no_researcher: "Kein Forscher" #deepl:1684501446
- pm_no_rune_carving: "Keine Runenschnitzerei" #deepl:455299236
- pm_no_runic_paper: "Nein $runic_paper$ Produktion" #deepl:3161531723
- pm_novice_researcher: "Neuling in der Forschung" #deepl:253921290
- pm_runic_paper: "$runic_paper$ Produktion" #deepl:264505405
- pm_simple_rune_carving: "Einfache Runenschnitzerei" #deepl:4278402051
- pm_simple_rune_carving_artillery: "$pm_simple_rune_carving$" #deepl:1944670311
- pm_simple_rune_carving_firearms: "$pm_simple_rune_carving$" #deepl:1944670311
- pm_simple_rune_carving_tools: "$pm_simple_rune_carving$" #deepl:1944670311
- pm_university_advanced_magic_research: "Wissenschaftliche Magieforschung" #deepl:1505756323
- pm_university_no_magic_research: "Keine magische Forschung" #deepl:746835841
- pm_university_simple_magic_research: "Einfache Magieforschung" #deepl:1654901702
- pm_unused_elven_forest: "Unbenutzter Elfenwald" #deepl:3807147107
- pmg_druid_groove: "Saatgutproduktion" #deepl:3392572433
- pmg_elven_forest: "Elfenwald" #deepl:1342129972
- pmg_gate_mana_well: "Anzapfen der Ley-Linie" #deepl:2901625908
- pmg_gate_seeds: "Saatgut" #deepl:3236423925
- pmg_gate_seeds_building_rice_farm: "$pmg_gate_seeds$" #deepl:2868746552
- pmg_gate_tree_regeneration: "Forstwirtschaft" #deepl:901467476
- pmg_golem_depot_agriculture: "Landwirtschaft Golems" #deepl:2677791422
- pmg_golem_depot_mining: "Bergbau-Golems" #deepl:2993051319
- pmg_golem_depot_plantation: "Plantagen-Golems" #deepl:2194660379
- pmg_golem_workshop_production: "Golem Produktion" #deepl:2443541763
- pmg_mage_tower: "Magierturm Typ" #deepl:882454487
- pmg_magic_academy_support: "Öffentliche Unterstützung" #deepl:19658190
- pmg_magic_gate_exploitation: "Tor-Ausbeutung" #deepl:778292210
- pmg_magic_gate_exploitation_alxa: "$pmg_magic_gate_exploitation$" #deepl:3956666428
- pmg_magic_gate_exploitation_eastern_new_guinea: "$pmg_magic_gate_exploitation$" #deepl:3956666428
- pmg_magic_gate_exploitation_san_salvador: "$pmg_magic_gate_exploitation$" #deepl:3956666428
- pmg_magic_gate_exploitation_tyrol: "$pmg_magic_gate_exploitation$" #deepl:3956666428
- pmg_magic_gate_exploitation_zambia: "$pmg_magic_gate_exploitation$" #deepl:3956666428
- pmg_magic_researcher: "[concept_magic_researcher] Erleben Sie" #deepl:889837740
- pmg_mana_core_workshop_production: "Mana-Kernproduktion" #deepl:2542239935
- pmg_mana_extraction: "Mana-Extraktion" #deepl:3537334183
- pmg_mana_fertilizer: "Mana-Infusion" #deepl:1042361227
- pmg_murk_transportation: "Murk Way Transport" #deepl:3763197449
- pmg_rune_carving: "Runenschnitzen" #deepl:1129105308
- pmg_rune_carving_artillery: "$pmg_rune_carving$" #deepl:3931273647
- pmg_rune_carving_firearms: "$pmg_rune_carving$" #deepl:3931273647
- pmg_rune_carving_tools: "$pmg_rune_carving$" #deepl:3931273647
- pmg_runic_paper: "$runic_paper$ Produktion" #deepl:264505405
- pmg_university_focus: "Morgenröte" #deepl:1759810906
- pmg_university_magic_research: "Magische Forschung" #deepl:1221300167
+# Modifiers
+ state_building_murk_ways_max_level_add: "$building_murk_ways$ Maximalpegel" #deepl:3357735769
+ state_building_murk_ways_max_level_add_desc: "Ein Bonus oder Malus auf die maximale Höhe von $building_murk_ways$ Gebäuden." #deepl:1113071428
  state_building_dwarven_coal_mine_max_level_add: "$building_dwarven_coal_mine$ Maximalpegel" #deepl:3654321904
  state_building_dwarven_coal_mine_max_level_add_desc: "Ein Bonus oder Malus auf die maximale Höhe von $building_dwarven_coal_mine$ Gebäuden." #deepl:308894599
- state_building_dwarven_gold_mine_max_level_add: "$building_dwarven_gold_mine$ Maximalpegel" #deepl:4190603861
- state_building_dwarven_gold_mine_max_level_add_desc: "Ein Bonus oder Malus auf die maximale Höhe von $building_dwarven_gold_mine$ Gebäuden." #deepl:1326817892
  state_building_dwarven_iron_mine_max_level_add: "$building_dwarven_iron_mine$ Maximalpegel" #deepl:822972480
  state_building_dwarven_iron_mine_max_level_add_desc: "Ein Bonus oder Malus auf die maximale Höhe von $building_dwarven_iron_mine$ Gebäuden." #deepl:3719517248
  state_building_dwarven_lead_mine_max_level_add: "$building_dwarven_lead_mine$ Maximalpegel" #deepl:1310091880
  state_building_dwarven_lead_mine_max_level_add_desc: "Ein Bonus oder Malus auf die maximale Höhe von $building_dwarven_lead_mine$ Gebäuden." #deepl:3391371202
  state_building_dwarven_sulfur_mine_max_level_add: "$building_dwarven_sulfur_mine$ Maximalpegel" #deepl:2562042245
  state_building_dwarven_sulfur_mine_max_level_add_desc: "Ein Bonus oder Malus auf die maximale Höhe von $building_dwarven_sulfur_mine$ Gebäuden." #deepl:433776642
- state_building_elven_forest_max_level_add: "$building_elven_forest$ Maximalpegel" #deepl:3390263855
- state_building_elven_forest_max_level_add_desc: "Ein Bonus oder Malus auf die maximale Höhe von $building_elven_forest$ Gebäuden." #deepl:1426769469
+ state_building_dwarven_gold_mine_max_level_add: "$building_dwarven_gold_mine$ Maximalpegel" #deepl:4190603861
+ state_building_dwarven_gold_mine_max_level_add_desc: "Ein Bonus oder Malus auf die maximale Höhe von $building_dwarven_gold_mine$ Gebäuden." #deepl:1326817892
  state_building_magic_coal_mine_max_level_add: "$building_magic_coal_mine$ Maximalpegel" #deepl:1525727751
  state_building_magic_coal_mine_max_level_add_desc: "Ein Bonus oder Malus auf die maximale Höhe von $building_magic_coal_mine$ Gebäuden." #deepl:3201635799
- state_building_magic_gold_mine_max_level_add: "$building_magic_gold_mine$ Maximalpegel" #deepl:2062012066
- state_building_magic_gold_mine_max_level_add_desc: "Ein Bonus oder Malus auf die maximale Höhe von $building_magic_gold_mine$ Gebäuden." #deepl:3819564084
  state_building_magic_iron_mine_max_level_add: "$building_magic_iron_mine$ Maximalpegel" #deepl:2989348023
  state_building_magic_iron_mine_max_level_add_desc: "Ein Bonus oder Malus auf die maximale Höhe von $building_magic_iron_mine$ Gebäuden." #deepl:1896815120
  state_building_magic_lead_mine_max_level_add: "$building_magic_lead_mine$ Maximalpegel" #deepl:3442880159
  state_building_magic_lead_mine_max_level_add_desc: "Ein Bonus oder Malus auf die maximale Höhe von $building_magic_lead_mine$ Gebäuden." #deepl:1721268626
  state_building_magic_sulfur_mine_max_level_add: "$building_magic_sulfur_mine$ Maximalpegel" #deepl:2971890522
  state_building_magic_sulfur_mine_max_level_add_desc: "Ein Bonus oder Malus auf die maximale Höhe von $building_magic_sulfur_mine$ Gebäuden." #deepl:1213880204
+ state_building_magic_gold_mine_max_level_add: "$building_magic_gold_mine$ Maximalpegel" #deepl:2062012066
+ state_building_magic_gold_mine_max_level_add_desc: "Ein Bonus oder Malus auf die maximale Höhe von $building_magic_gold_mine$ Gebäuden." #deepl:3819564084
  state_building_mana_extractor_max_level_add: "$building_mana_extractor$ Maximalpegel" #deepl:1579177630
  state_building_mana_extractor_max_level_add_desc: "Ein Bonus oder Malus auf die maximale Höhe von $building_mana_extractor$ Gebäuden." #deepl:30344598
- state_building_murk_ways_max_level_add: "$building_murk_ways$ Maximalpegel" #deepl:3357735769
- state_building_murk_ways_max_level_add_desc: "Ein Bonus oder Malus auf die maximale Höhe von $building_murk_ways$ Gebäuden." #deepl:1113071428
+ state_building_elven_forest_max_level_add: "$building_elven_forest$ Maximalpegel" #deepl:3390263855
+ state_building_elven_forest_max_level_add_desc: "Ein Bonus oder Malus auf die maximale Höhe von $building_elven_forest$ Gebäuden." #deepl:1426769469
+ building_group_bg_druid_grooves_throughput_add: "$bg_druid_grooves$ [concept_throughput]" #deepl:1209533225
+ building_group_bg_druid_grooves_throughput_add_desc: "Ein Bonus oder ein Malus auf Input und Output von $bg_druid_grooves$" #deepl:1519217776
+ building_group_bg_gate_magic_industry_throughput_add: "$bg_gate_magic_industry$ [concept_throughput]" #deepl:2957723725
+ building_group_bg_gate_magic_industry_throughput_add_desc: "Ein Bonus oder ein Malus auf Input und Output von $bg_gate_magic_industry$" #deepl:2378222132
