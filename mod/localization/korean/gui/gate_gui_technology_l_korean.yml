@@ -11,6 +11,10 @@
  gg_header_magic_innovation: "마법 혁신"
  gg_magic_innovation_total: "현재 보유 중인 [concept_magic_innovation]: #v @magic_innovation![GetPlayer.MakeScope.Var('magic_innovation').GetValue|0] / [GetGlobalVariable('magic_innovation_bank_max').GetValue|0]#!"
  gg_tab_technology_researcher: "연구자"
+ gg_tab_technology_deactivated: "경고! [concept_magic_technology] 을 조사하려면 [concept_magic_knowledge] 이 필요합니다!" #deepl:1273171504
+ gg_tab_technology_production_tooltip: "#header $PRODUCTION_NO_CONCEPT$#!\n[AddLocalizationIf(Not(GetTechnology('gate_magic_understanding_production').HasResearchedTech(GetPlayer.Self)), 'gg_tab_technology_deactivated')]" #deepl:2068446880
+ gg_tab_technology_society_tooltip: "#header $SOCIETY$#!\n[AddLocalizationIf(Not(GetTechnology('gate_magic_understanding_production').HasResearchedTech(GetPlayer.Self)), 'gg_tab_technology_deactivated')]" #deepl:1466417493
+ gg_tab_technology_military_tooltip: "#header $MILITARY$#!\n[AddLocalizationIf(Not(GetTechnology('gate_magic_understanding_production').HasResearchedTech(GetPlayer.Self)), 'gg_tab_technology_deactivated')]" #deepl:1652563637
  gg_header_magic_researcher: "마법 연구자"
  gg_technology_no_researcher: "현재 마법 연구자가 없음"
  gg_technology_no_researcher_blink: "#BOLD 새로운 연구자 고용#!"
