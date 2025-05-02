@@ -64,8 +64,8 @@ printf '\t"contentfolder" "%s"' "$mod_path" >> workshop.vdf
 printf '\n' >> workshop.vdf
 printf '\t"previewfile" "%s/thumbnail.png"' "$mod_path" >> workshop.vdf
 printf '\n' >> workshop.vdf
-printf '\t"visibility" "%s"' "$visibility" >> workshop.vdf
-printf '\n' >> workshop.vdf
+#printf '\t"visibility" "%s"' "$visibility" >> workshop.vdf
+#printf '\n' >> workshop.vdf
 printf '\t"title" "%s"' "$title" >> workshop.vdf
 printf '\n' >> workshop.vdf
 printf '\t"description" "%s"' "$description" >> workshop.vdf
