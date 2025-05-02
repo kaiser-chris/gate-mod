@@ -101,7 +101,7 @@ types gate_technology_panel_types {
                     text = "PRODUCTION_NO_CONCEPT"
                 }
                 blockoverride "second_button_tooltip" {
-                    tooltip = "PRODUCTION_NO_CONCEPT"
+                    tooltip = "gg_tab_technology_production_tooltip"
                 }
                 blockoverride "second_button_click" {
                     enabled = "[GetScriptedGui('sgui_gate_has_magic').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
@@ -116,28 +116,13 @@ types gate_technology_panel_types {
                 blockoverride "second_button_selected" {
                     text = "PRODUCTION_NO_CONCEPT"
                 }
-                blockoverride "second_button_background" {
-                    background = {
-                        margin = { 0 -2 }
-                        using = fade_bottom_entry_fancy_header_colored
-                        using = Color_Orange
-                        alpha = 0.5
-                    }
-                }
-                blockoverride "second_button_background_selected" {
-                    background = {
-                        using = fade_bottom_entry_fancy_header_colored
-                        using = Color_Orange
-                        alpha = 0.5
-                    }
-                }
 
                 # Military
                 blockoverride "third_button" {
                     text = "MILITARY"
                 }
                 blockoverride "third_button_tooltip" {
-                    tooltip = "MILITARY"
+                    tooltip = "gg_tab_technology_military_tooltip"
                 }
                 blockoverride "third_button_click" {
                     enabled = "[GetScriptedGui('sgui_gate_has_magic').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
@@ -152,28 +137,13 @@ types gate_technology_panel_types {
                 blockoverride "third_button_selected" {
                     text = "MILITARY"
                 }
-                blockoverride "third_button_background" {
-                    background = {
-                        margin = { 0 -2 }
-                        using = fade_bottom_entry_fancy_header_colored
-                        using = Color_Red
-                        alpha = 0.15
-                    }
-                }
-                blockoverride "third_button_background_selected" {
-                    background = {
-                        using = fade_bottom_entry_fancy_header_colored
-                        using = Color_Red
-                        alpha = 0.15
-                    }
-                }
 
                 # Society
                 blockoverride "fourth_button" {
                     text = "SOCIETY"
                 }
                 blockoverride "fourth_button_tooltip" {
-                    tooltip = "SOCIETY"
+                    tooltip = "gg_tab_technology_society_tooltip"
                 }
                 blockoverride "fourth_button_click" {
                     enabled = "[GetScriptedGui('sgui_gate_has_magic').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
@@ -187,21 +157,6 @@ types gate_technology_panel_types {
                 }
                 blockoverride "fourth_button_selected" {
                     text = "SOCIETY"
-                }
-                blockoverride "fourth_button_background" {
-                    background = {
-                        margin = { 0 -2 }
-                        using = fade_bottom_entry_fancy_header_colored
-                        using = Color_Red
-                        alpha = 0.15
-                    }
-                }
-                blockoverride "fourth_button_background_selected" {
-                    background = {
-                        using = fade_bottom_entry_fancy_header_colored
-                        using = Color_Red
-                        alpha = 0.15
-                    }
                 }
             }
 
@@ -858,7 +813,7 @@ types gate_technology_panel_types {
             }
 
             flowcontainer = {
-                visible = "[GetScriptedGui('sgui_gate_has_researcher').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
+                visible = "[GetScriptedGui('sgui_gate_research_pm').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
                 parentanchor = vcenter|right
                 margin_left = 2
 
