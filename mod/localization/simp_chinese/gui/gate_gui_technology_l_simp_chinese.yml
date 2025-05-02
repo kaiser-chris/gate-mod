@@ -11,6 +11,10 @@
  gg_header_magic_innovation: "魔法创新力"
  gg_magic_innovation_total: "当前储备的[concept_magic_innovation]： #v @magic_innovation![GetPlayer.MakeScope.Var('magic_innovation').GetValue|0] / [GetGlobalVariable('magic_innovation_bank_max').GetValue|0]#!"
  gg_tab_technology_researcher: "研究者"
+ gg_tab_technology_deactivated: "@warning!我们需要有[concept_magic_knowledge] 来研究[concept_magic_technology] ！" #deepl:1273171504
+ gg_tab_technology_production_tooltip: "#header $PRODUCTION_NO_CONCEPT$#!\n[AddLocalizationIf(Not(GetTechnology('gate_magic_understanding_production').HasResearchedTech(GetPlayer.Self)), 'gg_tab_technology_deactivated')]" #deepl:2068446880
+ gg_tab_technology_society_tooltip: "#header $SOCIETY$#!\n[AddLocalizationIf(Not(GetTechnology('gate_magic_understanding_production').HasResearchedTech(GetPlayer.Self)), 'gg_tab_technology_deactivated')]" #deepl:1466417493
+ gg_tab_technology_military_tooltip: "#header $MILITARY$#!\n[AddLocalizationIf(Not(GetTechnology('gate_magic_understanding_production').HasResearchedTech(GetPlayer.Self)), 'gg_tab_technology_deactivated')]" #deepl:1652563637
  gg_header_magic_researcher: "魔法研究者"
  gg_technology_no_researcher: "当前没有魔法研究者"
  gg_technology_no_researcher_blink: "#BOLD 雇佣一位新研究者#!"

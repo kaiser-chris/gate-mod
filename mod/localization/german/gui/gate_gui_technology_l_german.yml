@@ -11,6 +11,10 @@
  gg_header_magic_innovation: "Magische Innovation" #deepl:2673158403
  gg_magic_innovation_total: "Derzeit auf [concept_magic_innovation]: #v @magic_innovation![GetPlayer.MakeScope.Var('magic_innovation').GetValue|0] / [GetGlobalVariable('magic_innovation_bank_max').GetValue|0]#!" #deepl:3971030187
  gg_tab_technology_researcher: "Forscher" #deepl:2640845178
+ gg_tab_technology_deactivated: "@warning! Wir brauchen [concept_magic_knowledge] zur Recherche [concept_magic_technology]!" #deepl:1273171504
+ gg_tab_technology_production_tooltip: "#header $PRODUCTION_NO_CONCEPT$#!\n[AddLocalizationIf(Not(GetTechnology('gate_magic_understanding_production').HasResearchedTech(GetPlayer.Self)), 'gg_tab_technology_deactivated')]" #deepl:2068446880
+ gg_tab_technology_society_tooltip: "#header $SOCIETY$#!\n[AddLocalizationIf(Not(GetTechnology('gate_magic_understanding_production').HasResearchedTech(GetPlayer.Self)), 'gg_tab_technology_deactivated')]" #deepl:1466417493
+ gg_tab_technology_military_tooltip: "#header $MILITARY$#!\n[AddLocalizationIf(Not(GetTechnology('gate_magic_understanding_production').HasResearchedTech(GetPlayer.Self)), 'gg_tab_technology_deactivated')]" #deepl:1652563637
  gg_header_magic_researcher: "Magie-Forscher" #deepl:2227864323
  gg_technology_no_researcher: "Kein aktueller Magieforscher" #deepl:2543811700
  gg_technology_no_researcher_blink: "#BOLD Hire a New Researcher#!" #deepl:2759089566
