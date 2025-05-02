@@ -150,6 +150,18 @@ sgui_gate_has_researcher = {
 }
 
 # THIS = country
+sgui_gate_research_pm = {
+	scope = country
+
+	is_valid = {
+		has_variable = magic_researcher
+		capital ?= {
+			has_building = building_magic_research_institute
+		}
+	}
+}
+
+# THIS = country
 # scope:technology = technology
 sgui_gate_can_research = {
 	scope = country
