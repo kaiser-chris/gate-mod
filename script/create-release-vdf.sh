@@ -9,7 +9,7 @@ then
 else
   printf 'Missing Mod Directory'
   printf '\n'
-  printf 'Usage: ./create-release-vdf.sh MOD_DIR DESC_FILE [MOD_ID] [VISIBILITY]'
+  printf 'Usage: ./create-release-vdf.sh MOD_DIR DESC_FILE [MOD_ID]'
   exit 1
 fi
 # Check mod description
@@ -19,7 +19,7 @@ then
 else
   printf 'Missing Steam description'
   printf '\n'
-  printf 'Usage: ./create-release-vdf.sh MOD_DIR DESC_FILE [MOD_ID] [VISIBILITY]'
+  printf 'Usage: ./create-release-vdf.sh MOD_DIR DESC_FILE [MOD_ID]'
   exit 1
 fi
 
@@ -41,14 +41,6 @@ else
   mod_id='0'
 fi
 
-# Read visibility
-if [ -n "$4" ]
-then
-  visibility="$4"
-else
-  visibility='2'
-fi
-
 # Clean up old file
 printf '' > workshop.vdf
 
@@ -64,8 +56,6 @@ printf '\t"contentfolder" "%s"' "$mod_path" >> workshop.vdf
 printf '\n' >> workshop.vdf
 printf '\t"previewfile" "%s/thumbnail.png"' "$mod_path" >> workshop.vdf
 printf '\n' >> workshop.vdf
-#printf '\t"visibility" "%s"' "$visibility" >> workshop.vdf
-#printf '\n' >> workshop.vdf
 printf '\t"title" "%s"' "$title" >> workshop.vdf
 printf '\n' >> workshop.vdf
 printf '\t"description" "%s"' "$description" >> workshop.vdf
