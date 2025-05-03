@@ -20,10 +20,11 @@ on:
         options:
           - 'true'
           - 'false'
-
-env:
-  WORKSHOP_IDENTIFIER: 3371719217
-  WORKSHOP_VISIBILITY: 0
+      workshop-id:
+        description: 'Workshop Identifier'
+        required: false
+        default: '3371719217'
+        type: string
 
 jobs:
   release:
@@ -69,6 +70,9 @@ jobs:
         run: |
           sed -i 's/"version" : "${{ steps.project.outputs.last-version }}"/"version" : "${{ steps.increment-version.outputs.next-version }}"/g' mod/.metadata/metadata.json
           git commit -am "Updated version to ${{ steps.increment-version.outputs.next-version }}"
+          echo "# Versions" >> $GITHUB_STEP_SUMMARY
+          echo "Last Version: **${{ steps.project.outputs.last-version }}**" >> $GITHUB_STEP_SUMMARY
+          echo "Next Version: **${{ steps.increment-version.outputs.next-version }}**" >> $GITHUB_STEP_SUMMARY
 
       - name: Generate Localizations
         shell: bash
@@ -103,7 +107,7 @@ jobs:
           body: |
             Released a new version of the **Manaflow: Ankaris Arrival** mod.
 
-            ### Changes:
+            ### Commits:
             ${{ steps.commits.outputs.markdown }}
 
   publish:
@@ -122,7 +126,7 @@ jobs:
         id: metadata
         shell: bash
         run: |
-          (cd script; ./create-release-vdf.sh mod documentation/STEAM_PAGE.bbcode "$WORKSHOP_IDENTIFIER" "$WORKSHOP_VISIBILITY")
+          (cd script; ./create-release-vdf.sh mod documentation/STEAM_PAGE.bbcode "${{ inputs.workshop-id }}")
           echo "vdf=$(realpath workshop.vdf)" >> "$GITHUB_OUTPUT"
           echo "# Workflow Metadata" >> $GITHUB_STEP_SUMMARY
           echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
