@@ -904,3 +904,147 @@ gate_mana_saturation.13 = {
 		}
 	}
 }
+
+gate_mana_saturation.14 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:gate_ganges_state
+
+	title = gate_mana_saturation.14.t
+	desc = gate_mana_saturation.14.d
+	flavor = gate_mana_saturation.14.f
+
+	event_image = {
+		video = "gate_unspecified_magic_phenomena"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_gate_nexus.dds"
+
+	duration = 3
+
+	trigger = {
+		is_magic_country = yes
+		owns_entire_state_region = STATE_AWADH
+		any_scope_state = {
+			state_region ?= s:STATE_AWADH
+			NOT = {
+				has_state_trait = state_trait_gate_ganges
+			}
+		}
+		s:STATE_AWADH ?= {
+			var:mana_density >= medium_mana_density_threshhold
+		}
+	}
+
+	immediate = {
+		every_state = {
+			limit = {
+				state_region ?= s:STATE_AWADH
+			}
+			save_scope_as = gate_ganges_state
+		}
+	}
+
+	option = {
+		name = gate_mana_saturation.14.a
+		s:STATE_AWADH ?= {
+			add_state_trait = state_trait_gate_ganges
+			add_mana_density = {
+				amount = 50
+			}
+			hidden_effect = {
+				add_arable_land = 10
+			}
+		}
+		every_state = {
+			limit = {
+				has_state_trait = state_trait_ganges_river
+				NOT = {
+					has_state_trait = state_trait_gate_ganges
+				}
+				is_largest_state_in_region = yes
+			}
+			state_region = {
+				add_state_trait = state_trait_gate_healing_ganges
+				add_mana_density = {
+					amount = 20
+				}
+			}
+		}
+		add_magic_innovation = {
+			amount = 1000
+		}
+		trigger_event = {
+			id = researching_magic.5
+			months = 2
+		}
+	}
+}
+
+gate_mana_saturation.15 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:gate_ateshgah_state
+
+	title = gate_mana_saturation.15.t
+	desc = gate_mana_saturation.15.d
+	flavor = gate_mana_saturation.15.f
+
+	event_image = {
+		video = "gate_unspecified_magic_phenomena"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_gate_nexus.dds"
+
+	duration = 3
+
+	trigger = {
+		is_magic_country = yes
+		owns_entire_state_region = STATE_KURNOOL
+		any_scope_state = {
+			state_region ?= s:STATE_KURNOOL
+			NOT = {
+				has_state_trait = state_trait_gate_ganges
+			}
+		}
+		s:STATE_KURNOOL ?= {
+			var:mana_density >= medium_mana_density_threshhold
+		}
+	}
+
+	immediate = {
+		every_state = {
+			limit = {
+				state_region ?= s:STATE_KURNOOL
+			}
+			save_scope_as = gate_ateshgah_state
+		}
+	}
+
+	option = {
+		name = gate_mana_saturation.15.a
+		s:STATE_KURNOOL ?= {
+			add_state_trait = state_trait_gate_ganges
+			add_mana_density = {
+				amount = 50
+			}
+		}
+		scope:gate_ateshgah_state ?= {
+			create_building = {
+				building = building_gate_venkateswara_temple
+				level = 1
+			}
+		}
+		add_magic_innovation = {
+			amount = 500
+		}
+		trigger_event = {
+			id = researching_magic.5
+			months = 2
+		}
+	}
+}

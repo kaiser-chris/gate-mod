@@ -1,0 +1,21 @@
+﻿pm_gate_venkateswara_temple = {
+	texture = gfx/interface/icons/production_method_icons/wonders.dds
+	is_default = yes
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 50
+			country_ahead_of_time_research_penalty_mult = -0.05
+			country_tech_research_speed_mult = 0.05
+			country_gate_magical_innovation_mult = 0.05
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_mages_add = 100
+			building_employment_clergymen_add = 100
+			building_employment_academics_add = 100
+		}
+	}
+}
