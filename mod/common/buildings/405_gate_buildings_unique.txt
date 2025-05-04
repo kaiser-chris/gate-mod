@@ -60,7 +60,7 @@ building_gate_tyrol = {
 	}
 
 	production_method_groups = {
-		pmg_magic_gate_exploitation_tyrol
+		pmg_magic_gate_dwarven_immigation
 	}
 
 	possible = {
@@ -100,6 +100,7 @@ building_gate_zambia = {
 
 	production_method_groups = {
 		pmg_magic_gate_exploitation_zambia
+        #pmg_magic_gate_elven_immigation
 	}
 
 	possible = {
@@ -115,7 +116,7 @@ building_gate_zambia = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_magic.dds"
 }
 
-building_gate_san_salvador = {
+building_gate_equateur = {
 	building_group = bg_monuments
 	icon = "gfx/interface/icons/building_icons/building_gate.dds"
 	buildable = no
@@ -138,11 +139,12 @@ building_gate_san_salvador = {
 	}
 
 	production_method_groups = {
-		pmg_magic_gate_exploitation_san_salvador
+		pmg_magic_gate_exploitation_equateur
+        pmg_magic_gate_orcish_immigation
 	}
 
 	possible = {
-		state_region = s:STATE_SAN_SALVADOR
+		state_region = s:STATE_EQUATEUR
 	}
 
 	can_build_private = {

@@ -2,16 +2,22 @@
 	c:GATE_OK = {
 		create_military_formation = {
 			type = army
-			hq_region = sr:region_central_america
+			name = orc_army
+			hq_region = sr:region_congo
 			combat_unit = {
 				type = unit_type:combat_unit_type_mage_infantry
-				state_region = s:STATE_COSTA_RICA
-				count = 11
+				state_region = s:STATE_EQUATEUR
+				count = 20
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mage_artillery
-				state_region = s:STATE_COSTA_RICA
-				count = 4
+				state_region = s:STATE_EQUATEUR
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_KASAI
+				count = 15
 			}
 			save_scope_as = orc_army_a
 		}
@@ -19,7 +25,7 @@
 		create_character = {
 			birth_date = 1794.2.21
 			culture = orcish
-			hq = region_central_america
+			hq = region_congo
 			is_general = yes
 			interest_group = ig_armed_forces
 			commander_rank = commander_rank_2

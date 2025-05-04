@@ -1,6 +1,6 @@
 ﻿COUNTRIES = {
 	c:GATE_AD = {
-		effect_starting_technology_tier_5_tech = yes
+        effect_starting_technology_tier_3_tech = yes
 		effect_starting_politics_conservative = yes
 
 		# Technology
@@ -39,7 +39,8 @@
 		activate_law = law_type:law_theocracy
 		activate_law = law_type:law_state_religion
 		activate_law = law_type:law_autocracy
-		activate_law = law_type:law_land_based_taxation
+        activate_law = law_type:law_cultural_exclusion
+        activate_law = law_type:law_per_capita_based_taxation
 		activate_law = law_type:law_isolationism
 		activate_law = law_type:law_private_monster_hunters
 		activate_law = law_type:law_elven_supremacy_religious_preaching

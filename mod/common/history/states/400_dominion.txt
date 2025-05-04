@@ -2,11 +2,11 @@
 # "It's because of differing methods of editing throughout the production of the game. Quote marks are unnecessary, but harmless if present."
 
 STATES = {
-    # Arcturian Dominion
+	# Arcturian Dominion
 	s:STATE_ZAMBIA = {
 		create_state = {
 			country = c:GATE_AD
-			owned_provinces = { 
+			owned_provinces = {
 				x69FA4E x7DE1CA x6F3B8C x93D445
 				xEBD5BC x6D63E8 x4BCC5E x319C47
 				x4E7E66 xC1847A x923EAF xA4660F
@@ -38,16 +38,15 @@ STATES = {
 	}
 	s:STATE_BOTSWANA = {
 		create_state = {
-			country = c:GATE_AD
+			country = c:TSW
 			owned_provinces = {
 				x773A13 x0DDFB8 x3D4350 x6001D0
 			}
 		}
-		add_homeland = cu:elven
 	}
 	s:STATE_EAST_ANGOLA = {
 		create_state = {
-			country = c:GATE_AD
+			country = c:CHK
 			owned_provinces = {
 				xB5F875 x2156A2 x1BFAF4 xC0DF70
 			}
@@ -55,4 +54,15 @@ STATES = {
 		add_homeland = cu:elven
 	}
 
+	s:STATE_ZAMBEZI = {
+		create_state = {
+			country = c:GATE_AD
+			owned_provinces = { xFFC747 xB04FCB x7C01BF x8FA547 x8C071E xFDD3A8 x9E9DE0 x72538D x1DDFC8 xA265E8 x13D2E6 x2A4E0D x0C1465 x3EC9D7 x9E48A3 xD09450 x9BC892 x4F5BA5 x1E71AD x41B56A xCA6529 xCD5A23 x8CFBA4 x177BB7 x42B2AD xEB2A0C x717AEE xC5B524 xAF3E35 xA713CF x6BA7ED x297680 x3F5B96 x902111 x5DC4AA x540A1A x1C0736 x6CFDCA xFF008C x261624 xCC95E8 x3AF96A x75DD71 xC5026F x687096 x397111 x4389FD x692FBD xCFB732 x6FD74E x87A1D6 x9EE89D xC8D3A2 xA55697 x8BC875 x24BDE2 x7E355F x503447 x115BA0 x9389EA xEEF770 x26F723 xFB6168 x8AEE59 x84FBAB xC7F1A1 xAE5737 xE640D6 x90A011 x28169C x2121F7 x6CCC83 x479CCF x7E3F56 x4339A9 x13126A x3B335C }
+		}
+
+		add_homeland = cu:shona
+		add_homeland = cu:lacustrine_bantu
+		add_homeland = cu:elven
+
+	}
 }

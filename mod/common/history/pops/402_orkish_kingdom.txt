@@ -4,13 +4,124 @@
 # are not set correctly.
 POPS = {
 
-	s:STATE_NICARAGUA = {
-		region_state:UCA = {
+	#	s:STATE_NICARAGUA = {
+	#		region_state:UCA = {
+	#			kill_population_percent_in_state = {
+	#				percent = 1 # 100%
+	#			}
+	#		}
+	#		region_state:MKT = {
+	#			kill_population_percent_in_state = {
+	#				percent = 1 # 100%
+	#			}
+	#		}
+	#		region_state:GATE_OK = {
+	#			create_pop = {
+	#				culture = orcish
+	#				size = 600000
+	#			}
+	#			create_pop = {
+	#				pop_type = slaves
+	#				culture = miskito
+	#				size = 44000
+	#			}
+	#		}
+	#	}
+	#	s:STATE_COSTA_RICA = {
+	#		region_state:UCA = {
+	#			kill_population_percent_in_state = {
+	#				percent = 1 # 100%
+	#			}
+	#		}
+	#		region_state:GATE_OK = {
+	#			create_pop = {
+	#				culture = orcish
+	#				size = 500000
+	#			}
+	#			create_pop = {
+	#				pop_type = slaves
+	#				culture = central_american
+	#				size = 83992
+	#			}
+	#		}
+	#	}
+	#	s:STATE_GUATEMALA = {
+	#		region_state:UCA = {
+	#			kill_population_percent_in_state = {
+	#				percent = 1 # 100%
+	#			}
+	#		}
+	#		region_state:GBR = {
+	#			kill_population_percent_in_state = {
+	#				percent = 1 # 100%
+	#			}
+	#		}
+	#		region_state:GATE_OK = {
+	#			create_pop = {
+	#				culture = orcish
+	#				size = 300000
+	#			}
+	#			create_pop = {
+	#				pop_type = slaves
+	#				culture = central_american
+	#				size = 164404
+	#			}
+	#			create_pop = {
+	#				pop_type = slaves
+	#				culture = mayan
+	#				size = 312000
+	#			}
+	#		}
+	#	}
+	#	s:STATE_HONDURAS = {
+	#		region_state:UCA = {
+	#			kill_population_percent_in_state = {
+	#				percent = 1 # 100%
+	#			}
+	#		}
+	#		region_state:GATE_OK = {
+	#			create_pop = {
+	#				culture = orcish
+	#				size = 200000
+	#			}
+	#			create_pop = {
+	#				pop_type = slaves
+	#				culture = central_american
+	#				size = 385204
+	#			}
+	#		}
+	#	}
+	#	s:STATE_SAN_SALVADOR = {
+	#		region_state:UCA = {
+	#			kill_population_percent_in_state = {
+	#				percent = 1 # 100%
+	#			}
+	#		}
+	#		region_state:GATE_OK = {
+	#			create_pop = {
+	#				culture = orcish
+	#				size = 800000
+	#			}
+	#			create_pop = {
+	#				pop_type = slaves
+	#				culture = central_american
+	#				size = 428204
+	#			}
+	#		}
+	#	}
+
+	s:STATE_GABON = {
+		region_state:FNG = {
 			kill_population_percent_in_state = {
 				percent = 1 # 100%
 			}
 		}
-		region_state:MKT = {
+		region_state:LNG = {
+			kill_population_percent_in_state = {
+				percent = 1 # 100%
+			}
+		}
+		region_state:LNG = {
 			kill_population_percent_in_state = {
 				percent = 1 # 100%
 			}
@@ -18,96 +129,238 @@ POPS = {
 		region_state:GATE_OK = {
 			create_pop = {
 				culture = orcish
-				size = 200000
+				size = 250000
 			}
 			create_pop = {
 				pop_type = slaves
-				culture = miskito
-				size = 44000
-			}
-		}
-	}
-	s:STATE_COSTA_RICA = {
-		region_state:UCA = {
-			kill_population_percent_in_state = {
-				percent = 1 # 100%
-			}
-		}
-		region_state:GATE_OK = {
-			create_pop = {
-				culture = orcish
-				size = 300000
+				culture = fang
+				size = 79000
 			}
 			create_pop = {
-				pop_type = slaves
-				culture = central_american
-				size = 83992
-			}
-		}
-	}
-	s:STATE_GUATEMALA = {
-		region_state:UCA = {
-			kill_population_percent_in_state = {
-				percent = 1 # 100%
-			}
-		}
-		region_state:GBR = {
-			kill_population_percent_in_state = {
-				percent = 1 # 100%
-			}
-		}
-		region_state:GATE_OK = {
-			create_pop = {
-				culture = orcish
-				size = 200000
-			}
-			create_pop = {
-				pop_type = slaves
-				culture = central_american
-				size = 164404
-			}
-			create_pop = {
-				pop_type = slaves
-				culture = mayan
-				size = 312000
-			}
-		}
-	}
-	s:STATE_HONDURAS = {
-		region_state:UCA = {
-			kill_population_percent_in_state = {
-				percent = 1 # 100%
-			}
-		}
-		region_state:GATE_OK = {
-			create_pop = {
-				culture = orcish
-				size = 200000
-			}
-			create_pop = {
-				pop_type = slaves
-				culture = central_american
-				size = 385204
-			}
-		}
-	}
-	s:STATE_SAN_SALVADOR = {
-		region_state:UCA = {
-			kill_population_percent_in_state = {
-				percent = 1 # 100%
-			}
-		}
-		region_state:GATE_OK = {
-			create_pop = {
-				culture = orcish
-				size = 400000
-			}
-			create_pop = {
-				pop_type = slaves
-				culture = central_american
-				size = 428204
+				culture = equatorial_bantu
+				size = 201000
 			}
 		}
 	}
 
-}
+	s:STATE_CONGO = {
+		region_state:BOB = {
+			kill_population_percent_in_state = {
+				percent = 1 # 100%
+			}
+		}
+		region_state:LNG = {
+			kill_population_percent_in_state = {
+				percent = 1 # 100%
+			}
+		}
+		region_state:TKE = {
+			kill_population_percent_in_state = {
+				percent = 1 # 100%
+			}
+		}
+		region_state:GATE_OK = {
+			create_pop = {
+				culture = orcish
+				size = 100000
+			}
+			create_pop = {
+				culture = bakongo
+				size = 88000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = fluvian_bantu
+				size = 64000
+			}
+		}
+	}
+
+	s:STATE_BAS_CONGO = {
+		region_state:KON = {
+			kill_population_percent_in_state = {
+				percent = 1 # 100%
+			}
+		}
+		region_state:YKA = {
+			kill_population_percent_in_state = {
+				percent = 1 # 100%
+			}
+		}
+		region_state:GATE_OK = {
+			create_pop = {
+				culture = orcish
+				size = 15000
+			}
+			create_pop = {
+				culture = bakongo
+				size = 180000
+			}
+			create_pop = {
+				culture = lunda
+				size = 168000
+			}
+		}
+		region_state:KON = {
+			create_pop = {
+				culture = bakongo
+				size = 252000
+			}
+			create_pop = {
+				culture = bakongo
+				religion = catholic
+				size = 42000
+			}
+			create_pop = {
+				culture = fluvian_bantu
+				size = 184000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = fluvian_bantu
+				size = 20000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = bakongo
+				size = 30000
+			}
+		}
+	}
+
+	s:STATE_EQUATEUR = {
+		region_state:BNG = {
+			kill_population_percent_in_state = {
+				percent = 1 # 100%
+			}
+		}
+		region_state:BOB = {
+			kill_population_percent_in_state = {
+				percent = 1 # 100%
+			}
+		}
+		region_state:GATE_OK = {
+			create_pop = {
+				culture = orcish
+				size = 500000
+			}
+			create_pop = {
+				culture = mongo
+				size = 377000
+			}
+			create_pop = {
+				religion = gate_blood_god
+				culture = mongo
+				size = 500000
+			}
+		}
+	}
+
+	s:STATE_KASAI = {
+		region_state:KBA = {
+			kill_population_percent_in_state = {
+				percent = 1 # 100%
+			}
+		}
+		region_state:LBA = {
+			kill_population_percent_in_state = {
+				percent = 1 # 100%
+			}
+		}
+		region_state:GATE_OK = {
+			create_pop = {
+				culture = orcish
+				size = 50000
+			}
+			create_pop = {
+				culture = fluvian_bantu
+				size = 800000
+			}
+			create_pop = {
+				religion = gate_blood_god
+				culture = fluvian_bantu
+				size = 300000
+			}
+			create_pop = {
+				religion = gate_blood_god
+				culture = luba
+				size = 120000
+			}
+			create_pop = {
+				culture = lunda
+				size = 40000
+			}
+		}
+	}
+
+	s:STATE_KASAI = {
+		region_state:LBA = {
+			kill_population_percent_in_state = {
+				percent = 1 # 100%
+			}
+		}
+		region_state:GATE_OK = {
+			create_pop = {
+				culture = orcish
+				size = 10000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = luba
+				size = 20000
+			}
+		}
+	}
+
+	s:STATE_CONGO_ORIENTALE = {
+		region_state:MNB = {
+			kill_population_percent_in_state = {
+				percent = 1 # 100%
+			}
+		}
+		region_state:ZND = {
+			kill_population_percent_in_state = {
+				percent = 1 # 100%
+			}
+		}
+		region_state:LGA = {
+			kill_population_percent_in_state = {
+				percent = 1 # 100%
+			}
+		}
+		region_state:HMB = {
+			kill_population_percent_in_state = {
+				percent = 1 # 100%
+			}
+		}
+		region_state:LBA = {
+			kill_population_percent_in_state = {
+				percent = 1 # 100%
+			}
+		}
+		region_state:GATE_OK = {
+			create_pop = {
+				culture = orcish
+				size = 150000
+			}
+			create_pop = {
+				culture = fluvian_bantu
+				size = 400000
+			}
+			create_pop = {
+				religion = gate_blood_god
+				culture = fluvian_bantu
+				size = 500000
+			}
+			create_pop = {
+				culture = azande
+				size = 409000
+			}
+			create_pop = {
+				culture = luba
+				size = 108000
+			}
+		}
+	}
+
+}##############

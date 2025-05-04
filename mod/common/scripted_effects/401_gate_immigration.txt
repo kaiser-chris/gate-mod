@@ -1,4 +1,4 @@
-﻿add_gate_immigration = {
+﻿add_gate_immigration_dwarven = {
 	if = {
 		limit = {
 			has_technology_researched = dwarven_gate_immigration
@@ -79,6 +79,186 @@
 					}
 					create_pop = {
 						culture = dwarven
+						size = 30000
+						pop_type = academics # Fix illiterate pops
+					}
+				}
+			}
+		}
+	}
+}
+
+add_gate_immigration_orcish = {
+	if = {
+		limit = {
+			has_technology_researched = orcish_gate_immigration
+		}
+		every_scope_state = {
+			limit = {
+				has_magic_gate = yes
+				modifier:state_gate_monthly_orcish_immigration_add > 0
+			}
+			# Create pop throws errors after game start
+			# but still works
+			# Also size can not accept variables or modifiers
+			if = {
+				limit = {
+					modifier:state_gate_monthly_orcish_immigration_add = 30000
+				}
+				if = {
+					limit = {
+						literacy_rate <= 0.5
+					}
+					create_pop = {
+						culture = orcish
+						size = 30000
+						pop_type = officers # Fix illiterate pops
+					}
+				}
+				else_if = {
+					limit = {
+						literacy_rate > 0.5
+						literacy_rate <= 0.6
+					}
+					create_pop = {
+						culture = orcish
+						size = 30000
+						pop_type = aristocrats # Fix illiterate pops
+					}
+				}
+				else_if = {
+					limit = {
+						literacy_rate > 0.6
+					}
+					create_pop = {
+						culture = orcish
+						size = 30000
+						pop_type = academics # Fix illiterate pops
+					}
+				}
+
+			}
+			else_if = {
+				limit = {
+					modifier:state_gate_monthly_orcish_immigration_add = 60000
+				}
+				if = {
+					limit = {
+						literacy_rate <= 0.5
+					}
+					create_pop = {
+						culture = orcish
+						size = 60000
+						pop_type = officers # Fix illiterate pops
+					}
+				}
+				else_if = {
+					limit = {
+						literacy_rate > 0.5
+						literacy_rate <= 0.6
+					}
+					create_pop = {
+						culture = orcish
+						size = 60000
+						pop_type = aristocrats # Fix illiterate pops
+					}
+				}
+				else_if = {
+					limit = {
+						literacy_rate > 0.6
+					}
+					create_pop = {
+						culture = orcish
+						size = 60000
+						pop_type = academics # Fix illiterate pops
+					}
+				}
+			}
+		}
+	}
+}
+
+add_gate_immigration_elven = {
+	if = {
+		limit = {
+			has_technology_researched = elven_gate_immigration
+		}
+		every_scope_state = {
+			limit = {
+				has_magic_gate = yes
+				modifier:state_gate_monthly_elven_immigration_add > 0
+			}
+			# Create pop throws errors after game start
+			# but still works
+			# Also size can not accept variables or modifiers
+			if = {
+				limit = {
+					modifier:state_gate_monthly_elven_immigration_add = 10000
+				}
+				if = {
+					limit = {
+						literacy_rate <= 0.5
+					}
+					create_pop = {
+						culture = elven
+						size = 10000
+						pop_type = officers # Fix illiterate pops
+					}
+				}
+				else_if = {
+					limit = {
+						literacy_rate > 0.5
+						literacy_rate <= 0.6
+					}
+					create_pop = {
+						culture = elven
+						size = 10000
+						pop_type = aristocrats # Fix illiterate pops
+					}
+				}
+				else_if = {
+					limit = {
+						literacy_rate > 0.6
+					}
+					create_pop = {
+						culture = elven
+						size = 10000
+						pop_type = academics # Fix illiterate pops
+					}
+				}
+
+			}
+			else_if = {
+				limit = {
+					modifier:state_gate_monthly_elven_immigration_add = 20000
+				}
+				if = {
+					limit = {
+						literacy_rate <= 0.5
+					}
+					create_pop = {
+						culture = elven
+						size = 20000
+						pop_type = officers # Fix illiterate pops
+					}
+				}
+				else_if = {
+					limit = {
+						literacy_rate > 0.5
+						literacy_rate <= 0.6
+					}
+					create_pop = {
+						culture = elven
+						size = 30000
+						pop_type = aristocrats # Fix illiterate pops
+					}
+				}
+				else_if = {
+					limit = {
+						literacy_rate > 0.6
+					}
+					create_pop = {
+						culture = elven
 						size = 30000
 						pop_type = academics # Fix illiterate pops
 					}
