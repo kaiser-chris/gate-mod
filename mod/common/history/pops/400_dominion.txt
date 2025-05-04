@@ -10,37 +10,12 @@
 			create_pop = {
 				culture = elven
 				religion = gate_golden_religion
-				size = 250000
+				size = 1850000
 			}
 			create_pop = {
 				culture = lunda
 				religion = gate_golden_religion
-				size = 10000
-			}
-			create_pop = {
-				culture = lunda
-				religion = animist
-				size = 22092
-			}
-			create_pop = {
-				culture = kavango_bantu
-				religion = gate_golden_religion
-				size = 10000
-			}
-			create_pop = {
-				culture = kavango_bantu
-				religion = animist
-				size = 18000
-			}
-			create_pop = {
-				culture = chewa
-				religion = gate_golden_religion
-				size = 6164
-			}
-			create_pop = {
-				culture = chewa
-				religion = animist
-				size = 6164
+				size = 182092
 			}
 		}
 	}
@@ -50,7 +25,7 @@
 				percent = 1 # 100%
 			}
 		}
-		region_state:GATE_AD = {
+		region_state:CHK = {
 			create_pop = {
 				culture = elven
 				religion = gate_golden_religion
@@ -79,7 +54,66 @@
 		}
 	}
 	s:STATE_BOTSWANA = {
-		region_state:LZO = {
+		region_state:TSW = {
+			kill_population_percent_in_state = {
+				percent = 1 # 100%
+			}
+		}
+		region_state:TSW = {
+			create_pop = {
+				culture = tswana
+				religion = animist
+				size = 100000
+			}
+			create_pop = {
+				culture = tswana
+				religion = gate_golden_religion
+				size = 100000
+			}
+			create_pop = {
+				culture = kavango_bantu
+				religion = animist
+				size = 80000
+			}
+		}
+	}
+	#	s:STATE_BOTSWANA = {
+	#		region_state:LZO = {
+	#			kill_population_percent_in_state = {
+	#				percent = 1 # 100%
+	#			}
+	#		}
+	#		region_state:GATE_AD = {
+	#			create_pop = {
+	#				culture = elven
+	#				religion = gate_golden_religion
+	#				size = 30000
+	#			}
+	#			create_pop = {
+	#				culture = kavango_bantu
+	#				religion = gate_golden_religion
+	#				size = 7560
+	#			}
+	#			create_pop = {
+	#				culture = lunda
+	#				religion = animist
+	#				size = 7000
+	#			}
+	#		}
+	#	}
+
+	s:STATE_ZAMBEZI = {
+		region_state:MSH = {
+			kill_population_percent_in_state = {
+				percent = 1 # 100%
+			}
+		}
+		region_state:MTB = {
+			kill_population_percent_in_state = {
+				percent = 1 # 100%
+			}
+		}
+		region_state:MNC = {
 			kill_population_percent_in_state = {
 				percent = 1 # 100%
 			}
@@ -88,17 +122,17 @@
 			create_pop = {
 				culture = elven
 				religion = gate_golden_religion
-				size = 30000
+				size = 950000
 			}
 			create_pop = {
-				culture = kavango_bantu
+				culture = shona
 				religion = gate_golden_religion
-				size = 7560
+				size = 350000
 			}
 			create_pop = {
-				culture = lunda
-				religion = animist
-				size = 7000
+				culture = lacustrine_bantu
+				religion = gate_golden_religion
+				size = 70000
 			}
 		}
 	}

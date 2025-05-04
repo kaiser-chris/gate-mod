@@ -4,111 +4,227 @@
 # Otherwise the state will show as a 'split state' in game.
 GLOBAL = {
 
-	# Arcturian Dominion
-	s:STATE_ZAMBIA = {
-		set_owner_of_provinces = {
-			country = c:GATE_AD
-			provinces = {
-				x0F41AA
-				x31BEE9
-			}
-		}
-	}
-	s:STATE_BOTSWANA = {
-		set_owner_of_provinces = {
-			country = c:GATE_AD
-			provinces = {
-				x4401C5
-			}
-		}
-		add_homeland = cu:elven
-	}
-	s:STATE_EAST_ANGOLA = {
-		set_owner_of_provinces = {
-			country = c:GATE_AD
-			provinces = {
-				x52FB3B
-			}
-		}
-		add_homeland = cu:elven
-	}
+    # Arcturian Dominion
+    s:STATE_ZAMBIA = {
+        set_owner_of_provinces = {
+            country = c:GATE_AD
+            provinces = {
+                x0F41AA
+                x31BEE9
+            }
+        }
+    }
+    s:STATE_BOTSWANA = {
+        set_owner_of_provinces = {
+            country = c:GATE_AD
+            provinces = {
+                x4401C5
+            }
+        }
+        add_homeland = cu:elven
+    }
+    s:STATE_EAST_ANGOLA = {
+        set_owner_of_provinces = {
+            country = c:CHK
+            provinces = {
+                x52FB3B xB5F875 x2156A2 x1BFAF4 xC0DF70
+            }
+        }
+        add_homeland = cu:elven
+    }
+    s:STATE_ZAMBEZI = {
+        set_owner_of_provinces = {
+            country = c:GATE_AD
+            provinces = {
+                x86AC48 x9641D5 xF75223
+            }
+        }
+        add_homeland = cu:elven
+    }
 
-	# Mountain Kingdom
-	s:STATE_TYROL = {
-		set_owner_of_provinces = {
-			country = c:GATE_MK
-			provinces = { x51C0E0 }
-		}
-	}
-	s:STATE_SOUTH_TYROL = {
-		set_owner_of_provinces = {
-			country = c:GATE_MK
-			provinces = { xD0BF60 }
-		}
-	}
+    s:STATE_BOTSWANA = {
+        set_owner_of_provinces = {
+            country = c:TSW
+            provinces = {
+                x4401C5 x773A13 x0DDFB8 x3D4350 x6001D0
+            }
+        }
+        add_homeland = cu:elven
+    }
 
-	# Orkish Kingdom
-	s:STATE_NICARAGUA = {
-		set_owner_of_provinces = {
-			country = c:GATE_OK
-			provinces = { x95FC5A x17F33B }
-		}
-	}
-	s:STATE_COSTA_RICA = {
-		set_owner_of_provinces = {
-			country = c:GATE_OK
-			provinces = { x1A076A }
-		}
-	}
-	s:STATE_GUATEMALA = {
-		set_owner_of_provinces = {
-			country = c:GATE_OK
-			provinces = { xDEC8D3 xD0B040 }
-		}
-	}
-	s:STATE_HONDURAS = {
-		set_owner_of_provinces = {
-			country = c:GATE_OK
-			provinces = { x3C64D6 }
-		}
-	}
-	s:STATE_SAN_SALVADOR = {
-		set_owner_of_provinces = {
-			country = c:GATE_OK
-			provinces = { xB0D0C7 }
-		}
-	}
-	s:STATE_CHIAPAS = {
-		set_owner_of_provinces = {
-			country = c:GATE_OK
-			provinces = { x1030C0 }
-		}
-	}
 
-	# New Samadore
-	s:STATE_WESTERN_NEW_GUINEA = {
-		set_owner_of_provinces = {
-			country = c:GATE_NS
-			provinces = { x1650EE xD3B54D }
-		}
-	}
-	s:STATE_EASTERN_NEW_GUINEA = {
-		set_owner_of_provinces = {
-			country = c:GATE_NS
-			provinces = { x84D755 }
-		}
-	}
-	s:STATE_MOLUCCAS = {
-		set_owner_of_provinces = {
-			country = c:GATE_NS
-			provinces = { xF88172 x22A870 }
-		}
-	}
-	s:STATE_BOUGAINVILLE = {
-		set_owner_of_provinces = {
-			country = c:GATE_NS
-			provinces = { x97FBC3 }
-		}
-	}
+    # Mountain Kingdom
+    s:STATE_TYROL = {
+        set_owner_of_provinces = {
+            country = c:GATE_MK
+            provinces = { x51C0E0 }
+        }
+    }
+    s:STATE_SOUTH_TYROL = {
+        set_owner_of_provinces = {
+            country = c:GATE_MK
+            provinces = { xD0BF60 }
+        }
+    }
+
+    # Orkish Kingdom
+    s:STATE_KASAI = {
+        set_owner_of_provinces = {
+            country = c:GATE_OK
+            provinces = { x71D2EF }
+        }
+    }
+    s:STATE_KASAI = {
+        set_owner_of_provinces = {
+            country = c:GATE_OK
+            provinces = { x4E12AF }
+        }
+    }
+    s:STATE_EQUATEUR = {
+        set_owner_of_provinces = {
+            country = c:GATE_OK
+            provinces = { xFF0F19 }
+        }
+    }
+    s:STATE_EQUATEUR = {
+        set_owner_of_provinces = {
+            country = c:GATE_OK
+            provinces = { xC060F0 }
+        }
+    }
+    s:STATE_CONGO_ORIENTALE = {
+        set_owner_of_provinces = {
+            country = c:GATE_OK
+            provinces = { x74FC60 }
+        }
+    }
+    s:STATE_CONGO_ORIENTALE = {
+        set_owner_of_provinces = {
+            country = c:GATE_OK
+            provinces = { xCC2E74 }
+        }
+    }
+    s:STATE_CONGO_ORIENTALE = {
+        set_owner_of_provinces = {
+            country = c:GATE_OK
+            provinces = { x9D9072 }
+        }
+    }
+    s:STATE_CONGO_ORIENTALE = {
+        set_owner_of_provinces = {
+            country = c:GATE_OK
+            provinces = { xAFF1B2 }
+        }
+    }
+    s:STATE_CONGO_ORIENTALE = {
+        set_owner_of_provinces = {
+            country = c:GATE_OK
+            provinces = { x7ABE0E }
+        }
+    }
+    s:STATE_BAS_CONGO = {
+        set_owner_of_provinces = {
+            country = c:GATE_OK
+            provinces = { xA2D384 }
+        }
+    }
+    s:STATE_KATANGA = {
+        set_owner_of_provinces = {
+            country = c:GATE_OK
+            provinces = { xE1ECF8 }
+        }
+    }
+    s:STATE_CONGO = {
+        set_owner_of_provinces = {
+            country = c:GATE_OK
+            provinces = { x824974 }
+        }
+    }
+    s:STATE_CONGO = {
+        set_owner_of_provinces = {
+            country = c:GATE_OK
+            provinces = { x406070 }
+        }
+    }
+    s:STATE_CONGO = {
+        set_owner_of_provinces = {
+            country = c:GATE_OK
+            provinces = { xB63B70 }
+        }
+    }
+    s:STATE_GABON = {
+        set_owner_of_provinces = {
+            country = c:GATE_OK
+            provinces = { x46DE71 }
+        }
+    }
+    s:STATE_GABON = {
+        set_owner_of_provinces = {
+            country = c:GATE_OK
+            provinces = { x8D20C0 }
+        }
+    }
+    #	s:STATE_NICARAGUA = {
+    #		set_owner_of_provinces = {
+    #			country = c:GATE_OK
+    #			provinces = { x95FC5A x17F33B }
+    #		}
+    #	}
+    #	s:STATE_COSTA_RICA = {
+    #		set_owner_of_provinces = {
+    #			country = c:GATE_OK
+    #			provinces = { x1A076A }
+    #		}
+    #	}
+    #	s:STATE_GUATEMALA = {
+    #		set_owner_of_provinces = {
+    #			country = c:GATE_OK
+    #			provinces = { xDEC8D3 xD0B040 }
+    #		}
+    #	}
+    #	s:STATE_HONDURAS = {
+    #		set_owner_of_provinces = {
+    #			country = c:GATE_OK
+    #			provinces = { x3C64D6 }
+    #		}
+    #	}
+    #	s:STATE_SAN_SALVADOR = {
+    #		set_owner_of_provinces = {
+    #			country = c:GATE_OK
+    #			provinces = { xB0D0C7 }
+    #		}
+    #	}
+    #	s:STATE_CHIAPAS = {
+    #		set_owner_of_provinces = {
+    #			country = c:GATE_OK
+    #			provinces = { x1030C0 }
+    #		}
+    #	}
+
+    # New Samadore
+    s:STATE_WESTERN_NEW_GUINEA = {
+        set_owner_of_provinces = {
+            country = c:GATE_NS
+            provinces = { x1650EE xD3B54D }
+        }
+    }
+    s:STATE_EASTERN_NEW_GUINEA = {
+        set_owner_of_provinces = {
+            country = c:GATE_NS
+            provinces = { x84D755 }
+        }
+    }
+    s:STATE_MOLUCCAS = {
+        set_owner_of_provinces = {
+            country = c:GATE_NS
+            provinces = { xF88172 x22A870 }
+        }
+    }
+    s:STATE_BOUGAINVILLE = {
+        set_owner_of_provinces = {
+            country = c:GATE_NS
+            provinces = { x97FBC3 }
+        }
+    }
 
 }

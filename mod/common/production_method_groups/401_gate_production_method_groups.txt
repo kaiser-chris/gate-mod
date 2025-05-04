@@ -8,7 +8,7 @@
 	}
 }
 
-pmg_magic_gate_exploitation_tyrol = {
+pmg_magic_gate_dwarven_immigation = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
 
@@ -20,6 +20,28 @@ pmg_magic_gate_exploitation_tyrol = {
 	}
 }
 
+pmg_magic_gate_orcish_immigation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_gate_closed
+		pm_gate_immigration_orcish
+		pm_gate_mass_immigration_orcish
+	}
+}
+
+pmg_magic_gate_elven_immigation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_gate_closed
+		pm_gate_immigration_elven
+		pm_gate_mass_immigration_elven
+	}
+}
+
 pmg_magic_gate_exploitation_zambia = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
@@ -28,11 +50,10 @@ pmg_magic_gate_exploitation_zambia = {
 		pm_gate_defend
 		pm_gate_closed
 		pm_gate_support_elves
-		pm_gate_support_elves_plus
 	}
 }
 
-pmg_magic_gate_exploitation_san_salvador = {
+pmg_magic_gate_exploitation_equateur = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
 

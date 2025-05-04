@@ -105,4 +105,53 @@ GLOBAL = {
 			add_trait = gate_race_trait_vampire
 		}
 	}
+
+	every_state = {
+		limit = { state_region = s:STATE_GABON }
+		state_region = {
+			add_arable_land = 25
+		}
+	}
+	every_state = {
+		limit = { state_region = s:STATE_CONGO_ORIENTALE }
+		state_region = {
+			add_arable_land = 30
+		}
+	}
+	every_state = {
+		limit = { state_region = s:STATE_KASAI }
+		state_region = {
+			add_arable_land = 30
+		}
+	}
+	every_state = {
+		limit = { state_region = s:STATE_CONGO }
+		state_region = {
+			add_arable_land = 35
+		}
+	}
+	every_state = {
+		limit = { state_region = s:STATE_EQUATEUR }
+		state_region = {
+			add_arable_land = 50
+		}
+	}
+	every_state = {
+		limit = { state_region = s:STATE_BAS_CONGO }
+		state_region = {
+			add_arable_land = 30
+		}
+	}
+	every_state = {
+		limit = { state_region = s:STATE_ZAMBIA }
+		state_region = {
+			add_arable_land = 40
+		}
+	}
+	every_state = {
+		limit = { state_region = s:STATE_KATANGA }
+		state_region = {
+			add_arable_land = 30
+		}
+	}
 }

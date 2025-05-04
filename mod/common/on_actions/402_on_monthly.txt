@@ -57,7 +57,9 @@ on_monthly_pulse_country = {
     on_actions = {
         on_monthly_gate_magic_country
         on_monthly_gate_clean_magic_researcher
-        on_monthly_gate_add_immigration
+        on_monthly_gate_add_immigration_dwarven
+        on_monthly_gate_add_immigration_orcish
+        on_monthly_gate_add_immigration_elven
         on_monthly_gate_ai_magic_technology
         on_monthly_gate_set_research_production_method
     }
@@ -78,12 +80,30 @@ on_monthly_gate_ai_magic_technology = {
     }
 }
 
-on_monthly_gate_add_immigration = {
+on_monthly_gate_add_immigration_dwarven = {
     trigger = {
         has_technology_researched = dwarven_gate_immigration
     }
     effect = {
-        add_gate_immigration = yes
+        add_gate_immigration_dwarven = yes
+    }
+}
+
+on_monthly_gate_add_immigration_orcish = {
+    trigger = {
+        has_technology_researched = orcish_gate_immigration
+    }
+    effect = {
+        add_gate_immigration_orcish = yes
+    }
+}
+
+on_monthly_gate_add_immigration_elven= {
+    trigger = {
+        has_technology_researched = elven_gate_immigration
+    }
+    effect = {
+        add_gate_immigration_elven = yes
     }
 }
 

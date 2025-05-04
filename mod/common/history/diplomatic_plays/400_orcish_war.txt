@@ -1,43 +1,43 @@
-﻿DIPLOMATIC_PLAYS = {
-	c:GATE_OK = {
-		create_diplomatic_play = {
-			name = gok_war
-		
-			target_state = s:STATE_YUCATAN.region_state:MEX
-
-			war = yes
-			
-			type = dp_conquer_state
-
-			add_war_goal = {
-				holder = c:MEX
-				type = return_state
-				target_state = s:STATE_CHIAPAS.region_state:GATE_OK
-			}
-
-			add_war_goal = {
-				holder = c:MEX
-				type = conquer_state
-				target_state = s:STATE_GUATEMALA.region_state:GATE_OK
-			}
-
-			add_war_goal = {
-				holder = c:GATE_OK
-				type = conquer_state
-				target_state = s:STATE_CHIAPAS.region_state:MEX
-			}
-
-			add_war_goal = {
-				holder = c:GATE_OK
-				type = conquer_state
-				target_state = s:STATE_VERACRUZ.region_state:MEX
-			}
-
-			add_war_goal = {
-				holder = c:GATE_OK
-				type = conquer_state
-				target_state = s:STATE_OAXACA.region_state:MEX
-			}
-		}
-	}
-}
+﻿# DIPLOMATIC_PLAYS = {
+# 	c:GATE_OK = {
+# 		create_diplomatic_play = {
+# 			name = gok_war
+#
+# 			target_state = s:STATE_YUCATAN.region_state:MEX
+#
+# 			war = yes
+#
+# 			type = dp_conquer_state
+#
+# 			add_war_goal = {
+# 				holder = c:MEX
+# 				type = return_state
+# 				target_state = s:STATE_CHIAPAS.region_state:GATE_OK
+# 			}
+#
+# 			add_war_goal = {
+# 				holder = c:MEX
+# 				type = conquer_state
+# 				target_state = s:STATE_GUATEMALA.region_state:GATE_OK
+# 			}
+#
+# 			add_war_goal = {
+# 				holder = c:GATE_OK
+# 				type = conquer_state
+# 				target_state = s:STATE_CHIAPAS.region_state:MEX
+# 			}
+#
+# 			add_war_goal = {
+# 				holder = c:GATE_OK
+# 				type = conquer_state
+# 				target_state = s:STATE_VERACRUZ.region_state:MEX
+# 			}
+#
+# 			add_war_goal = {
+# 				holder = c:GATE_OK
+# 				type = conquer_state
+# 				target_state = s:STATE_OAXACA.region_state:MEX
+# 			}
+# 		}
+# 	}
+# }

@@ -3,7 +3,7 @@
     s:STATE_ZAMBIA = {
         region_state:GATE_AD = {
             create_building = {
-                building = building_gate_zambia
+                building = "building_gate_zambia"
                 add_ownership = {
                     country = {
                         country = c:GATE_AD
@@ -12,249 +12,176 @@
                 }
                 reserves = 1
                 activate_production_methods = {
-                    pm_gate_support_elves_plus
+                    pm_gate_support_elves
                 }
             }
             create_building = {
-                building = building_elven_forest
+                building = "building_elven_forest"
                 reserves = 1
                 level = 1
             }
             create_building = {
-                building = building_millet_farm
+                building = "building_magic_research_institute"
+                add_ownership = {
+                    country = {
+                        country = "c:GATE_AD"
+                        levels = 1
+                    }
+                }
+                reserves = 1
+                activate_production_methods = { "pm_novice_researcher" }
+            }
+            create_building = {
+                building = "building_university"
+                add_ownership = {
+                    country = {
+                        country = "c:GATE_AD"
+                        levels = 1
+                    }
+                }
+                reserves = 1
+                activate_production_methods = { "pm_scholastic_education" "pm_university_simple_magic_research" }
+            }
+            create_building = {
+                building = "building_millet_farm"
                 add_ownership = {
                     building = {
-                        type = building_millet_farm
-                        country = c:GATE_AD
+                        type = "building_manor_house"
+                        country = "c:GATE_AD"
                         levels = 4
-                        region = STATE_ZAMBIA
+                        region = "STATE_ZAMBIA"
                     }
                 }
                 reserves = 1
-                activate_production_methods = {
-                    pm_simple_farming
-                    pm_magic_seeds
-                    pm_fig_orchards
-                    pm_tools
-                }
+                activate_production_methods = { "pm_simple_farming" "pm_magic_seeds" "pm_no_secondary" "pm_tools" }
             }
             create_building = {
-                building = building_magic_research_institute
-                level = 1
-                reserves = 1
-                activate_production_methods = {
-                    pm_novice_researcher
-                }
-            }
-            create_building = {
-                building = building_university
-                add_ownership = {
-                    country = {
-                        country = c:GATE_AD
-                        levels = 1
-                    }
-                }
-                reserves = 1
-                activate_production_methods = {
-                    pm_scholastic_education
-                    pm_secular_academia
-                    pm_university_simple_magic_research
-                }
-            }
-            create_building = {
-                building = building_mana_extractor
+                building = "building_mana_extractor"
                 add_ownership = {
                     building = {
-                        type = building_mage_tower
-                        country = c:GATE_AD
+                        type = "building_mage_tower"
+                        country = "c:GATE_AD"
                         levels = 1
-                        region = STATE_ZAMBIA
+                        region = "STATE_ZAMBIA"
                     }
+                }
+                reserves = 1
+                activate_production_methods = { "pm_mage_ritual_extraction" }
+            }
+            create_building = {
+                building = "building_tooling_workshops"
+                add_ownership = {
+                    building = {
+                        type = "building_financial_district"
+                        country = "c:GATE_AD"
+                        levels = 1
+                        region = "STATE_ZAMBIA"
+                    }
+                }
+                reserves = 1
+                activate_production_methods = { "pm_pig_iron" }
+            }
+            create_building={
+                building="building_magic_iron_mine"
+                add_ownership={
+                    building={
+                        type="building_financial_district"
+                        country="c:GATE_AD"
+                        levels= 1
+                        region="STATE_ZAMBIA"
+                    }
+                }
+                reserves=1
+                activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+            }
+            create_building={
+                building="building_textile_mills"
+                add_ownership={
+                    building={
+                        type="building_financial_district"
+                        country="c:GATE_AD"
+                        levels= 1
+                        region="STATE_ZAMBIA"
+                    }
+                }
+                reserves=1
+                activate_production_methods={ "pm_dye_workshops" "pm_traditional_looms" "pm_no_luxury_clothes" }
+            }
+            create_building={
+                building="building_glassworks"
+                add_ownership={
+                    building={
+                        type="building_financial_district"
+                        country="c:GATE_AD"
+                        levels= 1
+                        region="STATE_ZAMBIA"
+                    }
+                }
+                reserves=1
+                activate_production_methods={ "pm_forest_glass" "pm_ceramics" "pm_manual_glassblowing" }
+            }
+            create_building = {
+                building = "building_government_administration"
+                add_ownership = {
                     country = {
-                        country = c:GATE_AD
+                        country = "c:GATE_AD"
                         levels = 2
                     }
                 }
                 reserves = 1
-                activate_production_methods = {
-                    pm_mage_ritual_extraction
-                }
+                activate_production_methods = { "pm_horizontal_drawer_cabinets" }
             }
-            create_building = {
-                building = building_tooling_workshops
-                add_ownership = {
-                    country = {
-                        country = c:GATE_AD
-                        levels = 1
+            create_building={
+                building="building_paper_mills"
+                add_ownership={
+                    building={
+                        type="building_financial_district"
+                        country="c:GATE_AD"
+                        levels= 1
+                        region="STATE_ZAMBIA"
                     }
                 }
-                reserves = 1
-                activate_production_methods = {
-                    pm_pig_iron
-                    pm_automation_disabled
-                }
+                reserves=1
+                activate_production_methods={ "pm_pulp_pressing" }
             }
-            create_building = {
-                building = building_textile_mills
-                add_ownership = {
-                    country = {
-                        country = c:GATE_AD
-                        levels = 2
+            create_building={
+                building="building_druid_groove"
+                add_ownership={
+                    building={
+                        type="building_mage_tower"
+                        country="c:GATE_AD"
+                        levels= 1
+                        region="STATE_ZAMBIA"
                     }
                 }
-                reserves = 1
-                activate_production_methods = {
-                    pm_dye_workshops
-                    pm_traditional_looms
-                    pm_no_luxury_clothes
-                }
+                reserves=1
+                activate_production_methods={ "pm_classic_magic_seed" }
             }
-            create_building = {
-                building = building_glassworks
-                add_ownership = {
-                    country = {
-                        country = c:GATE_AD
-                        levels = 1
+            create_building={
+                building="building_logging_camp"
+                add_ownership={
+                    building={
+                        type="building_financial_district"
+                        country="c:GATE_AD"
+                        levels= 1
+                        region="STATE_ZAMBIA"
                     }
                 }
-                reserves = 1
-                activate_production_methods = {
-                    pm_leaded_glass
-                    pm_ceramics
-                    pm_manual_glassblowing
-                }
+                reserves=1
+                activate_production_methods={ "pm_saw_mills" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
             }
-            create_building = {
-                building = building_government_administration
-                add_ownership = {
-                    country = {
-                        country = c:GATE_AD
-                        levels = 1
+            create_building={
+                building="building_food_industry"
+                add_ownership={
+                    building={
+                        type="building_financial_district"
+                        country="c:GATE_AD"
+                        levels= 1
+                        region="STATE_ZAMBIA"
                     }
                 }
-                reserves = 1
-                activate_production_methods = {
-                    pm_vertical_filing_cabinets
-                    pm_hereditary_bureaucrats
-                    pm_religious_bureaucrats
-                }
-            }
-            create_building = {
-                building = building_druid_groove
-                add_ownership = {
-                    country = {
-                        country = c:GATE_AD
-                        levels = 1
-                    }
-                }
-                reserves = 1
-                activate_production_methods = {
-                    pm_classic_magic_seed
-                }
-            }
-            create_building = {
-                building = building_logging_camp
-                add_ownership = {
-                    country = {
-                        country = c:GATE_AD
-                        levels = 1
-                    }
-                }
-                reserves = 1
-                activate_production_methods = {
-                    pm_saw_mills
-                    pm_no_hardwood
-                    pm_no_equipment
-                    pm_road_carts
-                }
-            }
-            create_building = {
-                building = building_food_industry
-                add_ownership = {
-                    country = {
-                        country = c:GATE_AD
-                        levels = 1
-                    }
-                }
-                reserves = 1
-                activate_production_methods = {
-                    pm_sweeteners
-                    pm_disabled_canning
-                    pm_pot_stills
-                    pm_manual_dough_processing
-                }
-            }
-        }
-    }
-    s:STATE_EAST_ANGOLA = {
-        region_state:GATE_AD = {
-            create_building = {
-                building = building_druid_groove
-                add_ownership = {
-                    building = {
-                        type = building_mage_tower
-                        country = c:GATE_AD
-                        levels = 1
-                        region = STATE_EAST_ANGOLA
-                    }
-                }
-                reserves = 1
-                activate_production_methods = {
-                    pm_classic_magic_seed
-                }
-            }
-            create_building = {
-                building = building_millet_farm
-                add_ownership = {
-                    building = {
-                        type = building_millet_farm
-                        country = c:GATE_AD
-                        levels = 1
-                        region = STATE_ZAMBIA
-                    }
-                }
-                reserves = 1
-                activate_production_methods = {
-                    pm_simple_farming
-                    pm_magic_seeds
-                    pm_fig_orchards
-                    pm_tools
-                }
-            }
-            create_building = {
-                building = building_paper_mills
-                add_ownership = {
-                    country = {
-                        country = c:GATE_AD
-                        levels = 1
-                    }
-                }
-                reserves = 1
-                activate_production_methods = {
-                    pm_pulp_pressing
-                    pm_automation_disabled
-                }
-            }
-        }
-    }
-    s:STATE_BOTSWANA = {
-        region_state:GATE_AD = {
-            create_building = {
-                building = building_furniture_manufacturies
-                add_ownership = {
-                    building = {
-                        type = building_furniture_manufacturies
-                        country = c:GATE_AD
-                        levels = 1
-                        region = STATE_BOTSWANA
-                    }
-                }
-                reserves = 1
-                activate_production_methods = {
-                    pm_handcrafted_furniture
-                    pm_no_luxuries
-                    pm_automation_disabled
-                }
+                reserves=1
+                activate_production_methods={ "pm_sweeteners" "pm_disabled_canning" "pm_pot_stills" "pm_manual_dough_processing" }
             }
         }
     }
@@ -359,42 +286,6 @@
                 }
             }
         }
-        region_state:LND = {
-            create_building = {
-                building = building_logging_camp
-                add_ownership = {
-                    building = {
-                        type = building_mage_tower
-                        country = c:GATE_AD
-                        levels = 2
-                        region = STATE_ZAMBIA
-                    }
-                }
-                reserves = 1
-                activate_production_methods = {
-                    pm_simple_forestry
-                    pm_no_hardwood
-                    pm_no_equipment
-                    pm_road_carts
-                }
-            }
-            create_building = {
-                building = building_livestock_ranch
-                add_ownership = {
-                    country = {
-                        country = c:GATE_AD
-                        levels = 1
-                    }
-                }
-                reserves = 1
-                activate_production_methods = {
-                    pm_open_air_stockyards
-                    pm_sheep_farms
-                    pm_standard_fences
-                    pm_unrefrigerated
-                }
-            }
-        }
         region_state:CHK = {
             create_building = {
                 building = building_livestock_ranch
@@ -402,7 +293,7 @@
                     building = {
                         type = building_manor_house
                         country = c:GATE_AD
-                        levels = 5
+                        levels = 3
                         region = STATE_ZAMBIA
                     }
                 }
@@ -469,290 +360,122 @@
         }
     }
     s:STATE_KATANGA = {
-        region_state:LND = {
-            create_building = {
-                building = building_dye_plantation
-                add_ownership = {
-                    building = {
-                        type = building_manor_house
-                        country = c:GATE_AD
-                        levels = 1
-                        region = STATE_BOTSWANA
-                    }
-                }
-                reserves = 1
-                activate_production_methods = {
-                    default_building_dye_plantation
-                    pm_road_carts
-                }
-            }
-            create_building = {
-                building = building_banana_plantation
-                add_ownership = {
-                    country = {
-                        country = c:GATE_AD
-                        levels = 1
-                    }
-                }
-                reserves = 1
-                activate_production_methods = {
-                    default_building_banana_plantation
-                    pm_road_carts
-                }
-            }
-            create_building = {
-                building = building_tea_plantation
-                add_ownership = {
-                    country = {
-                        country = c:GATE_AD
-                        levels = 1
-                    }
-                }
-                reserves = 1
-                activate_production_methods = {
-                    default_building_tea_plantation
-                    pm_road_carts
-                }
-            }
-            create_building = {
-                building = building_sugar_plantation
-                add_ownership = {
-                    building = {
-                        type = building_manor_house
-                        country = c:GATE_AD
-                        levels = 2
-                        region = STATE_ZAMBIA
-                    }
-                }
-                reserves = 1
-                activate_production_methods = {
-                    default_building_sugar_plantation
-                    pm_road_carts
-                }
-            }
-            create_building = {
-                building = building_millet_farm
-                add_ownership = {
-                    building = {
-                        type = building_manor_house
-                        country = c:GATE_AD
-                        levels = 3
-                        region = STATE_ZAMBIA
-                    }
-                }
-                reserves = 1
-                activate_production_methods = {
-                    pm_simple_farming
-                    pm_magic_seeds
-                    pm_no_secondary
-                    pm_tools
-                }
-            }
-        }
         region_state:KZM = {
             create_building = {
-                building = building_iron_mine
+                building = "building_dye_plantation"
                 add_ownership = {
                     building = {
-                        type = building_mage_tower
-                        country = c:GATE_AD
-                        levels = 2
-                        region = STATE_EAST_ANGOLA
+                        type = "building_manor_house"
+                        country = "c:KZM"
+                        levels = 1
+                        region = "STATE_KATANGA"
                     }
                 }
                 reserves = 1
-                activate_production_methods = {
-                    pm_picks_and_shovels_building_iron_mine
-                    pm_crystal_explosives_building_iron_mine
-                    pm_no_steam_automation
-                    pm_road_carts
-                }
+                activate_production_methods = { "default_building_dye_plantation" }
             }
             create_building = {
-                building = building_millet_farm
+                building = "building_banana_plantation"
                 add_ownership = {
-                    country = {
-                        country = c:GATE_AD
+                    building = {
+                        type = "building_manor_house"
+                        country = "c:KZM"
                         levels = 1
+                        region = "STATE_KATANGA"
                     }
                 }
                 reserves = 1
-                activate_production_methods = {
-                    pm_simple_farming
-                    pm_magic_seeds
-                    pm_no_secondary
-                    pm_tools
-                }
+                activate_production_methods = { "default_building_banana_plantation" }
             }
             create_building = {
-                building = building_banana_plantation
+                building = "building_tea_plantation"
                 add_ownership = {
-                    country = {
-                        country = c:GATE_AD
+                    building = {
+                        type = "building_manor_house"
+                        country = "c:KZM"
                         levels = 1
+                        region = "STATE_KATANGA"
                     }
                 }
                 reserves = 1
-                activate_production_methods = {
-                    default_building_banana_plantation
-                    pm_road_carts
+                activate_production_methods = { "default_building_tea_plantation" }
+            }
+            create_building = {
+                building = "building_millet_farm"
+                add_ownership = {
+                    building = {
+                        type = "building_manor_house"
+                        country = "c:KZM"
+                        levels = 3
+                        region = "STATE_KATANGA"
+                    }
                 }
+                reserves = 1
+                activate_production_methods = { "pm_simple_farming" "pm_magic_seeds" "pm_no_secondary" "pm_tools" }
+            }
+            create_building = {
+                building = "building_sugar_plantation"
+                add_ownership = {
+                    building = {
+                        type = "building_manor_house"
+                        country = "c:KZM"
+                        levels = 1
+                        region = "STATE_KATANGA"
+                    }
+                }
+                reserves = 1
+                activate_production_methods = { "default_building_sugar_plantation" }
             }
         }
     }
     s:STATE_KAZEMBE = {
         region_state:KZM = {
             create_building = {
-                building = building_logging_camp
+                building = "building_logging_camp"
                 add_ownership = {
                     building = {
-                        type = building_mage_tower
-                        country = c:GATE_AD
-                        levels = 2
-                        region = STATE_ZAMBIA
-                    }
-                    country = {
-                        country = c:GATE_AD
-                        levels = 1
+                        type = "building_financial_district"
+                        country = "c:KZM"
+                        levels = 3
+                        region = "STATE_KAZEMBE"
                     }
                 }
                 reserves = 1
-                activate_production_methods = {
-                    pm_simple_forestry
-                    pm_no_hardwood
-                    pm_no_equipment
-                    pm_road_carts
-                }
+                activate_production_methods = { "pm_simple_forestry" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
             }
             create_building = {
-                building = building_cotton_plantation
+                building = "building_cotton_plantation"
                 add_ownership = {
                     building = {
-                        type = building_manor_house
-                        country = c:GATE_AD
+                        type = "building_financial_district"
+                        country = "c:KZM"
                         levels = 1
-                        region = STATE_BOTSWANA
+                        region = "STATE_KAZEMBE"
                     }
                 }
                 reserves = 1
-                activate_production_methods = {
-                    default_building_cotton_plantation
-                    pm_road_carts
-                }
+                activate_production_methods = { "default_building_cotton_plantation" }
             }
         }
     }
     s:STATE_BOTSWANA = {
         region_state:TSW = {
             create_building = {
-                building = building_logging_camp
-                add_ownership = {
-                    country = {
-                        country = c:TSW
-                        levels = 1
-                    }
-                    country = {
-                        country = c:GATE_AD
-                        levels = 2
-                    }
-                }
-                reserves = 1
-                activate_production_methods = {
-                    pm_saw_mills
-                    pm_no_hardwood
-                    pm_no_equipment
-                    pm_road_carts
-                }
-            }
-            create_building = {
-                building = building_food_industry
-                add_ownership = {
-                    country = {
-                        country = c:TSW
-                        levels = 1
-                    }
-                }
-                reserves = 1
-                activate_production_methods = {
-                    pm_sweeteners
-                    pm_disabled_canning
-                    pm_pot_stills
-                    pm_manual_dough_processing
-                }
-            }
-            create_building = {
-                building = building_millet_farm
+                building = "building_logging_camp"
                 add_ownership = {
                     building = {
-                        type = building_millet_farm
-                        country = c:TSW
-                        levels = 2
-                        region = STATE_BOTSWANA
+                        type = "building_financial_district"
+                        country = "c:TSW"
+                        levels = 3
+                        region = "STATE_BOTSWANA"
                     }
                 }
                 reserves = 1
-                activate_production_methods = {
-                    pm_simple_farming
-                    pm_magic_seeds
-                    pm_no_secondary
-                    pm_tools
-                }
+                activate_production_methods = { "pm_simple_forestry" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
             }
         }
         s:STATE_NORTHERN_CAPE = {
             region_state:TSW = {
-                create_building = {
-                    building = building_tooling_workshops
-                    add_ownership = {
-                        country = {
-                            country = c:TSW
-                            levels = 1
-                        }
-                        country = {
-                            country = c:GATE_AD
-                            levels = 1
-                        }
-                    }
-                    reserves = 1
-                    activate_production_methods = {
-                        pm_pig_iron
-                        pm_automation_disabled
-                    }
-                }
-                create_building = {
-                    building = building_logging_camp
-                    add_ownership = {
-                        country = {
-                            country = c:TSW
-                            levels = 1
-                        }
-                    }
-                    reserves = 1
-                    activate_production_methods = {
-                        pm_saw_mills
-                        pm_no_hardwood
-                        pm_no_equipment
-                        pm_road_carts
-                    }
-                }
-                create_building = {
-                    building = building_livestock_ranch
-                    add_ownership = {
-                        building = {
-                            type = building_manor_house
-                            country = c:GATE_AD
-                            levels = 2
-                            region = STATE_ZAMBIA
-                        }
-                    }
-                    reserves = 1
-                    activate_production_methods = {
-                        pm_open_air_stockyards
-                        pm_sheep_farms
-                        pm_standard_fences
-                        pm_unrefrigerated
-                    }
-                }
             }
         }
     }
