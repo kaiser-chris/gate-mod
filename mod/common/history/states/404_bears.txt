@@ -1,0 +1,258 @@
+﻿STATES = {
+
+    s:STATE_COLORADO = {
+        create_state = {
+            country = c:GATE_B1
+            owned_provinces = {
+                x150652 x9F53C7 x904040 xD5F00A
+                xEBE9CE x687718 x129391 x66CBE4
+                x433C79 xA891E3 xCEB851 x83741F
+                xD0C000 xB1E3F4 x1BE078 xC5CFEF
+                x1DAD86 x25C53C x26A01D xBBFA06
+                x8C51FE xD07052 x0B9901 x4B60B0
+                x820130 x52080F xE86EE3 x348ACD
+                x32230C x8C7A20 xA69111 xEB212F
+                x017E79 x7854CE xAB4C21 x307992
+                xA90729 x812CF7 x5B5900 x724089
+                x125FB0 x63F85D x86F203 x50C000
+                x72823F xDE4C96 x52EB7C x15CB9B
+                x5AE64F x34EDA2 x4E209F xC8FA49
+                xF2C402 x4F6919 xBF0C47 x6EA57A
+                xEBAEAA x22BFC4 x669059 x07E17F
+                xF642DA x742D27 xE85180 x704257
+                x05E33E x61CB37 x511F34 xC97B5E
+                x88B597
+
+                # Provinces that need to be annexed in global:
+                # - c:MEX: xFD4329
+                # - c:ARP: x719099
+                # - c:UTE: x31580F
+                # - c:USA: xD04000
+            }
+            state_type = incorporated
+        }
+        add_homeland = cu:plundboelka
+    }
+
+    s:STATE_NEW_MEXICO = {
+        create_state = {
+            country = c:GATE_B1
+            owned_provinces = {
+                x256AEE xDF1965 x810C1A x3385DD
+                x74C317 x1B611D x0B1E97 x23E585
+                x00E2A7 xB6EC9A xA84AFD xA156C7
+                x940839 xC03080 x851687 xB566BA
+                x3CC82C x0DAC3E x46C455 x67B298
+                x79844B x90EA7D x5DA018 xB0BB90
+                x99C48C x9660D3 xB636E0 xE27DFB
+                x40B080 xD3611A x0E8A94 x8C6FA5
+                x418B71 xA858F4 x92D597 x2EE19C
+                xCAEC7A xB7D6F2 xAE76ED x8A526A
+                xFD2B9D xF9F60A xD78928 xDBA81D
+                x5967A1 x5E769A x50DED9 x504080
+                xC32AF4 xE9C718 x0957D1 x7EA360
+                xC50565 x4BBEE7 xF59F44 x3CD2D7
+                x59E5C4 x7D2451 x7C809B x38BB61
+                xAE2568 x808AB5 x17E6C3 xBD8033
+                x2DF849 x168663 xEF029F x9C0FED
+                x810C1A x256AEE x74C317 x92D597
+                x2EE19C xB7D6F2 xE27DFB x418B71
+                x9660D3 x40B080 xF9F60A x37B6CF
+                x4025EE x84CE0F xFB0FA8 x650434
+                x53F9F0 x9C15D3
+
+                # Provinces that need to be annexed in global:
+                # - c:MEX: xEED52D
+                # - c:NVJ: xAA2075
+                # - c:COM: xC03297
+                # - c:APC: x17660E
+            }
+            state_type = incorporated
+        }
+        add_homeland = cu:plundboelka
+    }
+
+    s:STATE_TEXAS = {
+        create_state = {
+            country = c:GATE_B1
+            owned_provinces = {
+                xD22E00 x849B8F x8CDEAE xFE4703
+                x803040 xB47B14 xF0BA2E xA909D2
+                x99A404 xFD0D62 x71ACC7 x33031A
+                xFB5451 x013AEB x798ACD xEDA6C0
+                x0DA281 x7E7CB0 xD4BE3A x5B5F82
+                x6FD534 x973B1C xD19D8F xA33609
+                x1BB9FA xE99673 x89E3C9 x2CBC3B
+                x00B040 x1B9E2A x7DCECB xD15251
+                x5C7EA4 x0289AA x04CD6D xD4536D
+                x6363AC x56A8B5 x607C83 x61EACC
+                xEB7B97 x18EC9C xAAFB06 xB7EAE9
+                xEE1B8C x1AC45E x2D8E7D x824F92
+                x25D807 x5C6FF5 x8B5EC8 xA66212
+                x5C9120 x1DDB1A x39DB21 x80B0C0
+                x99A694 x869D5F x2C9BF6 x90B38D
+                x80287B x317E88 x9D5716 x1120AB
+                x1C3B80 x44F322 xE567C9 x8BFDCC
+                x2C37DD x3CA5A6 xB8F19A x402088
+                x224C75 x80B040 x601A4F xC369DB
+                x27D689 x059C90 x1DCED1 x1E9A0F
+                x3751A7 x24C127 x10CA7B x951736
+                x871357 xD08070 xB9118E xC9D330
+                x5D3843 x2DA551 x760779 x4E19F4
+                x6958D6 x6E8169 xBB8A78 x0E125F
+                x90CE2B x860F5A x0D192D x6BB536
+                xA55E5C xB16A3C x8EBCC7 x94A617
+                x18F9D5 x03FDD9 xE222E2 xDB3E39
+                x27C614 xE3F481 x08F331 x3DAE0A
+                xC7ED1C xFDD38C xD206BC x0030C0
+                xED08F5 xA3A810 xDB68A7 x86122A
+                xC6EE8B x0B77C3 xB2484A xEC7601
+                x89CD8D x9632BE xD0FCF0 x4439A4
+                xC32E10 x48FB7B x99A780 x2FA254
+                xDE7B44 xFAB703 x907490 x94E465
+                x00A88F x212F2F x3F2F5D x58AF61
+                xC82BB4 x049490 x5C6475 x6FF4CE
+                x1E553B x22F5CE xE6C09D x2E8063
+                xB0D689 x46137E x00B0C0 xB114A9
+                xBD7887 xAFBF37 x6125F7 x3B9D9E
+
+                # Provinces that need to be annexed in global:
+                # - c:TEX: x10D832
+                # - c:MEX: x91A02C
+                # - c:COM: xFE0821
+            }
+            state_type = incorporated
+        }
+        add_homeland = cu:plundboelka
+    }
+
+    s:STATE_WYOMING = {
+        create_state = {
+            country = c:GATE_B2
+            owned_provinces = {
+                x7105F8 x2CC9D7 x1F5624 x2403EF
+                xCF073F x0EB61F x5B70BB x89656E
+                xD7B8D9 x465DC8 x84DF43 x3DC80A
+                x319B3E x0DE2A6 x93B583 x867348
+                x1AC89E x818335 xFABE6A x28CC5C
+                x5FBCFF xE35101 x65DCDB x59773A
+                x1213C4 xE1622A xF99A07 x8BF1A0
+                x90C080 x5B63B5 xC0CBE5 xF53AA9
+                xB9C5DD x170104 x109BC0 x10C080
+                x244042 xF2158B xE9F52A x63D8F8
+                x11BB04 x82F798 x050F0F x1DF2FD
+                xF2DFDC x57FDB7 x22B520 x533D44
+                x21EE68 x65D786 xAC6092 xEC9D85
+                x600D92 x42A388 xE387E7 x5F141F
+                x81DB36 x952F3F x58C850 x9F03E3
+                xA55B0A xF89B9D xB6CA16 x977599
+                xD74652 x52839A
+
+                # Provinces that need to be annexed in global:
+                # - c:USA: x65DCDB
+                # - c:LKT: xF3326F
+                # - c:ARP: x27F79C
+                # - c:BNN: x36DEC9
+                # - c:SLS: x8B96F2
+                # - c:ABS: xBE0B1C
+            }
+            state_type = incorporated
+        }
+        add_homeland = cu:praprandgaw
+    }
+
+    s:STATE_IDAHO = {
+        create_state = {
+            country = c:GATE_B2
+            owned_provinces = {
+                x4B49F2 xE836AA xB94979 x2BCA5E
+                x0667C7 x87941A xE65BC2 xFD9C12
+                xB8D005 x774CEA xD484FE xB20F44
+                x7355BF x017C34 x2C976D x73354E
+                x3BC3DC x81EADA x156C47 x573B27
+                xA1A13A xA1C84D x40339D x4A7CD8
+                x744A86 x0B6D01 x3B157B x1F04CC
+                x4690C2 xBC0AA9 x9888F6 x236126
+                xD00080 xEC9F6C x0FB2AA x4DBE4A
+                x06E885 x44332A xB95EB2 x7B1E0A
+                x233F47 x1E57E5 x0682D7 x249E28
+                xED64F1 x9F2532 x83926D xC3178C
+                xB5C710 x2CC6D7 x7D5812 xD06EF9
+                xE6E56D x9D7B0E xF11FC4 xCE1B4B
+                x0062B6 x01C975 x073B66 x96529F
+                x0456B2 xCC869C x402080 xCFD016
+                xBFA9C4 xE6B7A4 x8C707D x25F860
+                x4DAA8A xD7B25C x9D92A7
+
+                # Provinces that need to be annexed in global:
+                # - c:ORG: x7B7595
+                # - c:BNN: xC998B0
+                # - c:NZP: x82AA18
+            }
+            state_type = incorporated
+        }
+        add_homeland = cu:praprandgaw
+    }
+
+    s:STATE_OREGON = {
+        create_state = {
+            country = c:GATE_B2
+            owned_provinces = {
+                xBB67BF xECB422 x516EE9 x9A8FE0
+                x7F6C55 xB44E52 x6C865B x9D6DC4
+                x45A1A9 xD83E52 xCBB471 x293CFE
+                x39BBAC xAA3291 x2743B8 xF62E1E
+                x06ADC6 xA0E237 xA9C13D x87ED27
+                xD87AC6 x4A00D8 x637BED xD618E3
+                xF35EB7 xC1118F xF22299 x25F09F
+                x80A000 x111E67 xEE8DD8 x4960BF
+                x37E740 xEEE2DF xEB2D7C x0CE459
+                x9B28DC x0F1D3D xA22631 xBDE344
+                xFB0F43 xCD9293 xA87938 xA0C0C0
+                xC8AC77 x75F5D2 x25B61A x0419A4
+                x4E26DC xC305C5 x7A125A x70746B
+                xBC98A3 x1F5423 xE1EAB1 x508345
+                xFE0977 x9057FD xF5AD68 x2F14A9
+                x6976E3 xF72662 x5E6688 x404E40
+                xD8F5D7 xDEC345 x103F17 x500A3C
+                xD4E859 x399A20 xA0ECEC xA30109
+                x3A1A26 x42EA1A xE0E0E0 x7E3484
+                x17732C
+
+                # Provinces that need to be annexed in global:
+                # - c:ORG: xFAEFD3
+            }
+            state_type = incorporated
+        }
+        add_homeland = cu:praprandgaw
+    }
+
+    s:STATE_WASHINGTON = {
+        create_state = {
+            country = c:GATE_B2
+            owned_provinces = {
+                x052300 xAC33A4 xFC0388 xD31024
+                x7147A2 x3E4D28 xCF4646 x3A17A7
+                x639A2C x2FEE4D x8CF087 x896ABB
+                x085961 x4F0C2D xD61B40 xC0F8C2
+                xC8CBF4 x9E03D5 x0187D7 x00A000
+                xA4DD56 x551707 x872665 x2CE4D9
+                xCD3BA9 x0A48BB xD96A8E xDAC21E
+                xF4C54B x3F0EE7 x20C0C0 x74558E
+                x940588 x266DDD x036981 xC77F08
+                xB4D972 x5637A4 x3575A8 x30DED0
+                x64DA01 x6845FD x6AA85B xA040C0
+                x3CB52E x553AEE x2BF430 x496526
+                x9AA5A8 x5DFA9B xDCF81F xA92FD8
+                x38322E xB5A331 x68129D xFFBEF7
+                xBBBE62 x227733 x004935
+
+                # Provinces that need to be annexed in global:
+                # - c:ORG: x0D9D1A
+            }
+            state_type = incorporated
+        }
+        add_homeland = cu:praprandgaw
+    }
+
+}
