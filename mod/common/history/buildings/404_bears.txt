@@ -1,0 +1,81 @@
+﻿# Remove existing population first.
+# This is needed so the population is properly assimilated.
+# When this is not done qualifications and building occupancy
+# are not set correctly.
+BUILDINGS = {
+
+    s:STATE_COLORADO = {
+        # Base game states are empty
+        # So we do not need to remove existing buildings
+
+        region_state:GATE_B1 = {
+            create_building = {
+                building = building_gate_colorado
+                add_ownership = {
+                    country = {
+                        country = c:GATE_B1
+                        levels = 1
+                    }
+                }
+                reserves = 1
+                activate_production_methods = { pm_gate_closed }
+            }
+            # Add buildings here
+        }
+    }
+
+    s:STATE_NEW_MEXICO = {
+        # Base game states are empty
+        # So we do not need to remove existing buildings
+
+        region_state:GATE_B1 = {
+            # Add buildings here
+        }
+    }
+
+    s:STATE_TEXAS={
+        region_state:TEX = {
+            remove_building = building_maize_farm
+            remove_building = building_vineyard_plantation
+        }
+
+        region_state:GATE_B1 = {
+            # Add buildings here
+        }
+    }
+
+    s:STATE_WYOMING = {
+        # Base game states are empty
+        # So we do not need to remove existing buildings
+
+        region_state:GATE_B2 = {
+            # Add buildings here
+        }
+    }
+    s:STATE_IDAHO = {
+        # Base game states are empty
+        # So we do not need to remove existing buildings
+
+        region_state:GATE_B2 = {
+            # Add buildings here
+        }
+    }
+    s:STATE_OREGON = {
+        region_state:ORG = {
+            remove_building = building_logging_camp
+        }
+
+        region_state:GATE_B2 = {
+            # Add buildings here
+        }
+    }
+    s:STATE_WASHINGTON = {
+        # Base game states are empty
+        # So we do not need to remove existing buildings
+
+        region_state:GATE_B2 = {
+            # Add buildings here
+        }
+    }
+
+}

@@ -128,6 +128,47 @@ GLOBAL = {
 			template = gate_magic_researcher_template
 			interest_group = ig_intelligentsia
 		}
+
+		set_secret_goal = {
+			country = c:GATE_B1
+			secret_goal = dominate
+		}
+		set_secret_goal = {
+			country = c:GATE_B2
+			secret_goal = dominate
+		}
+	}
+
+	# United States
+	c:USA = {
+		# Add Researching Magic journal entry
+		add_journal_entry = {
+			type = je_gate_researching_magic
+		}
+
+		# Add progress to magic research since they have
+		# had access to a gate for years
+		je:je_gate_researching_magic = {
+			add_progress = {
+				name = pb_gate_researching_magic
+				value = 13
+			}
+		}
+
+		# Add Magic Researcher
+		create_character = {
+			template = gate_magic_researcher_template
+			interest_group = ig_intelligentsia
+		}
+
+		set_secret_goal = {
+			country = c:GATE_B1
+			secret_goal = dominate
+		}
+		set_secret_goal = {
+			country = c:GATE_B2
+			secret_goal = dominate
+		}
 	}
 
 }
