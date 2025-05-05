@@ -986,7 +986,7 @@ gate_mana_saturation.14 = {
 gate_mana_saturation.15 = {
 	type = country_event
 	dlc = dlc_magic_gate
-	placement = scope:gate_ateshgah_state
+	placement = scope:gate_venkateswara_state
 
 	title = gate_mana_saturation.15.t
 	desc = gate_mana_saturation.15.d
@@ -1008,7 +1008,7 @@ gate_mana_saturation.15 = {
 		any_scope_state = {
 			state_region ?= s:STATE_KURNOOL
 			NOT = {
-				has_state_trait = state_trait_gate_ganges
+				has_state_trait = state_trait_gate_venkateswara
 			}
 		}
 		s:STATE_KURNOOL ?= {
@@ -1021,19 +1021,19 @@ gate_mana_saturation.15 = {
 			limit = {
 				state_region ?= s:STATE_KURNOOL
 			}
-			save_scope_as = gate_ateshgah_state
+			save_scope_as = gate_venkateswara_state
 		}
 	}
 
 	option = {
 		name = gate_mana_saturation.15.a
 		s:STATE_KURNOOL ?= {
-			add_state_trait = state_trait_gate_ganges
+			add_state_trait = state_trait_gate_venkateswara
 			add_mana_density = {
 				amount = 50
 			}
 		}
-		scope:gate_ateshgah_state ?= {
+		scope:gate_venkateswara_state ?= {
 			create_building = {
 				building = building_gate_venkateswara_temple
 				level = 1
