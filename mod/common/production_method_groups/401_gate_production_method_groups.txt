@@ -8,40 +8,6 @@
 	}
 }
 
-pmg_magic_gate_dwarven_immigation = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	ai_selection = most_productive
-
-	production_methods = {
-		pm_gate_defend
-		pm_gate_closed
-		pm_gate_immigration_dwarves
-		pm_gate_mass_immigration_dwarves
-	}
-}
-
-pmg_magic_gate_orcish_immigation = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	ai_selection = most_productive
-
-	production_methods = {
-		pm_gate_closed
-		pm_gate_immigration_orcish
-		pm_gate_mass_immigration_orcish
-	}
-}
-
-pmg_magic_gate_elven_immigation = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	ai_selection = most_productive
-
-	production_methods = {
-		pm_gate_closed
-		pm_gate_immigration_elven
-		pm_gate_mass_immigration_elven
-	}
-}
-
 pmg_magic_gate_exploitation_zambia = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
@@ -71,15 +37,84 @@ pmg_magic_gate_exploitation_eastern_new_guinea = {
 	production_methods = {
 		pm_gate_defend
 		pm_gate_closed
+		#TODO: Add Gnome help pm
 	}
 }
 
-pmg_magic_gate_exploitation_colorado = {
+pmg_magic_gate_exploitation_yukon = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
 
 	production_methods = {
 		pm_gate_defend
 		pm_gate_closed
+		#TODO: Add Bear help pm
+	}
+}
+
+pmg_magic_gate_exploitation_tyrol = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_gate_defend
+		pm_gate_closed
+		#TODO: Add Dwarven help pm
+	}
+}
+
+pmg_magic_gate_dwarven_immigation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_gate_immigration_none
+		pm_gate_immigration_dwarves
+		pm_gate_mass_immigration_dwarves
+	}
+}
+
+pmg_magic_gate_orcish_immigation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_gate_immigration_none
+		pm_gate_immigration_orcish
+		pm_gate_mass_immigration_orcish
+	}
+}
+
+pmg_magic_gate_elven_immigation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_gate_immigration_none
+		pm_gate_immigration_elven
+		pm_gate_mass_immigration_elven
+	}
+}
+
+
+pmg_magic_gate_gnomish_immigation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_gate_immigration_none
+		pm_gate_immigration_gnomish
+		pm_gate_mass_immigration_gnomish
+	}
+}
+
+pmg_magic_gate_bear_immigation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_gate_immigration_none
+		pm_gate_immigration_bear
+		pm_gate_mass_immigration_bear
 	}
 }

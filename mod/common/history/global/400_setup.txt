@@ -62,6 +62,9 @@ GLOBAL = {
 		variable = magic_countries
 		limit = {
 			NOT = {
+				# Exclude Texas since it will lead
+				# to issues. This is handled in:
+				# 350_base_game_extension.txt
 				c:TEX ?= this
 			}
 		}
@@ -74,103 +77,10 @@ GLOBAL = {
 		}
 	}
 
-	every_character = {
-		limit = {
-			OR = {
-				culture ?= cu:dwarven
-				culture ?= cu:elven
-				culture ?= cu:vampire
-				culture ?= cu:plundboelka
-				culture ?= cu:praprandgaw
-			}
-		}
-		if = {
-			limit = {
-				culture ?= cu:dwarven
-				NOT = {
-					has_trait = gate_race_trait_dwarven
-				}
-			}
-			add_trait = gate_race_trait_dwarven
-		}
-		if = {
-			limit = {
-				culture ?= cu:elven
-				NOT = {
-					has_trait = gate_race_trait_elven
-				}
-			}
-			add_trait = gate_race_trait_elven
-		}
-		if = {
-			limit = {
-				culture ?= cu:vampire
-				NOT = {
-					has_trait = gate_race_trait_vampire
-				}
-			}
-			add_trait = gate_race_trait_vampire
-		}
-		if = {
-			limit = {
-				OR = {
-					culture ?= cu:plundboelka
-					culture ?= cu:praprandgaw
-				}
-				NOT = {
-					has_trait = gate_race_trait_bear
-				}
-			}
-			add_trait = gate_race_trait_bear
-		}
-	}
+	# Add race traits to all
+	# automatically generated characters
+	gate_add_race_traits = yes
 
-	every_state = {
-		limit = { state_region = s:STATE_GABON }
-		state_region = {
-			add_arable_land = 25
-		}
-	}
-	every_state = {
-		limit = { state_region = s:STATE_CONGO_ORIENTALE }
-		state_region = {
-			add_arable_land = 30
-		}
-	}
-	every_state = {
-		limit = { state_region = s:STATE_KASAI }
-		state_region = {
-			add_arable_land = 30
-		}
-	}
-	every_state = {
-		limit = { state_region = s:STATE_CONGO }
-		state_region = {
-			add_arable_land = 35
-		}
-	}
-	every_state = {
-		limit = { state_region = s:STATE_EQUATEUR }
-		state_region = {
-			add_arable_land = 50
-		}
-	}
-	every_state = {
-		limit = { state_region = s:STATE_BAS_CONGO }
-		state_region = {
-			add_arable_land = 30
-		}
-	}
-	every_state = {
-		limit = { state_region = s:STATE_ZAMBIA }
-		state_region = {
-			add_arable_land = 40
-		}
-	}
-	every_state = {
-		limit = { state_region = s:STATE_KATANGA }
-		state_region = {
-			add_arable_land = 30
-		}
-	}
+	# Add arable land for balancing
+	gate_setup_arable_land = yes
 }

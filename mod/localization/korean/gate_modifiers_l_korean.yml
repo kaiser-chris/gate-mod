@@ -12,10 +12,14 @@
  country_gate_magical_innovation_mult_desc: "\n[concept_magic_innovation]을 사용하여 [concept_magic_technology] 연구 속도에 가해지는 보너스 또는 페널티."
  state_gate_monthly_dwarven_immigration_add: "매달 드워프 이주"
  state_gate_monthly_dwarven_immigration_add_desc: "매달 [GetCulture('dwarven').GetName] 이민자의 수."
- state_gate_monthly_orcish_immigration_add: "월간 오크족 마이그레이션" #deepl:4048767454
+ state_gate_monthly_orcish_immigration_add: "월간 [GetCulture('orcish').GetNameNoFormatting] 마이그레이션" #deepl:2436410465
  state_gate_monthly_orcish_immigration_add_desc: "매월 [GetCulture('orcish').GetName] 이민 금액입니다." #deepl:1800484899
- state_gate_monthly_elven_immigration_add: "월간 엘프 마이그레이션" #deepl:3693646371
+ state_gate_monthly_elven_immigration_add: "월간 [GetCulture('elven').GetNameNoFormatting] 마이그레이션" #deepl:3017860544
  state_gate_monthly_elven_immigration_add_desc: "매월 [GetCulture('elven').GetName] 이민 금액입니다." #deepl:2508932495
+ state_gate_monthly_gnomish_immigration_add: "월간 [GetCulture('gnomish').GetNameNoFormatting] 마이그레이션" #deepl:2360512022
+ state_gate_monthly_gnomish_immigration_add_desc: "매월 [GetCulture('gnomish').GetName] 이민 금액입니다." #deepl:228990100
+ state_gate_monthly_bear_immigration_add: "월간 곰 이동" #deepl:3055978853
+ state_gate_monthly_bear_immigration_add_desc: "매월 Bear 이민 금액입니다." #deepl:263984905
  country_institution_gate_monster_hunting_max_investment_add: "최대 $institution_gate_monster_hunting$ [concept_institution] 투자"
  country_institution_gate_monster_hunting_max_investment_add_desc: "$institution_gate_monster_hunting$ [concept_institution] 건물 최대 레벨에 이익 또는 불이익이 적용됩니다."
  country_institution_cost_institution_gate_monster_hunting_mult: "@bur![Nbsp][concept_bureaucracy]의 [GetInstitutionType('institution_gate_monster_hunting').GetName] 비용"

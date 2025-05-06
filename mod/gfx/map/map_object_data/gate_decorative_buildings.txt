@@ -33,7 +33,7 @@ game_object_locator = {
 }
 
 game_object_locator = {
-    name = "building_san_salvador_magic_gate_locator"
+    name = "building_equateur_magic_gate_locator"
     clamp_to_water_level = no
     render_under_water = no
     generated_content = no
@@ -41,7 +41,23 @@ game_object_locator = {
     instances = {
         {
             id = 1
-            position = { 2052.17 0.00 1831.55 }
+            position = { 4544.60 0.00 1542.20 }
+            rotation = { 0.000000 1.000000 0.000000 6.000000 }
+            scale = { 0.800000 0.800000 0.800000 }
+        }
+    }
+}
+
+game_object_locator = {
+    name = "building_yukon_magic_gate_locator"
+    clamp_to_water_level = no
+    render_under_water = no
+    generated_content = no
+    layer = "static"
+    instances = {
+        {
+            id = 1
+            position = { 1112.21 0.00 3135.91 }
             rotation = { 0.000000 1.000000 0.000000 6.000000 }
             scale = { 0.800000 0.800000 0.800000 }
         }

@@ -60,6 +60,7 @@ building_gate_tyrol = {
 	}
 
 	production_method_groups = {
+		pmg_magic_gate_exploitation_tyrol
 		pmg_magic_gate_dwarven_immigation
 	}
 
@@ -100,7 +101,7 @@ building_gate_zambia = {
 
 	production_method_groups = {
 		pmg_magic_gate_exploitation_zambia
-        #pmg_magic_gate_elven_immigation
+        pmg_magic_gate_elven_immigation
 	}
 
 	possible = {
@@ -122,9 +123,25 @@ building_gate_yukon = {
 	buildable = no
 	expandable = no
 	downsizeable = no
+	unique = yes
+
+	locator = building_yukon_magic_gate_locator
+	entity_not_constructed = {}
+	entity_constructed = {
+		building_gate_magic_gate_entity
+	}
+	entity_under_construction = {
+		building_gate_magic_gate_entity
+	}
+
+	city_gfx_interactions = {
+		clear_size_area = yes
+		size = 5
+	}
 
 	production_method_groups = {
-		pmg_magic_gate_exploitation_colorado
+		pmg_magic_gate_exploitation_yukon
+		pmg_magic_gate_bear_immigation
 	}
 
 	possible = {
@@ -148,7 +165,7 @@ building_gate_equateur = {
 	downsizeable = no
 	unique = yes
 
-	locator = building_san_salvador_magic_gate_locator
+	locator = building_equateur_magic_gate_locator
 	entity_not_constructed = {}
 	entity_constructed = {
 		building_gate_magic_gate_entity
@@ -204,6 +221,7 @@ building_gate_eastern_new_guinea = {
 
 	production_method_groups = {
 		pmg_magic_gate_exploitation_eastern_new_guinea
+		pmg_magic_gate_gnomish_immigation
 	}
 
 	possible = {
