@@ -103,4 +103,21 @@
 		}
 	}
 
+	# Texas
+	c:TEX = {
+		# Magic Research Institute
+		s:STATE_TEXAS = {
+			region_state:TEX = {
+				create_building = {
+					building = building_magic_research_institute
+					level = 1
+					reserves = 1
+					activate_production_methods = {
+						pm_novice_researcher
+					}
+				}
+			}
+		}
+	}
+
 }

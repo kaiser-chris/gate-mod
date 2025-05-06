@@ -4,78 +4,69 @@
 # are not set correctly.
 BUILDINGS = {
 
-    s:STATE_COLORADO = {
+    s:STATE_ALASKA = {
         # Base game states are empty
         # So we do not need to remove existing buildings
 
-        region_state:GATE_B1 = {
+        region_state:GATE_BN = {
             create_building = {
-                building = building_gate_colorado
+                building = building_port
                 add_ownership = {
                     country = {
-                        country = c:GATE_B1
+                        country = c:GATE_BN
                         levels = 1
                     }
                 }
                 reserves = 1
-                activate_production_methods = { pm_gate_closed }
+                activate_production_methods = {
+                    pm_anchorage
+                }
             }
+
             # Add buildings here
         }
     }
 
-    s:STATE_NEW_MEXICO = {
+    s:STATE_YUKON_TERRITORY = {
         # Base game states are empty
         # So we do not need to remove existing buildings
 
-        region_state:GATE_B1 = {
+        region_state:GATE_BN = {
+            create_building = {
+                building = building_gate_yukon
+                add_ownership = {
+                    country = {
+                        country = c:GATE_BN
+                        levels = 1
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_gate_closed
+                }
+            }
+            create_building = {
+                building = building_magic_research_institute
+                level = 1
+                reserves = 1
+                activate_production_methods = {
+                    pm_novice_researcher
+                }
+            }
+
             # Add buildings here
         }
+
     }
 
-    s:STATE_TEXAS={
-        region_state:TEX = {
-            remove_building = building_maize_farm
-            remove_building = building_vineyard_plantation
-        }
-
-        region_state:GATE_B1 = {
-            # Add buildings here
-        }
-    }
-
-    s:STATE_WYOMING = {
-        # Base game states are empty
+    s:STATE_BRITISH_COLUMBIA = {
+        # Split state
         # So we do not need to remove existing buildings
 
-        region_state:GATE_B2 = {
+        region_state:GATE_BN = {
             # Add buildings here
         }
     }
-    s:STATE_IDAHO = {
-        # Base game states are empty
-        # So we do not need to remove existing buildings
 
-        region_state:GATE_B2 = {
-            # Add buildings here
-        }
-    }
-    s:STATE_OREGON = {
-        region_state:ORG = {
-            remove_building = building_logging_camp
-        }
-
-        region_state:GATE_B2 = {
-            # Add buildings here
-        }
-    }
-    s:STATE_WASHINGTON = {
-        # Base game states are empty
-        # So we do not need to remove existing buildings
-
-        region_state:GATE_B2 = {
-            # Add buildings here
-        }
-    }
 
 }

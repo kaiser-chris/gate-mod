@@ -181,3 +181,22 @@ gate_race_trait_gnomish = {
 
     weight = 0
 }
+
+gate_race_trait_bear = {
+    type = condition
+
+    texture = gfx/interface/icons/character_trait_icons/gate_fanatsy_race.dds
+
+    character_modifier = {
+        character_health_add = 0.1
+    }
+
+    possible = {
+        OR = {
+            culture ?= cu:plundboelka
+            culture ?= cu:praprandgaw
+        }
+    }
+
+    weight = 0
+}

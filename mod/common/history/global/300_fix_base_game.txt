@@ -164,42 +164,6 @@ GLOBAL = {
             provinces = { x8D20C0 }
         }
     }
-    #	s:STATE_NICARAGUA = {
-    #		set_owner_of_provinces = {
-    #			country = c:GATE_OK
-    #			provinces = { x95FC5A x17F33B }
-    #		}
-    #	}
-    #	s:STATE_COSTA_RICA = {
-    #		set_owner_of_provinces = {
-    #			country = c:GATE_OK
-    #			provinces = { x1A076A }
-    #		}
-    #	}
-    #	s:STATE_GUATEMALA = {
-    #		set_owner_of_provinces = {
-    #			country = c:GATE_OK
-    #			provinces = { xDEC8D3 xD0B040 }
-    #		}
-    #	}
-    #	s:STATE_HONDURAS = {
-    #		set_owner_of_provinces = {
-    #			country = c:GATE_OK
-    #			provinces = { x3C64D6 }
-    #		}
-    #	}
-    #	s:STATE_SAN_SALVADOR = {
-    #		set_owner_of_provinces = {
-    #			country = c:GATE_OK
-    #			provinces = { xB0D0C7 }
-    #		}
-    #	}
-    #	s:STATE_CHIAPAS = {
-    #		set_owner_of_provinces = {
-    #			country = c:GATE_OK
-    #			provinces = { x1030C0 }
-    #		}
-    #	}
 
     # New Samadore
     s:STATE_WESTERN_NEW_GUINEA = {
@@ -227,50 +191,23 @@ GLOBAL = {
         }
     }
 
-    # Plundboelka
-    s:STATE_COLORADO = {
+    # Praprandgaw
+    s:STATE_ALASKA = {
         set_owner_of_provinces = {
-            country = c:GATE_B1
-            provinces = { xFD4329 x719099 x31580F xD04000 }
+            country = c:GATE_BN
+            provinces = { xFFEF4A }
         }
     }
-    s:STATE_NEW_MEXICO = {
+    s:STATE_YUKON_TERRITORY = {
         set_owner_of_provinces = {
-            country = c:GATE_B1
-            provinces = { xEED52D xAA2075 xC03297 x17660E }
-        }
-    }
-    s:STATE_TEXAS = {
-        set_owner_of_provinces = {
-            country = c:GATE_B1
-            provinces = { x10D832 x91A02C xFE0821 }
+            country = c:GATE_BN
+            provinces = { xB3CC99 }
         }
     }
 
-    # Praprandgaw
-    s:STATE_WYOMING = {
-        set_owner_of_provinces = {
-            country = c:GATE_B2
-            provinces = { x65DCDB xF3326F x27F79C x36DEC9 x8B96F2 xBE0B1C }
-        }
-    }
-    s:STATE_IDAHO = {
-        set_owner_of_provinces = {
-            country = c:GATE_B2
-            provinces = { x7B7595 xC998B0 x82AA18 }
-        }
-    }
-    s:STATE_OREGON = {
-        set_owner_of_provinces = {
-            country = c:GATE_B2
-            provinces = { xFAEFD3 }
-        }
-    }
-    s:STATE_WASHINGTON = {
-        set_owner_of_provinces = {
-            country = c:GATE_B2
-            provinces = { x0D9D1A }
-        }
+    # Plundboelka
+    c:TEX = {
+        annex_with_incorporation = c:COM
     }
 
 }
