@@ -79,13 +79,6 @@ GLOBAL = {
 		}
 	}
 
-	s:STATE_CHUKOTKA = {
-		add_to_variable_list = {
-			name = mana_propogation_states
-			target = s:STATE_ALASKA
-		}
-	}
-
 	s:STATE_WALES = {
 		add_to_variable_list = {
 			name = mana_propogation_states
@@ -322,6 +315,13 @@ GLOBAL = {
 		add_to_variable_list = {
 			name = mana_propogation_states
 			target = s:STATE_ALASKA
+		}
+	}
+
+	s:STATE_ALASKA = {
+		add_to_variable_list = {
+			name = mana_propogation_states
+			target = s:STATE_CHUKOTKA
 		}
 	}
 

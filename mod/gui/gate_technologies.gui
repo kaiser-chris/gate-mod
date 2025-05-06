@@ -262,6 +262,34 @@ types gate_technologies {
 
         gate_technology = {
             blockoverride "context" {
+                datacontext = "[GetTechnology('orcish_gate_immigration')]"
+                datacontext = "[GetScriptedGui('orcish_gate_immigration')]"
+            }
+        }
+
+        gate_technology = {
+            blockoverride "context" {
+                datacontext = "[GetTechnology('elven_gate_immigration')]"
+                datacontext = "[GetScriptedGui('elven_gate_immigration')]"
+            }
+        }
+
+        gate_technology = {
+            blockoverride "context" {
+                datacontext = "[GetTechnology('gnomish_gate_immigration')]"
+                datacontext = "[GetScriptedGui('gnomish_gate_immigration')]"
+            }
+        }
+
+        gate_technology = {
+            blockoverride "context" {
+                datacontext = "[GetTechnology('bear_gate_immigration')]"
+                datacontext = "[GetScriptedGui('bear_gate_immigration')]"
+            }
+        }
+
+        gate_technology = {
+            blockoverride "context" {
                 datacontext = "[GetTechnology('orc_clan_support')]"
                 datacontext = "[GetScriptedGui('orc_clan_support')]"
             }

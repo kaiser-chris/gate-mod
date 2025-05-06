@@ -60,6 +60,8 @@ on_monthly_pulse_country = {
         on_monthly_gate_add_immigration_dwarven
         on_monthly_gate_add_immigration_orcish
         on_monthly_gate_add_immigration_elven
+        on_monthly_gate_add_immigration_gnomish
+        on_monthly_gate_add_immigration_bear
         on_monthly_gate_ai_magic_technology
         on_monthly_gate_set_research_production_method
     }
@@ -104,6 +106,24 @@ on_monthly_gate_add_immigration_elven= {
     }
     effect = {
         add_gate_immigration_elven = yes
+    }
+}
+
+on_monthly_gate_add_immigration_gnomish= {
+    trigger = {
+        has_technology_researched = gnomish_gate_immigration
+    }
+    effect = {
+        add_gate_immigration_gnomish = yes
+    }
+}
+
+on_monthly_gate_add_immigration_bear = {
+    trigger = {
+        has_technology_researched = bear_gate_immigration
+    }
+    effect = {
+        add_gate_immigration_bear = yes
     }
 }
 

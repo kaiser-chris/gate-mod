@@ -12,10 +12,14 @@
  country_gate_magical_innovation_mult_desc: "\n对花费[concept_magic_innovation]研究[concept_magic_technology]时研究速度的增益或惩罚"
  state_gate_monthly_dwarven_immigration_add: "每月矮人移民"
  state_gate_monthly_dwarven_immigration_add_desc: "每月[GetCulture('dwarven').GetName]移民的数量。"
- state_gate_monthly_orcish_immigration_add: "每月奥克人迁徙" #deepl:4048767454
+ state_gate_monthly_orcish_immigration_add: "每月[GetCulture('orcish').GetNameNoFormatting] 迁移" #deepl:2436410465
  state_gate_monthly_orcish_immigration_add_desc: "[GetCulture('orcish').GetName] 每月的移民数量。" #deepl:1800484899
- state_gate_monthly_elven_immigration_add: "精灵每月迁徙" #deepl:3693646371
+ state_gate_monthly_elven_immigration_add: "每月[GetCulture('elven').GetNameNoFormatting] 迁移" #deepl:3017860544
  state_gate_monthly_elven_immigration_add_desc: "[GetCulture('elven').GetName] 每月的移民数量。" #deepl:2508932495
+ state_gate_monthly_gnomish_immigration_add: "每月[GetCulture('gnomish').GetNameNoFormatting] 迁移" #deepl:2360512022
+ state_gate_monthly_gnomish_immigration_add_desc: "[GetCulture('gnomish').GetName] 每月的移民数量。" #deepl:228990100
+ state_gate_monthly_bear_immigration_add: "熊的每月迁徙" #deepl:3055978853
+ state_gate_monthly_bear_immigration_add_desc: "每月熊移民的数量。" #deepl:263984905
  country_institution_gate_monster_hunting_max_investment_add: "最大$institution_gate_monster_hunting$[concept_institution]投入等级"
  country_institution_gate_monster_hunting_max_investment_add_desc: "对$institution_gate_monster_hunting$[concept_institution]的最大投入等级的增益或惩罚"
  country_institution_cost_institution_gate_monster_hunting_mult: "@bur![GetInstitutionType('institution_gate_monster_hunting').GetName]@bur![concept_bureaucracy]花费"
