@@ -60,6 +60,11 @@ GLOBAL = {
 
 	every_in_global_list = {
 		variable = magic_countries
+		limit = {
+			NOT = {
+				c:TEX ?= this
+			}
+		}
 
 		# Add magic researcher to all magic
 		# countries
@@ -75,6 +80,8 @@ GLOBAL = {
 				culture ?= cu:dwarven
 				culture ?= cu:elven
 				culture ?= cu:vampire
+				culture ?= cu:plundboelka
+				culture ?= cu:praprandgaw
 			}
 		}
 		if = {
@@ -103,6 +110,18 @@ GLOBAL = {
 				}
 			}
 			add_trait = gate_race_trait_vampire
+		}
+		if = {
+			limit = {
+				OR = {
+					culture ?= cu:plundboelka
+					culture ?= cu:praprandgaw
+				}
+				NOT = {
+					has_trait = gate_race_trait_bear
+				}
+			}
+			add_trait = gate_race_trait_bear
 		}
 	}
 

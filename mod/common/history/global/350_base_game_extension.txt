@@ -128,15 +128,6 @@ GLOBAL = {
 			template = gate_magic_researcher_template
 			interest_group = ig_intelligentsia
 		}
-
-		set_secret_goal = {
-			country = c:GATE_B1
-			secret_goal = dominate
-		}
-		set_secret_goal = {
-			country = c:GATE_B2
-			secret_goal = dominate
-		}
 	}
 
 	# United States
@@ -160,14 +151,33 @@ GLOBAL = {
 			template = gate_magic_researcher_template
 			interest_group = ig_intelligentsia
 		}
+	}
 
-		set_secret_goal = {
-			country = c:GATE_B1
-			secret_goal = dominate
+	# Alaska - Russian-American Company
+	c:ALK = {
+		# Treaty port with Bears
+		every_scope_state = {
+			limit = {
+				state_region = s:STATE_ALASKA
+			}
+			set_state_type = treaty_port
 		}
-		set_secret_goal = {
-			country = c:GATE_B2
-			secret_goal = dominate
+	}
+
+	# Texas
+	c:TEX = {
+		# Add Bears culture
+		add_primary_culture = cu:plundboelka
+
+		# Add Magic Knowledge
+		learn_magic = yes
+
+		# Add Magic Researcher
+		create_character = {
+			template = gate_magic_researcher_template
+			interest_group = ig_intelligentsia
+			culture = plundboelka
+			ig_leader = yes
 		}
 	}
 
