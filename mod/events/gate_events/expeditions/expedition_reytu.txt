@@ -14,7 +14,7 @@ gate_expedition_reytu.1 = {
     }
 
     trigger = {
-        has_journal_entry = je_gate_expedition_reytu_preparation
+        has_journal_entry = je_gate_expedition_preparation
     }
 
     immediate = {
@@ -75,7 +75,7 @@ gate_expedition_reytu.1 = {
                     value = scope:expedition_militarist
                 }
             }
-            je:je_gate_expedition_reytu_preparation ?= {
+            je:je_gate_expedition_preparation ?= {
                 clear_variable_list = com_journal_characters
                 add_to_variable_list = {
                     name = com_journal_characters
@@ -97,7 +97,7 @@ gate_expedition_reytu.1 = {
                     value = scope:expedition_politician
                 }
             }
-            je:je_gate_expedition_reytu_preparation ?= {
+            je:je_gate_expedition_preparation ?= {
                 clear_variable_list = com_journal_characters
                 add_to_variable_list = {
                     name = com_journal_characters
@@ -118,7 +118,7 @@ gate_expedition_reytu.1 = {
                     value = scope:expedition_industrialist
                 }
             }
-            je:je_gate_expedition_reytu_preparation ?= {
+            je:je_gate_expedition_preparation ?= {
                 clear_variable_list = com_journal_characters
                 add_to_variable_list = {
                     name = com_journal_characters
@@ -145,7 +145,7 @@ gate_expedition_reytu.2 = {
 
     trigger = {
         NOT = {
-            has_journal_entry = je_gate_expedition_reytu_preparation
+            has_journal_entry = je_gate_expedition_preparation
         }
         has_building = building_gate_alxa
     }
@@ -180,7 +180,7 @@ gate_expedition_reytu.2 = {
             }
         }
         add_journal_entry = {
-            type = je_gate_expedition_reytu_preparation
+            type = je_gate_expedition_preparation
         }
     }
 
@@ -197,7 +197,7 @@ gate_expedition_reytu.2 = {
             }
         }
         add_journal_entry = {
-            type = je_gate_expedition_reytu_preparation
+            type = je_gate_expedition_preparation
         }
     }
 
@@ -214,7 +214,7 @@ gate_expedition_reytu.2 = {
             }
         }
         add_journal_entry = {
-            type = je_gate_expedition_reytu_preparation
+            type = je_gate_expedition_preparation
         }
     }
 }

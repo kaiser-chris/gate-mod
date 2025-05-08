@@ -20,7 +20,7 @@ types gate_technology_panel_types {
         name = "gate_technology_panel"
         datacontext = "[GetMetaPlayer.GetPlayedOrObservedCountry]"
 
-        visible = "[Or(GetVariableSystem.HasValue('com_open_window', 'gate_button_technology'), GetVariableSystem.HasValue('com_alert_action', Localize('gg_panel_technology_action')))]"
+        visible = "[GetVariableSystem.HasValue('com_open_window', 'gate_button_technology')]"
 
         blockoverride "animation_state_block" {
             state = {
