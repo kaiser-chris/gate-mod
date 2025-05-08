@@ -173,7 +173,10 @@ gate_expedition_reytu.2 = {
         custom_tooltip = {
             text = expedition_small_tooltip
             var:expedition_reytu ?= {
-
+                set_variable = {
+                    name = expedition_type
+                    value = expedition_time_small
+                }
             }
         }
         add_journal_entry = {
@@ -187,6 +190,10 @@ gate_expedition_reytu.2 = {
         custom_tooltip = {
             text = expedition_normal_tooltip
             var:expedition_reytu ?= {
+                set_variable = {
+                    name = expedition_type
+                    value = expedition_time_normal
+                }
             }
         }
         add_journal_entry = {
@@ -199,6 +206,10 @@ gate_expedition_reytu.2 = {
         custom_tooltip = {
             text = expedition_large_tooltip
             var:expedition_reytu ?= {
+                set_variable = {
+                    name = expedition_type
+                    value = expedition_time_large
+                }
 
             }
         }

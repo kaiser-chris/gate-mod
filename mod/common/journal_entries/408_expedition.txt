@@ -23,37 +23,21 @@
 	}
 
 	immediate = {
-		if = {
-			limit = {
-				NOT = {
-					has_variable = expedition_reytu
-				}
-			}
-			save_scope_as = gate_expedition_reytu_country
-			create_struct = {
-				struct_scope = expedition
-				struct_type = expedition_progress
-			}
-			set_variable = {
-				name = expedition_reytu
-				value = scope:expedition
-			}
+		set_variable = {
+			name = gate_expedition_preparation_progress
+			value = 0
 		}
-		every_scope_building = {
-			limit = {
-				is_building_type = building_gate_alxa
-			}
-			root = {
-				set_variable = {
-					name = expedition_gate
-					value = prev
-				}
-			}
+		set_variable = {
+			name = gate_expedition_preparation_max
+			value = var:expedition_reytu.var:expedition_type
 		}
 	}
 
 	complete = {
-		always = no
+		custom_tooltip = {
+			text = je_gate_expedition_reytu_preparation_complete_tooltip
+			var:gate_expedition_preparation_progress = var:gate_expedition_preparation_max
+		}
 	}
 
 	fail = {
@@ -62,13 +46,51 @@
 			NOT = {
 				has_building = building_gate_alxa
 			}
+			has_variable = gate_expedition_cancel
+		}
+	}
+
+	on_complete = {
+		hidden_effect = {
+			var:expedition_reytu ?= {
+				set_variable = expedition_started
+			}
+		}
+	}
+
+	on_fail = {
+		hidden_effect = {
+			remove_variable = gate_expedition_preparation_progress
+			remove_variable = gate_expedition_preparation_max
+			remove_variable = gate_expedition_cancel
 		}
 	}
 
 	scripted_button = je_gate_expedition_reytu_preparation_button_hire_leader
+	scripted_button = je_gate_expedition_reytu_preparation_button_start_preparations
+	scripted_button = je_gate_expedition_reytu_preparation_button_stop_preparations
 	scripted_button = je_gate_expedition_reytu_preparation_button_open_map
+	scripted_button = je_gate_expedition_reytu_preparation_button_cancel
 
-	progressbar = no
+	progressbar = yes
+	current_value = {
+		value = root.var:gate_expedition_preparation_progress
+	}
+	on_monthly_pulse = {
+		effect = {
+			if = {
+				limit = {
+					has_variable = gate_expedition_preparation_active
+				}
+				change_variable = {
+					name = gate_expedition_preparation_progress
+					add = 1
+					min = 0
+					max = var:gate_expedition_preparation_max
+				}
+			}
+		}
+	}
 
 	transferable = no
 	can_revolution_inherit = yes

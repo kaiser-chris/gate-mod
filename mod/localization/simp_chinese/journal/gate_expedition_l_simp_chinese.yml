@@ -7,11 +7,18 @@
  je_gate_expedition_reytu_preparation_hiring_leader: "我们目前正在寻找远征领队。"
  je_gate_expedition_reytu_preparation_in_progess: "我们需要为远征做准备。"
  je_gate_expedition_reytu_preparation_fail_tooltip: "未控制[GetStateRegion('STATE_ALXA').GetName]区域的[GetBuildingType('building_gate_alxa').GetName]。"
+ je_gate_expedition_reytu_preparation_complete_tooltip: "我们已经完成了准备工作。" #deepl:3451756210
  je_gate_expedition_reytu_preparation_button_hire_leader: "雇佣远征领队"
  je_gate_expedition_reytu_preparation_button_hire_leader_desc: "我们将寻找远征领队。"
  je_gate_expedition_reytu_preparation_button_hire_leader_trigger_search: "目前没有寻找远征领队。"
  je_gate_expedition_reytu_preparation_button_hire_leader_trigger_done: "尚无远征领队。"
  je_gate_expedition_reytu_preparation_button_hire_leader_effect: "开始寻找远征领队。"
+ je_gate_expedition_reytu_preparation_button_start_preparations: "开始准备" #deepl:13145887
+ je_gate_expedition_reytu_preparation_button_start_preparations_desc: "我们将开始积极准备远征。" #deepl:615458894
+ je_gate_expedition_reytu_preparation_button_stop_preparations: "暂停准备" #deepl:468916531
+ je_gate_expedition_reytu_preparation_button_stop_preparations_desc: "我们将暂停准备工作。" #deepl:1304732987
+ je_gate_expedition_reytu_preparation_button_cancel: "取消远征" #deepl:131191061
+ je_gate_expedition_reytu_preparation_button_cancel_desc: "我们将取消整个考察。" #deepl:774493766
  je_gate_expedition_reytu_preparation_button_open_map: "打开远征地图"
  je_gate_expedition_reytu_preparation_button_open_map_desc: "打开远征地图。"
  pb_gate_expedition_tools_progress: "进度：#v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#!（[JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]/5000）"

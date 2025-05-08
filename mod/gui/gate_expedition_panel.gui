@@ -66,7 +66,100 @@ types gate_expedition_panel_types {
         }
 
         blockoverride "fixed_top" {
-            # Later
+            datacontext = "[GetGlobalVariable('gate_expedition_reytu')]"
+            hbox = {
+                layoutpolicy_horizontal = expanding
+                margin = { 20 10 }
+                margin_bottom = 15
+                spacing = 30
+
+                # Expedition Leader
+                gate_character_small = {
+                    visible = "[And(
+                                    Scope.IsSet,
+                                    Scope.Var('leader').IsSet
+                               )]"
+                    blockoverride "character_context" {
+                        datacontext = "[Scope.Var('leader').GetCharacter]"
+                    }
+                }
+                gate_character_small = {
+                    visible = "[Or(
+                                    Not(Scope.IsSet),
+                                    Not(Scope.Var('leader').IsSet)
+                               )]"
+                    blockoverride "gate_character_tooltip" {
+                        tooltip = expedition_leader_missing_tooltip
+                    }
+                    blockoverride "gate_opinion_visible" {
+                        visible = no
+                    }
+                }
+                hbox = {
+                    layoutpolicy_horizontal = expanding
+                    layoutpolicy_vertical = expanding
+                    margin = { 10 10 }
+                    background = {
+                        using = simple_frame
+                    }
+
+                    expand = {}
+                }
+            }
+            hbox = {
+                minimumsize = { -1 2 }
+                layoutpolicy_horizontal = expanding
+                spacing = -2
+                margin_right = -15
+                hbox = {
+                    minimumsize = { 30 -1 }
+                    layoutpolicy_vertical = expanding
+
+                    background = {
+                        texture = "gfx/interface/dividers/divider_clean.dds"
+                        texture_density = 2
+                        spriteType = CorneredTiled
+                        spriteborder = { 4 0 }
+
+                        modify_texture = {
+                            texture = "gfx/interface/masks/fade_horizontal_left_full.dds"
+                            spriteType = Corneredstretched
+                            spriteborder = { 0 0 }
+                            blend_mode = alphamultiply
+                        }
+                    }
+                }
+                hbox = {
+                    layoutpolicy_vertical = expanding
+                    layoutpolicy_horizontal = expanding
+
+                    background = {
+                        texture = "gfx/interface/dividers/divider_clean.dds"
+                        texture_density = 2
+                        spriteType = CorneredTiled
+                        spriteborder = { 4 0 }
+                    }
+                }
+                hbox = {
+                    minimumsize = { 30 -1 }
+                    layoutpolicy_vertical = expanding
+
+                    background = {
+                        texture = "gfx/interface/dividers/divider_clean.dds"
+                        texture_density = 2
+                        spriteType = CorneredTiled
+                        spriteborder = { 4 0 }
+
+                        modify_texture = {
+                            texture = "gfx/interface/masks/fade_horizontal_left_full.dds"
+                            spriteType = Corneredstretched
+                            spriteborder = { 0 0 }
+                            blend_mode = alphamultiply
+                            mirror = horizontal
+                        }
+                    }
+                }
+            }
         }
 
         blockoverride "scrollarea_content" {
