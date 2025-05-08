@@ -2,25 +2,25 @@
  decision_gate_start_expedition_reytu: "Starten Sie eine Expedition nach Ankaris" #deepl:2160589379
  decision_gate_start_expedition_reytu_desc: "Besuchen Sie [GetBuildingType('building_gate_alxa').GetName] in der Region [GetStateRegion('STATE_ALXA').GetName]." #deepl:819952118
  decision_gate_start_expedition_reytu_possible: "Steuert das Magische Tor in der Region [GetStateRegion('STATE_ALXA').GetName]." #deepl:1282493707
- je_gate_expedition_reytu_preparation: "Vorbereitung der Expedition" #deepl:1574306075
- je_gate_expedition_reytu_preparation_reason: "Nachdem die Entscheidung gefallen ist, beginnen die Vorbereitungen ernsthaft. Es werden Karten erstellt, Vorräte beschafft, und eifrige Abenteurer melden sich freiwillig. Gelehrte debattieren über die möglichen Gefahren und Chancen, die dahinter liegen, während Ingenieure und Logistiker dafür sorgen, dass die Reise gut ausgerüstet ist. Die magische Pforte liegt vor uns, ein Tor zum Unbekannten - bald wird es Zeit sein, den ersten Schritt zu tun." #deepl:3725050251
- je_gate_expedition_reytu_preparation_hiring_leader: "Wir sind derzeit auf der Suche nach einem Expeditionsleiter." #deepl:1108601421
- je_gate_expedition_reytu_preparation_in_progess: "Wir müssen uns auf unsere Expedition vorbereiten." #deepl:1036857002
- je_gate_expedition_reytu_preparation_fail_tooltip: "Steuert nicht die [GetBuildingType('building_gate_alxa').GetName] in der Region [GetStateRegion('STATE_ALXA').GetName]." #deepl:2492892956
- je_gate_expedition_reytu_preparation_complete_tooltip: "Wir haben unsere Vorbereitungen abgeschlossen." #deepl:3451756210
- je_gate_expedition_reytu_preparation_button_hire_leader: "Expeditionsleiter anheuern" #deepl:1543565473
- je_gate_expedition_reytu_preparation_button_hire_leader_desc: "Wir werden einen Leiter für die Expedition suchen." #deepl:2118497909
- je_gate_expedition_reytu_preparation_button_hire_leader_trigger_search: "derzeit nicht auf der Suche nach einem Expeditionsleiter sind." #deepl:1414086464
- je_gate_expedition_reytu_preparation_button_hire_leader_trigger_done: "Es gibt keinen Expeditionsleiter." #deepl:4125505397
- je_gate_expedition_reytu_preparation_button_hire_leader_effect: "Beginnt die Suche nach einem Expeditionsleiter." #deepl:675279365
- je_gate_expedition_reytu_preparation_button_start_preparations: "Beginn der Vorbereitungen" #deepl:13145887
- je_gate_expedition_reytu_preparation_button_start_preparations_desc: "Wir werden uns aktiv auf die Expedition vorbereiten." #deepl:615458894
- je_gate_expedition_reytu_preparation_button_stop_preparations: "Pause Vorbereitungen" #deepl:468916531
- je_gate_expedition_reytu_preparation_button_stop_preparations_desc: "Wir werden unsere Vorbereitungen unterbrechen." #deepl:1304732987
- je_gate_expedition_reytu_preparation_button_cancel: "Expedition abbrechen" #deepl:131191061
- je_gate_expedition_reytu_preparation_button_cancel_desc: "Wir werden die gesamte Expedition absagen." #deepl:774493766
- je_gate_expedition_reytu_preparation_button_open_map: "Expeditionskarte öffnen" #deepl:537625907
- je_gate_expedition_reytu_preparation_button_open_map_desc: "Öffnet die Expeditionskarte." #deepl:2776223579
+ je_gate_expedition_preparation: "Vorbereitung der Expedition" #deepl:1574306075
+ je_gate_expedition_preparation_reason: "Nachdem die Entscheidung gefallen ist, beginnen die Vorbereitungen ernsthaft. Es werden Karten erstellt, Vorräte beschafft, und eifrige Abenteurer melden sich freiwillig. Gelehrte debattieren über die möglichen Gefahren und Chancen, die dahinter liegen, während Ingenieure und Logistiker dafür sorgen, dass die Reise gut ausgerüstet ist. Die magische Pforte liegt vor uns, ein Tor zum Unbekannten - bald wird es Zeit sein, den ersten Schritt zu tun." #deepl:3725050251
+ je_gate_expedition_preparation_hiring_leader: "Wir sind derzeit auf der Suche nach einem Expeditionsleiter." #deepl:1108601421
+ je_gate_expedition_preparation_in_progess: "Wir müssen uns auf unsere Expedition vorbereiten." #deepl:1036857002
+ je_gate_expedition_preparation_fail_tooltip: "Steuert nicht die [GetBuildingType('building_gate_alxa').GetName] in der Region [GetStateRegion('STATE_ALXA').GetName]." #deepl:2492892956
+ je_gate_expedition_preparation_complete_tooltip: "Wir haben unsere Vorbereitungen abgeschlossen." #deepl:3451756210
+ je_gate_expedition_preparation_button_hire_leader: "Expeditionsleiter anheuern" #deepl:1543565473
+ je_gate_expedition_preparation_button_hire_leader_desc: "Wir werden einen Leiter für die Expedition suchen." #deepl:2118497909
+ je_gate_expedition_preparation_button_hire_leader_trigger_search: "derzeit nicht auf der Suche nach einem Expeditionsleiter sind." #deepl:1414086464
+ je_gate_expedition_preparation_button_hire_leader_trigger_done: "Es gibt keinen Expeditionsleiter." #deepl:4125505397
+ je_gate_expedition_preparation_button_hire_leader_effect: "Beginnt die Suche nach einem Expeditionsleiter." #deepl:675279365
+ je_gate_expedition_preparation_button_start_preparations: "Beginn der Vorbereitungen" #deepl:13145887
+ je_gate_expedition_preparation_button_start_preparations_desc: "Wir werden uns aktiv auf die Expedition vorbereiten." #deepl:615458894
+ je_gate_expedition_preparation_button_stop_preparations: "Pause Vorbereitungen" #deepl:468916531
+ je_gate_expedition_preparation_button_stop_preparations_desc: "Wir werden unsere Vorbereitungen unterbrechen." #deepl:1304732987
+ je_gate_expedition_preparation_button_cancel: "Expedition abbrechen" #deepl:131191061
+ je_gate_expedition_preparation_button_cancel_desc: "Wir werden die gesamte Expedition absagen." #deepl:774493766
+ je_gate_expedition_button_open_map: "Expeditionskarte öffnen" #deepl:537625907
+ je_gate_expedition_button_open_map_desc: "Öffnet die Expeditionskarte." #deepl:2776223579
  pb_gate_expedition_tools_progress: "Fortschritt: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]/5000)" #deepl:4140396556
  pb_gate_expedition_tools_pm_no: "Keine Vorratshaltung" #deepl:1593032932
  pb_gate_expedition_tools_pm_slow: "Langsame Bevorratung" #deepl:892870279

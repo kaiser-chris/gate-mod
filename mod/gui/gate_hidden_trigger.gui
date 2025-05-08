@@ -3,28 +3,108 @@
 # Specifically when a research is done
 widget = {
     name = gate_hidden_trigger
+    datacontext = "[GetMetaPlayer.GetPlayedOrObservedCountry]"
     allow_outside = yes
     size = { 0 0 }
     alpha = 0
 
-    # Support custom shortcuts
-    flowcontainer = {
-        button = {
-            enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
-            input_action = "input_ctrl_g"
-            onclick = "[GetVariableSystem.Set('com_open_window', 'gate_button_main')]"
+    # Custom Shortcuts
+    widget = {
+        visible = "[Country.IsValid]"
+        widget = {
+            # Main Panel (CTRL + G)
+            button = {
+                # Open
+                enabled = "[Country.IsValid]"
+                visible = "[Not(GetVariableSystem.HasValue('com_open_window', 'gate_button_main'))]"
+                onclick = "[GetVariableSystem.Set('com_open_window', 'gate_button_main')]"
+                input_action = "input_ctrl_g"
+            }
+            button = {
+                # Close
+                enabled = "[Country.IsValid]"
+                visible = "[GetVariableSystem.HasValue('com_open_window', 'gate_button_main')]"
+                onclick = "[GetVariableSystem.Clear('com_open_window')]"
+                input_action = "input_ctrl_g"
+            }
         }
-        button = {
-            enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
-            input_action = "input_ctrl_t"
-            onclick = "[GetVariableSystem.Set('com_open_window', 'gate_button_technology')]"
+        widget = {
+            # Technology Panel (CTRL + T)
+            button = {
+                # Open
+                enabled = "[Country.IsValid]"
+                visible = "[Not(GetVariableSystem.HasValue('com_open_window', 'gate_button_technology'))]"
+                onclick = "[GetVariableSystem.Set('com_open_window', 'gate_button_technology')]"
+                input_action = "input_ctrl_t"
+            }
+            button = {
+                # Close
+                enabled = "[Country.IsValid]"
+                visible = "[GetVariableSystem.HasValue('com_open_window', 'gate_button_technology')]"
+                onclick = "[GetVariableSystem.Clear('com_open_window')]"
+                input_action = "input_ctrl_t"
+            }
         }
     }
 
+    # Script Open Panel
     widget = {
-        visible = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
-        datacontext = "[GetMetaPlayer.GetPlayedOrObservedCountry]"
+        widget = {
+            # Expedition
+            datacontext = "[GetScriptedGui('sgui_gate_open_expedition')]"
+            visible = "[ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
+            state = {
+                name = _show
+                on_finish = "[GetVariableSystem.Set('com_open_window', 'gate_button_expedition')]"
+                on_finish = "[ScriptedGui.Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
+            }
+        }
+    }
 
+    # Alerts
+    widget = {
+        visible = "[Country.IsValid]"
+        widget = {
+            # Main
+            visible = "[GetVariableSystem.HasValue('com_alert_action', Localize('gg_panel_main_action'))]"
+            state = {
+                name = _show
+                on_finish = "[GetVariableSystem.Set('com_open_window', 'gate_button_main')]"
+                on_finish = "[GetVariableSystem.Clear('com_alert_action')]"
+            }
+        }
+        widget = {
+            # Technology
+            visible = "[GetVariableSystem.HasValue('com_alert_action', Localize('gg_panel_technology_action'))]"
+            state = {
+                name = _show
+                on_finish = "[GetVariableSystem.Set('com_open_window', 'gate_button_technology')]"
+                on_finish = "[GetVariableSystem.Clear('com_alert_action')]"
+            }
+        }
+        widget = {
+            # Expedition
+            visible = "[GetVariableSystem.HasValue('com_alert_action', Localize('gg_panel_expedition_action'))]"
+            state = {
+                name = _show
+                on_finish = "[GetVariableSystem.Set('com_open_window', 'gate_button_expedition')]"
+                on_finish = "[GetVariableSystem.Clear('com_alert_action')]"
+            }
+        }
+        widget = {
+            # Space
+            visible = "[GetVariableSystem.HasValue('com_alert_action', Localize('gg_panel_space_action'))]"
+            state = {
+                name = _show
+                on_finish = "[GetVariableSystem.Set('com_open_window', 'gate_button_space')]"
+                on_finish = "[GetVariableSystem.Clear('com_alert_action')]"
+            }
+        }
+    }
+
+    # Technology Notifications
+    widget = {
+        visible = "[Country.IsValid]"
         gate_technologies_production = {
             blockoverride "tech_state" {
                 state = {
@@ -37,7 +117,6 @@ widget = {
                 }
             }
         }
-
         gate_technologies_military = {
             blockoverride "tech_state" {
                 state = {
@@ -50,7 +129,6 @@ widget = {
                 }
             }
         }
-
         gate_technologies_society = {
             blockoverride "tech_state" {
                 state = {

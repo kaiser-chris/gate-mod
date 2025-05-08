@@ -1,10 +1,25 @@
-﻿je_gate_expedition_reytu_preparation_button_hire_leader = {
-	name = je_gate_expedition_reytu_preparation_button_hire_leader
-	desc = je_gate_expedition_reytu_preparation_button_hire_leader_desc
+﻿je_gate_expedition_button_open_map = {
+	name = je_gate_expedition_button_open_map
+	desc = je_gate_expedition_button_open_map_desc
+
+	ai_chance = {
+		base = 0
+	}
+
+	effect = {
+		hidden_effect = {
+			set_variable = gate_open_expedition
+		}
+	}
+}
+
+je_gate_expedition_preparation_button_hire_leader = {
+	name = je_gate_expedition_preparation_button_hire_leader
+	desc = je_gate_expedition_preparation_button_hire_leader_desc
 
 	possible = {
 		custom_tooltip = {
-			text = je_gate_expedition_reytu_preparation_button_hire_leader_trigger_done
+			text = je_gate_expedition_preparation_button_hire_leader_trigger_done
 			NOT = {
 				var:gate_expedition ?= {
 					has_variable = leader
@@ -12,7 +27,7 @@
 			}
 		}
 		custom_tooltip = {
-			text = je_gate_expedition_reytu_preparation_button_hire_leader_trigger_search
+			text = je_gate_expedition_preparation_button_hire_leader_trigger_search
 			NOT = {
 				has_variable = expedition_reytu_preparation_hiring_leader
 			}
@@ -29,7 +44,7 @@
 
 	effect = {
 		custom_tooltip = {
-			text = je_gate_expedition_reytu_preparation_button_hire_leader_effect
+			text = je_gate_expedition_preparation_button_hire_leader_effect
 			set_variable = expedition_reytu_preparation_hiring_leader
 			trigger_event = {
 				id = gate_expedition_reytu.1
@@ -40,40 +55,9 @@
 	}
 }
 
-je_gate_expedition_reytu_preparation_button_open_map = {
-	name = je_gate_expedition_reytu_preparation_button_open_map
-	desc = je_gate_expedition_reytu_preparation_button_open_map_desc
-
-	possible = {
-		hidden_trigger = {
-			OR = {
-				has_global_variable = com_debug
-				has_variable = expedition_started
-			}
-		}
-	}
-
-	visible = {
-		OR = {
-			has_global_variable = com_debug
-			has_variable = expedition_started
-		}
-	}
-
-	ai_chance = {
-		base = 100
-	}
-
-	effect = {
-		hidden_effect = {
-			set_variable = open_expedition_map_reytu
-		}
-	}
-}
-
-je_gate_expedition_reytu_preparation_button_cancel = {
-	name = je_gate_expedition_reytu_preparation_button_cancel
-	desc = je_gate_expedition_reytu_preparation_button_cancel_desc
+je_gate_expedition_preparation_button_cancel = {
+	name = je_gate_expedition_preparation_button_cancel
+	desc = je_gate_expedition_preparation_button_cancel_desc
 
 	visible = {
 		always = yes
@@ -94,9 +78,9 @@ je_gate_expedition_reytu_preparation_button_cancel = {
 	}
 }
 
-je_gate_expedition_reytu_preparation_button_start_preparations = {
-	name = je_gate_expedition_reytu_preparation_button_start_preparations
-	desc = je_gate_expedition_reytu_preparation_button_start_preparations_desc
+je_gate_expedition_preparation_button_start_preparations = {
+	name = je_gate_expedition_preparation_button_start_preparations
+	desc = je_gate_expedition_preparation_button_start_preparations_desc
 
 	visible = {
 		NOT = {
@@ -119,9 +103,9 @@ je_gate_expedition_reytu_preparation_button_start_preparations = {
 	}
 }
 
-je_gate_expedition_reytu_preparation_button_stop_preparations = {
-	name = je_gate_expedition_reytu_preparation_button_stop_preparations
-	desc = je_gate_expedition_reytu_preparation_button_stop_preparations_desc
+je_gate_expedition_preparation_button_stop_preparations = {
+	name = je_gate_expedition_preparation_button_stop_preparations
+	desc = je_gate_expedition_preparation_button_stop_preparations_desc
 
 	visible = {
 		has_variable = gate_expedition_preparation_active

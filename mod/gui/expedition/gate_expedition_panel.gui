@@ -4,7 +4,7 @@ types gate_expedition_panel_types {
         name = "gate_expedition_panel"
         datacontext = "[GetMetaPlayer.GetPlayedOrObservedCountry]"
 
-        visible = "[Or(GetVariableSystem.HasValue('com_open_window', 'gate_button_expedition'), GetVariableSystem.HasValue('com_alert_action', Localize('gg_panel_expedition_action')))]"
+        visible = "[GetVariableSystem.HasValue('com_open_window', 'gate_button_expedition')]"
 
         blockoverride "animation_state_block" {
             state = {
@@ -206,36 +206,57 @@ types gate_expedition_panel_types {
         blockoverride "scrollarea_content" {
             widget = {
                 size = { 100% 100% }
+                widget = {
+                    parentanchor = top
+                    size = { 100% 100% }
 
-                background = {
-                    spriteType = CorneredTiled
-                    texture = gfx/map/ankaris/background.dds
+                    background = {
+                        spriteType = CorneredTiled
+                        texture = gfx/map/ankaris/background.dds
+                    }
+                    map_container = {}
 
-                    modify_texture = {
-                        texture = "gfx/interface/masks/fade_horizontal_center_map.dds"
-                        spriteType = Corneredstretched
-                        spriteborder = { 0 0 }
-                        blend_mode = alphamultiply
+                    map_sidebar = {}
+
+                    container = {
+                        parentanchor = top|right
+                        position = { -20 20 }
+                        background = {
+                            using = entry_bg_fancy_dark
+                            alpha = 1
+                        }
+                        textbox = {
+                            autoresize = yes
+                            margin = { 20 12 }
+                            align = center
+                            text = gg_panel_map_drag_hint
+                            using = fontsize_large
+                        }
                     }
                 }
-
-                map_container = {}
-
-                map_sidebar = {}
-
-                container = {
-                    parentanchor = top|right
-                    position = { -20 20 }
+                widget = {
+                    size = { 100% 100% }
                     background = {
-                        using = entry_bg_fancy_dark
-                        alpha = 1
-                    }
-                    textbox = {
-                        autoresize = yes
-                        margin = { 20 12 }
-                        align = center
-                        text = gg_panel_map_drag_hint
-                        using = fontsize_large
+                        texture = "gfx/interface/backgrounds/default_bg.dds"
+                        using = clickthrough_blocker
+                        spriteType = Corneredtiled
+                        spriteborder = { 0 0 }
+                        texture_density = 2
+
+                        modify_texture = {
+                            texture = "gfx/interface/misc/black.dds"
+                            spriteType = Corneredstretched
+                            spriteborder = { 0 0 }
+                            blend_mode = overlay
+                            alpha = 0.1
+                        }
+
+                        modify_texture = {
+                            texture = "gfx/interface/masks/fade_horizontal_center_map.dds"
+                            spriteType = Corneredstretched
+                            spriteborder = { 0 0 }
+                            blend_mode = alphamultiply
+                        }
                     }
                 }
             }

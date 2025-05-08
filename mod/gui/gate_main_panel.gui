@@ -21,7 +21,7 @@ types gate_main_panel_types {
         layer = layer_ingame_menu
         datacontext = "[GetMetaPlayer.GetPlayedOrObservedCountry]"
 
-        visible = "[Or(GetVariableSystem.HasValue('com_open_window', 'gate_button_main'), GetVariableSystem.HasValue('com_alert_action', Localize('gg_panel_main_action')))]"
+        visible = "[GetVariableSystem.HasValue('com_open_window', 'gate_button_main')]"
 
         blockoverride "animation_state_block" {
             state = {

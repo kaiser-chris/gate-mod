@@ -7,8 +7,11 @@
 	scripted_button = je_investigate_gate_button_cancel_focus_academia
 
 	complete = {
-		scope:journal_entry = {
-			is_goal_complete = yes
+		OR = {
+			scope:journal_entry = {
+				is_goal_complete = yes
+			}
+			has_technology_researched = gate_expeditions
 		}
 	}
 

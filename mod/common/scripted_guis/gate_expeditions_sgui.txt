@@ -1,4 +1,16 @@
-﻿sgui_gate_map_choose_location = {
+﻿sgui_gate_open_expedition = {
+    scope = none
+
+    is_valid = {
+        has_variable = gate_open_expedition
+    }
+
+    effect = {
+        remove_variable = gate_open_expedition
+    }
+}
+
+sgui_gate_map_choose_location = {
     scope = character
 
     effect = {

@@ -1,4 +1,4 @@
-﻿je_gate_expedition_reytu_preparation = {
+﻿je_gate_expedition_preparation = {
 	icon = "gfx/interface/icons/event_icons/event_map.dds"
 
 	group = je_group_expeditions
@@ -6,7 +6,7 @@
 	status_desc = {
 		first_valid = {
 			triggered_desc = {
-				desc = je_gate_expedition_reytu_preparation_hiring_leader
+				desc = je_gate_expedition_preparation_hiring_leader
 				trigger = {
 					has_variable = expedition_reytu_preparation_hiring_leader
 					NOT = {
@@ -17,7 +17,7 @@
 				}
 			}
 			triggered_desc = {
-				desc = je_gate_expedition_reytu_preparation_in_progess
+				desc = je_gate_expedition_preparation_in_progess
 			}
 		}
 	}
@@ -34,15 +34,14 @@
 	}
 
 	complete = {
-		custom_tooltip = {
-			text = je_gate_expedition_reytu_preparation_complete_tooltip
-			var:gate_expedition_preparation_progress = var:gate_expedition_preparation_max
+		scope:journal_entry = {
+			is_goal_complete = yes
 		}
 	}
 
 	fail = {
 		custom_tooltip = {
-			text = je_gate_expedition_reytu_preparation_fail_tooltip
+			text = je_gate_expedition_preparation_fail_tooltip
 			NOT = {
 				has_building = building_gate_alxa
 			}
@@ -80,15 +79,18 @@
 		}
 	}
 
-	scripted_button = je_gate_expedition_reytu_preparation_button_hire_leader
-	scripted_button = je_gate_expedition_reytu_preparation_button_start_preparations
-	scripted_button = je_gate_expedition_reytu_preparation_button_stop_preparations
-	scripted_button = je_gate_expedition_reytu_preparation_button_open_map
-	scripted_button = je_gate_expedition_reytu_preparation_button_cancel
+	scripted_button = je_gate_expedition_preparation_button_hire_leader
+	scripted_button = je_gate_expedition_preparation_button_start_preparations
+	scripted_button = je_gate_expedition_preparation_button_stop_preparations
+	scripted_button = je_gate_expedition_button_open_map
+	scripted_button = je_gate_expedition_preparation_button_cancel
 
 	progressbar = yes
 	current_value = {
 		value = root.var:gate_expedition_preparation_progress
+	}
+	goal_add_value = {
+		add = var:gate_expedition_preparation_max
 	}
 	on_monthly_pulse = {
 		effect = {
