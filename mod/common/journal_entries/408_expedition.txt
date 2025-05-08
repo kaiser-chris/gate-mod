@@ -10,7 +10,7 @@
 				trigger = {
 					has_variable = expedition_reytu_preparation_hiring_leader
 					NOT = {
-						var:expedition_reytu ?= {
+						var:gate_expedition ?= {
 							has_variable = leader
 						}
 					}
@@ -29,7 +29,7 @@
 		}
 		set_variable = {
 			name = gate_expedition_preparation_max
-			value = var:expedition_reytu.var:expedition_type
+			value = var:gate_expedition.var:expedition_type
 		}
 	}
 
@@ -52,8 +52,22 @@
 
 	on_complete = {
 		hidden_effect = {
-			var:expedition_reytu ?= {
+			var:gate_expedition ?= {
 				set_variable = expedition_started
+				set_variable = {
+					name = expedition_budget
+					value = {
+						value = var:expedition_type
+						multiply = gate_expedition_preparation_budget_multiplier
+					}
+				}
+				set_variable = {
+					name = expedition_budget_total
+					value = {
+						value = var:expedition_type
+						multiply = gate_expedition_preparation_budget_multiplier
+					}
+				}
 			}
 		}
 	}

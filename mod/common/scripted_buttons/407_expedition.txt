@@ -6,7 +6,7 @@
 		custom_tooltip = {
 			text = je_gate_expedition_reytu_preparation_button_hire_leader_trigger_done
 			NOT = {
-				var:expedition_reytu ?= {
+				var:gate_expedition ?= {
 					has_variable = leader
 				}
 			}
@@ -48,7 +48,7 @@ je_gate_expedition_reytu_preparation_button_open_map = {
 		hidden_trigger = {
 			OR = {
 				has_global_variable = com_debug
-				has_variable = expedition_reytu_embarked
+				has_variable = expedition_started
 			}
 		}
 	}
@@ -56,7 +56,7 @@ je_gate_expedition_reytu_preparation_button_open_map = {
 	visible = {
 		OR = {
 			has_global_variable = com_debug
-			has_variable = expedition_reytu_embarked
+			has_variable = expedition_started
 		}
 	}
 
@@ -105,7 +105,7 @@ je_gate_expedition_reytu_preparation_button_start_preparations = {
 	}
 
 	possible = {
-		var:expedition_reytu ?= {
+		var:gate_expedition ?= {
 			has_variable = leader
 		}
 	}
