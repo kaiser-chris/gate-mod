@@ -70,3 +70,68 @@ je_gate_expedition_reytu_preparation_button_open_map = {
 		}
 	}
 }
+
+je_gate_expedition_reytu_preparation_button_cancel = {
+	name = je_gate_expedition_reytu_preparation_button_cancel
+	desc = je_gate_expedition_reytu_preparation_button_cancel_desc
+
+	visible = {
+		always = yes
+	}
+
+	possible = {
+		NOT = {
+			has_variable = expedition_reytu_preparation_hiring_leader
+		}
+	}
+
+	effect = {
+		set_variable = gate_expedition_cancel
+	}
+
+	ai_chance = {
+		base = 100
+	}
+}
+
+je_gate_expedition_reytu_preparation_button_start_preparations = {
+	name = je_gate_expedition_reytu_preparation_button_start_preparations
+	desc = je_gate_expedition_reytu_preparation_button_start_preparations_desc
+
+	visible = {
+		NOT = {
+			has_variable = gate_expedition_preparation_active
+		}
+	}
+
+	possible = {
+		var:expedition_reytu ?= {
+			has_variable = leader
+		}
+	}
+
+	effect = {
+		set_variable = gate_expedition_preparation_active
+	}
+
+	ai_chance = {
+		base = 100
+	}
+}
+
+je_gate_expedition_reytu_preparation_button_stop_preparations = {
+	name = je_gate_expedition_reytu_preparation_button_stop_preparations
+	desc = je_gate_expedition_reytu_preparation_button_stop_preparations_desc
+
+	visible = {
+		has_variable = gate_expedition_preparation_active
+	}
+
+	effect = {
+		remove_variable = gate_expedition_preparation_active
+	}
+
+	ai_chance = {
+		base = 0
+	}
+}
