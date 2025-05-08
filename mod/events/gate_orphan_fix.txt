@@ -1,0 +1,102 @@
+﻿namespace = gate_orphan_fix
+
+# This file is here to shut up the error log about unused variables
+# These variables are used for the GUI or in localizations
+gate_orphan_fix.1 = {
+    type = country_event
+
+    placement = root
+
+    hidden = yes
+
+	# DO NOT CALL THIS EVENT
+	trigger = {
+		always = no
+	}
+	
+	cancellation_trigger = {
+		always = yes
+	}
+
+	immediate = {
+		# General
+		fix_variable_error = { variable = mana_density }
+		fix_variable_error = { variable = global_mana_saturation }
+		fix_variable_error = { variable = gate_button_main }
+		fix_variable_error = { variable = gate_button_technology }
+		fix_variable_error = { variable = mbudye_assassination_official_flag }
+		fix_variable_error = { variable = mbudye_assassination_general_flag }
+		fix_variable_error = { variable = mbudye_assassination_admiral_flag }
+		fix_variable_error = { variable = mbudye_assassination_politician_flag }
+		fix_variable_error = { variable = mbudye_defaced_temple_flag }
+		fix_variable_error = { variable = gate_vampire_cult_flag }
+
+		# Magic Researcher
+		fix_variable_error = { variable = character_opinion_magic_researcher }
+		fix_variable_error = { variable = character_opinion_magic_researcher_missing_institute }
+		fix_variable_error = { variable = character_opinion_magic_researcher_busy }
+		fix_variable_error = { variable = is_magic_researcher }
+
+		# Gate Expedition
+		fix_variable_error = { variable = is_expedition_leader }
+		fix_variable_error = { variable = open_expedition_map_reytu }
+		fix_variable_error = { variable = gate_expedition_reytu }
+		fix_variable_error = { variable = expedition_gate }
+		fix_variable_error = { variable = gate_expedition_opinion_industrialist }
+		fix_variable_error = { variable = gate_expedition_opinion_militarist }
+		fix_variable_error = { variable = gate_expedition_opinion_politician }
+		fix_variable_error = { variable = expedition_gate_name }
+		fix_variable_error = { variable = expedition_gate_desc }
+		fix_variable_error = { variable = expedition_village_name }
+		fix_variable_error = { variable = expedition_village_desc }
+		fix_variable_error = { variable = expedition_budget }
+		fix_variable_error = { variable = expedition_budget_total }
+		fix_variable_error = { variable = expedition_started }
+		fix_variable_error = { variable = id }
+		fix_variable_error = { variable = name }
+		fix_variable_error = { variable = desc }
+		fix_variable_error = { variable = hidden }
+		fix_variable_error = { variable = state_01 }
+		fix_variable_error = { variable = state_02 }
+		fix_variable_error = { variable = state_03 }
+		fix_variable_error = { variable = state_04 }
+		fix_variable_error = { variable = state_05 }
+		fix_variable_error = { variable = state_06 }
+		fix_variable_error = { variable = state_07 }
+		fix_variable_error = { variable = state_08 }
+		fix_variable_error = { variable = state_09 }
+		fix_variable_error = { variable = state_10 }
+		fix_variable_error = { variable = location_01 }
+		fix_variable_error = { variable = location_02 }
+		fix_variable_error = { variable = location_03 }
+		fix_variable_error = { variable = location_04 }
+		fix_variable_error = { variable = location_05 }
+		fix_variable_error = { variable = location_06 }
+		fix_variable_error = { variable = location_07 }
+		fix_variable_error = { variable = location_08 }
+		fix_variable_error = { variable = location_09 }
+		fix_variable_error = { variable = location_10 }
+
+		# Community Outfit Mod
+		fix_variable_error = { variable = mr_is_engineer_var }
+		fix_variable_error = { variable = mr_is_astronomer_var }
+		fix_variable_error = { variable = mr_is_chemist_var }
+		fix_variable_error = { variable = mr_is_physicist_var }
+		fix_variable_error = { variable = mr_is_geologist_var }
+		fix_variable_error = { variable = mr_is_naturalist_var }
+		fix_variable_error = { variable = mr_is_paleontologist_var }
+		fix_variable_error = { variable = mr_is_biologist_var }
+		fix_variable_error = { variable = mr_is_archaeologist_var }
+		fix_variable_error = { variable = mr_is_anthropologist_var }
+		fix_variable_error = { variable = mr_is_physician_var }
+		fix_variable_error = { variable = mr_is_racer_var }
+		fix_variable_error = { variable = mr_is_composer_var }
+		fix_variable_error = { variable = mr_is_travelling_composer_var }
+		fix_variable_error = { variable = mr_is_writer_var }
+		fix_variable_error = { variable = mr_is_local_writer_var }
+		fix_variable_error = { variable = mr_is_painter_var }
+		fix_variable_error = { variable = mr_is_independent_painter }
+	}
+	
+	orphan = yes
+}

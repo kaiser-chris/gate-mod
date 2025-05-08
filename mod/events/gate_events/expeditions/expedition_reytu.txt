@@ -21,35 +21,35 @@ gate_expedition_reytu.1 = {
         create_character = {
             template = gate_expedition_leader_template
             interest_group = ig_industrialists
-            on_created = {
-                set_variable = {
-                    name = com_opinion
-                    value = flag:expedition_opinion_industrialist
-                }
-            }
             save_scope_as = expedition_industrialist
+        }
+        scope:expedition_industrialist = {
+            set_variable = {
+                name = com_opinion
+                value = flag:gate_expedition_opinion_industrialist
+            }
         }
         create_character = {
             template = gate_expedition_leader_template
             interest_group = ig_armed_forces
-            on_created = {
-                set_variable = {
-                    name = com_opinion
-                    value = flag:expedition_opinion_militarist
-                }
-            }
             save_scope_as = expedition_militarist
+        }
+        scope:expedition_militarist = {
+            set_variable = {
+                name = com_opinion
+                value = flag:gate_expedition_opinion_militarist
+            }
         }
         create_character = {
             template = gate_expedition_leader_template
             interest_group = ROOT.ruler.interest_group
-            on_created = {
-                set_variable = {
-                    name = com_opinion
-                    value = flag:expedition_opinion_politician
-                }
-            }
             save_scope_as = expedition_politician
+        }
+        scope:expedition_politician = {
+            set_variable = {
+                name = com_opinion
+                value = flag:gate_expedition_opinion_politician
+            }
         }
     }
 
@@ -68,8 +68,8 @@ gate_expedition_reytu.1 = {
     option = {
         name = gate_expedition_reytu.1.a
         custom_tooltip = {
-            text = expedition_opinion_militarist
-            var:expedition_reytu ?= {
+            text = gate_expedition_opinion_militarist
+            var:gate_expedition ?= {
                 set_variable = {
                     name = leader
                     value = scope:expedition_militarist
@@ -90,8 +90,8 @@ gate_expedition_reytu.1 = {
         name = gate_expedition_reytu.1.b
         default_option = yes
         custom_tooltip = {
-            text = expedition_opinion_politician
-            var:expedition_reytu ?= {
+            text = gate_expedition_opinion_politician
+            var:gate_expedition ?= {
                 set_variable = {
                     name = leader
                     value = scope:expedition_politician
@@ -111,8 +111,8 @@ gate_expedition_reytu.1 = {
     option = {
         name = gate_expedition_reytu.1.c
         custom_tooltip = {
-            text = expedition_opinion_industrialist
-            var:expedition_reytu ?= {
+            text = gate_expedition_opinion_industrialist
+            var:gate_expedition ?= {
                 set_variable = {
                     name = leader
                     value = scope:expedition_industrialist
@@ -157,7 +157,7 @@ gate_expedition_reytu.2 = {
             struct_type = expedition_progress
         }
         set_variable = {
-            name = expedition_reytu
+            name = gate_expedition
             value = scope:expedition
         }
     }
@@ -171,11 +171,11 @@ gate_expedition_reytu.2 = {
     option = {
         name = gate_expedition_reytu.2.a
         custom_tooltip = {
-            text = expedition_small_tooltip
-            var:expedition_reytu ?= {
+            text = gate_expedition_small_tooltip
+            var:gate_expedition ?= {
                 set_variable = {
                     name = expedition_type
-                    value = expedition_time_small
+                    value = gate_expedition_preparation_time_small
                 }
             }
         }
@@ -188,11 +188,11 @@ gate_expedition_reytu.2 = {
         name = gate_expedition_reytu.2.b
         default_option = yes
         custom_tooltip = {
-            text = expedition_normal_tooltip
-            var:expedition_reytu ?= {
+            text = gate_expedition_normal_tooltip
+            var:gate_expedition ?= {
                 set_variable = {
                     name = expedition_type
-                    value = expedition_time_normal
+                    value = gate_expedition_preparation_time_normal
                 }
             }
         }
@@ -204,11 +204,11 @@ gate_expedition_reytu.2 = {
     option = {
         name = gate_expedition_reytu.2.c
         custom_tooltip = {
-            text = expedition_large_tooltip
-            var:expedition_reytu ?= {
+            text = gate_expedition_large_tooltip
+            var:gate_expedition ?= {
                 set_variable = {
                     name = expedition_type
-                    value = expedition_time_large
+                    value = gate_expedition_preparation_time_large
                 }
 
             }

@@ -76,6 +76,13 @@ types gate_shared {
             size = { 120 120 }
         }
 
+        # Character Tooltip
+        block "gate_character_tooltip" {
+            tooltipwidget = {
+                FancyTooltip_Character_Gate = {}
+            }
+        }
+
         widget = {
             size = { 120 120 }
             parentanchor = center
@@ -96,13 +103,6 @@ types gate_shared {
                 blockoverride "tooltip" {}
                 blockoverride "portrait_icons" {}
                 blockoverride "portrait_button" {}
-
-                # Character Tooltip
-                block "gate_character_tooltip" {
-                    tooltipwidget = {
-                        FancyTooltip_Character_Gate = {}
-                    }
-                }
             }
 
             # Character Opinion
@@ -110,7 +110,7 @@ types gate_shared {
                 block "gate_opinion_visible" {
                     visible = yes
                 }
-                position = { 120 -10 }
+                position = { 80 0 }
                 margin = { 10 10 }
                 tooltipwidget = {
                     RegularTooltip = {
@@ -121,7 +121,7 @@ types gate_shared {
                 }
 
                 icon = {
-                    size = { 40 40 }
+                    size = { 30 30 }
                     texture = "gfx/interface/icons/ai_strategy_icons/progressive_agenda.dds"
                 }
 
@@ -201,7 +201,7 @@ types gate_shared {
                         min = 0
                         max = 50
                     }
-                    block "on_top_of_the_progressbar" {
+                    blockoverride "on_top_of_the_progressbar" {
                         textbox = {
                             size = { 100% 20 }
                             text = gg_character_experience_novice
@@ -224,7 +224,7 @@ types gate_shared {
                         min = 50
                         max = 100
                     }
-                    block "on_top_of_the_progressbar" {
+                    blockoverride "on_top_of_the_progressbar" {
                         textbox = {
                             size = { 100% 20 }
                             text = gg_character_experience_experienced
@@ -244,7 +244,7 @@ types gate_shared {
                         min = 0
                         max = 100
                     }
-                    block "on_top_of_the_progressbar" {
+                    blockoverride "on_top_of_the_progressbar" {
                         textbox = {
                             size = { 100% 20 }
                             text = gg_character_experience_master
