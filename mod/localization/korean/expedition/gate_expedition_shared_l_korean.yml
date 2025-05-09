@@ -2,9 +2,13 @@
  gate_expedition_opinion_industrialist: "우리는 새로운 교역 기회를 창출하고 $gate_planet$의 자원을 우리의 것으로 만들 것이다!"
  gate_expedition_opinion_militarist: "우리는 무력을 통해 $gate_planet$를 정복할 것이다!"
  gate_expedition_opinion_politician: "외교를 통해 $gate_planet$를 우리의 것으로 만들 것이다!"
- expedition_goods: "[GetGoods('tools').GetName], [GetGoods('small_arms').GetName], [GetGoods('fabric').GetName], [GetGoods('wood').GetName] 그리고 [GetGoods('groceries').GetName]"
- gate_expedition_small_tooltip: "[SCOPE.ScriptValue('expedition_cost_small')|0v]의 $expedition_goods$가 필요한 탐험 준비를 시작합니다."
- gate_expedition_normal_tooltip: "[SCOPE.ScriptValue('expedition_cost_normal')|0v]의 $expedition_goods$가 필요한 탐험 준비를 시작합니다."
- gate_expedition_large_tooltip: "[SCOPE.ScriptValue('expedition_cost_large')|0v]의 $expedition_goods$가 필요한 탐험 준비를 시작합니다."
+ gate_expedition_small_tooltip: "[SCOPE.ScriptValue('gate_expedition_preparation_time_small')|0v] 몇 달의 준비가 필요한 소규모 탐험을 위한 준비를 시작합니다." #deepl:4133145642
+ gate_expedition_normal_tooltip: "[SCOPE.ScriptValue('gate_expedition_preparation_time_normal')|0v] 몇 달의 준비가 필요한 일반 탐험을 위한 준비를 시작합니다." #deepl:712700406
+ gate_expedition_large_tooltip: "[SCOPE.ScriptValue('gate_expedition_preparation_time_large')|0v] 몇 달의 준비가 필요한 대규모 탐험을 위한 준비를 시작합니다." #deepl:2091144821
  gate_expedition_leader_missing: "원정대 리더 없음" #deepl:3535734875
- gate_gate_expedition_leader_missing_tooltip: "현재 원정대 리더가 없습니다." #deepl:3941834986
+ gate_gate_expedition_leader_missing_tooltip: "We currently have no Expedition Leader." #TODO: Concept [gate_expedition_leader]
+ gate_expedition_budget_header: "Expedition Budget" #TODO: Concept [gate_expedition_budget]
+ gate_expedition_budget_tooltip: "원정대 예산은 [Scope.Var('expedition_budget_total').GetValue|0v] 포인트 중 [Scope.Var('expedition_budget').GetValue|0v] 입니다." #deepl:3165762762
+ gate_expedition_budget_empty: "원정대 예산이 모두 소진되었습니다." #deepl:1128213494
+ gate_expedition_blocked_trigger: "지난 [SCOPE.ScriptValue('gate_expedition_block_time')|0v] 개월 동안 [concept_gate_planet] 으로의 탐험을 완료하거나 취소한 적이 없습니다." #deepl:3624866321
+ gate_expedition_blocked_tooltip: "[SCOPE.ScriptValue('gate_expedition_block_time')|0v] 개월 동안 새로운 탐험( [concept_gate_planet] )을 시작할 수 없습니다." #deepl:2607397300

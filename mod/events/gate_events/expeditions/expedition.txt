@@ -1,0 +1,272 @@
+﻿namespace = gate_expedition
+
+gate_expedition.1 = {
+    type = country_event
+    dlc = dlc_magic_gate
+    placement = capital
+
+    title = gate_expedition.1.t
+    desc = gate_expedition.1.d
+    flavor = gate_expedition.1.f
+
+    event_image = {
+        video = "europenorthamerica_capitalists_meeting"
+    }
+
+    trigger = {
+        has_journal_entry = je_gate_expedition_preparation
+    }
+
+    immediate = {
+        create_character = {
+            template = gate_expedition_leader_template
+            interest_group = ig_industrialists
+            save_scope_as = expedition_industrialist
+        }
+        scope:expedition_industrialist = {
+            set_variable = {
+                name = com_opinion
+                value = flag:gate_expedition_opinion_industrialist
+            }
+        }
+        create_character = {
+            template = gate_expedition_leader_template
+            interest_group = ig_armed_forces
+            save_scope_as = expedition_militarist
+        }
+        scope:expedition_militarist = {
+            set_variable = {
+                name = com_opinion
+                value = flag:gate_expedition_opinion_militarist
+            }
+        }
+        create_character = {
+            template = gate_expedition_leader_template
+            interest_group = ROOT.ruler.interest_group
+            save_scope_as = expedition_politician
+        }
+        scope:expedition_politician = {
+            set_variable = {
+                name = com_opinion
+                value = flag:gate_expedition_opinion_politician
+            }
+        }
+    }
+
+    left_icon = scope:expedition_militarist
+    center_icon = scope:expedition_politician
+    right_icon = scope:expedition_industrialist
+
+    gui_window = event_window_3char_selection
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+    duration = 3
+
+    option = {
+        name = gate_expedition.1.a
+        custom_tooltip = {
+            text = gate_expedition_opinion_militarist
+            var:gate_expedition ?= {
+                set_variable = {
+                    name = leader
+                    value = scope:expedition_militarist
+                }
+            }
+            je:je_gate_expedition_preparation ?= {
+                clear_variable_list = com_journal_characters
+                add_to_variable_list = {
+                    name = com_journal_characters
+                    target = scope:expedition_militarist
+                }
+            }
+            remove_variable = expedition_preparation_hiring_leader
+        }
+    }
+
+    option = {
+        name = gate_expedition.1.b
+        default_option = yes
+        custom_tooltip = {
+            text = gate_expedition_opinion_politician
+            var:gate_expedition ?= {
+                set_variable = {
+                    name = leader
+                    value = scope:expedition_politician
+                }
+            }
+            je:je_gate_expedition_preparation ?= {
+                clear_variable_list = com_journal_characters
+                add_to_variable_list = {
+                    name = com_journal_characters
+                    target = scope:expedition_politician
+                }
+            }
+            remove_variable = expedition_preparation_hiring_leader
+        }
+    }
+
+    option = {
+        name = gate_expedition.1.c
+        custom_tooltip = {
+            text = gate_expedition_opinion_industrialist
+            var:gate_expedition ?= {
+                set_variable = {
+                    name = leader
+                    value = scope:expedition_industrialist
+                }
+            }
+            je:je_gate_expedition_preparation ?= {
+                clear_variable_list = com_journal_characters
+                add_to_variable_list = {
+                    name = com_journal_characters
+                    target = scope:expedition_industrialist
+                }
+            }
+            remove_variable = expedition_preparation_hiring_leader
+        }
+    }
+}
+
+gate_expedition.2 = {
+    type = country_event
+    dlc = dlc_magic_gate
+    placement = capital
+
+    title = gate_expedition.2.t
+    desc = gate_expedition.2.d
+    flavor = gate_expedition.2.f
+
+    event_image = {
+        video = "ep1_power_blocs"
+    }
+
+    trigger = {
+        NOT = {
+            has_journal_entry = je_gate_expedition_preparation
+        }
+        has_building = building_gate_alxa
+    }
+
+    immediate = {
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+    duration = 3
+
+    option = {
+        name = gate_expedition.2.a
+        custom_tooltip = {
+            text = gate_expedition_small_tooltip
+            var:gate_expedition ?= {
+                set_variable = {
+                    name = expedition_type
+                    value = gate_expedition_preparation_time_small
+                }
+            }
+        }
+        add_journal_entry = {
+            type = je_gate_expedition_preparation
+        }
+    }
+
+    option = {
+        name = gate_expedition.2.b
+        default_option = yes
+        custom_tooltip = {
+            text = gate_expedition_normal_tooltip
+            var:gate_expedition ?= {
+                set_variable = {
+                    name = expedition_type
+                    value = gate_expedition_preparation_time_normal
+                }
+            }
+        }
+        add_journal_entry = {
+            type = je_gate_expedition_preparation
+        }
+    }
+
+    option = {
+        name = gate_expedition.2.c
+        custom_tooltip = {
+            text = gate_expedition_large_tooltip
+            var:gate_expedition ?= {
+                set_variable = {
+                    name = expedition_type
+                    value = gate_expedition_preparation_time_large
+                }
+
+            }
+        }
+        add_journal_entry = {
+            type = je_gate_expedition_preparation
+        }
+    }
+}
+
+gate_expedition.3 = {
+    type = country_event
+    dlc = dlc_magic_gate
+    placement = capital
+
+    title = gate_expedition.3.t
+    desc = gate_expedition.3.d
+    flavor = gate_expedition.3.f
+
+    event_image = {
+        video = "unspecific_military_parade"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+    duration = 3
+
+    option = {
+        name = gate_expedition.3.a
+        custom_tooltip = {
+            text = gate_expedition_blocked_tooltip
+            set_variable = {
+                name = gate_expedition_blocked
+                months = gate_expedition_block_time
+            }
+        }
+        add_magic_innovation = {
+            amount = 3000
+        }
+    }
+}
+
+gate_expedition.4 = {
+    type = country_event
+    dlc = dlc_magic_gate
+    placement = capital
+
+    title = gate_expedition.4.t
+    desc = gate_expedition.4.d
+    flavor = gate_expedition.4.f
+
+    event_image = {
+        video = "unspecific_military_parade"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+    duration = 3
+
+    option = {
+        name = gate_expedition.4.a
+        add_journal_entry = {
+            type = je_gate_expedition_active
+        }
+    }
+}

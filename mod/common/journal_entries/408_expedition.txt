@@ -8,7 +8,7 @@
 			triggered_desc = {
 				desc = je_gate_expedition_preparation_hiring_leader
 				trigger = {
-					has_variable = expedition_reytu_preparation_hiring_leader
+					has_variable = expedition_preparation_hiring_leader
 					NOT = {
 						var:gate_expedition ?= {
 							has_variable = leader
@@ -68,7 +68,11 @@
 					}
 				}
 			}
+			remove_variable = gate_expedition_preparation_progress
+			remove_variable = gate_expedition_preparation_max
+			remove_variable = gate_expedition_cancel
 		}
+		trigger_event = gate_expedition.4
 	}
 
 	on_fail = {
@@ -82,7 +86,6 @@
 	scripted_button = je_gate_expedition_preparation_button_hire_leader
 	scripted_button = je_gate_expedition_preparation_button_start_preparations
 	scripted_button = je_gate_expedition_preparation_button_stop_preparations
-	scripted_button = je_gate_expedition_button_open_map
 	scripted_button = je_gate_expedition_preparation_button_cancel
 
 	progressbar = yes
@@ -101,12 +104,70 @@
 				change_variable = {
 					name = gate_expedition_preparation_progress
 					add = 1
-					min = 0
-					max = var:gate_expedition_preparation_max
 				}
 			}
 		}
 	}
+
+	transferable = no
+	can_revolution_inherit = yes
+
+	weight = 200
+	should_be_pinned_by_default = yes
+}
+
+je_gate_expedition_active = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_expeditions
+
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = je_gate_expedition_active_status
+			}
+		}
+	}
+
+	immediate = {
+	}
+
+	complete = {
+		custom_tooltip = {
+			text = gate_expedition_budget_empty
+			var:gate_expedition = {
+				var:expedition_budget <= 0
+			}
+		}
+	}
+
+	fail = {
+		custom_tooltip = {
+			text = je_gate_expedition_preparation_fail_tooltip
+			NOT = {
+				has_building = building_gate_alxa
+			}
+			has_variable = gate_expedition_cancel
+		}
+	}
+
+	on_complete = {
+		trigger_event = {
+			id = gate_expedition.3
+			months = 1
+		}
+		hidden_effect = {
+			remove_variable = gate_expedition
+		}
+	}
+
+	on_fail = {
+		hidden_effect = {
+			remove_variable = gate_expedition
+		}
+	}
+
+	scripted_button = je_gate_expedition_button_open_map
 
 	transferable = no
 	can_revolution_inherit = yes

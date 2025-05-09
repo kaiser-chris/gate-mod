@@ -57,7 +57,7 @@ types gate_expedition_panel_types {
                 onclick = "[GetVariableSystem.Clear('com_open_window')]"
                 onclick = "[GetVariableSystem.Clear('com_alert_action')]"
                 shortcut = "close_window"
-                position = { -55 116 }
+                position = { -56 116 }
             }
         }
 
@@ -68,6 +68,7 @@ types gate_expedition_panel_types {
         blockoverride "fixed_top" {
             datacontext = "[Country.MakeScope.Var('gate_expedition')]"
             hbox = {
+                visible = "[Scope.IsSet]"
                 layoutpolicy_horizontal = expanding
                 margin = { 20 10 }
                 margin_bottom = 15
@@ -75,19 +76,13 @@ types gate_expedition_panel_types {
 
                 # Expedition Leader
                 gate_character_small = {
-                    visible = "[And(
-                                    Scope.IsSet,
-                                    Scope.Var('leader').IsSet
-                               )]"
+                    visible = "[Scope.Var('leader').IsSet]"
                     blockoverride "character_context" {
                         datacontext = "[Scope.Var('leader').GetCharacter]"
                     }
                 }
                 gate_character_small = {
-                    visible = "[Or(
-                                    Not(Scope.IsSet),
-                                    Not(Scope.Var('leader').IsSet)
-                               )]"
+                    visible = "[Not(Scope.Var('leader').IsSet)]"
                     blockoverride "gate_character_tooltip" {
                         tooltip = gate_gate_expedition_leader_missing_tooltip
                     }
@@ -95,6 +90,8 @@ types gate_expedition_panel_types {
                         visible = no
                     }
                 }
+
+                # Expedition Budget
                 hbox = {
                     maximumsize = { 300 -1 }
                     layoutpolicy_horizontal = expanding
@@ -120,11 +117,6 @@ types gate_expedition_panel_types {
                         default_progressbar_horizontal = {
                             maximumsize = { -1 25 }
                             layoutpolicy_horizontal = expanding
-                            visible = "[And3(
-                                            Scope.IsSet,
-                                            Scope.Var('expedition_budget').IsSet,
-                                            Scope.Var('expedition_budget_total').IsSet
-                                       )]"
                             tooltip = gate_expedition_budget_tooltip
 
                             blockoverride "values" {
@@ -145,9 +137,24 @@ types gate_expedition_panel_types {
                     }
                 }
 
-                expand = {}
+                # Expedition Activity
+                hbox = {
+                    maximumsize = { 300 -1 }
+                    layoutpolicy_horizontal = expanding
+                    layoutpolicy_vertical = expanding
+                    margin = { 20 20 }
+                    spacing = 20
+
+                    background = {
+                        using = simple_frame
+                    }
+
+                    expand = {}
+                }
+
             }
             hbox = {
+                visible = "[Scope.IsSet]"
                 minimumsize = { -1 2 }
                 layoutpolicy_horizontal = expanding
                 spacing = -2
@@ -216,8 +223,6 @@ types gate_expedition_panel_types {
                     }
                     map_container = {}
 
-                    map_sidebar = {}
-
                     container = {
                         parentanchor = top|right
                         position = { -20 20 }
@@ -236,6 +241,8 @@ types gate_expedition_panel_types {
                 }
                 widget = {
                     size = { 100% 100% }
+
+                    map_sidebar = {}
                     background = {
                         texture = "gfx/interface/backgrounds/default_bg.dds"
                         using = clickthrough_blocker

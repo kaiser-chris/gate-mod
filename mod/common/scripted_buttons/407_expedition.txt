@@ -7,7 +7,8 @@
 	}
 
 	effect = {
-		hidden_effect = {
+		custom_tooltip = {
+			text = je_gate_expedition_button_open_map_effect
 			set_variable = gate_open_expedition
 		}
 	}
@@ -29,7 +30,7 @@ je_gate_expedition_preparation_button_hire_leader = {
 		custom_tooltip = {
 			text = je_gate_expedition_preparation_button_hire_leader_trigger_search
 			NOT = {
-				has_variable = expedition_reytu_preparation_hiring_leader
+				has_variable = expedition_preparation_hiring_leader
 			}
 		}
 	}
@@ -45,9 +46,9 @@ je_gate_expedition_preparation_button_hire_leader = {
 	effect = {
 		custom_tooltip = {
 			text = je_gate_expedition_preparation_button_hire_leader_effect
-			set_variable = expedition_reytu_preparation_hiring_leader
+			set_variable = expedition_preparation_hiring_leader
 			trigger_event = {
-				id = gate_expedition_reytu.1
+				id = gate_expedition.1
 				months = 3
 				popup = yes
 			}
@@ -64,13 +65,23 @@ je_gate_expedition_preparation_button_cancel = {
 	}
 
 	possible = {
-		NOT = {
-			has_variable = expedition_reytu_preparation_hiring_leader
+		custom_tooltip = {
+			text = je_gate_expedition_preparation_button_hire_leader_trigger_search
+			NOT = {
+				has_variable = expedition_preparation_hiring_leader
+			}
 		}
 	}
 
 	effect = {
-		set_variable = gate_expedition_cancel
+		custom_tooltip = {
+			text = gate_expedition_blocked_tooltip
+			set_variable = gate_expedition_cancel
+			set_variable = {
+				name = gate_expedition_blocked
+				months = gate_expedition_block_time
+			}
+		}
 	}
 
 	ai_chance = {
@@ -89,13 +100,25 @@ je_gate_expedition_preparation_button_start_preparations = {
 	}
 
 	possible = {
-		var:gate_expedition ?= {
-			has_variable = leader
+		custom_tooltip = {
+			text = je_gate_expedition_preparation_no_leader
+			var:gate_expedition ?= {
+				has_variable = leader
+			}
 		}
 	}
 
 	effect = {
-		set_variable = gate_expedition_preparation_active
+		custom_tooltip = {
+			text = je_gate_expedition_preparation_button_start_preparations_effect
+			set_variable = gate_expedition_preparation_active
+		}
+		scope:journal_entry = {
+			add_modifier = {
+				name = gate_expedition_preparation_modifier
+				multiplier = money_amount_multiplier_medium
+			}
+		}
 	}
 
 	ai_chance = {
@@ -112,7 +135,13 @@ je_gate_expedition_preparation_button_stop_preparations = {
 	}
 
 	effect = {
-		remove_variable = gate_expedition_preparation_active
+		custom_tooltip = {
+			text = je_gate_expedition_preparation_button_stop_preparations_effect
+			remove_variable = gate_expedition_preparation_active
+			scope:journal_entry = {
+				remove_modifier = gate_expedition_preparation_modifier
+			}
+		}
 	}
 
 	ai_chance = {
