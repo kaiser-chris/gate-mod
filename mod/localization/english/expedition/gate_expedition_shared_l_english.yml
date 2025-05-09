@@ -9,3 +9,6 @@
  gate_gate_expedition_leader_missing_tooltip: "We currently have no Expedition Leader." #TODO: Concept [gate_expedition_leader]
  gate_expedition_budget_header: "Expedition Budget" #TODO: Concept [gate_expedition_budget]
  gate_expedition_budget_tooltip: "Our Expedition Budget is [Scope.Var('expedition_budget').GetValue|0v] of [Scope.Var('expedition_budget_total').GetValue|0v] points."
+ gate_expedition_budget_empty: "Our Expedition Budget has been used up."
+ gate_expedition_blocked_trigger: "We haven't finished or canceled an expedition to [concept_gate_planet] in the last [SCOPE.ScriptValue('gate_expedition_block_time')|0v] months."
+ gate_expedition_blocked_tooltip: "We will not be able to start a new expedition to [concept_gate_planet] for [SCOPE.ScriptValue('gate_expedition_block_time')|0v] months."

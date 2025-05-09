@@ -37,3 +37,17 @@ sgui_gate_map_reset_location = {
         remove_global_variable = gate_map_sidebar
     }
 }
+
+sgui_gate_map_equals = {
+    scope = country
+
+    saved_scopes = {
+        potential_location
+    }
+
+    is_valid = {
+        var:gate_expedition ?= {
+            var:location ?= scope:potential_location
+        }
+    }
+}

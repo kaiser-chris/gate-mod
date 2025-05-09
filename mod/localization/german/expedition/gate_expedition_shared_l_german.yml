@@ -2,9 +2,13 @@
  gate_expedition_opinion_industrialist: "Wir werden neue Handelsmöglichkeiten schaffen und die Ressourcen von $gate_planet$ zu unseren machen!" #deepl:3801184300
  gate_expedition_opinion_militarist: "Mit Gewalt werden wir $gate_planet$ erobern!" #deepl:1661851974
  gate_expedition_opinion_politician: "Die Diplomatie wird $gate_planet$ zu unserer machen!" #deepl:2048136580
- expedition_goods: "[GetGoods('tools').GetName], [GetGoods('small_arms').GetName], [GetGoods('fabric').GetName], [GetGoods('wood').GetName] und [GetGoods('groceries').GetName]" #deepl:113118691
- gate_expedition_small_tooltip: "Beginn der Vorbereitungen für eine kleine Expedition, die [SCOPE.ScriptValue('gate_expedition_preparation_time_small')|0v] Monate der Vorbereitung erfordert." #deepl:3891501871
- gate_expedition_normal_tooltip: "Beginnt mit den Vorbereitungen für eine normale Expedition, die [SCOPE.ScriptValue('gate_expedition_preparation_time_normal')|0v] Monate der Vorbereitung erfordert." #deepl:1865361174
- gate_expedition_large_tooltip: "Beginn der Vorbereitungen für eine große Expedition, die [SCOPE.ScriptValue('gate_expedition_preparation_time_large')|0v] Monate der Vorbereitung erfordert." #deepl:1045475478
+ gate_expedition_small_tooltip: "Beginn der Vorbereitungen für eine kleine Expedition, die [SCOPE.ScriptValue('gate_expedition_preparation_time_small')|0v] Monate der Vorbereitung erfordert." #deepl:4133145642
+ gate_expedition_normal_tooltip: "Beginnt mit den Vorbereitungen für eine normale Expedition, die [SCOPE.ScriptValue('gate_expedition_preparation_time_normal')|0v] Monate der Vorbereitung erfordert." #deepl:712700406
+ gate_expedition_large_tooltip: "Beginn der Vorbereitungen für eine große Expedition, die [SCOPE.ScriptValue('gate_expedition_preparation_time_large')|0v] Monate der Vorbereitung erfordert." #deepl:2091144821
  gate_expedition_leader_missing: "Kein Expeditionsleiter" #deepl:3535734875
- gate_gate_expedition_leader_missing_tooltip: "Wir haben derzeit keinen Expeditionsleiter." #deepl:3941834986
+ gate_gate_expedition_leader_missing_tooltip: "We currently have no Expedition Leader." #TODO: Concept [gate_expedition_leader]
+ gate_expedition_budget_header: "Expedition Budget" #TODO: Concept [gate_expedition_budget]
+ gate_expedition_budget_tooltip: "Unser Expeditionsbudget ist [Scope.Var('expedition_budget').GetValue|0v] von [Scope.Var('expedition_budget_total').GetValue|0v] Punkte." #deepl:3165762762
+ gate_expedition_budget_empty: "Unser Expeditionsbudget ist aufgebraucht." #deepl:1128213494
+ gate_expedition_blocked_trigger: "[concept_gate_planet] Wir haben in den letzten [SCOPE.ScriptValue('gate_expedition_block_time')|0v] Monaten keine Expedition beendet oder abgesagt." #deepl:3624866321
+ gate_expedition_blocked_tooltip: "Wir werden in den nächsten Monaten keine neue Expedition nach [concept_gate_planet] starten können [SCOPE.ScriptValue('gate_expedition_block_time')|0v]." #deepl:2607397300

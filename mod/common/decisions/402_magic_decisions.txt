@@ -115,7 +115,7 @@ decision_gate_start_expedition_reytu = {
 					has_journal_entry = je_gate_expedition_preparation
 				}
 				NOT = {
-					has_variable = reytu_expedition_active
+					has_journal_entry = je_gate_expedition_active
 				}
 			}
 			AND = {
@@ -136,6 +136,15 @@ decision_gate_start_expedition_reytu = {
 				}
 			}
 		}
+		NOR = {
+			custom_tooltip = {
+				text = gate_expedition_blocked_trigger
+				has_variable = gate_expedition_blocked
+			}
+			hidden_trigger = {
+				has_variable = gate_expedition
+			}
+		}
 	}
 
 	when_taken = {
@@ -143,14 +152,29 @@ decision_gate_start_expedition_reytu = {
 			limit = {
 				is_player = yes
 			}
-			trigger_event = gate_expedition_reytu.2
+			hidden_effect = {
+				create_struct = {
+					struct_scope = expedition
+					struct_type = expedition_progress
+				}
+				set_variable = {
+					name = gate_expedition
+					value = scope:expedition
+				}
+				var:gate_expedition = {
+					set_variable = {
+						name = location
+						value = global_var:gate_expedition_reytu
+					}
+				}
+			}
+			trigger_event = gate_expedition.2
 		}
 		else = {
 			set_variable = AI_EXPEDITION_ANTARCTICA
 			ai_expedition_simulator_start = yes
 		}
 		hidden_effect = {
-			set_variable = reytu_expedition_active
 			set_variable = {
 				name = ai_expedition_cooldown
 				value = yes
