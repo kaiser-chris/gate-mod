@@ -51,7 +51,7 @@ widget = {
     widget = {
         widget = {
             # Expedition
-            datacontext = "[GetScriptedGui('sgui_gate_open_expedition')]"
+            datacontext = "[GetScriptedGui('sgui_gate_expedition_open')]"
             visible = "[ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
             state = {
                 name = _show

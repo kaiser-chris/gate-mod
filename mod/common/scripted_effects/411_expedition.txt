@@ -1,8 +1,74 @@
-﻿gate_setup_reytu = {
+﻿# Interactions:
+# - scope:interaction_home
+# - scope:interaction_explore
+# - scope:interaction_contact
+gate_setup_interactions = {
+	# Return Home
+	create_struct = {
+		struct_scope = interaction_home
+		struct_type = gate_expedition_interaction
+	}
+	scope:interaction_home = {
+		set_variable = {
+			name = text
+			value = flag:gate_expedition_interaction_home
+		}
+		set_variable = {
+			name = tooltip
+			value = flag:gate_expedition_interaction_home_tooltip
+		}
+		set_variable = {
+			name = type
+			value = gate_expedition_interaction_home
+		}
+	}
+
+	# Explore Location
+	create_struct = {
+		struct_scope = interaction_explore
+		struct_type = gate_expedition_interaction
+	}
+	scope:interaction_explore = {
+		set_variable = {
+			name = text
+			value = flag:gate_expedition_interaction_explore
+		}
+		set_variable = {
+			name = tooltip
+			value = flag:gate_expedition_interaction_explore_tooltip
+		}
+		set_variable = {
+			name = type
+			value = gate_expedition_interaction_explore
+		}
+	}
+
+	# Contact Location
+	create_struct = {
+		struct_scope = interaction_contact
+		struct_type = gate_expedition_interaction
+	}
+	scope:interaction_contact = {
+		set_variable = {
+			name = text
+			value = flag:gate_expedition_interaction_contact
+		}
+		set_variable = {
+			name = tooltip
+			value = flag:gate_expedition_interaction_contact_tooltip
+		}
+		set_variable = {
+			name = type
+			value = gate_expedition_interaction_contact
+		}
+	}
+}
+
+gate_setup_reytu = {
 	### States
 	create_struct = {
 		struct_scope = state_01
-		struct_type = expedition_state
+		struct_type = gate_expedition_state
 	}
 	scope:state_01 = {
 		set_variable = {
@@ -13,7 +79,7 @@
 	}
 	create_struct = {
 		struct_scope = state_02
-		struct_type = expedition_state
+		struct_type = gate_expedition_state
 	}
 	scope:state_02 = {
 		set_variable = {
@@ -24,7 +90,7 @@
 	}
 	create_struct = {
 		struct_scope = state_03
-		struct_type = expedition_state
+		struct_type = gate_expedition_state
 	}
 	scope:state_03 = {
 		set_variable = {
@@ -35,7 +101,7 @@
 	}
 	create_struct = {
 		struct_scope = state_04
-		struct_type = expedition_state
+		struct_type = gate_expedition_state
 	}
 	scope:state_04 = {
 		set_variable = {
@@ -46,7 +112,7 @@
 	}
 	create_struct = {
 		struct_scope = state_05
-		struct_type = expedition_state
+		struct_type = gate_expedition_state
 	}
 	scope:state_05 = {
 		set_variable = {
@@ -57,15 +123,15 @@
 	}
 	create_struct = {
 		struct_scope = state_06
-		struct_type = expedition_state
+		struct_type = gate_expedition_state
 	}
 	create_struct = {
 		struct_scope = location_01
-		struct_type = expedition_location
+		struct_type = gate_expedition_location
 	}
 	create_struct = {
 		struct_scope = location_02
-		struct_type = expedition_location
+		struct_type = gate_expedition_location
 	}
 	scope:state_06 = {
 		set_variable = {
@@ -83,6 +149,10 @@
 				name = desc
 				value = flag:expedition_gate_desc
 			}
+			add_to_variable_list = {
+				name = interactions
+				target = scope:interaction_home
+			}
 		}
 		set_variable = {
 			name = location_01
@@ -97,6 +167,14 @@
 				name = desc
 				value = flag:expedition_village_desc
 			}
+			add_to_variable_list = {
+				name = interactions
+				target = scope:interaction_contact
+			}
+			add_to_variable_list = {
+				name = interactions
+				target = scope:interaction_explore
+			}
 		}
 		set_variable = {
 			name = location_02
@@ -105,7 +183,7 @@
 	}
 	create_struct = {
 		struct_scope = state_07
-		struct_type = expedition_state
+		struct_type = gate_expedition_state
 	}
 	scope:state_07 = {
 		set_variable = {
@@ -116,7 +194,7 @@
 	}
 	create_struct = {
 		struct_scope = state_08
-		struct_type = expedition_state
+		struct_type = gate_expedition_state
 	}
 	scope:state_08 = {
 		set_variable = {
@@ -127,7 +205,7 @@
 	}
 	create_struct = {
 		struct_scope = state_09
-		struct_type = expedition_state
+		struct_type = gate_expedition_state
 	}
 	scope:state_09 = {
 		set_variable = {
@@ -138,7 +216,7 @@
 	}
 	create_struct = {
 		struct_scope = state_10
-		struct_type = expedition_state
+		struct_type = gate_expedition_state
 	}
 	scope:state_10 = {
 		# Properties
