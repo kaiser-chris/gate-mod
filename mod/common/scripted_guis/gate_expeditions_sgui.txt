@@ -1,4 +1,4 @@
-﻿sgui_gate_open_expedition = {
+﻿sgui_gate_expedition_open = {
     scope = none
 
     is_valid = {
@@ -10,34 +10,6 @@
     }
 }
 
-sgui_gate_map_choose_location = {
-    scope = character
-
-    effect = {
-        if = {
-            limit = {
-                global_var:gate_map_sidebar ?= root
-                has_global_variable = gate_map_sidebar
-            }
-            remove_global_variable = gate_map_sidebar
-        }
-        else = {
-            set_global_variable = {
-                name = gate_map_sidebar
-                value = root
-            }
-        }
-    }
-}
-
-sgui_gate_map_reset_location = {
-    scope = none
-
-    effect = {
-        remove_global_variable = gate_map_sidebar
-    }
-}
-
 sgui_gate_map_equals = {
     scope = country
 
@@ -45,9 +17,60 @@ sgui_gate_map_equals = {
         potential_location
     }
 
-    is_valid = {
+    is_shown = {
         var:gate_expedition ?= {
             var:location ?= scope:potential_location
         }
+    }
+}
+
+sgui_gate_map_location_choose = {
+    scope = country
+
+    saved_scopes = {
+        location
+    }
+
+    effect = {
+        if = {
+            limit = {
+                var:gate_map_sidebar ?= scope:location
+                has_variable = gate_map_sidebar
+            }
+            remove_variable = gate_map_sidebar
+        }
+        else = {
+            set_variable = {
+                name = gate_map_sidebar
+                value = scope:location
+            }
+        }
+    }
+}
+
+sgui_gate_map_location_reset = {
+    scope = country
+
+    effect = {
+        remove_variable = gate_map_sidebar
+    }
+}
+
+sgui_gate_map_location_interact = {
+    scope = country
+
+    saved_scopes = {
+        location
+        interaction
+    }
+
+    is_valid = {
+        NOT = {
+            scope:interaction ?= gate_expedition_interaction_contact
+        }
+    }
+
+    effect = {
+        remove_variable = gate_map_sidebar
     }
 }

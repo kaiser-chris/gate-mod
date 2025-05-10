@@ -155,7 +155,7 @@ decision_gate_start_expedition_reytu = {
 			hidden_effect = {
 				create_struct = {
 					struct_scope = expedition
-					struct_type = expedition_progress
+					struct_type = gate_expedition_progress
 				}
 				set_variable = {
 					name = gate_expedition
