@@ -65,9 +65,7 @@ sgui_gate_map_location_interact = {
     }
 
     is_valid = {
-        NOT = {
-            scope:interaction ?= gate_expedition_interaction_contact
-        }
+        gate_expedition_interaction_valid = yes
     }
 
     effect = {

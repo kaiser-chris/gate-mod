@@ -320,7 +320,7 @@ types gate_expedition_panel_types {
 
     type gate_map_sidebar = hbox {
         datacontext = "[Country.MakeScope.Var('gate_map_sidebar').GetCharacter]"
-        maximumsize = { 400 -1 }
+        maximumsize = { 544 -1 }
         margin_top = -4
         layoutpolicy_vertical = expanding
         layoutpolicy_horizontal = expanding
@@ -366,31 +366,77 @@ types gate_expedition_panel_types {
                     raw_text = "[Character.MakeScope.Var('name').GetFlagName]"
                 }
                 blockoverride "size" {
-                    size = { 400 44 }
+                    size = { 540 44 }
                 }
             }
             vbox = {
+                margin = { 0 15 }
                 spacing = 10
                 layoutpolicy_horizontal = expanding
                 layoutpolicy_vertical = expanding
-                margin = { 10 10 }
-                textbox = {
+                scrollarea = {
                     layoutpolicy_horizontal = expanding
-                    margin = { 20 20 }
-                    using = entry_bg
-                    autoresize = yes
-                    multiline = yes
-                    raw_text = "[Character.MakeScope.Var('desc').GetFlagName]"
+                    layoutpolicy_vertical = expanding
+
+                    scrollbarpolicy_horizontal = always_off
+
+                    scrollbar_vertical = {
+                        using = vertical_scrollbar
+                    }
+
+                    scrollwidget = {
+                        vbox = {
+                            margin = { 15 0 }
+                            layoutpolicy_horizontal = expanding
+                            layoutpolicy_vertical = expanding
+                            spacing = 10
+                            textbox = {
+                                maximumsize = { 500 -1 }
+                                layoutpolicy_horizontal = expanding
+                                margin = { 20 20 }
+                                autoresize = yes
+                                multiline = yes
+                                raw_text = "[Character.MakeScope.Var('desc').GetFlagName]"
+
+                                background = {
+                                    using = entry_bg_fancy_dark
+                                    alpha = 0.6
+                                }
+                            }
+                            textbox = {
+                                maximumsize = { 500 -1 }
+                                layoutpolicy_horizontal = expanding
+                                margin = { 20 20 }
+                                using = entry_bg
+                                autoresize = yes
+                                multiline = yes
+                                raw_text = "[Character.MakeScope.Var('flavor').GetFlagName]"
+                            }
+                            expand = {}
+                        }
+                    }
                 }
+
                 expand = {}
 
                 vbox = {
-                    spacing = 10
                     layoutpolicy_horizontal = expanding
-                    datamodel = "[Character.MakeScope.GetList('interactions')]"
+                    spacing = 10
+                    visible = "[Not(IsDataModelEmpty(Character.MakeScope.GetList('interactions')))]"
 
-                    item = {
-                        gate_location_interaction = {}
+                    divider_clean = {
+                        layoutpolicy_horizontal = expanding
+                    }
+
+                    vbox = {
+                        margin = { 15 0 }
+                        spacing = 10
+                        layoutpolicy_horizontal = expanding
+                        datamodel = "[Character.MakeScope.GetList('interactions')]"
+
+                        item = {
+                            gate_location_interaction = {}
+                        }
                     }
                 }
             }
@@ -423,36 +469,30 @@ types gate_expedition_panel_types {
         }
     }
 
-    type gate_location_interaction = hbox {
+    type gate_location_interaction = button {
         datacontext = "[GetScriptedGui('sgui_gate_map_location_interact')]"
-        layoutpolicy_horizontal = expanding
-        maximumsize = { -1 50 }
-        button = {
-            layoutpolicy_horizontal = expanding
-            layoutpolicy_vertical = expanding
-            minimumsize = { -1 50 }
-            raw_text = "[Scope.Var('text').GetFlagName]"
-            tooltip = "[Scope.Var('tooltip').GetFlagName]"
-            using = default_button_primary_big_action
-            onclick = "[ScriptedGui.Execute(GuiScope
+        size = { 450 44 }
+        raw_text = "[Scope.Var('text').GetFlagName]"
+        tooltip = "[Scope.Var('tooltip').GetFlagName]"
+        using = default_button_primary_big_action
+        onclick = "[ScriptedGui.Execute(GuiScope
                             .SetRoot(Country.MakeScope)
                             .AddScope('interaction', MakeScopeValue(Scope.Var('type').GetValue))
                             .AddScope('location', Character.MakeScope)
                             .End
                       )]"
-            enabled = "[ScriptedGui.IsValid(GuiScope
+        enabled = "[ScriptedGui.IsValid(GuiScope
                             .SetRoot(Country.MakeScope)
                             .AddScope('interaction', MakeScopeValue(Scope.Var('type').GetValue))
                             .AddScope('location', Character.MakeScope)
                             .End
                       )]"
-            visible = "[ScriptedGui.IsShown(GuiScope
+        visible = "[ScriptedGui.IsShown(GuiScope
                             .SetRoot(Country.MakeScope)
                             .AddScope('interaction', MakeScopeValue(Scope.Var('type').GetValue))
                             .AddScope('location', Character.MakeScope)
                             .End
                       )]"
-        }
     }
 
     type gate_state = widget {
@@ -497,6 +537,8 @@ types gate_expedition_panel_types {
             position = { 0 0 }
         }
         size = { 60 60 }
+
+        # Name
         widget = {
             parentanchor = hcenter|bottom
             position = { 0 -10 }
@@ -512,6 +554,34 @@ types gate_expedition_panel_types {
                 margin = { 20 10 }
             }
         }
+
+        # Highlight
+        widget = {
+            size = { 160% 160% }
+            parentanchor = center
+            block "selected_visibility" {
+                visible = "[ObjectsEqual(Country.MakeScope.Var('gate_map_sidebar').GetCharacter.MakeScope, Character.MakeScope)]"
+            }
+
+            icon = {
+                using = rotate_glow_animation
+            }
+
+            state = {
+                name = _show
+                duration = 0.4
+                using = Animation_Curve_Default
+                alpha = 0.5
+            }
+            state = {
+                name = _hide
+                duration = 0.7
+                using = Animation_Curve_Default
+                alpha = 0
+            }
+        }
+
+        # Button
         button_icon_round = {
             block "tooltip" {
                 tooltip = "[Character.MakeScope.Var('desc').GetFlagName]"
