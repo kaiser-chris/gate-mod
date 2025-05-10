@@ -83,4 +83,10 @@ GLOBAL = {
 
 	# Add arable land for balancing
 	gate_setup_arable_land = yes
+
+	# Setup Expedition structs
+	c:GATE_MK = {
+		# Country Scope does not matter
+		gate_setup_expeditions = yes
+	}
 }

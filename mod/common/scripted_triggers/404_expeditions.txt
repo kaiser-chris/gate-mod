@@ -1,0 +1,28 @@
+﻿# Check whether a specific interaction
+# is valid for the given expedition leader
+gate_expedition_interaction_valid = {
+	OR = {
+		# Always available
+		scope:interaction ?= gate_expedition_interaction_home
+		scope:interaction ?= gate_expedition_interaction_explore
+		AND = {
+			# Militarist
+			var:gate_expedition.var:leader_type ?= gate_expedition_leader_militarist
+			OR = {
+				scope:interaction ?= gate_expedition_interaction_raid
+				scope:interaction ?= gate_expedition_interaction_conquer
+			}
+		}
+		AND = {
+			# Politician
+			var:gate_expedition.var:leader_type ?= gate_expedition_leader_politician
+			scope:interaction ?= gate_expedition_interaction_contact
+		}
+		AND = {
+			# Industrialist
+			var:gate_expedition.var:leader_type ?= gate_expedition_leader_industrialist
+			scope:interaction ?= gate_expedition_interaction_trade
+		}
+
+	}
+}

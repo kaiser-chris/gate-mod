@@ -39,22 +39,40 @@ gate_orphan_fix.1 = {
 
 		# Gate Expedition
 		fix_variable_error = { variable = is_expedition_leader }
-		fix_variable_error = { variable = open_expedition_map_reytu }
 		fix_variable_error = { variable = gate_expedition_reytu }
-		fix_variable_error = { variable = expedition_gate }
 		fix_variable_error = { variable = gate_expedition_opinion_industrialist }
 		fix_variable_error = { variable = gate_expedition_opinion_militarist }
 		fix_variable_error = { variable = gate_expedition_opinion_politician }
-		fix_variable_error = { variable = expedition_gate_name }
-		fix_variable_error = { variable = expedition_gate_desc }
-		fix_variable_error = { variable = expedition_village_name }
-		fix_variable_error = { variable = expedition_village_desc }
+		fix_variable_error = { variable = expedition_location_gate_name }
+		fix_variable_error = { variable = expedition_location_gate_desc }
+		fix_variable_error = { variable = expedition_location_gate_flavor }
+		fix_variable_error = { variable = expedition_location_gate_tooltip }
+		fix_variable_error = { variable = expedition_location_village_name }
+		fix_variable_error = { variable = expedition_location_village_desc }
+		fix_variable_error = { variable = expedition_location_village_flavor }
+		fix_variable_error = { variable = expedition_location_village_tooltip }
+		fix_variable_error = { variable = gate_expedition_interaction_home }
+		fix_variable_error = { variable = gate_expedition_interaction_home_tooltip }
+		fix_variable_error = { variable = gate_expedition_interaction_trade }
+		fix_variable_error = { variable = gate_expedition_interaction_trade_tooltip }
+		fix_variable_error = { variable = gate_expedition_interaction_raid }
+		fix_variable_error = { variable = gate_expedition_interaction_raid_tooltip }
+		fix_variable_error = { variable = gate_expedition_interaction_conquer }
+		fix_variable_error = { variable = gate_expedition_interaction_conquer_tooltip }
+		fix_variable_error = { variable = gate_expedition_interaction_explore }
+		fix_variable_error = { variable = gate_expedition_interaction_explore_tooltip }
+		fix_variable_error = { variable = gate_expedition_interaction_contact }
+		fix_variable_error = { variable = gate_expedition_interaction_contact_tooltip }
 		fix_variable_error = { variable = expedition_budget }
 		fix_variable_error = { variable = expedition_budget_total }
 		fix_variable_error = { variable = expedition_started }
 		fix_variable_error = { variable = id }
 		fix_variable_error = { variable = name }
 		fix_variable_error = { variable = desc }
+		fix_variable_error = { variable = flavor }
+		fix_variable_error = { variable = text }
+		fix_variable_error = { variable = tooltip }
+		fix_variable_error = { variable = interactions }
 		fix_variable_error = { variable = hidden }
 		fix_variable_error = { variable = state_01 }
 		fix_variable_error = { variable = state_02 }

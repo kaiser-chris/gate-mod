@@ -74,6 +74,10 @@ gate_expedition.1 = {
                     name = leader
                     value = scope:expedition_militarist
                 }
+                set_variable = {
+                    name = leader_type
+                    value = gate_expedition_leader_militarist
+                }
             }
             je:je_gate_expedition_preparation ?= {
                 clear_variable_list = com_journal_characters
@@ -96,6 +100,10 @@ gate_expedition.1 = {
                     name = leader
                     value = scope:expedition_politician
                 }
+                set_variable = {
+                    name = leader_type
+                    value = gate_expedition_leader_politician
+                }
             }
             je:je_gate_expedition_preparation ?= {
                 clear_variable_list = com_journal_characters
@@ -116,6 +124,10 @@ gate_expedition.1 = {
                 set_variable = {
                     name = leader
                     value = scope:expedition_industrialist
+                }
+                set_variable = {
+                    name = leader_type
+                    value = gate_expedition_leader_industrialist
                 }
             }
             je:je_gate_expedition_preparation ?= {
