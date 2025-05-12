@@ -5,8 +5,7 @@
  gate_expedition_small_tooltip: "Starts preparation for a small expedition which requires [SCOPE.ScriptValue('gate_expedition_preparation_time_small')|0v] months of preparation."
  gate_expedition_normal_tooltip: "Starts preparation for a normal expedition which requires [SCOPE.ScriptValue('gate_expedition_preparation_time_normal')|0v] months of preparation."
  gate_expedition_large_tooltip: "Starts preparation for a large expedition which requires [SCOPE.ScriptValue('gate_expedition_preparation_time_large')|0v] months of preparation."
- gate_expedition_leader_missing: "No Expedition Leader"
- gate_gate_expedition_leader_missing_tooltip: "We currently have no Expedition Leader." #TODO: Concept [gate_expedition_leader]
+ gate_expedition_leader_missing_tooltip: "We currently have no [concept_gate_expedition_leader]."
  gate_expedition_budget_header: "[concept_gate_expedition_budget]"
  gate_expedition_budget_tooltip: "Our [concept_gate_expedition_budget] is [Scope.Var('expedition_budget').GetValue|0v] of [Scope.Var('expedition_budget_total').GetValue|0v] points."
  gate_expedition_budget_empty: "Our [concept_gate_expedition_budget] has been used up."

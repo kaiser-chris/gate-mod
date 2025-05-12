@@ -2,5 +2,11 @@
 # Expedition Panel
  gg_panel_expedition_title: "원정"
  gg_panel_expedition_action: "원정 패널"
+ gg_panel_expedition_leader_empty: "리더 없음" #deepl:455627523
+ gg_panel_expedition_leader_type: "[AddLocalizationIf(Not(Scope.Var('leader_type').IsSet), 'gg_panel_expedition_leader_empty')][AddTextIf(EqualTo_CFixedPoint(Scope.Var('leader_type').GetValue, Scope.ScriptValue('gate_expedition_leader_militarist')), GC('concept_gate_expedition_leader_militarist').GetName)][AddTextIf(EqualTo_CFixedPoint(Scope.Var('leader_type').GetValue, Scope.ScriptValue('gate_expedition_leader_politician')), GC('concept_gate_expedition_leader_politician').GetName)][AddTextIf(EqualTo_CFixedPoint(Scope.Var('leader_type').GetValue, Scope.ScriptValue('gate_expedition_leader_industrialist')), GC('concept_gate_expedition_leader_industrialist').GetName)]" #deepl:3853729635
  gg_panel_expedition_no_activity: "탐험이 유휴 상태입니다." #deepl:1957954623
  gg_panel_expedition_no_activity_blink: "#BOLD 새 활동 시작#!" #deepl:910284137
+ gg_panel_expedition_button_uncover: "스카우트 보내기" #deepl:3607000708
+ gg_panel_expedition_button_uncover_tooltip: "#header $gg_panel_expedition_button_uncover$#!\원정대 정찰대를 보내 탐험 지도의 새로운 척을 발견하세요\n$TOOLTIP_DELIMITER$\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(Country.MakeScope).End)]" #deepl:2438693865
+ gg_panel_expedition_button_cancel: "탐험 종료" #deepl:645683273
+ gg_panel_expedition_button_cancel_tooltip: "탐험을 끝내고 집으로 돌아갑니다." #deepl:2052092829

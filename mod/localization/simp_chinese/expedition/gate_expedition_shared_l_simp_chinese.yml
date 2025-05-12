@@ -5,8 +5,7 @@
  gate_expedition_small_tooltip: "开始准备一次小型远征，需要[SCOPE.ScriptValue('gate_expedition_preparation_time_small')|0v] 个月的准备时间。" #deepl:4133145642
  gate_expedition_normal_tooltip: "开始准备一次普通的远征，需要[SCOPE.ScriptValue('gate_expedition_preparation_time_normal')|0v] 个月的准备时间。" #deepl:712700406
  gate_expedition_large_tooltip: "开始准备一次大型远征，需要[SCOPE.ScriptValue('gate_expedition_preparation_time_large')|0v] 个月的准备时间。" #deepl:2091144821
- gate_expedition_leader_missing: "无探险队长" #deepl:3535734875
- gate_gate_expedition_leader_missing_tooltip: "We currently have no Expedition Leader." #TODO: Concept [gate_expedition_leader]
+ gate_expedition_leader_missing_tooltip: "我们目前没有[concept_gate_expedition_leader] 。" #deepl:2534684836
  gate_expedition_budget_header: "Expedition Budget"
  gate_expedition_budget_tooltip: "我们的[concept_gate_expedition_budget] 是[Scope.Var('expedition_budget_total').GetValue|0v] 点的[Scope.Var('expedition_budget').GetValue|0v] 。" #deepl:197132716
  gate_expedition_budget_empty: "我们的[concept_gate_expedition_budget] 已经用完。" #deepl:2206731559

@@ -72,3 +72,22 @@ sgui_gate_map_location_interact = {
         remove_variable = gate_map_sidebar
     }
 }
+
+sgui_gate_expedition_button_uncover = {
+    scope = country
+
+    saved_scopes = {
+        cost
+    }
+
+    is_valid = {
+        gate_expedition_has_budget = {
+            amount = 300
+        }
+        gate_expedition_has_covered = yes
+    }
+
+    effect = {
+        debug_log = "sgui_gate_expedition_button_uncover"
+    }
+}

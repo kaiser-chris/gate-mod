@@ -77,6 +77,7 @@ types gate_expedition_panel_types {
         blockoverride "fixed_top" {
             datacontext = "[Country.MakeScope.Var('gate_expedition')]"
             hbox = {
+                minimumsize = { -1 160 }
                 visible = "[Scope.IsSet]"
                 layoutpolicy_horizontal = expanding
                 margin = { 20 10 }
@@ -84,19 +85,30 @@ types gate_expedition_panel_types {
                 spacing = 30
 
                 # Expedition Leader
-                gate_character_small = {
-                    visible = "[Scope.Var('leader').IsSet]"
-                    blockoverride "character_context" {
-                        datacontext = "[Scope.Var('leader').GetCharacter]"
+                vbox = {
+                    gate_character_small = {
+                        visible = "[Scope.Var('leader').IsSet]"
+                        blockoverride "character_context" {
+                            datacontext = "[Scope.Var('leader').GetCharacter]"
+                        }
                     }
-                }
-                gate_character_small = {
-                    visible = "[Not(Scope.Var('leader').IsSet)]"
-                    blockoverride "gate_character_tooltip" {
-                        tooltip = gate_gate_expedition_leader_missing_tooltip
+                    gate_character_small = {
+                        visible = "[Not(Scope.Var('leader').IsSet)]"
+                        blockoverride "gate_character_tooltip" {
+                            tooltip = gate_expedition_leader_missing_tooltip
+                        }
+                        blockoverride "gate_opinion_visible" {
+                            visible = no
+                        }
                     }
-                    blockoverride "gate_opinion_visible" {
-                        visible = no
+                    expand = {}
+                    default_header_clean_faded = {
+                        blockoverride "text" {
+                            text = gg_panel_expedition_leader_type
+                        }
+                        blockoverride "size" {
+                            size = { 120 40 }
+                        }
                     }
                 }
 
@@ -182,6 +194,47 @@ types gate_expedition_panel_types {
                     }
 
                     expand = {}
+                }
+
+                # Expedition Interactions
+                vbox = {
+                    maximumsize = { 300 -1 }
+                    layoutpolicy_horizontal = expanding
+                    layoutpolicy_vertical = expanding
+                    button = {
+                        datacontext = "[GetScriptedGui('sgui_gate_expedition_button_uncover')]"
+                        size = { 300 40 }
+                        using = default_button_action
+                        text = gg_panel_expedition_button_uncover
+                        tooltip = gg_panel_expedition_button_uncover_tooltip
+                        enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
+                        onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
+                    }
+
+                    expand = {}
+
+                    button = {
+                        #datacontext = "[GetScriptedGui('sgui_gate_expedition_button_uncover')]"
+                        size = { 300 40 }
+                        using = default_button_action
+                        raw_text = "TODO"
+                        default_format = "#r"
+                        tooltip = gate_create_bug_report
+                        enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
+                        onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
+                    }
+
+                    expand = {}
+
+                    button = {
+                        #datacontext = "[GetScriptedGui('sgui_gate_expedition_button_uncover')]"
+                        size = { 300 40 }
+                        using = default_button_action
+                        text = gg_panel_expedition_button_cancel
+                        tooltip = gg_panel_expedition_button_cancel_tooltip
+                        enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
+                        onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
+                    }
                 }
 
             }
