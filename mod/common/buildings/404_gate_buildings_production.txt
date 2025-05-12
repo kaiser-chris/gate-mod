@@ -1,6 +1,6 @@
 ﻿building_mana_extractor = {
 	building_group = bg_mana_extraction
-	icon = "gfx/interface/icons/building_icons/building_mana_extractor.dds"
+	icon = "gfx/interface/icons/building_icons/building_gate_mana_extractor.dds"
 	city_type = none
 	has_max_level = yes
 
@@ -34,12 +34,12 @@
 	required_construction = construction_cost_medium
 	ownership_type = self
 
-	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_magic.dds"
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_gate_magic.dds"
 }
 
 building_gate_mana_well = {
 	building_group = bg_mana_extraction
-	icon = "gfx/interface/icons/building_icons/gate_building_mana_well.dds"
+	icon = "gfx/interface/icons/building_icons/building_gate_mana_well.dds"
 	city_type = none
 
 	unlocking_technologies = {
@@ -68,12 +68,12 @@ building_gate_mana_well = {
 	required_construction = construction_cost_very_high
 	ownership_type = self
 
-	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_magic.dds"
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_gate_magic.dds"
 }
 
 building_mana_core_workshop = {
 	building_group = bg_gate_magic_industry
-	icon = "gfx/interface/icons/building_icons/building_mana_core_workshop.dds"
+	icon = "gfx/interface/icons/building_icons/building_gate_mana_core_workshop.dds"
 	city_type = city
 
 	potential = {
@@ -93,12 +93,12 @@ building_mana_core_workshop = {
 	required_construction = construction_cost_high
 	ownership_type = self
 
-	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_magic.dds"
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_gate_magic.dds"
 }
 
 building_golem_workshop = {
 	building_group = bg_gate_magic_industry
-	icon = "gfx/interface/icons/building_icons/building_golem_workshop.dds"
+	icon = "gfx/interface/icons/building_icons/building_gate_golem_workshop.dds"
 	city_type = city
 
 	potential = {
@@ -118,12 +118,12 @@ building_golem_workshop = {
 	required_construction = construction_cost_very_high
 	ownership_type = self
 
-	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_magic.dds"
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_gate_magic.dds"
 }
 
 building_golem_depot = {
 	building_group = bg_public_infrastructure
-	icon = "gfx/interface/icons/building_icons/building_golem_depot.dds"
+	icon = "gfx/interface/icons/building_icons/building_gate_golem_depot.dds"
 	city_type = city
 	expandable = no
 
@@ -149,12 +149,12 @@ building_golem_depot = {
 
 	required_construction = construction_cost_very_high
 
-	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_magic.dds"
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_gate_magic.dds"
 }
 
 building_druid_groove = {
 	building_group = bg_druid_grooves
-	icon = "gfx/interface/icons/building_icons/building_druid_groove.dds"
+	icon = "gfx/interface/icons/building_icons/building_gate_druid_groove.dds"
 	city_type = none
 	levels_per_mesh = 5
 
@@ -184,5 +184,5 @@ building_druid_groove = {
 	required_construction = construction_cost_medium
 	ownership_type = self
 
-	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_magic.dds"
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_gate_magic.dds"
 }
