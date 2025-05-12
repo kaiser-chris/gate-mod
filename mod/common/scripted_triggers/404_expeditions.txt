@@ -26,3 +26,32 @@ gate_expedition_interaction_valid = {
 
 	}
 }
+
+gate_expedition_has_budget = {
+	save_temporary_scope_value_as = {
+		name = budget_cost
+		value = $amount$
+	}
+	custom_tooltip = {
+		text = trigger_gate_expedition_budget
+		var:gate_expedition ?= {
+			trigger_if = {
+				limit = {
+					exists = var:expedition_budget
+				}
+				var:expedition_budget >= $amount$
+			}
+			trigger_else = {
+				always = no
+			}
+		}
+	}
+}
+
+gate_expedition_has_covered = {
+	custom_tooltip = {
+		text = trigger_gate_expedition_has_covered
+		always = yes
+		#TODO: Implement
+	}
+}

@@ -2,5 +2,11 @@
 # Expedition Panel
  gg_panel_expedition_title: "Expedition" #deepl:111394542
  gg_panel_expedition_action: "Expedition Panel" #deepl:2071291385
+ gg_panel_expedition_leader_empty: "Kein Anführer" #deepl:455627523
+ gg_panel_expedition_leader_type: "[AddLocalizationIf(Not(Scope.Var('leader_type').IsSet), 'gg_panel_expedition_leader_empty')][AddTextIf(EqualTo_CFixedPoint(Scope.Var('leader_type').GetValue, Scope.ScriptValue('gate_expedition_leader_militarist')), GC('concept_gate_expedition_leader_militarist').GetName)][AddTextIf(EqualTo_CFixedPoint(Scope.Var('leader_type').GetValue, Scope.ScriptValue('gate_expedition_leader_politician')), GC('concept_gate_expedition_leader_politician').GetName)][AddTextIf(EqualTo_CFixedPoint(Scope.Var('leader_type').GetValue, Scope.ScriptValue('gate_expedition_leader_industrialist')), GC('concept_gate_expedition_leader_industrialist').GetName)]" #deepl:3853729635
  gg_panel_expedition_no_activity: "Expedition ist im Leerlauf" #deepl:1957954623
  gg_panel_expedition_no_activity_blink: "#BOLD Eine neue Aktivität starten#!" #deepl:910284137
+ gg_panel_expedition_button_uncover: "Pfadfinder aussenden" #deepl:3607000708
+ gg_panel_expedition_button_uncover_tooltip: "#header $gg_panel_expedition_button_uncover$#!\nSenden Sie unsere Späher, um ein neues Futter der Expeditionskarte zu entdecken\n$TOOLTIP_DELIMITER$\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(Country.MakeScope).End)]" #deepl:2438693865
+ gg_panel_expedition_button_cancel: "Expedition beenden" #deepl:645683273
+ gg_panel_expedition_button_cancel_tooltip: "Wir beenden unsere Expedition und kehren nach Hause zurück." #deepl:2052092829

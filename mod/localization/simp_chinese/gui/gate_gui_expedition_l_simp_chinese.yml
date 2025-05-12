@@ -2,5 +2,11 @@
 # Expedition Panel
  gg_panel_expedition_title: "远征"
  gg_panel_expedition_action: "远征面板"
+ gg_panel_expedition_leader_empty: "无领导" #deepl:455627523
+ gg_panel_expedition_leader_type: "[AddLocalizationIf(Not(Scope.Var('leader_type').IsSet), 'gg_panel_expedition_leader_empty')][AddTextIf(EqualTo_CFixedPoint(Scope.Var('leader_type').GetValue, Scope.ScriptValue('gate_expedition_leader_militarist')), GC('concept_gate_expedition_leader_militarist').GetName)][AddTextIf(EqualTo_CFixedPoint(Scope.Var('leader_type').GetValue, Scope.ScriptValue('gate_expedition_leader_politician')), GC('concept_gate_expedition_leader_politician').GetName)][AddTextIf(EqualTo_CFixedPoint(Scope.Var('leader_type').GetValue, Scope.ScriptValue('gate_expedition_leader_industrialist')), GC('concept_gate_expedition_leader_industrialist').GetName)]" #deepl:3853729635
  gg_panel_expedition_no_activity: "探险队闲置" #deepl:1957954623
  gg_panel_expedition_no_activity_blink: "#BOLD 开始新活动#!" #deepl:910284137
+ gg_panel_expedition_button_uncover: "派出童子军" #deepl:3607000708
+ gg_panel_expedition_button_uncover_tooltip: "#header $gg_panel_expedition_button_uncover$#!\派我们的侦察员去发掘远征地图的新夹头$TOOLTIP_DELIMITER$\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(Country.MakeScope).End)]" #deepl:2438693865
+ gg_panel_expedition_button_cancel: "结束远征" #deepl:645683273
+ gg_panel_expedition_button_cancel_tooltip: "结束探险，返回家园。" #deepl:2052092829

@@ -5,8 +5,7 @@
  gate_expedition_small_tooltip: "[SCOPE.ScriptValue('gate_expedition_preparation_time_small')|0v] 몇 달의 준비가 필요한 소규모 탐험을 위한 준비를 시작합니다." #deepl:4133145642
  gate_expedition_normal_tooltip: "[SCOPE.ScriptValue('gate_expedition_preparation_time_normal')|0v] 몇 달의 준비가 필요한 일반 탐험을 위한 준비를 시작합니다." #deepl:712700406
  gate_expedition_large_tooltip: "[SCOPE.ScriptValue('gate_expedition_preparation_time_large')|0v] 몇 달의 준비가 필요한 대규모 탐험을 위한 준비를 시작합니다." #deepl:2091144821
- gate_expedition_leader_missing: "원정대 리더 없음" #deepl:3535734875
- gate_gate_expedition_leader_missing_tooltip: "We currently have no Expedition Leader." #TODO: Concept [gate_expedition_leader]
+ gate_expedition_leader_missing_tooltip: "현재 [concept_gate_expedition_leader] 이 없습니다." #deepl:2534684836
  gate_expedition_budget_header: "Expedition Budget"
  gate_expedition_budget_tooltip: "저희 [concept_gate_expedition_budget] 는 [Scope.Var('expedition_budget_total').GetValue|0v] 포인트의 [Scope.Var('expedition_budget').GetValue|0v] 입니다." #deepl:197132716
  gate_expedition_budget_empty: "[concept_gate_expedition_budget] 주소가 모두 사용되었습니다." #deepl:2206731559

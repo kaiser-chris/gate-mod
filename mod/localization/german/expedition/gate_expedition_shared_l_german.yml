@@ -5,8 +5,7 @@
  gate_expedition_small_tooltip: "Beginn der Vorbereitungen für eine kleine Expedition, die [SCOPE.ScriptValue('gate_expedition_preparation_time_small')|0v] Monate der Vorbereitung erfordert." #deepl:4133145642
  gate_expedition_normal_tooltip: "Beginnt mit den Vorbereitungen für eine normale Expedition, die [SCOPE.ScriptValue('gate_expedition_preparation_time_normal')|0v] Monate der Vorbereitung erfordert." #deepl:712700406
  gate_expedition_large_tooltip: "Beginn der Vorbereitungen für eine große Expedition, die [SCOPE.ScriptValue('gate_expedition_preparation_time_large')|0v] Monate der Vorbereitung erfordert." #deepl:2091144821
- gate_expedition_leader_missing: "Kein Expeditionsleiter" #deepl:3535734875
- gate_gate_expedition_leader_missing_tooltip: "We currently have no Expedition Leader." #TODO: Concept [gate_expedition_leader]
+ gate_expedition_leader_missing_tooltip: "Wir haben derzeit keine [concept_gate_expedition_leader]." #deepl:2534684836
  gate_expedition_budget_header: "Expedition Budget"
  gate_expedition_budget_tooltip: "Unser [concept_gate_expedition_budget] ist [Scope.Var('expedition_budget').GetValue|0v] von [Scope.Var('expedition_budget_total').GetValue|0v] Punkten." #deepl:197132716
  gate_expedition_budget_empty: "Unser [concept_gate_expedition_budget] ist aufgebraucht." #deepl:2206731559

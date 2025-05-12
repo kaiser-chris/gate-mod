@@ -1,9 +1,10 @@
 ﻿l_german:
 # Placeholders
- orphan_fix.1: "ERSTELLEN SIE EINEN FEHLERBERICHT, WENN SIE DIES SEHEN" #deepl:581024195
- idle: "ERSTELLEN SIE EINEN FEHLERBERICHT, WENN SIE DIES SEHEN" #deepl:581024195
- commander_vs_left: "ERSTELLEN SIE EINEN FEHLERBERICHT, WENN SIE DIES SEHEN" #deepl:581024195
- commander_vs_right: "ERSTELLEN SIE EINEN FEHLERBERICHT, WENN SIE DIES SEHEN" #deepl:581024195
+ gate_create_bug_report: "ERSTELLEN SIE EINEN FEHLERBERICHT, WENN SIE DIES SEHEN" #deepl:581024195
+ orphan_fix.1: "$gate_create_bug_report$" #deepl:33573425
+ idle: "$gate_create_bug_report$" #deepl:33573425
+ commander_vs_left: "$gate_create_bug_report$" #deepl:33573425
+ commander_vs_right: "$gate_create_bug_report$" #deepl:33573425
 # Debug Decisions
  debug_mana_saturation_decision: "DEBUG: Vollständig $je_mana_saturation$" #deepl:1562175711
  debug_mana_saturation_decision_desc: "Vervollständigen Sie $je_mana_saturation$ Journaleintrag." #deepl:1886909990
