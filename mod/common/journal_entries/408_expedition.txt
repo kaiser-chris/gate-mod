@@ -18,6 +18,12 @@
 			}
 			triggered_desc = {
 				desc = je_gate_expedition_preparation_in_progess
+				trigger = {
+					has_variable = gate_expedition_preparation_active
+				}
+			}
+			triggered_desc = {
+				desc = je_gate_expedition_preparation_not_started_progess
 			}
 		}
 	}

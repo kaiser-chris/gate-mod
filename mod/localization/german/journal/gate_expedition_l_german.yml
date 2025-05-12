@@ -1,13 +1,14 @@
 ﻿l_german:
- decision_gate_start_expedition_reytu: "Starten Sie eine Expedition nach $gate_planet$" #deepl:917323877
+ decision_gate_start_expedition_reytu: "Start einer $concept_gate_expedition$" #deepl:2036704531
  decision_gate_start_expedition_reytu_desc: "Besuchen Sie [GetBuildingType('building_gate_alxa').GetName] in der Region [GetStateRegion('STATE_ALXA').GetName]." #deepl:819952118
  decision_gate_start_expedition_reytu_possible: "Steuert das Magische Tor in der Region [GetStateRegion('STATE_ALXA').GetName]." #deepl:1282493707
- je_gate_expedition_preparation: "Vorbereitung der Expedition" #deepl:1574306075
+ je_gate_expedition_preparation: "Vorbereitungen für die Expedition" #deepl:1262535496
  je_gate_expedition_preparation_reason: "Nachdem die Entscheidung gefallen ist, beginnen die Vorbereitungen ernsthaft. Es werden Karten erstellt, Vorräte beschafft, und eifrige Abenteurer melden sich freiwillig. Gelehrte debattieren über die möglichen Gefahren und Chancen, die dahinter liegen, während Ingenieure und Logistiker dafür sorgen, dass die Reise gut ausgerüstet ist. Die magische Pforte liegt vor uns, ein Tor zum Unbekannten - bald wird es Zeit sein, den ersten Schritt zu tun." #deepl:3725050251
  je_gate_expedition_preparation_goal: "Wir haben unsere Vorbereitungen abgeschlossen." #deepl:3451756210
- je_gate_expedition_preparation_no_leader: "Wir haben einen Expeditionsleiter." #deepl:2012318215
- je_gate_expedition_preparation_hiring_leader: "Wir sind derzeit auf der Suche nach einem Expeditionsleiter." #deepl:1108601421
- je_gate_expedition_preparation_in_progess: "Wir müssen uns auf unsere Expedition vorbereiten." #deepl:1036857002
+ je_gate_expedition_preparation_no_leader: "Wir haben eine [concept_gate_expedition_leader]." #deepl:1647671458
+ je_gate_expedition_preparation_hiring_leader: "Wir sind derzeit auf der Suche nach einem [concept_gate_expedition_leader]." #deepl:734714800
+ je_gate_expedition_preparation_not_started_progess: "Wir müssen mit unseren Vorbereitungen beginnen." #deepl:2275362365
+ je_gate_expedition_preparation_in_progess: "Wir bereiten derzeit die Expedition vor." #deepl:2562597712
  je_gate_expedition_preparation_fail_tooltip: "Steuert nicht die [GetBuildingType('building_gate_alxa').GetName] in der Region [GetStateRegion('STATE_ALXA').GetName]." #deepl:2492892956
  je_gate_expedition_preparation_button_hire_leader: "Expeditionsleiter anheuern" #deepl:1543565473
  je_gate_expedition_preparation_button_hire_leader_desc: "Wir werden einen Leiter für die Expedition suchen." #deepl:2118497909
@@ -22,30 +23,30 @@
  je_gate_expedition_preparation_button_stop_preparations_effect: "Unterbricht unsere Vorbereitungen." #deepl:1686301413
  je_gate_expedition_preparation_button_cancel: "Expedition abbrechen" #deepl:131191061
  je_gate_expedition_preparation_button_cancel_desc: "Wir werden die gesamte Expedition absagen." #deepl:774493766
- je_gate_expedition_active: "Expedition nach $gate_planet$" #deepl:3102698085
+ je_gate_expedition_active: "$concept_gate_expedition$" #deepl:2980131449
  je_gate_expedition_active_status: "Unsere Expedition ist noch nicht abgeschlossen." #deepl:2942341570
  je_gate_expedition_active_reason: "Nachdem die Entscheidung gefallen ist, beginnen die Vorbereitungen ernsthaft. Es werden Karten erstellt, Vorräte beschafft, und eifrige Abenteurer melden sich freiwillig. Gelehrte debattieren über die möglichen Gefahren und Chancen, die dahinter liegen, während Ingenieure und Logistiker dafür sorgen, dass die Reise gut ausgerüstet ist. Die magische Pforte liegt vor uns, ein Tor zum Unbekannten - bald wird es Zeit sein, den ersten Schritt zu tun." #deepl:3725050251
  je_gate_expedition_button_open_map: "Expeditionskarte öffnen" #deepl:537625907
  je_gate_expedition_button_open_map_desc: "Öffnet die Expeditionskarte." #deepl:2776223579
  je_gate_expedition_button_open_map_effect: "Expeditionsfenster öffnen." #deepl:1849424227
  gate_expedition_preparation_modifier: "Vorbereitung Kosten" #deepl:2202863878
- gate_expedition.1.t: "Auswahl eines Expeditionsleiters" #deepl:4173161503
- gate_expedition.1.d: "Wir haben diese drei potenziellen Expeditionsleiter gefunden. Jetzt müssen wir einen auswählen." #deepl:2541285372
+ gate_expedition.1.t: "Die Auswahl eines $concept_gate_expedition_leader$" #deepl:3052020482
+ gate_expedition.1.d: "Wir haben diese drei potenziellen [Concept('concept_gate_expedition_leader','$concept_gate_expedition_leaders$')] für unsere [concept_gate_expedition] gefunden. Nun müssen wir eine auswählen." #deepl:908519794
  gate_expedition.1.f: "Nach intensiven politischen Manövern und Hinterzimmerabsprachen haben sich drei Kandidaten als potenzielle Anführer für unsere Expedition zur Magischen Pforte herauskristallisiert. Einer von ihnen ist ein gewiefter Industrieller mit engen Beziehungen zur Wirtschaft, der die dortigen Ressourcen ausbeuten möchte. Ein anderer ist ein dekorierter Militäroffizier, der sich darauf konzentriert, Fuß zu fassen und unsere Vorherrschaft zu sichern. Der letzte Kandidat ist ein geschickter Politiker, der sich für vorsichtige Diplomatie und langfristige Stabilität einsetzt. Die Wahl, die wir treffen, wird über die Zukunft unserer Präsenz auf $gate_planet$ entscheiden." #deepl:1367357098
- gate_expedition.1.a: "Militarist: [SCOPE.sCharacter('expedition_militarist').GetFullName]" #deepl:1044047572
- gate_expedition.1.b: "Politiker: [SCOPE.sCharacter('expedition_politician').GetFullName]" #deepl:3483610795
- gate_expedition.1.c: "Industrieller: [SCOPE.sCharacter('expedition_industrialist').GetFullName]" #deepl:850030194
- gate_expedition.2.t: "Planung der Expedition $gate_planet$ " #deepl:3650540084
- gate_expedition.2.d: "Wir müssen entscheiden, wie groß unsere Expedition auf [GetBuildingType('building_gate_alxa').GetName] sein soll." #deepl:3650601666
+ gate_expedition.1.a: "[concept_gate_expedition_leader_militarist]: [SCOPE.sCharacter('expedition_militarist').GetFullName]" #deepl:809118842
+ gate_expedition.1.b: "[concept_gate_expedition_leader_politician]: [SCOPE.sCharacter('expedition_politician').GetFullName]" #deepl:546454634
+ gate_expedition.1.c: "[concept_gate_expedition_leader_industrialist]: [SCOPE.sCharacter('expedition_industrialist').GetFullName]" #deepl:3051857995
+ gate_expedition.2.t: "Planung der $concept_gate_expedition$" #deepl:733394989
+ gate_expedition.2.d: "Wir müssen entscheiden, wie groß unsere Expedition [concept_gate_expedition] sein soll." #deepl:3402278856
  gate_expedition.2.f: "Nachdem die Entscheidung gefallen war, die Magische Pforte zu durchschreiten, bestand die nächste Herausforderung darin, den Umfang unserer Expedition festzulegen. Eine kleine, wendige Gruppe könnte diskret erkunden und dabei Risiken und Kosten minimieren. Eine ausgewogene Truppe aus Siedlern, Gelehrten und Soldaten bietet eine sichere und dennoch flexible Vorgehensweise. Alternativ könnte eine große Expedition mit überwältigenden Ressourcen und Arbeitskräften einen unbestreitbaren Anspruch erheben - allerdings zu großen Kosten. Das Schicksal unseres Unternehmens hängt von dieser wichtigen Entscheidung ab." #deepl:1308442514
  gate_expedition.2.a: "Kleine Expedition." #deepl:3357700448
  gate_expedition.2.b: "Normale Expedition." #deepl:1709548526
  gate_expedition.2.c: "Lange Expedition." #deepl:3688515342
  gate_expedition.3.t: "Rückkehr von $gate_planet$" #deepl:3397125764
- gate_expedition.3.d: "Unsere Expedition auf [concept_gate_planet] ist zu Ende gegangen." #deepl:1305130681
+ gate_expedition.3.d: "Unser [concept_gate_expedition] ist zu Ende gegangen." #deepl:1098929001
  gate_expedition.3.f: "Das Tor schimmert ein letztes Mal, als unsere Expedition müde, aber triumphierend hindurchschreitet. $gate_planet$ In einer Welt mit violettem Himmel und kristallenen Wäldern haben wir Geheimnisse entdeckt, die unsere Vorstellungskraft übersteigen - uralte Runen, eine unbekannte Tierwelt und Manaströme, die es auf der Erde nicht gibt. Obwohl noch viele Fragen offen sind, könnte das mitgebrachte Wissen unsere arkanen Wissenschaften für immer umgestalten. Die Reise ist zu Ende... aber ihre Auswirkungen fangen gerade erst an." #deepl:4221158718
  gate_expedition.3.a: "Wir haben eine Menge gelernt." #deepl:2645932267
  gate_expedition.4.t: "Unsere Expedition beginnt" #deepl:2301692092
- gate_expedition.4.d: "Unsere Expedition nach [concept_gate_planet] macht sich auf den Weg." #deepl:3582510829
+ gate_expedition.4.d: "Unsere [concept_gate_expedition] macht sich auf den Weg." #deepl:3158844762
  gate_expedition.4.f: "Nach monatelanger Vorbereitung, Kalibrierung und arkaner Koordination pulsiert die Magische Pforte mit Stabilität. Die Vorräte sind geladen, die Verzauberungen doppelt geprüft, und das Expeditionsteam steht bereit am Rande des Unbekannten. Jenseits des Portals liegt $gate_planet$- eine ferne Welt, von der in alten Schriftrollen geflüstert wird und die man nur in prophetischen Träumen erblickt. Heute begeben wir uns auf eine Reise durch den Mythos und auf eine Entdeckungsreise." #deepl:2625105807
  gate_expedition.4.a: "Wir wünschen ihnen viel Glück." #deepl:889921407

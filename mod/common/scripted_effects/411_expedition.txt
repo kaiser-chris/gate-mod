@@ -4,9 +4,11 @@
 	gate_setup_expedition_reytu = yes
 }
 
-# Interactions:
+# Location Types:
 # - scope:location_gate
 # - scope:location_village
+# - scope:location_town
+# - scope:location_castle
 gate_setup_expedition_locations = {
 	# Magic Gate
 	create_struct = {
@@ -25,10 +27,6 @@ gate_setup_expedition_locations = {
 		set_variable = {
 			name = flavor
 			value = flag:expedition_location_gate_flavor
-		}
-		set_variable = {
-			name = tooltip
-			value = flag:expedition_location_gate_tooltip
 		}
 		add_to_variable_list = {
 			name = interactions
@@ -54,9 +52,77 @@ gate_setup_expedition_locations = {
 			name = flavor
 			value = flag:expedition_location_village_flavor
 		}
+		add_to_variable_list = {
+			name = interactions
+			target = scope:interaction_contact
+		}
+		add_to_variable_list = {
+			name = interactions
+			target = scope:interaction_trade
+		}
+		add_to_variable_list = {
+			name = interactions
+			target = scope:interaction_conquer
+		}
+		add_to_variable_list = {
+			name = interactions
+			target = scope:interaction_raid
+		}
+	}
+
+	# Town
+	create_struct = {
+		struct_scope = location_town
+		struct_type = gate_expedition_location
+	}
+	scope:location_town = {
 		set_variable = {
-			name = tooltip
-			value = flag:expedition_location_village_tooltip
+			name = name
+			value = flag:expedition_location_town_name
+		}
+		set_variable = {
+			name = desc
+			value = flag:expedition_location_town_desc
+		}
+		set_variable = {
+			name = flavor
+			value = flag:expedition_location_town_flavor
+		}
+		add_to_variable_list = {
+			name = interactions
+			target = scope:interaction_contact
+		}
+		add_to_variable_list = {
+			name = interactions
+			target = scope:interaction_trade
+		}
+		add_to_variable_list = {
+			name = interactions
+			target = scope:interaction_conquer
+		}
+		add_to_variable_list = {
+			name = interactions
+			target = scope:interaction_raid
+		}
+	}
+
+	# Castle
+	create_struct = {
+		struct_scope = location_castle
+		struct_type = gate_expedition_location
+	}
+	scope:location_castle = {
+		set_variable = {
+			name = name
+			value = flag:expedition_location_castle_name
+		}
+		set_variable = {
+			name = desc
+			value = flag:expedition_location_castle_desc
+		}
+		set_variable = {
+			name = flavor
+			value = flag:expedition_location_castle_flavor
 		}
 		add_to_variable_list = {
 			name = interactions
@@ -77,7 +143,7 @@ gate_setup_expedition_locations = {
 	}
 }
 
-# Interactions:
+# Interaction Types:
 # - scope:interaction_home
 # - scope:interaction_raid
 # - scope:interaction_conquer
