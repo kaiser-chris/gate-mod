@@ -51,7 +51,13 @@ gate_expedition_has_budget = {
 gate_expedition_has_covered = {
 	custom_tooltip = {
 		text = trigger_gate_expedition_has_covered
-		always = yes
-		#TODO: Implement
+		var:gate_expedition ?= {
+			var:location ?= {
+				any_in_list = {
+					variable = states
+					has_variable = hidden
+				}
+			}
+		}
 	}
 }

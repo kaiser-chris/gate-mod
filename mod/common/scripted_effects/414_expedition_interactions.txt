@@ -1,0 +1,29 @@
+﻿gate_setup_expedition_uncover_state = {
+	custom_tooltip = {
+		text = effect_gate_expedition_uncover
+		var:gate_expedition ?= {
+			var:location ?= {
+				ordered_in_list = {
+					variable = states
+					order_by = {
+						value = var:order
+						multiply = -1
+					}
+					limit = {
+						has_variable = hidden
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_local_variable = done
+							}
+						}
+						set_local_variable = done
+						remove_variable = hidden
+					}
+
+				}
+			}
+		}
+	}
+}

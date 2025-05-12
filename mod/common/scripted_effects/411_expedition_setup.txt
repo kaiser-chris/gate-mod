@@ -1,0 +1,526 @@
+﻿gate_setup_expeditions = {
+	gate_setup_expedition_interactions = yes
+	gate_setup_expedition_locations = yes
+	gate_setup_expedition_reytu = yes
+}
+
+# Location Types:
+# - scope:location_gate
+# - scope:location_village
+# - scope:location_town
+# - scope:location_castle
+gate_setup_expedition_locations = {
+	# Magic Gate
+	create_struct = {
+		struct_scope = location_gate
+		struct_type = gate_expedition_location
+	}
+	scope:location_gate = {
+		set_variable = {
+			name = name
+			value = flag:expedition_location_gate_name
+		}
+		set_variable = {
+			name = desc
+			value = flag:expedition_location_gate_desc
+		}
+		set_variable = {
+			name = flavor
+			value = flag:expedition_location_gate_flavor
+		}
+		add_to_variable_list = {
+			name = interactions
+			target = scope:interaction_home
+		}
+	}
+
+	# Village
+	create_struct = {
+		struct_scope = location_village
+		struct_type = gate_expedition_location
+	}
+	scope:location_village = {
+		set_variable = {
+			name = name
+			value = flag:expedition_location_village_name
+		}
+		set_variable = {
+			name = desc
+			value = flag:expedition_location_village_desc
+		}
+		set_variable = {
+			name = flavor
+			value = flag:expedition_location_village_flavor
+		}
+		add_to_variable_list = {
+			name = interactions
+			target = scope:interaction_contact
+		}
+		add_to_variable_list = {
+			name = interactions
+			target = scope:interaction_trade
+		}
+		add_to_variable_list = {
+			name = interactions
+			target = scope:interaction_conquer
+		}
+		add_to_variable_list = {
+			name = interactions
+			target = scope:interaction_raid
+		}
+	}
+
+	# Town
+	create_struct = {
+		struct_scope = location_town
+		struct_type = gate_expedition_location
+	}
+	scope:location_town = {
+		set_variable = {
+			name = name
+			value = flag:expedition_location_town_name
+		}
+		set_variable = {
+			name = desc
+			value = flag:expedition_location_town_desc
+		}
+		set_variable = {
+			name = flavor
+			value = flag:expedition_location_town_flavor
+		}
+		add_to_variable_list = {
+			name = interactions
+			target = scope:interaction_contact
+		}
+		add_to_variable_list = {
+			name = interactions
+			target = scope:interaction_trade
+		}
+		add_to_variable_list = {
+			name = interactions
+			target = scope:interaction_conquer
+		}
+		add_to_variable_list = {
+			name = interactions
+			target = scope:interaction_raid
+		}
+	}
+
+	# Castle
+	create_struct = {
+		struct_scope = location_castle
+		struct_type = gate_expedition_location
+	}
+	scope:location_castle = {
+		set_variable = {
+			name = name
+			value = flag:expedition_location_castle_name
+		}
+		set_variable = {
+			name = desc
+			value = flag:expedition_location_castle_desc
+		}
+		set_variable = {
+			name = flavor
+			value = flag:expedition_location_castle_flavor
+		}
+		add_to_variable_list = {
+			name = interactions
+			target = scope:interaction_contact
+		}
+		add_to_variable_list = {
+			name = interactions
+			target = scope:interaction_trade
+		}
+		add_to_variable_list = {
+			name = interactions
+			target = scope:interaction_conquer
+		}
+		add_to_variable_list = {
+			name = interactions
+			target = scope:interaction_raid
+		}
+	}
+}
+
+# Interaction Types:
+# - scope:interaction_home
+# - scope:interaction_raid
+# - scope:interaction_conquer
+# - scope:interaction_trade
+# - scope:interaction_explore
+# - scope:interaction_contact
+gate_setup_expedition_interactions = {
+	# Return Home
+	create_struct = {
+		struct_scope = interaction_home
+		struct_type = gate_expedition_interaction
+	}
+	scope:interaction_home = {
+		set_variable = {
+			name = text
+			value = flag:gate_expedition_interaction_home
+		}
+		set_variable = {
+			name = tooltip
+			value = flag:gate_expedition_interaction_home_tooltip
+		}
+		set_variable = {
+			name = type
+			value = gate_expedition_interaction_home
+		}
+	}
+
+	# Explore Location
+	create_struct = {
+		struct_scope = interaction_explore
+		struct_type = gate_expedition_interaction
+	}
+	scope:interaction_explore = {
+		set_variable = {
+			name = text
+			value = flag:gate_expedition_interaction_explore
+		}
+		set_variable = {
+			name = tooltip
+			value = flag:gate_expedition_interaction_explore_tooltip
+		}
+		set_variable = {
+			name = type
+			value = gate_expedition_interaction_explore
+		}
+	}
+
+	# Contact Location
+	create_struct = {
+		struct_scope = interaction_contact
+		struct_type = gate_expedition_interaction
+	}
+	scope:interaction_contact = {
+		set_variable = {
+			name = text
+			value = flag:gate_expedition_interaction_contact
+		}
+		set_variable = {
+			name = tooltip
+			value = flag:gate_expedition_interaction_contact_tooltip
+		}
+		set_variable = {
+			name = type
+			value = gate_expedition_interaction_contact
+		}
+	}
+
+	# Conquer Location
+	create_struct = {
+		struct_scope = interaction_conquer
+		struct_type = gate_expedition_interaction
+	}
+	scope:interaction_conquer = {
+		set_variable = {
+			name = text
+			value = flag:gate_expedition_interaction_conquer
+		}
+		set_variable = {
+			name = tooltip
+			value = flag:gate_expedition_interaction_conquer_tooltip
+		}
+		set_variable = {
+			name = type
+			value = gate_expedition_interaction_conquer
+		}
+	}
+
+	# Raid Location
+	create_struct = {
+		struct_scope = interaction_raid
+		struct_type = gate_expedition_interaction
+	}
+	scope:interaction_raid = {
+		set_variable = {
+			name = text
+			value = flag:gate_expedition_interaction_raid
+		}
+		set_variable = {
+			name = tooltip
+			value = flag:gate_expedition_interaction_raid_tooltip
+		}
+		set_variable = {
+			name = type
+			value = gate_expedition_interaction_raid
+		}
+	}
+
+	# Trade with Location
+	create_struct = {
+		struct_scope = interaction_trade
+		struct_type = gate_expedition_interaction
+	}
+	scope:interaction_trade = {
+		set_variable = {
+			name = text
+			value = flag:gate_expedition_interaction_trade
+		}
+		set_variable = {
+			name = tooltip
+			value = flag:gate_expedition_interaction_trade_tooltip
+		}
+		set_variable = {
+			name = type
+			value = gate_expedition_interaction_trade
+		}
+	}
+}
+
+gate_setup_expedition_reytu = {
+	### States
+	create_struct = {
+		struct_scope = state_01
+		struct_type = gate_expedition_state
+	}
+	scope:state_01 = {
+		set_variable = {
+			name = id
+			value = 1
+		}
+		set_variable = {
+			name = order
+			value = 9
+		}
+		set_variable = hidden
+	}
+	create_struct = {
+		struct_scope = state_02
+		struct_type = gate_expedition_state
+	}
+	scope:state_02 = {
+		set_variable = {
+			name = id
+			value = 2
+		}
+		set_variable = {
+			name = order
+			value = 10
+		}
+		set_variable = hidden
+	}
+	create_struct = {
+		struct_scope = state_03
+		struct_type = gate_expedition_state
+	}
+	scope:state_03 = {
+		set_variable = {
+			name = id
+			value = 3
+		}
+		set_variable = {
+			name = order
+			value = 8
+		}
+		set_variable = hidden
+	}
+	create_struct = {
+		struct_scope = state_04
+		struct_type = gate_expedition_state
+	}
+	scope:state_04 = {
+		set_variable = {
+			name = id
+			value = 4
+		}
+		set_variable = {
+			name = order
+			value = 6
+		}
+		set_variable = hidden
+	}
+	create_struct = {
+		struct_scope = state_05
+		struct_type = gate_expedition_state
+	}
+	scope:state_05 = {
+		set_variable = {
+			name = id
+			value = 5
+		}
+		set_variable = {
+			name = order
+			value = 7
+		}
+		set_variable = hidden
+	}
+	create_struct = {
+		struct_scope = state_06
+		struct_type = gate_expedition_state
+	}
+	scope:state_06 = {
+		set_variable = {
+			name = id
+			value = 6
+		}
+		set_variable = {
+			name = order
+			value = 1
+		}
+		set_variable = {
+			name = location_01
+			value = scope:location_gate
+		}
+		set_variable = {
+			name = location_02
+			value = scope:location_village
+		}
+	}
+	create_struct = {
+		struct_scope = state_07
+		struct_type = gate_expedition_state
+	}
+	scope:state_07 = {
+		set_variable = {
+			name = id
+			value = 7
+		}
+		set_variable = {
+			name = order
+			value = 2
+		}
+		set_variable = hidden
+	}
+	create_struct = {
+		struct_scope = state_08
+		struct_type = gate_expedition_state
+	}
+	scope:state_08 = {
+		set_variable = {
+			name = id
+			value = 8
+		}
+		set_variable = {
+			name = order
+			value = 3
+		}
+		set_variable = hidden
+	}
+	create_struct = {
+		struct_scope = state_09
+		struct_type = gate_expedition_state
+	}
+	scope:state_09 = {
+		set_variable = {
+			name = id
+			value = 9
+		}
+		set_variable = {
+			name = order
+			value = 4
+		}
+		set_variable = hidden
+	}
+	create_struct = {
+		struct_scope = state_10
+		struct_type = gate_expedition_state
+	}
+	scope:state_10 = {
+		set_variable = {
+			name = id
+			value = 10
+		}
+		set_variable = {
+			name = order
+			value = 5
+		}
+		set_variable = hidden
+	}
+
+
+	create_struct = {
+		struct_scope = gate_reytu
+		struct_type = gate_expedition
+	}
+	set_global_variable = {
+		name = gate_expedition_reytu
+		value = scope:gate_reytu
+	}
+	scope:gate_reytu = {
+		set_variable = {
+			name = state_01
+			value = scope:state_01
+		}
+		set_variable = {
+			name = state_02
+			value = scope:state_02
+		}
+		set_variable = {
+			name = state_03
+			value = scope:state_03
+		}
+		set_variable = {
+			name = state_04
+			value = scope:state_04
+		}
+		set_variable = {
+			name = state_05
+			value = scope:state_05
+		}
+		set_variable = {
+			name = state_06
+			value = scope:state_06
+		}
+		set_variable = {
+			name = state_07
+			value = scope:state_07
+		}
+		set_variable = {
+			name = state_08
+			value = scope:state_08
+		}
+		set_variable = {
+			name = state_09
+			value = scope:state_09
+		}
+		set_variable = {
+			name = state_10
+			value = scope:state_10
+		}
+		add_to_variable_list = {
+			name = states
+			target = scope:state_01
+		}
+		add_to_variable_list = {
+			name = states
+			target = scope:state_02
+		}
+		add_to_variable_list = {
+			name = states
+			target = scope:state_03
+		}
+		add_to_variable_list = {
+			name = states
+			target = scope:state_04
+		}
+		add_to_variable_list = {
+			name = states
+			target = scope:state_05
+		}
+		add_to_variable_list = {
+			name = states
+			target = scope:state_06
+		}
+		add_to_variable_list = {
+			name = states
+			target = scope:state_07
+		}
+		add_to_variable_list = {
+			name = states
+			target = scope:state_08
+		}
+		add_to_variable_list = {
+			name = states
+			target = scope:state_09
+		}
+		add_to_variable_list = {
+			name = states
+			target = scope:state_10
+		}
+	}
+}

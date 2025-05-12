@@ -64,8 +64,17 @@ sgui_gate_map_location_interact = {
         interaction
     }
 
-    is_valid = {
+    is_shown = {
         gate_expedition_interaction_valid = yes
+    }
+
+    is_valid = {
+        hidden_trigger = {
+            gate_expedition_interaction_valid = yes
+        }
+        gate_expedition_has_budget = {
+            amount = 100
+        }
     }
 
     effect = {
@@ -88,6 +97,6 @@ sgui_gate_expedition_button_uncover = {
     }
 
     effect = {
-        debug_log = "sgui_gate_expedition_button_uncover"
+        gate_setup_expedition_uncover_state = yes
     }
 }

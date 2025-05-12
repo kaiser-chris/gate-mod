@@ -117,7 +117,8 @@ types gate_expedition_panel_types {
                     maximumsize = { 300 -1 }
                     layoutpolicy_horizontal = expanding
                     layoutpolicy_vertical = expanding
-                    margin = { 20 20 }
+                    margin = { 20 -1 }
+                    margin_bottom = 50
                     spacing = 20
 
                     background = {
@@ -128,12 +129,16 @@ types gate_expedition_panel_types {
                         layoutpolicy_horizontal = expanding
                         layoutpolicy_vertical = expanding
 
-                        textbox = {
-                            layoutpolicy_horizontal = expanding
-                            text = gate_expedition_budget_header
-                            default_format = "#title"
-                            align = center
+                        default_header_clean_faded = {
+                            blockoverride "text" {
+                                text = gate_expedition_budget_header
+                            }
+                            blockoverride "size" {
+                                size = { 300 40 }
+                            }
                         }
+
+                        expand = {}
 
                         default_progressbar_horizontal = {
                             maximumsize = { -1 25 }
@@ -541,7 +546,7 @@ types gate_expedition_panel_types {
         datacontext = "[GetScriptedGui('sgui_gate_map_location_interact')]"
         size = { 450 44 }
         raw_text = "[Scope.Var('text').GetFlagName]"
-        tooltip = "[Scope.Var('tooltip').GetFlagName]"
+        tooltip = "[Scope.Var('tooltip').GetFlagName][Localize('gate_expedition_interaction_base_tooltip')]"
         using = default_button_primary_big_action
         onclick = "[ScriptedGui.Execute(GuiScope
                             .SetRoot(Country.MakeScope)
