@@ -1,9 +1,14 @@
 ﻿l_korean:
+ expedition_location_tooltip: "#v [Character.MakeScope.Var('name').GetFlagName]#!\[Character.MakeScope.Var('desc').GetFlagName]\n$TOOLTIP_DELIMITER$\n[Character.MakeScope.Var('flavor').GetFlagName]" #deepl:280622512
  expedition_location_gate_name: "지구로 가는 문" #deepl:3615238498
  expedition_location_gate_desc: "우리가 통과한 마법의 문. 지구로 돌아가는 연결고리입니다." #deepl:4142067516
  expedition_location_gate_flavor: "탐험 일지 - 성문 경계, 앙카리스 쪽\n\n#lore 통과했습니다. 처음으로 우리의 부츠가 성문의 문턱을 넘어 앙카리스의 땅을 밟았습니다. 공기는 잔여 마법과 연기가 오랫동안 가라앉아 짙어졌습니다. 아치 바로 너머에는 무너진 텐트, 부서진 상자, 부서진 비전 배터리 등 야전 캠프의 잔해가 남아 있습니다. 적의 휘장은 녹슨 갑옷과 불에 그을린 깃발로 변했지만 시신은 남아 있지 않습니다. 여기서 무슨 일이 벌어졌든 간에, 도망치거나 더 나쁜 상황으로 끝났습니다. 대지는 고요합니다. 정찰병도, 보초도, 심지어 썩은 짐승도 없습니다. 오직 바람만이 움직이며 빈 틈 사이로 휘파람을 불고 유령처럼 재를 공중으로 휘젓고 다닙니다. 성문은 안전하지만 고요함이 불안합니다. 우리는 지금 문턱을 지키고 있지만 안카리스가 지켜보고 있습니다.#!" #deepl:55294925
- expedition_location_gate_tooltip: "$expedition_location_gate_flavor$" #deepl:443660922
  expedition_location_village_name: "마을" #deepl:1217930007
  expedition_location_village_desc: "작은 [concept_gate_planet] 마을. 그들과 어떻게 소통하고 싶나요?" #deepl:2671302898
  expedition_location_village_flavor: "정찰 보고서 - 예비 마을 평가, 안카리스 탐험 일지\n\n#lore 이 마을은 자연 지형 속에 자리 잡고 있으며 주변 환경과 자연스럽게 어우러져 있습니다. 경작지가 있고 우리 학자들에게는 생소한 기이한 가축들이 살고 있어 대부분 자급자족하는 것처럼 보입니다. 건물은 낮고 실용적이며, 주변 마나로 희미하게 맥박을 뛰는 유기 재료로 보강된 건물이 많습니다. 현지인들은 아직 다가오지 않았지만, 지붕과 나무 사이에 매달린 반짝이는 마법 병동 뒤에서 우리를 관찰합니다. 희미한 마법의 흔적은 지역 전체에 존재하는데, 집중되어 있기보다는 미묘하고 광범위하게 퍼져 있어 그들의 땅과 깊은 관련이 있거나 조심스럽게 보호하고 있음을 암시합니다. 직접적인 접촉은 이루어지지 않았습니다. 추가 관찰을 권장합니다.#!" #deepl:2870528207
- expedition_location_village_tooltip: "$expedition_location_village_flavor$" #deepl:2685024335
+ expedition_location_castle_name: "성" #deepl:3677277491
+ expedition_location_castle_desc: "[concept_gate_planet] 성입니다. 어떻게 상호작용할 수 있을까요?" #deepl:2508247163
+ expedition_location_castle_flavor: "정찰 보고서 - 예비 마을 평가, 안카리스 탐험 일지\n\n#lore 이 마을은 자연 지형 속에 자리 잡고 있으며 주변 환경과 자연스럽게 어우러져 있습니다. 경작지가 있고 우리 학자들에게는 생소한 기이한 가축들이 살고 있어 대부분 자급자족하는 것처럼 보입니다. 건물은 낮고 실용적이며, 주변 마나로 희미하게 맥박을 뛰는 유기 재료로 보강된 건물이 많습니다. 현지인들은 아직 다가오지 않았지만, 지붕과 나무 사이에 매달린 반짝이는 마법 병동 뒤에서 우리를 관찰합니다. 희미한 마법의 흔적은 지역 전체에 존재하는데, 집중되어 있기보다는 미묘하고 광범위하게 퍼져 있어 그들의 땅과 깊은 관련이 있거나 조심스럽게 보호하고 있음을 암시합니다. 직접적인 접촉은 이루어지지 않았습니다. 추가 관찰을 권장합니다.#!" #deepl:2870528207
+ expedition_location_town_name: "마을" #deepl:967788374
+ expedition_location_town_desc: "[concept_gate_planet] 마을. 그들과 어떻게 소통하고 싶나요?" #deepl:811850490
+ expedition_location_town_flavor: "정찰 보고서 - 예비 마을 평가, 안카리스 탐험 일지\n\n#lore 이 마을은 자연 지형 속에 자리 잡고 있으며 주변 환경과 자연스럽게 어우러져 있습니다. 경작지가 있고 우리 학자들에게는 생소한 기이한 가축들이 살고 있어 대부분 자급자족하는 것처럼 보입니다. 건물은 낮고 실용적이며, 주변 마나로 희미하게 맥박을 뛰는 유기 재료로 보강된 건물이 많습니다. 현지인들은 아직 다가오지 않았지만, 지붕과 나무 사이에 매달린 반짝이는 마법 병동 뒤에서 우리를 관찰합니다. 희미한 마법의 흔적은 지역 전체에 존재하는데, 집중되어 있기보다는 미묘하고 광범위하게 퍼져 있어 그들의 땅과 깊은 관련이 있거나 조심스럽게 보호하고 있음을 암시합니다. 직접적인 접촉은 이루어지지 않았습니다. 추가 관찰을 권장합니다.#!" #deepl:2870528207

@@ -42,3 +42,19 @@
  concept_gate_ley_lines_desc: "灵脉是潜藏于地表之下的原始魔能脉络，常人不可见却维系着神秘学的根基。当其交汇之时，魔能会激涌而出，将所在区域化为强效魔法节点，并强化附近一切法术效果。"
  concept_gate_mana_well: "魔能井"
  concept_gate_mana_well_desc: "魔能井是[Concept('concept_gate_ley_lines','$concept_gate_ley_line$')]上的节点。魔能井几乎可以产生无尽的$mana$。\n\n但它们可能引发当地[Concept('concept_gate_ley_lines','$concept_gate_ley_line$')]的#v 不稳定#!，进而导致#v 事故#!。"
+ concept_gate_expedition: "远征$gate_planet$" #deepl:3102698085
+ concept_gate_expedition_desc: "当我们控制了一个[GetBuildingType('building_gate_alxa').GetName] ，并通过[GetTechnology('gate_expeditions').GetName] 培养了对它们的控制能力后，我们就可以开始 "远征"，前往[concept_gate_planet]" #deepl:3951746736
+ concept_gate_expedition_leader: "探险队队长" #deepl:1154052499
+ concept_gate_expedition_leaders: "探险队队长" #deepl:1758522193
+ concept_gate_expedition_leader_desc: "我们[concept_gate_expedition] 的领导者。[concept_gate_planet] [concept_gate_expedition_leader_militarist] [concept_gate_expedition_leader_politician]根据领导者的不同，我们可以在[concept_gate_expedition_activities] 上做不同的事情。[concept_gate_expedition_leader_industrialist]" #deepl:3589726996
+ concept_gate_expedition_leader_militarist: "军国主义" #deepl:3870761686
+ concept_gate_expedition_leader_militarist_desc: "$concept_gate_expedition_leader_militarist$ 专注于通过武力控制[concept_gate_planet] 上的人民。" #deepl:3667884153
+ concept_gate_expedition_leader_politician: "政治家" #deepl:61234762
+ concept_gate_expedition_leader_politician_desc: "$concept_gate_expedition_leader_politician$ 的重点是与[concept_gate_planet] 上的人民建立外交关系。" #deepl:3956538534
+ concept_gate_expedition_leader_industrialist: "实业家" #deepl:1917081893
+ concept_gate_expedition_leader_industrialist_desc: "$concept_gate_expedition_leader_industrialist$ 的重点是与[concept_gate_planet] 上的人们开发新的贸易路线。" #deepl:3904451690
+ concept_gate_expedition_budget: "远征预算" #deepl:909302767
+ concept_gate_expedition_budget_desc: "$concept_gate_expedition_budget$ 用于在[concept_gate_planet] 上启动新的[concept_gate_expedition_activities] 。用完后，我们的[concept_gate_expedition] 将终止。" #deepl:885277883
+ concept_gate_expedition_activity: "探险活动" #deepl:3789000274
+ concept_gate_expedition_activities: "探险活动" #deepl:3770752768
+ concept_gate_expedition_activities_desc: "探险地图上的每次互动都被视为[Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')] 。" #deepl:2899458355

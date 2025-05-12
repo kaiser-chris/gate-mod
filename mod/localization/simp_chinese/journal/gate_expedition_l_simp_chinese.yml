@@ -5,8 +5,9 @@
  je_gate_expedition_preparation: "准备远征"
  je_gate_expedition_preparation_reason: "随着决定做出，准备工作正式开始。地图被绘制，物资被调配，热切的冒险者纷纷踊跃报名。学者激烈争论着门后可能存在的危机与机遇，工程师和后勤人员则致力于确保这次远征准备周全。魔法门赫然矗立在前方——这扇通往未知的门户，很快便将迎来人类踏出的第一步。"
  je_gate_expedition_preparation_goal: "我们已经完成了准备工作。" #deepl:3451756210
- je_gate_expedition_preparation_no_leader: "我们有一位探险队队长。" #deepl:2012318215
+ je_gate_expedition_preparation_no_leader: "我们有一个[concept_gate_expedition_leader]." #deepl:1647671458
  je_gate_expedition_preparation_hiring_leader: "我们目前正在寻找远征领队。"
+ je_gate_expedition_preparation_not_started_progess: "我们需要开始准备。" #deepl:2275362365
  je_gate_expedition_preparation_in_progess: "我们需要为远征做准备。"
  je_gate_expedition_preparation_fail_tooltip: "未控制[GetStateRegion('STATE_ALXA').GetName]区域的[GetBuildingType('building_gate_alxa').GetName]。"
  je_gate_expedition_preparation_button_hire_leader: "雇佣远征领队"
@@ -22,30 +23,30 @@
  je_gate_expedition_preparation_button_stop_preparations_effect: "暂停我们的准备工作" #deepl:1686301413
  je_gate_expedition_preparation_button_cancel: "取消远征" #deepl:131191061
  je_gate_expedition_preparation_button_cancel_desc: "我们将取消整个考察。" #deepl:774493766
- je_gate_expedition_active: "远征$gate_planet$" #deepl:3102698085
+ je_gate_expedition_active: "$concept_gate_expedition$" #deepl:2980131449
  je_gate_expedition_active_status: "我们的远征还在继续。" #deepl:2942341570
  je_gate_expedition_active_reason: "做出决定后，准备工作便紧锣密鼓地展开了。绘制地图，征用物资，热心的冒险家们主动请缨。学者们讨论着前方可能存在的危险和机遇，工程师和后勤人员则努力确保旅程装备齐全。魔法门就在前方，它是通往未知世界的入口--很快，就到了迈出第一步的时候了。" #deepl:3725050251
  je_gate_expedition_button_open_map: "打开远征地图"
  je_gate_expedition_button_open_map_desc: "打开远征地图。"
  je_gate_expedition_button_open_map_effect: "打开远征窗口。" #deepl:1849424227
  gate_expedition_preparation_modifier: "准备费用" #deepl:2202863878
- gate_expedition.1.t: "选择探险队队长" #deepl:4173161503
- gate_expedition.1.d: "我们已经找到了这三位潜在的探险队队长。现在我们必须选择一个。" #deepl:2541285372
+ gate_expedition.1.t: "选择$concept_gate_expedition_leader$" #deepl:3052020482
+ gate_expedition.1.d: "我们已经为[concept_gate_expedition] 找到了这三个潜在的[Concept('concept_gate_expedition_leader','$concept_gate_expedition_leaders$')] 。现在我们必须选择一个。" #deepl:908519794
  gate_expedition.1.f: "经过激烈的政治斡旋和幕后交易，三名候选人脱颖而出，成为我们进入魔法门探险的潜在领导人。其中一位是精明的实业家，与经济界有着深厚的关系，渴望开发门外的一切资源。另一位是功勋卓著的军官，专注于确保我们的立足点和统治地位。最后一位候选人是一位娴熟的政治家，主张谨慎外交和长期稳定。我们的选择将决定我们在$gate_planet$ 上的未来。" #deepl:1367357098
- gate_expedition.1.a: "军国主义者：[SCOPE.sCharacter('expedition_militarist').GetFullName]" #deepl:1044047572
- gate_expedition.1.b: "政治家：[SCOPE.sCharacter('expedition_politician').GetFullName]" #deepl:3483610795
- gate_expedition.1.c: "实业家[SCOPE.sCharacter('expedition_industrialist').GetFullName]" #deepl:850030194
- gate_expedition.2.t: "规划$gate_planet$ 远征" #deepl:3650540084
- gate_expedition.2.d: "我们需要选择对[GetBuildingType('building_gate_alxa').GetName] 进行多大规模的考察。" #deepl:3650601666
+ gate_expedition.1.a: "[concept_gate_expedition_leader_militarist]:[SCOPE.sCharacter('expedition_militarist').GetFullName]" #deepl:809118842
+ gate_expedition.1.b: "[concept_gate_expedition_leader_politician]:[SCOPE.sCharacter('expedition_politician').GetFullName]" #deepl:546454634
+ gate_expedition.1.c: "[concept_gate_expedition_leader_industrialist]:[SCOPE.sCharacter('expedition_industrialist').GetFullName]" #deepl:3051857995
+ gate_expedition.2.t: "规划$concept_gate_expedition$" #deepl:733394989
+ gate_expedition.2.d: "我们需要选择我们的远征[concept_gate_expedition] 应该有多大。" #deepl:3402278856
  gate_expedition.2.f: "决定冒险穿越神奇之门后，下一个挑战就是确定我们的探险规模。一个小规模、灵活的团队可以谨慎地进行探索，将风险和成本降到最低。一支由定居者、学者和士兵组成的均衡部队可以提供安全而灵活的方法。或者，一个拥有压倒性资源和人力的大型探险队可以提出无可争议的主张，但代价也是巨大的。我们这次冒险的命运就取决于这个关键的决定。" #deepl:1308442514
  gate_expedition.2.a: "小型探险。" #deepl:3357700448
  gate_expedition.2.b: "正常探险。" #deepl:1709548526
  gate_expedition.2.c: "长征。" #deepl:3688515342
  gate_expedition.3.t: "返回$gate_planet$" #deepl:3397125764
- gate_expedition.3.d: "我们对[concept_gate_planet] 的考察已经结束。" #deepl:1305130681
+ gate_expedition.3.d: "我们的[concept_gate_expedition] 已经结束。" #deepl:1098929001
  gate_expedition.3.f: "当我们的探险队疲惫不堪却又凯旋而归时，大门最后一次闪亮登场。$gate_planet$在这个充满紫罗兰色天空和水晶森林的世界里，我们发现了超乎想象的秘密--古老的符文、未知的动物群落以及地球上绝无仅有的法力流动。虽然仍有许多疑问，但带回的知识可能会永远重塑我们的神秘科学。旅程已经结束......但它的影响才刚刚开始。" #deepl:4221158718
  gate_expedition.3.a: "我们学到了很多。" #deepl:2645932267
  gate_expedition.4.t: "我们的远征开始了" #deepl:2301692092
- gate_expedition.4.d: "我们的探险队[concept_gate_planet] 踏上征程。" #deepl:3582510829
+ gate_expedition.4.d: "我们的[concept_gate_expedition] 开始了他们的旅程。" #deepl:3158844762
  gate_expedition.4.f: "经过数月的准备、校准和奥秘协调，魔法门稳定地跳动着。物资已装载完毕，魔法也经过了反复检查，探险队在未知的边缘整装待发。传送门的另一端是$gate_planet$--一个在古代卷轴中耳语、只有在预言梦中才能瞥见的遥远世界。今天，我们穿越神话，踏上探索之旅。" #deepl:2625105807
  gate_expedition.4.a: "我们祝他们好运。" #deepl:889921407

@@ -50,13 +50,22 @@ types gate_expedition_panel_types {
                 onclick = "[GetVariableSystem.Clear('com_alert_action')]"
                 input_action = "back"
             }
-
+            # Deactivate Shortcut when Sidebar is visible
+            # This is to allow closing the Sidebar with the ESC button
             close_button_large = {
                 name = "tutorial_highlight_close_button"
                 parentanchor = top|right
                 onclick = "[GetVariableSystem.Clear('com_open_window')]"
                 onclick = "[GetVariableSystem.Clear('com_alert_action')]"
                 shortcut = "close_window"
+                visible = "[Not(Country.MakeScope.Var('gate_map_sidebar').IsSet)]"
+                position = { -56 116 }
+            }
+            close_button_large = {
+                parentanchor = top|right
+                onclick = "[GetVariableSystem.Clear('com_open_window')]"
+                onclick = "[GetVariableSystem.Clear('com_alert_action')]"
+                visible = "[Country.MakeScope.Var('gate_map_sidebar').IsSet]"
                 position = { -56 116 }
             }
         }
@@ -327,7 +336,6 @@ types gate_expedition_panel_types {
 
         visible = "[Country.MakeScope.Var('gate_map_sidebar').IsSet]"
 
-
         background = {
             using = default_bg
         }
@@ -367,6 +375,13 @@ types gate_expedition_panel_types {
                 }
                 blockoverride "size" {
                     size = { 540 44 }
+                }
+                close_button_large = {
+                    size = { 32 32 }
+                    parentanchor = top|right
+                    position = { 0 6 }
+                    shortcut = "close_window"
+                    onclick = "[GetScriptedGui('sgui_gate_map_location_reset').Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
                 }
             }
             vbox = {
@@ -584,7 +599,7 @@ types gate_expedition_panel_types {
         # Button
         button_icon_round = {
             block "tooltip" {
-                tooltip = "[Character.MakeScope.Var('desc').GetFlagName]"
+                tooltip = "expedition_location_tooltip"
             }
             size = { 60 60 }
             blockoverride "icon" {

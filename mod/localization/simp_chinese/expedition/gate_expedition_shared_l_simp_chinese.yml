@@ -7,8 +7,8 @@
  gate_expedition_large_tooltip: "开始准备一次大型远征，需要[SCOPE.ScriptValue('gate_expedition_preparation_time_large')|0v] 个月的准备时间。" #deepl:2091144821
  gate_expedition_leader_missing: "无探险队长" #deepl:3535734875
  gate_gate_expedition_leader_missing_tooltip: "We currently have no Expedition Leader." #TODO: Concept [gate_expedition_leader]
- gate_expedition_budget_header: "Expedition Budget" #TODO: Concept [gate_expedition_budget]
- gate_expedition_budget_tooltip: "我们的远征预算为[Scope.Var('expedition_budget').GetValue|0v] ，[Scope.Var('expedition_budget_total').GetValue|0v] 点数。" #deepl:3165762762
- gate_expedition_budget_empty: "我们的探险预算已经用完。" #deepl:1128213494
- gate_expedition_blocked_trigger: "在过去的[SCOPE.ScriptValue('gate_expedition_block_time')|0v] 个月里，我们还没有完成或取消过对[concept_gate_planet] 的考察。" #deepl:3624866321
- gate_expedition_blocked_tooltip: "在[SCOPE.ScriptValue('gate_expedition_block_time')|0v] 个月内，我们将无法对[concept_gate_planet] 进行新的考察。" #deepl:2607397300
+ gate_expedition_budget_header: "Expedition Budget"
+ gate_expedition_budget_tooltip: "我们的[concept_gate_expedition_budget] 是[Scope.Var('expedition_budget_total').GetValue|0v] 点的[Scope.Var('expedition_budget').GetValue|0v] 。" #deepl:197132716
+ gate_expedition_budget_empty: "我们的[concept_gate_expedition_budget] 已经用完。" #deepl:2206731559
+ gate_expedition_blocked_trigger: "在过去的[SCOPE.ScriptValue('gate_expedition_block_time')|0v] 个月里，我们没有完成或取消过一个[concept_gate_expedition] 。" #deepl:2270399837
+ gate_expedition_blocked_tooltip: "我们将在[SCOPE.ScriptValue('gate_expedition_block_time')|0v] 个月内无法启动新的[concept_gate_expedition] 。" #deepl:395471747
