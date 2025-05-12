@@ -39,12 +39,8 @@ on_monthly_gate_cleanup = {
 
 on_monthly_gate_mana_density = {
     effect = {
-        # Between 1 and 3 times
+        # Between 1 and 2 times
         gate_propogate_mana_density = yes
-        random = {
-            chance = 20
-            gate_propogate_mana_density = yes
-        }
         random = {
             chance = 20
             gate_propogate_mana_density = yes
