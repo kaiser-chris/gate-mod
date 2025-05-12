@@ -1,6 +1,6 @@
 ﻿building_murk_ways = {
 	building_group = bg_public_infrastructure
-	icon = "gfx/interface/icons/building_icons/building_murk_ways.dds"
+	icon = "gfx/interface/icons/building_icons/building_gate_murk_ways.dds"
 	city_type = city
 
 	has_max_level = yes
@@ -30,12 +30,12 @@
 
 	required_construction = construction_cost_medium
 
-	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_magic.dds"
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_gate_magic.dds"
 }
 
 building_magic_academy = {
 	building_group = bg_magic_technology
-	icon = "gfx/interface/icons/building_icons/building_magic_academy.dds"
+	icon = "gfx/interface/icons/building_icons/building_gate_magic_academy.dds"
 	city_type = city
 	expandable = no
 
@@ -67,12 +67,12 @@ building_magic_academy = {
 
 	required_construction = construction_cost_very_high
 
-	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_magic.dds"
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_gate_magic.dds"
 }
 
 building_magic_research_institute = {
 	building_group = bg_magic_technology
-	icon = "gfx/interface/icons/building_icons/building_magic_research_institute.dds"
+	icon = "gfx/interface/icons/building_icons/building_gate_magic_research_institute.dds"
 	city_type = city
 	expandable = no
 	downsizeable = no
@@ -107,12 +107,12 @@ building_magic_research_institute = {
 
 	required_construction = construction_cost_very_high
 
-	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_magic.dds"
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_gate_magic.dds"
 }
 
 building_mage_tower = {
 	building_group = bg_mage_tower
-	icon = "gfx/interface/icons/building_icons/building_mage_tower.dds"
+	icon = "gfx/interface/icons/building_icons/building_gate_mage_tower.dds"
 	city_type = city
 	levels_per_mesh = 10
 	lens = infrastructure
@@ -339,12 +339,12 @@ building_mage_tower = {
 	downsizeable = no
 	ownership_type = other
 
-	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_magic.dds"
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_gate_magic.dds"
 }
 
 building_elven_forest = {
 	building_group = bg_elven_forests
-	icon = "gfx/interface/icons/building_icons/building_elven_forest.dds"
+	icon = "gfx/interface/icons/building_icons/building_gate_elven_forest.dds"
 	city_type = none
 	levels_per_mesh = 5
 
@@ -393,5 +393,5 @@ building_elven_forest = {
 
 	required_construction = construction_cost_medium
 
-	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_magic.dds"
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_gate_magic.dds"
 }
