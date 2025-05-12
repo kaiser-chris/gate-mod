@@ -1,6 +1,6 @@
 ﻿has_maximum_magic_innovation_alert = {
 	script_context = player_country
-	texture = gfx/interface/icons/alert_icons/has_no_magic_research.dds
+	texture = gfx/interface/icons/alert_icons/gate_has_no_magic_research.dds
 
 	valid = {
 		var:magic_innovation >= global_var:magic_innovation_bank_max
@@ -15,7 +15,7 @@
 
 can_unlock_magic_technology_alert = {
 	script_context = player_country
-	texture = gfx/interface/icons/alert_icons/has_no_magic_research.dds
+	texture = gfx/interface/icons/alert_icons/gate_has_no_magic_research.dds
 
 	valid = {
 		has_variable = can_research_magic
@@ -30,7 +30,7 @@ can_unlock_magic_technology_alert = {
 
 has_not_started_research_of_magic_alert = {
 	script_context = player_country
-	texture = gfx/interface/icons/alert_icons/has_no_magic_research.dds
+	texture = gfx/interface/icons/alert_icons/gate_has_no_magic_research.dds
 
 	valid = {
 		AND = {
@@ -52,7 +52,7 @@ has_not_started_research_of_magic_alert = {
 
 has_no_magic_researcher_alert = {
 	script_context = player_country
-	texture = gfx/interface/icons/alert_icons/has_no_magic_research.dds
+	texture = gfx/interface/icons/alert_icons/gate_has_no_magic_research.dds
 
 	valid = {
 		OR = {
@@ -73,7 +73,7 @@ has_no_magic_researcher_alert = {
 
 expedition_alert = {
 	script_context = player_country
-	texture = gfx/interface/icons/alert_icons/has_no_magic_research.dds
+	texture = gfx/interface/icons/alert_icons/gate_has_no_magic_research.dds
 
 	valid = {
 		is_player = yes
@@ -88,7 +88,7 @@ expedition_alert = {
 
 gate_space_alert = {
 	script_context = player_country
-	texture = gfx/interface/icons/alert_icons/has_no_magic_research.dds
+	texture = gfx/interface/icons/alert_icons/gate_has_no_magic_research.dds
 
 	valid = {
 		is_player = yes
