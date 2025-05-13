@@ -46,19 +46,99 @@ gate_expedition_start_activity = {
 			$activity$ = gate_expedition_interaction_uncover
 		}
 		hidden_effect = {
-			create_struct = {
-				struct_scope = activity
-				struct_type = gate_expedition_activity
+			gate_expedition_create_activity = {
+				name = gate_expedition_activity_uncover
+				desc = gate_expedition_activity_uncover_desc
 			}
-			scope:activity = {
-				set_variable = {
-					name = name
-					value = flag:gate_expedition_activity_uncover
-				}
-				set_variable = {
-					name = desc
-					value = flag:gate_expedition_activity_uncover_desc
-				}
+		}
+		trigger_event = {
+			id = gate_expedition_activities.1
+			months = $months$
+		}
+	}
+	else_if = {
+		limit = {
+			$activity$ = gate_expedition_interaction_home
+		}
+		hidden_effect = {
+			gate_expedition_create_activity = {
+				name = gate_expedition_activity_home
+				desc = gate_expedition_activity_home_desc
+			}
+		}
+		trigger_event = {
+			id = gate_expedition.3
+			months = $months$
+		}
+	}
+	else_if = {
+		limit = {
+			$activity$ = gate_expedition_interaction_explore
+		}
+		hidden_effect = {
+			gate_expedition_create_activity = {
+				name = gate_expedition_activity_explore
+				desc = gate_expedition_activity_explore_desc
+			}
+		}
+		trigger_event = {
+			id = gate_expedition_activities.1
+			months = $months$
+		}
+	}
+	else_if = {
+		limit = {
+			$activity$ = gate_expedition_interaction_contact
+		}
+		hidden_effect = {
+			gate_expedition_create_activity = {
+				name = gate_expedition_activity_contact
+				desc = gate_expedition_activity_contact_desc
+			}
+		}
+		trigger_event = {
+			id = gate_expedition_activities.1
+			months = $months$
+		}
+	}
+	else_if = {
+		limit = {
+			$activity$ = gate_expedition_interaction_conquer
+		}
+		hidden_effect = {
+			gate_expedition_create_activity = {
+				name = gate_expedition_activity_conquer
+				desc = gate_expedition_activity_conquer_desc
+			}
+		}
+		trigger_event = {
+			id = gate_expedition_activities.1
+			months = $months$
+		}
+	}
+	else_if = {
+		limit = {
+			$activity$ = gate_expedition_interaction_raid
+		}
+		hidden_effect = {
+			gate_expedition_create_activity = {
+				name = gate_expedition_activity_raid
+				desc = gate_expedition_activity_raid_desc
+			}
+		}
+		trigger_event = {
+			id = gate_expedition_activities.1
+			months = $months$
+		}
+	}
+	else_if = {
+		limit = {
+			$activity$ = gate_expedition_interaction_trade
+		}
+		hidden_effect = {
+			gate_expedition_create_activity = {
+				name = gate_expedition_activity_trade
+				desc = gate_expedition_activity_trade_desc
 			}
 		}
 		trigger_event = {
@@ -84,6 +164,25 @@ gate_expedition_start_activity = {
 	}
 }
 
+# Create a new activity and provide it as
+# - scope:activity
+gate_expedition_create_activity = {
+	create_struct = {
+		struct_scope = activity
+		struct_type = gate_expedition_activity
+	}
+	scope:activity = {
+		set_variable = {
+			name = name
+			value = flag:$name$
+		}
+		set_variable = {
+			name = desc
+			value = flag:$desc$
+		}
+	}
+}
+
 gate_expedition_set_idle = {
 	var:gate_expedition ?= {
 		#TODO: Add destroy struct to CMF
@@ -96,16 +195,21 @@ gate_expedition_set_idle = {
 }
 
 gate_expedition_change_budget = {
-	save_temporary_scope_value_as = {
-		name = budget_change
-		value = $amount$
-	}
-	custom_tooltip = {
-		text = effect_gate_expedition_change_budget
-		var:gate_expedition ?= {
-			change_variable = {
-				name = expedition_budget
-				add = $amount$
+	if = {
+		limit = {
+			$amount$ > 0
+		}
+		save_temporary_scope_value_as = {
+			name = budget_change
+			value = $amount$
+		}
+		custom_tooltip = {
+			text = effect_gate_expedition_change_budget
+			var:gate_expedition ?= {
+				change_variable = {
+					name = expedition_budget
+					add = $amount$
+				}
 			}
 		}
 	}

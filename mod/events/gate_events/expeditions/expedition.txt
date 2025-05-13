@@ -254,6 +254,12 @@ gate_expedition.3 = {
             amount = 3000
         }
     }
+
+    after = {
+        hidden_effect = {
+            remove_variable = gate_expedition
+        }
+    }
 }
 
 gate_expedition.4 = {
