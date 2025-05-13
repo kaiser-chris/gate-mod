@@ -130,7 +130,17 @@ je_gate_expedition_active = {
 	status_desc = {
 		first_valid = {
 			triggered_desc = {
-				desc = je_gate_expedition_active_status
+				trigger = {
+					var:gate_expedition ?= {
+						var:activity ?= {
+							has_variable = name
+						}
+					}
+				}
+				desc = je_gate_expedition_active_activity
+			}
+			triggered_desc = {
+				desc = je_gate_expedition_active_idle
 			}
 		}
 	}

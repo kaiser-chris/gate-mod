@@ -1,0 +1,67 @@
+﻿namespace = gate_expedition_activities
+
+gate_expedition_activities.1 = {
+    type = country_event
+    dlc = dlc_magic_gate
+    placement = scope:gate_expedition_state
+
+    title = gate_expedition_activities.1.t
+    desc = gate_expedition_activities.1.d
+    flavor = gate_expedition_activities.1.f
+
+    event_image = {
+        video = "middleeast_jungle_expedition"
+    }
+
+    trigger = {
+        gate_expedition_has_covered = yes
+    }
+
+    immediate = {
+        var:gate_expedition ?= {
+            var:location ?= {
+                var:gate_state ?= {
+                    save_temporary_scope_as = gate_state_region
+                }
+            }
+        }
+        random_scope_state = {
+            limit = {
+                scope:gate_state_region ?= state_region
+            }
+            save_scope_as = gate_expedition_state
+        }
+        if = {
+            limit = {
+                NOT = {
+                    exists = scope:gate_expedition_state
+                }
+            }
+            capital = {
+                save_scope_as = gate_expedition_state
+            }
+        }
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+    duration = 3
+
+    option = {
+        name = gate_expedition_activities.1.a
+        default_option = yes
+        gate_expedition_uncover_state = yes
+    }
+
+    option = {
+        name = gate_expedition_activities.1.b
+        gate_expedition_uncover_state = yes
+        gate_expedition_open_map = yes
+    }
+
+    after = {
+        gate_expedition_set_idle = yes
+    }
+}

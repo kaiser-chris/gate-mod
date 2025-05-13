@@ -6,3 +6,4 @@
  trigger_not_is_magic_country: "[concept_magic_knowledge] 미보유"
  trigger_gate_expedition_budget: "#기본_텍스트가 [concept_gate_expedition_budget] [SCOPE.GetValue('budget_cost')|0v] 이상입니다.#!" #deepl:2216446202
  trigger_gate_expedition_has_covered: "#기본_텍스트 [concept_gate_expedition] 지도의 미탐험 부분이 있습니다.#!" #deepl:663241663
+ trigger_gate_expedition_has_no_activity: "#기본_텍스트 우리는 이미 [Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')].#!" #deepl:3118854392

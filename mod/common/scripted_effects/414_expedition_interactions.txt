@@ -1,8 +1,19 @@
-﻿gate_setup_expedition_uncover_state = {
+﻿gate_expedition_open_map = {
+	custom_tooltip = {
+		text = effect_gate_expedition_open_map
+		set_variable = gate_open_expedition
+	}
+}
+
+# Uncovers the next region on the currently active expedition
+# The region is uncovered permanently for all future expeditions
+# There is a predefined order on how regions are uncovered
+gate_expedition_uncover_state = {
 	custom_tooltip = {
 		text = effect_gate_expedition_uncover
-		var:gate_expedition ?= {
-			var:location ?= {
+		remove_local_variable = done
+		var:gate_expedition = {
+			var:location = {
 				ordered_in_list = {
 					variable = states
 					order_by = {
@@ -23,6 +34,78 @@
 					}
 
 				}
+			}
+		}
+	}
+}
+
+gate_expedition_start_activity = {
+	# Setup activity by type
+	if = {
+		limit = {
+			$activity$ = gate_expedition_interaction_uncover
+		}
+		hidden_effect = {
+			create_struct = {
+				struct_scope = activity
+				struct_type = gate_expedition_activity
+			}
+			scope:activity = {
+				set_variable = {
+					name = name
+					value = flag:gate_expedition_activity_uncover
+				}
+				set_variable = {
+					name = desc
+					value = flag:gate_expedition_activity_uncover_desc
+				}
+			}
+		}
+		trigger_event = {
+			id = gate_expedition_activities.1
+			months = $months$
+		}
+	}
+	else = {
+		debug_log = "GATE - ERROR: Tried starting an unknown activity type"
+	}
+
+	# Start Activity
+	var:gate_expedition ?= {
+		if = {
+			limit = {
+				exists = scope:activity
+			}
+			set_variable = {
+				name = activity
+				value = scope:activity
+			}
+		}
+	}
+}
+
+gate_expedition_set_idle = {
+	var:gate_expedition ?= {
+		#TODO: Add destroy struct to CMF
+		var:activity ?= {
+			kill_character = yes
+			free_character_from_void = yes
+		}
+		remove_variable = activity
+	}
+}
+
+gate_expedition_change_budget = {
+	save_temporary_scope_value_as = {
+		name = budget_change
+		value = $amount$
+	}
+	custom_tooltip = {
+		text = effect_gate_expedition_change_budget
+		var:gate_expedition ?= {
+			change_variable = {
+				name = expedition_budget
+				add = $amount$
 			}
 		}
 	}

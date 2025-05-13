@@ -442,6 +442,17 @@ gate_setup_expedition_reytu = {
 		value = scope:gate_reytu
 	}
 	scope:gate_reytu = {
+		every_state = {
+			limit = {
+				has_building = building_gate_alxa
+			}
+			prev = {
+				set_variable = {
+					name = gate_state
+					value = prev.state_region
+				}
+			}
+		}
 		set_variable = {
 			name = state_01
 			value = scope:state_01

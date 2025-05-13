@@ -198,7 +198,29 @@ types gate_expedition_panel_types {
                         }
                     }
 
-                    expand = {}
+                    vbox = {
+                        layoutpolicy_horizontal = expanding
+                        layoutpolicy_vertical = expanding
+                        visible = "[Scope.Var('activity').IsSet]"
+
+                        textbox = {
+                            layoutpolicy_horizontal = expanding
+                            text = "[Scope.Var('activity').Var('name').GetFlagName]"
+                            autoresize = yes
+                            align = center
+                            using = fontsize_xxl
+                            default_format = "#header"
+                        }
+
+                        textbox = {
+                            layoutpolicy_horizontal = expanding
+                            text = "[Scope.Var('activity').Var('desc').GetFlagName]"
+                            autoresize = yes
+                            align = center
+                            using = fontsize_large
+                            default_format = "#lore"
+                        }
+                    }
                 }
 
                 # Expedition Interactions

@@ -39,7 +39,6 @@ gate_orphan_fix.1 = {
 
 		# Gate Expedition
 		fix_variable_error = { variable = is_expedition_leader }
-		fix_variable_error = { variable = gate_expedition_reytu }
 		fix_variable_error = { variable = gate_expedition_opinion_industrialist }
 		fix_variable_error = { variable = gate_expedition_opinion_militarist }
 		fix_variable_error = { variable = gate_expedition_opinion_politician }
@@ -67,7 +66,8 @@ gate_orphan_fix.1 = {
 		fix_variable_error = { variable = gate_expedition_interaction_explore_tooltip }
 		fix_variable_error = { variable = gate_expedition_interaction_contact }
 		fix_variable_error = { variable = gate_expedition_interaction_contact_tooltip }
-		fix_variable_error = { variable = expedition_budget }
+		fix_variable_error = { variable = gate_expedition_activity_uncover }
+		fix_variable_error = { variable = gate_expedition_activity_uncover_desc }
 		fix_variable_error = { variable = expedition_budget_total }
 		fix_variable_error = { variable = expedition_started }
 		fix_variable_error = { variable = id }

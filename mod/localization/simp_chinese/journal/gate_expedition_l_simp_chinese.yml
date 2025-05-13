@@ -24,11 +24,11 @@
  je_gate_expedition_preparation_button_cancel: "取消远征" #deepl:131191061
  je_gate_expedition_preparation_button_cancel_desc: "我们将取消整个考察。" #deepl:774493766
  je_gate_expedition_active: "$concept_gate_expedition$" #deepl:2980131449
- je_gate_expedition_active_status: "我们的远征还在继续。" #deepl:2942341570
+ je_gate_expedition_active_idle: "我们的探险队目前正在待命。" #deepl:959888078
+ je_gate_expedition_active_activity: "我们的探险队目前正在[Scope.Var('gate_expedition').Var('activity').Var('name').GetFlagName]." #deepl:3461872375
  je_gate_expedition_active_reason: "做出决定后，准备工作便紧锣密鼓地展开了。绘制地图，征用物资，热心的冒险家们主动请缨。学者们讨论着前方可能存在的危险和机遇，工程师和后勤人员则努力确保旅程装备齐全。魔法门就在前方，它是通往未知世界的入口--很快，就到了迈出第一步的时候了。" #deepl:3725050251
  je_gate_expedition_button_open_map: "打开远征地图"
  je_gate_expedition_button_open_map_desc: "打开远征地图。"
- je_gate_expedition_button_open_map_effect: "打开远征窗口。" #deepl:1849424227
  gate_expedition_preparation_modifier: "准备费用" #deepl:2202863878
  gate_expedition.1.t: "选择$concept_gate_expedition_leader$" #deepl:3052020482
  gate_expedition.1.d: "我们已经为[concept_gate_expedition] 找到了这三个潜在的[Concept('concept_gate_expedition_leader','$concept_gate_expedition_leaders$')] 。现在我们必须选择一个。" #deepl:908519794
