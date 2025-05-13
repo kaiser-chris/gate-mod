@@ -154,6 +154,7 @@ je_gate_expedition_active = {
 			var:gate_expedition = {
 				var:expedition_budget <= 0
 			}
+			has_variable = gate_expedition_block_time
 		}
 	}
 
@@ -168,12 +169,16 @@ je_gate_expedition_active = {
 	}
 
 	on_complete = {
-		trigger_event = {
-			id = gate_expedition.3
-			months = 1
-		}
-		hidden_effect = {
-			remove_variable = gate_expedition
+		if = {
+			limit = {
+				NOT = {
+					has_variable = gate_expedition_block_time
+				}
+			}
+			trigger_event = {
+				id = gate_expedition.3
+				months = 1
+			}
 		}
 	}
 

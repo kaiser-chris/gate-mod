@@ -568,23 +568,23 @@ types gate_expedition_panel_types {
         datacontext = "[GetScriptedGui('sgui_gate_map_location_interact')]"
         size = { 450 44 }
         raw_text = "[Scope.Var('text').GetFlagName]"
-        tooltip = "[Scope.Var('tooltip').GetFlagName][Localize('gate_expedition_interaction_base_tooltip')]"
+        tooltip = "[Scope.Var('tooltip').GetFlagName][Localize('gate_expedition_interaction_tooltip_separator')][ScriptedGui.BuildTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('interaction', Scope.GetCharacter.MakeScope).End)]"
         using = default_button_primary_big_action
         onclick = "[ScriptedGui.Execute(GuiScope
                             .SetRoot(Country.MakeScope)
-                            .AddScope('interaction', MakeScopeValue(Scope.Var('type').GetValue))
+                            .AddScope('interaction', Scope.GetCharacter.MakeScope)
                             .AddScope('location', Character.MakeScope)
                             .End
                       )]"
         enabled = "[ScriptedGui.IsValid(GuiScope
                             .SetRoot(Country.MakeScope)
-                            .AddScope('interaction', MakeScopeValue(Scope.Var('type').GetValue))
+                            .AddScope('interaction', Scope.GetCharacter.MakeScope)
                             .AddScope('location', Character.MakeScope)
                             .End
                       )]"
         visible = "[ScriptedGui.IsShown(GuiScope
                             .SetRoot(Country.MakeScope)
-                            .AddScope('interaction', MakeScopeValue(Scope.Var('type').GetValue))
+                            .AddScope('interaction', Scope.GetCharacter.MakeScope)
                             .AddScope('location', Character.MakeScope)
                             .End
                       )]"

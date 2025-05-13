@@ -73,12 +73,26 @@ sgui_gate_map_location_interact = {
             gate_expedition_interaction_valid = yes
         }
         gate_expedition_has_budget = {
-            amount = 100
+            amount = scope:interaction.var:cost
         }
+        gate_expedition_has_no_activity = yes
     }
 
     effect = {
-        remove_variable = gate_map_sidebar
+        save_temporary_scope_value_as = {
+            name = cost
+            value = {
+                value = scope:interaction.var:cost
+                multiply = -1
+            }
+        }
+        gate_expedition_change_budget = {
+            amount = scope:cost
+        }
+        gate_expedition_start_activity = {
+            months = 3
+            activity = scope:interaction.var:type
+        }
     }
 }
 

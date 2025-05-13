@@ -169,6 +169,10 @@ gate_setup_expedition_interactions = {
 			name = type
 			value = gate_expedition_interaction_home
 		}
+		set_variable = {
+			name = cost
+			value = 0
+		}
 	}
 
 	# Explore Location
@@ -188,6 +192,10 @@ gate_setup_expedition_interactions = {
 		set_variable = {
 			name = type
 			value = gate_expedition_interaction_explore
+		}
+		set_variable = {
+			name = cost
+			value = 100
 		}
 	}
 
@@ -209,6 +217,10 @@ gate_setup_expedition_interactions = {
 			name = type
 			value = gate_expedition_interaction_contact
 		}
+		set_variable = {
+			name = cost
+			value = 100
+		}
 	}
 
 	# Conquer Location
@@ -228,6 +240,10 @@ gate_setup_expedition_interactions = {
 		set_variable = {
 			name = type
 			value = gate_expedition_interaction_conquer
+		}
+		set_variable = {
+			name = cost
+			value = 100
 		}
 	}
 
@@ -249,6 +265,10 @@ gate_setup_expedition_interactions = {
 			name = type
 			value = gate_expedition_interaction_raid
 		}
+		set_variable = {
+			name = cost
+			value = 100
+		}
 	}
 
 	# Trade with Location
@@ -268,6 +288,10 @@ gate_setup_expedition_interactions = {
 		set_variable = {
 			name = type
 			value = gate_expedition_interaction_trade
+		}
+		set_variable = {
+			name = cost
+			value = 100
 		}
 	}
 }
