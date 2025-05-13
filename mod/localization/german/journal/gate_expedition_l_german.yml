@@ -24,11 +24,11 @@
  je_gate_expedition_preparation_button_cancel: "Expedition abbrechen" #deepl:131191061
  je_gate_expedition_preparation_button_cancel_desc: "Wir werden die gesamte Expedition absagen." #deepl:774493766
  je_gate_expedition_active: "$concept_gate_expedition$" #deepl:2980131449
- je_gate_expedition_active_status: "Unsere Expedition ist noch nicht abgeschlossen." #deepl:2942341570
+ je_gate_expedition_active_idle: "Unsere Expedition ist derzeit in Bereitschaft." #deepl:959888078
+ je_gate_expedition_active_activity: "Unsere Expedition ist derzeit [Scope.Var('gate_expedition').Var('activity').Var('name').GetFlagName]." #deepl:3461872375
  je_gate_expedition_active_reason: "Nachdem die Entscheidung gefallen ist, beginnen die Vorbereitungen ernsthaft. Es werden Karten erstellt, Vorräte beschafft, und eifrige Abenteurer melden sich freiwillig. Gelehrte debattieren über die möglichen Gefahren und Chancen, die dahinter liegen, während Ingenieure und Logistiker dafür sorgen, dass die Reise gut ausgerüstet ist. Die magische Pforte liegt vor uns, ein Tor zum Unbekannten - bald wird es Zeit sein, den ersten Schritt zu tun." #deepl:3725050251
  je_gate_expedition_button_open_map: "Expeditionskarte öffnen" #deepl:537625907
  je_gate_expedition_button_open_map_desc: "Öffnet die Expeditionskarte." #deepl:2776223579
- je_gate_expedition_button_open_map_effect: "Expeditionsfenster öffnen." #deepl:1849424227
  gate_expedition_preparation_modifier: "Vorbereitung Kosten" #deepl:2202863878
  gate_expedition.1.t: "Die Auswahl eines $concept_gate_expedition_leader$" #deepl:3052020482
  gate_expedition.1.d: "Wir haben diese drei potenziellen [Concept('concept_gate_expedition_leader','$concept_gate_expedition_leaders$')] für unsere [concept_gate_expedition] gefunden. Nun müssen wir eine auswählen." #deepl:908519794

@@ -85,18 +85,21 @@ sgui_gate_map_location_interact = {
 sgui_gate_expedition_button_uncover = {
     scope = country
 
-    saved_scopes = {
-        cost
-    }
-
     is_valid = {
         gate_expedition_has_budget = {
             amount = 300
         }
         gate_expedition_has_covered = yes
+        gate_expedition_has_no_activity = yes
     }
 
     effect = {
-        gate_setup_expedition_uncover_state = yes
+        gate_expedition_change_budget = {
+            amount = -300
+        }
+        gate_expedition_start_activity = {
+            months = 3
+            activity = gate_expedition_interaction_uncover
+        }
     }
 }

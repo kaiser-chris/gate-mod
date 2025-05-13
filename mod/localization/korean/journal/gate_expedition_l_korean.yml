@@ -24,11 +24,11 @@
  je_gate_expedition_preparation_button_cancel: "원정대 취소" #deepl:131191061
  je_gate_expedition_preparation_button_cancel_desc: "전체 탐험을 취소합니다." #deepl:774493766
  je_gate_expedition_active: "$concept_gate_expedition$" #deepl:2980131449
- je_gate_expedition_active_status: "탐험은 현재 진행 중입니다." #deepl:2942341570
+ je_gate_expedition_active_idle: "원정대는 현재 대기 중입니다." #deepl:959888078
+ je_gate_expedition_active_activity: "현재 원정대는 [Scope.Var('gate_expedition').Var('activity').Var('name').GetFlagName] 입니다." #deepl:3461872375
  je_gate_expedition_active_reason: "결정이 내려지면 본격적인 준비가 시작됩니다. 지도를 작성하고, 물자를 요청하고, 열성적인 모험가들이 자원봉사에 나섭니다. 학자들은 그 너머에 있을 수 있는 위험과 기회에 대해 토론하고, 엔지니어와 물류 담당자는 여정에 필요한 모든 것을 갖추기 위해 노력합니다. 미지의 세계로 가는 포털인 매직 게이트가 눈앞에 다가오면 곧 첫발을 내딛을 시간입니다." #deepl:3725050251
  je_gate_expedition_button_open_map: "탐험 지도 열기"
  je_gate_expedition_button_open_map_desc: "탐험 지도를 엽니다."
- je_gate_expedition_button_open_map_effect: "탐험 창을 엽니다." #deepl:1849424227
  gate_expedition_preparation_modifier: "준비 비용" #deepl:2202863878
  gate_expedition.1.t: "선택 $concept_gate_expedition_leader$" #deepl:3052020482
  gate_expedition.1.d: "[concept_gate_expedition] 에 대한 세 가지 잠재적 [Concept('concept_gate_expedition_leader','$concept_gate_expedition_leaders$')] 을 찾았습니다. 이제 하나를 선택해야 합니다." #deepl:908519794

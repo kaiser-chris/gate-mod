@@ -61,3 +61,14 @@ gate_expedition_has_covered = {
 		}
 	}
 }
+
+gate_expedition_has_no_activity = {
+	custom_tooltip = {
+		text = trigger_gate_expedition_has_no_activity
+		var:gate_expedition ?= {
+			NOT = {
+				has_variable = activity
+			}
+		}
+	}
+}
