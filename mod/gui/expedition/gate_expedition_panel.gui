@@ -77,15 +77,17 @@ types gate_expedition_panel_types {
         blockoverride "fixed_top" {
             datacontext = "[Country.MakeScope.Var('gate_expedition')]"
             hbox = {
-                minimumsize = { -1 160 }
+                maximumsize = { -1 140 }
                 visible = "[Scope.IsSet]"
                 layoutpolicy_horizontal = expanding
                 margin = { 20 10 }
                 margin_bottom = 15
-                spacing = 30
+                spacing = 20
 
                 # Expedition Leader
                 vbox = {
+                    spacing = -20
+                    layoutpolicy_vertical = expanding
                     gate_character_small = {
                         visible = "[Scope.Var('leader').IsSet]"
                         blockoverride "character_context" {
@@ -101,7 +103,6 @@ types gate_expedition_panel_types {
                             visible = no
                         }
                     }
-                    expand = {}
                     default_header_clean_faded = {
                         blockoverride "text" {
                             text = gg_panel_expedition_leader_type
@@ -118,7 +119,7 @@ types gate_expedition_panel_types {
                     layoutpolicy_horizontal = expanding
                     layoutpolicy_vertical = expanding
                     margin = { 20 -1 }
-                    margin_bottom = 20
+                    margin_bottom = 15
                     spacing = 10
 
                     background = {
@@ -142,7 +143,7 @@ types gate_expedition_panel_types {
                             layoutpolicy_horizontal = expanding
                             layoutpolicy_vertical = expanding
                             maximumsize = { 300 -1 }
-                            minimumsize = { -1 61 }
+                            minimumsize = { -1 45 }
                             text = gate_expedition_budget_text
                             autoresize = yes
                             multiline = yes
@@ -238,8 +239,8 @@ types gate_expedition_panel_types {
                     layoutpolicy_horizontal = expanding
                     layoutpolicy_vertical = expanding
                     margin = { 20 -1 }
-                    margin_bottom = 20
-                    spacing = 10
+                    margin_bottom = 10
+                    spacing = 5
 
                     background = {
                         using = simple_frame
@@ -254,8 +255,6 @@ types gate_expedition_panel_types {
                         }
                     }
 
-                    expand = {}
-
                     button = {
                         datacontext = "[GetScriptedGui('sgui_gate_expedition_button_uncover')]"
                         size = { 250 40 }
@@ -265,8 +264,6 @@ types gate_expedition_panel_types {
                         enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
                         onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
                     }
-
-                    expand = {}
 
                     button = {
                         datacontext = "[GetScriptedGui('sgui_gate_expedition_button_home')]"
@@ -423,7 +420,7 @@ types gate_expedition_panel_types {
     }
 
     type gate_map_sidebar = hbox {
-        datacontext = "[Country.MakeScope.Var('gate_map_sidebar').GetCharacter]"
+        datacontext = "[Country.MakeScope.Var('gate_map_sidebar')]"
         maximumsize = { 544 -1 }
         margin_top = -4
         layoutpolicy_vertical = expanding
@@ -466,7 +463,7 @@ types gate_expedition_panel_types {
 
             default_header_clean = {
                 blockoverride "text" {
-                    raw_text = "[Character.MakeScope.Var('name').GetFlagName]"
+                    raw_text = "[Scope.Var('type').Var('name').GetFlagName]"
                 }
                 blockoverride "size" {
                     size = { 540 44 }
@@ -506,7 +503,7 @@ types gate_expedition_panel_types {
                                 margin = { 20 20 }
                                 autoresize = yes
                                 multiline = yes
-                                raw_text = "[Character.MakeScope.Var('desc').GetFlagName]"
+                                raw_text = "[Scope.Var('type').Var('desc').GetFlagName]"
 
                                 background = {
                                     using = entry_bg_fancy_dark
@@ -520,7 +517,7 @@ types gate_expedition_panel_types {
                                 using = entry_bg
                                 autoresize = yes
                                 multiline = yes
-                                raw_text = "[Character.MakeScope.Var('flavor').GetFlagName]"
+                                raw_text = "[Scope.Var('type').Var('flavor').GetFlagName]"
                             }
                             expand = {}
                         }
@@ -532,7 +529,7 @@ types gate_expedition_panel_types {
                 vbox = {
                     layoutpolicy_horizontal = expanding
                     spacing = 10
-                    visible = "[Not(IsDataModelEmpty(Character.MakeScope.GetList('interactions')))]"
+                    visible = "[Not(IsDataModelEmpty(Scope.Var('type').GetList('interactions')))]"
 
                     divider_clean = {
                         layoutpolicy_horizontal = expanding
@@ -542,7 +539,7 @@ types gate_expedition_panel_types {
                         margin = { 15 0 }
                         spacing = 10
                         layoutpolicy_horizontal = expanding
-                        datamodel = "[Character.MakeScope.GetList('interactions')]"
+                        datamodel = "[Scope.Var('type').GetList('interactions')]"
 
                         item = {
                             gate_location_interaction = {}
@@ -617,7 +614,24 @@ types gate_expedition_panel_types {
 
             alwaystransparent = no
 
-            block "state_content" {}
+            block "state_content" {
+                widget = {
+                    size = { 100% 100% }
+                    datamodel = "[Scope.GetList('locations')]"
+                    max_update_rate = 100
+                    item = {
+                        gate_button_map_marker = {
+                            blockoverride button_position {
+                                state = {
+                                    trigger_on_create = yes
+                                    position_x = "[Scope.Var('x').GetValue]"
+                                    position_y = "[Scope.Var('y').GetValue]"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         widget = {
@@ -654,7 +668,7 @@ types gate_expedition_panel_types {
             position = { 0 -10 }
             textbox = {
                 block "sub_text" {
-                    text = "[Character.MakeScope.Var('name').GetFlagName]"
+                    text = "[Scope.Var('type').Var('name').GetFlagName]"
                 }
                 background = {
                     using = paper_bg
@@ -670,7 +684,7 @@ types gate_expedition_panel_types {
             size = { 160% 160% }
             parentanchor = center
             block "selected_visibility" {
-                visible = "[ObjectsEqual(Country.MakeScope.Var('gate_map_sidebar').GetCharacter.MakeScope, Character.MakeScope)]"
+                visible = "[ObjectsEqual(Country.MakeScope.Var('gate_map_sidebar').GetCharacter.MakeScope, Scope.GetCharacter.MakeScope)]"
             }
 
             icon = {
@@ -707,149 +721,135 @@ types gate_expedition_panel_types {
                     parentanchor = hcenter|vcenter
                 }
             }
-            onclick = "[GetScriptedGui('sgui_gate_map_location_choose').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('location', Character.MakeScope).End)]"
+            onclick = "[GetScriptedGui('sgui_gate_map_location_choose').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('location', Scope.GetCharacter.MakeScope).End)]"
         }
     }
 
     type gate_expedition_reytu = widget {
-            name = gate_expedition_reytu
-            visible = "[GetScriptedGui('sgui_gate_map_equals').IsShown(GuiScope
-                            .SetRoot(Country.MakeScope)
-                            .AddScope('potential_location', GetGlobalVariable('gate_expedition_reytu'))
-                            .End
-                       )]"
-            datacontext = "[GetGlobalVariable('gate_expedition_reytu').GetCharacter]"
-            parentanchor = top|left
-            size = { 15360 7288 }
-            background = {
-                texture = gfx/map/ankaris/reytu/base.dds
-                spriteType = Corneredstretched
-            }
-
-            gate_state = {
-                datacontext = "[Character.MakeScope.Var('state_01')]"
-                blockoverride hidden_location {
-                    size = { 3329 3630 }
-                    position = { 3279 1852 }
-                }
-                blockoverride state_mask_hidden {
-                    texture = gfx/map/ankaris/reytu/state_mask_01_hidden.dds
-                }
-            }
-
-            gate_state = {
-                datacontext = "[Character.MakeScope.Var('state_02')]"
-                blockoverride hidden_location {
-                    size = { 3111 1756 }
-                    position = { 4031 774 }
-                }
-                blockoverride state_mask_hidden {
-                    texture = gfx/map/ankaris/reytu/state_mask_02_hidden.dds
-                }
-            }
-
-            gate_state = {
-                datacontext = "[Character.MakeScope.Var('state_03')]"
-                blockoverride hidden_location {
-                    size = { 2834 4122 }
-                    position = { 4323 2079 }
-                }
-                blockoverride state_mask_hidden {
-                    texture = gfx/map/ankaris/reytu/state_mask_03_hidden.dds
-                }
-            }
-
-            gate_state = {
-                datacontext = "[Character.MakeScope.Var('state_04')]"
-                blockoverride hidden_location {
-                    size = { 2998 3131 }
-                    position = { 6115 1219 }
-                }
-                blockoverride state_mask_hidden {
-                    texture = gfx/map/ankaris/reytu/state_mask_04_hidden.dds
-                }
-            }
-
-            gate_state = {
-                datacontext = "[Character.MakeScope.Var('state_05')]"
-                blockoverride hidden_location {
-                    size = { 2758 2834 }
-                    position = { 5751 3471 }
-                }
-                blockoverride state_mask_hidden {
-                    texture = gfx/map/ankaris/reytu/state_mask_05_hidden.dds
-                }
-            }
-
-            gate_state = {
-                datacontext = "[Character.MakeScope.Var('state_07')]"
-                blockoverride hidden_location {
-                    size = { 2960 2525 }
-                    position = { 7907 3614 }
-                }
-                blockoverride state_mask_hidden {
-                    texture = gfx/map/ankaris/reytu/state_mask_07_hidden.dds
-                }
-            }
-
-            gate_state = {
-                datacontext = "[Character.MakeScope.Var('state_08')]"
-                blockoverride hidden_location {
-                    size = { 4029 4815 }
-                    position = { 8512 1104 }
-                }
-                blockoverride state_mask_hidden {
-                    texture = gfx/map/ankaris/reytu/state_mask_08_hidden.dds
-                }
-            }
-
-            gate_state = {
-                datacontext = "[Character.MakeScope.Var('state_09')]"
-                blockoverride hidden_location {
-                    size = { 1030 966 }
-                    position = { 10807 4368 }
-                }
-                blockoverride state_mask_hidden {
-                    texture = gfx/map/ankaris/reytu/state_mask_09_hidden.dds
-                }
-            }
-
-            gate_state = {
-                datacontext = "[Character.MakeScope.Var('state_10')]"
-                blockoverride hidden_location {
-                    size = { 1053 1114 }
-                    position = { 11372 2681 }
-                }
-                blockoverride state_mask_hidden {
-                    texture = gfx/map/ankaris/reytu/state_mask_10_hidden.dds
-                }
-            }
-
-            gate_state = {
-                datacontext = "[Character.MakeScope.Var('state_06')]"
-                blockoverride hidden_location {
-                    size = { 1882 2189 }
-                    position = { 7848 2151 }
-                }
-                blockoverride state_mask_hidden {
-                    texture = gfx/map/ankaris/reytu/state_mask_06_hidden.dds
-                }
-                blockoverride "state_content" {
-                    gate_button_map_marker = {
-                        datacontext = "[Scope.Var('location_01').GetCharacter]"
-                        blockoverride button_position {
-                            position = { 900 800 }
-                        }
-                    }
-                    gate_button_map_marker = {
-                        datacontext = "[Scope.Var('location_02').GetCharacter]"
-                        blockoverride button_position {
-                            position = { 750 1200 }
-                        }
-                    }
-                }
-            }
-
+        name = gate_expedition_reytu
+        visible = "[GetScriptedGui('sgui_gate_map_equals').IsShown(GuiScope
+                        .SetRoot(Country.MakeScope)
+                        .AddScope('potential_location', GetGlobalVariable('gate_expedition_reytu'))
+                        .End
+                   )]"
+        datacontext = "[GetGlobalVariable('gate_expedition_reytu').GetCharacter]"
+        parentanchor = top|left
+        size = { 15360 7288 }
+        background = {
+            texture = gfx/map/ankaris/reytu/base.dds
+            spriteType = Corneredstretched
         }
+
+        gate_state = {
+            datacontext = "[Character.MakeScope.Var('state_1')]"
+            blockoverride hidden_location {
+                size = { 3329 3630 }
+                position = { 3279 1852 }
+            }
+            blockoverride state_mask_hidden {
+                texture = gfx/map/ankaris/reytu/state_mask_01_hidden.dds
+            }
+        }
+
+        gate_state = {
+            datacontext = "[Character.MakeScope.Var('state_2')]"
+            blockoverride hidden_location {
+                size = { 3111 1756 }
+                position = { 4031 774 }
+            }
+            blockoverride state_mask_hidden {
+                texture = gfx/map/ankaris/reytu/state_mask_02_hidden.dds
+            }
+        }
+
+        gate_state = {
+            datacontext = "[Character.MakeScope.Var('state_3')]"
+            blockoverride hidden_location {
+                size = { 2834 4122 }
+                position = { 4323 2079 }
+            }
+            blockoverride state_mask_hidden {
+                texture = gfx/map/ankaris/reytu/state_mask_03_hidden.dds
+            }
+        }
+
+        gate_state = {
+            datacontext = "[Character.MakeScope.Var('state_4')]"
+            blockoverride hidden_location {
+                size = { 2998 3131 }
+                position = { 6115 1219 }
+            }
+            blockoverride state_mask_hidden {
+                texture = gfx/map/ankaris/reytu/state_mask_04_hidden.dds
+            }
+        }
+
+        gate_state = {
+            datacontext = "[Character.MakeScope.Var('state_5')]"
+            blockoverride hidden_location {
+                size = { 2758 2834 }
+                position = { 5751 3471 }
+            }
+            blockoverride state_mask_hidden {
+                texture = gfx/map/ankaris/reytu/state_mask_05_hidden.dds
+            }
+        }
+
+        gate_state = {
+            datacontext = "[Character.MakeScope.Var('state_7')]"
+            blockoverride hidden_location {
+                size = { 2960 2525 }
+                position = { 7907 3614 }
+            }
+            blockoverride state_mask_hidden {
+                texture = gfx/map/ankaris/reytu/state_mask_07_hidden.dds
+            }
+        }
+
+        gate_state = {
+            datacontext = "[Character.MakeScope.Var('state_8')]"
+            blockoverride hidden_location {
+                size = { 4029 4815 }
+                position = { 8512 1104 }
+            }
+            blockoverride state_mask_hidden {
+                texture = gfx/map/ankaris/reytu/state_mask_08_hidden.dds
+            }
+        }
+
+        gate_state = {
+            datacontext = "[Character.MakeScope.Var('state_9')]"
+            blockoverride hidden_location {
+                size = { 1030 966 }
+                position = { 10807 4368 }
+            }
+            blockoverride state_mask_hidden {
+                texture = gfx/map/ankaris/reytu/state_mask_09_hidden.dds
+            }
+        }
+
+        gate_state = {
+            datacontext = "[Character.MakeScope.Var('state_10')]"
+            blockoverride hidden_location {
+                size = { 1053 1114 }
+                position = { 11372 2681 }
+            }
+            blockoverride state_mask_hidden {
+                texture = gfx/map/ankaris/reytu/state_mask_10_hidden.dds
+            }
+        }
+
+        gate_state = {
+            datacontext = "[Character.MakeScope.Var('state_6')]"
+            blockoverride hidden_location {
+                size = { 1882 2189 }
+                position = { 7848 2151 }
+            }
+            blockoverride state_mask_hidden {
+                texture = gfx/map/ankaris/reytu/state_mask_06_hidden.dds
+            }
+        }
+
+    }
 
 }

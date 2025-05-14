@@ -173,6 +173,10 @@ gate_setup_expedition_interactions = {
 			name = cost
 			value = 0
 		}
+		set_variable = {
+			name = time
+			value = 2
+		}
 	}
 
 	# Explore Location
@@ -196,6 +200,10 @@ gate_setup_expedition_interactions = {
 		set_variable = {
 			name = cost
 			value = 100
+		}
+		set_variable = {
+			name = time
+			value = 3
 		}
 	}
 
@@ -221,6 +229,10 @@ gate_setup_expedition_interactions = {
 			name = cost
 			value = 100
 		}
+		set_variable = {
+			name = time
+			value = 4
+		}
 	}
 
 	# Conquer Location
@@ -244,6 +256,10 @@ gate_setup_expedition_interactions = {
 		set_variable = {
 			name = cost
 			value = 100
+		}
+		set_variable = {
+			name = time
+			value = 4
 		}
 	}
 
@@ -269,6 +285,10 @@ gate_setup_expedition_interactions = {
 			name = cost
 			value = 100
 		}
+		set_variable = {
+			name = time
+			value = 2
+		}
 	}
 
 	# Trade with Location
@@ -293,170 +313,81 @@ gate_setup_expedition_interactions = {
 			name = cost
 			value = 100
 		}
+		set_variable = {
+			name = time
+			value = 4
+		}
+	}
+}
+
+gate_setup_expedition_create_state = {
+	create_struct = {
+		struct_scope = state_$id$
+		struct_type = gate_expedition_state
+	}
+	scope:state_$id$ = {
+		set_variable = {
+			name = id
+			value = $id$
+		}
+		set_variable = {
+			name = order
+			value = $order$
+		}
+		if = {
+			limit = {
+				$hidden$ ?= 1
+			}
+			set_variable = hidden
+		}
+	}
+	scope:$expedition$ = {
+		set_variable = {
+			name = state_$id$
+			value = scope:state_$id$
+		}
+		add_to_variable_list = {
+			name = states
+			target = scope:state_$id$
+		}
+	}
+}
+
+gate_setup_expedition_create_location = {
+	create_struct = {
+		struct_scope = location_$location_id$
+		struct_type = gate_expedition_state_location
+	}
+	scope:location_$location_id$ = {
+		set_variable = {
+			name = id
+			value = $location_id$
+		}
+		set_variable = {
+			name = type
+			value = scope:$location_type$
+		}
+		set_variable = {
+			name = x
+			value = $location_x$
+		}
+		set_variable = {
+			name = y
+			value = $location_y$
+		}
+	}
+	scope:$expedition$ = {
+		var:state_$state_id$ = {
+			add_to_variable_list = {
+				name = locations
+				target = scope:location_$location_id$
+			}
+		}
 	}
 }
 
 gate_setup_expedition_reytu = {
-	### States
-	create_struct = {
-		struct_scope = state_01
-		struct_type = gate_expedition_state
-	}
-	scope:state_01 = {
-		set_variable = {
-			name = id
-			value = 1
-		}
-		set_variable = {
-			name = order
-			value = 9
-		}
-		set_variable = hidden
-	}
-	create_struct = {
-		struct_scope = state_02
-		struct_type = gate_expedition_state
-	}
-	scope:state_02 = {
-		set_variable = {
-			name = id
-			value = 2
-		}
-		set_variable = {
-			name = order
-			value = 10
-		}
-		set_variable = hidden
-	}
-	create_struct = {
-		struct_scope = state_03
-		struct_type = gate_expedition_state
-	}
-	scope:state_03 = {
-		set_variable = {
-			name = id
-			value = 3
-		}
-		set_variable = {
-			name = order
-			value = 8
-		}
-		set_variable = hidden
-	}
-	create_struct = {
-		struct_scope = state_04
-		struct_type = gate_expedition_state
-	}
-	scope:state_04 = {
-		set_variable = {
-			name = id
-			value = 4
-		}
-		set_variable = {
-			name = order
-			value = 6
-		}
-		set_variable = hidden
-	}
-	create_struct = {
-		struct_scope = state_05
-		struct_type = gate_expedition_state
-	}
-	scope:state_05 = {
-		set_variable = {
-			name = id
-			value = 5
-		}
-		set_variable = {
-			name = order
-			value = 7
-		}
-		set_variable = hidden
-	}
-	create_struct = {
-		struct_scope = state_06
-		struct_type = gate_expedition_state
-	}
-	scope:state_06 = {
-		set_variable = {
-			name = id
-			value = 6
-		}
-		set_variable = {
-			name = order
-			value = 1
-		}
-		set_variable = {
-			name = location_01
-			value = scope:location_gate
-		}
-		set_variable = {
-			name = location_02
-			value = scope:location_village
-		}
-	}
-	create_struct = {
-		struct_scope = state_07
-		struct_type = gate_expedition_state
-	}
-	scope:state_07 = {
-		set_variable = {
-			name = id
-			value = 7
-		}
-		set_variable = {
-			name = order
-			value = 2
-		}
-		set_variable = hidden
-	}
-	create_struct = {
-		struct_scope = state_08
-		struct_type = gate_expedition_state
-	}
-	scope:state_08 = {
-		set_variable = {
-			name = id
-			value = 8
-		}
-		set_variable = {
-			name = order
-			value = 3
-		}
-		set_variable = hidden
-	}
-	create_struct = {
-		struct_scope = state_09
-		struct_type = gate_expedition_state
-	}
-	scope:state_09 = {
-		set_variable = {
-			name = id
-			value = 9
-		}
-		set_variable = {
-			name = order
-			value = 4
-		}
-		set_variable = hidden
-	}
-	create_struct = {
-		struct_scope = state_10
-		struct_type = gate_expedition_state
-	}
-	scope:state_10 = {
-		set_variable = {
-			name = id
-			value = 10
-		}
-		set_variable = {
-			name = order
-			value = 5
-		}
-		set_variable = hidden
-	}
-
-
+	# Expedition Container
 	create_struct = {
 		struct_scope = gate_reytu
 		struct_type = gate_expedition
@@ -477,85 +408,102 @@ gate_setup_expedition_reytu = {
 				}
 			}
 		}
-		set_variable = {
-			name = state_01
-			value = scope:state_01
-		}
-		set_variable = {
-			name = state_02
-			value = scope:state_02
-		}
-		set_variable = {
-			name = state_03
-			value = scope:state_03
-		}
-		set_variable = {
-			name = state_04
-			value = scope:state_04
-		}
-		set_variable = {
-			name = state_05
-			value = scope:state_05
-		}
-		set_variable = {
-			name = state_06
-			value = scope:state_06
-		}
-		set_variable = {
-			name = state_07
-			value = scope:state_07
-		}
-		set_variable = {
-			name = state_08
-			value = scope:state_08
-		}
-		set_variable = {
-			name = state_09
-			value = scope:state_09
-		}
-		set_variable = {
-			name = state_10
-			value = scope:state_10
-		}
-		add_to_variable_list = {
-			name = states
-			target = scope:state_01
-		}
-		add_to_variable_list = {
-			name = states
-			target = scope:state_02
-		}
-		add_to_variable_list = {
-			name = states
-			target = scope:state_03
-		}
-		add_to_variable_list = {
-			name = states
-			target = scope:state_04
-		}
-		add_to_variable_list = {
-			name = states
-			target = scope:state_05
-		}
-		add_to_variable_list = {
-			name = states
-			target = scope:state_06
-		}
-		add_to_variable_list = {
-			name = states
-			target = scope:state_07
-		}
-		add_to_variable_list = {
-			name = states
-			target = scope:state_08
-		}
-		add_to_variable_list = {
-			name = states
-			target = scope:state_09
-		}
-		add_to_variable_list = {
-			name = states
-			target = scope:state_10
-		}
+	}
+
+	# States
+	# State: 1
+	gate_setup_expedition_create_state = {
+		expedition = gate_reytu
+		id = 1
+		order = 9
+		hidden = 1
+	}
+
+	# State: 2
+	gate_setup_expedition_create_state = {
+		expedition = gate_reytu
+		id = 2
+		order = 10
+		hidden = 1
+	}
+
+	# State: 3
+	gate_setup_expedition_create_state = {
+		expedition = gate_reytu
+		id = 3
+		order = 8
+		hidden = 1
+	}
+
+	# State: 4
+	gate_setup_expedition_create_state = {
+		expedition = gate_reytu
+		id = 4
+		order = 6
+		hidden = 1
+	}
+
+	# State: 5
+	gate_setup_expedition_create_state = {
+		expedition = gate_reytu
+		id = 5
+		order = 7
+		hidden = 1
+	}
+
+	# State: 6
+	gate_setup_expedition_create_state = {
+		expedition = gate_reytu
+		id = 6
+		order = 1
+		hidden = 0
+	}
+	gate_setup_expedition_create_location = {
+		expedition = gate_reytu
+		state_id = 6
+		location_id = 1
+		location_type = location_gate
+		location_x = 900
+		location_y = 800
+	}
+	gate_setup_expedition_create_location = {
+		expedition = gate_reytu
+		state_id = 6
+		location_id = 2
+		location_type = location_village
+		location_x = 750
+		location_y = 1200
+	}
+
+	# State: 7
+	gate_setup_expedition_create_state = {
+		expedition = gate_reytu
+		id = 7
+		order = 2
+		hidden = 1
+	}
+
+	# State: 8
+	gate_setup_expedition_create_state = {
+		expedition = gate_reytu
+		id = 8
+		order = 3
+		hidden = 1
+	}
+
+	# State: 9
+	gate_setup_expedition_create_state = {
+		expedition = gate_reytu
+		id = 9
+		order = 4
+		hidden = 1
+	}
+
+	# State: 10
+	gate_setup_expedition_create_state = {
+		expedition = gate_reytu
+		id = 10
+		order = 5
+		hidden = 1
 	}
 }

@@ -90,7 +90,7 @@ sgui_gate_map_location_interact = {
             amount = scope:cost
         }
         gate_expedition_start_activity = {
-            months = 3
+            months = scope:interaction.var:time
             activity = scope:interaction.var:type
         }
     }
