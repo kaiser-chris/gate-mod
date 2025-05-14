@@ -31,4 +31,9 @@
  alert_gate_space_alert_desc: "TODO" #TODO: Write alert_gate_space_alert_desc
  alert_gate_space_alert_hint: "TODO" #TODO: Write alert_gate_space_alert_hint
  alert_gate_space_alert_action: "$gg_panel_space_action$"
- gate_space_alert_setting_name: "太空可操作"
+ gate_space_alert_setting_name: "Space has Action" #TODO: Write gate_space_alert_setting_name
+ alert_alert_gate_expedition_no_activity_name: "远征怠速" #deepl:3913546768
+ alert_alert_gate_expedition_no_activity_desc: "我们的[concept_gate_expedition] 闲置不用。" #deepl:1004469122
+ alert_alert_gate_expedition_no_activity_hint: "您可以在[concept_gate_expedition_map] 上单击一个位置并选择互动，开始一个新的[Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')] 。" #deepl:1684026104
+ alert_alert_gate_expedition_no_activity_action: "$gg_panel_expedition_action$" #deepl:4261063976
+ alert_gate_expedition_no_activity_setting_name: "没有[Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')]" #deepl:3083321520

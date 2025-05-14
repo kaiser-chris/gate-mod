@@ -65,3 +65,80 @@ gate_expedition_activities.1 = {
         gate_expedition_set_idle = yes
     }
 }
+
+gate_expedition_activities.2 = {
+    type = country_event
+    dlc = dlc_magic_gate
+    placement = capital
+
+    title = gate_expedition_activities.2.t
+    desc = gate_expedition_activities.2.d
+    flavor = gate_expedition_activities.2.f
+
+    event_image = {
+        video = "unspecific_military_parade"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+    duration = 3
+
+    option = {
+        name = gate_expedition_activities.2.a
+        gate_expedition_open_map = yes
+    }
+
+    option = {
+        default_option = yes
+        name = gate_expedition_activities.2.b
+    }
+
+    after = {
+        gate_expedition_set_idle = yes
+    }
+}
+
+gate_expedition_activities.3 = {
+    type = country_event
+    dlc = dlc_magic_gate
+    placement = capital
+
+    title = gate_expedition_activities.3.t
+    desc = gate_expedition_activities.3.d
+    flavor = gate_expedition_activities.3.f
+
+    event_image = {
+        video = "unspecific_military_parade"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+    duration = 3
+
+    immediate = {
+        set_variable = {
+            name = gate_expedition_blocked
+            months = gate_expedition_block_time
+        }
+    }
+
+    option = {
+        name = gate_expedition_activities.3.a
+        custom_tooltip = {
+            text = gate_expedition_blocked_tooltip
+        }
+        add_magic_innovation = {
+            amount = 3000
+        }
+    }
+
+    after = {
+        hidden_effect = {
+            remove_variable = gate_expedition
+        }
+    }
+}

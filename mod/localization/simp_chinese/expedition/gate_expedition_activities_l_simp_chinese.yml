@@ -1,15 +1,19 @@
 ﻿l_simp_chinese:
 # Uncover Map
  gate_expedition_activity_uncover: "考察新地区" #deepl:3468357458
- gate_expedition_activity_uncover_desc: "我们目前正在考察一个新的地区。" #deepl:309300654
+ gate_expedition_activity_uncover_desc: "我们目前正在[concept_gate_expedition_map] 上考察一个新的地区。" #deepl:2217925533
  gate_expedition_activities.1.t: "绘制地平线" #deepl:2979000170
- gate_expedition_activities.1.d: "我们在探险地图上发现了一个新区域。" #deepl:415009062
+ gate_expedition_activities.1.d: "我们在[concept_gate_expedition_map] 上发现了一个新区域。" #deepl:248535618
  gate_expedition_activities.1.f: "TODO"
  gate_expedition_activities.1.a: "很好。" #deepl:3593588592
  gate_expedition_activities.1.b: "让我们看看报告。" #deepl:1707225933
  # Home
  gate_expedition_activity_home: "返回地球" #deepl:2331946383
  gate_expedition_activity_home_desc: "We are currently packing up the expedition and returning to Earth through the Magic Gate." #TODO: Improve gate_expedition_activity_home_desc
+ gate_expedition_activities.3.t: "返回$gate_planet$" #deepl:3397125764
+ gate_expedition_activities.3.d: "我们的[concept_gate_expedition] 已经结束。" #deepl:1098929001
+ gate_expedition_activities.3.f: "当我们的探险队疲惫却胜利地踏进大门时，大门最后一次闪烁着光芒。$gate_planet$在这个充满紫罗兰色天空和水晶森林的世界里，我们发现了超乎想象的秘密--古老的符文、未知的动物群落以及地球上绝无仅有的法力流动。虽然仍有许多疑问，但带回的知识可能会永远重塑我们的神秘科学。旅程已经结束......但它的影响才刚刚开始。" #deepl:4221158718
+ gate_expedition_activities.3.a: "我们学到了很多。" #deepl:2645932267
 # Explore
  gate_expedition_activity_explore: "探索神奇的地点" #deepl:485321791
  gate_expedition_activity_explore_desc: "We are currently exploring a magical location." #TODO: Improve gate_expedition_activity_explore_desc
@@ -24,4 +28,12 @@
  gate_expedition_activity_raid_desc: "We are currently raiding a settlement." #TODO: Improve gate_expedition_activity_raid_desc
  # Trade
  gate_expedition_activity_trade: "建立新的贸易路线" #deepl:497000063
- gate_expedition_activity_trade_desc: "我们目前正在建立一条新的贸易路线。" #deepl:374648587
+ gate_expedition_activity_trade_desc: "We are currently setting up a new Trade Route." #TODO: Improve gate_expedition_activity_trade_desc
+ # Embark
+ gate_expedition_activity_embark: "做最后的准备" #deepl:1003159139
+ gate_expedition_activity_embark_desc: "目前，我们正在为穿越神奇之门的远征收拾行李。" #deepl:3860797745
+ gate_expedition_activities.2.t: "我们的远征开始了" #deepl:2301692092
+ gate_expedition_activities.2.d: "我们的[concept_gate_expedition] 开始了他们的旅程。" #deepl:3158844762
+ gate_expedition_activities.2.f: "经过数月的准备、校准和奥秘协调，魔法门稳定地跳动着。物资已装载完毕，魔法也经过了反复检查，探险队在未知的边缘整装待发。传送门的另一端是$gate_planet$--一个在古代卷轴中耳语、只有在预言梦中才能瞥见的遥远世界。今天，我们穿越神话，踏上探索之旅。" #deepl:2625105807
+ gate_expedition_activities.2.a: "让我们看看[concept_gate_expedition_map]." #deepl:382787511
+ gate_expedition_activities.2.b: "很好。" #deepl:3593588592

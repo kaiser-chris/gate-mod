@@ -31,7 +31,7 @@
  je_gate_expedition_button_open_map_desc: "탐험 지도를 엽니다."
  gate_expedition_preparation_modifier: "준비 비용" #deepl:2202863878
  gate_expedition.1.t: "선택 $concept_gate_expedition_leader$" #deepl:3052020482
- gate_expedition.1.d: "[concept_gate_expedition] 에 대한 세 가지 잠재적 [Concept('concept_gate_expedition_leader','$concept_gate_expedition_leaders$')] 을 찾았습니다. 이제 하나를 선택해야 합니다." #deepl:908519794
+ gate_expedition.1.d: "[concept_gate_expedition] 에 대한 세 가지 잠재적 [Concept('concept_gate_expedition_leader','$concept_gate_expedition_leaders$')] 을 찾았습니다. 이제 하나를 선택해야 합니다.\n\n@warning! 이것은 중요한 선택이며 [concept_gate_expedition_map] 에서 시작할 수 있는 [concept_gate_expedition_activities] 을 결정할 것입니다." #deepl:3004576230
  gate_expedition.1.f: "치열한 정치적 책략과 뒷거래 끝에 마법의 문 탐험의 잠재적 리더로 세 명의 후보가 등장했습니다. 한 명은 경제계와 깊은 관계를 맺고 있는 영리한 사업가로, 그 너머에 있는 자원을 개발하고자 하는 열망을 가지고 있습니다. 다른 한 명은 훈장을 받은 군 장교로, 거점을 확보하고 지배권을 확보하는 데 주력하고 있습니다. 마지막 후보는 신중한 외교와 장기적인 안정을 주장하는 숙련된 정치인입니다. 우리가 어떤 선택을 하느냐에 따라 $gate_planet$ 의 미래가 결정됩니다." #deepl:1367357098
  gate_expedition.1.a: "[concept_gate_expedition_leader_militarist]: [SCOPE.sCharacter('expedition_militarist').GetFullName]" #deepl:809118842
  gate_expedition.1.b: "[concept_gate_expedition_leader_politician]: [SCOPE.sCharacter('expedition_politician').GetFullName]" #deepl:546454634
@@ -42,11 +42,3 @@
  gate_expedition.2.a: "소규모 원정대." #deepl:3357700448
  gate_expedition.2.b: "일반 탐험." #deepl:1709548526
  gate_expedition.2.c: "긴 탐험." #deepl:3688515342
- gate_expedition.3.t: "다음에서 돌아가기 $gate_planet$" #deepl:3397125764
- gate_expedition.3.d: "[concept_gate_expedition] 이 종료되었습니다." #deepl:1098929001
- gate_expedition.3.f: "원정대가 피곤하지만 승리한 모습으로 마지막으로 문을 통과할 때 문이 반짝반짝 빛납니다. $gate_planet$ 보랏빛 하늘과 수정 숲의 세계는 고대 룬, 미지의 동물, 지구에서 볼 수 없는 마나 흐름 등 상상을 초월하는 비밀을 품고 있습니다. 아직 많은 의문이 남아있지만, 가져온 지식은 우리의 신비로운 과학을 영원히 바꿔놓을지도 모릅니다. 여정은 끝났지만 그 영향력은 이제 막 시작되었습니다." #deepl:4221158718
- gate_expedition.3.a: "많은 것을 배웠습니다." #deepl:2645932267
- gate_expedition.4.t: "원정대 출정" #deepl:2301692092
- gate_expedition.4.d: "저희 [concept_gate_expedition] 가 그 여정을 시작합니다." #deepl:3158844762
- gate_expedition.4.f: "수개월간의 준비와 보정, 마법 조율 끝에 마법의 문이 안정적으로 작동합니다. 식량을 장전하고 마법을 다시 한 번 확인하며 탐험대는 미지의 세계로 향할 준비를 마쳤습니다. 포털 너머에는 고대 두루마리에서 속삭이고 예언의 꿈에서만 엿볼 수 있었던 먼 세계 $gate_planet$가 있습니다. 오늘 우리는 신화 속을 지나 발견의 길로 들어섭니다." #deepl:2625105807
- gate_expedition.4.a: "행운을 기원합니다." #deepl:889921407

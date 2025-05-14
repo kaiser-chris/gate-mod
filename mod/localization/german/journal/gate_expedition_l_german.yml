@@ -28,10 +28,10 @@
  je_gate_expedition_active_activity: "Unsere Expedition ist derzeit [Scope.Var('gate_expedition').Var('activity').Var('name').GetFlagName]." #deepl:3461872375
  je_gate_expedition_active_reason: "Nachdem die Entscheidung gefallen ist, beginnen die Vorbereitungen ernsthaft. Es werden Karten erstellt, Vorräte beschafft, und eifrige Abenteurer melden sich freiwillig. Gelehrte debattieren über die möglichen Gefahren und Chancen, die dahinter liegen, während Ingenieure und Logistiker dafür sorgen, dass die Reise gut ausgerüstet ist. Die magische Pforte liegt vor uns, ein Tor zum Unbekannten - bald wird es Zeit sein, den ersten Schritt zu tun." #deepl:3725050251
  je_gate_expedition_button_open_map: "Expeditionskarte öffnen" #deepl:537625907
- je_gate_expedition_button_open_map_desc: "Öffnet die Expeditionskarte." #deepl:2776223579
+ je_gate_expedition_button_open_map_desc: "Öffnet die [concept_gate_expedition_map]." #deepl:3073493927
  gate_expedition_preparation_modifier: "Vorbereitung Kosten" #deepl:2202863878
  gate_expedition.1.t: "Die Auswahl eines $concept_gate_expedition_leader$" #deepl:3052020482
- gate_expedition.1.d: "Wir haben diese drei potenziellen [Concept('concept_gate_expedition_leader','$concept_gate_expedition_leaders$')] für unsere [concept_gate_expedition] gefunden. Nun müssen wir eine auswählen." #deepl:908519794
+ gate_expedition.1.d: "Wir haben diese drei potenziellen [Concept('concept_gate_expedition_leader','$concept_gate_expedition_leaders$')] für unsere [concept_gate_expedition] gefunden. Jetzt müssen wir uns für einen entscheiden. Achtung! Dies ist eine wichtige Entscheidung, die darüber entscheidet, [concept_gate_expedition_activities] wir mit der [concept_gate_expedition_map] beginnen können." #deepl:3004576230
  gate_expedition.1.f: "Nach intensiven politischen Manövern und Hinterzimmerabsprachen haben sich drei Kandidaten als potenzielle Anführer für unsere Expedition zur Magischen Pforte herauskristallisiert. Einer von ihnen ist ein gewiefter Industrieller mit engen Beziehungen zur Wirtschaft, der die dortigen Ressourcen ausbeuten möchte. Ein anderer ist ein dekorierter Militäroffizier, der sich darauf konzentriert, Fuß zu fassen und unsere Vorherrschaft zu sichern. Der letzte Kandidat ist ein geschickter Politiker, der sich für vorsichtige Diplomatie und langfristige Stabilität einsetzt. Die Wahl, die wir treffen, wird über die Zukunft unserer Präsenz auf $gate_planet$ entscheiden." #deepl:1367357098
  gate_expedition.1.a: "[concept_gate_expedition_leader_militarist]: [SCOPE.sCharacter('expedition_militarist').GetFullName]" #deepl:809118842
  gate_expedition.1.b: "[concept_gate_expedition_leader_politician]: [SCOPE.sCharacter('expedition_politician').GetFullName]" #deepl:546454634
@@ -42,11 +42,3 @@
  gate_expedition.2.a: "Kleine Expedition." #deepl:3357700448
  gate_expedition.2.b: "Normale Expedition." #deepl:1709548526
  gate_expedition.2.c: "Lange Expedition." #deepl:3688515342
- gate_expedition.3.t: "Rückkehr von $gate_planet$" #deepl:3397125764
- gate_expedition.3.d: "Unser [concept_gate_expedition] ist zu Ende gegangen." #deepl:1098929001
- gate_expedition.3.f: "Das Tor schimmert ein letztes Mal, als unsere Expedition müde, aber triumphierend hindurchschreitet. $gate_planet$ In einer Welt mit violettem Himmel und kristallenen Wäldern haben wir Geheimnisse entdeckt, die unsere Vorstellungskraft übersteigen - uralte Runen, eine unbekannte Tierwelt und Manaströme, die es auf der Erde nicht gibt. Obwohl noch viele Fragen offen sind, könnte das mitgebrachte Wissen unsere arkanen Wissenschaften für immer umgestalten. Die Reise ist zu Ende... aber ihre Auswirkungen fangen gerade erst an." #deepl:4221158718
- gate_expedition.3.a: "Wir haben eine Menge gelernt." #deepl:2645932267
- gate_expedition.4.t: "Unsere Expedition beginnt" #deepl:2301692092
- gate_expedition.4.d: "Unsere [concept_gate_expedition] macht sich auf den Weg." #deepl:3158844762
- gate_expedition.4.f: "Nach monatelanger Vorbereitung, Kalibrierung und arkaner Koordination pulsiert die Magische Pforte mit Stabilität. Die Vorräte sind geladen, die Verzauberungen doppelt geprüft, und das Expeditionsteam steht bereit am Rande des Unbekannten. Jenseits des Portals liegt $gate_planet$- eine ferne Welt, von der in alten Schriftrollen geflüstert wird und die man nur in prophetischen Träumen erblickt. Heute begeben wir uns auf eine Reise durch den Mythos und auf eine Entdeckungsreise." #deepl:2625105807
- gate_expedition.4.a: "Wir wünschen ihnen viel Glück." #deepl:889921407

@@ -71,6 +71,27 @@ has_no_magic_researcher_alert = {
 	alert_group = gate_alerts
 }
 
+alert_gate_expedition_no_activity = {
+	script_context = player_country
+	texture = gfx/interface/icons/event_icons/event_map.dds
+
+	valid = {
+		is_player = yes
+		var:gate_expedition ?= {
+			NOT = {
+				has_variable = activity
+			}
+			has_variable = expedition_started
+		}
+	}
+
+	type = alert
+
+	alert_group = gate_alerts
+
+	color = red
+}
+
 expedition_alert = {
 	script_context = player_country
 	texture = gfx/interface/icons/alert_icons/gate_has_no_magic_research.dds

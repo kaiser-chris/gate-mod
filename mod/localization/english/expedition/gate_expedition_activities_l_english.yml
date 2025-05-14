@@ -1,15 +1,19 @@
 ﻿l_english:
 # Uncover Map
  gate_expedition_activity_uncover: "Scouting new Areas"
- gate_expedition_activity_uncover_desc: "We are currently scouting out a new region."
+ gate_expedition_activity_uncover_desc: "We are currently scouting out a new region on the [concept_gate_expedition_map]."
  gate_expedition_activities.1.t: "Horizons Mapped"
- gate_expedition_activities.1.d: "We have uncovered a new region on the expedition map."
+ gate_expedition_activities.1.d: "We have uncovered a new region on the [concept_gate_expedition_map]."
  gate_expedition_activities.1.f: "Our expeditionary scouts have returned with detailed accounts of a previously unexplored region on Ankaris. Though many questions remain, the veil has lifted slightly—revealing new terrain, untapped resources, and signs of life. The journey was long, the conditions often strange, but our maps now stretch farther than ever before. The frontier narrows."
  gate_expedition_activities.1.a: "Good."
  gate_expedition_activities.1.b: "Lets see the Report."
  # Home
  gate_expedition_activity_home: "Returning to Earth"
  gate_expedition_activity_home_desc: "We are currently packing up the expedition and returning to Earth through the Magic Gate." #TODO: Improve gate_expedition_activity_home_desc
+ gate_expedition_activities.3.t: "Return from $gate_planet$"
+ gate_expedition_activities.3.d: "Our [concept_gate_expedition] has come to an end."
+ gate_expedition_activities.3.f: "The gate shimmers one last time as our expedition steps through, weary yet triumphant. $gate_planet$, a world of violet skies and crystal forests, has yielded secrets beyond imagination—ancient runes, unknown fauna, and ambient mana flows unlike anything on Earth. Though many questions remain, the knowledge brought back may reshape our arcane sciences forever. The journey has ended… but its impact is just beginning."
+ gate_expedition_activities.3.a: "We learned a lot."
 # Explore
  gate_expedition_activity_explore: "Exploring a magical Location"
  gate_expedition_activity_explore_desc: "We are currently exploring a magical location." #TODO: Improve gate_expedition_activity_explore_desc
@@ -25,3 +29,11 @@
  # Trade
  gate_expedition_activity_trade: "Setting up a new Trade Route"
  gate_expedition_activity_trade_desc: "We are currently setting up a new Trade Route." #TODO: Improve gate_expedition_activity_trade_desc
+ # Embark
+ gate_expedition_activity_embark: "Doing Final Preparations"
+ gate_expedition_activity_embark_desc: "We are currently packing up everything for our Expedition through the Magic Gate."
+ gate_expedition_activities.2.t: "Our Expedition Embarks"
+ gate_expedition_activities.2.d: "Our [concept_gate_expedition] embarks on their journey."
+ gate_expedition_activities.2.f: "After months of preparation, calibration, and arcane coordination, the Magic Gate pulses with stability. Provisions are loaded, enchantments double-checked, and the expedition team stands ready at the brink of the unknown. Beyond the portal lies $gate_planet$—a distant world whispered of in ancient scrolls and glimpsed only in prophetic dreams. Today, we step through myth and into discovery."
+ gate_expedition_activities.2.a: "Lets see the [concept_gate_expedition_map]."
+ gate_expedition_activities.2.b: "Good."

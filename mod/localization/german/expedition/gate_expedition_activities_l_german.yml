@@ -1,15 +1,19 @@
 ﻿l_german:
 # Uncover Map
  gate_expedition_activity_uncover: "Erkundung neuer Gebiete" #deepl:3468357458
- gate_expedition_activity_uncover_desc: "Wir sind gerade dabei, eine neue Region auszukundschaften." #deepl:309300654
+ gate_expedition_activity_uncover_desc: "Wir sind gerade dabei, eine neue Region auf [concept_gate_expedition_map] auszukundschaften." #deepl:2217925533
  gate_expedition_activities.1.t: "Horizonte kartiert" #deepl:2979000170
- gate_expedition_activities.1.d: "Wir haben eine neue Region auf der Expeditionskarte aufgedeckt." #deepl:415009062
+ gate_expedition_activities.1.d: "Wir haben eine neue Region auf der Website [concept_gate_expedition_map] entdeckt." #deepl:248535618
  gate_expedition_activities.1.f: "TODO"
  gate_expedition_activities.1.a: "Gut." #deepl:3593588592
  gate_expedition_activities.1.b: "Lassen Sie uns den Bericht sehen." #deepl:1707225933
  # Home
  gate_expedition_activity_home: "Die Rückkehr zur Erde" #deepl:2331946383
  gate_expedition_activity_home_desc: "We are currently packing up the expedition and returning to Earth through the Magic Gate." #TODO: Improve gate_expedition_activity_home_desc
+ gate_expedition_activities.3.t: "Rückkehr von $gate_planet$" #deepl:3397125764
+ gate_expedition_activities.3.d: "Unser [concept_gate_expedition] ist zu Ende gegangen." #deepl:1098929001
+ gate_expedition_activities.3.f: "Das Tor schimmert ein letztes Mal, als unsere Expedition müde, aber triumphierend hindurchschreitet. $gate_planet$ In einer Welt mit violettem Himmel und kristallenen Wäldern haben wir Geheimnisse entdeckt, die unsere Vorstellungskraft übersteigen - uralte Runen, eine unbekannte Tierwelt und Manaströme, die es auf der Erde nicht gibt. Obwohl noch viele Fragen offen sind, könnte das mitgebrachte Wissen unsere arkanen Wissenschaften für immer umgestalten. Die Reise ist zu Ende... aber ihre Auswirkungen fangen gerade erst an." #deepl:4221158718
+ gate_expedition_activities.3.a: "Wir haben eine Menge gelernt." #deepl:2645932267
 # Explore
  gate_expedition_activity_explore: "Erkundung eines magischen Ortes" #deepl:485321791
  gate_expedition_activity_explore_desc: "We are currently exploring a magical location." #TODO: Improve gate_expedition_activity_explore_desc
@@ -24,4 +28,12 @@
  gate_expedition_activity_raid_desc: "We are currently raiding a settlement." #TODO: Improve gate_expedition_activity_raid_desc
  # Trade
  gate_expedition_activity_trade: "Einrichten einer neuen Handelsroute" #deepl:497000063
- gate_expedition_activity_trade_desc: "Wir sind dabei, eine neue Handelsroute einzurichten." #deepl:374648587
+ gate_expedition_activity_trade_desc: "We are currently setting up a new Trade Route." #TODO: Improve gate_expedition_activity_trade_desc
+ # Embark
+ gate_expedition_activity_embark: "Letzte Vorbereitungen treffen" #deepl:1003159139
+ gate_expedition_activity_embark_desc: "Wir sind gerade dabei, alles für unsere Expedition durch das Zaubertor zu packen." #deepl:3860797745
+ gate_expedition_activities.2.t: "Unsere Expedition beginnt" #deepl:2301692092
+ gate_expedition_activities.2.d: "Unsere [concept_gate_expedition] macht sich auf den Weg." #deepl:3158844762
+ gate_expedition_activities.2.f: "Nach monatelanger Vorbereitung, Kalibrierung und arkaner Koordination pulsiert die Magische Pforte mit Stabilität. Die Vorräte sind geladen, die Verzauberungen doppelt geprüft, und das Expeditionsteam steht bereit am Rande des Unbekannten. Jenseits des Portals liegt $gate_planet$- eine ferne Welt, von der in alten Schriftrollen geflüstert wird und die man nur in prophetischen Träumen erblickt. Heute begeben wir uns auf eine Reise durch den Mythos und auf eine Entdeckungsreise." #deepl:2625105807
+ gate_expedition_activities.2.a: "Schauen wir uns die [concept_gate_expedition_map] an." #deepl:382787511
+ gate_expedition_activities.2.b: "Gut." #deepl:3593588592

@@ -78,7 +78,9 @@
 			remove_variable = gate_expedition_preparation_max
 			remove_variable = gate_expedition_cancel
 		}
-		trigger_event = gate_expedition.4
+		add_journal_entry = {
+			type = je_gate_expedition_active
+		}
 	}
 
 	on_fail = {
@@ -146,15 +148,16 @@ je_gate_expedition_active = {
 	}
 
 	immediate = {
+		gate_expedition_start_activity = {
+			activity = gate_expedition_interaction_embark
+			months = 2
+		}
 	}
 
 	complete = {
 		custom_tooltip = {
-			text = gate_expedition_budget_empty
-			var:gate_expedition = {
-				var:expedition_budget <= 0
-			}
-			has_variable = gate_expedition_block_time
+			text = gate_expedition_cancel_tooltip
+			has_variable = gate_expedition_blocked
 		}
 	}
 
@@ -163,21 +166,6 @@ je_gate_expedition_active = {
 			text = je_gate_expedition_preparation_fail_tooltip
 			NOT = {
 				has_building = building_gate_alxa
-			}
-			has_variable = gate_expedition_cancel
-		}
-	}
-
-	on_complete = {
-		if = {
-			limit = {
-				NOT = {
-					has_variable = gate_expedition_block_time
-				}
-			}
-			trigger_event = {
-				id = gate_expedition.3
-				months = 1
 			}
 		}
 	}
