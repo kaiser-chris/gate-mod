@@ -7,6 +7,7 @@
  gate_expedition_large_tooltip: "开始准备一次大型远征，需要[SCOPE.ScriptValue('gate_expedition_preparation_time_large')|0v] 个月的准备时间。" #deepl:2091144821
  gate_expedition_leader_missing_tooltip: "我们目前没有[concept_gate_expedition_leader] 。" #deepl:2534684836
  gate_expedition_budget_header: "Expedition Budget"
+ gate_expedition_budget_text: "$concept_gate_expedition_budget$ 用于启动新的[concept_gate_expedition_activities] 。" #deepl:2316620112
  gate_expedition_budget_tooltip: "我们的[concept_gate_expedition_budget] 是[Scope.Var('expedition_budget_total').GetValue|0v] 点的[Scope.Var('expedition_budget').GetValue|0v] 。" #deepl:197132716
  gate_expedition_cancel_tooltip: "我们决定提前从[concept_gate_expedition] 返回。" #deepl:2964559883
  gate_expedition_blocked_trigger: "在过去的[SCOPE.ScriptValue('gate_expedition_block_time')|0v] 个月里，我们没有完成或取消过一个[concept_gate_expedition] 。" #deepl:2270399837

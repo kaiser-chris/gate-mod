@@ -221,6 +221,9 @@ gate_expedition_change_budget = {
 	if = {
 		limit = {
 			$amount$ != 0
+			var:gate_expedition ?= {
+				has_variable = expedition_budget
+			}
 		}
 		save_temporary_scope_value_as = {
 			name = budget_change

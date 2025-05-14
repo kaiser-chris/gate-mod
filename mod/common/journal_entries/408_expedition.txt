@@ -1,5 +1,5 @@
 ﻿je_gate_expedition_preparation = {
-	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	icon = "gfx/interface/icons/event_icons/event_gate_expedition.dds"
 
 	group = je_group_expeditions
 
@@ -60,13 +60,6 @@
 			var:gate_expedition ?= {
 				set_variable = expedition_started
 				set_variable = {
-					name = expedition_budget
-					value = {
-						value = var:expedition_type
-						multiply = gate_expedition_preparation_budget_multiplier
-					}
-				}
-				set_variable = {
 					name = expedition_budget_total
 					value = {
 						value = var:expedition_type
@@ -125,7 +118,7 @@
 }
 
 je_gate_expedition_active = {
-	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	icon = "gfx/interface/icons/event_icons/event_gate_expedition.dds"
 
 	group = je_group_expeditions
 

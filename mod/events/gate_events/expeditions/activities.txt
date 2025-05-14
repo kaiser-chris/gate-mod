@@ -45,7 +45,7 @@ gate_expedition_activities.1 = {
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-    icon = "gfx/interface/icons/event_icons/event_map.dds"
+    icon = "gfx/interface/icons/event_icons/event_gate_expedition.dds"
 
     duration = 3
 
@@ -81,9 +81,18 @@ gate_expedition_activities.2 = {
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-    icon = "gfx/interface/icons/event_icons/event_map.dds"
+    icon = "gfx/interface/icons/event_icons/event_gate_expedition.dds"
 
     duration = 3
+
+    immediate = {
+        var:gate_expedition ?= {
+            set_variable = {
+                name = expedition_budget
+                value = var:expedition_budget_total
+            }
+        }
+    }
 
     option = {
         name = gate_expedition_activities.2.a
@@ -115,7 +124,7 @@ gate_expedition_activities.3 = {
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-    icon = "gfx/interface/icons/event_icons/event_map.dds"
+    icon = "gfx/interface/icons/event_icons/event_gate_expedition.dds"
 
     duration = 3
 

@@ -118,8 +118,8 @@ types gate_expedition_panel_types {
                     layoutpolicy_horizontal = expanding
                     layoutpolicy_vertical = expanding
                     margin = { 20 -1 }
-                    margin_bottom = 50
-                    spacing = 20
+                    margin_bottom = 20
+                    spacing = 10
 
                     background = {
                         using = simple_frame
@@ -138,7 +138,16 @@ types gate_expedition_panel_types {
                             }
                         }
 
-                        expand = {}
+                        textbox = {
+                            layoutpolicy_horizontal = expanding
+                            layoutpolicy_vertical = expanding
+                            maximumsize = { 300 -1 }
+                            minimumsize = { -1 61 }
+                            text = gate_expedition_budget_text
+                            autoresize = yes
+                            multiline = yes
+                            align = center
+                        }
 
                         default_progressbar_horizontal = {
                             maximumsize = { -1 25 }
@@ -146,14 +155,14 @@ types gate_expedition_panel_types {
                             tooltip = gate_expedition_budget_tooltip
 
                             blockoverride "values" {
-                                value = "[Scope.Var('expedition_budget').GetValue]"
+                                value = "[Country.MakeScope.ScriptValue('gate_expedition_budget')]"
                                 min = 0
-                                max = "[Scope.Var('expedition_budget_total').GetValue]"
+                                max = "[Country.MakeScope.ScriptValue('gate_expedition_budget_total')]"
                             }
 
                             blockoverride "on_top_of_the_progressbar" {
                                 textbox = {
-                                    raw_text = "[Scope.Var('expedition_budget').GetValue] / [Scope.Var('expedition_budget_total').GetValue]"
+                                    raw_text = "[Country.MakeScope.ScriptValue('gate_expedition_budget')] / [Country.MakeScope.ScriptValue('gate_expedition_budget_total')]"
                                     autoresize = yes
                                     align = center
                                     parentanchor = center
@@ -225,12 +234,31 @@ types gate_expedition_panel_types {
 
                 # Expedition Interactions
                 vbox = {
-                    maximumsize = { 300 -1 }
+                    maximumsize = { 250 -1 }
                     layoutpolicy_horizontal = expanding
                     layoutpolicy_vertical = expanding
+                    margin = { 20 -1 }
+                    margin_bottom = 20
+                    spacing = 10
+
+                    background = {
+                        using = simple_frame
+                    }
+
+                    default_header_clean_faded = {
+                        blockoverride "text" {
+                            text = gg_panel_expedition_activity_header
+                        }
+                        blockoverride "size" {
+                            size = { 250 40 }
+                        }
+                    }
+
+                    expand = {}
+
                     button = {
                         datacontext = "[GetScriptedGui('sgui_gate_expedition_button_uncover')]"
-                        size = { 300 40 }
+                        size = { 250 40 }
                         using = default_button_action
                         text = gg_panel_expedition_button_uncover
                         tooltip = gg_panel_expedition_button_uncover_tooltip
@@ -241,21 +269,8 @@ types gate_expedition_panel_types {
                     expand = {}
 
                     button = {
-                        #datacontext = "[GetScriptedGui('sgui_gate_expedition_button_uncover')]"
-                        size = { 300 40 }
-                        using = default_button_action
-                        raw_text = "TODO"
-                        default_format = "#r"
-                        tooltip = gate_create_bug_report
-                        enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
-                        onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
-                    }
-
-                    expand = {}
-
-                    button = {
-                        #datacontext = "[GetScriptedGui('sgui_gate_expedition_button_uncover')]"
-                        size = { 300 40 }
+                        datacontext = "[GetScriptedGui('sgui_gate_expedition_button_home')]"
+                        size = { 250 40 }
                         using = default_button_action
                         text = gg_panel_expedition_button_cancel
                         tooltip = gg_panel_expedition_button_cancel_tooltip
