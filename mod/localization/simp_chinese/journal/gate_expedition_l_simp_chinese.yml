@@ -31,7 +31,7 @@
  je_gate_expedition_button_open_map_desc: "打开远征地图。"
  gate_expedition_preparation_modifier: "准备费用" #deepl:2202863878
  gate_expedition.1.t: "选择$concept_gate_expedition_leader$" #deepl:3052020482
- gate_expedition.1.d: "我们已经为[concept_gate_expedition] 找到了这三个潜在的[Concept('concept_gate_expedition_leader','$concept_gate_expedition_leaders$')] 。现在我们必须选择一个。" #deepl:908519794
+ gate_expedition.1.d: "我们已经为我们的[concept_gate_expedition] 找到了这三个潜在的[Concept('concept_gate_expedition_leader','$concept_gate_expedition_leaders$')] 。现在我们必须选择一个！这是一个重要的选择，将决定[concept_gate_expedition_activities] ，我们可以开始[concept_gate_expedition_map] 。" #deepl:3004576230
  gate_expedition.1.f: "经过激烈的政治斡旋和幕后交易，三名候选人脱颖而出，成为我们进入魔法门探险的潜在领导人。其中一位是精明的实业家，与经济界有着深厚的关系，渴望开发门外的一切资源。另一位是功勋卓著的军官，专注于确保我们的立足点和统治地位。最后一位候选人是一位娴熟的政治家，主张谨慎外交和长期稳定。我们的选择将决定我们在$gate_planet$ 上的未来。" #deepl:1367357098
  gate_expedition.1.a: "[concept_gate_expedition_leader_militarist]:[SCOPE.sCharacter('expedition_militarist').GetFullName]" #deepl:809118842
  gate_expedition.1.b: "[concept_gate_expedition_leader_politician]:[SCOPE.sCharacter('expedition_politician').GetFullName]" #deepl:546454634
@@ -42,11 +42,3 @@
  gate_expedition.2.a: "小型探险。" #deepl:3357700448
  gate_expedition.2.b: "正常探险。" #deepl:1709548526
  gate_expedition.2.c: "长征。" #deepl:3688515342
- gate_expedition.3.t: "返回$gate_planet$" #deepl:3397125764
- gate_expedition.3.d: "我们的[concept_gate_expedition] 已经结束。" #deepl:1098929001
- gate_expedition.3.f: "当我们的探险队疲惫不堪却又凯旋而归时，大门最后一次闪亮登场。$gate_planet$在这个充满紫罗兰色天空和水晶森林的世界里，我们发现了超乎想象的秘密--古老的符文、未知的动物群落以及地球上绝无仅有的法力流动。虽然仍有许多疑问，但带回的知识可能会永远重塑我们的神秘科学。旅程已经结束......但它的影响才刚刚开始。" #deepl:4221158718
- gate_expedition.3.a: "我们学到了很多。" #deepl:2645932267
- gate_expedition.4.t: "我们的远征开始了" #deepl:2301692092
- gate_expedition.4.d: "我们的[concept_gate_expedition] 开始了他们的旅程。" #deepl:3158844762
- gate_expedition.4.f: "经过数月的准备、校准和奥秘协调，魔法门稳定地跳动着。物资已装载完毕，魔法也经过了反复检查，探险队在未知的边缘整装待发。传送门的另一端是$gate_planet$--一个在古代卷轴中耳语、只有在预言梦中才能瞥见的遥远世界。今天，我们穿越神话，踏上探索之旅。" #deepl:2625105807
- gate_expedition.4.a: "我们祝他们好运。" #deepl:889921407

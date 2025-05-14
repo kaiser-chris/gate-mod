@@ -1,9 +1,10 @@
 ﻿l_braz_por:
 # Placeholders
- orphan_fix.1: "CREATE A BUG REPORT IF YOU SEE THIS"
- idle: "CREATE A BUG REPORT IF YOU SEE THIS"
- commander_vs_left: "CREATE A BUG REPORT IF YOU SEE THIS"
- commander_vs_right: "CREATE A BUG REPORT IF YOU SEE THIS"
+ gate_create_bug_report: "CREATE A BUG REPORT IF YOU SEE THIS"
+ orphan_fix.1: "$gate_create_bug_report$"
+ idle: "$gate_create_bug_report$"
+ commander_vs_left: "$gate_create_bug_report$"
+ commander_vs_right: "$gate_create_bug_report$"
 # Debug Decisions
  debug_mana_saturation_decision: "DEBUG: Complete $je_mana_saturation$"
  debug_mana_saturation_decision_desc: "Complete $je_mana_saturation$ Journal Entry."

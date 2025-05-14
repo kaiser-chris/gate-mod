@@ -1,15 +1,19 @@
 ﻿l_korean:
 # Uncover Map
  gate_expedition_activity_uncover: "새로운 지역 스카우트" #deepl:3468357458
- gate_expedition_activity_uncover_desc: "현재 새로운 지역을 물색하고 있습니다." #deepl:309300654
+ gate_expedition_activity_uncover_desc: "현재 [concept_gate_expedition_map] 에서 새로운 지역을 스카우트하고 있습니다." #deepl:2217925533
  gate_expedition_activities.1.t: "지평선 매핑" #deepl:2979000170
- gate_expedition_activities.1.d: "탐험 지도에서 새로운 지역을 발견했습니다." #deepl:415009062
+ gate_expedition_activities.1.d: "[concept_gate_expedition_map] 에서 새로운 지역을 발견했습니다." #deepl:248535618
  gate_expedition_activities.1.f: "TODO"
  gate_expedition_activities.1.a: "좋아요." #deepl:3593588592
  gate_expedition_activities.1.b: "보고서를 살펴보겠습니다." #deepl:1707225933
  # Home
  gate_expedition_activity_home: "지구로 돌아가기" #deepl:2331946383
  gate_expedition_activity_home_desc: "We are currently packing up the expedition and returning to Earth through the Magic Gate." #TODO: Improve gate_expedition_activity_home_desc
+ gate_expedition_activities.3.t: "다음에서 돌아가기 $gate_planet$" #deepl:3397125764
+ gate_expedition_activities.3.d: "[concept_gate_expedition] 이 종료되었습니다." #deepl:1098929001
+ gate_expedition_activities.3.f: "원정대가 피곤하지만 승리한 모습으로 마지막으로 문을 통과할 때 문이 반짝반짝 빛납니다. $gate_planet$ 보랏빛 하늘과 수정 숲의 세계는 고대 룬, 미지의 동물, 지구에서 볼 수 없는 마나 흐름 등 상상을 초월하는 비밀을 품고 있습니다. 아직 많은 의문이 남아있지만, 가져온 지식은 우리의 신비로운 과학을 영원히 바꿔놓을지도 모릅니다. 여정은 끝났지만 그 영향력은 이제 막 시작되었습니다." #deepl:4221158718
+ gate_expedition_activities.3.a: "많은 것을 배웠습니다." #deepl:2645932267
 # Explore
  gate_expedition_activity_explore: "마법의 장소 탐험하기" #deepl:485321791
  gate_expedition_activity_explore_desc: "We are currently exploring a magical location." #TODO: Improve gate_expedition_activity_explore_desc
@@ -24,4 +28,12 @@
  gate_expedition_activity_raid_desc: "We are currently raiding a settlement." #TODO: Improve gate_expedition_activity_raid_desc
  # Trade
  gate_expedition_activity_trade: "새 거래 경로 설정" #deepl:497000063
- gate_expedition_activity_trade_desc: "현재 새로운 무역 경로를 설정하고 있습니다." #deepl:374648587
+ gate_expedition_activity_trade_desc: "We are currently setting up a new Trade Route." #TODO: Improve gate_expedition_activity_trade_desc
+ # Embark
+ gate_expedition_activity_embark: "최종 준비하기" #deepl:1003159139
+ gate_expedition_activity_embark_desc: "현재 마법의 문을 통과할 원정대를 위해 모든 짐을 꾸리고 있습니다." #deepl:3860797745
+ gate_expedition_activities.2.t: "원정대 출정" #deepl:2301692092
+ gate_expedition_activities.2.d: "저희 [concept_gate_expedition] 가 그 여정을 시작합니다." #deepl:3158844762
+ gate_expedition_activities.2.f: "수개월간의 준비와 보정, 마법 조율 끝에 마법의 문이 안정적으로 작동합니다. 식량을 장전하고 마법을 재차 확인하며 탐험대는 미지의 세계로 향할 준비를 마쳤습니다. 포털 너머에는 고대 두루마리에서 속삭이고 예언의 꿈에서만 엿볼 수 있었던 먼 세계 $gate_planet$가 있습니다. 오늘 우리는 신화 속을 지나 발견의 길로 들어섭니다." #deepl:2625105807
+ gate_expedition_activities.2.a: "[concept_gate_expedition_map]." #deepl:382787511
+ gate_expedition_activities.2.b: "좋아요." #deepl:3593588592

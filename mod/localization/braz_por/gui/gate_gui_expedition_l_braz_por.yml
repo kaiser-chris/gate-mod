@@ -2,5 +2,11 @@
 # Expedition Panel
  gg_panel_expedition_title: "Expedition"
  gg_panel_expedition_action: "Expedition Panel"
+ gg_panel_expedition_leader_empty: "No Leader"
+ gg_panel_expedition_leader_type: "[AddLocalizationIf(Not(Scope.Var('leader_type').IsSet), 'gg_panel_expedition_leader_empty')][AddTextIf(EqualTo_CFixedPoint(Scope.Var('leader_type').GetValue, Scope.ScriptValue('gate_expedition_leader_militarist')), GC('concept_gate_expedition_leader_militarist').GetName)][AddTextIf(EqualTo_CFixedPoint(Scope.Var('leader_type').GetValue, Scope.ScriptValue('gate_expedition_leader_politician')), GC('concept_gate_expedition_leader_politician').GetName)][AddTextIf(EqualTo_CFixedPoint(Scope.Var('leader_type').GetValue, Scope.ScriptValue('gate_expedition_leader_industrialist')), GC('concept_gate_expedition_leader_industrialist').GetName)]"
  gg_panel_expedition_no_activity: "Expedition is Idle"
  gg_panel_expedition_no_activity_blink: "#BOLD Start a new Activity#!"
+ gg_panel_expedition_button_uncover: "Send out Scouts"
+ gg_panel_expedition_button_uncover_tooltip: "#header $gg_panel_expedition_button_uncover$#!\nSend our scouts to uncover a new chuck of the [concept_gate_expedition_map].\n$TOOLTIP_DELIMITER$\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(Country.MakeScope).End)]"
+ gg_panel_expedition_button_cancel: "End Expedition"
+ gg_panel_expedition_button_cancel_tooltip: "End our expedition and return home."
