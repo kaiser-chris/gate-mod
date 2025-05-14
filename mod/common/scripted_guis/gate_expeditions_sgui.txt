@@ -117,3 +117,18 @@ sgui_gate_expedition_button_uncover = {
         }
     }
 }
+
+sgui_gate_expedition_button_home = {
+    scope = country
+
+    is_valid = {
+        gate_expedition_has_no_activity = yes
+    }
+
+    effect = {
+        gate_expedition_start_activity = {
+            months = 2
+            activity = gate_expedition_interaction_home
+        }
+    }
+}
