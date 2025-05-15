@@ -540,6 +540,7 @@ types gate_expedition_panel_types {
                         spacing = 10
                         layoutpolicy_horizontal = expanding
                         datamodel = "[Scope.Var('type').GetList('interactions')]"
+                        datacontext = "[Scope.GetCharacter]"
 
                         item = {
                             gate_location_interaction = {}

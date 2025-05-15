@@ -42,3 +42,15 @@ gate_expedition_budget_total = {
         add = var:gate_expedition.var:expedition_budget_total
     }
 }
+
+gate_expedition_activity_time = {
+    value = 0
+    if = {
+        limit = {
+            scope:interaction ?= {
+                has_variable = time
+            }
+        }
+        add = scope:interaction.var:time
+    }
+}

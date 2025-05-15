@@ -3,27 +3,26 @@
 gate_expedition_interaction_valid = {
 	OR = {
 		# Always available
-		scope:interaction.var:type ?= gate_expedition_interaction_home
-		scope:interaction.var:type ?= gate_expedition_interaction_explore
+		$activity$ = gate_expedition_interaction_home
+		$activity$ = gate_expedition_interaction_explore
 		AND = {
 			# Militarist
-			var:gate_expedition.var:leader_type ?= gate_expedition_leader_militarist
+			var:gate_expedition.var:leader_type = gate_expedition_leader_militarist
 			OR = {
-				scope:interaction.var:type ?= gate_expedition_interaction_raid
-				scope:interaction.var:type ?= gate_expedition_interaction_conquer
+				$activity$ = gate_expedition_interaction_raid
+				$activity$ = gate_expedition_interaction_conquer
 			}
 		}
 		AND = {
 			# Politician
-			var:gate_expedition.var:leader_type ?= gate_expedition_leader_politician
-			scope:interaction.var:type ?= gate_expedition_interaction_contact
+			var:gate_expedition.var:leader_type = gate_expedition_leader_politician
+			$activity$ = gate_expedition_interaction_contact
 		}
 		AND = {
 			# Industrialist
-			var:gate_expedition.var:leader_type ?= gate_expedition_leader_industrialist
-			scope:interaction.var:type ?= gate_expedition_interaction_trade
+			var:gate_expedition.var:leader_type = gate_expedition_leader_industrialist
+			$activity$ = gate_expedition_interaction_trade
 		}
-
 	}
 }
 
