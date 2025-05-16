@@ -146,8 +146,6 @@ gate_expedition_activities.3 = {
     }
 
     after = {
-        hidden_effect = {
-            remove_variable = gate_expedition
-        }
+        gate_expedition_end = yes
     }
 }
