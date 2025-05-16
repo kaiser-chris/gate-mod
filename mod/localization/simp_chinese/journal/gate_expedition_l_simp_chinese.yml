@@ -31,14 +31,18 @@
  je_gate_expedition_button_open_map_desc: "打开远征地图。"
  gate_expedition_preparation_modifier: "准备费用" #deepl:2202863878
  gate_expedition.1.t: "选择$concept_gate_expedition_leader$" #deepl:3052020482
- gate_expedition.1.d: "我们已经为我们的[concept_gate_expedition] 找到了这三个潜在的[Concept('concept_gate_expedition_leader','$concept_gate_expedition_leaders$')] 。现在我们必须选择一个！这是一个重要的选择，将决定[concept_gate_expedition_activities] ，我们可以开始[concept_gate_expedition_map] 。" #deepl:3004576230
+ gate_expedition.1.d: "我们已经为我们的[concept_gate_expedition] 找到了这三个潜在的[Concept('concept_gate_expedition_leader','$concept_gate_expedition_leaders$')] 。现在我们必须选择一个！这是一个重要的选择，它将决定我们可以从哪个[concept_gate_expedition_activities] 开始[concept_gate_expedition_map] 。" #deepl:990907525
  gate_expedition.1.f: "经过激烈的政治斡旋和幕后交易，三名候选人脱颖而出，成为我们进入魔法门探险的潜在领导人。其中一位是精明的实业家，与经济界有着深厚的关系，渴望开发门外的一切资源。另一位是功勋卓著的军官，专注于确保我们的立足点和统治地位。最后一位候选人是一位娴熟的政治家，主张谨慎外交和长期稳定。我们的选择将决定我们在$gate_planet$ 上的未来。" #deepl:1367357098
  gate_expedition.1.a: "[concept_gate_expedition_leader_militarist]:[SCOPE.sCharacter('expedition_militarist').GetFullName]" #deepl:809118842
  gate_expedition.1.b: "[concept_gate_expedition_leader_politician]:[SCOPE.sCharacter('expedition_politician').GetFullName]" #deepl:546454634
  gate_expedition.1.c: "[concept_gate_expedition_leader_industrialist]:[SCOPE.sCharacter('expedition_industrialist').GetFullName]" #deepl:3051857995
+ gate_expedition.1.cancel: "这些都不行。" #deepl:652779195
+ gate_expedition.1.cancel.tt: "我们将暂时结束对[concept_gate_expedition_leader] 的搜索，稍后再试。" #deepl:3941738911
  gate_expedition.2.t: "规划$concept_gate_expedition$" #deepl:733394989
- gate_expedition.2.d: "我们需要选择我们的远征[concept_gate_expedition] 应该有多大。" #deepl:3402278856
+ gate_expedition.2.d: "我们需要选择探险队的规模[concept_gate_expedition] 。为远征做准备将耗费#bold #! 。" #deepl:2369326501
  gate_expedition.2.f: "决定冒险穿越神奇之门后，下一个挑战就是确定我们的探险规模。一个小规模、灵活的团队可以谨慎地进行探索，将风险和成本降到最低。一支由定居者、学者和士兵组成的均衡部队可以提供安全而灵活的方法。或者，一个拥有压倒性资源和人力的大型探险队可以提出无可争议的主张，但代价也是巨大的。我们这次冒险的命运就取决于这个关键的决定。" #deepl:1308442514
  gate_expedition.2.a: "小型探险。" #deepl:3357700448
  gate_expedition.2.b: "正常探险。" #deepl:1709548526
  gate_expedition.2.c: "长征。" #deepl:3688515342
+ gate_expedition.2.cancel: "别介意" #deepl:3430506882
+ gate_expedition.2.cancel.tt: "我们将取消[concept_gate_expedition] 。" #deepl:615383399

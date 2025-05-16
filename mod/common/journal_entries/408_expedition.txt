@@ -141,6 +141,13 @@ je_gate_expedition_active = {
 	}
 
 	immediate = {
+		je:je_gate_expedition_active ?= {
+			clear_variable_list = com_journal_characters
+			add_to_variable_list = {
+				name = com_journal_characters
+				target = root.var:gate_expedition.var:leader
+			}
+		}
 		gate_expedition_start_activity = {
 			activity = gate_expedition_interaction_embark
 			months = 2
