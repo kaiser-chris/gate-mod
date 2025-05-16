@@ -204,14 +204,23 @@ gate_expedition_create_activity = {
 	}
 }
 
-gate_expedition_set_idle = {
-	var:gate_expedition ?= {
-		#TODO: Add destroy struct to CMF
-		var:activity ?= {
-			kill_character = yes
-			free_character_from_void = yes
+gate_expedition_end = {
+	hidden_effect = {
+		destroy_struct = {
+			struct = var:gate_expedition
 		}
-		remove_variable = activity
+		remove_variable = gate_expedition
+	}
+}
+
+gate_expedition_set_idle = {
+	hidden_effect = {
+		var:gate_expedition ?= {
+			destroy_struct = {
+				struct = var:activity
+			}
+			remove_variable = activity
+		}
 	}
 }
 
