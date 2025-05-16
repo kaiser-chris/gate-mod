@@ -31,14 +31,18 @@
  je_gate_expedition_button_open_map_desc: "Öffnet die [concept_gate_expedition_map]." #deepl:3073493927
  gate_expedition_preparation_modifier: "Vorbereitung Kosten" #deepl:2202863878
  gate_expedition.1.t: "Die Auswahl eines $concept_gate_expedition_leader$" #deepl:3052020482
- gate_expedition.1.d: "Wir haben diese drei potenziellen [Concept('concept_gate_expedition_leader','$concept_gate_expedition_leaders$')] für unsere [concept_gate_expedition] gefunden. Jetzt müssen wir uns für einen entscheiden. Achtung! Dies ist eine wichtige Entscheidung, die darüber entscheidet, [concept_gate_expedition_activities] wir mit der [concept_gate_expedition_map] beginnen können." #deepl:3004576230
+ gate_expedition.1.d: "Wir haben diese drei potenziellen [Concept('concept_gate_expedition_leader','$concept_gate_expedition_leaders$')] für unsere [concept_gate_expedition] gefunden. Jetzt müssen wir uns für einen entscheiden. Achtung! Dies ist eine wichtige Entscheidung und entscheidet darüber, welche [concept_gate_expedition_activities] wir auf der [concept_gate_expedition_map] beginnen können." #deepl:990907525
  gate_expedition.1.f: "Nach intensiven politischen Manövern und Hinterzimmerabsprachen haben sich drei Kandidaten als potenzielle Anführer für unsere Expedition zur Magischen Pforte herauskristallisiert. Einer von ihnen ist ein gewiefter Industrieller mit engen Beziehungen zur Wirtschaft, der die dortigen Ressourcen ausbeuten möchte. Ein anderer ist ein dekorierter Militäroffizier, der sich darauf konzentriert, Fuß zu fassen und unsere Vorherrschaft zu sichern. Der letzte Kandidat ist ein geschickter Politiker, der sich für vorsichtige Diplomatie und langfristige Stabilität einsetzt. Die Wahl, die wir treffen, wird über die Zukunft unserer Präsenz auf $gate_planet$ entscheiden." #deepl:1367357098
  gate_expedition.1.a: "[concept_gate_expedition_leader_militarist]: [SCOPE.sCharacter('expedition_militarist').GetFullName]" #deepl:809118842
  gate_expedition.1.b: "[concept_gate_expedition_leader_politician]: [SCOPE.sCharacter('expedition_politician').GetFullName]" #deepl:546454634
  gate_expedition.1.c: "[concept_gate_expedition_leader_industrialist]: [SCOPE.sCharacter('expedition_industrialist').GetFullName]" #deepl:3051857995
+ gate_expedition.1.cancel: "Keiner von ihnen wird ausreichen." #deepl:652779195
+ gate_expedition.1.cancel.tt: "Wir beenden unsere Suche nach einer [concept_gate_expedition_leader] für den Moment und können es später noch einmal versuchen." #deepl:3941738911
  gate_expedition.2.t: "Planung der $concept_gate_expedition$" #deepl:733394989
- gate_expedition.2.d: "Wir müssen entscheiden, wie groß unsere Expedition [concept_gate_expedition] sein soll." #deepl:3402278856
+ gate_expedition.2.d: "Wir müssen entscheiden, wie groß unsere Expedition [concept_gate_expedition] sein soll. Die Vorbereitungen für die Expedition werden #bold kostspielig#!." #deepl:2369326501
  gate_expedition.2.f: "Nachdem die Entscheidung gefallen war, die Magische Pforte zu durchschreiten, bestand die nächste Herausforderung darin, den Umfang unserer Expedition festzulegen. Eine kleine, wendige Gruppe könnte diskret erkunden und dabei Risiken und Kosten minimieren. Eine ausgewogene Truppe aus Siedlern, Gelehrten und Soldaten bietet eine sichere und dennoch flexible Vorgehensweise. Alternativ könnte eine große Expedition mit überwältigenden Ressourcen und Arbeitskräften einen unbestreitbaren Anspruch erheben - allerdings zu großen Kosten. Das Schicksal unseres Unternehmens hängt von dieser wichtigen Entscheidung ab." #deepl:1308442514
  gate_expedition.2.a: "Kleine Expedition." #deepl:3357700448
  gate_expedition.2.b: "Normale Expedition." #deepl:1709548526
  gate_expedition.2.c: "Lange Expedition." #deepl:3688515342
+ gate_expedition.2.cancel: "Vergessen Sie's." #deepl:3430506882
+ gate_expedition.2.cancel.tt: "Wir werden unsere [concept_gate_expedition] kündigen." #deepl:615383399

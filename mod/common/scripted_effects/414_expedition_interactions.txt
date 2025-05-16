@@ -68,6 +68,7 @@ gate_expedition_start_activity = {
 			trigger_event = {
 				id = gate_expedition_activities.3
 				months = $months$
+				popup = yes
 			}
 		}
 	}
@@ -158,6 +159,7 @@ gate_expedition_start_activity = {
 			trigger_event = {
 				id = gate_expedition_activities.2
 				months = $months$
+				popup = yes
 			}
 		}
 	}
@@ -200,6 +202,59 @@ gate_expedition_create_activity = {
 		set_variable = {
 			name = desc
 			value = flag:$desc$
+		}
+	}
+}
+
+gate_expedition_set_leader = {
+	var:gate_expedition ?= {
+		set_variable = {
+			name = leader
+			value = $leader$
+		}
+		set_variable = {
+			name = leader_type
+			value = $leader_type$
+		}
+	}
+	je:je_gate_expedition_preparation ?= {
+		clear_variable_list = com_journal_characters
+		add_to_variable_list = {
+			name = com_journal_characters
+			target = $leader$
+		}
+	}
+	je:je_gate_expedition_active ?= {
+		clear_variable_list = com_journal_characters
+		add_to_variable_list = {
+			name = com_journal_characters
+			target = $leader$
+		}
+	}
+}
+
+gate_expedition_set_state_scope = {
+	var:gate_expedition ?= {
+		var:location ?= {
+			var:gate_state ?= {
+				save_temporary_scope_as = gate_state_region
+			}
+		}
+	}
+	random_scope_state = {
+		limit = {
+			scope:gate_state_region ?= state_region
+		}
+		save_scope_as = $scope$
+	}
+	if = {
+		limit = {
+			NOT = {
+				exists = scope:$scope$
+			}
+		}
+		capital = {
+			save_scope_as = gate_expedition_state
 		}
 	}
 }

@@ -348,3 +348,57 @@ debug_gate_reset_reytu = {
 		base = 0
 	}
 }
+
+debug_gate_start_reytu = {
+	is_shown = {
+		has_global_variable = com_debug
+		is_player = yes
+	}
+
+	when_taken = {
+		add_technology_researched = gate_expeditions
+		hidden_effect = {
+			create_struct = {
+				struct_scope = expedition
+				struct_type = gate_expedition_progress
+			}
+			set_variable = {
+				name = gate_expedition
+				value = scope:expedition
+			}
+			var:gate_expedition = {
+				set_variable = {
+					name = location
+					value = global_var:gate_expedition_reytu
+				}
+				set_variable = {
+					name = expedition_type
+					value = gate_expedition_preparation_time_large
+				}
+				set_variable = expedition_started
+				set_variable = {
+					name = expedition_budget_total
+					value = {
+						value = var:expedition_type
+						multiply = gate_expedition_preparation_budget_multiplier
+					}
+				}
+			}
+		}
+		add_journal_entry = {
+			type = je_gate_expedition_active
+		}
+		trigger_event = {
+			id = gate_expedition.1
+			popup = yes
+		}
+		gate_expedition_start_activity = {
+			activity = gate_expedition_interaction_embark
+			months = 0
+		}
+	}
+
+	ai_chance = {
+		base = 0
+	}
+}

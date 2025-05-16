@@ -31,14 +31,18 @@
  je_gate_expedition_button_open_map_desc: "탐험 지도를 엽니다."
  gate_expedition_preparation_modifier: "준비 비용" #deepl:2202863878
  gate_expedition.1.t: "선택 $concept_gate_expedition_leader$" #deepl:3052020482
- gate_expedition.1.d: "[concept_gate_expedition] 에 대한 세 가지 잠재적 [Concept('concept_gate_expedition_leader','$concept_gate_expedition_leaders$')] 을 찾았습니다. 이제 하나를 선택해야 합니다.\n\n@warning! 이것은 중요한 선택이며 [concept_gate_expedition_map] 에서 시작할 수 있는 [concept_gate_expedition_activities] 을 결정할 것입니다." #deepl:3004576230
+ gate_expedition.1.d: "[concept_gate_expedition] 에 대한 세 가지 잠재적 [Concept('concept_gate_expedition_leader','$concept_gate_expedition_leaders$')] 을 찾았습니다. 이제 하나를 선택해야 합니다.\n\n@warning! 이것은 중요한 선택이며 [concept_gate_expedition_map] 에서 시작할 수 있는 [concept_gate_expedition_activities] 을 결정합니다." #deepl:990907525
  gate_expedition.1.f: "치열한 정치적 책략과 뒷거래 끝에 마법의 문 탐험의 잠재적 리더로 세 명의 후보가 등장했습니다. 한 명은 경제계와 깊은 관계를 맺고 있는 영리한 사업가로, 그 너머에 있는 자원을 개발하고자 하는 열망을 가지고 있습니다. 다른 한 명은 훈장을 받은 군 장교로, 거점을 확보하고 지배권을 확보하는 데 주력하고 있습니다. 마지막 후보는 신중한 외교와 장기적인 안정을 주장하는 숙련된 정치인입니다. 우리가 어떤 선택을 하느냐에 따라 $gate_planet$ 의 미래가 결정됩니다." #deepl:1367357098
  gate_expedition.1.a: "[concept_gate_expedition_leader_militarist]: [SCOPE.sCharacter('expedition_militarist').GetFullName]" #deepl:809118842
  gate_expedition.1.b: "[concept_gate_expedition_leader_politician]: [SCOPE.sCharacter('expedition_politician').GetFullName]" #deepl:546454634
  gate_expedition.1.c: "[concept_gate_expedition_leader_industrialist]: [SCOPE.sCharacter('expedition_industrialist').GetFullName]" #deepl:3051857995
+ gate_expedition.1.cancel: "이 중 어느 것도 효과가 없습니다." #deepl:652779195
+ gate_expedition.1.cancel.tt: "지금은 [concept_gate_expedition_leader] 검색을 종료하고 나중에 다시 시도할 수 있습니다." #deepl:3941738911
  gate_expedition.2.t: "계획 $concept_gate_expedition$" #deepl:733394989
- gate_expedition.2.d: "원정대( [concept_gate_expedition] )의 규모를 선택해야 합니다." #deepl:3402278856
+ gate_expedition.2.d: "원정대 [concept_gate_expedition] 의 규모를 정해야 합니다. 탐험을 준비하려면 #bold 비용이 많이 듭니다#!." #deepl:2369326501
  gate_expedition.2.f: "매직 게이트를 통과하기로 결정했으니 다음 과제는 탐험의 규모를 결정하는 것이었습니다. 소규모의 민첩한 그룹이 신중하게 탐험하여 위험과 비용을 최소화할 수 있습니다. 정착민, 학자, 군인으로 구성된 균형 잡힌 탐험대는 안전하면서도 유연한 접근 방식을 제공합니다. 또는 압도적인 자원과 인력을 갖춘 대규모 탐험대는 부인할 수 없는 주장을 내세울 수 있지만 막대한 대가를 치러야 합니다. 우리 벤처의 운명이 이 중요한 결정에 달려 있습니다." #deepl:1308442514
  gate_expedition.2.a: "소규모 원정대." #deepl:3357700448
  gate_expedition.2.b: "일반 탐험." #deepl:1709548526
  gate_expedition.2.c: "긴 탐험." #deepl:3688515342
+ gate_expedition.2.cancel: "신경 쓰지 마세요." #deepl:3430506882
+ gate_expedition.2.cancel.tt: "[concept_gate_expedition] 을 취소합니다." #deepl:615383399
