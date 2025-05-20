@@ -20,8 +20,8 @@
  concept_mana_density_desc: "Seit sich die Magischen Tore geöffnet haben, strömt Mana auf die Erde. Die Anwendung von [concept_magic_knowledge] auf der Erde hat die Menge des Manas in der Atmosphäre weiter erhöht. Sollte $concept_mana_density$ in einem Staat sein Maximum erreichen, wird [concept_magical_phenomena] alltäglich werden. Bis dahin werden unterschiedliche Niveaus von $concept_mana_density$ in einem Zustand zu unvorhersehbaren Veränderungen und Ereignissen führen.\n\n#header Mana-Dichte-Stufen:#!\n - Niedrige Mana-Dichte beginnt ab #v [GuiScope.ScriptValue('low_mana_density_threshhold')]%#!\n - Mittlere Mana-Dichte beginnt ab #v [GuiScope.ScriptValue('medium_mana_density_threshhold')]%#!\n - Hohe Mana-Dichte beginnt ab #v [GuiScope.ScriptValue('high_mana_density_threshhold')]%#!" #deepl:3221155201
  concept_magical_phenomena: "Magische Phänomene" #deepl:2882996657
  concept_magical_phenomena_desc: "Magische Phänomene sind Ereignisse, die durch die erhöhte [concept_mana_density] in einem Staat ausgelöst werden. Sie reichen von gutartig über hilfreich bis hin zu erschreckend." #deepl:2378601276
- concept_magic_researcher: "Magie-Forscher" #deepl:2227864323
- concept_magic_researcher_desc: "Ein Länder-Magieforscher leitet die [GetBuildingType('building_magic_research_institute').GetName] und steuert ihre [concept_magic_innovation]." #deepl:2907151544
+ concept_magic_researcher: "Arkanist" #deepl:3183248554
+ concept_magic_researcher_desc: "Ein Länder-Arkanist leitet die [GetBuildingType('building_magic_research_institute').GetName] und steuert ihre [concept_magic_innovation]." #deepl:1843928989
  concept_gate_character_experience: "Charakter-Erfahrung" #deepl:356262571
  concept_gate_character_experience_desc: "Bestimmte Charaktere wie unser [concept_magic_researcher] können bei ihrer Arbeit Erfahrung sammeln.\n\n#header Experience Levels:#!\n - $gg_character_experience_novice$\n - $gg_character_experience_experienced$\n - $gg_character_experience_master$" #deepl:1164657798
  concept_gate_magic: "Magie" #deepl:4074079286

@@ -1,0 +1,56 @@
+﻿je_gate_orcish_expansion = {
+	icon = "gfx/interface/icons/event_icons/event_gate_expedition.dds"
+
+	group = je_group_foreign_affairs
+
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = je_gate_orcish_expansion_status
+			}
+		}
+	}
+
+	immediate = {
+		set_variable = {
+			name = gate_orc_controlled_states
+			value = 0
+		}
+		every_scope_state = {
+			limit = {
+				is_split_state = no
+			}
+			change_variable = {
+				name = gate_orc_controlled_states
+				add = 1
+			}
+		}
+	}
+
+	complete = {
+		any_scope_state = {
+			is_split_state = no
+			count >= 15
+		}
+	}
+
+	fail = {
+		game_date > 1900
+	}
+
+	on_complete = {
+		# TODO
+	}
+
+	on_fail = {
+		hidden_effect = {
+			remove_variable = gate_orc_controlled_states
+		}
+	}
+
+	transferable = no
+	can_revolution_inherit = yes
+
+	weight = 200
+	should_be_pinned_by_default = yes
+}
