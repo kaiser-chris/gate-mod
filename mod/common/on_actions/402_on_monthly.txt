@@ -60,6 +60,7 @@ on_monthly_pulse_country = {
         on_monthly_gate_add_immigration_bear
         on_monthly_gate_ai_magic_technology
         on_monthly_gate_set_research_production_method
+        on_monthly_gate_vampire_journal
     }
 }
 
@@ -149,5 +150,20 @@ on_monthly_gate_set_research_production_method = {
     }
     effect = {
         reset_research_institute_pm = yes
+    }
+}
+
+on_monthly_gate_vampire_journal = {
+    trigger = {
+        has_journal_entry = je_gate_vampire_emergence
+    }
+    effect = {
+        je:je_gate_vampire_emergence ?= {
+            clear_variable_list = com_journal_characters
+            add_to_variable_list = {
+                name = com_journal_characters
+                target = root.var:gate_character_vampire
+            }
+        }
     }
 }

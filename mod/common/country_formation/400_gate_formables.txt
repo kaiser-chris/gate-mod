@@ -6,7 +6,9 @@
 	}
 
 	possible = {
-		c:GATE_MK ?= this
+		any_primary_culture = {
+			cu:dwarven ?= this
+		}
 		has_technology_researched = pan-nationalism
 	}
 
