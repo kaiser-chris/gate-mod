@@ -22,33 +22,21 @@
 	}
 
 	# Orcish Kingdom
-	# No one likes slaving orcs
 	c:GATE_OK = {
-		set_relations = { country = c:USA value = -50 }
-		set_relations = { country = c:MEX value = -50 }
-		set_relations = { country = c:GBR value = -50 }
-		set_relations = { country = c:CUB value = -50 }
-		set_relations = { country = c:CLM value = -50 }
-		set_relations = { country = c:HAI value = -50 }
+		set_relations = { country = c:POR value = -15 }
+		set_relations = { country = c:KON value = -15 }
+		set_relations = { country = c:GATE_AD value = -30 }
+	}
+	c:KON = {
+		set_relations = { country = c:GATE_OK value = -15 }
+	}
+	c:POR = {
+		set_relations = { country = c:GATE_OK value = -15 }
+	}
 
-	}
-	c:USA = {
-		set_relations = { country = c:GATE_OK value = -50 }
-	}
-	c:MEX = {
-		set_relations = { country = c:GATE_OK value = -50 }
-	}
-	c:GBR = {
-		set_relations = { country = c:GATE_OK value = -50 }
-	}
-	c:CUB = {
-		set_relations = { country = c:GATE_OK value = -50 }
-	}
-	c:CLM = {
-		set_relations = { country = c:GATE_OK value = -50 }
-	}
-	c:HAI = {
-		set_relations = { country = c:GATE_OK value = -50 }
+	# Arcturian Dominion
+	c:GATE_AD = {
+		set_relations = { country = c:GATE_OK value = -30 }
 	}
 
 }
