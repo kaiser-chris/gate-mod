@@ -102,7 +102,7 @@ gate_race_trait_vampire = {
     }
 
     possible = {
-        culture ?= cu:vampire
+        cu:vampire ?= culture
     }
 
     weight = 0
@@ -128,7 +128,7 @@ gate_race_trait_dwarven = {
     }
 
     possible = {
-        culture ?= cu:dwarven
+        cu:dwarven ?= culture
     }
 
     weight = 0
@@ -144,7 +144,7 @@ gate_race_trait_elven = {
     }
 
     possible = {
-        culture ?= cu:elven
+        cu:elven ?= culture
     }
 
     weight = 0
@@ -160,7 +160,7 @@ gate_race_trait_orcish = {
     }
 
     possible = {
-        culture ?= cu:orcish
+        cu:orcish ?= culture
     }
 
     weight = 0
@@ -176,7 +176,7 @@ gate_race_trait_gnomish = {
     }
 
     possible = {
-        culture ?= cu:gnomish
+        cu:gnomish ?= culture
     }
 
     weight = 0
@@ -193,8 +193,8 @@ gate_race_trait_bear = {
 
     possible = {
         OR = {
-            culture ?= cu:plundboelka
-            culture ?= cu:praprandgaw
+            cu:plundboelka ?= culture
+            cu:praprandgaw ?= culture
         }
     }
 

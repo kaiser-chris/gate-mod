@@ -386,6 +386,8 @@ gate_vampire.6 = {
 
 	immediate = {
 		var:gate_character_vampire ?= {
+			transfer_character = root
+			free_from_exile_effect = yes
 			set_as_interest_group_leader = yes
 			save_scope_as = gate_vampire_leader
 		}

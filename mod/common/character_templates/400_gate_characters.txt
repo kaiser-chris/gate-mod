@@ -73,10 +73,7 @@ gate_vampire_ruler_template = {
 
 		home_country ?= {
 			var:gate_character_vampire ?= {
-				kill_character = {
-					value = yes
-					hidden = yes
-				}
+				set_character_immortal = no
 			}
 			je:je_gate_vampire_emergence ?= {
 				clear_variable_list = com_journal_characters
