@@ -20,14 +20,12 @@ on_gate_research_institute_built = {
 }
 
 on_gate_elven_forest_built = {
+    trigger = {
+        is_building_type = building_elven_forest
+    }
     effect = {
-        if = {
-            limit = {
-                is_building_type = building_elven_forest
-            }
-            state.state_region = {
-                add_arable_land = 5
-            }
+        state.state_region = {
+            add_arable_land = 5
         }
     }
 }
@@ -63,16 +61,14 @@ on_diplomatic_play_started = {
 
 on_gate_lunda_uprising_start = {
     trigger = {
-        AND = {
-            scope:initiator = c:GATE_AD
-            OR = {
-                scope:target = c:LND
-                scope:target = c:CHK
-                scope:target = c:KSN
-                scope:target = c:KZM
-            }
-            is_diplomatic_play_type = dp_annex_subject
+        c:GATE_AD ?= scope:initiator
+        OR = {
+            c:LND ?= scope:target
+            c:CHK ?= scope:target
+            c:KSN ?= scope:target
+            c:KZM ?= scope:target
         }
+        is_diplomatic_play_type = dp_annex_subject
     }
     effect = {
         end_play = yes
@@ -82,61 +78,5 @@ on_gate_lunda_uprising_start = {
                 popup = yes
             }
         }
-    }
-}
-
-# Root = Character
-on_character_creation = {
-    on_actions = {
-        on_gate_vampire_created
-        on_gate_elf_created
-        on_gate_dwarf_created
-        on_gate_orc_created
-        on_gate_gnome_created
-    }
-}
-
-on_gate_vampire_created = {
-    trigger = {
-        culture ?= cu:vampire
-    }
-    effect = {
-        add_trait = gate_race_trait_vampire
-    }
-}
-
-on_gate_elf_created = {
-    trigger = {
-        culture ?= cu:elven
-    }
-    effect = {
-        add_trait = gate_race_trait_elven
-    }
-}
-
-on_gate_dwarf_created = {
-    trigger = {
-        culture ?= cu:dwarven
-    }
-    effect = {
-        add_trait = gate_race_trait_dwarven
-    }
-}
-
-on_gate_orc_created = {
-    trigger = {
-        culture ?= cu:orcish
-    }
-    effect = {
-        add_trait = gate_race_trait_orcish
-    }
-}
-
-on_gate_gnome_created = {
-    trigger = {
-        culture ?= cu:gnomish
-    }
-    effect = {
-        add_trait = gate_race_trait_gnomish
     }
 }

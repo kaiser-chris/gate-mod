@@ -1,0 +1,68 @@
+﻿# Root = Character
+on_character_creation = {
+    on_actions = {
+        on_gate_vampire_created
+        on_gate_elf_created
+        on_gate_dwarf_created
+        on_gate_orc_created
+        on_gate_gnome_created
+        on_gate_bear_created
+    }
+}
+
+on_gate_vampire_created = {
+    trigger = {
+        cu:vampire ?= culture
+    }
+    effect = {
+        add_trait = gate_race_trait_vampire
+    }
+}
+
+on_gate_elf_created = {
+    trigger = {
+        cu:elven ?= culture
+    }
+    effect = {
+        add_trait = gate_race_trait_elven
+    }
+}
+
+on_gate_dwarf_created = {
+    trigger = {
+        cu:dwarven ?= culture
+    }
+    effect = {
+        add_trait = gate_race_trait_dwarven
+    }
+}
+
+on_gate_orc_created = {
+    trigger = {
+        cu:orcish ?= culture
+    }
+    effect = {
+        add_trait = gate_race_trait_orcish
+    }
+}
+
+on_gate_gnome_created = {
+    trigger = {
+        cu:gnomish ?= culture
+    }
+    effect = {
+        add_trait = gate_race_trait_gnomish
+    }
+}
+
+on_gate_bear_created = {
+    trigger = {
+        OR = {
+            cu:praprandgaw ?= culture
+            cu:plundboelka ?= culture
+        }
+    }
+    effect = {
+        add_trait = gate_race_trait_bear
+    }
+}
