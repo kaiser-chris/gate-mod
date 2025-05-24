@@ -380,7 +380,7 @@ building_elven_forest = {
 
 	possible = {
 		custom_tooltip = {
-			text = building_requirement_medium_mana_density
+			text = trigger_gate_requirement_medium_mana_density
 			state_region = {
 				var:mana_density >= medium_mana_density_threshhold
 			}

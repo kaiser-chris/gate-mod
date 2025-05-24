@@ -2,8 +2,11 @@
  trigger_has_magic_gate: "[GetBuildingType('building_gate_alxa').GetName] 보유"
  trigger_not_has_magic_gate: "[GetBuildingType('building_gate_alxa').GetName] 미보유"
  trigger_is_gate_planet_country: "[concept_gate_planet] 출신 국가"
- trigger_is_magic_country: "[concept_magic_knowledge] 보유"
- trigger_not_is_magic_country: "[concept_magic_knowledge] 미보유"
+ trigger_gate_is_magic_country: "[concept_magic_knowledge] 보유"
+ trigger_gate_not_is_magic_country: "[concept_magic_knowledge] 미보유"
  trigger_gate_expedition_budget: "#기본_텍스트가 [concept_gate_expedition_budget] [SCOPE.GetValue('budget_cost')|0v] 이상입니다.#!" #deepl:2216446202
  trigger_gate_expedition_has_covered: "#기본_텍스트 [concept_gate_expedition] 지도의 미탐험 부분이 있습니다.#!" #deepl:663241663
  trigger_gate_expedition_has_no_activity: "#기본_텍스트 우리는 이미 [Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')].#!" #deepl:3118854392
+ trigger_gate_requirement_low_mana_density: "이를 구축하려면 [concept_building] 주에는 [TopScope.ScriptValue('low_mana_density_threshhold')] 이상의 [concept_mana_density] 이 있어야 합니다." #deepl:2217222028
+ trigger_gate_requirement_medium_mana_density: "이를 구축하려면 [concept_building] 주에는 [TopScope.ScriptValue('medium_mana_density_threshhold')] 이상의 [concept_mana_density] 이 있어야 합니다." #deepl:3057879360
+ trigger_gate_requirement_max_mana_density: "이를 구축하려면 [concept_building] 주에는 [TopScope.ScriptValue('maximum_mana_density')] 이상의 [concept_mana_density] 이 있어야 합니다." #deepl:1165809799

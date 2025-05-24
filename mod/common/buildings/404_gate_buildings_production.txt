@@ -16,7 +16,7 @@
 
 	possible = {
 		custom_tooltip = {
-			text = building_requirement_low_mana_density
+			text = trigger_gate_requirement_low_mana_density
 			state_region = {
 				var:mana_density >= low_mana_density_threshhold
 			}
@@ -54,7 +54,7 @@ building_gate_mana_well = {
 
 	possible = {
 		custom_tooltip = {
-			text = building_gate_requirement_max_mana_density
+			text = trigger_gate_requirement_max_mana_density
 			state_region = {
 				var:mana_density >= maximum_mana_density
 			}
@@ -170,7 +170,7 @@ building_druid_groove = {
 
 	possible = {
 		custom_tooltip = {
-			text = building_requirement_medium_mana_density
+			text = trigger_gate_requirement_medium_mana_density
 			state_region = {
 				var:mana_density >= medium_mana_density_threshhold
 			}
