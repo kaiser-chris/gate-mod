@@ -19,8 +19,7 @@ combat_unit_type_irregular_infantry = {
     upkeep_modifier = {
     }
 
-    # scope = country
-    # both this and "can_build" needs to be true to build conscripts
+    ## 1.9 CHECK
     can_build_conscript = {
         always = yes
     }
@@ -537,6 +536,7 @@ combat_unit_type_squad_infantry = {
 combat_unit_type_thaumaturgic_commandos = {
     group = combat_unit_group_infantry
 
+    ## 1.9 CHECK
     can_build_conscript = {
         NOT = {
             has_law = law_type:law_peasant_levies
@@ -570,6 +570,7 @@ combat_unit_type_thaumaturgic_commandos = {
 combat_unit_type_mechanized_infantry = {
     group = combat_unit_group_infantry
 
+    ## 1.9 CHECK
     can_build_conscript = {
         NOT = {
             has_law = law_type:law_peasant_levies
@@ -686,7 +687,8 @@ combat_unit_type_mage_artillery = {
 
 combat_unit_type_cannon_artillery = {
     group = combat_unit_group_artillery
-	
+
+    ## 1.9 CHECK
     can_build_conscript = {
         NOT = {
             has_law = law_type:law_peasant_levies
@@ -768,7 +770,8 @@ combat_unit_type_cannon_artillery = {
 
 combat_unit_type_mobile_artillery = {
     group = combat_unit_group_artillery
-	
+
+    ## 1.9 CHECK
     can_build_conscript = {
         NOT = {
             has_law = law_type:law_peasant_levies
@@ -850,6 +853,7 @@ combat_unit_type_mobile_artillery = {
 combat_unit_type_shrapnel_artillery = {
     group = combat_unit_group_artillery
 
+    ## 1.9 CHECK
     can_build_conscript = {
         NOT = {
             has_law = law_type:law_peasant_levies
@@ -924,6 +928,7 @@ combat_unit_type_shrapnel_artillery = {
 combat_unit_type_mana_artillery = {
     group = combat_unit_group_artillery
 
+    ## 1.9 CHECK
     can_build_conscript = {
         NOT = {
             has_law = law_type:law_peasant_levies
@@ -963,6 +968,7 @@ combat_unit_type_mana_artillery = {
 combat_unit_type_siege_artillery = {
     group = combat_unit_group_artillery
 
+    ## 1.9 CHECK
     can_build_conscript = {
         NOT = {
             has_law = law_type:law_peasant_levies
@@ -1027,6 +1033,7 @@ combat_unit_type_siege_artillery = {
 combat_unit_type_heavy_tank = {
     group = combat_unit_group_artillery
 
+    ## 1.9 CHECK
     can_build_conscript = {
         NOT = {
             has_law = law_type:law_peasant_levies
@@ -1066,7 +1073,8 @@ combat_unit_type_heavy_tank = {
 
 combat_unit_type_hussars = {
     group = combat_unit_group_cavalry
-	
+
+    ## 1.9 CHECK
     can_build_conscript = {
         NOT = {
             has_law = law_type:law_peasant_levies
@@ -1135,6 +1143,7 @@ combat_unit_type_hussars = {
 combat_unit_type_dragoons = {
     group = combat_unit_group_cavalry
 
+    ## 1.9 CHECK
     can_build_conscript = {
         NOT = {
             has_law = law_type:law_peasant_levies
@@ -1199,7 +1208,8 @@ combat_unit_type_dragoons = {
 
 combat_unit_type_cuirassiers = {
     group = combat_unit_group_cavalry
-	
+
+    ## 1.9 CHECK
     can_build_conscript = {
         NOT = {
             has_law = law_type:law_peasant_levies
@@ -1262,7 +1272,8 @@ combat_unit_type_cuirassiers = {
 
 combat_unit_type_lancers = {
     group = combat_unit_group_cavalry
-	
+
+    ## 1.9 CHECK
     can_build_conscript = {
         NOT = {
             has_law = law_type:law_peasant_levies
@@ -1328,6 +1339,7 @@ combat_unit_type_lancers = {
 combat_unit_type_wraithwalkers = {
     group = combat_unit_group_cavalry
 
+    ## 1.9 CHECK
     can_build_conscript = {
         NOT = {
             has_law = law_type:law_peasant_levies
@@ -1363,6 +1375,7 @@ combat_unit_type_wraithwalkers = {
 combat_unit_type_light_tanks = {
     group = combat_unit_group_cavalry
 
+    ## 1.9 CHECK
     can_build_conscript = {
         NOT = {
             has_law = law_type:law_peasant_levies
