@@ -2,8 +2,11 @@
  trigger_has_magic_gate: "拥有[GetBuildingType('building_gate_alxa').GetName]"
  trigger_not_has_magic_gate: "没有[GetBuildingType('building_gate_alxa').GetName]"
  trigger_is_gate_planet_country: "是来自[concept_gate_planet]的国家"
- trigger_is_magic_country: "拥有[concept_magic_knowledge]"
- trigger_not_is_magic_country: "没有[concept_magic_knowledge]"
+ trigger_gate_is_magic_country: "拥有[concept_magic_knowledge]"
+ trigger_gate_not_is_magic_country: "没有[concept_magic_knowledge]"
  trigger_gate_expedition_budget: "#default_text 具有[concept_gate_expedition_budget] 或更高的[SCOPE.GetValue('budget_cost')|0v] 。#!" #deepl:2216446202
  trigger_gate_expedition_has_covered: "#default_text 拥有[concept_gate_expedition] 地图的未开发部分。#!" #deepl:663241663
  trigger_gate_expedition_has_no_activity: "#default_text 我们还没有进行[Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')] 。#!" #deepl:3118854392
+ trigger_gate_requirement_low_mana_density: "要建立这个[concept_building] ，一个州的[concept_mana_density] 至少要达到[TopScope.ScriptValue('low_mana_density_threshhold')] 。" #deepl:2217222028
+ trigger_gate_requirement_medium_mana_density: "要建立这个[concept_building] ，一个州的[concept_mana_density] 至少要达到[TopScope.ScriptValue('medium_mana_density_threshhold')] 。" #deepl:3057879360
+ trigger_gate_requirement_max_mana_density: "要建立这个[concept_building] ，一个州的[concept_mana_density] 至少要达到[TopScope.ScriptValue('maximum_mana_density')] 。" #deepl:1165809799
