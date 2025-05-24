@@ -8,6 +8,16 @@
 			tab_variable = gate_main_technology_active_tab
 		}
 	}
+
+	is_shown = {
+		OR = {
+			morgenrote_is_active = no
+			AND = {
+				morgenrote_is_active = yes
+				is_magic_country = yes
+			}
+		}
+	}
 }
 
 sgui_gate_technology_tab_researcher = {
@@ -16,14 +26,30 @@ sgui_gate_technology_tab_researcher = {
 	is_shown = {
 		AND = {
 			has_variable = gate_main_technology_active_tab
+			morgenrote_is_active = no
 			var:gate_main_technology_active_tab = 1
 		}
 	}
 
+	is_valid = {
+		morgenrote_is_active = no
+	}
+
 	effect = {
-		set_variable = {
-			name = gate_main_technology_active_tab
-			value = 1
+		if = {
+			limit = {
+				morgenrote_is_active = no
+			}
+			set_variable = {
+				name = gate_main_technology_active_tab
+				value = 1
+			}
+		}
+		else = {
+			set_variable = {
+				name = gate_main_technology_active_tab
+				value = 2
+			}
 		}
 	}
 }
@@ -32,9 +58,20 @@ sgui_gate_technology_tab_production = {
 	scope = country
 
 	is_shown = {
-		AND = {
-			has_variable = gate_main_technology_active_tab
-			var:gate_main_technology_active_tab = 2
+		OR = {
+			AND = {
+				morgenrote_is_active = no
+				has_variable = gate_main_technology_active_tab
+				var:gate_main_technology_active_tab = 2
+			}
+			AND = {
+				morgenrote_is_active = yes
+				has_variable = gate_main_technology_active_tab
+				OR = {
+					var:gate_main_technology_active_tab = 1
+					var:gate_main_technology_active_tab = 2
+				}
+			}
 		}
 	}
 

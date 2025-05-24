@@ -62,6 +62,8 @@ types gate_technology_panel_types {
         {
             tab_buttons = {
                 # Researcher
+                blockoverride "first_button_icon" {
+                }
                 blockoverride "first_button" {
                     text = gg_tab_technology_researcher
                 }
@@ -72,10 +74,16 @@ types gate_technology_panel_types {
                     onclick = "[GetScriptedGui('sgui_gate_technology_tab_researcher').Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
                 }
                 blockoverride "first_button_visibility" {
-                    visible = "[GetScriptedGui('sgui_gate_technology_tab_researcher').IsShown(GuiScope.SetRoot(Country.MakeScope).End)]"
+                    visible = "[And(
+                                    GetScriptedGui('sgui_gate_technology_tab_researcher').IsValid(GuiScope.SetRoot(Country.MakeScope).End),
+                                    GetScriptedGui('sgui_gate_technology_tab_researcher').IsShown(GuiScope.SetRoot(Country.MakeScope).End)
+                              )]"
                 }
                 blockoverride "first_button_visibility_checked" {
-                    visible = "[Not(GetScriptedGui('sgui_gate_technology_tab_researcher').IsShown(GuiScope.SetRoot(Country.MakeScope).End))]"
+                    visible = "[And(
+                                    GetScriptedGui('sgui_gate_technology_tab_researcher').IsValid(GuiScope.SetRoot(Country.MakeScope).End),
+                                    Not(GetScriptedGui('sgui_gate_technology_tab_researcher').IsShown(GuiScope.SetRoot(Country.MakeScope).End))
+                              )]"
                 }
                 blockoverride "first_button_selected" {
                     text = gg_tab_technology_researcher
