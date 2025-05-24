@@ -19,17 +19,27 @@ Below is a table with all currently open ToDos.
 
 | File | Line | ToDo |
 | ---- | ---- | ---- |
-| ./mod/common/alert_types/400_gate_alert_types.txt | 80 |  Remove this debug check for expedition_alert |
-| ./mod/common/alert_types/400_gate_alert_types.txt | 95 |  Remove this debug check for expedition_alert |
-| ./mod/common/character_templates/400_gate_characters.txt | 99 |  Create custom trait for expedition leaders |
-| ./mod/common/technology/technologies/402_magic_military.txt | 113 |  Create icon for gate_commando_thaumaturgy |
-| ./mod/common/technology/technologies/402_magic_military.txt | 47 |  Create icon for gate_arcane_warfare_doctrine |
-| ./mod/common/technology/technologies/402_magic_military.txt | 64 |  Create icon for gate_mana_weaponization |
-| ./mod/common/technology/technologies/402_magic_military.txt | 81 |  Create icon for gate_shadow_infiltration_tactics |
-| ./mod/common/technology/technologies/403_magic_society.txt | 264 |  Create icon for mana_linked_education |
-| ./mod/common/technology/technologies/403_magic_society.txt | 285 |  Create icon for thaumaturgic_courts |
-| ./mod/common/technology/technologies/403_magic_society.txt | 305 |  Create icon for soulbound_currency |
-| ./mod/common/technology/technologies/403_magic_society.txt | 98 |  Implement gate_expeditions technology |
+| ./mod/common/alert_types/400_gate_alert_types.txt | 101 |  Remove this debug check for expedition_alert |
+| ./mod/common/alert_types/400_gate_alert_types.txt | 116 |  Remove this debug check for expedition_alert |
+| ./mod/common/character_templates/400_gate_characters.txt | 96 |  Create custom trait for expedition leaders |
+| ./mod/common/country_definitions/400_gate_countries.txt | 89 |  Define color for bear nation |
+| ./mod/common/history/countries/gb2 - praprandgaw.txt | 3 |  This is a copy of Mountain Kingdom and needs balancing |
+| ./mod/common/production_method_groups/401_gate_production_method_groups.txt | 40 |  Add Gnome help pm |
+| ./mod/common/production_method_groups/401_gate_production_method_groups.txt | 51 |  Add Bear help pm |
+| ./mod/common/production_method_groups/401_gate_production_method_groups.txt | 62 |  Add Dwarven help pm |
+| ./mod/common/technology/technologies/402_magic_military.txt | 79 |  Create icon for gate_shadow_infiltration_tactics |
+| ./mod/common/technology/technologies/403_magic_society.txt | 346 |  Create icon for soulbound_currency |
+| ./mod/localization/english/expedition/gate_expedition_activities_l_english.yml | 12 |  Improve gate_expedition_activity_home_desc |
+| ./mod/localization/english/expedition/gate_expedition_activities_l_english.yml | 19 |  Improve gate_expedition_activity_explore_desc |
+| ./mod/localization/english/expedition/gate_expedition_activities_l_english.yml | 22 |  Improve gate_expedition_activity_contact_desc |
+| ./mod/localization/english/expedition/gate_expedition_activities_l_english.yml | 25 |  Improve gate_expedition_activity_conquer_desc |
+| ./mod/localization/english/expedition/gate_expedition_activities_l_english.yml | 28 |  Improve gate_expedition_activity_raid_desc |
+| ./mod/localization/english/expedition/gate_expedition_activities_l_english.yml | 31 |  Improve gate_expedition_activity_trade_desc |
+| ./mod/localization/english/expedition/gate_expedition_interactions_l_english.yml | 10 |  gate_expedition_interaction_conquer_tooltip |
+| ./mod/localization/english/expedition/gate_expedition_interactions_l_english.yml | 12 |  gate_expedition_interaction_raid_tooltip |
+| ./mod/localization/english/expedition/gate_expedition_interactions_l_english.yml | 14 |  gate_expedition_interaction_trade_tooltip |
+| ./mod/localization/english/expedition/gate_expedition_interactions_l_english.yml | 6 |  gate_expedition_interaction_explore_tooltip |
+| ./mod/localization/english/expedition/gate_expedition_interactions_l_english.yml | 8 |  gate_expedition_interaction_contact_tooltip |
 | ./mod/localization/english/gate_alerts_l_english.yml | 25 |  Write alert_expedition_alert_name |
 | ./mod/localization/english/gate_alerts_l_english.yml | 26 |  Write alert_expedition_alert_desc |
 | ./mod/localization/english/gate_alerts_l_english.yml | 27 |  Write alert_expedition_alert_hint |
@@ -38,6 +48,10 @@ Below is a table with all currently open ToDos.
 | ./mod/localization/english/gate_alerts_l_english.yml | 31 |  Write alert_gate_space_alert_desc |
 | ./mod/localization/english/gate_alerts_l_english.yml | 32 |  Write alert_gate_space_alert_hint |
 | ./mod/localization/english/gate_alerts_l_english.yml | 34 |  Write gate_space_alert_setting_name |
-| ./mod/localization/english/gate_technology_l_english.yml | 49 |  Write description for gnomish_support_desc |
+| ./mod/localization/english/gate_technology_l_english.yml | 44 |  Write description bear_gate_immigration |
+| ./mod/localization/english/gate_technology_l_english.yml | 45 |  Write description for bear_gate_immigration_desc |
+| ./mod/localization/english/gate_technology_l_english.yml | 46 |  Write description bear_gate_immigration |
+| ./mod/localization/english/gate_technology_l_english.yml | 47 |  Write description for bear_gate_immigration_desc |
+| ./mod/localization/english/gate_technology_l_english.yml | 57 |  Write description for gnomish_support_desc |
 
 [//]: # (TODO-END)

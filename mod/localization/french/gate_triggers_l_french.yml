@@ -7,3 +7,6 @@
  trigger_gate_expedition_budget: "#default_text Has an [concept_gate_expedition_budget] of [SCOPE.GetValue('budget_cost')|0v] or more.#!"
  trigger_gate_expedition_has_covered: "#default_text Has an unexplored part of the [concept_gate_expedition] map.#!"
  trigger_gate_expedition_has_no_activity: "#default_text We are not already doing an [Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')].#!"
+ trigger_gate_requirement_low_mana_density: "To build this [concept_building] a state needs to have a [concept_mana_density] of at least [TopScope.ScriptValue('low_mana_density_threshhold')]."
+ trigger_gate_requirement_medium_mana_density: "To build this [concept_building] a state needs to have a [concept_mana_density] of at least [TopScope.ScriptValue('medium_mana_density_threshhold')]."
+ trigger_gate_requirement_max_mana_density: "To build this [concept_building] a state needs to have a [concept_mana_density] of at least [TopScope.ScriptValue('maximum_mana_density')]."
