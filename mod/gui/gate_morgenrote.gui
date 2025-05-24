@@ -16,79 +16,86 @@
 
 types gate_main_panel_types {
 
-    type manaflow_placeholder = academics_widget_character_with_button {
-        datacontext = "[GetMetaPlayer.GetPlayedOrObservedCountry]"
-        blockoverride "role_icon" {
+    type mr_academic_manaflow = mr_shared_occupation {
+        layoutpolicy_horizontal = expanding
+        blockoverride "occupation_character_context" {
+            datacontext = "[Country.MakeScope.Var('magic_researcher')]"
+        }
+        blockoverride "occupation_role_icon" {
             texture = gfx/interface/icons/mr_icons/gate_magic_researcher.dds
         }
-        blockoverride "role_tooltip" {
-            tooltip = "[concept_magic_researcher_desc]"
+        blockoverride "occupation_role_tooltip" {
+            tooltip = concept_magic_researcher_desc
         }
-        blockoverride "role_name" {
+        blockoverride "occupation_role_name" {
             text = gg_mr_magic_research
         }
-        blockoverride "character" {
-            datacontext = "[GetPlayer.MakeScope.Var('magic_researcher').GetCharacter]"
-        }
-        blockoverride "character_visible" {
-            visible = "[GetPlayer.MakeScope.Var('magic_researcher').IsSet]"
-        }
-        blockoverride "no_character_visible" {
-            visible = "[Not(GetPlayer.MakeScope.Var('magic_researcher').IsSet)]"
-        }
-        blockoverride "character_name" {
+        blockoverride "occupation_character_name" {
             text = "[GetPlayer.GetCustom('gg_mr_has_magic_researcher_custom_loc')]"
         }
-        blockoverride "achievements_icon_visibility" {
+        blockoverride "occupation_achievements_icon_visibility" {
             visible = no
         }
-        blockoverride "character_traits" {
-            datacontext = "[GetPlayer.MakeScope.Var('magic_researcher').GetCharacter]"
-            datamodel = "[Character.AccessTraits]"
+        blockoverride "occupation_data_header_text" {
+            text = mr_science_engineer_data_header
         }
-        blockoverride "experience_bar_visibility" {
-            visible = yes
+        blockoverride "occupation_experience_value" {
+            value = "[Scope.Var('magic_experience').GetValue]"
         }
-        blockoverride "values" {
+        blockoverride "occupation_experience_range" {
             min = 0
             max = 100
-            value = "[GetPlayer.MakeScope.Var('magic_researcher').Var('magic_experience').GetValue]"
         }
-        blockoverride "experience_tooltip" {
-            tooltip = "concept_gate_character_experience_desc"
+        blockoverride "occupation_experience_tooltip" {
+            tooltip = concept_gate_character_experience_desc
         }
-        blockoverride "experience_bar_text" {
+        blockoverride "occupation_experience_bar_text" {
             text = "[GetPlayer.GetCustom('gg_mr_magic_researcher_experience_custom_loc')]"
         }
-        blockoverride "small_box_content" {
-            flowcontainer = {
-                direction = vertical
-                margin = { 25 0 }
+        blockoverride "occupation_data_header_text" {
+            text = gg_header_magic_innovation
+        }
+        blockoverride "occupation_data_content" {
 
-                textbox = {
-                    margin = { 0 20 }
-                    text = gg_mr_magic_innovation_total
-                    minimumsize = { 250 25 }
-                    autoresize = yes
-                    multiline = yes
-                    align = center
-                    using = fontsize_large
-                }
-
-                divider_decorative = {
-                    size = { 250 2 }
-                }
-
-                textbox = {
-                    margin = { 0 20 }
-                    text = gg_mr_monthly_magic_innovation
-                    minimumsize = { 250 25 }
-                    autoresize = yes
-                    multiline = yes
-                    align = left
-                    using = fontsize_large
-                }
+            textbox = {
+                text = gg_mr_magic_innovation_total
+                minimumsize = { 220 -1 }
+                layoutpolicy_horizontal = expanding
+                autoresize = yes
+                multiline = yes
+                align = center
+                using = fontsize_large
             }
+
+            divider_decorative = {
+                size = { 220 2 }
+            }
+
+            textbox = {
+                minimumsize = { 220 -1 }
+                maximumsize = { 220 -1 }
+                visible = "[GetScriptedGui('sgui_gate_has_magic').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
+                text = gg_monthly_magic_innovation
+                multiline = yes
+                autoresize = yes
+                align = center
+            }
+            textbox = {
+                minimumsize = { 220 -1 }
+                maximumsize = { 220 -1 }
+                visible = "[Not(GetScriptedGui('sgui_gate_has_magic').IsValid(GuiScope.SetRoot(Country.MakeScope).End))]"
+                text = gg_monthly_magic_innovation_no_magic
+                multiline = yes
+                autoresize = yes
+                align = center
+            }
+        }
+        blockoverride "extra_button" {
+            text = magic_researcher_decision
+            datacontext = "[GetScriptedGui('sgui_gate_mr_hire_researcher')]"
+            onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(Country.MakeScope).End )]"
+            enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End )]"
+            tooltip = magic_researcher_decision_desc
         }
         blockoverride "visit_button" {
             text = "gg_mr_visit_magic_technology"
@@ -96,23 +103,177 @@ types gate_main_panel_types {
             enabled = "[GetScriptedGui('sgui_gate_technology_tab_production').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
         }
         blockoverride "big_box_content" {
-            flowcontainer = {
-                direction = vertical
-                margin = { 25 20 }
+            margin = { 20 20 }
+            gate_mr_institute_details = {
+                datacontext = "[Country.GetCapital.GetBuilding('building_magic_research_institute')]"
+            }
+        }
+    }
 
-                button = {
-                    #Sell Minerals Button
-                    using = default_button_primary_big_action
-                    size = { 250 40 }
-                    text = magic_researcher_decision
-                    using = fontsize_medium
+    type gate_mr_institute_details = vbox {
+        spacing = 15
+        layoutpolicy_horizontal = expanding
 
-                    datacontext = "[GetScriptedGui('sgui_gate_mr_hire_researcher')]"
-                    onclick = "[ScriptedGui.Execute(GuiScope.SetRoot( GetPlayer.MakeScope).End )]"
-                    enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( GetPlayer.MakeScope).End )]"
-                    tooltip = magic_researcher_decision_desc
+        # Title
+        textbox = {
+            maximumsize = { 250 -1 }
+            minimumsize = { 250 -1 }
+            autoresize = yes
+            multiline = yes
+            raw_text = "[Building.GetNameNoFormatting]"
+            align = center
+            using = fontsize_large
+        }
+
+        # Icon
+        button = {
+            tooltipwidget = {
+                FancyTooltip_Building = {}
+            }
+            onrightclick = "[RightClickMenuManager.ShowForBuilding(Building.AccessSelf)]"
+            size = { 115 115 }
+
+            icon = {
+                alpha = "[TransparentIfFalse(Building.IsActive)]"
+                texture = "[Building.GetIcon]"
+                size = { 100% 100% }
+
+                icon = {
+                    visible = "[Building.IsAutoDownsizing]"
+                    tooltip = "[Building.GetAutoDownsizeTooltip]"
+                    position = { 5 5 }
+                    size = { 30 30 }
+                    texture = "gfx/interface/production_methods/auto_downsize.dds"
+                }
+            }
+
+            icon = {
+                visible = "[And( GreaterThan_int32( Building.GetExpansionLevel, '(int32)0'), Not( Building.IsActive ))]"
+                size = { 100% 100% }
+                texture = "gfx/interface/icons/generic_icons/inactive_building.dds"
+            }
+        }
+
+        # Construction Progress
+        hbox = {
+            visible = "[Building.HasConstructionQueued]"
+
+            default_progressbar_horizontal = {
+                tooltip = "BUILDING_PROGRESS_TOOLTIP"
+                size = { 110 5 }
+
+                blockoverride "values" {
+                    value = "[Building.GetConstructionProgressPercentage]"
+                    min = 0
+                    max = 1
+                }
+            }
+        }
+
+        # Staffing
+        building_progressbars = {
+            blockoverride "progressbar_size" {
+                size = { 200 26 }
+            }
+        }
+
+        divider_decorative = {}
+
+        # Wages
+        hbox = {
+            layoutpolicy_horizontal = expanding
+            visible = "[GreaterThan_CFixedPoint(Building.GetLastWagesExpenses, '(CFixedPoint)0')]"
+            maximumsize = { 250 -1 }
+            minimumsize = { 250 -1 }
+
+            background = {
+                using = entry_bg_simple
+            }
+
+            textbox = {
+                text = "WAGES"
+                autoresize = yes
+                multiline = yes
+                resizeparent = yes
+                align = left|nobaseline
+                margin = { 10 8 }
+            }
+
+            expand = {}
+
+            textbox = {
+                raw_text = "#variable @money![Building.GetLastWagesExpenses|K]#!"
+                tooltip = "[Building.GetLastWagesExpensesDesc]"
+                autoresize = yes
+                multiline = yes
+                align = right|nobaseline
+                margin = { 10 8 }
+            }
+        }
+
+        # Modifiers
+        vbox = {
+            layoutpolicy_horizontal = expanding
+            datamodel = "[Building.GetProducedModifiers.GetEntries]"
+            visible = "[Not(IsDataModelEmpty(Building.GetProducedModifiers.GetEntries))]"
+
+            item = {
+                container = {
+                    maximumsize = { 250 -1 }
+                    minimumsize = { 250 39 }
+
+                    background = {
+                        using = entry_bg_simple
+                    }
+
+                    flowcontainer = {
+                        parentanchor = vcenter
+                        margin_left = 5
+                        icon = {
+                            size = { 25 25 }
+                            visible = "[And(Building.CanBeAffectedByInputShortage(ModifierEntry.Self),And(Building.HasAnyInputShortage,GreaterThan_CFixedPoint(Building.GetInputShortagePenalty, '(CFixedPoint)0')))]"
+                            texture = "gfx/interface/icons/generic_icons/goods_shortage.dds"
+                            tooltip = "GOODS_OUTPUT_PENALTY_TOOLTIP"
+                            parentanchor = vcenter
+                        }
+
+                        icon = {
+                            size = { 25 25 }
+                            visible = "[And(Building.CanBeAffectedByInputShortage(ModifierEntry.Self),And(Not(Building.HasAnyInputShortage),GreaterThan_CFixedPoint(Building.GetInputShortagePenalty, '(CFixedPoint)0')))]"
+                            texture = "gfx/interface/icons/generic_icons/goods_shortage.dds"
+                            tooltip = "GOODS_OUTPUT_PENALTY_LINGERING_TOOLTIP"
+                            parentanchor = vcenter
+                        }
+
+                        textbox = {
+                            text = "[ModifierEntry.GetName]"
+                            tooltip = "BUILDING_DETAILS_PRODUCED_MODIFIER_TOOLTIP"
+                            autoresize = yes
+                            multiline = yes
+                            align = left|nobaseline
+                            parentanchor = vcenter
+                            minimumsize = { 170 -1 }
+                            maximumsize = { 170 -1 }
+                            margin_left = 5
+                            margin_top = 5
+                            margin_bottom = 5
+                        }
+                    }
+
+                    textbox = {
+                        text = "[ModifierEntry.GetFormattedValue]"
+                        tooltip = "BUILDING_DETAILS_PRODUCED_MODIFIER_TOOLTIP"
+                        autoresize = yes
+                        multiline = yes
+                        align = right|nobaseline
+                        parentanchor = right|vcenter
+                        minimumsize = { 250 -1 }
+                        maximumsize = { 250 -1 }
+                        margin_right = 10
+                    }
                 }
             }
         }
     }
+
 }
