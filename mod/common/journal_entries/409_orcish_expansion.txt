@@ -1,5 +1,5 @@
 ﻿je_gate_orcish_expansion = {
-	icon = "gfx/interface/icons/event_icons/event_gate_expedition.dds"
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
 
 	group = je_group_foreign_affairs
 
@@ -12,19 +12,6 @@
 	}
 
 	immediate = {
-		set_variable = {
-			name = gate_orc_controlled_states
-			value = 0
-		}
-		every_scope_state = {
-			limit = {
-				is_split_state = no
-			}
-			change_variable = {
-				name = gate_orc_controlled_states
-				add = 1
-			}
-		}
 	}
 
 	complete = {
@@ -35,17 +22,20 @@
 	}
 
 	fail = {
-		game_date > 1900
+		OR = {
+			NOT = {
+				has_building = building_gate_equateur
+			}
+			game_date > 1890
+		}
 	}
 
 	on_complete = {
-		# TODO
+		trigger_event = gate_orcish_expansion.1
 	}
 
 	on_fail = {
-		hidden_effect = {
-			remove_variable = gate_orc_controlled_states
-		}
+		trigger_event = gate_orcish_expansion.2
 	}
 
 	transferable = no
