@@ -65,3 +65,19 @@ gate_expedition_preparation_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_bureaucrat_negative.dds
 	country_expenses_add = 1
 }
+
+modifier_gate_orcish_expansion_success = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	country_loyalism_increases_full_acceptance_mult = 0.5
+	country_authority_add = 100
+	building_group_bg_plantations_throughput_add = 0.3
+	building_group_bg_agriculture_throughput_add = 0.3
+}
+
+modifier_gate_orcish_expansion_failure = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	country_loyalism_increases_full_acceptance_mult = -0.3
+	country_authority_add = -100
+	building_group_bg_plantations_throughput_add = -0.3
+	building_group_bg_agriculture_throughput_add = -0.3
+}
