@@ -24,20 +24,6 @@ GLOBAL = {
 	# Build initial Mana Density around gates
 	initial_gate_propogate_mana_density = yes
 
-	# Mana Density Cache
-	set_global_variable = {
-		name = global_mana_density_cache
-		value = {
-			value = 0
-			every_state_region = {
-				limit = {
-					var:mana_density > 0
-				}
-				add = var:mana_density
-			}
-		}
-	}
-
 	# Randomly propagate mana density
 	# so every start is a little different
 	random = {
@@ -57,7 +43,6 @@ GLOBAL = {
 		gate_propogate_mana_density = yes
 	}
 
-	## 1.9 CHECK
-	# After random propagation calculate saturation
+	# Calculate initial saturation
 	calculate_mana_saturation = yes
 }

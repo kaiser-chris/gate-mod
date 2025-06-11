@@ -1,0 +1,46 @@
+﻿namespace = gate_ankaris_orcish_elven_war
+
+gate_ankaris_orcish_elven_war.1 = {
+    type = country_event
+    dlc = dlc_magic_gate
+
+    title = gate_ankaris_orcish_elven_war.1.t
+    desc = gate_ankaris_orcish_elven_war.1.d
+    flavor = gate_ankaris_orcish_elven_war.1.f
+
+    event_image = {
+        video = "ep1_transfer_of_authority"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+    duration = 3
+
+    trigger = {
+        has_building = building_gate_zambia
+    }
+
+    immediate = {
+
+    }
+
+    option = {
+        name = gate_ankaris_orcish_elven_war.1.a
+        default_option = yes
+        activate_production_method = {
+            building_type = building_gate_zambia
+            production_method = pm_gate_situation_normal
+        }
+    }
+
+    option = {
+        name = gate_ankaris_orcish_elven_war.1.b
+        default_option = no
+        activate_production_method = {
+            building_type = building_gate_zambia
+            production_method = pm_gate_situation_orcish_elven_war
+        }
+    }
+}

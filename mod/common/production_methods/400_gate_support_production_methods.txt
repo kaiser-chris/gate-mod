@@ -95,8 +95,11 @@ pm_gate_support_elves = {
 		elven_support
 	}
 
+	unlocking_production_methods = {
+		pm_gate_situation_normal
+	}
+
 	disallowing_laws = {
-		law_freedom_of_conscience
 		law_total_separation
 		law_state_atheism
 	}
@@ -114,7 +117,7 @@ pm_gate_support_elves = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
-			goods_output_mana_add = 25
+			goods_output_mana_add = 20
 		}
 		level_scaled = {
 			building_employment_mages_add = 100
@@ -123,8 +126,8 @@ pm_gate_support_elves = {
 	}
 }
 
-pm_gate_support_elves_plus = {
-	texture = "gfx/interface/icons/production_method_icons/gate_elven_gold_support_plus.dds"
+pm_gate_reverse_support_elves = {
+	texture = gfx/interface/icons/production_method_icons/muskets.dds
 
 	is_hidden_when_unavailable = yes
 
@@ -132,29 +135,50 @@ pm_gate_support_elves_plus = {
 		elven_support
 	}
 
-	disallowing_laws = {
-		law_total_separation
-		law_state_atheism
-	}
-
-	country_modifiers = {
-		workforce_scaled = {
-			country_minting_add = 3000
-		}
-
-		level_scaled = {
-			country_gate_magical_innovation_add = 50
-		}
+	unlocking_production_methods = {
+		pm_gate_situation_orcish_elven_war
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
 			goods_output_mana_add = 20
+			# input goods
+			goods_input_small_arms_add = 25
+			goods_input_artillery_add = 5
 		}
 		level_scaled = {
 			building_employment_mages_add = 100
-			building_employment_clergymen_add = 500
+			building_employment_soldiers_add = 1000
+		}
+	}
+}
+
+pm_gate_reverse_support_elves_plus = {
+	texture = gfx/interface/icons/production_method_icons/rifles.dds
+
+	is_hidden_when_unavailable = yes
+
+	unlocking_technologies = {
+		elven_support
+	}
+
+	unlocking_production_methods = {
+		pm_gate_situation_orcish_elven_war
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_output_mana_add = 20
+			# input goods
+			goods_input_small_arms_add = 50
+			goods_input_artillery_add = 20
+			goods_input_ammunition_add = 20
+		}
+		level_scaled = {
+			building_employment_mages_add = 100
+			building_employment_soldiers_add = 2000
 		}
 	}
 }

@@ -19,6 +19,13 @@ on_monthly_gate_buttons = {
 on_monthly_gate_calculate_mana_saturation = {
     trigger = {
         global_var:global_mana_saturation <= 100
+        OR = {
+            # Every three months
+            month = 0
+            month = 3
+            month = 6
+            month = 9
+        }
     }
     effect = {
         calculate_mana_saturation = yes
@@ -38,6 +45,18 @@ on_monthly_gate_cleanup = {
 }
 
 on_monthly_gate_mana_density = {
+    trigger = {
+        global_var:global_mana_saturation <= 100
+        OR = {
+            # Every two months
+            month = 0
+            month = 2
+            month = 4
+            month = 6
+            month = 8
+            month = 10
+        }
+    }
     effect = {
         # Between 1 and 2 times
         gate_propogate_mana_density = yes
