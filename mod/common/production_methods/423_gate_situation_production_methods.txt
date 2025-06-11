@@ -1,0 +1,18 @@
+﻿pm_gate_situation_normal = {
+	texture = gfx/interface/icons/production_method_icons/gate_situation_normal.dds
+	is_hidden_when_unavailable = yes
+	is_default = yes
+
+	unlocking_production_methods = {
+		pm_gate_situation_normal
+	}
+}
+
+pm_gate_situation_orcish_elven_war = {
+	texture = "gfx/interface/icons/production_method_icons/gate_defend.dds"
+	is_hidden_when_unavailable = yes
+
+	unlocking_production_methods = {
+		pm_gate_situation_orcish_elven_war
+	}
+}

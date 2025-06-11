@@ -1,0 +1,46 @@
+﻿pb_gate_ankaris_orcish_elven_war = {
+	name = pb_gate_ankaris_orcish_elven_war_name
+	desc = pb_gate_ankaris_orcish_elven_war_pro
+	second_desc = pb_gate_ankaris_orcish_elven_war_anti
+
+	double_sided_bad = yes
+
+	yearly_progress = {
+		if = {
+			limit = {
+				var:gate_ankaris_orcish_elven_war_support ?= gate_ankaris_war_support_strong
+			}
+			subtract = {
+				value = 1
+				min = 0
+				max = 100
+				desc = pb_gate_ankaris_orcish_elven_war_support_tooltip_strong
+			}
+		}
+		else_if = {
+			limit = {
+				var:gate_ankaris_orcish_elven_war_support ?= gate_ankaris_war_support_low
+			}
+			add = {
+				value = 0
+				min = 0
+				max = 100
+				desc = pb_gate_ankaris_orcish_elven_war_support_tooltip_low
+			}
+		}
+		else_if = {
+			limit = {
+				var:gate_ankaris_orcish_elven_war_support ?= gate_ankaris_war_support_none
+			}
+			add = {
+				value = -1
+				max = 100
+				desc = pb_gate_ankaris_orcish_elven_war_support_tooltip_none
+			}
+		}
+	}
+
+	start_value = 50
+	min_value = 0
+	max_value = 100
+}

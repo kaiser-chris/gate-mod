@@ -1,0 +1,104 @@
+﻿je_gate_ankaris_orcish_elven_war = {
+	icon = "gfx/interface/icons/event_icons/event_gate_struggle_shield.dds"
+
+	group = je_group_foreign_affairs
+
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = je_gate_ankaris_orcish_elven_war_status_loosing
+				trigger = {
+					scope:journal_entry = {
+						scripted_bar_progress = {
+							name = pb_gate_ankaris_orcish_elven_war
+							value <= 35
+						}
+					}
+				}
+			}
+			triggered_desc = {
+				desc = je_gate_ankaris_orcish_elven_war_status_winning
+				trigger = {
+					scope:journal_entry = {
+						scripted_bar_progress = {
+							name = pb_gate_ankaris_orcish_elven_war
+							value >= 65
+						}
+					}
+				}
+			}
+			triggered_desc = {
+				desc = je_gate_ankaris_orcish_elven_war_status_even
+			}
+		}
+	}
+
+	is_shown_when_inactive = {
+		# Trigger when the Orks lose their gate
+		s:STATE_EQUATEUR = {
+			NOT = {
+				any_scope_state = {
+					c:GATE_OK ?= owner
+				}
+			}
+		}
+		has_building = building_gate_zambia
+		c:GATE_AD ?= this
+	}
+
+	immediate = {
+		set_variable = je_gate_ankaris_orcish_elven_war
+		trigger_event = {
+			id = gate_ankaris_orcish_elven_war.1
+		}
+	}
+
+	complete = {
+		custom_tooltip = {
+			text = je_gate_ankaris_orcish_elven_war_complete
+			scope:journal_entry = {
+				scripted_bar_progress = {
+					name = pb_gate_ankaris_orcish_elven_war
+					value >= 100
+				}
+			}
+		}
+	}
+
+	fail = {
+		NOT = {
+			has_building = building_gate_zambia
+		}
+		custom_tooltip = {
+			text = je_gate_ankaris_orcish_elven_war_fail
+			scope:journal_entry = {
+				scripted_bar_progress = {
+					name = pb_gate_ankaris_orcish_elven_war
+					value <= 0
+				}
+			}
+		}
+	}
+
+	on_complete = {
+		hidden_effect = {
+			remove_variable = je_gate_ankaris_orcish_elven_war
+		}
+		trigger_event = gate_orcish_expansion.1
+	}
+
+	on_fail = {
+		hidden_effect = {
+			remove_variable = je_gate_ankaris_orcish_elven_war
+		}
+		trigger_event = gate_orcish_expansion.2
+	}
+
+	scripted_progress_bar = pb_gate_ankaris_orcish_elven_war
+
+	transferable = no
+	can_revolution_inherit = yes
+
+	weight = 200
+	should_be_pinned_by_default = yes
+}
