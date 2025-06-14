@@ -89,4 +89,23 @@ GLOBAL = {
 		# Country Scope does not matter
 		gate_setup_expeditions = yes
 	}
+
+				every_state = {
+			limit = { state_region = s:STATE_ALASKA }
+			state_region = {
+				 add_arable_land = 50
+			}
+}
+		every_state = {
+			limit = { state_region = s:STATE_YUKON_TERRITORY }
+			state_region = {
+				 add_arable_land = 30
+			}
+		}
+				every_state = {
+			limit = { state_region = s:STATE_BRITISH_COLUMBIA }
+			state_region = {
+				 add_arable_land = 50
+			}
+		}
 }
