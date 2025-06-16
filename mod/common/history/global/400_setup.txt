@@ -1,95 +1,114 @@
 ﻿# This scripts are run after all other history scripts were run
 GLOBAL = {
 
-	# Fixes colonization issues
-	c:GATE_NS = {
-		activate_law = law_type:law_gnomish_integration
-	}
-	c:GATE_AD = {
-		activate_law = law_type:law_frontier_colonization
-	}
-	c:GATE_OK = {
-		activate_law = law_type:law_colonial_exploitation
-	}
+    # Fixes colonization issues
+    c:GATE_NS = {
+        activate_law = law_type:law_gnomish_integration
+    }
+    c:GATE_AD = {
+        activate_law = law_type:law_frontier_colonization
+    }
+	  c:GATE_OK = {
+        activate_law = law_type:law_colonial_exploitation
+    }
 
-	set_global_variable = {
-		name = magic_growing_var
-		value = 0
-	}
+    set_global_variable = {
+        name = magic_growing_var
+        value = 0
+    }
 
-	# Every country has a journal entry for mana saturation
-	# since some countries can interact with the journal entry
-	every_country = {
-		limit = {
-			NOT = {
-				is_country_type = decentralized
-			}
-		}
-		add_journal_entry = {
-			type = je_mana_saturation
-		}
-	}
+    # Every country has a journal entry for mana saturation
+    # since some countries can interact with the journal entry
+    every_country = {
+        limit = {
+            NOT = {
+                is_country_type = decentralized
+            }
+        }
+        add_journal_entry = {
+            type = je_mana_saturation
+        }
+    }
 
-	# Make Mage Tower an owner building
-	add_to_global_variable_list = {
-		name = com_custom_owner_buildings
-		target = bt:building_mage_tower
-	}
+    # Make Mage Tower an owner building
+    add_to_global_variable_list = {
+        name = com_custom_owner_buildings
+        target = bt:building_mage_tower
+    }
 
-	# Add custom buttons
-	add_gate_magic_main_button = yes
-	add_gate_magic_technology_button = yes
+    # Add custom buttons
+    add_gate_magic_main_button = yes
+    add_gate_magic_technology_button = yes
 
-	set_global_variable = {
-		name = magic_innovation_bank_max
-		value = 30000
-	}
+    set_global_variable = {
+        name = magic_innovation_bank_max
+        value = 30000
+    }
 
-	# Calculate magic innovation
-	every_country = {
-		set_variable = {
-			name = magic_ethics
-			value = 0
-		}
-		set_variable = {
-			name = magic_innovation
-			value = 0
-		}
-		calculate_magic_research = yes
-	}
+    # Calculate magic innovation
+    every_country = {
+        set_variable = {
+            name = magic_ethics
+            value = 0
+        }
+        set_variable = {
+            name = magic_innovation
+            value = 0
+        }
+        calculate_magic_research = yes
+    }
 
-	# Statistics GUI
-	gate_collect_magic_countries = yes
+    # Statistics GUI
+    gate_collect_magic_countries = yes
 
-	every_in_global_list = {
-		variable = magic_countries
-		limit = {
-			NOT = {
-				# Exclude Texas since it will lead
-				# to issues. This is handled in:
-				# 350_base_game_extension.txt
-				c:TEX ?= this
-			}
-		}
+    every_in_global_list = {
+        variable = magic_countries
+        limit = {
+            NOT = {
+                # Exclude Texas since it will lead
+                # to issues. This is handled in:
+                # 350_base_game_extension.txt
+                c:TEX ?= this
+            }
+        }
 
-		# Add magic researcher to all magic
-		# countries
-		create_character = {
-			template = gate_magic_researcher_template
-			interest_group = ig_gate_magic_users
-		}
-	}
+        # Add magic researcher to all magic
+        # countries
+        create_character = {
+            template = gate_magic_researcher_template
+            interest_group = ig_gate_magic_users
+        }
+    }
 
-	# Add race traits to all
-	# automatically generated characters
-	gate_add_race_traits = yes
+    # Add race traits to all
+    # automatically generated characters
+    gate_add_race_traits = yes
 
-	# Add arable land for balancing
-	gate_setup_arable_land = yes
+    # Add arable land for balancing
+    gate_setup_arable_land = yes
 
-	# Setup Expedition structs
-	c:GATE_MK = {
-		# Country Scope does not matter
-		gate_setup_expeditions = yes
-	}
+    # Setup Expedition structs
+    c:GATE_MK = {
+        # Country Scope does not matter
+        gate_setup_expeditions = yes
+    }
+
+    every_state = {
+        limit = { state_region = s:STATE_ALASKA }
+        state_region = {
+            add_arable_land = 50
+        }
+    }
+    every_state = {
+        limit = { state_region = s:STATE_YUKON_TERRITORY }
+        state_region = {
+            add_arable_land = 30
+        }
+    }
+    every_state = {
+        limit = { state_region = s:STATE_BRITISH_COLUMBIA }
+        state_region = {
+            add_arable_land = 50
+        }
+    }
 }
