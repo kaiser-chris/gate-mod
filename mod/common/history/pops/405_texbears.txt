@@ -1,0 +1,49 @@
+﻿# Remove existing population first.
+# This is needed so the population is properly assimilated.
+# When this is not done qualifications and building occupancy
+# are not set correctly.
+POPS = {
+
+    s:STATE_TEXAS = {
+        region_state:TEX = {
+            kill_population_percent_in_state = {
+                percent = 1
+            }
+        }
+        region_state:TEX = {
+            # Base Game pops for reference
+            create_pop = {
+                culture = dixie
+                size = 238800
+            }
+		    create_pop = {
+                culture = comanche
+                size = 19500
+            }
+			create_pop = {
+                culture = afro_american
+				pop_type = slaves
+                size = 188800
+            }
+            create_pop = {
+                culture = apache
+                size = 4400
+            }
+			create_pop = {
+                culture = caddoan
+                size = 4100
+            }
+			create_pop = {
+                culture = siouan
+                size = 2200
+            }
+
+            # Bears
+            create_pop = {
+                culture = plundboelka
+                size = 2500000
+            }
+        }
+    }
+
+}
