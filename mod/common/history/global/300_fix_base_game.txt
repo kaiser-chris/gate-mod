@@ -205,9 +205,27 @@ GLOBAL = {
         }
     }
 
-    # Plundboelka
+    # Plundboelka (Texas)
     c:TEX = {
         annex_with_incorporation = c:COM
+
+        every_state = {
+            limit = {
+                NOT = {
+                    owner = c:TEX
+                }
+                state_region = s:STATE_TEXAS
+            }
+            set_state_owner = c:TEX
+        }
+
+        every_diplomatic_play = {
+            limit = {
+                initiator_is = c:TEX
+                target_is = c:MEX
+            }
+            end_play = yes
+        }
     }
 
 }
