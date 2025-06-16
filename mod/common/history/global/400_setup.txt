@@ -8,6 +8,9 @@ GLOBAL = {
 	c:GATE_AD = {
 		activate_law = law_type:law_frontier_colonization
 	}
+	c:GATE_OK = {
+		activate_law = law_type:law_colonial_exploitation
+	}
 
 	set_global_variable = {
 		name = magic_growing_var
