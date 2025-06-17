@@ -18,7 +18,7 @@ types gate_technology_panel_types {
 
     type gate_technology_panel = default_block_window {
         name = "gate_technology_panel"
-        datacontext = "[GetMetaPlayer.GetPlayedOrObservedCountry]"
+        datacontext = "[AccessMetaPlayer.AccessPlayedOrObservedCountry]"
 
         visible = "[GetVariableSystem.HasValue('com_open_window', 'gate_button_technology')]"
 
@@ -292,7 +292,7 @@ types gate_technology_panel_types {
 
                 # Research Institute
                 gate_building_details = {
-                    datacontext = "[Country.GetCapital.GetBuilding('building_magic_research_institute')]"
+                    datacontext = "[Country.AccessCapital.AccessBuilding('building_magic_research_institute')]"
                 }
             }
 
@@ -316,14 +316,14 @@ types gate_technology_panel_types {
                     }
                 }
 
-                gate_technologies_production = {
-                    blockoverride "visibility" {
-                        visible = "[And(Technology.HasResearchedTech(Country.Self), Or(Not(Country.MakeScope.Var('magic_research').IsSet), Not(ObjectsEqual(Country.MakeScope.Var('magic_research').GetTechnology.MakeScope, Technology.MakeScope))))]"
-                    }
-                    blockoverride "enabled" {
-                        enabled = no
-                    }
-                }
+                # gate_technologies_production = {
+                #     blockoverride "visibility" {
+                #         visible = "[And(Technology.HasResearchedTech(Country.Self), Or(Not(Country.MakeScope.Var('magic_research').IsSet), Not(ObjectsEqual(Country.MakeScope.Var('magic_research').GetTechnology.MakeScope, Technology.MakeScope))))]"
+                #     }
+                #     blockoverride "enabled" {
+                #         enabled = no
+                #     }
+                # }
             }
 
             # Military
@@ -718,24 +718,25 @@ types gate_technology_panel_types {
         }
 
         # Unlocks
-        flowcontainer = {
-            margin_top = 0
-            margin_bottom = 5
-            margin_left = 5
-            margin_right = 5
-            parentanchor = right
-            spacing = 5
-            datamodel = "[Technology.GetUnlocks(Country.Self)]"
-
-            item = {
-                icon = {
-                    size = { 25 25 }
-                    texture = "[TechnologyUnlock.GetTexture]"
-                    tooltip = "[TechnologyUnlock.GetTooltip]"
-                    using = tooltip_se
-                }
-            }
-        }
+        # TODO: Fix Technology unlocks
+        # flowcontainer = {
+        #     margin_top = 0
+        #     margin_bottom = 5
+        #     margin_left = 5
+        #     margin_right = 5
+        #     parentanchor = right
+        #     spacing = 5
+        #     datamodel = "[Technology.GetUnlocks(Country.Self)]"
+        #
+        #     item = {
+        #         icon = {
+        #             size = { 25 25 }
+        #             texture = "[TechnologyUnlock.GetTexture]"
+        #             tooltip = "[TechnologyUnlock.GetTooltip]"
+        #             using = tooltip_se
+        #         }
+        #     }
+        # }
     }
 
     type gate_building_details = flowcontainer {
