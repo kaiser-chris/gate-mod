@@ -153,17 +153,6 @@ GLOBAL = {
 		}
 	}
 
-	# Alaska - Russian-American Company
-	c:ALK = {
-		# Treaty port with Bears
-		every_scope_state = {
-			limit = {
-				state_region = s:STATE_ALASKA
-			}
-			set_state_type = treaty_port
-		}
-	}
-
 	# Texas
 	c:TEX = {
 		# Add Bears culture

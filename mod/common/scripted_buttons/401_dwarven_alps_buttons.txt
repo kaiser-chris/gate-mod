@@ -20,10 +20,12 @@
 			NOT = {
 				OR = {
 					is_subject_of = c:GATE_MK
-					## 1.9 CHECK
-					has_diplomatic_pact = {
-						who = ROOT
-						type = alliance
+					any_scope_treaty = {
+						binds = root
+						binds = c:SWI
+						any_scope_article = {
+							has_type = alliance
+						}
 					}
 				}
 			}
@@ -31,7 +33,7 @@
 	}
 
 	ai_chance = {
-		base = 100
+		value = 100
 	}
 
 	effect = {
@@ -60,10 +62,12 @@ je_dwarven_alps_button_switzerland_integrate = {
 		c:SWI ?= {
 			relations:ROOT >= relations_threshold:friendly
 			OR = {
-				## 1.9 CHECK
-				has_diplomatic_pact = {
-					who = ROOT
-					type = alliance
+				any_scope_treaty = {
+					binds = root
+					binds = c:SWI
+					any_scope_article = {
+						has_type = alliance
+					}
 				}
 				is_subject_of = c:GATE_MK
 			}
@@ -71,7 +75,7 @@ je_dwarven_alps_button_switzerland_integrate = {
 	}
 
 	ai_chance = {
-		base = 100
+		value = 100
 	}
 
 	effect = {
@@ -99,7 +103,7 @@ je_dwarven_alps_integrate_germans = {
 	}
 
 	ai_chance = {
-		base = 100
+		value = 100
 	}
 
 	effect = {
