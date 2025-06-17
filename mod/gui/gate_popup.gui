@@ -3,6 +3,8 @@ widget = {
     allow_outside = yes
     size = { 100% 100% }
     layer = popups
+    datacontext = "[GetMetaPlayer.GetPlayedOrObservedCountry]"
+    visible = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 
     missing_dependency_popup = {}
 }

@@ -145,6 +145,7 @@ types gate_main_panel_types {
                         blockoverride "tooltip" {
                             tooltip = gg_ethic_empty_slot_tooltip
                         }
+                        blockoverride "icon" {}
                     }
 
                     gate_ethic = {
@@ -157,6 +158,7 @@ types gate_main_panel_types {
                         blockoverride "tooltip" {
                             tooltip = gg_ethic_empty_slot_tooltip
                         }
+                        blockoverride "icon" {}
                     }
                 }
 
@@ -319,71 +321,6 @@ types gate_main_panel_types {
                                             autoresize = yes
                                             align = nobaseline
                                             raw_text = "[Country.GetDefinition.GetTier]"
-                                        }
-                                    }
-                                }
-
-                                ### OTHER ACTIVE PACTS WITH THIS SUBJECT
-                                flowcontainer = {
-                                    parentanchor = right|vcenter
-
-                                    dynamicgridbox = {
-                                        parentanchor = vcenter
-                                        datamodel_wrap = 3
-                                        datamodel = "[AccessPlayer.AccessActiveDiplomaticPacts(Country.Self)]"
-
-                                        item = {
-                                            widget = {
-                                                size = { 40 40 }
-
-                                                icon = {
-                                                    parentanchor = center
-                                                    size = { 80% 80% }
-                                                    datacontext = "[DiplomaticPact.GetDiplomaticActionType]"
-                                                    texture = "[DiplomaticActionType.GetTexture]"
-
-                                                    tooltipwidget = {
-                                                        FancyTooltip_DiplomaticActionType = {
-                                                            blockoverride "text_before_before" {
-                                                                visible = "[GreaterThan_CFixedPoint(DiplomaticActionType.GetMaintenanceCost(GetPlayer.Self, Country.Self), '(CFixedPoint)0')]"
-                                                                text = "DIPLOMATIC_ACTION_TYPE_COST"
-                                                                margin_bottom = 15
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-
-                                    widget = {
-                                        size = { 3 3 }
-                                    }
-
-                                    vertical_divider = {
-                                        size = { 2 150 }
-                                    }
-
-                                    widget = {
-                                        size = { 10 10 }
-                                    }
-
-                                    flowcontainer = {
-                                        parentanchor = vcenter
-                                        direction = vertical
-                                        margin_right = 10
-
-                                        flowcontainer = {
-                                            direction = vertical
-                                            spacing = 5
-
-                                            ### Magic Diplomatic Actions
-                                            # TODO: Add magic diplomatic actions here
-                                            # gate_diplo_button = {
-                                            #     blockoverride "datacontext" {
-                                            #         datacontext = "[GetPlayer.GetDiplomaticAction('damage_relations', Country.Self)]"
-                                            #     }
-                                            # }
                                         }
                                     }
                                 }

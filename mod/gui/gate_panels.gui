@@ -2,6 +2,8 @@ widget = {
     name = "gate_panels"
     layer = layer_ingame_menu
     size = { 100% 100% }
+    datacontext = "[GetMetaPlayer.GetPlayedOrObservedCountry]"
+    visible = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 
     gate_expedition_panel = {}
     gate_space_panel = {}
