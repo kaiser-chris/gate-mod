@@ -17,18 +17,7 @@ GLOBAL = {
         value = 0
     }
 
-    # Every country has a journal entry for mana saturation
-    # since some countries can interact with the journal entry
-    every_country = {
-        limit = {
-            NOT = {
-                is_country_type = decentralized
-            }
-        }
-        add_journal_entry = {
-            type = je_mana_saturation
-        }
-    }
+
 
     # Make Mage Tower an owner building
     add_to_global_variable_list = {

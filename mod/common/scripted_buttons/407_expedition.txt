@@ -2,9 +2,8 @@
 	name = je_gate_expedition_button_open_map
 	desc = je_gate_expedition_button_open_map_desc
 
-	## 1.9 CHECK
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 
 	effect = {
@@ -37,9 +36,8 @@ je_gate_expedition_preparation_button_hire_leader = {
 		always = yes
 	}
 
-	## 1.9 CHECK
 	ai_chance = {
-		base = 100
+		value = 100
 	}
 
 	effect = {
@@ -90,9 +88,8 @@ je_gate_expedition_preparation_button_cancel = {
 		}
 	}
 
-	## 1.9 CHECK
 	ai_chance = {
-		base = 100
+		value = 100
 	}
 }
 
@@ -128,9 +125,8 @@ je_gate_expedition_preparation_button_start_preparations = {
 		}
 	}
 
-	## 1.9 CHECK
 	ai_chance = {
-		base = 100
+		value = 100
 	}
 }
 
@@ -152,8 +148,7 @@ je_gate_expedition_preparation_button_stop_preparations = {
 		}
 	}
 
-	## 1.9 CHECK
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
