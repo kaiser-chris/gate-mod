@@ -265,18 +265,17 @@ types overwrites {
 			button = {
 				size = { @panel_width_plus_14 274 }
 				texture = "[State.GetBestTexture]"
+				onrightclick = "[RightClickMenuManager.ShowForState(State.AccessSelf)]"
+				effectname = "NoHighlight"
+				distribute_visual_state = no
+				inherit_visual_state = no
+				using = fade_top_illus
+
 				vfx = {
 					blockoverride "entity_instance" {
 						entity_instance = "[State.GetBestTextureEffect]"
 					}
 				}
-
-				onrightclick = "[RightClickMenuManager.ShowForState(State.AccessSelf)]"
-				effectname = "NoHighlight"
-				distribute_visual_state = no
-				inherit_visual_state = no
-
-				using = fade_top_illus
 
 				toggle_condensed = {
 					visible = "[InDebugMode]"
@@ -301,10 +300,15 @@ types overwrites {
 					blockoverride "flag_tooltip" {}
 				}
 				flag = {
-					datacontext = "[State.GetOccupant]"
+					datacontext = "[State.GetEnemyWithHighestOccupation]"
+					visible = "[Country.IsValid]"
 					tooltip = "[State.GetOccupantsTooltip]"
-					visible = "[And(State.HasOccupant, State.IsFullyOccupied)]"
 					blockoverride "flag_tooltip" {}
+
+					blockoverride "onhover" {
+						onmousehierarchyenter = "[AccessHighlightManager.HighlightStateOccupation(State.Self,State.GetOccupant.Self)]"
+						onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
+					}
 				}
 
 				# Mana Density
@@ -349,7 +353,7 @@ types overwrites {
 					}
 
 					blockoverride = "chart_visible" {
-						visible = "[And(State.HasOccupant, Not(State.IsFullyOccupied))]"
+						visible = "[GreaterThan_int32(GetDataModelSize(State.GetOccupationPiechartData),'(int32)1')]"
 					}
 
 					blockoverride "title" {}
@@ -388,8 +392,6 @@ types overwrites {
 					}
 				}
 			}
-
-
 
 			flowcontainer = {
 				visible = "[Not(IsDataModelEmpty(State.AccessStateRegion.AccessTraits))]"
@@ -477,18 +479,18 @@ types overwrites {
 			}
 		}
 
-		### NAVAL INVASIONS
+		### INVASIONS
 		flowcontainer = {
-			visible = "[Not(IsDataModelEmpty(State.GetActiveNavalInvasions))]"
+			visible = "[Not(IsDataModelEmpty(State.GetInvasions))]"
 			spacing = 10
 			direction = vertical
 			parentanchor = hcenter
 			margin = { 0 10 }
 
-			datamodel = "[State.GetActiveNavalInvasions]"
+			datamodel = "[State.GetInvasions]"
 
 			item = {
-				naval_invasion_list_item = {}
+				invasion_list_item = {}
 			}
 		}
 
@@ -529,9 +531,8 @@ types overwrites {
 				}
 
 				blockoverride "goto" {
-					datacontext = "[State.AccessMarket]"
 					tooltip = "GO_TO_BUTTON_MARKET"
-					onclick = "[InformationPanelBar.OpenMarketPanelTab(State.AccessMarket, 'default')]"
+					onclick = "[InformationPanelBar.OpenMarketPanelTab(State.GetMarket, 'default')]"
 				}
 			}
 
@@ -553,9 +554,8 @@ types overwrites {
 				}
 
 				blockoverride "goto" {
-					datacontext = "[State.AccessMarket]"
 					tooltip = "GO_TO_BUTTON_MARKET"
-					onclick = "[InformationPanelBar.OpenMarketPanel(State.AccessMarket)]"
+					onclick = "[InformationPanelBar.OpenMarketPanel(State.GetMarket)]"
 				}
 			}
 		}
@@ -1039,6 +1039,143 @@ types overwrites {
 			}
 
 			state_panel_status_item_small = {
+				visible = "[GreaterThan_CFixedPoint(State.GetBlockadeLevel, '(CFixedPoint)0')]"
+				datacontext = "[State.GetStateRegion]"
+				tooltip = "TOOLTIP_STATE_BLOCKADE_LEVEL"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/blockaded.dds"
+				}
+
+				blockoverride "name" {
+					text = "STATE_BLOCKADE_LEVEL"
+				}
+			}
+
+			state_panel_status_item_small = {
+				tooltip = "STATE_WORLD_MARKET_ACCESS_DESC"
+				alwaystransparent = no
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/world_market_access.dds"
+				}
+
+				blockoverride "name" {
+					text = "STATE_WORLD_MARKET_ACCESS"
+				}
+
+				blockoverride "alpha" {
+					alpha = "[TransparentIfZero_int32(State.GetTradeCapacity)]"
+				}
+
+				blockoverride "navigation_button" {
+					datacontext = "[State.AccessBuilding('building_trade_center')]"
+
+					# BUILD IF TRADE CAPACITY IS ZERO
+					button_icon_plus_action = {
+						visible = "[And(IsValid( Building.QueueConstruction ), EqualTo_int32(State.GetTradeCapacity,'(int32)0'))]"
+						tooltip = "[Building.GetQueueConstructionTooltip]"
+						onclick = "[Execute( Building.QueueConstruction )]"
+
+						position = { -5 5 }
+						size = { 25 25 }
+						parentanchor = top|right
+					}
+
+					# GOTO IF TRADE CAPACITY IS ABOVE ZERO
+					button_icon_goto = {
+						visible = "[GreaterThan_int32(State.GetTradeCapacity,'(int32)0')]"
+						onclick = "[InformationPanelBar.OpenPanel('world_market')]"
+						tooltip = "GOTO_WORLD_MARKET"
+
+						position = { -5 5 }
+						size = { 25 25 }
+						parentanchor = top|right
+					}
+				}
+			}
+
+			state_panel_status_item_small = {
+				tooltip = "STATE_TRADE_CAPACITY_DESC"
+				visible = "[GreaterThan_int32(State.GetTradeCapacity,'(int32)0')]"
+				alwaystransparent = no
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/trade_capacity.dds"
+				}
+
+				blockoverride "name" {
+					text = "STATE_TRADE_CAPACITY"
+				}
+
+				blockoverride "goto" {
+
+				}
+
+				blockoverride "navigation_button" {
+					flowcontainer = {
+						position = { -5 5 }
+						parentanchor = top|right
+						datacontext = "[State.AccessBuilding('building_trade_center')]"
+						spacing = 1
+
+						button_icon_plus_action = {
+							size = { 25 25 }
+							visible = "[IsValid( Building.QueueConstruction )]"
+							tooltip = "[Building.GetQueueConstructionTooltip]"
+							onclick = "[Execute( Building.QueueConstruction )]"
+						}
+
+						button_icon_goto = {
+							size = { 25 25 }
+							tooltip = "GO_TO_BUTTON_BUILDING"
+							onclick = "[InformationPanelBar.OpenBuildingDetailsPanel(Building.AccessSelf)]"
+						}
+					}
+				}
+
+				blockoverride "extra_widget" {
+					flowcontainer = {
+						datacontext = "[State.AccessBuilding('building_trade_center')]"
+						spacing = 5
+						overlappingitembox = {
+							block "trade_center_extra_info_size" {
+								size = { 70 23 }
+							}
+
+							datamodel = "[DataModelFirst(Building.AccessState.GetImports, '(int32)3')]"
+
+							item = {
+								small_goods_button = {
+									blockoverride "tooltip" {
+										tooltip = "[Goods.GetStateImportsDesc]"
+									}
+								}
+							}
+						}
+
+						vertical_divider = {}
+
+						overlappingitembox = {
+							block "trade_center_extra_info_size" {
+								size = { 70 23 }
+							}
+
+							datamodel = "[DataModelFirst(Building.AccessState.GetExports, '(int32)3')]"
+
+							item = {
+								small_goods_button = {
+									blockoverride "tooltip" {
+										tooltip = "[Goods.GetStateExportsDesc]"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			state_panel_status_item_small = {
 				name = "tutorial_highlight_state_infrastructure"
 				tooltip = "STATE_INFRASTRUCTURE_DESC"
 				alwaystransparent = no
@@ -1133,7 +1270,7 @@ types overwrites {
 				tooltip = "STATE_STRATEGIC_OBJECTIVE_TOOLTIP"
 
 				blockoverride "texture" {
-					texture = "gfx/interface/icons/lens_toolbar_icons/designate_strategic_objective_lens_option.dds"
+					texture = "gfx/interface/icons/formation_order_icons/strategic_objective.dds"
 				}
 
 				blockoverride "name" {
@@ -1155,7 +1292,7 @@ types overwrites {
 			}
 
 			state_panel_status_item_small = {
-				visible = "[State.IsFunctioningTreatyPort]"
+				visible = "[State.IsTreatyPort]"
 				tooltip = "TOOLTIP_TREATY_PORT"
 
 				blockoverride "texture" {
@@ -1164,19 +1301,6 @@ types overwrites {
 
 				blockoverride "name" {
 					text = "[concept_treaty_port]"
-				}
-			}
-
-			state_panel_status_item_small = {
-				visible = "[And(Not(State.IsFunctioningTreatyPort),State.IsTreatyPort)]"
-				tooltip = "TOOLTIP_INACTIVE_TREATY_PORT"
-
-				blockoverride "texture" {
-					texture = "gfx/interface/icons/state_status_icons/treaty_port_icon.dds"
-				}
-
-				blockoverride "name" {
-					text = "TREATY_PORT_INACTIVE"
 				}
 			}
 
