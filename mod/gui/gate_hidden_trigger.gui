@@ -2,7 +2,7 @@
 # This allows triggering state events
 # Specifically when a research is done
 widget = {
-    name = gate_hidden_trigger
+    name = "gate_hidden_trigger"
     datacontext = "[GetMetaPlayer.GetPlayedOrObservedCountry]"
     allow_outside = yes
     size = { 0 0 }
