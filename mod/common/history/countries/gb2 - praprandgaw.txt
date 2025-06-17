@@ -1,8 +1,5 @@
 ﻿COUNTRIES = {
     c:GATE_BN = {
-        #TODO: This is a copy of Mountain Kingdom and needs balancing
-
-        # Technological partnership with Bavaria (BAV)
         effect_starting_technology_tier_2_tech = yes
         effect_starting_politics_conservative = yes
         effect_starting_pop_literacy_very_high = yes
@@ -10,6 +7,7 @@
 
         # Technology
         learn_magic = yes
+        add_technology_researched = bear_gate_immigration # Ursalith Concord
         add_technology_researched = mana_lanterns
         add_technology_researched = mage_infantry
         add_technology_researched = mage_artillery
