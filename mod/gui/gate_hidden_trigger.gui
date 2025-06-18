@@ -117,6 +117,7 @@ widget = {
                     on_finish = "[GetScriptedGui('sgui_gate_can_research').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('technology', Technology.MakeScope).End)]"
                 }
             }
+            blockoverride "unlocks" {}
         }
         gate_technologies_military = {
             blockoverride "tech_state" {
@@ -129,6 +130,7 @@ widget = {
                     on_finish = "[GetScriptedGui('sgui_gate_can_research').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('technology', Technology.MakeScope).End)]"
                 }
             }
+            blockoverride "unlocks" {}
         }
         gate_technologies_society = {
             blockoverride "tech_state" {
@@ -141,6 +143,7 @@ widget = {
                     on_finish = "[GetScriptedGui('sgui_gate_can_research').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('technology', Technology.MakeScope).End)]"
                 }
             }
+            blockoverride "unlocks" {}
         }
     }
 }
