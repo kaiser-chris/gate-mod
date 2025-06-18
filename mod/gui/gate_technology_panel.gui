@@ -718,25 +718,28 @@ types gate_technology_panel_types {
         }
 
         # Unlocks
-        # TODO: Fix Technology unlocks
-        # flowcontainer = {
-        #     margin_top = 0
-        #     margin_bottom = 5
-        #     margin_left = 5
-        #     margin_right = 5
-        #     parentanchor = right
-        #     spacing = 5
-        #     datamodel = "[Technology.GetUnlocks(Country.Self)]"
-        #
-        #     item = {
-        #         icon = {
-        #             size = { 25 25 }
-        #             texture = "[TechnologyUnlock.GetTexture]"
-        #             tooltip = "[TechnologyUnlock.GetTooltip]"
-        #             using = tooltip_se
-        #         }
-        #     }
-        # }
+        block "unlocks" {
+            # TODO: Fix issue
+            # Non const vs. Const
+            # flowcontainer = {
+            #     margin_top = 0
+            #     margin_bottom = 5
+            #     margin_left = 5
+            #     margin_right = 5
+            #     parentanchor = right
+            #     spacing = 5
+            #     datamodel = "[Technology.GetUnlocks(Country.Self)]"
+            #
+            #     item = {
+            #         icon = {
+            #             size = { 25 25 }
+            #             texture = "[TechnologyUnlock.GetTexture]"
+            #             tooltip = "[TechnologyUnlock.GetTooltip]"
+            #             using = tooltip_se
+            #         }
+            #     }
+            # }
+        }
     }
 
     type gate_building_details = flowcontainer {
