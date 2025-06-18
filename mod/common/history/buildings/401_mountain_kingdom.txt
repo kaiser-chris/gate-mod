@@ -24,6 +24,19 @@
                 }
             }
             create_building = {
+                building = building_trade_center
+                add_ownership = {
+                    country = {
+                        country = c:GATE_MK
+                        levels = 3
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_trade_center_trade_quantity_normal
+                }
+            }
+            create_building = {
                 building = building_university
                 add_ownership = {
                     country = {
