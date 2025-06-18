@@ -1,5 +1,4 @@
 ﻿l_korean:
-# Conversion Journal Entry
  je_gate_mbudye: "[GetCulture('lunda').GetNameNoFormatting] 개종"
  je_gate_mbudye_reason: "아크투리안 신성국의 엘프들은 룬다인의 개종을 영적 사명으로 여기면서 동시에 신정 통치를 공고히 하는 수단으로도 간주합니다. 그들의 사절단은 룬다의 존경받는 해석자이자 역사가인 음부디예 평의회와 교류하며, 신성국의 신앙을 룬다 전통에 녹여내려 합니다. 엘프들은 신성한 계시를 전한다고 주장하지만, 음부디예는 엘프의 경전 속에 은밀히 숨겨진 주권 침해의 위험을 간파하고 있습니다. 이 싸움은 설득과 저항의 대립이며, 고대 룬다의 원칙이 신성국의 천상의 교리에 맞서 충돌하고 있습니다."
  je_gate_mbudye_complete: "[GetCulture('lunda').GetName] 국가들이 모두 [GetReligion('gate_golden_religion').GetName]으로 개종함."
@@ -46,7 +45,6 @@
  pb_gate_mbudye_kazembe_desc: "[SCOPE.sCountry('gate_mbudye_kazembe').GetNameNoFlag]의 개종된 인구"
  pb_gate_mbudye_kasanje_name: "[SCOPE.sCountry('gate_mbudye_kasanje').GetName] 개종"
  pb_gate_mbudye_kasanje_desc: "[SCOPE.sCountry('gate_mbudye_kasanje').GetNameNoFlag]의 개종된 인구"
-# Integration Journal Entry
  je_gate_mbudye_integration: "[GetCulture('lunda').GetNameNoFormatting] 국가 통합"
  je_gate_mbudye_integration_reason: "황금빛 축복이 이 땅에 깊이 뿌리내리면서, 룬다의 국가들은 아크투리안 연방의 품 안으로 끌려들어갔습니다. 개종의 상처는 아직 아물지 않았지만, 공동의 신앙과 신중한 외교는 새로운 시대를 여는 길을 닦아가고 있습니다—신의 감시 아래에서 하나된 시대가 펼쳐집니다."
  je_gate_mbudye_integration_complete: "[GetCulture('lunda').GetName] 국가는 모두 [SCOPE.sCountry('gate_mbudye_dominion').GetName]에 통합됩니다."
@@ -59,18 +57,14 @@
  pb_gate_mbudye_integration_desc: "진행 상황: #v [Multiply_float(JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self), '(float)12')|0]#! / 12개월"
  pb_gate_mbudye_integration_block: "통합 절차가 진행되고 있지 않음."
  pb_gate_mbudye_integration_progress: "통합 절차가 진행 중임"
-# Flags
  mbudye_assassination_official_flag: "#v 관리#!의 #v 암살#!"
  mbudye_assassination_general_flag: "#v 장군#!의 #v 암살#!"
  mbudye_assassination_admiral_flag: "#v 제독#!의 #v 암살#!"
  mbudye_assassination_politician_flag: "#v 정치인#!의 #v 암살#!"
  mbudye_defaced_temple_flag: "#v 사원#!의 #v 훼손#!"
-# Modifiers
  lunda_uprising_modifier: "혁명의 정신"
  lunda_bambudye_liberty_modifier: "[concept_bambudye]의 음모"
- lunda_conversion_modifier: "열정적인 전환" #deepl:503332567
  dp_lunda_uprising: "룬다 반란"
-# Events
  gate_mbudye.1.t: "황금빛 개종"
  gate_mbudye.1.desc: "우리의 지배 아래 있는 [GetCulture('lunda').GetName] 국가들은 [GetReligion('gate_golden_religion').GetName]으로 개종했다."
  gate_mbudye.1.f: "수년 간의 지칠 줄 모르는 설교, 정치적 책략, 그리고 치열한 갈등 끝에 룬다는 마침내 황금 축복의 신앙을 받아들였다. 한때 그들의 전통을 굳게 지킨 물디예 의회는 이제 엘프 사제들과 함께 엄숙한 기도를 드리며 무릎을 꿇고 있다. 그러나 이 순간에 이르기까지의 길은 피로 물들었고, 갈등으로 얼룩졌다—마을은 불에 타고, 가족은 갈라졌으며, 역사는 다시 쓰여졌다. 황금 깃발이 룬다 땅에 나부끼는 가운데, 여전히 남아 있는 질문이 있다: 이 새로운 신앙이 통합을 가져올 것인가, 아니면 오래된 상처들이 표면 아래에서 곪아갈 것인가?"
@@ -163,3 +157,4 @@
  gate_mbudye.17.f: "스크롤이 서명되어 [GetCulture('lunda').GetNameNoFormatting] 국가들이 [SCOPE.sCountry('gate_mbudye_dominion').GetNameNoFormatting]과 신앙과 법 모두에서 결속되었습니다. 선교사와 철기의 시대에서 시작된 일이 이제 엄숙한 의식으로 절정에 달하며, 고대 왕국들이 [GetReligion('gate_golden_religion').GetNameNoFormatting] 아래 새로운 질서에 굴복하게 되었습니다."
  gate_mbudye.17.a: "[GetCulture('lunda').GetName]을 우리나라에 완전히 통합한다."
  gate_mbudye.17.b: "[GetCulture('lunda').GetName] 국가들만 우리 나라에 통합해라."
+ lunda_conversion_modifier: "열정적인 개종"

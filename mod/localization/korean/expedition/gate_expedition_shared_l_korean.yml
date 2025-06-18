@@ -1,14 +1,14 @@
 ﻿l_korean:
- gate_expedition_opinion_industrialist: "우리는 새로운 교역 기회를 창출하고 $gate_planet$의 자원을 우리의 것으로 만들 것이다!"
- gate_expedition_opinion_militarist: "우리는 무력을 통해 $gate_planet$를 정복할 것이다!"
- gate_expedition_opinion_politician: "외교를 통해 $gate_planet$를 우리의 것으로 만들 것이다!"
- gate_expedition_small_tooltip: "[SCOPE.ScriptValue('gate_expedition_preparation_time_small')|0v] 몇 달의 준비가 필요한 소규모 탐험을 위한 준비를 시작합니다." #deepl:4133145642
- gate_expedition_normal_tooltip: "[SCOPE.ScriptValue('gate_expedition_preparation_time_normal')|0v] 몇 달의 준비가 필요한 일반 탐험을 위한 준비를 시작합니다." #deepl:712700406
- gate_expedition_large_tooltip: "[SCOPE.ScriptValue('gate_expedition_preparation_time_large')|0v] 몇 달의 준비가 필요한 대규모 탐험을 위한 준비를 시작합니다." #deepl:2091144821
- gate_expedition_leader_missing_tooltip: "현재 [concept_gate_expedition_leader] 이 없습니다." #deepl:2534684836
- gate_expedition_budget_header: "Expedition Budget"
- gate_expedition_budget_text: "$concept_gate_expedition_budget$ 은 [concept_gate_expedition_activities] 을 새로 시작하는 데 사용됩니다." #deepl:2316620112
- gate_expedition_budget_tooltip: "저희 [concept_gate_expedition_budget] 는 [Scope.Var('expedition_budget_total').GetValue|0v] 포인트의 [Scope.Var('expedition_budget').GetValue|0v] 입니다." #deepl:197132716
- gate_expedition_cancel_tooltip: "저희는 [concept_gate_expedition] 에서 조기 복귀하기로 결정했습니다." #deepl:2964559883
- gate_expedition_blocked_trigger: "지난 [SCOPE.ScriptValue('gate_expedition_block_time')|0v] 개월 동안 [concept_gate_expedition] 을 완료하거나 취소한 적이 없습니다." #deepl:2270399837
- gate_expedition_blocked_tooltip: "[SCOPE.ScriptValue('gate_expedition_block_time')|0v] 개월 동안 새로운 [concept_gate_expedition] 을 시작할 수 없습니다." #deepl:395471747
+ gate_expedition_opinion_industrialist: "새로운 무역 기회를 창출하고 [concept_gate_planet]의 자원을 우리 것으로 만들겠습니다!"
+ gate_expedition_opinion_militarist: "우리는 힘으로 [concept_gate_planet]을 정복할 것입니다!"
+ gate_expedition_opinion_politician: "외교를 통해 [concept_gate_planet]을 우리 것으로 만들 것입니다!"
+ gate_expedition_small_tooltip: "[SCOPE.ScriptValue('gate_expedition_preparation_time_small')|0v]개월간의 준비가 필요한 소규모 원정을 위한 준비를 시작합니다."
+ gate_expedition_normal_tooltip: "[SCOPE.ScriptValue('gate_expedition_preparation_time_normal')|0v]개월간의 준비가 필요한 중규모 원정을 위한 준비를 시작합니다."
+ gate_expedition_large_tooltip: "[SCOPE.ScriptValue('gate_expedition_preparation_time_large')|0v]개월간의 준비가 필요한 대규모 원정을 위한 준비를 시작합니다."
+ gate_expedition_leader_missing_tooltip: "현재 [concept_gate_expedition_leader]이 없습니다."
+ gate_expedition_budget_header: "[concept_gate_expedition_budget]"
+ gate_expedition_budget_text: "$concept_gate_expedition_budget$은 새로운 [concept_gate_expedition_activities]을 시작하는 데 사용됩니다."
+ gate_expedition_budget_tooltip: "우리의 [concept_gate_expedition_budget]는 총 [Scope.Var('expedition_budget_total').GetValue|0v]점 중 [Scope.Var('expedition_budget').GetValue|0v]점입니다."
+ gate_expedition_cancel_tooltip: "우리의 [concept_gate_expedition]을 조기 종료하기로 결정했습니다."
+ gate_expedition_blocked_trigger: "지난 [SCOPE.ScriptValue('gate_expedition_block_time')|0v]개월 동안 [concept_gate_expedition]을 완료하거나 취소하지 않았습니다."
+ gate_expedition_blocked_tooltip: "앞으로 [SCOPE.ScriptValue('gate_expedition_block_time')|0v]개월 동안 새로운 [concept_gate_expedition]을 시작할 수 없습니다."

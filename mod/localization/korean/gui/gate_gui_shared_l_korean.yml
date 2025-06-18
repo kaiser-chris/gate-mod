@@ -1,6 +1,6 @@
 ﻿l_korean:
  gg_character_tooltip: "[AddTextIf( Character.IsHistorical, Concatenate( Localize( 'DATA_CHARACTER_TOOLTIP_HISTORICAL' ), '\n\n' ) )][AddTextIf( Character.IsBusy, Concatenate( Localize( 'CHARACTER_IS_BUSY' ), '\n' ) )][Concept('concept_character_role', '$concept_character_roles$')]: [Character.GetAllRoleNames|v][ConcatIfNeitherEmpty(' #v 및#! ', AddLocalizationIf(Character.MakeScope.Var('is_magic_researcher').IsSet, 'gg_character_role_researcher'))]$DATA_CHARACTER_NAME_TOOLTIP_COMMANDER_DETAILS$[ConcatIfNeitherEmpty('\n', AddLocalizationIf( Character.IsAgitator, 'AGITATOR_POLITICAL_MOVEMENT_IN_COUNTRY'))]\n\n[Concept('concept_character_trait', '$concept_character_traits$')]: [Character.GetTraitsDesc]\n[concept_interest_group]: [Character.GetInterestGroup.GetName]\n[concept_ideology]: [Character.GetIdeology.GetName]\n\n[SelectLocalization(Character.IsInExilePool, 'DATA_CHARACTER_NAME_TOOLTIP_LOCATION_EXILE', 'DATA_CHARACTER_NAME_TOOLTIP_LOCATION_COUNTRY')][ConcatIfNeitherEmpty('\n', AddLocalizationIf(Character.IsAgitator, 'EXILE_HOME_COUNTRY'))]\n[concept_culture]: [Character.GetCulture.GetName]\n[concept_religion]: [Character.GetReligion.GetName]\n[concept_popularity]: #tooltippable_name #tooltip:[Character.GetTooltipTag],POPULARITY_BREAKDOWN [LabelingHelper.GetLabelForPopularityCFixedPoint(Character.GetPopularity)]#!#! (#tooltippable #tooltip:[Character.GetTooltipTag],POPULARITY_BREAKDOWN [Character.GetPopularity|0]#!#!)\n나이: [Character.GetAge|v]"
- gg_character_role_researcher: "#v 마법 연구자#!"
+ gg_character_role_researcher: "#v 비전주의자#!"
  gg_character_experience_header: "[concept_gate_character_experience]:"
  gg_character_experience_novice: "초심자"
  gg_character_experience_novice_tooltip: "[Character.GetFullName]은(는) #v $gg_character_experience_novice$#!이며, [Character.MakeScope.Var('magic_experience').GetValue|0v]의 경험을 보유하고 있습니다.\n#v $gg_character_experience_experienced$#!로 승급하려면 [Character.MakeScope.ScriptValue('character_experienced_threshhold')|0v]의 경험이 필요합니다."
@@ -8,4 +8,4 @@
  gg_character_experience_experienced_tooltip: "[Character.GetFullName]은(는) #v $gg_character_experience_experienced$#!이며, [Character.MakeScope.Var('magic_experience').GetValue|0v]의 경험을 보유하고 있습니다.\n#v $gg_character_experience_master$#!로 승급하려면 [Character.MakeScope.ScriptValue('character_master_threshhold')|0v]의 경험이 필요합니다."
  gg_character_experience_master: "대가"
  gg_character_experience_master_tooltip: "[Character.GetFullName]은(는) #v $gg_character_experience_master$#!이며, 해당 분야에서 최고의 경지에 도달했습니다."
- gg_panel_map_drag_hint: "지도를 #v 오른쪽 마우스 버튼#!으로 끌 수 있습니다.\n그리고 #v 마우스 휠#!로 확대/축소할 수 있습니다.\""
+ gg_panel_map_drag_hint: "지도를 #v 왼쪽 마우스 버튼#!으로 끌 수 있습니다.\n그리고 #v 마우스 휠#!로 확대/축소할 수 있습니다.\""

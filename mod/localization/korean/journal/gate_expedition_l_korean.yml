@@ -1,48 +1,48 @@
 ﻿l_korean:
- decision_gate_start_expedition_reytu: "안카리스로 탐험을 개시"
- decision_gate_start_expedition_reytu_desc: "[GetStateRegion('STATE_ALXA').GetName] 지역의 [GetBuildingType('building_gate_alxa').GetName]로 탐험을 떠납니다."
+ decision_gate_start_expedition_reytu: "안카리스로 원정을 개시"
+ decision_gate_start_expedition_reytu_desc: "[GetStateRegion('STATE_ALXA').GetName] 지역의 [GetBuildingType('building_gate_alxa').GetName]로 원정을 떠납니다."
  decision_gate_start_expedition_reytu_possible: "[GetStateRegion('STATE_ALXA').GetName] 지역의 마법 관문을 장악하고 있습니다."
- je_gate_expedition_preparation: "탐험 준비"
- je_gate_expedition_preparation_reason: "결정이 내려지면 본격적인 준비가 시작됩니다. 지도가 그려지고, 물자가 요청되며, 열정적인 모험가들이 자원봉사에 나섭니다. 학자들은 그 너머에 숨어 있을 위험과 기회에 대해 열띤 토론을 벌이고, 엔지니어와 물류 담당자들은 여정에 필요한 모든 것을 완벽하게 준비하려고 힘씁니다. 미지의 세계로 이어지는 포털인 매직 게이트가 눈앞에 다가오면, 곧 첫발을 내딛을 준비가 완료될 것입니다."
- je_gate_expedition_preparation_goal: "준비를 완료했습니다." #deepl:3451756210
- je_gate_expedition_preparation_no_leader: "[concept_gate_expedition_leader]." #deepl:1647671458
- je_gate_expedition_preparation_hiring_leader: "현재 탐험대의 지도자를 모집하고 있습니다."
- je_gate_expedition_preparation_not_started_progess: "이제 준비를 시작해야 합니다." #deepl:2275362365
- je_gate_expedition_preparation_in_progess: "탐험을 준비해야 합니다."
- je_gate_expedition_preparation_fail_tooltip: "[GetStateRegion('STATE_ALXA').GetName] 지역에 있는 [GetBuildingType('building_gate_alxa').GetName]을(를) 통제하지 않습니다."
- je_gate_expedition_preparation_button_hire_leader: "탐험대 지도자 고용"
- je_gate_expedition_preparation_button_hire_leader_desc: "우리는 탐험대의 지도자를 찾을 것입니다."
- je_gate_expedition_preparation_button_hire_leader_trigger_search: "현재 탐험대 지도자를 모집하고 있지 않습니다."
- je_gate_expedition_preparation_button_hire_leader_trigger_done: "탐험대 지도자가 없습니다."
- je_gate_expedition_preparation_button_hire_leader_effect: "탐험대 지도자를 찾기 시작합니다."
- je_gate_expedition_preparation_button_start_preparations: "준비 시작" #deepl:13145887
- je_gate_expedition_preparation_button_start_preparations_desc: "탐험을 위한 적극적인 준비를 시작할 것입니다." #deepl:615458894
- je_gate_expedition_preparation_button_start_preparations_effect: "준비를 시작합니다." #deepl:559694610
- je_gate_expedition_preparation_button_stop_preparations: "준비 일시 중지" #deepl:468916531
- je_gate_expedition_preparation_button_stop_preparations_desc: "준비를 잠시 중단하겠습니다." #deepl:1304732987
- je_gate_expedition_preparation_button_stop_preparations_effect: "준비를 일시 중지합니다." #deepl:1686301413
- je_gate_expedition_preparation_button_cancel: "원정대 취소" #deepl:131191061
- je_gate_expedition_preparation_button_cancel_desc: "전체 탐험을 취소합니다." #deepl:774493766
- je_gate_expedition_active: "$concept_gate_expedition$" #deepl:2980131449
- je_gate_expedition_active_idle: "원정대는 현재 대기 중입니다." #deepl:959888078
- je_gate_expedition_active_activity: "현재 원정대는 [Scope.Var('gate_expedition').Var('activity').Var('name').GetFlagName] 입니다." #deepl:3461872375
- je_gate_expedition_active_reason: "결정이 내려지면 본격적인 준비가 시작됩니다. 지도를 작성하고, 물자를 요청하고, 열성적인 모험가들이 자원봉사에 나섭니다. 학자들은 그 너머에 있을 수 있는 위험과 기회에 대해 토론하고, 엔지니어와 물류 담당자는 여정에 필요한 모든 것을 갖추기 위해 노력합니다. 미지의 세계로 가는 포털인 매직 게이트가 눈앞에 다가오면 곧 첫발을 내딛을 시간입니다." #deepl:3725050251
+ je_gate_expedition_preparation: "원정대 준비"
+ je_gate_expedition_preparation_reason: "결정이 내려지자 준비가 본격적으로 시작됩니다. 지도는 작성되고, 물자는 요청되며, 열정 가득한 모험가들이 자원합니다. 학자들은 그 너머에 도사린 위험과 기회에 대해 논의하고, 기술자와 물류 담당자들은 여정이 철저히 준비되도록 힘씁니다. 마법의 관문이 저 앞으로 우뚝 서 있습니다. 미지의 세계로 가는 문, 곧 첫 걸음을 내딛을 시간입니다."
+ je_gate_expedition_preparation_goal: "준비를 완료했습니다."
+ je_gate_expedition_preparation_no_leader: "우리에게는 [concept_gate_expedition_leader]가 있습니다."
+ je_gate_expedition_preparation_hiring_leader: "현재 [concept_gate_expedition_leader]를 찾고 있습니다."
+ je_gate_expedition_preparation_not_started_progess: "이제 준비를 시작해야 합니다."
+ je_gate_expedition_preparation_in_progess: "현재 원정대를 준비 중입니다."
+ je_gate_expedition_preparation_fail_tooltip: "[GetStateRegion('STATE_ALXA').GetName] 지역의 [GetBuildingType('building_gate_alxa').GetName]을(를) 통제하지 않습니다."
+ je_gate_expedition_preparation_button_hire_leader: "원정대장 고용"
+ je_gate_expedition_preparation_button_hire_leader_desc: "원정대장을 찾습니다."
+ je_gate_expedition_preparation_button_hire_leader_trigger_search: "현재 원정대장을 찾고 있지 않습니다."
+ je_gate_expedition_preparation_button_hire_leader_trigger_done: "원정대장이 없습니다."
+ je_gate_expedition_preparation_button_hire_leader_effect: "원정대장을 찾기 시작합니다."
+ je_gate_expedition_preparation_button_start_preparations: "준비 시작"
+ je_gate_expedition_preparation_button_start_preparations_desc: "원정을 위한 적극적인 준비를 시작합니다."
+ je_gate_expedition_preparation_button_start_preparations_effect: "준비를 시작합니다."
+ je_gate_expedition_preparation_button_stop_preparations: "준비 일시 중지"
+ je_gate_expedition_preparation_button_stop_preparations_desc: "준비를 잠시 중단합니다."
+ je_gate_expedition_preparation_button_stop_preparations_effect: "준비를 일시 중지합니다."
+ je_gate_expedition_preparation_button_cancel: "원정 취소"
+ je_gate_expedition_preparation_button_cancel_desc: "전체 원정을 취소합니다."
+ je_gate_expedition_active: "$concept_gate_expedition$"
+ je_gate_expedition_active_idle: "원정대는 현재 대기 중입니다."
+ je_gate_expedition_active_activity: "원정대는 현재 [Scope.Var('gate_expedition').Var('activity').Var('name').GetFlagName]입니다."
+ je_gate_expedition_active_reason: "결정이 내려지자 준비가 본격적으로 시작됩니다. 지도는 작성되고, 물자는 요청되며, 열정 가득한 모험가들이 자원합니다. 학자들은 그 너머에 도사린 위험과 기회에 대해 논의하고, 기술자와 물류 담당자들은 여정이 철저히 준비되도록 힘씁니다. 마법의 관문이 저 앞으로 우뚝 서 있습니다. 미지의 세계로 가는 문, 곧 첫 걸음을 내딛을 시간입니다."
  je_gate_expedition_button_open_map: "탐험 지도 열기"
- je_gate_expedition_button_open_map_desc: "탐험 지도를 엽니다."
- gate_expedition_preparation_modifier: "준비 비용" #deepl:2202863878
- gate_expedition.1.t: "선택 $concept_gate_expedition_leader$" #deepl:3052020482
- gate_expedition.1.d: "[concept_gate_expedition] 에 대한 세 가지 잠재적 [Concept('concept_gate_expedition_leader','$concept_gate_expedition_leaders$')] 을 찾았습니다. 이제 하나를 선택해야 합니다.\n\n@warning! 이것은 중요한 선택이며 [concept_gate_expedition_map] 에서 시작할 수 있는 [concept_gate_expedition_activities] 을 결정합니다." #deepl:990907525
- gate_expedition.1.f: "치열한 정치적 책략과 뒷거래 끝에 마법의 문 탐험의 잠재적 리더로 세 명의 후보가 등장했습니다. 한 명은 경제계와 깊은 관계를 맺고 있는 영리한 사업가로, 그 너머에 있는 자원을 개발하고자 하는 열망을 가지고 있습니다. 다른 한 명은 훈장을 받은 군 장교로, 거점을 확보하고 지배권을 확보하는 데 주력하고 있습니다. 마지막 후보는 신중한 외교와 장기적인 안정을 주장하는 숙련된 정치인입니다. 우리가 어떤 선택을 하느냐에 따라 $gate_planet$ 의 미래가 결정됩니다." #deepl:1367357098
- gate_expedition.1.a: "[concept_gate_expedition_leader_militarist]: [SCOPE.sCharacter('expedition_militarist').GetFullName]" #deepl:809118842
- gate_expedition.1.b: "[concept_gate_expedition_leader_politician]: [SCOPE.sCharacter('expedition_politician').GetFullName]" #deepl:546454634
- gate_expedition.1.c: "[concept_gate_expedition_leader_industrialist]: [SCOPE.sCharacter('expedition_industrialist').GetFullName]" #deepl:3051857995
- gate_expedition.1.cancel: "이 중 어느 것도 효과가 없습니다." #deepl:652779195
- gate_expedition.1.cancel.tt: "지금은 [concept_gate_expedition_leader] 검색을 종료하고 나중에 다시 시도할 수 있습니다." #deepl:3941738911
- gate_expedition.2.t: "계획 $concept_gate_expedition$" #deepl:733394989
- gate_expedition.2.d: "원정대 [concept_gate_expedition] 의 규모를 정해야 합니다. 탐험을 준비하려면 #bold 비용이 많이 듭니다#!." #deepl:2369326501
- gate_expedition.2.f: "매직 게이트를 통과하기로 결정했으니 다음 과제는 탐험의 규모를 결정하는 것이었습니다. 소규모의 민첩한 그룹이 신중하게 탐험하여 위험과 비용을 최소화할 수 있습니다. 정착민, 학자, 군인으로 구성된 균형 잡힌 탐험대는 안전하면서도 유연한 접근 방식을 제공합니다. 또는 압도적인 자원과 인력을 갖춘 대규모 탐험대는 부인할 수 없는 주장을 내세울 수 있지만 막대한 대가를 치러야 합니다. 우리 벤처의 운명이 이 중요한 결정에 달려 있습니다." #deepl:1308442514
- gate_expedition.2.a: "소규모 원정대." #deepl:3357700448
- gate_expedition.2.b: "일반 탐험." #deepl:1709548526
- gate_expedition.2.c: "긴 탐험." #deepl:3688515342
- gate_expedition.2.cancel: "신경 쓰지 마세요." #deepl:3430506882
- gate_expedition.2.cancel.tt: "[concept_gate_expedition] 을 취소합니다." #deepl:615383399
+ je_gate_expedition_button_open_map_desc: "[concept_gate_expedition_map] 열기."
+ gate_expedition_preparation_modifier: "준비 비용"
+ gate_expedition.1.t: "$concept_gate_expedition_leader$ 선택"
+ gate_expedition.1.d: "우리 [concept_gate_expedition]을 위해 세 명의 잠재적인 [Concept('concept_gate_expedition_leader','$concept_gate_expedition_leaders$')]를 찾았습니다. 이제 그중 한 명을 선택해야 합니다.\n\n@warning! 이 선택은 매우 중요하며, 우리가 [concept_gate_expedition_map]에서 시작할 수 있는 [concept_gate_expedition_activities]를 결정합니다."
+ gate_expedition.1.f: "치열한 정치적 술책과 은밀한 거래 끝에, 마법의 관문 탐사대의 잠재적 지도자로 세 후보가 떠올랐습니다. 한 명은 경제와 깊은 연줄을 가진 노련한 산업가로, 그 너머 자원을 적극적으로 개척하려 합니다. 또 다른 한 명은 훈장을 받은 군 장교로, 발판 확보와 지배력 강화를 목표로 합니다. 마지막 후보는 뛰어난 정치가로, 신중한 외교와 장기적 안정을 옹호합니다. 우리가 내리는 선택이 $gate_planet$에서 우리의 미래를 결정할 것입니다."
+ gate_expedition.1.a: "[concept_gate_expedition_leader_militarist]: [SCOPE.sCharacter('expedition_militarist').GetFullName]"
+ gate_expedition.1.b: "[concept_gate_expedition_leader_politician]: [SCOPE.sCharacter('expedition_politician').GetFullName]"
+ gate_expedition.1.c: "[concept_gate_expedition_leader_industrialist]: [SCOPE.sCharacter('expedition_industrialist').GetFullName]"
+ gate_expedition.1.cancel: "이 중 어느 것도 적합하지 않다."
+ gate_expedition.1.cancel.tt: "현재는 [concept_gate_expedition_leader] 찾기를 마치고, 나중에 다시 시도할 수 있습니다."
+ gate_expedition.2.t: "$concept_gate_expedition$ 계획"
+ gate_expedition.2.d: "우리 탐사대 [concept_gate_expedition]의 규모를 결정해야 합니다. 탐사를 준비하는 데는 #bold 많은 비용#!이 듭니다."
+ gate_expedition.2.f: "마법의 관문을 통과하기로 결정한 후, 다음 과제는 탐사의 규모를 정하는 일입니다. 작고 민첩한 소규모 팀은 은밀하게 탐사하며 위험과 비용을 최소화할 수 있습니다. 정착민, 학자, 군인이 균형 있게 구성된 중간 규모의 탐사는 안정적이면서도 유연한 접근법을 제공합니다. 또는 막대한 자원과 인력을 투입한 대규모 탐사는 확실한 영향력을 행사할 수 있지만, 그만큼 큰 비용이 듭니다. 우리 모험의 운명은 이 중대한 결정에 달려 있습니다."
+ gate_expedition.2.a: "짧은 원정."
+ gate_expedition.2.b: "보통 원정."
+ gate_expedition.2.c: "긴 원정."
+ gate_expedition.2.cancel: "아니 됐다."
+ gate_expedition.2.cancel.tt: "[concept_gate_expedition]을 취소합니다."
