@@ -4,484 +4,484 @@
 # are not set correctly.
 BUILDINGS = {
 
-	s:STATE_WESTERN_NEW_GUINEA={
-		region_state:TID={
-			# Clean up base game buildings
-			remove_building = building_banana_plantation
-			remove_building = building_port
-		}
-		region_state:GATE_NS = {
-			create_building = {
-				building = building_mana_extractor
-				add_ownership = {
-					country = {
-						country = c:GATE_NS
-						levels = 1
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_mage_mana_extraction
-				}
-			}
-			create_building = {
-				building = building_logging_camp
-				add_ownership = {
-					country = {
-						country = c:GATE_NS
-						levels = 5
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_saw_mills
-					pm_no_hardwood
-					pm_no_equipment
-					pm_road_carts
-				}
-			}
-			create_building = {
-				building = building_port
-				add_ownership = {
-					country = {
-						country = c:GATE_NS
-						levels = 1
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_basic_port
-				}
-			}
-			create_building = {
-				building = building_trade_center
-				add_ownership = {
-					country = {
-						country = c:GATE_NS
-						levels = 2
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_trade_center_trade_quantity_normal
-				}
-			}
-			create_building = {
-				building = building_furniture_manufacturies
-				add_ownership = {
-					country = {
-						country = c:GATE_NS
-						levels = 1
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_handcrafted_furniture
-					pm_no_luxuries
-					pm_automation_disabled
-				}
-			}
-			create_building = {
-				building = building_tooling_workshops
-				add_ownership = {
-					country = {
-						country = c:GATE_NS
-						levels = 2
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_pig_iron
-				}
-			}
-			create_building = {
-				building = building_shipyards
-				add_ownership = {
-					country = {
-						country = c:GATE_NS
-						levels = 2
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_basic_shipbuilding
-				}
-			}
-			create_building = {
-				building = building_fishing_wharf
-				add_ownership = {
-					country = {
-						country = c:GATE_NS
-						levels = 2
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_fishing_trawlers
-				}
-			}
-			create_building = {
-				building = building_government_administration
-				add_ownership = {
-					country = {
-						country = c:GATE_NS
-						levels = 3
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_vertical_filing_cabinets
-					pm_professional_bureaucrats
-					pm_religious_bureaucrats
-				}
-			}
-		}
-	}
-	s:STATE_EASTERN_NEW_GUINEA = {
-		region_state:GATE_NS = {
-			create_building = {
-				building = building_gate_eastern_new_guinea
-				add_ownership = {
-					country = {
-						country = c:GATE_NS
-						levels = 1
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_gate_closed
-					pm_gate_immigration_gnomish
-				}
-			}
-			create_building = {
-				building = building_magic_research_institute
-				level = 1
-				reserves = 1
-				activate_production_methods = { pm_novice_researcher }
-			}
-			create_building = {
-				building = building_university
-				add_ownership = {
-					country = {
-						country = c:GATE_NS
-						levels = 1
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_scholastic_education
-					pm_secular_academia
-					pm_university_simple_magic_research
-				}
-			}
-			create_building = {
-				building = building_textile_mills
-				add_ownership = {
-					country = {
-						country = c:GATE_NS
-						levels = 1
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_dye_workshops
-					pm_no_luxury_clothes
-					pm_traditional_looms
-				}
-			}
-			create_building = {
-				building = building_government_administration
-				add_ownership = {
-					country = {
-						country = c:GATE_NS
-						levels = 4
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_vertical_filing_cabinets
-					pm_professional_bureaucrats
-					pm_religious_bureaucrats
-				}
-			}
-			create_building = {
-				building = building_port
-				add_ownership = {
-					country = {
-						country = c:GATE_NS
-						levels = 1
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_basic_port
-				}
-			}
-			create_building = {
-				building = building_paper_mills
-				add_ownership = {
-					country = {
-						country = c:GATE_NS
-						levels = 1
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_pulp_pressing
-					pm_automation_disabled
-				}
-			}
-			create_building = {
-				building = building_iron_mine
-				add_ownership = {
-					country = {
-						country = c:GATE_NS
-						levels = 2
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_picks_and_shovels_building_iron_mine
-				}
-			}
-			create_building = {
-				building = building_druid_groove
-				add_ownership = {
-					country = {
-						country = c:GATE_NS
-						levels = 2
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_classic_magic_seed
+    s:STATE_WESTERN_NEW_GUINEA = {
+        region_state:TID = {
+            # Clean up base game buildings
+            remove_building = building_banana_plantation
+            remove_building = building_port
+        }
+        region_state:GATE_NS = {
+            create_building = {
+                building = building_mana_extractor
+                add_ownership = {
+                    country = {
+                        country = c:GATE_NS
+                        levels = 1
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_mage_mana_extraction
+                }
+            }
+            create_building = {
+                building = building_logging_camp
+                add_ownership = {
+                    country = {
+                        country = c:GATE_NS
+                        levels = 5
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_saw_mills
+                    pm_no_hardwood
+                    pm_no_equipment
+                    pm_road_carts
+                }
+            }
+            create_building = {
+                building = building_port
+                add_ownership = {
+                    country = {
+                        country = c:GATE_NS
+                        levels = 1
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_basic_port
+                }
+            }
+            create_building = {
+                building = building_trade_center
+                add_ownership = {
+                    country = {
+                        country = c:GATE_NS
+                        levels = 2
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_trade_center_trade_quantity_normal
+                }
+            }
+            create_building = {
+                building = building_furniture_manufacturies
+                add_ownership = {
+                    country = {
+                        country = c:GATE_NS
+                        levels = 1
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_handcrafted_furniture
+                    pm_no_luxuries
+                    pm_automation_disabled
+                }
+            }
+            create_building = {
+                building = building_tooling_workshops
+                add_ownership = {
+                    country = {
+                        country = c:GATE_NS
+                        levels = 2
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_pig_iron
+                }
+            }
+            create_building = {
+                building = building_shipyards
+                add_ownership = {
+                    country = {
+                        country = c:GATE_NS
+                        levels = 2
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_basic_shipbuilding
+                }
+            }
+            create_building = {
+                building = building_fishing_wharf
+                add_ownership = {
+                    country = {
+                        country = c:GATE_NS
+                        levels = 2
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_fishing_trawlers
+                }
+            }
+            create_building = {
+                building = building_government_administration
+                add_ownership = {
+                    country = {
+                        country = c:GATE_NS
+                        levels = 3
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_vertical_filing_cabinets
+                    pm_professional_bureaucrats
+                    pm_religious_bureaucrats
+                }
+            }
+        }
+    }
+    s:STATE_EASTERN_NEW_GUINEA = {
+        region_state:GATE_NS = {
+            create_building = {
+                building = building_gate_eastern_new_guinea
+                add_ownership = {
+                    country = {
+                        country = c:GATE_NS
+                        levels = 1
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_gate_closed
+                    pm_gate_immigration_gnomish
+                }
+            }
+            create_building = {
+                building = building_magic_research_institute
+                level = 1
+                reserves = 1
+                activate_production_methods = { pm_novice_researcher }
+            }
+            create_building = {
+                building = building_university
+                add_ownership = {
+                    country = {
+                        country = c:GATE_NS
+                        levels = 1
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_scholastic_education
+                    pm_secular_academia
+                    pm_university_simple_magic_research
+                }
+            }
+            create_building = {
+                building = building_textile_mills
+                add_ownership = {
+                    country = {
+                        country = c:GATE_NS
+                        levels = 1
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_dye_workshops
+                    pm_no_luxury_clothes
+                    pm_traditional_looms
+                }
+            }
+            create_building = {
+                building = building_government_administration
+                add_ownership = {
+                    country = {
+                        country = c:GATE_NS
+                        levels = 4
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_vertical_filing_cabinets
+                    pm_professional_bureaucrats
+                    pm_religious_bureaucrats
+                }
+            }
+            create_building = {
+                building = building_port
+                add_ownership = {
+                    country = {
+                        country = c:GATE_NS
+                        levels = 1
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_basic_port
+                }
+            }
+            create_building = {
+                building = building_paper_mills
+                add_ownership = {
+                    country = {
+                        country = c:GATE_NS
+                        levels = 1
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_pulp_pressing
+                    pm_automation_disabled
+                }
+            }
+            create_building = {
+                building = building_iron_mine
+                add_ownership = {
+                    country = {
+                        country = c:GATE_NS
+                        levels = 2
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_picks_and_shovels_building_iron_mine
+                }
+            }
+            create_building = {
+                building = building_druid_groove
+                add_ownership = {
+                    country = {
+                        country = c:GATE_NS
+                        levels = 2
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_classic_magic_seed
 
-				}
-			}
-			create_building = {
-				building = building_livestock_ranch
-				add_ownership = {
-					country = {
-						country = c:GATE_NS
-						levels = 3
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_open_air_stockyards
-					pm_simple_ranch
-					pm_standard_fences
-					pm_unrefrigerated
+                }
+            }
+            create_building = {
+                building = building_livestock_ranch
+                add_ownership = {
+                    country = {
+                        country = c:GATE_NS
+                        levels = 3
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_open_air_stockyards
+                    pm_simple_ranch
+                    pm_standard_fences
+                    pm_unrefrigerated
 
-				}
-			}
-			create_building = {
-				building = building_banana_plantation
-				add_ownership = {
-					country = {
-						country = c:GATE_NS
-						levels = 2
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					default_building_banana_plantation
-					pm_road_carts
-				}
-			}
-			create_building = {
-				building = building_fishing_wharf
-				add_ownership = {
-					country = {
-						country = c:GATE_NS
-						levels = 2
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_fishing_trawlers
-				}
-			}
-			create_building = {
-				building = building_rice_farm
-				add_ownership = {
-					country = {
-						country = c:GATE_NS
-						levels = 2
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_simple_farming_building_rice_farm
-					pm_magic_seeds_building_rice_farm
-					pm_fig_orchards_building_rice_farm
-					pm_tools_building_rice_farm
-				}
-			}
-		}
-	}
-	s:STATE_MOLUCCAS = {
-		region_state:DEI={
-			# Clean up base game buildings
-			remove_building = building_tea_plantation
-			remove_building = building_dye_plantation
-			remove_building = building_port
-		}
-		region_state:TID={
-			# Clean up base game buildings
-			remove_building = building_tea_plantation
-			remove_building = building_tobacco_plantation
-			remove_building = building_dye_plantation
-			remove_building = building_barracks
-			remove_building = building_port
-		}
-		region_state:GATE_NS = {
-			create_building = {
-				building = building_government_administration
-				add_ownership = {
-					country = {
-						country = c:GATE_NS
-						levels = 1
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_vertical_filing_cabinets
-					pm_professional_bureaucrats
-					pm_religious_bureaucrats
-				}
-			}
-			create_building = {
-				building = building_tea_plantation
-				add_ownership = {
-					country = {
-						country = c:GATE_NS
-						levels = 2
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					default_building_tea_plantation
-					pm_road_carts
-				}
-			}
-			create_building = {
-				building = building_tobacco_plantation
-				add_ownership = {
-					country = {
-						country = c:GATE_NS
-						levels = 3
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					default_building_tobacco_plantation
-					pm_road_carts
-				}
-			}
-			create_building = {
-				building = building_dye_plantation
-				add_ownership = {
-					country = {
-						country = c:GATE_NS
-						levels = 3
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					default_building_dye_plantation
-					pm_road_carts
-				}
-			}
-			create_building = {
-				building = building_rice_farm
-				add_ownership = {
-					country = {
-						country = c:GATE_NS
-						levels = 2
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_simple_farming_building_rice_farm
-					pm_magic_seeds_building_rice_farm
-					pm_fig_orchards_building_rice_farm
-					pm_tools_building_rice_farm
-				}
-			}
-			create_building = {
-				building = building_port
-				add_ownership = {
-					country = {
-						country = c:GATE_NS
-						levels = 2
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_basic_port
-				}
-			}
-			create_building = {
-				building = building_fishing_wharf
-				add_ownership = {
-					country = {
-						country = c:GATE_NS
-						levels = 1
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_fishing_trawlers
-				}
-			}
-		}
-	}
-	s:STATE_BOUGAINVILLE = {
-		region_state:GATE_NS = {
-			create_building = {
-				building = building_port
-				add_ownership = {
-					country = {
-						country = c:GATE_NS
-						levels = 1
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_basic_port
-				}
-			}
-			create_building = {
-				building = building_fishing_wharf
-				add_ownership = {
-					country = {
-						country = c:GATE_NS
-						levels = 1
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_fishing_trawlers
-				}
-			}
-			create_building = {
-				building = building_rice_farm
-				add_ownership = {
-					country = {
-						country = c:GATE_NS
-						levels = 1
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_simple_farming_building_rice_farm
-					pm_magic_seeds_building_rice_farm
-					pm_fig_orchards_building_rice_farm
-					pm_tools_building_rice_farm
-				}
-			}
-		}
-	}
+                }
+            }
+            create_building = {
+                building = building_banana_plantation
+                add_ownership = {
+                    country = {
+                        country = c:GATE_NS
+                        levels = 2
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    default_building_banana_plantation
+                    pm_road_carts
+                }
+            }
+            create_building = {
+                building = building_fishing_wharf
+                add_ownership = {
+                    country = {
+                        country = c:GATE_NS
+                        levels = 2
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_fishing_trawlers
+                }
+            }
+            create_building = {
+                building = building_rice_farm
+                add_ownership = {
+                    country = {
+                        country = c:GATE_NS
+                        levels = 2
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_simple_farming_building_rice_farm
+                    pm_magic_seeds_building_rice_farm
+                    pm_fig_orchards_building_rice_farm
+                    pm_tools_building_rice_farm
+                }
+            }
+        }
+    }
+    s:STATE_MOLUCCAS = {
+        region_state:DEI = {
+            # Clean up base game buildings
+            remove_building = building_tea_plantation
+            remove_building = building_dye_plantation
+            remove_building = building_port
+        }
+        region_state:TID = {
+            # Clean up base game buildings
+            remove_building = building_tea_plantation
+            remove_building = building_tobacco_plantation
+            remove_building = building_dye_plantation
+            remove_building = building_barracks
+            remove_building = building_port
+        }
+        region_state:GATE_NS = {
+            create_building = {
+                building = building_government_administration
+                add_ownership = {
+                    country = {
+                        country = c:GATE_NS
+                        levels = 1
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_vertical_filing_cabinets
+                    pm_professional_bureaucrats
+                    pm_religious_bureaucrats
+                }
+            }
+            create_building = {
+                building = building_tea_plantation
+                add_ownership = {
+                    country = {
+                        country = c:GATE_NS
+                        levels = 2
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    default_building_tea_plantation
+                    pm_road_carts
+                }
+            }
+            create_building = {
+                building = building_tobacco_plantation
+                add_ownership = {
+                    country = {
+                        country = c:GATE_NS
+                        levels = 3
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    default_building_tobacco_plantation
+                    pm_road_carts
+                }
+            }
+            create_building = {
+                building = building_dye_plantation
+                add_ownership = {
+                    country = {
+                        country = c:GATE_NS
+                        levels = 3
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    default_building_dye_plantation
+                    pm_road_carts
+                }
+            }
+            create_building = {
+                building = building_rice_farm
+                add_ownership = {
+                    country = {
+                        country = c:GATE_NS
+                        levels = 2
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_simple_farming_building_rice_farm
+                    pm_magic_seeds_building_rice_farm
+                    pm_fig_orchards_building_rice_farm
+                    pm_tools_building_rice_farm
+                }
+            }
+            create_building = {
+                building = building_port
+                add_ownership = {
+                    country = {
+                        country = c:GATE_NS
+                        levels = 2
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_basic_port
+                }
+            }
+            create_building = {
+                building = building_fishing_wharf
+                add_ownership = {
+                    country = {
+                        country = c:GATE_NS
+                        levels = 1
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_fishing_trawlers
+                }
+            }
+        }
+    }
+    s:STATE_BOUGAINVILLE = {
+        region_state:GATE_NS = {
+            create_building = {
+                building = building_port
+                add_ownership = {
+                    country = {
+                        country = c:GATE_NS
+                        levels = 1
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_basic_port
+                }
+            }
+            create_building = {
+                building = building_fishing_wharf
+                add_ownership = {
+                    country = {
+                        country = c:GATE_NS
+                        levels = 1
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_fishing_trawlers
+                }
+            }
+            create_building = {
+                building = building_rice_farm
+                add_ownership = {
+                    country = {
+                        country = c:GATE_NS
+                        levels = 1
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_simple_farming_building_rice_farm
+                    pm_magic_seeds_building_rice_farm
+                    pm_fig_orchards_building_rice_farm
+                    pm_tools_building_rice_farm
+                }
+            }
+        }
+    }
 
 }
