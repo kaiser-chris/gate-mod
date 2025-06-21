@@ -1,4 +1,5 @@
 ﻿l_korean:
+# Monster Congress
  je_monster_congress: "국가 괴물 회의"
  je_monster_congress_custom_goal: "회의가 종료됨."
  je_monster_congress_reason: "국가 괴물 회의가 개최되며, 정치인, 연구자, 군 지도자들이 한자리에 모였습니다. 벽에는 과거 괴물 공격으로 인한 피해 차트가 걸려 있고, 연구자들은 괴물 행동의 패턴과 변칙성을 분석하며 긴박한 목소리로 설명합니다. 군 지휘관들은 새로운 전략을 발표하며, 불굴의 화력과 정밀한 계획으로 무장된 전술을 내놓습니다. 한편, 정치인들은 방어에 자원을 집중할 것인지, 아니면 근본적인 원인을 규명하기 위한 연구에 투자할 것인지 격렬한 논쟁을 벌이고 있습니다."
@@ -12,8 +13,10 @@
  pb_monster_congress_desc: "진행 상황: #v [Multiply_float(JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self), '(float)6')|0]#! / 6개월"
  pb_monster_congress_block: "회의가 시작되지 않음"
  pb_monster_congress_progress: "회의가 진행 중임"
+# Modifiers
  monster_horde_cost_modifier: "괴물 대규모 습격 지원"
  monster_congress_modifier: "괴물 회의 진행 중"
+# Events
  gate_monster_attack.1.t: "괴물 무리"
  gate_monster_attack.1.d: "지역의 [concept_mana_density] 상승으로 인해 [SCOPE.sState('monster_horde_state').GetName]에서 괴물의 무리가 출현했습니다.]"
  gate_monster_attack.1.f: "마나가 땅 속으로 스며들면서 고대의 잊혀진 공포들을 풀어놓았습니다. 땅의 틈새에서 괴물의 무리가 솟구쳐 나오며, 그들의 눈은 야생적이고 억제되지 않은 마법 에너지로 빛나고 있습니다."

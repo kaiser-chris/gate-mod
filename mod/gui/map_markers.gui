@@ -4398,68 +4398,68 @@ template sea_node_framed_button_gfx
     downframe = 3
 }
 
-types map_marker_types
-{
+types map_marker_types {
     type movement_marker_hover_vfx = widget {
-    size = { 100% 100% }
+        size = { 100% 100% }
 
-    vfx = {
-        blockoverride "parent_anchor" {
-            parentanchor = center
-        }
+        vfx = {
+            blockoverride "parent_anchor" {
+                parentanchor = center
+            }
 
-        blockoverride "size" {
-            size = { 1000% 1000% }
-        }
+            blockoverride "size" {
+                size = { 1000% 1000% }
+            }
 
-        blockoverride "entity_instance" {
-            block "vfx_entity_instance" {
-                entity_instance = vfx_entity_ui_onhover_sea_node_formation_movement
+            blockoverride "entity_instance" {
+                block "vfx_entity_instance" {
+                    entity_instance = vfx_entity_ui_onhover_sea_node_formation_movement
+                }
             }
         }
     }
-}
 
     type movement_marker_click_vfx = widget {
-    size = { 100% 100% }
+        size = { 100% 100% }
 
-    vfx = {
-        name = "onrightclick_vfx"
-        alpha = 0
-
-        blockoverride "parent_anchor" {
-            parentanchor = center
-        }
-
-        blockoverride "size" {
-            size = { 1000% 1000% }
-        }
-
-        blockoverride "entity_instance" {
-            block "vfx_entity_instance" {
-                entity_instance = vfx_entity_ui_onclick_sea_node_formation_movement
-            }
-        }
-
-        state = {
-            name = "show"
-            duration = 0.1
-            alpha = 1
-            using = Animation_Curve_Default
-            next = "hold"
-        }
-        state = {
-            name = "hold"
-            duration = 0.5
-            alpha = 1
-            using = Animation_Curve_Default
-            next = "hide"
-        }
-        state = {
-            name = "hide"
-            duration = 0.4
+        vfx = {
+            name = "onrightclick_vfx"
             alpha = 0
-            using = Animation_Curve_Default
+
+            blockoverride "parent_anchor" {
+                parentanchor = center
+            }
+
+            blockoverride "size" {
+                size = { 1000% 1000% }
+            }
+
+            blockoverride "entity_instance" {
+                block "vfx_entity_instance" {
+                    entity_instance = vfx_entity_ui_onclick_sea_node_formation_movement
+                }
+            }
+
+            state = {
+                name = "show"
+                duration = 0.1
+                alpha = 1
+                using = Animation_Curve_Default
+                next = "hold"
+            }
+            state = {
+                name = "hold"
+                duration = 0.5
+                alpha = 1
+                using = Animation_Curve_Default
+                next = "hide"
+            }
+            state = {
+                name = "hide"
+                duration = 0.4
+                alpha = 0
+                using = Animation_Curve_Default
+            }
         }
     }
 }
