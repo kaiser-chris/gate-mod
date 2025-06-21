@@ -1,7 +1,9 @@
 ﻿l_korean:
+# Button
  gate_button_main: "gate_button_main"
  gate_button_main_desc: "$gg_panel_main_title$"
  gate_button_main_tooltip: "#header $gg_panel_main_title$#!\n단축키: #V 마법#! (#V CTRL + G#!)"
+# Main Panel
  gg_panel_main_action: "마법 패널"
  gg_tab_magic_statistics: "개요"
  gg_tab_magic_countries: "마법 국가"
@@ -16,6 +18,6 @@
  gg_ethic_empty_slot_tooltip: "이 [concept_magic_ethic] 슬롯은 비어 있으며, 관련 기술을 연구하면 채울 수 있습니다.\n\n#title 연구 가능한 기술#!\n - [GetTechnology('magic_science').GetName]\n - 아직 구현되지 않음"
  gg_header_magic_state: "전세계 마법 현황"
  gg_header_magic_countries: "마법 국가"
- gg_magic_countries_relations_region: "#header [DiplomaticAction.GetName]#!\n@red_cross! 해당 국가의 [concept_strategic_region]에서 [concept_interest]을 보유해야 실행할 수 있습니다."
  gg_magic_countries_us: "우리 국가"
  gg_magic_countries_relations: "$concept_relations$: #v [Country.GetRelationsWithDesc(GetPlayer)]#! (#v [Country.GetRelationsWith(GetPlayer)|0]#!)"
+ gg_magic_countries_relations_region: "#header [DiplomaticAction.GetName]#!\n@red_cross! 해당 국가의 [concept_strategic_region]에서 [concept_interest]을 보유해야 실행할 수 있습니다."

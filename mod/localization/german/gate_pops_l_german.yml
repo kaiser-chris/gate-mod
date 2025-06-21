@@ -4,7 +4,7 @@
  mages_only_icon: "@mages!" #deepl:2519370184
  mages_no_icon: "Magier" #deepl:1773414191
  mages_desc: "Gebildete [concept_gate_magic_users], die oft der wohlhabenden Elite angehören. Ihre politischen Interessen werden am häufigsten von der [GetInterestGroupVariant('ig_gate_magic_users',GetPlayer).GetNameWithCountryVariant] vertreten." #deepl:877185503
- mages_qualifications_desc: "Nur Pops mit ausreichender [concept_literacy] können #v $mages$#! werden. Das Potenzial steigt mit größerem [concept_literacy] und [concept_wealth]. Pops, deren [concept_culture] gegenüber [concept_discrimination] steht, brauchen viel länger. #v $aristocrats$#! und #v $academics$#! haben es besonders leicht, #v $mages$#! zu werden. Ein [GetBuildingType('building_magic_academy').GetName] [concept_building] erleichtert auch die Ausbildung neuer #v $mages$#!" #deepl:3355709172
+ MAGES_QUALIFICATIONS_DESC: "Nur Knackis mit ausreichend [concept_literacy] können #v $mages$ #! werden. Das Potenzial steigt mit größerem [concept_literacy] und [concept_wealth]. Pops, deren [concept_culture] Gesichter [concept_discrimination] viel länger brauchen. #v $aristocrats$ #! und #v $academics$ #! haben es besonders leicht, #v $mages$ #! zu werden. Ein [GetBuildingType('building_magic_academy').GetName] [concept_building] erleichtert auch die Ausbildung neuer #v $mages$ #! ." #deepl:3355709172
  mages_qualifications_academy: "von unserem [GetBuildingType('building_magic_academy').GetName]" #deepl:962771589
  pop_mages: "$mages$ [concept_profession]" #deepl:4056154339
  building_employment_mages_add: "$mages$ Pro Stufe" #deepl:74696181
@@ -36,7 +36,7 @@
  druids_only_icon: "@druids!" #deepl:1048814
  druids_no_icon: "Druiden" #deepl:952413689
  druids_desc: "Natürlich [concept_gate_magic_users] die oft aus Bauernfamilien stammen. Ihre politischen Interessen werden zumeist von der [GetInterestGroupVariant('ig_gate_magic_users',GetPlayer).GetNameWithCountryVariant] vertreten." #deepl:3562442764
- druids_qualifications_desc: ""Jeder Pop kann #v $druids$#! werden. Das Potenzial steigt mit größerer [concept_literacy] und [concept_wealth]. Pops, deren [concept_culture] gegenüber [concept_discrimination] steht, brauchen viel länger. #v $farmers$#! und #v $laborers$#! haben es besonders leicht, #v $druids$#! zu werden." #deepl:3002345990
+ DRUIDS_QUALIFICATIONS_DESC: "Jeder Pop kann #v $druids$ #! werden. Das Potenzial steigt mit größerer [concept_literacy] und [concept_wealth]. Pops, deren [concept_culture] gegenüber [concept_discrimination] steht, brauchen viel länger. #v $farmers$ #! und #v $laborers$ #! haben es besonders leicht, #v $druids$ #! zu werden." #deepl:2460264004
  pop_druids: "$druids$ [concept_profession]" #deepl:285799728
  building_employment_druids_add: "$druids$ Pro Stufe" #deepl:966414285
  building_employment_druids_add_desc: "Ändert die Anzahl der $druids$, die ein Gebäude pro Level anheuern kann" #deepl:3309503400
