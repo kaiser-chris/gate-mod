@@ -25,11 +25,11 @@ gate_orcish_expansion.1 = {
 		name = gate_orcish_expansion.1.a
 		add_modifier = {
 			name = unification_prestige
-			months = very_long_modifier_time
+			days = very_long_modifier_time
 		}
 		add_modifier = {
 			name = modifier_gate_orcish_expansion_success
-			months = very_long_modifier_time
+			days = very_long_modifier_time
 			is_decaying = yes
 		}
 		default_option = yes
@@ -62,7 +62,7 @@ gate_orcish_expansion.2 = {
 		default_option = yes
 		add_modifier = {
 			name = modifier_gate_orcish_expansion_failure
-			months = very_long_modifier_time
+			days = very_long_modifier_time
 			is_decaying = yes
 		}
 	}
