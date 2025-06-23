@@ -8,8 +8,9 @@ pdxmesh = {
 		texture_diffuse = "building_gate_magic_gate_diffuse.dds"
 		texture_normal = "building_gate_magic_gate_normal.dds"
 		texture_specular = "building_gate_magic_gate_properties.dds"
+		texture = { file = "european_city_university_01_tint.dds" index = 5 }
 		shader = "standard"
-		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN"  }
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" }
 		shader_file = "gfx/FX/pdxmesh.shader"
 	}
 	meshsettings = {
