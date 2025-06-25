@@ -19,7 +19,12 @@ gate_orphan_fix.1 = {
 	}
 
 	immediate = {
+		# Topbar
+		fix_variable_error = { variable = gg_topbar_magic_innovation }
+		fix_variable_error = { variable = gg_topbar_mana_saturation }
+
 		# General
+		fix_variable_error = { variable = gate_ankaris_orcish_elven_war_support }
 		fix_variable_error = { variable = mana_density }
 		fix_variable_error = { variable = global_mana_saturation }
 		fix_variable_error = { variable = gate_button_main }

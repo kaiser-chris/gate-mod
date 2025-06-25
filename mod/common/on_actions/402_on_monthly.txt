@@ -5,14 +5,52 @@ on_monthly_pulse = {
         on_monthly_gate_statistics
         on_monthly_gate_cleanup
         on_monthly_gate_mana_density
-        on_monthly_gate_buttons
+        on_monthly_ui_check
     }
 }
 
-on_monthly_gate_buttons = {
+on_monthly_ui_check = {
     effect = {
         add_gate_magic_main_button = yes
         add_gate_magic_technology_button = yes
+        if = {
+            limit = {
+                NOT = {
+                    any_in_global_list = {
+                        variable = com_topbar_items
+                        var:com_name ?= flag:gg_topbar_mana_saturation
+                    }
+                }
+            }
+            add_com_topbar_element = {
+                element_name = gg_topbar_mana_saturation
+            }
+            every_country = {
+                add_to_variable_list = {
+                    name = com_topbar_second_line
+                    target = scope:gg_topbar_mana_saturation
+                }
+            }
+        }
+        if = {
+            limit = {
+                NOT = {
+                    any_in_global_list = {
+                        variable = com_topbar_items
+                        var:com_name ?= flag:gg_topbar_magic_innovation
+                    }
+                }
+            }
+            add_com_topbar_element = {
+                element_name = gg_topbar_magic_innovation
+            }
+            every_country = {
+                add_to_variable_list = {
+                    name = com_topbar_second_line
+                    target = scope:gg_topbar_magic_innovation
+                }
+            }
+        }
     }
 }
 
