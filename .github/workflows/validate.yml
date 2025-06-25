@@ -39,6 +39,13 @@ jobs:
           ref: 'main'
           path: 'cmf'
 
+      - name: Checkout Expanded Topbar Framework
+        uses: actions/checkout@v4.2.2
+        with:
+          repository: Victoria-3-Modding-Co-op/Expanded-Topbar-Framework
+          ref: 'main'
+          path: 'etf'
+
       - name: Validate
         uses: ./validation/
         with:

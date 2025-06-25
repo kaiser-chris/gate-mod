@@ -17,36 +17,22 @@ GLOBAL = {
         value = 0
     }
 
-    c:GATE_MK = {
-        create_struct = {
-            struct_type = 0
-            struct_scope = topbar_magic_innovation
-        }
-        scope:topbar_magic_innovation = {
-            set_variable = {
-                name = com_name
-                value = flag:gg_topbar_magic_innovation
-            }
-        }
-        create_struct = {
-            struct_type = 0
-            struct_scope = topbar_mana_saturation
-        }
-        scope:topbar_mana_saturation = {
-            set_variable = {
-                name = com_name
-                value = flag:gg_topbar_mana_saturation
-            }
-        }
+    # Add expanded topbar elements
+    add_com_topbar_element = {
+        element_name = gg_topbar_magic_innovation
     }
-
-    add_to_global_variable_list = {
-        name = com_topbar_items
-        target = scope:topbar_magic_innovation
+    add_com_topbar_element = {
+        element_name = gg_topbar_mana_saturation
     }
-    add_to_global_variable_list = {
-        name = com_topbar_items
-        target = scope:topbar_mana_saturation
+    every_country = {
+        add_to_variable_list = {
+            name = com_topbar_second_line
+            target = scope:gg_topbar_magic_innovation
+        }
+        add_to_variable_list = {
+            name = com_topbar_second_line
+            target = scope:gg_topbar_mana_saturation
+        }
     }
 
     # Make Mage Tower an owner building
