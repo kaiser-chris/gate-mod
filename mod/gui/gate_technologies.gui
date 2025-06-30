@@ -122,6 +122,7 @@ types gate_technologies {
                 datacontext = "[GetScriptedGui('mana_infused_fertilizers')]"
             }
         }
+        ### Era 4
 
         gate_technology = {
             blockoverride "context" {
@@ -130,21 +131,6 @@ types gate_technologies {
             }
         }
 
-        gate_technology = {
-            blockoverride "context" {
-                datacontext = "[GetTechnology('mechanical_golems')]"
-                datacontext = "[GetScriptedGui('mechanical_golems')]"
-            }
-        }
-
-        ### Era 4
-
-        gate_technology = {
-            blockoverride "context" {
-                datacontext = "[GetTechnology('magic_electric_golems')]"
-                datacontext = "[GetScriptedGui('magic_electric_golems')]"
-            }
-        }
     }
 
     type gate_technologies_military = flowcontainer {

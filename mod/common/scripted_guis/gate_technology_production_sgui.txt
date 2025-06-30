@@ -152,29 +152,3 @@ magic_golems = {
 		add_technology_researched = magic_golems
 	}
 }
-
-mechanical_golems = {
-	scope = country
-	is_valid = {
-		AND = {
-			has_technology_researched = magic_golems
-			has_technology_researched = atmospheric_engine
-		}
-	}
-	effect = {
-		add_technology_researched = mechanical_golems
-	}
-}
-
-magic_electric_golems = {
-	scope = country
-	is_valid = {
-		AND = {
-			has_technology_researched = electrical_generation
-			has_technology_researched = mechanical_golems
-		}
-	}
-	effect = {
-		add_technology_researched = magic_electric_golems
-	}
-}

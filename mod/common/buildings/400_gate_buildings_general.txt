@@ -142,6 +142,12 @@ building_mage_tower = {
 						is_magic_country = yes
 					}
 					value = 1
+					if = {
+						limit = {
+							has_law = law_type:law_gate_restricted_magic_users
+						}
+						divide = 2
+					}
 				}
 				else = {
 					value = 0
@@ -165,6 +171,12 @@ building_mage_tower = {
 							}
 						}
 						multiply = 2.0
+					}
+					if = {
+						limit = {
+							has_law = law_type:law_gate_restricted_magic_users
+						}
+						divide = 2
 					}
 				}
 				else = {
@@ -190,6 +202,12 @@ building_mage_tower = {
 						}
 						multiply = 2.0
 					}
+					if = {
+						limit = {
+							has_law = law_type:law_gate_restricted_magic_users
+						}
+						divide = 2
+					}
 				}
 				else = {
 					value = 0
@@ -214,6 +232,12 @@ building_mage_tower = {
 						}
 						multiply = 2.0
 					}
+					if = {
+						limit = {
+							has_law = law_type:law_gate_restricted_magic_users
+						}
+						divide = 2
+					}
 				}
 				else = {
 					value = 0
@@ -228,6 +252,12 @@ building_mage_tower = {
 						is_magic_country = yes
 					}
 					value = 1.5
+					if = {
+						limit = {
+							has_law = law_type:law_gate_restricted_magic_users
+						}
+						divide = 2
+					}
 				}
 				else = {
 					value = 0
@@ -242,6 +272,12 @@ building_mage_tower = {
 						is_magic_country = yes
 					}
 					value = 1
+					if = {
+						limit = {
+							has_law = law_type:law_gate_restricted_magic_users
+						}
+						divide = 2
+					}
 				}
 				else = {
 					value = 0
@@ -256,6 +292,12 @@ building_mage_tower = {
 						is_magic_country = yes
 					}
 					value = 0.5
+					if = {
+						limit = {
+							has_law = law_type:law_gate_restricted_magic_users
+						}
+						divide = 2
+					}
 				}
 				else = {
 					value = 0
@@ -270,6 +312,12 @@ building_mage_tower = {
 						is_magic_country = yes
 					}
 					value = 0.5
+					if = {
+						limit = {
+							has_law = law_type:law_gate_restricted_magic_users
+						}
+						divide = 2
+					}
 				}
 				else = {
 					value = 0
@@ -284,6 +332,12 @@ building_mage_tower = {
 						is_magic_country = yes
 					}
 					value = 0.25
+					if = {
+						limit = {
+							has_law = law_type:law_gate_restricted_magic_users
+						}
+						divide = 2
+					}
 				}
 				else = {
 					value = 0
@@ -298,6 +352,12 @@ building_mage_tower = {
 						is_magic_country = yes
 					}
 					value = 0.25
+					if = {
+						limit = {
+							has_law = law_type:law_gate_restricted_magic_users
+						}
+						divide = 2
+					}
 				}
 				else = {
 					value = 0
@@ -312,6 +372,12 @@ building_mage_tower = {
 						is_magic_country = yes
 					}
 					value = 0.5
+					if = {
+						limit = {
+							has_law = law_type:law_gate_restricted_magic_users
+						}
+						divide = 2
+					}
 				}
 				else = {
 					value = 0
@@ -326,6 +392,52 @@ building_mage_tower = {
 						is_magic_country = yes
 					}
 					value = 0.5
+					if = {
+						limit = {
+							has_law = law_type:law_gate_restricted_magic_users
+						}
+						divide = 2
+					}
+				}
+				else = {
+					value = 0
+				}
+			}
+		}
+		bg_gate_magic_industry_score = {
+			group = "bg_gate_magic_industry"
+			score = {
+				if = {
+					limit = {
+						is_magic_country = yes
+					}
+					value = 2
+					if = {
+						limit = {
+							has_law = law_type:law_gate_restricted_magic_users
+						}
+						divide = 2
+					}
+				}
+				else = {
+					value = 0
+				}
+			}
+		}
+		bg_mana_extraction_score = {
+			group = "bg_mana_extraction"
+			score = {
+				if = {
+					limit = {
+						is_magic_country = yes
+					}
+					value = 3
+					if = {
+						limit = {
+							has_law = law_type:law_gate_restricted_magic_users
+						}
+						divide = 2
+					}
 				}
 				else = {
 					value = 0

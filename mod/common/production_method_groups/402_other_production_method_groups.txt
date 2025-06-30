@@ -67,9 +67,19 @@ pmg_golem_workshop_production = {
 
 	production_methods = {
 		pm_golem_workshop_no_production
-		pm_golem_workshop_artisan_production
-		pm_golem_workshop_steam_production
+		pm_golem_workshop_simple_production
 		pm_golem_workshop_electric_production
+	}
+}
+
+pmg_golem_workshop_automation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_automation_disabled
+		pm_rotary_valve_engine_building_golem_workshop
+		pm_assembly_lines_building_golem_workshop
 	}
 }
 
