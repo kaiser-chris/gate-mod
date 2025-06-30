@@ -1,12 +1,12 @@
 ﻿pm_golem_workshop_no_production = {
 	texture = "gfx/interface/icons/production_method_icons/gate_no_golems.dds"
 
-	replacement_if_valid = pm_golem_workshop_artisan_production
+	replacement_if_valid = pm_golem_workshop_simple_production
 
 	is_default = yes
 }
 
-pm_golem_workshop_artisan_production = {
+pm_golem_workshop_simple_production = {
 	texture = "gfx/interface/icons/production_method_icons/gate_normal_golems.dds"
 
 	unlocking_technologies = {
@@ -26,38 +26,8 @@ pm_golem_workshop_artisan_production = {
 
 		level_scaled = {
 			building_employment_shopkeepers_add = 500
-			building_employment_mages_add = 5000
-			building_employment_laborers_add = 2000
-		}
-	}
-}
-
-pm_golem_workshop_steam_production = {
-	texture = "gfx/interface/icons/production_method_icons/gate_mechanical_golems.dds"
-
-	unlocking_technologies = {
-		mechanical_golems
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			# input goods
-			goods_input_mana_core_add = 10
-			goods_input_steel_add = 5
-			goods_input_engines_add = 5
-			goods_input_runic_paper_add = 10
-			goods_input_coal_add = 5
-
-			# output goods
-			goods_output_golem_add = 70
-		}
-
-		level_scaled = {
-			building_employment_shopkeepers_add = 500
-			building_employment_mages_add = 2000
-			building_employment_laborers_add = 1000
-			building_employment_machinists_add = 2000
-			building_employment_engineers_add = 1000
+			building_employment_mages_add = 3000
+			building_employment_laborers_add = 5000
 		}
 	}
 }
@@ -66,7 +36,7 @@ pm_golem_workshop_electric_production = {
 	texture = "gfx/interface/icons/production_method_icons/gate_electrical_golems.dds"
 
 	unlocking_technologies = {
-		magic_electric_golems
+		electrical_generation
 	}
 
 	building_modifiers = {
@@ -75,8 +45,8 @@ pm_golem_workshop_electric_production = {
 			goods_input_mana_core_add = 15
 			goods_input_steel_add = 5
 			goods_input_engines_add = 5
-			goods_input_runic_paper_add = 10
-			goods_input_electricity_add = 20
+			goods_input_runic_paper_add = 5
+			goods_input_electricity_add = 10
 
 			# output goods
 			goods_output_golem_add = 100
@@ -85,9 +55,72 @@ pm_golem_workshop_electric_production = {
 		level_scaled = {
 			building_employment_shopkeepers_add = 500
 			building_employment_mages_add = 2000
-			building_employment_laborers_add = 1000
-			building_employment_machinists_add = 3000
+			building_employment_laborers_add = 2000
+			building_employment_machinists_add = 1000
 			building_employment_engineers_add = 2000
+		}
+	}
+
+	required_input_goods = electricity
+}
+
+
+pm_rotary_valve_engine_building_golem_workshop = {
+	texture = "gfx/interface/icons/production_method_icons/rotary_valve_engine.dds"
+
+	unlocking_technologies = {
+		rotary_valve_engine
+	}
+
+	disallowing_laws = {
+		law_industry_banned
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_coal_add = 10
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -2000
+		}
+	}
+}
+
+pm_assembly_lines_building_golem_workshop = {
+	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
+
+	unlocking_technologies = {
+		conveyors
+	}
+
+	disallowing_laws = {
+		law_industry_banned
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_tools_add = 5
+			goods_input_oil_add = 5
+			goods_input_electricity_add = 5
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -2000
+			building_employment_mages_add = -1000
 		}
 	}
 
