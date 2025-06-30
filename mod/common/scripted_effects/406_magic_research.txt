@@ -366,22 +366,6 @@ ai_unlock_magic_technology = {
 		}
 		add_technology_researched = mana_infused_fertilizers
 	}
-	else_if = {
-		limit = {
-			NOT = {
-				has_technology_researched = mechanical_golems
-			}
-		}
-		add_technology_researched = mechanical_golems
-	}
-	else_if = {
-		limit = {
-			NOT = {
-				has_technology_researched = magic_electric_golems
-			}
-		}
-		add_technology_researched = magic_electric_golems
-	}
 	set_variable = {
 		name = magic_innovation
 		value = 0
