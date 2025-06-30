@@ -83,4 +83,31 @@
         }
     }
 
+    european_executive_headgear = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = european_executive_hats
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 10000
+                OR = {
+                    AND = {
+                        politician_clothes_trigger = yes
+                        scope:character ?= {
+                            is_interest_group_type = ig_industrialists
+                        }
+                    }
+                    executive_clothes_trigger = yes
+                }
+                dwarven_portrait_trigger = yes
+            }
+        }
+    }
+
 }

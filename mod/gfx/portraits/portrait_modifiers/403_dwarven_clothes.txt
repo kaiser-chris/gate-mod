@@ -38,6 +38,56 @@
         }
     }
 
+    dwarven_common_executive_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = top_layer
+                template = executive_overcoat
+                range = { 0 1 } # For the randomness to work correctly
+            }
+
+            accessory = {
+                mode = add
+                gene = civilian_coats
+                template = european_executive_coats
+                range = { 0 1 } # For the randomness to work correctly
+            }
+
+            accessory = {
+                mode = add
+                gene = legwear
+                template = european_legwear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+
+            accessory = {
+                mode = add
+                gene = props
+                template = gene_lences
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 1000
+                has_dlc_feature = mp1_cosmetics
+                OR = {
+                    AND = {
+                        politician_clothes_trigger = yes
+                        scope:character ?= {
+                            is_interest_group_type = ig_industrialists
+                        }
+                    }
+                    executive_clothes_trigger = yes
+                }
+                dwarven_portrait_trigger = yes
+            }
+        }
+    }
+
     dwarven_child_clothes = {
         dna_modifiers = {
             accessory = {
@@ -501,7 +551,15 @@
                 add = 100
                 AND = {
                     dwarven_portrait_trigger = yes
-                    politician_clothes_trigger = yes
+                    OR = {
+                        politician_clothes_trigger = yes
+                        AND = {
+                            executive_clothes_trigger = yes
+                            NOT = {
+                                has_dlc_feature = mp1_cosmetics
+                            }
+                        }
+                    }
                     scope:character ?= {
                         age >= define:NCharacters|ADULT_AGE
                         NOR = {
