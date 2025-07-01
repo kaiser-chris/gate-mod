@@ -2,6 +2,7 @@
  effect_add_magic_innovation: "增加[SCOPE.GetValue('added_innovation')|+=0][concept_magic_innovation]"
  effect_add_mana_density: "增加[SCOPE.GetValue('added_mana_density')|+=0][concept_mana_density]"
  effect_learn_magic: "学习[concept_magic_knowledge]"
+ effect_gate_establish_treaty: "在[SCOPE.GetLocalVariable('gate_treaty_source').GetCountry.GetName] 和[SCOPE.GetLocalVariable('gate_treaty_target').GetCountry.GetName] 之间建立#bold [SCOPE.GetLocalVariable('gate_treaty_name').GetFlagName] #! [concept_treaty] 。" #deepl:3749156315
  effect_pops_embrace_vampirism: "我国部分人口接受了[concept_gate_vampirism]，并转变为[GetCulture('vampire').GetName]文化与[GetReligion('gate_lunar_masquerade').GetName]宗教。"
  effect_characters_embrace_vampirism: "我们的领袖和政治家接受了[concept_gate_vampirism]，并转变为[GetCulture('vampire').GetName]文化与[GetReligion('gate_lunar_masquerade').GetName]宗教。"
  effect_gate_magic_experience: "[concept_magic_researcher]增加[SCOPE.GetValue('added_experience')|+=0][concept_gate_character_experience]"

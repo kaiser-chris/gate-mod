@@ -18,19 +18,48 @@ dwarven_alps.1 = {
 	
 	duration = 3
 
+	immediate = {
+		c:SWI ?= {
+			save_scope_as = loc_swiss_scope
+		}
+		c:GATE_MK ?= {
+			save_scope_as = loc_raetia_scope
+		}
+	}
+
 	option = {
 		name = dwarven_alps.1.a
 		default_option = yes
-		c:SWI ?= {
-			learn_magic = yes
-			set_variable = {
-				name = swiss_magic_var
+		gate_treaty_tooltip = {
+			treaty = treaty_name_gate_dwarven_swiss_alliance
+			source_scope = root
+			target_scope = c:SWI
+		}
+		hidden_effect = {
+			c:SWI ?= {
+				set_variable = {
+					name = swiss_magic_var
+				}
 			}
-			## 1.9 CHECK -- I commented this out for testing -Alexedishi
-#			create_diplomatic_pact = {
-#				country = ROOT
-#				type = alliance
-#			}
+			create_treaty = {
+				name = treaty_name_gate_dwarven_swiss_alliance
+				first_country = root
+				second_country = c:SWI
+				is_draft = no
+				articles_to_create = {
+					{
+						article = alliance
+					}
+					{
+						article = gate_magic_knowledge
+						source_country = root
+						target_country = c:SWI
+					}
+				}
+				binding_period = {
+					years = 25
+				}
+			}
 		}
 	}
 }

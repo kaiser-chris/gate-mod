@@ -1,0 +1,17 @@
+﻿gate_treaty_tooltip = {
+    custom_tooltip = {
+        text = effect_gate_establish_treaty
+        set_local_variable = {
+            name = gate_treaty_name
+            value = flag:$treaty$
+        }
+        set_local_variable = {
+            name = gate_treaty_source
+            value = $source_scope$
+        }
+        set_local_variable = {
+            name = gate_treaty_target
+            value = $target_scope$
+        }
+    }
+}

@@ -1,0 +1,8 @@
+﻿l_simp_chinese:
+ DIPLOMATIC_ACCEPTANCE_GATE_LEARNING_MAGIC: "正在研究[concept_magic_knowledge]" #deepl:3540471904
+ DIPLOMATIC_ACCEPTANCE_GATE_NO_MAGIC: "没有[concept_magic_knowledge]" #deepl:63607955
+
+ gate_magic_knowledge: "$concept_magic_knowledge$" #deepl:3581261840
+ gate_magic_knowledge_desc: ""
+ gate_magic_knowledge_effects_desc: "- 建立两个[Concept('concept_country', '$concept_countries$')] 之间的协议，其中一个$concept_country$ 向另一个转让[concept_magic_knowledge] " #deepl:1007169874
+ gate_magic_knowledge_article_short_desc: "[SOURCE_COUNTRY.GetNameNoFormatting] 将 转至[concept_magic_knowledge] [TARGET_COUNTRY.GetNameNoFormatting]" #deepl:2177576491
