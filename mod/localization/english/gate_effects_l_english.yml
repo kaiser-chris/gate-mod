@@ -1,7 +1,8 @@
 ﻿l_english:
  effect_add_magic_innovation: "Add [SCOPE.GetValue('added_innovation')|+=0] [concept_magic_innovation]."
  effect_add_mana_density: "Add [SCOPE.GetValue('added_mana_density')|+=0] [concept_mana_density]."
- effect_learn_magic: "Learn [concept_magic_knowledge]."
+ effect_learn_magic: "[SCOPE.sCountry('gate_magic_learner').GetName] learns [concept_magic_knowledge]."
+ effect_gate_establish_treaty: "Establish #bold [SCOPE.GetLocalVariable('gate_treaty_name').GetFlagName]#! [concept_treaty] between [SCOPE.GetLocalVariable('gate_treaty_source').GetCountry.GetName] and [SCOPE.GetLocalVariable('gate_treaty_target').GetCountry.GetName]."
  effect_pops_embrace_vampirism: "A part of our population embrace [concept_gate_vampirism] and convert to the [GetCulture('vampire').GetName] culture and the [GetReligion('gate_lunar_masquerade').GetName] religion."
  effect_characters_embrace_vampirism: "Our leaders and politicians embrace [concept_gate_vampirism] and convert to the [GetCulture('vampire').GetName] culture and the [GetReligion('gate_lunar_masquerade').GetName] religion."
  effect_gate_magic_experience: "Add [SCOPE.GetValue('added_experience')|+=0] [concept_gate_character_experience] to [concept_magic_researcher]."

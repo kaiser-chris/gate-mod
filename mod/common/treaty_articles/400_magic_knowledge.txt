@@ -1,0 +1,255 @@
+﻿gate_magic_knowledge = {
+	kind = directed
+	cost = 0
+
+	icon = "gfx/interface/icons/diplomatic_treaties_articles_icons/gate_magic_knowledge_treaties.dds"
+
+	maintenance_paid_by = source_country
+	usage_limit = once_per_treaty
+
+	unlocked_by_technologies = {
+		magic_understanding_society
+		magic_understanding_military
+		gate_magic_understanding_production
+	}
+
+	visible = {
+		is_magic_country = yes
+	}
+
+	possible = {
+		always = yes
+	}
+
+	can_ratify = {
+		scope:target_country = {
+			is_magic_country = no
+		}
+	}
+
+	on_entry_into_force = {
+		scope:article_options = {
+			target_country = {
+				learn_magic = yes
+			}
+		}
+	}
+
+	on_withdrawal = {}
+
+	on_break = {
+		scope:withdrawing_country = {
+			change_infamy = {
+				value = {
+					add = 1
+					multiply = {
+						value = scope:treaty_options.remaining_binding_period
+						min = 365
+						divide = 365
+					}
+					max = 20
+					min = 5
+				}
+			}
+		}
+		scope:withdrawing_country = {
+			change_relations = {
+				country = scope:non_withdrawing_country value = -10
+			}
+		}
+	}
+
+	ai = {
+
+		treaty_categories = {
+			none
+		}
+
+		evaluation_chance = {
+			value = 0.25
+		}
+
+		article_ai_usage = {
+            request
+        }
+
+		inherent_accept_score = {
+			value = 0
+
+			if = {
+				limit = {
+					scope:source_country ?= this
+				}
+				scope:source_country = {
+					save_temporary_scope_as = target
+				}
+				scope:target_country = {
+					save_temporary_scope_as = actor
+				}
+
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_BASE_ADDITIONAL"
+					value = -25
+				}
+
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_ATTITUDE"
+					if = {
+						limit = {
+							OR = {
+								has_attitude = {
+									who = scope:target_country
+									attitude = genial
+								}
+								has_attitude = {
+									who = scope:target_country
+									attitude = protective
+								}
+								has_attitude = {
+									who = scope:target_country
+									attitude = cooperative
+								}
+							}
+						}
+						value = 15
+					}
+					else_if = {
+						limit = {
+							OR = {
+								has_attitude = {
+									who = scope:target_country
+									attitude = conciliatory
+								}
+								has_attitude = {
+									who = scope:target_country
+									attitude = domineering
+								}
+							}
+						}
+						value = 5
+					}
+					else_if = {
+						limit = {
+							OR = {
+								has_attitude = {
+									who = scope:target_country
+									attitude = antagonistic
+								}
+								has_attitude = {
+									who = scope:target_country
+									attitude = belligerent
+								}
+							}
+						}
+						value = -200
+					}
+					else = {
+						value = -25
+					}
+				}
+
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_IDEOLOGICAL_OPINION"
+					value = "scope:source_country.ai_ideological_opinion(scope:target_country)"
+					multiply = 0.25
+					max = 10
+					min = -25
+				}
+
+			}
+			else = {
+				scope:source_country = {
+					save_temporary_scope_as = actor
+				}
+				scope:target_country = {
+					save_temporary_scope_as = target
+				}
+
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_BASE"
+					value = -10
+				}
+
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_GATE_NO_MAGIC"
+					if = {
+						limit = {
+							not_is_magic_country = yes
+						}
+						value = 20
+					}
+					else = {
+						value = 0
+					}
+				}
+
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_GATE_LEARNING_MAGIC"
+					if = {
+						limit = {
+							scope:target = {
+								has_journal_entry = je_gate_researching_magic
+							}
+						}
+						value = 25
+					}
+					else = {
+						value = 0
+					}
+				}
+
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_ATTITUDE"
+					if = {
+						limit = {
+							OR = {
+								has_attitude = {
+									who = scope:target_country
+									attitude = antagonistic
+								}
+								has_attitude = {
+									who = scope:target_country
+									attitude = domineering
+								}
+								has_attitude = {
+									who = scope:target_country
+									attitude = belligerent
+								}
+								has_attitude = {
+									who = scope:target_country
+									attitude = rebellious
+								}
+							}
+						}
+						value = -1000
+					}
+				}
+			}
+		}
+
+		contextual_accept_score = {
+			value = 0
+
+			if = {
+				limit = {
+					scope:target_country ?= this
+					scope:source_country = { is_ai = no }
+					scope:treaty ?= {
+						NOT = {
+							any_scope_article_option = {
+								OR = {
+									source_country ?= scope:target_country
+									is_giftable_treaty_article = no
+								}
+							}
+						}
+					}
+				}
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_GIFT"
+					value = 200
+				}
+			}
+		}
+	}
+}
