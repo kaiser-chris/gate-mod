@@ -1,0 +1,8 @@
+﻿l_braz_por:
+ DIPLOMATIC_ACCEPTANCE_GATE_LEARNING_MAGIC: "Is researching [concept_magic_knowledge]"
+ DIPLOMATIC_ACCEPTANCE_GATE_NO_MAGIC: "Does not have [concept_magic_knowledge]"
+
+ gate_magic_knowledge: "$concept_magic_knowledge$"
+ gate_magic_knowledge_desc:  ""
+ gate_magic_knowledge_effects_desc: "• Establishes an agreement between two [Concept('concept_country', '$concept_countries$')] where one $concept_country$ transfers [concept_magic_knowledge] to the other"
+ gate_magic_knowledge_article_short_desc: "[SOURCE_COUNTRY.GetNameNoFormatting] transfers [concept_magic_knowledge] to [TARGET_COUNTRY.GetNameNoFormatting]"

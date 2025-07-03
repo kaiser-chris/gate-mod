@@ -26,7 +26,7 @@
  pb_gate_german_integration_support_state_peace: "[Concept('concept_incorporated_state', '$concept_incorporated_states$')] with low [concept_turmoil]"
  pb_gate_german_integration_support_state_turmoil: "[Concept('concept_incorporated_state', '$concept_incorporated_states$')] with high [concept_turmoil]"
  dwarven_alps.1.t: "Magic Alliance"
- dwarven_alps.1.d: "Forged and Alliance with [SCOPE.sCountry('loc_swiss_scdope').GetName] for our [concept_magic_knowledge]."
+ dwarven_alps.1.d: "[SCOPE.sCountry('loc_raetia_scope').GetName] forged an Arcane [concept_alliance] with [SCOPE.sCountry('loc_swiss_scope').GetName]."
  dwarven_alps.1.f: "In the frostbitten peaks of $GATE_MK$, the dwarves emerged from their hidden forges, carrying secrets older than the mountains themselves. Under the watchful gaze of ancient stone sentinels, they met with the envoys of Switzerland, their eyes gleaming with a mix of caution and hope. In exchange for sharing their arcane knowledge, the dwarves sought the strength of an alliance with the surface dwellers. The pact was sealed with a clasped handshake, binding mountain and valley in a union that promised to reshape the fate of both realms."
  dwarven_alps.1.a: "We will share the mountain range."
  dwarven_alps.2.t: "Dwarven Tunnels Complete"
