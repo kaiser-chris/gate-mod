@@ -293,7 +293,10 @@ magic_science = {
 	on_researched = {
 		custom_tooltip = {
 			text = add_magic_ethic_tooltip
-			trigger_event = magic_ethic.1
+			trigger_event = {
+				id = magic_ethic.1
+				popup = yes
+			}
 		}
 	}
 

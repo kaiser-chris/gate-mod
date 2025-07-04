@@ -5,8 +5,10 @@ widget = {
     datacontext = "[GetMetaPlayer.GetPlayedOrObservedCountry]"
     visible = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 
+    # Fullscreen Panels
     gate_expedition_panel = {}
     gate_space_panel = {}
+    gate_base_panel = {}
 
     vbox = {
         parentanchor = top|left
@@ -22,8 +24,7 @@ widget = {
                 layoutpolicy_horizontal = expanding
                 layoutpolicy_vertical = expanding
 
-                gate_technology_panel = {}
-                gate_main_panel = {}
+                # Side Panels
 
                 expand = {}
             }

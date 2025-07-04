@@ -1,0 +1,856 @@
+types gate_expedition_panel_types {
+
+    type gate_expedition_panel = fullscreen_block_window {
+        name = "gate_expedition_panel"
+        datacontext = "[GetMetaPlayer.GetPlayedOrObservedCountry]"
+
+        visible = "[GetVariableSystem.HasValue('com_open_window', 'gate_button_expedition')]"
+
+        blockoverride "animation_state_block" {
+            state = {
+                name = _show
+                # Close open panel before showing this one
+                on_finish = "[InformationPanelBar.ClosePanel]"
+                on_finish = "[MapListPanelManager.CloseCurrentPanel]"
+                # Fullscreen panels hide topbar
+                on_finish = "[GetVariableSystem.Set('com_fullscreen', 'com_fullscreen')]"
+                on_finish = "[GetScriptedGui('sgui_gate_map_location_reset').Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
+                start_sound = {
+                    soundeffect = "event:/SFX/UI/SideBar/markets"
+                }
+                start_sound = {
+                    soundeffect = "snapshot:/Dynamic/mute_world_80"
+                }
+                start_sound = {
+                    soundeffect = "snapshot:/Dynamic/mute_vfx_war_100"
+                }
+            }
+
+            state = {
+                name = _hide
+                on_finish = "[GetVariableSystem.Clear('com_fullscreen')]"
+                on_finish = "[GetScriptedGui('sgui_gate_map_location_reset').Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
+                start_sound = {
+                    soundeffect = "event:/SFX/UI/SideBar/markets_stop"
+                }
+            }
+        }
+
+        blockoverride "window_header_name"
+        {
+            text = gg_panel_expedition_title
+            default_format = "#title"
+        }
+
+        block "back_button_fullscreen" {
+            back_button_large = {
+                position = { 11 15 }
+                parentanchor = top|left
+                onclick = "[GetVariableSystem.Clear('com_open_window')]"
+                onclick = "[GetVariableSystem.Clear('com_alert_action')]"
+                input_action = "back"
+            }
+            # Deactivate Shortcut when Sidebar is visible
+            # This is to allow closing the Sidebar with the ESC button
+            close_button_large = {
+                name = "tutorial_highlight_close_button"
+                parentanchor = top|right
+                onclick = "[GetVariableSystem.Clear('com_open_window')]"
+                onclick = "[GetVariableSystem.Clear('com_alert_action')]"
+                shortcut = "close_window"
+                visible = "[Not(Country.MakeScope.Var('gate_map_sidebar').IsSet)]"
+                position = { -56 116 }
+            }
+            close_button_large = {
+                parentanchor = top|right
+                onclick = "[GetVariableSystem.Clear('com_open_window')]"
+                onclick = "[GetVariableSystem.Clear('com_alert_action')]"
+                visible = "[Country.MakeScope.Var('gate_map_sidebar').IsSet]"
+                position = { -56 116 }
+            }
+        }
+
+        blockoverride "close_button_position" {
+            visible = no
+        }
+
+        blockoverride "fixed_top" {
+            datacontext = "[Country.MakeScope.Var('gate_expedition')]"
+            hbox = {
+                maximumsize = { -1 140 }
+                visible = "[Scope.IsSet]"
+                layoutpolicy_horizontal = expanding
+                margin = { 20 10 }
+                margin_bottom = 15
+                spacing = 20
+
+                # Expedition Leader
+                vbox = {
+                    spacing = -20
+                    layoutpolicy_vertical = expanding
+                    gate_character_small = {
+                        visible = "[Scope.Var('leader').IsSet]"
+                        blockoverride "character_context" {
+                            datacontext = "[Scope.Var('leader').GetCharacter]"
+                        }
+                    }
+                    gate_character_small = {
+                        visible = "[Not(Scope.Var('leader').IsSet)]"
+                        blockoverride "gate_character_tooltip" {
+                            tooltip = gate_expedition_leader_missing_tooltip
+                        }
+                        blockoverride "gate_opinion_visible" {
+                            visible = no
+                        }
+                    }
+                    default_header_clean_faded = {
+                        blockoverride "text" {
+                            text = gg_panel_expedition_leader_type
+                        }
+                        blockoverride "size" {
+                            size = { 120 40 }
+                        }
+                    }
+                }
+
+                # Expedition Budget
+                hbox = {
+                    maximumsize = { 300 -1 }
+                    layoutpolicy_horizontal = expanding
+                    layoutpolicy_vertical = expanding
+                    margin = { 20 -1 }
+                    margin_bottom = 15
+                    spacing = 10
+
+                    background = {
+                        using = simple_frame
+                    }
+
+                    vbox = {
+                        layoutpolicy_horizontal = expanding
+                        layoutpolicy_vertical = expanding
+
+                        default_header_clean_faded = {
+                            blockoverride "text" {
+                                text = gate_expedition_budget_header
+                            }
+                            blockoverride "size" {
+                                size = { 300 40 }
+                            }
+                        }
+
+                        textbox = {
+                            layoutpolicy_horizontal = expanding
+                            layoutpolicy_vertical = expanding
+                            maximumsize = { 300 -1 }
+                            minimumsize = { -1 45 }
+                            text = gate_expedition_budget_text
+                            autoresize = yes
+                            multiline = yes
+                            align = center
+                        }
+
+                        default_progressbar_horizontal = {
+                            maximumsize = { -1 25 }
+                            layoutpolicy_horizontal = expanding
+                            tooltip = gate_expedition_budget_tooltip
+
+                            blockoverride "values" {
+                                value = "[Country.MakeScope.ScriptValue('gate_expedition_budget')]"
+                                min = 0
+                                max = "[Country.MakeScope.ScriptValue('gate_expedition_budget_total')]"
+                            }
+
+                            blockoverride "on_top_of_the_progressbar" {
+                                textbox = {
+                                    raw_text = "[Country.MakeScope.ScriptValue('gate_expedition_budget')] / [Country.MakeScope.ScriptValue('gate_expedition_budget_total')]"
+                                    autoresize = yes
+                                    align = center
+                                    parentanchor = center
+                                }
+                            }
+                        }
+                    }
+                }
+
+                # Expedition Activity
+                hbox = {
+                    layoutpolicy_horizontal = expanding
+                    layoutpolicy_vertical = expanding
+                    margin = { 20 20 }
+                    spacing = 20
+
+                    background = {
+                        using = simple_frame
+                    }
+
+                    vbox = {
+                        layoutpolicy_horizontal = expanding
+                        layoutpolicy_vertical = expanding
+                        visible = "[Not(Scope.Var('activity').IsSet)]"
+
+                        textbox = {
+                            layoutpolicy_horizontal = expanding
+                            text = gg_panel_expedition_no_activity
+                            autoresize = yes
+                            align = center
+                            using = fontsize_large
+                            alpha = 0.5
+                        }
+
+                        textbox = {
+                            layoutpolicy_horizontal = expanding
+                            text = gg_panel_expedition_no_activity_blink
+                            autoresize = yes
+                            align = center
+                            using = fontsize_xxl
+                            using = look_at_me_text_animation
+                        }
+                    }
+
+                    vbox = {
+                        layoutpolicy_horizontal = expanding
+                        layoutpolicy_vertical = expanding
+                        visible = "[Scope.Var('activity').IsSet]"
+
+                        textbox = {
+                            layoutpolicy_horizontal = expanding
+                            text = "[Scope.Var('activity').Var('name').GetFlagName]"
+                            autoresize = yes
+                            align = center
+                            using = fontsize_xxl
+                            default_format = "#header"
+                        }
+
+                        textbox = {
+                            layoutpolicy_horizontal = expanding
+                            text = "[Scope.Var('activity').Var('desc').GetFlagName]"
+                            autoresize = yes
+                            align = center
+                            using = fontsize_large
+                            default_format = "#lore"
+                        }
+                    }
+                }
+
+                # Expedition Interactions
+                vbox = {
+                    maximumsize = { 250 -1 }
+                    layoutpolicy_horizontal = expanding
+                    layoutpolicy_vertical = expanding
+                    margin = { 20 -1 }
+                    margin_bottom = 10
+                    spacing = 5
+
+                    background = {
+                        using = simple_frame
+                    }
+
+                    default_header_clean_faded = {
+                        blockoverride "text" {
+                            text = gg_panel_expedition_activity_header
+                        }
+                        blockoverride "size" {
+                            size = { 250 40 }
+                        }
+                    }
+
+                    button = {
+                        datacontext = "[GetScriptedGui('sgui_gate_expedition_button_uncover')]"
+                        size = { 250 40 }
+                        using = default_button_action
+                        text = gg_panel_expedition_button_uncover
+                        tooltip = gg_panel_expedition_button_uncover_tooltip
+                        enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
+                        onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
+                    }
+
+                    button = {
+                        datacontext = "[GetScriptedGui('sgui_gate_expedition_button_home')]"
+                        size = { 250 40 }
+                        using = default_button_action
+                        text = gg_panel_expedition_button_cancel
+                        tooltip = gg_panel_expedition_button_cancel_tooltip
+                        enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
+                        onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
+                    }
+                }
+
+            }
+            hbox = {
+                visible = "[Scope.IsSet]"
+                minimumsize = { -1 2 }
+                layoutpolicy_horizontal = expanding
+                spacing = -2
+                margin_right = -15
+                hbox = {
+                    minimumsize = { 30 -1 }
+                    layoutpolicy_vertical = expanding
+
+                    background = {
+                        texture = "gfx/interface/dividers/divider_clean.dds"
+                        texture_density = 2
+                        spriteType = CorneredTiled
+                        spriteborder = { 4 0 }
+
+                        modify_texture = {
+                            texture = "gfx/interface/masks/fade_horizontal_left_full.dds"
+                            spriteType = Corneredstretched
+                            spriteborder = { 0 0 }
+                            blend_mode = alphamultiply
+                        }
+                    }
+                }
+                hbox = {
+                    layoutpolicy_vertical = expanding
+                    layoutpolicy_horizontal = expanding
+
+                    background = {
+                        texture = "gfx/interface/dividers/divider_clean.dds"
+                        texture_density = 2
+                        spriteType = CorneredTiled
+                        spriteborder = { 4 0 }
+                    }
+                }
+                hbox = {
+                    minimumsize = { 30 -1 }
+                    layoutpolicy_vertical = expanding
+
+                    background = {
+                        texture = "gfx/interface/dividers/divider_clean.dds"
+                        texture_density = 2
+                        spriteType = CorneredTiled
+                        spriteborder = { 4 0 }
+
+                        modify_texture = {
+                            texture = "gfx/interface/masks/fade_horizontal_left_full.dds"
+                            spriteType = Corneredstretched
+                            spriteborder = { 0 0 }
+                            blend_mode = alphamultiply
+                            mirror = horizontal
+                        }
+                    }
+                }
+            }
+        }
+
+        blockoverride "scrollarea_content" {
+            widget = {
+                size = { 100% 100% }
+                widget = {
+                    parentanchor = top
+                    size = { 100% 100% }
+
+                    background = {
+                        spriteType = CorneredTiled
+                        texture = gfx/map/ankaris/background.dds
+                    }
+                    gate_map_container = {}
+
+                    container = {
+                        parentanchor = top|right
+                        position = { -20 20 }
+                        background = {
+                            using = entry_bg_fancy_dark
+                            alpha = 1
+                        }
+                        textbox = {
+                            autoresize = yes
+                            margin = { 20 12 }
+                            align = center
+                            text = gg_panel_map_drag_hint
+                            using = fontsize_large
+                        }
+                    }
+                }
+                widget = {
+                    size = { 100% 100% }
+
+                    gate_map_sidebar = {}
+                    background = {
+                        texture = "gfx/interface/backgrounds/default_bg.dds"
+                        using = clickthrough_blocker
+                        spriteType = Corneredtiled
+                        spriteborder = { 0 0 }
+                        texture_density = 2
+
+                        modify_texture = {
+                            texture = "gfx/interface/misc/black.dds"
+                            spriteType = Corneredstretched
+                            spriteborder = { 0 0 }
+                            blend_mode = overlay
+                            alpha = 0.1
+                        }
+
+                        modify_texture = {
+                            texture = "gfx/interface/masks/fade_horizontal_center_map.dds"
+                            spriteType = Corneredstretched
+                            spriteborder = { 0 0 }
+                            blend_mode = alphamultiply
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    type gate_map_container = zoomarea {
+        name = gate_map_container
+        visible = "[Country.MakeScope.Var('gate_expedition').IsSet]"
+        allow_outside = yes
+        size = { 100% 100% }
+
+        state = {
+            name = "_zoom_changed"
+            duration = 0.15
+        }
+        scissor = yes
+
+        zoom = 0.15
+        zoom_step = 0.25
+        zoom_min = 0.15
+        zoom_max = 1.5
+        draggable_by = left # Do not add 'middle' click here, otherwise you will re-introduce PRCAL-16945
+
+        zoomwidget = {
+            container = {
+                gate_expedition_reytu = {}
+            }
+        }
+    }
+
+    type gate_map_sidebar = hbox {
+        datacontext = "[Country.MakeScope.Var('gate_map_sidebar')]"
+        maximumsize = { 544 -1 }
+        margin_top = -4
+        layoutpolicy_vertical = expanding
+        layoutpolicy_horizontal = expanding
+
+        visible = "[Country.MakeScope.Var('gate_map_sidebar').IsSet]"
+
+        background = {
+            using = default_bg
+        }
+
+        vbox = {
+            minimumsize = { 2 -1 }
+            layoutpolicy_vertical = expanding
+            layoutpolicy_horizontal = expanding
+            vbox = {
+                minimumsize = { -1 2 }
+                layoutpolicy_vertical = expanding
+                layoutpolicy_horizontal = expanding
+
+                background = {
+                    texture = "gfx/interface/dividers/divider_clean.dds"
+                    texture_density = 2
+                    spriteType = CorneredTiled
+                    spriteborder = { 4 0 }
+
+                    modify_texture = {
+                        texture = "gfx/interface/masks/fade_vertical_top.dds"
+                        spriteType = Corneredstretched
+                        spriteborder = { 0 0 }
+                        blend_mode = alphamultiply
+                    }
+                }
+            }
+        }
+
+        vbox = {
+            layoutpolicy_horizontal = expanding
+            layoutpolicy_vertical = expanding
+
+            default_header_clean = {
+                blockoverride "text" {
+                    raw_text = "[Scope.Var('type').Var('name').GetFlagName]"
+                }
+                blockoverride "size" {
+                    size = { 540 44 }
+                }
+                close_button_large = {
+                    size = { 32 32 }
+                    parentanchor = top|right
+                    position = { 0 6 }
+                    shortcut = "close_window"
+                    onclick = "[GetScriptedGui('sgui_gate_map_location_reset').Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
+                }
+            }
+            vbox = {
+                margin = { 0 15 }
+                spacing = 10
+                layoutpolicy_horizontal = expanding
+                layoutpolicy_vertical = expanding
+                scrollarea = {
+                    layoutpolicy_horizontal = expanding
+                    layoutpolicy_vertical = expanding
+
+                    scrollbarpolicy_horizontal = always_off
+
+                    scrollbar_vertical = {
+                        using = vertical_scrollbar
+                    }
+
+                    scrollwidget = {
+                        vbox = {
+                            margin = { 15 0 }
+                            layoutpolicy_horizontal = expanding
+                            layoutpolicy_vertical = expanding
+                            spacing = 10
+                            textbox = {
+                                maximumsize = { 500 -1 }
+                                layoutpolicy_horizontal = expanding
+                                margin = { 20 20 }
+                                autoresize = yes
+                                multiline = yes
+                                raw_text = "[Scope.Var('type').Var('desc').GetFlagName]"
+
+                                background = {
+                                    using = entry_bg_fancy_dark
+                                    alpha = 0.6
+                                }
+                            }
+                            textbox = {
+                                maximumsize = { 500 -1 }
+                                layoutpolicy_horizontal = expanding
+                                margin = { 20 20 }
+                                using = entry_bg
+                                autoresize = yes
+                                multiline = yes
+                                raw_text = "[Scope.Var('type').Var('flavor').GetFlagName]"
+                            }
+                            expand = {}
+                        }
+                    }
+                }
+
+                expand = {}
+
+                vbox = {
+                    layoutpolicy_horizontal = expanding
+                    spacing = 10
+                    visible = "[Not(IsDataModelEmpty(Scope.Var('type').GetList('interactions')))]"
+
+                    divider_clean = {
+                        layoutpolicy_horizontal = expanding
+                    }
+
+                    vbox = {
+                        margin = { 15 0 }
+                        spacing = 10
+                        layoutpolicy_horizontal = expanding
+                        datamodel = "[Scope.Var('type').GetList('interactions')]"
+                        datacontext = "[Scope.GetCharacter]"
+
+                        item = {
+                            gate_location_interaction = {}
+                        }
+                    }
+                }
+            }
+
+        }
+
+        vbox = {
+            minimumsize = { 2 -1 }
+            layoutpolicy_vertical = expanding
+            layoutpolicy_horizontal = expanding
+            vbox = {
+                minimumsize = { -1 2 }
+                layoutpolicy_vertical = expanding
+                layoutpolicy_horizontal = expanding
+
+                background = {
+                    texture = "gfx/interface/dividers/divider_clean.dds"
+                    texture_density = 2
+                    spriteType = CorneredTiled
+                    spriteborder = { 4 0 }
+
+                    modify_texture = {
+                        texture = "gfx/interface/masks/fade_vertical_bottom.dds"
+                        spriteType = Corneredstretched
+                        spriteborder = { 0 0 }
+                        blend_mode = alphamultiply
+                    }
+                }
+            }
+        }
+    }
+
+    type gate_location_interaction = button {
+        datacontext = "[GetScriptedGui('sgui_gate_map_location_interact')]"
+        size = { 450 44 }
+        raw_text = "[Scope.Var('text').GetFlagName]"
+        tooltip = "[Scope.Var('tooltip').GetFlagName][Localize('gate_expedition_interaction_tooltip_separator')][ScriptedGui.BuildTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('interaction', Scope.GetCharacter.MakeScope).End)]"
+        using = default_button_primary_big_action
+        onclick = "[ScriptedGui.Execute(GuiScope
+                            .SetRoot(Country.MakeScope)
+                            .AddScope('interaction', Scope.GetCharacter.MakeScope)
+                            .AddScope('location', Character.MakeScope)
+                            .End
+                      )]"
+        enabled = "[ScriptedGui.IsValid(GuiScope
+                            .SetRoot(Country.MakeScope)
+                            .AddScope('interaction', Scope.GetCharacter.MakeScope)
+                            .AddScope('location', Character.MakeScope)
+                            .End
+                      )]"
+        visible = "[ScriptedGui.IsShown(GuiScope
+                            .SetRoot(Country.MakeScope)
+                            .AddScope('interaction', Scope.GetCharacter.MakeScope)
+                            .AddScope('location', Character.MakeScope)
+                            .End
+                      )]"
+    }
+
+    type gate_state = widget {
+        #parentanchor = top|left
+        block hidden_location {
+            #size = { 3129 3430 }
+            #position = { 3379 1952 }
+        }
+
+        widget = {
+            size = { 100% 100% }
+
+            alwaystransparent = no
+
+            block "state_content" {
+                widget = {
+                    size = { 100% 100% }
+                    datamodel = "[Scope.GetList('locations')]"
+                    max_update_rate = 100
+                    item = {
+                        gate_button_map_marker = {
+                            blockoverride button_position {
+                                state = {
+                                    trigger_on_create = yes
+                                    position_x = "[Scope.Var('x').GetValue]"
+                                    position_y = "[Scope.Var('y').GetValue]"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        widget = {
+            parentanchor = top|left
+            position = { 0 0 }
+            size = { 100% 100% }
+
+            visible = "[Scope.Var('hidden').IsSet]"
+
+            background = {
+                texture = "gfx/map/ankaris/hidden.dds"
+
+                modify_texture = {
+                    block state_mask_hidden {
+                        #texture = gfx/map/ankaris/reytu/state_mask_01_hidden.dds
+                    }
+                    spriteType = Corneredstretched
+                    blend_mode = alphamultiply
+                    texture_density = 2
+                }
+            }
+        }
+    }
+
+    type gate_button_map_marker = widget {
+        block "button_position" {
+            position = { 0 0 }
+        }
+        size = { 60 60 }
+
+        # Name
+        widget = {
+            parentanchor = hcenter|bottom
+            position = { 0 -10 }
+            textbox = {
+                block "sub_text" {
+                    text = "[Scope.Var('type').Var('name').GetFlagName]"
+                }
+                background = {
+                    using = paper_bg
+                }
+                parentanchor = hcenter
+                autoresize = yes
+                margin = { 20 10 }
+            }
+        }
+
+        # Highlight
+        widget = {
+            size = { 160% 160% }
+            parentanchor = center
+            block "selected_visibility" {
+                visible = "[ObjectsEqual(Country.MakeScope.Var('gate_map_sidebar').GetCharacter.MakeScope, Scope.GetCharacter.MakeScope)]"
+            }
+
+            icon = {
+                using = rotate_glow_animation
+            }
+
+            state = {
+                name = _show
+                duration = 0.4
+                using = Animation_Curve_Default
+                alpha = 0.5
+            }
+            state = {
+                name = _hide
+                duration = 0.7
+                using = Animation_Curve_Default
+                alpha = 0
+            }
+        }
+
+        # Button
+        button_icon_round = {
+            block "tooltip" {
+                tooltip = "expedition_location_tooltip"
+            }
+            size = { 60 60 }
+            blockoverride "icon" {
+                icon = {
+                    size = { 60 60 }
+                    block "icon_texture" {
+                        texture = gfx/map/gate/markers/empty_flag.dds
+                    }
+                    scale = 0.8
+                    parentanchor = hcenter|vcenter
+                }
+            }
+            onclick = "[GetScriptedGui('sgui_gate_map_location_choose').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('location', Scope.GetCharacter.MakeScope).End)]"
+        }
+    }
+
+    type gate_expedition_reytu = widget {
+        name = gate_expedition_reytu
+        visible = "[GetScriptedGui('sgui_gate_map_equals').IsShown(GuiScope
+                        .SetRoot(Country.MakeScope)
+                        .AddScope('potential_location', GetGlobalVariable('gate_expedition_reytu').GetCharacter.MakeScope)
+                        .End
+                   )]"
+        datacontext = "[GetGlobalVariable('gate_expedition_reytu').GetCharacter]"
+        parentanchor = top|left
+        size = { 15360 7288 }
+        background = {
+            texture = gfx/map/ankaris/reytu/base.dds
+            spriteType = Corneredstretched
+        }
+
+        gate_state = {
+            datacontext = "[Character.MakeScope.Var('state_1')]"
+            blockoverride hidden_location {
+                size = { 3329 3630 }
+                position = { 3279 1852 }
+            }
+            blockoverride state_mask_hidden {
+                texture = gfx/map/ankaris/reytu/state_mask_01_hidden.dds
+            }
+        }
+
+        gate_state = {
+            datacontext = "[Character.MakeScope.Var('state_2')]"
+            blockoverride hidden_location {
+                size = { 3111 1756 }
+                position = { 4031 774 }
+            }
+            blockoverride state_mask_hidden {
+                texture = gfx/map/ankaris/reytu/state_mask_02_hidden.dds
+            }
+        }
+
+        gate_state = {
+            datacontext = "[Character.MakeScope.Var('state_3')]"
+            blockoverride hidden_location {
+                size = { 2834 4122 }
+                position = { 4323 2079 }
+            }
+            blockoverride state_mask_hidden {
+                texture = gfx/map/ankaris/reytu/state_mask_03_hidden.dds
+            }
+        }
+
+        gate_state = {
+            datacontext = "[Character.MakeScope.Var('state_4')]"
+            blockoverride hidden_location {
+                size = { 2998 3131 }
+                position = { 6115 1219 }
+            }
+            blockoverride state_mask_hidden {
+                texture = gfx/map/ankaris/reytu/state_mask_04_hidden.dds
+            }
+        }
+
+        gate_state = {
+            datacontext = "[Character.MakeScope.Var('state_5')]"
+            blockoverride hidden_location {
+                size = { 2758 2834 }
+                position = { 5751 3471 }
+            }
+            blockoverride state_mask_hidden {
+                texture = gfx/map/ankaris/reytu/state_mask_05_hidden.dds
+            }
+        }
+
+        gate_state = {
+            datacontext = "[Character.MakeScope.Var('state_7')]"
+            blockoverride hidden_location {
+                size = { 2960 2525 }
+                position = { 7907 3614 }
+            }
+            blockoverride state_mask_hidden {
+                texture = gfx/map/ankaris/reytu/state_mask_07_hidden.dds
+            }
+        }
+
+        gate_state = {
+            datacontext = "[Character.MakeScope.Var('state_8')]"
+            blockoverride hidden_location {
+                size = { 4029 4815 }
+                position = { 8512 1104 }
+            }
+            blockoverride state_mask_hidden {
+                texture = gfx/map/ankaris/reytu/state_mask_08_hidden.dds
+            }
+        }
+
+        gate_state = {
+            datacontext = "[Character.MakeScope.Var('state_9')]"
+            blockoverride hidden_location {
+                size = { 1030 966 }
+                position = { 10807 4368 }
+            }
+            blockoverride state_mask_hidden {
+                texture = gfx/map/ankaris/reytu/state_mask_09_hidden.dds
+            }
+        }
+
+        gate_state = {
+            datacontext = "[Character.MakeScope.Var('state_10')]"
+            blockoverride hidden_location {
+                size = { 1053 1114 }
+                position = { 11372 2681 }
+            }
+            blockoverride state_mask_hidden {
+                texture = gfx/map/ankaris/reytu/state_mask_10_hidden.dds
+            }
+        }
+
+        gate_state = {
+            datacontext = "[Character.MakeScope.Var('state_6')]"
+            blockoverride hidden_location {
+                size = { 1882 2189 }
+                position = { 7848 2151 }
+            }
+            blockoverride state_mask_hidden {
+                texture = gfx/map/ankaris/reytu/state_mask_06_hidden.dds
+            }
+        }
+
+    }
+
+}

@@ -1,6 +1,5 @@
 # This widget is hidden but visible
 # This allows triggering state events
-# Specifically when a research is done
 widget = {
     name = "gate_hidden_trigger"
     datacontext = "[GetMetaPlayer.GetPlayedOrObservedCountry]"
@@ -13,36 +12,12 @@ widget = {
     widget = {
         visible = "[Country.IsValid]"
         widget = {
-            # Main Panel (CTRL + G)
+            # Base Panel (CTRL + T)
             button = {
                 # Open
                 enabled = "[Country.IsValid]"
-                visible = "[Not(GetVariableSystem.HasValue('com_open_window', 'gate_button_main'))]"
+                onclick = "[GetScriptedGui('gate_button_main').Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
                 onclick = "[GetVariableSystem.Set('com_open_window', 'gate_button_main')]"
-                input_action = "input_ctrl_g"
-            }
-            button = {
-                # Close
-                enabled = "[Country.IsValid]"
-                visible = "[GetVariableSystem.HasValue('com_open_window', 'gate_button_main')]"
-                onclick = "[GetVariableSystem.Clear('com_open_window')]"
-                input_action = "input_ctrl_g"
-            }
-        }
-        widget = {
-            # Technology Panel (CTRL + T)
-            button = {
-                # Open
-                enabled = "[Country.IsValid]"
-                visible = "[Not(GetVariableSystem.HasValue('com_open_window', 'gate_button_technology'))]"
-                onclick = "[GetVariableSystem.Set('com_open_window', 'gate_button_technology')]"
-                input_action = "input_ctrl_t"
-            }
-            button = {
-                # Close
-                enabled = "[Country.IsValid]"
-                visible = "[GetVariableSystem.HasValue('com_open_window', 'gate_button_technology')]"
-                onclick = "[GetVariableSystem.Clear('com_open_window')]"
                 input_action = "input_ctrl_t"
             }
         }
@@ -66,20 +41,11 @@ widget = {
     widget = {
         visible = "[Country.IsValid]"
         widget = {
-            # Main
-            visible = "[GetVariableSystem.HasValue('com_alert_action', Localize('gg_panel_main_action'))]"
+            # Base Panel
+            visible = "[GetVariableSystem.HasValue('com_alert_action', Localize('gg_panel_base_action'))]"
             state = {
                 name = _show
-                on_finish = "[GetVariableSystem.Set('com_open_window', 'gate_button_main')]"
-                on_finish = "[GetVariableSystem.Clear('com_alert_action')]"
-            }
-        }
-        widget = {
-            # Technology
-            visible = "[GetVariableSystem.HasValue('com_alert_action', Localize('gg_panel_technology_action'))]"
-            state = {
-                name = _show
-                on_finish = "[GetVariableSystem.Set('com_open_window', 'gate_button_technology')]"
+                on_finish = "[GetVariableSystem.Set('com_open_window', 'gate_button_base')]"
                 on_finish = "[GetVariableSystem.Clear('com_alert_action')]"
             }
         }
@@ -117,7 +83,6 @@ widget = {
                     on_finish = "[GetScriptedGui('sgui_gate_can_research').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('technology', Technology.MakeScope).End)]"
                 }
             }
-            blockoverride "unlocks" {}
         }
         gate_technologies_military = {
             blockoverride "tech_state" {
@@ -130,7 +95,6 @@ widget = {
                     on_finish = "[GetScriptedGui('sgui_gate_can_research').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('technology', Technology.MakeScope).End)]"
                 }
             }
-            blockoverride "unlocks" {}
         }
         gate_technologies_society = {
             blockoverride "tech_state" {

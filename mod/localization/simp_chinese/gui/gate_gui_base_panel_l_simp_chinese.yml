@@ -1,0 +1,27 @@
+﻿l_simp_chinese:
+# Button
+ gate_button_main: "gate_button_main" #deepl:1622562608
+ gate_button_main_desc: "$gg_panel_base_title$" #deepl:1976458859
+ gate_button_main_tooltip: "#header $gg_panel_base_title$#!\n快捷键：#V $gg_panel_base_title$ #! (#V CTRL + T#!)" #deepl:1050239708
+ gg_panel_base_action: "马纳弗洛面板" #deepl:3726450867
+# Panel
+ gg_panel_base_title: "马纳夫洛" #deepl:1361387616
+ gg_panel_base_tab_general: "一般情况" #deepl:972568161
+ gg_panel_base_no_researcher: "没有奥术师" #deepl:1531408062
+ gg_panel_base_no_researcher_blink: "#BOLD 雇佣一名新的奥术师#!" #deepl:968085008
+ gg_mana_saturation: "法力饱和度" #deepl:1203188312
+ gg_mana_saturation_tooltip: "#header [concept_mana_saturation]#!\n目前，#v [GetGlobalVariable('global_mana_saturation').GetValue|1] #! % 的地球被玛那覆盖。\n\n 玛那是所有[concept_magical_phenomena] 的基础，在[concept_magic_technology] 中被广泛使用。" #deepl:4290326966
+ gg_header_magic_ethic: "[Concept('concept_magic_ethic','$concept_magic_ethics$')]" #deepl:3894943634
+ gg_header_magic_countries: "奥术国家" #deepl:2611929564
+ gg_ethic_empty_slot: "空域插槽" #deepl:1572555500
+ gg_ethic_empty_slot_tooltip: "该[concept_magic_ethic] 插槽为空，可通过研究相应技术来填补。\n\n #title  已解锁#!\n - 正在学习[concept_magic_knowledge]\n -[GetTechnology('magic_science').GetName]\n - 尚未实施" #deepl:3093784275
+ gg_magic_countries_us: "我们的国家" #deepl:3262087796
+ gg_magic_countries_relations: "$concept_relations$：#v [Country.GetRelationsWithDesc(GetPlayer)] #! (#v [Country.GetRelationsWith(GetPlayer)|0] #! )" #deepl:4253451336
+ gg_magic_countries_relations_region: "#header [DiplomaticAction.GetName]#!\n@red_cross! 只有当 在其 中时才能做到。[concept_interest] [concept_strategic_region]" #deepl:3367504428
+ gg_header_magic_innovation: "魔法创新" #deepl:2673158403
+ gg_magic_innovation_total: "目前已入库[concept_magic_innovation]:#v @magic_innovation! [GetPlayer.MakeScope.Var('magic_innovation').GetValue|0] /[GetGlobalVariable('magic_innovation_bank_max').GetValue|0]#!" #deepl:3971030187
+ gg_magic_innovation_warning_calc: "我们没有使用的[concept_magic_innovation] 将被#v 丢失#! 。" #deepl:2904895195
+ gg_monthly_magic_innovation: "我们每月都会生成 #tooltip:gg_monthly_magic_innovation_tooltip @magic_innovation!$gg_monthly_magic_innovation_value$ #! [concept_magic_innovation] 。" #deepl:2748831333
+ gg_monthly_magic_innovation_no_magic: "我们没有生产任何[concept_magic_innovation] 。\n我们需要先研究[concept_magic_knowledge] 。" #deepl:1150311696
+ gg_monthly_magic_innovation_value: "#bold [Country.MakeScope.ScriptValue('gate_magic_innovation')|g]#!" #deepl:1294646018
+ gg_monthly_magic_innovation_tooltip: "#header [concept_magic_innovation]#!\n我们每月生成$gg_monthly_magic_innovation_value$ [concept_magic_innovation] ：\n[Country.AccessModifier.GetBreakdownFor('country_gate_magical_innovation_add').GetBreakdown] \n \n ，乘数为[Country.AccessModifier.GetValueWithBreakdownFor('country_gate_magical_innovation_mult')]\n \n ，每月最多[Country.MakeScope.ScriptValue('gate_magic_innovation_max')|v] [concept_magic_innovation] ：\n[Country.MakeScope.ScriptValue('gate_magic_innovation_max')|+=] [Country.GetName]\n  [Country.MakeScope.ScriptValue('gate_magic_innovation_max_base')|+=] 基础值\n [Country.MakeScope.ScriptValue('gate_magic_innovation_max_literacy')|+=] [concept_literacy]" #deepl:3812547032
