@@ -1,0 +1,27 @@
+﻿l_german:
+# Button
+ gate_button_main: "gate_button_main" #deepl:1622562608
+ gate_button_main_desc: "$gg_panel_base_title$" #deepl:1976458859
+ gate_button_main_tooltip: "#header $gg_panel_base_title$#!\nAbkürzung: #V $gg_panel_base_title$ #! (#V CTRL + T#!)" #deepl:1050239708
+ gg_panel_base_action: "Manaflow-Panel" #deepl:3726450867
+# Panel
+ gg_panel_base_title: "Manaflow" #deepl:1361387616
+ gg_panel_base_tab_general: "Allgemein" #deepl:972568161
+ gg_panel_base_no_researcher: "Kein Arkanist" #deepl:1531408062
+ gg_panel_base_no_researcher_blink: "#BOLD Einen neuen Arkanisten anheuern#!" #deepl:968085008
+ gg_mana_saturation: "Mana-Sättigung" #deepl:1203188312
+ gg_mana_saturation_tooltip: "#header [concept_mana_saturation]#!\nDerzeit sind #v [GetGlobalVariable('global_mana_saturation').GetValue|1] %#! der Erde mit Mana bedeckt.\n\n Mana ist die Grundlage von allem [concept_magical_phenomena] und wird in [concept_magic_technology] ausgiebig genutzt." #deepl:4290326966
+ gg_header_magic_ethic: "[Concept('concept_magic_ethic','$concept_magic_ethics$')]" #deepl:3894943634
+ gg_header_magic_countries: "Arkane Länder" #deepl:2611929564
+ gg_ethic_empty_slot: "Leerer Domain Slot" #deepl:1572555500
+ gg_ethic_empty_slot_tooltip: "Dieser [concept_magic_ethic] Slot ist leer und kann durch die Erforschung entsprechender Technologien gefüllt werden.\n\n #title  Unlocked#!\n - Learning [concept_magic_knowledge]\n - [GetTechnology('magic_science').GetName]\n - Not implemented yet" #deepl:3093784275
+ gg_magic_countries_us: "Unser Land" #deepl:3262087796
+ gg_magic_countries_relations: "$concept_relations$: #v [Country.GetRelationsWithDesc(GetPlayer)] #! (#v [Country.GetRelationsWith(GetPlayer)|0] #! )" #deepl:4253451336
+ gg_magic_countries_relations_region: "#header [DiplomaticAction.GetName]#!\n@red_cross! Kann nur gemacht werden, wenn Sie in ihrem haben. [concept_interest] [concept_strategic_region]" #deepl:3367504428
+ gg_header_magic_innovation: "Magische Innovation" #deepl:2673158403
+ gg_magic_innovation_total: "Derzeitige Bankverbindung [concept_magic_innovation]: #v @magic_innovation! [GetPlayer.MakeScope.Var('magic_innovation').GetValue|0] / [GetGlobalVariable('magic_innovation_bank_max').GetValue|0]#!" #deepl:3971030187
+ gg_magic_innovation_warning_calc: "Alle [concept_magic_innovation], die wir nicht nutzen, gehen #v #! verloren." #deepl:2904895195
+ gg_monthly_magic_innovation: "Wir erstellen jeden Monat #tooltip:gg_monthly_magic_innovation_tooltip @magic_innovation!$gg_monthly_magic_innovation_value$ #! [concept_magic_innovation] ." #deepl:2748831333
+ gg_monthly_magic_innovation_no_magic: "Wir produzieren keine [concept_magic_innovation].\nWir müssen zuerst [concept_magic_knowledge] erforschen." #deepl:1150311696
+ gg_monthly_magic_innovation_value: "#bold [Country.MakeScope.ScriptValue('gate_magic_innovation')|g]#!" #deepl:1294646018
+ gg_monthly_magic_innovation_tooltip: "#header [concept_magic_innovation]#!\nWir generieren $gg_monthly_magic_innovation_value$ [concept_magic_innovation] jeden Monat:\n[Country.AccessModifier.GetBreakdownFor('country_gate_magical_innovation_add').GetBreakdown] \n \n mit einem Multiplikator von [Country.AccessModifier.GetValueWithBreakdownFor('country_gate_magical_innovation_mult')]\n \n bis zu einem Maximum von [Country.MakeScope.ScriptValue('gate_magic_innovation_max')|v] [concept_magic_innovation] pro Monat:\n[Country.MakeScope.ScriptValue('gate_magic_innovation_max')|+=] [Country.GetName]\n  [Country.MakeScope.ScriptValue('gate_magic_innovation_max_base')|+=] Basiswert\n [Country.MakeScope.ScriptValue('gate_magic_innovation_max_literacy')|+=] [concept_literacy]" #deepl:3812547032

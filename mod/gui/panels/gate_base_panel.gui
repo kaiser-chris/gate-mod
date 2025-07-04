@@ -1,0 +1,1644 @@
+types gate_base_panel_types {
+
+    type gate_base_panel = fullscreen_block_window {
+        name = "gate_base_panel"
+        datacontext = "[GetMetaPlayer.GetPlayedOrObservedCountry]"
+
+        visible = "[GetVariableSystem.HasValue('com_open_window', 'gate_button_main')]"
+
+        blockoverride "animation_state_block" {
+            state = {
+                name = _show
+                # Close open panel before showing this one
+                on_finish = "[InformationPanelBar.ClosePanel]"
+                on_finish = "[MapListPanelManager.CloseCurrentPanel]"
+                # Fullscreen panels hide topbar
+                on_finish = "[GetVariableSystem.Set('com_fullscreen', 'com_fullscreen')]"
+                start_sound = {
+                    soundeffect = "event:/SFX/UI/SideBar/markets"
+                }
+                start_sound = {
+                    soundeffect = "snapshot:/Dynamic/mute_world_80"
+                }
+                start_sound = {
+                    soundeffect = "snapshot:/Dynamic/mute_vfx_war_100"
+                }
+            }
+
+            state = {
+                name = _hide
+                on_finish = "[GetVariableSystem.Clear('com_fullscreen')]"
+                on_finish = "[GetScriptedGui('sgui_gate_base_tab_reset').Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
+                start_sound = {
+                    soundeffect = "event:/SFX/UI/SideBar/markets_stop"
+                }
+            }
+        }
+
+        blockoverride "window_header_name" {
+            text = gg_panel_base_title
+            default_format = "#title"
+        }
+
+        block "back_button_fullscreen" {
+            back_button_large = {
+                position = { 11 15 }
+                parentanchor = top|left
+                onclick = "[GetVariableSystem.Clear('com_open_window')]"
+                onclick = "[GetVariableSystem.Clear('com_alert_action')]"
+                input_action = "back"
+            }
+            close_button_large = {
+                name = "tutorial_highlight_close_button"
+                parentanchor = top|right
+                onclick = "[GetVariableSystem.Clear('com_open_window')]"
+                onclick = "[GetVariableSystem.Clear('com_alert_action')]"
+                shortcut = "close_window"
+                position = { -56 116 }
+            }
+        }
+
+        blockoverride "close_button_position" {
+            visible = no
+        }
+
+        blockoverride "fixed_top" {
+            tab_buttons_fullscreen = {
+                # Researcher
+                blockoverride "first_button_icon" {
+                }
+                blockoverride "first_button" {
+                    text = gg_panel_base_tab_general
+                }
+                blockoverride "first_button_tooltip" {
+                    tooltip = gg_panel_base_tab_general
+                }
+                blockoverride "first_button_click" {
+                    onclick = "[GetScriptedGui('sgui_gate_base_tab_general').Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
+                }
+                blockoverride "first_button_visibility" {
+                    visible = "[GetScriptedGui('sgui_gate_base_tab_general').IsShown(GuiScope.SetRoot(Country.MakeScope).End)]"
+                }
+                blockoverride "first_button_visibility_checked" {
+                    visible = "[Not(GetScriptedGui('sgui_gate_base_tab_general').IsShown(GuiScope.SetRoot(Country.MakeScope).End))]"
+                }
+                blockoverride "first_button_selected" {
+                    text = gg_panel_base_tab_general
+                }
+                blockoverride "first_button_background" {
+                    background = {
+                        margin = { 0 -2 }
+                        using = fade_bottom_entry_fancy_header_colored
+                        using = Color_Orange
+                        alpha = 0.5
+                    }
+                }
+                blockoverride "first_button_background_selected" {
+                    background = {
+                        using = fade_bottom_entry_fancy_header_colored
+                        using = Color_Orange
+                        alpha = 0.5
+                    }
+                }
+
+                # Production
+                blockoverride "second_button" {
+                    text = "PRODUCTION_NO_CONCEPT"
+                }
+                blockoverride "second_button_tooltip" {
+                    tooltip = "PRODUCTION_NO_CONCEPT"
+                }
+                blockoverride "second_button_click" {
+                    onclick = "[GetScriptedGui('sgui_gate_base_tab_production').Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
+                }
+                blockoverride "second_button_visibility" {
+                    visible = "[GetScriptedGui('sgui_gate_base_tab_production').IsShown(GuiScope.SetRoot(Country.MakeScope).End)]"
+                }
+                blockoverride "second_button_visibility_checked" {
+                    visible = "[Not(GetScriptedGui('sgui_gate_base_tab_production').IsShown(GuiScope.SetRoot(Country.MakeScope).End))]"
+                }
+                blockoverride "second_button_selected" {
+                    text = "PRODUCTION_NO_CONCEPT"
+                }
+
+                # Military
+                blockoverride "third_button" {
+                    text = "MILITARY"
+                }
+                blockoverride "third_button_tooltip" {
+                    tooltip = "MILITARY"
+                }
+                blockoverride "third_button_click" {
+                    onclick = "[GetScriptedGui('sgui_gate_base_tab_military').Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
+                }
+                blockoverride "third_button_visibility" {
+                    visible = "[GetScriptedGui('sgui_gate_base_tab_military').IsShown(GuiScope.SetRoot(Country.MakeScope).End)]"
+                }
+                blockoverride "third_button_visibility_checked" {
+                    visible = "[Not(GetScriptedGui('sgui_gate_base_tab_military').IsShown(GuiScope.SetRoot(Country.MakeScope).End))]"
+                }
+                blockoverride "third_button_selected" {
+                    text = "MILITARY"
+                }
+
+                # Society
+                blockoverride "fourth_button" {
+                    text = "SOCIETY"
+                }
+                blockoverride "fourth_button_tooltip" {
+                    tooltip = "SOCIETY"
+                }
+                blockoverride "fourth_button_click" {
+                    onclick = "[GetScriptedGui('sgui_gate_base_tab_society').Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
+                }
+                blockoverride "fourth_button_visibility" {
+                    visible = "[GetScriptedGui('sgui_gate_base_tab_society').IsShown(GuiScope.SetRoot(Country.MakeScope).End)]"
+                }
+                blockoverride "fourth_button_visibility_checked" {
+                    visible = "[Not(GetScriptedGui('sgui_gate_base_tab_society').IsShown(GuiScope.SetRoot(Country.MakeScope).End))]"
+                }
+                blockoverride "fourth_button_selected" {
+                    text = "SOCIETY"
+                }
+            }
+            hbox = {
+                maximumsize = { -1 140 }
+                layoutpolicy_horizontal = expanding
+                margin = { 20 10 }
+                margin_bottom = 15
+                spacing = 20
+
+                # Magic Researcher
+                vbox = {
+                    datacontext = "[GetScriptedGui('sgui_gate_has_researcher')]"
+                    spacing = -20
+                    layoutpolicy_vertical = expanding
+                    gate_character_small = {
+                        visible = "[ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
+                        blockoverride "character_context" {
+                            datacontext = "[Country.MakeScope.Var('magic_researcher').GetCharacter]"
+                        }
+                    }
+                    default_header_clean_faded = {
+                        visible = "[ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
+                        blockoverride "text" {
+                            text = "[Country.MakeScope.Var('magic_researcher').GetCharacter.GetFullName]"
+                        }
+                        blockoverride "size" {
+                            size = { 250 40 }
+                        }
+                    }
+                    gate_character_small = {
+                        visible = "[Not(ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End))]"
+                        blockoverride "gate_character_tooltip" {
+                            tooltip = gate_expedition_leader_missing_tooltip
+                        }
+                        blockoverride "gate_character_portrait" {
+                            icon = {
+                                size = { 100% 100% }
+                                using = generic_highlight
+                                texture = "gfx/interface/portraits/portrait_frame_head_historical_info_link.dds"
+                            }
+                        }
+                        blockoverride "gate_opinion_visible" {
+                            visible = no
+                        }
+                    }
+                    default_header_clean_faded = {
+                        visible = "[Not(ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End))]"
+                        blockoverride "text" {
+                            text = gg_panel_base_no_researcher
+                        }
+                        blockoverride "size" {
+                            minimumsize = { 150 40 }
+                        }
+                    }
+                }
+
+                # Magic Innovation
+                hbox = {
+                    datacontext = "[GetScriptedGui('sgui_gate_has_magic')]"
+                    layoutpolicy_horizontal = expanding
+                    layoutpolicy_vertical = expanding
+                    margin = { 20 20 }
+                    spacing = 20
+
+                    background = {
+                        using = simple_frame
+                    }
+
+                    vbox = {
+                        layoutpolicy_horizontal = expanding
+                        layoutpolicy_vertical = expanding
+                        visible = "[Not(ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End))]"
+                        spacing = 10
+
+                        textbox = {
+                            text = gg_monthly_magic_innovation_no_magic
+                            multiline = yes
+                            autoresize = yes
+                            using = fontsize_large
+                            align = center
+                        }
+                    }
+
+                    vbox = {
+                        layoutpolicy_horizontal = expanding
+                        layoutpolicy_vertical = expanding
+                        visible = "[ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
+                        spacing = 10
+
+                        textbox = {
+                            text = gg_magic_innovation_total
+                            autoresize = yes
+                            align = center
+                            using = fontsize_xxl
+                        }
+
+                        divider_light = {}
+
+                        textbox = {
+                            text = gg_monthly_magic_innovation
+                            autoresize = yes
+                            align = center
+                            using = fontsize_large
+                        }
+                    }
+                }
+
+            }
+            hbox = {
+                minimumsize = { -1 2 }
+                layoutpolicy_horizontal = expanding
+                spacing = -2
+                margin_right = -15
+                hbox = {
+                    minimumsize = { 30 -1 }
+                    layoutpolicy_vertical = expanding
+
+                    background = {
+                        texture = "gfx/interface/dividers/divider_clean.dds"
+                        texture_density = 2
+                        spriteType = CorneredTiled
+                        spriteborder = { 4 0 }
+
+                        modify_texture = {
+                            texture = "gfx/interface/masks/fade_horizontal_left_full.dds"
+                            spriteType = Corneredstretched
+                            spriteborder = { 0 0 }
+                            blend_mode = alphamultiply
+                        }
+                    }
+                }
+                hbox = {
+                    layoutpolicy_vertical = expanding
+                    layoutpolicy_horizontal = expanding
+
+                    background = {
+                        texture = "gfx/interface/dividers/divider_clean.dds"
+                        texture_density = 2
+                        spriteType = CorneredTiled
+                        spriteborder = { 4 0 }
+                    }
+                }
+                hbox = {
+                    minimumsize = { 30 -1 }
+                    layoutpolicy_vertical = expanding
+
+                    background = {
+                        texture = "gfx/interface/dividers/divider_clean.dds"
+                        texture_density = 2
+                        spriteType = CorneredTiled
+                        spriteborder = { 4 0 }
+
+                        modify_texture = {
+                            texture = "gfx/interface/masks/fade_horizontal_left_full.dds"
+                            spriteType = Corneredstretched
+                            spriteborder = { 0 0 }
+                            blend_mode = alphamultiply
+                            mirror = horizontal
+                        }
+                    }
+                }
+            }
+        }
+
+        blockoverride "scrollarea_content" {
+            widget = {
+                size = { 100% 100% }
+                parentanchor = top
+
+                background = {
+                    visible = "[GetScriptedGui('sgui_gate_base_tab_production').IsShown(GuiScope.SetRoot(Country.MakeScope).End)]"
+                    using = illu_alpha
+                    fittype = center
+                    texture = "gfx/interface/illustrations/tech_tree/illustration_tech_production.dds"
+                    using = default_content_fade
+                }
+                background = {
+                    visible = "[GetScriptedGui('sgui_gate_base_tab_military').IsShown(GuiScope.SetRoot(Country.MakeScope).End)]"
+                    using = illu_alpha
+                    fittype = center
+                    texture = "gfx/interface/illustrations/tech_tree/illustration_tech_military.dds"
+                    using = default_content_fade
+                }
+                background = {
+                    visible = "[GetScriptedGui('sgui_gate_base_tab_society').IsShown(GuiScope.SetRoot(Country.MakeScope).End)]"
+                    using = illu_alpha
+                    fittype = center
+                    texture = "gfx/interface/illustrations/tech_tree/illustration_tech_society.dds"
+                    using = default_content_fade
+                }
+                background = {
+                    visible = "[GetScriptedGui('sgui_gate_base_tab_general').IsShown(GuiScope.SetRoot(Country.MakeScope).End)]"
+                    using = illu_alpha
+                    fittype = center
+                    texture = "gfx/interface/illustrations/background/illustration_gate_magic.dds"
+                    using = default_content_fade
+                }
+
+                gate_base_panel_general = {
+                    visible = "[GetScriptedGui('sgui_gate_base_tab_general').IsShown(GuiScope.SetRoot(Country.MakeScope).End)]"
+                }
+
+                gate_tech_tree = {
+                    visible = "[Or3(
+                        GetScriptedGui('sgui_gate_base_tab_production').IsShown(GuiScope.SetRoot(Country.MakeScope).End),
+                        GetScriptedGui('sgui_gate_base_tab_military').IsShown(GuiScope.SetRoot(Country.MakeScope).End),
+                        GetScriptedGui('sgui_gate_base_tab_society').IsShown(GuiScope.SetRoot(Country.MakeScope).End)
+                    )]"
+                }
+            }
+        }
+    }
+
+    type gate_base_panel_general = hbox {
+        layoutpolicy_vertical = expanding
+        layoutpolicy_horizontal = expanding
+        margin = { 20 20 }
+        spacing = 20
+
+        vbox = {
+            layoutpolicy_vertical = expanding
+            layoutpolicy_horizontal = expanding
+            spacing = 20
+
+            vbox = {
+                margin_top = -2
+                layoutpolicy_horizontal = expanding
+                layoutpolicy_vertical = expanding
+                background = {
+                    using = simple_frame
+                }
+
+                default_header_clean_faded = {
+                    layoutpolicy_horizontal = expanding
+                    blockoverride "text" {
+                        text = gg_header_magic_ethic
+                    }
+                }
+                vbox = {
+                    layoutpolicy_horizontal = expanding
+                    layoutpolicy_vertical = expanding
+
+                    hbox = {
+                        hbox = {
+                            datamodel = "[Country.GetTimedModifiers]"
+
+                            item = {
+                                gate_ethic = {}
+                            }
+                        }
+                        gate_ethic = {
+                            blockoverride "visible" {
+                                visible = "[Not(GetScriptedGui('sgui_has_one_ethic').IsShown(GuiScope.SetRoot(Country.MakeScope).End))]"
+                            }
+                            blockoverride "name" {
+                                text = gg_ethic_empty_slot
+                            }
+                            blockoverride "tooltip" {
+                                tooltip = gg_ethic_empty_slot_tooltip
+                            }
+                            blockoverride "icon" {}
+                        }
+
+                        gate_ethic = {
+                            blockoverride "visible" {
+                                visible = "[Not(GetScriptedGui('sgui_has_two_ethics').IsShown(GuiScope.SetRoot(Country.MakeScope).End))]"
+                            }
+                            blockoverride "name" {
+                                text = gg_ethic_empty_slot
+                            }
+                            blockoverride "tooltip" {
+                                tooltip = gg_ethic_empty_slot_tooltip
+                            }
+                            blockoverride "icon" {}
+                        }
+
+                        gate_ethic = {
+                            blockoverride "visible" {
+                                visible = "[Not(GetScriptedGui('sgui_has_three_ethics').IsShown(GuiScope.SetRoot(Country.MakeScope).End))]"
+                            }
+                            blockoverride "name" {
+                                text = gg_ethic_empty_slot
+                            }
+                            blockoverride "tooltip" {
+                                tooltip = gg_ethic_empty_slot_tooltip
+                            }
+                            blockoverride "icon" {}
+                        }
+                    }
+                }
+            }
+        }
+
+        vbox = {
+            maximumsize = { 570 -1 }
+            minimumsize = { 570 -1 }
+            spacing = 10
+            margin_top = -2
+            margin_bottom = 10
+            layoutpolicy_vertical = expanding
+            layoutpolicy_horizontal = expanding
+
+            background = {
+                using = simple_frame
+            }
+
+            default_header_clean_faded = {
+                layoutpolicy_horizontal = expanding
+                blockoverride "text" {
+                    text = gg_header_magic_countries
+                }
+            }
+
+            scrollarea = {
+                layoutpolicy_vertical = expanding
+                layoutpolicy_horizontal = expanding
+                scrollbarpolicy_horizontal = always_off
+                scrollbarpolicy_vertical = always_on
+                scrollbar_vertical = {
+                    using = vertical_scrollbar
+                }
+
+                scrollwidget = {
+                    flowcontainer = {
+                        minimumsize = { 570 -1 }
+                        direction = vertical
+                        spacing = 10
+                        margin = { 20 20 }
+
+                        block "datamodel" {
+                            datamodel = "[GetGlobalList('magic_countries')]"
+                        }
+
+                        item = {
+                            gate_base_panel_magic_country = {}
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    type gate_base_panel_magic_country = flowcontainer {
+        datacontext = "[Scope.GetCountry]"
+        direction = vertical
+        parentanchor = hcenter
+
+        widget = {
+            size = { 530 140 }
+
+            icon = {
+                using = dark_area
+                using = frame_small_mask
+                parentanchor = right
+                size = { 240 140 }
+                alpha = 0.2
+                position = { 0 0 }
+
+                modify_texture = {
+                    texture = "gfx/interface/masks/fade_horizontal_left.dds"
+                    spriteType = Corneredstretched
+                    spriteborder = { 0 0 }
+                    blend_mode = alphamultiply
+                }
+            }
+
+            background = {
+                texture = "gfx/interface/backgrounds/subject_liberty_desire_frame.dds"
+            }
+
+            fancy_flag_ui = {
+                size = { 80 60 }
+                position = { 10 10 }
+
+                blockoverride "overlay_button_and_bg_glow_position" {
+                    position = { -9 -4 }
+                }
+
+                blockoverride "rank_badge_block" {}
+            }
+
+            container = {
+                parentanchor = bottom
+
+                gate_relations_bar_and_buttons = {}
+
+                flowcontainer = {
+                    parentanchor = hcenter
+                    position = { 0 7 }
+                    spacing = 5
+                    tooltip = "COUNTRY_RELATIONS_TOOLTIP"
+                    using = tooltip_se
+
+                    flowcontainer = {
+                        visible = "[Not(ObjectsEqual(Scope.GetCountry.MakeScope, GetPlayer.MakeScope))]"
+                        textbox = {
+                            parentanchor = vcenter
+                            autoresize = yes
+                            align = nobaseline
+                            max_width = 190
+                            fontsize_min = 12
+                            elide = right
+                            text = gg_magic_countries_relations
+                        }
+                    }
+
+                    flowcontainer = {
+                        visible = "[ObjectsEqual(Scope.GetCountry.MakeScope, GetPlayer.MakeScope)]"
+                        textbox = {
+                            parentanchor = vcenter
+                            autoresize = yes
+                            align = nobaseline
+                            max_width = 100
+                            fontsize_min = 12
+                            elide = right
+                            text = gg_magic_countries_us
+                        }
+                    }
+                }
+            }
+
+            flowcontainer = {
+                position = { 100 10 }
+                spacing = 15
+
+                flowcontainer = {
+                    parentanchor = vcenter
+                    direction = vertical
+
+                    textbox = {
+                        minimumsize = { 225 -1 }
+                        maximumsize = { 225 -1 }
+                        autoresize = yes
+                        align = nobaseline
+                        elide = right
+                        fontsize_min = 12
+                        using = fontsize_large
+                        raw_text = "[Country.GetNameNoFlag]"
+                    }
+
+                    textbox = {
+                        autoresize = yes
+                        align = nobaseline
+                        raw_text = "[Country.GetDefinition.GetTier]"
+                    }
+                }
+            }
+
+            rank_badge = {
+                size = { 45 45 }
+                position = { -15 -15 }
+
+                blockoverride "datacontext " {}
+
+                blockoverride "font_size_under_100_rank" {
+                    using = fontsize_medium
+                }
+            }
+        }
+
+        widget = {
+            size = { 5 5 }
+        }
+    }
+
+    type gate_relations_bar_and_buttons = container {
+        parentanchor = bottom
+        position = { -4 9 }
+
+        # Progressbar and Frame
+        widget = {
+            parentanchor = bottom
+
+            size = { 307 52 }
+
+            widget = {
+                visible = "[Not(ObjectsEqual(Scope.GetCountry.MakeScope, GetPlayer.MakeScope))]"
+                parentanchor = center
+                allow_outside = yes
+
+                block "bar_position" {
+                    position = { 0 6 }
+                }
+
+                block "bar_size" {
+                    size = { 220 17 }
+                }
+
+                gold_progressbar_horizontal = {
+                    size = { 100% 100% }
+                    blockoverride "background" {}
+                    blockoverride "frame" {}
+
+                    blockoverride "values" {
+                        value = "[Country.GetRelationsWith(GetPlayer)]"
+                        min = -100
+                        max = 100
+                    }
+                }
+
+                green_progressbar_horizontal = {
+                    size = { 100% 100% }
+                    visible = "[GreaterThanOrEqualTo_int32(Country.GetRelationsWith(GetPlayer), '(int32)20')]"
+                    blockoverride "background" {}
+                    blockoverride "frame" {}
+
+                    blockoverride "values" {
+                        value = "[Country.GetRelationsWith(GetPlayer)]"
+                        min = -100
+                        max = 100
+                    }
+                }
+
+                bad_progressbar_horizontal = {
+                    size = { 100% 100% }
+                    visible = "[LessThanOrEqualTo_int32(Country.GetRelationsWith(GetPlayer), '(int32)-20')]"
+                    blockoverride "background" {}
+                    blockoverride "frame" {}
+
+                    blockoverride "values" {
+                        value = "[Country.GetRelationsWith(GetPlayer)]"
+                        min = -100
+                        max = 100
+                    }
+                }
+
+                changed_value_increased_progressbar_horizontal_green = {
+                    size = { 100% 100% }
+                    visible = "[GreaterThan_CFixedPoint(Country.GetDailyRelationsProgress(GetPlayer), '(CFixedPoint)0')]"
+
+                    blockoverride "second_progressbar" {}
+
+                    blockoverride "values" {
+                        value = "[Country.GetRelationsWith(GetPlayer)]"
+                        min = -100
+                        max = 100
+                        tooltip = "[Country.GetRelationsProgressDesc(GetPlayer)]"
+                    }
+
+                    blockoverride "glow_size" {
+                        size = { 40 100% }
+                    }
+
+                    blockoverride "arrow_texture_density" {
+                        texture_density = 10 #use to match height of progressbar
+                    }
+                }
+
+                changed_value_decreased_progressbar_horizontal_bad = {
+                    size = { 100% 100% }
+                    visible = "[LessThan_CFixedPoint(Country.GetDailyRelationsProgress(GetPlayer), '(CFixedPoint)0')]"
+
+                    blockoverride "second_progressbar" {}
+
+                    blockoverride "values" {
+                        value = "[Country.GetRelationsWith(GetPlayer)]"
+                        min = -100
+                        max = 100
+                    }
+
+                    blockoverride "glow_size" {
+                        size = { 40 100% }
+                    }
+
+                    blockoverride "arrow_texture_density" {
+                        texture_density = 10 #use to match height of progressbar
+                    }
+                }
+            }
+
+            icon = {
+                size = { 100% 100% }
+
+                texture = "gfx/interface/backgrounds/subject_liberty_desire_bar.dds"
+            }
+        }
+
+        # Relation increase/damage buttons
+        widget = {
+            parentanchor = center
+            size = { 100% 100% }
+
+            button_icon_round = {
+                blockoverride "wood_texture" {
+                    texture = "gfx/interface/buttons/round_button_small_wood_action.dds"
+                }
+                blockoverride "frame_visible" {}
+                size = { 38 38 }
+                position = { 8 0 }
+                enabled = no
+                visible = "[ObjectsEqual(Scope.GetCountry.MakeScope, GetPlayer.MakeScope)]"
+                parentanchor = vcenter
+            }
+
+            button_icon_round = {
+                blockoverride "wood_texture" {
+                    texture = "gfx/interface/buttons/round_button_small_wood_action.dds"
+                }
+                blockoverride "frame_visible" {}
+                size = { 38 38 }
+                position = { -6 0 }
+                enabled = no
+                visible = "[ObjectsEqual(Scope.GetCountry.MakeScope, GetPlayer.MakeScope)]"
+                parentanchor = right|vcenter
+            }
+
+            gate_diplo_button = {
+                visible = "[Not(ObjectsEqual(Scope.GetCountry.MakeScope, GetPlayer.MakeScope))]"
+                parentanchor = vcenter
+                position = { 8 0 }
+                blockoverride "datacontext" {
+                    datacontext = "[Country.GetDiplomaticAction('increase_relations', Country.Self)]"
+                }
+            }
+
+            gate_diplo_button = {
+                visible = "[Not(ObjectsEqual(Scope.GetCountry.MakeScope, GetPlayer.MakeScope))]"
+                parentanchor = right|vcenter
+                position = { -6 0 }
+                blockoverride "datacontext" {
+                    datacontext = "[Country.GetDiplomaticAction('damage_relations', Country.Self)]"
+                }
+            }
+        }
+    }
+
+    type gate_ethic = container {
+        minimumsize = { 260 -1 }
+        maximumsize = { 260 -1 }
+        block "visible" {
+            visible = "[Or5(
+                            EqualTo_string(TimedModifier.GetName, GetStaticModifier('ethic_neutral').GetName),
+                            EqualTo_string(TimedModifier.GetName, GetStaticModifier('ethic_war').GetName),
+                            EqualTo_string(TimedModifier.GetName, GetStaticModifier('ethic_diplomacy').GetName),
+                            EqualTo_string(TimedModifier.GetName, GetStaticModifier('ethic_economy').GetName),
+                            EqualTo_string(TimedModifier.GetName, GetStaticModifier('ethic_environment').GetName)
+                       )]"
+        }
+        flowcontainer = {
+            parentanchor = hcenter
+            margin = { 20 20 }
+            direction = vertical
+            minimumsize = { 260 -1 }
+            maximumsize = { 260 -1 }
+
+            flowcontainer = {
+                direction = vertical
+                minimumsize = { 230 -1 }
+                maximumsize = { 230 -1 }
+                margin = { 15 15 }
+                block "tooltip" {
+                    tooltip = "[TimedModifier.GetTooltip]"
+                }
+
+
+                widget = {
+                    size = { 230 30 }
+                    parentanchor = hcenter
+                    textbox = {
+                        block "name" {
+                            text = "[TimedModifier.GetName]"
+                        }
+                        align = center|nobaseline
+                        parentanchor = top|hcenter
+                        default_format = "#header"
+                        size = { 230 20 }
+                    }
+                }
+
+                widget = {
+                    size = { 200 200 }
+                    parentanchor = hcenter
+                    icon = {
+                        parentanchor = hcenter|vcenter
+                        size = { 120 120 }
+                        block "icon" {
+                            texture = "[TimedModifier.GetIcon]"
+                        }
+                    }
+                    background = {
+                        texture = "gfx/interface/backgrounds/round_frame_dec.dds"
+                    }
+                }
+
+                background = {
+                    using = entry_bg
+                }
+            }
+        }
+    }
+
+    type gate_tech_tree = zoomarea {
+        name = gate_tech_tree
+        allow_outside = yes
+        size = { 100% 100% }
+
+        state = {
+            name = "_zoom_changed"
+            duration = 0.15
+        }
+        scissor = yes
+
+        zoom = 0.4
+        zoom_step = 0.15
+        zoom_min = 0.3
+        zoom_max = 1
+        draggable_by = left # Do not add 'middle' click here, otherwise you will re-introduce PRCAL-16945
+
+        zoomwidget = {
+            hbox = {
+                layoutpolicy_vertical = expanding
+                layoutpolicy_horizontal = expanding
+
+                gate_tech_tree_production = {
+                    blockoverride "visible" {
+                        visible = "[GetScriptedGui('sgui_gate_base_tab_production').IsShown(GuiScope.SetRoot(Country.MakeScope).End)]"
+                    }
+                }
+
+                gate_tech_tree_military = {
+                    blockoverride "visible" {
+                        visible = "[GetScriptedGui('sgui_gate_base_tab_military').IsShown(GuiScope.SetRoot(Country.MakeScope).End)]"
+                    }
+                }
+
+                gate_tech_tree_society = {
+                    blockoverride "visible" {
+                        visible = "[GetScriptedGui('sgui_gate_base_tab_society').IsShown(GuiScope.SetRoot(Country.MakeScope).End)]"
+                    }
+                }
+            }
+        }
+    }
+
+    type gate_tech_tree_production = gate_tech_tree_content {
+        blockoverride "era_01" {
+            gate_tech_tree_row = {
+                blockoverride "items" {
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('gate_magic_understanding_production')]"
+                            datacontext = "[GetScriptedGui('gate_magic_understanding_production')]"
+                        }
+                    }
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('gate_mana_extraction')]"
+                            datacontext = "[GetScriptedGui('gate_mana_extraction')]"
+                        }
+                    }
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('magic_dwarf_murk')]"
+                            datacontext = "[GetScriptedGui('magic_dwarf_murk')]"
+                        }
+                    }
+                }
+            }
+        }
+        blockoverride "era_02" {
+            gate_tech_tree_row = {
+                blockoverride "items" {
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('gate_improved_extraction')]"
+                            datacontext = "[GetScriptedGui('gate_improved_extraction')]"
+                        }
+                    }
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('magic_farming')]"
+                            datacontext = "[GetScriptedGui('magic_farming')]"
+                        }
+                    }
+
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('living_irrigation')]"
+                            datacontext = "[GetScriptedGui('living_irrigation')]"
+                        }
+                    }
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('simple_rune_carving')]"
+                            datacontext = "[GetScriptedGui('simple_rune_carving')]"
+                        }
+                    }
+                }
+            }
+            gate_tech_tree_row = {
+                blockoverride "items" {
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('magic_dwarf_murk_railways')]"
+                            datacontext = "[GetScriptedGui('magic_dwarf_murk_railways')]"
+                        }
+                    }
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('mana_cores')]"
+                            datacontext = "[GetScriptedGui('mana_cores')]"
+                        }
+                    }
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('arcane_foundries')]"
+                            datacontext = "[GetScriptedGui('arcane_foundries')]"
+                        }
+                    }
+                }
+            }
+        }
+        blockoverride "era_03" {
+            gate_tech_tree_row = {
+                blockoverride "items" {
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('gate_ley_line_tap')]"
+                            datacontext = "[GetScriptedGui('gate_ley_line_tap')]"
+                        }
+                    }
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('regenerative_timber')]"
+                            datacontext = "[GetScriptedGui('regenerative_timber')]"
+                        }
+                    }
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('mana_infused_fertilizers')]"
+                            datacontext = "[GetScriptedGui('mana_infused_fertilizers')]"
+                        }
+                    }
+                }
+            }
+        }
+        blockoverride "era_04" {
+            gate_tech_tree_row = {
+                blockoverride "items" {
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('magic_golems')]"
+                            datacontext = "[GetScriptedGui('magic_golems')]"
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    type gate_tech_tree_military = gate_tech_tree_content {
+        blockoverride "era_01" {
+            gate_tech_tree_row = {
+                blockoverride "items" {
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('magic_understanding_military')]"
+                            datacontext = "[GetScriptedGui('magic_understanding_military')]"
+                        }
+                    }
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('mage_infantry')]"
+                            datacontext = "[GetScriptedGui('mage_infantry')]"
+                        }
+                    }
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('battlefield_wards')]"
+                            datacontext = "[GetScriptedGui('battlefield_wards')]"
+                        }
+                    }
+                }
+            }
+        }
+        blockoverride "era_02" {
+            gate_tech_tree_row = {
+                blockoverride "items" {
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('gate_arcane_warfare_doctrine')]"
+                            datacontext = "[GetScriptedGui('gate_arcane_warfare_doctrine')]"
+                        }
+                    }
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('gate_mana_weaponization')]"
+                            datacontext = "[GetScriptedGui('gate_mana_weaponization')]"
+                        }
+                    }
+
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('mage_artillery')]"
+                            datacontext = "[GetScriptedGui('mage_artillery')]"
+                        }
+                    }
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('ritual_magic')]"
+                            datacontext = "[GetScriptedGui('ritual_magic')]"
+                        }
+                    }
+                }
+            }
+        }
+        blockoverride "era_03" {
+            gate_tech_tree_row = {
+                blockoverride "items" {
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('gate_shadow_infiltration_tactics')]"
+                            datacontext = "[GetScriptedGui('gate_shadow_infiltration_tactics')]"
+                        }
+                    }
+                }
+            }
+        }
+        blockoverride "era_04" {
+            gate_tech_tree_row = {
+                blockoverride "items" {
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('gate_runic_armor_forging')]"
+                            datacontext = "[GetScriptedGui('gate_runic_armor_forging')]"
+                        }
+                    }
+                }
+            }
+        }
+        blockoverride "era_05" {
+            gate_tech_tree_row = {
+                blockoverride "items" {
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('gate_commando_thaumaturgy')]"
+                            datacontext = "[GetScriptedGui('gate_commando_thaumaturgy')]"
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    type gate_tech_tree_society = gate_tech_tree_content {
+        blockoverride "era_01" {
+            gate_tech_tree_row = {
+                blockoverride "items" {
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('magic_understanding_society')]"
+                            datacontext = "[GetScriptedGui('magic_understanding_society')]"
+                        }
+                    }
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('dwarven_gate_immigration')]"
+                            datacontext = "[GetScriptedGui('dwarven_gate_immigration')]"
+                        }
+                    }
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('orcish_gate_immigration')]"
+                            datacontext = "[GetScriptedGui('orcish_gate_immigration')]"
+                        }
+                    }
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('orc_clan_support')]"
+                            datacontext = "[GetScriptedGui('orc_clan_support')]"
+                        }
+                    }
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('elven_gate_immigration')]"
+                            datacontext = "[GetScriptedGui('elven_gate_immigration')]"
+                        }
+                    }
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('elven_support')]"
+                            datacontext = "[GetScriptedGui('elven_support')]"
+                        }
+                    }
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('gnomish_gate_immigration')]"
+                            datacontext = "[GetScriptedGui('gnomish_gate_immigration')]"
+                        }
+                    }
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('gnomish_harmony')]"
+                            datacontext = "[GetScriptedGui('gnomish_harmony')]"
+                        }
+                    }
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('bear_gate_immigration')]"
+                            datacontext = "[GetScriptedGui('bear_gate_immigration')]"
+                        }
+                    }
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('mana_lanterns')]"
+                            datacontext = "[GetScriptedGui('mana_lanterns')]"
+                        }
+                    }
+                }
+            }
+        }
+        blockoverride "era_02" {
+            gate_tech_tree_row = {
+                blockoverride "items" {
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('formalized_magic')]"
+                            datacontext = "[GetScriptedGui('formalized_magic')]"
+                        }
+                    }
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('monster_compendium')]"
+                            datacontext = "[GetScriptedGui('monster_compendium')]"
+                        }
+                    }
+
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('healing_circles')]"
+                            datacontext = "[GetScriptedGui('healing_circles')]"
+                        }
+                    }
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('arcane_infrastructure')]"
+                            datacontext = "[GetScriptedGui('arcane_infrastructure')]"
+                        }
+                    }
+                }
+            }
+            gate_tech_tree_row = {
+                blockoverride "items" {
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('ethereal_messaging')]"
+                            datacontext = "[GetScriptedGui('ethereal_messaging')]"
+                        }
+                    }
+                }
+            }
+        }
+        blockoverride "era_03" {
+            gate_tech_tree_row = {
+                blockoverride "items" {
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('magic_science')]"
+                            datacontext = "[GetScriptedGui('magic_science')]"
+                        }
+                    }
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('mana_linked_education')]"
+                            datacontext = "[GetScriptedGui('mana_linked_education')]"
+                        }
+                    }
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('thaumaturgic_courts')]"
+                            datacontext = "[GetScriptedGui('thaumaturgic_courts')]"
+                        }
+                    }
+                }
+            }
+        }
+        blockoverride "era_04" {
+            gate_tech_tree_row = {
+                blockoverride "items" {
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('soulbound_currency')]"
+                            datacontext = "[GetScriptedGui('soulbound_currency')]"
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    type gate_tech_tree_content = vbox {
+        layoutpolicy_vertical = expanding
+        layoutpolicy_horizontal = expanding
+        spacing = 200
+        margin = { 100 100 }
+
+        block "visible" {
+            visible = yes
+        }
+
+        hbox = {
+            layoutpolicy_horizontal = expanding
+            spacing = 200
+            background = {
+                size = { 200% 100% }
+                using = tech_tree_divider
+                alpha = 0.15
+                margin = { 1350 50 }
+            }
+
+            gate_tech_tree_era = {
+                blockoverride "text" {
+                    raw_text = "I"
+                }
+            }
+
+            vbox = {
+                spacing = 100
+                block "era_01" {
+                    # Fill through override
+                    visible = no
+                }
+            }
+
+            expand = {}
+        }
+
+        hbox = {
+            layoutpolicy_horizontal = expanding
+            spacing = 200
+
+            gate_tech_tree_era = {
+                blockoverride "text" {
+                    raw_text = "II"
+                }
+            }
+
+            vbox = {
+                spacing = 100
+                block "era_02" {
+                    # Fill through override
+                    visible = no
+                }
+            }
+
+            expand = {}
+        }
+
+        hbox = {
+            layoutpolicy_horizontal = expanding
+            spacing = 200
+            background = {
+                size = { 200% 100% }
+                using = tech_tree_divider
+                alpha = 0.15
+                margin = { 1350 50 }
+            }
+
+            gate_tech_tree_era = {
+                blockoverride "text" {
+                    raw_text = "III"
+                }
+            }
+
+            vbox = {
+                spacing = 100
+                block "era_03" {
+                    # Fill through override
+                    visible = no
+                }
+            }
+
+            expand = {}
+        }
+
+        hbox = {
+            layoutpolicy_horizontal = expanding
+            spacing = 200
+
+            gate_tech_tree_era = {
+                blockoverride "text" {
+                    raw_text = "IV"
+                }
+            }
+
+            vbox = {
+                spacing = 100
+                block "era_04" {
+                    # Fill through override
+                    visible = no
+                }
+            }
+
+            expand = {}
+        }
+
+        hbox = {
+            layoutpolicy_horizontal = expanding
+            spacing = 200
+            background = {
+                size = { 200% 100% }
+                using = tech_tree_divider
+                alpha = 0.15
+                margin = { 1350 50 }
+            }
+
+            gate_tech_tree_era = {
+                blockoverride "text" {
+                    raw_text = "V"
+                }
+            }
+
+            hbox = {
+                spacing = 100
+                block "era_05" {
+                    # Fill through override
+                    visible = no
+                }
+            }
+
+            expand = {}
+        }
+    }
+
+    type gate_tech_tree_era = widget {
+        size = { 200 100 }
+        background = {
+            using = entry_bg_simple
+        }
+        textbox = {
+            size = { 100% 100% }
+            block "text" {
+                raw_text = "gate_tech_tree_era - text"
+            }
+            align = center
+            default_format = "#header"
+            using = header_font_fancy_size
+        }
+    }
+
+    type gate_tech_tree_row = hbox {
+        layoutpolicy_horizontal = expanding
+        spacing = 200
+
+        block "items" {
+
+        }
+
+        expand = {}
+    }
+
+    type gate_tech_tree_node = widget {
+        visible = "[Or(ScriptedGui.IsShown(GuiScope.SetRoot(Country.MakeScope).End), Technology.HasResearchedTech(GetPlayer.Self))]"
+        size = { 465 150 }
+        tooltipwidget = {
+            FancyTooltip_Technology_Tech_Tree = {}
+        }
+
+        block "context" {
+            visible = no
+            #datacontext = "[GetTechnology('some_technology')]"
+            #datacontext = "[GetScriptedGui('some_technology')]"
+        }
+
+        using = default_fade_in_out
+
+        ### RESEARCH BUTTON BACKGROUND
+        button = {
+            size = { 80% 100% }
+            parentanchor = right
+            using = default_button_action
+            enabled = "[And3(
+                            ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End),
+                            GetScriptedGui('sgui_gate_window_execute_research').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('technology', Technology.MakeScope).End),
+                            GreaterThanOrEqualTo_CFixedPoint(Country.MakeScope.Var('magic_innovation').GetValue, Technology.GetCost(Country.Self))
+                        )]"
+            using = technology_confirm_button_sound
+            using = shimmer
+            onclick = "[GetScriptedGui('sgui_gate_window_execute_research').Execute(GuiScope
+                                .SetRoot(Country.MakeScope)
+                                .AddScope('technology', Technology.MakeScope)
+                                .AddScope('cost', MakeScopeValue(Technology.GetCost(Country.Self)))
+                                .End
+                            )]"
+            onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('technology', Technology.MakeScope).End)]"
+        }
+
+        ### SIMPLE RECTANGULAR BACKGROUND GLOW
+        block "glow_animation" {
+            widget = {
+                visible = "[And3(
+                    ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End),
+                    GetScriptedGui('sgui_gate_window_execute_research').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('technology', Technology.MakeScope).End),
+                    GreaterThanOrEqualTo_CFixedPoint(Country.MakeScope.Var('magic_innovation').GetValue, Technology.GetCost(Country.Self))
+                )]"
+                size = { 100% 100% }
+                parentanchor = bottom|hcenter
+                position = { 0 0 }
+                using = ui_event_glow_animation_looping
+
+                blockoverride "fade" {
+                    modify_texture = {
+                        texture = "gfx/interface/masks/fade_horizontal_center.dds"
+                        spriteType = Corneredstretched
+                        spriteborder = { 0 0 }
+                        blend_mode = alphamultiply
+                    }
+                }
+            }
+        }
+
+        ### BACKGROUND
+        widget = {
+            parentanchor = top|right
+
+            size = { 80% 100% }
+
+            background = {
+                visible = "[Not(Technology.HasResearchedTech(GetPlayer.Self))]"
+                using = entry_fancy_header_colored
+                using = dark_area
+            }
+
+            background = {
+                visible = "[Technology.HasResearchedTech(GetPlayer.Self)]"
+                using = paper_bg
+            }
+
+            icon = {
+                using = highlighted_square_selection
+                visible = "[ObjectsEqual(GetPlayer.GetCurrentlyResearchedTechnology, Technology.Self)]"
+            }
+        }
+
+        ### TECH NAME
+        block "tech_name" {
+            widget = {
+                size = { 330 60 }
+                parentanchor = right
+
+                block "name_background" {
+                    background = {
+                        visible = "[Not(Technology.HasResearchedTech(GetPlayer.Self))]"
+                        using = fade_right_entry_fancy_header_colored
+                        using = dark_area
+                    }
+
+                    background = {
+                        visible = "[Technology.HasResearchedTech(GetPlayer.Self)]"
+                        using = paper_bg
+                    }
+                }
+
+                textbox = {
+                    text = "[Technology.GetNameNoFormatting]"
+                    size = { 85% 100% }
+                    margin = { 0 5 }
+                    margin_left = 30
+                    multiline = yes
+                    elide = right
+                    align = center|nobaseline
+                    parentanchor = center
+
+                    block "name_formatting" {}
+
+                    block "alpha" {
+                        alpha = 1
+                    }
+
+                    fontsize = 36
+                    fontsize_min = 22
+                }
+            }
+        }
+
+        ### TECH ICON FRAME BACKGROUND
+        block "round_frame" {
+            icon = {
+                texture = "gfx/interface/backgrounds/round_frame_dec.dds"
+                parentanchor = vcenter
+                size = { 180 180 }
+                alwaystransparent = yes
+            }
+        }
+
+        ### TECH ICON BUTTON
+        button = {
+            size = { 138 138 }
+            texture = "[Technology.GetTexture]"
+            parentanchor = vcenter
+            position = { 20 0 }
+            enabled = "[And3(
+                ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End),
+                GetScriptedGui('sgui_gate_window_execute_research').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('technology', Technology.MakeScope).End),
+                GreaterThanOrEqualTo_CFixedPoint(Country.MakeScope.Var('magic_innovation').GetValue, Technology.GetCost(Country.Self))
+            )]"
+            blockoverride "sound" {
+                using = technology_confirm_button_sound
+            }
+            onclick = "[GetScriptedGui('sgui_gate_window_execute_research').Execute(GuiScope
+                                .SetRoot(Country.MakeScope)
+                                .AddScope('technology', Technology.MakeScope)
+                                .AddScope('cost', MakeScopeValue(Technology.GetCost(Country.Self)))
+                                .End
+                            )]"
+            onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('technology', Technology.MakeScope).End)]"
+        }
+
+        ### TECH ICON - HAS RESEARCHED OR IS RESEARCHING
+        icon = {
+            visible = "[Technology.HasResearchedTech(GetPlayer.Self)]"
+            size = { 138 138 }
+            texture = "[Technology.GetTexture]"
+            parentanchor = vcenter
+            position = { 20 0 }
+        }
+
+        ### UNLOCK ICONS
+        textbox = {
+            parentanchor = bottom|left
+            position = { 200 -30 }
+            size = { 200 30 }
+            align = center
+            raw_text = "@magic_innovation! [Technology.GetCost(GetPlayer.Self)|*0v]"
+            using = fontsize_mega
+        }
+
+        ### ERA
+        widget = {
+            size = { 40 40 }
+            parentanchor = left|bottom
+            position = { 70 15 }
+
+            icon = {
+                size = { 100% 100% }
+                texture = "gfx/interface/backgrounds/round_button_bg.dds"
+                block "enabled" {}
+            }
+
+            textbox = {
+                text = "TECHNOLOGY_TYPE_DESCRIPTION"
+                align = center|nobaseline
+                using = fontsize_xxl
+                parentanchor = center
+                block "alpha" {}
+            }
+        }
+    }
+
+    type gate_diplo_button = button_icon_round_action {
+        using = tooltip_se
+
+        block "datacontext" {}
+
+        block "button_properties" {
+            enabled = "[IsValid(DiplomaticAction.ExecuteAction)]"
+            onclick = "[DiplomaticAction.ExecuteWithConfirmation]"
+        }
+
+        block "clicksound" {
+            using = generic_diplomatic_action_sound
+        }
+
+        tooltipwidget = {
+            FancyTooltip_DiplomaticActionWithTargetCountry = {}
+        }
+
+        blockoverride "size" {
+            block "autonomy_button_size" {
+                size = { 38	38 }
+            }
+        }
+
+        blockoverride "icon_size" {
+            size = { 60% 60% }
+        }
+
+        blockoverride "icon" {
+            texture = "[DiplomaticAction.GetType.GetTexture]"
+        }
+    }
+
+}

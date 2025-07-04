@@ -1,4 +1,10 @@
 ﻿learn_magic = {
+    hidden_effect = {
+        set_variable = {
+            name = magic_ethics
+            value = 0
+        }
+    }
     custom_tooltip = {
         text = effect_learn_magic
         save_temporary_scope_as = gate_magic_learner
@@ -6,6 +12,13 @@
         add_technology_researched = magic_understanding_society
         add_technology_researched = magic_understanding_military
         add_gate_ideologies = yes
+    }
+    custom_tooltip = {
+        text = add_magic_ethic_tooltip
+        trigger_event = {
+            id = magic_ethic.1
+            popup = yes
+        }
     }
 }
 

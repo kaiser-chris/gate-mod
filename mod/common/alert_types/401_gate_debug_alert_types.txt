@@ -1,0 +1,42 @@
+﻿expedition_alert = {
+	script_context = player_country
+	texture = gfx/interface/icons/alert_icons/gate_has_no_magic_research.dds
+
+	valid = {
+		is_player = yes
+		#TODO: Remove this debug check for expedition_alert
+		has_global_variable = com_debug
+	}
+
+	type = important_action
+
+	alert_group = gate_alerts
+}
+
+alert_gate_debug_base_panel = {
+	script_context = player_country
+	texture = gfx/interface/icons/alert_icons/gate_has_no_magic_research.dds
+
+	valid = {
+		is_player = yes
+		has_global_variable = com_debug
+	}
+
+	type = important_action
+
+	alert_group = gate_alerts
+}
+
+gate_space_alert = {
+	script_context = player_country
+	texture = gfx/interface/icons/alert_icons/gate_has_no_magic_research.dds
+
+	valid = {
+		is_player = yes
+		has_global_variable = com_debug
+	}
+
+	type = important_action
+
+	alert_group = gate_alerts
+}
