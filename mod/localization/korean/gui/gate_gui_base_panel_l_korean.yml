@@ -1,27 +1,27 @@
 ﻿l_korean:
 # Button
- gate_button_main: "게이트 버튼_메인" #deepl:1622562608
- gate_button_main_desc: "$gg_panel_base_title$" #deepl:1976458859
- gate_button_main_tooltip: "#header $gg_panel_base_title$#!\n바로 가기: #V $gg_panel_base_title$ #! (#V CTRL + T#!)" #deepl:1050239708
- gg_panel_base_action: "마나플로우 패널" #deepl:3726450867
+ gate_button_main: "gate_button_main"
+ gate_button_main_desc: "$gg_panel_base_title$"
+ gate_button_main_tooltip: "#header $gg_panel_base_title$#!\n단축키: #V $gg_panel_base_title$#! (#V CTRL + T#!)"
+ gg_panel_base_action: "마나플로우 패널"
 # Panel
- gg_panel_base_title: "마나플로우" #deepl:1361387616
- gg_panel_base_tab_general: "일반" #deepl:972568161
- gg_panel_base_no_researcher: "아르카니스트 없음" #deepl:1531408062
- gg_panel_base_no_researcher_blink: "#BOLD 새로운 아르카니스트를 고용하세요#!" #deepl:968085008
- gg_mana_saturation: "마나 채도" #deepl:1203188312
- gg_mana_saturation_tooltip: "#header [concept_mana_saturation]#!\n현재 #v [GetGlobalVariable('global_mana_saturation').GetValue|1] 지구의#! %가 마나로 덮여 있습니다.\n\n 마나는 모든 [concept_magical_phenomena] 의 기초이며 [concept_magic_technology] 에서 광범위하게 사용됩니다." #deepl:4290326966
- gg_header_magic_ethic: "[Concept('concept_magic_ethic','$concept_magic_ethics$')]" #deepl:3894943634
- gg_header_magic_countries: "아케인 국가" #deepl:2611929564
- gg_ethic_empty_slot: "빈 도메인 슬롯" #deepl:1572555500
- gg_ethic_empty_slot_tooltip: "[concept_magic_ethic]\n\n  잠금 해제됨  - 학습 중  -  - 아직 구현되지 않았습니다.#title #!\n [concept_magic_knowledge]\n [GetTechnology('magic_science').GetName]\n" #deepl:3093784275
- gg_magic_countries_us: "우리나라" #deepl:3262087796
- gg_magic_countries_relations: "$concept_relations$: #v [Country.GetRelationsWithDesc(GetPlayer)] #! (#v [Country.GetRelationsWith(GetPlayer)|0] #! )" #deepl:4253451336
- gg_magic_countries_relations_region: "#header [DiplomaticAction.GetName]#!\n@red_cross! [concept_strategic_region] 에 이 있어야만 수행할 수 있습니다. [concept_interest] " #deepl:3367504428
- gg_header_magic_innovation: "매직 혁신" #deepl:2673158403
- gg_magic_innovation_total: "현재 은행계좌 [concept_magic_innovation]: #v @magic_innovation! [GetPlayer.MakeScope.Var('magic_innovation').GetValue|0] / [GetGlobalVariable('magic_innovation_bank_max').GetValue|0]#!" #deepl:3971030187
- gg_magic_innovation_warning_calc: "사용하지 않는 [concept_magic_innovation] 은 #v 손실됩니다#!." #deepl:2904895195
- gg_monthly_magic_innovation: "매월 #tooltip:gg_monthly_magic_innovation_tooltip @magic_innovation!$gg_monthly_magic_innovation_value$ #! [concept_magic_innovation]  을 생성하고 있습니다." #deepl:2748831333
- gg_monthly_magic_innovation_no_magic: "[concept_magic_innovation]\n 먼저 [concept_magic_knowledge] 를 조사해야 합니다." #deepl:1150311696
- gg_monthly_magic_innovation_value: "#bold [Country.MakeScope.ScriptValue('gate_magic_innovation')|g]#!" #deepl:1294646018
- gg_monthly_magic_innovation_tooltip: "#header [concept_magic_innovation]#!\n매월 $gg_monthly_magic_innovation_value$ [concept_magic_innovation] 생성:\n[Country.AccessModifier.GetBreakdownFor('country_gate_magical_innovation_add').GetBreakdown] \n \n 승수 [Country.AccessModifier.GetValueWithBreakdownFor('country_gate_magical_innovation_mult')]\n \n 최대 [Country.MakeScope.ScriptValue('gate_magic_innovation_max')|v] [concept_magic_innovation] 월 최대:\n[Country.MakeScope.ScriptValue('gate_magic_innovation_max')|+=] [Country.GetName]\n  [Country.MakeScope.ScriptValue('gate_magic_innovation_max_base')|+=] 기본값\n [Country.MakeScope.ScriptValue('gate_magic_innovation_max_literacy')|+=] [concept_literacy]" #deepl:3812547032
+ gg_panel_base_title: "마나플로우"
+ gg_panel_base_tab_general: "장군"
+ gg_panel_base_no_researcher: "비전주의자 없음"
+ gg_panel_base_no_researcher_blink: "#BOLD 새로운 비전주의자 고용#!"
+ gg_mana_saturation: "마나 포화"
+ gg_mana_saturation_tooltip: "#header [concept_mana_saturation]#!\n현재 지구의 #v [GetGlobalVariable('global_mana_saturation').GetValue|1]%#!가 마나로 뒤덮여 있습니다.\n\n마나는 모든 [concept_magical_phenomena]의 근원이며, [concept_magic_technology]에 광범위하게 사용됩니다."
+ gg_header_magic_ethic: "[Concept('concept_magic_ethic','$concept_magic_ethics$')]"
+ gg_header_magic_countries: "마법 국가"
+ gg_ethic_empty_slot: "빈 용량 슬롯"
+ gg_ethic_empty_slot_tooltip: "이 [concept_magic_ethic] 슬롯은 비어 있으며, 해당 기술을 연구하여 채울 수 있습니다.\n\n#title 잠금 해제됨#!\n• [concept_magic_knowledge] 학습\n• [GetTechnology('magic_science').GetName]\n• 아직 구현되지 않음"
+ gg_magic_countries_us: "우리 나라"
+ gg_magic_countries_relations: "$concept_relations$: #v [Country.GetRelationsWithDesc(GetPlayer)]#! (#v [Country.GetRelationsWith(GetPlayer)|0]#!)"
+ gg_magic_countries_relations_region: "#header [DiplomaticAction.GetName]#!\n@red_cross! 해당 행위는 상대국 [concept_strategic_region]에 [concept_interest]가 있을 때만 수행할 수 있습니다."
+ gg_header_magic_innovation: "마법 혁신"
+ gg_magic_innovation_total: "현재 보유 중인 [concept_magic_innovation]: #v @magic_innovation![GetPlayer.MakeScope.Var('magic_innovation').GetValue|0] / [GetGlobalVariable('magic_innovation_bank_max').GetValue|0]#!"
+ gg_magic_innovation_warning_calc: "사용하지 않는 모든 [concept_magic_innovation]는 #v 소멸#!됩니다."
+ gg_monthly_magic_innovation: "우리는 매월 #tooltip:gg_monthly_magic_innovation_tooltip @magic_innovation!$gg_monthly_magic_innovation_value$#! [concept_magic_innovation]를 생산하고 있습니다."
+ gg_monthly_magic_innovation_no_magic: "현재 [concept_magic_innovation]를 생산하고 있지 않습니다.\n먼저 [concept_magic_knowledge]를 연구해야 합니다."
+ gg_monthly_magic_innovation_value: "#bold [Country.MakeScope.ScriptValue('gate_magic_innovation')|g]#!"
+ gg_monthly_magic_innovation_tooltip: "#header [concept_magic_innovation]#!\n우리는 매달 $gg_monthly_magic_innovation_value$ [concept_magic_innovation]를 생산하고 있습니다:\n[Country.AccessModifier.GetBreakdownFor('country_gate_magical_innovation_add').GetBreakdown]\n\n배수: [Country.AccessModifier.GetValueWithBreakdownFor('country_gate_magical_innovation_mult')]\n\n최대 매월 [Country.MakeScope.ScriptValue('gate_magic_innovation_max')|v] [concept_magic_innovation]까지:\n[Country.MakeScope.ScriptValue('gate_magic_innovation_max')|+=] [Country.GetName]\n[Country.MakeScope.ScriptValue('gate_magic_innovation_max_base')|+=] 기본값\n[Country.MakeScope.ScriptValue('gate_magic_innovation_max_literacy')|+=] [concept_literacy]"

@@ -1,8 +1,8 @@
 ﻿l_korean:
  effect_add_magic_innovation: "[SCOPE.GetValue('added_innovation')|+=0] [concept_magic_innovation] 추가."
  effect_add_mana_density: "[SCOPE.GetValue('added_mana_density')|+=0] [concept_mana_density] 추가."
- effect_learn_magic: "[concept_magic_knowledge] 학습."
- effect_gate_establish_treaty: "[SCOPE.GetLocalVariable('gate_treaty_source').GetCountry.GetName] 와 [SCOPE.GetLocalVariable('gate_treaty_target').GetCountry.GetName] 사이에 #bold [SCOPE.GetLocalVariable('gate_treaty_name').GetFlagName] #! [concept_treaty] 을 설정합니다." #deepl:3749156315
+ effect_learn_magic: "[SCOPE.sCountry('gate_magic_learner').GetName]가 [concept_magic_knowledge]를 배우고 있습니다."
+ effect_gate_establish_treaty: "#bold [SCOPE.GetLocalVariable('gate_treaty_name').GetFlagName]#! [concept_treaty]를 [SCOPE.GetLocalVariable('gate_treaty_source').GetCountry.GetName]와(과) [SCOPE.GetLocalVariable('gate_treaty_target').GetCountry.GetName] 사이에 체결합니다."
  effect_pops_embrace_vampirism: "우리 인구의 일부가 [concept_gate_vampirism]을 받아들이고 [GetCulture('vampire').GetName] 문화와 [GetReligion('gate_lunar_masquerade').GetName] 종교로 개종합니다."
  effect_characters_embrace_vampirism: "우리의 지도자들과 정치인들은 [concept_gate_vampirism]을 받아들이고 [GetCulture('vampire').GetName] 문화와 [GetReligion('gate_lunar_masquerade').GetName] 종교로 개종합니다."
  effect_gate_magic_experience: "[SCOPE.GetValue('added_experience')|+=0]만큼의 [concept_gate_character_experience]이(가) [concept_magic_researcher]에게 추가됩니다."
