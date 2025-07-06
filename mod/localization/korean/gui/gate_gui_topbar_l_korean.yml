@@ -1,16 +1,16 @@
 ﻿l_korean:
- gg_topbar_magic_innovation: "GG_TOPBAR_MAGIC_INNOVATION" #deepl:1922060619
- gg_topbar_magic_innovation_icon: "@magic_innovation!" #deepl:1534598836
- gg_topbar_magic_innovation_value: "[AccessPlayer.MakeScope.ScriptValue('gate_magic_innovation')|0v]" #deepl:1036106055
- gg_topbar_magic_innovation_tooltip: "#header [concept_magic_innovation]#!\매월 #bold [AccessMetaPlayer.AccessPlayedOrObservedCountry.MakeScope.ScriptValue('gate_magic_innovation')|g] #! [concept_magic_innovation] 매월 생성됨:\n[AccessMetaPlayer.AccessPlayedOrObservedCountry.AccessModifier.GetBreakdownFor('country_gate_magical_innovation_add').GetBreakdown]\n\n승수 [AccessMetaPlayer.AccessPlayedOrObservedCountry.AccessModifier.GetValueWithBreakdownFor('country_gate_magical_innovation_mult')]\n\n최대 [AccessMetaPlayer.AccessPlayedOrObservedCountry.MakeScope.ScriptValue('gate_magic_innovation_max')|v] [concept_magic_innovation] 매월 생성됨:\n[AccessMetaPlayer.AccessPlayedOrObservedCountry.MakeScope.ScriptValue('gate_magic_innovation_max')|+=] [GetMetaPlayer.GetPlayedOrObservedCountry.GetName] \n [AccessMetaPlayer.AccessPlayedOrObservedCountry.MakeScope.ScriptValue('gate_magic_innovation_max_base')|+=] 기본값\n [AccessMetaPlayer.AccessPlayedOrObservedCountry.MakeScope.ScriptValue('gate_magic_innovation_max_literacy')|+=] [concept_literacy]" #deepl:777999684
- gg_topbar_magic_innovation_window: "$gate_button_main$" #deepl:1281520751
- gg_topbar_magic_innovation_source: "$dlc_magic_gate$" #deepl:1831481130
- gg_topbar_magic_innovation_source_tooltip: "$dlc_magic_gate_desc$" #deepl:1008678244
+ gg_topbar_magic_innovation: "gg_topbar_magic_innovation"
+ gg_topbar_magic_innovation_icon: "@magic_innovation!"
+ gg_topbar_magic_innovation_value: "[AccessPlayer.MakeScope.ScriptValue('gate_magic_innovation')|0v]"
+ gg_topbar_magic_innovation_tooltip: "#header [concept_magic_innovation]#!\n우리는 매달 #bold [AccessMetaPlayer.AccessPlayedOrObservedCountry.MakeScope.ScriptValue('gate_magic_innovation')|g]#! [concept_magic_innovation]를 생산하고 있습니다:\n[AccessMetaPlayer.AccessPlayedOrObservedCountry.AccessModifier.GetBreakdownFor('country_gate_magical_innovation_add').GetBreakdown]\n\n배수: [AccessMetaPlayer.AccessPlayedOrObservedCountry.AccessModifier.GetValueWithBreakdownFor('country_gate_magical_innovation_mult')]\n\n최대 매월 [AccessMetaPlayer.AccessPlayedOrObservedCountry.MakeScope.ScriptValue('gate_magic_innovation_max')|v] [concept_magic_innovation]까지:\n[AccessMetaPlayer.AccessPlayedOrObservedCountry.MakeScope.ScriptValue('gate_magic_innovation_max')|+=] [GetMetaPlayer.GetPlayedOrObservedCountry.GetName]\n[AccessMetaPlayer.AccessPlayedOrObservedCountry.MakeScope.ScriptValue('gate_magic_innovation_max_base')|+=] 기본값\n[AccessMetaPlayer.AccessPlayedOrObservedCountry.MakeScope.ScriptValue('gate_magic_innovation_max_literacy')|+=] [concept_literacy]"
+ gg_topbar_magic_innovation_window: "$gate_button_main$"
+ gg_topbar_magic_innovation_source: "$dlc_magic_gate$"
+ gg_topbar_magic_innovation_source_tooltip: "$dlc_magic_gate_desc$"
 
- gg_topbar_mana_saturation: "GG_톱바_마나_채도" #deepl:4088793098
- gg_topbar_mana_saturation_icon: "@mana_saturation!" #deepl:3437148818
- gg_topbar_mana_saturation_value: "#v [GetGlobalVariable('global_mana_saturation').GetValue|0]%#!" #deepl:3197637856
- gg_topbar_mana_saturation_tooltip: "$gg_mana_saturation_tooltip$" #deepl:1616492294
- gg_topbar_mana_saturation_window: "$gate_button_main$" #deepl:1281520751
- gg_topbar_mana_saturation_source: "$dlc_magic_gate$" #deepl:1831481130
- gg_topbar_mana_saturation_source_tooltip: "$dlc_magic_gate_desc$" #deepl:1008678244
+ gg_topbar_mana_saturation: "gg_topbar_mana_saturation"
+ gg_topbar_mana_saturation_icon: "@mana_saturation!"
+ gg_topbar_mana_saturation_value: "#v [GetGlobalVariable('global_mana_saturation').GetValue|0]%#!"
+ gg_topbar_mana_saturation_tooltip: "$gg_mana_saturation_tooltip$"
+ gg_topbar_mana_saturation_window: "$gate_button_main$"
+ gg_topbar_mana_saturation_source: "$dlc_magic_gate$"
+ gg_topbar_mana_saturation_source_tooltip: "$dlc_magic_gate_desc$"

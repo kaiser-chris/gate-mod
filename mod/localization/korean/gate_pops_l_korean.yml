@@ -4,7 +4,7 @@
  mages_only_icon: "@mages!"
  mages_no_icon: "마법사"
  mages_desc: "교육받은 마법 사용자들은 종종 부유한 엘리트 계층 출신입니다. 그들의 정치적 이해관계는 대개 [GetInterestGroupVariant('ig_magic_users',GetPlayer).GetNameWithCountryVariant]에 의해 대변됩니다."
- MAGES_QUALIFICATIONS_DESC: "적절한 [concept_literacy] 을 가진 팝만 #v $mages$ #! 이 될 수 있습니다. [concept_literacy] 및 [concept_wealth] 이 클수록 잠재력이 증가합니다. [concept_culture] 얼굴 [concept_discrimination] 을 가진 팝은 시간이 훨씬 오래 걸립니다. #v $aristocrats$ #! 및 #v $academics$ #! 은 #v $mages$ #! 이 되는 데 특히 쉽습니다. [GetBuildingType('building_magic_academy').GetName] [concept_building] 을 사용하면 새로운 #v $mages$ #! 도 더 쉽게 훈련할 수 있습니다." #deepl:3355709172
+ MAGES_QUALIFICATIONS_DESC: "충분한 [concept_literacy]를 가진 인구만이 #v $mages$#!가 될 수 있습니다. 잠재력은 [concept_literacy]와 [concept_wealth]가 높을수록 증가합니다. [concept_culture]가 [concept_discrimination]을 겪는 인구는 훨씬 더 오랜 시간이 걸립니다. #v $aristocrats$#!와 #v $academics$#!는 특히 쉽게 #v $mages$#!가 됩니다. 또한 [GetBuildingType('building_magic_academy').GetName] [concept_building]은 새로운 #v $mages$#! 교육을 더욱 용이하게 합니다."
  mages_qualifications_academy: "우리의 [GetBuildingType('building_magic_academy').GetName]에서"
  pop_mages: "$mages$ [concept_profession]"
  building_employment_mages_add: "건물당 $mages$ 고용 인원"
@@ -36,7 +36,7 @@
  druids_only_icon: "@druids!"
  druids_no_icon: "드루이드"
  druids_desc: "자연적으로 마법을 익힌 자들은 대개 농경 가문 출신입니다. 그들의 정치적 이해관계는 주로 [GetInterestGroupVariant('ig_magic_users', GetPlayer).GetNameWithCountryVariant]에 의해 대변됩니다."
- DRUIDS_QUALIFICATIONS_DESC: "모든 팝은 #v $druids$ #! . [concept_literacy] 과 [concept_wealth] 이 커질수록 잠재력이 증가합니다. [concept_culture] 얼굴이 [concept_discrimination] 인 팝은 훨씬 더 오래 걸립니다. #v $farmers$ #! 및 #v $laborers$ #! 는 특히 쉽게 #v $druids$ #! ." #deepl:2460264004
+ DRUIDS_QUALIFICATIONS_DESC: "어떤 인구든 #v $druids$#!가 될 수 있습니다. 잠재력은 [concept_literacy]와 [concept_wealth]가 높을수록 증가합니다. [concept_culture]가 [concept_discrimination]을 겪는 인구는 훨씬 더 오랜 시간이 걸립니다. #v $farmers$#!와 #v $laborers$#!는 특히 쉽게 #v $druids$#!가 됩니다."
  pop_druids: "$druids$ [concept_profession]"
  building_employment_druids_add: "건물당 $druids$ 고용 인원"
  building_employment_druids_add_desc: "건물 레벨당 고용할 수 있는 $druids$의 수를 조정합니다."
