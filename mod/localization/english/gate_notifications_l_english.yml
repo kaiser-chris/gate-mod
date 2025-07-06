@@ -1,0 +1,5 @@
+﻿l_english:
+# Prestige Goods
+ notification_prestige_good_gate_generic_mana_unlocked_name: "[SCOPE.sCompany('relevant_company').GetName] develops @prestige_good_gate_generic_mana! #b $prestige_good_gate_generic_mana$#!"
+ notification_prestige_good_gate_generic_mana_unlocked_desc: "[Concept('concept_building', '$concept_buildings$')] owned by [SCOPE.sCompany('relevant_company').GetName] may now begin producing @prestige_good_gate_generic_mana! #b $prestige_good_gate_generic_mana$#!"
+ notification_prestige_good_gate_generic_mana_unlocked_tooltip: "#header $notification_prestige_good_gate_generic_mana_unlocked_name$#!\n$TOOLTIP_DELIMITER$\n$notification_prestige_good_gate_generic_mana_unlocked_desc$"

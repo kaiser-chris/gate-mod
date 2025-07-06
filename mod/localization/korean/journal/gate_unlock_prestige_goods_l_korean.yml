@@ -1,0 +1,8 @@
+﻿l_korean:
+# Generic Mana
+ je_prestige_goods_gate_mana: "$prestige_good_gate_generic_mana$" #deepl:164293173
+ je_prestige_goods_gate_mana_reason: "[SCOPE.sCompany('relevant_company').GetName] 는 우리 경제의 중요한 주체로 자리 잡았습니다. 이 회사는 현재의 번영을 활용하여 @prestige_good_gate_generic_mana! #b  $prestige_good_gate_generic_mana$ #! 의 자체 브랜드를 개발하고자 합니다. 성공한다면 글로벌 @mana! #b  $mana$ #! 시장에서 경쟁력을 확대할 수 있을 것입니다." #deepl:1214168212
+ je_prestige_goods_gate_mana_goal: "#v [GetPlayer.MakeScope.ScriptValue('prestige_good_journal_entry_months')] 개월 동안 다음을 유지하세요#! (현재 #v [ROOT.GetCountry.MakeScope.Var('prestige_mana_timer_var').GetValue] #! ): #들여쓰기_새줄:3 " #deepl:3762588357
+ je_prestige_goods_gate_mana_complete_tt: "#b $je_prestige_goods_gate_mana$ #! [concept_journal_entry]" #deepl:444495528
+ je_prestige_goods_gate_mana_reward_tt: "[SCOPE.sCompany('relevant_company').GetName] 를 생성할 수 있습니다 @prestige_good_gate_generic_mana! #b $prestige_good_gate_generic_mana$#!" #deepl:1301396449
+ not_prestige_good_gate_generic_mana_var_tt: "#b 아닌#! 이미 개발 @prestige_good_gate_generic_mana! #b $prestige_good_gate_generic_mana$#!" #deepl:3717181701

@@ -1,0 +1,8 @@
+﻿l_simp_chinese:
+# Generic Mana
+ je_prestige_goods_gate_mana: "$prestige_good_gate_generic_mana$" #deepl:164293173
+ je_prestige_goods_gate_mana_reason: "[SCOPE.sCompany('relevant_company').GetName] 已成为我国经济中的重要角色。该公司力图利用当前的繁荣发展自己的品牌    。如果成功，它将能够扩大其在全球    市场上的竞争力。@prestige_good_gate_generic_mana! #b $prestige_good_gate_generic_mana$#! @mana! #b $mana$#! " #deepl:1214168212
+ je_prestige_goods_gate_mana_goal: "维持#v [GetPlayer.MakeScope.ScriptValue('prestige_good_journal_entry_months')] 个月#! （目前为#v [ROOT.GetCountry.MakeScope.Var('prestige_mana_timer_var').GetValue] #! ）：#indent_newline:3 " #deepl:3762588357
+ je_prestige_goods_gate_mana_complete_tt: "已完成#b $je_prestige_goods_gate_mana$ #! [concept_journal_entry]" #deepl:444495528
+ je_prestige_goods_gate_mana_reward_tt: "[SCOPE.sCompany('relevant_company').GetName] 将能够生产@prestige_good_gate_generic_mana! #b $prestige_good_gate_generic_mana$#!" #deepl:1301396449
+ not_prestige_good_gate_generic_mana_var_tt: "#b 难道#! 已经开发出@prestige_good_gate_generic_mana! #b $prestige_good_gate_generic_mana$#!" #deepl:3717181701

@@ -1,10 +1,12 @@
 ﻿company_gate_dwarven_mining_guild = {
 	icon = "gfx/interface/icons/company_icons/gate_dwarven_mining_guild.dds"
-	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
 	
 	flavored_company = yes
 
-	preferred_headquarters = { STATE_LOWER_EGYPT }
+	preferred_headquarters = {
+		STATE_TYROL
+	}
 
 	building_types = {
 		# Dwarven Mines
