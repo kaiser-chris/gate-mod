@@ -1,0 +1,8 @@
+﻿l_german:
+# Generic Mana
+ je_prestige_goods_gate_mana: "$prestige_good_gate_generic_mana$" #deepl:164293173
+ je_prestige_goods_gate_mana_reason: "[SCOPE.sCompany('relevant_company').GetName] hat sich als ein wichtiger Akteur in unserer Wirtschaft etabliert. Das Unternehmen ist bestrebt, seinen derzeitigen Wohlstand zu nutzen, um seine eigene Marke @prestige_good_gate_generic_mana! #b  $prestige_good_gate_generic_mana$ #! zu entwickeln. Wenn dies gelingt, wird es seine Wettbewerbsfähigkeit auf dem globalen @mana! #b  $mana$ #! Markt ausbauen können." #deepl:1214168212
+ je_prestige_goods_gate_mana_goal: "Pflegen Sie Folgendes für #v [GetPlayer.MakeScope.ScriptValue('prestige_good_journal_entry_months')] Monate#! (derzeit #v [ROOT.GetCountry.MakeScope.Var('prestige_mana_timer_var').GetValue] #! ): #indent_newline:3 " #deepl:3762588357
+ je_prestige_goods_gate_mana_complete_tt: "Hat die #b $je_prestige_goods_gate_mana$ #! abgeschlossen. [concept_journal_entry]" #deepl:444495528
+ je_prestige_goods_gate_mana_reward_tt: "[SCOPE.sCompany('relevant_company').GetName] wird @prestige_good_gate_generic_mana! produzieren können. #b $prestige_good_gate_generic_mana$#!" #deepl:1301396449
+ not_prestige_good_gate_generic_mana_var_tt: "Hat #b nicht bereits#! entwickelt @prestige_good_gate_generic_mana! #b $prestige_good_gate_generic_mana$#!" #deepl:3717181701
