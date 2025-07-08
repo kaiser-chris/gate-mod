@@ -4,14 +4,34 @@
     progressiveness = 0
 
     ai_will_do = {
+        is_gate_planet_country = no
         OR = {
-            has_ruling_interest_group = ig_landowners
-            has_ruling_interest_group = ig_industrialists
-            ruler ?= {
+            AND = {
                 OR = {
-                    culture = cu:vampire
-                    religion = rel:gate_lunar_masquerade
+                    has_journal_entry = je_gate_vampire_emergence
+                    has_variable = gate_had_eternal_monarchy
                 }
+                OR = {
+                    has_ruling_interest_group = ig_landowners
+                    has_ruling_interest_group = ig_industrialists
+                    has_ruling_interest_group = ig_petty_bourgeoisie
+                    ruler ?= {
+                        OR = {
+                            culture = cu:vampire
+                            religion = rel:gate_lunar_masquerade
+                        }
+                    }
+                }
+            }
+            AND = {
+                has_global_variable = gate_vampire_monarchy_happened
+                overlord ?= {
+                    has_law = law_type:law_gate_vampire_monarchy
+                }
+            }
+            AND = {
+                has_global_variable = gate_vampire_monarchy_happened
+                has_ruling_interest_group = ig_landowners
             }
         }
     }
@@ -163,6 +183,14 @@
                 add_ideology = ideology_gate_vampire_surpremacists
             }
         }
+        if = {
+            limit = {
+                NOT = {
+                    has_global_variable = gate_vampire_monarchy_happened
+                }
+            }
+            set_global_variable = gate_vampire_monarchy_happened
+        }
     }
 
     on_deactivate = {
@@ -173,6 +201,7 @@
         OR = {
             has_journal_entry = je_gate_vampire_emergence
             has_variable = gate_had_eternal_monarchy
+            has_global_variable = gate_vampire_monarchy_happened
         }
     }
 

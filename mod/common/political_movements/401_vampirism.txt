@@ -8,8 +8,16 @@
 	}
 	
 	creation_trigger = {
-		has_variable = gate_character_vampire
 		is_gate_planet_country = no
+		OR = {
+			has_variable = gate_character_vampire
+			AND = {
+				has_global_variable = gate_vampire_monarchy_happened
+				overlord ?= {
+					has_law = law_type:law_gate_vampire_monarchy
+				}
+			}
+		}
 	}
 
 	creation_weight = {
