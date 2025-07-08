@@ -17,13 +17,16 @@
 		building_dwarven_sulfur_mine
 
 		# Base Game Mines
-		building_coal_mine
 		building_iron_mine
 		building_gold_mine
+	}
+
+	extension_building_types = {
+		building_coal_mine
 		building_lead_mine
 		building_sulfur_mine
 	}
-	
+
 	potential = {
 		c:GATE_MK ?= this
 	}
@@ -47,6 +50,20 @@
 				}
 				level >= 2
 			}
+		}
+	}
+
+	possible_prestige_goods = {
+		prestige_good_gate_dwarven_iron
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_gate_dwarven_iron_complete_tt
+			has_variable = gate_prestige_good_generic_mana
+		}
+		owner ?= {
+			has_technology_researched = simple_rune_carving
 		}
 	}
 	

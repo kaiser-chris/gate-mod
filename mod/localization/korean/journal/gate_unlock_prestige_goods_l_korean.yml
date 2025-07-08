@@ -1,8 +1,22 @@
 ﻿l_korean:
-# Generic Mana
+# Generic Mana Crystals
  je_prestige_goods_gate_mana: "$prestige_good_gate_generic_mana$" #deepl:164293173
  je_prestige_goods_gate_mana_reason: "[SCOPE.sCompany('relevant_company').GetName] 는 우리 경제의 중요한 주체로 자리 잡았습니다. 이 회사는 현재의 번영을 활용하여 @prestige_good_gate_generic_mana! #b  $prestige_good_gate_generic_mana$ #! 의 자체 브랜드를 개발하고자 합니다. 성공한다면 글로벌 @mana! #b  $mana$ #! 시장에서 경쟁력을 확대할 수 있을 것입니다." #deepl:1214168212
  je_prestige_goods_gate_mana_goal: "#v [GetPlayer.MakeScope.ScriptValue('prestige_good_journal_entry_months')] 개월 동안 다음을 유지하세요#! (현재 #v [ROOT.GetCountry.MakeScope.Var('prestige_mana_timer_var').GetValue] #! ): #들여쓰기_새줄:3 " #deepl:3762588357
  je_prestige_goods_gate_mana_complete_tt: "#b $je_prestige_goods_gate_mana$ #! [concept_journal_entry]" #deepl:444495528
  je_prestige_goods_gate_mana_reward_tt: "[SCOPE.sCompany('relevant_company').GetName] 를 생성할 수 있습니다 @prestige_good_gate_generic_mana! #b $prestige_good_gate_generic_mana$#!" #deepl:1301396449
  not_prestige_good_gate_generic_mana_var_tt: "#b 아닌#! 이미 개발 @prestige_good_gate_generic_mana! #b $prestige_good_gate_generic_mana$#!" #deepl:3717181701
+ # Generic Golems
+ je_prestige_goods_gate_golem: "$prestige_good_gate_generic_golem$" #deepl:4171349388
+ je_prestige_goods_gate_golem_reason: "[SCOPE.sCompany('relevant_company').GetName] 는 우리 경제의 중요한 주체로 자리 잡았습니다. 이 회사는 현재의 번영을 활용하여 @prestige_good_gate_generic_golem! #b  $prestige_good_gate_generic_golem$ #! 의 자체 브랜드를 개발하고자 합니다. 성공한다면 글로벌 @golem! #b  $golem$ #! 시장에서 경쟁력을 확대할 수 있을 것입니다." #deepl:2372760523
+ je_prestige_goods_gate_golem_goal: "#v [GetPlayer.MakeScope.ScriptValue('prestige_good_journal_entry_months')] 개월 동안 다음을 유지하세요#! (현재 #v [ROOT.GetCountry.MakeScope.Var('prestige_golem_timer_var').GetValue] #! ): #들여쓰기_새줄:3 " #deepl:4190822651
+ je_prestige_goods_gate_golem_complete_tt: "#b $je_prestige_goods_gate_golem$ #! [concept_journal_entry]" #deepl:1444999603
+ je_prestige_goods_gate_golem_reward_tt: "[SCOPE.sCompany('relevant_company').GetName] 를 생성할 수 있습니다 @prestige_good_gate_generic_golem! #b $prestige_good_gate_generic_golem$#!" #deepl:4253425780
+ not_prestige_good_gate_generic_golem_var_tt: "#b 아닌#! 이미 개발 @prestige_good_gate_generic_golem! #b $prestige_good_gate_generic_golem$#!" #deepl:1955093548
+# Dwarven Iron
+ je_prestige_goods_gate_dwarven_iron: "$prestige_good_gate_dwarven_iron$" #deepl:2319005322
+ je_prestige_goods_gate_dwarven_iron_reason: "[SCOPE.sCompany('relevant_company').GetName] 는 우리 경제의 중요한 주체로 자리 잡았습니다. 이 회사는 현재의 번영을 활용하여 @prestige_good_gate_dwarven_iron! #b  $prestige_good_gate_dwarven_iron$ #! 의 자체 브랜드를 개발하고자 합니다. 성공한다면 글로벌 @iron! #b  $iron$ #! 시장에서 경쟁력을 확대할 수 있을 것입니다." #deepl:761316536
+ je_prestige_goods_gate_dwarven_iron_goal: "#v [GetPlayer.MakeScope.ScriptValue('prestige_good_journal_entry_months')] 개월 동안 다음을 유지하세요#! (현재 #v [ROOT.GetCountry.MakeScope.Var('prestige_dwarven_iron_timer_var').GetValue] #! ): #들여쓰기_새줄:3 " #deepl:3693539501
+ je_prestige_goods_gate_dwarven_iron_complete_tt: "#b $je_prestige_goods_gate_dwarven_iron$ #! [concept_journal_entry]" #deepl:1270873347
+ je_prestige_goods_gate_dwarven_iron_reward_tt: "[SCOPE.sCompany('relevant_company').GetName] 를 생성할 수 있습니다 @prestige_good_gate_dwarven_iron! #b $prestige_good_gate_dwarven_iron$#!" #deepl:165782984
+ not_prestige_good_gate_dwarven_iron_var_tt: "#b 아닌#! 이미 개발 @prestige_good_gate_dwarven_iron! #b $prestige_good_gate_dwarven_iron$#!" #deepl:2583670572

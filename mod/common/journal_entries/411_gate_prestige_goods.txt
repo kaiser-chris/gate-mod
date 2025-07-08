@@ -126,3 +126,262 @@
 
 	should_be_pinned_by_default = yes
 }
+
+je_prestige_goods_gate_golem = {
+	icon = "gfx/interface/icons/goods_icons/prestige_goods/gate_prestige_golems.dds"
+
+	group = je_group_technology
+
+	is_shown_when_inactive = {
+		has_dlc_feature = mp1_content
+		any_company = {
+			can_potentially_produce_prestige_goods = prestige_good_gate_generic_golem
+			is_producing_prestige_goods = no
+			NOT = {
+				has_variable = gate_prestige_good_generic_golem
+			}
+		}
+	}
+
+	possible = {
+		any_company = {
+			can_potentially_produce_prestige_goods = prestige_good_gate_generic_golem
+			is_producing_prestige_goods = no
+			company_is_prosperous = yes
+			NOT = {
+				custom_tooltip = {
+					text = not_prestige_good_gate_generic_golem_var_tt
+					has_variable = gate_prestige_good_generic_golem
+				}
+			}
+		}
+	}
+
+	immediate = {
+		random_company = {
+			limit = {
+				can_potentially_produce_prestige_goods = prestige_good_gate_generic_golem
+				is_producing_prestige_goods = no
+				company_is_prosperous = yes
+				NOT = {
+					has_variable = gate_prestige_good_generic_golem
+				}
+			}
+			save_scope_as = relevant_company
+		}
+		set_variable = {
+			name = prestige_golem_timer_var
+			value = 0
+		}
+		g:golem = {
+			save_scope_as = relevant_goods
+		}
+	}
+
+	complete = {
+		trigger_if = {
+			limit = {
+				has_variable = prestige_golem_timer_var
+			}
+			scope:journal_entry = {
+				is_goal_complete = yes
+			}
+		}
+		trigger_if = {
+			limit = {
+				exists = scope:relevant_company
+			}
+			scope:relevant_company ?= {
+				company_is_prosperous = yes
+			}
+		}
+		trigger_if = {
+			limit = {
+				exists = scope:relevant_goods
+			}
+			custom_tooltip = {
+				text = relevant_goods_production_rank_tt
+				"goods_production_rank(scope:relevant_goods)" <= 3
+			}
+		}
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			if = {
+				limit = {
+					scope:relevant_company ?= {
+						company_is_prosperous = yes
+					}
+					"goods_production_rank(scope:relevant_goods)" <= 3
+				}
+				change_variable = { name = prestige_golem_timer_var add = 1 }
+			}
+		}
+	}
+
+	on_complete = {
+		if = {
+			limit = {
+				exists = scope:relevant_company
+			}
+			custom_tooltip = {
+				text = je_prestige_goods_gate_golem_reward_tt
+				scope:relevant_company ?= {
+					set_variable = gate_prestige_good_generic_golem
+				}
+			}
+		}
+		post_notification = prestige_good_gate_generic_golem_unlocked
+	}
+
+	invalid = {
+		NOT = {
+			exists = scope:relevant_company
+		}
+	}
+
+	current_value = {
+		value = root.var:prestige_golem_timer_var
+	}
+
+	goal_add_value = {
+		add = prestige_good_journal_entry_months
+	}
+
+	progressbar = yes
+
+	weight = 1000
+
+	should_be_pinned_by_default = yes
+}
+
+je_prestige_goods_gate_dwarven_iron = {
+	icon = "gfx/interface/icons/goods_icons/prestige_goods/gate_prestige_magic_iron.dds"
+
+	group = je_group_technology
+
+	is_shown_when_inactive = {
+		has_dlc_feature = mp1_content
+		any_company = {
+			can_potentially_produce_prestige_goods = prestige_good_gate_dwarven_iron
+			is_producing_prestige_goods = no
+			NOT = {
+				has_variable = gate_prestige_good_dwarven_iron
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = simple_rune_carving
+		any_company = {
+			can_potentially_produce_prestige_goods = prestige_good_gate_dwarven_iron
+			is_producing_prestige_goods = no
+			company_is_prosperous = yes
+			NOT = {
+				custom_tooltip = {
+					text = not_prestige_good_gate_dwarven_iron_var_tt
+					has_variable = gate_prestige_good_dwarven_iron
+				}
+			}
+		}
+	}
+
+	immediate = {
+		random_company = {
+			limit = {
+				can_potentially_produce_prestige_goods = prestige_good_gate_dwarven_iron
+				is_producing_prestige_goods = no
+				company_is_prosperous = yes
+				NOT = {
+					has_variable = gate_prestige_good_dwarven_iron
+				}
+			}
+			save_scope_as = relevant_company
+		}
+		set_variable = {
+			name = prestige_golem_timer_var
+			value = 0
+		}
+		g:iron = {
+			save_scope_as = relevant_goods
+		}
+	}
+
+	complete = {
+		trigger_if = {
+			limit = {
+				has_variable = prestige_golem_timer_var
+			}
+			scope:journal_entry = {
+				is_goal_complete = yes
+			}
+		}
+		trigger_if = {
+			limit = {
+				exists = scope:relevant_company
+			}
+			scope:relevant_company ?= {
+				company_is_prosperous = yes
+			}
+		}
+		trigger_if = {
+			limit = {
+				exists = scope:relevant_goods
+			}
+			custom_tooltip = {
+				text = relevant_goods_production_rank_tt
+				"goods_production_rank(scope:relevant_goods)" <= 3
+			}
+		}
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			if = {
+				limit = {
+					scope:relevant_company ?= {
+						company_is_prosperous = yes
+					}
+					"goods_production_rank(scope:relevant_goods)" <= 3
+				}
+				change_variable = { name = prestige_golem_timer_var add = 1 }
+			}
+		}
+	}
+
+	on_complete = {
+		if = {
+			limit = {
+				exists = scope:relevant_company
+			}
+			custom_tooltip = {
+				text = je_prestige_goods_gate_golem_reward_tt
+				scope:relevant_company ?= {
+					set_variable = gate_prestige_good_dwarven_iron
+				}
+			}
+		}
+		post_notification = prestige_good_gate_dwarven_iron_unlocked
+	}
+
+	invalid = {
+		NOT = {
+			exists = scope:relevant_company
+		}
+	}
+
+	current_value = {
+		value = root.var:prestige_golem_timer_var
+	}
+
+	goal_add_value = {
+		add = prestige_good_journal_entry_months
+	}
+
+	progressbar = yes
+
+	weight = 1000
+
+	should_be_pinned_by_default = yes
+}
