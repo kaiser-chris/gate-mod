@@ -24,16 +24,15 @@
 	}
 	
 	attainable = {
-		is_magic_country = yes
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			is_magic_country = yes
+		}
 	}
 
 	possible = { 
 		any_scope_state = {
 			any_scope_building = {
-				OR = {
-					is_building_type = building_mana_extractor
-					is_building_type = building_gate_mana_well
-				}
+				is_building_type = building_mana_extractor
 				level >= 2
 			}
 		}
@@ -42,10 +41,7 @@
 	ai_will_do = {
 		any_scope_state = {
 			any_scope_building = {
-				OR = {
-					is_building_type = building_mana_extractor
-					is_building_type = building_gate_mana_well
-				}
+				is_building_type = building_mana_extractor
 				level >= 3
 			}
 		}
@@ -53,7 +49,7 @@
 
 	prestige_goods_trigger = {
 		custom_tooltip = {
-			text = je_prestige_goods_fish_complete_tt
+			text = je_prestige_goods_gate_mana_complete_tt
 			has_variable = gate_prestige_good_generic_mana
 		}
 	}
@@ -64,6 +60,77 @@
 
 	possible_prestige_goods = {
 		prestige_good_gate_generic_mana
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+company_gate_generic_golem_production = {
+	icon = "gfx/interface/icons/company_icons/gate_generic_golem_production.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	building_types = {
+		building_golem_workshop
+	}
+
+	uses_dynamic_naming = yes
+	dynamic_company_type_names = {
+		dynamic_company_type_company
+		dynamic_company_type_consortium
+		dynamic_company_type_guild
+		dynamic_company_type_society
+		dynamic_company_type_syndicate
+	}
+
+	extension_building_types = {
+		building_mana_core_workshop
+	}
+
+	potential = {
+		is_magic_country = yes
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			is_magic_country = yes
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			any_scope_building = {
+				is_building_type = building_golem_workshop
+				level >= 2
+			}
+		}
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			any_scope_building = {
+				is_building_type = building_golem_workshop
+				level >= 3
+			}
+		}
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_gate_golem_complete_tt
+			has_variable = gate_prestige_good_generic_golem
+		}
+	}
+
+	prosperity_modifier = {
+		unit_army_offense_mult = 0.1
+		unit_kill_rate_add = 0.1
+
+	}
+
+	possible_prestige_goods = {
+		prestige_good_gate_generic_golem
 	}
 
 	ai_weight = {

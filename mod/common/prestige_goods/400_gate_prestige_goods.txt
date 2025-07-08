@@ -1,7 +1,17 @@
-﻿# prestige_goods types
-
-prestige_good_gate_generic_mana = {
+﻿prestige_good_gate_generic_mana = {
 	base_good = mana
 	prestige_bonus = 0.1
 	texture = "gfx/interface/icons/goods_icons/prestige_goods/gate_prestige_mana_crystals.dds"
+}
+
+prestige_good_gate_generic_golem = {
+	base_good = golem
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/gate_prestige_golems.dds"
+}
+
+prestige_good_gate_dwarven_iron = {
+	base_good = iron
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/gate_prestige_magic_iron.dds"
 }
