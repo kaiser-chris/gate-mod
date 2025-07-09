@@ -391,6 +391,33 @@ add_magic_innovation = {
 	}
 }
 
+add_maximum_magic_innovation = {
+	save_temporary_scope_value_as = {
+		name = added_innovation
+		value = $amount$
+	}
+	custom_tooltip = {
+		text = effect_add_maximum_magic_innovation
+		if = {
+			limit = {
+				exists = var:gate_country_magic_innovation_max
+			}
+			change_variable = {
+				name = gate_country_magic_innovation_max
+				add = $amount$
+			}
+		}
+		else = {
+			set_variable = {
+				name = gate_country_magic_innovation_max
+				value = $amount$
+			}
+		}
+	}
+}
+
+
+
 gate_hire_researcher = {
 	trigger_event = {
 		id = researching_magic.4

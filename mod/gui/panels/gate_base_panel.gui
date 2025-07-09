@@ -378,31 +378,86 @@ types gate_base_panel_types {
         margin = { 20 20 }
         spacing = 20
 
+        # Projects
         vbox = {
             layoutpolicy_vertical = expanding
             layoutpolicy_horizontal = expanding
             spacing = 20
+            vbox = {
+                margin_top = -2
+                layoutpolicy_vertical = expanding
+                layoutpolicy_horizontal = expanding
+                background = {
+                    using = simple_frame
+                }
+
+                default_header_clean_faded = {
+                    blockoverride "text" {
+                        raw_text = "[Concept('concept_gate_project', Localize('concept_gate_projects'))]"
+                    }
+                    layoutpolicy_horizontal = expanding
+                }
+                vbox = {
+                    layoutpolicy_vertical = expanding
+
+                    gate_left_icon_button = {
+                        blockoverride "button_content" {
+                            text = button_project_expand_research_institute
+                        }
+                        blockoverride "tooltip" {
+                            tooltipwidget = {
+                                RegularTooltip = {
+                                    blockoverride "tooltip_content" {
+                                        custom_tooltip_textbox = {
+                                            text = "[concept_gate_project]"
+                                            default_format = "#header"
+                                        }
+                                        custom_tooltip_textbox_with_empty_line = {
+                                            text = je_gate_project_expand_research_institute_description
+                                        }
+                                        custom_tooltip_textbox = {
+                                            text = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(Country.MakeScope).End)]"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        blockoverride "datacontext" {
+                            datacontext = "[GetScriptedGui('gg_project_expand_research_institute')]"
+                        }
+                        blockoverride "icon" {
+                            texture = "gfx/interface/icons/mr_icons/gate_magic_researcher.dds"
+                        }
+                    }
+                }
+            }
+        }
+
+        # Domains
+        vbox = {
+            layoutpolicy_vertical = expanding
+            spacing = 20
 
             vbox = {
                 margin_top = -2
-                layoutpolicy_horizontal = expanding
                 layoutpolicy_vertical = expanding
                 background = {
                     using = simple_frame
                 }
 
                 default_header_clean_faded = {
-                    layoutpolicy_horizontal = expanding
                     blockoverride "text" {
                         text = gg_header_magic_ethic
                     }
+                    blockoverride "size" {
+                        size = { 280 45 }
+                    }
                 }
                 vbox = {
-                    layoutpolicy_horizontal = expanding
                     layoutpolicy_vertical = expanding
 
-                    hbox = {
-                        hbox = {
+                    vbox = {
+                        vbox = {
                             datamodel = "[Country.GetTimedModifiers]"
 
                             item = {
@@ -412,9 +467,6 @@ types gate_base_panel_types {
                         gate_ethic = {
                             blockoverride "visible" {
                                 visible = "[Not(GetScriptedGui('sgui_has_one_ethic').IsShown(GuiScope.SetRoot(Country.MakeScope).End))]"
-                            }
-                            blockoverride "name" {
-                                text = gg_ethic_empty_slot
                             }
                             blockoverride "tooltip" {
                                 tooltip = gg_ethic_empty_slot_tooltip
@@ -426,9 +478,6 @@ types gate_base_panel_types {
                             blockoverride "visible" {
                                 visible = "[Not(GetScriptedGui('sgui_has_two_ethics').IsShown(GuiScope.SetRoot(Country.MakeScope).End))]"
                             }
-                            blockoverride "name" {
-                                text = gg_ethic_empty_slot
-                            }
                             blockoverride "tooltip" {
                                 tooltip = gg_ethic_empty_slot_tooltip
                             }
@@ -438,9 +487,6 @@ types gate_base_panel_types {
                         gate_ethic = {
                             blockoverride "visible" {
                                 visible = "[Not(GetScriptedGui('sgui_has_three_ethics').IsShown(GuiScope.SetRoot(Country.MakeScope).End))]"
-                            }
-                            blockoverride "name" {
-                                text = gg_ethic_empty_slot
                             }
                             blockoverride "tooltip" {
                                 tooltip = gg_ethic_empty_slot_tooltip
@@ -452,12 +498,13 @@ types gate_base_panel_types {
             }
         }
 
+        # Countries
         vbox = {
             maximumsize = { 570 -1 }
             minimumsize = { 570 -1 }
-            spacing = 10
+            spacing = 0
             margin_top = -2
-            margin_bottom = 10
+            margin_bottom = 2
             layoutpolicy_vertical = expanding
             layoutpolicy_horizontal = expanding
 
@@ -483,7 +530,7 @@ types gate_base_panel_types {
 
                 scrollwidget = {
                     flowcontainer = {
-                        minimumsize = { 570 -1 }
+                        minimumsize = { 570 300 }
                         direction = vertical
                         spacing = 10
                         margin = { 20 20 }
@@ -786,8 +833,8 @@ types gate_base_panel_types {
     }
 
     type gate_ethic = container {
-        minimumsize = { 260 -1 }
-        maximumsize = { 260 -1 }
+        minimumsize = { 180 -1 }
+        maximumsize = { 180 -1 }
         block "visible" {
             visible = "[Or5(
                             EqualTo_string(TimedModifier.GetName, GetStaticModifier('ethic_neutral').GetName),
@@ -799,41 +846,25 @@ types gate_base_panel_types {
         }
         flowcontainer = {
             parentanchor = hcenter
-            margin = { 20 20 }
             direction = vertical
-            minimumsize = { 260 -1 }
-            maximumsize = { 260 -1 }
+            minimumsize = { 180 -1 }
+            maximumsize = { 180 -1 }
 
             flowcontainer = {
                 direction = vertical
-                minimumsize = { 230 -1 }
-                maximumsize = { 230 -1 }
+                minimumsize = { 180 -1 }
+                maximumsize = { 180 -1 }
                 margin = { 15 15 }
                 block "tooltip" {
                     tooltip = "[TimedModifier.GetTooltip]"
                 }
 
-
                 widget = {
-                    size = { 230 30 }
-                    parentanchor = hcenter
-                    textbox = {
-                        block "name" {
-                            text = "[TimedModifier.GetName]"
-                        }
-                        align = center|nobaseline
-                        parentanchor = top|hcenter
-                        default_format = "#header"
-                        size = { 230 20 }
-                    }
-                }
-
-                widget = {
-                    size = { 200 200 }
+                    size = { 160 160 }
                     parentanchor = hcenter
                     icon = {
                         parentanchor = hcenter|vcenter
-                        size = { 120 120 }
+                        size = { 100 100 }
                         block "icon" {
                             texture = "[TimedModifier.GetIcon]"
                         }
@@ -843,9 +874,9 @@ types gate_base_panel_types {
                     }
                 }
 
-                background = {
-                    using = entry_bg
-                }
+                # background = {
+                #     using = entry_bg
+                # }
             }
         }
     }

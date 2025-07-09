@@ -608,119 +608,6 @@ types gate_shared {
         }
     }
 
-    type missing_dependency_popup = widget {
-        size = { 100% 100% }
-        using = clickthrough_blocker
-
-        enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
-
-        background = {
-            using = dark_area
-            alpha = 0.9
-        }
-
-        block "visible" {
-            visible = "[And4(
-                            Not(GetScriptedGui('gate_dependency_cmf').IsValid(GuiScope.End)),
-                            IsInGame,
-                            Not(IsPauseMenuShown),
-                            Not(IsGameOverScreenShown)
-                       )]"
-        }
-
-        window = {
-            layer = popups
-            using = clickthrough_blocker
-            filter_mouse = all
-            allow_outside = yes
-            parentanchor = hcenter|vcenter
-
-            size = { 700 400 }
-
-
-            widget = {
-                size = { 100% 100% }
-
-                background = {
-                    texture = "gfx/interface/backgrounds/popup_bg.dds"
-                    spriteType = Corneredstretched
-                    spriteborder = { 90 90 }
-                    texture_density = 2
-
-                    modify_texture = {
-                        texture = "gfx/interface/backgrounds/default_bg_shading.dds"
-                        spriteType = Corneredstretched
-                        spriteborder = { 0 0 }
-                        blend_mode = overlay
-                    }
-                    modify_texture = {
-                        using = texture_velvet
-                    }
-                }
-            }
-
-            ### HEADER
-            widget = {
-                size = { 100% 82 }
-
-                popup_top_header = {}
-
-                textbox = {
-                    block "first_line_position" {
-                        position = { 0 24 }
-                    }
-                    size = { 75% 40 }
-                    block "title" {
-                        text = gg_missing_dependency_header
-                    }
-                    elide = right
-                    fontsize_min = 14
-                    parentanchor = hcenter
-                    align = hcenter|nobaseline
-                    using = header_font
-                    using = header_font_size
-                    default_format = "#header"
-                }
-
-                block "second_line" {}
-            }
-
-            ### FRAME
-            popup_bg_frame = {}
-
-            ### Actual stuff
-            textbox = {
-                block "body" {
-                    text = gg_missing_dependency_body
-                }
-                position = { 30 90 }
-                size = { 640 280 }
-                parentanchor = top
-                align = top|left
-                elide = right
-                multiline = yes
-                using = fontsize_large
-            }
-
-            #Close button
-            button_icon_round = {
-                parentanchor = top|right
-                size = { 42 42 }
-                position = { -5 13 }
-
-                enabled = no
-                tooltip = gg_missing_dependency_tooltip
-
-                blockoverride "icon" {
-                    texture = "gfx/interface/buttons/button_icons/close.dds"
-                }
-                blockoverride "icon_size" {
-                    size = { 100% 100% }
-                }
-            }
-        }
-    }
-
     type gate_building_details = flowcontainer {
         direction = vertical
         using = default_list_position
@@ -1234,6 +1121,89 @@ types gate_shared {
                     align = right|nobaseline
                 }
             }
+
+        }
+    }
+
+    type gate_project_button = widget {
+        visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Country.MakeScope).End)]"
+        block "size" {
+            size = { 350 45 }
+        }
+        button = {
+            block "button_content" {}
+            block "button_style" {
+                using = default_button_primary_big_action
+            }
+            block "size" {
+                size = { 350 45 }
+            }
+            onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
+            enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
+        }
+        icon = {
+            size = { 102% 110% }
+            block "button_highlight_visible" {
+                visible = no
+            }
+            using = highlighted_square_selection
+            background = {
+                texture = "gfx/interface/buttons/glow_button_border.dds"
+                spriteType = CorneredStretched
+                framesize = { 150 150 }
+                spriteborder = { 60 60 }
+                frame = 3
+                using = frame_small_mask
+            }
+        }
+    }
+
+    type gate_left_icon_button = widget {
+        block "datacontext" {}
+        block "size" {
+            size = { 350 45 }
+        }
+        block "tooltip" {
+            tooltipwidget = {
+                RegularTooltip = {
+                    blockoverride "tooltip_content" {
+                        custom_tooltip_textbox = {
+                            text = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(Country.MakeScope).End)]"
+                        }
+                    }
+                }
+            }
+        }
+        gate_project_button = {}
+        icon = {
+            enabled = yes
+            parentanchor = left|vcenter
+            position = { -10 0 }
+            size = { 60 60 }
+            block "background" {
+                texture = "gfx/interface/backgrounds/round_button_bg.dds"
+            }
+            icon = {
+                parentanchor = center
+                block "icon_size" {
+                    size = { 60% 60% }
+                }
+                block "icon" {
+                    #texture = ""
+                }
+            }
+            icon = {
+                block "icon_highlight_visible" {
+                    visible = no
+                }
+                size = { 100% 100% }
+                using = highlighted_circle_selection_big
+            }
+        }
+    }
+
+    type gate_button_tooltip = RegularTooltip {
+        blockoverride "tooltip_content" {
 
         }
     }

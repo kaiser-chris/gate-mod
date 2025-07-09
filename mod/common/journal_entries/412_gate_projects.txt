@@ -1,0 +1,87 @@
+﻿je_gate_project_expand_research_institute = {
+	icon = "gfx/interface/icons/event_icons/event_gate_project.dds"
+
+	group = je_group_gate_projects
+
+	immediate = {
+		set_variable = {
+			name = gate_magic_project_timer
+			value = 0
+		}
+
+	}
+
+	complete = {
+		trigger_if = {
+			limit = {
+				has_variable = gate_magic_project_timer
+			}
+			scope:journal_entry = {
+				is_goal_complete = yes
+			}
+		}
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			if = {
+				limit = {
+					has_magic_researcher = yes
+					capital = {
+						has_building = building_magic_research_institute
+					}
+				}
+				change_variable = {
+					name = gate_magic_project_timer
+					add = 1
+				}
+			}
+		}
+	}
+
+	invalid = {
+		hidden_trigger = {
+			NOT = {
+				has_variable = gate_magic_project
+			}
+		}
+	}
+
+	on_complete = {
+		add_maximum_magic_innovation = {
+			amount = 100
+		}
+		hidden_effect = {
+			gate_stop_magic_project = yes
+		}
+	}
+
+	fail = {
+		NOT = {
+			capital = {
+				has_building = building_magic_research_institute
+			}
+		}
+		not_has_magic_researcher = yes
+	}
+
+	on_fail = {
+		gate_stop_magic_project = yes
+	}
+
+	current_value = {
+		value = root.var:gate_magic_project_timer
+	}
+
+	goal_add_value = {
+		add = gate_project_journal_entry_medium
+	}
+
+	scripted_button = gate_project_button_stop
+
+	progressbar = yes
+
+	weight = 1000
+
+	should_be_pinned_by_default = yes
+}

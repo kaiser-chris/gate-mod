@@ -42,7 +42,12 @@ sgui_gate_base_tab_general = {
 	scope = country
 
 	is_shown = {
-		var:gate_base_panel_active_tab <= 1
+		OR = {
+			NOT = {
+				exists = var:gate_base_panel_active_tab
+			}
+			var:gate_base_panel_active_tab <= 1
+		}
 	}
 
 	effect = {
@@ -179,6 +184,7 @@ sgui_has_one_ethic = {
 	scope = country
 
 	is_shown = {
+		exists = var:magic_ethics
 		var:magic_ethics >= 1
 	}
 }
@@ -187,6 +193,7 @@ sgui_has_two_ethics = {
 	scope = country
 
 	is_shown = {
+		exists = var:magic_ethics
 		var:magic_ethics >= 2
 	}
 }
@@ -195,6 +202,7 @@ sgui_has_three_ethics = {
 	scope = country
 
 	is_shown = {
+		exists = var:magic_ethics
 		var:magic_ethics >= 3
 	}
 }

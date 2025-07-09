@@ -1,5 +1,6 @@
 ﻿l_korean:
  effect_add_magic_innovation: "[SCOPE.GetValue('added_innovation')|+=0] [concept_magic_innovation] 추가."
+ effect_add_maximum_magic_innovation: "[SCOPE.GetValue('added_innovation')|+=0] #bold 최대 매월 추가#! [concept_magic_innovation]" #deepl:295554505
  effect_add_mana_density: "[SCOPE.GetValue('added_mana_density')|+=0] [concept_mana_density] 추가."
  effect_learn_magic: "[SCOPE.sCountry('gate_magic_learner').GetName]가 [concept_magic_knowledge]를 배우고 있습니다."
  effect_gate_establish_treaty: "#bold [SCOPE.GetLocalVariable('gate_treaty_name').GetFlagName]#! [concept_treaty]를 [SCOPE.GetLocalVariable('gate_treaty_source').GetCountry.GetName]와(과) [SCOPE.GetLocalVariable('gate_treaty_target').GetCountry.GetName] 사이에 체결합니다."
@@ -10,3 +11,5 @@
  effect_gate_expedition_open_map: "[concept_gate_expedition_map] 개방."
  effect_gate_expedition_change_budget: "우리 [concept_gate_expedition_budget]이(가) [SCOPE.GetValue('budget_change')|+=0]만큼 변동됩니다."
  effect_gate_expedition_start_activity: "[SCOPE.GetValue('months')|0v]개월 동안 [Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')]를 시작합니다."
+ effect_gate_start_magic_project: "시작 #bold [SCOPE.GetLocalVariable('gate_project_name').GetFlagName] #! [concept_gate_project]" #deepl:1238736437
+ effect_gate_stop_magic_project: "현재 활성화 중지 [concept_gate_project]" #deepl:753901991
