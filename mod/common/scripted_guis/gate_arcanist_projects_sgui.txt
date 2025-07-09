@@ -1,0 +1,18 @@
+﻿gg_project_expand_research_institute = {
+    scope = country
+
+    is_valid = {
+        capital = {
+            has_building = building_magic_research_institute
+        }
+        is_magic_country = yes
+        has_magic_researcher = yes
+        not_has_active_magic_project = yes
+    }
+
+    effect = {
+        gate_start_magic_project = {
+            project = je_gate_project_expand_research_institute
+        }
+    }
+}

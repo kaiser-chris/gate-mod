@@ -1,0 +1,23 @@
+﻿gate_start_magic_project = {
+	custom_tooltip = {
+		text = effect_gate_start_magic_project
+		set_local_variable = {
+			name = gate_project_name
+			value = flag:$project$
+		}
+		add_journal_entry = {
+			type = $project$
+		}
+		set_variable = {
+			name = gate_magic_project
+			value = je:$project$
+		}
+	}
+}
+
+gate_stop_magic_project = {
+	custom_tooltip = {
+		text = effect_gate_stop_magic_project
+		remove_variable = gate_magic_project
+	}
+}

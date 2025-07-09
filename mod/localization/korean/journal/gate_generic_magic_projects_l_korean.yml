@@ -1,0 +1,9 @@
+﻿l_korean:
+# Generic Project
+ gate_project_button_stop: "프로젝트 중지" #deepl:2081085240
+ gate_project_button_stop_desc: "이 프로젝트를 중지하고 [concept_magic_researcher] 에서 새 프로젝트를 시작하도록 허용하세요." #deepl:2164579840
+ button_project_expand_research_institute: "마법 연구소 확장" #deepl:2761505813
+ je_gate_project_expand_research_institute: "매직 연구소 확장" #deepl:145765584
+ je_gate_project_expand_research_institute_reason: "[concept_magic_researcher] [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName] 는 현재 #bold $je_gate_project_expand_research_institute$ #! 에서 작업 중입니다.\n$gate_journal_delimiter$\n$je_gate_project_expand_research_institute_description$" #deepl:1211751475
+ je_gate_project_expand_research_institute_goal: "이 프로젝트는 #v [SCOPE.ScriptValue('gate_project_journal_entry_medium')] 개월 동안 진행됩니다#! (현재 #v [ROOT.GetCountry.MakeScope.Var('gate_magic_project_timer').GetValue] #! )" #deepl:404853970
+ je_gate_project_expand_research_institute_description: "[GetBuildingType('building_magic_research_institute').GetName] 프로젝트는 마술을 응용하는 새로운 방법을 연구하기 위한 노력의 핵심입니다. 이 프로젝트는 매월 적립할 수 있는 #bold 최대#! 금액( [concept_magic_innovation] )을 늘릴 것입니다." #deepl:1633805910

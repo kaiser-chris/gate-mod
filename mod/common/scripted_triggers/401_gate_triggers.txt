@@ -55,7 +55,7 @@ not_has_magic_gate = {
 
 # Trigger to check whether a state has mountains or not
 # Used to check for dwarven murk buildings
-is_mountainous_state = {
+is_dwarven_mountainous_state = {
 	OR = {
 		has_state_trait = state_trait_scottish_highlands
 		has_state_trait = state_trait_cascades
@@ -92,7 +92,7 @@ has_all_ethics = {
 	}
 }
 
-gate_can_hire_researcher = {
+can_hire_magic_researcher = {
 	AND = {
 		hidden_trigger = {
 			OR = {
@@ -111,6 +111,36 @@ gate_can_hire_researcher = {
 			NOT = {
 				has_variable = actively_hiring_magic_researcher
 			}
+		}
+	}
+}
+
+has_magic_researcher = {
+	custom_tooltip = {
+		text = trigger_gate_has_magic_researcher
+		has_variable = magic_researcher
+	}
+}
+not_has_magic_researcher = {
+	custom_tooltip = {
+		text = trigger_gate_not_has_magic_researcher
+		NOT = {
+			has_variable = magic_researcher
+		}
+	}
+}
+
+has_active_magic_project = {
+	custom_tooltip = {
+		text = trigger_gate_has_active_magic_project
+		has_variable = gate_magic_project
+	}
+}
+not_has_active_magic_project = {
+	custom_tooltip = {
+		text = trigger_gate_not_has_active_magic_project
+		NOT = {
+			has_variable = gate_magic_project
 		}
 	}
 }
