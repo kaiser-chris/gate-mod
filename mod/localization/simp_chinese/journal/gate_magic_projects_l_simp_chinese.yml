@@ -1,0 +1,13 @@
+﻿l_simp_chinese:
+# Shared
+ gate_project_button_stop: "停止项目" #deepl:2081085240
+ gate_project_button_stop_desc: "停止这个项目，让我们的[concept_magic_researcher] 开始一个新的项目。" #deepl:2164579840
+# Expand Magic Research Institute
+ button_project_expand_research_institute: "展开[GetBuildingType('building_magic_research_institute').GetNameNoFormatting]" #deepl:4164655069
+ je_gate_project_expand_research_institute: "扩大我们的[GetBuildingType('building_magic_research_institute').GetNameNoFormatting]" #deepl:1329624068
+ je_gate_project_expand_research_institute_reason: "[concept_magic_researcher] [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName] 目前正致力于#bold $je_gate_project_expand_research_institute$ #! 。\n$gate_journal_delimiter$\n$je_gate_project_expand_research_institute_description$" #deepl:1211751475
+ je_gate_project_expand_research_institute_goal: "该项目将持续#v [SCOPE.ScriptValue('gate_project_journal_entry_medium')] 个月#! （目前为#v [ROOT.GetCountry.MakeScope.Var('gate_magic_project_timer').GetValue] #! )" #deepl:404853970
+ je_gate_project_expand_research_institute_description: "[GetBuildingType('building_magic_research_institute').GetName] 是我们研究应用魔法新方法的核心。该项目将增加我们每月可赚取的#bold 最大#! [concept_magic_innovation] 。" #deepl:1633805910
+ gate_modifier_project_institute_new_wing: "新研究楼" #deepl:1936772017
+ gate_modifier_project_institute_improved_instruments: "改进仪器" #deepl:900242831
+ gate_modifier_project_institute_better_mana_conduits: "更好的法力导管" #deepl:2850600925

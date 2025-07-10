@@ -41,15 +41,47 @@
 
 	invalid = {
 		hidden_trigger = {
-			NOT = {
-				has_variable = gate_magic_project
+			OR = {
+				not_has_active_magic_project = yes
+				AND = {
+					has_modifier = gate_modifier_project_institute_new_wing
+					has_modifier = gate_modifier_project_institute_improved_instruments
+					has_modifier = gate_modifier_project_institute_better_mana_conduits
+				}
 			}
 		}
 	}
 
+	on_invalid = {
+		hidden_effect = {
+			gate_stop_magic_project = yes
+		}
+	}
+
 	on_complete = {
-		add_maximum_magic_innovation = {
-			amount = 100
+		if = {
+			limit = {
+				NOT = {
+					has_modifier = gate_modifier_project_institute_new_wing
+				}
+			}
+			add_modifier = gate_modifier_project_institute_new_wing
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_modifier = gate_modifier_project_institute_improved_instruments
+				}
+			}
+			add_modifier = gate_modifier_project_institute_improved_instruments
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_modifier = gate_modifier_project_institute_better_mana_conduits
+				}
+			}
+			add_modifier = gate_modifier_project_institute_better_mana_conduits
 		}
 		hidden_effect = {
 			gate_stop_magic_project = yes
