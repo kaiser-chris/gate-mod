@@ -25,12 +25,7 @@ gate_magic_innovation = {
 gate_magic_innovation_max = {
     value = gate_magic_innovation_max_base
     add = gate_magic_innovation_max_literacy
-    if = {
-        limit = {
-            exists = var:gate_country_magic_innovation_max
-        }
-        add = var:gate_country_magic_innovation_max
-    }
+    add = modifier:country_gate_magical_innovation_max_add
 }
 
 gate_magic_innovation_max_literacy = {

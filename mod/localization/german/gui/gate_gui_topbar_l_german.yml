@@ -2,7 +2,7 @@
  gg_topbar_magic_innovation: "gg_topbar_magische_innovation" #deepl:1922060619
  gg_topbar_magic_innovation_icon: "@magic_innovation!" #deepl:1534598836
  gg_topbar_magic_innovation_value: "[AccessPlayer.MakeScope.ScriptValue('gate_magic_innovation')|0v]" #deepl:1036106055
- gg_topbar_magic_innovation_tooltip: "#header [concept_magic_innovation]#!\nWir generieren #bold [AccessMetaPlayer.AccessPlayedOrObservedCountry.MakeScope.ScriptValue('gate_magic_innovation')|g] #! [concept_magic_innovation] jeden Monat:\n[AccessMetaPlayer.AccessPlayedOrObservedCountry.AccessModifier.GetBreakdownFor('country_gate_magical_innovation_add').GetBreakdown]\n\nMit einem Multiplikator von [AccessMetaPlayer.AccessPlayedOrObservedCountry.AccessModifier.GetValueWithBreakdownFor('country_gate_magical_innovation_mult')]\n\nBis zu einem Maximum von [AccessMetaPlayer.AccessPlayedOrObservedCountry.MakeScope.ScriptValue('gate_magic_innovation_max')|v] [concept_magic_innovation] pro Monat:\n[AccessMetaPlayer.AccessPlayedOrObservedCountry.MakeScope.ScriptValue('gate_magic_innovation_max')|+=] [GetMetaPlayer.GetPlayedOrObservedCountry.GetName] \n [AccessMetaPlayer.AccessPlayedOrObservedCountry.MakeScope.ScriptValue('gate_magic_innovation_max_base')|+=] Basiswert\n [AccessMetaPlayer.AccessPlayedOrObservedCountry.MakeScope.ScriptValue('gate_magic_innovation_max_literacy')|+=] [concept_literacy]" #deepl:777999684
+ gg_topbar_magic_innovation_tooltip: "$gg_monthly_magic_innovation_tooltip$" #deepl:3317801455
  gg_topbar_magic_innovation_window: "$gate_button_main$" #deepl:1281520751
  gg_topbar_magic_innovation_source: "$dlc_magic_gate$" #deepl:1831481130
  gg_topbar_magic_innovation_source_tooltip: "$dlc_magic_gate_desc$" #deepl:1008678244

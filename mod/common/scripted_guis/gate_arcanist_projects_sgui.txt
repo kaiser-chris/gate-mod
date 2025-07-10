@@ -5,6 +5,11 @@
         capital = {
             has_building = building_magic_research_institute
         }
+        NOT = {
+            has_modifier = gate_modifier_project_institute_new_wing
+            has_modifier = gate_modifier_project_institute_improved_instruments
+            has_modifier = gate_modifier_project_institute_better_mana_conduits
+        }
         is_magic_country = yes
         has_magic_researcher = yes
         not_has_active_magic_project = yes

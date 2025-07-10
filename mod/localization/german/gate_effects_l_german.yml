@@ -1,6 +1,5 @@
 ﻿l_german:
  effect_add_magic_innovation: "[SCOPE.GetValue('added_innovation')|+=0] hinzufügen [concept_magic_innovation]" #deepl:3000519830
- effect_add_maximum_magic_innovation: "Fügen Sie [SCOPE.GetValue('added_innovation')|+=0] zu unserem #bold Maximum#! monatlich hinzu. [concept_magic_innovation]" #deepl:295554505
  effect_add_mana_density: "[SCOPE.GetValue('added_mana_density')|+=0] hinzufügen [concept_mana_density]" #deepl:3689115295
  effect_learn_magic: "[SCOPE.sCountry('gate_magic_learner').GetName] lernt [concept_magic_knowledge]" #deepl:2746595305
  effect_gate_establish_treaty: "Einrichtung von #bold [SCOPE.GetLocalVariable('gate_treaty_name').GetFlagName] #! [concept_treaty] zwischen [SCOPE.GetLocalVariable('gate_treaty_source').GetCountry.GetName] und [SCOPE.GetLocalVariable('gate_treaty_target').GetCountry.GetName]" #deepl:37883036
