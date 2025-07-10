@@ -11,3 +11,9 @@
  gate_modifier_project_institute_new_wing: "Neuer Forschungstrakt" #deepl:1936772017
  gate_modifier_project_institute_improved_instruments: "Verbesserte Instrumente" #deepl:900242831
  gate_modifier_project_institute_better_mana_conduits: "Bessere Mana-Leitungen" #deepl:2850600925
+# Research Arcane Domains
+ button_project_domain: "Forschung $concept_magic_ethics$" #deepl:4196951174
+ je_gate_project_domain: "Forschung $concept_magic_ethics$" #deepl:4196951174
+ je_gate_project_domain_reason: "[concept_magic_researcher] [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName] arbeitet derzeit an #bold $je_gate_project_domain$ #! .\n$gate_journal_delimiter$\n$je_gate_project_domain_description$" #deepl:2064086008
+ je_gate_project_domain_goal: "Dieses Projekt wird für #v [SCOPE.ScriptValue('gate_project_journal_entry_long')] Monate#! (derzeit #v [ROOT.GetCountry.MakeScope.Var('gate_magic_project_timer').GetValue] #! ) laufen." #deepl:3642557961
+ je_gate_project_domain_description: "[Concept('concept_magic_ethic','$concept_magic_ethics$')] die unsere Auffassung von Magie in unserer Gesellschaft repräsentieren und unserem Land massive Impulse geben. Mit diesem Projekt können wir eine zusätzliche [concept_magic_ethic] wählen." #deepl:3481739336

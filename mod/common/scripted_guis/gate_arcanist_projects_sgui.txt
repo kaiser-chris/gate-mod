@@ -21,3 +21,26 @@
         }
     }
 }
+
+gg_project_domain = {
+    scope = country
+
+    is_valid = {
+        has_technology_researched = formalized_magic
+        trigger_if = {
+            limit = {
+                exists = var:magic_ethics
+            }
+            var:magic_ethics < 3
+        }
+        is_magic_country = yes
+        has_magic_researcher = yes
+        not_has_active_magic_project = yes
+    }
+
+    effect = {
+        gate_start_magic_project = {
+            project = je_gate_project_domain
+        }
+    }
+}

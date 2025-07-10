@@ -11,3 +11,9 @@
  gate_modifier_project_institute_new_wing: "새로운 연구동" #deepl:1936772017
  gate_modifier_project_institute_improved_instruments: "개선된 도구" #deepl:900242831
  gate_modifier_project_institute_better_mana_conduits: "더 나은 마나 도관" #deepl:2850600925
+# Research Arcane Domains
+ button_project_domain: "연구 $concept_magic_ethics$" #deepl:4196951174
+ je_gate_project_domain: "연구 $concept_magic_ethics$" #deepl:4196951174
+ je_gate_project_domain_reason: "[concept_magic_researcher] [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName] 는 현재 #bold $je_gate_project_domain$ #! 에서 작업 중입니다.\n$gate_journal_delimiter$\n$je_gate_project_domain_description$" #deepl:2064086008
+ je_gate_project_domain_goal: "이 프로젝트는 #v [SCOPE.ScriptValue('gate_project_journal_entry_long')] 개월 동안 진행됩니다#! (현재 #v [ROOT.GetCountry.MakeScope.Var('gate_magic_project_timer').GetValue] #! )" #deepl:3642557961
+ je_gate_project_domain_description: "[Concept('concept_magic_ethic','$concept_magic_ethics$')] 는 우리 사회에서 마술에 대한 우리의 관점을 대변하고 우리나라에 큰 힘을 실어줄 것입니다. 이 프로젝트를 통해 추가로 [concept_magic_ethic]." #deepl:3481739336
