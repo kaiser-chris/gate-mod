@@ -14,7 +14,7 @@
  gg_header_magic_ethic: "[Concept('concept_magic_ethic','$concept_magic_ethics$')]"
  gg_header_magic_countries: "Arcane Countries"
  gg_ethic_empty_slot: "Empty Domain Slot"
- gg_ethic_empty_slot_tooltip: "This [concept_magic_ethic] slot is empty and can be filled by researching corresponding technologies.\n\n#title Unlocked#!\n• Learning [concept_magic_knowledge]\n• [GetTechnology('magic_science').GetName]\n• Not implemented yet"
+ gg_ethic_empty_slot_tooltip: "This [concept_magic_ethic] slot is empty and can be filled by researching corresponding technologies.\n\n#title Unlocked#!\n• Learning [concept_magic_knowledge]\n• The #bold $je_gate_project_domain$#! [concept_gate_project]\n• Researching [GetTechnology('magic_science').GetName]"
  gg_magic_countries_us: "Our Country"
  gg_magic_countries_relations: "$concept_relations$: #v [Country.GetRelationsWithDesc(GetPlayer)]#! (#v [Country.GetRelationsWith(GetPlayer)|0]#!)"
  gg_magic_countries_relations_region: "#header [DiplomaticAction.GetName]#!\n@red_cross! Can only be done when you have [concept_interest] in their [concept_strategic_region]."

@@ -83,6 +83,9 @@
 			}
 			add_modifier = gate_modifier_project_institute_better_mana_conduits
 		}
+		add_magic_innovation = {
+			amount = 500
+		}
 		hidden_effect = {
 			gate_stop_magic_project = yes
 		}
@@ -107,6 +110,86 @@
 
 	goal_add_value = {
 		add = gate_project_journal_entry_medium
+	}
+
+	scripted_button = gate_project_button_stop
+
+	progressbar = yes
+
+	weight = 1000
+
+	should_be_pinned_by_default = yes
+}
+
+je_gate_project_domain = {
+	icon = "gfx/interface/icons/event_icons/event_gate_project.dds"
+
+	group = je_group_gate_projects
+
+	immediate = {
+		set_variable = {
+			name = gate_magic_project_timer
+			value = 0
+		}
+
+	}
+
+	complete = {
+		trigger_if = {
+			limit = {
+				has_variable = gate_magic_project_timer
+			}
+			scope:journal_entry = {
+				is_goal_complete = yes
+			}
+		}
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			if = {
+				limit = {
+					has_magic_researcher = yes
+				}
+				change_variable = {
+					name = gate_magic_project_timer
+					add = 1
+				}
+			}
+		}
+	}
+
+	invalid = {
+		hidden_trigger = {
+			OR = {
+				not_has_active_magic_project = yes
+				var:magic_ethics >= gate_max_ethics
+			}
+		}
+	}
+
+	on_invalid = {
+		hidden_effect = {
+			gate_stop_magic_project = yes
+		}
+	}
+
+	on_complete = {
+		trigger_event = magic_ethic.1
+		add_magic_innovation = {
+			amount = 500
+		}
+		hidden_effect = {
+			gate_stop_magic_project = yes
+		}
+	}
+
+	current_value = {
+		value = root.var:gate_magic_project_timer
+	}
+
+	goal_add_value = {
+		add = gate_project_journal_entry_long
 	}
 
 	scripted_button = gate_project_button_stop

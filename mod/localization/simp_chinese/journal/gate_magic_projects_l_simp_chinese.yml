@@ -11,3 +11,9 @@
  gate_modifier_project_institute_new_wing: "新研究楼" #deepl:1936772017
  gate_modifier_project_institute_improved_instruments: "改进仪器" #deepl:900242831
  gate_modifier_project_institute_better_mana_conduits: "更好的法力导管" #deepl:2850600925
+# Research Arcane Domains
+ button_project_domain: "研究$concept_magic_ethics$" #deepl:4196951174
+ je_gate_project_domain: "研究$concept_magic_ethics$" #deepl:4196951174
+ je_gate_project_domain_reason: "[concept_magic_researcher] [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName] 目前正致力于#bold $je_gate_project_domain$ #! 。\n$gate_journal_delimiter$\n$je_gate_project_domain_description$" #deepl:2064086008
+ je_gate_project_domain_goal: "该项目将持续#v [SCOPE.ScriptValue('gate_project_journal_entry_long')] 个月#! （目前为#v [ROOT.GetCountry.MakeScope.Var('gate_magic_project_timer').GetValue] #! )" #deepl:3642557961
+ je_gate_project_domain_description: "[Concept('concept_magic_ethic','$concept_magic_ethics$')] 代表了我们对社会中魔法的看法，并为我们的国家提供了巨大的推动力。这个项目将让我们选择一个额外的 。[concept_magic_ethic]" #deepl:3481739336

@@ -14,7 +14,7 @@
  gg_header_magic_ethic: "[Concept('concept_magic_ethic','$concept_magic_ethics$')]" #deepl:3894943634
  gg_header_magic_countries: "奥术国家" #deepl:2611929564
  gg_ethic_empty_slot: "空域插槽" #deepl:1572555500
- gg_ethic_empty_slot_tooltip: "该[concept_magic_ethic] 插槽为空，可通过研究相应技术来填补。\n\n #title  已解锁#!\n - 正在学习[concept_magic_knowledge]\n -[GetTechnology('magic_science').GetName]\n - 尚未实施" #deepl:3093784275
+ gg_ethic_empty_slot_tooltip: "#! 该[concept_magic_ethic] 插槽为空，可通过研究相应技术来填补。\n\n #title  已解锁#!\n - 学习[concept_magic_knowledge]\n - The#bold $je_gate_project_domain$ [concept_gate_project] \n - 研究[GetTechnology('magic_science').GetName]" #deepl:285173537
  gg_magic_countries_us: "我们的国家" #deepl:3262087796
  gg_magic_countries_relations: "$concept_relations$：#v [Country.GetRelationsWithDesc(GetPlayer)] #! (#v [Country.GetRelationsWith(GetPlayer)|0] #! )" #deepl:4253451336
  gg_magic_countries_relations_region: "#header [DiplomaticAction.GetName]#!\n@red_cross! 只有当 在其 中时才能做到。[concept_interest] [concept_strategic_region]" #deepl:3367504428
