@@ -1,0 +1,22 @@
+﻿l_turkish:
+# Generic Mana Crystals
+ je_prestige_goods_gate_mana: "$prestige_good_gate_generic_mana$"
+ je_prestige_goods_gate_mana_reason: "[SCOPE.sCompany('relevant_company').GetName] has established itself as an important actor within our economy. The company seeks to leverage its current prosperity to develop its own brand of @prestige_good_gate_generic_mana! #b $prestige_good_gate_generic_mana$#!. If successful, it will be able to expand its competitiveness within the global @mana! #b $mana$#! market."
+ je_prestige_goods_gate_mana_goal: "Maintain the following for #v [GetPlayer.MakeScope.ScriptValue('prestige_good_journal_entry_months')] months#! (currently #v [ROOT.GetCountry.MakeScope.Var('prestige_mana_timer_var').GetValue]#!): #indent_newline:3 "
+ je_prestige_goods_gate_mana_complete_tt: "Has completed the #b $je_prestige_goods_gate_mana$#! [concept_journal_entry]"
+ je_prestige_goods_gate_mana_reward_tt: "[SCOPE.sCompany('relevant_company').GetName] will be able to produce @prestige_good_gate_generic_mana! #b $prestige_good_gate_generic_mana$#!"
+ not_prestige_good_gate_generic_mana_var_tt: "Has #b not#! already developed @prestige_good_gate_generic_mana! #b $prestige_good_gate_generic_mana$#!"
+ # Generic Golems
+ je_prestige_goods_gate_golem: "$prestige_good_gate_generic_golem$"
+ je_prestige_goods_gate_golem_reason: "[SCOPE.sCompany('relevant_company').GetName] has established itself as an important actor within our economy. The company seeks to leverage its current prosperity to develop its own brand of @prestige_good_gate_generic_golem! #b $prestige_good_gate_generic_golem$#!. If successful, it will be able to expand its competitiveness within the global @golem! #b $golem$#! market."
+ je_prestige_goods_gate_golem_goal: "Maintain the following for #v [GetPlayer.MakeScope.ScriptValue('prestige_good_journal_entry_months')] months#! (currently #v [ROOT.GetCountry.MakeScope.Var('prestige_golem_timer_var').GetValue]#!): #indent_newline:3 "
+ je_prestige_goods_gate_golem_complete_tt: "Has completed the #b $je_prestige_goods_gate_golem$#! [concept_journal_entry]"
+ je_prestige_goods_gate_golem_reward_tt: "[SCOPE.sCompany('relevant_company').GetName] will be able to produce @prestige_good_gate_generic_golem! #b $prestige_good_gate_generic_golem$#!"
+ not_prestige_good_gate_generic_golem_var_tt: "Has #b not#! already developed @prestige_good_gate_generic_golem! #b $prestige_good_gate_generic_golem$#!"
+# Dwarven Iron
+ je_prestige_goods_gate_dwarven_iron: "$prestige_good_gate_dwarven_iron$"
+ je_prestige_goods_gate_dwarven_iron_reason: "[SCOPE.sCompany('relevant_company').GetName] has established itself as an important actor within our economy. The company seeks to leverage its current prosperity to develop its own brand of @prestige_good_gate_dwarven_iron! #b $prestige_good_gate_dwarven_iron$#!. If successful, it will be able to expand its competitiveness within the global @iron! #b $iron$#! market."
+ je_prestige_goods_gate_dwarven_iron_goal: "Maintain the following for #v [GetPlayer.MakeScope.ScriptValue('prestige_good_journal_entry_months')] months#! (currently #v [ROOT.GetCountry.MakeScope.Var('prestige_dwarven_iron_timer_var').GetValue]#!): #indent_newline:3 "
+ je_prestige_goods_gate_dwarven_iron_complete_tt: "Has completed the #b $je_prestige_goods_gate_dwarven_iron$#! [concept_journal_entry]"
+ je_prestige_goods_gate_dwarven_iron_reward_tt: "[SCOPE.sCompany('relevant_company').GetName] will be able to produce @prestige_good_gate_dwarven_iron! #b $prestige_good_gate_dwarven_iron$#!"
+ not_prestige_good_gate_dwarven_iron_var_tt: "Has #b not#! already developed @prestige_good_gate_dwarven_iron! #b $prestige_good_gate_dwarven_iron$#!"

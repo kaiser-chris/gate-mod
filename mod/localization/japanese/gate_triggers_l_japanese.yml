@@ -10,3 +10,7 @@
  trigger_gate_requirement_low_mana_density: "To build this [concept_building] a state needs to have a [concept_mana_density] of at least [TopScope.ScriptValue('low_mana_density_threshhold')]."
  trigger_gate_requirement_medium_mana_density: "To build this [concept_building] a state needs to have a [concept_mana_density] of at least [TopScope.ScriptValue('medium_mana_density_threshhold')]."
  trigger_gate_requirement_max_mana_density: "To build this [concept_building] a state needs to have a [concept_mana_density] of at least [TopScope.ScriptValue('maximum_mana_density')]."
+ trigger_gate_has_magic_researcher: "Has an [concept_magic_researcher]"
+ trigger_gate_not_has_magic_researcher: "Does not have an [concept_magic_researcher]"
+ trigger_gate_has_active_magic_project: "Has an active [concept_gate_project]"
+ trigger_gate_not_has_active_magic_project: "Does not have an active [concept_gate_project]"

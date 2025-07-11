@@ -27,7 +27,7 @@ Below is a list of the currently implemented content:
 
 [//]: # (CONTENT-START)
 
- - 46 new Technologies
+ - 45 new Technologies
  - 6 new Countries
  - 8 new Cultures
  - 6 new Religions
@@ -38,7 +38,7 @@ Below is a list of the currently implemented content:
  - 2 new Pops
  - 5 new Goods
  - 24 new Combat Unit Types
- - 2586 new Localization Keys
+ - 2583 new Localization Keys
 
 [//]: # (CONTENT-END)
 
