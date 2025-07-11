@@ -1,0 +1,8 @@
+﻿l_french:
+ rule_gate_magic_start: "$concept_magic_knowledge$ at Game Start"
+ setting_gate_deactivate_magic_start: "Historical"
+ setting_gate_deactivate_magic_start_desc: "Only [Concept('concept_country', '$concept_countries$')] with relevant history will start with [concept_magic_knowledge]."
+ setting_gate_activate_magic_start_player: "Player Country + Historical"
+ setting_gate_activate_magic_start_player_desc: "All player [Concept('concept_country', '$concept_countries$')], as well as [Concept('concept_country', '$concept_countries$')] with relevant history will start with [concept_magic_knowledge]."
+ setting_gate_activate_magic_start_all: "All Countries"
+ setting_gate_activate_magic_start_all_desc: "All [Concept('concept_country', '$concept_countries$')] will start with [concept_magic_knowledge]."

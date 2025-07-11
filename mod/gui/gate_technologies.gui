@@ -239,13 +239,6 @@ types gate_technologies {
 
         gate_technology_placeholder = {
             blockoverride "context" {
-                datacontext = "[GetTechnology('gnomish_support')]"
-                datacontext = "[GetScriptedGui('gnomish_support')]"
-            }
-        }
-
-        gate_technology_placeholder = {
-            blockoverride "context" {
                 datacontext = "[GetTechnology('elven_support')]"
                 datacontext = "[GetScriptedGui('elven_support')]"
             }

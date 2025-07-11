@@ -48,8 +48,5 @@ Below is a table with all currently open ToDos.
 | ./mod/localization/english/gate_debug_l_english.yml | 57 |  Write alert_gate_space_alert_desc |
 | ./mod/localization/english/gate_debug_l_english.yml | 58 |  Write alert_gate_space_alert_hint |
 | ./mod/localization/english/gate_debug_l_english.yml | 60 |  Write gate_space_alert_setting_name |
-| ./mod/localization/english/gate_technology_l_english.yml | 40 |  Write description bear_gate_immigration |
-| ./mod/localization/english/gate_technology_l_english.yml | 41 |  Write description for bear_gate_immigration_desc |
-| ./mod/localization/english/gate_technology_l_english.yml | 53 |  Write description for gnomish_support_desc |
 
 [//]: # (TODO-END)
