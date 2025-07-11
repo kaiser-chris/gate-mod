@@ -18,22 +18,6 @@ types gate_technologies {
 
     type gate_technologies_production = flowcontainer {
         direction = vertical
-        parentanchor = top|left
-        margin_left = 8
-        block "container_spacing" {
-            spacing = 5
-            margin_top = 10
-            margin_bottom = 10
-        }
-
-        ### Era 1
-
-        gate_technology_placeholder = {
-            blockoverride "context" {
-                datacontext = "[GetTechnology('gate_magic_understanding_production')]"
-                datacontext = "[GetScriptedGui('gate_magic_understanding_production')]"
-            }
-        }
 
         gate_technology_placeholder = {
             blockoverride "context" {
@@ -135,21 +119,6 @@ types gate_technologies {
 
     type gate_technologies_military = flowcontainer {
         direction = vertical
-        margin_left = 8
-        block "container_spacing" {
-            spacing = 5
-            margin_top = 10
-            margin_bottom = 10
-        }
-
-        ### Era 1
-
-        gate_technology_placeholder = {
-            blockoverride "context" {
-                datacontext = "[GetTechnology('magic_understanding_military')]"
-                datacontext = "[GetScriptedGui('magic_understanding_military')]"
-            }
-        }
 
         gate_technology_placeholder = {
             blockoverride "context" {
@@ -225,19 +194,6 @@ types gate_technologies {
 
     type gate_technologies_society = flowcontainer {
         direction = vertical
-        margin_left = 8
-        block "container_spacing" {
-            spacing = 5
-            margin_top = 10
-            margin_bottom = 10
-        }
-
-        gate_technology_placeholder = {
-            blockoverride "context" {
-                datacontext = "[GetTechnology('magic_understanding_society')]"
-                datacontext = "[GetScriptedGui('magic_understanding_society')]"
-            }
-        }
 
         gate_technology_placeholder = {
             blockoverride "context" {
@@ -383,6 +339,8 @@ types gate_technologies {
     type gate_technology_placeholder = widget {
         block "context" {}
         block "tech_state" {}
-        visible = "[And3(ScriptedGui.IsShown(GuiScope.SetRoot(Country.MakeScope).End), Not(Technology.HasResearchedTech(Country.Self)), Or(Not(Country.MakeScope.Var('magic_research').IsSet), Not(ObjectsEqual(Country.MakeScope.Var('magic_research').GetTechnology.MakeScope, Technology.MakeScope))))]"
+        block "tech_visibility" {
+            visible = "[And3(ScriptedGui.IsShown(GuiScope.SetRoot(Country.MakeScope).End), Not(Technology.HasResearchedTech(Country.Self)), Or(Not(Country.MakeScope.Var('magic_research').IsSet), Not(ObjectsEqual(Country.MakeScope.Var('magic_research').GetTechnology.MakeScope, Technology.MakeScope))))]"
+        }
     }
 }

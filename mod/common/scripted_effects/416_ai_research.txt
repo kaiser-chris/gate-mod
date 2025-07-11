@@ -1,0 +1,20 @@
+﻿gate_ai_research = {
+	every_country = {
+		limit = {
+			any_in_list = {
+				variable = gate_ai_research
+				count >= 1
+			}
+			is_ai = yes
+		}
+		random_in_list = {
+			variable = gate_ai_research
+			save_scope_as = technology_to_research
+		}
+		add_to_global_variable_list = {
+			name = gate_ai_research
+			target = scope:technology_to_research
+		}
+		clear_variable_list = gate_ai_research
+	}
+}

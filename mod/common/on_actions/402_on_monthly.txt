@@ -6,6 +6,13 @@ on_monthly_pulse = {
         on_monthly_gate_cleanup
         on_monthly_gate_mana_density
         on_monthly_ui_check
+        on_monthly_gate_ai_magic_technology
+    }
+}
+
+on_monthly_gate_ai_magic_technology = {
+    effect = {
+        gate_ai_research = yes
     }
 }
 
@@ -114,24 +121,8 @@ on_monthly_pulse_country = {
         on_monthly_gate_add_immigration_elven
         on_monthly_gate_add_immigration_gnomish
         on_monthly_gate_add_immigration_bear
-        on_monthly_gate_ai_magic_technology
         on_monthly_gate_set_research_production_method
         on_monthly_gate_vampire_journal
-    }
-}
-
-on_monthly_gate_ai_magic_technology = {
-    trigger = {
-        is_player = no
-        is_magic_country = yes
-    }
-    effect = {
-        if = {
-            limit = {
-                var:magic_innovation >= 15000
-            }
-            ai_unlock_magic_technology = yes
-        }
     }
 }
 
