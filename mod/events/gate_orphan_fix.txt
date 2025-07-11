@@ -40,6 +40,9 @@ gate_orphan_fix.1 = {
 		fix_variable_error = { variable = gate_treaty_source }
 		fix_variable_error = { variable = gate_treaty_target }
 
+		# Research Hack
+		fix_variable_error = { variable = technology_container }
+
 		# Magic Researcher
 		fix_variable_error = { variable = character_opinion_magic_researcher }
 		fix_variable_error = { variable = character_opinion_magic_researcher_missing_institute }

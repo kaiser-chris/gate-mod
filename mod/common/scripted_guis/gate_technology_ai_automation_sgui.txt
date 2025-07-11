@@ -1,0 +1,43 @@
+﻿sgui_gate_register_ai_research = {
+	scope = country
+
+	saved_scopes = {
+		technology
+	}
+
+	effect = {
+		create_struct = {
+			struct_type = gate_ai_research_container
+			struct_scope = ai_research_container
+		}
+		scope:ai_research_container = {
+			set_variable = {
+				name = technology
+				value = scope:technology
+			}
+			set_variable = {
+				name = country
+				value = prev
+			}
+		}
+		add_to_variable_list = {
+			name = gate_ai_research
+			target = scope:ai_research_container
+		}
+	}
+}
+
+sgui_gate_ai_research_done = {
+	scope = none
+
+	saved_scopes = {
+		research_container
+	}
+
+	effect = {
+		remove_list_global_variable = {
+			name = gate_ai_research
+			target = scope:research_container
+		}
+	}
+}

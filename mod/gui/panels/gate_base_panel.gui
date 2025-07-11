@@ -964,12 +964,6 @@ types gate_base_panel_types {
                 blockoverride "items" {
                     gate_tech_tree_node = {
                         blockoverride "context" {
-                            datacontext = "[GetTechnology('gate_magic_understanding_production')]"
-                            datacontext = "[GetScriptedGui('gate_magic_understanding_production')]"
-                        }
-                    }
-                    gate_tech_tree_node = {
-                        blockoverride "context" {
                             datacontext = "[GetTechnology('gate_mana_extraction')]"
                             datacontext = "[GetScriptedGui('gate_mana_extraction')]"
                         }
@@ -1080,12 +1074,6 @@ types gate_base_panel_types {
                 blockoverride "items" {
                     gate_tech_tree_node = {
                         blockoverride "context" {
-                            datacontext = "[GetTechnology('magic_understanding_military')]"
-                            datacontext = "[GetScriptedGui('magic_understanding_military')]"
-                        }
-                    }
-                    gate_tech_tree_node = {
-                        blockoverride "context" {
                             datacontext = "[GetTechnology('mage_infantry')]"
                             datacontext = "[GetScriptedGui('mage_infantry')]"
                         }
@@ -1172,12 +1160,6 @@ types gate_base_panel_types {
         blockoverride "era_01" {
             gate_tech_tree_row = {
                 blockoverride "items" {
-                    gate_tech_tree_node = {
-                        blockoverride "context" {
-                            datacontext = "[GetTechnology('magic_understanding_society')]"
-                            datacontext = "[GetScriptedGui('magic_understanding_society')]"
-                        }
-                    }
                     gate_tech_tree_node = {
                         blockoverride "context" {
                             datacontext = "[GetTechnology('dwarven_gate_immigration')]"
@@ -1476,7 +1458,9 @@ types gate_base_panel_types {
     }
 
     type gate_tech_tree_node = widget {
-        visible = "[Or(ScriptedGui.IsShown(GuiScope.SetRoot(Country.MakeScope).End), Technology.HasResearchedTech(GetPlayer.Self))]"
+        block "tech_visibility" {
+            visible = "[Or(ScriptedGui.IsShown(GuiScope.SetRoot(Country.MakeScope).End), Technology.HasResearchedTech(GetPlayer.Self))]"
+        }
         size = { 465 150 }
         tooltipwidget = {
             FancyTooltip_Technology_Tech_Tree = {}
@@ -1486,6 +1470,10 @@ types gate_base_panel_types {
             visible = no
             #datacontext = "[GetTechnology('some_technology')]"
             #datacontext = "[GetScriptedGui('some_technology')]"
+        }
+
+        block "tech_state" {
+
         }
 
         using = default_fade_in_out

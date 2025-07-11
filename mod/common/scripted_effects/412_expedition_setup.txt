@@ -325,7 +325,7 @@ gate_setup_expedition_create_state = {
 		struct_scope = state_$id$
 		struct_type = gate_expedition_state
 	}
-	scope:state_$id$ = {
+	scope:state_$id$ ?= {
 		set_variable = {
 			name = id
 			value = $id$
@@ -341,7 +341,7 @@ gate_setup_expedition_create_state = {
 			set_variable = hidden
 		}
 	}
-	scope:$expedition$ = {
+	scope:$expedition$ ?= {
 		set_variable = {
 			name = state_$id$
 			value = scope:state_$id$
