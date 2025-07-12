@@ -462,6 +462,36 @@ types gate_base_panel_types {
                         }
                     }
 
+                    gate_left_icon_button = {
+                        blockoverride "datacontext" {
+                            datacontext = "[GetScriptedGui('gg_project_improve_mana_extraction')]"
+                        }
+                        blockoverride "button_content" {
+                            text = button_project_improve_mana_extraction
+                        }
+                        blockoverride "icon" {
+                            texture = "gfx/interface/icons/mr_icons/gate_magic_researcher.dds"
+                        }
+                        blockoverride "tooltip" {
+                            tooltipwidget = {
+                                RegularTooltip = {
+                                    blockoverride "tooltip_content" {
+                                        custom_tooltip_textbox = {
+                                            text = "[concept_gate_project]"
+                                            default_format = "#header"
+                                        }
+                                        custom_tooltip_textbox_with_empty_line = {
+                                            text = je_gate_project_improve_mana_extraction_description
+                                        }
+                                        custom_tooltip_textbox = {
+                                            text = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(Country.MakeScope).End)]"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
                     expand = {}
                 }
             }

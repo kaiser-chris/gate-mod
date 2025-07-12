@@ -4,37 +4,25 @@
 	group = je_group_gate_projects
 
 	immediate = {
-		set_variable = {
-			name = gate_magic_project_timer
-			value = 0
+		gate_project_setup = {
+			cost = money_amount_multiplier_medium
+			time = gate_project_journal_entry_medium
 		}
-
 	}
 
 	complete = {
-		trigger_if = {
-			limit = {
-				has_variable = gate_magic_project_timer
-			}
-			scope:journal_entry = {
-				is_goal_complete = yes
-			}
-		}
+		gate_project_check_complete = yes
 	}
 
 	on_monthly_pulse = {
 		effect = {
 			if = {
 				limit = {
-					has_magic_researcher = yes
 					capital = {
 						has_building = building_magic_research_institute
 					}
 				}
-				change_variable = {
-					name = gate_magic_project_timer
-					add = 1
-				}
+				gate_project_progress = yes
 			}
 		}
 	}
@@ -109,7 +97,7 @@
 	}
 
 	goal_add_value = {
-		add = gate_project_journal_entry_medium
+		add = root.var:gate_magic_project_length
 	}
 
 	scripted_button = gate_project_button_stop
@@ -127,35 +115,19 @@ je_gate_project_domain = {
 	group = je_group_gate_projects
 
 	immediate = {
-		set_variable = {
-			name = gate_magic_project_timer
-			value = 0
+		gate_project_setup = {
+			cost = money_amount_multiplier_medium
+			time = gate_project_journal_entry_medium
 		}
-
 	}
 
 	complete = {
-		trigger_if = {
-			limit = {
-				has_variable = gate_magic_project_timer
-			}
-			scope:journal_entry = {
-				is_goal_complete = yes
-			}
-		}
+		gate_project_check_complete = yes
 	}
 
 	on_monthly_pulse = {
 		effect = {
-			if = {
-				limit = {
-					has_magic_researcher = yes
-				}
-				change_variable = {
-					name = gate_magic_project_timer
-					add = 1
-				}
-			}
+			gate_project_progress = yes
 		}
 	}
 
@@ -189,7 +161,85 @@ je_gate_project_domain = {
 	}
 
 	goal_add_value = {
-		add = gate_project_journal_entry_long
+		add = root.var:gate_magic_project_length
+	}
+
+	scripted_button = gate_project_button_stop
+
+	progressbar = yes
+
+	weight = 1000
+
+	should_be_pinned_by_default = yes
+}
+
+je_gate_project_improve_mana_extraction = {
+	icon = "gfx/interface/icons/event_icons/event_gate_project.dds"
+
+	group = je_group_gate_projects
+
+	immediate = {
+		gate_project_setup = {
+			cost = money_amount_multiplier_small
+			time = gate_project_journal_entry_short
+		}
+		random_scope_building = {
+			limit = {
+				is_building_group = bg_mana_extraction
+				NOT = {
+					has_modifier = gate_modifier_project_improved_mana_extraction
+				}
+			}
+			save_scope_as = building
+		}
+	}
+
+	complete = {
+		gate_project_check_complete = yes
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			gate_project_progress = yes
+		}
+	}
+
+	invalid = {
+		hidden_trigger = {
+			OR = {
+				not_has_active_magic_project = yes
+				# Relevant Building has been removed
+				NOT = {
+					exists = scope:building
+				}
+			}
+		}
+	}
+
+	on_invalid = {
+		hidden_effect = {
+			gate_stop_magic_project = yes
+		}
+	}
+
+	on_complete = {
+		scope:building ?= {
+			add_modifier = gate_modifier_project_improved_mana_extraction
+		}
+		add_magic_innovation = {
+			amount = 500
+		}
+		hidden_effect = {
+			gate_stop_magic_project = yes
+		}
+	}
+
+	current_value = {
+		value = root.var:gate_magic_project_timer
+	}
+
+	goal_add_value = {
+		add = root.var:gate_magic_project_length
 	}
 
 	scripted_button = gate_project_button_stop

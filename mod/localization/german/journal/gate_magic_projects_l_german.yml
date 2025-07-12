@@ -2,11 +2,12 @@
 # Shared
  gate_project_button_stop: "Projekt stoppen" #deepl:2081085240
  gate_project_button_stop_desc: "Stoppen Sie dieses Projekt und erlauben Sie unserer [concept_magic_researcher], ein neues zu starten." #deepl:2164579840
+ gate_modifier_project_cost: "Projektkosten" #deepl:971985343
+ gate_project_goal: "Dieses Projekt wird für #v [ROOT.GetCountry.MakeScope.Var('gate_magic_project_length').GetValue] Monate#! (derzeit #v [ROOT.GetCountry.MakeScope.Var('gate_magic_project_timer').GetValue] #! ) laufen." #deepl:1104592694
 # Expand Magic Research Institute
  button_project_expand_research_institute: "Erweitern Sie [GetBuildingType('building_magic_research_institute').GetNameNoFormatting]" #deepl:4164655069
  je_gate_project_expand_research_institute: "Ausweitung unserer [GetBuildingType('building_magic_research_institute').GetNameNoFormatting]" #deepl:1329624068
  je_gate_project_expand_research_institute_reason: "[concept_magic_researcher] [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName] arbeitet derzeit an #bold $je_gate_project_expand_research_institute$ #! .\n$gate_journal_delimiter$\n$je_gate_project_expand_research_institute_description$" #deepl:1211751475
- je_gate_project_expand_research_institute_goal: "Dieses Projekt wird für #v [SCOPE.ScriptValue('gate_project_journal_entry_medium')] Monate#! (derzeit #v [ROOT.GetCountry.MakeScope.Var('gate_magic_project_timer').GetValue] #! ) laufen." #deepl:404853970
  je_gate_project_expand_research_institute_description: "Die [GetBuildingType('building_magic_research_institute').GetName] ist das Herzstück unserer Bemühungen, neue Wege zur Anwendung von Magie zu erforschen. Dieses Projekt wird den #bold maximalen#! Betrag von [concept_magic_innovation] erhöhen, den wir jeden Monat verdienen können." #deepl:1633805910
  gate_modifier_project_institute_new_wing: "Neuer Forschungstrakt" #deepl:1936772017
  gate_modifier_project_institute_improved_instruments: "Verbesserte Instrumente" #deepl:900242831
@@ -15,5 +16,10 @@
  button_project_domain: "Forschung $concept_magic_ethics$" #deepl:4196951174
  je_gate_project_domain: "Forschung $concept_magic_ethics$" #deepl:4196951174
  je_gate_project_domain_reason: "[concept_magic_researcher] [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName] arbeitet derzeit an #bold $je_gate_project_domain$ #! .\n$gate_journal_delimiter$\n$je_gate_project_domain_description$" #deepl:2064086008
- je_gate_project_domain_goal: "Dieses Projekt wird für #v [SCOPE.ScriptValue('gate_project_journal_entry_long')] Monate#! (derzeit #v [ROOT.GetCountry.MakeScope.Var('gate_magic_project_timer').GetValue] #! ) laufen." #deepl:3642557961
  je_gate_project_domain_description: "[Concept('concept_magic_ethic','$concept_magic_ethics$')] die unsere Auffassung von Magie in unserer Gesellschaft repräsentieren und unserem Land massive Impulse geben. Mit diesem Projekt können wir eine zusätzliche [concept_magic_ethic] wählen." #deepl:3481739336
+# Improve Mana Extraction
+ button_project_improve_mana_extraction: "Verbesserte Mana-Extraktion" #deepl:4188291293
+ je_gate_project_improve_mana_extraction: "Verbesserte Mana-Extraktion" #deepl:4188291293
+ je_gate_project_improve_mana_extraction_reason: "[concept_magic_researcher] [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName] arbeitet derzeit an #bold $je_gate_project_improve_mana_extraction$ #! .\n$gate_journal_delimiter$\n$je_gate_project_improve_mana_extraction_description$" #deepl:3116483298
+ je_gate_project_improve_mana_extraction_description: "Die Manaextraktion ist unsere Hauptquelle für [GetGoods('mana').GetName], die für das Gedeihen der magischen Industrie unerlässlich ist." #deepl:3951852140
+ gate_modifier_project_improved_mana_extraction: "Verbesserte Extraktion" #deepl:4056629473
