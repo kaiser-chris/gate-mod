@@ -25,3 +25,11 @@
  gate_modifier_project_improved_mana_extraction: "改进提取" #deepl:4056629473
  gate_modifier_project_improved_mana_extraction_tooltip: "#V $gate_modifier_project_improved_mana_extraction$#!\n[GetStaticModifier('gate_modifier_project_improved_mana_extraction').GetDesc]" #deepl:4182175613
  gate_modifier_project_improved_mana_extraction_with_tooltip: "#bold #tooltip:[GetRawTextTooltipTag('gate_modifier_project_improved_mana_extraction_tooltip')] #underline $gate_modifier_project_improved_mana_extraction$#!#!#!" #deepl:2533865098
+ # Modernizing Seed Selection
+ button_project_modernize_seed_selection: "种子选择现代化" #deepl:2922325633
+ je_gate_project_modernize_seed_selection: "种子选择现代化" #deepl:1714033401
+ je_gate_project_modernize_seed_selection_reason: "[concept_magic_researcher] [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName] 目前正致力于#bold $je_gate_project_modernize_seed_selection$ #! 。\n$gate_journal_delimiter$\n$je_gate_project_modernize_seed_selection_description$" #deepl:4093611764
+ je_gate_project_modernize_seed_selection_description: "[GetGoods('magic_seed').GetName] 用于提高作物产量。为提高产量而对这些种子进行现代化选育将提高我们的产量。该项目为我们的一个 添加了 改性剂。[GetBuildingType('building_druid_grove').GetName] $gate_modifier_project_modernize_seed_selection_with_tooltip$ " #deepl:633694667
+ gate_modifier_project_modernize_seed_selection: "现代种子选择" #deepl:1094148601
+ gate_modifier_project_modernize_seed_selection_tooltip: "#V $gate_modifier_project_modernize_seed_selection$#!\n[GetStaticModifier('gate_modifier_project_modernize_seed_selection').GetDesc]" #deepl:3288771792
+ gate_modifier_project_modernize_seed_selection_with_tooltip: "#bold #tooltip:[GetRawTextTooltipTag('gate_modifier_project_modernize_seed_selection_tooltip')] #underline $gate_modifier_project_modernize_seed_selection$#!#!#!" #deepl:372033018

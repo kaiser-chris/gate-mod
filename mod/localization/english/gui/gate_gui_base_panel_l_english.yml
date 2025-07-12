@@ -19,9 +19,13 @@
  gg_magic_countries_relations: "$concept_relations$: #v [Country.GetRelationsWithDesc(GetPlayer)]#! (#v [Country.GetRelationsWith(GetPlayer)|0]#!)"
  gg_magic_countries_relations_region: "#header [DiplomaticAction.GetName]#!\n@red_cross! Can only be done when you have [concept_interest] in their [concept_strategic_region]."
  gg_header_magic_innovation: "Magic Innovation"
+# Magic Innovation
  gg_magic_innovation_total: "Currently banked [concept_magic_innovation]: #v @magic_innovation![GetPlayer.MakeScope.Var('magic_innovation').GetValue|0] / [GetGlobalVariable('magic_innovation_bank_max').GetValue|0]#!"
  gg_magic_innovation_warning_calc: "Any [concept_magic_innovation] we are not using will be #v lost#!."
  gg_monthly_magic_innovation: "We are generating #tooltip:gg_monthly_magic_innovation_tooltip @magic_innovation!$gg_monthly_magic_innovation_value$#! [concept_magic_innovation] each month."
  gg_monthly_magic_innovation_no_magic: "We are not producing any [concept_magic_innovation].\nWe need to research [concept_magic_knowledge] first."
  gg_monthly_magic_innovation_value: "#bold [Country.MakeScope.ScriptValue('gate_magic_innovation')|g]#!"
  gg_monthly_magic_innovation_tooltip: "#header [concept_magic_innovation]#!\nWe are generating #bold [AccessMetaPlayer.AccessPlayedOrObservedCountry.MakeScope.ScriptValue('gate_magic_innovation')|g]#! [concept_magic_innovation] each month:\n[AccessMetaPlayer.AccessPlayedOrObservedCountry.AccessModifier.GetBreakdownFor('country_gate_magical_innovation_add').GetBreakdown]\n\nWith a multiplier of [AccessMetaPlayer.AccessPlayedOrObservedCountry.AccessModifier.GetValueWithBreakdownFor('country_gate_magical_innovation_mult')]\n\nUp to a maximum of [AccessMetaPlayer.AccessPlayedOrObservedCountry.MakeScope.ScriptValue('gate_magic_innovation_max')|v] [concept_magic_innovation] per month:\n[AccessMetaPlayer.AccessPlayedOrObservedCountry.MakeScope.ScriptValue('gate_magic_innovation_max')|+=] [GetMetaPlayer.GetPlayedOrObservedCountry.GetName]\n  [AccessMetaPlayer.AccessPlayedOrObservedCountry.MakeScope.ScriptValue('gate_magic_innovation_max_base')|+=] Base Value\n  [AccessMetaPlayer.AccessPlayedOrObservedCountry.MakeScope.ScriptValue('gate_magic_innovation_max_literacy')|+=] [concept_literacy]\n  [AccessMetaPlayer.AccessPlayedOrObservedCountry.AccessModifier.GetValueWithBreakdownFor('country_gate_magical_innovation_max_add')] Modifiers"
+# Projects
+ gg_projects_no_active_project: "Our [concept_magic_researcher] is currently idle."
+ gg_projects_active_project: "Our [concept_magic_researcher] is currently working on #v [GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.GetName]#!."
