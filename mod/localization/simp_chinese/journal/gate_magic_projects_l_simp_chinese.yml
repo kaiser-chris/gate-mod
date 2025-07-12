@@ -21,5 +21,7 @@
  button_project_improve_mana_extraction: "提高法力汲取" #deepl:4188291293
  je_gate_project_improve_mana_extraction: "提高法力汲取" #deepl:4188291293
  je_gate_project_improve_mana_extraction_reason: "[concept_magic_researcher] [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName] 目前正致力于#bold $je_gate_project_improve_mana_extraction$ #! 。\n$gate_journal_delimiter$\n$je_gate_project_improve_mana_extraction_description$" #deepl:3116483298
- je_gate_project_improve_mana_extraction_description: "法力提取是我们[GetGoods('mana').GetName] 的主要来源，而法力是魔法产业蓬勃发展的必要条件。" #deepl:3951852140
+ je_gate_project_improve_mana_extraction_description: "法力萃取是我们[GetGoods('mana').GetName] 的主要来源，而法力萃取是魔法工业蓬勃发展的必要条件。该项目为我们的一座法力提取建筑添加了$gate_modifier_project_improved_mana_extraction_with_tooltip$ 修改器。" #deepl:3475707505
  gate_modifier_project_improved_mana_extraction: "改进提取" #deepl:4056629473
+ gate_modifier_project_improved_mana_extraction_tooltip: "#V $gate_modifier_project_improved_mana_extraction$#!\n[GetStaticModifier('gate_modifier_project_improved_mana_extraction').GetDesc]" #deepl:4182175613
+ gate_modifier_project_improved_mana_extraction_with_tooltip: "#bold #tooltip:[GetRawTextTooltipTag('gate_modifier_project_improved_mana_extraction_tooltip')] #underline $gate_modifier_project_improved_mana_extraction$#!#!#!" #deepl:2533865098

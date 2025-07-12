@@ -2,11 +2,12 @@
 # Shared
  gate_project_button_stop: "Stop Project"
  gate_project_button_stop_desc: "Stop this project and allow our [concept_magic_researcher] to start a new one."
+ gate_modifier_project_cost: "Project Cost"
+ gate_project_goal: "This project will run for #v [ROOT.GetCountry.MakeScope.Var('gate_magic_project_length').GetValue] months#! (currently #v [ROOT.GetCountry.MakeScope.Var('gate_magic_project_timer').GetValue]#!)"
 # Expand Magic Research Institute
  button_project_expand_research_institute: "Expand [GetBuildingType('building_magic_research_institute').GetNameNoFormatting]"
  je_gate_project_expand_research_institute: "Expanding our [GetBuildingType('building_magic_research_institute').GetNameNoFormatting]"
  je_gate_project_expand_research_institute_reason: "[concept_magic_researcher] [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName] is currently working on #bold $je_gate_project_expand_research_institute$#!.\n$gate_journal_delimiter$\n$je_gate_project_expand_research_institute_description$"
- je_gate_project_expand_research_institute_goal: "This project will run for #v [SCOPE.ScriptValue('gate_project_journal_entry_medium')] months#! (currently #v [ROOT.GetCountry.MakeScope.Var('gate_magic_project_timer').GetValue]#!)"
  je_gate_project_expand_research_institute_description: "The [GetBuildingType('building_magic_research_institute').GetName] is the heart of our efforts to research new ways to apply magic. This project will increase the #bold maximum#! amount of [concept_magic_innovation] we can earn every month."
  gate_modifier_project_institute_new_wing: "New Research Wing"
  gate_modifier_project_institute_improved_instruments: "Improved Instruments"
@@ -15,5 +16,12 @@
  button_project_domain: "Research $concept_magic_ethics$"
  je_gate_project_domain: "Research $concept_magic_ethics$"
  je_gate_project_domain_reason: "[concept_magic_researcher] [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName] is currently working on #bold $je_gate_project_domain$#!.\n$gate_journal_delimiter$\n$je_gate_project_domain_description$"
- je_gate_project_domain_goal: "This project will run for #v [SCOPE.ScriptValue('gate_project_journal_entry_long')] months#! (currently #v [ROOT.GetCountry.MakeScope.Var('gate_magic_project_timer').GetValue]#!)"
  je_gate_project_domain_description: "[Concept('concept_magic_ethic','$concept_magic_ethics$')] represent our view of magic in our society and provide massive boosts to our country. This project will let us choose an additional [concept_magic_ethic]."
+# Improve Mana Extraction
+ button_project_improve_mana_extraction: "Improve Mana Extraction"
+ je_gate_project_improve_mana_extraction: "Improve Mana Extraction"
+ je_gate_project_improve_mana_extraction_reason: "[concept_magic_researcher] [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName] is currently working on #bold $je_gate_project_improve_mana_extraction$#!.\n$gate_journal_delimiter$\n$je_gate_project_improve_mana_extraction_description$"
+ je_gate_project_improve_mana_extraction_description: "Mana Extraction is our primary source of [GetGoods('mana').GetName], which are essential for magical industry to flourish. This project adds the $gate_modifier_project_improved_mana_extraction_with_tooltip$ modifier to one of our Mana Extraction buildings."
+ gate_modifier_project_improved_mana_extraction: "Improved Extraction"
+ gate_modifier_project_improved_mana_extraction_tooltip: "#V $gate_modifier_project_improved_mana_extraction$#!\n[GetStaticModifier('gate_modifier_project_improved_mana_extraction').GetDesc]"
+ gate_modifier_project_improved_mana_extraction_with_tooltip: "#bold #tooltip:[GetRawTextTooltipTag('gate_modifier_project_improved_mana_extraction_tooltip')] #underline $gate_modifier_project_improved_mana_extraction$#!#!#!"

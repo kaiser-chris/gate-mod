@@ -21,5 +21,7 @@
  button_project_improve_mana_extraction: "마나 추출 향상" #deepl:4188291293
  je_gate_project_improve_mana_extraction: "마나 추출 향상" #deepl:4188291293
  je_gate_project_improve_mana_extraction_reason: "[concept_magic_researcher] [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName] 는 현재 #bold $je_gate_project_improve_mana_extraction$ #! 에서 작업 중입니다.\n$gate_journal_delimiter$\n$je_gate_project_improve_mana_extraction_description$" #deepl:3116483298
- je_gate_project_improve_mana_extraction_description: "마나 추출은 마법 산업이 번성하는 데 필수적인 [GetGoods('mana').GetName] 의 주요 공급원입니다." #deepl:3951852140
+ je_gate_project_improve_mana_extraction_description: "마나 추출은 마법 산업이 번성하는 데 필수적인 [GetGoods('mana').GetName] 의 주요 공급원입니다. 이 프로젝트는 마나 추출 건물 중 하나에 $gate_modifier_project_improved_mana_extraction_with_tooltip$ 수정자를 추가합니다." #deepl:3475707505
  gate_modifier_project_improved_mana_extraction: "향상된 추출" #deepl:4056629473
+ gate_modifier_project_improved_mana_extraction_tooltip: "#V $gate_modifier_project_improved_mana_extraction$#!\n[GetStaticModifier('gate_modifier_project_improved_mana_extraction').GetDesc]" #deepl:4182175613
+ gate_modifier_project_improved_mana_extraction_with_tooltip: "#bold #툴팁:[GetRawTextTooltipTag('gate_modifier_project_improved_mana_extraction_tooltip')] #underline $gate_modifier_project_improved_mana_extraction$#!#!#!" #deepl:2533865098
