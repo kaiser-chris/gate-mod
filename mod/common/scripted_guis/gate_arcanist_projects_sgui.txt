@@ -5,7 +5,7 @@
         capital = {
             has_building = building_magic_research_institute
         }
-        NOT = {
+        NAND = {
             has_modifier = gate_modifier_project_institute_new_wing
             has_modifier = gate_modifier_project_institute_improved_instruments
             has_modifier = gate_modifier_project_institute_better_mana_conduits
@@ -18,6 +18,8 @@
     effect = {
         gate_start_magic_project = {
             project = je_gate_project_expand_research_institute
+            monthly_cost = money_amount_multiplier_medium
+            months = gate_project_journal_entry_medium
         }
     }
 }
@@ -41,6 +43,33 @@ gg_project_domain = {
     effect = {
         gate_start_magic_project = {
             project = je_gate_project_domain
+            monthly_cost = money_amount_multiplier_medium
+            months = gate_project_journal_entry_long
+        }
+    }
+}
+
+gg_project_improve_mana_extraction = {
+    scope = country
+
+    is_valid = {
+        has_technology_researched = gate_mana_extraction
+        any_scope_building = {
+            is_building_group = bg_mana_extraction
+            NOT = {
+                has_modifier = gate_modifier_project_improved_mana_extraction
+            }
+        }
+        is_magic_country = yes
+        has_magic_researcher = yes
+        not_has_active_magic_project = yes
+    }
+
+    effect = {
+        gate_start_magic_project = {
+            project = je_gate_project_improve_mana_extraction
+            monthly_cost = money_amount_multiplier_small
+            months = gate_project_journal_entry_short
         }
     }
 }

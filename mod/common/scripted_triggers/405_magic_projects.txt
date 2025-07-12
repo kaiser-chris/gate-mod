@@ -1,0 +1,13 @@
+﻿gate_project_check_complete = {
+	custom_tooltip = {
+		text = gate_project_goal
+		trigger_if = {
+			limit = {
+				has_variable = gate_magic_project_timer
+			}
+			scope:journal_entry = {
+				is_goal_complete = yes
+			}
+		}
+	}
+}

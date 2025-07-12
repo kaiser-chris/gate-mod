@@ -2,11 +2,12 @@
 # Shared
  gate_project_button_stop: "停止项目" #deepl:2081085240
  gate_project_button_stop_desc: "停止这个项目，让我们的[concept_magic_researcher] 开始一个新的项目。" #deepl:2164579840
+ gate_modifier_project_cost: "项目成本" #deepl:971985343
+ gate_project_goal: "该项目将持续#v [ROOT.GetCountry.MakeScope.Var('gate_magic_project_length').GetValue] 个月#! （目前为#v [ROOT.GetCountry.MakeScope.Var('gate_magic_project_timer').GetValue] #! )" #deepl:1104592694
 # Expand Magic Research Institute
  button_project_expand_research_institute: "展开[GetBuildingType('building_magic_research_institute').GetNameNoFormatting]" #deepl:4164655069
  je_gate_project_expand_research_institute: "扩大我们的[GetBuildingType('building_magic_research_institute').GetNameNoFormatting]" #deepl:1329624068
  je_gate_project_expand_research_institute_reason: "[concept_magic_researcher] [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName] 目前正致力于#bold $je_gate_project_expand_research_institute$ #! 。\n$gate_journal_delimiter$\n$je_gate_project_expand_research_institute_description$" #deepl:1211751475
- je_gate_project_expand_research_institute_goal: "该项目将持续#v [SCOPE.ScriptValue('gate_project_journal_entry_medium')] 个月#! （目前为#v [ROOT.GetCountry.MakeScope.Var('gate_magic_project_timer').GetValue] #! )" #deepl:404853970
  je_gate_project_expand_research_institute_description: "[GetBuildingType('building_magic_research_institute').GetName] 是我们研究应用魔法新方法的核心。该项目将增加我们每月可赚取的#bold 最大#! [concept_magic_innovation] 。" #deepl:1633805910
  gate_modifier_project_institute_new_wing: "新研究楼" #deepl:1936772017
  gate_modifier_project_institute_improved_instruments: "改进仪器" #deepl:900242831
@@ -15,5 +16,10 @@
  button_project_domain: "研究$concept_magic_ethics$" #deepl:4196951174
  je_gate_project_domain: "研究$concept_magic_ethics$" #deepl:4196951174
  je_gate_project_domain_reason: "[concept_magic_researcher] [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName] 目前正致力于#bold $je_gate_project_domain$ #! 。\n$gate_journal_delimiter$\n$je_gate_project_domain_description$" #deepl:2064086008
- je_gate_project_domain_goal: "该项目将持续#v [SCOPE.ScriptValue('gate_project_journal_entry_long')] 个月#! （目前为#v [ROOT.GetCountry.MakeScope.Var('gate_magic_project_timer').GetValue] #! )" #deepl:3642557961
  je_gate_project_domain_description: "[Concept('concept_magic_ethic','$concept_magic_ethics$')] 代表了我们对社会中魔法的看法，并为我们的国家提供了巨大的推动力。这个项目将让我们选择一个额外的 。[concept_magic_ethic]" #deepl:3481739336
+# Improve Mana Extraction
+ button_project_improve_mana_extraction: "提高法力汲取" #deepl:4188291293
+ je_gate_project_improve_mana_extraction: "提高法力汲取" #deepl:4188291293
+ je_gate_project_improve_mana_extraction_reason: "[concept_magic_researcher] [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName] 目前正致力于#bold $je_gate_project_improve_mana_extraction$ #! 。\n$gate_journal_delimiter$\n$je_gate_project_improve_mana_extraction_description$" #deepl:3116483298
+ je_gate_project_improve_mana_extraction_description: "法力提取是我们[GetGoods('mana').GetName] 的主要来源，而法力是魔法产业蓬勃发展的必要条件。" #deepl:3951852140
+ gate_modifier_project_improved_mana_extraction: "改进提取" #deepl:4056629473

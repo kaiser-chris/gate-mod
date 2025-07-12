@@ -2,11 +2,12 @@
 # Shared
  gate_project_button_stop: "프로젝트 중지" #deepl:2081085240
  gate_project_button_stop_desc: "이 프로젝트를 중지하고 [concept_magic_researcher] 에서 새 프로젝트를 시작하도록 허용하세요." #deepl:2164579840
+ gate_modifier_project_cost: "프로젝트 비용" #deepl:971985343
+ gate_project_goal: "이 프로젝트는 #v [ROOT.GetCountry.MakeScope.Var('gate_magic_project_length').GetValue] 개월 동안 진행됩니다#! (현재 #v [ROOT.GetCountry.MakeScope.Var('gate_magic_project_timer').GetValue] #! )" #deepl:1104592694
 # Expand Magic Research Institute
  button_project_expand_research_institute: "확장 [GetBuildingType('building_magic_research_institute').GetNameNoFormatting]" #deepl:4164655069
  je_gate_project_expand_research_institute: "확장 [GetBuildingType('building_magic_research_institute').GetNameNoFormatting]" #deepl:1329624068
  je_gate_project_expand_research_institute_reason: "[concept_magic_researcher] [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName] 는 현재 #bold $je_gate_project_expand_research_institute$ #! 에서 작업 중입니다.\n$gate_journal_delimiter$\n$je_gate_project_expand_research_institute_description$" #deepl:1211751475
- je_gate_project_expand_research_institute_goal: "이 프로젝트는 #v [SCOPE.ScriptValue('gate_project_journal_entry_medium')] 개월 동안 진행됩니다#! (현재 #v [ROOT.GetCountry.MakeScope.Var('gate_magic_project_timer').GetValue] #! )" #deepl:404853970
  je_gate_project_expand_research_institute_description: "[GetBuildingType('building_magic_research_institute').GetName] 프로젝트는 마술을 응용하는 새로운 방법을 연구하기 위한 노력의 핵심입니다. 이 프로젝트는 매월 적립할 수 있는 #bold 최대#! 금액( [concept_magic_innovation] )을 늘릴 것입니다." #deepl:1633805910
  gate_modifier_project_institute_new_wing: "새로운 연구동" #deepl:1936772017
  gate_modifier_project_institute_improved_instruments: "개선된 도구" #deepl:900242831
@@ -15,5 +16,10 @@
  button_project_domain: "연구 $concept_magic_ethics$" #deepl:4196951174
  je_gate_project_domain: "연구 $concept_magic_ethics$" #deepl:4196951174
  je_gate_project_domain_reason: "[concept_magic_researcher] [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName] 는 현재 #bold $je_gate_project_domain$ #! 에서 작업 중입니다.\n$gate_journal_delimiter$\n$je_gate_project_domain_description$" #deepl:2064086008
- je_gate_project_domain_goal: "이 프로젝트는 #v [SCOPE.ScriptValue('gate_project_journal_entry_long')] 개월 동안 진행됩니다#! (현재 #v [ROOT.GetCountry.MakeScope.Var('gate_magic_project_timer').GetValue] #! )" #deepl:3642557961
  je_gate_project_domain_description: "[Concept('concept_magic_ethic','$concept_magic_ethics$')] 는 우리 사회에서 마술에 대한 우리의 관점을 대변하고 우리나라에 큰 힘을 실어줄 것입니다. 이 프로젝트를 통해 추가로 [concept_magic_ethic]." #deepl:3481739336
+# Improve Mana Extraction
+ button_project_improve_mana_extraction: "마나 추출 향상" #deepl:4188291293
+ je_gate_project_improve_mana_extraction: "마나 추출 향상" #deepl:4188291293
+ je_gate_project_improve_mana_extraction_reason: "[concept_magic_researcher] [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName] 는 현재 #bold $je_gate_project_improve_mana_extraction$ #! 에서 작업 중입니다.\n$gate_journal_delimiter$\n$je_gate_project_improve_mana_extraction_description$" #deepl:3116483298
+ je_gate_project_improve_mana_extraction_description: "마나 추출은 마법 산업이 번성하는 데 필수적인 [GetGoods('mana').GetName] 의 주요 공급원입니다." #deepl:3951852140
+ gate_modifier_project_improved_mana_extraction: "향상된 추출" #deepl:4056629473

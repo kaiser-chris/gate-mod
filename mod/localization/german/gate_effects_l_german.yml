@@ -10,5 +10,5 @@
  effect_gate_expedition_open_map: "Öffnen Sie [concept_gate_expedition_map]" #deepl:2134944514
  effect_gate_expedition_change_budget: "Ändert unsere [concept_gate_expedition_budget] durch [SCOPE.GetValue('budget_change')|+=0]" #deepl:566174399
  effect_gate_expedition_start_activity: "Startet eine [Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')] für [SCOPE.GetValue('months')|0v] Monate" #deepl:337475788
- effect_gate_start_magic_project: "Start #bold [SCOPE.GetLocalVariable('gate_project_name').GetFlagName] #! [concept_gate_project]" #deepl:1238736437
+ effect_gate_start_magic_project: "Starten Sie #bold [SCOPE.GetLocalVariable('gate_project_name').GetFlagName] #! [concept_gate_project] . Dieses Projekt wird #v [SCOPE.GetLocalVariable('months').GetValue|0] Monate#! dauern und uns @money!#r  -#![SCOPE.GetLocalVariable('monthly_cost').GetValue|-0v] jeden Monat kosten." #deepl:2614357206
  effect_gate_stop_magic_project: "Stoppen Sie derzeit aktiv [concept_gate_project]" #deepl:753901991

@@ -51,8 +51,11 @@ gate_orphan_fix.1 = {
 
 		# Projects
 		fix_variable_error = { variable = gate_project_name }
+		fix_variable_error = { variable = monthly_cost }
+		fix_variable_error = { variable = months }
 		fix_variable_error = { variable = je_gate_project_expand_research_institute }
 		fix_variable_error = { variable = je_gate_project_domain }
+		fix_variable_error = { variable = je_gate_project_improve_mana_extraction }
 
 		# Gate Expedition
 		fix_variable_error = { variable = is_expedition_leader }
