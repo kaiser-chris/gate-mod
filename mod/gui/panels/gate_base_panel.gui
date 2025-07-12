@@ -215,6 +215,39 @@ types gate_base_panel_types {
                     }
                 }
 
+                # Magic Researcher Project
+                vbox = {
+                    layoutpolicy_vertical = expanding
+                    background = {
+                        using = simple_frame
+                    }
+                    margin = { 20 20 }
+                    minimumsize = { 300 -1 }
+                    maximumsize = { 300 -1 }
+
+                    textbox = {
+                        visible = "[Not(Country.MakeScope.Var('gate_magic_project').IsSet)]"
+                        minimumsize = { 300 -1 }
+                        maximumsize = { 300 -1 }
+                        multiline = yes
+                        autoresize = yes
+                        text = gg_projects_no_active_project
+                        align = center
+                        using = fontsize_large
+                    }
+
+                    textbox = {
+                        visible = "[Country.MakeScope.Var('gate_magic_project').IsSet]"
+                        minimumsize = { 300 -1 }
+                        maximumsize = { 300 -1 }
+                        multiline = yes
+                        autoresize = yes
+                        text = gg_projects_active_project
+                        align = center
+                        using = fontsize_large
+                    }
+                }
+
                 # Magic Innovation
                 hbox = {
                     datacontext = "[GetScriptedGui('sgui_gate_has_magic')]"
@@ -397,103 +430,7 @@ types gate_base_panel_types {
                     }
                     layoutpolicy_horizontal = expanding
                 }
-                vbox = {
-                    layoutpolicy_vertical = expanding
-                    spacing = 20
-                    margin = { 20 20 }
-
-                    gate_left_icon_button = {
-                        blockoverride "datacontext" {
-                            datacontext = "[GetScriptedGui('gg_project_expand_research_institute')]"
-                        }
-                        blockoverride "button_content" {
-                            text = button_project_expand_research_institute
-                        }
-                        blockoverride "icon" {
-                            texture = "gfx/interface/icons/gui_icons/projects/gate_project_magic_innovation.dds"
-                        }
-                        blockoverride "tooltip" {
-                            tooltipwidget = {
-                                RegularTooltip = {
-                                    blockoverride "tooltip_content" {
-                                        custom_tooltip_textbox = {
-                                            text = "[concept_gate_project]"
-                                            default_format = "#header"
-                                        }
-                                        custom_tooltip_textbox_with_empty_line = {
-                                            text = je_gate_project_expand_research_institute_description
-                                        }
-                                        custom_tooltip_textbox = {
-                                            text = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(Country.MakeScope).End)]"
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    gate_left_icon_button = {
-                        blockoverride "datacontext" {
-                            datacontext = "[GetScriptedGui('gg_project_domain')]"
-                        }
-                        blockoverride "button_content" {
-                            text = button_project_domain
-                        }
-                        blockoverride "icon" {
-                            texture = "gfx/interface/icons/gui_icons/gate_magic_researcher.dds"
-                        }
-                        blockoverride "tooltip" {
-                            tooltipwidget = {
-                                RegularTooltip = {
-                                    blockoverride "tooltip_content" {
-                                        custom_tooltip_textbox = {
-                                            text = "[concept_gate_project]"
-                                            default_format = "#header"
-                                        }
-                                        custom_tooltip_textbox_with_empty_line = {
-                                            text = je_gate_project_domain_description
-                                        }
-                                        custom_tooltip_textbox = {
-                                            text = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(Country.MakeScope).End)]"
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    gate_left_icon_button = {
-                        blockoverride "datacontext" {
-                            datacontext = "[GetScriptedGui('gg_project_improve_mana_extraction')]"
-                        }
-                        blockoverride "button_content" {
-                            text = button_project_improve_mana_extraction
-                        }
-                        blockoverride "icon" {
-                            texture = "gfx/interface/icons/gui_icons/projects/gate_project_magic_crystal.dds"
-                        }
-                        blockoverride "tooltip" {
-                            tooltipwidget = {
-                                RegularTooltip = {
-                                    blockoverride "tooltip_content" {
-                                        custom_tooltip_textbox = {
-                                            text = "[concept_gate_project]"
-                                            default_format = "#header"
-                                        }
-                                        custom_tooltip_textbox_with_empty_line = {
-                                            text = je_gate_project_improve_mana_extraction_description
-                                        }
-                                        custom_tooltip_textbox = {
-                                            text = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(Country.MakeScope).End)]"
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    expand = {}
-                }
+                gate_projects = {}
             }
         }
 
@@ -619,6 +556,29 @@ types gate_base_panel_types {
 
         widget = {
             size = { 530 140 }
+
+            widget = {
+                visible = "[Not(ObjectsEqual(Scope.GetCountry.MakeScope, GetPlayer.MakeScope))]"
+                size = { 100 140 }
+                parentanchor = right|vcenter
+                button_icon_round = {
+                    parentanchor = right|vcenter
+                    position = { -30 0 }
+                    onclick = "[InformationPanelBar.OpenTreatyDraftPanelForNewDraft(GetPlayer.Self, Country.Self)]"
+                    enabled = "[GetPlayer.CanSignTreatyWith(Country.Self)]"
+                    tooltip = "TREATY_CAN_SIGN_WITH"
+                    blockoverride "size" {
+                        size = { 70 70 }
+                    }
+                    blockoverride "icon" {
+                        texture = "gfx/interface/icons/generic_icons/diplomatic_treaties.dds"
+                    }
+
+                    blockoverride "icon_size" {
+                        size = { 70% 70% }
+                    }
+                }
+            }
 
             icon = {
                 using = dark_area
@@ -881,7 +841,7 @@ types gate_base_panel_types {
                 parentanchor = vcenter
                 position = { 8 0 }
                 blockoverride "datacontext" {
-                    datacontext = "[Country.GetDiplomaticAction('increase_relations', Country.Self)]"
+                    datacontext = "[GetPlayer.GetDiplomaticAction('increase_relations', Country.Self)]"
                 }
             }
 
@@ -890,7 +850,7 @@ types gate_base_panel_types {
                 parentanchor = right|vcenter
                 position = { -6 0 }
                 blockoverride "datacontext" {
-                    datacontext = "[Country.GetDiplomaticAction('damage_relations', Country.Self)]"
+                    datacontext = "[GetPlayer.GetDiplomaticAction('damage_relations', Country.Self)]"
                 }
             }
         }
@@ -1722,6 +1682,151 @@ types gate_base_panel_types {
         blockoverride "icon" {
             texture = "[DiplomaticAction.GetType.GetTexture]"
         }
+    }
+
+    type gate_projects = vbox {
+        layoutpolicy_vertical = expanding
+        spacing = 20
+        margin = { 20 20 }
+
+        textbox = {
+            text = concept_gate_project_desc
+            minimumsize = { 350 -1 }
+            maximumsize = { 500 -1 }
+            align = center
+            multiline = yes
+            autoresize = yes
+            background = {
+                using = entry_bg_simple
+            }
+            margin = { 20 20 }
+        }
+
+        divider_decorative = {}
+
+        gate_left_icon_button = {
+            blockoverride "datacontext" {
+                datacontext = "[GetScriptedGui('gg_project_expand_research_institute')]"
+            }
+            blockoverride "button_content" {
+                text = button_project_expand_research_institute
+            }
+            blockoverride "icon" {
+                texture = "gfx/interface/icons/gui_icons/projects/gate_project_magic_innovation.dds"
+            }
+            blockoverride "tooltip" {
+                tooltipwidget = {
+                    RegularTooltip = {
+                        blockoverride "tooltip_content" {
+                            custom_tooltip_textbox = {
+                                text = "[concept_gate_project]"
+                                default_format = "#header"
+                            }
+                            custom_tooltip_textbox_with_empty_line = {
+                                text = je_gate_project_expand_research_institute_description
+                            }
+                            custom_tooltip_textbox = {
+                                text = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(Country.MakeScope).End)]"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        gate_left_icon_button = {
+            blockoverride "datacontext" {
+                datacontext = "[GetScriptedGui('gg_project_domain')]"
+            }
+            blockoverride "button_content" {
+                text = button_project_domain
+            }
+            blockoverride "icon" {
+                texture = "gfx/interface/icons/gui_icons/gate_magic_researcher.dds"
+            }
+            blockoverride "tooltip" {
+                tooltipwidget = {
+                    RegularTooltip = {
+                        blockoverride "tooltip_content" {
+                            custom_tooltip_textbox = {
+                                text = "[concept_gate_project]"
+                                default_format = "#header"
+                            }
+                            custom_tooltip_textbox_with_empty_line = {
+                                text = je_gate_project_domain_description
+                            }
+                            custom_tooltip_textbox = {
+                                text = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(Country.MakeScope).End)]"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        divider_clean = {}
+
+        gate_left_icon_button = {
+            blockoverride "datacontext" {
+                datacontext = "[GetScriptedGui('gg_project_improve_mana_extraction')]"
+            }
+            blockoverride "button_content" {
+                text = button_project_improve_mana_extraction
+            }
+            blockoverride "icon" {
+                texture = "gfx/interface/icons/gui_icons/projects/gate_project_magic_crystal.dds"
+            }
+            blockoverride "tooltip" {
+                tooltipwidget = {
+                    RegularTooltip = {
+                        blockoverride "tooltip_content" {
+                            custom_tooltip_textbox = {
+                                text = "[concept_gate_project]"
+                                default_format = "#header"
+                            }
+                            custom_tooltip_textbox_with_empty_line = {
+                                text = je_gate_project_improve_mana_extraction_description
+                            }
+                            custom_tooltip_textbox = {
+                                text = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(Country.MakeScope).End)]"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        gate_left_icon_button = {
+            blockoverride "datacontext" {
+                datacontext = "[GetScriptedGui('gg_project_modernize_seed_selection')]"
+            }
+            blockoverride "button_content" {
+                text = button_project_modernize_seed_selection
+            }
+            blockoverride "icon" {
+                texture = "gfx/interface/icons/gui_icons/projects/gate_project_magic_seeds.dds"
+            }
+            blockoverride "tooltip" {
+                tooltipwidget = {
+                    RegularTooltip = {
+                        blockoverride "tooltip_content" {
+                            custom_tooltip_textbox = {
+                                text = "[concept_gate_project]"
+                                default_format = "#header"
+                            }
+                            custom_tooltip_textbox_with_empty_line = {
+                                text = je_gate_project_modernize_seed_selection_description
+                            }
+                            custom_tooltip_textbox = {
+                                text = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(Country.MakeScope).End)]"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        expand = {}
     }
 
 }

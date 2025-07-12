@@ -73,3 +73,28 @@ gg_project_improve_mana_extraction = {
         }
     }
 }
+
+gg_project_modernize_seed_selection = {
+    scope = country
+
+    is_valid = {
+        has_technology_researched = magic_farming
+        any_scope_building = {
+            is_building_group = bg_druid_groves
+            NOT = {
+                has_modifier = gate_modifier_project_modernize_seed_selection
+            }
+        }
+        is_magic_country = yes
+        has_magic_researcher = yes
+        not_has_active_magic_project = yes
+    }
+
+    effect = {
+        gate_start_magic_project = {
+            project = je_gate_project_modernize_seed_selection
+            monthly_cost = money_amount_multiplier_small
+            months = gate_project_journal_entry_short
+        }
+    }
+}

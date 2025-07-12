@@ -25,3 +25,11 @@
  gate_modifier_project_improved_mana_extraction: "Verbesserte Extraktion" #deepl:4056629473
  gate_modifier_project_improved_mana_extraction_tooltip: "#V $gate_modifier_project_improved_mana_extraction$#!\n[GetStaticModifier('gate_modifier_project_improved_mana_extraction').GetDesc]" #deepl:4182175613
  gate_modifier_project_improved_mana_extraction_with_tooltip: "#bold #tooltip:[GetRawTextTooltipTag('gate_modifier_project_improved_mana_extraction_tooltip')] #underline $gate_modifier_project_improved_mana_extraction$#!#!#!" #deepl:2533865098
+ # Modernizing Seed Selection
+ button_project_modernize_seed_selection: "Saatgutauswahl modernisieren" #deepl:2922325633
+ je_gate_project_modernize_seed_selection: "Modernisierung der Saatgutauswahl" #deepl:1714033401
+ je_gate_project_modernize_seed_selection_reason: "[concept_magic_researcher] [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName] arbeitet derzeit an #bold $je_gate_project_modernize_seed_selection$ #! .\n$gate_journal_delimiter$\n$je_gate_project_modernize_seed_selection_description$" #deepl:4093611764
+ je_gate_project_modernize_seed_selection_description: "[GetGoods('magic_seed').GetName] werden verwendet, um den Ernteertrag zu steigern. Die Modernisierung der Auswahl dieses Saatguts für einen besseren Ertrag wird unsere Produktion verbessern. Dieses Projekt fügt den $gate_modifier_project_modernize_seed_selection_with_tooltip$ Modifikator zu einem unserer [GetBuildingType('building_druid_grove').GetName] hinzu." #deepl:633694667
+ gate_modifier_project_modernize_seed_selection: "Moderne Saatgutauswahl" #deepl:1094148601
+ gate_modifier_project_modernize_seed_selection_tooltip: "#V $gate_modifier_project_modernize_seed_selection$#!\n[GetStaticModifier('gate_modifier_project_modernize_seed_selection').GetDesc]" #deepl:3288771792
+ gate_modifier_project_modernize_seed_selection_with_tooltip: "#bold #tooltip:[GetRawTextTooltipTag('gate_modifier_project_modernize_seed_selection_tooltip')] #underline $gate_modifier_project_modernize_seed_selection$#!#!#!" #deepl:372033018
