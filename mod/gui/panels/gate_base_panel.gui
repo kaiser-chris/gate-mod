@@ -236,15 +236,36 @@ types gate_base_panel_types {
                         using = fontsize_large
                     }
 
-                    textbox = {
+                    vbox = {
                         visible = "[Country.MakeScope.Var('gate_magic_project').IsSet]"
-                        minimumsize = { 300 -1 }
-                        maximumsize = { 300 -1 }
-                        multiline = yes
-                        autoresize = yes
-                        text = gg_projects_active_project
-                        align = center
-                        using = fontsize_large
+                        layoutpolicy_vertical = expanding
+                        spacing = 20
+
+                        textbox = {
+                            minimumsize = { 300 -1 }
+                            maximumsize = { 300 -1 }
+                            multiline = yes
+                            autoresize = yes
+                            text = gg_projects_active_project
+                            align = center
+                            using = fontsize_large
+                        }
+
+                        green_progressbar_horizontal = {
+                            size = { 300 25 }
+
+                            blockoverride "values" {
+                                value = "[GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.CalcCurrentGoalValue]"
+                                min = 0
+                                max = "[GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.GetTotalGoalValue]"
+                            }
+
+                            textbox = {
+                                size = { 300 25 }
+                                text = gg_projects_progress
+                                align = center
+                            }
+                        }
                     }
                 }
 
@@ -516,7 +537,7 @@ types gate_base_panel_types {
             default_header_clean_faded = {
                 layoutpolicy_horizontal = expanding
                 blockoverride "text" {
-                    text = gg_header_magic_countries
+                    raw_text = "[Concept('concept_gate_magic_country', Localize('concept_gate_magic_countries'))]"
                 }
             }
 
