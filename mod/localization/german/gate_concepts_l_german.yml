@@ -21,9 +21,9 @@
  concept_magical_phenomena: "Magische Phänomene" #deepl:2882996657
  concept_magical_phenomena_desc: "Magische Phänomene sind Ereignisse, die durch die erhöhte [concept_mana_density] in einem Staat ausgelöst werden. Sie reichen von gutartig über hilfreich bis hin zu erschreckend." #deepl:2378601276
  concept_magic_researcher: "Arkanist" #deepl:3183248554
- concept_magic_researcher_desc: "Ein Länder-Arkanist leitet die [GetBuildingType('building_magic_research_institute').GetName] und steuert ihre [concept_magic_innovation]." #deepl:1843928989
+ concept_magic_researcher_desc: "Ein Arkanist eines Landes leitet die [GetBuildingType('building_magic_research_institute').GetName] und steuert die [concept_magic_innovation]. Sie leiten [Concept('concept_gate_project','$concept_gate_projects$')] und helfen uns, die magischen Industrien und die Nutzung der Magie in der Gesellschaft zu verbessern." #deepl:4177266127
  concept_gate_character_experience: "Charakter-Erfahrung" #deepl:356262571
- concept_gate_character_experience_desc: "Bestimmte Charaktere wie unser [concept_magic_researcher] können bei ihrer Arbeit Erfahrung sammeln.\n\n#header Erfahrungsstufen:#!\n- $gg_character_experience_novice$\n- $gg_character_experience_experienced$\n- $gg_character_experience_master$" #deepl:222324263
+ concept_gate_character_experience_desc: "Bestimmte Charaktere wie unser [concept_magic_researcher] können durch ihre Arbeit Erfahrung sammeln. Charaktere mit höherem Level sind besser in ihrem Job und steigern die Ergebnisse ihrer täglichen Arbeit.\n\n #header  Erfahrungslevel:#!\n - $gg_character_experience_novice$\n - $gg_character_experience_experienced$\n - $gg_character_experience_master$" #deepl:3702660743
  concept_gate_magic: "Magie" #deepl:4074079286
  concept_gate_magic_desc: "Magie ist der Akt der Formung von Mana, um eine Wirkung auf die Welt zu erzielen." #deepl:3855567043
  concept_gate_magic_users: "Magische Benutzer" #deepl:676616820
@@ -63,3 +63,6 @@
  concept_gate_project: "Arcanist Project"
  concept_gate_projects: "Arcanist Projects"
  concept_gate_project_desc: "Unter der Leitung der besten Magieexperten unseres Landes werden in den Arkanistenprojekten arkane Theorien in praktische Innovationen umgesetzt. Diese gezielten Forschungsanstrengungen bringen magische Verbesserungen hervor, die die Industrie, die Gesellschaft und die Infrastruktur verbessern und den Weg in eine zauberhaftere Zukunft ebnen." #deepl:1406830406
+ concept_gate_magic_country: "Arkanes Land" #deepl:2403103397
+ concept_gate_magic_countries: "Arkane Länder" #deepl:2611929564
+ concept_gate_magic_country_desc: "Länder, die [concept_magic_knowledge] erworben haben." #deepl:489898820
