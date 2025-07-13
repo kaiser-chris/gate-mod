@@ -1,27 +1,8 @@
 ﻿# Extensions of base game ideologies
 # These are added by the scripted effect add_gate_ideologies
 
-ideology_liberal_gate = {
+ideology_gate_intelligentsia = {
     icon = "gfx/interface/icons/ideology_icons/gate_liberal.dds"
-
-    lawgroup_citizenship = {
-        law_gnomish_harmony = approve
-        law_multicultural = disapprove
-        law_ethnostate = disapprove
-        law_national_supremacy = disapprove
-        law_racial_segregation = neutral
-        law_cultural_exclusion = approve
-    }
-
-    lawgroup_governance_principles = {
-        law_gate_magocracy = disapprove
-        law_presidential_republic = strongly_approve
-        law_parliamentary_republic = approve
-        law_corporate_state = neutral
-        law_monarchy = neutral
-        law_theocracy = neutral
-        law_council_republic = disapprove
-    }
 
     lawgroup_gate_monster_hunting = {
         law_no_organized_monster_hunting = neutral
@@ -40,25 +21,8 @@ ideology_liberal_gate = {
     }
 }
 
-ideology_isolationist_gate = {
+ideology_gate_rural_folk = {
     icon = "gfx/interface/icons/ideology_icons/gate_isolationist.dds"
-
-    lawgroup_colonization = {
-        law_gnomish_integration = neutral
-        law_frontier_colonization = strongly_approve
-        law_no_colonial_affairs = approve
-        law_colonial_resettlement = disapprove
-        law_colonial_exploitation = disapprove
-    }
-
-    lawgroup_citizenship = {
-        law_gnomish_harmony = disapprove
-        law_ethnostate = disapprove
-        law_national_supremacy = neutral
-        law_racial_segregation = approve
-        law_cultural_exclusion = neutral
-        law_multicultural = strongly_disapprove
-    }
 
     lawgroup_gate_monster_hunting = {
         law_no_organized_monster_hunting = strongly_disapprove
@@ -77,16 +41,8 @@ ideology_isolationist_gate = {
     }
 }
 
-ideology_jingoist_gate = {
+ideology_gate_armed_forces = {
     icon = "gfx/interface/icons/ideology_icons/gate_jingoist.dds"
-
-    lawgroup_colonization = {
-        law_gnomish_integration = approve
-        law_colonial_resettlement = approve
-        law_colonial_exploitation = approve
-        law_frontier_colonization = approve
-        law_no_colonial_affairs = neutral
-    }
 
     lawgroup_gate_monster_hunting = {
         law_no_organized_monster_hunting = disapprove
@@ -105,25 +61,13 @@ ideology_jingoist_gate = {
     }
 }
 
-ideology_pious_gate = {
+ideology_gate_devout = {
     icon = "gfx/interface/icons/ideology_icons/gate_pious.dds"
 
-    lawgroup_colonization = {
-        law_gnomish_integration = disapprove
-    }
-
-    lawgroup_citizenship = {
-        law_gnomish_harmony = approve
-    }
-
-    lawgroup_governance_principles = {
-        law_gate_magocracy = strongly_disapprove
-        law_monarchy = strongly_approve
-        law_theocracy = approve
-        law_presidential_republic = neutral
-        law_parliamentary_republic = neutral
-        law_corporate_state = neutral
-        law_council_republic = strongly_disapprove
+    lawgroup_elven_supremacy = {
+        law_elven_supremacy_religious_preaching = strongly_approve
+        law_elven_supremacy_enforced = approve
+        law_elven_supremacy_not_enforced = strongly_disapprove
     }
 
     lawgroup_gate_monster_hunting = {
@@ -143,26 +87,14 @@ ideology_pious_gate = {
     }
 }
 
-ideology_reactionary_gate = {
+ideology_gate_petty_bourgeoisie = {
     icon = "gfx/interface/icons/ideology_icons/gate_reactionary.dds"
 
-    lawgroup_citizenship = {
-        law_gnomish_harmony = disapprove
-        law_ethnostate = approve
-        law_national_supremacy = strongly_approve
-        law_racial_segregation = approve
-        law_cultural_exclusion = neutral
-        law_multicultural = disapprove
-    }
-
-    lawgroup_governance_principles = {
-        law_gate_magocracy = approve
-        law_monarchy = approve
-        law_theocracy = approve
-        law_presidential_republic = neutral
-        law_parliamentary_republic = neutral
-        law_corporate_state = neutral
-        law_council_republic = disapprove
+    lawgroup_gate_monster_hunting = {
+        law_no_organized_monster_hunting = strongly_disapprove
+        law_dedicated_monster_hunters = approve
+        law_private_monster_hunters = neutral
+        law_militarized_monster_hunters = approve
     }
 
     lawgroup_elven_supremacy = {
@@ -181,16 +113,8 @@ ideology_reactionary_gate = {
     }
 }
 
-ideology_egalitarian_gate = {
+ideology_gate_trade_unions = {
     icon = "gfx/interface/icons/ideology_icons/gate_egalitarian.dds"
-
-    lawgroup_governance_principles = {
-        law_gate_magocracy = strongly_disapprove
-    }
-
-    lawgroup_citizenship = {
-        law_gnomish_harmony = strongly_approve
-    }
 
     lawgroup_gate_monster_hunting = {
         law_no_organized_monster_hunting = neutral
@@ -209,18 +133,8 @@ ideology_egalitarian_gate = {
     }
 }
 
-ideology_paternalistic_gate = {
+ideology_gate_landowners = {
     icon = "gfx/interface/icons/ideology_icons/gate_paternalistic.dds"
-
-    lawgroup_governance_principles = {
-        law_gate_magocracy = strongly_approve
-        law_monarchy = strongly_approve
-        law_theocracy = approve
-        law_presidential_republic = neutral
-        law_parliamentary_republic = neutral
-        law_corporate_state = neutral
-        law_council_republic = strongly_disapprove
-    }
 
     lawgroup_gate_monster_hunting = {
         law_no_organized_monster_hunting = disapprove
@@ -239,16 +153,8 @@ ideology_paternalistic_gate = {
     }
 }
 
-ideology_laissez_faire_gate = {
+ideology_gate_industrialists = {
     icon = "gfx/interface/icons/ideology_icons/gate_laissez_faire.dds"
-
-    lawgroup_colonization = {
-        law_gnomish_integration = approve
-        law_colonial_exploitation = approve
-        law_no_colonial_affairs = neutral
-        law_colonial_resettlement = neutral
-        law_frontier_colonization = neutral
-    }
 
     lawgroup_gate_monster_hunting = {
         law_no_organized_monster_hunting = strongly_disapprove
