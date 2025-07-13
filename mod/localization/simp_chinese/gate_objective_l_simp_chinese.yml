@@ -21,9 +21,23 @@
  objective_magic_dominance_idle_hint: "接下来将会出现更多的挑战"
  magic_dominance_welcome: "魔法统御"
  magic_dominance_welcome_desc: "欢迎来到$objective_magic_dominance$玩家目标。在该目标中，你将获得一系列需要完成的[Concept('concept_journal_entry', '$concept_journal_entries$')]，这些日志条目会指引你走上主宰魔法与科技的道路。"
- # Journal Entries
- je_obj_magic_knowledge: "学习魔法知识"
- je_obj_magic_knowledge_reason: "魔法的奥秘颠覆了自然法则，我们的国家正站在命运的十字路口。为了驾驭这种新发现的力量，我们必须全身心投入对其现象的研究。从解读魔能的本质到了解其与物理世界的相互作用，掌握魔法的基础认知至关重要。唯有通过严谨研究和系统训练，我们才能释放其潜能，为那些可能塑造人类未来的实际应用奠定基础。"
- je_obj_magic_knowledge_goal_tt: "学习[concept_magic_knowledge]"
- je_obj_magic_academy: "设立魔法学院"
- je_obj_magic_academy_reason: "为了培养新一代的法师，我们必须摒弃零散的研究与盲目实验。建立专门的魔法学院将使奥术体系化，通过系统化的培训让学员有效且安全地驾驭魔能。这样的学院将加速培养技艺精湛的施法者，确保我国始终处于魔法发展的最前沿。"
+# Journal Entries
+ je_obj_gate_hire_researcher: "雇用一名$concept_magic_researcher$" #deepl:3440333179
+ je_obj_gate_hire_researcher_reason: "" #TODO: Write je_obj_gate_hire_researcher_reason
+ je_obj_gate_hire_researcher_status: "" #TODO: Write je_obj_gate_hire_researcher_status
+ je_obj_gate_build_research_institute: "建立[GetBuildingType('building_magic_research_institute').GetNameNoFormatting]" #deepl:1823860501
+ je_obj_gate_build_research_institute_reason: "" #TODO: Write je_obj_gate_build_research_institute_reason
+ je_obj_gate_build_research_institute_status: "" #TODO: Write je_obj_gate_build_research_institute_status
+ je_obj_gate_magic_knowledge: "学习魔法知识" #deepl:4288289565
+ je_obj_gate_magic_knowledge_reason: "" #TODO: Write je_obj_gate_magic_knowledge_reason
+ je_obj_gate_magic_knowledge_status: "" #TODO: Write je_obj_gate_magic_knowledge_status
+ je_obj_gate_finish_magic_project: "完成一个$concept_gate_project$" #deepl:4119009530
+ je_obj_gate_finish_magic_project_reason: "" #TODO: Write je_obj_gate_finish_magic_project_reason
+ je_obj_gate_finish_magic_project_status: "" #TODO: Write je_obj_gate_finish_magic_project_status
+ je_obj_gate_finish_magic_project_goal_tooltip: "成功完成一项[concept_gate_project]" #deepl:3100120676
+ je_obj_gate_produce_magic_goods: "生产[GetGoods('mana').GetNameNoFormatting] &amp;[GetGoods('magic_seed').GetNameNoFormatting]" #deepl:1045790609
+ je_obj_gate_produce_magic_goods_reason: "" #TODO: Write je_obj_gate_produce_magic_goods_reason
+ je_obj_gate_produce_magic_goods_status: "" #TODO: Write je_obj_gate_produce_magic_goods_status
+ je_obj_gate_magic_academy: "建设魔法学院" #deepl:3993713733
+ je_obj_gate_magic_academy_reason: "" #TODO: Write je_obj_gate_magic_academy_reason
+ je_obj_gate_magic_academy_status: ""

@@ -21,9 +21,23 @@
  objective_magic_dominance_idle_hint: "More challenges will appear eventually"
  magic_dominance_welcome: "Magic Dominance"
  magic_dominance_welcome_desc: "Welcome to the $objective_magic_dominance$ Player Objective. In this objective you will be given a series of [Concept('concept_journal_entry', '$concept_journal_entries$')] to complete that will guide you down a path towards dominating magic and technology."
- # Journal Entries
- je_obj_magic_knowledge: "Learn Magic Knowledge"
- je_obj_magic_knowledge_reason: "The mysteries of magic have upended the natural order, and our nation stands at a crossroads. To harness this newfound power, we must dedicate ourselves to studying its phenomena. From deciphering the nature of mana to understanding its interaction with the physical world, gaining a basic grasp of magic is crucial. Only through research and discipline can we unlock its potential and lay the groundwork for practical applications that could shape our future."
- je_obj_magic_knowledge_goal_tt: "Learned [concept_magic_knowledge]"
- je_obj_magic_academy: "Build Magic Academy"
- je_obj_magic_academy_reason: "To cultivate a new generation of mages, we must move beyond scattered study and experimentation. A dedicated Magic Academy will formalize the understanding of arcane arts, offering structured training to harness mana efficiently and safely. With such an institution, we can accelerate the development of skilled practitioners, ensuring our nation remains at the forefront of magical advancement."
+# Journal Entries
+ je_obj_gate_hire_researcher: "Hire an $concept_magic_researcher$"
+ je_obj_gate_hire_researcher_reason: "" #TODO: Write je_obj_gate_hire_researcher_reason
+ je_obj_gate_hire_researcher_status: "" #TODO: Write je_obj_gate_hire_researcher_status
+ je_obj_gate_build_research_institute: "Build the [GetBuildingType('building_magic_research_institute').GetNameNoFormatting]"
+ je_obj_gate_build_research_institute_reason: "" #TODO: Write je_obj_gate_build_research_institute_reason
+ je_obj_gate_build_research_institute_status: "" #TODO: Write je_obj_gate_build_research_institute_status
+ je_obj_gate_magic_knowledge: "Learn Magic Knowledge"
+ je_obj_gate_magic_knowledge_reason: "" #TODO: Write je_obj_gate_magic_knowledge_reason
+ je_obj_gate_magic_knowledge_status: "" #TODO: Write je_obj_gate_magic_knowledge_status
+ je_obj_gate_finish_magic_project: "Finish an $concept_gate_project$"
+ je_obj_gate_finish_magic_project_reason: "" #TODO: Write je_obj_gate_finish_magic_project_reason
+ je_obj_gate_finish_magic_project_status: "" #TODO: Write je_obj_gate_finish_magic_project_status
+ je_obj_gate_finish_magic_project_goal_tooltip: "Successfully finished an [concept_gate_project]"
+ je_obj_gate_produce_magic_goods: "Produce [GetGoods('mana').GetNameNoFormatting] & [GetGoods('magic_seed').GetNameNoFormatting]"
+ je_obj_gate_produce_magic_goods_reason: "" #TODO: Write je_obj_gate_produce_magic_goods_reason
+ je_obj_gate_produce_magic_goods_status: "" #TODO: Write je_obj_gate_produce_magic_goods_status
+ je_obj_gate_magic_academy: "Build Magic Academy"
+ je_obj_gate_magic_academy_reason: "" #TODO: Write je_obj_gate_magic_academy_reason
+ je_obj_gate_magic_academy_status: "" #TODO: Write je_obj_gate_magic_academy_status
