@@ -1,12 +1,31 @@
-﻿je_obj_magic_knowledge = {
+﻿je_obj_gate_hire_researcher = {
 	icon = "gfx/interface/icons/event_icons/event_gate_magic.dds"
-
 	group = je_group_objectives
 
+	status_desc = {
+		desc = je_obj_gate_hire_researcher_status
+	}
+
 	complete = {
-		custom_tooltip = {
-			text = je_obj_magic_knowledge_goal_tt
-			is_magic_country = yes
+		has_magic_researcher = yes
+	}
+
+	should_be_pinned_by_default = yes
+	weight = 1000
+	transferable = yes
+}
+
+je_obj_gate_build_research_institute = {
+	icon = "gfx/interface/icons/event_icons/event_gate_magic.dds"
+	group = je_group_objectives
+
+	status_desc = {
+		desc = je_obj_gate_build_research_institute_status
+	}
+
+	complete = {
+		capital = {
+			has_building = building_magic_research_institute
 		}
 	}
 
@@ -15,10 +34,72 @@
 	transferable = yes
 }
 
-je_obj_magic_academy = {
+je_obj_gate_magic_knowledge = {
 	icon = "gfx/interface/icons/event_icons/event_gate_magic.dds"
-
 	group = je_group_objectives
+
+	status_desc = {
+		desc = je_obj_gate_magic_knowledge_status
+	}
+
+	complete = {
+		is_magic_country = yes
+	}
+
+	should_be_pinned_by_default = yes
+	weight = 1000
+	transferable = yes
+}
+
+je_obj_gate_finish_magic_project = {
+	icon = "gfx/interface/icons/event_icons/event_gate_magic.dds"
+	group = je_group_objectives
+
+	status_desc = {
+		desc = je_obj_gate_finish_magic_project_status
+	}
+
+	complete = {
+		custom_tooltip = {
+			text = je_obj_gate_finish_magic_project_goal_tooltip
+			has_variable = gate_has_finished_project
+		}
+	}
+
+	should_be_pinned_by_default = yes
+	weight = 1000
+	transferable = yes
+}
+
+je_obj_gate_produce_magic_goods = {
+	icon = "gfx/interface/icons/event_icons/event_gate_magic.dds"
+	group = je_group_objectives
+
+	status_desc = {
+		desc = je_obj_gate_produce_magic_goods_status
+	}
+
+	complete = {
+		any_scope_building = {
+			is_building_group = bg_mana_extraction
+		}
+		any_scope_building = {
+			is_building_group = bg_druid_groves
+		}
+	}
+
+	should_be_pinned_by_default = yes
+	weight = 1000
+	transferable = yes
+}
+
+je_obj_gate_magic_academy = {
+	icon = "gfx/interface/icons/event_icons/event_gate_magic.dds"
+	group = je_group_objectives
+
+	status_desc = {
+		desc = je_obj_gate_magic_academy_status
+	}
 
 	complete = {
 		capital = {

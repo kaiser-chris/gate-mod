@@ -78,6 +78,7 @@
 			amount = 10
 		}
 		hidden_effect = {
+			set_variable = gate_has_finished_project
 			gate_stop_magic_project = yes
 		}
 	}
@@ -158,6 +159,7 @@ je_gate_project_domain = {
 			amount = 10
 		}
 		hidden_effect = {
+			set_variable = gate_has_finished_project
 			gate_stop_magic_project = yes
 		}
 	}
@@ -239,6 +241,7 @@ je_gate_project_improve_mana_extraction = {
 			amount = 10
 		}
 		hidden_effect = {
+			set_variable = gate_has_finished_project
 			gate_stop_magic_project = yes
 		}
 	}
@@ -320,6 +323,7 @@ je_gate_project_modernize_seed_selection = {
 			amount = 10
 		}
 		hidden_effect = {
+			set_variable = gate_has_finished_project
 			gate_stop_magic_project = yes
 		}
 	}

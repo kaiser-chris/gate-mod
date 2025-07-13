@@ -3,12 +3,12 @@
 		has_global_variable = com_debug
 		is_player = yes
 		NOT = {
-			has_completed_subgoal = sg_magic_knowledge
+			has_completed_subgoal = sg_gate_magic_knowledge
 		}
 	}
 
 	when_taken = {
-		complete_objective_subgoal = sg_magic_knowledge
+		complete_objective_subgoal = sg_gate_magic_knowledge
 	}
 
 	ai_chance = {
@@ -21,12 +21,12 @@ debug_complete_sg_magic_academy = {
 		has_global_variable = com_debug
 		is_player = yes
 		NOT = {
-			has_completed_subgoal = sg_magic_academy
+			has_completed_subgoal = sg_gate_magic_academy
 		}
 	}
 
 	when_taken = {
-		complete_objective_subgoal = sg_magic_academy
+		complete_objective_subgoal = sg_gate_magic_academy
 	}
 
 	ai_chance = {

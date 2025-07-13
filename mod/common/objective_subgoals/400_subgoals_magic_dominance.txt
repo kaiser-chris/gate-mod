@@ -1,33 +1,128 @@
-﻿sg_magic_knowledge = {
+﻿sg_gate_hire_researcher = {
 	category = sgcat_magic_dominance
 	is_repeatable = no
 
-	trigger = {
-	}
-	
 	on_start = {
-		add_journal_entry = {
-			type = je_obj_magic_knowledge
-			objective_subgoal = sg_magic_knowledge
+		if = {
+			limit = {
+				has_magic_researcher = yes
+			}
+			complete_objective_subgoal = sg_gate_hire_researcher
+		}
+		else = {
+			add_journal_entry = {
+				type = je_obj_gate_hire_researcher
+				objective_subgoal = sg_gate_hire_researcher
+			}
 		}
 	}
 }
 
-sg_magic_academy = {
+sg_gate_build_research_institute = {
+	category = sgcat_magic_dominance
+	is_repeatable = no
+
+	on_start = {
+		if = {
+			limit = {
+				capital = {
+					has_building = building_magic_research_institute
+				}
+			}
+			complete_objective_subgoal = sg_gate_build_research_institute
+		}
+		else = {
+			add_journal_entry = {
+				type = je_obj_gate_build_research_institute
+				objective_subgoal = sg_gate_build_research_institute
+			}
+		}
+	}
+}
+
+sg_gate_magic_knowledge = {
 	category = sgcat_magic_dominance
 	is_repeatable = no
 
 	unlocking_subgoals_all = {
-		sg_magic_knowledge
+		sg_gate_hire_researcher
+		sg_gate_build_research_institute
 	}
+	
+	on_start = {
+		if = {
+			limit = {
+				is_magic_country = yes
+			}
+			complete_objective_subgoal = sg_gate_magic_knowledge
+		}
+		else = {
+			add_journal_entry = {
+				type = je_obj_gate_magic_knowledge
+				objective_subgoal = sg_gate_magic_knowledge
+			}
+		}
+	}
+}
 
-	trigger = {
+sg_gate_finish_magic_project = {
+	category = sgcat_magic_dominance
+	is_repeatable = no
+
+	unlocking_subgoals_all = {
+		sg_gate_magic_knowledge
 	}
 
 	on_start = {
 		add_journal_entry = {
-			type = je_obj_magic_academy
-			objective_subgoal = sg_magic_academy
+			type = je_obj_gate_finish_magic_project
+			objective_subgoal = sg_gate_finish_magic_project
+		}
+	}
+}
+
+sg_gate_produce_magic_goods = {
+	category = sgcat_magic_dominance
+	is_repeatable = no
+
+	unlocking_subgoals_all = {
+		sg_gate_magic_knowledge
+	}
+
+	on_start = {
+		if = {
+			limit = {
+				any_scope_building = {
+					is_building_group = bg_mana_extraction
+				}
+				any_scope_building = {
+					is_building_group = bg_druid_groves
+				}
+			}
+			complete_objective_subgoal = sg_gate_produce_magic_goods
+		}
+		else = {
+			add_journal_entry = {
+				type = je_obj_gate_produce_magic_goods
+				objective_subgoal = sg_gate_produce_magic_goods
+			}
+		}
+	}
+}
+
+sg_gate_magic_academy = {
+	category = sgcat_magic_dominance
+	is_repeatable = no
+
+	unlocking_subgoals_all = {
+		sg_gate_finish_magic_project
+		sg_gate_produce_magic_goods
+	}
+
+	on_start = {
+		add_journal_entry = {
+			type = je_obj_gate_magic_academy
+			objective_subgoal = sg_gate_magic_academy
 		}
 	}
 }
