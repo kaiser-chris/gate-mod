@@ -27,74 +27,74 @@ add_gate_ideologies = {
         if = {
             limit = {
                 NOT = {
-                    has_ideology = ideology:ideology_liberal_gate
+                    has_ideology = ideology:ideology_gate_intelligentsia
                 }
-                has_ideology = ideology:ideology_liberal
+                is_interest_group_type = ig_intelligentsia
             }
-            add_ideology = ideology_liberal_gate
+            add_ideology = ideology_gate_intelligentsia
         }
         if = {
             limit = {
                 NOT = {
-                    has_ideology = ideology:ideology_paternalistic_gate
+                    has_ideology = ideology:ideology_gate_landowners
                 }
-                has_ideology = ideology:ideology_paternalistic
+                is_interest_group_type = ig_landowners
             }
-            add_ideology = ideology_paternalistic_gate
+            add_ideology = ideology_gate_landowners
         }
         if = {
             limit = {
                 NOT = {
-                    has_ideology = ideology:ideology_pious_gate
+                    has_ideology = ideology:ideology_gate_devout
                 }
-                has_ideology = ideology:ideology_pious
+                is_interest_group_type = ig_devout
             }
-            add_ideology = ideology_pious_gate
+            add_ideology = ideology_gate_devout
         }
         if = {
             limit = {
                 NOT = {
-                    has_ideology = ideology:ideology_laissez_faire_gate
+                    has_ideology = ideology:ideology_gate_industrialists
                 }
-                has_ideology = ideology:ideology_laissez_faire
+                is_interest_group_type = ig_industrialists
             }
-            add_ideology = ideology_laissez_faire_gate
+            add_ideology = ideology_gate_industrialists
         }
         if = {
             limit = {
                 NOT = {
-                    has_ideology = ideology:ideology_reactionary_gate
+                    has_ideology = ideology:ideology_gate_petty_bourgeoisie
                 }
-                has_ideology = ideology:ideology_reactionary
+                is_interest_group_type = ig_petty_bourgeoisie
             }
-            add_ideology = ideology_reactionary_gate
+            add_ideology = ideology_gate_petty_bourgeoisie
         }
         if = {
             limit = {
                 NOT = {
-                    has_ideology = ideology:ideology_egalitarian_gate
+                    has_ideology = ideology:ideology_gate_trade_unions
                 }
-                has_ideology = ideology:ideology_egalitarian
+                is_interest_group_type = ig_trade_unions
             }
-            add_ideology = ideology_egalitarian_gate
+            add_ideology = ideology_gate_trade_unions
         }
         if = {
             limit = {
                 NOT = {
-                    has_ideology = ideology:ideology_isolationist_gate
+                    has_ideology = ideology:ideology_gate_rural_folk
                 }
-                has_ideology = ideology:ideology_isolationist
+                is_interest_group_type = ig_rural_folk
             }
-            add_ideology = ideology_isolationist_gate
+            add_ideology = ideology_gate_rural_folk
         }
         if = {
             limit = {
                 NOT = {
-                    has_ideology = ideology:ideology_jingoist_gate
+                    has_ideology = ideology:ideology_gate_armed_forces
                 }
-                has_ideology = ideology:ideology_jingoist
+                is_interest_group_type = ig_armed_forces
             }
-            add_ideology = ideology_jingoist_gate
+            add_ideology = ideology_gate_armed_forces
         }
     }
 }
