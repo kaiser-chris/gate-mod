@@ -51,4 +51,7 @@
  law_gate_vampire_monarchy: "Eternal Monarchy"
  law_gate_vampire_monarchy_desc: "This country has embraced [concept_gate_vampirism] and its monarch is considered eternal."
  law_gate_magocracy: "Magocracy"
- law_gate_magocracy_desc: "#lore The government is ruled by circle of [GetPopType('mages').GetName] and [GetPopType('druids').GetName]. The Head of State is nominally the most powerful spell caster in the nation, selected by merit, status, or birth.#!"
+ law_gate_magocracy_desc: "A form of governance where the most powerful spell caster in the nation, selected by merit, status, or birth rules for life. They are declared an $RULER_TITLE_GATE_ARCHWIZARD$ or $RULER_TITLE_GATE_ARCHWITCH$."
+# Distribution of Power
+ law_gate_arcane_council: "Arcane Council"
+ law_gate_arcane_council_desc: "The Head of State shares power and responsibility with a small group of powerful, unelected [GetPopType('mages').GetName] and [GetPopType('druids').GetName]."
