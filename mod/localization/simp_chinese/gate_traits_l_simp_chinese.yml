@@ -15,9 +15,9 @@
  state_trait_gate_beatus_caves: "圣贝尔多斯洞穴"
  state_trait_gate_baba_gurgur: "巴巴古尔古尔"
  state_trait_gate_ateshgah: "巴库火祠"
- state_trait_gate_ganges: "恒河干线连接点" #deepl:2665970369
- state_trait_gate_healing_ganges: "治愈恒河雷线" #deepl:1706835395
- state_trait_gate_venkateswara: "文卡特斯瓦拉" #deepl:246700422
+ state_trait_gate_ganges: "恒河灵脉节点"
+ state_trait_gate_healing_ganges: "恒河疗愈灵脉"
+ state_trait_gate_venkateswara: "文卡特斯瓦拉"
  state_trait_dwarven_mines: "矮人矿井"
  state_trait_dwarven_mines_tyrol: "$state_trait_dwarven_mines$"
  state_trait_dwarven_mines_south_tyrol: "$state_trait_dwarven_mines$"
@@ -26,10 +26,10 @@
 # Character Traits
  gate_monster_killer: "怪物杀手"
  gate_monster_killer_desc: "这位将军成功地保护了民众免受怪物的袭击。"
- gate_magic_researcher: "魔法研究者"
+ gate_magic_researcher: "奥术师"
  gate_magic_researcher_desc: "此人对魔法及其应用非常着迷。"
- gate_expedition_leader: "$gate_planet$ 探险队队长" #deepl:281496026
- gate_expedition_leader_desc: "此人现在或曾经是[concept_gate_planet] 远征队的领队。" #deepl:155879429
+ gate_expedition_leader: "$gate_planet$远征领队"
+ gate_expedition_leader_desc: "该角色是或曾经是[concept_gate_planet]远征队的队长。"
  gate_eternal_monarch: "永恒君主"
  gate_eternal_monarch_desc: "该统治者是一位永生的[GetCulture('vampire').GetName]。"
  gate_race_trait_vampire: "[GetCulture('vampire').GetNameNoFormatting]"
@@ -42,5 +42,5 @@
  gate_race_trait_orcish_desc: "该角色属于[GetCulture('orcish').GetName]种族。"
  gate_race_trait_gnomish: "[GetCulture('gnomish').GetNameNoFormatting]"
  gate_race_trait_gnomish_desc: "该角色属于[GetCulture('gnomish').GetName]种族。"
- gate_race_trait_bear: "熊" #deepl:2802323579
- gate_race_trait_bear_desc: "这个角色属于熊族。" #deepl:3875923797
+ gate_race_trait_bear: "熊"
+ gate_race_trait_bear_desc: "该角色属于熊种族。"

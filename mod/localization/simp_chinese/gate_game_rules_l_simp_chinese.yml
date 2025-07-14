@@ -1,8 +1,8 @@
 ﻿l_simp_chinese:
- rule_gate_magic_start: "$concept_magic_knowledge$ 游戏开始时" #deepl:1582202143
- setting_gate_deactivate_magic_start: "历史" #deepl:711774471
- setting_gate_deactivate_magic_start_desc: "只有具有相关历史的[Concept('concept_country', '$concept_countries$')] 才会从[concept_magic_knowledge] 开始。" #deepl:3182066989
- setting_gate_activate_magic_start_player: "玩家国家 + 历史" #deepl:990927132
- setting_gate_activate_magic_start_player_desc: "所有玩家[Concept('concept_country', '$concept_countries$')] 以及具有相关历史的[Concept('concept_country', '$concept_countries$')] 都将以[concept_magic_knowledge] 开始。" #deepl:3621474324
- setting_gate_activate_magic_start_all: "所有国家" #deepl:3544990229
- setting_gate_activate_magic_start_all_desc: "所有[Concept('concept_country', '$concept_countries$')] 均以[concept_magic_knowledge] 开头。" #deepl:2402796077
+ rule_gate_magic_start: "开局$concept_magic_knowledge$"
+ setting_gate_deactivate_magic_start: "史实"
+ setting_gate_deactivate_magic_start_desc: "只有具有相关历史的[Concept('concept_country', '$concept_countries$')]才会开局拥有[concept_magic_knowledge]。"
+ setting_gate_activate_magic_start_player: "玩家国家+史实"
+ setting_gate_activate_magic_start_player_desc: "具有相关历史的[Concept('concept_country', '$concept_countries$')]和所有玩家[Concept('concept_country', '$concept_countries$')]会开局拥有[concept_magic_knowledge]。"
+ setting_gate_activate_magic_start_all: "所有国家"
+ setting_gate_activate_magic_start_all_desc: "所以[Concept('concept_country', '$concept_countries$')]都开局拥有[concept_magic_knowledge]。"

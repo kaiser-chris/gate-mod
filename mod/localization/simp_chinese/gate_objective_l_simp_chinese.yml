@@ -6,38 +6,38 @@
  objective_magic_dominance_name_GATE_AD: "#v $GATE_AD$#!"
  objective_magic_dominance_desc_GATE_AD: "#lore $GATE_AD_FLAVOR_TEXT$#!"
  objective_magic_dominance_name_GATE_OK: "#v $GATE_OK$#!"
- objective_magic_dominance_desc_GATE_OK: "#v 该国尚无背景故事！#!\n\n#lore $GATE_OK_FLAVOR_TEXT$#!"
- objective_magic_dominance_name_GATE_BN: "#v $GATE_BN$#!" #deepl:4026568507
- objective_magic_dominance_desc_GATE_BN: "#v 这个国家还没有风味内容！#!\n\n#lore $GATE_BN_FLAVOR_TEXT$#!" #deepl:1738979730
+ objective_magic_dominance_desc_GATE_OK: "#lore $GATE_OK_FLAVOR_TEXT$#!"
+ objective_magic_dominance_name_GATE_BN: "#v $GATE_BN$#!"
+ objective_magic_dominance_desc_GATE_BN: "#v 该国尚无风味内容！#!\n\n#lore $GATE_BN_FLAVOR_TEXT$#!"
  objective_magic_dominance_name_GATE_NS: "#v $GATE_NS$#!"
- objective_magic_dominance_desc_GATE_NS: "#v 该国尚无背景故事！#!\n\n#lore $GATE_NS_FLAVOR_TEXT$#!"
+ objective_magic_dominance_desc_GATE_NS: "#v 该国尚无风味内容！#!\n\n#lore $GATE_NS_FLAVOR_TEXT$#!"
  objective_magic_dominance_name_GBR: "#v $GBR$#!"
  objective_magic_dominance_desc_GBR: "#lore 在1814至1836年间，大英帝国在其非洲殖民地频繁遭遇异界势力的侵扰，这场跨越维度的冲突反而坚定了其掌控神秘力量的决心。此时的帝国已被魔法的魅影深深蛊惑，化作探索未知与秘术创新的熔炉，誓要揭开星门的奥秘。在权力与利润的双重驱动下，不列颠的视线如鹰隼般锁定那些时空裂隙——他们不仅要攫取门扉彼岸的财富，更要驯服潜藏其中的致命威胁。#!"
  objective_magic_dominance_name_CHI: "#v $dyn_c_great_qing$#!"
  objective_magic_dominance_desc_CHI: "#lore 公元1814年，一道魔法门在偏远的阿拉善地区骤然开启，释放出异界入侵者。清朝凭借坚韧意志与战略智慧击退了这场异界侵袭，加固魔法门以固守疆域，捍卫了国家主权。在军方枕戈待旦之际，清朝学者正在魔法研究方面引领地球诸国。坊间渐起深入未知领域的探险传闻——这些行动可能带来无上荣耀，也可能招致难以言喻的灾祸。#!"
- objective_magic_dominance_name_TEX: "#v $TEX$#!" #deepl:4031726930
- objective_magic_dominance_desc_TEX: "#lore 德克萨斯州曾经是一个边疆共和国，如今却发生了翻天覆地的变化--它的命运因$plundboelka$ 的到来而彻底改变，这是一个流离失所的乌萨利斯熊人部族，被他们的$praprandgaw$ 亲属驱赶到南方。$plundboelka$ 通过魔法门来到冰天雪地的安卡利斯，他们带来了地球人长期以来未知的神秘知识。这个不太可能的联盟建立了一个新的、坚韧不拔的德克萨斯--一个步枪和符文并存的地方。#!" #deepl:2526713592
+ objective_magic_dominance_name_TEX: "#v $TEX$#!"
+ objective_magic_dominance_desc_TEX: "#lore 德克萨斯曾是一个边疆共和国，如今其命运因$plundboelka$的到来而永远改变，这群被迫迁徙的乌萨利思熊族，被其$praprandgaw$同族驱赶南下。$plundboelka$从安卡里斯冰原穿越魔法门降临于此，带来了地球人类未曾知晓的奥秘知识。这不可思议的联盟锻造了一个崭新而坚韧的德克萨斯——在这里，步枪与符文并肩而立。#!"
  objective_magic_dominance_idle_header: "继续前行"
  objective_magic_dominance_idle_hint: "接下来将会出现更多的挑战"
  magic_dominance_welcome: "魔法统御"
  magic_dominance_welcome_desc: "欢迎来到$objective_magic_dominance$玩家目标。在该目标中，你将获得一系列需要完成的[Concept('concept_journal_entry', '$concept_journal_entries$')]，这些日志条目会指引你走上主宰魔法与科技的道路。"
 # Journal Entries
- je_obj_gate_hire_researcher: "雇用一名$concept_magic_researcher$" #deepl:3440333179
- je_obj_gate_hire_researcher_reason: ""
- je_obj_gate_hire_researcher_status: ""
- je_obj_gate_build_research_institute: "建立[GetBuildingType('building_magic_research_institute').GetNameNoFormatting]" #deepl:1823860501
- je_obj_gate_build_research_institute_reason: ""
- je_obj_gate_build_research_institute_status: ""
- je_obj_gate_magic_knowledge: "学习$concept_magic_knowledge$" #deepl:1819829812
- je_obj_gate_magic_knowledge_reason: ""
- je_obj_gate_magic_knowledge_status: ""
- je_obj_gate_finish_magic_project: "完成一个$concept_gate_project$" #deepl:4119009530
- je_obj_gate_finish_magic_project_reason: ""
- je_obj_gate_finish_magic_project_status: ""
- je_obj_gate_finish_magic_project_goal_tooltip: "成功完成一项[concept_gate_project]" #deepl:3100120676
- je_obj_gate_produce_magic_goods: "生产[GetGoods('mana').GetNameNoFormatting] &amp;[GetGoods('magic_seed').GetNameNoFormatting]" #deepl:1045790609
- je_obj_gate_produce_magic_goods_reason: ""
- je_obj_gate_produce_magic_goods_status: ""
- je_obj_gate_magic_academy: "建设魔法学院" #deepl:3993713733
- je_obj_gate_magic_academy_reason: ""
- je_obj_gate_magic_academy_status: ""
+ je_obj_gate_hire_researcher: "雇佣$concept_magic_researcher$"
+ je_obj_gate_hire_researcher_reason: "奥术师是当今社会魔法进步的基石。作为奥术知识的最高权威，他们开创并引领着探索魔法奥秘的研究。从领导变革性项目到运用法术技艺改善日常生活，再到催生解锁强大技术所必需的关键魔法创新，在充分发掘现代魔法能量潜力的进程中，奥术师发挥着不可替代的核心作用。"
+ je_obj_gate_hire_researcher_status: "你可以在决议面板中雇佣一位[concept_magic_researcher]。"
+ je_obj_gate_build_research_institute: "建造[GetBuildingType('building_magic_research_institute').GetNameNoFormatting]"
+ je_obj_gate_build_research_institute_reason: "魔法研究机构是国家奥术发展的核心所在。作为奥术师的主要工作场所，这里进行着魔法理论的检验、咒语的精炼与突破性成果的诞生。作为魔法研究的核心枢纽，该机构对开启魔法科技研究、解锁塑造未来魔力驱动时代的关键奥秘具有不可或缺的作用。"
+ je_obj_gate_build_research_institute_status: "[GetBuildingType('building_magic_research_institute').GetName]已在你的[concept_capital_state]建造完毕。"
+ je_obj_gate_magic_knowledge: "学习$concept_magic_knowledge$"
+ je_obj_gate_magic_knowledge_reason: "奥术知识标志着一个国家踏入魔法领域的第一步。若缺乏此项根基，任何魔法进步都无从谈起。获取途径有二：或通过与已觉醒的奥术国家缔结外交条约，或委派你的奥术师潜心研究以揭示其奥秘。这项基础认知对于解锁后续纷繁复杂的魔法科技至关重要。"
+ je_obj_gate_magic_knowledge_status: "[concept_magic_knowledge]可以通过我们的[concept_magic_researcher]习得，或通过与[concept_gate_magic_country]签订[concept_treaty]获取。"
+ je_obj_gate_finish_magic_project: "完成$concept_gate_project$"
+ je_obj_gate_finish_magic_project_reason: "奥术师项目是由你国家的顶级魔法专家主导的重要研究计划。这些项目将原始的奥术理论转化为切实的提升——增强工业、赋能社会、丰富基础设施。通过投资奥术师项目， 你将塑造一个魔法成为国家进步基石的未来。"
+ je_obj_gate_finish_magic_project_status: "[Concept('concept_gate_project','$concept_gate_projects$')]已在魔潮面板启动。"
+ je_obj_gate_finish_magic_project_goal_tooltip: "成功完成一项[concept_gate_project]"
+ je_obj_gate_produce_magic_goods: "生产[GetGoods('mana').GetNameNoFormatting]和[GetGoods('magic_seed').GetNameNoFormatting]"
+ je_obj_gate_produce_magic_goods_reason: "魔能水晶和魔法种子是任何繁荣魔法经济的支柱。法力水晶由法师从大气中提炼，对于驱动魔法工业和科技至关重要。与此同时，德鲁伊在圣林中培育魔法种子，以提高农业产出——解放劳动力并推动工业发展。它们共同为一个魔法强国奠定了基础。"
+ je_obj_gate_produce_magic_goods_status: "建造[GetBuildingType('building_mana_extractor').GetName]和[GetBuildingType('building_druid_grove').GetName]"
+ je_obj_gate_magic_academy: "建造魔法学院"
+ je_obj_gate_magic_academy_reason: "魔法学院作为我国首都奥术学习的灯塔，致力于培养新一代技艺精湛的魔法师。通过提升魔法资质与拓展创新能力，该学院已成为维系魔法持续进步与国家发展的基石。"
+ je_obj_gate_magic_academy_status: "[GetBuildingType('building_magic_academy').GetName]已在你的[concept_capital_state]建造完毕。"

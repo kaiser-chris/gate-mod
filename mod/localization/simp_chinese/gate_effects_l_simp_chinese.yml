@@ -1,14 +1,14 @@
 ﻿l_simp_chinese:
  effect_add_magic_innovation: "增加[SCOPE.GetValue('added_innovation')|+=0][concept_magic_innovation]"
  effect_add_mana_density: "增加[SCOPE.GetValue('added_mana_density')|+=0][concept_mana_density]"
- effect_learn_magic: "学习[concept_magic_knowledge]"
- effect_gate_establish_treaty: "在[SCOPE.GetLocalVariable('gate_treaty_source').GetCountry.GetName] 和 之间建立#bold [SCOPE.GetLocalVariable('gate_treaty_name').GetFlagName] #! [concept_treaty] [SCOPE.GetLocalVariable('gate_treaty_target').GetCountry.GetName]" #deepl:37883036
- effect_pops_embrace_vampirism: "我国部分人口接受了[concept_gate_vampirism]，并转变为[GetCulture('vampire').GetName]文化与[GetReligion('gate_lunar_masquerade').GetName]宗教。"
- effect_characters_embrace_vampirism: "我们的领袖和政治家接受了[concept_gate_vampirism]，并转变为[GetCulture('vampire').GetName]文化与[GetReligion('gate_lunar_masquerade').GetName]宗教。"
+ effect_learn_magic: "[SCOPE.sCountry('gate_magic_learner').GetName]学习[concept_magic_knowledge]"
+ effect_gate_establish_treaty: "在[SCOPE.GetLocalVariable('gate_treaty_source').GetCountry.GetName]与[SCOPE.GetLocalVariable('gate_treaty_target').GetCountry.GetName]之间建立#bold [SCOPE.GetLocalVariable('gate_treaty_name').GetFlagName]#![concept_treaty]"
+ effect_pops_embrace_vampirism: "我国部分人口接受了[concept_gate_vampirism]，并转变为[GetCulture('vampire').GetName]文化与[GetReligion('gate_lunar_masquerade').GetName]宗教"
+ effect_characters_embrace_vampirism: "我们的领袖和政治家接受了[concept_gate_vampirism]，并转变为[GetCulture('vampire').GetName]文化与[GetReligion('gate_lunar_masquerade').GetName]宗教"
  effect_gate_magic_experience: "[concept_magic_researcher]增加[SCOPE.GetValue('added_experience')|+=0][concept_gate_character_experience]"
- effect_gate_expedition_uncover: "发现新区域[concept_gate_expedition_map]" #deepl:3316576148
- effect_gate_expedition_open_map: "开放[concept_gate_expedition_map]" #deepl:2134944514
- effect_gate_expedition_change_budget: "通过以下方式改变我们的[concept_gate_expedition_budget] [SCOPE.GetValue('budget_change')|+=0]" #deepl:566174399
- effect_gate_expedition_start_activity: "开始[Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')] ，为期[SCOPE.GetValue('months')|0v] 个月" #deepl:337475788
- effect_gate_start_magic_project: "开始#bold [SCOPE.GetLocalVariable('gate_project_name').GetFlagName] #! [concept_gate_project] 。该项目将耗时#v [SCOPE.GetLocalVariable('months').GetValue|0] 个月#! ，每月将花费我们@money!#r  -#![SCOPE.GetLocalVariable('monthly_cost').GetValue|-0v] 。" #deepl:2614357206
- effect_gate_stop_magic_project: "停止当前活动[concept_gate_project]" #deepl:753901991
+ effect_gate_expedition_uncover: "发现[concept_gate_expedition_map]的新区域"
+ effect_gate_expedition_open_map: "打开[concept_gate_expedition_map]"
+ effect_gate_expedition_change_budget: "[concept_gate_expedition_budget]改变[SCOPE.GetValue('budget_change')|+=0]"
+ effect_gate_expedition_start_activity: "开启为期[SCOPE.GetValue('months')|0v]个月的[Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')]"
+ effect_gate_start_magic_project: "启动#bold [SCOPE.GetLocalVariable('gate_project_name').GetFlagName]#![concept_gate_project]。该项目将耗时#v [SCOPE.GetLocalVariable('months').GetValue|0]个月#!，并将每月耗费我们@money!#r ‑#![SCOPE.GetLocalVariable('monthly_cost').GetValue|-0v]资金。"
+ effect_gate_stop_magic_project: "停止当前进行的[concept_gate_project]"

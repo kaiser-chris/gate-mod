@@ -4,7 +4,7 @@
  mages_only_icon: "@mages!"
  mages_no_icon: "法师"
  mages_desc: "受过教育的[concept_gate_magic_users]，通常来自富裕的精英阶层。他们的政治利益通常由[GetInterestGroupVariant('ig_gate_magic_users',GetPlayer).GetNameWithCountryVariant]代表。"
- MAGES_QUALIFICATIONS_DESC: "只有拥有足够的[concept_literacy] 才能成为#v $mages$ #! 。[concept_literacy] 和[concept_wealth] 的潜力越大。[concept_culture] 面孔[concept_discrimination] 的 pop 需要更长的时间。#v $aristocrats$ #! 和#v $academics$ #! 特别容易成为#v $mages$ #! 。[GetBuildingType('building_magic_academy').GetName] [concept_building] 也更容易培养出新的#v $mages$ #! 。" #deepl:3355709172
+ MAGES_QUALIFICATIONS_DESC: "只有拥有足够[concept_literacy]的人群能成为#v $mages$#!。[concept_literacy]和[concept_wealth]越高，转变潜力就越高。[concept_culture]被[concept_discrimination]的人群转变需要更长时间。#v $aristocrats$#!和#v $academics$#!特别容易成为#v $mages$#!。[GetBuildingType('building_magic_academy').GetName][concept_building]也会使培养新#v $mages$#!更加容易。"
  mages_qualifications_academy: "来自我们的[GetBuildingType('building_magic_academy').GetName]"
  pop_mages: "$mages$[concept_profession]"
  building_employment_mages_add: "$mages$/级"
@@ -36,7 +36,7 @@
  druids_only_icon: "@druids!"
  druids_no_icon: "德鲁伊"
  druids_desc: "天生的[concept_gate_magic_users]，一般来自农民家庭。他们的政治利益通常由[GetInterestGroupVariant('ig_gate_magic_users',GetPlayer).GetNameWithCountryVariant]]代表。"
- DRUIDS_QUALIFICATIONS_DESC: "任何流行语都可以成为#v $druids$ #! 。[concept_literacy] 和[concept_wealth] 的潜力越大。[concept_culture] 面孔的流行音乐[concept_discrimination] 需要更长的时间。#v $farmers$ #! 和#v $laborers$ #! 特别容易成为#v $druids$ #! 。" #deepl:2460264004
+ DRUIDS_QUALIFICATIONS_DESC: "任何人群都能成为#v $druids$#!。[concept_literacy]和[concept_wealth]越高，转变潜力就越高。[concept_culture]被[concept_discrimination]的人群转变需要更长时间。#v $farmers$#!和#v $laborers$#!特别容易成为#v $druids$#!。"
  pop_druids: "$druids$[concept_profession]"
  building_employment_druids_add: "$druids$/级"
  building_employment_druids_add_desc: "修正建筑每等级可以雇佣的$druids$数量"
