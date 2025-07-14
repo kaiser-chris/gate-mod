@@ -1,35 +1,35 @@
 ﻿l_korean:
 # Shared
- gate_project_button_stop: "프로젝트 중지" #deepl:2081085240
- gate_project_button_stop_desc: "이 프로젝트를 중지하고 [concept_magic_researcher] 에서 새 프로젝트를 시작하도록 허용하세요." #deepl:2164579840
- gate_modifier_project_cost: "프로젝트 비용" #deepl:971985343
- gate_project_goal: "이 프로젝트는 #v [ROOT.GetCountry.MakeScope.Var('gate_magic_project_length').GetValue] 개월 동안 진행됩니다#! (현재 #v [ROOT.GetCountry.MakeScope.Var('gate_magic_project_timer').GetValue] #! )" #deepl:1104592694
+ gate_project_button_stop: "프로젝트 중지"
+ gate_project_button_stop_desc: "이 프로젝트를 중단하고 우리의 [concept_magic_researcher]가 새 프로젝트를 시작할 수 있도록 허용합니다."
+ gate_modifier_project_cost: "프로젝트 비용"
+ gate_project_goal: "이 프로젝트는 #v [ROOT.GetCountry.MakeScope.Var('gate_magic_project_length').GetValue] 개월 동안 진행됩니다#! (현재 진행 기간: #v [ROOT.GetCountry.MakeScope.Var('gate_magic_project_timer').GetValue]#!)"
 # Expand Magic Research Institute
- button_project_expand_research_institute: "확장 [GetBuildingType('building_magic_research_institute').GetNameNoFormatting]" #deepl:4164655069
- je_gate_project_expand_research_institute: "확장 [GetBuildingType('building_magic_research_institute').GetNameNoFormatting]" #deepl:1329624068
- je_gate_project_expand_research_institute_reason: "[concept_magic_researcher] [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName] 는 현재 #bold $je_gate_project_expand_research_institute$ #! 에서 작업 중입니다.\n$gate_journal_delimiter$\n$je_gate_project_expand_research_institute_description$" #deepl:1211751475
- je_gate_project_expand_research_institute_description: "[GetBuildingType('building_magic_research_institute').GetName] 프로젝트는 마술을 응용하는 새로운 방법을 연구하기 위한 노력의 핵심입니다. 이 프로젝트는 매월 적립할 수 있는 #bold 최대#! 금액( [concept_magic_innovation] )을 늘릴 것입니다." #deepl:1633805910
- gate_modifier_project_institute_new_wing: "새로운 연구동" #deepl:1936772017
- gate_modifier_project_institute_improved_instruments: "개선된 도구" #deepl:900242831
- gate_modifier_project_institute_better_mana_conduits: "더 나은 마나 도관" #deepl:2850600925
+ button_project_expand_research_institute: "[GetBuildingType('building_magic_research_institute').GetNameNoFormatting] 확장"
+ je_gate_project_expand_research_institute: "우리의 [GetBuildingType('building_magic_research_institute').GetNameNoFormatting] 확장 중"
+ je_gate_project_expand_research_institute_reason: "[concept_magic_researcher] [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName]가 현재 #bold $je_gate_project_expand_research_institute$#!를 진행 중입니다.\n$gate_journal_delimiter$\n$je_gate_project_expand_research_institute_description$"
+ je_gate_project_expand_research_institute_description: "[GetBuildingType('building_magic_research_institute').GetName]는 마법 적용의 새로운 방법을 연구하는 우리의 핵심 기관입니다. 이 프로젝트는 매달 얻을 수 있는 [concept_magic_innovation]의 #bold 최대#!수치를 증가시킵니다."
+ gate_modifier_project_institute_new_wing: "새로운 연구동"
+ gate_modifier_project_institute_improved_instruments: "개선된 도구"
+ gate_modifier_project_institute_better_mana_conduits: "더 나은 마나 도관"
 # Research Arcane Domains
- button_project_domain: "연구 $concept_magic_ethics$" #deepl:4196951174
- je_gate_project_domain: "연구 $concept_magic_ethics$" #deepl:4196951174
- je_gate_project_domain_reason: "[concept_magic_researcher] [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName] 는 현재 #bold $je_gate_project_domain$ #! 에서 작업 중입니다.\n$gate_journal_delimiter$\n$je_gate_project_domain_description$" #deepl:2064086008
- je_gate_project_domain_description: "[Concept('concept_magic_ethic','$concept_magic_ethics$')] 는 우리 사회에서 마술에 대한 우리의 관점을 대변하고 우리나라에 큰 힘을 실어줄 것입니다. 이 프로젝트를 통해 추가로 [concept_magic_ethic]." #deepl:3481739336
+ button_project_domain: "$concept_magic_ethics$ 연구"
+ je_gate_project_domain: "$concept_magic_ethics$ 연구"
+ je_gate_project_domain_reason: "[concept_magic_researcher] [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName]가 현재 #bold $je_gate_project_domain$#!를 진행 중입니다.\n$gate_journal_delimiter$\n$je_gate_project_domain_description$"
+ je_gate_project_domain_description: "[Concept('concept_magic_ethic','$concept_magic_ethics$')]은 우리 사회에서 마법에 대한 관점을 나타내며, 국가에 큰 이점을 제공합니다. 이 프로젝트를 통해 추가로 하나의 [concept_magic_ethic]을 선택할 수 있게 됩니다."
 # Improve Mana Extraction
- button_project_improve_mana_extraction: "마나 추출 향상" #deepl:4188291293
- je_gate_project_improve_mana_extraction: "마나 추출 향상" #deepl:4188291293
- je_gate_project_improve_mana_extraction_reason: "[concept_magic_researcher] [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName] 는 현재 #bold $je_gate_project_improve_mana_extraction$ #! 에서 작업 중입니다.\n$gate_journal_delimiter$\n$je_gate_project_improve_mana_extraction_description$" #deepl:3116483298
- je_gate_project_improve_mana_extraction_description: "마나 추출은 마법 산업이 번성하는 데 필수적인 [GetGoods('mana').GetName] 의 주요 공급원입니다. 이 프로젝트는 마나 추출 건물 중 하나에 $gate_modifier_project_improved_mana_extraction_with_tooltip$ 수정자를 추가합니다." #deepl:3475707505
- gate_modifier_project_improved_mana_extraction: "향상된 추출" #deepl:4056629473
- gate_modifier_project_improved_mana_extraction_tooltip: "#V $gate_modifier_project_improved_mana_extraction$#!\n[GetStaticModifier('gate_modifier_project_improved_mana_extraction').GetDesc]" #deepl:4182175613
- gate_modifier_project_improved_mana_extraction_with_tooltip: "#bold #툴팁:[GetRawTextTooltipTag('gate_modifier_project_improved_mana_extraction_tooltip')] #underline $gate_modifier_project_improved_mana_extraction$#!#!#!" #deepl:2533865098
+ button_project_improve_mana_extraction: "마나 추출 향상"
+ je_gate_project_improve_mana_extraction: "마나 추출 향상"
+ je_gate_project_improve_mana_extraction_reason: "[concept_magic_researcher] [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName]가 현재 #bold $je_gate_project_improve_mana_extraction$#!를 진행 중입니다.\n$gate_journal_delimiter$\n$je_gate_project_improve_mana_extraction_description$"
+ je_gate_project_improve_mana_extraction_description: "마나 추출은 마법 산업이 번성하는 데 필수적인 [GetGoods('mana').GetName]의 주요 공급원입니다. 이 프로젝트는 마나 추출 건물 중 하나에 $gate_modifier_project_improved_mana_extraction_with_tooltip$ 수정을 추가합니다."
+ gate_modifier_project_improved_mana_extraction: "향상된 추출"
+ gate_modifier_project_improved_mana_extraction_tooltip: "#V $gate_modifier_project_improved_mana_extraction$#!\n[GetStaticModifier('gate_modifier_project_improved_mana_extraction').GetDesc]"
+ gate_modifier_project_improved_mana_extraction_with_tooltip: "#bold #tooltip:[GetRawTextTooltipTag('gate_modifier_project_improved_mana_extraction_tooltip')] #underline $gate_modifier_project_improved_mana_extraction$#!#!#!"
  # Modernizing Seed Selection
- button_project_modernize_seed_selection: "종자 선택 현대화" #deepl:2922325633
- je_gate_project_modernize_seed_selection: "종자 선택 현대화" #deepl:1714033401
- je_gate_project_modernize_seed_selection_reason: "[concept_magic_researcher] [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName] 는 현재 #bold $je_gate_project_modernize_seed_selection$ #! 에서 작업 중입니다.\n$gate_journal_delimiter$\n$je_gate_project_modernize_seed_selection_description$" #deepl:4093611764
- je_gate_project_modernize_seed_selection_description: "[GetGoods('magic_seed').GetName] 는 작물 수확량을 늘리는 데 사용됩니다. 더 나은 수확량을 위해 이러한 종자를 현대적으로 선택하면 생산량이 향상될 것입니다. 이 프로젝트는 [GetBuildingType('building_druid_grove').GetName] 에 $gate_modifier_project_modernize_seed_selection_with_tooltip$ 수정자를 추가합니다." #deepl:633694667
- gate_modifier_project_modernize_seed_selection: "현대식 씨앗 선택" #deepl:1094148601
- gate_modifier_project_modernize_seed_selection_tooltip: "#V $gate_modifier_project_modernize_seed_selection$#!\n[GetStaticModifier('gate_modifier_project_modernize_seed_selection').GetDesc]" #deepl:3288771792
- gate_modifier_project_modernize_seed_selection_with_tooltip: "#bold #툴팁:[GetRawTextTooltipTag('gate_modifier_project_modernize_seed_selection_tooltip')] #underline $gate_modifier_project_modernize_seed_selection$#!#!#!" #deepl:372033018
+ button_project_modernize_seed_selection: "종자 선택 현대화"
+ je_gate_project_modernize_seed_selection: "종자 선택 현대화"
+ je_gate_project_modernize_seed_selection_reason: "[concept_magic_researcher] [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName]가 현재 #bold $je_gate_project_modernize_seed_selection$#!를 진행 중입니다.\n$gate_journal_delimiter$\n$je_gate_project_modernize_seed_selection_description$"
+ je_gate_project_modernize_seed_selection_description: "[GetGoods('magic_seed').GetName]는 농작물 수확량을 증가시키는 데 사용됩니다. 더 나은 수확량을 위해 종자 선별 방식을 현대화하면 생산량이 향상됩니다. 이 프로젝트는 우리 [GetBuildingType('building_druid_grove').GetName] 중 하나에 $gate_modifier_project_modernize_seed_selection_with_tooltip$ 수정을 추가합니다."
+ gate_modifier_project_modernize_seed_selection: "현대식 종자 선택"
+ gate_modifier_project_modernize_seed_selection_tooltip: "#V $gate_modifier_project_modernize_seed_selection$#!\n[GetStaticModifier('gate_modifier_project_modernize_seed_selection').GetDesc]"
+ gate_modifier_project_modernize_seed_selection_with_tooltip: "#bold #tooltip:[GetRawTextTooltipTag('gate_modifier_project_modernize_seed_selection_tooltip')] #underline $gate_modifier_project_modernize_seed_selection$#!#!#!"

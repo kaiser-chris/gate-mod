@@ -6,7 +6,7 @@
  concept_mana_saturation: "마나 포화"
  concept_mana_saturation_desc: "마나 포화는 전 세계의 평균 [concept_mana_density]를 나타냅니다."
  concept_magic_innovation: "마법 혁신"
- concept_magic_innovation_desc: "@magic_innovation!$concept_magic_innovation$는 주로 [concept_magic_researcher]와 [GetBuildingType('building_magic_research_institute').GetName]에서 생산됩니다. 또한 [GetBuildingType('building_gate').GetName], [GetBuildingType('building_mage_tower').GetName], [GetBuildingType('building_magic_academy').GetName], [GetBuildingType('building_university').GetName] 등의 $concept_buildings$도 매월 마법 혁신 생성에 기여할 수 있습니다."
+ concept_magic_innovation_desc: "@magic_innovation!$concept_magic_innovation$는 주로 [concept_magic_researcher]와 [GetBuildingType('building_magic_research_institute').GetName]에서 생산됩니다. 또한 [GetBuildingType('building_gate_alxa').GetName], [GetBuildingType('building_mage_tower').GetName], [GetBuildingType('building_magic_academy').GetName], [GetBuildingType('building_university').GetName] 등의 $concept_buildings$도 매월 마법 혁신 생성에 기여할 수 있습니다."
  concept_magic_technology: "마법 기술"
  concept_magic_technologies: "마법 기술"
  concept_magic_technology_desc: "$concept_magic_technology$는 $PRODUCTION_NO_CONCEPT$, $MILITARY$, 그리고 $SOCIETY$ 분야에서의 모든 마법 혁신을 포함합니다. $concept_magic_technologies$는 국가 전체에 영향을 미치며, [Concept('concept_modifier','$concept_modifiers$')]를 통해 국가 운영 방식을 변화시키거나 새로운 [Concept('concept_production_method','$concept_production_methods$')], [Concept('concept_building','$concept_buildings$')], [Concept('concept_law','$concept_laws$')], [Concept('concept_decree','$concept_decrees$')], [Concept('concept_diplomatic_pact','$concept_diplomatic_pacts$')]을 해금할 수 있습니다.\n\n새로운 $concept_magic_technologies$의 연구는 [concept_magic_innovation]을 통해 진행됩니다.\n\n$concept_magic_technology$를 획득하는 데 필요한 연구 진행량은 해당 기술의 [Concept('concept_technology_era','$concept_technology_era_short$')]에 따라 달라집니다. $concept_technology_era_ahead_of_time_penalty_desc$"
@@ -21,9 +21,9 @@
  concept_magical_phenomena: "마법 현상"
  concept_magical_phenomena_desc: "마법 현상은 특정 지역에서 증가한 [concept_mana_density]로 인해 발생하는 사건입니다. 이들은 무해하거나 유익할 수도 있으며, 때로는 끔찍한 재앙이 될 수도 있습니다."
  concept_magic_researcher: "비전주의자"
- concept_magic_researcher_desc: "국가의 비전주의자는 [GetBuildingType('building_magic_research_institute').GetName]를 운영하며, [concept_magic_innovation] 연구를 주도합니다."
+ concept_magic_researcher_desc: "한 국가의 비전주의자는 [GetBuildingType('building_magic_research_institute').GetName]를 이끌며 [concept_magic_innovation]을 주도합니다. 이들은 [Concept('concept_gate_project','$concept_gate_projects$')]를 지도하고, 마법 산업과 사회 전반에서의 마법 활용을 발전시키는 데 기여합니다."
  concept_gate_character_experience: "캐릭터 경험"
- concept_gate_character_experience_desc: "[concept_magic_researcher]와 같은 특정 인물들은 그들의 연구와 활동을 통해 경험을 쌓을 수 있습니다.\n\n#header 경험 단계:#!\n • $gg_character_experience_novice$\n • $gg_character_experience_experienced$\n • $gg_character_experience_master$"
+ concept_gate_character_experience_desc: "특정 인물들, 예를 들어 우리의 [concept_magic_researcher]는 자신의 업무에서 경험을 쌓을 수 있습니다. 높은 레벨의 인물일수록 업무 능력이 뛰어나며, 일상 업무의 성과를 높여줍니다.\n\n#header 경험 레벨:#!\n• $gg_character_experience_novice$\n• $gg_character_experience_experienced$\n• $gg_character_experience_master$"
  concept_gate_magic: "마법"
  concept_gate_magic_desc: "마법은 마나를 세상에 영향을 미치도록 만드는 행위입니다."
  concept_gate_magic_users: "마법 사용자"
@@ -60,9 +60,9 @@
  concept_gate_expedition_activities_desc: "[concept_gate_expedition_map]의 모든 상호작용은 [Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')]으로 간주합니다."
  concept_gate_expedition_map: "탐험 지도"
  concept_gate_expedition_map_desc: "$concept_gate_expedition_map$은 정찰을 통해 한 조각씩 밝혀내야 합니다. 지도 자체는 여러 탐사에서 변하지 않고 일정하게 유지됩니다."
- concept_gate_project: "Arcanist Project"
- concept_gate_projects: "Arcanist Projects"
- concept_gate_project_desc: "미국 최고의 마법사들이 이끄는 아카니스트 프로젝트는 마법 이론을 실용적인 혁신으로 연결합니다. 이러한 집중적인 연구 노력은 산업, 사회, 인프라를 향상시키는 마법의 힘을 발휘하여 더욱 매혹적인 미래를 향한 길을 열어줍니다." #deepl:1406830406
- concept_gate_magic_country: "아케인 컨트리" #deepl:2403103397
- concept_gate_magic_countries: "아케인 국가" #deepl:2611929564
- concept_gate_magic_country_desc: "[concept_magic_knowledge] 을 획득한 국가." #deepl:489898820
+ concept_gate_project: "비전주의자 프로젝트"
+ concept_gate_projects: "비전주의자 프로젝트"
+ concept_gate_project_desc: "우리 국가 최고의 마법 학자들의 지도를 받으며, 비전주의자 프로젝트는 신비로운 이론을 실용적인 혁신으로 전환합니다. 이러한 집중된 연구 노력은 산업, 사회, 그리고 인프라를 향상시키는 마법적 개량을 가능하게 하며, 보다 마법으로 물든 미래를 향한 길을 닦아 나갑니다."
+ concept_gate_magic_country: "마법 국가"
+ concept_gate_magic_countries: "마법 국가"
+ concept_gate_magic_country_desc: "[concept_magic_knowledge]을 습득한 국가들."
