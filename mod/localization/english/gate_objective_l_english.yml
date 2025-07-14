@@ -23,21 +23,21 @@
  magic_dominance_welcome_desc: "Welcome to the $objective_magic_dominance$ Player Objective. In this objective you will be given a series of [Concept('concept_journal_entry', '$concept_journal_entries$')] to complete that will guide you down a path towards dominating magic and technology."
 # Journal Entries
  je_obj_gate_hire_researcher: "Hire an $concept_magic_researcher$"
- je_obj_gate_hire_researcher_reason: "" #TODO: Write je_obj_gate_hire_researcher_reason
- je_obj_gate_hire_researcher_status: "" #TODO: Write je_obj_gate_hire_researcher_status
+ je_obj_gate_hire_researcher_reason: "The Arcanist is the cornerstone of magical advancement in our society. As the chief authority on arcane knowledge, they initiate and guide research into the mysteries of magic. From leading transformative projects to enhancing everyday life with spellcraft, to generating vital magic innovation needed for unlocking powerful technologies, the Arcanist is essential to harnessing the full potential of mana in the modern age."
+ je_obj_gate_hire_researcher_status: "You can hire an [concept_magic_researcher] in the Decisions panel."
  je_obj_gate_build_research_institute: "Build the [GetBuildingType('building_magic_research_institute').GetNameNoFormatting]"
- je_obj_gate_build_research_institute_reason: "" #TODO: Write je_obj_gate_build_research_institute_reason
- je_obj_gate_build_research_institute_status: "" #TODO: Write je_obj_gate_build_research_institute_status
- je_obj_gate_magic_knowledge: "Learn Magic Knowledge"
- je_obj_gate_magic_knowledge_reason: "" #TODO: Write je_obj_gate_magic_knowledge_reason
- je_obj_gate_magic_knowledge_status: "" #TODO: Write je_obj_gate_magic_knowledge_status
+ je_obj_gate_build_research_institute_reason: "The Magic Research Institute is the heart of a nation's arcane advancement. Serving as the primary workplace of the Arcanist, it is where magical theories are tested, spells refined, and breakthroughs born. As the central hub of magical inquiry, it is essential for beginning the study of magic technologies and unlocking the secrets that will shape a mana-powered future."
+ je_obj_gate_build_research_institute_status: "The [GetBuildingType('building_magic_research_institute').GetName] is built in your [concept_capital_state]."
+ je_obj_gate_magic_knowledge: "Learn $concept_magic_knowledge$"
+ je_obj_gate_magic_knowledge_reason: "Arcane Knowledge marks a nation's first step into the realm of magic. Without it, no magical advancements are possible. It can be obtained either through diplomatic treaties with already awakened arcane nations or by assigning your Arcanist to uncover it through dedicated research. This foundational understanding is essential to unlock the vast world of magic technologies that follow."
+ je_obj_gate_magic_knowledge_status: "[concept_magic_knowledge] can be learned through our [concept_magic_researcher] or through a [concept_treaty] with an [concept_gate_magic_country]."
  je_obj_gate_finish_magic_project: "Finish an $concept_gate_project$"
- je_obj_gate_finish_magic_project_reason: "" #TODO: Write je_obj_gate_finish_magic_project_reason
- je_obj_gate_finish_magic_project_status: "" #TODO: Write je_obj_gate_finish_magic_project_status
+ je_obj_gate_finish_magic_project_reason: "Arcanist Projects are vital research initiatives led by your nation's top magical expert. These projects transform raw arcane theory into tangible improvements—enhancing industry, empowering society, and enriching infrastructure. By investing in Arcanist Projects, you shape a future where magic becomes a cornerstone of national progress."
+ je_obj_gate_finish_magic_project_status: "[Concept('concept_gate_project','$concept_gate_projects$')] are started from the Manaflow panel."
  je_obj_gate_finish_magic_project_goal_tooltip: "Successfully finished an [concept_gate_project]"
  je_obj_gate_produce_magic_goods: "Produce [GetGoods('mana').GetNameNoFormatting] & [GetGoods('magic_seed').GetNameNoFormatting]"
- je_obj_gate_produce_magic_goods_reason: "" #TODO: Write je_obj_gate_produce_magic_goods_reason
- je_obj_gate_produce_magic_goods_status: "" #TODO: Write je_obj_gate_produce_magic_goods_status
+ je_obj_gate_produce_magic_goods_reason: "Mana Crystals and Magic Seeds form the backbone of any thriving magical economy. Mana Crystals, extracted from the atmosphere by skilled Mages, are essential for powering magical industries and technologies. Meanwhile, Druids cultivate Magic Seeds in sacred Groves to boost agricultural output—freeing up labor and fueling industrial growth. Together, they lay the foundation for a magically empowered nation."
+ je_obj_gate_produce_magic_goods_status: "Build a [GetBuildingType('building_mana_extractor').GetName] and a [GetBuildingType('building_druid_grove').GetName]."
  je_obj_gate_magic_academy: "Build Magic Academy"
- je_obj_gate_magic_academy_reason: "" #TODO: Write je_obj_gate_magic_academy_reason
- je_obj_gate_magic_academy_status: "" #TODO: Write je_obj_gate_magic_academy_status
+ je_obj_gate_magic_academy_reason: "The Magic Academy stands as a beacon of arcane learning in our capital, cultivating a new generation of skilled magic users. By enhancing magical qualifications and expanding our capacity for innovation, it becomes the cornerstone of sustained magical advancement and national progress."
+ je_obj_gate_magic_academy_status: "The [GetBuildingType('building_magic_academy').GetName] is built in your [concept_capital_state]."
