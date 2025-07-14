@@ -1,14 +1,14 @@
 ﻿l_simp_chinese:
- gate_expedition_opinion_industrialist: "我们将开辟新的贸易渠道，让$gate_planet$的资源尽归我们掌控！"
- gate_expedition_opinion_militarist: "用武力征服$gate_planet$！"
- gate_expedition_opinion_politician: "靠外交手段使$gate_planet$归顺我们！"
- gate_expedition_small_tooltip: "开始准备一次小型远征，需要[SCOPE.ScriptValue('gate_expedition_preparation_time_small')|0v] 个月的准备时间。" #deepl:4133145642
- gate_expedition_normal_tooltip: "开始准备一次普通的远征，需要[SCOPE.ScriptValue('gate_expedition_preparation_time_normal')|0v] 个月的准备时间。" #deepl:712700406
- gate_expedition_large_tooltip: "开始准备一次大型远征，需要[SCOPE.ScriptValue('gate_expedition_preparation_time_large')|0v] 个月的准备时间。" #deepl:2091144821
- gate_expedition_leader_missing_tooltip: "我们目前没有[concept_gate_expedition_leader] 。" #deepl:2534684836
- gate_expedition_budget_header: "Expedition Budget"
- gate_expedition_budget_text: "$concept_gate_expedition_budget$ 用于启动新的[concept_gate_expedition_activities] 。" #deepl:2316620112
- gate_expedition_budget_tooltip: "我们的[concept_gate_expedition_budget] 是[Scope.Var('expedition_budget_total').GetValue|0v] 点的[Scope.Var('expedition_budget').GetValue|0v] 。" #deepl:197132716
- gate_expedition_cancel_tooltip: "我们决定提前从[concept_gate_expedition] 返回。" #deepl:2964559883
- gate_expedition_blocked_trigger: "在过去的[SCOPE.ScriptValue('gate_expedition_block_time')|0v] 个月里，我们没有完成或取消过一个[concept_gate_expedition] 。" #deepl:2270399837
- gate_expedition_blocked_tooltip: "我们将在[SCOPE.ScriptValue('gate_expedition_block_time')|0v] 个月内无法启动新的[concept_gate_expedition] 。" #deepl:395471747
+ gate_expedition_opinion_industrialist: "我们将创造新的贸易机会，让[concept_gate_planet]的资源归我们所有！"
+ gate_expedition_opinion_militarist: "我们将通过武力征服[concept_gate_planet]！"
+ gate_expedition_opinion_politician: "外交将使[concept_gate_planet]心悦诚服！"
+ gate_expedition_small_tooltip: "开始筹备一次小型远征，需要[SCOPE.ScriptValue('gate_expedition_preparation_time_small')|0v]个月准备时间。"
+ gate_expedition_normal_tooltip: "开始筹备一次常规远征，需要[SCOPE.ScriptValue('gate_expedition_preparation_time_normal')|0v]个月准备时间。"
+ gate_expedition_large_tooltip: "开始筹备一次大型远征，需要[SCOPE.ScriptValue('gate_expedition_preparation_time_large')|0v]个月准备时间。"
+ gate_expedition_leader_missing_tooltip: "我们当前没有[concept_gate_expedition_leader]。"
+ gate_expedition_budget_header: "[concept_gate_expedition_budget]"
+ gate_expedition_budget_text: "$concept_gate_expedition_budget$用于开启新的[concept_gate_expedition_activities]"
+ gate_expedition_budget_tooltip: "我们的[concept_gate_expedition_budget]是[Scope.Var('expedition_budget').GetValue|0v]/[Scope.Var('expedition_budget_total').GetValue|0v]点。"
+ gate_expedition_cancel_tooltip: "我们决定提前从[concept_gate_expedition]返回。"
+ gate_expedition_blocked_trigger: "我们在过去[SCOPE.ScriptValue('gate_expedition_block_time')|0v]个月内尚未完成或取消一次[concept_gate_expedition]。"
+ gate_expedition_blocked_tooltip: "我们在[SCOPE.ScriptValue('gate_expedition_block_time')|0v]个月内将无法开始新的[concept_gate_expedition]。"

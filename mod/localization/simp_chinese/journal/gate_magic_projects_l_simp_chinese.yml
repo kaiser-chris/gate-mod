@@ -1,35 +1,35 @@
 ﻿l_simp_chinese:
 # Shared
- gate_project_button_stop: "停止项目" #deepl:2081085240
- gate_project_button_stop_desc: "停止这个项目，让我们的[concept_magic_researcher] 开始一个新的项目。" #deepl:2164579840
- gate_modifier_project_cost: "项目成本" #deepl:971985343
- gate_project_goal: "该项目将持续#v [ROOT.GetCountry.MakeScope.Var('gate_magic_project_length').GetValue] 个月#! （目前为#v [ROOT.GetCountry.MakeScope.Var('gate_magic_project_timer').GetValue] #! )" #deepl:1104592694
+ gate_project_button_stop: "停止项目"
+ gate_project_button_stop_desc: "停止这个项目，让我们的[concept_magic_researcher]开始一个新的项目。"
+ gate_modifier_project_cost: "项目花费"
+ gate_project_goal: "该项目将持续#v [ROOT.GetCountry.MakeScope.Var('gate_magic_project_length').GetValue]个月#!（当前#v [ROOT.GetCountry.MakeScope.Var('gate_magic_project_timer').GetValue]#!）"
 # Expand Magic Research Institute
- button_project_expand_research_institute: "展开[GetBuildingType('building_magic_research_institute').GetNameNoFormatting]" #deepl:4164655069
- je_gate_project_expand_research_institute: "扩大我们的[GetBuildingType('building_magic_research_institute').GetNameNoFormatting]" #deepl:1329624068
- je_gate_project_expand_research_institute_reason: "[concept_magic_researcher] [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName] 目前正致力于#bold $je_gate_project_expand_research_institute$ #! 。\n$gate_journal_delimiter$\n$je_gate_project_expand_research_institute_description$" #deepl:1211751475
- je_gate_project_expand_research_institute_description: "[GetBuildingType('building_magic_research_institute').GetName] 是我们研究应用魔法新方法的核心。该项目将增加我们每月可赚取的#bold 最大#! [concept_magic_innovation] 。" #deepl:1633805910
- gate_modifier_project_institute_new_wing: "新研究楼" #deepl:1936772017
- gate_modifier_project_institute_improved_instruments: "改进仪器" #deepl:900242831
- gate_modifier_project_institute_better_mana_conduits: "更好的法力导管" #deepl:2850600925
+ button_project_expand_research_institute: "扩建[GetBuildingType('building_magic_research_institute').GetNameNoFormatting]"
+ je_gate_project_expand_research_institute: "扩建我们的[GetBuildingType('building_magic_research_institute').GetNameNoFormatting]"
+ je_gate_project_expand_research_institute_reason: "[concept_magic_researcher][GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName]正在研究#bold $je_gate_project_expand_research_institute$#!。\n$gate_journal_delimiter$\n$je_gate_project_expand_research_institute_description$"
+ je_gate_project_expand_research_institute_description: "[GetBuildingType('building_magic_research_institute').GetName]是我们研究魔法新应用方式的核心。该项目将增加我们每月可获得的[concept_magic_innovation]的#bold 最大值#!。"
+ gate_modifier_project_institute_new_wing: "新研究翼楼"
+ gate_modifier_project_institute_improved_instruments: "改进的仪器"
+ gate_modifier_project_institute_better_mana_conduits: "更好的魔能导管"
 # Research Arcane Domains
- button_project_domain: "研究$concept_magic_ethics$" #deepl:4196951174
- je_gate_project_domain: "研究$concept_magic_ethics$" #deepl:4196951174
- je_gate_project_domain_reason: "[concept_magic_researcher] [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName] 目前正致力于#bold $je_gate_project_domain$ #! 。\n$gate_journal_delimiter$\n$je_gate_project_domain_description$" #deepl:2064086008
- je_gate_project_domain_description: "[Concept('concept_magic_ethic','$concept_magic_ethics$')] 代表了我们对社会中魔法的看法，并为我们的国家提供了巨大的推动力。这个项目将让我们选择一个额外的 。[concept_magic_ethic]" #deepl:3481739336
+ button_project_domain: "研究$concept_magic_ethics$"
+ je_gate_project_domain: "研究$concept_magic_ethics$"
+ je_gate_project_domain_reason: "[concept_magic_researcher][GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName]正在研究#bold $je_gate_project_domain$#!。\n$gate_journal_delimiter$\n$je_gate_project_domain_description$"
+ je_gate_project_domain_description: "[Concept('concept_magic_ethic','$concept_magic_ethics$')]代表了我们社会的魔法观念，并为我们的国家提供巨大增益。此项目将让我们能够选择一个额外的[concept_magic_ethic]。"
 # Improve Mana Extraction
- button_project_improve_mana_extraction: "提高法力汲取" #deepl:4188291293
- je_gate_project_improve_mana_extraction: "提高法力汲取" #deepl:4188291293
- je_gate_project_improve_mana_extraction_reason: "[concept_magic_researcher] [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName] 目前正致力于#bold $je_gate_project_improve_mana_extraction$ #! 。\n$gate_journal_delimiter$\n$je_gate_project_improve_mana_extraction_description$" #deepl:3116483298
- je_gate_project_improve_mana_extraction_description: "法力萃取是我们[GetGoods('mana').GetName] 的主要来源，而法力萃取是魔法工业蓬勃发展的必要条件。该项目为我们的一座法力提取建筑添加了$gate_modifier_project_improved_mana_extraction_with_tooltip$ 修改器。" #deepl:3475707505
- gate_modifier_project_improved_mana_extraction: "改进提取" #deepl:4056629473
- gate_modifier_project_improved_mana_extraction_tooltip: "#V $gate_modifier_project_improved_mana_extraction$#!\n[GetStaticModifier('gate_modifier_project_improved_mana_extraction').GetDesc]" #deepl:4182175613
- gate_modifier_project_improved_mana_extraction_with_tooltip: "#bold #tooltip:[GetRawTextTooltipTag('gate_modifier_project_improved_mana_extraction_tooltip')] #underline $gate_modifier_project_improved_mana_extraction$#!#!#!" #deepl:2533865098
+ button_project_improve_mana_extraction: "改进魔能提取"
+ je_gate_project_improve_mana_extraction: "改进魔能提取"
+ je_gate_project_improve_mana_extraction_reason: "[concept_magic_researcher][GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName]正在研究#bold $je_gate_project_improve_mana_extraction$#!。\n$gate_journal_delimiter$\n$je_gate_project_improve_mana_extraction_description$"
+ je_gate_project_improve_mana_extraction_description: "魔能提取是我们[GetGoods('mana').GetName]的主要来源，这对魔法产业的繁荣至关重要。该项目将$gate_modifier_project_improved_mana_extraction_with_tooltip$修正添加到我们的一个魔能提取建筑上。"
+ gate_modifier_project_improved_mana_extraction: "改进的提取"
+ gate_modifier_project_improved_mana_extraction_tooltip: "#V $gate_modifier_project_improved_mana_extraction$#!\n[GetStaticModifier('gate_modifier_project_improved_mana_extraction').GetDesc]"
+ gate_modifier_project_improved_mana_extraction_with_tooltip: "#bold #tooltip:[GetRawTextTooltipTag('gate_modifier_project_improved_mana_extraction_tooltip')] #underline $gate_modifier_project_improved_mana_extraction$#!#!#!"
  # Modernizing Seed Selection
- button_project_modernize_seed_selection: "种子选择现代化" #deepl:2922325633
- je_gate_project_modernize_seed_selection: "种子选择现代化" #deepl:1714033401
- je_gate_project_modernize_seed_selection_reason: "[concept_magic_researcher] [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName] 目前正致力于#bold $je_gate_project_modernize_seed_selection$ #! 。\n$gate_journal_delimiter$\n$je_gate_project_modernize_seed_selection_description$" #deepl:4093611764
- je_gate_project_modernize_seed_selection_description: "[GetGoods('magic_seed').GetName] 用于提高作物产量。为提高产量而对这些种子进行现代化选育将提高我们的产量。该项目为我们的一个 添加了 改性剂。[GetBuildingType('building_druid_grove').GetName] $gate_modifier_project_modernize_seed_selection_with_tooltip$ " #deepl:633694667
- gate_modifier_project_modernize_seed_selection: "现代种子选择" #deepl:1094148601
- gate_modifier_project_modernize_seed_selection_tooltip: "#V $gate_modifier_project_modernize_seed_selection$#!\n[GetStaticModifier('gate_modifier_project_modernize_seed_selection').GetDesc]" #deepl:3288771792
- gate_modifier_project_modernize_seed_selection_with_tooltip: "#bold #tooltip:[GetRawTextTooltipTag('gate_modifier_project_modernize_seed_selection_tooltip')] #underline $gate_modifier_project_modernize_seed_selection$#!#!#!" #deepl:372033018
+ button_project_modernize_seed_selection: "选种现代化"
+ je_gate_project_modernize_seed_selection: "选种现代化"
+ je_gate_project_modernize_seed_selection_reason: "[concept_magic_researcher][GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName]正在研究#bold $je_gate_project_modernize_seed_selection$#!。\n$gate_journal_delimiter$\n$je_gate_project_modernize_seed_selection_description$"
+ je_gate_project_modernize_seed_selection_description: "[GetGoods('magic_seed').GetName]用于提高作物产量。现代选种会获得更好的产量以改善我们的生产。该项目将$gate_modifier_project_modernize_seed_selection_with_tooltip$修正添加到我们的一个[GetBuildingType('building_druid_grove').GetName]。"
+ gate_modifier_project_modernize_seed_selection: "现代选种"
+ gate_modifier_project_modernize_seed_selection_tooltip: "#V $gate_modifier_project_modernize_seed_selection$#!\n[GetStaticModifier('gate_modifier_project_modernize_seed_selection').GetDesc]"
+ gate_modifier_project_modernize_seed_selection_with_tooltip: "#bold #tooltip:[GetRawTextTooltipTag('gate_modifier_project_modernize_seed_selection_tooltip')] #underline $gate_modifier_project_modernize_seed_selection$#!#!#!"

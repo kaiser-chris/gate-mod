@@ -1,10 +1,10 @@
 ﻿l_simp_chinese:
 # Placeholders
- gate_create_bug_report: "如果发现此问题，请创建错误报告" #deepl:581024195
- orphan_fix.1: "如果看到此内容，请创建BUG报告"
- idle: "如果看到此内容，请创建BUG报告"
- commander_vs_left: "如果看到此内容，请创建BUG报告"
- commander_vs_right: "如果看到此内容，请创建BUG报告"
+ gate_create_bug_report: "如果看到此内容，请创建错误报告"
+ orphan_fix.1: "$gate_create_bug_report$"
+ idle: "$gate_create_bug_report$"
+ commander_vs_left: "$gate_create_bug_report$"
+ commander_vs_right: "$gate_create_bug_report$"
 # Debug Decisions
  debug_mana_saturation_decision: "调试：立刻完成$je_mana_saturation$"
  debug_mana_saturation_decision_desc: "完成$je_mana_saturation$日志条目"
@@ -26,9 +26,9 @@
  debug_monster_horde_decision_desc: "触发$gate_monster_attack.1.t$事件"
  debug_monster_attack_decision: "调试：触发$monster_attack$"
  debug_monster_attack_decision_desc: "在首都触发$monster_attack$收获状况。"
- debug_toggle_busy_researcher_decision: "调试：切换魔法研究者忙碌状态"
+ debug_toggle_busy_researcher_decision: "调试：切换奥术师忙碌状态"
  debug_toggle_busy_researcher_decision_desc: "改变我国[concept_magic_researcher]的忙碌状态。"
- debug_kill_researcher_decision: "调试：杀死魔法研究者"
+ debug_kill_researcher_decision: "调试：杀死我们需要征服更多的领土！"
  debug_kill_researcher_decision_desc: "杀死我国存在的[concept_magic_researcher]。"
  debug_trigger_ethics_decision: "调试：选择魔法伦理"
  debug_trigger_ethics_decision_desc: "选择新的魔法伦理"
@@ -40,21 +40,21 @@
  debug_gate_enact_vampire_monarchy_desc: "接受[concept_gate_vampirism]"
  debug_gate_reset_reytu: "调试：重置星门远征"
  debug_gate_reset_reytu_desc: "重新加载星门远征的配置。"
- debug_gate_start_reytu: "DEBUG：启动雷图探险" #deepl:736139186
- debug_gate_start_reytu_desc: "直接启动雷图探险。" #deepl:2271213561
+ debug_gate_start_reytu: "调试：开启星门远征"
+ debug_gate_start_reytu_desc: "直接开启星门远征。"
 # Debug Alerts
  alert_alert_gate_debug_base_panel_name: "Base Panel" #TODO: Write alert_gate_space_alert_name
  alert_alert_gate_debug_base_panel_desc: "TODO" #TODO: Write alert_gate_space_alert_desc
  alert_alert_gate_debug_base_panel_hint: "TODO" #TODO: Write alert_gate_space_alert_hint
- alert_alert_gate_debug_base_panel_action: "$gg_panel_base_action$" #deepl:3768099815
+ alert_alert_gate_debug_base_panel_action: "$gg_panel_base_action$"
  alert_gate_debug_base_panel_setting_name: "Space has Action" #TODO: Write gate_space_alert_setting_name
  alert_expedition_alert_name: "Expedition" #TODO: Write alert_expedition_alert_name
  alert_expedition_alert_desc: "TODO" #TODO: Write alert_expedition_alert_desc
  alert_expedition_alert_hint: "TODO" #TODO: Write alert_expedition_alert_hint
- alert_expedition_alert_action: "$gg_panel_expedition_action$" #deepl:4261063976
+ alert_expedition_alert_action: "$gg_panel_expedition_action$"
  expedition_alert_setting_name: "Expedition has Action" #TODO: Write expedition_alert_setting_name
  alert_gate_space_alert_name: "Space" #TODO: Write alert_gate_space_alert_name
  alert_gate_space_alert_desc: "TODO" #TODO: Write alert_gate_space_alert_desc
  alert_gate_space_alert_hint: "TODO" #TODO: Write alert_gate_space_alert_hint
- alert_gate_space_alert_action: "$gg_panel_space_action$" #deepl:2975879105
- gate_space_alert_setting_name: "空间有行动" #deepl:747096029
+ alert_gate_space_alert_action: "$gg_panel_space_action$"
+ gate_space_alert_setting_name: "太空有行动"

@@ -5,12 +5,12 @@
  alert_has_maximum_magic_innovation_alert_name: "最大魔法创新力"
  alert_has_maximum_magic_innovation_alert_desc: "我们已达到[concept_magic_innovation]的上限。因此，所有正在产生的[concept_magic_innovation]都将被#v 损失#!。"
  alert_has_maximum_magic_innovation_alert_hint: "你可以使用[concept_magic_innovation]在魔法科技面板中解锁[concept_magic_technology]。"
- alert_has_maximum_magic_innovation_alert_action: "$gg_panel_base_action$" #deepl:3768099815
+ alert_has_maximum_magic_innovation_alert_action: "$gg_panel_base_action$"
  has_maximum_magic_innovation_alert_setting_name: "最大[concept_magic_innovation]"
  alert_can_unlock_magic_technology_alert_name: "可以解锁魔法科技"
  alert_can_unlock_magic_technology_alert_desc: "我们已经积累了足够的[concept_magic_innovation]来解锁一种新[concept_magic_technology]。"
  alert_can_unlock_magic_technology_alert_hint: "你可以使用[concept_magic_innovation]在魔法科技面板中解锁[concept_magic_technology]。"
- alert_can_unlock_magic_technology_alert_action: "$gg_panel_base_action$" #deepl:3768099815
+ alert_can_unlock_magic_technology_alert_action: "$gg_panel_base_action$"
  can_unlock_magic_technology_alert_setting_name: "你可以解锁一个新[concept_magic_technology]"
  alert_has_not_started_research_of_magic_alert_name: "未在研究魔法"
  alert_has_not_started_research_of_magic_alert_desc: "我们当前未在研究[concept_magic_knowledge]"
@@ -22,8 +22,8 @@
  alert_has_no_magic_researcher_alert_hint: "你可以通过#header $magic_researcher_decision$#!决议雇佣一位[concept_magic_researcher]"
  alert_has_no_magic_researcher_alert_action: "日志面板"
  has_no_magic_researcher_alert_setting_name: "没有[concept_magic_researcher]"
- alert_alert_gate_expedition_no_activity_name: "$gate_planet$ 探险队闲置" #deepl:2113638393
- alert_alert_gate_expedition_no_activity_desc: "我们的[concept_gate_expedition] 闲置不用。" #deepl:1004469122
- alert_alert_gate_expedition_no_activity_hint: "您可以在[concept_gate_expedition_map] 上单击一个位置并选择互动，开始一个新的[Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')] 。" #deepl:1684026104
- alert_alert_gate_expedition_no_activity_action: "$gg_panel_expedition_action$" #deepl:4261063976
- alert_gate_expedition_no_activity_setting_name: "没有[Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')]" #deepl:3083321520
+ alert_alert_gate_expedition_no_activity_name: "$gate_planet$远征处于空闲状态"
+ alert_alert_gate_expedition_no_activity_desc: "我们的[concept_gate_expedition]处于空闲状态。"
+ alert_alert_gate_expedition_no_activity_hint: "你可以通过在[concept_gate_expedition_map]上点击某个地点并选择互动方式，开启新的[Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')]。"
+ alert_alert_gate_expedition_no_activity_action: "$gg_panel_expedition_action$"
+ alert_gate_expedition_no_activity_setting_name: "无[Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')]"
