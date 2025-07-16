@@ -300,7 +300,7 @@ je_prestige_goods_gate_dwarven_iron = {
 			save_scope_as = relevant_company
 		}
 		set_variable = {
-			name = prestige_golem_timer_var
+			name = prestige_good_dwarven_timer_var
 			value = 0
 		}
 		g:iron = {
@@ -311,7 +311,7 @@ je_prestige_goods_gate_dwarven_iron = {
 	complete = {
 		trigger_if = {
 			limit = {
-				has_variable = prestige_golem_timer_var
+				has_variable = prestige_good_dwarven_timer_var
 			}
 			scope:journal_entry = {
 				is_goal_complete = yes
@@ -345,7 +345,15 @@ je_prestige_goods_gate_dwarven_iron = {
 					}
 					"goods_production_rank(scope:relevant_goods)" <= 3
 				}
-				change_variable = { name = prestige_golem_timer_var add = 1 }
+				if = {
+					limit = {
+						has_variable = prestige_good_dwarven_timer_var
+					}
+					change_variable = { name = prestige_good_dwarven_timer_var add = 1 }
+				}
+				else = {
+					set_variable = { name = prestige_good_dwarven_timer_var value = 1 }
+				}
 			}
 		}
 	}
@@ -372,7 +380,7 @@ je_prestige_goods_gate_dwarven_iron = {
 	}
 
 	current_value = {
-		value = root.var:prestige_golem_timer_var
+		value = root.var:prestige_good_dwarven_timer_var
 	}
 
 	goal_add_value = {
