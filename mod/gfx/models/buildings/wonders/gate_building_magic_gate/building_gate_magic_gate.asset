@@ -2,18 +2,25 @@ pdxmesh = {
 	name = "building_gate_magic_gate_mesh"
 	file = "building_gate_magic_gate.mesh"
 
+    lod_percentages = {
+		lod = { index = 1 percent = 16.0 }
+		lod = { index = 2 percent = 8.0 }
+		lod = { index = 3 percent = 4.0 }
+    }
+
 	meshsettings = {
-		name = "building_gate_magic_gateShape"
+		name = "LOD_0_building_gate_magic_gateShape"
 		index = 0
 		texture_diffuse = "building_gate_magic_gate_diffuse.dds"
 		texture_normal = "building_gate_magic_gate_normal.dds"
 		texture_specular = "building_gate_magic_gate_properties.dds"
+		texture = { file = "building_gate_magic_gate_tint.dds" index = 5 }
 		shader = "standard"
-		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN"  }
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" }
 		shader_file = "gfx/FX/pdxmesh.shader"
 	}
 	meshsettings = {
-		name = "g_body_treesShape"
+		name = "LOD_0_g_body_treesShape"
 		index = 0
 		texture_diffuse = "wonder_vatican_city_01_diffuse.dds"
 		texture_normal = "wonder_vatican_city_01_normal.dds"
@@ -21,9 +28,98 @@ pdxmesh = {
 		shader = "tree_colormap"
 		shader_file = "gfx/FX/tree.shader"
 	}
+	meshsettings = {
+		name = "LOD_0_building_gate_magic_gate_decalShape"
+		index = 0
+		texture_diffuse = "building_gate_magic_gate_decal_diffuse.dds"
+		texture_normal = "building_gate_magic_gate_decal_normal.dds"
+		texture_specular = "building_gate_magic_gate_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+	}
 
 	meshsettings = {
-		name = "building_gate_magic_gate_decalShape"
+		name = "LOD_1_building_gate_magic_gateShape"
+		index = 0
+		texture_diffuse = "building_gate_magic_gate_diffuse.dds"
+		texture_normal = "building_gate_magic_gate_normal.dds"
+		texture_specular = "building_gate_magic_gate_properties.dds"
+		texture = { file = "building_gate_magic_gate_tint.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	meshsettings = {
+		name = "LOD_1_g_body_treesShape"
+		index = 0
+		texture_diffuse = "wonder_vatican_city_01_diffuse.dds"
+		texture_normal = "wonder_vatican_city_01_normal.dds"
+		texture_specular = "wonder_vatican_city_01_properties.dds"
+		shader = "tree_colormap"
+		shader_file = "gfx/FX/tree.shader"
+	}
+	meshsettings = {
+		name = "LOD_1_building_gate_magic_gate_decalShape"
+		index = 0
+		texture_diffuse = "building_gate_magic_gate_decal_diffuse.dds"
+		texture_normal = "building_gate_magic_gate_decal_normal.dds"
+		texture_specular = "building_gate_magic_gate_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_2_building_gate_magic_gateShape"
+		index = 0
+		texture_diffuse = "building_gate_magic_gate_diffuse.dds"
+		texture_normal = "building_gate_magic_gate_normal.dds"
+		texture_specular = "building_gate_magic_gate_properties.dds"
+		texture = { file = "building_gate_magic_gate_tint.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	meshsettings = {
+		name = "LOD_2_g_body_treesShape"
+		index = 0
+		texture_diffuse = "wonder_vatican_city_01_diffuse.dds"
+		texture_normal = "wonder_vatican_city_01_normal.dds"
+		texture_specular = "wonder_vatican_city_01_properties.dds"
+		shader = "tree_colormap"
+		shader_file = "gfx/FX/tree.shader"
+	}
+	meshsettings = {
+		name = "LOD_2_building_gate_magic_gate_decalShape"
+		index = 0
+		texture_diffuse = "building_gate_magic_gate_decal_diffuse.dds"
+		texture_normal = "building_gate_magic_gate_decal_normal.dds"
+		texture_specular = "building_gate_magic_gate_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_3_building_gate_magic_gateShape"
+		index = 0
+		texture_diffuse = "building_gate_magic_gate_diffuse.dds"
+		texture_normal = "building_gate_magic_gate_normal.dds"
+		texture_specular = "building_gate_magic_gate_properties.dds"
+		texture = { file = "building_gate_magic_gate_tint.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	meshsettings = {
+		name = "LOD_3_g_body_treesShape"
+		index = 0
+		texture_diffuse = "wonder_vatican_city_01_diffuse.dds"
+		texture_normal = "wonder_vatican_city_01_normal.dds"
+		texture_specular = "wonder_vatican_city_01_properties.dds"
+		shader = "tree_colormap"
+		shader_file = "gfx/FX/tree.shader"
+	}
+	meshsettings = {
+		name = "LOD_3_building_gate_magic_gate_decalShape"
 		index = 0
 		texture_diffuse = "building_gate_magic_gate_decal_diffuse.dds"
 		texture_normal = "building_gate_magic_gate_decal_normal.dds"
