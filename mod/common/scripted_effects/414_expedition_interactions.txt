@@ -194,7 +194,7 @@ gate_expedition_create_activity = {
 		struct_scope = activity
 		struct_type = gate_expedition_activity
 	}
-	scope:activity = {
+	scope:activity ?= {
 		set_variable = {
 			name = name
 			value = flag:$name$

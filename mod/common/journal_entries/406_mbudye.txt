@@ -171,18 +171,20 @@
 	}
 
 	fail = {
-		custom_tooltip = {
-			text = je_gate_mbudye_fail_support
-			scope:journal_entry = {
-				scripted_bar_progress = {
-					name = pb_gate_mbudye
-					value <= 0
+		OR = {
+			custom_tooltip = {
+				text = je_gate_mbudye_fail_support
+				scope:journal_entry = {
+					scripted_bar_progress = {
+						name = pb_gate_mbudye
+						value <= 0
+					}
 				}
 			}
-		}
-		custom_tooltip = {
-			text = je_gate_mbudye_fail_annex
-			has_global_variable = mbudye_unification
+			custom_tooltip = {
+				text = je_gate_mbudye_fail_annex
+				has_global_variable = mbudye_unification
+			}
 		}
 	}
 

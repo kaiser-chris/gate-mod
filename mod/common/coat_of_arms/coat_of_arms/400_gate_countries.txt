@@ -55,23 +55,28 @@ GATE_OK = {
 
 GATE_NS = {
 	pattern = "pattern_solid.tga"
-	color1 = rgb{ 82 170 138 }
-	color2 = rgb{ 56 134 89 }
-	color3 = rgb{ 58 174 216 }
-	color4 = rgb{ 207 153 95 }
+	color1 = rgb{ 197 190 144 }
+	color2 = rgb{ 171 126 41 }
+	color3 = rgb{ 19 48 26 }
+	color4 = rgb{ 136 94 11 }
+
 
 	colored_emblem = {
-		texture = "ce_circle.dds"
+		texture = "ce_gate_gnomish_mark.dds"
 		color1 = color2
+		color2 = color3
+		color3 = color4
 		instance = {
 			scale = { 1.5 1.5 }
 		}
 	}
 
-	colored_emblem = {
-		texture = "ce_hand_flame.dds"
-		color1 = color3
-		color2 = color4
+	textured_emblem = {
+		texture = "te_gate_coa_flower.dds"
+		instance = {
+			scale = { 0.9 0.9 }
+			position = { 0.5 0.5 }
+		}
 	}
 }
 
