@@ -38,6 +38,12 @@ gg_project_domain = {
         is_magic_country = yes
         has_magic_researcher = yes
         not_has_active_magic_project = yes
+        custom_tooltip = {
+            text = je_gate_project_domain_condition_not_researched
+            NOT = {
+                has_variable = gate_has_researched_domain
+            }
+        }
     }
 
     effect = {
