@@ -1,5 +1,6 @@
 ﻿l_german:
- rule_gate_magic_start: "$concept_magic_knowledge$ bei Spielbeginn" #deepl:1582202143
+ gate_rule_mod_tooltip: "#header $dlc_magic_gate$#!\n$dlc_magic_gate_desc$" #deepl:955832897
+ rule_gate_magic_start: "#tooltip:[GetRawTextTooltipTag('gate_rule_mod_tooltip')] @gate_mod_logo! #! $concept_magic_knowledge$ bei Spielstart" #deepl:19603014
  setting_gate_deactivate_magic_start: "Historisch" #deepl:711774471
  setting_gate_deactivate_magic_start_desc: "Nur [Concept('concept_country', '$concept_countries$')] mit einschlägiger Vorgeschichte wird mit [concept_magic_knowledge] starten." #deepl:3182066989
  setting_gate_activate_magic_start_player: "Spieler Land + Historisch" #deepl:990927132

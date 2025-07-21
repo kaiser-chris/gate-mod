@@ -2,17 +2,7 @@
     scope = country
 
     is_valid = {
-        capital = {
-            has_building = building_magic_research_institute
-        }
-        NAND = {
-            has_modifier = gate_modifier_project_institute_new_wing
-            has_modifier = gate_modifier_project_institute_improved_instruments
-            has_modifier = gate_modifier_project_institute_better_mana_conduits
-        }
-        is_magic_country = yes
-        has_magic_researcher = yes
-        not_has_active_magic_project = yes
+        gate_project_can_start_expand_research_institute= yes
     }
 
     effect = {
@@ -28,22 +18,7 @@ gg_project_domain = {
     scope = country
 
     is_valid = {
-        has_technology_researched = formalized_magic
-        trigger_if = {
-            limit = {
-                exists = var:magic_ethics
-            }
-            var:magic_ethics < 3
-        }
-        is_magic_country = yes
-        has_magic_researcher = yes
-        not_has_active_magic_project = yes
-        custom_tooltip = {
-            text = je_gate_project_domain_condition_not_researched
-            NOT = {
-                has_variable = gate_has_researched_domain
-            }
-        }
+        gate_project_can_start_domain = yes
     }
 
     effect = {
@@ -59,16 +34,7 @@ gg_project_improve_mana_extraction = {
     scope = country
 
     is_valid = {
-        has_technology_researched = gate_mana_extraction
-        any_scope_building = {
-            is_building_group = bg_mana_extraction
-            NOT = {
-                has_modifier = gate_modifier_project_improved_mana_extraction
-            }
-        }
-        is_magic_country = yes
-        has_magic_researcher = yes
-        not_has_active_magic_project = yes
+        gate_project_can_start_improve_mana_extraction = yes
     }
 
     effect = {
@@ -84,16 +50,7 @@ gg_project_modernize_seed_selection = {
     scope = country
 
     is_valid = {
-        has_technology_researched = magic_farming
-        any_scope_building = {
-            is_building_group = bg_druid_groves
-            NOT = {
-                has_modifier = gate_modifier_project_modernize_seed_selection
-            }
-        }
-        is_magic_country = yes
-        has_magic_researcher = yes
-        not_has_active_magic_project = yes
+        gate_project_can_start_modernize_seed_selection = yes
     }
 
     effect = {
