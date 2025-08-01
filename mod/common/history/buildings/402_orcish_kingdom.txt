@@ -6,11 +6,22 @@
                 add_ownership = {
                     country = {
                         country = "c:GATE_OK"
-                        levels = 4
+                        levels = 1
                     }
                 }
                 reserves = 1
-                activate_production_methods = { "pm_simple_organization" "pm_professional_bureaucrats" "pm_secular_bureaucrats" }
+                activate_production_methods = { "pm_horizontal_drawer_cabinets" "pm_professional_bureaucrats" "pm_secular_bureaucrats" }
+            }
+            create_building = {
+                building = "building_paper_mills"
+                add_ownership = {
+                    building = {
+                        type = "building_paper_mills"
+                        country = "c:GATE_OK"
+                        levels = 1
+                        region = "STATE_EQUATEUR"
+                    }
+                }
             }
             create_building = {
                 building = "building_cotton_plantation"
@@ -183,11 +194,11 @@
                 add_ownership = {
                     country = {
                         country = "c:GATE_OK"
-                        levels = 1
+                        levels = 5
                     }
                 }
                 reserves = 1
-                activate_production_methods = { "pm_simple_organization" "pm_professional_bureaucrats" "pm_secular_bureaucrats" }
+                activate_production_methods = { "pm_horizontal_drawer_cabinets" "pm_professional_bureaucrats" "pm_secular_bureaucrats" }
             }
             create_building = {
                 building = "building_construction_sector"

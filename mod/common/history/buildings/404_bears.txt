@@ -19,7 +19,7 @@ BUILDINGS = {
                 }
                 reserves = 1
                 activate_production_methods = {
-                    pm_anchorage
+                    pm_basic_port
                 }
             }
             create_building = {
@@ -27,7 +27,7 @@ BUILDINGS = {
                 add_ownership = {
                     country = {
                         country = c:GATE_BN
-                        levels = 2
+                        levels = 5
                     }
                 }
                 reserves = 1
@@ -75,7 +75,7 @@ BUILDINGS = {
                     building = {
                         type = "building_manor_house"
                         country = "c:GATE_BN"
-                        levels = 1
+                        levels = 5
                         region = "STATE_ALASKA"
                     }
                 }
@@ -170,7 +170,7 @@ BUILDINGS = {
                 reserves = 1
                 activate_production_methods = {
                     pm_gate_closed
-                    pm_gate_immigration_bear
+                    pm_gate_mass_immigration_bear
                 }
             }
             create_building = {
@@ -216,9 +216,35 @@ BUILDINGS = {
 
     s:STATE_TEXAS = {
         region_state:TEX = {
+            create_building={ 
+				building="building_shipyards"
+				add_ownership={
+					building={
+						type="building_shipyards"
+						country="c:TEX"
+						levels=2
+						region="STATE_TEXAS"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_basic_shipbuilding"  }
+			}
+            create_building = {
+                building = building_port
+                add_ownership = {
+                    country = {
+                        country = c:TEX
+                        levels = 4
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_basic_port
+                }
+            }
             create_building = {
                 building = "building_government_administration"
-                level = 4
+                level = 6
                 reserves = 1
                 activate_production_methods = {
                     "pm_horizontal_drawer_cabinets"
@@ -227,10 +253,54 @@ BUILDINGS = {
                 }
             }
             create_building = {
+                building = building_trade_center
+                add_ownership = {
+                    country = {
+                        country = c:TEX
+                        levels = 15
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_trade_center_trade_quantity_normal
+                }
+            }
+            create_building = {
+                building = "building_livestock_ranch"
+                add_ownership = {
+                    building = {
+                        type = "building_manor_house"
+                        country = "c:TEX"
+                        levels = 20
+                        region = "STATE_TEXAS"
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    "pm_sheep_farms"
+                    "pm_slaughterhouses"
+                    "pm_standard_fences"
+                    "pm_unrefrigerated"
+                }
+            }
+            create_building={
+				building="building_fishing_wharf"
+				add_ownership={
+					building={
+						type="building_fishing_wharf"
+						country="c:TEX"
+						levels=5
+						region="STATE_TEXAS"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_unrefrigerated" "pm_fishing_trawlers" }
+			}
+            create_building = {
                 building = "building_paper_mills"
                 add_ownership = {
                     building = {
-                        type = "building_financial_district"
+                        type = "building_paper_mills"
                         country = "c:TEX"
                         levels = 1
                         region = "STATE_TEXAS"
@@ -241,7 +311,7 @@ BUILDINGS = {
                 building = "building_tooling_workshops"
                 add_ownership = {
                     building = {
-                        type = "building_financial_district"
+                        type = "building_tooling_workshops"
                         country = "c:TEX"
                         levels = 1
                         region = "STATE_TEXAS"
@@ -249,7 +319,7 @@ BUILDINGS = {
                 }
                 reserves = 1
                 activate_production_methods = {
-                    "pm_crude_tools"
+                    "pm_pig_iron"
                     "pm_automation_disabled"
                 }
             }
@@ -272,12 +342,42 @@ BUILDINGS = {
                 }
             }
             create_building = {
+                building = "building_maize_farm"
+                add_ownership = {
+                    building = {
+                        type = "building_manor_house"
+                        country = "c:TEX"
+                        levels = 10
+                        region = "STATE_TEXAS"
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    "pm_soil_enriching_farming"
+                    "pm_no_equipment"
+                    "pm_no_secondary"
+                }
+            }
+            create_building={
+				building="building_coal_mine"
+				add_ownership={
+					building={
+						type="building_coal_mine"
+						country="c:TEX"
+						levels=4
+						region="STATE_TEXAS"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_coal_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts"  }
+			}
+            create_building = {
                 building = "building_cotton_plantation"
                 add_ownership = {
                     building = {
                         type = "building_manor_house"
                         country = "c:TEX"
-                        levels = 1
+                        levels = 6
                         region = "STATE_TEXAS"
                     }
                 }
@@ -291,15 +391,15 @@ BUILDINGS = {
                 building = "building_textile_mills"
                 add_ownership = {
                     building = {
-                        type = "building_financial_district"
+                        type = "building_textile_mills"
                         country = "c:TEX"
-                        levels = 1
+                        levels = 7
                         region = "STATE_TEXAS"
                     }
                 }
                 reserves = 1
                 activate_production_methods = {
-                    "pm_handsewn_clothes"
+                    "pm_dye_workshops"
                     "pm_no_luxury_clothes"
                 }
             }
