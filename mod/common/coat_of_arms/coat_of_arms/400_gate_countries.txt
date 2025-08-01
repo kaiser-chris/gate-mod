@@ -1,11 +1,39 @@
-﻿GATE_AD = {
+﻿GATE_AD_HOME = {
+	pattern = "pattern_border_fringe.tga"
+	color1 = "green_dark"
+	color2 = "gold"
+
+	textured_emblem = {
+		texture = te_gate_coa_arcturian.dds
+		instance = {
+			scale = { 0.6 0.7 }
+			position = { 0.5 0.5 }
+		}
+	}
+}
+
+GATE_AD = {
 	pattern = "pattern_solid.tga"
-	color1 = "white"
-	color2 = "yellow"
+	color1 = "blue"
+	color2 = "yellow_dark"
+	color3 = "green"
 
 	colored_emblem = {
-		texture = "ce_gate_dominion.dds"
+		texture = ce_gate_dominion.dds
 		color1 = color2
+		color2 = color3
+		instance = {
+			scale = { 0.7 0.7 }
+			position = { 0.68 0.5 }
+		}
+	}
+
+	sub = {
+		parent = GATE_AD_HOME
+		instance = {
+			scale = { 0.4 0.4 }
+			offset = { 0 0 }
+		}
 	}
 }
 

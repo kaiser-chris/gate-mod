@@ -140,6 +140,7 @@ je_gate_project_domain = {
 			OR = {
 				not_has_active_magic_project = yes
 				var:magic_ethics >= gate_max_ethics
+				has_variable = gate_has_researched_domain
 			}
 		}
 	}

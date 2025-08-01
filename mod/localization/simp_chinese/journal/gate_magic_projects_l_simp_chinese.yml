@@ -26,6 +26,7 @@
  gate_modifier_project_improved_mana_extraction: "改进的提取"
  gate_modifier_project_improved_mana_extraction_tooltip: "#V $gate_modifier_project_improved_mana_extraction$#!\n[GetStaticModifier('gate_modifier_project_improved_mana_extraction').GetDesc]"
  gate_modifier_project_improved_mana_extraction_with_tooltip: "#bold #tooltip:[GetRawTextTooltipTag('gate_modifier_project_improved_mana_extraction_tooltip')] #underline $gate_modifier_project_improved_mana_extraction$#!#!#!"
+ trigger_gate_project_can_has_unimproved_mana_extraction: "拥有[GetBuildingType('building_mana_extractor').GetBuildingGroupName] [concept_building] ，无需$gate_modifier_project_improved_mana_extraction_with_tooltip$ [concept_modifier]" #deepl:163511478
  # Modernizing Seed Selection
  button_project_modernize_seed_selection: "选种现代化"
  je_gate_project_modernize_seed_selection: "选种现代化"
@@ -34,3 +35,4 @@
  gate_modifier_project_modernize_seed_selection: "现代选种"
  gate_modifier_project_modernize_seed_selection_tooltip: "#V $gate_modifier_project_modernize_seed_selection$#!\n[GetStaticModifier('gate_modifier_project_modernize_seed_selection').GetDesc]"
  gate_modifier_project_modernize_seed_selection_with_tooltip: "#bold #tooltip:[GetRawTextTooltipTag('gate_modifier_project_modernize_seed_selection_tooltip')] #underline $gate_modifier_project_modernize_seed_selection$#!#!#!"
+ trigger_gate_project_can_has_unimproved_magic_seed: "拥有[GetBuildingType('building_druid_grove').GetBuildingGroupName] [concept_building] ，无需$gate_modifier_project_modernize_seed_selection_with_tooltip$ [concept_modifier]" #deepl:380520325
