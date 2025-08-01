@@ -91,12 +91,7 @@ alert_gate_project_no_activity = {
 	texture = gfx/interface/icons/event_icons/event_gate_project.dds
 
 	valid = {
-		is_magic_country = yes
-		has_magic_researcher = yes
-		has_building = building_magic_research_institute
-		NOT = {
-			has_variable = gate_magic_project
-		}
+		gate_project_can_start_any = yes
 	}
 
 	type = alert

@@ -26,6 +26,7 @@
  gate_modifier_project_improved_mana_extraction: "향상된 추출"
  gate_modifier_project_improved_mana_extraction_tooltip: "#V $gate_modifier_project_improved_mana_extraction$#!\n[GetStaticModifier('gate_modifier_project_improved_mana_extraction').GetDesc]"
  gate_modifier_project_improved_mana_extraction_with_tooltip: "#bold #tooltip:[GetRawTextTooltipTag('gate_modifier_project_improved_mana_extraction_tooltip')] #underline $gate_modifier_project_improved_mana_extraction$#!#!#!"
+ trigger_gate_project_can_has_unimproved_mana_extraction: "$gate_modifier_project_improved_mana_extraction_with_tooltip$ 없이 [GetBuildingType('building_mana_extractor').GetBuildingGroupName] [concept_building] [concept_modifier]" #deepl:163511478
  # Modernizing Seed Selection
  button_project_modernize_seed_selection: "종자 선택 현대화"
  je_gate_project_modernize_seed_selection: "종자 선택 현대화"
@@ -34,3 +35,4 @@
  gate_modifier_project_modernize_seed_selection: "현대식 종자 선택"
  gate_modifier_project_modernize_seed_selection_tooltip: "#V $gate_modifier_project_modernize_seed_selection$#!\n[GetStaticModifier('gate_modifier_project_modernize_seed_selection').GetDesc]"
  gate_modifier_project_modernize_seed_selection_with_tooltip: "#bold #tooltip:[GetRawTextTooltipTag('gate_modifier_project_modernize_seed_selection_tooltip')] #underline $gate_modifier_project_modernize_seed_selection$#!#!#!"
+ trigger_gate_project_can_has_unimproved_magic_seed: "$gate_modifier_project_modernize_seed_selection_with_tooltip$ 없이 [GetBuildingType('building_druid_grove').GetBuildingGroupName] [concept_building] [concept_modifier]" #deepl:380520325
