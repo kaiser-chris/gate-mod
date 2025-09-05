@@ -266,6 +266,16 @@ researching_magic.4 = {
 		custom_tooltip = {
 			text = researching_magic.4.a.tt
 		}
+        hidden_effect = {
+            if = {
+                limit = {
+                    is_ai = yes
+                }
+                capital = {
+                    start_building_construction = building_magic_research_institute
+                }
+            }
+        }
 	}
 }
 

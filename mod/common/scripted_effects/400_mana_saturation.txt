@@ -222,9 +222,6 @@ setup_mana_density = {
         value = 0
     }
     every_state_region = {
-        limit = {
-            is_state_region_land = yes
-        }
         change_global_variable = {
             name = state_count
             add = 1
