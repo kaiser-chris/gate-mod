@@ -5,6 +5,7 @@
 			value = 0
 			every_state_region = {
 				limit = {
+                    is_state_region_land = yes
 					var:mana_density > 0
 				}
 				add = var:mana_density
@@ -19,6 +20,7 @@ gate_propogate_mana_density = {
 		limit = {
 			has_variable = mana_density
 			var:mana_density >= medium_mana_density_threshhold
+            is_state_region_land = yes
 		}
 		save_temporary_scope_value_as = {
 			name = origin_density
@@ -209,4 +211,70 @@ propogate_from_state_region = {
 			add_mana_density_modifier = yes
 		}
 	}
+}
+
+setup_mana_density = {
+    # Get amount of states for
+    # later calculation and
+    # initialize mana density variable
+    set_global_variable = {
+        name = state_count
+        value = 0
+    }
+    every_state_region = {
+        limit = {
+            is_state_region_land = yes
+        }
+        change_global_variable = {
+            name = state_count
+            add = 1
+        }
+        set_variable = {
+            name = mana_density
+            value = 0
+        }
+    }
+
+    set_global_variable = {
+        name = global_mana_saturation
+        value = 0
+    }
+
+    # Every country has a journal entry for mana saturation
+    # since some countries can interact with the journal entry
+    every_country = {
+        limit = {
+            NOT = {
+                is_country_type = decentralized
+            }
+        }
+        add_journal_entry = {
+            type = je_mana_saturation
+        }
+    }
+
+    # Build initial Mana Density around gates
+    initial_gate_propogate_mana_density = yes
+
+    # Randomly propagate mana density
+    # so every start is a little different
+    random = {
+        chance = 50
+        gate_propogate_mana_density = yes
+    }
+    random = {
+        chance = 50
+        gate_propogate_mana_density = yes
+    }
+    random = {
+        chance = 50
+        gate_propogate_mana_density = yes
+    }
+    random = {
+        chance = 50
+        gate_propogate_mana_density = yes
+    }
+
+    # Calculate initial saturation
+    calculate_mana_saturation = yes
 }

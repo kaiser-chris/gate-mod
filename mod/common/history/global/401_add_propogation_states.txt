@@ -129,6 +129,13 @@ GLOBAL = {
 		}
 	}
 
+    s:STATE_WEST_INDIES = {
+        add_to_variable_list = {
+            name = mana_propogation_states
+            target = s:STATE_PUERTO_RICO
+        }
+    }
+
 	s:STATE_SANTO_DOMINGO = {
 		add_to_variable_list = {
 			name = mana_propogation_states
@@ -216,6 +223,20 @@ GLOBAL = {
 			target = s:STATE_BERMUDA
 		}
 	}
+
+    s:STATE_NORTH_CAROLINA = {
+        add_to_variable_list = {
+            name = mana_propogation_states
+            target = s:STATE_BERMUDA
+        }
+    }
+
+    s:STATE_BERMUDA = {
+        add_to_variable_list = {
+            name = mana_propogation_states
+            target = s:STATE_PUERTO_RICO
+        }
+    }
 
 	s:STATE_WESTERN_NEW_GUINEA = {
 		add_to_variable_list = {

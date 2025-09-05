@@ -64,11 +64,10 @@ on_monthly_gate_calculate_mana_saturation = {
     trigger = {
         global_var:global_mana_saturation <= 100
         OR = {
-            # Every three months
+            # Every four months
             month = 0
-            month = 3
-            month = 6
-            month = 9
+            month = 4
+            month = 8
         }
     }
     effect = {
@@ -92,13 +91,11 @@ on_monthly_gate_mana_density = {
     trigger = {
         global_var:global_mana_saturation <= 100
         OR = {
-            # Every two months
+            # Every three months
             month = 0
-            month = 2
-            month = 4
+            month = 3
             month = 6
-            month = 8
-            month = 10
+            month = 9
         }
     }
     effect = {

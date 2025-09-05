@@ -37,6 +37,9 @@
 			hidden_trigger = {
 				has_global_variable = gate_mana_saturation_full
 			}
+            hidden_trigger = {
+                global_var:global_mana_saturation >= 100
+            }
 			scope:journal_entry = {
 				is_goal_complete = yes
 			}
