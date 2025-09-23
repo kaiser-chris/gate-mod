@@ -1,11 +1,10 @@
-﻿# TODO: 1.10 regenerate these
+﻿building_university = {
 
-building_university = {
     building_group = bg_technology
 
     city_type = city
 
-    levels_per_mesh = 5
+    levels_per_mesh = 50
 
     unlocking_technologies = {
         academia
@@ -24,6 +23,31 @@ building_university = {
     required_construction = construction_cost_medium
 
     background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+
+    ai_value = {
+        value = 1000
+
+        if = { # British dictates
+            limit = {
+                owner = {
+                    has_journal_entry = je_british_dictate_universities
+                }
+                OR = {
+                    state_region = s:STATE_WEST_BENGAL
+                    state_region = s:STATE_BOMBAY
+                    state_region = s:STATE_MADRAS
+                }
+                NOR = {
+                    has_building = building_university
+                    any_scope_building = {
+                        is_building_type = building_university
+                        level > 3
+                    }
+                }
+            }
+            add = 2000
+        }
+    }
 }
 
 building_paper_mills = {
@@ -37,7 +61,7 @@ building_paper_mills = {
     }
 
     city_type = city
-    levels_per_mesh = 5
+    levels_per_mesh = 50
 
     production_method_groups = {
         pmg_base_building_paper_mills
@@ -62,7 +86,7 @@ building_tooling_workshops = {
     }
 
     city_type = city
-    levels_per_mesh = 5
+    levels_per_mesh = 50
 
     production_method_groups = {
         pmg_base_building_tooling_workshops
@@ -82,7 +106,7 @@ building_arms_industry = {
     building_group = bg_arms_industries
     icon = "gfx/interface/icons/building_icons/arms_industry.dds"
     city_type = city
-    levels_per_mesh = 5
+    levels_per_mesh = 50
 
     ai_nationalization_desire = 0.5 # AI generally does not want to privatize military goods industries
 
@@ -106,7 +130,7 @@ building_artillery_foundries = {
     building_group = bg_artillery_foundaries
     icon = "gfx/interface/icons/building_icons/artillery_foundry.dds"
     city_type = city
-    levels_per_mesh = 5
+    levels_per_mesh = 50
 
     ai_nationalization_desire = 0.5 # AI generally does not want to privatize military goods industries
 
@@ -132,7 +156,7 @@ building_rye_farm = {
     icon = "gfx/interface/icons/building_icons/rye_farm.dds"
 
     city_type = farm
-    levels_per_mesh = 5
+    levels_per_mesh = 50
 
     unlocking_technologies = {
         enclosure
@@ -158,7 +182,7 @@ building_wheat_farm = {
     icon = "gfx/interface/icons/building_icons/wheat_farm.dds"
 
     city_type = farm
-    levels_per_mesh = 5
+    levels_per_mesh = 50
 
     unlocking_technologies = {
         enclosure
@@ -185,7 +209,7 @@ building_rice_farm = {
     icon = "gfx/interface/icons/building_icons/rice_farm.dds"
 
     city_type = farm
-    levels_per_mesh = 5
+    levels_per_mesh = 50
 
     unlocking_technologies = {
         enclosure
@@ -212,7 +236,7 @@ building_maize_farm = {
     icon = "gfx/interface/icons/building_icons/maize_farm.dds"
 
     city_type = farm
-    levels_per_mesh = 5
+    levels_per_mesh = 50
 
     unlocking_technologies = {
         enclosure
@@ -239,7 +263,7 @@ building_millet_farm = {
     icon = "gfx/interface/icons/building_icons/millet_farm.dds"
 
     city_type = farm
-    levels_per_mesh = 5
+    levels_per_mesh = 50
 
     unlocking_technologies = {
         enclosure
@@ -269,7 +293,7 @@ building_chemical_plants = {
     }
 
     city_type = city
-    levels_per_mesh = 5
+    levels_per_mesh = 50
 
     production_method_groups = {
         pmg_fertilizer_production
@@ -300,7 +324,7 @@ building_logging_camp = {
     city_type = wood
     required_construction = construction_cost_low
     terrain_manipulator = forestry
-    levels_per_mesh = 5
+    levels_per_mesh = 50
 
     production_method_groups = {
         pmg_base_building_logging_camp
