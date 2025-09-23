@@ -1,5 +1,6 @@
 ﻿l_japanese:
- rule_gate_magic_start: "$concept_magic_knowledge$ at Game Start"
+ gate_rule_mod_tooltip: "#header $dlc_magic_gate$#!\n$dlc_magic_gate_desc$"
+ rule_gate_magic_start: "#tooltip:[GetRawTextTooltipTag('gate_rule_mod_tooltip')] @gate_mod_logo!#! $concept_magic_knowledge$ at Game Start"
  setting_gate_deactivate_magic_start: "Historical"
  setting_gate_deactivate_magic_start_desc: "Only [Concept('concept_country', '$concept_countries$')] with relevant history will start with [concept_magic_knowledge]."
  setting_gate_activate_magic_start_player: "Player Country + Historical"
