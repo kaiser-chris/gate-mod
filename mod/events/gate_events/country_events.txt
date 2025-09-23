@@ -34,8 +34,8 @@ gate_country_events.1 = {
 				}
 				religion ?= {
 					OR = {
-						has_discrimination_trait = christian
-						has_discrimination_trait = muslim
+						has_discrimination_trait = heritage_christian
+						has_discrimination_trait = heritage_islamic
 					}
 				}
 			}
