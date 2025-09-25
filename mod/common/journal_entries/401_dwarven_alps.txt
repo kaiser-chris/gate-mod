@@ -7,6 +7,10 @@
 	scripted_button = je_dwarven_alps_button_switzerland_magic
 	scripted_button = je_dwarven_alps_button_switzerland_integrate
 
+    is_shown_in_lobby = {
+        c:GATE_MK ?= THIS
+    }
+
 	immediate = {
 		c:SWI ?= {
 			save_scope_as = loc_swiss_scope

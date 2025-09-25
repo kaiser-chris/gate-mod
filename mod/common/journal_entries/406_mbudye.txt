@@ -61,6 +61,10 @@
 		}
 	}
 
+    is_shown_in_lobby = {
+        c:GATE_AD ?= THIS
+    }
+
 	immediate = {
 		save_scope_as = gate_mbudye_dominion
 		c:LND = {
