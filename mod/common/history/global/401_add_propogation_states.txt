@@ -20,6 +20,14 @@ GLOBAL = {
 			name = mana_propogation_states
 			target = s:STATE_GREENLAND
 		}
+        add_to_variable_list = {
+            name = mana_propogation_states
+            target = s:STATE_HIGHLANDS
+        }
+        add_to_variable_list = {
+            name = mana_propogation_states
+            target = s:STATE_WESTERN_NORWAY
+        }
 	}
 
 	s:STATE_NUNAVUT = {
@@ -84,6 +92,10 @@ GLOBAL = {
 			name = mana_propogation_states
 			target = s:STATE_LEINSTER
 		}
+        add_to_variable_list = {
+            name = mana_propogation_states
+            target = s:STATE_MUNSTER
+        }
 	}
 
 	s:STATE_ESTREMADURA = {

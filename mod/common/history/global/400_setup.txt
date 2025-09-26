@@ -55,7 +55,12 @@ GLOBAL = {
             name = magic_innovation
             value = 0
         }
-        calculate_magic_research = yes
+        if = {
+            limit = {
+                is_magic_country = yes
+            }
+            calculate_magic_research = yes
+        }
     }
 
     # Statistics GUI

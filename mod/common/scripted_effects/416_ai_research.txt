@@ -1,20 +1,132 @@
 ﻿gate_ai_research = {
-	every_country = {
-		limit = {
-			any_in_list = {
-				variable = gate_ai_research
-				count >= 1
-			}
-			is_ai = yes
-		}
-		random_in_list = {
-			variable = gate_ai_research
-			save_scope_as = technology_to_research
-		}
-		add_to_global_variable_list = {
-			name = gate_ai_research
-			target = scope:technology_to_research
-		}
-		clear_variable_list = gate_ai_research
-	}
+    random_list = {
+        33 = {
+            gate_ai_research_prodution = yes
+        }
+        33 = {
+            gate_ai_research_military = yes
+        }
+        33 = {
+            gate_ai_research_society = yes
+        }
+    }
+}
+
+gate_ai_research_prodution = {
+    gate_ai_conditional_research = {
+        research = gate_mana_extraction
+    }
+    gate_ai_conditional_research = {
+        research = gate_improved_extraction
+    }
+    gate_ai_conditional_research = {
+        research = gate_ley_line_tap
+    }
+    gate_ai_conditional_research = {
+        research = magic_farming
+    }
+    gate_ai_conditional_research = {
+        research = simple_rune_carving
+    }
+    gate_ai_conditional_research = {
+        research = living_irrigation
+    }
+    gate_ai_conditional_research = {
+        research = magic_dwarf_murk_railways
+    }
+    gate_ai_conditional_research = {
+        research = mana_cores
+    }
+    gate_ai_conditional_research = {
+        research = arcane_foundries
+    }
+    gate_ai_conditional_research = {
+        research = regenerative_timber
+    }
+    gate_ai_conditional_research = {
+        research = mana_infused_fertilizers
+    }
+    gate_ai_conditional_research = {
+        research = magic_golems
+    }
+}
+
+gate_ai_research_military = {
+    gate_ai_conditional_research = {
+        research = mage_infantry
+    }
+    gate_ai_conditional_research = {
+        research = battlefield_wards
+    }
+    gate_ai_conditional_research = {
+        research = mage_artillery
+    }
+    gate_ai_conditional_research = {
+        research = ritual_magic
+    }
+    gate_ai_conditional_research = {
+        research = gate_arcane_warfare_doctrine
+    }
+    gate_ai_conditional_research = {
+        research = gate_mana_weaponization
+    }
+    gate_ai_conditional_research = {
+        research = gate_runic_armor_forging
+    }
+    gate_ai_conditional_research = {
+        research = gate_shadow_infiltration_tactics
+    }
+    gate_ai_conditional_research = {
+        research = gate_commando_thaumaturgy
+    }
+}
+
+gate_ai_research_society = {
+    gate_ai_conditional_research = {
+        research = mana_lanterns
+    }
+    gate_ai_conditional_research = {
+        research = formalized_magic
+    }
+    gate_ai_conditional_research = {
+        research = monster_compendium
+    }
+    gate_ai_conditional_research = {
+        research = arcane_infrastructure
+    }
+    gate_ai_conditional_research = {
+        research = ethereal_messaging
+    }
+    gate_ai_conditional_research = {
+        research = healing_circles
+    }
+    gate_ai_conditional_research = {
+        research = magic_science
+    }
+    gate_ai_conditional_research = {
+        research = mana_linked_education
+    }
+    gate_ai_conditional_research = {
+        research = thaumaturgic_courts
+    }
+    gate_ai_conditional_research = {
+        research = soulbound_currency
+    }
+}
+
+gate_ai_conditional_research = {
+    if = {
+        limit = {
+            NOT = {
+                has_technology_researched = $research$
+            }
+            $research$ = yes
+            var:magic_innovation >= gate_ai_research_cost
+        }
+        add_technology_researched = $research$
+        change_variable = {
+            name = magic_innovation
+            subtract = gate_ai_research_cost
+        }
+    }
 }

@@ -35,7 +35,7 @@ gate_propogate_mana_density = {
 			}
 			state_region = {
 				add_mana_density = {
-					amount = 1
+					amount = $amount$
 				}
 			}
 		}
@@ -50,7 +50,7 @@ gate_propogate_mana_density = {
 					var:mana_density < scope:origin_density
 				}
 				add_mana_density = {
-					amount = 1
+					amount = $amount$
 				}
 			}
 		}
@@ -222,6 +222,9 @@ setup_mana_density = {
         value = 0
     }
     every_state_region = {
+        limit = {
+            is_state_region_land = yes
+        }
         change_global_variable = {
             name = state_count
             add = 1
@@ -255,21 +258,12 @@ setup_mana_density = {
 
     # Randomly propagate mana density
     # so every start is a little different
-    random = {
-        chance = 50
-        gate_propogate_mana_density = yes
+    set_local_variable = {
+        name = gate_mana_propagation_amount
+        value = { 1 4 }
     }
-    random = {
-        chance = 50
-        gate_propogate_mana_density = yes
-    }
-    random = {
-        chance = 50
-        gate_propogate_mana_density = yes
-    }
-    random = {
-        chance = 50
-        gate_propogate_mana_density = yes
+    gate_propogate_mana_density = {
+        amount = local_var:gate_mana_propagation_amount
     }
 
     # Calculate initial saturation

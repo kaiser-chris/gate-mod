@@ -1,0 +1,116 @@
+﻿# Root = country
+on_half_yearly_pulse_country = {
+    on_actions = {
+        on_half_yearly_gate_ai_calculate_magic_innovation
+        on_half_yearly_gate_ai_magic_technology
+        on_half_yearly_gate_ai_rebuild_magic_institute
+    }
+}
+
+on_half_yearly_gate_ai_calculate_magic_innovation = {
+    trigger = {
+        is_magic_country = yes
+        is_ai = yes
+    }
+    effect = {
+        # Do 6 months of calculations
+        calculate_magic_research = yes
+        calculate_magic_research = yes
+        calculate_magic_research = yes
+        calculate_magic_research = yes
+        calculate_magic_research = yes
+        calculate_magic_research = yes
+    }
+}
+
+on_half_yearly_gate_ai_magic_technology = {
+    trigger = {
+        is_magic_country = yes
+        var:magic_innovation >= gate_ai_research_cost
+        is_ai = yes
+    }
+    effect = {
+        gate_ai_research = yes
+    }
+}
+
+on_half_yearly_gate_ai_rebuild_magic_institute = {
+    trigger = {
+        is_magic_country = yes
+        is_ai = yes
+        capital = {
+            NOT = {
+                has_building = building_magic_research_institute
+            }
+        }
+    }
+    effect = {
+        capital = {
+            start_building_construction = building_magic_research_institute
+        }
+    }
+}
+
+on_half_yearly_gate_cleanup_research_institutes = {
+    trigger = {
+        any_scope_state = {
+            is_capital = no
+            has_building = building_magic_research_institute
+        }
+    }
+    effect = {
+        gate_cleanup_research_institutes = yes
+    }
+}
+
+on_half_yearly_gate_cleanup_research_institutes = {
+    trigger = {
+        any_scope_state = {
+            is_capital = no
+            has_building = building_magic_research_institute
+        }
+    }
+    effect = {
+        gate_cleanup_research_institutes = yes
+    }
+}
+
+
+# Root = country
+on_monthly_pulse_country = {
+    on_actions = {
+        on_monthly_gate_player_calculate_magic_innovation
+        on_monthly_gate_clean_magic_researcher
+        on_monthly_gate_set_research_production_method
+    }
+}
+
+on_monthly_gate_player_calculate_magic_innovation = {
+    trigger = {
+        is_magic_country = yes
+        is_player = yes
+    }
+    effect = {
+        calculate_magic_research = yes
+    }
+}
+
+on_monthly_gate_clean_magic_researcher = {
+    trigger = {
+        has_variable = magic_researcher
+    }
+    effect = {
+        cleanup_researchers = yes
+    }
+}
+
+on_monthly_gate_set_research_production_method = {
+    trigger = {
+        capital = {
+            has_building = building_magic_research_institute
+        }
+    }
+    effect = {
+        reset_research_institute_pm = yes
+    }
+}

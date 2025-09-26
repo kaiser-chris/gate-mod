@@ -1,0 +1,14 @@
+last_date = "1900.1.1"
+
+tests = {
+    # Does Mana Saturation reach 100%?
+	gate_test_mana_saturation_max = {
+        acceptable_fail_rate = 0.0
+		success = {
+            global_var:global_mana_saturation >= 100
+		}
+		fail = {
+			game_date > "1890.1.1"
+		}
+	}
+}

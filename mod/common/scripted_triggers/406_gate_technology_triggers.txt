@@ -1,0 +1,194 @@
+﻿## Production
+gate_magic_understanding_production = {
+    always = no
+}
+
+gate_mana_extraction = {
+    has_technology_researched = gate_magic_understanding_production
+}
+
+gate_improved_extraction = {
+    has_technology_researched = gate_mana_extraction
+}
+
+gate_ley_line_tap = {
+    has_technology_researched = gate_improved_extraction
+}
+
+magic_farming = {
+    has_technology_researched = gate_mana_extraction
+}
+
+simple_rune_carving = {
+    has_technology_researched = gate_mana_extraction
+    has_technology_researched = mechanical_tools
+}
+
+living_irrigation = {
+    has_technology_researched = magic_farming
+}
+
+magic_dwarf_murk = {
+    always = no
+}
+
+magic_dwarf_murk_railways = {
+    has_technology_researched = magic_dwarf_murk
+    has_technology_researched = railways
+}
+
+mana_cores = {
+    has_technology_researched = gate_mana_extraction
+}
+
+arcane_foundries = {
+    has_technology_researched = mana_cores
+}
+
+regenerative_timber = {
+    has_technology_researched = living_irrigation
+}
+
+mana_infused_fertilizers = {
+    has_technology_researched = magic_farming
+    has_technology_researched = improved_fertilizer
+}
+
+magic_golems = {
+    has_technology_researched = mana_cores
+    has_technology_researched = simple_rune_carving
+}
+
+## Military
+magic_understanding_military = {
+    always = no
+}
+
+mage_infantry = {
+    has_technology_researched = magic_understanding_military
+}
+
+battlefield_wards = {
+    has_technology_researched = mage_infantry
+}
+
+mage_artillery = {
+    has_technology_researched = magic_understanding_military
+}
+
+ritual_magic = {
+    has_technology_researched = mage_artillery
+}
+
+gate_arcane_warfare_doctrine = {
+    has_technology_researched = mage_infantry
+    has_technology_researched = line_infantry
+}
+
+gate_mana_weaponization = {
+    has_technology_researched = general_staff
+    has_technology_researched = gate_arcane_warfare_doctrine
+}
+
+gate_runic_armor_forging = {
+    has_technology_researched = trench_works
+    has_technology_researched = gate_mana_weaponization
+}
+
+gate_shadow_infiltration_tactics = {
+    has_technology_researched = trench_works
+    has_technology_researched = gate_mana_weaponization
+}
+
+gate_commando_thaumaturgy = {
+    has_technology_researched = nco_training
+    has_technology_researched = gate_shadow_infiltration_tactics
+}
+
+## Society
+magic_understanding_society = {
+    always = no
+}
+
+dwarven_gate_immigration = {
+    always = no
+}
+
+orcish_gate_immigration = {
+    always = no
+}
+
+elven_gate_immigration = {
+    always = no
+}
+
+gnomish_gate_immigration = {
+    always = no
+}
+
+bear_gate_immigration = {
+    always = no
+}
+
+orc_clan_support = {
+    always = no
+}
+
+gnomish_harmony = {
+    always = no
+}
+
+elven_support = {
+    always = no
+}
+
+elven_forests = {
+    always = no
+}
+
+mana_lanterns = {
+    has_technology_researched = urban_planning
+    has_technology_researched = magic_understanding_society
+}
+
+formalized_magic = {
+    has_technology_researched = academia
+    has_technology_researched = magic_understanding_society
+}
+
+monster_compendium = {
+    has_technology_researched = formalized_magic
+}
+
+arcane_infrastructure = {
+    has_technology_researched = mana_lanterns
+    has_technology_researched = modern_sewerage
+}
+
+ethereal_messaging = {
+    has_technology_researched = formalized_magic
+    has_technology_researched = central_archives
+}
+
+healing_circles = {
+    has_technology_researched = formalized_magic
+    has_technology_researched = medical_degrees
+}
+
+magic_science = {
+    has_technology_researched = formalized_magic
+}
+
+mana_linked_education = {
+    has_technology_researched = magic_science
+    has_technology_researched = dialectics
+}
+
+thaumaturgic_courts = {
+    has_technology_researched = magic_science
+}
+
+soulbound_currency = {
+    has_technology_researched = magic_science
+    has_technology_researched = international_exchange_standards
+}
