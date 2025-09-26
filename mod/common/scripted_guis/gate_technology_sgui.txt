@@ -1,0 +1,410 @@
+﻿# Production
+gate_magic_understanding_production = {
+    scope = country
+    is_valid = {
+        gate_magic_understanding_production = yes
+    }
+    is_shown = {
+        always = no
+    }
+    effect = {
+        add_technology_researched = gate_magic_understanding_production
+    }
+}
+gate_mana_extraction = {
+    scope = country
+    is_valid = {
+        gate_mana_extraction = yes
+    }
+    effect = {
+        add_technology_researched = gate_mana_extraction
+    }
+}
+gate_improved_extraction = {
+    scope = country
+    is_valid = {
+        gate_improved_extraction = yes
+    }
+    effect = {
+        add_technology_researched = gate_improved_extraction
+    }
+}
+gate_ley_line_tap = {
+    scope = country
+    is_valid = {
+        gate_ley_line_tap = yes
+    }
+    effect = {
+        add_technology_researched = gate_ley_line_tap
+    }
+}
+magic_farming = {
+    scope = country
+    is_valid = {
+        magic_farming = yes
+    }
+    effect = {
+        add_technology_researched = magic_farming
+    }
+}
+simple_rune_carving = {
+    scope = country
+    is_valid = {
+        simple_rune_carving = yes
+    }
+    effect = {
+        add_technology_researched = simple_rune_carving
+    }
+}
+living_irrigation = {
+    scope = country
+    is_valid = {
+        living_irrigation = yes
+    }
+    effect = {
+        add_technology_researched = living_irrigation
+    }
+}
+magic_dwarf_murk = {
+    scope = country
+    is_valid = {
+        magic_dwarf_murk = yes
+    }
+    is_shown = {
+        always = no
+    }
+    effect = {
+        add_technology_researched = magic_dwarf_murk
+    }
+}
+magic_dwarf_murk_railways = {
+    scope = country
+    is_valid = {
+        magic_dwarf_murk_railways = yes
+    }
+    is_shown = {
+        has_technology_researched = magic_dwarf_murk
+    }
+    effect = {
+        add_technology_researched = magic_dwarf_murk_railways
+    }
+}
+mana_cores = {
+    scope = country
+    is_valid = {
+        mana_cores = yes
+    }
+    effect = {
+        add_technology_researched = mana_cores
+    }
+}
+arcane_foundries = {
+    scope = country
+    is_valid = {
+        arcane_foundries = yes
+    }
+    effect = {
+        add_technology_researched = arcane_foundries
+    }
+}
+regenerative_timber = {
+    scope = country
+    is_valid = {
+        regenerative_timber = yes
+    }
+    effect = {
+        add_technology_researched = regenerative_timber
+    }
+}
+mana_infused_fertilizers = {
+    scope = country
+    is_valid = {
+        mana_infused_fertilizers = yes
+    }
+    effect = {
+        add_technology_researched = mana_infused_fertilizers
+    }
+}
+magic_golems = {
+    scope = country
+    is_valid = {
+        magic_golems = yes
+    }
+    effect = {
+        add_technology_researched = magic_golems
+    }
+}
+
+# Military
+magic_understanding_military = {
+	scope = country
+	is_valid = {
+        magic_understanding_military = yes
+	}
+	is_shown = {
+		always = no
+	}
+}
+mage_infantry = {
+	scope = country
+	is_valid = {
+        mage_infantry = yes
+	}
+	effect = {
+		add_technology_researched = mage_infantry
+	}
+}
+battlefield_wards = {
+	scope = country
+	is_valid = {
+        battlefield_wards = yes
+	}
+	effect = {
+		add_technology_researched = battlefield_wards
+	}
+}
+mage_artillery = {
+	scope = country
+	is_valid = {
+        mage_artillery = yes
+	}
+	effect = {
+		add_technology_researched = mage_artillery
+	}
+}
+ritual_magic = {
+	scope = country
+	is_valid = {
+        ritual_magic = yes
+	}
+	effect = {
+		add_technology_researched = ritual_magic
+	}
+}
+gate_arcane_warfare_doctrine = {
+	scope = country
+	is_valid = {
+        gate_arcane_warfare_doctrine = yes
+	}
+	effect = {
+		add_technology_researched = gate_arcane_warfare_doctrine
+	}
+}
+gate_mana_weaponization = {
+	scope = country
+	is_valid = {
+        gate_mana_weaponization = yes
+	}
+	effect = {
+		add_technology_researched = gate_mana_weaponization
+	}
+}
+gate_runic_armor_forging = {
+	scope = country
+	is_valid = {
+        gate_runic_armor_forging = yes
+	}
+	effect = {
+		add_technology_researched = gate_runic_armor_forging
+	}
+}
+gate_shadow_infiltration_tactics = {
+	scope = country
+	is_valid = {
+        gate_shadow_infiltration_tactics = yes
+	}
+	effect = {
+		add_technology_researched = gate_shadow_infiltration_tactics
+	}
+}
+gate_commando_thaumaturgy = {
+	scope = country
+	is_valid = {
+        gate_commando_thaumaturgy = yes
+	}
+	effect = {
+		add_technology_researched = gate_commando_thaumaturgy
+	}
+}
+
+# Society
+magic_understanding_society = {
+    scope = country
+    is_valid = {
+        magic_understanding_society = yes
+    }
+    is_shown = {
+        always = no
+    }
+}
+dwarven_gate_immigration = {
+    scope = country
+    is_valid = {
+        always = no
+    }
+    is_shown = {
+        always = no
+    }
+}
+orcish_gate_immigration = {
+    scope = country
+    is_valid = {
+        always = no
+    }
+    is_shown = {
+        always = no
+    }
+}
+elven_gate_immigration = {
+    scope = country
+    is_valid = {
+        always = no
+    }
+    is_shown = {
+        always = no
+    }
+}
+gnomish_gate_immigration = {
+    scope = country
+    is_valid = {
+        always = no
+    }
+    is_shown = {
+        always = no
+    }
+}
+bear_gate_immigration = {
+    scope = country
+    is_valid = {
+        always = no
+    }
+    is_shown = {
+        always = no
+    }
+}
+orc_clan_support = {
+    scope = country
+    is_valid = {
+        always = no
+    }
+    is_shown = {
+        always = no
+    }
+}
+gnomish_harmony = {
+    scope = country
+    is_valid = {
+        always = no
+    }
+    is_shown = {
+        always = no
+    }
+}
+elven_support = {
+    scope = country
+    is_valid = {
+        always = no
+    }
+    is_shown = {
+        always = no
+    }
+}
+elven_forests = {
+    scope = country
+    is_valid = {
+        always = no
+    }
+    is_shown = {
+        always = no
+    }
+}
+mana_lanterns = {
+    scope = country
+    is_valid = {
+        mana_lanterns = yes
+    }
+    effect = {
+        add_technology_researched = mana_lanterns
+    }
+}
+formalized_magic = {
+    scope = country
+    is_valid = {
+        formalized_magic = yes
+    }
+    effect = {
+        add_technology_researched = formalized_magic
+    }
+}
+monster_compendium = {
+    scope = country
+    is_valid = {
+        monster_compendium = yes
+    }
+    effect = {
+        add_technology_researched = monster_compendium
+    }
+}
+arcane_infrastructure = {
+    scope = country
+    is_valid = {
+        arcane_infrastructure = yes
+    }
+    effect = {
+        add_technology_researched = arcane_infrastructure
+    }
+}
+ethereal_messaging = {
+    scope = country
+    is_valid = {
+        ethereal_messaging = yes
+    }
+    effect = {
+        add_technology_researched = ethereal_messaging
+    }
+}
+healing_circles = {
+    scope = country
+    is_valid = {
+        healing_circles = yes
+    }
+    effect = {
+        add_technology_researched = healing_circles
+    }
+}
+magic_science = {
+    scope = country
+    is_valid = {
+        magic_science = yes
+    }
+    effect = {
+        add_technology_researched = magic_science
+    }
+}
+mana_linked_education = {
+    scope = country
+    is_valid = {
+        mana_linked_education = yes
+    }
+    effect = {
+        add_technology_researched = mana_linked_education
+    }
+}
+thaumaturgic_courts = {
+    scope = country
+    is_valid = {
+        thaumaturgic_courts = yes
+    }
+    effect = {
+        add_technology_researched = thaumaturgic_courts
+    }
+}
+soulbound_currency = {
+    scope = country
+    is_valid = {
+        soulbound_currency = yes
+    }
+    effect = {
+        add_technology_researched = soulbound_currency
+    }
+}

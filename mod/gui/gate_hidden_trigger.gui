@@ -1,11 +1,17 @@
-# This widget is hidden but visible
+# This widget is hidden but internally visible
 # This allows triggering state events
+
+# Fast update triggers
+# - Custom Shortcuts
+# - Script Open Panel
+# - Alerts
 widget = {
-    name = "gate_hidden_trigger"
+    name = "gate_hidden_trigger_fast"
     datacontext = "[GetMetaPlayer.GetPlayedOrObservedCountry]"
     allow_outside = yes
     size = { 0 0 }
     alpha = 0
+    max_update_rate = 8
     visible = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 
     # Custom Shortcuts
@@ -68,6 +74,18 @@ widget = {
             }
         }
     }
+}
+
+# Slow update triggers
+# - Technology Notifications
+widget = {
+    name = "gate_hidden_trigger_slow"
+    datacontext = "[GetMetaPlayer.GetPlayedOrObservedCountry]"
+    allow_outside = yes
+    size = { 0 0 }
+    alpha = 0
+    max_update_rate = 600
+    visible = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 
     # Technology Notifications
     widget = {
@@ -114,148 +132,6 @@ widget = {
                                         GreaterThanOrEqualTo_CFixedPoint(Country.MakeScope.Var('magic_innovation').GetValue, Technology.GetCost(Country.Self))
                                     )]"
                     on_finish = "[GetScriptedGui('sgui_gate_can_research').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('technology', Technology.MakeScope).End)]"
-                }
-            }
-        }
-    }
-
-    # Register AI research
-    flowcontainer = {
-        direction = vertical
-        datamodel = "[GetGlobalList('magic_countries')]"
-
-        item = {
-            widget = {
-                gate_tech_tree_production = {
-                    blockoverride "tech_visibility" {
-                        visible = "[Not(Technology.HasResearchedTech(Scope.GetCountry.Self))]"
-                    }
-                    blockoverride "tech_state" {
-                        state = {
-                            trigger_when = "[And3(
-                                ScriptedGui.IsValid(GuiScope.SetRoot(Scope.GetCountry.MakeScope).End),
-                                GetScriptedGui('sgui_gate_window_execute_research').IsValid(GuiScope.SetRoot(Scope.GetCountry.MakeScope).AddScope('technology', Technology.MakeScope).End),
-                                GreaterThanOrEqualTo_CFixedPoint(Scope.Var('magic_innovation').GetValue, Technology.GetCost(Scope.GetCountry.Self))
-                            )]"
-                            on_finish = "[GetScriptedGui('sgui_gate_register_ai_research').Execute(GuiScope
-                                .SetRoot(Scope.GetCountry.MakeScope)
-                                .AddScope('technology', Technology.MakeScope)
-                                .End
-                            )]"
-                        }
-                    }
-                }
-                gate_tech_tree_military = {
-                    blockoverride "tech_visibility" {
-                        visible = "[Not(Technology.HasResearchedTech(Scope.GetCountry.Self))]"
-                    }
-                    blockoverride "tech_state" {
-                        state = {
-                            trigger_when = "[And3(
-                                ScriptedGui.IsValid(GuiScope.SetRoot(Scope.GetCountry.MakeScope).End),
-                                GetScriptedGui('sgui_gate_window_execute_research').IsValid(GuiScope.SetRoot(Scope.GetCountry.MakeScope).AddScope('technology', Technology.MakeScope).End),
-                                GreaterThanOrEqualTo_CFixedPoint(Scope.Var('magic_innovation').GetValue, Technology.GetCost(Scope.GetCountry.Self))
-                            )]"
-                            on_finish = "[GetScriptedGui('sgui_gate_register_ai_research').Execute(GuiScope
-                                .SetRoot(Scope.GetCountry.MakeScope)
-                                .AddScope('technology', Technology.MakeScope)
-                                .End
-                            )]"
-                        }
-                    }
-                }
-                gate_tech_tree_society = {
-                    blockoverride "tech_visibility" {
-                        visible = "[Not(Technology.HasResearchedTech(Scope.GetCountry.Self))]"
-                    }
-                    blockoverride "tech_state" {
-                        state = {
-                            trigger_when = "[And3(
-                                ScriptedGui.IsValid(GuiScope.SetRoot(Scope.GetCountry.MakeScope).End),
-                                GetScriptedGui('sgui_gate_window_execute_research').IsValid(GuiScope.SetRoot(Scope.GetCountry.MakeScope).AddScope('technology', Technology.MakeScope).End),
-                                GreaterThanOrEqualTo_CFixedPoint(Scope.Var('magic_innovation').GetValue, Technology.GetCost(Scope.GetCountry.Self))
-                            )]"
-                            on_finish = "[GetScriptedGui('sgui_gate_register_ai_research').Execute(GuiScope
-                                .SetRoot(Scope.GetCountry.MakeScope)
-                                .AddScope('technology', Technology.MakeScope)
-                                .End
-                            )]"
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    # AI Research
-    flowcontainer = {
-        direction = vertical
-        datamodel = "[GetGlobalList('gate_ai_research')]"
-
-        item = {
-            widget = {
-                gate_tech_tree_production = {
-                    blockoverride "tech_visibility" {
-                        visible = "[ObjectsEqual(Technology.Self, Scope.Var('technology').GetTechnology.Self)]"
-                    }
-                    blockoverride "tech_state" {
-                        state = {
-                            trigger_when = "[GetScriptedGui('sgui_gate_ai_research_done').IsValid(GuiScope.End)]"
-                            on_finish = "[GetScriptedGui('sgui_gate_window_execute_research').Execute(GuiScope
-                                .SetRoot(Scope.Var('country').GetCountry.MakeScope)
-                                .AddScope('technology', Technology.MakeScope)
-                                .AddScope('cost', MakeScopeValue(Technology.GetCost(Scope.Var('country').GetCountry.Self)))
-                                .End
-                            )]"
-                            on_finish = "[GetScriptedGui('sgui_gate_ai_research_done').Execute(GuiScope
-                                .AddScope('research_container', Scope.GetCharacter.MakeScope)
-                                .End
-                            )]"
-                            on_finish = "[ScriptedGui.Execute(GuiScope.SetRoot(Scope.Var('country').GetCountry.MakeScope).End)]"
-                        }
-                    }
-                }
-                gate_tech_tree_military = {
-                    blockoverride "tech_visibility" {
-                        visible = "[ObjectsEqual(Technology.Self, Scope.Var('technology').GetTechnology.Self)]"
-                    }
-                    blockoverride "tech_state" {
-                        state = {
-                            trigger_when = "[GetScriptedGui('sgui_gate_ai_research_done').IsValid(GuiScope.End)]"
-                            on_finish = "[GetScriptedGui('sgui_gate_window_execute_research').Execute(GuiScope
-                                .SetRoot(Scope.Var('country').GetCountry.MakeScope)
-                                .AddScope('technology', Technology.MakeScope)
-                                .AddScope('cost', MakeScopeValue(Technology.GetCost(Scope.Var('country').GetCountry.Self)))
-                                .End
-                            )]"
-                            on_finish = "[GetScriptedGui('sgui_gate_ai_research_done').Execute(GuiScope
-                                .AddScope('research_container', Scope.GetCharacter.MakeScope)
-                                .End
-                            )]"
-                            on_finish = "[ScriptedGui.Execute(GuiScope.SetRoot(Scope.Var('country').GetCountry.MakeScope).End)]"
-                        }
-                    }
-                }
-                gate_tech_tree_society = {
-                    blockoverride "tech_visibility" {
-                        visible = "[ObjectsEqual(Technology.Self, Scope.Var('technology').GetTechnology.Self)]"
-                    }
-                    blockoverride "tech_state" {
-                        state = {
-                            trigger_when = "[GetScriptedGui('sgui_gate_ai_research_done').IsValid(GuiScope.End)]"
-                            on_finish = "[GetScriptedGui('sgui_gate_window_execute_research').Execute(GuiScope
-                                .SetRoot(Scope.Var('country').GetCountry.MakeScope)
-                                .AddScope('technology', Technology.MakeScope)
-                                .AddScope('cost', MakeScopeValue(Technology.GetCost(Scope.Var('country').GetCountry.Self)))
-                                .End
-                            )]"
-                            on_finish = "[GetScriptedGui('sgui_gate_ai_research_done').Execute(GuiScope
-                                .AddScope('research_container', Scope.GetCharacter.MakeScope)
-                                .End
-                            )]"
-                            on_finish = "[ScriptedGui.Execute(GuiScope.SetRoot(Scope.Var('country').GetCountry.MakeScope).End)]"
-                        }
-                    }
                 }
             }
         }

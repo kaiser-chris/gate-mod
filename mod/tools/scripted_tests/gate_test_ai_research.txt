@@ -1,0 +1,40 @@
+last_date = "1932.1.1"
+
+tests = {
+    # Does at least one magic country research all/most magic technologies?
+	gate_test_ai_research_max = {
+        acceptable_fail_rate = 0.0
+		success = {
+            OR = {
+                c:GATE_MK ?= {
+                    has_technology_researched = gate_commando_thaumaturgy
+                    has_technology_researched = soulbound_currency
+                    has_technology_researched = magic_golems
+                }
+                c:GATE_AD ?= {
+                    has_technology_researched = gate_commando_thaumaturgy
+                    has_technology_researched = soulbound_currency
+                    has_technology_researched = magic_golems
+                }
+                c:GATE_OK ?= {
+                    has_technology_researched = gate_commando_thaumaturgy
+                    has_technology_researched = soulbound_currency
+                    has_technology_researched = magic_golems
+                }
+                c:GATE_BN ?= {
+                    has_technology_researched = gate_commando_thaumaturgy
+                    has_technology_researched = soulbound_currency
+                    has_technology_researched = magic_golems
+                }
+                c:GATE_NS ?= {
+                    has_technology_researched = gate_commando_thaumaturgy
+                    has_technology_researched = soulbound_currency
+                    has_technology_researched = magic_golems
+                }
+            }
+		}
+		fail = {
+            game_date > "1930.1.1"
+		}
+	}
+}

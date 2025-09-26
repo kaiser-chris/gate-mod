@@ -3,16 +3,8 @@ on_monthly_pulse = {
     on_actions = {
         on_monthly_gate_calculate_mana_saturation
         on_monthly_gate_statistics
-        on_monthly_gate_cleanup
         on_monthly_gate_mana_density
         on_monthly_ui_check
-        on_monthly_gate_ai_magic_technology
-    }
-}
-
-on_monthly_gate_ai_magic_technology = {
-    effect = {
-        gate_ai_research = yes
     }
 }
 
@@ -81,12 +73,6 @@ on_monthly_gate_statistics = {
     }
 }
 
-on_monthly_gate_cleanup = {
-    effect = {
-        gate_cleanup_research_institutes = yes
-    }
-}
-
 on_monthly_gate_mana_density = {
     trigger = {
         global_var:global_mana_saturation <= 100
@@ -99,11 +85,12 @@ on_monthly_gate_mana_density = {
         }
     }
     effect = {
-        # Between 1 and 2 times
-        gate_propogate_mana_density = yes
-        random = {
-            chance = 20
-            gate_propogate_mana_density = yes
+        set_local_variable = {
+            name = gate_mana_propagation_amount
+            value = { 1 3 }
+        }
+        gate_propogate_mana_density = {
+            amount = local_var:gate_mana_propagation_amount
         }
     }
 }
@@ -111,14 +98,11 @@ on_monthly_gate_mana_density = {
 # Root = country
 on_monthly_pulse_country = {
     on_actions = {
-        on_monthly_gate_magic_country
-        on_monthly_gate_clean_magic_researcher
         on_monthly_gate_add_immigration_dwarven
         on_monthly_gate_add_immigration_orcish
         on_monthly_gate_add_immigration_elven
         on_monthly_gate_add_immigration_gnomish
         on_monthly_gate_add_immigration_bear
-        on_monthly_gate_set_research_production_method
         on_monthly_gate_vampire_journal
     }
 }
@@ -165,35 +149,6 @@ on_monthly_gate_add_immigration_bear = {
     }
     effect = {
         add_gate_immigration_bear = yes
-    }
-}
-
-on_monthly_gate_magic_country = {
-    trigger = {
-        is_magic_country = yes
-    }
-    effect = {
-        calculate_magic_research = yes
-    }
-}
-
-on_monthly_gate_clean_magic_researcher = {
-    trigger = {
-        has_variable = magic_researcher
-    }
-    effect = {
-        cleanup_researchers = yes
-    }
-}
-
-on_monthly_gate_set_research_production_method = {
-    trigger = {
-        capital = {
-            has_building = building_magic_research_institute
-        }
-    }
-    effect = {
-        reset_research_institute_pm = yes
     }
 }
 

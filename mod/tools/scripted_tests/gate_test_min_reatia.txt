@@ -1,0 +1,17 @@
+last_date = "1870.1.1"
+
+tests = {
+    # Does at least one magic country research all/most magic technologies?
+	gate_test_unified_alps = {
+        acceptable_fail_rate = 0.0
+		success = {
+            c:GATE_MK ?= {
+                has_state_in_state_region = STATE_EAST_SWITZERLAND
+                has_state_in_state_region = STATE_WEST_SWITZERLAND
+            }
+		}
+		fail = {
+            game_date > "1860.1.1"
+		}
+	}
+}

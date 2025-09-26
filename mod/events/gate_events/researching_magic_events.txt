@@ -269,6 +269,11 @@ researching_magic.4 = {
         hidden_effect = {
             if = {
                 limit = {
+                    capital ?= {
+                        NOT = {
+                            has_building = building_magic_research_institute
+                        }
+                    }
                     is_ai = yes
                 }
                 capital = {
