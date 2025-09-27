@@ -1126,7 +1126,9 @@ types gate_shared {
     }
 
     type gate_project_button = widget {
-        visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Country.MakeScope).End)]"
+        block "visibility" {
+            visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Country.MakeScope).End)]"
+        }
         block "size" {
             size = { 350 45 }
         }
@@ -1138,8 +1140,10 @@ types gate_shared {
             block "size" {
                 size = { 350 45 }
             }
-            onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
-            enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
+            block "interaction" {
+                onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
+                enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
+            }
         }
         icon = {
             size = { 102% 110% }

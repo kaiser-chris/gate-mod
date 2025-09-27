@@ -1,4 +1,4 @@
-﻿mm_state_mana_density = {
+﻿mm_state_gate_mana_density = {
 	map_painting_mode = countries
 	map_names = countries
 	map_markers = { production_marker }
@@ -7,4 +7,15 @@
 
 	soundeffect = "snapshot:/Dynamic/low_pass_world"
 	icon = "gfx/interface/icons/map_mode_icons/gate_mana_density.dds"
+}
+
+mm_country_gate_has_magic = {
+    map_painting_mode = countries
+    map_names = countries
+    map_markers = { production_marker }
+    gradient_border_settings = default
+    is_visible = yes
+
+    soundeffect = "snapshot:/Dynamic/low_pass_world"
+    icon = "gfx/interface/icons/map_mode_icons/gate_mana_density.dds"
 }
