@@ -9,82 +9,80 @@ flowcontainer = {
     parentanchor = bottom|hcenter
 
     # Vanilla
-    flowcontainer = {
-        direction = vertical
-        tooltip = "STATE_PRODUCTION_MARKER_TOOLTIP"
+    container = {
         visible = "[And(
-						Or(
-							IsZoomLevelNear,
-							And(
-								Not(IsZoomLevelNear),
-								ObjectsEqual(State.AccessSelf, State.AccessStateRegion.GetLargestStateInRegion)
-							)
-						),
-						Not(IsMapModeSelected('mm_state_mana_density'))
-					)]"
-
-        background = {
-            visible = "[IsZoomLevelNear]"
-            using = default_background
-            margin = { 11 6 }
-        }
+            Not(IsMapModeSelected('mm_country_gate_has_magic')),
+            Not(IsMapModeSelected('mm_state_gate_mana_density'))
+		)]"
 
         flowcontainer = {
-            visible = "[Not(IsDataModelEmpty(State.AccessStateRegion.AccessTraits))]"
-            datamodel = "[State.AccessStateRegion.AccessTraits]"
-            datamodel_reuse_widgets = yes
-            spacing = 2
-            parentanchor = hcenter
-            margin_top = 2
+            direction = vertical
+            tooltip = "STATE_PRODUCTION_MARKER_TOOLTIP"
+            visible = "[Or(IsZoomLevelNear, And(Not(IsZoomLevelNear), ObjectsEqual(State.AccessSelf, State.AccessStateRegion.GetLargestStateInRegion)))]"
 
-            item = {
-                flowcontainer = {
-                    onmousehierarchyenter = "[AccessHighlightManager.HighlightStateTrait(StateTrait.Self)]"
-                    onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
-                    alwaystransparent = no
-                    tooltip = TOOLTIP_STATE_TRAIT
+            background = {
+                visible = "[IsZoomLevelNear]"
+                using = default_background
+                margin = { 11 6 }
+            }
 
-                    icon = {
-                        visible = "[Not(IsZoomLevelFar)]"
-                        size = { 36 36 }
-                        texture = "[StateTrait.GetTexture]"
-                    }
+            flowcontainer = {
+                visible = "[Not(IsDataModelEmpty(State.AccessStateRegion.AccessTraits))]"
+                datamodel = "[State.AccessStateRegion.AccessTraits]"
+                datamodel_reuse_widgets = yes
+                spacing = 2
+                parentanchor = hcenter
+                margin_top = 2
 
-                    icon = {
-                        visible = "[IsZoomLevelFar]"
-                        size = { 25 25 }
-                        texture = "[StateTrait.GetTexture]"
+                item = {
+                    flowcontainer = {
+                        onmousehierarchyenter = "[AccessHighlightManager.HighlightStateTrait(StateTrait.Self)]"
+                        onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
+                        alwaystransparent = no
+                        tooltip = TOOLTIP_STATE_TRAIT
+
+                        icon = {
+                            visible = "[Not(IsZoomLevelFar)]"
+                            size = { 36 36 }
+                            texture = "[StateTrait.GetTexture]"
+                        }
+
+                        icon = {
+                            visible = "[IsZoomLevelFar]"
+                            size = { 25 25 }
+                            texture = "[StateTrait.GetTexture]"
+                        }
                     }
                 }
             }
-        }
 
-        textbox = {
+            textbox = {
+                visible = "[IsZoomLevelNear]"
+                using = default_list_position
+                text = "MAP_LIST_STATE_AVAILABLE_LABOR"
+                tooltip = "STATE_AVAILABLE_LABOR_TOOLTIP"
+                autoresize = yes
+                align = left|nobaseline
+            }
+        }
+        widget = {
+            visible = "[IsZoomLevelNear]"
+            size = { 3 3 }
+        }
+        widget = {
             visible = "[IsZoomLevelNear]"
             using = default_list_position
-            text = "MAP_LIST_STATE_AVAILABLE_LABOR"
-            tooltip = "STATE_AVAILABLE_LABOR_TOOLTIP"
-            autoresize = yes
-            align = left|nobaseline
+            using = small_nib
         }
     }
-    widget = {
-        visible = "[And(IsZoomLevelNear, Not(GetVariableSystem.Exists('gate_map_mode')))]"
-        size = { 3 3 }
-    }
-    widget = {
-        visible = "[And(IsZoomLevelNear, Not(GetVariableSystem.Exists('gate_map_mode')))]"
-        using = default_list_position
-        using = small_nib
-    }
 
-    # Gate Content
+    # Manaflow Content
     # == Mana Density
     flowcontainer = {
         direction = vertical
         visible = "[And(
 						ObjectsEqual(State.AccessSelf, State.AccessStateRegion.GetLargestStateInRegion),
-						IsMapModeSelected('mm_state_mana_density')
+						IsMapModeSelected('mm_state_gate_mana_density')
 					)]"
         onmousehierarchyenter = "[AccessHighlightManager.HighlightStateRegion(State.AccessStateRegion.Self)]"
         onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
@@ -108,6 +106,59 @@ flowcontainer = {
             }
             blockoverride "font_size" {
                 using = fontsize_small
+            }
+        }
+    }
+
+    # == Arcane Countries
+    flowcontainer = {
+        direction = vertical
+        datacontext = "[State.GetCountry]"
+        visible = "[And3(
+            State.IsCapitalState,
+            IsMapModeSelected('mm_country_gate_has_magic'),
+            GetScriptedGui('sgui_gate_map_mode_country_has_magic').IsShown(GuiScope.SetRoot(Country.MakeScope).End)
+        )]"
+        using = clickthrough_blocker
+
+        onmousehierarchyenter = "[AccessHighlightManager.HighlightCountry(Country.Self)]"
+        onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
+
+        icon = {
+            parentanchor = left|vcenter
+            position = { -10 0 }
+            size = { 40 40 }
+            block "background" {
+                texture = "gfx/interface/backgrounds/round_button_bg.dds"
+            }
+            tooltipwidget = {
+                RegularTooltip = {
+                    blockoverride "tooltip_content" {
+                        custom_tooltip_textbox = {
+                            text = "[Country.GetName]"
+                            default_format = "#header"
+                        }
+                        custom_tooltip_textbox = {
+                            text = "[Localize('concept_magic_knowledge_desc')]"
+                        }
+                    }
+                }
+            }
+            icon = {
+                parentanchor = center
+                block "icon_size" {
+                    size = { 60% 60% }
+                }
+                block "icon" {
+                    texture = "gfx/interface/icons/war_goals/magic_knowledge.dds"
+                }
+            }
+            icon = {
+                block "icon_highlight_visible" {
+                    visible = no
+                }
+                size = { 100% 100% }
+                using = highlighted_circle_selection_big
             }
         }
     }

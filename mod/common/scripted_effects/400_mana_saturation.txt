@@ -130,6 +130,7 @@ initial_gate_propogate_mana_density = {
 	every_state_region = {
 		limit = {
 			has_magic_gate = yes
+            is_state_region_land = yes
 		}
 		set_variable = {
 			name = mana_density
@@ -142,7 +143,7 @@ initial_gate_propogate_mana_density = {
 	s:STATE_AMAZONAS = {
 		set_variable = {
 			name = mana_density
-			value = medium_mana_density_threshhold
+			value = maximum_mana_density
 		}
 		add_mana_density_modifier = yes
 	}
@@ -150,7 +151,15 @@ initial_gate_propogate_mana_density = {
 	# Propagate initial mana density fall off
 	every_state_region = {
 		limit = {
-			var:mana_density = 100
+            trigger_if = {
+                limit = {
+                    is_state_region_land = yes
+                }
+                var:mana_density = 100
+            }
+            trigger_else = {
+                always = no
+            }
 		}
 		propogate_from_state_region = {
 			amount = 70
@@ -158,7 +167,15 @@ initial_gate_propogate_mana_density = {
 	}
 	every_state_region = {
 		limit = {
-			var:mana_density = 70
+            trigger_if = {
+                limit = {
+                    is_state_region_land = yes
+                }
+                var:mana_density = 70
+            }
+            trigger_else = {
+                always = no
+            }
 		}
 		propogate_from_state_region = {
 			amount = 40
@@ -166,7 +183,15 @@ initial_gate_propogate_mana_density = {
 	}
 	every_state_region = {
 		limit = {
-			var:mana_density = 40
+            trigger_if = {
+                limit = {
+                    is_state_region_land = yes
+                }
+                var:mana_density = 40
+            }
+            trigger_else = {
+                always = no
+            }
 		}
 		propogate_from_state_region = {
 			amount = 10

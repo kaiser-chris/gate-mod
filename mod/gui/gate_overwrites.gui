@@ -314,7 +314,7 @@ types overwrites {
 				# Mana Density
 				gate_mana_density_colored = {
 					onmousehierarchyenter = "[AccessHighlightManager.HighlightStateRegion(State.AccessStateRegion.Self)]"
-					onmousehierarchyenter = "[SetTempMapModeByKey('mm_state_mana_density')]"
+					onmousehierarchyenter = "[SetTempMapModeByKey('mm_state_gate_mana_density')]"
 					onmousehierarchyleave = "[RemoveTempMapMode]"
 					onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
 
