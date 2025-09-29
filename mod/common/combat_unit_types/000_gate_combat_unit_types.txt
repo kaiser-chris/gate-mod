@@ -1,4 +1,5 @@
 ﻿#noinspection ALL
+#noinspection ALL
 
 # All base game units will be overwritten and
 # therefor do not need to be updated unless it produces errors
@@ -455,11 +456,11 @@ combat_unit_type_rune_guard_infantry = {
 
     upkeep_modifier = {
         goods_input_small_arms_add = 2
-        goods_input_mana_core_add = 1
+        goods_input_runic_paper_add = 1
     }
 
     battle_modifier = {
-        unit_offense_add = 20
+        unit_offense_add = 25
         unit_defense_add = 50
         unit_morale_loss_add = 5
     }
