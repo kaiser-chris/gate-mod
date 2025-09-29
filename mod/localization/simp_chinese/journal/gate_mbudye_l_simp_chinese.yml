@@ -1,6 +1,7 @@
 ﻿l_simp_chinese:
 # Conversion Journal Entry
  je_gate_mbudye: "向[GetCulture('lunda').GetNameNoFormatting]传教"
+ je_gate_mbudye_lobby: "$je_gate_mbudye_reason$" #deepl:4113937531
  je_gate_mbudye_reason: "阿图瑞安统御国的精灵将使隆达人皈依视为一项精神使命，同时也是巩固其神权统治的手段。他们的使者与备受尊崇的释经者暨历史学家议会姆布迪耶接触，将统治领域的信仰编织进隆达传统的经纬之中。尽管精灵声称要传递神圣启迪，姆布迪耶始终保持着警觉，他们从精灵经卷的字里行间觉察到了主权被悄然侵蚀的危机。这场较量既是信仰的感召与抵拒，更是古老的隆达法则与统御国天命的激烈碰撞。"
  je_gate_mbudye_complete: "[GetCulture('lunda').GetName]诸国已全部皈依[GetReligion('gate_golden_religion').GetName]。"
  je_gate_mbudye_fail_support: "我们失去了[GetCulture('lunda').GetName]国家的所有支持。"
