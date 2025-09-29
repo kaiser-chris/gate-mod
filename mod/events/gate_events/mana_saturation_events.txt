@@ -14,11 +14,14 @@ gate_mana_saturation.1 = {
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
+    gui_window = event_window_widescreen_classic
+
 	icon = "gfx/interface/icons/event_icons/event_default.dds"
 	
 	duration = 3
 	
 	trigger = {
+        global_var:global_mana_saturation >= 100
 	}
 
 	option = {
