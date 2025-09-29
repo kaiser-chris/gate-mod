@@ -11,4 +11,15 @@ tests = {
 			game_date > "1890.1.1"
 		}
 	}
+
+    # Does the Mana Saturation Journal finish?
+    gate_test_mana_saturation_je = {
+        acceptable_fail_rate = 0.0
+        success = {
+            has_global_variable = gate_mana_saturation_full
+        }
+        fail = {
+            game_date > "1890.1.1"
+        }
+    }
 }
