@@ -206,7 +206,7 @@ form_lunda_nation = {
 		# Carry over magic nation status
 		if = {
 			limit = {
-				not_is_magic_country = yes
+				is_magic_country = no
 				c:CHK = {
 					is_magic_country = yes
 				}
@@ -215,7 +215,7 @@ form_lunda_nation = {
 		}
 		else_if = {
 			limit = {
-				not_is_magic_country = yes
+				is_magic_country = no
 				c:KZM = {
 					is_magic_country = yes
 				}
@@ -224,7 +224,7 @@ form_lunda_nation = {
 		}
 		else_if = {
 			limit = {
-				not_is_magic_country = yes
+				is_magic_country = no
 				c:KSN = {
 					is_magic_country = yes
 				}

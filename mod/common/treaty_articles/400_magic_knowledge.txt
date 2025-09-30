@@ -178,7 +178,7 @@
 					desc = "DIPLOMATIC_ACCEPTANCE_GATE_NO_MAGIC"
 					if = {
 						limit = {
-							not_is_magic_country = yes
+							is_magic_country = no
 						}
 						value = 20
 					}
