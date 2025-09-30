@@ -32,7 +32,7 @@ gate_project_can_start_expand_research_institute = {
 	}
 	is_magic_country = yes
 	has_magic_researcher = yes
-	not_has_active_magic_project = yes
+	has_active_magic_project = no
 }
 
 gate_project_can_start_domain = {
@@ -45,7 +45,7 @@ gate_project_can_start_domain = {
 	}
 	is_magic_country = yes
 	has_magic_researcher = yes
-	not_has_active_magic_project = yes
+	has_active_magic_project = no
 	custom_tooltip = {
 		text = je_gate_project_domain_condition_not_researched
 		NOT = {
@@ -67,7 +67,7 @@ gate_project_can_start_improve_mana_extraction = {
 	}
 	is_magic_country = yes
 	has_magic_researcher = yes
-	not_has_active_magic_project = yes
+	has_active_magic_project = no
 }
 
 gate_project_can_start_modernize_seed_selection = {
@@ -83,7 +83,7 @@ gate_project_can_start_modernize_seed_selection = {
 	}
 	is_magic_country = yes
 	has_magic_researcher = yes
-	not_has_active_magic_project = yes
+	has_active_magic_project = no
 }
 
 gate_project_can_improve_building = {
