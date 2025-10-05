@@ -187,7 +187,15 @@
 			}
 			custom_tooltip = {
 				text = je_gate_mbudye_fail_annex
-				has_global_variable = mbudye_unification
+                OR = {
+                    has_global_variable = mbudye_unification
+                    NOR = {
+                        exists = c:LND
+                        exists = c:CHK
+                        exists = c:KZM
+                        exists = c:KSN
+                    }
+                }
 			}
 		}
 	}
