@@ -1,16 +1,32 @@
 ﻿l_korean:
  trigger_has_magic_gate: "[GetBuildingType('building_gate_alxa').GetName] 보유"
- trigger_not_has_magic_gate: "[GetBuildingType('building_gate_alxa').GetName] 미보유"
+ trigger_has_magic_gate_not: "제어하지 않습니다. [GetBuildingType('building_gate_alxa').GetName]" #deepl:2766616975
+ trigger_has_magic_gate_third: "[COUNTRY.GetNameNoFlag] 컨트롤은 [GetBuildingType('building_gate_alxa').GetName]" #deepl:3482540568
+ trigger_has_magic_gate_third_not: "[COUNTRY.GetNameNoFlag] 를 제어하지 않습니다. [GetBuildingType('building_gate_alxa').GetName]" #deepl:349052751
+
  trigger_is_gate_planet_country: "[concept_gate_planet] 출신 국가"
+ trigger_is_gate_planet_country_not: "다음 국가가 아닙니다. [concept_gate_planet]" #deepl:1445886546
+ trigger_is_gate_planet_country_third: "[COUNTRY.GetNameNoFlag] 의 국가는 [concept_gate_planet]" #deepl:498334440
+ trigger_is_gate_planet_country_third_not: "[COUNTRY.GetNameNoFlag] 의 국가가 아닙니다. [concept_gate_planet]" #deepl:1709490938
+
  trigger_gate_is_magic_country: "[concept_magic_knowledge] 있음"
- trigger_gate_not_is_magic_country: "[concept_magic_knowledge] 없음"
+ trigger_gate_is_magic_country_not: "없음 [concept_magic_knowledge]" #deepl:63607955
+ trigger_gate_is_magic_country_third: "[COUNTRY.GetNameNoFlag] has [concept_magic_knowledge]" #deepl:4259156759
+ trigger_gate_is_magic_country_third_not: "[COUNTRY.GetNameNoFlag] 에는 [concept_magic_knowledge]" #deepl:1565322128
+
+ trigger_gate_has_magic_researcher: "[concept_magic_researcher]가 있음"
+ trigger_gate_has_magic_researcher_not: "없는 [concept_magic_researcher]" #deepl:1463586438
+ trigger_gate_has_magic_researcher_third: "[COUNTRY.GetNameNoFlag] 에는 [concept_magic_researcher]" #deepl:3451463689
+ trigger_gate_has_magic_researcher_third_not: "[COUNTRY.GetNameNoFlag] 에는 [concept_magic_researcher]" #deepl:1362137834
+
+ trigger_gate_has_active_magic_project: "활성화된 [concept_gate_project]가 있음"
+ trigger_gate_has_active_magic_project_not: "활성 [concept_gate_project]" #deepl:2442006880
+ trigger_gate_has_active_magic_project_third: "[COUNTRY.GetNameNoFlag] 활성 [concept_gate_project]" #deepl:3559282227
+ trigger_gate_has_active_magic_project_third_not: "[COUNTRY.GetNameNoFlag] 에 활성 [concept_gate_project]" #deepl:3765575407
+
  trigger_gate_expedition_budget: "#default_text [SCOPE.GetValue('budget_cost')|0v] 이상의 [concept_gate_expedition_budget]을 보유하고 있습니다.#!"
  trigger_gate_expedition_has_covered: "#default_text [concept_gate_expedition] 지도에 미탐험 지역이 있습니다.#!"
  trigger_gate_expedition_has_no_activity: "#default_text 현재 [Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')]를 진행 중이지 않습니다.#!"
  trigger_gate_requirement_low_mana_density: "이 [concept_building]을(를) 건설하려면, 주는 최소 [TopScope.ScriptValue('low_mana_density_threshhold')] 이상의 [concept_mana_density]를 보유해야 합니다."
  trigger_gate_requirement_medium_mana_density: "이 [concept_building]을(를) 건설하려면, 주는 최소 [TopScope.ScriptValue('medium_mana_density_threshhold')] 이상의 [concept_mana_density]를 보유해야 합니다."
  trigger_gate_requirement_max_mana_density: "이 [concept_building]을(를) 건설하려면, 주는 최소 [TopScope.ScriptValue('maximum_mana_density')] 이상의 [concept_mana_density]를 보유해야 합니다."
- trigger_gate_has_magic_researcher: "[concept_magic_researcher]가 있음"
- trigger_gate_not_has_magic_researcher: "[concept_magic_researcher]가 없음"
- trigger_gate_has_active_magic_project: "활성화된 [concept_gate_project]가 있음"
- trigger_gate_not_has_active_magic_project: "활성화된 [concept_gate_project]가 없음"

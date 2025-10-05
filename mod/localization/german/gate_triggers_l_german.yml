@@ -1,16 +1,32 @@
 ﻿l_german:
- trigger_has_magic_gate: "Hat eine [GetBuildingType('building_gate_alxa').GetName]" #deepl:3257633499
- trigger_not_has_magic_gate: "Hat keine [GetBuildingType('building_gate_alxa').GetName]" #deepl:2357536010
+ trigger_has_magic_gate: "Steuert eine [GetBuildingType('building_gate_alxa').GetName]" #deepl:2728419724
+ trigger_has_magic_gate_not: "Steuert nicht eine [GetBuildingType('building_gate_alxa').GetName]" #deepl:2766616975
+ trigger_has_magic_gate_third: "[COUNTRY.GetNameNoFlag] steuert eine [GetBuildingType('building_gate_alxa').GetName]" #deepl:3482540568
+ trigger_has_magic_gate_third_not: "[COUNTRY.GetNameNoFlag] steuert nicht eine [GetBuildingType('building_gate_alxa').GetName]" #deepl:349052751
+
  trigger_is_gate_planet_country: "Ist ein Land aus [concept_gate_planet]" #deepl:1127581163
+ trigger_is_gate_planet_country_not: "Ist nicht ein Land aus [concept_gate_planet]" #deepl:1445886546
+ trigger_is_gate_planet_country_third: "[COUNTRY.GetNameNoFlag] ist ein Land aus [concept_gate_planet]" #deepl:498334440
+ trigger_is_gate_planet_country_third_not: "[COUNTRY.GetNameNoFlag] ist nicht ein Land aus [concept_gate_planet]" #deepl:1709490938
+
  trigger_gate_is_magic_country: "Hat [concept_magic_knowledge]" #deepl:3230436468
- trigger_gate_not_is_magic_country: "Hat nicht [concept_magic_knowledge]" #deepl:63607955
+ trigger_gate_is_magic_country_not: "Hat nicht [concept_magic_knowledge]" #deepl:63607955
+ trigger_gate_is_magic_country_third: "[COUNTRY.GetNameNoFlag] hat [concept_magic_knowledge]" #deepl:4259156759
+ trigger_gate_is_magic_country_third_not: "[COUNTRY.GetNameNoFlag] hat nicht [concept_magic_knowledge]" #deepl:1565322128
+
+ trigger_gate_has_magic_researcher: "Hat eine [concept_magic_researcher]" #deepl:1269013119
+ trigger_gate_has_magic_researcher_not: "Hat keine [concept_magic_researcher]" #deepl:1463586438
+ trigger_gate_has_magic_researcher_third: "[COUNTRY.GetNameNoFlag] hat eine [concept_magic_researcher]" #deepl:3451463689
+ trigger_gate_has_magic_researcher_third_not: "[COUNTRY.GetNameNoFlag] nicht über eine [concept_magic_researcher]" #deepl:1362137834
+
+ trigger_gate_has_active_magic_project: "Hat eine aktive [concept_gate_project]" #deepl:4219602973
+ trigger_gate_has_active_magic_project_not: "Hat keine aktive [concept_gate_project]" #deepl:2442006880
+ trigger_gate_has_active_magic_project_third: "[COUNTRY.GetNameNoFlag] hat eine aktive [concept_gate_project]" #deepl:3559282227
+ trigger_gate_has_active_magic_project_third_not: "[COUNTRY.GetNameNoFlag] nicht über eine aktive [concept_gate_project]" #deepl:3765575407
+
  trigger_gate_expedition_budget: "#default_text Hat eine [concept_gate_expedition_budget] von [SCOPE.GetValue('budget_cost')|0v] oder mehr.#!" #deepl:2216446202
  trigger_gate_expedition_has_covered: "#default_text Hat einen unerforschten Teil der [concept_gate_expedition] Karte.#!" #deepl:663241663
  trigger_gate_expedition_has_no_activity: "#default_text Wir machen nicht schon eine [Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')].#!" #deepl:3118854392
  trigger_gate_requirement_low_mana_density: "Um diese [concept_building] zu erstellen, muss ein Staat eine [concept_mana_density] von mindestens [TopScope.ScriptValue('low_mana_density_threshhold')] haben." #deepl:2217222028
  trigger_gate_requirement_medium_mana_density: "Um diese [concept_building] zu erstellen, muss ein Staat eine [concept_mana_density] von mindestens [TopScope.ScriptValue('medium_mana_density_threshhold')] haben." #deepl:3057879360
  trigger_gate_requirement_max_mana_density: "Um diese [concept_building] zu erstellen, muss ein Staat eine [concept_mana_density] von mindestens [TopScope.ScriptValue('maximum_mana_density')] haben." #deepl:1165809799
- trigger_gate_has_magic_researcher: "Hat eine [concept_magic_researcher]" #deepl:3099816269
- trigger_gate_not_has_magic_researcher: "Hat keine [concept_magic_researcher]" #deepl:3439322194
- trigger_gate_has_active_magic_project: "Hat eine aktive [concept_gate_project]" #deepl:4219602973
- trigger_gate_not_has_active_magic_project: "Hat keine aktive [concept_gate_project]" #deepl:2442006880

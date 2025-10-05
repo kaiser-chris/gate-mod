@@ -1,16 +1,32 @@
 ﻿l_simp_chinese:
  trigger_has_magic_gate: "拥有[GetBuildingType('building_gate_alxa').GetName]"
- trigger_not_has_magic_gate: "没有[GetBuildingType('building_gate_alxa').GetName]"
+ trigger_has_magic_gate_not: "不控制[GetBuildingType('building_gate_alxa').GetName]" #deepl:2766616975
+ trigger_has_magic_gate_third: "[COUNTRY.GetNameNoFlag] 控制 a[GetBuildingType('building_gate_alxa').GetName]" #deepl:3482540568
+ trigger_has_magic_gate_third_not: "[COUNTRY.GetNameNoFlag] 不控制[GetBuildingType('building_gate_alxa').GetName]" #deepl:349052751
+
  trigger_is_gate_planet_country: "是来自[concept_gate_planet]的国家"
+ trigger_is_gate_planet_country_not: "不是一个来自[concept_gate_planet]" #deepl:1445886546
+ trigger_is_gate_planet_country_third: "[COUNTRY.GetNameNoFlag] 是一个来自[concept_gate_planet]" #deepl:498334440
+ trigger_is_gate_planet_country_third_not: "[COUNTRY.GetNameNoFlag] 不是一个来自[concept_gate_planet]" #deepl:1709490938
+
  trigger_gate_is_magic_country: "拥有[concept_magic_knowledge]"
- trigger_gate_not_is_magic_country: "没有[concept_magic_knowledge]"
+ trigger_gate_is_magic_country_not: "没有[concept_magic_knowledge]" #deepl:63607955
+ trigger_gate_is_magic_country_third: "[COUNTRY.GetNameNoFlag] 有[concept_magic_knowledge]" #deepl:4259156759
+ trigger_gate_is_magic_country_third_not: "[COUNTRY.GetNameNoFlag] 没有[concept_magic_knowledge]" #deepl:1565322128
+
+ trigger_gate_has_magic_researcher: "有[concept_magic_researcher]"
+ trigger_gate_has_magic_researcher_not: "没有[concept_magic_researcher]" #deepl:1463586438
+ trigger_gate_has_magic_researcher_third: "[COUNTRY.GetNameNoFlag] 有一个[concept_magic_researcher]" #deepl:3451463689
+ trigger_gate_has_magic_researcher_third_not: "[COUNTRY.GetNameNoFlag] 没有[concept_magic_researcher]" #deepl:1362137834
+
+ trigger_gate_has_active_magic_project: "有可用的[concept_gate_project]"
+ trigger_gate_has_active_magic_project_not: "没有激活[concept_gate_project]" #deepl:2442006880
+ trigger_gate_has_active_magic_project_third: "[COUNTRY.GetNameNoFlag] 有一个活跃的[concept_gate_project]" #deepl:3559282227
+ trigger_gate_has_active_magic_project_third_not: "[COUNTRY.GetNameNoFlag] 没有活动的[concept_gate_project]" #deepl:3765575407
+
  trigger_gate_expedition_budget: "#default_text 拥有一项或更多[SCOPE.GetValue('budget_cost')|0v][concept_gate_expedition_budget]#!"
  trigger_gate_expedition_has_covered: "#default_text [concept_gate_expedition]地图中有未探索部分。#!"
  trigger_gate_expedition_has_no_activity: "#default_text 我们未进行一项[Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')]。#!"
  trigger_gate_requirement_low_mana_density: "要建造该[concept_building]，地区[concept_mana_density]至少为[TopScope.ScriptValue('low_mana_density_threshhold')]。"
  trigger_gate_requirement_medium_mana_density: "要建造该[concept_building]，地区[concept_mana_density]至少为[TopScope.ScriptValue('medium_mana_density_threshhold')]。"
  trigger_gate_requirement_max_mana_density: "要建造该[concept_building]，地区[concept_mana_density]至少为[TopScope.ScriptValue('maximum_mana_density')]。"
- trigger_gate_has_magic_researcher: "有[concept_magic_researcher]"
- trigger_gate_not_has_magic_researcher: "没有[concept_magic_researcher]"
- trigger_gate_has_active_magic_project: "有可用的[concept_gate_project]"
- trigger_gate_not_has_active_magic_project: "没有可用的[concept_gate_project]"
