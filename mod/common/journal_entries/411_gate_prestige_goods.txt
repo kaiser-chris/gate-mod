@@ -29,6 +29,11 @@
 	}
 
 	immediate = {
+        scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_magic_gate
+            }
+        }
 		random_company = {
 			limit = {
 				can_potentially_produce_prestige_goods = prestige_good_gate_generic_mana
@@ -158,6 +163,11 @@ je_prestige_goods_gate_golem = {
 	}
 
 	immediate = {
+        scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_magic_gate
+            }
+        }
 		random_company = {
 			limit = {
 				can_potentially_produce_prestige_goods = prestige_good_gate_generic_golem
@@ -288,6 +298,11 @@ je_prestige_goods_gate_dwarven_iron = {
 	}
 
 	immediate = {
+        scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_magic_gate
+            }
+        }
 		random_company = {
 			limit = {
 				can_potentially_produce_prestige_goods = prestige_good_gate_dwarven_iron

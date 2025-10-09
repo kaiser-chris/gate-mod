@@ -33,6 +33,7 @@
 		}
 	}
 
+
 	is_shown_when_inactive = {
 		# Trigger when the Orks lose their gate
 		s:STATE_EQUATEUR = {
@@ -47,9 +48,21 @@
 
 		# Debug
 		has_global_variable = com_debug
+        always = no
 	}
 
+    possible = {
+        # Debug
+        has_global_variable = com_debug
+        always = no
+    }
+
 	immediate = {
+        scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_magic_gate
+            }
+        }
 		set_variable = je_gate_ankaris_orcish_elven_war
 		trigger_event = {
 			id = gate_ankaris_orcish_elven_war.1

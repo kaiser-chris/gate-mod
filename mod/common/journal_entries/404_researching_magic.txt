@@ -6,6 +6,14 @@
 	scripted_button = je_gate_researching_magic_button_focus_academia
 	scripted_button = je_gate_researching_magic_button_cancel_focus_academia
 
+    immediate = {
+        scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_magic_gate
+            }
+        }
+    }
+
 	status_desc = {
 		first_valid = {
 			triggered_desc = {
