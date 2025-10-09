@@ -20,6 +20,11 @@
 			name = je_investigate_gate_progress
 			value = 0
 		}
+        scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_magic_gate
+            }
+        }
 	}
 
 	invalid = {

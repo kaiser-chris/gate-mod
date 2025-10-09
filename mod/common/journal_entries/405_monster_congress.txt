@@ -5,6 +5,14 @@
 
 	scripted_button = je_monster_congress_button_start
 
+    immediate = {
+        scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_magic_gate
+            }
+        }
+    }
+
 	status_desc = {
 		first_valid = {
 			triggered_desc = {

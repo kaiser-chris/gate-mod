@@ -4,6 +4,11 @@
 	group = je_group_gate_projects
 
 	immediate = {
+        scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_magic_gate
+            }
+        }
 		gate_project_setup = {
 			cost = money_amount_multiplier_medium
 			time = gate_project_journal_entry_medium
@@ -119,6 +124,11 @@ je_gate_project_domain = {
 	group = je_group_gate_projects
 
 	immediate = {
+        scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_magic_gate
+            }
+        }
 		gate_project_setup = {
 			cost = money_amount_multiplier_medium
 			time = gate_project_journal_entry_medium
@@ -189,6 +199,11 @@ je_gate_project_improve_mana_extraction = {
 	group = je_group_gate_projects
 
 	immediate = {
+        scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_magic_gate
+            }
+        }
 		gate_project_setup = {
 			cost = money_amount_multiplier_small
 			time = gate_project_journal_entry_short
@@ -271,6 +286,11 @@ je_gate_project_modernize_seed_selection = {
 	group = je_group_gate_projects
 
 	immediate = {
+        scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_magic_gate
+            }
+        }
 		gate_project_setup = {
 			cost = money_amount_multiplier_small
 			time = gate_project_journal_entry_short
