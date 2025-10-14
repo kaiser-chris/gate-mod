@@ -1,7 +1,10 @@
+### name = AI Research
 last_date = "1932.1.1"
 
 tests = {
-    # Does at least one magic country research all/most magic technologies?
+
+    ### name = Verify AI magic research
+    ### desc = Does at least one magic country research all/most magic technologies?
 	gate_test_ai_research_max = {
         acceptable_fail_rate = 0.0
 		success = {
