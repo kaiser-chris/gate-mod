@@ -1,7 +1,9 @@
+### name = Mana Density
 last_date = "1900.1.1"
 
 tests = {
-    # Does Mana Saturation reach 100%?
+    ### name = Verify mana covers whole planet
+    ### desc = Does Mana Saturation and Mana Density reach 100% in all states?
 	gate_test_mana_saturation_max = {
         acceptable_fail_rate = 0.0
 		success = {
@@ -12,7 +14,8 @@ tests = {
 		}
 	}
 
-    # Does the Mana Saturation Journal finish?
+    ### name = Verify Mana Saturation JE completes
+    ### desc = Does the Mana Saturation journal entry finish?
     gate_test_mana_saturation_je = {
         acceptable_fail_rate = 0.0
         success = {
