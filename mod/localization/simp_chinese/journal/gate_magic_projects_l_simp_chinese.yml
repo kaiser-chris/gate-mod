@@ -2,8 +2,13 @@
 # Shared
  gate_project_button_stop: "停止项目"
  gate_project_button_stop_desc: "停止这个项目，让我们的[concept_magic_researcher]开始一个新的项目。"
+ gate_project_button_pause: "暂停项目" #deepl:2307779866
+ gate_project_button_pause_desc: "暂时停止[concept_gate_project] 及其持续成本。" #deepl:3859155914
+ gate_project_button_continue: "继续项目" #deepl:2263740318
+ gate_project_button_continue_desc: "继续[concept_gate_project] 。" #deepl:973786552
  gate_modifier_project_cost: "项目花费"
- gate_project_goal: "该项目将持续#v [ROOT.GetCountry.MakeScope.Var('gate_magic_project_length').GetValue]个月#!（当前#v [ROOT.GetCountry.MakeScope.Var('gate_magic_project_timer').GetValue]#!）"
+ gate_modifier_project_infrastructure_cost: "项目建设成本" #deepl:1189034740
+ gate_project_goal: "该项目将持续#v [ROOT.GetCountry.MakeScope.Var('gate_magic_project_length').GetValue]个月#!（当前#v [ROOT.GetCountry.MakeScope.Var('gate_magic_project_progress').GetValue]#!）"
 # Expand Magic Research Institute
  button_project_expand_research_institute: "扩建[GetBuildingType('building_magic_research_institute').GetNameNoFormatting]"
  je_gate_project_expand_research_institute: "扩建我们的[GetBuildingType('building_magic_research_institute').GetNameNoFormatting]"
@@ -27,7 +32,7 @@
  gate_modifier_project_improved_mana_extraction_tooltip: "#V $gate_modifier_project_improved_mana_extraction$#!\n[GetStaticModifier('gate_modifier_project_improved_mana_extraction').GetDesc]"
  gate_modifier_project_improved_mana_extraction_with_tooltip: "#bold #tooltip:[GetRawTextTooltipTag('gate_modifier_project_improved_mana_extraction_tooltip')] #underline $gate_modifier_project_improved_mana_extraction$#!#!#!"
  trigger_gate_project_can_has_unimproved_mana_extraction: "拥有[GetBuildingType('building_mana_extractor').GetBuildingGroupName] [concept_building] ，无需$gate_modifier_project_improved_mana_extraction_with_tooltip$ [concept_modifier]" #deepl:163511478
- # Modernizing Seed Selection
+# Modernizing Seed Selection
  button_project_modernize_seed_selection: "选种现代化"
  je_gate_project_modernize_seed_selection: "选种现代化"
  je_gate_project_modernize_seed_selection_reason: "[concept_magic_researcher][GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName]正在研究#bold $je_gate_project_modernize_seed_selection$#!。\n$gate_journal_delimiter$\n$je_gate_project_modernize_seed_selection_description$"
@@ -36,3 +41,8 @@
  gate_modifier_project_modernize_seed_selection_tooltip: "#V $gate_modifier_project_modernize_seed_selection$#!\n[GetStaticModifier('gate_modifier_project_modernize_seed_selection').GetDesc]"
  gate_modifier_project_modernize_seed_selection_with_tooltip: "#bold #tooltip:[GetRawTextTooltipTag('gate_modifier_project_modernize_seed_selection_tooltip')] #underline $gate_modifier_project_modernize_seed_selection$#!#!#!"
  trigger_gate_project_can_has_unimproved_magic_seed: "拥有[GetBuildingType('building_druid_grove').GetBuildingGroupName] [concept_building] ，无需$gate_modifier_project_modernize_seed_selection_with_tooltip$ [concept_modifier]" #deepl:380520325
+# Artificial Ecosystem
+ button_project_artificial_ecosystem: "构建人工生态系统" #deepl:1402757762
+ je_gate_project_artificial_ecosystem: "构建人工生态系统" #deepl:2735770378
+ je_gate_project_artificial_ecosystem_reason: "[concept_magic_researcher] [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName] 目前正致力于#bold $je_gate_project_artificial_ecosystem$ #! 。\n$gate_journal_delimiter$\n$je_gate_project_artificial_ecosystem_description$" #deepl:262219231
+ je_gate_project_artificial_ecosystem_description: "[GetGoods('magic_seed').GetName] 用于提高作物产量。为提高产量而对这些种子进行现代化选育将提高我们的产量。该项目将$gate_modifier_project_modernize_seed_selection_with_tooltip$ [concept_modifier] 添加到我们的[GetBuildingType('building_druid_grove').GetBuildingGroupName] 中。" #deepl:1114415172

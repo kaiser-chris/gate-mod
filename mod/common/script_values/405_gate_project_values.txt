@@ -1,3 +1,26 @@
 ﻿gate_project_journal_entry_short = 24
 gate_project_journal_entry_medium = 36
 gate_project_journal_entry_long = 48
+
+gate_project_type_normal = 0
+gate_project_type_infrastructure = 1
+
+gate_project_current_progress = {
+    scope:journal_entry ?= {
+        if = {
+            limit = {
+                exists = var:gate_magic_project_progress
+            }
+            value = var:gate_magic_project_progress
+        }
+        else = {
+            value = 0
+        }
+    }
+}
+
+# Scales with base game construction cost
+gate_project_construction_cost_huge = {
+    value = construction_cost_very_high
+    multiply = 30
+}

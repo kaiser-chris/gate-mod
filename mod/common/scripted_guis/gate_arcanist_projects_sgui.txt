@@ -2,7 +2,7 @@
     scope = country
 
     is_valid = {
-        gate_project_can_start_expand_research_institute= yes
+        gate_project_can_start_expand_research_institute = yes
     }
 
     effect = {
@@ -58,6 +58,23 @@ gg_project_modernize_seed_selection = {
             project = je_gate_project_modernize_seed_selection
             monthly_cost = money_amount_multiplier_small
             months = gate_project_journal_entry_short
+        }
+    }
+}
+
+gg_project_artificial_ecosystem = {
+    scope = country
+
+    is_valid = {
+        #TODO
+        always = yes
+    }
+
+    effect = {
+        gate_start_magic_infrastructure_project = {
+            project = je_gate_project_artificial_ecosystem
+            construction = gate_project_construction_cost_huge
+            monthly_cost = money_amount_multiplier_very_small
         }
     }
 }

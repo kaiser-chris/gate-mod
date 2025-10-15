@@ -29,4 +29,5 @@
 # Projects
  gg_projects_no_active_project: "Unser [concept_magic_researcher] ist derzeit inaktiv." #deepl:3214953417
  gg_projects_active_project: "Unser [concept_magic_researcher] arbeitet derzeit an #v [GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.GetName] #! ." #deepl:3425964137
- gg_projects_progress: "[GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.CalcCurrentGoalValue|v0] von [GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.GetTotalGoalValue|v0] Monate" #deepl:3276623840
+ gg_projects_progress_months: "[GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.CalcCurrentGoalValue|v0] von [GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.GetTotalGoalValue|v0] Monate" #deepl:3276623840
+ gg_projects_progress_construction: "[GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.CalcCurrentGoalValue|v0] von [GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.GetTotalGoalValue|v0K] [concept_construction]" #deepl:990621305

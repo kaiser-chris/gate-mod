@@ -2,8 +2,13 @@
 # Shared
  gate_project_button_stop: "프로젝트 중지"
  gate_project_button_stop_desc: "이 프로젝트를 중단하고 우리의 [concept_magic_researcher]가 새 프로젝트를 시작할 수 있도록 허용합니다."
+ gate_project_button_pause: "프로젝트 일시 중지" #deepl:2307779866
+ gate_project_button_pause_desc: "[concept_gate_project] 및 진행 중인 비용을 잠시 일시 중지합니다." #deepl:3859155914
+ gate_project_button_continue: "프로젝트 계속하기" #deepl:2263740318
+ gate_project_button_continue_desc: "계속 진행 [concept_gate_project]." #deepl:973786552
  gate_modifier_project_cost: "프로젝트 비용"
- gate_project_goal: "이 프로젝트는 #v [ROOT.GetCountry.MakeScope.Var('gate_magic_project_length').GetValue] 개월 동안 진행됩니다#! (현재 진행 기간: #v [ROOT.GetCountry.MakeScope.Var('gate_magic_project_timer').GetValue]#!)"
+ gate_modifier_project_infrastructure_cost: "프로젝트 구축 비용" #deepl:1189034740
+ gate_project_goal: "이 프로젝트는 #v [ROOT.GetCountry.MakeScope.Var('gate_magic_project_length').GetValue] 개월 동안 진행됩니다#! (현재 진행 기간: #v [ROOT.GetCountry.MakeScope.Var('gate_magic_project_progress').GetValue]#!)"
 # Expand Magic Research Institute
  button_project_expand_research_institute: "[GetBuildingType('building_magic_research_institute').GetNameNoFormatting] 확장"
  je_gate_project_expand_research_institute: "우리의 [GetBuildingType('building_magic_research_institute').GetNameNoFormatting] 확장 중"
@@ -27,7 +32,7 @@
  gate_modifier_project_improved_mana_extraction_tooltip: "#V $gate_modifier_project_improved_mana_extraction$#!\n[GetStaticModifier('gate_modifier_project_improved_mana_extraction').GetDesc]"
  gate_modifier_project_improved_mana_extraction_with_tooltip: "#bold #tooltip:[GetRawTextTooltipTag('gate_modifier_project_improved_mana_extraction_tooltip')] #underline $gate_modifier_project_improved_mana_extraction$#!#!#!"
  trigger_gate_project_can_has_unimproved_mana_extraction: "$gate_modifier_project_improved_mana_extraction_with_tooltip$ 없이 [GetBuildingType('building_mana_extractor').GetBuildingGroupName] [concept_building] [concept_modifier]" #deepl:163511478
- # Modernizing Seed Selection
+# Modernizing Seed Selection
  button_project_modernize_seed_selection: "종자 선택 현대화"
  je_gate_project_modernize_seed_selection: "종자 선택 현대화"
  je_gate_project_modernize_seed_selection_reason: "[concept_magic_researcher] [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName]가 현재 #bold $je_gate_project_modernize_seed_selection$#!를 진행 중입니다.\n$gate_journal_delimiter$\n$je_gate_project_modernize_seed_selection_description$"
@@ -36,3 +41,8 @@
  gate_modifier_project_modernize_seed_selection_tooltip: "#V $gate_modifier_project_modernize_seed_selection$#!\n[GetStaticModifier('gate_modifier_project_modernize_seed_selection').GetDesc]"
  gate_modifier_project_modernize_seed_selection_with_tooltip: "#bold #tooltip:[GetRawTextTooltipTag('gate_modifier_project_modernize_seed_selection_tooltip')] #underline $gate_modifier_project_modernize_seed_selection$#!#!#!"
  trigger_gate_project_can_has_unimproved_magic_seed: "$gate_modifier_project_modernize_seed_selection_with_tooltip$ 없이 [GetBuildingType('building_druid_grove').GetBuildingGroupName] [concept_building] [concept_modifier]" #deepl:380520325
+# Artificial Ecosystem
+ button_project_artificial_ecosystem: "인공 생태계 구축" #deepl:1402757762
+ je_gate_project_artificial_ecosystem: "인공 생태계 구축" #deepl:2735770378
+ je_gate_project_artificial_ecosystem_reason: "[concept_magic_researcher] [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName] 는 현재 #bold $je_gate_project_artificial_ecosystem$ #! 에서 작업 중입니다.\n$gate_journal_delimiter$\n$je_gate_project_artificial_ecosystem_description$" #deepl:262219231
+ je_gate_project_artificial_ecosystem_description: "[GetGoods('magic_seed').GetName] 는 작물 수확량을 늘리는 데 사용됩니다. 더 나은 수확량을 위해 이러한 종자를 현대적으로 선택하면 생산량이 향상될 것입니다. 이 프로젝트는 [GetBuildingType('building_druid_grove').GetBuildingGroupName] 에 $gate_modifier_project_modernize_seed_selection_with_tooltip$ [concept_modifier] 을 추가합니다." #deepl:1114415172

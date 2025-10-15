@@ -15,7 +15,9 @@ gate_country_events.1 = {
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_default.dds"
-	
+
+    gui_window = com_event_window_newspaper
+
 	duration = 3
 	
 	immediate = {

@@ -29,4 +29,5 @@
 # Projects
  gg_projects_no_active_project: "[concept_magic_researcher]는 현재 유휴 상태임."
  gg_projects_active_project: "우리의 [concept_magic_researcher]는 현재 #v [GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.GetName]#!을(를) 연구 중임."
- gg_projects_progress: "[GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.GetTotalGoalValue|v0]개월 중 [GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.CalcCurrentGoalValue|v0]개월 진행됨"
+ gg_projects_progress_months: "[GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.CalcCurrentGoalValue|v0] 의 [GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.GetTotalGoalValue|v0] 개월" #deepl:3276623840
+ gg_projects_progress_construction: "[GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.CalcCurrentGoalValue|v0] 의 [GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.GetTotalGoalValue|v0K] [concept_construction]" #deepl:990621305

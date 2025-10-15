@@ -11,4 +11,5 @@
  effect_gate_expedition_change_budget: "[concept_gate_expedition_budget]改变[SCOPE.GetValue('budget_change')|+=0]"
  effect_gate_expedition_start_activity: "开启为期[SCOPE.GetValue('months')|0v]个月的[Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')]"
  effect_gate_start_magic_project: "启动#bold [SCOPE.GetLocalVariable('gate_project_name').GetFlagName]#![concept_gate_project]。该项目将耗时#v [SCOPE.GetLocalVariable('months').GetValue|0]个月#!，并将每月耗费我们@money!#r ‑#![SCOPE.GetLocalVariable('monthly_cost').GetValue|-0v]资金。"
+ effect_gate_start_magic_infrastructure_project: "开始#bold [SCOPE.GetLocalVariable('gate_project_name').GetFlagName] #! [concept_gate_project] 。该项目将耗费#v [SCOPE.GetLocalVariable('construction').GetValue|0] #! [concept_construction] ，每月将花费我们@money!#r  -#![SCOPE.GetLocalVariable('monthly_cost').GetValue|-0v] 。而以活动基础设施为重点的[Concept('concept_gate_project','$concept_gate_projects$')] 将使我们的正常[concept_construction] 产出减少一半#v #! ！" #deepl:4011660078
  effect_gate_stop_magic_project: "停止当前进行的[concept_gate_project]"

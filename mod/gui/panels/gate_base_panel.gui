@@ -259,10 +259,16 @@ types gate_base_panel_types {
                                 min = 0
                                 max = "[GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.GetTotalGoalValue]"
                             }
-
                             textbox = {
+                                visible = "[EqualTo_CFixedPoint(GetPlayer.MakeScope.Var('gate_magic_project').Var('gate_magic_project_type').GetValue, GetPlayer.MakeScope.ScriptValue('gate_project_type_normal'))]"
                                 size = { 300 25 }
-                                text = gg_projects_progress
+                                text = gg_projects_progress_months
+                                align = center
+                            }
+                            textbox = {
+                                visible = "[EqualTo_CFixedPoint(GetPlayer.MakeScope.Var('gate_magic_project').Var('gate_magic_project_type').GetValue, GetPlayer.MakeScope.ScriptValue('gate_project_type_infrastructure'))]"
+                                size = { 300 25 }
+                                text = gg_projects_progress_construction
                                 align = center
                             }
                         }
@@ -1849,6 +1855,35 @@ types gate_base_panel_types {
                                     }
                                     custom_tooltip_textbox_with_empty_line = {
                                         text = je_gate_project_modernize_seed_selection_description
+                                    }
+                                    custom_tooltip_textbox = {
+                                        text = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(Country.MakeScope).End)]"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                gate_left_icon_button = {
+                    blockoverride "datacontext" {
+                        datacontext = "[GetScriptedGui('gg_project_artificial_ecosystem')]"
+                    }
+                    blockoverride "button_content" {
+                        text = button_project_artificial_ecosystem
+                    }
+                    blockoverride "icon" {
+                        texture = "gfx/interface/icons/gui_icons/projects/gate_project_artificial_ecosystem.dds"
+                    }
+                    blockoverride "tooltip" {
+                        tooltipwidget = {
+                            RegularTooltip = {
+                                blockoverride "tooltip_content" {
+                                    custom_tooltip_textbox = {
+                                        text = "[concept_gate_project]"
+                                        default_format = "#header"
+                                    }
+                                    custom_tooltip_textbox_with_empty_line = {
+                                        text = je_gate_project_artificial_ecosystem_description
                                     }
                                     custom_tooltip_textbox = {
                                         text = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(Country.MakeScope).End)]"

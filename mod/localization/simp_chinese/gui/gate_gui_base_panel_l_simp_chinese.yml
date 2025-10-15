@@ -29,4 +29,5 @@
 # Projects
  gg_projects_no_active_project: "我们的[concept_magic_researcher]当前处于空闲状态。"
  gg_projects_active_project: "我们的[concept_magic_researcher]正在进行的项目是#v [GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.GetName]#!。"
- gg_projects_progress: "[GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.CalcCurrentGoalValue|v0]月/[GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.GetTotalGoalValue|v0]月"
+ gg_projects_progress_months: "[GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.CalcCurrentGoalValue|v0] [GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.GetTotalGoalValue|v0] 个月" #deepl:3276623840
+ gg_projects_progress_construction: "[GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.CalcCurrentGoalValue|v0] [GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.GetTotalGoalValue|v0K] [concept_construction]" #deepl:990621305

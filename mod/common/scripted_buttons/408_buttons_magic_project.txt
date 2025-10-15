@@ -1,0 +1,70 @@
+﻿gate_project_button_stop = {
+	name = gate_project_button_stop
+	desc = gate_project_button_stop_desc
+
+	ai_chance = {
+		value = 0
+	}
+
+	possible = {
+		hidden_trigger = {
+			has_active_magic_project = yes
+		}
+	}
+
+	effect = {
+		gate_stop_magic_project = yes
+	}
+}
+
+gate_project_button_pause = {
+    name = gate_project_button_pause
+    desc = gate_project_button_pause_desc
+
+    ai_chance = {
+        value = 0
+    }
+
+    visible = {
+        hidden_trigger = {
+            has_active_magic_project = yes
+        }
+        gate_project_is_paused = no
+    }
+
+    possible = {
+        hidden_trigger = {
+            has_active_magic_project = yes
+        }
+    }
+
+    effect = {
+        gate_pause_magic_project = yes
+    }
+}
+
+gate_project_button_continue = {
+    name = gate_project_button_continue
+    desc = gate_project_button_continue_desc
+
+    ai_chance = {
+        value = 0
+    }
+
+    visible = {
+        hidden_trigger = {
+            has_active_magic_project = yes
+        }
+        gate_project_is_paused = yes
+    }
+
+    possible = {
+        hidden_trigger = {
+            has_active_magic_project = yes
+        }
+    }
+
+    effect = {
+        gate_continue_magic_project = yes
+    }
+}
