@@ -3,7 +3,7 @@
  gate_project_button_stop: "Stop Project"
  gate_project_button_stop_desc: "Stop this project and allow our [concept_magic_researcher] to start a new one."
  gate_modifier_project_cost: "Project Cost"
- gate_project_goal: "This project will run for #v [ROOT.GetCountry.MakeScope.Var('gate_magic_project_length').GetValue] months#! (currently #v [ROOT.GetCountry.MakeScope.Var('gate_magic_project_timer').GetValue]#!)"
+ gate_project_goal: "This project will run for #v [ROOT.GetCountry.MakeScope.Var('gate_magic_project_length').GetValue] months#! (currently #v [ROOT.GetCountry.MakeScope.Var('gate_magic_project_progress').GetValue]#!)"
 # Expand Magic Research Institute
  button_project_expand_research_institute: "Expand [GetBuildingType('building_magic_research_institute').GetNameNoFormatting]"
  je_gate_project_expand_research_institute: "Expanding our [GetBuildingType('building_magic_research_institute').GetNameNoFormatting]"

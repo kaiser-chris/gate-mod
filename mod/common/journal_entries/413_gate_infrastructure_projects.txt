@@ -1,0 +1,61 @@
+﻿je_gate_project_artificial_ecosystem = {
+	icon = "gfx/interface/icons/event_icons/event_gate_project_ecosystem.dds"
+
+	group = je_group_gate_grand_projects
+
+	immediate = {
+        add_gate_dlc_icon = yes
+	}
+
+	complete = {
+        gate_project_check_complete = yes
+	}
+
+	on_weekly_pulse = {
+		effect = {
+            gate_infrastructure_project_progress = yes
+		}
+	}
+
+	invalid = {
+		hidden_trigger = {
+            OR = {
+                has_active_magic_project = no
+                var:gate_project_target_state ?= {
+                    has_building = building_arms_industry
+                }
+            }
+		}
+	}
+
+	on_invalid = {
+		hidden_effect = {
+			gate_stop_magic_project = yes
+		}
+	}
+
+	on_complete = {
+		hidden_effect = {
+			set_variable = gate_has_finished_project
+			gate_stop_magic_project = yes
+		}
+	}
+
+	current_value = {
+        add = gate_project_current_progress
+	}
+
+	goal_add_value = {
+		add = scope:target
+	}
+
+    scripted_button = gate_project_button_pause
+    scripted_button = gate_project_button_continue
+    scripted_button = gate_project_button_stop
+
+	progressbar = yes
+
+	weight = 1000
+
+	should_be_pinned_by_default = yes
+}

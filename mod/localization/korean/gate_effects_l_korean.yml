@@ -11,4 +11,5 @@
  effect_gate_expedition_change_budget: "우리 [concept_gate_expedition_budget]이(가) [SCOPE.GetValue('budget_change')|+=0]만큼 변동됨"
  effect_gate_expedition_start_activity: "[SCOPE.GetValue('months')|0v]개월 동안 [Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')]를 시작함"
  effect_gate_start_magic_project: "#bold [SCOPE.GetLocalVariable('gate_project_name').GetFlagName]#! [concept_gate_project]를 시작합니다. 이 프로젝트는 #v [SCOPE.GetLocalVariable('months').GetValue|0] 개월#!이 소요되며, 매달 @money!#r -#![SCOPE.GetLocalVariable('monthly_cost').GetValue|-0v]의 비용이 듭니다."
+ effect_gate_start_magic_infrastructure_project: "시작 #bold [SCOPE.GetLocalVariable('gate_project_name').GetFlagName] #! [concept_gate_project] . 이 프로젝트는 #v [SCOPE.GetLocalVariable('construction').GetValue|0] #! [concept_construction] 매월 @money!#r  -#![SCOPE.GetLocalVariable('monthly_cost').GetValue|-0v] 비용이 소요됩니다. 활성 인프라에 집중하는 동안 [Concept('concept_gate_project','$concept_gate_projects$')] 평소 [concept_construction] 생산량을 #v 절반으로 줄입니다#!!" #deepl:4011660078
  effect_gate_stop_magic_project: "현재 진행 중인 [concept_gate_project]를 중단함"

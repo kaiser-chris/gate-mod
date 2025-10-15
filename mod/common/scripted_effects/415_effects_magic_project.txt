@@ -1,0 +1,170 @@
+﻿gate_start_magic_project = {
+	custom_tooltip = {
+		text = effect_gate_start_magic_project
+		add_journal_entry = {
+			type = $project$
+            target = $months$
+		}
+		set_variable = {
+			name = gate_magic_project
+			value = je:$project$
+		}
+        var:gate_magic_project ?= {
+            set_variable = {
+                name = gate_magic_project_type
+                value = gate_project_type_normal
+            }
+            set_variable = {
+                name = gate_magic_project_progress
+                value = 0
+            }
+            set_variable = {
+                name = gate_magic_project_length
+                value = $months$
+            }
+            set_variable = {
+                name = gate_magic_project_monthly_cost
+                value = $monthly_cost$
+            }
+            add_modifier = {
+                name = gate_modifier_project_cost
+                multiplier = $monthly_cost$
+            }
+        }
+
+        # Tooltip variables
+        fix_variable_error = { variable = $project$ }
+        set_local_variable = {
+            name = gate_project_name
+            value = flag:$project$
+        }
+        set_local_variable = {
+            name = monthly_cost
+            value = $monthly_cost$
+        }
+        set_local_variable = {
+            name = months
+            value = $months$
+        }
+	}
+}
+
+gate_start_magic_infrastructure_project = {
+    custom_tooltip = {
+        text = effect_gate_start_magic_infrastructure_project
+        add_journal_entry = {
+            type = $project$
+            target = $construction$
+        }
+        set_variable = {
+            name = gate_magic_project
+            value = je:$project$
+        }
+        var:gate_magic_project ?= {
+            set_variable = {
+                name = gate_magic_project_type
+                value = gate_project_type_infrastructure
+            }
+            set_variable = {
+                name = gate_magic_project_progress
+                value = 0
+            }
+            set_variable = {
+                name = gate_magic_project_construction
+                value = $construction$
+            }
+            set_variable = {
+                name = gate_magic_project_monthly_cost
+                value = $monthly_cost$
+            }
+            add_modifier = {
+                name = gate_modifier_project_cost
+                multiplier = $monthly_cost$
+            }
+            add_modifier = {
+                name = gate_modifier_project_infrastructure_cost
+            }
+        }
+
+        # Tooltip variables
+        fix_variable_error = { variable = $project$ }
+        set_local_variable = {
+            name = gate_project_name
+            value = flag:$project$
+        }
+        set_local_variable = {
+            name = monthly_cost
+            value = $monthly_cost$
+        }
+        set_local_variable = {
+            name = construction
+            value = $construction$
+        }
+    }
+}
+
+gate_pause_magic_project = {
+    scope:journal_entry = {
+        remove_modifier = gate_modifier_project_cost
+        if = {
+            limit = {
+                var:gate_magic_project_type ?= gate_project_type_infrastructure
+            }
+            remove_modifier = gate_modifier_project_infrastructure_cost
+        }
+    }
+}
+
+gate_continue_magic_project = {
+    scope:journal_entry = {
+        add_modifier = {
+            name = gate_modifier_project_cost
+            multiplier = scope:journal_entry.var:gate_magic_project_monthly_cost
+        }
+        if = {
+            limit = {
+                var:gate_magic_project_type ?= gate_project_type_infrastructure
+            }
+            add_modifier = gate_modifier_project_infrastructure_cost
+        }
+    }
+}
+
+gate_stop_magic_project = {
+	custom_tooltip = {
+		text = effect_gate_stop_magic_project
+		remove_variable = gate_magic_project
+	}
+}
+
+gate_project_progress = {
+	if = {
+		limit = {
+			has_magic_researcher = yes
+            gate_project_is_paused = no
+		}
+        scope:journal_entry = {
+            change_variable = {
+                name = gate_magic_project_progress
+                add = 1
+            }
+        }
+	}
+}
+
+gate_infrastructure_project_progress = {
+    if = {
+        limit = {
+            gate_project_is_paused = no
+            is_construction_paused = no
+        }
+        scope:journal_entry = {
+            change_variable = {
+                name = gate_magic_project_progress
+                add = {
+                    value = root.modifier:country_construction_add
+                }
+            }
+        }
+    }
+}
