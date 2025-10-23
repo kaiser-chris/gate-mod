@@ -1,0 +1,46 @@
+﻿catalyst_gate_religion_change = {
+	category = cc_gate_change_religion
+
+	ai_country_goal_recalculation = {
+		type = more_hostile
+		trigger = {
+			NOT = {
+                is_country_type = unrecognized
+            }
+            scope:target_country = {
+                religion = root.religion
+            }
+		}
+		chance = {
+			value = 0.25
+
+            if = {
+                limit = {
+                    country_rank >= rank_value:major_power
+                }
+                multiply = 2
+            }
+
+			if = {
+				limit = {
+                    country_rank >= rank_value:great_power
+                }
+				multiply = 4
+			}
+
+			if = {
+				limit = {
+                    "relations(scope:target_country)" >= relations_threshold:cordial
+                }
+				multiply = 0.5
+			}
+
+			if = {
+				limit = {
+                    is_in_same_power_bloc = scope:target_country
+                }
+				multiply = 0.1
+			}
+		}
+	}
+}

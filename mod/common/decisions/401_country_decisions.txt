@@ -60,16 +60,6 @@ gate_germanic_decision = {
 	}
 
 	when_taken = {
-		set_state_religion = rel:gate_germanic
-		custom_tooltip = {
-			text = gate_germanic_decision_conversion_tooltip
-			every_scope_state = {
-				convert_population = {
-					target = rel:gate_germanic
-					value = 0.2
-				}
-			}
-		}
 		trigger_event = gate_country_events.1
 	}
 

@@ -16,8 +16,6 @@ gate_country_events.1 = {
 
 	icon = "gfx/interface/icons/event_icons/event_default.dds"
 
-    gui_window = com_event_window_newspaper
-
 	duration = 3
 	
 	immediate = {
@@ -27,40 +25,66 @@ gate_country_events.1 = {
 	option = {
 		name = gate_country_events.1.a
 		default_option = yes
-		every_country = {
-			limit = {
-				OR = {
-					has_interest_marker_in_region = region_north_germany
-					has_interest_marker_in_region = region_south_germany
-					has_interest_marker_in_region = region_rhine
-				}
-				religion ?= {
-					OR = {
-						has_discrimination_trait = heritage_christian
-						has_discrimination_trait = heritage_islamic
-					}
-				}
-			}
-			change_relations = {
-				country = root
-				value = -10
-			}
-		}
+        custom_tooltip = {
+            text = gate_germanic_decision_heretic_tooltip
+            every_country = {
+                limit = {
+                    OR = {
+                        has_interest_marker_in_region = region_north_germany
+                        has_interest_marker_in_region = region_south_germany
+                        has_interest_marker_in_region = region_rhine
+                    }
+                    religion ?= {
+                        OR = {
+                            has_discrimination_trait = heritage_christian
+                            has_discrimination_trait = heritage_islamic
+                        }
+                    }
+                }
+                create_diplomatic_catalyst = {
+                    target = root
+                    type = catalyst_gate_religion_change
+                }
+                change_relations = {
+                    country = root
+                    value = -10
+                }
+            }
+        }
 		ig:ig_devout ?= {
-			add_modifier = {
-				name = rejected_petition
-				multiplier = 10
-				months = 24
-				is_decaying = yes
-			}
+            add_modifier = {
+                name = ig_mass_arrests
+                multiplier = 2
+                months = 24
+                is_decaying = yes
+            }
+            set_interest_group_name = ig_gate_hofgodi
+            set_ig_trait = ig_trait:ig_trait_pious_fiction
+            set_ig_trait = ig_trait:ig_trait_divine_right
+            set_ig_trait = ig_trait:ig_trait_asceticism
+
 		}
-		add_radicals = {
-			value = 0.1
-		}
+        add_journal_entry = {
+            type = je_gate_germanic_religion
+        }
+        set_state_religion = rel:gate_germanic
+        custom_tooltip = {
+            text = gate_germanic_decision_conversion_tooltip
+            every_scope_state = {
+                convert_population = {
+                    target = rel:gate_germanic
+                    value = 0.2
+                }
+            }
+        }
 		add_radicals = {
 			interest_group = ig:ig_devout
 			value = 0.5
 		}
+        add_loyalists = {
+            religion = rel:gate_germanic
+            value = 0.5
+        }
 	}
 
 	option = {
