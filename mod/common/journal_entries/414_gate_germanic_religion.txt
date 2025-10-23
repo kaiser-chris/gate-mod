@@ -1,0 +1,87 @@
+﻿je_gate_germanic_religion = {
+    icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	group = je_group_foreign_affairs
+
+	immediate = {
+        add_gate_dlc_icon = yes
+        s:STATE_FRIESLAND = {
+            add_claim = root
+        }
+        s:STATE_HOLLAND = {
+            add_claim = root
+        }
+        s:STATE_GELRE = {
+            add_claim = root
+        }
+        s:STATE_FLANDERS = {
+            add_claim = root
+        }
+        s:STATE_WALLONIA = {
+            add_claim = root
+        }
+        s:STATE_FRIESLAND = {
+            add_claim = root
+        }
+	}
+
+	complete = {
+        country_or_subject_owns_entire_state_region = STATE_FRIESLAND
+        country_or_subject_owns_entire_state_region = STATE_HOLLAND
+        country_or_subject_owns_entire_state_region = STATE_GELRE
+        country_or_subject_owns_entire_state_region = STATE_FLANDERS
+        country_or_subject_owns_entire_state_region = STATE_WALLONIA
+	}
+
+    on_complete = {
+        every_subject_or_below = {
+            limit = {
+                any_scope_state = {
+                    OR = {
+                        state_region = s:STATE_FRIESLAND
+                        state_region = s:STATE_HOLLAND
+                        state_region = s:STATE_GELRE
+                        state_region = s:STATE_FLANDERS
+                        state_region = s:STATE_WALLONIA
+                        state_region = s:STATE_FRIESLAND
+                    }
+                }
+            }
+            ig:ig_devout ?= {
+                add_modifier = {
+                    name = ig_mass_arrests
+                    multiplier = 2
+                    months = 24
+                    is_decaying = yes
+                }
+                set_interest_group_name = ig_gate_hofgodi
+                set_ig_trait = ig_trait:ig_trait_pious_fiction
+                set_ig_trait = ig_trait:ig_trait_divine_right
+                set_ig_trait = ig_trait:ig_trait_asceticism
+
+            }
+            set_state_religion = rel:gate_germanic
+            custom_tooltip = {
+                text = gate_germanic_decision_conversion_tooltip
+                every_scope_state = {
+                    convert_population = {
+                        target = rel:gate_germanic
+                        value = 0.2
+                    }
+                }
+            }
+            add_radicals = {
+                interest_group = ig:ig_devout
+                value = 0.2
+            }
+            add_loyalists = {
+                religion = rel:gate_germanic
+                value = 0.5
+            }
+        }
+    }
+
+	weight = 1000
+
+	should_be_pinned_by_default = yes
+}
