@@ -94,7 +94,7 @@ s:STATE_GUATEMALA = {
         remove_building = building_government_administration
         remove_building = building_maize_farm
         remove_building = building_livestock_ranch
-        remove_building = building_barracks
+        remove_building = building_barrack
     }
     region_state:GBR = {
         # Clean up base game buildings
