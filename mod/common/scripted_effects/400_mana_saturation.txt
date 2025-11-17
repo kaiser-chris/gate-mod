@@ -265,19 +265,6 @@ setup_mana_density = {
         value = 0
     }
 
-    # Every country has a journal entry for mana saturation
-    # since some countries can interact with the journal entry
-    every_country = {
-        limit = {
-            NOT = {
-                is_country_type = decentralized
-            }
-        }
-        add_journal_entry = {
-            type = je_mana_saturation
-        }
-    }
-
     # Build initial Mana Density around gates
     initial_gate_propogate_mana_density = yes
 

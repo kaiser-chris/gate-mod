@@ -1,7 +1,7 @@
 ﻿je_mana_saturation = {
 	icon = "gfx/interface/icons/event_icons/event_gate_magic_world.dds"
 
-	group = je_group_magical_affairs
+	group = je_group_global_international_situations
 
 	scripted_button = je_mana_saturation_button_slave_ritual
 
@@ -11,8 +11,48 @@
                 dlc = dlc_magic_gate
             }
         }
-		save_scope_as = loc_country_scope
+        set_global_variable = {
+            name = global_mana_saturation
+            value = 0
+        }
 	}
+
+    should_be_involved = {
+        OR = {
+            is_player = yes
+            NOT = {
+                is_country_type = decentralized
+            }
+        }
+    }
+
+    is_shown_when_inactive = {
+        hidden_trigger = {
+            trigger_if = {
+                limit = {
+                    exists = global_var:global_mana_saturation
+                }
+                global_var:global_mana_saturation < 100
+            }
+            trigger_else = {
+                always = no
+            }
+        }
+    }
+
+    possible = {
+        hidden_trigger = {
+            trigger_if = {
+                limit = {
+                    exists = global_var:global_mana_saturation
+                }
+                global_var:global_mana_saturation < 100
+            }
+            trigger_else = {
+                always = no
+            }
+        }
+    }
 
 	status_desc = {
 		first_valid = {
@@ -59,13 +99,15 @@
 			name = global_mana_saturation
 			value = 100
 		}
-		trigger_event = {
-			id = gate_mana_saturation.1
-			popup = yes
-		}
 	}
 
-	transferable = yes
+    on_complete_all_involved = {
+        trigger_event = {
+            id = gate_mana_saturation.1
+            popup = yes
+        }
+    }
+
 	can_revolution_inherit = yes
 
 	current_value = {
