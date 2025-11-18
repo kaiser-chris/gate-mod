@@ -37,6 +37,12 @@ idle = {
 		                }
 	                }
 	            }
+				modifier = {
+	                add = 10000
+	                scope:character ?= {
+	                    has_template = GBR_isambard_kingdom_brunel
+	                }
+           		}
 	        }
 
 			portrait_modifier = { animations_props = smoking_attachment }
@@ -74,7 +80,7 @@ idle = {
 					}
 					struggling_pop_trigger = no
 				}
-			}							
+			}
 		}
 
 		hatacademic_pop_idle_struggle = {
@@ -85,7 +91,7 @@ idle = {
 
 				modifier = {
 					add = 200
-					
+
 				    exists = scope:pop
 				    scope:pop = {
 						is_pop_type = academics
@@ -95,21 +101,6 @@ idle = {
 			}
 		}
 
-		basket_pop_idle = {
-			animation = { head = "idle_head_pop_basket" torso = "idle_body_basket" }
-
-			weight = {
-				base = 0
-
-				modifier = {
-					add = 50
-					poor_clothes_pop_trigger = yes
-					struggling_pop_trigger = no
-				}
-			}
-			portrait_modifier = { animations_props = basket_attachment	 }
-		}		
-		
 		saber_pop_idle= {
 			animation = { head = "idle_head_pop_saber" torso = "idle_body_saber" }
 
@@ -122,14 +113,14 @@ idle = {
 					struggling_pop_trigger = no
 				}
 			}
-			portrait_modifier = { 
-				animations_props = saber_attachment	
+			portrait_modifier = {
+				animations_props = saber_attachment
 			}
 		}
 
 		shovels_pop_idle = {
 			animation = { head = "idle_head_pop_hattop" torso = "idle_body_shovels" }
-				
+
 
 			weight = {
 				base = 0
@@ -137,7 +128,7 @@ idle = {
 				modifier = {
 					add = 100
 					laborers_clothes_pop_trigger = yes
-					struggling_pop_trigger = no				
+					struggling_pop_trigger = no
 				}
 			}
 			portrait_modifier = { animations_props = shovel_attachment	}
@@ -156,12 +147,17 @@ idle = {
 					OR = {
 		                hindu_clothes_pop_trigger = yes
 		                buddhist_clothes_pop_trigger = yes
+		                scope:pop ?= {
+		                	religion = {
+			                	rel:animist = this
+			                }
+		                }
 		            }
 	                clergy_clothes_pop_trigger = yes
 					struggling_pop_trigger = no
 				}
 			}
-		}	
+		}
 
 		holyscripture_pop_idle = {
 			animation = { head = "idle_head_pop_holyscripture" torso = "idle_body_holyscripture" }
@@ -171,11 +167,7 @@ idle = {
 
 				modifier = {
 					add = 100
-					OR = {
-						clergy_clothes_pop_trigger = yes
-						magic_users_clothes_pop_trigger = yes
-					}
-					
+					clergy_clothes_pop_trigger = yes
 					struggling_pop_trigger = no
 				}
 			}
@@ -183,7 +175,7 @@ idle = {
 		}
 
 		bureaucrat_pop_idle = {
-			animation = { head = "idle_head_pop_calipers" torso = "idle_body_General_VS_Right_Cross" }
+			animation = { head = "idle_head_pop_calipers" torso = "idle7" }
 
 			weight = {
 				base = 0
@@ -194,6 +186,31 @@ idle = {
 					struggling_pop_trigger = no
 				}
 			}
+		}
+
+		rifle_pop_idle_hajduk = {
+			animation = { head = "idle_head_pop_holyscripture" torso = "idle_body_shovels" }
+
+			weight = {
+				base = 0
+
+				modifier = {
+					add = 5000
+					soldier_clothes_pop_trigger = yes
+					struggling_pop_trigger = no
+
+					has_dlc_feature = ip3_cosmetics
+					montenegrin_clothes_pop_trigger = yes
+					scope:pop ?= {
+						owner ?= {
+							NOT = {
+								has_technology_researched = bolt_action_rifles
+							}
+						}
+					}
+				}
+			}
+			portrait_modifier = { animations_props = rifle_attachment }
 		}
 
 		rifle_pop_idle = {
@@ -239,7 +256,6 @@ idle = {
 			}
 			portrait_modifier = { animations_props = shackles_attachment }
 		}
-
 
 		crudehoe_pop_idle = {
 			animation = { head = "idle_head_pop_pitchfork" torso = "idle_body_pitchfork" }
@@ -376,7 +392,7 @@ idle = {
 			}
 			portrait_modifier = { animations_props = handheldfan_attachment }
 		}
-		
+
 		flowers_pop_idle = {
 			animation = { head = "idle_head_pop_flowers" torso = "idle_body_flowers" }
 
@@ -391,7 +407,7 @@ idle = {
 			}
 			portrait_modifier = { animations_props = bundleofflowers_attachment	 }
 		}
-		
+
 		apron_pop_idle = {
 			animation = { head = "idle_head_pop_apron" torso = "idle_body_apron" }
 
@@ -403,9 +419,9 @@ idle = {
 					shopkeepers_clothes_pop_trigger = yes
 					struggling_pop_trigger = no
 				}
-			}																
+			}
 		}
-		
+
 		hattop_pop_idle = {
 			animation = { head = "idle_head_pop_hattop" torso = "idle_body_hattop" }
 
@@ -418,9 +434,9 @@ idle = {
 					european_clothes_pop_trigger = yes
 					struggling_pop_trigger = no
 				}
-			}																
-		}				
-				
+			}
+		}
+
 		hatmonocle_pop_idle = {
 			animation = { head = "idle_head_pop_hatmonocle" torso = "idle_body_hatmonocle" }
 			weight = {
@@ -432,16 +448,16 @@ idle = {
 					european_clothes_pop_trigger = yes
 					struggling_pop_trigger = no
 				}
-			}									
+			}
 		}
 
 
-		
-		
+
+
 		###################################
 		# POP Animations  for Struggling/Starving
 		###################################
-		
+
 		saber_pop_idle_struggle = {
 			animation = { head = "idle_head_struggle_pop_saber" torso = "idle_body_struggle_saber" }
 
@@ -454,14 +470,14 @@ idle = {
 					struggling_pop_trigger = yes
 				}
 			}
-			portrait_modifier = { 
-				animations_props = saber_attachment	
+			portrait_modifier = {
+				animations_props = saber_attachment
 			}
 		}
 
 		shovels_pop_idle_struggle = {
 			animation = { head = "idle_head_struggle_pop_shovels" torso = "idle_body_struggle_shovels" }
-				
+
 			weight = {
 				base = 0
 
@@ -472,7 +488,7 @@ idle = {
 				}
 			}
 			portrait_modifier = { animations_props = shovel_attachment }
-		}	
+		}
 
 		clergy_india_idle_struggle = {
 			animation = { head = "idle_head_struggle_pop_pitchfork" torso = "idle_body_struggle_hatmonocle" }
@@ -501,10 +517,7 @@ idle = {
 
 				modifier = {
 					add = 150
-					OR = {
-						clergy_clothes_pop_trigger = yes
-						magic_users_clothes_pop_trigger = yes
-					}
+					clergy_clothes_pop_trigger = yes
 					struggling_pop_trigger = yes
 				}
 			}
@@ -554,7 +567,7 @@ idle = {
 				}
 			}
 			portrait_modifier = { animations_props = pitchfork_attachment }
-		}	
+		}
 
 
 
@@ -727,18 +740,18 @@ idle = {
 
 		apron_pop_idle_struggle = {
 			animation = { head = "idle_head_struggle_pop_apron" torso = "idle_body_struggle_apron" }
-	
+
 			weight = {
 				base = 0
-	
+
 				modifier = {
 					add = 150
 					shopkeepers_clothes_pop_trigger = yes
 					struggling_pop_trigger = yes
 				}
-			}								
+			}
 		}
-								
+
 		hattop_pop_idle_struggle = {
 			animation = { head = "idle_head_struggle_pop_hattop" torso = "idle_body_struggle_hattop" }
 
@@ -752,7 +765,7 @@ idle = {
 					struggling_pop_trigger = yes
 				}
 			}
-		}						
+		}
 
 		hatmonocle_pop_idle_struggle = {
 			animation = { head = "idle_head_struggle_pop_hatmonocle" torso = "idle_body_struggle_hatmonocle" }
@@ -797,7 +810,7 @@ idle = {
 
 	female = {
 		default = { head = "idle3" torso = "idle3" }
-		
+
 		###################################
 		# POP Animations  #
 		###################################
@@ -901,7 +914,7 @@ idle = {
 				modifier = {
 					add = 50
 					poor_clothes_pop_trigger = yes
-					struggling_pop_trigger = no
+ 					struggling_pop_trigger = no
 				}
 			}
 			portrait_modifier = { animations_props = basket_attachment	 }
@@ -920,7 +933,7 @@ idle = {
 			}
 			portrait_modifier = { animations_props = shackles_attachment }
 		}
-		
+
 		pitchfork_pop_idle = {
 			animation = { head = "idle_head_pop_hattop" torso = "idle_body_pitchfork" }
 
@@ -966,7 +979,7 @@ idle = {
 		}
 
 		holy_pop_idle = {
-			animation = { head = "idle_head_pop_ledger" torso = "idle_body_General_VS_Left_Cross" }
+			animation = { head = "idle_head_pop_ledger" torso = "idle_body_general_vs_left_cross" }
 
 			weight = {
 				base = 0
@@ -979,7 +992,7 @@ idle = {
 			}
 		}
 				officer_pop_idle = {
-			animation = { head = "idle_head_pop_ledger" torso = "idle_body_General_VS_Left_HandsHips" }
+			animation = { head = "idle_head_pop_ledger" torso = "idle_body_general_vs_left_handships" }
 
 			weight = {
 				base = 0
@@ -995,7 +1008,7 @@ idle = {
 		###################################
 		# POP Animations  for Struggling/Starving#
 		###################################
-		
+
 		parasol_pop_idle_struggle = {
 			animation = { head = "idle_head_struggle_pop_parasol" torso = "idle_body_struggle_parasol" }
 
@@ -1059,18 +1072,18 @@ idle = {
 
 		apron_pop_idle_struggle = {
 			animation = { head = "idle_head_struggle_pop_apron" torso = "idle_body_struggle_hatmonocle" }
-	
+
 			weight = {
 				base = 0
-	
+
 				modifier = {
 					add = 150
 					laborers_clothes_pop_trigger = yes
 					struggling_pop_trigger = yes
 				}
-			}								
+			}
 		}
-			
+
 					crudehoe_pop_idle_struggle = {
 			animation = { head = "idle_head_struggle_pop_hatmonocle" torso = "idle_body_struggle_crudehoe" }
 
@@ -1117,10 +1130,10 @@ idle = {
 		####general_emotions_proud_idle = {
 	########					animation = { head = "idle_head_emotions_proud" torso = "idle_body_emotions_proud" }
 	########	}
-		
+
 
 	}
-	
+
 	girl = boy
 
 	adolescent_boy = {
@@ -1136,40 +1149,48 @@ idle = {
 
 ### COMMANDER VS LEFT
 commander_vs_left = {
-	
+
 	male = {
 		default = { head = "idle_entry" torso = "idle_entry" }
-		
-		General_VS_Left_Saber= {
 
-			animation = { head = "idle_head_General_VS_Left_Saber" torso = "idle_body_General_VS_Left_Saber" }
+		general_vs_left_saber= {
 
-			portrait_modifier = { 
-				animations_props = saber_attachment	
+			animation = { head = "idle_head_general_vs_left_saber" torso = "idle_body_general_vs_left_saber" }
+
+			portrait_modifier = {
+				animations_props = saber_attachment
 			}
 		}
 
-		General_VS_Left_Point = {
-			animation = { head = "idle_head_General_VS_Left_Point" torso = "idle_body_General_VS_Left_Point" }
-		}	
+		general_vs_left_napoleon = {
+			animation = { head = "idle_head_general_vs_left_napoleon" torso = "idle_body_general_vs_left_napoleon" }
 
-		General_VS_Left_Fist = {
-			animation = { head = "idle_head_General_VS_Left_Fist" torso = "idle_body_General_VS_Left_Fist" }	
+			portrait_modifier = {
+				animations_props = walkingcane_attachment
+			}
 		}
 
-		General_VS_Left_Cross = {
-			animation = { head = "idle_head_General_VS_Left_Cross" torso = "idle_body_General_VS_Left_Cross" }
+		general_vs_left_rider = {
+			animation = { head = "idle_head_general_vs_left_rider" torso = "idle_body_general_vs_left_rider" }
+
+			portrait_modifier = {
+				animations_props = walkingcane_attachment
+			}
 		}
 
-		General_VS_Left_HandsHips = {
-			animation = { head = "idle_head_General_VS_Left_HandsHips" torso = "idle_body_General_VS_Left_HandsHips" }
+		general_vs_left_caneback = {
+			animation = { head = "idle_head_general_vs_left_caneback" torso = "idle_body_general_vs_left_caneback" }
+
+			portrait_modifier = {
+				animations_props = walkingcane_attachment
+			}
 		}
 	}
-	
+
 	female = {
 		default = { head = "idle_entry" torso = "idle_entry" }
 	}
-	
+
 	boy = {
 		default = { head = "idle1" torso = "idle1" }
 	}
@@ -1188,39 +1209,47 @@ commander_vs_left = {
 
 ### COMMANDER VS RIGHT
 commander_vs_right = {
-	
+
 	male = {
 		default = { head = "idle_entry" torso = "idle_entry" }
-		
-		General_VS_Right_Saber= {
-			animation = { head = "idle_head_General_VS_Right_Saber" torso = "idle_body_General_VS_Right_Saber" }
-			
-			portrait_modifier = { 
-				animations_props = saber_attachment	
+
+		general_vs_right_saber= {
+			animation = { head = "idle_head_general_vs_right_saber" torso = "idle_body_general_vs_right_saber" }
+
+			portrait_modifier = {
+				animations_props = saber_attachment
 			}
 		}
 
-		General_VS_Right_Point = {
-			animation = { head = "idle_head_General_VS_Right_Point" torso = "idle_body_General_VS_Right_Point" }
-		}	
+		general_vs_right_napoleon = {
+			animation = { head = "idle_head_general_vs_right_napoleon" torso = "idle_body_general_vs_right_napoleon" }
 
-		General_VS_Right_Fist = {
-			animation = { head = "idle_head_General_VS_Right_Fist" torso = "idle_body_General_VS_Right_Fist" }
+			portrait_modifier = {
+				animations_props = walkingcane_attachment
+			}
 		}
 
-		General_VS_Right_Cross = {
-			animation = { head = "idle_head_General_VS_Right_Cross" torso = "idle_body_General_VS_Right_Cross" }
+		general_vs_right_rider = {
+			animation = { head = "idle_head_general_vs_right_rider" torso = "idle_body_general_vs_right_rider" }
+
+			portrait_modifier = {
+				animations_props = walkingcane_attachment
+			}
 		}
 
-		General_VS_Right_HandsHips = {
-			animation = { head = "idle_head_General_VS_Right_HandsHips" torso = "idle_body_General_VS_Right_HandsHips" }
+		general_vs_right_caneback = {
+			animation = { head = "idle_head_general_vs_right_caneback" torso = "idle_body_general_vs_right_caneback" }
+
+			portrait_modifier = {
+				animations_props = walkingcane_attachment
+			}
 		}
 	}
-	
+
 	female = {
-		default = { head = "idle_entry" torso = "idle_entry" }  
+		default = { head = "idle_entry" torso = "idle_entry" }
 	}
-	
+
 	boy = {
 		default = { head = "idle1" torso = "idle1" }
 	}

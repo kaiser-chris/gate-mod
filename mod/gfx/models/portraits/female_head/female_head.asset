@@ -298,24 +298,24 @@ pdxmesh = {
 		#### Generals VS screen ####
 	
 	
-		animation = { id = "head_General_VS_Left_Saber"						type = "female_head_General_VS_Left_Saber.anim" }		
+		animation = { id = "head_general_vs_left_saber"						type = "female_head_general_vs_left_saber.anim" }
 	
-		animation = { id = "head_General_VS_Left_Point"						type = "female_head_General_VS_Left_Point.anim" }		
+		animation = { id = "head_general_vs_left_point"						type = "female_head_general_vs_left_point.anim" }
 		
-		animation = { id = "head_General_VS_Left_Fist"						type = "female_head_General_VS_Left_Fist.anim" }	
+		animation = { id = "head_general_vs_left_fist"						type = "female_head_general_vs_left_fist.anim" }
 	
-		animation = { id = "head_General_VS_Left_Cross"						type = "female_head_General_VS_Left_Cross.anim" }	
+		animation = { id = "head_general_vs_left_cross"						type = "female_head_general_vs_left_cross.anim" }
 		
 
-		animation = { id = "head_General_VS_Right_Saber"					type = "female_head_General_VS_Right_Saber.anim" }
+		animation = { id = "head_general_vs_right_saber"					type = "female_head_general_vs_right_saber.anim" }
 		
-		animation = { id = "head_General_VS_Right_Point"					type = "female_head_General_VS_Right_Point.anim" }
+		animation = { id = "head_general_vs_right_point"					type = "female_head_general_vs_right_point.anim" }
 		
-		animation = { id = "head_General_VS_Right_Fist"						type = "female_head_General_VS_Right_Fist.anim" }
+		animation = { id = "head_general_vs_right_fist"						type = "female_head_general_vs_right_fist.anim" }
 		
-		animation = { id = "head_General_VS_Right_Cross"					type = "female_head_General_VS_Right_Cross.anim" }	
+		animation = { id = "head_general_vs_right_cross"					type = "female_head_general_vs_right_cross.anim" }
 		
-		animation = { id = "head_General_VS_Right_HandsHips"					type = "female_head_General_VS_Right_HandsHips.anim" }	
+		animation = { id = "head_general_vs_right_handships"					type = "female_head_general_vs_right_handships.anim" }
 		
 		
 		
@@ -404,6 +404,7 @@ entity = {
     attribute = { name = "head_mouth_width"					additive_animation = "head_mouth_width" default = 0.5 }
     attribute = { name = "head_neck_length"					additive_animation = "head_neck_length" default = 0.5 }
     attribute = { name = "head_neck_width"					additive_animation = "head_neck_width" default = 0.5 }
+
 
 
 	#### BLEND SHAPES ####
@@ -672,27 +673,27 @@ entity = {
 								#### Generals VS screen ####
 		
 		
-	state = {	name = "idle_head_General_VS_Left_Saber"				animation = "head_General_VS_Left_Saber" chance = 10 looping = yes  }
+	state = {	name = "idle_head_general_vs_left_saber"				animation = "head_general_vs_left_saber" chance = 10 looping = yes  }
 
-	state = {	name = "idle_head_General_VS_Left_Point"				animation = "head_General_VS_Left_Point" chance = 10 looping = yes  }	
+	state = {	name = "idle_head_general_vs_left_point"				animation = "head_general_vs_left_point" chance = 10 looping = yes  }
 	
-	state = {	name = "idle_head_General_VS_Left_Fist"					animation = "head_General_VS_Left_Fist" chance = 10 looping = yes  }	
+	state = {	name = "idle_head_general_vs_left_fist"					animation = "head_general_vs_left_fist" chance = 10 looping = yes  }
 	
-	state = {	name = "idle_head_General_VS_Left_Cross"				animation = "head_General_VS_Left_Cross" chance = 10 looping = yes  }	
+	state = {	name = "idle_head_general_vs_left_cross"				animation = "head_general_vs_left_cross" chance = 10 looping = yes  }
 	
 		
 		
 		
 		
-	state = {	name = "idle_head_General_VS_Right_Saber"				animation = "head_General_VS_Right_Saber" chance = 10 looping = yes  }	
+	state = {	name = "idle_head_general_vs_right_saber"				animation = "head_general_vs_right_saber" chance = 10 looping = yes  }
 	
-	state = {	name = "idle_head_General_VS_Right_Point"				animation = "head_General_VS_Right_Point" chance = 10 looping = yes  }
+	state = {	name = "idle_head_general_vs_right_point"				animation = "head_general_vs_right_point" chance = 10 looping = yes  }
 	
-	state = {	name = "idle_head_General_VS_Right_Fist"				animation = "head_General_VS_Right_Fist" chance = 10 looping = yes  }
+	state = {	name = "idle_head_general_vs_right_fist"				animation = "head_general_vs_right_fist" chance = 10 looping = yes  }
 
-	state = {	name = "idle_head_General_VS_Right_Cross"				animation = "head_General_VS_Right_Cross" chance = 10 looping = yes  }
+	state = {	name = "idle_head_general_vs_right_cross"				animation = "head_general_vs_right_cross" chance = 10 looping = yes  }
 	
-	state = {	name = "idle_head_General_VS_Right_HandsHips"			animation = "head_General_VS_Right_HandsHips" chance = 10 looping = yes  }
+	state = {	name = "idle_head_general_vs_right_handships"			animation = "head_general_vs_right_handships" chance = 10 looping = yes  }
 
 
 

@@ -168,13 +168,13 @@
         }
     }
 
-    european_ruler_clothes = {
+    vampire_ruler_clothes = {
         dna_modifiers = {
             accessory = {
                 mode = add
                 gene = coats
-                template = european_coats
-                range = { 0 0.27 } # limiting the set to single-breasted coats, so aiguillettes work
+                template = european_uniform_coats
+                range = { 0.15 0.35 } # limiting the set to single-breasted coats, so aiguillettes work
             }
             accessory = {
                 mode = add
@@ -198,7 +198,7 @@
         }
     }
 
-    european_ruler_republic_clothes = {
+    vampire_ruler_republic_clothes = {
         dna_modifiers = {
             accessory = {
                 mode = add
@@ -250,7 +250,7 @@
             accessory = {
                 mode = add
                 gene = coats
-                template = european_coats
+                template = european_uniform_coats
                 range = { 0 1 } # For the randomness to work correctly
             }
             accessory = {
@@ -309,13 +309,13 @@
         }
     }
 
-    european_military_clothes = {
+    vampire_military_clothes = {
         dna_modifiers = {
             accessory = {
                 mode = add
                 gene = coats
-                template = european_coats
-                range = { 0 0.27 } # For the randomness to work correctly
+                template = european_uniform_coats
+                range = { 0.15 0.35 } # For the randomness to work correctly
             }
             accessory = {
                 mode = add
@@ -790,7 +790,7 @@
             accessory = {
                 mode = add
                 gene = coats
-                template = european_coats
+                template = european_uniform_coats
                 range = { 0 1 } # For the randomness to work correctly
             }
             accessory = {
