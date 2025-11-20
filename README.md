@@ -7,7 +7,7 @@
 ## Status
 [![Validation](https://github.com/kaiser-chris/gate-mod/actions/workflows/validate.yml/badge.svg)](https://github.com/kaiser-chris/gate-mod/actions/workflows/validate.yml)
 [![GitHub Release](https://img.shields.io/github/v/release/kaiser-chris/gate-mod?display_name=release&label=Mod%20Version&color=blue)](https://github.com/kaiser-chris/gate-mod/releases)
-[![Static Badge](https://img.shields.io/badge/Game_Version-1.9-blue)](https://vic3.paradoxwikis.com/Patches)
+[![Static Badge](https://img.shields.io/badge/Game_Version-1.12-blue)](https://vic3.paradoxwikis.com/Patches)
 [![Discord](https://img.shields.io/discord/1329045839619817543?label=Discord&color=blue)](https://discord.gg/9Yp22JMMv2)
 
 ## Story

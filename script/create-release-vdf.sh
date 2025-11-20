@@ -19,7 +19,7 @@ then
   description="$(cat < "$2")"
   description=${description//$'\n'/\\n}
   description=${description//$'\t'/\\t}
-  description=${description//\"/\\\"}
+  description=${description//\"/\'}
 else
   printf 'Missing Steam description'
   printf '\n'
@@ -61,6 +61,8 @@ printf '\n' >> workshop.vdf
 printf '\t"previewfile" "%s/thumbnail.png"' "$mod_path" >> workshop.vdf
 printf '\n' >> workshop.vdf
 printf '\t"title" "%s"' "$title" >> workshop.vdf
+printf '\n' >> workshop.vdf
+printf '\t"description" "%s"' "$description" >> workshop.vdf
 printf '\n' >> workshop.vdf
 printf '\t"changenote" "%s"' "$release_notes" >> workshop.vdf
 printf '\n' >> workshop.vdf
