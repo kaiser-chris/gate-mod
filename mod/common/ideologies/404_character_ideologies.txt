@@ -2,8 +2,9 @@
     icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_magic_supremacy.dds"
 
     lawgroup_gate_magic_users = {
-        law_gate_free_magic_users = approve
-        law_gate_mage_guilds = disapprove
+        law_gate_free_magic_users = neutral
+        law_gate_mage_guilds = approve
+        law_gate_druidic_circles = approve
         law_gate_restricted_magic_users = strongly_disapprove
         law_gate_noble_magic_users = strongly_approve
     }
@@ -45,6 +46,7 @@ ideology_magic_hopeful = {
     lawgroup_gate_magic_users = {
         law_gate_free_magic_users = strongly_approve
         law_gate_mage_guilds = neutral
+        law_gate_druidic_circles = neutral
         law_gate_restricted_magic_users = strongly_disapprove
         law_gate_noble_magic_users = approve
     }
@@ -89,8 +91,9 @@ ideology_magic_sceptic = {
     icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_magic_cynic.dds"
 
     lawgroup_gate_magic_users = {
-        law_gate_free_magic_users = neutral
-        law_gate_mage_guilds = strongly_approve
+        law_gate_free_magic_users = disapprove
+        law_gate_mage_guilds = neutral
+        law_gate_druidic_circles = neutral
         law_gate_restricted_magic_users = approve
         law_gate_noble_magic_users = strongly_disapprove
     }
@@ -139,8 +142,9 @@ ideology_magic_cynic = {
     icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_magic_cynic.dds"
 
     lawgroup_gate_magic_users = {
-        law_gate_free_magic_users = disapprove
-        law_gate_mage_guilds = approve
+        law_gate_free_magic_users = strongly_disapprove
+        law_gate_mage_guilds = disapprove
+        law_gate_druidic_circles = disapprove
         law_gate_restricted_magic_users = strongly_approve
         law_gate_noble_magic_users = strongly_disapprove
     }

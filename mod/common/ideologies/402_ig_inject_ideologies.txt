@@ -1,0 +1,309 @@
+﻿INJECT:ideology_anti_clerical = {
+    lawgroup_elven_supremacy = {
+        law_elven_supremacy_religious_preaching = disapprove
+        law_elven_supremacy_enforced = disapprove
+        law_elven_supremacy_not_enforced = strongly_approve
+    }
+
+    lawgroup_orcish_hegemony = {
+        law_orcish_hegemony_enforced = disapprove
+        law_orcish_hegemony_not_enforced = approve
+    }
+}
+
+INJECT:ideology_loyalist = {
+    lawgroup_elven_supremacy = {
+        law_elven_supremacy_religious_preaching = approve
+        law_elven_supremacy_enforced = approve
+        law_elven_supremacy_not_enforced = neutral
+    }
+
+    lawgroup_orcish_hegemony = {
+        law_orcish_hegemony_enforced = approve
+        law_orcish_hegemony_not_enforced = neutral
+    }
+}
+
+INJECT:ideology_liberal = {
+    lawgroup_gate_monster_hunting = {
+        law_no_organized_monster_hunting = neutral
+        law_dedicated_monster_hunters = neutral
+        law_private_monster_hunters = disapprove
+        law_militarized_monster_hunters = disapprove
+    }
+
+    lawgroup_gate_magic_users = {
+        law_gate_free_magic_users = strongly_approve
+        law_gate_mage_guilds = approve
+        law_gate_druidic_circles = approve
+        law_gate_restricted_magic_users = disapprove
+        law_gate_arcane_bureau = strongly_approve
+        law_gate_noble_magic_users = strongly_disapprove
+    }
+}
+
+INJECT:ideology_liberal_modern = {
+    lawgroup_gate_monster_hunting = {
+        law_no_organized_monster_hunting = neutral
+        law_dedicated_monster_hunters = neutral
+        law_private_monster_hunters = disapprove
+        law_militarized_monster_hunters = disapprove
+    }
+
+    lawgroup_gate_magic_users = {
+        law_gate_free_magic_users = strongly_approve
+        law_gate_mage_guilds = approve
+        law_gate_druidic_circles = approve
+        law_gate_restricted_magic_users = disapprove
+        law_gate_arcane_bureau = strongly_approve
+        law_gate_noble_magic_users = strongly_disapprove
+    }
+
+    lawgroup_orcish_hegemony = {
+        law_orcish_hegemony_enforced = strongly_disapprove
+        law_orcish_hegemony_not_enforced = strongly_approve
+    }
+}
+
+INJECT:ideology_republican = {
+    lawgroup_distribution_of_power = {
+        law_gate_arcane_council = disapprove
+    }
+
+    lawgroup_governance_principles = {
+        law_gate_magocracy = neutral
+        law_gate_vampire_monarchy = neutral
+
+    }
+}
+
+INJECT:ideology_isolationist = {
+    lawgroup_gate_monster_hunting = {
+        law_no_organized_monster_hunting = strongly_disapprove
+        law_dedicated_monster_hunters = approve
+        law_private_monster_hunters = disapprove
+        law_militarized_monster_hunters = neutral
+    }
+
+    lawgroup_gate_magic_users = {
+        law_gate_free_magic_users = neutral
+        law_gate_mage_guilds = disapprove
+        law_gate_druidic_circles = strongly_approve
+        law_gate_restricted_magic_users = neutral
+        law_gate_arcane_bureau = approve
+        law_gate_noble_magic_users = disapprove
+    }
+}
+
+INJECT:ideology_jingoist = {
+    lawgroup_gate_monster_hunting = {
+        law_no_organized_monster_hunting = disapprove
+        law_dedicated_monster_hunters = approve
+        law_private_monster_hunters = neutral
+        law_militarized_monster_hunters = strongly_approve
+    }
+
+    lawgroup_gate_magic_users = {
+        law_gate_free_magic_users = disapprove
+        law_gate_mage_guilds = neutral
+        law_gate_druidic_circles = neutral
+        law_gate_restricted_magic_users = neutral
+        law_gate_arcane_bureau = approve
+        law_gate_noble_magic_users = neutral
+    }
+}
+
+INJECT:ideology_pious = {
+    lawgroup_elven_supremacy = {
+        law_elven_supremacy_religious_preaching = strongly_approve
+        law_elven_supremacy_enforced = approve
+        law_elven_supremacy_not_enforced = strongly_disapprove
+    }
+
+    lawgroup_orcish_hegemony = {
+        law_orcish_hegemony_enforced = approve
+        law_orcish_hegemony_not_enforced = disapprove
+    }
+}
+
+INJECT:ideology_moralist = {
+    lawgroup_gate_magic_users = {
+        law_gate_free_magic_users = strongly_disapprove
+        law_gate_mage_guilds = neutral
+        law_gate_druidic_circles = neutral
+        law_gate_restricted_magic_users = approve
+        law_gate_arcane_bureau = disapprove
+        law_gate_noble_magic_users = strongly_disapprove
+    }
+
+    lawgroup_governance_principles = {
+        law_gate_magocracy = strongly_disapprove
+        law_gate_vampire_monarchy = strongly_disapprove
+    }
+}
+
+INJECT:ideology_montenegrin_moralist = {
+    lawgroup_gate_magic_users = {
+        law_gate_free_magic_users = strongly_disapprove
+        law_gate_mage_guilds = neutral
+        law_gate_druidic_circles = neutral
+        law_gate_restricted_magic_users = approve
+        law_gate_arcane_bureau = disapprove
+        law_gate_noble_magic_users = strongly_disapprove
+    }
+
+    lawgroup_governance_principles = {
+        law_gate_magocracy = strongly_disapprove
+        law_gate_vampire_monarchy = strongly_disapprove
+    }
+}
+
+INJECT:ideology_reactionary = {
+    lawgroup_elven_supremacy = {
+        law_elven_supremacy_religious_preaching = strongly_disapprove
+        law_elven_supremacy_enforced = neutral
+        law_elven_supremacy_not_enforced = approve
+    }
+
+    lawgroup_governance_principles = {
+        law_gate_magocracy = approve
+        law_gate_vampire_monarchy = approve
+    }
+}
+
+INJECT:ideology_meritocratic = {
+    lawgroup_gate_magic_users = {
+        law_gate_free_magic_users = disapprove
+        law_gate_mage_guilds = approve
+        law_gate_druidic_circles = approve
+        law_gate_restricted_magic_users = neutral
+        law_gate_arcane_bureau = approve
+        law_gate_noble_magic_users = strongly_disapprove
+    }
+
+    lawgroup_distribution_of_power = {
+        law_gate_arcane_council = disapprove
+    }
+
+    lawgroup_orcish_hegemony = {
+        law_orcish_hegemony_enforced = neutral
+        law_orcish_hegemony_not_enforced = approve
+    }
+}
+
+INJECT:ideology_patriotic = {
+    lawgroup_gate_monster_hunting = {
+        law_no_organized_monster_hunting = strongly_disapprove
+        law_dedicated_monster_hunters = approve
+        law_private_monster_hunters = neutral
+        law_militarized_monster_hunters = strongly_approve
+    }
+}
+
+INJECT:ideology_populist = {
+    lawgroup_gate_monster_hunting = {
+        law_no_organized_monster_hunting = neutral
+        law_dedicated_monster_hunters = approve
+        law_private_monster_hunters = disapprove
+        law_militarized_monster_hunters = disapprove
+    }
+
+    lawgroup_distribution_of_power = {
+        law_gate_arcane_council = strongly_disapprove
+    }
+
+    lawgroup_orcish_hegemony = {
+        law_orcish_hegemony_enforced = strongly_disapprove
+        law_orcish_hegemony_not_enforced = neutral
+    }
+
+    lawgroup_elven_supremacy = {
+        law_elven_supremacy_religious_preaching = strongly_disapprove
+        law_elven_supremacy_enforced = strongly_disapprove
+        law_elven_supremacy_not_enforced = neutral
+    }
+}
+
+INJECT:ideology_socialist = {
+    lawgroup_governance_principles = {
+        law_gate_magocracy = strongly_disapprove
+        law_gate_vampire_monarchy = strongly_disapprove
+    }
+}
+
+INJECT:ideology_egalitarian = {
+    lawgroup_gate_magic_users = {
+        law_gate_free_magic_users = strongly_approve
+        law_gate_mage_guilds = approve
+        law_gate_druidic_circles = approve
+        law_gate_restricted_magic_users = disapprove
+        law_gate_arcane_bureau = approve
+        law_gate_noble_magic_users = disapprove
+    }
+}
+
+INJECT:ideology_egalitarian_modern = {
+    lawgroup_gate_magic_users = {
+        law_gate_free_magic_users = strongly_approve
+        law_gate_mage_guilds = approve
+        law_gate_druidic_circles = approve
+        law_gate_restricted_magic_users = disapprove
+        law_gate_arcane_bureau = strongly_approve
+        law_gate_noble_magic_users = strongly_disapprove
+    }
+}
+
+INJECT:ideology_paternalistic = {
+    lawgroup_gate_monster_hunting = {
+        law_no_organized_monster_hunting = disapprove
+        law_dedicated_monster_hunters = neutral
+        law_private_monster_hunters = approve
+        law_militarized_monster_hunters = neutral
+    }
+
+    lawgroup_governance_principles = {
+        law_gate_magocracy = approve
+    }
+}
+
+INJECT:ideology_hierarchic = {
+    lawgroup_gate_magic_users = {
+        law_gate_free_magic_users = disapprove
+        law_gate_mage_guilds = approve
+        law_gate_druidic_circles = disapprove
+        law_gate_restricted_magic_users = approve
+        law_gate_arcane_bureau = neutral
+        law_gate_noble_magic_users = strongly_approve
+    }
+
+    lawgroup_orcish_hegemony = {
+        law_orcish_hegemony_enforced = strongly_approve
+        law_orcish_hegemony_not_enforced = disapprove
+    }
+
+    lawgroup_elven_supremacy = {
+        law_elven_supremacy_religious_preaching = strongly_approve
+        law_elven_supremacy_enforced = approve
+        law_elven_supremacy_not_enforced = disapprove
+    }
+}
+
+INJECT:ideology_laissez_faire = {
+    lawgroup_gate_monster_hunting = {
+        law_no_organized_monster_hunting = strongly_disapprove
+        law_dedicated_monster_hunters = neutral
+        law_private_monster_hunters = strongly_approve
+        law_militarized_monster_hunters = neutral
+    }
+}
+
+INJECT:ideology_individualist = {
+    lawgroup_gate_magic_users = {
+        law_gate_free_magic_users = neutral
+        law_gate_mage_guilds = strongly_approve
+        law_gate_druidic_circles = approve
+        law_gate_restricted_magic_users = strongly_disapprove
+        law_gate_arcane_bureau = approve
+        law_gate_noble_magic_users = neutral
+    }
+}
