@@ -1,0 +1,36 @@
+﻿###################################
+# Default Personality Animations  #
+###################################
+
+INJECT:idle = {
+	male = {
+		2d_pop_idle = {
+			animation = { head = "idle_entry" torso = "idle_entry" }
+
+			weight = {
+				base = 0
+
+				modifier = {
+					add = 10000
+					no_portrait_trigger = yes
+				}
+			}
+		}
+
+	}
+
+	female = {
+		2d_pop_idle = {
+			animation = { head = "idle3" torso = "idle3" }
+
+			weight = {
+				base = 0
+
+				modifier = {
+					add = 10000
+					no_portrait_trigger = yes
+				}
+			}
+		}
+	}
+}
