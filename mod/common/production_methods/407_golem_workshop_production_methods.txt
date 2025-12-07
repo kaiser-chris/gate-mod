@@ -17,8 +17,8 @@ pm_golem_workshop_simple_production = {
 		workforce_scaled = {
 			# input goods
 			goods_input_mana_core_add = 10
-			goods_input_hardwood_add = 10
-			goods_input_runic_paper_add = 10
+			goods_input_hardwood_add = 5
+			goods_input_runic_paper_add = 5
 
 			# output goods
 			goods_output_golem_add = 40
@@ -26,8 +26,8 @@ pm_golem_workshop_simple_production = {
 
 		level_scaled = {
 			building_employment_shopkeepers_add = 500
-			building_employment_mages_add = 3000
-			building_employment_laborers_add = 5000
+			building_employment_mages_add = 1000
+			building_employment_laborers_add = 3500
 		}
 	}
 }
@@ -42,22 +42,20 @@ pm_golem_workshop_electric_production = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_mana_core_add = 15
-			goods_input_steel_add = 5
-			goods_input_engines_add = 5
-			goods_input_runic_paper_add = 5
+			goods_input_mana_core_add = 10
+			goods_input_runic_paper_add = 10
 			goods_input_electricity_add = 10
 
 			# output goods
-			goods_output_golem_add = 100
+			goods_output_golem_add = 120
 		}
 
 		level_scaled = {
 			building_employment_shopkeepers_add = 500
-			building_employment_mages_add = 2000
-			building_employment_laborers_add = 2000
-			building_employment_machinists_add = 1000
-			building_employment_engineers_add = 2000
+			building_employment_mages_add = 500
+			building_employment_laborers_add = 1500
+			building_employment_machinists_add = 1500
+			building_employment_engineers_add = 1000
 		}
 	}
 
@@ -76,6 +74,10 @@ pm_rotary_valve_engine_building_golem_workshop = {
 		law_industry_banned
 	}
 
+    unlocking_production_methods = {
+        pm_golem_workshop_simple_production
+    }
+
 	state_modifiers = {
 		workforce_scaled = {
 			state_pollution_generation_add = 10
@@ -84,7 +86,7 @@ pm_rotary_valve_engine_building_golem_workshop = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_coal_add = 10
+			goods_input_coal_add = 15
 		}
 
 		level_scaled = {
@@ -100,6 +102,10 @@ pm_assembly_lines_building_golem_workshop = {
 		conveyors
 	}
 
+    unlocking_production_methods = {
+        pm_golem_workshop_electric_production
+    }
+
 	disallowing_laws = {
 		law_industry_banned
 	}
@@ -113,14 +119,13 @@ pm_assembly_lines_building_golem_workshop = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_tools_add = 5
 			goods_input_oil_add = 5
 			goods_input_electricity_add = 5
 		}
 
 		level_scaled = {
-			building_employment_laborers_add = -2000
-			building_employment_mages_add = -1000
+			building_employment_laborers_add = -1500
+            building_employment_machinists_add = -1000
 		}
 	}
 
