@@ -93,9 +93,8 @@ gate_vampire_ruler_template = {
 gate_expedition_leader_template = {
 	ideology = ideology_magic_hopeful
 
-	#TODO: Create custom trait for expedition leaders
 	traits = {
-		gate_magic_researcher
+        gate_expedition_leader
 	}
 
 	on_created = {
