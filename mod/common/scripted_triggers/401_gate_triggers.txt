@@ -69,20 +69,6 @@ is_dwarven_mountainous_state = {
 	}
 }
 
-has_all_ethics = {
-	AND = {
-		has_modifier = ethic_neutral
-		OR = {
-			has_modifier = ethic_war
-			has_modifier = ethic_diplomacy
-		}
-		OR = {
-			has_modifier = ethic_economy
-			has_modifier = ethic_environment
-		}
-	}
-}
-
 can_hire_magic_researcher = {
 	AND = {
 		hidden_trigger = {
