@@ -14,6 +14,7 @@ magic_ethic.1 = {
 
 	trigger = {
 		var:magic_ethics < gate_max_ethics
+        gate_ethic_has_all = no
 	}
 
 	gui_window = event_window_ethics
@@ -25,252 +26,119 @@ magic_ethic.1 = {
 	option = {
 		name = magic_ethic.1.all
 		default_option = yes
-		custom_tooltip = magic_ethic.1.all.tooltip
+        custom_tooltip = magic_ethic.1.all.tooltip
 		trigger = {
-			hidden_trigger = {
-				has_all_ethics = yes
-			}
+            gate_ethic_has_all = yes
 		}
 	}
 
-	## Neutral START
 	option = {
 		name = magic_ethic.1.neutral
 		default_option = yes
-		add_modifier = {
-			name = ethic_neutral
-		}
-		change_variable = {
-			name = magic_ethics
-			add = 1
-		}
-		trigger = {
-			hidden_trigger = {
-				NOT = {
-					has_modifier = ethic_neutral
-				}
-			}
-		}
+        gate_unlock_ethic = {
+            ethic = ethic_neutral
+        }
+        trigger = {
+            gate_ethic_can_unlock = {
+                ethic = ethic_neutral
+                opposite = ethic_neutral
+            }
+        }
 	}
-	option = {
-		name = magic_ethic.1.neutral
-		default_option = yes
-		highlighted_option = yes
-		hidden_effect = {
-			trigger_event = magic_ethic.1
-		}
-		custom_tooltip = magic_ethic.1.done.tooltip
-		trigger = {
-			has_modifier = ethic_neutral
-			hidden_trigger = {
-				has_all_ethics = no
-			}
-		}
-	}
-	## Neutral END
 
-	## War START
 	option = {
 		name = magic_ethic.1.war
-		add_modifier = {
-			name = ethic_war
-		}
-		change_variable = {
-			name = magic_ethics
-			add = 1
-		}
-		trigger = {
-			hidden_trigger = {
-				NOT = {
-					has_modifier = ethic_war
-				}
-				NOT = {
-					has_modifier = ethic_diplomacy
-				}
-				has_all_ethics = no
-			}
-		}
+        gate_unlock_ethic = {
+            ethic = ethic_war
+        }
+        show_as_unavailable = {
+            always = yes
+        }
+        trigger = {
+            gate_ethic_can_unlock = {
+                ethic = ethic_war
+                opposite = ethic_diplomacy
+            }
+        }
 	}
-	option = {
-		name = magic_ethic.1.war
-		highlighted_option = yes
-		hidden_effect = {
-			trigger_event = magic_ethic.1
-		}
-		custom_tooltip = magic_ethic.1.done.tooltip
-		trigger = {
-			has_modifier = ethic_war
-			hidden_trigger = {
-				has_all_ethics = no
-			}
-		}
-	}
-	option = {
-		name = magic_ethic.1.forbidden
-		highlighted_option = yes
-		hidden_effect = {
-			trigger_event = magic_ethic.1
-		}
-		custom_tooltip = magic_ethic.1.forbidden.tooltip
-		trigger = {
-			has_modifier = ethic_diplomacy
-			hidden_trigger = {
-				has_all_ethics = no
-			}
-		}
-	}
-	## War END
 
-	## Diplomacy START
 	option = {
 		name = magic_ethic.1.diplomacy
-		add_modifier = {
-			name = ethic_diplomacy
-		}
-		change_variable = {
-			name = magic_ethics
-			add = 1
-		}
-		trigger = {
-			hidden_trigger = {
-				NOT = {
-					has_modifier = ethic_war
-				}
-				NOT = {
-					has_modifier = ethic_diplomacy
-				}
-				has_all_ethics = no
-			}
-		}
+        gate_unlock_ethic = {
+            ethic = ethic_diplomacy
+        }
+        show_as_unavailable = {
+            always = yes
+        }
+        trigger = {
+            gate_ethic_can_unlock = {
+                ethic = ethic_diplomacy
+                opposite = ethic_war
+            }
+        }
 	}
-	option = {
-		name = magic_ethic.1.diplomacy
-		highlighted_option = yes
-		hidden_effect = {
-			trigger_event = magic_ethic.1
-		}
-		custom_tooltip = magic_ethic.1.done.tooltip
-		trigger = {
-			has_modifier = ethic_diplomacy
-			hidden_trigger = {
-				has_all_ethics = no
-			}
-		}
-	}
-	option = {
-		name = magic_ethic.1.forbidden
-		hidden_effect = {
-			trigger_event = magic_ethic.1
-		}
-		custom_tooltip = magic_ethic.1.forbidden.tooltip
-		trigger = {
-			has_modifier = ethic_war
-			hidden_trigger = {
-				has_all_ethics = no
-			}
-		}
-	}
-	## Diplomacy END
 
-	## Economy START
 	option = {
 		name = magic_ethic.1.economy
-		add_modifier = {
-			name = ethic_economy
-		}
-		change_variable = {
-			name = magic_ethics
-			add = 1
-		}
-		trigger = {
-			hidden_trigger = {
-				NOT = {
-					has_modifier = ethic_economy
-				}
-				NOT = {
-					has_modifier = ethic_environment
-				}
-				has_all_ethics = no
-			}
-		}
+        gate_unlock_ethic = {
+            ethic = ethic_economy
+        }
+        show_as_unavailable = {
+            always = yes
+        }
+        trigger = {
+            gate_ethic_can_unlock = {
+                ethic = ethic_economy
+                opposite = ethic_environment
+            }
+        }
 	}
-	option = {
-		name = magic_ethic.1.economy
-		highlighted_option = yes
-		hidden_effect = {
-			trigger_event = magic_ethic.1
-		}
-		custom_tooltip = magic_ethic.1.done.tooltip
-		trigger = {
-			has_modifier = ethic_economy
-			hidden_trigger = {
-				has_all_ethics = no
-			}
-		}
-	}
-	option = {
-		name = magic_ethic.1.forbidden
-		hidden_effect = {
-			trigger_event = magic_ethic.1
-		}
-		custom_tooltip = magic_ethic.1.forbidden.tooltip
-		trigger = {
-			has_modifier = ethic_environment
-			hidden_trigger = {
-				has_all_ethics = no
-			}
-		}
-	}
-	## Economy END
 
-	## Environment START
 	option = {
 		name = magic_ethic.1.environment
-		add_modifier = {
-			name = ethic_environment
-		}
-		change_variable = {
-			name = magic_ethics
-			add = 1
-		}
-		trigger = {
-			hidden_trigger = {
-				NOT = {
-					has_modifier = ethic_environment
-				}
-				NOT = {
-					has_modifier = ethic_economy
-				}
-				has_all_ethics = no
-			}
-		}
+        gate_unlock_ethic = {
+            ethic = ethic_environment
+        }
+        show_as_unavailable = {
+            always = yes
+        }
+        trigger = {
+            gate_ethic_can_unlock = {
+                ethic = ethic_environment
+                opposite = ethic_economy
+            }
+        }
 	}
-	option = {
-		name = magic_ethic.1.environment
-		highlighted_option = yes
-		hidden_effect = {
-			trigger_event = magic_ethic.1
-		}
-		custom_tooltip = magic_ethic.1.done.tooltip
-		trigger = {
-			hidden_trigger = {
-				has_modifier = ethic_environment
-				has_all_ethics = no
-			}
-		}
-	}
-	option = {
-		name = magic_ethic.1.forbidden
-		hidden_effect = {
-			trigger_event = magic_ethic.1
-		}
-		custom_tooltip = magic_ethic.1.forbidden.tooltip
-		trigger = {
-			has_modifier = ethic_economy
-			hidden_trigger = {
-				has_all_ethics = no
-			}
-		}
-	}
-	## Environment END
+
+    option = {
+        name = magic_ethic.1.harmony
+        gate_unlock_ethic = {
+            ethic = ethic_harmony
+        }
+        show_as_unavailable = {
+            always = yes
+        }
+        trigger = {
+            gate_ethic_can_unlock = {
+                ethic = ethic_harmony
+                opposite = ethic_discord
+            }
+        }
+    }
+
+    option = {
+        name = magic_ethic.1.discord
+        gate_unlock_ethic = {
+            ethic = ethic_discord
+        }
+        show_as_unavailable = {
+            always = yes
+        }
+        trigger = {
+            gate_ethic_can_unlock = {
+                ethic = ethic_discord
+                opposite = ethic_harmony
+            }
+        }
+    }
 }

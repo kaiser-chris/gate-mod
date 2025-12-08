@@ -1,0 +1,30 @@
+﻿gate_ethic_has_all = {
+    custom_description = {
+        text = gate_has_magic_researcher
+        subject = this
+
+        has_modifier = ethic_neutral
+        OR = {
+            has_modifier = ethic_war
+            has_modifier = ethic_diplomacy
+        }
+        OR = {
+            has_modifier = ethic_economy
+            has_modifier = ethic_environment
+        }
+        OR = {
+            has_modifier = ethic_harmony
+            has_modifier = ethic_discord
+        }
+    }
+}
+
+gate_ethic_can_unlock = {
+    hidden_trigger = {
+        NOR = {
+            has_modifier = $ethic$
+            has_modifier = $opposite$
+        }
+        gate_ethic_has_all = no
+    }
+}
