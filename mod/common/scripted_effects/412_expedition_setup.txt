@@ -15,7 +15,7 @@ gate_setup_expedition_locations = {
 		struct_scope = location_gate
 		struct_type = gate_expedition_location
 	}
-	scope:location_gate = {
+	scope:location_gate ?= {
 		set_variable = {
 			name = name
 			value = flag:expedition_location_gate_name
@@ -39,7 +39,7 @@ gate_setup_expedition_locations = {
 		struct_scope = location_village
 		struct_type = gate_expedition_location
 	}
-	scope:location_village = {
+	scope:location_village ?= {
 		set_variable = {
 			name = name
 			value = flag:expedition_location_village_name
@@ -75,7 +75,7 @@ gate_setup_expedition_locations = {
 		struct_scope = location_town
 		struct_type = gate_expedition_location
 	}
-	scope:location_town = {
+	scope:location_town ?= {
 		set_variable = {
 			name = name
 			value = flag:expedition_location_town_name
@@ -111,7 +111,7 @@ gate_setup_expedition_locations = {
 		struct_scope = location_castle
 		struct_type = gate_expedition_location
 	}
-	scope:location_castle = {
+	scope:location_castle ?= {
 		set_variable = {
 			name = name
 			value = flag:expedition_location_castle_name
@@ -156,7 +156,7 @@ gate_setup_expedition_interactions = {
 		struct_scope = interaction_home
 		struct_type = gate_expedition_interaction
 	}
-	scope:interaction_home = {
+	scope:interaction_home ?= {
 		set_variable = {
 			name = text
 			value = flag:gate_expedition_interaction_home
@@ -184,7 +184,7 @@ gate_setup_expedition_interactions = {
 		struct_scope = interaction_explore
 		struct_type = gate_expedition_interaction
 	}
-	scope:interaction_explore = {
+	scope:interaction_explore ?= {
 		set_variable = {
 			name = text
 			value = flag:gate_expedition_interaction_explore
@@ -212,7 +212,7 @@ gate_setup_expedition_interactions = {
 		struct_scope = interaction_contact
 		struct_type = gate_expedition_interaction
 	}
-	scope:interaction_contact = {
+	scope:interaction_contact ?= {
 		set_variable = {
 			name = text
 			value = flag:gate_expedition_interaction_contact
@@ -240,7 +240,7 @@ gate_setup_expedition_interactions = {
 		struct_scope = interaction_conquer
 		struct_type = gate_expedition_interaction
 	}
-	scope:interaction_conquer = {
+	scope:interaction_conquer ?= {
 		set_variable = {
 			name = text
 			value = flag:gate_expedition_interaction_conquer
@@ -268,7 +268,7 @@ gate_setup_expedition_interactions = {
 		struct_scope = interaction_raid
 		struct_type = gate_expedition_interaction
 	}
-	scope:interaction_raid = {
+	scope:interaction_raid ?= {
 		set_variable = {
 			name = text
 			value = flag:gate_expedition_interaction_raid
@@ -296,7 +296,7 @@ gate_setup_expedition_interactions = {
 		struct_scope = interaction_trade
 		struct_type = gate_expedition_interaction
 	}
-	scope:interaction_trade = {
+	scope:interaction_trade ?= {
 		set_variable = {
 			name = text
 			value = flag:gate_expedition_interaction_trade
@@ -358,7 +358,7 @@ gate_setup_expedition_create_location = {
 		struct_scope = location_$location_id$
 		struct_type = gate_expedition_state_location
 	}
-	scope:location_$location_id$ = {
+	scope:location_$location_id$ ?= {
 		set_variable = {
 			name = id
 			value = $location_id$
@@ -376,7 +376,7 @@ gate_setup_expedition_create_location = {
 			value = $location_y$
 		}
 	}
-	scope:$expedition$ = {
+	scope:$expedition$ ?= {
 		var:state_$state_id$ = {
 			add_to_variable_list = {
 				name = locations
@@ -396,7 +396,7 @@ gate_setup_expedition_reytu = {
 		name = gate_expedition_reytu
 		value = scope:gate_reytu
 	}
-	scope:gate_reytu = {
+	scope:gate_reytu ?= {
 		every_state = {
 			limit = {
 				has_building = building_gate_alxa

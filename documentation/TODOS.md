@@ -19,9 +19,8 @@ Below is a table with all currently open ToDos.
 
 | File | Line | ToDo |
 | ---- | ---- | ---- |
-| ./mod/common/alert_types/401_gate_debug_alert_types.txt | 7 |  Remove this debug check for expedition_alert |
-| ./mod/common/character_templates/400_gate_characters.txt | 96 |  Create custom trait for expedition leaders |
 | ./mod/common/country_definitions/400_gate_countries.txt | 89 |  Define color for bear nation |
+| ./mod/common/laws/402_samadore.txt | 25 |  Adjust this |
 | ./mod/common/production_method_groups/401_gate_production_method_groups.txt | 42 |  Add Gnome help pm |
 | ./mod/common/production_method_groups/401_gate_production_method_groups.txt | 53 |  Add Bear help pm |
 | ./mod/common/production_method_groups/401_gate_production_method_groups.txt | 64 |  Add Dwarven help pm |
