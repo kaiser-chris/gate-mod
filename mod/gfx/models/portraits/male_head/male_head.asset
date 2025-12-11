@@ -274,28 +274,24 @@ pdxmesh = {
 		#### Generals VS screen ####
 	
 	
-		animation = { id = "head_General_VS_Left_Saber"						type = "male_head_General_VS_Left_Saber.anim" }		
+		animation = { id = "head_general_vs_left_saber"						type = "male_head_general_vs_left_saber.anim" }
 			
-		animation = { id = "head_General_VS_Left_Point"						type = "male_head_General_VS_Left_Point.anim" }	
+		animation = { id = "head_general_vs_left_napoleon"					type = "male_head_general_vs_left_napoleon.anim" }
 
-		animation = { id = "head_General_VS_Left_Fist"						type = "male_head_General_VS_Left_Fist.anim" }	
-	
-		animation = { id = "head_General_VS_Left_Cross"						type = "male_head_General_VS_Left_Cross.anim" }	
-		
-		animation = { id = "head_General_VS_Left_HandsHips"					type = "male_head_General_VS_Left_HandsHips.anim" }	
-		
+		animation = { id = "head_general_vs_left_rider"						type = "male_head_general_vs_left_rider.anim" }
+
+		animation = { id = "head_general_vs_left_caneback"					type = "male_head_general_vs_left_caneback.anim" }
+
 		
 		
-		animation = { id = "head_General_VS_Right_Saber"					type = "male_head_General_VS_Right_Saber.anim" }			
+		animation = { id = "head_general_vs_right_saber"					type = "male_head_general_vs_right_saber.anim" }
 			
-		animation = { id = "head_General_VS_Right_Point"					type = "male_head_General_VS_Right_Point.anim" }	
-		
-		animation = { id = "head_General_VS_Right_Fist"					type = "male_head_General_VS_Right_Fist.anim" }
-	
-		animation = { id = "head_General_VS_Right_Cross"					type = "male_head_General_VS_Right_Cross.anim" }	
-	
-		animation = { id = "head_General_VS_Right_HandsHips"				type = "male_head_General_VS_Right_HandsHips.anim" }	
-	
+		animation = { id = "head_general_vs_right_napoleon"					type = "male_head_general_vs_right_napoleon.anim" }
+
+		animation = { id = "head_general_vs_right_rider"					type = "male_head_general_vs_right_rider.anim" }
+
+		animation = { id = "head_general_vs_right_caneback"					type = "male_head_general_vs_right_caneback.anim" }
+
 
 	#### General Emotions Animations ####
 
@@ -635,28 +631,23 @@ entity = {
 						#### Generals VS screen ####
 		
 		
-	state = {	name = "idle_head_General_VS_Left_Saber"				animation = "head_General_VS_Left_Saber" chance = 10 looping = yes  }
+	state = {	name = "idle_head_general_vs_left_saber"				animation = "head_general_vs_left_saber" chance = 10 looping = yes  }
 
-	state = {	name = "idle_head_General_VS_Left_Point"				animation = "head_General_VS_Left_Point" chance = 10 looping = yes  }		
+	state = {	name = "idle_head_general_vs_left_napoleon"				animation = "head_general_vs_left_napoleon" chance = 10 looping = yes  }
 
-	state = {	name = "idle_head_General_VS_Left_Fist"					animation = "head_General_VS_Left_Fist" chance = 10 looping = yes  }	
-	
-	state = {	name = "idle_head_General_VS_Left_Cross"				animation = "head_General_VS_Left_Cross" chance = 10 looping = yes  }		
-	
-	state = {	name = "idle_head_General_VS_Left_HandsHips"			animation = "head_General_VS_Left_HandsHips" chance = 10 looping = yes  }	
+	state = {	name = "idle_head_general_vs_left_rider"				animation = "head_general_vs_left_rider" chance = 10 looping = yes  }
+
+	state = {	name = "idle_head_general_vs_left_caneback"				animation = "head_general_vs_left_caneback" chance = 10 looping = yes  }
 	
 	
 			
-	state = {	name = "idle_head_General_VS_Right_Saber"				animation = "head_General_VS_Right_Saber" chance = 10 looping = yes  }
+	state = {	name = "idle_head_general_vs_right_saber"				animation = "head_general_vs_right_saber" chance = 10 looping = yes  }
 	
-	state = {	name = "idle_head_General_VS_Right_Point"				animation = "head_General_VS_Right_Point" chance = 10 looping = yes  }	
-	
-	state = {	name = "idle_head_General_VS_Right_Fist"				animation = "head_General_VS_Right_Fist" chance = 10 looping = yes  }
-	
-	state = {	name = "idle_head_General_VS_Right_Cross"				animation = "head_General_VS_Right_Cross" chance = 10 looping = yes  }	
-	
-	state = {	name = "idle_head_General_VS_Right_HandsHips"			animation = "head_General_VS_Right_HandsHips" chance = 10 looping = yes  }	
-	
+	state = {	name = "idle_head_general_vs_right_napoleon"			animation = "head_general_vs_right_napoleon" chance = 10 looping = yes  }
+
+	state = {	name = "idle_head_general_vs_right_rider"				animation = "head_general_vs_right_rider" chance = 10 looping = yes  }
+
+	state = {	name = "idle_head_general_vs_right_caneback"			animation = "head_general_vs_right_caneback" chance = 10 looping = yes  }
 
 	#### General Emotions States ####
 

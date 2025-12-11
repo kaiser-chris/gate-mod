@@ -65,7 +65,7 @@ GLOBAL = {
 	s:STATE_YUCATAN = {
 		add_to_variable_list = {
 			name = mana_propogation_states
-			target = s:STATE_CUBA
+			target = s:STATE_WESTERN_CUBA
 		}
 		add_to_variable_list = {
 			name = mana_propogation_states
@@ -126,7 +126,7 @@ GLOBAL = {
 		}
 	}
 
-	s:STATE_CUBA = {
+	s:STATE_WESTERN_CUBA = {
 		add_to_variable_list = {
 			name = mana_propogation_states
 			target = s:STATE_BAHAMAS
@@ -135,11 +135,14 @@ GLOBAL = {
 			name = mana_propogation_states
 			target = s:STATE_FLORIDA
 		}
-		add_to_variable_list = {
-			name = mana_propogation_states
-			target = s:STATE_HAITI
-		}
 	}
+
+    s:STATE_EASTERN_CUBA = {
+        add_to_variable_list = {
+            name = mana_propogation_states
+            target = s:STATE_HAITI
+        }
+    }
 
     s:STATE_WEST_INDIES = {
         add_to_variable_list = {
@@ -197,7 +200,7 @@ GLOBAL = {
 	s:STATE_VALENCIA = {
 		add_to_variable_list = {
 			name = mana_propogation_states
-			target = s:STATE_BALEARES
+			target = s:STATE_BALEARIC_ISLANDS
 		}
 	}
 

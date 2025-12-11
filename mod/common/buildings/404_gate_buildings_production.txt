@@ -26,6 +26,7 @@
 	production_method_groups = {
 		pmg_mana_extraction
 	}
+
 	ai_value = {
 		# Mana Extractors are important
 		value = 2000
@@ -149,6 +150,46 @@ building_golem_depot = {
 	}
 
 	required_construction = construction_cost_very_high
+
+    ai_value = {
+        value = 1000
+
+        if = {
+            # The capital is important
+            limit = {
+                OR = {
+                    this = owner.capital
+                    this = owner.market_capital
+                }
+            }
+            multiply = 3
+        }
+        else_if = {
+            # High End Infrastructure
+            # Limited to the homeland
+            limit = {
+                is_incorporated = no
+            }
+            divide = 2
+        }
+
+        if = {
+            # Very helpful to boost resource industries
+            limit = {
+                OR = {
+                    AND = {
+                        arable_land > 50
+                        free_arable_land < 10
+                    }
+                    any_scope_building = {
+                        is_building_group = bg_extraction
+                        count > 50
+                    }
+                }
+            }
+            multiply = 5
+        }
+    }
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_gate_magic.dds"
 }

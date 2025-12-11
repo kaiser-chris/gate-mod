@@ -118,7 +118,7 @@ pdxmesh = {
 	
 		#### Pop Staving-Struggle Animations ####
 	
-	animation = { id = "body_struggle_saber"					type = "female_body_struggle_saber_idle.anim" }
+		animation = { id = "body_struggle_saber"					type = "female_body_struggle_saber_idle.anim" }
 
 	animation = { id = "body_struggle_holyscripture"				type = "female_body_struggle_holyscripture_idle.anim" }
 	
@@ -166,26 +166,26 @@ pdxmesh = {
 	
 	
 	
-	animation = { id = "body_General_VS_Left_Saber"					type = "female_body_General_VS_Left_Saber.anim" }			
+	animation = { id = "body_general_vs_left_saber"					type = "female_body_general_vs_left_saber.anim" }
 		
-	animation = { id = "body_General_VS_Left_Point"					type = "female_body_General_VS_Left_Point.anim" }			
+	animation = { id = "body_general_vs_left_point"					type = "female_body_general_vs_left_point.anim" }
 			
-	animation = { id = "body_General_VS_Left_Fist"					type = "female_body_General_VS_Left_Fist.anim" }			
+	animation = { id = "body_general_vs_left_fist"					type = "female_body_general_vs_left_fist.anim" }
 	
-	animation = { id = "body_General_VS_Left_Cross"					type = "female_body_General_VS_Left_Cross.anim" }				
+	animation = { id = "body_general_vs_left_cross"					type = "female_body_general_vs_left_cross.anim" }
 	
-	animation = { id = "body_General_VS_Left_HandsHips"				type = "female_body_General_VS_Left_HandsHips.anim" }	
+	animation = { id = "body_general_vs_left_handships"				type = "female_body_general_vs_left_handships.anim" }
 	
 	
-	animation = { id = "body_General_VS_Right_Saber"					type = "female_body_General_VS_Right_Saber.anim" }			
+	animation = { id = "body_general_vs_right_saber"				type = "female_body_general_vs_right_saber.anim" }
 		
-	animation = { id = "body_General_VS_Right_Point"					type = "female_body_General_VS_Right_Point.anim" }			
+	animation = { id = "body_general_vs_right_point"				type = "female_body_general_vs_right_point.anim" }
 			
-		animation = { id = "body_General_VS_Right_Fist"					type = "female_body_General_VS_Right_Fist.anim" }	
+	animation = { id = "body_general_vs_right_fist"					type = "female_body_general_vs_right_fist.anim" }
 	
-	animation = { id = "body_General_VS_Right_Cross"					type = "female_body_General_VS_Right_Cross.anim" }				
+	animation = { id = "body_general_vs_right_cross"				type = "female_body_general_vs_right_cross.anim" }
 	
-	animation = { id = "body_General_VS_Right_HandsHips"				type = "female_body_General_VS_Right_HandsHips.anim" }	
+	animation = { id = "body_general_vs_right_handships"			type = "female_body_general_vs_right_handships.anim" }
 	
 
 	#### General Emotions Animations ####
@@ -238,12 +238,14 @@ entity = {
 	attribute = { name = "body_bs_bust_size_min"					blend_shape = "female_body_bs_bust_size_min" }
 	attribute = { name = "body_bs_thin"					blend_shape = "female_body_bs_thin" }
 	attribute = { name = "body_bs_thick"					blend_shape = "female_body_bs_thick" }
-	attribute = { name = "body_bs_shrink_arms"					blend_shape = "female_body_bs_shrink_arms" }
-	attribute = { name = "body_bs_shrink_legs"					blend_shape = "female_body_bs_shrink_legs" }
-	attribute = { name = "body_bs_shrink_chest"					blend_shape = "female_body_bs_shrink_chest" }
-	attribute = { name = "body_bs_shrink_belly"					blend_shape = "female_body_bs_shrink_belly" }
-	attribute = { name = "body_bs_no_portrait"					blend_shape = "female_body_bs_no_portrait" }
-	
+		attribute = { name = "body_bs_shrink_arms"					blend_shape = "female_body_bs_shrink_arms" }
+		attribute = { name = "body_bs_shrink_legs"					blend_shape = "female_body_bs_shrink_legs" }
+		attribute = { name = "body_bs_shrink_chest"					blend_shape = "female_body_bs_shrink_chest" }
+		attribute = { name = "body_bs_shrink_belly"					blend_shape = "female_body_bs_shrink_belly" }
+
+    attribute = { name = "body_bs_no_portrait"					blend_shape = "female_body_bs_no_portrait" }
+
+
 	#### Animations ####
 
     default_state = "none"
@@ -388,30 +390,30 @@ entity = {
 	
 	#### Generals VS screen ####
 
-	state = {	name = "idle_body_General_VS_Left_Saber"				animation = "body_General_VS_Left_Saber" chance = 10 looping = yes  }		
+	state = {	name = "idle_body_general_vs_left_saber"				animation = "body_general_vs_left_saber" chance = 10 looping = yes  }
 	
-	state = {	name = "idle_body_General_VS_Left_Point"				animation = "body_General_VS_Left_Point" chance = 10 looping = yes  }		
+	state = {	name = "idle_body_general_vs_left_point"				animation = "body_general_vs_left_point" chance = 10 looping = yes  }
 	
-	state = {	name = "idle_body_General_VS_Left_Fist"					animation = "body_General_VS_Left_Fist" chance = 10 looping = yes  }			
+	state = {	name = "idle_body_general_vs_left_fist"					animation = "body_general_vs_left_fist" chance = 10 looping = yes  }
 	
-	state = {	name = "idle_body_General_VS_Left_Cross"				animation = "body_General_VS_Left_Cross" chance = 10 looping = yes  }		
+	state = {	name = "idle_body_general_vs_left_cross"				animation = "body_general_vs_left_cross" chance = 10 looping = yes  }
 
-	state = {	name = "idle_body_General_VS_Left_HandsHips"			animation = "body_General_VS_Left_HandsHips" chance = 10 looping = yes  }	
-
-
+	state = {	name = "idle_body_general_vs_left_handships"			animation = "body_general_vs_left_handships" chance = 10 looping = yes  }
 
 
-	
-	
-	state = {	name = "idle_body_General_VS_Right_Saber"				animation = "body_General_VS_Right_Saber" chance = 10 looping = yes  }		
-	
-	state = {	name = "idle_body_General_VS_Right_Point"				animation = "body_General_VS_Right_Point" chance = 10 looping = yes  }		
-	
-	state = {	name = "idle_body_General_VS_Right_Fist"				animation = "body_General_VS_Right_Fist" chance = 10 looping = yes  }			
-	
-	state = {	name = "idle_body_General_VS_Right_Cross"				animation = "body_General_VS_Right_Cross" chance = 10 looping = yes  }		
 
-	state = {	name = "idle_body_General_VS_Right_HandsHips"			animation = "body_General_VS_Right_HandsHips" chance = 10 looping = yes  }	
+
+	
+	
+	state = {	name = "idle_body_general_vs_right_saber"				animation = "body_general_vs_right_saber" chance = 10 looping = yes  }
+	
+	state = {	name = "idle_body_general_vs_right_point"				animation = "body_general_vs_right_point" chance = 10 looping = yes  }
+	
+	state = {	name = "idle_body_general_vs_right_fist"				animation = "body_general_vs_right_fist" chance = 10 looping = yes  }
+	
+	state = {	name = "idle_body_general_vs_right_cross"				animation = "body_general_vs_right_cross" chance = 10 looping = yes  }
+
+	state = {	name = "idle_body_general_vs_right_handships"			animation = "body_general_vs_right_handships" chance = 10 looping = yes  }
 
 
 

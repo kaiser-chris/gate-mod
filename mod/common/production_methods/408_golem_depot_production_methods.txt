@@ -8,7 +8,7 @@ pm_golem_depot_plantation_normal_golems = {
 
 	state_modifiers = {
 		workforce_scaled = {
-			building_group_bg_plantations_throughput_add = 0.1
+			building_group_bg_plantations_throughput_add = 0.15
 		}
 	}
 
@@ -20,7 +20,7 @@ pm_golem_depot_plantation_normal_golems = {
 		workforce_scaled = {
 			# input goods
 			goods_input_golem_add = 20
-			goods_input_mana_core_add = 20
+			goods_input_mana_core_add = 10
 
 			# output goods
 			goods_output_services_add = 5
@@ -28,9 +28,9 @@ pm_golem_depot_plantation_normal_golems = {
 		}
 
 		level_scaled = {
-			building_employment_mages_add = 2000
-			building_employment_machinists_add = 2000
-			building_employment_clerks_add = 750
+			building_employment_mages_add = 1000
+			building_employment_machinists_add = 1000
+			building_employment_clerks_add = 500
 		}
 	}
 }
@@ -45,7 +45,7 @@ pm_golem_depot_agriculture_normal_golems = {
 
 	state_modifiers = {
 		workforce_scaled = {
-			building_group_bg_agriculture_throughput_add = 0.1
+			building_group_bg_agriculture_throughput_add = 0.15
 		}
 	}
 
@@ -55,19 +55,19 @@ pm_golem_depot_agriculture_normal_golems = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			# input goods
-			goods_input_golem_add = 20
-			goods_input_mana_core_add = 20
+            # input goods
+            goods_input_golem_add = 20
+            goods_input_mana_core_add = 10
 
-			# output goods
-			goods_output_services_add = 5
-			goods_output_transportation_add = 10
+            # output goods
+            goods_output_services_add = 5
+            goods_output_transportation_add = 10
 		}
 
 		level_scaled = {
-			building_employment_mages_add = 2000
-			building_employment_machinists_add = 2000
-			building_employment_clerks_add = 750
+            building_employment_mages_add = 1000
+            building_employment_machinists_add = 1000
+            building_employment_clerks_add = 500
 		}
 	}
 }
@@ -82,7 +82,7 @@ pm_golem_depot_mining_normal_golems = {
 
 	state_modifiers = {
 		workforce_scaled = {
-			building_group_bg_mining_throughput_add = 0.1
+			building_group_bg_mining_throughput_add = 0.15
 		}
 	}
 
@@ -92,19 +92,19 @@ pm_golem_depot_mining_normal_golems = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			# input goods
-			goods_input_golem_add = 20
-			goods_input_mana_core_add = 20
+            # input goods
+            goods_input_golem_add = 20
+            goods_input_mana_core_add = 10
 
-			# output goods
-			goods_output_services_add = 5
-			goods_output_transportation_add = 10
+            # output goods
+            goods_output_services_add = 5
+            goods_output_transportation_add = 10
 		}
 
 		level_scaled = {
-			building_employment_mages_add = 2000
-			building_employment_machinists_add = 2000
-			building_employment_clerks_add = 750
+            building_employment_mages_add = 1000
+            building_employment_machinists_add = 1000
+            building_employment_clerks_add = 500
 		}
 	}
 }

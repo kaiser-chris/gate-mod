@@ -11,90 +11,12 @@
         add_technology_researched = gate_magic_understanding_production
         add_technology_researched = magic_understanding_society
         add_technology_researched = magic_understanding_military
-        add_gate_ideologies = yes
     }
     custom_tooltip = {
         text = add_magic_ethic_tooltip
         trigger_event = {
             id = magic_ethic.1
             popup = yes
-        }
-    }
-}
-
-add_gate_ideologies = {
-    every_interest_group = {
-        if = {
-            limit = {
-                NOT = {
-                    has_ideology = ideology:ideology_gate_intelligentsia
-                }
-                is_interest_group_type = ig_intelligentsia
-            }
-            add_ideology = ideology_gate_intelligentsia
-        }
-        if = {
-            limit = {
-                NOT = {
-                    has_ideology = ideology:ideology_gate_landowners
-                }
-                is_interest_group_type = ig_landowners
-            }
-            add_ideology = ideology_gate_landowners
-        }
-        if = {
-            limit = {
-                NOT = {
-                    has_ideology = ideology:ideology_gate_devout
-                }
-                is_interest_group_type = ig_devout
-            }
-            add_ideology = ideology_gate_devout
-        }
-        if = {
-            limit = {
-                NOT = {
-                    has_ideology = ideology:ideology_gate_industrialists
-                }
-                is_interest_group_type = ig_industrialists
-            }
-            add_ideology = ideology_gate_industrialists
-        }
-        if = {
-            limit = {
-                NOT = {
-                    has_ideology = ideology:ideology_gate_petty_bourgeoisie
-                }
-                is_interest_group_type = ig_petty_bourgeoisie
-            }
-            add_ideology = ideology_gate_petty_bourgeoisie
-        }
-        if = {
-            limit = {
-                NOT = {
-                    has_ideology = ideology:ideology_gate_trade_unions
-                }
-                is_interest_group_type = ig_trade_unions
-            }
-            add_ideology = ideology_gate_trade_unions
-        }
-        if = {
-            limit = {
-                NOT = {
-                    has_ideology = ideology:ideology_gate_rural_folk
-                }
-                is_interest_group_type = ig_rural_folk
-            }
-            add_ideology = ideology_gate_rural_folk
-        }
-        if = {
-            limit = {
-                NOT = {
-                    has_ideology = ideology:ideology_gate_armed_forces
-                }
-                is_interest_group_type = ig_armed_forces
-            }
-            add_ideology = ideology_gate_armed_forces
         }
     }
 }

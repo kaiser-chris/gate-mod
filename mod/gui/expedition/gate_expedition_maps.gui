@@ -1,0 +1,115 @@
+types gate_expedition_panel_types {
+
+    type gate_map_container = zoomarea {
+        name = gate_map_container
+        visible = "[Country.MakeScope.Var('gate_expedition').IsSet]"
+        allow_outside = yes
+        size = { 100% 100% }
+
+        state = {
+            name = "_zoom_changed"
+            duration = 0.15
+        }
+        scissor = yes
+
+        zoom = 0.15
+        zoom_step = 0.25
+        zoom_min = 0.15
+        zoom_max = 1.5
+        draggable_by = left # Do not add 'middle' click here, otherwise you will re-introduce PRCAL-16945
+
+        zoomwidget = {
+            container = {
+                gate_expedition_reytu = {}
+            }
+        }
+    }
+
+    type gate_expedition_reytu = widget {
+        name = gate_expedition_reytu
+        visible = "[GetScriptedGui('sgui_gate_map_equals').IsShown(GuiScope
+                        .SetRoot(Country.MakeScope)
+                        .AddScope('potential_location', GetGlobalVariable('gate_expedition_reytu').GetCharacter.MakeScope)
+                        .End
+                   )]"
+        datacontext = "[GetGlobalVariable('gate_expedition_reytu').GetCharacter]"
+        parentanchor = top|left
+        size = { 10000 5620 }
+        background = {
+            texture = gfx/map/ankaris/reytu/base.dds
+            spriteType = Corneredstretched
+        }
+
+        gate_state = {
+            datacontext = "[Character.MakeScope.Var('state_1')]"
+            blockoverride state_mask_hidden {
+                texture = gfx/map/ankaris/reytu/state_mask_01_hidden.dds
+            }
+        }
+
+        gate_state = {
+            datacontext = "[Character.MakeScope.Var('state_2')]"
+            blockoverride state_mask_hidden {
+                texture = gfx/map/ankaris/reytu/state_mask_02_hidden.dds
+            }
+        }
+
+        gate_state = {
+            datacontext = "[Character.MakeScope.Var('state_3')]"
+            blockoverride state_mask_hidden {
+                texture = gfx/map/ankaris/reytu/state_mask_03_hidden.dds
+            }
+        }
+
+        gate_state = {
+            datacontext = "[Character.MakeScope.Var('state_4')]"
+            blockoverride state_mask_hidden {
+                texture = gfx/map/ankaris/reytu/state_mask_04_hidden.dds
+            }
+        }
+
+        gate_state = {
+            datacontext = "[Character.MakeScope.Var('state_5')]"
+            blockoverride state_mask_hidden {
+                texture = gfx/map/ankaris/reytu/state_mask_05_hidden.dds
+            }
+        }
+
+        gate_state = {
+            datacontext = "[Character.MakeScope.Var('state_7')]"
+            blockoverride state_mask_hidden {
+                texture = gfx/map/ankaris/reytu/state_mask_07_hidden.dds
+            }
+        }
+
+        gate_state = {
+            datacontext = "[Character.MakeScope.Var('state_8')]"
+            blockoverride state_mask_hidden {
+                texture = gfx/map/ankaris/reytu/state_mask_08_hidden.dds
+            }
+        }
+
+        gate_state = {
+            datacontext = "[Character.MakeScope.Var('state_9')]"
+            blockoverride state_mask_hidden {
+                texture = gfx/map/ankaris/reytu/state_mask_09_hidden.dds
+            }
+        }
+
+        gate_state = {
+            datacontext = "[Character.MakeScope.Var('state_10')]"
+            blockoverride state_mask_hidden {
+                texture = gfx/map/ankaris/reytu/state_mask_10_hidden.dds
+            }
+        }
+
+        gate_state = {
+            datacontext = "[Character.MakeScope.Var('state_6')]"
+            blockoverride state_mask_hidden {
+                texture = gfx/map/ankaris/reytu/state_mask_06_hidden.dds
+            }
+        }
+
+    }
+
+}
