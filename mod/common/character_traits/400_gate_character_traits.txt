@@ -20,7 +20,10 @@
 
     possible = {
         NOT = { age < define:NCharacters|ADULT_AGE }
-        has_role = general
+        OR = {
+            has_role = general
+            has_role = admiral
+        }
         has_global_variable = global_mana_saturation
         global_var:global_mana_saturation >= 30
         has_global_variable = monster_horde_happened
@@ -52,16 +55,19 @@ gate_magic_researcher = {
 gate_expedition_leader = {
     type = personality
 
-    texture = gfx/interface/icons/character_trait_icons/innovative.dds
+    texture = gfx/interface/icons/character_trait_icons/explorer.dds
 
     # Reminder: this would only come into effect if this character is or becomes a Ruler
+    character_modifier = {
+        character_popularity_add = 25
+    }
+
     country_modifier = {
-        country_weekly_innovation_mult = 0.05
-        country_gate_magical_innovation_add = 20
+        country_prestige_add = 20
     }
 
     possible = {
-        NOT = { age < define:NCharacters|ADULT_AGE }
+        always = no
     }
 
     weight = 0

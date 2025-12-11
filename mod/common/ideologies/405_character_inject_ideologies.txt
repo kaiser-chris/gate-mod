@@ -1,0 +1,43 @@
+﻿INJECT:ideology_traditionalist = {
+    lawgroup_elven_supremacy = {
+        law_elven_supremacy_religious_preaching = strongly_approve
+        law_elven_supremacy_enforced = approve
+        law_elven_supremacy_not_enforced = disapprove
+    }
+
+    lawgroup_orcish_hegemony = {
+        law_orcish_hegemony_enforced = strongly_approve
+        law_orcish_hegemony_not_enforced = disapprove
+    }
+}
+
+INJECT:ideology_republican_leader = {
+    lawgroup_governance_principles = {
+        law_gate_vampire_monarchy = disapprove
+        law_gate_magocracy = disapprove
+    }
+}
+
+INJECT:ideology_radical = {
+    lawgroup_governance_principles = {
+        law_gate_vampire_monarchy = strongly_disapprove
+        law_gate_magocracy = strongly_disapprove
+    }
+
+    lawgroup_distribution_of_power = {
+        law_gate_arcane_council = strongly_disapprove
+    }
+}
+
+INJECT:ideology_royalist = {
+    lawgroup_governance_principles = {
+        law_gate_vampire_monarchy = strongly_approve
+        law_gate_magocracy = neutral
+    }
+}
+
+INJECT:ideology_social_democrat = {
+    lawgroup_distribution_of_power = {
+        law_gate_arcane_council = disapprove
+    }
+}

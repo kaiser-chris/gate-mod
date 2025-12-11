@@ -1,0 +1,2260 @@
+﻿@maleMin = 0.0
+@maleMax = 1.0
+@femaleMin = 0.0
+@femaleMax = 0.8
+
+@maleAnimMin = -0.5
+@maleAnimMax = 0.5
+@femaleAnimMin = -0.4
+@femaleAnimMax = 0.4
+
+@maleBsMin = -1.0
+@maleBsMax = 1.0
+@femaleBsMin = -0.8
+@femaleBsMax = 0.8
+
+@boyMin = 0.0
+@boyMax = 1.0
+@girlMin = 0.2
+@girlMax = 0.8
+
+age_presets = {
+    age_preset_child_fat_elf = {
+        mode = multiply
+        curve = {
+            { 0.0 0.2 }
+            { 0.10 0.5 }
+            { 0.18 1.0 }
+            { 0.7 1.0 }
+            { 0.95 1.0 }
+        }
+    }
+    age_preset_aging_elf = {
+        mode = add
+        curve = {
+            { 0.0 0.0 }
+            { 0.7 0.0 }
+        }
+    }
+    age_preset_eyebrows_fullness_elf = {
+        mode = multiply
+        curve = {
+            { 0.0 0.5 }
+            { 0.15 0.75 }
+            { 0.2 1.0 }
+        }
+    }
+
+    age_preset_aging_always_old_primary = {
+        mode = multiply
+        curve = {
+            { 0.0 1.0 }
+            { 0.25 1.0 }
+            { 0.35 1.0 }
+            { 0.75 1.0 }
+        }
+    }
+    age_preset_aging_hsv_curve_always_old = {
+        mode = multiply
+        curve = {
+            { 0.0 1.0 }
+            { 0.35 1.0 }
+            { 0.7 1.0 }
+            { 0.8 1.0 }
+        }
+    }
+    age_preset_aging_always_old_secondary = {
+        mode = multiply
+        curve = {
+            { 0.0 0.5 }
+            { 0.55 0.5 }
+            { 0.90 0.5 }
+        }
+    }
+
+    age_preset_infant_joints_short = {
+        mode = multiply
+        curve = {
+            { 0.0 -1.0 }
+            { 0.03 -0.6 }
+            { 0.07 -0.43 }
+            { 0.10 -0.3 }
+            { 0.15 -0.3 }
+            { 0.18 -0.3 }
+        }
+    }
+    age_preset_infant_joints_body_short = {
+        mode = multiply
+        curve = {
+            { 0.0 -1.0 }
+            { 0.03 -0.7 }
+            { 0.07 -0.45 }
+            { 0.15 -0.4 }
+            { 0.18 -0.30 }
+        }
+    }
+    age_preset_infant_joints_very_short = {
+        mode = multiply
+        curve = {
+            { 0.0 -1.0 }
+            { 0.03 -0.6 }
+            { 0.07 -0.43 }
+            { 0.10 -0.28 }
+            { 0.15 -0.34 }
+            { 0.18 -0.4 }
+        }
+    }
+    age_preset_infant_joints_body_very_short = {
+        mode = multiply
+        curve = {
+            { 0.0 -1.0 }
+            { 0.03 -0.7 }
+            { 0.07 -0.45 }
+            { 0.15 -0.4 }
+            { 0.18 -0.40 }
+        }
+    }
+
+    age_preset_child_bs_head_fat = {
+        mode = multiply
+        curve = {
+            { 0.03 0.7 }
+            { 0.05 0.6 }
+            { 0.10 0.5 }
+            { 0.20 0.25 }
+        }
+    }
+
+    age_preset_child_bs_body_fat = {
+        mode = multiply
+        curve = {
+            { 0.00 1.0 }
+            { 0.05 0.5 }
+            { 0.10 0.5 }
+            { 0.10 0.5 }
+            { 0.15 0.5 }
+        }
+    }
+
+    age_preset_aging_gauntness_always_old = {
+        mode = add
+        curve = {
+            { 0.0 0.4 }
+            { 0.7 0.4 }
+            { 0.95 0.4 }
+        }
+    }
+}
+
+morph_genes = {
+    INJECT:gene_bs_body_type = {
+        body_fat_head_fat_low_elf = {
+            index = 6
+            male = {
+                # Fat body from 0.5 to 1.0 gene value
+                setting = {
+                    # Head fat
+                    attribute = "head_bs_fat_head"
+                    # value = { min = -0.35 max = 0.35 }
+                    curve = {
+                        { 0.0 0.0 }
+                        { 0.5 0.0 }
+                        { 1.0 0.45 }
+                    }
+                    age = age_preset_child_fat_elf
+                }
+                setting = {
+                    attribute = "head_bs_fat_body"
+                    # value = { min = -0.75 max = 0.75 }
+                    curve = {
+                        { 0.0 0.0 }
+                        { 0.5 0.0 }
+                        { 1.0 0.45 }
+                    }
+                    age = age_preset_child_fat_elf
+                }
+                setting = {
+                    attribute = "body_bs_fat"
+                    # value = { min = -0.75 max = 0.75 }
+                    curve = {
+                        { 0.0 0.0 }
+                        { 0.5 0.0 }
+                        { 1.0 0.45 }
+                    }
+                    age = age_preset_child_fat_elf
+                }
+                # Gaunt body from 0.5 to 0.0 gene value
+                setting = {
+                    attribute = "head_bs_gaunt_head"
+                    # value = { min = 1.0 max = -1.5 }
+                    curve = {
+                        { 0.0 1.0 }
+                        { 0.4 0.0 }
+                        { 1.0 0.0 }
+                    }
+                    age = age_preset_aging_elf
+                }
+                setting = {
+                    attribute = "head_bs_gaunt_body"
+                    # value = { min = 1.0 max = -1.5 }
+                    curve = {
+                        { 0.0 1.0 }
+                        { 0.5 0.0 }
+                        { 1.0 0.0 }
+                    }
+                    age = age_preset_aging_elf
+                }
+                setting = {
+                    attribute = "body_bs_gaunt"
+                    # value = { min = 1.0 max = -1.5 }
+                    curve = {
+                        { 0.0 1.0 }
+                        { 0.5 0.0 }
+                        { 1.0 0.0 }
+                    }
+                    age = age_preset_aging_elf
+                }
+                # }
+            }
+            female = {
+                # Fat body from 0.5 to 1.0 gene value
+                setting = {
+                    # Head fat
+                    attribute = "head_bs_fat_head"
+                    # value = { min = -0.25 max = 0.25 }
+                    curve = {
+                        { 0.0 0.0 }
+                        { 0.5 0.0 }
+                        { 1.0 0.45 }
+                    }
+                    age = age_preset_child_fat_elf
+                }
+                setting = {
+                    attribute = "head_bs_fat_body"
+                    # value = { min = -1.0 max = 1.0 }
+                    curve = {
+                        { 0.0 0.0 }
+                        { 0.5 0.0 }
+                        { 1.0 0.45 }
+                    }
+                    age = age_preset_child_fat_elf
+                }
+                setting = {
+                    attribute = "body_bs_fat"
+                    # value = { min = -1.0 max = 1.0 }
+                    curve = {
+                        { 0.0 0.0 }
+                        { 0.5 0.0 }
+                        { 1.0 0.45 }
+                    }
+                    age = age_preset_child_fat_elf
+                }
+                # Gaunt body from 0.5 to 0.0 gene value
+                setting = {
+                    attribute = "head_bs_gaunt_head"
+                    # value = { min = 1.0 max = -1.5 }
+                    curve = {
+                        { 0.0 1.0 }
+                        { 0.4 0.0 }
+                        { 1.0 0.0 }
+                    }
+                    age = age_preset_aging_elf
+                }
+                setting = {
+                    attribute = "head_bs_gaunt_body"
+                    # value = { min = 1.0 max = -1.5 }
+                    curve = {
+                        { 0.0 1.0 }
+                        { 0.5 0.0 }
+                        { 1.0 0.0 }
+                    }
+                    age = age_preset_aging_elf
+                }
+                setting = {
+                    attribute = "body_bs_gaunt"
+                    # value = { min = 1.0 max = -1.5 }
+                    curve = {
+                        { 0.0 1.0 }
+                        { 0.5 0.0 }
+                        { 1.0 0.0 }
+                    }
+                    age = age_preset_aging_elf
+                }
+            }
+            boy = male
+            girl = female
+        }
+        body_fat_head_fat_medium_elf = {
+            index = 7
+            male = {
+                # Fat body from 0.5 to 1.0 gene value
+                setting = {
+                    # Head fat
+                    attribute = "head_bs_fat_head"
+                    # value = { min = -0.55 max = 0.55 }
+                    curve = {
+                        { 0.0 0.0 }
+                        { 0.5 0.0 }
+                        { 1.0 0.45 }
+                    }
+                    age = age_preset_child_fat_elf
+                }
+                setting = {
+                    attribute = "head_bs_fat_body"
+                    # value = { min = -1.0 max = 1.0 }
+                    curve = {
+                        { 0.0 0.0 }
+                        { 0.5 0.0 }
+                        { 1.0 0.45 }
+                    }
+                    age = age_preset_child_fat_elf
+                }
+                setting = {
+                    attribute = "body_bs_fat"
+                    # value = { min = -1.0 max = 1.0 }
+                    curve = {
+                        { 0.0 0.0 }
+                        { 0.5 0.0 }
+                        { 1.0 0.45 }
+                    }
+                    age = age_preset_child_fat_elf
+                }
+                # Gaunt body from 0.5 to 0.0 gene value
+                setting = {
+                    attribute = "head_bs_gaunt_head"
+                    # value = { min = 1.0 max = -1.5 }
+                    curve = {
+                        { 0.0 1.0 }
+                        { 0.4 0.0 }
+                        { 1.0 0.0 }
+                    }
+                    age = age_preset_aging_elf
+                }
+                setting = {
+                    attribute = "head_bs_gaunt_body"
+                    # value = { min = 1.0 max = -1.5 }
+                    curve = {
+                        { 0.0 1.0 }
+                        { 0.5 0.0 }
+                        { 1.0 0.0 }
+                    }
+                    age = age_preset_aging_elf
+                }
+                setting = {
+                    attribute = "body_bs_gaunt"
+                    # value = { min = 1.0 max = -1.5 }
+                    curve = {
+                        { 0.0 1.0 }
+                        { 0.5 0.0 }
+                        { 1.0 0.0 }
+                    }
+                    age = age_preset_aging_elf
+                }
+            }
+            female = {
+                # Fat body from 0.5 to 1.0 gene value
+                setting = {
+                    # Head fat
+                    attribute = "head_bs_fat_head"
+                    # value = { min = -0.5 max = 0.5 }
+                    curve = {
+                        { 0.0 0.0 }
+                        { 0.5 0.0 }
+                        { 1.0 0.45 }
+                    }
+                    age = age_preset_child_fat_elf
+                }
+                setting = {
+                    attribute = "head_bs_fat_body"
+                    # value = { min = -1.0 max = 1.0 }
+                    curve = {
+                        { 0.0 0.0 }
+                        { 0.5 0.0 }
+                        { 1.0 0.45 }
+                    }
+                    age = age_preset_child_fat_elf
+                }
+                setting = {
+                    attribute = "body_bs_fat"
+                    # value = { min = -1.0 max = 1.0 }
+                    curve = {
+                        { 0.0 0.0 }
+                        { 0.5 0.0 }
+                        { 1.0 0.45 }
+                    }
+                    age = age_preset_child_fat_elf
+                }
+                # Gaunt body from 0.5 to 0.0 gene value
+                setting = {
+                    attribute = "head_bs_gaunt_head"
+                    # value = { min = 1.0 max = -1.5 }
+                    curve = {
+                        { 0.0 1.0 }
+                        { 0.4 0.0 }
+                        { 1.0 0.0 }
+                    }
+                    age = age_preset_aging_elf
+                }
+                setting = {
+                    attribute = "head_bs_gaunt_body"
+                    # value = { min = 1.0 max = -1.5 }
+                    curve = {
+                        { 0.0 1.0 }
+                        { 0.5 0.0 }
+                        { 1.0 0.0 }
+                    }
+                    age = age_preset_aging_elf
+                }
+                setting = {
+                    attribute = "body_bs_gaunt"
+                    # value = { min = 1.0 max = -1.5 }
+                    curve = {
+                        { 0.0 1.0 }
+                        { 0.5 0.0 }
+                        { 1.0 0.0 }
+                    }
+                    age = age_preset_aging_elf
+                }
+            }
+            boy = male
+            girl = female
+        }
+        body_fat_head_fat_full_elf = {
+            index = 8
+            male = {
+                # Fat body from 0.5 to 1.0 gene value
+                setting = {
+                    # Head fat
+                    attribute = "head_bs_fat_head"
+                    #value = { min = -0.75 max = 0.75 }
+                    curve = {
+                        { 0.0 0.0 }
+                        { 0.5 0.0 }
+                        { 1.0 0.45 }
+                    }
+                    age = age_preset_child_fat_elf
+                }
+                setting = {
+                    attribute = "head_bs_fat_body"
+                    #value = { min = -0.75 max = 0.75 }
+                    curve = {
+                        { 0.0 0.0 }
+                        { 0.5 0.0 }
+                        { 1.0 0.45 }
+                    }
+                    age = age_preset_child_fat_elf
+                }
+                setting = {
+                    attribute = "body_bs_fat"
+                    #value = { min = -0.75 max = 0.75 }
+                    curve = {
+                        { 0.0 0.0 }
+                        { 0.5 0.0 }
+                        { 1.0 0.45 }
+                    }
+                    age = age_preset_child_fat_elf
+                }
+                # Gaunt body from 0.5 to 0.0 gene value
+                setting = {
+                    attribute = "head_bs_gaunt_head"
+                    # value = { min = 1.0 max = -1.5 }
+                    curve = {
+                        { 0.0 1.0 }
+                        { 0.4 0.0 }
+                        { 1.0 0.0 }
+                    }
+                    age = age_preset_aging_elf
+                }
+                setting = {
+                    attribute = "head_bs_gaunt_body"
+                    # value = { min = 1.0 max = -1.5 }
+                    curve = {
+                        { 0.0 1.0 }
+                        { 0.5 0.0 }
+                        { 1.0 0.0 }
+                    }
+                    age = age_preset_aging_elf
+                }
+                setting = {
+                    attribute = "body_bs_gaunt"
+                    # value = { min = 1.0 max = -1.5 }
+                    curve = {
+                        { 0.0 1.0 }
+                        { 0.5 0.0 }
+                        { 1.0 0.0 }
+                    }
+                    age = age_preset_aging_elf
+                }
+            }
+            female = {
+                # Fat body from 0.5 to 1.0 gene value
+                setting = {
+                    # Head fat
+                    attribute = "head_bs_fat_head"
+                    # value = { min = -0.85 max = 0.85 }
+                    curve = {
+                        { 0.0 0.0 }
+                        { 0.5 0.0 }
+                        { 1.0 0.45 }
+                    }
+                    age = age_preset_child_fat_elf
+                }
+                setting = {
+                    attribute = "head_bs_fat_body"
+                    # value = { min = -1.0 max = 1.0 }
+                    curve = {
+                        { 0.0 0.0 }
+                        { 0.5 0.0 }
+                        { 1.0 0.45 }
+                    }
+                    age = age_preset_child_fat_elf
+                }
+                setting = {
+                    attribute = "body_bs_fat"
+                    # value = { min = -1.0 max = 1.0 }
+                    curve = {
+                        { 0.0 0.0 }
+                        { 0.5 0.0 }
+                        { 1.0 0.45 }
+                    }
+                    age = age_preset_child_fat_elf
+                }
+                # Gaunt body from 0.5 to 0.0 gene value
+                setting = {
+                    attribute = "head_bs_gaunt_head"
+                    # value = { min = 1.0 max = -1.5 }
+                    curve = {
+                        { 0.0 1.0 }
+                        { 0.4 0.0 }
+                        { 1.0 0.0 }
+                    }
+                    age = age_preset_aging_elf
+                }
+                setting = {
+                    attribute = "head_bs_gaunt_body"
+                    # value = { min = 1.0 max = -1.5 }
+                    curve = {
+                        { 0.0 1.0 }
+                        { 0.5 0.0 }
+                        { 1.0 0.0 }
+                    }
+                    age = age_preset_aging_elf
+                }
+                setting = {
+                    attribute = "body_bs_gaunt"
+                    # value = { min = 1.0 max = -1.5 }
+                    curve = {
+                        { 0.0 1.0 }
+                        { 0.5 0.0 }
+                        { 1.0 0.0 }
+                    }
+                    age = age_preset_aging_elf
+                }
+            }
+            boy = male
+            girl = female
+        }
+    }
+
+    INJECT:gene_age = {
+        no_aging = {
+            index = 5
+        }
+        elf_aging = {
+            index = 6
+            generic = no # Can't be selected unless the character has a trait with forced_portrait_age_index matching this
+            male = {
+                ## Children ##
+                setting = {
+                    attribute = "head_infant_proportions"
+                    value = { min = @maleAnimMax max = @maleAnimMax }
+                    age = age_preset_infant_joints
+                }
+                setting = {
+                    attribute = "body_infant_proportions"
+                    value = { min = @maleAnimMax max = @maleAnimMax }
+                    age = age_preset_infant_joints_body
+                }
+                setting = {
+                    attribute = "head_bs_infant_head"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_child_bs_head
+                }
+                setting = {
+                    attribute = "head_bs_infant_body"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_child_bs_body
+                }
+                setting = {
+                    attribute = "body_bs_infant"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_child_bs_body
+                }
+                eye_hsv_shift_curve = {
+                    curve = {
+                        { 0.0 { 0.0 -0.75 0.0 } }
+                    }
+                    age = age_preset_aging_hsv_curve
+                }
+            }
+            female = {
+                ## Children ##
+                setting = {
+                    attribute = "head_infant_proportions"
+                    value = { min = @maleAnimMax max = @maleAnimMax }
+                    age = age_preset_infant_joints
+                }
+                setting = {
+                    attribute = "body_infant_proportions"
+                    value = { min = @maleAnimMax max = @maleAnimMax }
+                    age = age_preset_infant_joints_body
+                }
+                setting = {
+                    attribute = "head_bs_infant_head"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_child_bs_head
+                }
+                setting = {
+                    attribute = "head_bs_infant_body"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_child_bs_body
+                }
+                setting = {
+                    attribute = "body_bs_infant"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_child_bs_body
+                }
+
+                eye_hsv_shift_curve = {
+                    curve = {
+                        { 0.0 { 0.0 -0.75 0.0 } }
+                    }
+                    age = age_preset_aging_hsv_curve
+                }
+            }
+            boy = male
+            girl = female
+        }
+        always_old = {
+            index = 7
+            generic = no
+            male = {
+
+                setting = {
+                    attribute = "head_infant_proportions"
+                    value = { min = @maleAnimMax max = @maleAnimMax }
+                    age = age_preset_infant_joints
+                }
+                setting = {
+                    attribute = "body_infant_proportions"
+                    value = { min = @maleAnimMax max = @maleAnimMax }
+                    age = age_preset_infant_joints_body
+                }
+                setting = {
+                    attribute = "head_bs_infant_head"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_child_bs_head
+                }
+                setting = {
+                    attribute = "head_bs_infant_body"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_child_bs_body
+                }
+                setting = {
+                    attribute = "body_bs_infant"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_child_bs_body
+                }
+
+
+                setting = {
+                    attribute = "head_bs_old_1"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_aging_always_old_secondary
+                }
+                setting = {
+                    attribute = "body_bs_old"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_aging_always_old_secondary
+                }
+                hair_hsv_shift_curve = {
+                    curve = {
+                        { 0.0 { 0.0 -1.0 0.8 } }
+                    }
+                    age = {
+                        mode = multiply
+                        curve = {
+                            { 0 1 }
+                            { 0.7 1.0 }
+                            { 0.6 1.0 }
+                        }
+                    }
+                }
+                eye_hsv_shift_curve = {
+                    curve = {
+                        { 0.0 { 0.0 -0.5 0.0 } }
+                    }
+                    age = age_preset_aging_hsv_curve_always_old
+                }
+                skin_hsv_shift_curve = {
+                    curve = {
+                        { 0.0 { 0.0 -0.1 -0.02 } }
+                    }
+                    age = age_preset_aging_hsv_curve_always_old
+                }
+            }
+            female = {
+
+                setting = {
+                    attribute = "head_infant_proportions"
+                    value = { min = @maleAnimMax max = @maleAnimMax }
+                    age = age_preset_infant_joints
+                }
+                setting = {
+                    attribute = "body_infant_proportions"
+                    value = { min = @maleAnimMax max = @maleAnimMax }
+                    age = age_preset_infant_joints_body
+                }
+                setting = {
+                    attribute = "head_bs_infant_head"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_child_bs_head
+                }
+                setting = {
+                    attribute = "head_bs_infant_body"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_child_bs_body
+                }
+                setting = {
+                    attribute = "body_bs_infant"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_child_bs_body
+                }
+
+
+                setting = {
+                    attribute = "head_bs_old_1"
+                    value = { min = @femaleMax max = @femaleMax }
+                    age = age_preset_aging_always_old_secondary
+                }
+                setting = {
+                    attribute = "body_bs_old"
+                    value = { min = @femaleMax max = @femaleMax }
+                    age = age_preset_aging_always_old_secondary
+                }
+                hair_hsv_shift_curve = {
+                    curve = {
+                        { 0.0 { 0.0 -1.0 0.8 } }
+                    }
+                    age = {
+                        mode = multiply
+                        curve = {
+                            { 0 1 }
+                            { 0.7 1.0 }
+                            { 0.6 1.0 }
+                        }
+                    }
+                }
+
+                eye_hsv_shift_curve = {
+                    curve = {
+                        { 0.0 { 0.0 -0.5 0.0 } }
+                    }
+                    age = age_preset_aging_hsv_curve_always_old
+                }
+                skin_hsv_shift_curve = {
+                    curve = {
+                        { 0.0 { 0.0 -0.1 -0.02 } }
+                    }
+                    age = age_preset_aging_hsv_curve_always_old
+                }
+            }
+            boy = male
+            girl = female
+
+        }
+        always_old_hag = {
+            index = 8
+            generic = no
+            female = {
+
+                setting = {
+                    attribute = "head_infant_proportions"
+                    value = { min = @maleAnimMax max = @maleAnimMax }
+                    age = age_preset_infant_joints
+                }
+                setting = {
+                    attribute = "body_infant_proportions"
+                    value = { min = @maleAnimMax max = @maleAnimMax }
+                    age = age_preset_infant_joints_body
+                }
+                setting = {
+                    attribute = "head_bs_infant_head"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_child_bs_head
+                }
+                setting = {
+                    attribute = "head_bs_infant_body"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_child_bs_body
+                }
+                setting = {
+                    attribute = "body_bs_infant"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_child_bs_body
+                }
+
+
+                setting = {
+                    attribute = "head_bs_old_1"
+                    value = { min = @femaleMax max = @femaleMax }
+                    age = age_preset_aging_always_old_secondary
+                }
+                setting = {
+                    attribute = "body_bs_old"
+                    value = { min = @femaleMax max = @femaleMax }
+                    age = age_preset_aging_always_old_secondary
+                }
+                hair_hsv_shift_curve = {
+                    curve = {
+                        { 0.0 { 0.0 -1.0 0.8 } }
+                    }
+                    age = {
+                        mode = multiply
+                        curve = {
+                            { 0 1 }
+                            { 0.7 1.0 }
+                            { 0.6 1.0 }
+                        }
+                    }
+                }
+
+                eye_hsv_shift_curve = {
+                    curve = {
+                        { 0.0 { 0.0 -0.5 0.0 } }
+                    }
+                    age = age_preset_aging_hsv_curve_always_old
+                }
+                skin_hsv_shift_curve = {
+                    curve = {
+                        { 0.0 { 0.0 -0.1 -0.02 } }
+                    }
+                    age = age_preset_aging_hsv_curve_always_old
+                }
+            }
+            boy = male
+            girl = female
+            male = female
+
+        }
+        short_aging = {
+            generic = no
+            index = 9
+            male = {
+
+                setting = {
+                    attribute = "head_infant_proportions"
+                    value = { min = @maleAnimMax max = @maleAnimMax }
+                    age = age_preset_infant_joints_short
+                }
+                setting = {
+                    attribute = "body_infant_proportions"
+                    value = { min = @maleAnimMax max = @maleAnimMax }
+                    age = age_preset_infant_joints_body_short
+                }
+                setting = {
+                    attribute = "head_bs_infant_head"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_child_bs_head
+                }
+                setting = {
+                    attribute = "head_bs_infant_body"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_child_bs_body
+                }
+                setting = {
+                    attribute = "body_bs_infant"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_child_bs_body
+                }
+
+
+                setting = {
+                    attribute = "head_bs_old_1"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_aging_secondary
+                }
+                setting = {
+                    attribute = "body_bs_old"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_aging_secondary
+                }
+                hair_hsv_shift_curve = {
+                    curve = {
+                        { 0.0 { 0.0 -1.0 0.8 } }
+                    }
+                    age = {
+                        mode = multiply
+                        curve = {
+                            { 0 0 }
+                            { 0.7 0 }
+                            { 0.6 1.0 }
+                        }
+                    }
+                }
+                eye_hsv_shift_curve = {
+                    curve = {
+                        { 0.0 { 0.0 -0.5 0.0 } }
+                    }
+                    age = age_preset_aging_hsv_curve
+                }
+                skin_hsv_shift_curve = {
+                    curve = {
+                        { 0.0 { 0.0 -0.1 -0.02 } }
+                    }
+                    age = age_preset_aging_hsv_curve
+                }
+            }
+            female = {
+
+                setting = {
+                    attribute = "head_infant_proportions"
+                    value = { min = @maleAnimMax max = @maleAnimMax }
+                    age = age_preset_infant_joints_short
+                }
+                setting = {
+                    attribute = "body_infant_proportions"
+                    value = { min = @maleAnimMax max = @maleAnimMax }
+                    age = age_preset_infant_joints_body_short
+                }
+                setting = {
+                    attribute = "head_bs_infant_head"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_child_bs_head
+                }
+                setting = {
+                    attribute = "head_bs_infant_body"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_child_bs_body
+                }
+                setting = {
+                    attribute = "body_bs_infant"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_child_bs_body
+                }
+
+
+                setting = {
+                    attribute = "head_bs_old_1"
+                    value = { min = @femaleMax max = @femaleMax }
+                    age = age_preset_aging_secondary
+                }
+                setting = {
+                    attribute = "body_bs_old"
+                    value = { min = @femaleMax max = @femaleMax }
+                    age = age_preset_aging_secondary
+                }
+                hair_hsv_shift_curve = {
+                    curve = {
+                        { 0.0 { 0.0 -1.0 0.8 } }
+                    }
+                    age = {
+                        mode = multiply
+                        curve = {
+                            { 0 0 }
+                            { 0.7 0 }
+                            { 0.6 1.0 }
+                        }
+                    }
+                }
+
+                eye_hsv_shift_curve = {
+                    curve = {
+                        { 0.0 { 0.0 -0.5 0.0 } }
+                    }
+                    age = age_preset_aging_hsv_curve
+                }
+                skin_hsv_shift_curve = {
+                    curve = {
+                        { 0.0 { 0.0 -0.1 -0.02 } }
+                    }
+                    age = age_preset_aging_hsv_curve
+                }
+            }
+            boy = male
+            girl = female
+
+        }
+        short_aging_fat = {
+            generic = no
+            index = 10
+            male = {
+
+                setting = {
+                    attribute = "head_infant_proportions"
+                    value = { min = @maleAnimMax max = @maleAnimMax }
+                    age = age_preset_infant_joints_short
+                }
+                setting = {
+                    attribute = "body_infant_proportions"
+                    value = { min = @maleAnimMax max = @maleAnimMax }
+                    age = age_preset_infant_joints_body_short
+                }
+                setting = {
+                    attribute = "head_bs_infant_head"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_child_bs_head_fat
+                }
+                setting = {
+                    attribute = "head_bs_infant_body"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_child_bs_body
+                }
+                setting = {
+                    attribute = "body_bs_infant"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_child_bs_body_fat
+                }
+
+
+                setting = {
+                    attribute = "head_bs_old_1"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_aging_secondary
+                }
+                setting = {
+                    attribute = "body_bs_old"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_aging_secondary
+                }
+                hair_hsv_shift_curve = {
+                    curve = {
+                        { 0.0 { 0.0 -1.0 0.8 } }
+                    }
+                    age = {
+                        mode = multiply
+                        curve = {
+                            { 0 0 }
+                            { 0.7 0 }
+                            { 0.6 1.0 }
+                        }
+                    }
+                }
+                eye_hsv_shift_curve = {
+                    curve = {
+                        { 0.0 { 0.0 -0.5 0.0 } }
+                    }
+                    age = age_preset_aging_hsv_curve
+                }
+                skin_hsv_shift_curve = {
+                    curve = {
+                        { 0.0 { 0.0 -0.1 -0.02 } }
+                    }
+                    age = age_preset_aging_hsv_curve
+                }
+            }
+            female = {
+
+                setting = {
+                    attribute = "head_infant_proportions"
+                    value = { min = @maleAnimMax max = @maleAnimMax }
+                    age = age_preset_infant_joints_short
+                }
+                setting = {
+                    attribute = "body_infant_proportions"
+                    value = { min = @maleAnimMax max = @maleAnimMax }
+                    age = age_preset_infant_joints_body_short
+                }
+                setting = {
+                    attribute = "head_bs_infant_head"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_child_bs_head
+                }
+                setting = {
+                    attribute = "head_bs_infant_body"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_child_bs_body
+                }
+                setting = {
+                    attribute = "body_bs_infant"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_child_bs_body
+                }
+
+
+                setting = {
+                    attribute = "head_bs_old_1"
+                    value = { min = @femaleMax max = @femaleMax }
+                    age = age_preset_aging_secondary
+                }
+                setting = {
+                    attribute = "body_bs_old"
+                    value = { min = @femaleMax max = @femaleMax }
+                    age = age_preset_aging_secondary
+                }
+                hair_hsv_shift_curve = {
+                    curve = {
+                        { 0.0 { 0.0 -1.0 0.8 } }
+                    }
+                    age = {
+                        mode = multiply
+                        curve = {
+                            { 0 0 }
+                            { 0.7 0 }
+                            { 0.6 1.0 }
+                        }
+                    }
+                }
+
+                eye_hsv_shift_curve = {
+                    curve = {
+                        { 0.0 { 0.0 -0.5 0.0 } }
+                    }
+                    age = age_preset_aging_hsv_curve
+                }
+                skin_hsv_shift_curve = {
+                    curve = {
+                        { 0.0 { 0.0 -0.1 -0.02 } }
+                    }
+                    age = age_preset_aging_hsv_curve
+                }
+            }
+            boy = male
+            girl = female
+
+        }
+        very_short_aging = {
+            generic = no
+            index = 11
+            male = {
+
+                setting = {
+                    attribute = "head_infant_proportions"
+                    value = { min = @maleAnimMax max = @maleAnimMax }
+                    age = age_preset_infant_joints_very_short
+                }
+                setting = {
+                    attribute = "body_infant_proportions"
+                    value = { min = @maleAnimMax max = @maleAnimMax }
+                    age = age_preset_infant_joints_body_very_short
+                }
+                setting = {
+                    attribute = "head_bs_infant_head"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_child_bs_head
+                }
+                setting = {
+                    attribute = "head_bs_infant_body"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_child_bs_body
+                }
+                setting = {
+                    attribute = "body_bs_infant"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_child_bs_body
+                }
+
+
+                setting = {
+                    attribute = "head_bs_old_1"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_aging_secondary
+                }
+                setting = {
+                    attribute = "body_bs_old"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_aging_secondary
+                }
+                hair_hsv_shift_curve = {
+                    curve = {
+                        { 0.0 { 0.0 -1.0 0.8 } }
+                    }
+                    age = {
+                        mode = multiply
+                        curve = {
+                            { 0 0 }
+                            { 0.7 0 }
+                            { 0.6 1.0 }
+                        }
+                    }
+                }
+                eye_hsv_shift_curve = {
+                    curve = {
+                        { 0.0 { 0.0 -0.5 0.0 } }
+                    }
+                    age = age_preset_aging_hsv_curve
+                }
+                skin_hsv_shift_curve = {
+                    curve = {
+                        { 0.0 { 0.0 -0.1 -0.02 } }
+                    }
+                    age = age_preset_aging_hsv_curve
+                }
+            }
+            female = {
+
+                setting = {
+                    attribute = "head_infant_proportions"
+                    value = { min = @maleAnimMax max = @maleAnimMax }
+                    age = age_preset_infant_joints_very_short
+                }
+                setting = {
+                    attribute = "body_infant_proportions"
+                    value = { min = @maleAnimMax max = @maleAnimMax }
+                    age = age_preset_infant_joints_body_very_short
+                }
+                setting = {
+                    attribute = "head_bs_infant_head"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_child_bs_head
+                }
+                setting = {
+                    attribute = "head_bs_infant_body"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_child_bs_body
+                }
+                setting = {
+                    attribute = "body_bs_infant"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_child_bs_body
+                }
+
+
+                setting = {
+                    attribute = "head_bs_old_1"
+                    value = { min = @femaleMax max = @femaleMax }
+                    age = age_preset_aging_secondary
+                }
+                setting = {
+                    attribute = "body_bs_old"
+                    value = { min = @femaleMax max = @femaleMax }
+                    age = age_preset_aging_secondary
+                }
+                hair_hsv_shift_curve = {
+                    curve = {
+                        { 0.0 { 0.0 -1.0 0.8 } }
+                    }
+                    age = {
+                        mode = multiply
+                        curve = {
+                            { 0 0 }
+                            { 0.7 0 }
+                            { 0.6 1.0 }
+                        }
+                    }
+                }
+
+                eye_hsv_shift_curve = {
+                    curve = {
+                        { 0.0 { 0.0 -0.5 0.0 } }
+                    }
+                    age = age_preset_aging_hsv_curve
+                }
+                skin_hsv_shift_curve = {
+                    curve = {
+                        { 0.0 { 0.0 -0.1 -0.02 } }
+                    }
+                    age = age_preset_aging_hsv_curve
+                }
+            }
+            boy = male
+            girl = female
+
+        }
+        fat_aging = {
+            index = 12
+            male = {
+
+                setting = {
+                    attribute = "head_infant_proportions"
+                    value = { min = @maleAnimMax max = @maleAnimMax }
+                    age = age_preset_infant_joints
+                }
+                setting = {
+                    attribute = "body_infant_proportions"
+                    value = { min = @maleAnimMax max = @maleAnimMax }
+                    age = age_preset_infant_joints_body
+                }
+                setting = {
+                    attribute = "head_bs_infant_head"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_child_bs_head_fat
+                }
+                setting = {
+                    attribute = "head_bs_infant_body"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_child_bs_body
+                }
+                setting = {
+                    attribute = "body_bs_infant"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_child_bs_body_fat
+                }
+
+
+                setting = {
+                    attribute = "head_bs_old_1"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_aging_secondary
+                }
+                setting = {
+                    attribute = "body_bs_old"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_aging_secondary
+                }
+                hair_hsv_shift_curve = {
+                    curve = {
+                        { 0.0 { 0.0 -1.0 0.8 } }
+                    }
+                    age = {
+                        mode = multiply
+                        curve = {
+                            { 0 0 }
+                            { 0.7 0 }
+                            { 0.6 1.0 }
+                        }
+                    }
+                }
+                eye_hsv_shift_curve = {
+                    curve = {
+                        { 0.0 { 0.0 -0.5 0.0 } }
+                    }
+                    age = age_preset_aging_hsv_curve
+                }
+                skin_hsv_shift_curve = {
+                    curve = {
+                        { 0.0 { 0.0 -0.1 -0.02 } }
+                    }
+                    age = age_preset_aging_hsv_curve
+                }
+            }
+            female = {
+
+                setting = {
+                    attribute = "head_infant_proportions"
+                    value = { min = @maleAnimMax max = @maleAnimMax }
+                    age = age_preset_infant_joints
+                }
+                setting = {
+                    attribute = "body_infant_proportions"
+                    value = { min = @maleAnimMax max = @maleAnimMax }
+                    age = age_preset_infant_joints_body
+                }
+                setting = {
+                    attribute = "head_bs_infant_head"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_child_bs_head
+                }
+                setting = {
+                    attribute = "head_bs_infant_body"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_child_bs_body
+                }
+                setting = {
+                    attribute = "body_bs_infant"
+                    value = { min = @maleMax max = @maleMax }
+                    age = age_preset_child_bs_body
+                }
+
+
+                setting = {
+                    attribute = "head_bs_old_1"
+                    value = { min = @femaleMax max = @femaleMax }
+                    age = age_preset_aging_secondary
+                }
+                setting = {
+                    attribute = "body_bs_old"
+                    value = { min = @femaleMax max = @femaleMax }
+                    age = age_preset_aging_secondary
+                }
+                hair_hsv_shift_curve = {
+                    curve = {
+                        { 0.0 { 0.0 -1.0 0.8 } }
+                    }
+                    age = {
+                        mode = multiply
+                        curve = {
+                            { 0 0 }
+                            { 0.7 0 }
+                            { 0.6 1.0 }
+                        }
+                    }
+                }
+
+                eye_hsv_shift_curve = {
+                    curve = {
+                        { 0.0 { 0.0 -0.5 0.0 } }
+                    }
+                    age = age_preset_aging_hsv_curve
+                }
+                skin_hsv_shift_curve = {
+                    curve = {
+                        { 0.0 { 0.0 -0.1 -0.02 } }
+                    }
+                    age = age_preset_aging_hsv_curve
+                }
+            }
+            boy = male
+            girl = female
+
+        }
+    }
+
+    INJECT:gene_old_ears = {
+        old_ears_elf = {
+            index = 1
+        }
+    }
+
+    INJECT:gene_old_eyes = {
+        old_eyes_elf = {
+            index = 3
+        }
+    }
+
+    INJECT:gene_old_forehead = {
+        old_forehead_elf = {
+            index = 3
+        }
+    }
+
+    INJECT:gene_old_mouth = {
+        old_mouth_elf = {
+            index = 3
+        }
+    }
+
+    INJECT:gene_old_nose = {
+        old_nose_elf = {
+            index = 3
+        }
+    }
+
+    INJECT:gene_complexion = {
+        complexion_05 = {
+            index = 4
+            male = {
+                texture_override = {
+                    weight = 100  #if there are multiple texture_overrides in a character's dna one will be picked by weighted random
+                    diffuse = "gfx/models/portraits/male_head/male_head_04_diffuse.dds"
+                    normal = "gfx/models/portraits/male_head/male_head_01_normal.dds"
+                    specular = "gfx/models/portraits/male_head/male_head_01_properties.dds"
+                }
+                decal = {
+                    #Lip color
+
+                    body_part = head
+                    textures = {
+                        diffuse = "gfx/models/portraits/decals/female_head/decal_female_head_lip_color_01_diffuse.dds"
+                    }
+                    alpha_curve = {
+                        #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+                        #gene strength%, decal alpha
+                        { 0.0 0.0 }
+                        { 1.0 0.8 }
+                    }
+                    blend_modes = {
+                        #overlay/replace/hard_light/multiply
+                        diffuse = multiply
+                        # normal = overlay
+                        # properties =
+                    }
+                    priority = 1
+                    # age = age_preset_aging_definition_male
+                }
+            }
+            female = {
+                texture_override = {
+                    weight = 100  #if there are multiple texture_overrides in a character's dna one will be picked by weighted random
+                    diffuse = "gfx/models/portraits/female_head/female_head_05_diffuse.dds"
+                    normal = "gfx/models/portraits/female_head/female_head_01_normal.dds"
+                    specular = "gfx/models/portraits/female_head/female_head_01_properties.dds"
+                }
+                decal = {
+                    #Lip color
+
+                    body_part = head
+                    textures = {
+                        diffuse = "gfx/models/portraits/decals/female_head/decal_female_head_lip_color_05_diffuse.dds"
+                    }
+                    alpha_curve = {
+                        #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+                        #gene strength%, decal alpha
+                        { 0.0 0.0 }
+                        { 1.0 0.8 }
+                    }
+                    blend_modes = {
+                        #overlay/replace/hard_light/multiply
+                        diffuse = multiply
+                        # normal = overlay
+                        # properties =
+                    }
+                    priority = 1
+                    # age = age_preset_aging_definition_male
+                }
+            }
+            boy = male
+            girl = female
+        }
+        complexion_01_forced_female = {
+            index = 5
+            female = {
+                texture_override = {
+                    weight = 100  #if there are multiple texture_overrides in a character's dna one will be picked by weighted random
+                    diffuse = "gfx/models/portraits/female_head/female_head_01_diffuse.dds"
+                    normal = "gfx/models/portraits/female_head/female_head_01_normal.dds"
+                    specular = "gfx/models/portraits/female_head/female_head_01_properties.dds"
+                }
+                decal = {
+                    #Lip color
+
+                    body_part = head
+                    textures = {
+                        diffuse = "gfx/models/portraits/decals/female_head/decal_female_head_lip_color_01_diffuse.dds"
+                    }
+                    alpha_curve = {
+                        #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+                        #gene strength%, decal alpha
+                        { 0.0 0.0 }
+                        { 1.0 0.8 }
+                    }
+                    blend_modes = {
+                        #overlay/replace/hard_light/multiply
+                        diffuse = multiply
+                        # normal = overlay
+                        # properties =
+                    }
+                    priority = 1
+                    # age = age_preset_aging_definition_male
+                }
+            }
+            male = female
+            boy = female
+            girl = female
+        }
+        complexion_02_forced_female = {
+            index = 6
+            female = {
+                texture_override = {
+                    weight = 100  #if there are multiple texture_overrides in a character's dna one will be picked by weighted random
+                    diffuse = "gfx/models/portraits/female_head/female_head_02_diffuse.dds"
+                    normal = "gfx/models/portraits/female_head/female_head_01_normal.dds"
+                    specular = "gfx/models/portraits/female_head/female_head_01_properties.dds"
+                }
+                decal = {
+                    #Lip color
+
+                    body_part = head
+                    textures = {
+                        diffuse = "gfx/models/portraits/decals/female_head/decal_female_head_lip_color_01_diffuse.dds"
+                    }
+                    alpha_curve = {
+                        #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+                        #gene strength%, decal alpha
+                        { 0.0 0.0 }
+                        { 1.0 0.8 }
+                    }
+                    blend_modes = {
+                        #overlay/replace/hard_light/multiply
+                        diffuse = multiply
+                        # normal = overlay
+                        # properties =
+                    }
+                    priority = 1
+                    # age = age_preset_aging_definition_male
+                }
+            }
+            male = female
+            boy = female
+            girl = female
+        }
+        complexion_03_forced_female = {
+            index = 7
+            female = {
+                texture_override = {
+                    weight = 100  #if there are multiple texture_overrides in a character's dna one will be picked by weighted random
+                    diffuse = "gfx/models/portraits/female_head/female_head_03_diffuse.dds"
+                    normal = "gfx/models/portraits/female_head/female_head_01_normal.dds"
+                    specular = "gfx/models/portraits/female_head/female_head_01_properties.dds"
+                }
+                decal = {
+                    #Lip color
+
+                    body_part = head
+                    textures = {
+                        diffuse = "gfx/models/portraits/decals/female_head/decal_female_head_lip_color_01_diffuse.dds"
+                    }
+                    alpha_curve = {
+                        #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+                        #gene strength%, decal alpha
+                        { 0.0 0.0 }
+                        { 1.0 0.8 }
+                    }
+                    blend_modes = {
+                        #overlay/replace/hard_light/multiply
+                        diffuse = multiply
+                        # normal = overlay
+                        # properties =
+                    }
+                    priority = 1
+                    # age = age_preset_aging_definition_male
+                }
+            }
+            male = female
+            boy = female
+            girl = female
+        }
+        complexion_04_forced_female = {
+            index = 8
+            female = {
+                texture_override = {
+                    weight = 100  #if there are multiple texture_overrides in a character's dna one will be picked by weighted random
+                    diffuse = "gfx/models/portraits/female_head/female_head_04_diffuse.dds"
+                    normal = "gfx/models/portraits/female_head/female_head_01_normal.dds"
+                    specular = "gfx/models/portraits/female_head/female_head_01_properties.dds"
+                }
+                decal = {
+                    #Lip color
+
+                    body_part = head
+                    textures = {
+                        diffuse = "gfx/models/portraits/decals/female_head/decal_female_head_lip_color_01_diffuse.dds"
+                    }
+                    alpha_curve = {
+                        #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+                        #gene strength%, decal alpha
+                        { 0.0 0.0 }
+                        { 1.0 0.8 }
+                    }
+                    blend_modes = {
+                        #overlay/replace/hard_light/multiply
+                        diffuse = multiply
+                        # normal = overlay
+                        # properties =
+                    }
+                    priority = 1
+                    # age = age_preset_aging_definition_male
+                }
+            }
+            male = female
+            boy = female
+            girl = female
+        }
+    }
+
+    INJECT:gene_eyebrows_shape = {
+        avg_spacing_avg_thickness_elf = {
+            index = 16
+            male = {
+                decal = {
+
+                    body_part = head
+                    textures = {
+                        diffuse = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_avg_spacing_avg_thickness_diffuse.dds"
+                        normal = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_avg_spacing_avg_thickness_normal.dds"
+                        properties = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_avg_spacing_avg_thickness_properties.dds"
+                    }
+                    alpha_curve = {
+                        #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+                        #gene strength%, decal alpha
+                        { 0.0 0.0 }
+                        { 1.0 1.0 }
+                    }
+                    blend_modes = {
+                        #overlay/replace/hard_light/multiply
+                        diffuse = multiply
+                        normal = overlay
+                        properties = replace
+                    }
+                    priority = 10
+                    age = age_preset_eyebrows
+                }
+            }
+            female = male
+            boy = male
+            girl = female
+        }
+        avg_spacing_high_thickness_elf = {
+            index = 17
+            male = {
+                decal = {
+
+                    body_part = head
+                    textures = {
+                        diffuse = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_avg_spacing_high_thickness_diffuse.dds"
+                        normal = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_avg_spacing_high_thickness_normal.dds"
+                        properties = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_avg_spacing_high_thickness_properties.dds"
+                    }
+                    alpha_curve = {
+                        #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+                        #gene strength%, decal alpha
+                        { 0.0 0.0 }
+                        { 1.0 1.0 }
+                    }
+                    blend_modes = {
+                        #overlay/replace/hard_light/multiply
+                        diffuse = multiply
+                        normal = overlay
+                        properties = replace
+                    }
+                    priority = 10
+                    age = age_preset_eyebrows
+                }
+            }
+            female = male
+            boy = male
+            girl = female
+        }
+        avg_spacing_low_thickness_elf = {
+            index = 18
+            male = {
+                decal = {
+
+                    body_part = head
+                    textures = {
+                        diffuse = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_avg_spacing_low_thickness_diffuse.dds"
+                        normal = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_avg_spacing_high_thickness_normal.dds"
+                        properties = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_avg_spacing_high_thickness_properties.dds"
+                    }
+                    alpha_curve = {
+                        #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+                        #gene strength%, decal alpha
+                        { 0.0 0.0 }
+                        { 1.0 1.0 }
+                    }
+                    blend_modes = {
+                        #overlay/replace/hard_light/multiply
+                        diffuse = multiply
+                        normal = overlay
+                        properties = replace
+                    }
+                    priority = 10
+                    age = age_preset_eyebrows
+                }
+            }
+            female = male
+            boy = male
+            girl = female
+        }
+        avg_spacing_lower_thickness_elf = {
+            index = 19
+            male = {
+                decal = {
+
+                    body_part = head
+                    textures = {
+                        diffuse = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_avg_spacing_lower_thickness_diffuse.dds"
+                        normal = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_avg_spacing_high_thickness_normal.dds"
+                        properties = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_avg_spacing_high_thickness_properties.dds"
+                    }
+                    alpha_curve = {
+                        #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+                        #gene strength%, decal alpha
+                        { 0.0 0.0 }
+                        { 1.0 1.0 }
+                    }
+                    blend_modes = {
+                        #overlay/replace/hard_light/multiply
+                        diffuse = multiply
+                        normal = overlay
+                        properties = replace
+                    }
+                    priority = 10
+                    age = age_preset_eyebrows
+                }
+            }
+            female = male
+            boy = male
+            girl = female
+        }
+        avg_spacing_lowest_thickness_elf = {
+            index = 20
+            male = {
+                decal = {
+
+                    body_part = head
+                    textures = {
+                        diffuse = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_avg_spacing_lowest_thickness_diffuse.dds"
+                        normal = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_avg_spacing_high_thickness_normal.dds"
+                        properties = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_avg_spacing_high_thickness_properties.dds"
+                    }
+                    alpha_curve = {
+                        #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+                        #gene strength%, decal alpha
+                        { 0.0 0.0 }
+                        { 1.0 1.0 }
+                    }
+                    blend_modes = {
+                        #overlay/replace/hard_light/multiply
+                        diffuse = multiply
+                        normal = overlay
+                        properties = replace
+                    }
+                    priority = 10
+                    age = age_preset_eyebrows
+                }
+            }
+            female = male
+            boy = male
+            girl = female
+        }
+        far_spacing_avg_thickness_elf = {
+            index = 21
+            male = {
+                decal = {
+
+                    body_part = head
+                    textures = {
+                        diffuse = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_far_spacing_avg_thickness_diffuse.dds"
+                        normal = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_avg_spacing_avg_thickness_normal.dds"
+                        properties = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_avg_spacing_avg_thickness_properties.dds"
+                    }
+                    alpha_curve = {
+                        #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+                        #gene strength%, decal alpha
+                        { 0.0 0.0 }
+                        { 1.0 1.0 }
+                    }
+                    blend_modes = {
+                        #overlay/replace/hard_light/multiply
+                        diffuse = multiply
+                        normal = overlay
+                        properties = replace
+                    }
+                    priority = 10
+                    age = age_preset_eyebrows
+                }
+            }
+            female = male
+            boy = male
+            girl = female
+        }
+        far_spacing_high_thickness_elf = {
+            index = 22
+            male = {
+                decal = {
+
+                    body_part = head
+                    textures = {
+                        diffuse = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_far_spacing_high_thickness_diffuse.dds"
+                        normal = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_avg_spacing_high_thickness_normal.dds"
+                        properties = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_avg_spacing_high_thickness_properties.dds"
+                    }
+                    alpha_curve = {
+                        #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+                        #gene strength%, decal alpha
+                        { 0.0 0.0 }
+                        { 1.0 1.0 }
+                    }
+                    blend_modes = {
+                        #overlay/replace/hard_light/multiply
+                        diffuse = multiply
+                        normal = overlay
+                        properties = replace
+                    }
+                    priority = 10
+                    age = age_preset_eyebrows
+                }
+            }
+            female = male
+            boy = male
+            girl = female
+        }
+        far_spacing_low_thickness_elf = {
+            index = 23
+            male = {
+                decal = {
+
+                    body_part = head
+                    textures = {
+                        diffuse = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_far_spacing_low_thickness_diffuse.dds"
+                        normal = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_avg_spacing_high_thickness_normal.dds"
+                        properties = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_avg_spacing_high_thickness_properties.dds"
+                    }
+                    alpha_curve = {
+                        #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+                        #gene strength%, decal alpha
+                        { 0.0 0.0 }
+                        { 1.0 1.0 }
+                    }
+                    blend_modes = {
+                        #overlay/replace/hard_light/multiply
+                        diffuse = multiply
+                        normal = overlay
+                        properties = replace
+                    }
+                    priority = 10
+                    age = age_preset_eyebrows
+                }
+            }
+            female = male
+            boy = male
+            girl = female
+        }
+        far_spacing_lower_thickness_elf = {
+            index = 24
+            male = {
+                decal = {
+
+                    body_part = head
+                    textures = {
+                        diffuse = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_far_spacing_lower_thickness_diffuse.dds"
+                        normal = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_avg_spacing_high_thickness_normal.dds"
+                        properties = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_avg_spacing_high_thickness_properties.dds"
+                    }
+                    alpha_curve = {
+                        #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+                        #gene strength%, decal alpha
+                        { 0.0 0.0 }
+                        { 1.0 1.0 }
+                    }
+                    blend_modes = {
+                        #overlay/replace/hard_light/multiply
+                        diffuse = multiply
+                        normal = overlay
+                        properties = replace
+                    }
+                    priority = 10
+                    age = age_preset_eyebrows
+                }
+            }
+            female = male
+            boy = male
+            girl = female
+        }
+        far_spacing_lowest_thickness_elf = {
+            index = 25
+            male = {
+                decal = {
+
+                    body_part = head
+                    textures = {
+                        diffuse = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_far_spacing_lowest_thickness_diffuse.dds"
+                        normal = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_avg_spacing_high_thickness_normal.dds"
+                        properties = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_avg_spacing_high_thickness_properties.dds"
+                    }
+                    alpha_curve = {
+                        #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+                        #gene strength%, decal alpha
+                        { 0.0 0.0 }
+                        { 1.0 1.0 }
+                    }
+                    blend_modes = {
+                        #overlay/replace/hard_light/multiply
+                        diffuse = multiply
+                        normal = overlay
+                        properties = replace
+                    }
+                    priority = 10
+                    age = age_preset_eyebrows
+                }
+            }
+            female = male
+            boy = male
+            girl = female
+        }
+        close_spacing_avg_thickness_elf = {
+            index = 26
+            male = {
+                decal = {
+
+                    body_part = head
+                    textures = {
+                        diffuse = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_close_spacing_avg_thickness_diffuse.dds"
+                        normal = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_avg_spacing_avg_thickness_normal.dds"
+                        properties = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_avg_spacing_avg_thickness_properties.dds"
+                    }
+                    alpha_curve = {
+                        #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+                        #gene strength%, decal alpha
+                        { 0.0 0.0 }
+                        { 1.0 1.0 }
+                    }
+                    blend_modes = {
+                        #overlay/replace/hard_light/multiply
+                        diffuse = multiply
+                        normal = overlay
+                        properties = replace
+                    }
+                    priority = 10
+                    age = age_preset_eyebrows
+                }
+            }
+            female = male
+            boy = male
+            girl = female
+        }
+        close_spacing_high_thickness_elf = {
+            index = 27
+            male = {
+                decal = {
+
+                    body_part = head
+                    textures = {
+                        diffuse = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_close_spacing_high_thickness_diffuse.dds"
+                        normal = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_avg_spacing_high_thickness_normal.dds"
+                        properties = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_avg_spacing_high_thickness_properties.dds"
+                    }
+                    alpha_curve = {
+                        #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+                        #gene strength%, decal alpha
+                        { 0.0 0.0 }
+                        { 1.0 1.0 }
+                    }
+                    blend_modes = {
+                        #overlay/replace/hard_light/multiply
+                        diffuse = multiply
+                        normal = overlay
+                        properties = replace
+                    }
+                    priority = 10
+                    age = age_preset_eyebrows
+                }
+            }
+            female = male
+            boy = male
+            girl = female
+        }
+        close_spacing_low_thickness_elf = {
+            index = 28
+            male = {
+                decal = {
+
+                    body_part = head
+                    textures = {
+                        diffuse = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_close_spacing_low_thickness_diffuse.dds"
+                        normal = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_avg_spacing_high_thickness_normal.dds"
+                        properties = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_avg_spacing_high_thickness_properties.dds"
+                    }
+                    alpha_curve = {
+                        #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+                        #gene strength%, decal alpha
+                        { 0.0 0.0 }
+                        { 1.0 1.0 }
+                    }
+                    blend_modes = {
+                        #overlay/replace/hard_light/multiply
+                        diffuse = multiply
+                        normal = overlay
+                        properties = replace
+                    }
+                    priority = 11
+                    age = age_preset_eyebrows
+                }
+            }
+            female = male
+            boy = male
+            girl = female
+        }
+        close_spacing_lower_thickness_elf = {
+            index = 29
+            male = {
+                decal = {
+
+                    body_part = head
+                    textures = {
+                        diffuse = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_close_spacing_lower_thickness_diffuse.dds"
+                        normal = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_avg_spacing_high_thickness_normal.dds"
+                        properties = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_avg_spacing_high_thickness_properties.dds"
+                    }
+                    alpha_curve = {
+                        #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+                        #gene strength%, decal alpha
+                        { 0.0 0.0 }
+                        { 1.0 1.0 }
+                    }
+                    blend_modes = {
+                        #overlay/replace/hard_light/multiply
+                        diffuse = multiply
+                        normal = overlay
+                        properties = replace
+                    }
+                    priority = 11
+                    age = age_preset_eyebrows
+                }
+            }
+            female = male
+            boy = male
+            girl = female
+        }
+        close_spacing_lowest_thickness_elf = {
+            index = 30
+            male = {
+                decal = {
+
+                    body_part = head
+                    textures = {
+                        diffuse = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_close_spacing_lowest_thickness_diffuse.dds"
+                        normal = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_avg_spacing_high_thickness_normal.dds"
+                        properties = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_avg_spacing_high_thickness_properties.dds"
+                    }
+                    alpha_curve = {
+                        #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+                        #gene strength%, decal alpha
+                        { 0.0 0.0 }
+                        { 1.0 1.0 }
+                    }
+                    blend_modes = {
+                        #overlay/replace/hard_light/multiply
+                        diffuse = multiply
+                        normal = overlay
+                        properties = replace
+                    }
+                    priority = 11
+                    age = age_preset_eyebrows
+                }
+            }
+            female = male
+            boy = male
+            girl = female
+        }
+    }
+
+    INJECT:gene_eyebrows_fullness = {
+        layer_2_avg_thickness_elf = {
+            index = 6
+            male = {
+                decal = {
+
+                    body_part = head
+                    textures = {
+                        diffuse = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_layer_2_avg_thickness_diffuse.dds"
+                        normal = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_layer_2_avg_thickness_normal.dds"
+                    }
+                    alpha_curve = {
+                        #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+                        #gene strength%, decal alpha
+                        { 0.0 0.0 }
+                        { 1.0 1.0 }
+                    }
+                    blend_modes = {
+                        #overlay/replace/hard_light/multiply
+                        diffuse = multiply
+                        normal = overlay
+                    }
+                    priority = 10
+                    age = age_preset_eyebrows_fullness_elf
+                }
+            }
+            female = male
+            boy = male
+            girl = female
+        }
+        layer_2_high_thickness_elf = {
+            index = 7
+            male = {
+                decal = {
+
+                    body_part = head
+                    textures = {
+                        diffuse = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_layer_2_high_thickness_diffuse.dds"
+                        normal = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_layer_2_avg_thickness_normal.dds"
+                    }
+                    alpha_curve = {
+                        #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+                        #gene strength%, decal alpha
+                        { 0.0 0.0 }
+                        { 1.0 1.0 }
+                    }
+                    blend_modes = {
+                        #overlay/replace/hard_light/multiply
+                        diffuse = multiply
+                        normal = overlay
+                    }
+                    priority = 10
+                    age = age_preset_eyebrows_fullness_elf
+                }
+            }
+            female = male
+            boy = male
+            girl = female
+        }
+        layer_2_low_thickness_elf = {
+            index = 8
+            male = {
+                decal = {
+
+                    body_part = head
+                    textures = {
+                        diffuse = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_layer_2_low_thickness_diffuse.dds"
+                        normal = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_layer_2_avg_thickness_normal.dds"
+                    }
+                    alpha_curve = {
+                        #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+                        #gene strength%, decal alpha
+                        { 0.0 0.0 }
+                        { 1.0 1.0 }
+                    }
+                    blend_modes = {
+                        #overlay/replace/hard_light/multiply
+                        diffuse = multiply
+                        normal = overlay
+                    }
+                    priority = 10
+                    age = age_preset_eyebrows_fullness_elf
+                }
+            }
+            female = male
+            boy = male
+            girl = female
+        }
+        layer_2_lower_thickness_elf = {
+            index = 9
+            male = {
+                decal = {
+
+                    body_part = head
+                    textures = {
+                        diffuse = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_layer_2_lower_thickness_diffuse.dds"
+                        normal = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_layer_2_avg_thickness_normal.dds"
+                    }
+                    alpha_curve = {
+                        #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+                        #gene strength%, decal alpha
+                        { 0.0 0.0 }
+                        { 1.0 1.0 }
+                    }
+                    blend_modes = {
+                        #overlay/replace/hard_light/multiply
+                        diffuse = multiply
+                        normal = overlay
+                    }
+                    priority = 10
+                    age = age_preset_eyebrows_fullness_elf
+                }
+            }
+            female = male
+            boy = male
+            girl = female
+        }
+        layer_2_lowest_thickness_elf = {
+            index = 10
+            male = {
+                decal = {
+
+                    body_part = head
+                    textures = {
+                        diffuse = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_layer_2_lowest_thickness_diffuse.dds"
+                        normal = "gfx/models/portraits/decals/male_eyebrows/decal_male_eyebrows_layer_2_avg_thickness_normal.dds"
+                    }
+                    alpha_curve = {
+                        #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+                        #gene strength%, decal alpha
+                        { 0.0 0.0 }
+                        { 1.0 1.0 }
+                    }
+                    blend_modes = {
+                        #overlay/replace/hard_light/multiply
+                        diffuse = multiply
+                        normal = overlay
+                    }
+                    priority = 10
+                    age = age_preset_eyebrows_fullness_elf
+                }
+            }
+            female = male
+            boy = male
+            girl = female
+        }
+    }
+}

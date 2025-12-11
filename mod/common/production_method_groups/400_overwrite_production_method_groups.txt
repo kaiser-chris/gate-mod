@@ -1,85 +1,49 @@
 ﻿# These production methods groups are modified groups from
 # the base game.
 
-# Urban Center
-pmg_street_lighting = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	production_methods = {
-		pm_no_street_lighting
-		pm_gas_streetlights
-		pm_magic_streetlights
-		pm_electric_streetlights
-	}
+INJECT:pmg_street_lighting = {
+    production_methods = {
+        pm_magic_streetlights
+    }
 }
 
 # Mines
-pmg_explosives_building_coal_mine = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	production_methods = {
-		pm_no_explosives
-		pm_crystal_explosives_building_coal_mine
-		pm_nitroglycerin_building_coal_mine
-		pm_dynamite_building_coal_mine
-	}
+INJECT:pmg_explosives_building_coal_mine = {
+    production_methods = {
+        pm_crystal_explosives_building_coal_mine
+    }
 }
-pmg_explosives_building_iron_mine = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	production_methods = {
-		pm_no_explosives
-		pm_crystal_explosives_building_iron_mine
-		pm_nitroglycerin_building_iron_mine
-		pm_dynamite_building_iron_mine
-	}
+INJECT:pmg_explosives_building_iron_mine = {
+    production_methods = {
+        pm_crystal_explosives_building_iron_mine
+    }
 }
-pmg_explosives_building_lead_mine = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	production_methods = {
-		pm_no_explosives
-		pm_crystal_explosives_building_lead_mine
-		pm_nitroglycerin_building_lead_mine
-		pm_dynamite_building_lead_mine
-	}
+INJECT:pmg_explosives_building_lead_mine = {
+    production_methods = {
+        pm_crystal_explosives_building_lead_mine
+    }
 }
-pmg_explosives_building_sulfur_mine = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	production_methods = {
-		pm_no_explosives
-		pm_crystal_explosives_building_sulfur_mine
-		pm_nitroglycerin_building_sulfur_mine
-		pm_dynamite_building_sulfur_mine
-	}
+INJECT:pmg_explosives_building_sulfur_mine = {
+    production_methods = {
+        pm_crystal_explosives_building_sulfur_mine
+    }
 }
-pmg_explosives_building_gold_mine = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	production_methods = {
-		pm_no_explosives
-		pm_crystal_explosives_building_gold_mine
-		pm_nitroglycerin_building_gold_mine
-		pm_dynamite_building_gold_mine
-	}
+INJECT:pmg_explosives_building_gold_mine = {
+    production_methods = {
+        pm_crystal_explosives_building_gold_mine
+    }
 }
 
 # Infrastructure
-pmg_base_building_railway = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	ai_selection = most_productive
-
-	production_methods = {
-		pm_early_trains
-		pm_early_mana_trains
-		pm_steam_trains
-		pm_steam_trains_principle_transport_3
-		pm_mana_trains
-		pm_electric_trains
-		pm_electric_trains_principle_transport_3
-		pm_diesel_trains
-		pm_diesel_trains_principle_transport_3
-	}
+INJECT:pmg_base_building_railway = {
+    production_methods = {
+        pm_early_mana_trains
+        pm_mana_trains
+    }
 }
 
 # Industry
-pmg_steelmaking_process = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+INJECT:pmg_steelmaking_process = {
 	production_methods = {
 		pm_blister_steel_process
 		pm_bessemer_process
@@ -90,94 +54,63 @@ pmg_steelmaking_process = {
 }
 
 # Plantations
-pmg_base_building_coffee_plantation = {
+INJECT:pmg_base_building_coffee_plantation = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
-		default_building_coffee_plantation
 		pm_living_irrigation_building_coffee_plantation
-		automatic_irrigation_building_coffee_plantation
 	}
 }
-pmg_base_building_cotton_plantation = {
+INJECT:pmg_base_building_cotton_plantation = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
-		default_building_cotton_plantation
 		pm_living_irrigation_building_cotton_plantation
-		automatic_irrigation_building_cotton_plantation
 	}
 }
-pmg_base_building_dye_plantation = {
+INJECT:pmg_base_building_dye_plantation = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
-		default_building_dye_plantation
 		pm_living_irrigation_building_dye_plantation
-		automatic_irrigation_building_dye_plantation
 	}
 }
-pmg_base_building_opium_plantation = {
+INJECT:pmg_base_building_opium_plantation = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
-		default_building_opium_plantation
 		pm_living_irrigation_building_opium_plantation
-		automatic_irrigation_building_opium_plantation
 	}
 }
-pmg_base_building_tea_plantation = {
+INJECT:pmg_base_building_tea_plantation = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
-		default_building_tea_plantation
 		pm_living_irrigation_building_tea_plantation
-		automatic_irrigation_building_tea_plantation
 	}
 }
-pmg_base_building_tobacco_plantation = {
+INJECT:pmg_base_building_tobacco_plantation = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
-		default_building_tobacco_plantation
 		pm_living_irrigation_building_tobacco_plantation
-		automatic_irrigation_building_tobacco_plantation
 	}
 }
-pmg_base_building_sugar_plantation = {
+INJECT:pmg_base_building_sugar_plantation = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
-		default_building_sugar_plantation
 		pm_living_irrigation_building_sugar_plantation
-		automatic_irrigation_building_sugar_plantation
 	}
 }
-pmg_base_building_banana_plantation = {
+INJECT:pmg_base_building_banana_plantation = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
-		default_building_banana_plantation
 		pm_living_irrigation_building_banana_plantation
-		automatic_irrigation_building_banana_plantation
 	}
 }
-pmg_base_building_silk_plantation = {
+INJECT:pmg_base_building_silk_plantation = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
-		default_building_silk_plantation
 		pm_living_irrigation_building_silk_plantation
-		automatic_irrigation_building_silk_plantation
 	}
 }
-pmg_base_building_vineyard_plantation = {
+INJECT:pmg_base_building_vineyard = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
-		default_building_vineyard_plantation
-		pm_living_irrigation_building_vineyard_plantation
-		automatic_irrigation_building_vineyard_plantation
-	}
-}
-
-# Morgenröte
-pmg_university_focus = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	ai_selection = most_productive
-	is_hidden_when_unavailable = yes
-
-	production_methods = {
-		pm_gate_mr_locked
+		pm_living_irrigation_building_vineyard
 	}
 }

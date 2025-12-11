@@ -366,7 +366,7 @@ debug_gate_start_reytu = {
 				name = gate_expedition
 				value = scope:expedition
 			}
-			var:gate_expedition = {
+			var:gate_expedition ?= {
 				set_variable = {
 					name = location
 					value = global_var:gate_expedition_reytu
