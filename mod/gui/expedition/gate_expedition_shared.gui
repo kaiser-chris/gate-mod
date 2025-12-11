@@ -1,0 +1,306 @@
+types gate_expedition_panel_types {
+
+    type gate_map_sidebar = hbox {
+        datacontext = "[Country.MakeScope.Var('gate_map_sidebar')]"
+        maximumsize = { 544 -1 }
+        margin_top = -4
+        layoutpolicy_vertical = expanding
+        layoutpolicy_horizontal = expanding
+
+        visible = "[Country.MakeScope.Var('gate_map_sidebar').IsSet]"
+
+        background = {
+            using = default_bg
+        }
+
+        vbox = {
+            minimumsize = { 2 -1 }
+            layoutpolicy_vertical = expanding
+            layoutpolicy_horizontal = expanding
+            vbox = {
+                minimumsize = { -1 2 }
+                layoutpolicy_vertical = expanding
+                layoutpolicy_horizontal = expanding
+
+                background = {
+                    texture = "gfx/interface/dividers/divider_clean.dds"
+                    texture_density = 2
+                    spriteType = CorneredTiled
+                    spriteborder = { 4 0 }
+
+                    modify_texture = {
+                        texture = "gfx/interface/masks/fade_vertical_top.dds"
+                        spriteType = Corneredstretched
+                        spriteborder = { 0 0 }
+                        blend_mode = alphamultiply
+                    }
+                }
+            }
+        }
+
+        vbox = {
+            layoutpolicy_horizontal = expanding
+            layoutpolicy_vertical = expanding
+
+            default_header_clean = {
+                blockoverride "text" {
+                    raw_text = "[Scope.Var('type').Var('name').GetFlagName]"
+                }
+                blockoverride "size" {
+                    size = { 540 44 }
+                }
+                close_button_large = {
+                    size = { 32 32 }
+                    parentanchor = top|right
+                    position = { 0 6 }
+                    shortcut = "close_window"
+                    onclick = "[GetScriptedGui('sgui_gate_map_location_reset').Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
+                }
+            }
+            vbox = {
+                margin = { 0 15 }
+                spacing = 10
+                layoutpolicy_horizontal = expanding
+                layoutpolicy_vertical = expanding
+                scrollarea = {
+                    layoutpolicy_horizontal = expanding
+                    layoutpolicy_vertical = expanding
+
+                    scrollbarpolicy_horizontal = always_off
+
+                    scrollbar_vertical = {
+                        using = vertical_scrollbar
+                    }
+
+                    scrollwidget = {
+                        vbox = {
+                            margin = { 15 0 }
+                            layoutpolicy_horizontal = expanding
+                            layoutpolicy_vertical = expanding
+                            spacing = 10
+                            textbox = {
+                                maximumsize = { 500 -1 }
+                                layoutpolicy_horizontal = expanding
+                                margin = { 20 20 }
+                                autoresize = yes
+                                multiline = yes
+                                raw_text = "[Scope.Var('type').Var('desc').GetFlagName]"
+
+                                background = {
+                                    using = entry_bg_fancy_dark
+                                    alpha = 0.6
+                                }
+                            }
+                            textbox = {
+                                maximumsize = { 500 -1 }
+                                layoutpolicy_horizontal = expanding
+                                margin = { 20 20 }
+                                using = entry_bg
+                                autoresize = yes
+                                multiline = yes
+                                raw_text = "[Scope.Var('type').Var('flavor').GetFlagName]"
+                            }
+                            expand = {}
+                        }
+                    }
+                }
+
+                expand = {}
+
+                vbox = {
+                    layoutpolicy_horizontal = expanding
+                    spacing = 10
+                    visible = "[Not(IsDataModelEmpty(Scope.Var('type').GetList('interactions')))]"
+
+                    divider_clean = {
+                        layoutpolicy_horizontal = expanding
+                    }
+
+                    vbox = {
+                        margin = { 15 0 }
+                        spacing = 10
+                        layoutpolicy_horizontal = expanding
+                        datamodel = "[Scope.Var('type').GetList('interactions')]"
+                        datacontext = "[Scope.GetCharacter]"
+
+                        item = {
+                            gate_location_interaction = {}
+                        }
+                    }
+                }
+            }
+
+        }
+
+        vbox = {
+            minimumsize = { 2 -1 }
+            layoutpolicy_vertical = expanding
+            layoutpolicy_horizontal = expanding
+            vbox = {
+                minimumsize = { -1 2 }
+                layoutpolicy_vertical = expanding
+                layoutpolicy_horizontal = expanding
+
+                background = {
+                    texture = "gfx/interface/dividers/divider_clean.dds"
+                    texture_density = 2
+                    spriteType = CorneredTiled
+                    spriteborder = { 4 0 }
+
+                    modify_texture = {
+                        texture = "gfx/interface/masks/fade_vertical_bottom.dds"
+                        spriteType = Corneredstretched
+                        spriteborder = { 0 0 }
+                        blend_mode = alphamultiply
+                    }
+                }
+            }
+        }
+    }
+
+    type gate_location_interaction = button {
+        datacontext = "[GetScriptedGui('sgui_gate_map_location_interact')]"
+        size = { 450 44 }
+        raw_text = "[Scope.Var('text').GetFlagName]"
+        tooltip = "[Scope.Var('tooltip').GetFlagName][Localize('gate_expedition_interaction_tooltip_separator')][ScriptedGui.BuildTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('interaction', Scope.GetCharacter.MakeScope).End)]"
+        using = default_button_primary_big_action
+        onclick = "[ScriptedGui.Execute(GuiScope
+                            .SetRoot(Country.MakeScope)
+                            .AddScope('interaction', Scope.GetCharacter.MakeScope)
+                            .AddScope('location', Character.MakeScope)
+                            .End
+                      )]"
+        enabled = "[ScriptedGui.IsValid(GuiScope
+                            .SetRoot(Country.MakeScope)
+                            .AddScope('interaction', Scope.GetCharacter.MakeScope)
+                            .AddScope('location', Character.MakeScope)
+                            .End
+                      )]"
+        visible = "[ScriptedGui.IsShown(GuiScope
+                            .SetRoot(Country.MakeScope)
+                            .AddScope('interaction', Scope.GetCharacter.MakeScope)
+                            .AddScope('location', Character.MakeScope)
+                            .End
+                      )]"
+    }
+
+    type gate_state = widget {
+        parentanchor = center
+        size = { 100% 100% }
+
+        widget = {
+            parentanchor = center
+            size = { 100% 100% }
+            visible = "[Not(Scope.Var('hidden').IsSet)]"
+            alwaystransparent = yes
+
+            block "state_content" {
+                widget = {
+                    size = { 100% 100% }
+                    datamodel = "[Scope.GetList('locations')]"
+                    max_update_rate = 100
+                    item = {
+                        gate_button_map_marker = {
+                            blockoverride button_position {
+                                state = {
+                                    trigger_on_create = yes
+                                    position_x = "[Scope.Var('x').GetValue]"
+                                    position_y = "[Scope.Var('y').GetValue]"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        widget = {
+            parentanchor = center
+            size = { 100% 100% }
+            visible = "[Scope.Var('hidden').IsSet]"
+
+            background = {
+                texture = "gfx/map/ankaris/hidden.dds"
+
+                modify_texture = {
+                    block state_mask_hidden {
+                        #texture = gfx/map/ankaris/reytu/state_mask_01_hidden.dds
+                    }
+                    spriteType = Corneredstretched
+                    blend_mode = alphamultiply
+                    texture_density = 2
+                }
+            }
+        }
+    }
+
+    type gate_button_map_marker = widget {
+        block "button_position" {
+            position = { 0 0 }
+        }
+        size = { 60 60 }
+
+        # Name
+        widget = {
+            parentanchor = hcenter|bottom
+            position = { 0 -10 }
+            textbox = {
+                block "sub_text" {
+                    text = "[Scope.Var('type').Var('name').GetFlagName]"
+                }
+                background = {
+                    using = paper_bg
+                }
+                parentanchor = hcenter
+                autoresize = yes
+                margin = { 20 10 }
+            }
+        }
+
+        # Highlight
+        widget = {
+            size = { 160% 160% }
+            parentanchor = center
+            block "selected_visibility" {
+                visible = "[ObjectsEqual(Country.MakeScope.Var('gate_map_sidebar').GetCharacter.MakeScope, Scope.GetCharacter.MakeScope)]"
+            }
+
+            icon = {
+                using = rotate_glow_animation
+            }
+
+            state = {
+                name = _show
+                duration = 0.4
+                using = Animation_Curve_Default
+                alpha = 0.5
+            }
+            state = {
+                name = _hide
+                duration = 0.7
+                using = Animation_Curve_Default
+                alpha = 0
+            }
+        }
+
+        # Button
+        button_icon_round = {
+            block "tooltip" {
+                tooltip = "expedition_location_tooltip"
+            }
+            size = { 60 60 }
+            blockoverride "icon" {
+                icon = {
+                    size = { 60 60 }
+                    block "icon_texture" {
+                        texture = gfx/map/gate/markers/empty_flag.dds
+                    }
+                    scale = 0.8
+                    parentanchor = hcenter|vcenter
+                }
+            }
+            onclick = "[GetScriptedGui('sgui_gate_map_location_choose').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('location', Scope.GetCharacter.MakeScope).End)]"
+        }
+    }
+
+}
