@@ -30,3 +30,8 @@
  trigger_gate_requirement_low_mana_density: "To build this [concept_building] a state needs to have a [concept_mana_density] of at least [TopScope.ScriptValue('low_mana_density_threshhold')]."
  trigger_gate_requirement_medium_mana_density: "To build this [concept_building] a state needs to have a [concept_mana_density] of at least [TopScope.ScriptValue('medium_mana_density_threshhold')]."
  trigger_gate_requirement_max_mana_density: "To build this [concept_building] a state needs to have a [concept_mana_density] of at least [TopScope.ScriptValue('maximum_mana_density')]."
+
+ trigger_gate_ethic_has_all: "Has chosen all possible [Concept('concept_magic_ethic','$concept_magic_ethics$')]"
+ trigger_gate_ethic_has_all_not: "Hasn't chosen all possible [Concept('concept_magic_ethic','$concept_magic_ethics$')]"
+ trigger_gate_ethic_has_all_third: "[COUNTRY.GetNameNoFlag] has chosen all possible [Concept('concept_magic_ethic','$concept_magic_ethics$')]"
+ trigger_gate_ethic_has_all_third_not: "[COUNTRY.GetNameNoFlag] hasn't chosen all possible [Concept('concept_magic_ethic','$concept_magic_ethics$')]"
