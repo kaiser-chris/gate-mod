@@ -1,19 +1,16 @@
 ﻿l_korean:
-# Generic Mana Crystals
  je_prestige_goods_gate_mana: "$prestige_good_gate_generic_mana$"
  je_prestige_goods_gate_mana_reason: "[SCOPE.sCompany('relevant_company').GetName]은 우리 경제에서 중요한 주체로 자리 잡았습니다. 이 회사는 현재의 번영을 바탕으로 자체 브랜드인 @prestige_good_gate_generic_mana! #b $prestige_good_gate_generic_mana$#!를 개발하려 합니다. 성공할 경우, 글로벌 @mana! #b $mana$#! 시장에서 경쟁력을 확대할 수 있을 것입니다."
  je_prestige_goods_gate_mana_goal: "다음 사항을 #v [GetPlayer.MakeScope.ScriptValue('prestige_good_journal_entry_months')] 개월 동안 유지하십시오#! (현재 #v [ROOT.GetCountry.MakeScope.Var('prestige_mana_timer_var').GetValue]#!): #indent_newline:3 "
  je_prestige_goods_gate_mana_complete_tt: "#b $je_prestige_goods_gate_mana$#! [concept_journal_entry]를 완료했습니다."
  je_prestige_goods_gate_mana_reward_tt: "[SCOPE.sCompany('relevant_company').GetName]은 @prestige_good_gate_generic_mana! #b $prestige_good_gate_generic_mana$#!를 생산할 수 있게 됩니다."
  not_prestige_good_gate_generic_mana_var_tt: "아직 @prestige_good_gate_generic_mana! #b $prestige_good_gate_generic_mana$#!을(를) 개발하지 #b 않았습니다#!."
- # Generic Golems
  je_prestige_goods_gate_golem: "$prestige_good_gate_generic_golem$"
  je_prestige_goods_gate_golem_reason: "[SCOPE.sCompany('relevant_company').GetName]은 우리 경제에서 중요한 주체로 자리 잡았습니다. 이 회사는 현재의 번영을 바탕으로 자체 브랜드인 @prestige_good_gate_generic_golem! #b $prestige_good_gate_generic_golem$#!를 개발하려 합니다. 성공할 경우, 글로벌 @golem! #b $golem$#! 시장에서 경쟁력을 확대할 수 있을 것입니다."
  je_prestige_goods_gate_golem_goal: "다음 사항을 #v [GetPlayer.MakeScope.ScriptValue('prestige_good_journal_entry_months')] 개월 동안 유지하십시오#! (현재 #v [ROOT.GetCountry.MakeScope.Var('prestige_golem_timer_var').GetValue]#!): #indent_newline:3 "
  je_prestige_goods_gate_golem_complete_tt: "#b $je_prestige_goods_gate_golem$#! [concept_journal_entry]를 완료했습니다."
  je_prestige_goods_gate_golem_reward_tt: "[SCOPE.sCompany('relevant_company').GetName]은 @prestige_good_gate_generic_golem! #b $prestige_good_gate_generic_golem$#!를 생산할 수 있게 됩니다."
  not_prestige_good_gate_generic_golem_var_tt: "아직 @prestige_good_gate_generic_golem! #b $prestige_good_gate_generic_golem$#!을(를) 개발하지 #b 않았습니다#!."
-# Dwarven Iron
  je_prestige_goods_gate_dwarven_iron: "$prestige_good_gate_dwarven_iron$"
  je_prestige_goods_gate_dwarven_iron_reason: "[SCOPE.sCompany('relevant_company').GetName]은 우리 경제에서 중요한 주체로 자리 잡았습니다. 이 회사는 현재의 번영을 바탕으로 자체 브랜드인 @prestige_good_gate_dwarven_iron! #b $prestige_good_gate_dwarven_iron$#!를 개발하려 합니다. 성공할 경우, 글로벌 @iron! #b $iron$#! 시장에서 경쟁력을 확대할 수 있을 것입니다."
  je_prestige_goods_gate_dwarven_iron_goal: "다음 사항을 #v [GetPlayer.MakeScope.ScriptValue('prestige_good_journal_entry_months')] 개월 동안 유지하십시오#! (현재 #v [ROOT.GetCountry.MakeScope.Var('prestige_dwarven_iron_timer_var').GetValue]#!): #indent_newline:3 "
