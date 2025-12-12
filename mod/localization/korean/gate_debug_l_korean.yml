@@ -1,11 +1,8 @@
 ﻿l_korean:
-# Placeholders
- gate_create_bug_report: "이 내용이 보이면 버그 리포트를 작성하세요"
  orphan_fix.1: "$gate_create_bug_report$"
  idle: "$gate_create_bug_report$"
  commander_vs_left: "$gate_create_bug_report$"
  commander_vs_right: "$gate_create_bug_report$"
-# Debug Decisions
  debug_mana_saturation_decision: "디버그: $je_mana_saturation$ 완료"
  debug_mana_saturation_decision_desc: "$je_mana_saturation$ 저널 항목을 완료합니다."
  debug_complete_sg_magic_knowledge: "디버그: $je_obj_gate_magic_knowledge$ 완료"
@@ -40,21 +37,21 @@
  debug_gate_enact_vampire_monarchy_desc: "[concept_gate_vampirism] 수용."
  debug_gate_reset_reytu: "디버그: 리셋 레이투 원정대"
  debug_gate_reset_reytu_desc: "레이투 원정대 구성을 다시 로드하세요."
+ gate_create_bug_report: "이 내용이 보이면 버그 리포트를 작성하세요"
  debug_gate_start_reytu: "디버그: 레이투 원정 시작"
  debug_gate_start_reytu_desc: "레이투 원정을 바로 시작하세요"
-# Debug Alerts
- alert_alert_gate_debug_base_panel_name: "Base Panel" #TODO: Write alert_gate_space_alert_name
- alert_alert_gate_debug_base_panel_desc: "TODO" #TODO: Write alert_gate_space_alert_desc
- alert_alert_gate_debug_base_panel_hint: "TODO" #TODO: Write alert_gate_space_alert_hint
+ alert_alert_gate_debug_base_panel_name: "기본 패널"
+ alert_alert_gate_debug_base_panel_desc: "할 것"
+ alert_alert_gate_debug_base_panel_hint: "할 것"
  alert_alert_gate_debug_base_panel_action: "$gg_panel_base_action$"
- alert_gate_debug_base_panel_setting_name: "Space has Action" #TODO: Write gate_space_alert_setting_name
- alert_expedition_alert_name: "Expedition" #TODO: Write alert_expedition_alert_name
- alert_expedition_alert_desc: "TODO" #TODO: Write alert_expedition_alert_desc
- alert_expedition_alert_hint: "TODO" #TODO: Write alert_expedition_alert_hint
+ alert_gate_debug_base_panel_setting_name: "우주 행동"
+ alert_expedition_alert_name: "원정"
+ alert_expedition_alert_desc: "할 것"
+ alert_expedition_alert_hint: "할 것"
  alert_expedition_alert_action: "$gg_panel_expedition_action$"
- expedition_alert_setting_name: "Expedition has Action" #TODO: Write expedition_alert_setting_name
- alert_gate_space_alert_name: "Space" #TODO: Write alert_gate_space_alert_name
- alert_gate_space_alert_desc: "TODO" #TODO: Write alert_gate_space_alert_desc
- alert_gate_space_alert_hint: "TODO" #TODO: Write alert_gate_space_alert_hint
+ expedition_alert_setting_name: "원정대 행동"
+ alert_gate_space_alert_name: "우주"
+ alert_gate_space_alert_desc: "할 것"
+ alert_gate_space_alert_hint: "할 것"
  alert_gate_space_alert_action: "$gg_panel_space_action$"
  gate_space_alert_setting_name: "우주 행동"

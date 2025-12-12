@@ -1,9 +1,9 @@
 ﻿l_korean:
- gate_rule_mod_tooltip: "#header $dlc_magic_gate$#!\n$dlc_magic_gate_desc$" #deepl:955832897
- rule_gate_magic_start: "게임 시작 시 $concept_magic_knowledge$"
+ rule_gate_magic_start: "#tooltip:[GetRawTextTooltipTag('gate_rule_mod_tooltip')] @gate_mod_logo!#! $concept_magic_knowledge$ at Game Start"
  setting_gate_deactivate_magic_start: "역사적"
  setting_gate_deactivate_magic_start_desc: "관련된 역사를 가진 [Concept('concept_country', '$concept_countries$')]만이 [concept_magic_knowledge]를 보유한 상태로 시작합니다."
  setting_gate_activate_magic_start_player: "플레이어 국가 + 역사적"
  setting_gate_activate_magic_start_player_desc: "모든 플레이어 [Concept('concept_country', '$concept_countries$')]와 관련 역사를 가진 [Concept('concept_country', '$concept_countries$')]가 [concept_magic_knowledge]를 보유한 상태로 시작합니다."
  setting_gate_activate_magic_start_all: "모든 국가"
  setting_gate_activate_magic_start_all_desc: "모든 [Concept('concept_country', '$concept_countries$')]가 [concept_magic_knowledge]를 보유한 상태로 시작합니다."
+ gate_rule_mod_tooltip: "#header $dlc_magic_gate$#!\n$dlc_magic_gate_desc$"
