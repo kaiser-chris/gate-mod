@@ -1,10 +1,8 @@
 ﻿l_korean:
-# Button
  gate_button_main: "gate_button_main"
  gate_button_main_desc: "$gg_panel_base_title$"
  gate_button_main_tooltip: "#header $gg_panel_base_title$#!\n단축키: #V $gg_panel_base_title$#! (#V CTRL + T#!)"
  gg_panel_base_action: "마나플로우 패널"
-# Panel
  gg_panel_base_title: "마나플로우"
  gg_panel_base_tab_general: "장군"
  gg_panel_base_no_researcher: "비전주의자 없음"
@@ -19,15 +17,13 @@
  gg_magic_countries_relations: "$concept_relations$: #v [Country.GetRelationsWithDesc(GetPlayer)]#! (#v [Country.GetRelationsWith(GetPlayer)|0]#!)"
  gg_magic_countries_relations_region: "#header [DiplomaticAction.GetName]#!\n@red_cross! 해당 행위는 상대국 [concept_strategic_region]에 [concept_interest]가 있을 때만 수행할 수 있습니다."
  gg_header_magic_innovation: "마법 혁신"
-# Magic Innovation
  gg_magic_innovation_total: "현재 보유 중인 [concept_magic_innovation]: #v @magic_innovation![GetPlayer.MakeScope.Var('magic_innovation').GetValue|0] / [GetGlobalVariable('magic_innovation_bank_max').GetValue|0]#!"
  gg_magic_innovation_warning_calc: "사용하지 않는 모든 [concept_magic_innovation]는 #v 소멸#!됩니다."
  gg_monthly_magic_innovation: "우리는 매월 #tooltip:gg_monthly_magic_innovation_tooltip @magic_innovation!$gg_monthly_magic_innovation_value$#! [concept_magic_innovation]를 생산하고 있습니다."
  gg_monthly_magic_innovation_no_magic: "현재 [concept_magic_innovation]를 생산하고 있지 않습니다.\n먼저 [concept_magic_knowledge]를 연구해야 합니다."
  gg_monthly_magic_innovation_value: "#bold [Country.MakeScope.ScriptValue('gate_magic_innovation')|g]#!"
  gg_monthly_magic_innovation_tooltip: "#header [concept_magic_innovation]#!\n우리는 매달 #bold [AccessMetaPlayer.AccessPlayedOrObservedCountry.MakeScope.ScriptValue('gate_magic_innovation')|g]#!의 [concept_magic_innovation]을 생성하고 있습니다:\n[AccessMetaPlayer.AccessPlayedOrObservedCountry.AccessModifier.GetBreakdownFor('country_gate_magical_innovation_add').GetBreakdown]\n\n배율은 [AccessMetaPlayer.AccessPlayedOrObservedCountry.AccessModifier.GetValueWithBreakdownFor('country_gate_magical_innovation_mult')]입니다.\n\n월간 최대 [concept_magic_innovation] 생성량은 [AccessMetaPlayer.AccessPlayedOrObservedCountry.MakeScope.ScriptValue('gate_magic_innovation_max')|v]입니다:\n[AccessMetaPlayer.AccessPlayedOrObservedCountry.MakeScope.ScriptValue('gate_magic_innovation_max')|+=] [GetMetaPlayer.GetPlayedOrObservedCountry.GetName]\n  [AccessMetaPlayer.AccessPlayedOrObservedCountry.MakeScope.ScriptValue('gate_magic_innovation_max_base')|+=] 기본 값\n  [AccessMetaPlayer.AccessPlayedOrObservedCountry.MakeScope.ScriptValue('gate_magic_innovation_max_literacy')|+=] [concept_literacy]\n  [AccessMetaPlayer.AccessPlayedOrObservedCountry.AccessModifier.GetValueWithBreakdownFor('country_gate_magical_innovation_max_add')] 수정치"
-# Projects
  gg_projects_no_active_project: "[concept_magic_researcher]는 현재 유휴 상태임."
  gg_projects_active_project: "우리의 [concept_magic_researcher]는 현재 #v [GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.GetName]#!을(를) 연구 중임."
- gg_projects_progress_months: "[GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.CalcCurrentGoalValue|v0] 의 [GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.GetTotalGoalValue|v0] 개월" #deepl:3276623840
- gg_projects_progress_construction: "[GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.CalcCurrentGoalValue|v0] 의 [GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.GetTotalGoalValue|v0K] [concept_construction]" #deepl:990621305
+ gg_projects_progress_months: "[GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.CalcCurrentGoalValue|v0] of [GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.GetTotalGoalValue|v0] months"
+ gg_projects_progress_construction: "[GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.CalcCurrentGoalValue|v0] of [GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.GetTotalGoalValue|v0K] [concept_construction]"

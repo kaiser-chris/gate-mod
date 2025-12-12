@@ -15,8 +15,6 @@
  gate_mana_saturation_ritual_progress_bar_balance: "의식"
  gate_germanic_decision: "[GetReligion('gate_germanic').GetName] 종교로 개종"
  gate_germanic_decision_desc: "옛 신들이 돌아오고 있는 지금, 우리는 그들을 받아들일지 말지를 결정해야 합니다."
- gate_germanic_decision_conversion_tooltip: "우리나라의 약 #v 20%#!가 옛 [GetReligion('gate_germanic').GetName] 신앙으로 개종할 것입니다."
- gate_germanic_decision_heretic_tooltip: "대부분의 #v $heritage_group_abrahamic$ #! [Concept('concept_country','$concept_countries$')] 유럽에서는 우리를 #v;r 이단자로 취급합니다.#!" #deepl:1122077269
  gate_mana_saturation.1.t: "마법의 세계"
  gate_mana_saturation.1.d: "[concept_mana_saturation]가 최대치에 도달했습니다."
  gate_mana_saturation.1.f: "세상은 이제 끊임없는 낮은 진동으로 울려 퍼지고, 공기는 보이지 않는 힘들의 스파클로 가득 차 있습니다. 모든 돌, 모든 나뭇잎, 모든 숨결은 마나의 거칠고 맥박치는 에너지로 떨고 있습니다. 바다는 섬뜩한 빛으로 빛나고, 하늘은 인간의 눈으로는 결코 볼 수 없었던 색깔들로 춤을 춥니다. 지구는 이제 살아 있는 에너지의 통로가 되었으며, 그 중심은 마법으로 가득 차 있습니다."
@@ -73,6 +71,7 @@
  gate_mana_saturation.13.d: "지역의 [concept_mana_density]가 증가하면서, 바쿠의 아테쉬가흐가 아래에 잠들어 있던 고대 [Concept('concept_gate_ley_lines','$concept_gate_ley_line$')] 넥서스가 깨어났습니다."
  gate_mana_saturation.13.f: "고대 아테쉬가흐가 사원에서, 수 세기 동안 신성한 불꽃이 춤을 추어왔던 그곳, 마나가 풍부한 공기가 이제 불꽃을 초자연적인 힘으로 끌어당깁니다. 일곱 개의 영원한 불꽃은 어떤 살아있는 영혼도 기억하지 못한 채 더욱 강렬히 타오르며, 바쿠 하늘을 찬란하게 비춥니다. 이상하게도, 지역 전역에서 대장간과 용광로의 불꽃이 더 뜨겁고 효율적으로 타오르며, 지역의 제철소들은 거의 신성한 열로 강화되었습니다. 일부는 불의 영혼들이 깨어났다고 말하고, 다른 이들은 잊힌 기도가 응답받았다고 이야기합니다. 진실이 무엇이든, 대장장이의 신들이 기뻐하는 듯 보입니다."
  gate_mana_saturation.13.a: "걱정스럽군."
+ gate_germanic_decision_conversion_tooltip: "Around #v 20%#! of our country will convert to the old [GetReligion('gate_germanic').GetName] faith"
  gate_mana_saturation.14.t: "빛나는 순수의 물"
  gate_mana_saturation.14.d: "지역 [concept_mana_density]가 증가하면서 갠지스 강 아래에 있는 고대 [Concept('concept_gate_ley_lines','$concept_gate_ley_line$')] 연결점이 깨어났습니다."
  gate_mana_saturation.14.f: "오랜 전통과 시간 속에서 성스러움을 지켜온 고대 도시 바라나시는 이제 새로 깨어난 신비한 마법 에너지로 움직이고 있습니다. 갠지스 강 아래의 레이 라인이 깨어나면서, 성스러운 강물은 달빛 아래 은은하게 빛나며 부드럽고 치유하는 마법의 힘을 담고 있습니다. 현지인들은 오래된 병이 사라지고, 강가에서 목욕하는 이들에게 깊은 평온이 찾아온다고 전합니다. 경외심과 감탄 속에 순례자와 학자들이 모여 갠지스의 부활을 목격합니다. 이 강은 이제 단순한 영적 생명선이 아니라 살아 있는 마나의 통로로 다시 태어났습니다."
@@ -81,3 +80,4 @@
  gate_mana_saturation.15.d: "지역 [concept_mana_density]가 증가하면서 벤카테스와라 사원 아래에 있는 고대 [Concept('concept_gate_ley_lines','$concept_gate_ley_line$')] 연결점이 깨어났습니다."
  gate_mana_saturation.15.f: "벤카테스와라 사원 아래 레이 라인의 각성은 고대 신성함과 현대 마법을 엮어냈습니다. 순례자와 학자들은 사원의 그림자 안에서 환상과 계시, 그리고 불가사의한 명료함을 경험했다고 전합니다. 벤카테스와라 신이 이제 레이 흐름을 통해 진리를 속삭인다고 하며, 감히 귀 기울이는 이들에게 통찰을 선물한다고 합니다."
  gate_mana_saturation.15.a: "정말 멋지군!"
+ gate_germanic_decision_heretic_tooltip: "Most #v $heritage_group_abrahamic$#! [Concept('concept_country','$concept_countries$')] in Europe will treat us as #v;r heretics#!"
