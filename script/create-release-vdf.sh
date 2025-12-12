@@ -17,9 +17,6 @@ fi
 if [ -f "$2" ]
 then
   description="$(cat < "$2")"
-  description=${description//$'\n'/\\n}
-  description=${description//$'\t'/\\t}
-  description=${description//\"/\'}
 else
   printf 'Missing Steam description'
   printf '\n'
@@ -27,8 +24,8 @@ else
   exit 1
 fi
 
-title=$(grep -Po '(?<=\s\"name\"\s:\s\").+(?=\",)' "$mod_path/.metadata/metadata.json")
-version=$(grep -Po '(?<=\s\"version\"\s:\s\").+(?=\",)' "$mod_path/.metadata/metadata.json")
+title=$(grep -rhoP '\s\"name\"\s*:\s*\"\K.+(?=\"\s*,)' "$mod_path/.metadata/metadata.json")
+version=$(grep -rhoP '\s\"version\"\s*:\s*\"\K.+(?=\"\s*,)' "$mod_path/.metadata/metadata.json")
 
 if [ -f "$mod_path/../documentation/updates/$version.bbcode" ]
 then
