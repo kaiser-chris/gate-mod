@@ -86,6 +86,7 @@ jobs:
 
       - name: Create Release Artifact
         run: |
+          rm -f mod/vic3-tiger.conf
           (cd mod; zip -r release-${{ steps.increment-version.outputs.next-version }}.zip .)
 
       - name: Upload Release Artifact
