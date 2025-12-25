@@ -1167,6 +1167,9 @@ types gate_shared {
         block "size" {
             size = { 350 45 }
         }
+        block "visibility" {
+            visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Country.MakeScope).End)]"
+        }
         block "tooltip" {
             tooltipwidget = {
                 RegularTooltip = {

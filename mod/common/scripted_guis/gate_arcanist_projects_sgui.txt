@@ -66,8 +66,11 @@ gg_project_artificial_ecosystem = {
     scope = country
 
     is_valid = {
-        #TODO
-        always = yes
+        has_global_variable = com_debug
+    }
+
+    is_shown = {
+        has_global_variable = com_debug
     }
 
     effect = {
