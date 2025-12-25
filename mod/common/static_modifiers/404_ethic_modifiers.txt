@@ -30,15 +30,15 @@ ethic_diplomacy = {
 
 ethic_harmony = {
     icon = gfx/interface/icons/ethic_icons/ethic_harmony.dds
-    country_acceptance_no_shared_heritage_trait_add = 10
-    country_acceptance_no_shared_language_trait_add = 10
-    country_acceptance_no_shared_tradition_trait_add = 10
+	country_legitimacy_ideological_incoherence_mult = -0.05
+	political_movement_radicalism_add = -0.05
+    country_acceptance_no_shared_heritage_trait_add = 2
+    country_acceptance_no_shared_language_trait_add = 2
+    country_acceptance_no_shared_tradition_trait_add = 2
 }
 
 ethic_discord = {
     icon = gfx/interface/icons/ethic_icons/ethic_discord.dds
-    country_assimilation_second_rate_citizen_mult = 0.05
-    country_assimilation_open_prejudice_mult = 0.05
-    country_assimilation_cultural_erasure_mult = 0.10
-    country_assimilation_violent_hostility_mult = 0.15
+	country_radicals_from_legitimacy_mult = -0.1
+	country_loyalists_from_legitimacy_mult = 0.1
 }
