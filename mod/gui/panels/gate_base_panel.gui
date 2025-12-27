@@ -525,55 +525,6 @@ types gate_base_panel_types {
                 }
             }
         }
-
-        # Countries
-        # vbox = {
-        #     maximumsize = { 570 -1 }
-        #     minimumsize = { 570 -1 }
-        #     spacing = 0
-        #     margin_top = -2
-        #     margin_bottom = 2
-        #     layoutpolicy_vertical = expanding
-        #     layoutpolicy_horizontal = expanding
-        #
-        #     background = {
-        #         using = simple_frame
-        #     }
-        #
-        #     default_header_clean_faded = {
-        #         layoutpolicy_horizontal = expanding
-        #         blockoverride "text" {
-        #             raw_text = "[Concept('concept_gate_magic_country', Localize('concept_gate_magic_countries'))]"
-        #         }
-        #     }
-        #
-        #     scrollarea = {
-        #         layoutpolicy_vertical = expanding
-        #         layoutpolicy_horizontal = expanding
-        #         scrollbarpolicy_horizontal = always_off
-        #         scrollbarpolicy_vertical = always_on
-        #         scrollbar_vertical = {
-        #             using = vertical_scrollbar
-        #         }
-        #
-        #         scrollwidget = {
-        #             flowcontainer = {
-        #                 minimumsize = { 570 300 }
-        #                 direction = vertical
-        #                 spacing = 10
-        #                 margin = { 20 20 }
-        #
-        #                 block "datamodel" {
-        #                     datamodel = "[GetGlobalList('magic_countries')]"
-        #                 }
-        #
-        #                 item = {
-        #                     gate_base_panel_magic_country = {}
-        #                 }
-        #             }
-        #         }
-        #     }
-        # }
     }
 
     type gate_base_panel_magic_country = flowcontainer {
@@ -887,12 +838,14 @@ types gate_base_panel_types {
         minimumsize = { 180 -1 }
         maximumsize = { 180 -1 }
         block "visible" {
-            visible = "[Or5(
+            visible = "[Or7(
                             EqualTo_string(TimedModifier.GetName, GetStaticModifier('ethic_neutral').GetName),
                             EqualTo_string(TimedModifier.GetName, GetStaticModifier('ethic_war').GetName),
                             EqualTo_string(TimedModifier.GetName, GetStaticModifier('ethic_diplomacy').GetName),
                             EqualTo_string(TimedModifier.GetName, GetStaticModifier('ethic_economy').GetName),
-                            EqualTo_string(TimedModifier.GetName, GetStaticModifier('ethic_environment').GetName)
+                            EqualTo_string(TimedModifier.GetName, GetStaticModifier('ethic_environment').GetName),
+                            EqualTo_string(TimedModifier.GetName, GetStaticModifier('ethic_harmony').GetName),
+                            EqualTo_string(TimedModifier.GetName, GetStaticModifier('ethic_discord').GetName)
                        )]"
         }
         flowcontainer = {
