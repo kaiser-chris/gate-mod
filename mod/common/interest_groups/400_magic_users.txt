@@ -115,7 +115,7 @@
 				limit = {
 					is_pop_type = mages
 				}
-				value = 200
+				value = 100
 			}
 		}
 
@@ -126,7 +126,7 @@
 				limit = {
 					is_pop_type = druids
 				}
-				value = 150
+				value = 100
 			}
 		}
 
@@ -136,7 +136,7 @@
 				limit = {
 					is_pop_type = aristocrats
 				}
-				value = 75
+				value = 60
 			}
 		}
 
@@ -146,7 +146,17 @@
 				limit = {
 					is_pop_type = academics
 				}
-				value = 100
+				value = 60
+			}
+		}
+
+		add = {
+			desc = "POP_FARMERS"
+			if = {
+				limit = {
+					is_pop_type = farmers
+				}
+				value = 25
 			}
 		}
 		
