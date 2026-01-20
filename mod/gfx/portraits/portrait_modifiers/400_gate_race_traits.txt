@@ -1,0 +1,33 @@
+﻿gate_races = {
+    usage = game
+
+    orcish_race = {
+        dna_modifiers = {
+            morph = {
+                # Orcish Skin Color
+                mode = add
+                gene = gate_skin_color
+                template = color_shift_full
+                value = 0.61
+            }
+            accessory = {
+                # Orcish Tusks
+                mode = add
+                gene = gate_gene_tusks_and_teeth
+                template = random_tusks
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                OR = {
+                    orcish_portrait_trigger = yes
+                    orcish_portrait_pop_trigger = yes
+                }
+            }
+        }
+    }
+
+}
