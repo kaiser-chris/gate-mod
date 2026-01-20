@@ -1,0 +1,234 @@
+﻿@maleMin = 0.0
+@maleMax = 1.0
+@femaleMin = 0.0
+@femaleMax = 0.8
+
+@maleAnimMin = -0.5
+@maleAnimMax = 0.5
+@femaleAnimMin = -0.4
+@femaleAnimMax = 0.4
+
+@maleBsMin = -1.0
+@maleBsMax = 1.0
+@femaleBsMin = -0.8
+@femaleBsMax = 0.8
+
+@boyMin = 0.0
+@boyMax = 1.0
+@girlMin = 0.2
+@girlMax = 0.8
+
+
+special_genes = {
+    morph_genes = {
+        gate_skin_color = {
+            color_normal = {
+                index = 1
+            }
+
+            color_shift_hue = {
+                index = 2
+                male = {
+                    skin_hsv_shift_curve = {
+                        curve = {
+                            { 0.0 { -1.0 0.0 0.0 } }
+                            { 0.5 { 0.0 0.0 0.0 } }
+                            { 1.0 { 1.0 0.0 0.0 } }
+                        }
+                    }
+                }
+                female = male
+                boy = male
+                girl = male
+            }
+
+            color_shift_saturation = {
+                index = 3
+                male = {
+                    skin_hsv_shift_curve = {
+                        curve = {
+                            { 0.0 { 0.0 -1.0 0.0 } }
+                            { 0.5 { 0.0 0.0 0.0 } }
+                            { 1.0 { 0.0 1.0 0.0 } }
+                        }
+                    }
+                }
+                female = male
+                boy = male
+                girl = male
+            }
+
+            color_shift_base = {
+                index = 4
+                male = {
+                    skin_hsv_shift_curve = {
+                        curve = {
+                            { 0.0 { 0.0 0.0 -1.0 } }
+                            { 0.5 { 0.0 0.0 0.0 } }
+                            { 1.0 { 0.0 0.0 1.0 } }
+                        }
+                    }
+                }
+                female = male
+                boy = male
+                girl = male
+            }
+
+            color_shift_full = {
+                index = 5
+                male = {
+                    skin_hsv_shift_curve = {
+                        curve = {
+                            { 0.0 { -1.0 -1.0 -1.0 } }
+                            { 0.5 { 0.0 0.0 0.0 } }
+                            { 1.0 { 1.0 1.0 1.0 } }
+                        }
+                    }
+                }
+                female = male
+                boy = male
+                girl = male
+            }
+        }
+
+        gate_hair_color = {
+            color_normal = {
+                index = 1
+            }
+
+            color_shift_hue = {
+                index = 2
+                male = {
+                    hair_hsv_shift_curve = {
+                        curve = {
+                            { 0.0 { -1.0 0.0 0.0 } }
+                            { 0.5 { 0.0 0.0 0.0 } }
+                            { 1.0 { 1.0 0.0 0.0 } }
+                        }
+                    }
+                }
+                female = male
+                boy = male
+                girl = male
+            }
+
+            color_shift_saturation = {
+                index = 3
+                male = {
+                    hair_hsv_shift_curve = {
+                        curve = {
+                            { 0.0 { 0.0 -1.0 0.0 } }
+                            { 0.5 { 0.0 0.0 0.0 } }
+                            { 1.0 { 0.0 1.0 0.0 } }
+                        }
+                    }
+                }
+                female = male
+                boy = male
+                girl = male
+            }
+
+            color_shift_base = {
+                index = 4
+                male = {
+                    hair_hsv_shift_curve = {
+                        curve = {
+                            { 0.0 { 0.0 0.0 -1.0 } }
+                            { 0.5 { 0.0 0.0 0.0 } }
+                            { 1.0 { 0.0 0.0 1.0 } }
+                        }
+                    }
+                }
+                female = male
+                boy = male
+                girl = male
+            }
+
+            color_shift_full = {
+                index = 5
+                male = {
+                    hair_hsv_shift_curve = {
+                        curve = {
+                            { 0.0 { -1.0 -1.0 -1.0 } }
+                            { 0.5 { 0.0 0.0 0.0 } }
+                            { 1.0 { 1.0 1.0 1.0 } }
+                        }
+                    }
+                }
+                female = male
+                boy = male
+                girl = male
+            }
+        }
+
+        gate_eye_color = {
+            color_normal = {
+                index = 1
+            }
+
+            color_shift_hue = {
+                index = 2
+                male = {
+                    eye_hsv_shift_curve = {
+                        curve = {
+                            { 0.0 { -1.0 0.0 0.0 } }
+                            { 0.5 { 0.0 0.0 0.0 } }
+                            { 1.0 { 1.0 0.0 0.0 } }
+                        }
+                    }
+                }
+                female = male
+                boy = male
+                girl = male
+            }
+
+            color_shift_saturation = {
+                index = 3
+                male = {
+                    eye_hsv_shift_curve = {
+                        curve = {
+                            { 0.0 { 0.0 -1.0 0.0 } }
+                            { 0.5 { 0.0 0.0 0.0 } }
+                            { 1.0 { 0.0 1.0 0.0 } }
+                        }
+                    }
+                }
+                female = male
+                boy = male
+                girl = male
+            }
+
+            color_shift_base = {
+                index = 4
+                male = {
+                    eye_hsv_shift_curve = {
+                        curve = {
+                            { 0.0 { 0.0 0.0 -1.0 } }
+                            { 0.5 { 0.0 0.0 0.0 } }
+                            { 1.0 { 0.0 0.0 1.0 } }
+                        }
+                    }
+                }
+                female = male
+                boy = male
+                girl = male
+            }
+
+            color_shift_full = {
+                index = 5
+                male = {
+                    eye_hsv_shift_curve = {
+                        curve = {
+                            { 0.0 { -1.0 -1.0 -1.0 } }
+                            { 0.5 { 0.0 0.0 0.0 } }
+                            { 1.0 { 1.0 1.0 1.0 } }
+                        }
+                    }
+                }
+                female = male
+                boy = male
+                girl = male
+            }
+        }
+    }
+}

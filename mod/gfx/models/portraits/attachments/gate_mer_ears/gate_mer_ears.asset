@@ -1,0 +1,87 @@
+pdxmesh = {
+	name = "gate_race_mer_ears_01_mesh"
+	file = "gate_race_mer_ears_01.mesh"
+
+	meshsettings = {
+		name = "MeshShape.001"
+		index = 0
+		texture_diffuse = "male_head_01_diffuse.dds"
+		texture_normal = "male_head_01_normal.dds"
+		texture_specular = "male_head_01_properties.dds"
+		texture = { file = "male_head_01_ssao_color.dds" index = 3 }
+		shader = "portrait_skin_face"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "gate_race_mer_ears_01_entity"
+	pdxmesh = "gate_race_mer_ears_01_mesh"
+
+	game_data = {
+		portrait_entity_user_data = {
+			color_mask_remap_interval = {
+				interval = {0.0 1.0}
+			}
+		}
+	}
+}
+
+pdxmesh = {
+	name = "gate_race_mer_ears_02_mesh"
+	file = "gate_race_mer_ears_02.mesh"
+
+	meshsettings = {
+		name = "MeshShap"
+		index = 0
+		texture_diffuse = "male_head_01_diffuse.dds"
+		texture_normal = "male_head_01_normal.dds"
+		texture_specular = "male_head_01_properties.dds"
+		texture = { file = "male_head_01_ssao_color.dds" index = 3 }
+		shader = "portrait_skin_face"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "gate_race_mer_ears_02_entity"
+	pdxmesh = "gate_race_mer_ears_02_mesh"
+
+	game_data = {
+		portrait_entity_user_data = {
+			color_mask_remap_interval = {
+				interval = {0.0 1.0}
+			}
+		}
+	}
+}
+
+pdxmesh = {
+	name = "gate_race_mer_ears_03_mesh"
+	file = "gate_race_mer_ears_03.mesh"
+
+	meshsettings = {
+		name = "MeshShape.001"
+		index = 0
+		texture_diffuse = "male_head_01_diffuse.dds"
+		texture_normal = "male_head_01_normal.dds"
+		texture_specular = "male_head_01_properties.dds"
+		texture = { file = "male_head_01_ssao_color.dds" index = 3 }
+		shader = "portrait_skin_face"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "gate_race_mer_ears_03_entity"
+	pdxmesh = "gate_race_mer_ears_03_mesh"
+
+	game_data = {
+		portrait_entity_user_data = {
+			color_mask_remap_interval = {
+				interval = {0.0 1.0}
+			}
+		}
+	}
+}
+
