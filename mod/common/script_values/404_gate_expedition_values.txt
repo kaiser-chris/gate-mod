@@ -23,6 +23,7 @@ gate_expedition_budget = {
     value = 0
     if = {
         limit = {
+            exists = var:gate_expedition
             var:gate_expedition ?= {
                 has_variable = expedition_budget
                 has_variable = expedition_budget_total
@@ -35,6 +36,7 @@ gate_expedition_budget_total = {
     value = 0
     if = {
         limit = {
+            exists = var:gate_expedition
             var:gate_expedition ?= {
                 has_variable = expedition_budget_total
             }
@@ -47,6 +49,7 @@ gate_expedition_activity_time = {
     value = 0
     if = {
         limit = {
+            exists = scope:interaction
             scope:interaction ?= {
                 has_variable = time
             }

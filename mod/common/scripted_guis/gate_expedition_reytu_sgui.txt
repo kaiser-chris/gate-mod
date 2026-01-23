@@ -1,0 +1,63 @@
+﻿sgui_gate_map_location_interact = {
+    scope = country
+
+    saved_scopes = {
+        location
+        interaction
+    }
+
+    is_shown = {
+        gate_expedition_interaction_valid = {
+            activity = scope:interaction.var:type
+        }
+    }
+
+    is_valid = {
+        hidden_trigger = {
+            gate_expedition_interaction_valid = {
+                activity = scope:interaction.var:type
+            }
+        }
+        gate_expedition_has_budget = {
+            amount = scope:interaction.var:cost
+        }
+        gate_expedition_has_no_activity = yes
+    }
+
+    effect = {
+        save_temporary_scope_value_as = {
+            name = cost
+            value = {
+                value = scope:interaction.var:cost
+                multiply = -1
+            }
+        }
+        gate_expedition_change_budget = {
+            amount = scope:cost
+        }
+        gate_expedition_start_activity = {
+            # Using a script value because using
+            # scope:interaction.var:time directly causes an error
+            # even though it works
+            months = gate_expedition_activity_time
+            activity = scope:interaction.var:type
+        }
+    }
+}
+
+expedition_location_deephold = {
+    scope = country
+
+    saved_scopes = {
+        location
+        interaction
+    }
+
+    is_valid = {
+        gate_expedition_has_no_activity = yes
+    }
+
+    effect = {
+        trigger_event = gate_expedition_activities.1
+    }
+}

@@ -159,7 +159,7 @@ types gate_expedition_panel_types {
     }
 
     type gate_location_interaction = button {
-        datacontext = "[GetScriptedGui('sgui_gate_map_location_interact')]"
+        datacontext = "[GetScriptedGui(Scope.Var('sgui').GetFlagName)]"
         size = { 450 44 }
         raw_text = "[Scope.Var('text').GetFlagName]"
         tooltip = "[Scope.Var('tooltip').GetFlagName][Localize('gate_expedition_interaction_tooltip_separator')][ScriptedGui.BuildTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('interaction', Scope.GetCharacter.MakeScope).End)]"
