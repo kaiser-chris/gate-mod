@@ -34,7 +34,7 @@ types gate_expedition_panel_types {
                    )]"
         datacontext = "[GetGlobalVariable('gate_expedition_reytu').GetCharacter]"
         parentanchor = top|left
-        size = { 10000 5620 }
+        size = { 6000 3372 }
         background = {
             texture = gfx/map/ankaris/reytu/base.dds
             spriteType = Corneredstretched
@@ -62,16 +62,16 @@ types gate_expedition_panel_types {
         }
 
         gate_state = {
-            datacontext = "[Character.MakeScope.Var('state_4')]"
+            datacontext = "[Character.MakeScope.Var('state_5')]"
             blockoverride state_mask_hidden {
-                texture = gfx/map/ankaris/reytu/state_mask_04_hidden.dds
+                texture = gfx/map/ankaris/reytu/state_mask_05_hidden.dds
             }
         }
 
         gate_state = {
-            datacontext = "[Character.MakeScope.Var('state_5')]"
+            datacontext = "[Character.MakeScope.Var('state_6')]"
             blockoverride state_mask_hidden {
-                texture = gfx/map/ankaris/reytu/state_mask_05_hidden.dds
+                texture = gfx/map/ankaris/reytu/state_mask_06_hidden.dds
             }
         }
 
@@ -97,16 +97,9 @@ types gate_expedition_panel_types {
         }
 
         gate_state = {
-            datacontext = "[Character.MakeScope.Var('state_10')]"
+            datacontext = "[Character.MakeScope.Var('state_4')]"
             blockoverride state_mask_hidden {
-                texture = gfx/map/ankaris/reytu/state_mask_10_hidden.dds
-            }
-        }
-
-        gate_state = {
-            datacontext = "[Character.MakeScope.Var('state_6')]"
-            blockoverride state_mask_hidden {
-                texture = gfx/map/ankaris/reytu/state_mask_06_hidden.dds
+                texture = gfx/map/ankaris/reytu/state_mask_04_hidden.dds
             }
         }
 

@@ -1,0 +1,97 @@
+﻿sgui_gate_expedition_open = {
+    scope = none
+
+    is_valid = {
+        has_variable = gate_open_expedition
+    }
+
+    effect = {
+        remove_variable = gate_open_expedition
+    }
+}
+
+sgui_gate_map_equals = {
+    scope = country
+
+    saved_scopes = {
+        potential_location
+    }
+
+    is_shown = {
+        var:gate_expedition ?= {
+            var:location ?= scope:potential_location
+        }
+    }
+}
+
+sgui_gate_map_location_choose = {
+    scope = country
+
+    saved_scopes = {
+        location
+    }
+
+    effect = {
+        if = {
+            limit = {
+                var:gate_map_sidebar ?= scope:location
+                has_variable = gate_map_sidebar
+            }
+            remove_variable = gate_map_sidebar
+        }
+        else = {
+            set_variable = {
+                name = gate_map_sidebar
+                value = scope:location
+            }
+        }
+    }
+}
+
+sgui_gate_map_location_reset = {
+    scope = country
+
+    effect = {
+        remove_variable = gate_map_sidebar
+    }
+}
+
+sgui_gate_expedition_button_uncover = {
+    scope = country
+
+    is_valid = {
+        gate_expedition_has_budget = {
+            amount = 300
+        }
+        gate_expedition_has_covered = yes
+        gate_expedition_has_no_activity = yes
+    }
+
+    effect = {
+        gate_expedition_change_budget = {
+            amount = -300
+        }
+        gate_expedition_start_activity = {
+            months = 3
+            activity = gate_expedition_interaction_uncover
+        }
+    }
+}
+
+sgui_gate_expedition_button_home = {
+    scope = country
+
+    is_valid = {
+        gate_expedition_has_no_activity = yes
+    }
+
+    effect = {
+        gate_expedition_start_activity = {
+            months = 2
+            activity = gate_expedition_interaction_home
+        }
+    }
+
+    confirm_title = gate_expedition_interaction_home
+    confirm_text = gate_expedition_interaction_home_tooltip
+}

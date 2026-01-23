@@ -1,0 +1,163 @@
+﻿gate_setup_expeditions = {
+	gate_setup_expedition_locations = yes
+	gate_setup_expedition_reytu = yes
+}
+
+gate_setup_expedition_create_state = {
+	create_struct = {
+		struct_scope = state_$id$
+		struct_type = gate_expedition_state
+	}
+	scope:state_$id$ ?= {
+		set_variable = {
+			name = id
+			value = $id$
+		}
+		set_variable = {
+			name = order
+			value = $order$
+		}
+		if = {
+			limit = {
+				$hidden$ ?= 1
+			}
+			set_variable = hidden
+		}
+	}
+	scope:$expedition$ ?= {
+		set_variable = {
+			name = state_$id$
+			value = scope:state_$id$
+		}
+		add_to_variable_list = {
+			name = states
+			target = scope:state_$id$
+		}
+	}
+}
+
+# Parameters:
+# - name = scope and name prefix for loc keys
+# Required loc keys:
+# - $name$_name = name of location
+# - $name$_desc = description of location
+# - $name$_flavor = flavor of location
+gate_setup_expedition_create_location_type = {
+	fix_variable_error = { variable = $name$_name }
+	fix_variable_error = { variable = $name$_desc }
+	fix_variable_error = { variable = $name$_flavor }
+	fix_variable_error = { variable = $name$_sgui }
+	create_struct = {
+		struct_scope = $name$_interaction
+		struct_type = gate_expedition_interaction
+	}
+	scope:$name$_interaction ?= {
+		set_variable = {
+			name = text
+			value = flag:gate_expedition_interaction_generic
+		}
+		set_variable = {
+			name = tooltip
+			value = flag:gate_expedition_interaction_generic_tooltip
+		}
+		set_variable = {
+			name = sgui
+			value = flag:$name$_sgui
+		}
+	}
+	create_struct = {
+		struct_scope = $name$
+		struct_type = gate_expedition_location
+	}
+	scope:$name$ ?= {
+		set_variable = {
+			name = name
+			value = flag:$name$_name
+		}
+		set_variable = {
+			name = desc
+			value = flag:$name$_desc
+		}
+		set_variable = {
+			name = flavor
+			value = flag:$name$_flavor
+		}
+		add_to_variable_list = {
+			name = interactions
+			target = scope:$name$_interaction
+		}
+	}
+}
+
+# Parameters:
+# - name = scope and name prefix for loc keys
+# - cost = cost in activity points
+# - time = time in months
+# Required loc keys:
+# - $name$ = name of interaction
+# - $name$_tooltip = tooltip of interaction
+# - $name$_sgui = sgui which is run for this interaction
+gate_setup_expedition_create_location_interaction = {
+	fix_variable_error = { variable = $name$ }
+	fix_variable_error = { variable = $name$_tooltip }
+	fix_variable_error = { variable = $name$_sgui }
+	create_struct = {
+		struct_scope = $name$
+		struct_type = gate_expedition_interaction
+	}
+	scope:$name$ ?= {
+		set_variable = {
+			name = text
+			value = flag:$name$
+		}
+		set_variable = {
+			name = tooltip
+			value = flag:$name$_tooltip
+		}
+		set_variable = {
+			name = sgui
+			value = flag:$name$_sgui
+		}
+		set_variable = {
+			name = cost
+			value = $cost$
+		}
+		set_variable = {
+			name = time
+			value = $time$
+		}
+	}
+}
+
+gate_setup_expedition_create_location = {
+	create_struct = {
+		struct_scope = location_$location_id$
+		struct_type = gate_expedition_state_location
+	}
+	scope:location_$location_id$ ?= {
+		set_variable = {
+			name = id
+			value = $location_id$
+		}
+		set_variable = {
+			name = type
+			value = scope:$location_type$
+		}
+		set_variable = {
+			name = x
+			value = $location_x$
+		}
+		set_variable = {
+			name = y
+			value = $location_y$
+		}
+	}
+	scope:$expedition$ ?= {
+		var:state_$state_id$ = {
+			add_to_variable_list = {
+				name = locations
+				target = scope:location_$location_id$
+			}
+		}
+	}
+}

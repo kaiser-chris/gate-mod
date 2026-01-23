@@ -1,388 +1,67 @@
-﻿gate_setup_expeditions = {
-	gate_setup_expedition_interactions = yes
-	gate_setup_expedition_locations = yes
-	gate_setup_expedition_reytu = yes
-}
-
-# Location Types:
-# - scope:location_gate
-# - scope:location_village
-# - scope:location_town
-# - scope:location_castle
+﻿# Location Types:
+# - scope:expedition_location_gate
+# - scope:expedition_location_kaelmont_harbor
+# - scope:expedition_location_shadowfen_marshes
+# - scope:expedition_location_thornhaven
+# - scope:expedition_location_shattered_spine
+# - scope:expedition_location_deephold
+# - scope:expedition_location_silverwood
+# - scope:expedition_location_crescent_bay
+# - scope:expedition_location_ashcrest_ruins
 gate_setup_expedition_locations = {
 	# Magic Gate
-	create_struct = {
-		struct_scope = location_gate
-		struct_type = gate_expedition_location
+	gate_setup_expedition_create_location_type = {
+		name = expedition_location_gate
 	}
-	scope:location_gate ?= {
-		set_variable = {
-			name = name
-			value = flag:expedition_location_gate_name
-		}
-		set_variable = {
-			name = desc
-			value = flag:expedition_location_gate_desc
-		}
-		set_variable = {
-			name = flavor
-			value = flag:expedition_location_gate_flavor
-		}
-		add_to_variable_list = {
-			name = interactions
-			target = scope:interaction_home
+	scope:expedition_location_gate ?= {
+		clear_variable_list = interactions
+	}
+
+	# Kaelmont Harbor
+	gate_setup_expedition_create_location_type = {
+		name = expedition_location_kaelmont_harbor
+	}
+
+	# Shadowfen Marshes
+	gate_setup_expedition_create_location_type = {
+		name = expedition_location_shadowfen_marshes
+	}
+
+	# Thornhaven Library
+	gate_setup_expedition_create_location_type = {
+		name = expedition_location_thornhaven
+	}
+
+	# The Shattered Spine
+	gate_setup_expedition_create_location_type = {
+		name = expedition_location_shattered_spine
+	}
+
+	# Deephold
+	gate_setup_expedition_create_location_type = {
+		name = expedition_location_deephold
+	}
+	scope:expedition_location_deephold = {
+		gate_setup_expedition_create_location_interaction = {
+			name = gate_expedition_interaction_home
+			cost = 0
+			time = 2
 		}
 	}
 
-	# Village
-	create_struct = {
-		struct_scope = location_village
-		struct_type = gate_expedition_location
-	}
-	scope:location_village ?= {
-		set_variable = {
-			name = name
-			value = flag:expedition_location_village_name
-		}
-		set_variable = {
-			name = desc
-			value = flag:expedition_location_village_desc
-		}
-		set_variable = {
-			name = flavor
-			value = flag:expedition_location_village_flavor
-		}
-		add_to_variable_list = {
-			name = interactions
-			target = scope:interaction_contact
-		}
-		add_to_variable_list = {
-			name = interactions
-			target = scope:interaction_trade
-		}
-		add_to_variable_list = {
-			name = interactions
-			target = scope:interaction_conquer
-		}
-		add_to_variable_list = {
-			name = interactions
-			target = scope:interaction_raid
-		}
+	# The Silverwood
+	gate_setup_expedition_create_location_type = {
+		name = expedition_location_silverwood
 	}
 
-	# Town
-	create_struct = {
-		struct_scope = location_town
-		struct_type = gate_expedition_location
-	}
-	scope:location_town ?= {
-		set_variable = {
-			name = name
-			value = flag:expedition_location_town_name
-		}
-		set_variable = {
-			name = desc
-			value = flag:expedition_location_town_desc
-		}
-		set_variable = {
-			name = flavor
-			value = flag:expedition_location_town_flavor
-		}
-		add_to_variable_list = {
-			name = interactions
-			target = scope:interaction_contact
-		}
-		add_to_variable_list = {
-			name = interactions
-			target = scope:interaction_trade
-		}
-		add_to_variable_list = {
-			name = interactions
-			target = scope:interaction_conquer
-		}
-		add_to_variable_list = {
-			name = interactions
-			target = scope:interaction_raid
-		}
+	# Crescent Bay Trading Post
+	gate_setup_expedition_create_location_type = {
+		name = expedition_location_crescent_bay
 	}
 
-	# Castle
-	create_struct = {
-		struct_scope = location_castle
-		struct_type = gate_expedition_location
-	}
-	scope:location_castle ?= {
-		set_variable = {
-			name = name
-			value = flag:expedition_location_castle_name
-		}
-		set_variable = {
-			name = desc
-			value = flag:expedition_location_castle_desc
-		}
-		set_variable = {
-			name = flavor
-			value = flag:expedition_location_castle_flavor
-		}
-		add_to_variable_list = {
-			name = interactions
-			target = scope:interaction_contact
-		}
-		add_to_variable_list = {
-			name = interactions
-			target = scope:interaction_trade
-		}
-		add_to_variable_list = {
-			name = interactions
-			target = scope:interaction_conquer
-		}
-		add_to_variable_list = {
-			name = interactions
-			target = scope:interaction_raid
-		}
-	}
-}
-
-# Interaction Types:
-# - scope:interaction_home
-# - scope:interaction_raid
-# - scope:interaction_conquer
-# - scope:interaction_trade
-# - scope:interaction_explore
-# - scope:interaction_contact
-gate_setup_expedition_interactions = {
-	# Return Home
-	create_struct = {
-		struct_scope = interaction_home
-		struct_type = gate_expedition_interaction
-	}
-	scope:interaction_home ?= {
-		set_variable = {
-			name = text
-			value = flag:gate_expedition_interaction_home
-		}
-		set_variable = {
-			name = tooltip
-			value = flag:gate_expedition_interaction_home_tooltip
-		}
-		set_variable = {
-			name = type
-			value = gate_expedition_interaction_home
-		}
-		set_variable = {
-			name = cost
-			value = 0
-		}
-		set_variable = {
-			name = time
-			value = 2
-		}
-	}
-
-	# Explore Location
-	create_struct = {
-		struct_scope = interaction_explore
-		struct_type = gate_expedition_interaction
-	}
-	scope:interaction_explore ?= {
-		set_variable = {
-			name = text
-			value = flag:gate_expedition_interaction_explore
-		}
-		set_variable = {
-			name = tooltip
-			value = flag:gate_expedition_interaction_explore_tooltip
-		}
-		set_variable = {
-			name = type
-			value = gate_expedition_interaction_explore
-		}
-		set_variable = {
-			name = cost
-			value = 100
-		}
-		set_variable = {
-			name = time
-			value = 3
-		}
-	}
-
-	# Contact Location
-	create_struct = {
-		struct_scope = interaction_contact
-		struct_type = gate_expedition_interaction
-	}
-	scope:interaction_contact ?= {
-		set_variable = {
-			name = text
-			value = flag:gate_expedition_interaction_contact
-		}
-		set_variable = {
-			name = tooltip
-			value = flag:gate_expedition_interaction_contact_tooltip
-		}
-		set_variable = {
-			name = type
-			value = gate_expedition_interaction_contact
-		}
-		set_variable = {
-			name = cost
-			value = 100
-		}
-		set_variable = {
-			name = time
-			value = 4
-		}
-	}
-
-	# Conquer Location
-	create_struct = {
-		struct_scope = interaction_conquer
-		struct_type = gate_expedition_interaction
-	}
-	scope:interaction_conquer ?= {
-		set_variable = {
-			name = text
-			value = flag:gate_expedition_interaction_conquer
-		}
-		set_variable = {
-			name = tooltip
-			value = flag:gate_expedition_interaction_conquer_tooltip
-		}
-		set_variable = {
-			name = type
-			value = gate_expedition_interaction_conquer
-		}
-		set_variable = {
-			name = cost
-			value = 100
-		}
-		set_variable = {
-			name = time
-			value = 4
-		}
-	}
-
-	# Raid Location
-	create_struct = {
-		struct_scope = interaction_raid
-		struct_type = gate_expedition_interaction
-	}
-	scope:interaction_raid ?= {
-		set_variable = {
-			name = text
-			value = flag:gate_expedition_interaction_raid
-		}
-		set_variable = {
-			name = tooltip
-			value = flag:gate_expedition_interaction_raid_tooltip
-		}
-		set_variable = {
-			name = type
-			value = gate_expedition_interaction_raid
-		}
-		set_variable = {
-			name = cost
-			value = 100
-		}
-		set_variable = {
-			name = time
-			value = 2
-		}
-	}
-
-	# Trade with Location
-	create_struct = {
-		struct_scope = interaction_trade
-		struct_type = gate_expedition_interaction
-	}
-	scope:interaction_trade ?= {
-		set_variable = {
-			name = text
-			value = flag:gate_expedition_interaction_trade
-		}
-		set_variable = {
-			name = tooltip
-			value = flag:gate_expedition_interaction_trade_tooltip
-		}
-		set_variable = {
-			name = type
-			value = gate_expedition_interaction_trade
-		}
-		set_variable = {
-			name = cost
-			value = 100
-		}
-		set_variable = {
-			name = time
-			value = 4
-		}
-	}
-}
-
-gate_setup_expedition_create_state = {
-	create_struct = {
-		struct_scope = state_$id$
-		struct_type = gate_expedition_state
-	}
-	scope:state_$id$ ?= {
-		set_variable = {
-			name = id
-			value = $id$
-		}
-		set_variable = {
-			name = order
-			value = $order$
-		}
-		if = {
-			limit = {
-				$hidden$ ?= 1
-			}
-			set_variable = hidden
-		}
-	}
-	scope:$expedition$ ?= {
-		set_variable = {
-			name = state_$id$
-			value = scope:state_$id$
-		}
-		add_to_variable_list = {
-			name = states
-			target = scope:state_$id$
-		}
-	}
-}
-
-gate_setup_expedition_create_location = {
-	create_struct = {
-		struct_scope = location_$location_id$
-		struct_type = gate_expedition_state_location
-	}
-	scope:location_$location_id$ ?= {
-		set_variable = {
-			name = id
-			value = $location_id$
-		}
-		set_variable = {
-			name = type
-			value = scope:$location_type$
-		}
-		set_variable = {
-			name = x
-			value = $location_x$
-		}
-		set_variable = {
-			name = y
-			value = $location_y$
-		}
-	}
-	scope:$expedition$ ?= {
-		var:state_$state_id$ = {
-			add_to_variable_list = {
-				name = locations
-				target = scope:location_$location_id$
-			}
-		}
+	# Ashcrest Ruins
+	gate_setup_expedition_create_location_type = {
+		name = expedition_location_ashcrest_ruins
 	}
 }
 
@@ -410,12 +89,12 @@ gate_setup_expedition_reytu = {
 		}
 	}
 
-	# States
+	#= States
 	# State: 1
 	gate_setup_expedition_create_state = {
 		expedition = gate_reytu
 		id = 1
-		order = 9
+		order = 7
 		hidden = 1
 	}
 
@@ -423,7 +102,7 @@ gate_setup_expedition_reytu = {
 	gate_setup_expedition_create_state = {
 		expedition = gate_reytu
 		id = 2
-		order = 10
+		order = 3
 		hidden = 1
 	}
 
@@ -431,7 +110,7 @@ gate_setup_expedition_reytu = {
 	gate_setup_expedition_create_state = {
 		expedition = gate_reytu
 		id = 3
-		order = 8
+		order = 2
 		hidden = 1
 	}
 
@@ -439,15 +118,31 @@ gate_setup_expedition_reytu = {
 	gate_setup_expedition_create_state = {
 		expedition = gate_reytu
 		id = 4
-		order = 6
-		hidden = 1
+		order = 1
+		hidden = 0
+	}
+	gate_setup_expedition_create_location = {
+		expedition = gate_reytu
+		state_id = 4
+		location_id = 1
+		location_type = expedition_location_gate
+		location_x = 2430
+		location_y = 800
+	}
+	gate_setup_expedition_create_location = {
+		expedition = gate_reytu
+		state_id = 4
+		location_id = 2
+		location_type = expedition_location_deephold
+		location_x = 2190
+		location_y = 1345
 	}
 
 	# State: 5
 	gate_setup_expedition_create_state = {
 		expedition = gate_reytu
 		id = 5
-		order = 7
+		order = 4
 		hidden = 1
 	}
 
@@ -455,31 +150,14 @@ gate_setup_expedition_reytu = {
 	gate_setup_expedition_create_state = {
 		expedition = gate_reytu
 		id = 6
-		order = 1
-		hidden = 0
+		order = 5
+		hidden = 1
 	}
-	gate_setup_expedition_create_location = {
-		expedition = gate_reytu
-		state_id = 6
-		location_id = 1
-		location_type = location_gate
-		location_x = 900
-		location_y = 800
-	}
-	gate_setup_expedition_create_location = {
-		expedition = gate_reytu
-		state_id = 6
-		location_id = 2
-		location_type = location_village
-		location_x = 750
-		location_y = 1200
-	}
-
 	# State: 7
 	gate_setup_expedition_create_state = {
 		expedition = gate_reytu
 		id = 7
-		order = 2
+		order = 6
 		hidden = 1
 	}
 
@@ -487,7 +165,7 @@ gate_setup_expedition_reytu = {
 	gate_setup_expedition_create_state = {
 		expedition = gate_reytu
 		id = 8
-		order = 3
+		order = 8
 		hidden = 1
 	}
 
@@ -495,15 +173,7 @@ gate_setup_expedition_reytu = {
 	gate_setup_expedition_create_state = {
 		expedition = gate_reytu
 		id = 9
-		order = 4
-		hidden = 1
-	}
-
-	# State: 10
-	gate_setup_expedition_create_state = {
-		expedition = gate_reytu
-		id = 10
-		order = 5
+		order = 9
 		hidden = 1
 	}
 }
