@@ -1,6 +1,6 @@
 pdxmesh = {
-	name = "gate_race_mer_ears_01_mesh"
-	file = "gate_race_mer_ears_01.mesh"
+	name = "gate_race_mer_ears_01_male_mesh"
+	file = "gate_race_mer_ears_01_male.mesh"
 
 	meshsettings = {
 		name = "MeshShape.001"
@@ -15,8 +15,8 @@ pdxmesh = {
 }
 
 entity = {
-	name = "gate_race_mer_ears_01_entity"
-	pdxmesh = "gate_race_mer_ears_01_mesh"
+	name = "gate_race_mer_ears_01_male_entity"
+	pdxmesh = "gate_race_mer_ears_01_male_mesh"
 
 	game_data = {
 		portrait_entity_user_data = {
@@ -28,8 +28,37 @@ entity = {
 }
 
 pdxmesh = {
-	name = "gate_race_mer_ears_02_mesh"
-	file = "gate_race_mer_ears_02.mesh"
+	name = "gate_race_mer_ears_01_female_mesh"
+	file = "gate_race_mer_ears_01_female.mesh"
+
+	meshsettings = {
+		name = "MeshShape.001"
+		index = 0
+		texture_diffuse = "female_head_01_diffuse.dds"
+		texture_normal = "female_head_01_normal.dds"
+		texture_specular = "female_head_01_properties.dds"
+		texture = { file = "female_head_01_ssao_color.dds" index = 3 }
+		shader = "portrait_skin_face"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "gate_race_mer_ears_01_female_entity"
+	pdxmesh = "gate_race_mer_ears_01_female_mesh"
+
+	game_data = {
+		portrait_entity_user_data = {
+			color_mask_remap_interval = {
+				interval = {0.0 1.0}
+			}
+		}
+	}
+}
+
+pdxmesh = {
+	name = "gate_race_mer_ears_02_male_mesh"
+	file = "gate_race_mer_ears_02_male.mesh"
 
 	meshsettings = {
 		name = "MeshShap"
@@ -44,8 +73,8 @@ pdxmesh = {
 }
 
 entity = {
-	name = "gate_race_mer_ears_02_entity"
-	pdxmesh = "gate_race_mer_ears_02_mesh"
+	name = "gate_race_mer_ears_02_male_entity"
+	pdxmesh = "gate_race_mer_ears_02_male_mesh"
 
 	game_data = {
 		portrait_entity_user_data = {
@@ -57,8 +86,37 @@ entity = {
 }
 
 pdxmesh = {
-	name = "gate_race_mer_ears_03_mesh"
-	file = "gate_race_mer_ears_03.mesh"
+	name = "gate_race_mer_ears_02_female_mesh"
+	file = "gate_race_mer_ears_02_female.mesh"
+
+	meshsettings = {
+		name = "MeshShap"
+		index = 0
+		texture_diffuse = "female_head_01_diffuse.dds"
+		texture_normal = "female_head_01_normal.dds"
+		texture_specular = "female_head_01_properties.dds"
+		texture = { file = "female_head_01_ssao_color.dds" index = 3 }
+		shader = "portrait_skin_face"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "gate_race_mer_ears_02_female_entity"
+	pdxmesh = "gate_race_mer_ears_02_female_mesh"
+
+	game_data = {
+		portrait_entity_user_data = {
+			color_mask_remap_interval = {
+				interval = {0.0 1.0}
+			}
+		}
+	}
+}
+
+pdxmesh = {
+	name = "gate_race_mer_ears_03_male_mesh"
+	file = "gate_race_mer_ears_03_male.mesh"
 
 	meshsettings = {
 		name = "MeshShape.001"
@@ -73,8 +131,8 @@ pdxmesh = {
 }
 
 entity = {
-	name = "gate_race_mer_ears_03_entity"
-	pdxmesh = "gate_race_mer_ears_03_mesh"
+	name = "gate_race_mer_ears_03_male_entity"
+	pdxmesh = "gate_race_mer_ears_03_male_mesh"
 
 	game_data = {
 		portrait_entity_user_data = {
@@ -85,3 +143,31 @@ entity = {
 	}
 }
 
+pdxmesh = {
+	name = "gate_race_mer_ears_03_female_mesh"
+	file = "gate_race_mer_ears_03_female.mesh"
+
+	meshsettings = {
+		name = "MeshShape.001"
+		index = 0
+		texture_diffuse = "female_head_01_diffuse.dds"
+		texture_normal = "female_head_01_normal.dds"
+		texture_specular = "female_head_01_properties.dds"
+		texture = { file = "female_head_01_ssao_color.dds" index = 3 }
+		shader = "portrait_skin_face"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "gate_race_mer_ears_03_female_entity"
+	pdxmesh = "gate_race_mer_ears_03_female_mesh"
+
+	game_data = {
+		portrait_entity_user_data = {
+			color_mask_remap_interval = {
+				interval = {0.0 1.0}
+			}
+		}
+	}
+}
