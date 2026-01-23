@@ -1,6 +1,6 @@
 ﻿special_genes = {
 	accessory_genes = {
-		gate_gene_mer_ears = {
+		gate_gene_mer_ears_left = {
 			inheritable = no
 
 			no_mer_ears = {
@@ -16,10 +16,10 @@
 			mer_ears_01 = {
 				index = 2
 				male = {
-					1 = "gate_race_mer_ears_01_male"
+					1 = "gate_race_mer_ears_01_male_left"
 				}
 				female = {
-					1 = "gate_race_mer_ears_01_female"
+					1 = "gate_race_mer_ears_01_female_left"
 				}
 				boy = male
 				girl = female
@@ -48,7 +48,31 @@
 				boy = male
 				girl = female
 			}
+		}
+		gate_gene_mer_ears_right = {
+			inheritable = no
 
+			no_mer_ears = {
+				index = 1
+				male = {
+					1 = empty
+				}
+				female = male
+				boy = male
+				girl = male
+			}
+
+			mer_ears_01 = {
+				index = 2
+				male = {
+					1 = "gate_race_mer_ears_01_male_right"
+				}
+				female = {
+					1 = "gate_race_mer_ears_01_female_right"
+				}
+				boy = male
+				girl = female
+			}
 		}
 	}
 }
