@@ -304,3 +304,52 @@ gate_expedition_change_budget = {
 		}
 	}
 }
+
+
+gate_expedition_start_event_activity = {
+	hidden_effect = {
+		gate_expedition_create_activity = {
+			name = $name$
+			desc = $desc$
+		}
+		save_temporary_scope_value_as = {
+			name = months
+			value = $months$
+		}
+		#TODO: Build weighting logic/calculation
+		random_list = {
+			50 = {
+				trigger_event = {
+					id = $success_event$
+					months = $months$
+					popup = yes
+				}
+			}
+			50 = {
+				trigger_event = {
+					id = $fail_event$
+					months = $months$
+					popup = yes
+				}
+			}
+		}
+	}
+	# Start Activity
+	custom_tooltip = {
+		text = effect_gate_expedition_start_activity
+		var:gate_expedition ?= {
+			if = {
+				limit = {
+					exists = scope:activity
+				}
+				set_variable = {
+					name = activity
+					value = scope:activity
+				}
+			}
+		}
+	}
+	gate_expedition_change_budget = {
+		amount = $budget_cost$
+	}
+}

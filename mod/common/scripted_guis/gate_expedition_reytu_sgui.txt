@@ -58,6 +58,9 @@ expedition_location_deephold = {
     }
 
     effect = {
-        trigger_event = gate_expedition_activities.1
+        trigger_event = {
+            id = gate_expedition_reytu_deepholm.1
+            popup = yes
+        }
     }
 }
