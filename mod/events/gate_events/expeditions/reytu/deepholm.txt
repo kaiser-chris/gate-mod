@@ -1,0 +1,118 @@
+﻿namespace = gate_expedition_reytu_deepholm
+
+gate_expedition_reytu_deepholm.1 = {
+    type = country_event
+    dlc = dlc_magic_gate
+    placement = scope:gate_expedition_state
+
+    title = gate_expedition_reytu_deepholm.1.title
+    desc = gate_expedition_interaction_location_desc
+    flavor = expedition_location_deephold_flavor
+
+    immediate = {
+        gate_expedition_set_state_scope = {
+            scope = gate_expedition_state
+        }
+    }
+
+    option = {
+        name = gate_expedition_reytu_deepholm.1.a
+        show_as_unavailable = {
+            gate_expedition_has_budget = {
+                amount = 300
+            }
+            gate_expedition_has_no_activity = yes
+        }
+        gate_expedition_start_event_activity = {
+            name = gate_expedition_activity_trade
+            desc = gate_expedition_activity_trade_desc
+            fail_event = gate_expedition_reytu_deepholm.2
+            success_event = gate_expedition_reytu_deepholm.3
+            months = gate_expedition_interaction_time_short
+            budget_cost = -300
+        }
+    }
+
+    option = {
+        name = gate_expedition_reytu_deepholm.1.b
+        show_as_unavailable = {
+            gate_expedition_has_budget = {
+                amount = 300
+            }
+            gate_expedition_has_no_activity = yes
+        }
+        gate_expedition_start_event_activity = {
+            name = gate_expedition_activity_conquer
+            desc = gate_expedition_activity_conquer_desc
+            fail_event = gate_expedition_reytu_deepholm.1
+            success_event = gate_expedition_reytu_deepholm.1
+            months = gate_expedition_interaction_time_short
+            budget_cost = -300
+        }
+    }
+
+    option = {
+        name = gate_expedition_reytu_deepholm.1.c
+        show_as_unavailable = {
+            gate_expedition_has_budget = {
+                amount = 300
+            }
+            gate_expedition_has_no_activity = yes
+        }
+        gate_expedition_start_event_activity = {
+            name = gate_expedition_activity_conquer
+            desc = gate_expedition_activity_conquer_desc
+            fail_event = gate_expedition_reytu_deepholm.1
+            success_event = gate_expedition_reytu_deepholm.1
+            months = gate_expedition_interaction_time_short
+            budget_cost = -300
+        }
+    }
+
+    option = {
+        default_option = yes
+        name = gate_expedition_reytu_deepholm.1.d
+    }
+}
+
+gate_expedition_reytu_deepholm.2 = {
+    type = country_event
+    dlc = dlc_magic_gate
+    placement = scope:gate_expedition_state
+
+    immediate = {
+        gate_expedition_set_state_scope = {
+            scope = gate_expedition_state
+        }
+    }
+
+    title = gate_expedition_reytu_deepholm.trade_route
+    desc = gate_expedition_reytu_deepholm.2.desc
+    flavor = gate_expedition_reytu_deepholm.2.flavor
+
+    option = {
+        default_option = yes
+        name = gate_expedition_reytu_deepholm.2.a
+    }
+}
+
+gate_expedition_reytu_deepholm.3 = {
+    type = country_event
+    dlc = dlc_magic_gate
+    placement = scope:gate_expedition_state
+
+    immediate = {
+        gate_expedition_set_state_scope = {
+            scope = gate_expedition_state
+        }
+    }
+
+    title = gate_expedition_reytu_deepholm.trade_route
+    desc = gate_expedition_reytu_deepholm.3.desc
+    flavor = gate_expedition_reytu_deepholm.3.flavor
+
+    option = {
+        default_option = yes
+        name = gate_expedition_reytu_deepholm.3.a
+    }
+}
