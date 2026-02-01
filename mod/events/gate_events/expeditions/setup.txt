@@ -27,6 +27,7 @@ gate_expedition.1 = {
             save_scope_as = expedition_industrialist
         }
         scope:expedition_industrialist = {
+            add_trait = gate_expedition_leader_industrialist
             set_variable = {
                 name = com_opinion
                 value = flag:gate_expedition_opinion_industrialist
@@ -38,6 +39,7 @@ gate_expedition.1 = {
             save_scope_as = expedition_militarist
         }
         scope:expedition_militarist = {
+            add_trait = gate_expedition_leader_militarist
             set_variable = {
                 name = com_opinion
                 value = flag:gate_expedition_opinion_militarist
@@ -49,6 +51,7 @@ gate_expedition.1 = {
             save_scope_as = expedition_politician
         }
         scope:expedition_politician = {
+            add_trait = gate_expedition_leader_politician
             set_variable = {
                 name = com_opinion
                 value = flag:gate_expedition_opinion_politician
