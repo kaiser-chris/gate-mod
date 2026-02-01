@@ -1,0 +1,74 @@
+﻿gate_expedition_leader = {
+    type = personality
+
+    texture = gfx/interface/icons/character_trait_icons/explorer.dds
+
+    character_modifier = {
+        character_popularity_add = 25
+    }
+
+    # Reminder: this would only come into effect if this character is or becomes a Ruler
+    country_modifier = {
+        country_prestige_add = 20
+    }
+
+    possible = {
+        always = no
+    }
+
+    weight = 0
+}
+
+gate_expedition_leader_industrialist = {
+    type = skill
+
+    texture = gfx/interface/icons/character_trait_icons/convoy_raider_commander.dds
+
+    character_modifier = {
+        character_gate_expedition_interaction_success_chance_industrial_add = 0.1
+    }
+
+    possible = {
+        always = no
+    }
+
+    weight = 0
+
+    value = 2
+}
+
+gate_expedition_leader_militarist = {
+    type = skill
+
+    texture = gfx/interface/icons/character_trait_icons/convoy_raider_commander.dds
+
+    character_modifier = {
+        character_gate_expedition_interaction_success_chance_military_add = 0.1
+    }
+
+    possible = {
+        always = no
+    }
+
+    weight = 0
+
+    value = 2
+}
+
+gate_expedition_leader_politician = {
+    type = skill
+
+    texture = gfx/interface/icons/character_trait_icons/convoy_raider_commander.dds
+
+    character_modifier = {
+        character_gate_expedition_interaction_success_chance_political_add = 0.1
+    }
+
+    possible = {
+        always = no
+    }
+
+    weight = 0
+
+    value = 2
+}

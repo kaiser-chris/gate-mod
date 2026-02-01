@@ -52,27 +52,6 @@ gate_magic_researcher = {
     weight = 0
 }
 
-gate_expedition_leader = {
-    type = personality
-
-    texture = gfx/interface/icons/character_trait_icons/explorer.dds
-
-    # Reminder: this would only come into effect if this character is or becomes a Ruler
-    character_modifier = {
-        character_popularity_add = 25
-    }
-
-    country_modifier = {
-        country_prestige_add = 20
-    }
-
-    possible = {
-        always = no
-    }
-
-    weight = 0
-}
-
 gate_eternal_monarch = {
     type = condition
 

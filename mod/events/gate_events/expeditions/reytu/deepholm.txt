@@ -15,6 +15,12 @@ gate_expedition_reytu_deepholm.1 = {
         }
     }
 
+    event_image = {
+        video = "middleeast_jungle_expedition"
+    }
+
+    gui_window = event_window_com_focus_text
+
     option = {
         name = gate_expedition_reytu_deepholm.1.a
         show_as_unavailable = {
@@ -23,13 +29,13 @@ gate_expedition_reytu_deepholm.1 = {
             }
             gate_expedition_has_no_activity = yes
         }
-        gate_expedition_start_event_activity = {
+        gate_expedition_interact_industrial = {
             name = gate_expedition_activity_trade
             desc = gate_expedition_activity_trade_desc
             fail_event = gate_expedition_reytu_deepholm.2
             success_event = gate_expedition_reytu_deepholm.3
-            months = gate_expedition_interaction_time_short
-            budget_cost = -300
+            months = gate_expedition_activity_time_short
+            budget_change = -300
         }
     }
 
@@ -41,13 +47,13 @@ gate_expedition_reytu_deepholm.1 = {
             }
             gate_expedition_has_no_activity = yes
         }
-        gate_expedition_start_event_activity = {
-            name = gate_expedition_activity_conquer
-            desc = gate_expedition_activity_conquer_desc
-            fail_event = gate_expedition_reytu_deepholm.1
-            success_event = gate_expedition_reytu_deepholm.1
-            months = gate_expedition_interaction_time_short
-            budget_cost = -300
+        gate_expedition_interact_industrial = {
+            name = gate_expedition_activity_trade
+            desc = gate_expedition_activity_trade_desc
+            fail_event = gate_expedition_reytu_deepholm.2
+            success_event = gate_expedition_reytu_deepholm.3
+            months = gate_expedition_activity_time_short
+            budget_change = -300
         }
     }
 
@@ -59,13 +65,13 @@ gate_expedition_reytu_deepholm.1 = {
             }
             gate_expedition_has_no_activity = yes
         }
-        gate_expedition_start_event_activity = {
-            name = gate_expedition_activity_conquer
-            desc = gate_expedition_activity_conquer_desc
-            fail_event = gate_expedition_reytu_deepholm.1
-            success_event = gate_expedition_reytu_deepholm.1
-            months = gate_expedition_interaction_time_short
-            budget_cost = -300
+        gate_expedition_interact_industrial = {
+            name = gate_expedition_activity_trade
+            desc = gate_expedition_activity_trade_desc
+            fail_event = gate_expedition_reytu_deepholm.2
+            success_event = gate_expedition_reytu_deepholm.3
+            months = gate_expedition_activity_time_short
+            budget_change = -300
         }
     }
 
@@ -86,6 +92,8 @@ gate_expedition_reytu_deepholm.2 = {
         }
     }
 
+    gui_window = event_window_com_text_simple
+
     title = gate_expedition_reytu_deepholm.trade_route
     desc = gate_expedition_reytu_deepholm.2.desc
     flavor = gate_expedition_reytu_deepholm.2.flavor
@@ -93,6 +101,10 @@ gate_expedition_reytu_deepholm.2 = {
     option = {
         default_option = yes
         name = gate_expedition_reytu_deepholm.2.a
+    }
+
+    after = {
+        gate_expedition_set_idle = yes
     }
 }
 
@@ -107,6 +119,8 @@ gate_expedition_reytu_deepholm.3 = {
         }
     }
 
+    gui_window = event_window_com_text_simple
+
     title = gate_expedition_reytu_deepholm.trade_route
     desc = gate_expedition_reytu_deepholm.3.desc
     flavor = gate_expedition_reytu_deepholm.3.flavor
@@ -114,5 +128,9 @@ gate_expedition_reytu_deepholm.3 = {
     option = {
         default_option = yes
         name = gate_expedition_reytu_deepholm.3.a
+    }
+
+    after = {
+        gate_expedition_set_idle = yes
     }
 }

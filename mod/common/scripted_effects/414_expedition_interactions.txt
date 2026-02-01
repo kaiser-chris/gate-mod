@@ -190,19 +190,23 @@ gate_expedition_start_activity = {
 # Create a new activity and provide it as
 # - scope:activity
 gate_expedition_create_activity = {
-	create_struct = {
-		struct_scope = activity
-		struct_type = gate_expedition_activity
-	}
-	scope:activity ?= {
-		set_variable = {
-			name = name
-			value = flag:$name$
+	hidden_effect = {
+		create_struct = {
+			struct_scope = activity
+			struct_type = gate_expedition_activity
 		}
-		set_variable = {
-			name = desc
-			value = flag:$desc$
+		scope:activity ?= {
+			set_variable = {
+				name = name
+				value = flag:$name$
+			}
+			set_variable = {
+				name = desc
+				value = flag:$desc$
+			}
 		}
+		fix_variable_error = { variable = $name$ }
+		fix_variable_error = { variable = $desc$ }
 	}
 }
 
@@ -305,20 +309,21 @@ gate_expedition_change_budget = {
 	}
 }
 
-
-gate_expedition_start_event_activity = {
-	hidden_effect = {
-		gate_expedition_create_activity = {
-			name = $name$
-			desc = $desc$
-		}
-		save_temporary_scope_value_as = {
-			name = months
-			value = $months$
-		}
-		#TODO: Build weighting logic/calculation
+gate_expedition_interact_industrial = {
+	custom_tooltip = {
+		text = effect_gate_expedition_start_activity
 		random_list = {
 			50 = {
+				modifier = {
+					add = {
+						var:gate_expedition ?= {
+							var:leader ?= {
+								value = 100
+								multiply = modifier:character_gate_expedition_interaction_success_chance_industrial_add
+							}
+						}
+					}
+				}
 				trigger_event = {
 					id = $success_event$
 					months = $months$
@@ -326,6 +331,16 @@ gate_expedition_start_event_activity = {
 				}
 			}
 			50 = {
+				modifier = {
+					subtract = {
+						var:gate_expedition ?= {
+							var:leader ?= {
+								value = 100
+								multiply = modifier:character_gate_expedition_interaction_success_chance_industrial_add
+							}
+						}
+					}
+				}
 				trigger_event = {
 					id = $fail_event$
 					months = $months$
@@ -333,10 +348,126 @@ gate_expedition_start_event_activity = {
 				}
 			}
 		}
+		save_temporary_scope_value_as = {
+			name = months
+			value = $months$
+		}
 	}
-	# Start Activity
+	gate_expedition_start_event_activity = {
+		name = $name$
+		desc = $desc$
+		budget_change = $budget_change$
+	}
+}
+
+gate_expedition_interact_military = {
 	custom_tooltip = {
 		text = effect_gate_expedition_start_activity
+		random_list = {
+			50 = {
+				modifier = {
+					add = {
+						var:gate_expedition ?= {
+							var:leader ?= {
+								value = 100
+								multiply = modifier:character_gate_expedition_interaction_success_chance_military_add
+							}
+						}
+					}
+				}
+				trigger_event = {
+					id = $success_event$
+					months = $months$
+					popup = yes
+				}
+			}
+			50 = {
+				modifier = {
+					subtract = {
+						var:gate_expedition ?= {
+							var:leader ?= {
+								value = 100
+								multiply = modifier:character_gate_expedition_interaction_success_chance_military_add
+							}
+						}
+					}
+				}
+				trigger_event = {
+					id = $fail_event$
+					months = $months$
+					popup = yes
+				}
+			}
+		}
+		save_temporary_scope_value_as = {
+			name = months
+			value = $months$
+		}
+	}
+	gate_expedition_start_event_activity = {
+		name = $name$
+		desc = $desc$
+		budget_change = $budget_change$
+	}
+}
+
+gate_expedition_interact_political = {
+	custom_tooltip = {
+		text = effect_gate_expedition_start_activity
+		random_list = {
+			50 = {
+				modifier = {
+					add = {
+						var:gate_expedition ?= {
+							var:leader ?= {
+								value = 100
+								multiply = modifier:character_gate_expedition_interaction_success_chance_political_add
+							}
+						}
+					}
+				}
+				trigger_event = {
+					id = $success_event$
+					months = $months$
+					popup = yes
+				}
+			}
+			50 = {
+				modifier = {
+					subtract = {
+						var:gate_expedition ?= {
+							var:leader ?= {
+								value = 100
+								multiply = modifier:character_gate_expedition_interaction_success_chance_political_add
+							}
+						}
+					}
+				}
+				trigger_event = {
+					id = $fail_event$
+					months = $months$
+					popup = yes
+				}
+			}
+		}
+		save_temporary_scope_value_as = {
+			name = months
+			value = $months$
+		}
+	}
+	gate_expedition_start_event_activity = {
+		name = $name$
+		desc = $desc$
+		budget_change = $budget_change$
+	}
+}
+
+gate_expedition_start_event_activity = {
+	hidden_effect = {
+		gate_expedition_create_activity = {
+			name = $name$
+			desc = $desc$
+		}
 		var:gate_expedition ?= {
 			if = {
 				limit = {
@@ -350,6 +481,6 @@ gate_expedition_start_event_activity = {
 		}
 	}
 	gate_expedition_change_budget = {
-		amount = $budget_cost$
+		amount = $budget_change$
 	}
 }
