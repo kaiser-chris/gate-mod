@@ -1,0 +1,87 @@
+﻿
+    #############
+    # By Lord R #
+    #############
+
+###############################
+# COM CHECK SCRPITED TRIGGERS #
+###############################
+
+mr_gate_special_character_blocker = {
+    NOR = {
+		has_variable = mr_is_engineer_var
+		has_variable = mr_is_astronomer_var
+		has_variable = mr_is_chemist_var
+		has_variable = mr_is_physicist_var
+		has_variable = mr_is_geologist_var
+		has_variable = mr_is_naturalist_var
+		has_variable = mr_is_paleontologist_var
+		has_variable = mr_is_biologist_var
+		has_variable = mr_is_archaeologist_var
+		has_variable = mr_is_anthropologist_var
+		has_variable = mr_is_physician_var
+		has_variable = mr_is_racer_var
+		has_variable = mr_is_composer_var
+		has_variable = mr_is_travelling_composer_var
+		has_variable = mr_is_writer_var
+		has_variable = mr_is_local_writer_var
+		has_variable = mr_is_painter_var
+		has_variable = mr_is_independent_painter
+	}
+}
+
+# Triggers dedicated to driving seamless compatibility with Western Clothes: Redux
+#
+# ################
+# # By 1230james #
+# ################
+#
+# File last updated: 2024-03-21
+# See WCR's copy for latest documentation
+#     https://steamcommunity.com/sharedfiles/filedetails/?id=2981574864
+#     https://github.com/1230james/vic3-western-clothes
+#
+# ==================================================================================================================== #
+#
+# COM_WCR_enable_outfit
+#     When true, signals intent to have an outfit be enabled; i.e., WCR is not trying to apply an outfit and is
+#     expecting COM to provide one.
+#
+# COM_WCR_disable_outfit
+#     When true, signals intent to have an outfit be disabled; i.e., WCR is trying to apply its own outfit and wants
+#     COM to not apply a potentially conflicting outfit.
+#
+# Both triggers should be implemented directly in the modifier block of an outfit. No other checks with regards to
+# country, character/pop, etc. are needed by COM and WCR will handle that on its end. Best usage for both triggers would
+# be to use them in separate modifier blocks away from the normal logic (unless if otherwise acceptable). Either trigger
+# returning false should be interpreted as WCR not wishing to interrupt the functionality of COM, and trigger logic
+# should be set up such that either trigger returning false has zero impact on any outfits the triggers are used in.
+#
+# ==================================================================================================================== #
+#
+# List of WCR-controlled COM outfits:
+#   Monarchs
+#     Korea
+#     Japan
+#
+#   Militaries
+#     None
+#
+# ==================================================================================================================== #
+
+# Implementations here MUST always be `always = no` for proper functionality.
+# WCR will overwrite with actual logic if the mod is installed.
+
+COM_WCR_enable_outfit = {
+	always = no
+}
+
+COM_WCR_disable_outfit = {
+	always = no
+}
+
+
+# CMF
+community_framework_is_active = {
+	always = no
+}
