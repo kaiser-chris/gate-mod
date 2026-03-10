@@ -1,0 +1,95 @@
+﻿gate_clothes_removal = {
+    usage = game
+    selection_behavior = weighted_random
+    fallback = base_game
+
+    base_game = {
+        weight = {
+            base = 1
+        }
+    }
+
+    gate_race = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = top_layer
+                template = no_top_layer
+                value = 1
+            }
+            accessory = {
+                mode = add
+                gene = epaulettes
+                template = no_epaulette
+                value = 1
+            }
+            accessory = {
+                mode = add
+                gene = necklaces
+                template = no_necklace
+                value = 1
+            }
+            accessory = {
+                mode = add
+                gene = outfits
+                template = no_outfit
+                value = 1
+            }
+            accessory = {
+                mode = add
+                gene = gene_nudity
+                template = hide_nudity
+                value = 1
+            }
+            accessory = {
+                mode = add
+                gene = shirt
+                template = no_shirts
+                value = 1
+            }
+            accessory = {
+                mode = add
+                gene = aiguillettes
+                template = no_aiguillettes
+                value = 1
+            }
+            accessory = {
+                mode = add
+                gene = civilian_coats
+                template  = no_civilian_coat
+                value = 1
+            }
+            accessory = {
+                mode = add
+                gene = coats
+                template  = no_coat
+                value = 1
+            }
+            accessory = {
+                mode = add
+                gene = medals
+                template  = no_medals
+                value = 1
+            }
+            accessory = {
+                mode = add
+                gene = belts
+                template  = no_belt
+                value = 1
+            }
+            accessory = {
+                mode = add
+                gene = waistcoats
+                template = no_waistcoat
+                value = 1
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 1000
+                gate_race_trigger = yes
+            }
+        }
+    }
+}

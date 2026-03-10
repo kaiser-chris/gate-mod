@@ -1,4 +1,19 @@
-﻿no_portrait_trigger = {
+﻿gate_race_trigger = {
+    OR = {
+        dwarven_portrait_trigger = yes
+        dwarven_portrait_pop_trigger = yes
+        gnomish_portrait_trigger = yes
+        gnomish_portrait_pop_trigger = yes
+        elven_portrait_trigger = yes
+        elven_portrait_pop_trigger = yes
+        vampire_portrait_trigger = yes
+        vampire_portrait_pop_trigger = yes
+        orcish_portrait_trigger = yes
+        orcish_portrait_pop_trigger = yes
+    }
+}
+
+gate_no_portrait_trigger = {
     OR = {
         scope:character ?= {
             culture = {
@@ -109,23 +124,20 @@ gnomish_portrait_pop_trigger = {
     }
 }
 
-human_portrait_trigger = {
+
+gate_bear_portrait_trigger = {
     scope:character ?= {
-        NOR = {
-            has_culture = cu:elven
-            has_culture = cu:gnomish
-            has_culture = cu:dwarven
-            has_culture = cu:orcish
+        OR = {
+            has_culture = cu:plundboelka
+            has_culture = cu:praprandgaw
         }
     }
 }
-human_portrait_pop_trigger = {
+gate_bear_portrait_pop_trigger = {
     scope:pop ?= {
-        NOR = {
-            culture = cu:elven
-            culture = cu:gnomish
-            culture = cu:dwarven
-            culture = cu:orcish
+        OR = {
+            culture = cu:plundboelka
+            culture = cu:praprandgaw
         }
     }
 }

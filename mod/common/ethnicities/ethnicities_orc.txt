@@ -38,7 +38,7 @@ orc = {
     template = "ethnicity_template"
 
     skin_color = {
-        10 = { 0 0.57 0 0.58 }
+        10 = { 0.10 0.57 0.10 0.58 }
     }
 
     hairstyles = {
@@ -370,23 +370,16 @@ orc = {
         80 = { name = nose_tip_width range = { 0.5 1.0 } }
     }
 
-    race_gene_mer_ears_01 = {
-        90 = { name = mer_ears_03 range = { 0.4 0.8 } }
-    }
-
-    race_gene_mer_ears_02 = {
-        90 = { name = mer_ears_03 range = { 0.4 0.8 } }
-    }
+    #race_gene_mer_ears_01 = {
+    #    90 = { name = mer_ears_03 range = { 0.4 0.8 } }
+    #}
+#
+    #race_gene_mer_ears_02 = {
+    #    90 = { name = mer_ears_03 range = { 0.4 0.8 } }
+    #}
 
     teeth_accessory = {
         10 = { name = no_teeth range = { 1.0 1.0 } }
-    }
-
-    gene_tusks_and_teeth = {
-        40 = { name = orc_teeth_tusk_big range = { 1.0 1.0 } }
-        10 = { name = orc_teeth_tusk_left range = { 1.0 1.0 } }
-        10 = { name = orc_teeth_tusk_right range = { 1.0 1.0 } }
-        30 = { name = orc_teeth_tusk_small range = { 1.0 1.0 } }
     }
 
     gene_eyebrows_fullness = {
