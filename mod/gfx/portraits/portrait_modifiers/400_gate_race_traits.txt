@@ -30,4 +30,26 @@
         }
     }
 
+    orcish_race = {
+        dna_modifiers = {
+            morph = {
+                # White Skin
+                mode = add
+                gene = gate_skin_color
+                template = color_shift_saturation
+                value = 0.4
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                OR = {
+                    elven_portrait_trigger = yes
+                    elven_portrait_pop_trigger = yes
+                }
+            }
+        }
+    }
+
 }
