@@ -38,6 +38,17 @@
 				remove_ideology = ideology_gate_magic_supremacist
 				remove_ideology = ideology_feminist_ig
 			}
+			# Arcturian Dominion
+			else_if = {
+				limit = {
+					owner = { c:GATE_AD ?= this }
+				}
+				remove_ideology = ideology_anti_clerical
+				add_ideology = ideology_reactionary
+				set_ig_trait = ig_trait:ig_trait_hidden_research
+				set_ig_trait = ig_trait:ig_trait_military_support
+				set_ig_trait = ig_trait:ig_trait_patriotic_research
+			}
 			# Default Traits
 			else = {
 				set_ig_trait = ig_trait:ig_trait_hidden_research

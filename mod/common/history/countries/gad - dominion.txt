@@ -50,7 +50,6 @@
 
         set_ruling_interest_groups = {
 			ig_devout
-			ig_gate_magic_users
         }
 
 		add_journal_entry = {
@@ -60,6 +59,12 @@
 		set_variable = {
 			name = custom_social_hierarchy
 			value = active_law:lawgroup_elven_supremacy
+		}
+
+		ig:ig_devout = {
+			remove_ideology = ideology_patriarchal
+			add_ideology = ideology_gate_devout_censors
+			set_interest_group_name = ig_gate_golden_defenders
 		}
 	}
 }
