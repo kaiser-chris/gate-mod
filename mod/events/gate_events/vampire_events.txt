@@ -314,53 +314,13 @@ gate_vampire.5 = {
 		var:gate_character_vampire ?= {
 			add_trait = ruthless
 		}
-		ig:ig_devout ?= {
-			add_modifier = {
-				name = rejected_petition
-				multiplier = 10
-				months = 24
-				is_decaying = yes
-			}
-			leader ?= {
-				set_ideology = ideology:ideology_gate_vampirism_purge
-			}
-		}
-		add_radicals = {
-			value = 0.1
-		}
 		add_radicals = {
 			interest_group = ig:ig_devout
-			value = 0.5
+			value = 0.1
 		}
-		change_infamy = 5
-		trigger = {
-			NOT = {
-				has_law = law_type:law_theocracy
-			}
-		}
+		change_infamy = 2
 		ai_chance = {
 			base = 100
-		}
-	}
-
-	option = {
-		name = gate_vampire.5.b
-		show_as_tooltip = {
-			trigger_event = gate_vampire.2
-		}
-		hidden_effect = {
-			set_variable = gate_rejected_vampirism
-		}
-		ai_chance = {
-			base = 50
-			modifier = {
-				trigger = {
-					ig:ig_devout ?= {
-						is_in_government = yes
-					}
-				}
-				add = 100
-			}
 		}
 	}
 }
@@ -381,6 +341,9 @@ gate_vampire.6 = {
 	trigger = {
 		NOT = {
 			ig:ig_petty_bourgeoisie.leader ?= var:gate_character_vampire
+		}
+		NOT = {
+			has_variable = gate_vampire_decapitated
 		}
 	}
 
@@ -487,5 +450,390 @@ gate_vampire.8 = {
 	option = {
 		name = gate_vampire.8.a
 		default_option = yes
+	}
+}
+
+gate_vampire.9 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = capital
+
+	title = gate_vampire.9.t
+	desc = gate_vampire.9.d
+	flavor = gate_vampire.9.f
+
+	event_image = {
+		video = "middleeast_police_breaking_door"
+	}
+
+	immediate = {
+		set_variable = gate_hidden_decapitate_block
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/event_icons/event_gate_bat.dds
+
+	duration = 3
+
+	trigger = {
+		NOR = {
+			has_variable = gate_vampire_decapitated
+			has_variable = gate_hidden_decapitate_block
+		}
+	}
+
+	option = {
+		name = gate_vampire.9.a
+		var:gate_character_vampire ?= {
+			hidden_effect = {
+				set_character_immortal = no
+			}
+			kill_character = yes
+		}
+		hidden_effect = {
+			set_variable = gate_vampire_decapitated
+			set_variable = {
+				name = gate_vampire_wait
+				months = 4
+			}
+			je:je_gate_vampire_emergence ?= {
+				clear_variable_list = com_journal_characters
+			}
+		}
+		add_radicals = {
+			culture = cu:vampire
+			value = 0.9
+		}
+	}
+
+	option = {
+		name = gate_vampire.9.b
+		default_option = yes
+		custom_tooltip = gate_vampire.9.b.delay
+	}
+
+	after = {
+		remove_variable = gate_hidden_decapitate_block
+	}
+}
+
+gate_vampire.10 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = capital
+
+	title = gate_vampire.10.t
+	desc = gate_vampire.10.desc
+	flavor = gate_vampire.10.f
+
+	event_image = {
+		video = "europenorthamerica_london_center"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/event_icons/event_gate_bat.dds
+
+	duration = 3
+
+	option = {
+		name = gate_vampire.10.a
+		add_primary_culture = cu:vampire
+		add_radicals = {
+			interest_group = ig:ig_devout
+			value = 0.1
+		}
+		add_loyalists = {
+			culture = cu:vampire
+			value = 0.1
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	option = {
+		name = gate_vampire.10.b
+		default_option = yes
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	option = {
+		name = gate_vampire.10.c
+		add_loyalists = {
+			interest_group = ig:ig_devout
+			value = 0.1
+		}
+		add_radicals = {
+			culture = cu:vampire
+			value = 0.1
+		}
+		add_culture_acceptance_modifier = {
+			culture = cu:vampire
+			multiplier = -20
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				trigger = {
+					ig:ig_devout ?= {
+						is_in_government = yes
+					}
+				}
+				add = 100
+			}
+		}
+	}
+
+	option = {
+		name = gate_vampire.10.d
+		hidden_effect = {
+			set_variable = gate_rejected_vampirism
+		}
+		trigger_event = gate_vampire.2
+		ai_chance = {
+			base = 50
+			modifier = {
+				trigger = {
+					ig:ig_devout ?= {
+						is_powerful = yes
+					}
+				}
+				add = 100
+			}
+		}
+	}
+}
+
+gate_vampire.11 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:gate_vampire_event_state
+
+	title = gate_vampire.11.t
+	desc = gate_vampire.11.d
+	flavor = gate_vampire.11.f
+
+	event_image = {
+		video = "ip3_agitator_reading_manifesto"
+	}
+
+	immediate = {
+		random_scope_state = {
+			save_scope_as = gate_vampire_event_state
+		}
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/event_icons/event_gate_bat.dds
+
+	duration = 3
+
+	option = {
+		name = gate_vampire.11.a
+		default_option = yes
+		scope:gate_vampire_event_state = {
+			every_scope_pop = {
+				change_pop_culture = {
+					target = cu:vampire
+					value = 0.05
+				}
+			}
+		}
+	}
+}
+
+gate_vampire.12 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:gate_vampire_event_state
+
+	title = gate_vampire.12.t
+	desc = gate_vampire.12.d
+	flavor = gate_vampire.12.f
+
+	event_image = {
+		video = "ip3_agitator_reading_manifesto"
+	}
+
+	immediate = {
+		random_scope_state = {
+			save_scope_as = gate_vampire_event_state
+		}
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/event_icons/event_gate_bat.dds
+
+	duration = 3
+
+	option = {
+		name = gate_vampire.12.a
+		default_option = yes
+		scope:gate_vampire_event_state = {
+			every_scope_pop = {
+				change_pop_culture = {
+					target = cu:vampire
+					value = 0.05
+				}
+			}
+		}
+	}
+}
+
+gate_vampire.13 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:gate_vampire_event_state
+
+	title = gate_vampire.13.t
+	desc = gate_vampire.13.d
+	flavor = gate_vampire.13.f
+
+	event_image = {
+		video = "ip3_agitator_reading_manifesto"
+	}
+
+	immediate = {
+		random_scope_state = {
+			save_scope_as = gate_vampire_event_state
+		}
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/event_icons/event_gate_bat.dds
+
+	duration = 3
+
+	option = {
+		name = gate_vampire.13.a
+		default_option = yes
+		scope:gate_vampire_event_state = {
+			every_scope_pop = {
+				change_pop_culture = {
+					target = cu:vampire
+					value = 0.05
+				}
+			}
+		}
+	}
+}
+
+gate_vampire.14 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:gate_vampire_event_state
+
+	title = gate_vampire.14.t
+	desc = gate_vampire.14.d
+	flavor = gate_vampire.14.f
+
+	event_image = {
+		video = "ip3_agitator_reading_manifesto"
+	}
+
+	immediate = {
+		random_scope_state = {
+			save_scope_as = gate_vampire_event_state
+		}
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/event_icons/event_gate_bat.dds
+
+	duration = 3
+
+	option = {
+		name = gate_vampire.14.a
+		default_option = yes
+		scope:gate_vampire_event_state = {
+			every_scope_pop = {
+				change_pop_culture = {
+					target = cu:vampire
+					value = 0.05
+				}
+			}
+		}
+	}
+}
+
+gate_vampire.15 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:gate_vampire_event_state
+
+	title = gate_vampire.15.t
+	desc = gate_vampire.15.d
+	flavor = gate_vampire.15.f
+
+	event_image = {
+		video = "ip3_agitator_reading_manifesto"
+	}
+
+	immediate = {
+		random_scope_state = {
+			save_scope_as = gate_vampire_event_state
+		}
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/event_icons/event_gate_bat.dds
+
+	duration = 3
+
+	option = {
+		name = gate_vampire.15.a
+		default_option = yes
+		scope:gate_vampire_event_state = {
+			kill_population_percent_in_state = {
+				culture = cu:vampire
+				percent = 0.05
+			}
+		}
+	}
+}
+
+gate_vampire.16 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:gate_vampire_event_state
+
+	title = gate_vampire.16.t
+	desc = gate_vampire.16.d
+	flavor = gate_vampire.16.f
+
+	event_image = {
+		video = "ip3_agitator_reading_manifesto"
+	}
+
+	immediate = {
+		random_scope_state = {
+			save_scope_as = gate_vampire_event_state
+		}
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/event_icons/event_gate_bat.dds
+
+	duration = 3
+
+	option = {
+		name = gate_vampire.16.a
+		default_option = yes
+		scope:gate_vampire_event_state = {
+			kill_population_percent_in_state = {
+				culture = cu:vampire
+				percent = 0.1
+			}
+		}
 	}
 }

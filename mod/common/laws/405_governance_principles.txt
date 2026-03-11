@@ -205,6 +205,15 @@
         }
     }
 
+    can_enact = {
+        custom_tooltip = {
+            text = je_gate_vampire_emergence_trigger_decapitated_false
+            NOT = {
+                has_variable = gate_vampire_decapitated
+            }
+        }
+    }
+
     modifier = {
         country_aristocrats_pol_str_mult = 0.25
         country_capitalists_pol_str_mult = 0.25

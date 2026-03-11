@@ -18,10 +18,22 @@
 				}
 			}
 		}
+		custom_tooltip = {
+			text = je_gate_vampire_emergence_trigger_decapitated_false
+			NOT = {
+				has_variable = gate_vampire_decapitated
+			}
+		}
 	}
 
     disband_trigger = {
-        has_law = law_type:law_gate_vampire_monarchy
+		OR = {
+			has_law = law_type:law_gate_vampire_monarchy
+			custom_tooltip = {
+				text = je_gate_vampire_emergence_trigger_decapitated_true
+				has_variable = gate_vampire_decapitated
+			}
+		}
     }
 
 	creation_weight = {
