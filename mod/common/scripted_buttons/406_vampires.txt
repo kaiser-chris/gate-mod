@@ -3,6 +3,10 @@
 	desc = je_gate_vampire_emergence_button_purge_desc
 
 	possible = {
+		custom_tooltip = {
+			text = je_gate_vampire_emergence_trigger_truth_known
+			has_variable = gate_vampire_truth
+		}
 		OR = {
 			ig:ig_devout ?= {
 				is_powerful = yes
@@ -12,16 +16,66 @@
 			}
 			has_law = law_type:law_theocracy
 		}
+		custom_tooltip = {
+			text = je_gate_vampire_emergence_trigger_decapitated_false
+			NOT = {
+				has_variable = gate_vampire_decapitated
+			}
+		}
 	}
 
 	ai_chance = {
-		value = 100
+		value = 50
+	}
+
+	effect = {
+		show_as_tooltip = {
+			trigger_event = gate_vampire.2
+		}
+		hidden_effect = {
+			set_variable = gate_rejected_vampirism
+		}
+	}
+}
+
+je_gate_vampire_emergence_button_decapitate = {
+	name = je_gate_vampire_emergence_button_decapitate
+	desc = je_gate_vampire_emergence_button_decapitate_desc
+
+	possible = {
+		any_political_movement = {
+			is_political_movement_type = movement_gate_vampirism
+			is_revolutionary = no
+		}
+		custom_tooltip = {
+			text = je_gate_vampire_emergence_trigger_truth_known
+			has_variable = gate_vampire_truth
+		}
+		custom_tooltip = {
+			text = je_gate_vampire_emergence_trigger_decapitated_false
+			NOT = {
+				has_variable = gate_vampire_decapitated
+			}
+		}
+		hidden_trigger = {
+			NOT = {
+				has_variable = gate_hidden_decapitate_block
+			}
+		}
+	}
+
+	ai_chance = {
+		value = 60
 	}
 
 	effect = {
 		trigger_event = {
-			id = gate_vampire.2
+			id = gate_vampire.9
 			popup = yes
 		}
+	}
+
+	cooldown = {
+		months = 3
 	}
 }

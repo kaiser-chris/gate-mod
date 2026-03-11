@@ -3,10 +3,17 @@
 
 	group = je_group_internal_affairs
 
+	scripted_button = je_gate_vampire_emergence_button_decapitate
 	scripted_button = je_gate_vampire_emergence_button_purge
 
 	status_desc = {
 		first_valid = {
+			triggered_desc = {
+				desc = je_gate_vampire_emergence_decapitated
+				trigger = {
+					has_variable = gate_vampire_decapitated
+				}
+			}
 			triggered_desc = {
 				desc = je_gate_vampire_emergence_truth_known
 				trigger = {
@@ -33,7 +40,10 @@
 		effect = {
 			if = {
 				limit = {
-					has_variable = gate_vampire_truth
+					OR = {
+						has_variable = gate_vampire_truth
+						has_variable = gate_vampire_decapitated
+					}
 				}
 				every_scope_pop = {
 					limit = {
@@ -75,6 +85,22 @@
 	}
 
 	on_monthly_pulse = {
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_variable = gate_vampire_decapitated
+					}
+				}
+				je:je_gate_vampire_emergence ?= {
+					clear_variable_list = com_journal_characters
+					add_to_variable_list = {
+						name = com_journal_characters
+						target = root.var:gate_character_vampire
+					}
+				}
+			}
+		}
 		# Trigger vampire events
 		random_events = {
 			chance_of_no_event = 80
@@ -82,6 +108,12 @@
 			1 = gate_vampire.6
 			1 = gate_vampire.7
 			1 = gate_vampire.8
+			1 = gate_vampire.11
+			1 = gate_vampire.12
+			1 = gate_vampire.13
+			1 = gate_vampire.14
+			1 = gate_vampire.15
+			1 = gate_vampire.16
 		}
 	}
 
@@ -106,12 +138,33 @@
 		}
 	}
 
+	invalid = {
+		custom_tooltip = {
+			text = je_gate_vampire_emergence_invalid
+			has_variable = gate_vampire_decapitated
+			NOT = {
+				has_variable = gate_vampire_wait
+			}
+		}
+	}
+
 	on_complete = {
 		hidden_effect = {
 			trigger_event = {
 				id = gate_vampire.1
 				popup = yes
 			}
+		}
+	}
+
+	on_invalid = {
+		hidden_effect = {
+			trigger_event = {
+				id = gate_vampire.10
+				popup = yes
+			}
+			remove_variable = gate_vampire_decapitated
+			remove_variable = gate_vampire_truth
 		}
 	}
 
