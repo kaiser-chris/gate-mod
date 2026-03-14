@@ -30,14 +30,14 @@
         }
     }
 
-    orcish_race = {
+    vampire_race = {
         dna_modifiers = {
             morph = {
                 # White Skin
                 mode = add
-                gene = gate_skin_color
-                template = color_shift_saturation
-                value = 0.4
+                gene = gate_eye_color
+                template = color_shift_full
+                value = 0.48
             }
         }
         weight = {
