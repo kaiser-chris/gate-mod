@@ -93,7 +93,11 @@ flowcontainer = {
                 size = { 70 45 }
             }
             blockoverride "mana_density_visibility" {
-                visible = "[IsZoomLevelNear]"
+                visible = "[And3(
+                    IsZoomLevelNear,
+                    Not(GetScriptedGui('sgui_gate_map_mode_magic_gate_visible').IsShown(GuiScope.SetRoot(State.AccessStateRegion.MakeScope).End)),
+                    Not(GetScriptedGui('sgui_gate_map_mode_magic_gate_veiled').IsShown(GuiScope.SetRoot(State.AccessStateRegion.MakeScope).End))
+                )]"
             }
         }
 
@@ -102,10 +106,32 @@ flowcontainer = {
                 size = { 65 40 }
             }
             blockoverride "mana_density_visibility" {
-                visible = "[Or(IsZoomLevelMid, IsZoomLevelFar)]"
+                visible = "[And3(
+                    Or(IsZoomLevelMid, IsZoomLevelFar),
+                    Not(GetScriptedGui('sgui_gate_map_mode_magic_gate_visible').IsShown(GuiScope.SetRoot(State.AccessStateRegion.MakeScope).End)),
+                    Not(GetScriptedGui('sgui_gate_map_mode_magic_gate_veiled').IsShown(GuiScope.SetRoot(State.AccessStateRegion.MakeScope).End))
+                )]"
             }
             blockoverride "font_size" {
                 using = fontsize_small
+            }
+        }
+
+        container = {
+            visible = "[GetScriptedGui('sgui_gate_map_mode_magic_gate_visible').IsShown(GuiScope.SetRoot(State.AccessStateRegion.MakeScope).End)]"
+            tooltip = gg_map_marker_mana_density_gate_tooltip
+            icon = {
+                size = { 60 60 }
+                texture = "gfx/interface/icons/gui_icons/gate_visible.dds"
+            }
+        }
+
+        container = {
+            visible = "[GetScriptedGui('sgui_gate_map_mode_magic_gate_veiled').IsShown(GuiScope.SetRoot(State.AccessStateRegion.MakeScope).End)]"
+            tooltip = gg_map_marker_mana_density_gate_veiled_tooltip
+            icon = {
+                size = { 60 60 }
+                texture = "gfx/interface/icons/gui_icons/gate_veiled.dds"
             }
         }
     }

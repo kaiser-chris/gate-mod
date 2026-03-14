@@ -5,3 +5,22 @@
         is_magic_country = yes
     }
 }
+
+sgui_gate_map_mode_magic_gate_visible = {
+    scope = state_region
+
+    is_shown = {
+        has_magic_gate = yes
+        NOT = {
+            has_variable = gate_veiled_gate
+        }
+    }
+}
+
+sgui_gate_map_mode_magic_gate_veiled = {
+    scope = state_region
+
+    is_shown = {
+        has_variable = gate_veiled_gate
+    }
+}

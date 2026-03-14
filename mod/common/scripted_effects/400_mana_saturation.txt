@@ -141,6 +141,7 @@ initial_gate_propogate_mana_density = {
 
 	# Hidden Gate in Amazonas
 	s:STATE_AMAZONAS = {
+		set_variable = gate_veiled_gate
 		set_variable = {
 			name = mana_density
 			value = maximum_mana_density
