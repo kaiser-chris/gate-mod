@@ -6,8 +6,8 @@
 				culture ?= cu:elven
 				culture ?= cu:vampire
 				culture ?= cu:gnomish
-				culture ?= cu:plundboelka
-				culture ?= cu:praprandgaw
+				culture ?= cu:gate_south_ogre
+				culture ?= cu:gate_arctic_ogre
 			}
 		}
 		if = {
@@ -49,8 +49,8 @@
 		if = {
 			limit = {
 				OR = {
-					culture ?= cu:plundboelka
-					culture ?= cu:praprandgaw
+					culture ?= cu:gate_south_ogre
+					culture ?= cu:gate_arctic_ogre
 				}
 				NOT = {
 					has_trait = gate_race_trait_bear

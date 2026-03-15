@@ -1,0 +1,31 @@
+﻿special_genes = {
+	accessory_genes = {
+		gate_gene_ogre_horns = {
+			inheritable = no
+
+			no_horns = {
+				index = 0
+				male = {}
+				female = {}
+				boy = {}
+				girl = {}
+			}
+
+			random_horns = {
+				index = 1
+				male = {
+					1 = male_headgear_ogre_horns_1
+					1 = male_headgear_ogre_horns_2
+					1 = male_headgear_ogre_horns_3
+				}
+				female = {
+					1 = female_headgear_ogre_horns_1
+					1 = female_headgear_ogre_horns_2
+					1 = female_headgear_ogre_horns_3
+				}
+				boy = male
+				girl = female
+			}
+		}
+	}
+}

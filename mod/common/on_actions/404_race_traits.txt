@@ -58,8 +58,8 @@ on_gate_gnome_created = {
 on_gate_bear_created = {
     trigger = {
         OR = {
-            cu:praprandgaw ?= culture
-            cu:plundboelka ?= culture
+            cu:gate_arctic_ogre ?= culture
+            cu:gate_south_ogre ?= culture
         }
     }
     effect = {

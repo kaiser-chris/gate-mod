@@ -1,0 +1,56 @@
+﻿pdxmesh = {
+	name = "male_headgear_ogre_horns_1_mesh"
+	file = "male_headgear_ogre_horns_1.mesh"
+
+	meshsettings = {
+		name = "male_headgear_ogre_horns_1Shape"
+		index = 0
+		texture_diffuse = "ogre_horns_1_diffuse.dds"
+		texture_normal = "ogre_horns_1_normal.dds"
+		texture_specular = "ogre_horns_1_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+entity = {
+	name = "male_headgear_ogre_horns_1_entity"
+	pdxmesh = "male_headgear_ogre_horns_1_mesh"
+}
+
+pdxmesh = {
+	name = "male_headgear_ogre_horns_2_mesh"
+	file = "male_headgear_ogre_horns_2.mesh"
+
+	meshsettings = {
+		name = "male_headgear_ogre_horns_2Shape"
+		index = 0
+		texture_diffuse = "ogre_horns_2_diffuse.dds"
+		texture_normal = "ogre_horns_2_normal.dds"
+		texture_specular = "ogre_horns_2_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+entity = {
+	name = "male_headgear_ogre_horns_2_entity"
+	pdxmesh = "male_headgear_ogre_horns_2_mesh"
+}
+
+pdxmesh = {
+	name = "male_headgear_ogre_horns_3_mesh"
+	file = "male_headgear_ogre_horns_3.mesh"
+
+	meshsettings = {
+		name = "male_headgear_ogre_horns_3Shape"
+		index = 0
+		texture_diffuse = "ogre_horns_3_diffuse.dds"
+		texture_normal = "ogre_horns_3_normal.dds"
+		texture_specular = "ogre_horns_3_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+entity = {
+	name = "male_headgear_ogre_horns_3_entity"
+	pdxmesh = "male_headgear_ogre_horns_3_mesh"
+}

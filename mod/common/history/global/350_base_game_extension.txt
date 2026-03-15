@@ -156,13 +156,13 @@ GLOBAL = {
 	# Texas
 	c:TEX = {
 		# Add Bears culture
-		add_primary_culture = cu:plundboelka
+		add_primary_culture = cu:gate_south_ogre
 
 		# Add Magic Researcher
 		create_character = {
 			template = gate_magic_researcher_template
 			interest_group = ig_intelligentsia
-			culture = plundboelka
+			culture = gate_south_ogre
 			ig_leader = yes
 		}
 	}

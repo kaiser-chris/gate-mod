@@ -554,6 +554,77 @@ morph_genes = {
             boy = male
             girl = female
         }
+        # Full 0.0 to 1.0 range
+        body_fat_head_fat_full_range = {
+            index = 9
+            male = {
+                # Fat body from 0.5 to 1.0 gene value
+                setting = { # Head fat
+                    attribute = "head_bs_fat_head"
+                    #value = { min = -0.75 max = 0.75 }
+                    curve = {
+                        { 0.0   0.0 }
+                        { 0.5   0.4 }
+                        { 1.0   1.0 }
+                    }
+                    age = age_preset_child_fat
+                }
+                setting = {
+                    attribute = "head_bs_fat_body"
+                    curve = {
+                        { 0.0   0.0 }
+                        { 0.5   0.4 }
+                        { 1.0   1.0 }
+                    }
+                    age = age_preset_child_fat
+                }
+                setting = {
+                    attribute = "body_bs_fat"
+                    #value = { min = -0.75 max = 0.75 }
+                    curve = {
+                        { 0.0   0.0 }
+                        { 0.5   0.4 }
+                        { 1.0   1.0 }
+                    }
+                    age = age_preset_child_fat
+                }
+
+                # Gaunt body from 0.5 to 0.0 gene value
+                setting = {
+                    attribute = "head_bs_gaunt_head"
+                    # value = { min = 1.0 max = -1.5 }
+                    curve = {
+                        { 0.0   1.0 }
+                        { 0.5   0.0 }
+                        { 1.0   0.0 }
+                    }
+                    age = age_preset_aging_gauntness
+                }
+                setting = {
+                    attribute = "head_bs_gaunt_body"
+                    # value = { min = 1.0 max = -1.5 }
+                    curve = {
+                        { 0.0   1.0 }
+                        { 0.5   0.0 }
+                        { 1.0   0.0 }
+                    }
+                    age = age_preset_aging_gauntness
+                }
+                setting = {
+                    attribute = "body_bs_gaunt"
+                    # value = { min = 1.0 max = -1.5 }
+                    curve = {
+                        { 0.0   1.0 }
+                        { 0.5   0.0 }
+                        { 1.0   0.0 }
+                    }
+                    age = age_preset_aging_gauntness
+                }
+            }
+            female = male
+            boy = male
+            girl = male
+        }
     }
 
     INJECT:gene_age = {
@@ -2255,6 +2326,67 @@ morph_genes = {
             female = male
             boy = male
             girl = female
+        }
+    }
+
+    INJECT:gene_height = {
+        short_height = {
+            index = 1
+            male = {
+                setting = {
+                    attribute = "body_height"
+                    value = { min = @maleAnimMin max = -0.25 }
+                    age = age_preset_height
+                }
+                setting = {
+                    attribute = "head_height"
+                    value = { min = @maleAnimMin max = -0.25 }
+                    age = age_preset_height
+                }
+                setting = {
+                    attribute = "body_bs_thin"
+                    curve = {
+                        { 0.0   0.0 }
+                        { 0.5   0.0 }
+                        { 1.0   0.5 }
+                    }
+                    # age = age_preset_child_fat
+                }
+                setting = {
+                    attribute = "body_bs_thick"
+                    curve = {
+                        { 0.0   0.5 }
+                        { 0.5   0.0 }
+                        { 1.0   0.0 }
+                    }
+                    # age = age_preset_child_fat
+                }
+            }
+            female = male
+            boy = male
+            girl = male
+        }
+        giant_height = {
+            index = 2
+            male = {
+                setting = {
+                    attribute = "body_height"
+                    value = { min = 0.38 max = 0.55 } # Some pops start clipping out of frame above this
+                    age = age_preset_height
+                }
+                setting = {
+                    attribute = "head_height"
+                    value = { min = 0.0 max = 0.3 } # A somewhat smaller head helps make the body look bigger
+                    age = age_preset_height
+                }
+                setting = {
+                    attribute = "body_bs_thick"
+                    value = { min = 0.3 max = 0.4 } # Starts clipping out of some clothing if more than 0.4 sadly.
+                }
+            }
+            female = male
+            boy = male
+            girl = male
         }
     }
 }
