@@ -103,21 +103,14 @@ combat_unit_type_mage_infantry = {
 
     combat_unit_image = {
         trigger = {
-            has_culture_graphics = elven
-        }
-        texture = "gfx/unit_illustrations/gate_infantry_elven_mage.dds"
-    }
-
-    combat_unit_image = {
-        trigger = {
-            has_culture_graphics = dwarven
+            has_culture_graphics = gate_dwarven
         }
         texture = "gfx/unit_illustrations/gate_infantry_dwarven_mage.dds"
     }
 
     combat_unit_image = {
         trigger = {
-            has_culture_graphics = orcish
+            has_culture_graphics = gate_orcish
         }
         texture = gfx/unit_illustrations/gate_infantry_orc_mage.dds
     }
@@ -581,27 +574,6 @@ combat_unit_type_mage_artillery = {
 
     unlocking_technologies = {
         mage_artillery
-    }
-
-    combat_unit_image = {
-        trigger = {
-            this = cu:elven
-        }
-        texture = "gfx/unit_illustrations/gate_artillery_elven_mage.dds"
-    }
-
-    combat_unit_image = {
-        trigger = {
-            this = cu:dwarven
-        }
-        texture = "gfx/unit_illustrations/gate_artillery_dwarven_mage.dds"
-    }
-
-    combat_unit_image = {
-        trigger = {
-            this = cu:orcish
-        }
-        texture = "gfx/unit_illustrations/gate_artillery_orc_mage.dds"
     }
 
     combat_unit_image = {
