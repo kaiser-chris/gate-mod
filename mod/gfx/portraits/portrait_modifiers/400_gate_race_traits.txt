@@ -33,7 +33,7 @@
     vampire_race = {
         dna_modifiers = {
             morph = {
-                # White Skin
+                # Red Eyes
                 mode = add
                 gene = gate_eye_color
                 template = color_shift_full
@@ -45,8 +45,30 @@
             modifier = {
                 add = 100
                 OR = {
-                    elven_portrait_trigger = yes
-                    elven_portrait_pop_trigger = yes
+                    vampire_portrait_trigger = yes
+                    vampire_portrait_pop_trigger = yes
+                }
+            }
+        }
+    }
+
+    ogre_race = {
+        dna_modifiers = {
+            accessory = {
+                # Ogre Horns
+                mode = add
+                gene = gate_gene_ogre_horns
+                template = random_horns
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                OR = {
+                    gate_ogre_portrait_trigger = yes
+                    gate_ogre_portrait_pop_trigger = yes
                 }
             }
         }

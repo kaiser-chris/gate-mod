@@ -141,7 +141,7 @@
         }
     }
 
-    european_royal_clothes = { #Currently only includes and checks for female clothes.
+    vampire_royal_clothes = { #Currently only includes and checks for female clothes.
         dna_modifiers = {
             accessory = {
                 mode = add
@@ -514,55 +514,6 @@
         }
     }
 
-    vampire_eternal_ruler_clothes = {
-        dna_modifiers = {
-            accessory = {
-                mode = add
-                gene = belts
-                template = male_belt_saber
-                range = { 0 1 }
-            }
-            accessory = {
-                mode = add
-                gene = epaulettes
-                template = prussian_epaulettes
-                accessory = male_epaulettes_02
-            }
-            accessory = {
-                mode = add
-                gene = top_layer
-                template = male_belt_saber
-                range = { 0 1 }
-            }
-            accessory = {
-                mode = add
-                gene = coats
-                template = agitator_blanqui
-                range = { 0 0.1 }
-            }
-            accessory = {
-                mode = add
-                gene = legwear
-                template = european_legwear_colors
-                accessory = male_legwear_european_01_black
-            }
-        }
-
-        weight = {
-            base = 0
-            modifier = {
-                add = 10000
-                vampire_portrait_trigger = yes
-                scope:character = {
-                    is_ruler = yes
-                    home_country ?= {
-                        has_law = law_type:law_gate_vampire_monarchy
-                    }
-                }
-            }
-        }
-    }
-
     vampire_fancy_politician_clothes = {
         dna_modifiers = {
             accessory = {
@@ -752,6 +703,7 @@
             }
         }
     }
+
     vampire_upper_clothes = {
         dna_modifiers = {
             accessory = {
@@ -822,7 +774,7 @@
         }
     }
 
-    enslaved_clothes = {
+    vampire_enslaved_clothes = {
         dna_modifiers = {
             accessory = {
                 mode = add

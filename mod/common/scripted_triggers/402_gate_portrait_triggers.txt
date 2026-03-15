@@ -85,6 +85,43 @@ vampire_portrait_pop_trigger = {
     }
 }
 
+gate_ogre_portrait_trigger = {
+    scope:character ?= {
+        OR = {
+            has_culture = cu:gate_arctic_ogre
+            has_culture = cu:gate_south_ogre
+        }
+    }
+}
+gate_ogre_portrait_pop_trigger = {
+    scope:pop ?= {
+        OR = {
+            culture = cu:gate_arctic_ogre
+            culture = cu:gate_south_ogre
+        }
+    }
+}
+gate_arctic_ogre_portrait_trigger = {
+    scope:character ?= {
+        has_culture = cu:gate_arctic_ogre
+    }
+}
+gate_arctic_ogre_portrait_pop_trigger = {
+    scope:pop ?= {
+        culture = cu:gate_arctic_ogre
+    }
+}
+gate_south_ogre_portrait_trigger = {
+    scope:character ?= {
+        has_culture = cu:gate_south_ogre
+    }
+}
+gate_south_ogre_portrait_pop_trigger = {
+    scope:pop ?= {
+        culture = cu:gate_south_ogre
+    }
+}
+
 elven_portrait_trigger = {
     scope:character ?= {
         has_culture = cu:elven
@@ -128,16 +165,16 @@ gnomish_portrait_pop_trigger = {
 gate_bear_portrait_trigger = {
     scope:character ?= {
         OR = {
-            has_culture = cu:plundboelka
-            has_culture = cu:praprandgaw
+            has_culture = cu:gate_south_ogre
+            has_culture = cu:gate_arctic_ogre
         }
     }
 }
 gate_bear_portrait_pop_trigger = {
     scope:pop ?= {
         OR = {
-            culture = cu:plundboelka
-            culture = cu:praprandgaw
+            culture = cu:gate_south_ogre
+            culture = cu:gate_arctic_ogre
         }
     }
 }
