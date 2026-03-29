@@ -16,7 +16,7 @@
     non_interest_group_leader_trigger = {
         # Agitators should have an ideology at odds with current laws
         NAND = {
-            has_role = agitator
+            has_role_of_type = agitator
             owner = {
                 has_law = law_type:law_gate_noble_magic_users
             }
@@ -62,7 +62,7 @@ ideology_magic_hopeful = {
     non_interest_group_leader_trigger = {
         # Agitators should have an ideology at odds with current laws
         NAND = {
-            has_role = agitator
+            has_role_of_type = agitator
             owner = {
                 has_law = law_type:law_gate_free_magic_users
             }
@@ -113,7 +113,7 @@ ideology_magic_sceptic = {
     non_interest_group_leader_trigger = {
         # Agitators should have an ideology at odds with current laws
         NAND = {
-            has_role = agitator
+            has_role_of_type = agitator
             owner = {
                 has_law = law_type:law_gate_mage_guilds
             }
@@ -163,7 +163,7 @@ ideology_magic_cynic = {
     non_interest_group_leader_trigger = {
         # Agitators should have an ideology at odds with current laws
         NAND = {
-            has_role = agitator
+            has_role_of_type = agitator
             owner = {
                 has_law = law_type:law_gate_restricted_magic_users
             }
@@ -218,7 +218,7 @@ ideology_gate_vampirism = {
         }
         # Agitators should have an ideology at odds with current laws
         NAND = {
-            has_role = agitator
+            has_role_of_type = agitator
             owner = {
                 OR = {
                     has_law = law_type:law_chiefdom
@@ -282,7 +282,7 @@ ideology_gate_vampirism_interested = {
         }
         # Agitators should have an ideology at odds with current laws
         NAND = {
-            has_role = agitator
+            has_role_of_type = agitator
             owner = {
                 OR = {
                     has_law = law_type:law_chiefdom
@@ -335,7 +335,7 @@ ideology_gate_vampirism_purge = {
     non_interest_group_leader_trigger = {
         # Agitators should have an ideology at odds with current laws
         AND = {
-            has_role = agitator
+            has_role_of_type = agitator
             owner = {
                 has_law = law_type:law_gate_vampire_monarchy
             }

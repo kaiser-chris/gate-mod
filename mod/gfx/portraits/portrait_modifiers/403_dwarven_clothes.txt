@@ -160,7 +160,7 @@
                         exists = scope:character
                         scope:character = {
                             is_female = yes
-                            is_ruler = yes
+                            is_ruler_of_any_country = yes
                         }
                     }
                 }
@@ -383,7 +383,7 @@
                 dwarven_portrait_trigger = yes
                 OR = {
                     scope:character ?= {
-                        has_role = general
+                        has_role_of_type = general
                     }
                     AND = {
                         armed_forces_clothes_trigger = yes
@@ -423,20 +423,20 @@
                         NOT = { has_technology_researched = bolt_action_rifles }
                     }
                     OR = {
-                        has_role = general
-                        has_role = admiral
+                        has_role_of_type = general
+                        has_role_of_type = admiral
                         AND = {
                             is_interest_group_type = ig_armed_forces
-                            has_role = politician
+                            has_role_of_type = politician
                             OR = {  # A monarch shouldn't wear this, but a republican ruler can
                                 AND = {
-                                    is_ruler = no
+                                    is_ruler_of_any_country = no
                                     home_country ?= {
                                         has_law = law_type:law_monarchy
                                     }
                                 }
                                 AND = {
-                                    is_ruler = yes
+                                    is_ruler_of_any_country = yes
                                     home_country ?= {
                                         NOT = { has_law = law_type:law_monarchy }
                                     }
@@ -444,7 +444,7 @@
                             }
                         }
                         AND = {
-                            has_role = agitator
+                            has_role_of_type = agitator
                             is_interest_group_type = ig_armed_forces
                         }
                     }
@@ -484,20 +484,20 @@
                         has_technology_researched = bolt_action_rifles
                     }
                     OR = {
-                        has_role = general
-                        has_role = admiral
+                        has_role_of_type = general
+                        has_role_of_type = admiral
                         AND = {
                             is_interest_group_type = ig_armed_forces
-                            has_role = politician
+                            has_role_of_type = politician
                             OR = {  # A monarch shouldn't wear this, but a republican ruler can
                                 AND = {
-                                    is_ruler = no
+                                    is_ruler_of_any_country = no
                                     home_country ?= {
                                         has_law = law_type:law_monarchy
                                     }
                                 }
                                 AND = {
-                                    is_ruler = yes
+                                    is_ruler_of_any_country = yes
                                     home_country ?= {
                                         NOT = { has_law = law_type:law_monarchy }
                                     }
@@ -505,7 +505,7 @@
                             }
                         }
                         AND = {
-                            has_role = agitator
+                            has_role_of_type = agitator
                             is_interest_group_type = ig_armed_forces
                         }
                     }
@@ -859,13 +859,13 @@
                         is_interest_group_type = ig_petty_bourgeoisie
                     }
                     OR = {
-                        is_ruler = no
+                        is_ruler_of_any_country = no
                         AND = {
-                            is_ruler = yes
+                            is_ruler_of_any_country = yes
                             republic_clothes_trigger = yes
                         }
                     }
-                    is_heir = no
+                    is_heir_of_own_country = no
                     OR = {  # November to February
                         month < 3
                         month > 10

@@ -30,9 +30,9 @@ gate_country_events.1 = {
             every_country = {
                 limit = {
                     OR = {
-                        has_interest_marker_in_region = region_north_germany
-                        has_interest_marker_in_region = region_south_germany
-                        has_interest_marker_in_region = region_rhine
+                        has_interest_marker_in_region = region_central_europe
+                        has_interest_marker_in_region = region_central_europe
+                        has_interest_marker_in_region = region_central_europe
                     }
                     religion ?= {
                         OR = {
