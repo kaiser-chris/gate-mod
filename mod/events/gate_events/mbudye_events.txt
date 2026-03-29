@@ -554,7 +554,7 @@ gate_mbudye.7 = {
 			has_variable = mbudye_investigation
 		}
 		any_scope_character = {
-			has_role = general
+			has_role_of_type = general
 			is_character_alive = yes
 			is_immortal = no
 		}
@@ -717,7 +717,7 @@ gate_mbudye.8 = {
 			has_variable = mbudye_investigation
 		}
 		any_scope_character = {
-			has_role = admiral
+			has_role_of_type = admiral
 			is_character_alive = yes
 			is_immortal = no
 		}
@@ -866,7 +866,7 @@ gate_mbudye.9 = {
 			limit = {
 				is_character_alive = yes
 				is_immortal = no
-				is_ruler = no
+				is_ruler_of_any_country = no
 				is_busy = no
 			}
 			save_scope_as = mbudye_event_character
@@ -884,7 +884,7 @@ gate_mbudye.9 = {
 		any_scope_politician = {
 			is_character_alive = yes
 			is_immortal = no
-			is_ruler = no
+			is_ruler_of_any_country = no
 			is_busy = no
 		}
 	}

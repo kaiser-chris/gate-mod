@@ -60,8 +60,8 @@
                     scope:character = {
                         exists = owner
                         OR = {
-                            is_ruler = yes
-                            is_heir = yes
+                            is_ruler_of_any_country = yes
+                            is_heir_of_own_country = yes
                         }
                     }
                 }
