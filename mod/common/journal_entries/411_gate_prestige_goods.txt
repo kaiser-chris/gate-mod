@@ -28,12 +28,14 @@
 		}
 	}
 
+	widget = {
+		gui = "gui/com_journal_injects/injects.gui"
+		name = "com_journal_entry_dlc_icon"
+		container = "custom_widget_container_7"
+	}
+
 	immediate = {
-        scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_magic_gate
-            }
-        }
+		add_gate_dlc_icon = yes
 		random_company = {
 			limit = {
 				can_potentially_produce_prestige_goods = prestige_good_gate_generic_mana
@@ -162,12 +164,14 @@ je_prestige_goods_gate_golem = {
 		}
 	}
 
+	widget = {
+		gui = "gui/com_journal_injects/injects.gui"
+		name = "com_journal_entry_dlc_icon"
+		container = "custom_widget_container_7"
+	}
+
 	immediate = {
-        scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_magic_gate
-            }
-        }
+		add_gate_dlc_icon = yes
 		random_company = {
 			limit = {
 				can_potentially_produce_prestige_goods = prestige_good_gate_generic_golem
@@ -297,12 +301,14 @@ je_prestige_goods_gate_dwarven_iron = {
 		}
 	}
 
+	widget = {
+		gui = "gui/com_journal_injects/injects.gui"
+		name = "com_journal_entry_dlc_icon"
+		container = "custom_widget_container_7"
+	}
+
 	immediate = {
-        scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_magic_gate
-            }
-        }
+		add_gate_dlc_icon = yes
 		random_company = {
 			limit = {
 				can_potentially_produce_prestige_goods = prestige_good_gate_dwarven_iron

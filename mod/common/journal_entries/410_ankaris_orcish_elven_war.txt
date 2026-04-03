@@ -57,12 +57,14 @@
         always = no
     }
 
+	widget = {
+		gui = "gui/com_journal_injects/injects.gui"
+		name = "com_journal_entry_dlc_icon"
+		container = "custom_widget_container_7"
+	}
+
 	immediate = {
-        scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_magic_gate
-            }
-        }
+		add_gate_dlc_icon = yes
 		set_variable = je_gate_ankaris_orcish_elven_war
 		trigger_event = {
 			id = gate_ankaris_orcish_elven_war.1

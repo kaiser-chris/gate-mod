@@ -2,12 +2,14 @@
 	icon = "gfx/interface/icons/event_icons/event_gate_magic.dds"
 	group = je_group_objectives
 
+	widget = {
+		gui = "gui/com_journal_injects/injects.gui"
+		name = "com_journal_entry_dlc_icon"
+		container = "custom_widget_container_7"
+	}
+
     immediate = {
-        scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_magic_gate
-            }
-        }
+		add_gate_dlc_icon = yes
     }
 
 	status_desc = {
@@ -27,12 +29,14 @@ je_obj_gate_build_research_institute = {
 	icon = "gfx/interface/icons/event_icons/event_gate_magic.dds"
 	group = je_group_objectives
 
+	widget = {
+		gui = "gui/com_journal_injects/injects.gui"
+		name = "com_journal_entry_dlc_icon"
+		container = "custom_widget_container_7"
+	}
+
     immediate = {
-        scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_magic_gate
-            }
-        }
+		add_gate_dlc_icon = yes
     }
 
 	status_desc = {
@@ -54,12 +58,14 @@ je_obj_gate_magic_knowledge = {
 	icon = "gfx/interface/icons/event_icons/event_gate_magic.dds"
 	group = je_group_objectives
 
+	widget = {
+		gui = "gui/com_journal_injects/injects.gui"
+		name = "com_journal_entry_dlc_icon"
+		container = "custom_widget_container_7"
+	}
+
     immediate = {
-        scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_magic_gate
-            }
-        }
+		add_gate_dlc_icon = yes
     }
 
 	status_desc = {
@@ -79,12 +85,14 @@ je_obj_gate_finish_magic_project = {
 	icon = "gfx/interface/icons/event_icons/event_gate_magic.dds"
 	group = je_group_objectives
 
+	widget = {
+		gui = "gui/com_journal_injects/injects.gui"
+		name = "com_journal_entry_dlc_icon"
+		container = "custom_widget_container_7"
+	}
+
     immediate = {
-        scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_magic_gate
-            }
-        }
+		add_gate_dlc_icon = yes
     }
 
 	status_desc = {
@@ -108,12 +116,14 @@ je_obj_gate_produce_magic_goods = {
 	group = je_group_objectives
 
     immediate = {
-        scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_magic_gate
-            }
-        }
+		add_gate_dlc_icon = yes
     }
+
+	widget = {
+		gui = "gui/com_journal_injects/injects.gui"
+		name = "com_journal_entry_dlc_icon"
+		container = "custom_widget_container_7"
+	}
 
 	status_desc = {
 		desc = je_obj_gate_produce_magic_goods_status
@@ -137,12 +147,14 @@ je_obj_gate_magic_academy = {
 	icon = "gfx/interface/icons/event_icons/event_gate_magic.dds"
 	group = je_group_objectives
 
+	widget = {
+		gui = "gui/com_journal_injects/injects.gui"
+		name = "com_journal_entry_dlc_icon"
+		container = "custom_widget_container_7"
+	}
+
     immediate = {
-        scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_magic_gate
-            }
-        }
+		add_gate_dlc_icon = yes
     }
 
 	status_desc = {
