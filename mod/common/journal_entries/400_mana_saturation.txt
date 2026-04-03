@@ -5,12 +5,14 @@
 
 	scripted_button = je_mana_saturation_button_slave_ritual
 
+	widget = {
+		gui = "gui/com_journal_injects/injects.gui"
+		name = "com_journal_entry_dlc_icon"
+		container = "custom_widget_container_7"
+	}
+
 	immediate = {
-        scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_magic_gate
-            }
-        }
+		add_gate_dlc_icon = yes
         set_global_variable = {
             name = global_mana_saturation
             value = 0

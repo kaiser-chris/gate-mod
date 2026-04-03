@@ -3,6 +3,12 @@
 
 	group = je_group_gate_grand_projects
 
+	widget = {
+		gui = "gui/com_journal_injects/injects.gui"
+		name = "com_journal_entry_dlc_icon"
+		container = "custom_widget_container_7"
+	}
+
 	immediate = {
         add_gate_dlc_icon = yes
 	}

@@ -28,12 +28,14 @@
 		}
 	}
 
+	widget = {
+		gui = "gui/com_journal_injects/injects.gui"
+		name = "com_journal_entry_dlc_icon"
+		container = "custom_widget_container_7"
+	}
+
 	immediate = {
-        scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_magic_gate
-            }
-        }
+		add_gate_dlc_icon = yes
 		set_variable = {
 			name = gate_expedition_preparation_progress
 			value = 0
@@ -145,12 +147,14 @@ je_gate_expedition_active = {
 		}
 	}
 
+	widget = {
+		gui = "gui/com_journal_injects/injects.gui"
+		name = "com_journal_entry_dlc_icon"
+		container = "custom_widget_container_7"
+	}
+
 	immediate = {
-        scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_magic_gate
-            }
-        }
+		add_gate_dlc_icon = yes
 		je:je_gate_expedition_active ?= {
 			clear_variable_list = com_journal_characters
 			add_to_variable_list = {
