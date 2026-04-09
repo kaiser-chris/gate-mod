@@ -173,11 +173,11 @@ types gate_shared {
         }
 
         blockoverride "go_to_button_properties" {
-            onclick = "[InformationPanelBar.OpenCommanderPanel(Character.AccessSelf)]"
+            onclick = "[InformationPanelBar.OpenCharacterPanel(Character.AccessSelf)]"
         }
 
         blockoverride "go_to_button_properties" {
-            onclick = "[InformationPanelBar.OpenCommanderPanel(Character.AccessSelf)]"
+            onclick = "[InformationPanelBar.OpenCharacterPanel(Character.AccessSelf)]"
         }
 
         blockoverride "tooltip_content_after" {
@@ -616,8 +616,8 @@ types gate_shared {
         top_illu = {
             blockoverride "illu" {
                 texture = "[Building.GetBuildingType.GetBackground]"
-                fittype = start
-                alpha = 0.7
+                fittype = centercrop
+                alpha = 0.5
             }
             minimumsize = { 555 -1 }
 
@@ -873,6 +873,20 @@ types gate_shared {
                         }
                         blockoverride "text_right" {
                             raw_text = "#variable @money![Building.GetTariffsPaid|K]#!"
+                        }
+                    }
+
+                    ### tolls
+                    building_process_entry = {
+                        blockoverride "visible" {
+                            visible = "[GreaterThan_CFixedPoint(Building.GetTollsPaid, '(CFixedPoint)0')]"
+                        }
+                        blockoverride "text" {
+                            text = "[concept_tolls]"
+                        }
+                        blockoverride "text_right" {
+                            raw_text = "#variable @money![Building.GetTollsPaid|K]#!"
+                            tooltip = "[Building.GetTollsPaidDesc]"
                         }
                     }
 
