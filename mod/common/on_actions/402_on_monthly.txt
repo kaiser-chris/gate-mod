@@ -67,6 +67,12 @@ on_monthly_gate_calculate_mana_saturation = {
     }
 }
 
+on_calculate_mana_saturation = {
+    effect = {
+        calculate_mana_saturation = yes
+    }
+}
+
 on_monthly_gate_statistics = {
     effect = {
         gate_collect_magic_countries = yes
