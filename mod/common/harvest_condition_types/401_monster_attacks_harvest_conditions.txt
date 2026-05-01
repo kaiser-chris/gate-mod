@@ -1,4 +1,6 @@
 ﻿monster_attack = {
+	has_animation = no
+
 	# Monster attacks can happen in any state
 	trigger = {
 		var:mana_density >= medium_mana_density_threshhold
@@ -66,6 +68,8 @@
 }
 
 monster_horde = {
+	has_animation = no
+
 	# Monster attacks can happen in any state
 	trigger = {
 		var:mana_density >= medium_mana_density_threshhold
