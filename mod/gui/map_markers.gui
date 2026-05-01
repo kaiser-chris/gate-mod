@@ -203,6 +203,20 @@ widget = {
     container = {
         parentanchor = center
         resizeparent = yes
+        onmousehierarchyenter = "[AccessHighlightManager.HighlightAdjacentPorts(SeaNodeMarker.GetProvince.Self)]"
+        onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
+
+        ### Debug data for ai navy
+        textbox = {
+            visible = "[SeaNodeMarker.HasAIDebugInfo]"
+            raw_text = "[SeaNodeMarker.GetAIDebugInfo]"
+            position = { 32 0 }
+            minimumsize = { 120 -1 }
+            autoresize = yes
+            align = nobaseline
+            multiline = yes
+            elide = right
+        }
 
         ### network interaction
         button = {
@@ -221,7 +235,7 @@ widget = {
             size = { 250% 250% }
             alpha = 0.8
             texture ="gfx/interface/map_markers/round_highlight_green.dds"
-            visible = "[And(SeaNodeMarker.IsValidInteractionNode, Not(SeaNodeMarker.IsActiveInteractionNode))]"
+            visible = "[And3(SeaNodeMarker.IsValidInteractionNode, SeaNodeMarker.IsClickableInteractionNode, Not(SeaNodeMarker.IsActiveInteractionNode))]"
             onclick = "[SeaNodeMarker.SelectInteractionClick]"
             parentanchor = center
             position = { 0 0 }
@@ -270,7 +284,7 @@ widget = {
                 parentanchor = center
                 alpha = 0.5
                 using = tooltip_above
-                tooltip = "[SeaNodeMarker.GetSupplyNetworkTooltip]"
+                tooltip = "SEA_NODE_TOOLTIP"
             }
 
             ### no supply - in interaction
@@ -302,7 +316,7 @@ widget = {
                 size = { 18 18 }
                 parentanchor = center
                 using = tooltip_above
-                tooltip = "[SeaNodeMarker.GetSupplyNetworkTooltip]"
+                tooltip = "SEA_NODE_TOOLTIP"
             }
 
             ### has supply - in interaction
@@ -325,7 +339,7 @@ widget = {
                 onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
                 size = { 100% 100% }
                 using = tooltip_above
-                tooltip = "[SeaNodeMarker.GetSupplyNetworkTooltip]"
+                tooltip = "SEA_NODE_TOOLTIP"
 
                 icon = {
                     visible = "[SeaNodeMarker.IsSelected]"
@@ -355,7 +369,7 @@ widget = {
                 size = { 25 25 }
                 parentanchor = center
                 using = tooltip_above
-                tooltip = "[SeaNodeMarker.GetSupplyNetworkTooltip]"
+                tooltip = "SEA_NODE_TOOLTIP"
             }
 
             ### no supply - in interaction
@@ -388,7 +402,7 @@ widget = {
                 size = { 30 30 }
                 parentanchor = center
                 using = tooltip_above
-                tooltip = "[SeaNodeMarker.GetSupplyNetworkTooltip]"
+                tooltip = "SEA_NODE_TOOLTIP"
             }
 
             ### has supply - in interaction
@@ -420,7 +434,7 @@ widget = {
                     alwaystransparent = yes
                 }
                 using = tooltip_above
-                tooltip = "[SeaNodeMarker.GetSupplyNetworkTooltip]"
+                tooltip = "SEA_NODE_TOOLTIP"
             }
         }
     }
@@ -446,13 +460,28 @@ widget = {
 
         movement_marker_click_vfx = {}
 
-        ### Green circle highlight without confirmation
+        ### Green circle highlight with existing naval mission and valid sea region addition
         button = {
-            visible = "[And(SeaNodeMovementMarker.CanDeploySelectedFormationsToSeaNode, Not(ShouldAskConfirmation(SeaNodeMovementMarker.GetSeaNode.GetDeploySelectedFormationsCommand)))]"
+            visible = "[SeaNodeMovementMarker.GetSeaNode.WouldAddSeaRegionToSelectedFleetMissions]"
             size = { 250% 250% }
             alpha = 0.8
             onclick = "[InformationPanelBar.OpenSeaRegionPanelTab(SeaNodeMovementMarker.GetSeaNode.Self, 'navy')]"
-            onrightclick = "[Execute( SeaNodeMovementMarker.GetSeaNode.GetDeploySelectedFormationsCommand )]"
+            onrightclick = "[Execute( SeaNodeMovementMarker.GetSeaNode.AddSeaRegionToSelectedFleetMissions )]"
+            onrightclick = "[PdxGuiWidget.AccessParent.AccessParent.FindChild('onrightclick_vfx').TriggerAnimation('show')]"
+            onrightclick = "[GetVariableSystem.Clear(Concatenate('sea_node_movement_marker_highlight', SeaNodeMovementMarker.GetSeaNode.GetID))]"
+            rightclicksound = "event:/SFX/UI/Military/naval_mission_settings_confirm"
+            parentanchor = center
+            position = { 0 0 }
+            texture ="gfx/interface/map_markers/round_highlight_green.dds"
+        }
+
+        ### Green circle highlight with no existing naval mission
+        button = {
+            visible = "[SeaNodeMovementMarker.GetSeaNode.WouldAssignSelectedFleetsToNewMissionWithoutConfirmation('naval_mission_type_project_power')]"
+            size = { 250% 250% }
+            alpha = 0.8
+            onclick = "[InformationPanelBar.OpenSeaRegionPanelTab(SeaNodeMovementMarker.GetSeaNode.Self, 'navy')]"
+            onrightclick = "[Execute( SeaNodeMovementMarker.GetSeaNode.AssignSelectedFleetsToNewMissionInRegion('naval_mission_type_project_power') )]"
             onrightclick = "[PdxGuiWidget.AccessParent.AccessParent.FindChild('onrightclick_vfx').TriggerAnimation('show')]"
             onrightclick = "[GetVariableSystem.Clear(Concatenate('sea_node_movement_marker_highlight', SeaNodeMovementMarker.GetSeaNode.GetID))]"
             rightclicksound = "event:/SFX/UI/Military/formation_actions_deploy_to_sea_node"
@@ -461,13 +490,13 @@ widget = {
             texture ="gfx/interface/map_markers/round_highlight_green.dds"
         }
 
-        ### Green circle highlight with confirmation
+        ### Green circle highlight with existing naval mission and invalid sea region addition
         button = {
-            visible = "[And(SeaNodeMovementMarker.CanDeploySelectedFormationsToSeaNode, ShouldAskConfirmation(SeaNodeMovementMarker.GetSeaNode.GetDeploySelectedFormationsCommand))]"
+            visible = "[SeaNodeMovementMarker.GetSeaNode.WouldAssignSelectedFleetsToNewMissionWithConfirmation('naval_mission_type_project_power')]"
             size = { 250% 250% }
             alpha = 0.8
             onclick = "[InformationPanelBar.OpenSeaRegionPanelTab(SeaNodeMovementMarker.GetSeaNode.Self, 'navy')]"
-            onrightclick = "[PopupManager.AskConfirmationWithSound( SeaNodeMovementMarker.GetSeaNode.GetDeploySelectedFormationsCommand, 'event:/SFX/UI/Military/formation_actions_deploy_to_sea_node' )]"
+            onrightclick = "[PopupManager.AskConfirmationWithSound( SeaNodeMovementMarker.GetSeaNode.AssignSelectedFleetsToNewMissionInRegion('naval_mission_type_project_power'), 'event:/SFX/UI/Military/formation_actions_deploy_to_sea_node' )]"
             onrightclick = "[PdxGuiWidget.AccessParent.AccessParent.FindChild('onrightclick_vfx').TriggerAnimation('show')]"
             onrightclick = "[GetVariableSystem.Clear(Concatenate('sea_node_movement_marker_highlight', SeaNodeMovementMarker.GetSeaNode.GetID))]"
             rightclicksound = "event:/SFX/UI/Global/select"
@@ -495,206 +524,20 @@ widget = {
         }
 
         ### ZOOM FAR
-        container = {
+        movement_marker_knob = {
             visible = "[IsZoomLevelFar]"
-
-            ### no supply - with right-click
-            button = {
-                visible = "[And3(Not(SeaNodeMovementMarker.HasActiveSupplyNetwork), SeaNodeMovementMarker.CanDeploySelectedFormationsToSeaNode, Not(ShouldAskConfirmation(SeaNodeMovementMarker.GetSeaNode.GetDeploySelectedFormationsCommand)))]"
-                parentanchor = center
-                size = { 15 15 }
-                onclick = "[InformationPanelBar.OpenSeaRegionPanelTab(SeaNodeMovementMarker.GetSeaNode.Self, 'navy')]"
-                onrightclick = "[Execute( SeaNodeMovementMarker.GetSeaNode.GetDeploySelectedFormationsCommand )]"
-                onrightclick = "[PdxGuiWidget.AccessParent.AccessParent.FindChild('onrightclick_vfx').TriggerAnimation('show')]"
-                onrightclick = "[GetVariableSystem.Clear(Concatenate('sea_node_movement_marker_highlight', SeaNodeMovementMarker.GetSeaNode.GetID))]"
-                rightclicksound = "event:/SFX/UI/Military/formation_actions_deploy_to_sea_node"
-                texture = "gfx/interface/map_markers/sea_node.dds"
-                using = sea_node_framed_button_gfx
-                using = default_button_animation
-                using = select_button_sound
-                framesize = { 60 60 }
-                alpha = 0.5
-            }
-
-            ### has supply - with right-click
-            button = {
-                visible = "[And3(SeaNodeMovementMarker.HasActiveSupplyNetwork, SeaNodeMovementMarker.CanDeploySelectedFormationsToSeaNode, Not(ShouldAskConfirmation(SeaNodeMovementMarker.GetSeaNode.GetDeploySelectedFormationsCommand)))]"
-                parentanchor = center
-                size = { 18 18 }
-                onclick = "[InformationPanelBar.OpenSeaRegionPanelTab(SeaNodeMovementMarker.GetSeaNode.Self, 'navy')]"
-                onrightclick = "[Execute( SeaNodeMovementMarker.GetSeaNode.GetDeploySelectedFormationsCommand )]"
-                onrightclick = "[PdxGuiWidget.AccessParent.AccessParent.FindChild('onrightclick_vfx').TriggerAnimation('show')]"
-                onrightclick = "[GetVariableSystem.Clear(Concatenate('sea_node_movement_marker_highlight', SeaNodeMovementMarker.GetSeaNode.GetID))]"
-                rightclicksound = "event:/SFX/UI/Military/formation_actions_deploy_to_sea_node"
-                texture = "gfx/interface/map_markers/sea_node_have_supply.dds"
-                using = sea_node_framed_button_gfx
-                using = default_button_animation
-                using = select_button_sound
-                framesize = { 60 60 }
-            }
-
-            ### no supply - with right-click and confirmation
-            button = {
-                visible = "[And3(Not(SeaNodeMovementMarker.HasActiveSupplyNetwork), SeaNodeMovementMarker.CanDeploySelectedFormationsToSeaNode, ShouldAskConfirmation(SeaNodeMovementMarker.GetSeaNode.GetDeploySelectedFormationsCommand))]"
-                parentanchor = center
-                size = { 15 15 }
-                onclick = "[InformationPanelBar.OpenSeaRegionPanelTab(SeaNodeMovementMarker.GetSeaNode.Self, 'navy')]"
-                onrightclick = "[PopupManager.AskConfirmationWithSound(SeaNodeMovementMarker.GetSeaNode.GetDeploySelectedFormationsCommand, 'event:/SFX/UI/Military/formation_actions_deploy_to_sea_node' )]"
-                onrightclick = "[PdxGuiWidget.AccessParent.AccessParent.FindChild('onrightclick_vfx').TriggerAnimation('show')]"
-                onrightclick = "[GetVariableSystem.Clear(Concatenate('sea_node_movement_marker_highlight', SeaNodeMovementMarker.GetSeaNode.GetID))]"
-                rightclicksound = "event:/SFX/UI/Global/select"
-                texture = "gfx/interface/map_markers/sea_node.dds"
-                using = sea_node_framed_button_gfx
-                using = default_button_animation
-                using = select_button_sound
-                framesize = { 60 60 }
-                alpha = 0.5
-            }
-
-            ### has supply - with right-click and confirmation
-            button = {
-                visible = "[And3(SeaNodeMovementMarker.HasActiveSupplyNetwork, SeaNodeMovementMarker.CanDeploySelectedFormationsToSeaNode, ShouldAskConfirmation(SeaNodeMovementMarker.GetSeaNode.GetDeploySelectedFormationsCommand))]"
-                parentanchor = center
-                size = { 18 18 }
-                onclick = "[InformationPanelBar.OpenSeaRegionPanelTab(SeaNodeMovementMarker.GetSeaNode.Self, 'navy')]"
-                onrightclick = "[PopupManager.AskConfirmationWithSound(SeaNodeMovementMarker.GetSeaNode.GetDeploySelectedFormationsCommand, 'event:/SFX/UI/Military/formation_actions_deploy_to_sea_node' )]"
-                onrightclick = "[PdxGuiWidget.AccessParent.AccessParent.FindChild('onrightclick_vfx').TriggerAnimation('show')]"
-                onrightclick = "[GetVariableSystem.Clear(Concatenate('sea_node_movement_marker_highlight', SeaNodeMovementMarker.GetSeaNode.GetID))]"
-                rightclicksound = "event:/SFX/UI/Global/select"
-                texture = "gfx/interface/map_markers/sea_node_have_supply.dds"
-                using = sea_node_framed_button_gfx
-                using = default_button_animation
-                using = select_button_sound
-                framesize = { 60 60 }
-            }
-
-            ### no supply - without right-click
-            button = {
-                visible = "[And(Not(SeaNodeMovementMarker.HasActiveSupplyNetwork), Not(SeaNodeMovementMarker.CanDeploySelectedFormationsToSeaNode))]"
-                parentanchor = center
-                size = { 15 15 }
-                onclick = "[InformationPanelBar.OpenSeaRegionPanelTab(SeaNodeMovementMarker.GetSeaNode.Self, 'navy')]"
-                texture = "gfx/interface/map_markers/sea_node.dds"
-                using = sea_node_framed_button_gfx
-                using = default_button_animation
-                using = select_button_sound
-                framesize = { 60 60 }
-                alpha = 0.5
-            }
-
-            ### has supply - without right-click
-            button = {
-                visible = "[And(SeaNodeMovementMarker.HasActiveSupplyNetwork, Not(SeaNodeMovementMarker.CanDeploySelectedFormationsToSeaNode))]"
-                parentanchor = center
-                size = { 18 18 }
-                onclick = "[InformationPanelBar.OpenSeaRegionPanelTab(SeaNodeMovementMarker.GetSeaNode.Self, 'navy')]"
-                texture = "gfx/interface/map_markers/sea_node_have_supply.dds"
-                using = sea_node_framed_button_gfx
-                using = default_button_animation
-                using = select_button_sound
-                framesize = { 60 60 }
-            }
         }
 
         ### ZOOM NEAR
-        container = {
+        movement_marker_knob = {
             visible = "[Not(IsZoomLevelFar)]"
 
-            ### no supply - with right-click
-            button = {
-                visible = "[And3(Not(SeaNodeMovementMarker.HasActiveSupplyNetwork), SeaNodeMovementMarker.CanDeploySelectedFormationsToSeaNode, Not(ShouldAskConfirmation(SeaNodeMovementMarker.GetSeaNode.GetDeploySelectedFormationsCommand)))]"
-                parentanchor = center
+            blockoverride "no_supply_size" {
                 size = { 25 25 }
-                onclick = "[InformationPanelBar.OpenSeaRegionPanelTab(SeaNodeMovementMarker.GetSeaNode.Self, 'navy')]"
-                onrightclick = "[Execute( SeaNodeMovementMarker.GetSeaNode.GetDeploySelectedFormationsCommand )]"
-                onrightclick = "[PdxGuiWidget.AccessParent.AccessParent.FindChild('onrightclick_vfx').TriggerAnimation('show')]"
-                onrightclick = "[GetVariableSystem.Clear(Concatenate('sea_node_movement_marker_highlight', SeaNodeMovementMarker.GetSeaNode.GetID))]"
-                rightclicksound = "event:/SFX/UI/Military/formation_actions_deploy_to_sea_node"
-                texture = "gfx/interface/map_markers/sea_node.dds"
-                using = sea_node_framed_button_gfx
-                using = default_button_animation
-                using = select_button_sound
-                framesize = { 60 60 }
-                alpha = 0.5
             }
 
-            ### has supply - with right-click
-            button = {
-                visible = "[And3(SeaNodeMovementMarker.HasActiveSupplyNetwork, SeaNodeMovementMarker.CanDeploySelectedFormationsToSeaNode, Not(ShouldAskConfirmation(SeaNodeMovementMarker.GetSeaNode.GetDeploySelectedFormationsCommand)))]"
-                parentanchor = center
+            blockoverride "has_supply_size" {
                 size = { 30 30 }
-                onclick = "[InformationPanelBar.OpenSeaRegionPanelTab(SeaNodeMovementMarker.GetSeaNode.Self, 'navy')]"
-                onrightclick = "[Execute( SeaNodeMovementMarker.GetSeaNode.GetDeploySelectedFormationsCommand )]"
-                onrightclick = "[PdxGuiWidget.AccessParent.AccessParent.FindChild('onrightclick_vfx').TriggerAnimation('show')]"
-                onrightclick = "[GetVariableSystem.Clear(Concatenate('sea_node_movement_marker_highlight', SeaNodeMovementMarker.GetSeaNode.GetID))]"
-                rightclicksound = "event:/SFX/UI/Military/formation_actions_deploy_to_sea_node"
-                texture = "gfx/interface/map_markers/sea_node_have_supply.dds"
-                using = sea_node_framed_button_gfx
-                using = default_button_animation
-                using = select_button_sound
-                framesize = { 60 60 }
-            }
-
-            ### no supply - with right-click and confirmation
-            button = {
-                visible = "[And3(Not(SeaNodeMovementMarker.HasActiveSupplyNetwork), SeaNodeMovementMarker.CanDeploySelectedFormationsToSeaNode, ShouldAskConfirmation(SeaNodeMovementMarker.GetSeaNode.GetDeploySelectedFormationsCommand))]"
-                parentanchor = center
-                size = { 25 25 }
-                onclick = "[InformationPanelBar.OpenSeaRegionPanelTab(SeaNodeMovementMarker.GetSeaNode.Self, 'navy')]"
-                onrightclick = "[PopupManager.AskConfirmationWithSound(SeaNodeMovementMarker.GetSeaNode.GetDeploySelectedFormationsCommand, 'event:/SFX/UI/Military/formation_actions_deploy_to_sea_node' )]"
-                onrightclick = "[PdxGuiWidget.AccessParent.AccessParent.FindChild('onrightclick_vfx').TriggerAnimation('show')]"
-                onrightclick = "[GetVariableSystem.Clear(Concatenate('sea_node_movement_marker_highlight', SeaNodeMovementMarker.GetSeaNode.GetID))]"
-                rightclicksound = "event:/SFX/UI/Global/select"
-                texture = "gfx/interface/map_markers/sea_node.dds"
-                using = sea_node_framed_button_gfx
-                using = default_button_animation
-                using = select_button_sound
-                framesize = { 60 60 }
-                alpha = 0.5
-            }
-
-            ### has supply - with right-click and confirmation
-            button = {
-                visible = "[And3(SeaNodeMovementMarker.HasActiveSupplyNetwork, SeaNodeMovementMarker.CanDeploySelectedFormationsToSeaNode, ShouldAskConfirmation(SeaNodeMovementMarker.GetSeaNode.GetDeploySelectedFormationsCommand))]"
-                parentanchor = center
-                size = { 30 30 }
-                onclick = "[InformationPanelBar.OpenSeaRegionPanelTab(SeaNodeMovementMarker.GetSeaNode.Self, 'navy')]"
-                onrightclick = "[PopupManager.AskConfirmationWithSound(SeaNodeMovementMarker.GetSeaNode.GetDeploySelectedFormationsCommand, 'event:/SFX/UI/Military/formation_actions_deploy_to_sea_node' )]"
-                onrightclick = "[PdxGuiWidget.AccessParent.AccessParent.FindChild('onrightclick_vfx').TriggerAnimation('show')]"
-                onrightclick = "[GetVariableSystem.Clear(Concatenate('sea_node_movement_marker_highlight', SeaNodeMovementMarker.GetSeaNode.GetID))]"
-                rightclicksound = "event:/SFX/UI/Global/select"
-                texture = "gfx/interface/map_markers/sea_node_have_supply.dds"
-                using = sea_node_framed_button_gfx
-                using = default_button_animation
-                using = select_button_sound
-                framesize = { 60 60 }
-            }
-
-            ### no supply - without right-click
-            button = {
-                visible = "[And(Not(SeaNodeMovementMarker.HasActiveSupplyNetwork), Not(SeaNodeMovementMarker.CanDeploySelectedFormationsToSeaNode))]"
-                parentanchor = center
-                size = { 25 25 }
-                onclick = "[InformationPanelBar.OpenSeaRegionPanelTab(SeaNodeMovementMarker.GetSeaNode.Self, 'navy')]"
-                texture = "gfx/interface/map_markers/sea_node.dds"
-                using = sea_node_framed_button_gfx
-                using = default_button_animation
-                using = select_button_sound
-                framesize = { 60 60 }
-                alpha = 0.5
-            }
-
-            ### has supply - without right-click
-            button = {
-                visible = "[And(SeaNodeMovementMarker.HasActiveSupplyNetwork, Not(SeaNodeMovementMarker.CanDeploySelectedFormationsToSeaNode))]"
-                parentanchor = center
-                size = { 30 30 }
-                onclick = "[InformationPanelBar.OpenSeaRegionPanelTab(SeaNodeMovementMarker.GetSeaNode.Self, 'navy')]"
-                texture = "gfx/interface/map_markers/sea_node_have_supply.dds"
-                using = sea_node_framed_button_gfx
-                using = default_button_animation
-                using = select_button_sound
-                framesize = { 60 60 }
             }
         }
     }
@@ -1289,7 +1132,7 @@ container = {
             parentanchor = hcenter
             datacontext = "[GetPlayer]"
             datacontext = "[GetPlayer.GetCurrentInterestTierTypeIn(StrategicRegion.Self)]"
-            visible = "[GetPlayer.HasInterestIn( StrategicRegion.Self )]"
+            visible = "[Or(NotZero_CFixedPoint(Country.GetTargetInvolvementIn(StrategicRegion.Self)), NotZero_CFixedPoint(Country.GetCurrentInvolvementIn(StrategicRegion.Self)))]"
 
             button = {
                 size = { 65 65 }
@@ -1333,7 +1176,7 @@ container = {
                     parentanchor = vcenter
                     size = { 25 25 }
                     alwaystransparent = yes
-                    texture = "gfx/interface/icons/generic_icons/trend_upup.dds"
+                    texture = "gfx/interface/icons/generic_icons/trend_up.dds"
                     position = { -5 0 }
 
                     state = {
@@ -1593,8 +1436,8 @@ container = {
     parentanchor = bottom|hcenter
     datacontext = "[StrategicRegionMarker.AccessStrategicRegion.AccessFirstDiplomaticPlay.AccessWar]"
     datacontext = "[StrategicRegionMarker.GetStrategicRegion]"
-    datacontext = "[GetPlayer.GetCurrentInterestTierTypeIn(StrategicRegion.Self)]"
-    datacontext = "[GetPlayer]"
+    datacontext = "[GetMapPerspectiveCountry.GetCurrentInterestTierTypeIn(StrategicRegion.Self)]"
+    datacontext = "[GetMapPerspectiveCountry]"
 
     container = {
         button = {
@@ -1638,7 +1481,7 @@ container = {
                 parentanchor = vcenter|left
                 size = { 20 20 }
                 alwaystransparent = yes
-                texture = "gfx/interface/icons/generic_icons/trend_upup.dds"
+                texture = "gfx/interface/icons/generic_icons/trend_up.dds"
 
                 state = {
                     name = "big"
@@ -2651,19 +2494,19 @@ container = {
 
         ### BATTLE INFO SMALLER VERSION
         widget = {
-            visible = "[Or(And(IsZoomLevelNear, Not(NavalBattle.IsBeingHighlighted)), And(IsZoomLevelMid, NavalBattle.IsBeingHighlighted))]"
-            size = { 0 40 }
+            visible = "[And(NavalBattle.IsBeingHighlighted, IsZoomLevelMid)]"
+            size = { 0 30 }
 
             state = {
                 name = _show
-                size = { 130 40 }
+                size = { 130 30 }
                 duration = 0.2
                 alpha = 1
                 using = Animation_Curve_Default
             }
             state = {
                 name = _hide
-                size = { 0 40 }
+                size = { 0 30 }
                 duration = 0.2
                 alpha = 0
                 using = Animation_Curve_Default
@@ -2922,10 +2765,31 @@ container = {
             parentanchor = bottom|hcenter
 
             icon = {
-                size = { 50 50 }
+                size = { 120% 120% }
                 parentanchor = center
                 visible = "[NavalBattle.IsBeingHighlighted]"
                 texture = "gfx/interface/map_markers/round_highlight.dds"
+            }
+
+            state = {
+                name = "big"
+                trigger_when = "[IsZoomLevelNear]"
+                size = { 40 40 }
+                duration = 0.2
+            }
+
+            state = {
+                name = "mid"
+                trigger_when = "[IsZoomLevelMid]"
+                size = { 34 34 }
+                duration = 0.2
+            }
+
+            state = {
+                name = "small"
+                trigger_when = "[IsZoomLevelFar]"
+                size = { 30 30 }
+                duration = 0.2
             }
         }
 
@@ -2935,7 +2799,27 @@ container = {
             tooltip = "[NavalBattle.GetStatusString]"
             using = tooltip_above
             parentanchor = bottom|hcenter
-            visible = "[Or(NavalBattle.IsBeingHighlighted, IsZoomLevelNear)]"
+
+            state = {
+                name = "big"
+                trigger_when = "[IsZoomLevelNear]"
+                size = { 40 40 }
+                duration = 0.2
+            }
+
+            state = {
+                name = "mid"
+                trigger_when = "[IsZoomLevelMid]"
+                size = { 34 34 }
+                duration = 0.2
+            }
+
+            state = {
+                name = "small"
+                trigger_when = "[IsZoomLevelFar]"
+                size = { 30 30 }
+                duration = 0.2
+            }
 
             textbox = {
                 visible = "[ObjectsEqual(NavalBattle.GetAttacker, GetPlayer.Self)]"
@@ -2952,24 +2836,6 @@ container = {
                 autoresize = yes
                 position = { 0 -24 }
             }
-        }
-
-        icon = {
-            size = { 30 30 }
-            texture = "[NavalBattle.GetBattleIcon]"
-            tooltip = "[NavalBattle.GetStatusString]"
-            using = tooltip_above
-            parentanchor = center
-            visible = "[And(IsZoomLevelMid, Not(NavalBattle.IsBeingHighlighted))]"
-        }
-
-        icon = {
-            size = { 20 20 }
-            texture = "[NavalBattle.GetBattleIcon]"
-            tooltip = "[NavalBattle.GetStatusString]"
-            using = tooltip_above
-            parentanchor = center
-            visible = "[And(IsZoomLevelFar, Not(NavalBattle.IsBeingHighlighted))]"
         }
     }
 }
@@ -3632,7 +3498,7 @@ container = {
     }
 
     button = {
-        visible = "[Not(FrontMovementMarker.CanDeploySelectedFormationsToFront)]"
+        visible = "[And(Not(FrontMovementMarker.CanDeploySelectedFormationsToFront), Not(FrontMovementMarker.RequiresNavalTransportForSelectedFormations))]"
         parentanchor = bottom|hcenter
         onmousehierarchyenter = "[AccessHighlightManager.HighlightFront(Front.Self)]"
         onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
@@ -3641,8 +3507,9 @@ container = {
         onclick = "[InformationPanelBar.OpenFrontPanel(FrontMovementMarker.GetFront.Self)]"
     }
 
+    # Deploy to front directly
     button = {
-        visible = "[FrontMovementMarker.CanDeploySelectedFormationsToFront]"
+        visible = "[And(FrontMovementMarker.CanDeploySelectedFormationsToFront, Not(FrontMovementMarker.RequiresNavalTransportForSelectedFormations))]"
         parentanchor = bottom|hcenter
         onmousehierarchyenter = "[AccessHighlightManager.HighlightFront(Front.Self)]"
         onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
@@ -3650,6 +3517,20 @@ container = {
         tooltip = "FRONT_MOVEMENT_MARKER_TOOLTIP"
         onclick = "[InformationPanelBar.OpenFrontPanel(FrontMovementMarker.GetFront.Self)]"
         onrightclick = "[Execute( Front.GetDeploySelectedFormationsCommand )]"
+        onrightclick = "[PdxGuiWidget.AccessParent.FindChild('onrightclick_vfx').TriggerAnimation('show')]"
+        rightclicksound = "event:/SFX/UI/Military/formation_actions_deploy_to_front"
+    }
+
+    # Naval transport fallback - open transport planner
+    button = {
+        visible = "[FrontMovementMarker.RequiresNavalTransportForSelectedFormations]"
+        parentanchor = bottom|hcenter
+        onmousehierarchyenter = "[AccessHighlightManager.HighlightFront(Front.Self)]"
+        onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
+        size = { 70 70 }
+        tooltip = "FRONT_MOVEMENT_MARKER_TOOLTIP"
+        onclick = "[InformationPanelBar.OpenFrontPanel(FrontMovementMarker.GetFront.Self)]"
+        onrightclick = "[FrontMovementMarker.ShowTransportPlannerForSelectedFormation]"
         onrightclick = "[PdxGuiWidget.AccessParent.FindChild('onrightclick_vfx').TriggerAnimation('show')]"
         rightclicksound = "event:/SFX/UI/Military/formation_actions_deploy_to_front"
     }
@@ -3998,12 +3879,6 @@ container = {
         direction = vertical
         visible = "[Not(IsDataModelEmpty(NavalMissionMarker.AccessNavalMissionTypes))]"
 
-        background = {
-            visible = "[IsZoomLevelNear]"
-            using = default_background
-            margin = { 11 6 }
-        }
-
         flowcontainer = {
             datamodel = "[NavalMissionMarker.AccessNavalMissionTypes]"
             datamodel_reuse_widgets = yes
@@ -4016,15 +3891,35 @@ container = {
                     size = { 40 40 }
                     onclick = "[InformationPanelBar.OpenSeaRegionPanelTab(NavalMissionMarker.GetProvince.Self, 'navy')]"
                     onrightclick = "[RightClickMenuManager.ToggleFleetsOnMissionInSeaRegion(NavalMissionMarker.Self, NavalMissionType.Self, PdxGuiWidget.AccessSelf, 'fleets_on_mission_in_sea_region')]"
-
                     tooltip = "NAVAL_MISSION_MARKER_TOOLTIP"
+
+                    state = {
+                        name = "big"
+                        trigger_when = "[IsZoomLevelNear]"
+                        size = { 40 40 }
+                        duration = 0.2
+                    }
+
+                    state = {
+                        name = "mid"
+                        trigger_when = "[IsZoomLevelMid]"
+                        size = { 36 36 }
+                        duration = 0.2
+                    }
+
+                    state = {
+                        name = "small"
+                        trigger_when = "[IsZoomLevelFar]"
+                        size = { 34 34 }
+                        duration = 0.2
+                    }
 
                     blockoverride "icon" {
                         texture = "[NavalMissionType.GetIcon]"
                     }
 
                     blockoverride "icon_size" {
-                        size = { 36 36 }
+                        size = { 75% 75% }
                     }
 
                     action_selection_number = {
@@ -5572,6 +5467,135 @@ types map_marker_types
     }
 }
 
+    type movement_marker_knob_button = button {
+    parentanchor = center
+
+    onclick = "[InformationPanelBar.OpenSeaRegionPanelTab(SeaNodeMovementMarker.GetSeaNode.Self, 'navy')]"
+
+    using = sea_node_framed_button_gfx
+    using = default_button_animation
+    using = select_button_sound
+    framesize = { 60 60 }
+}
+
+    type movement_marker_knob = container {
+    ### no supply - right click adds sea region to current mission(s)
+    movement_marker_knob_button = {
+        visible = "[And(Not(SeaNodeMovementMarker.HasActiveSupplyNetwork), SeaNodeMovementMarker.GetSeaNode.WouldAddSeaRegionToSelectedFleetMissions)]"
+
+        block "no_supply_size" {
+            size = { 15 15 }
+        }
+
+        onrightclick = "[Execute( SeaNodeMovementMarker.GetSeaNode.AddSeaRegionToSelectedFleetMissions )]"
+        onrightclick = "[PdxGuiWidget.AccessParent.AccessParent.FindChild('onrightclick_vfx').TriggerAnimation('show')]"
+        onrightclick = "[GetVariableSystem.Clear(Concatenate('sea_node_movement_marker_highlight', SeaNodeMovementMarker.GetSeaNode.GetID))]"
+        rightclicksound = "event:/SFX/UI/Military/naval_mission_settings_confirm"
+        texture = "gfx/interface/map_markers/sea_node.dds"
+        alpha = 0.5
+    }
+
+    ### has supply - right click adds sea region to current mission(s)
+    movement_marker_knob_button = {
+        visible = "[And(SeaNodeMovementMarker.HasActiveSupplyNetwork, SeaNodeMovementMarker.GetSeaNode.WouldAddSeaRegionToSelectedFleetMissions)]"
+
+        block "has_supply_size" {
+            size = { 18 18 }
+        }
+
+        onrightclick = "[Execute( SeaNodeMovementMarker.GetSeaNode.AddSeaRegionToSelectedFleetMissions )]"
+        onrightclick = "[PdxGuiWidget.AccessParent.AccessParent.FindChild('onrightclick_vfx').TriggerAnimation('show')]"
+        onrightclick = "[GetVariableSystem.Clear(Concatenate('sea_node_movement_marker_highlight', SeaNodeMovementMarker.GetSeaNode.GetID))]"
+        rightclicksound = "event:/SFX/UI/Military/naval_mission_settings_confirm"
+        texture = "gfx/interface/map_markers/sea_node_have_supply.dds"
+    }
+
+    ### no supply - right click assigns a new mission without confirmation
+    movement_marker_knob_button = {
+        visible = "[And(Not(SeaNodeMovementMarker.HasActiveSupplyNetwork), SeaNodeMovementMarker.GetSeaNode.WouldAssignSelectedFleetsToNewMissionWithoutConfirmation('naval_mission_type_project_power'))]"
+
+        block "no_supply_size" {
+            size = { 15 15 }
+        }
+
+        onrightclick = "[Execute( SeaNodeMovementMarker.GetSeaNode.AssignSelectedFleetsToNewMissionInRegion('naval_mission_type_project_power') )]"
+        onrightclick = "[PdxGuiWidget.AccessParent.AccessParent.FindChild('onrightclick_vfx').TriggerAnimation('show')]"
+        onrightclick = "[GetVariableSystem.Clear(Concatenate('sea_node_movement_marker_highlight', SeaNodeMovementMarker.GetSeaNode.GetID))]"
+        rightclicksound = "event:/SFX/UI/Military/formation_actions_deploy_to_sea_node"
+        texture = "gfx/interface/map_markers/sea_node.dds"
+        alpha = 0.5
+    }
+
+    ### has supply - right click assigns a new mission without confirmation
+    movement_marker_knob_button = {
+        visible = "[And(SeaNodeMovementMarker.HasActiveSupplyNetwork, SeaNodeMovementMarker.GetSeaNode.WouldAssignSelectedFleetsToNewMissionWithoutConfirmation('naval_mission_type_project_power'))]"
+
+        block "has_supply_size" {
+            size = { 18 18 }
+        }
+
+        onrightclick = "[Execute( SeaNodeMovementMarker.GetSeaNode.AssignSelectedFleetsToNewMissionInRegion('naval_mission_type_project_power') )]"
+        onrightclick = "[PdxGuiWidget.AccessParent.AccessParent.FindChild('onrightclick_vfx').TriggerAnimation('show')]"
+        onrightclick = "[GetVariableSystem.Clear(Concatenate('sea_node_movement_marker_highlight', SeaNodeMovementMarker.GetSeaNode.GetID))]"
+        rightclicksound = "event:/SFX/UI/Military/formation_actions_deploy_to_sea_node"
+        texture = "gfx/interface/map_markers/sea_node_have_supply.dds"
+    }
+
+    ### no supply - right click assigns a new mission with confirmation
+    movement_marker_knob_button = {
+        visible = "[And(Not(SeaNodeMovementMarker.HasActiveSupplyNetwork), SeaNodeMovementMarker.GetSeaNode.WouldAssignSelectedFleetsToNewMissionWithConfirmation('naval_mission_type_project_power'))]"
+
+        block "no_supply_size" {
+            size = { 15 15 }
+        }
+
+        onrightclick = "[PopupManager.AskConfirmationWithSound( SeaNodeMovementMarker.GetSeaNode.AssignSelectedFleetsToNewMissionInRegion('naval_mission_type_project_power'), 'event:/SFX/UI/Military/formation_actions_deploy_to_sea_node' )]"
+        onrightclick = "[PdxGuiWidget.AccessParent.AccessParent.FindChild('onrightclick_vfx').TriggerAnimation('show')]"
+        onrightclick = "[GetVariableSystem.Clear(Concatenate('sea_node_movement_marker_highlight', SeaNodeMovementMarker.GetSeaNode.GetID))]"
+        rightclicksound = "event:/SFX/UI/Global/select"
+        texture = "gfx/interface/map_markers/sea_node.dds"
+        alpha = 0.5
+    }
+
+    ### has supply - right click assigns a new mission with confirmation
+    movement_marker_knob_button = {
+        visible = "[And(SeaNodeMovementMarker.HasActiveSupplyNetwork, SeaNodeMovementMarker.GetSeaNode.WouldAssignSelectedFleetsToNewMissionWithConfirmation('naval_mission_type_project_power'))]"
+
+        block "has_supply_size" {
+            size = { 18 18 }
+        }
+
+        onrightclick = "[PopupManager.AskConfirmationWithSound( SeaNodeMovementMarker.GetSeaNode.AssignSelectedFleetsToNewMissionInRegion('naval_mission_type_project_power'), 'event:/SFX/UI/Military/formation_actions_deploy_to_sea_node' )]"
+        onrightclick = "[PdxGuiWidget.AccessParent.AccessParent.FindChild('onrightclick_vfx').TriggerAnimation('show')]"
+        onrightclick = "[GetVariableSystem.Clear(Concatenate('sea_node_movement_marker_highlight', SeaNodeMovementMarker.GetSeaNode.GetID))]"
+        rightclicksound = "event:/SFX/UI/Global/select"
+        texture = "gfx/interface/map_markers/sea_node_have_supply.dds"
+    }
+
+    ### no supply - without right-click
+    movement_marker_knob_button = {
+        visible = "[And3(Not(SeaNodeMovementMarker.HasActiveSupplyNetwork), Not(SeaNodeMovementMarker.GetSeaNode.WouldAddSeaRegionToSelectedFleetMissions), Not(Or(SeaNodeMovementMarker.GetSeaNode.WouldAssignSelectedFleetsToNewMissionWithoutConfirmation('naval_mission_type_project_power'), SeaNodeMovementMarker.GetSeaNode.WouldAssignSelectedFleetsToNewMissionWithConfirmation('naval_mission_type_project_power'))))]"
+
+        block "no_supply_size" {
+            size = { 15 15 }
+        }
+
+        texture = "gfx/interface/map_markers/sea_node.dds"
+        alpha = 0.5
+    }
+
+    ### has supply - without right-click
+    movement_marker_knob_button = {
+        visible = "[And3(SeaNodeMovementMarker.HasActiveSupplyNetwork, Not(SeaNodeMovementMarker.GetSeaNode.WouldAddSeaRegionToSelectedFleetMissions), Not(Or(SeaNodeMovementMarker.GetSeaNode.WouldAssignSelectedFleetsToNewMissionWithoutConfirmation('naval_mission_type_project_power'), SeaNodeMovementMarker.GetSeaNode.WouldAssignSelectedFleetsToNewMissionWithConfirmation('naval_mission_type_project_power'))))]"
+
+        block "has_supply_size" {
+            size = { 18 18 }
+        }
+
+        texture = "gfx/interface/map_markers/sea_node_have_supply.dds"
+    }
+}
+
     type country_with_interest_map_marker_item = container {
     parentanchor = center
     tooltip = "COUNTRY_INTEREST_TOOLTIP"
@@ -5654,59 +5678,263 @@ container = {
     parentanchor = bottom|hcenter
 
     container = {
+        parentanchor = bottom|hcenter
         datacontext = "[StraitMarker.GetStrait]"
         onmousehierarchyenter = "[AccessHighlightManager.HighlightStrait(Strait.Self)]"
         onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
         alwaystransparent = no
+        using = tooltip_ne
 
-        parentanchor = bottom|hcenter
+        tooltipwidget = {
+            FancyTooltip_Strait = {}
+        }
 
         widget = {
-            size = { 40 40 }
+            visible = "[Not(And(IsMapModeSelected( 'mm_default' ), IsZoomLevelFar))]"
             parentanchor = bottom|hcenter
+            size = { 30 30 }
 
-            icon = {
-                size = { 50 50 }
+            state = {
+                name = "big"
+                trigger_when = "[Not(IsZoomLevelFar)]"
+                size = { 40 40 }
+                duration = 0.2
+            }
+
+            state = {
+                name = "small"
+                trigger_when = "[IsZoomLevelFar]"
+                size = { 30 30 }
+                duration = 0.2
+            }
+
+            widget = {
+                visible = "[Strait.IsBeingHighlighted]"
+                size = { 100% 100% }
+                parentanchor = bottom|hcenter
+
+                icon = {
+                    size = { 125% 125% }
+                    parentanchor = center
+                    texture = "gfx/interface/map_markers/round_highlight.dds"
+                }
+            }
+
+            ### Big Flags
+            widget = {
+                visible = "[And(Strait.IsBeingHighlighted, Not(IsZoomLevelFar))]"
                 parentanchor = center
-                #visible = "[Strait.IsBeingHighlighted]"
-                visible = no
-                texture = "gfx/interface/map_markers/round_highlight.dds"
+                size = { 0 28 }
+
+                background = {
+                    using = entry_bg_simple_solid
+                }
+
+                state = {
+                    name = "_show"
+                    size = { 104 28 }
+                    duration = 0.2
+                    alpha = 1
+                    using = Animation_Curve_Default
+                }
+
+                state = {
+                    name = "_hide"
+                    size = { 0 28 }
+                    duration = 0.2
+                    alpha = 0
+                    using = Animation_Curve_Default
+                }
+
+                # Controller is subject - show overlord
+                tiny_flag_no_interact = {
+                    visible = "[Strait.GetFirstState.GetController.IsSubject]"
+                    parentanchor = vcenter
+                    position = { 5 0 }
+                    datacontext = "[Strait.GetFirstState.GetController.GetTopOverlord]"
+                }
+
+                tiny_flag_no_interact = {
+                    visible = "[Strait.GetSecondState.GetController.IsSubject]"
+                    parentanchor = vcenter|right
+                    position = { -5 0 }
+                    datacontext = "[Strait.GetSecondState.GetController.GetTopOverlord]"
+                }
+
+                # Controller is independent
+                tiny_flag_no_interact = {
+                    visible = "[Not(Strait.GetFirstState.GetController.IsSubject)]"
+                    parentanchor = vcenter
+                    position = { 5 0 }
+                    datacontext = "[Strait.GetFirstState.GetController]"
+                }
+
+                tiny_flag_no_interact = {
+                    visible = "[Not(Strait.GetSecondState.GetController.IsSubject)]"
+                    parentanchor = vcenter|right
+                    position = { -5 0 }
+                    datacontext = "[Strait.GetSecondState.GetController]"
+                }
+            }
+
+            ### Small Flags
+            widget = {
+                visible = "[And(Strait.IsBeingHighlighted, IsZoomLevelFar)]"
+                parentanchor = center
+                size = { 0 20 }
+
+                background = {
+                    using = entry_bg_simple_solid
+                }
+
+                state = {
+                    name = "_show"
+                    size = { 80 20 }
+                    duration = 0.2
+                    alpha = 1
+                    using = Animation_Curve_Default
+                }
+
+                state = {
+                    name = "_hide"
+                    size = { 0 20 }
+                    duration = 0.2
+                    alpha = 0
+                    using = Animation_Curve_Default
+                }
+
+                miniature_flag_no_interact = {
+                    parentanchor = vcenter
+                    position = { 5 0 }
+                    datacontext = "[Strait.GetFirstState.GetController]"
+                }
+
+                miniature_flag_no_interact = {
+                    parentanchor = vcenter|right
+                    position = { -5 0 }
+                    datacontext = "[Strait.GetSecondState.GetController]"
+                }
+            }
+
+            button = {
+                parentanchor = bottom|hcenter
+                size = { 100% 100% }
+                onclick = "[InformationPanelBar.OpenStraitPanel( StraitMarker.GetStrait.AccessSelf )]"
+                texture = "gfx/interface/backgrounds/round_button_bg.dds"
+
+
+                button = {
+                    visible = "[Strait.HasOpenAccess(GetPlayer.Self)]"
+                    parentanchor = center
+                    size = { 80% 80% }
+                    alwaystransparent = yes
+                    texture = "[Strait.GetAccessOpenIcon]"
+                }
+
+                button = {
+                    visible = "[Strait.HasNoMilitaryAccess(GetPlayer.Self)]"
+                    parentanchor = center
+                    size = { 100% 100% }
+                    alwaystransparent = yes
+                    texture = "[Strait.GetAccessNoMilitaryIcon]"
+                }
+
+                button = {
+                    visible = "[Strait.HasNoAccess(GetPlayer.Self)]"
+                    parentanchor = center
+                    size = { 100% 100% }
+                    alwaystransparent = yes
+                    texture = "[Strait.GetAccessClosedIcon]"
+                }
             }
         }
 
-        button = {
-            onclick = "[InformationPanelBar.OpenStraitPanel( StraitMarker.GetStrait.AccessSelf )]"
-            size = { 100% 100% }
-        }
-
-        widget = {
-            visible = yes
-            size = { 0 40 }
-
-            state = {
-                name = _show
-                size = { 110 40 }
-                duration = 0.2
-                alpha = 1
-                using = Animation_Curve_Default
-            }
-            state = {
-                name = _hide
-                size = { 0 40 }
-                duration = 0.2
-                alpha = 0
-                using = Animation_Curve_Default
-            }
-        }
-
-        icon = {
-            size = { 32 32 }
-            texture = "gfx/interface/strait_placeholder_icon.png"
-            tooltipwidget = {
-                FancyTooltip_Strait = {}
-            }
+        ### Zoom Level Far & Player has no Access
+        container = {
+            visible = no
             parentanchor = bottom|hcenter
-            visible = "[Or(Strait.IsBeingHighlighted, Not(IsZoomLevelFar))]"
+
+            widget = {
+                visible = "[Strait.IsBeingHighlighted]"
+                size = { 30 30 }
+                parentanchor = bottom|hcenter
+
+                icon = {
+                    size = { 40 40 }
+                    parentanchor = center
+                    texture = "gfx/interface/map_markers/round_highlight.dds"
+                }
+            }
+
+            widget = {
+                visible = "[Strait.IsBeingHighlighted]"
+                parentanchor = center
+                size = { 0 20 }
+
+                background = {
+                    using = entry_bg_simple_solid
+                }
+
+                state = {
+                    name = _show
+                    size = { 80 20 }
+                    duration = 0.2
+                    alpha = 1
+                    using = Animation_Curve_Default
+                }
+
+                state = {
+                    name = _hide
+                    size = { 0 20 }
+                    duration = 0.2
+                    alpha = 0
+                    using = Animation_Curve_Default
+                }
+
+                miniature_flag_no_interact = {
+                    parentanchor = vcenter
+                    position = { 5 0 }
+                    datacontext = "[Strait.GetFirstState.GetController]"
+                }
+
+                miniature_flag_no_interact = {
+                    parentanchor = vcenter|right
+                    position = { -5 0 }
+                    datacontext = "[Strait.GetSecondState.GetController]"
+                }
+            }
+
+            button = {
+                parentanchor = bottom|hcenter
+                size = { 30 30 }
+                onclick = "[InformationPanelBar.OpenStraitPanel( StraitMarker.GetStrait.AccessSelf )]"
+                texture = "gfx/interface/backgrounds/round_button_bg.dds"
+
+
+                button = {
+                    visible = "[Strait.HasOpenAccess(GetPlayer.Self)]"
+                    parentanchor = center
+                    size = { 100% 100% }
+                    alwaystransparent = yes
+                    texture = "gfx/interface/buttons/button_icons/unlock.dds"
+                }
+
+                button = {
+                    visible = "[Strait.HasNoMilitaryAccess(GetPlayer.Self)]"
+                    parentanchor = center
+                    size = { 100% 100% }
+                    alwaystransparent = yes
+                    texture = "gfx/interface/icons/generic_icons/population.dds" #todo PRCAL-41308 - Add icon for No Military here
+                }
+
+                button = {
+                    visible = "[Strait.HasNoAccess(GetPlayer.Self)]"
+                    parentanchor = center
+                    size = { 100% 100% }
+                    alwaystransparent = yes
+                    texture = "gfx/interface/buttons/button_icons/lock.dds"
+                }
+            }
         }
     }
 }
