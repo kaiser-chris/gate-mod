@@ -211,51 +211,7 @@ researching_magic.4 = {
 	icon = "gfx/interface/icons/generic_icons/innovation.dds"
 
 	immediate = {
-		if = {
-			limit = {
-				is_magic_country = yes
-			}
-			create_character = {
-				template = gate_magic_researcher_template
-				interest_group = ig_gate_magic_users
-				save_scope_as = magic_researcher
-			}
-		}
-		else = {
-			create_character = {
-				template = gate_magic_researcher_template
-				interest_group = ig_intelligentsia
-				save_scope_as = magic_researcher
-			}
-		}
-		if = {
-			limit = {
-				has_journal_entry = je_gate_researching_magic
-			}
-			je:je_gate_researching_magic = {
-				clear_variable_list = com_journal_characters
-				add_to_variable_list = {
-					name = com_journal_characters
-					target = scope:magic_researcher
-				}
-			}
-			# Our researcher complaining about the missing institute
-			if = {
-				limit = {
-					capital = {
-						NOT = {
-							has_building = building_magic_research_institute
-						}
-					}
-				}
-				scope:magic_researcher = {
-					set_variable = {
-						name = com_opinion
-						value = flag:character_opinion_magic_researcher_missing_institute
-					}
-				}
-			}
-		}
+		gate_create_and_activate_magic_researcher = yes
 	}
 
 	duration = 3

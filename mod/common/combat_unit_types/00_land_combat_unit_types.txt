@@ -1238,89 +1238,87 @@ combat_unit_type_light_tanks = {
 ### marines
 
 combat_unit_type_low_tier_marines = {
-	group = combat_unit_group_marines
-	max_manpower = 1000
-	supply_capacity = 12
+    group = combat_unit_group_marines
+    max_manpower = 1000
+    supply_capacity = 12
 
-	conscript_peasant_levies = yes
+    conscript_peasant_levies = yes
 
-	upkeep_modifier = {
-		goods_input_small_arms_add = 1
+    upkeep_modifier = {
+        goods_input_small_arms_add = 1.5
+    }
+
+    battle_modifier = {
+        unit_offense_add = 20
+        unit_defense_add = 25
+        unit_morale_loss_add = 10
+        # no naval invasion efficiency loss
+    }
+
+    unlocking_technologies = { line_infantry }
+
+    combat_unit_image = {
+        # fallback
+        texture = "gfx/unit_illustrations/marines_eu_low.dds"
+    }
+
+    upgrades = {
+        combat_unit_type_mid_tier_marines
+        combat_unit_type_high_tier_marines
+    }
+}
+
+combat_unit_type_mid_tier_marines = {
+    group = combat_unit_group_marines
+    max_manpower = 1000
+    supply_capacity = 18
+
+    conscript_peasant_levies = yes
+
+    upkeep_modifier = {
+        goods_input_small_arms_add = 2.5
+        goods_input_ammunition_add = 1.5
     }
 
     battle_modifier = {
         unit_offense_add = 25
-        unit_defense_add = 20
+        unit_defense_add = 35
         unit_morale_loss_add = 10
-        unit_naval_invasion_efficiency_mult = 0
+        # no naval invasion efficiency loss
     }
 
-	unlocking_technologies = { line_infantry }
+    unlocking_technologies = { power_of_the_purse }
 
     combat_unit_image = {
-		# fallback
-        texture = "gfx/unit_illustrations/marines_eu_low.dds"
-    }
-
-	upgrades = {
-        combat_unit_type_mid_tier_marines
-        combat_unit_type_high_tier_marines
-	}
-}
-
-combat_unit_type_mid_tier_marines = {
-	group = combat_unit_group_marines
-	max_manpower = 1000
-	supply_capacity = 18
-
-	conscript_peasant_levies = yes
-
-	upkeep_modifier = {
-		goods_input_small_arms_add = 3
-		goods_input_ammunition_add = 2
-    }
-
-    battle_modifier = {
-        unit_offense_add = 40
-        unit_defense_add = 30
-        unit_morale_loss_add = 8
-        unit_naval_invasion_efficiency_mult = 0
-    }
-
-	unlocking_technologies = { trench_works }
-
-    combat_unit_image = {
-		# fallback
+        # fallback
         texture = "gfx/unit_illustrations/marines_eu_mid.dds"
     }
 
     upgrades = {
         combat_unit_type_high_tier_marines
-
     }
 }
 
 combat_unit_type_high_tier_marines = {
-	group = combat_unit_group_marines
-	max_manpower = 1000
-	supply_capacity = 25
+    group = combat_unit_group_marines
+    max_manpower = 1000
+    supply_capacity = 25
 
-	conscript_peasant_levies = yes
+    conscript_peasant_levies = yes
 
-	upkeep_modifier = {
-		goods_input_small_arms_add = 3
-		goods_input_ammunition_add = 3
-		goods_input_radios_add = 1
+    upkeep_modifier = {
+        goods_input_small_arms_add = 4
+        goods_input_ammunition_add = 3
     }
 
     battle_modifier = {
-        unit_offense_add = 55
-        unit_defense_add = 50
-        unit_morale_loss_add = 6
-        unit_naval_invasion_efficiency_mult = 0
+        unit_offense_add = 30
+        unit_defense_add = 40
+        unit_morale_loss_add = 8
+        # no naval invasion efficiency loss
     }
 
-	unlocking_technologies = { nco_training }
+    unlocking_technologies = { landing_craft }
 
     combat_unit_image = {
         # fallback

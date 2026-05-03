@@ -1,0 +1,36 @@
+﻿gate_arcanist = {
+    texture = "gfx/interface/icons/character_role_icons/gate_arcanist.dds"
+
+    priority = 100
+
+    character_modifier = {
+        country_weekly_innovation_mult = 0.05
+        country_gate_magical_innovation_add = 10
+    }
+
+    spawn_characters_to_pool = yes
+
+    pool_spawn_target_country_wide = {
+        value = 0
+
+        if = {
+            limit = {
+                OR = {
+                    is_magic_country = yes
+                    has_journal_entry = je_gate_researching_magic
+                }
+                NOT = {
+                    has_variable = actively_hiring_magic_researcher
+                }
+            }
+            add = 3
+        }
+    }
+
+    title_format = custom
+
+    career_length = {
+        5
+        10
+    }
+}

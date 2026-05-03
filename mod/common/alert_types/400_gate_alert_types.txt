@@ -58,9 +58,11 @@ has_no_magic_researcher_alert = {
 		can_hire_magic_researcher = yes
 	}
 
-	open_panel = journal
+	open_panel = pops_overview|national_cast
 
-	type = important_action
+	type = alert
+
+	color = red
 
 	alert_group = gate_alerts
 }

@@ -76,32 +76,7 @@ research_magic_decision = {
 	}
 }
 
-magic_researcher_decision = {
-	is_shown = {
-		OR = {
-			is_magic_country = yes
-			has_journal_entry = je_gate_researching_magic
-		}
-		NOT = {
-			is_country_type = decentralized
-		}
-	}
-
-	possible = {
-		can_hire_magic_researcher = yes
-	}
-
-	when_taken = {
-		gate_hire_researcher = yes
-	}
-
-	ai_chance = {
-		value = 1000
-	}
-}
-
 decision_gate_start_expedition_reytu = {
-
 	is_shown = {
 		AND = {
 			AND = {

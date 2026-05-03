@@ -82,7 +82,15 @@ STATES = {
 		add_homeland = cu:azande
 		add_homeland = cu:luba
 		add_homeland = cu:fluvian_bantu
-		add_state_trait = state_trait_mana_mines_zambia
+
+		change_resource_potential = {
+			type = building_iron_mine
+			amount = 20
+		}
+		change_resource_potential = {
+			type = building_sulfur_mine
+			amount = 20
+		}
 	}
 
 	s:STATE_KATANGA = {

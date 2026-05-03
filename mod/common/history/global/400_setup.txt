@@ -63,35 +63,6 @@ GLOBAL = {
         }
     }
 
-    # Statistics GUI
-    gate_collect_magic_countries = yes
-
-    every_in_global_list = {
-        variable = magic_countries
-        limit = {
-            NOT = {
-                # Exclude Texas since it will lead
-                # to issues. This is handled in:
-                # 350_base_game_extension.txt
-                c:TEX ?= this
-            }
-        }
-
-        # Add magic researcher to all magic
-        # countries
-        create_character = {
-            template = gate_magic_researcher_template
-            interest_group = ig_gate_magic_users
-        }
-    }
-
-    # Add race traits to all
-    # automatically generated characters
-    gate_add_race_traits = yes
-
-    # Add arable land for balancing
-    gate_setup_arable_land = yes
-
     # Setup Expedition structs
     c:GATE_MK = {
         # Country Scope does not matter

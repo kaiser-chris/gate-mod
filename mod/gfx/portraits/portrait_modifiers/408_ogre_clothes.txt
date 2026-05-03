@@ -114,12 +114,16 @@
                 has_dlc_feature = mp1_cosmetics
                 OR = {
                     AND = {
-                        politician_clothes_trigger = yes
+                        OR = {
+                            politician_clothes_trigger = yes
+                            gate_arcanist_portrait_trigger = yes
+                        }
                         scope:character ?= {
                             is_interest_group_type = ig_industrialists
                         }
                     }
                     executive_clothes_trigger = yes
+                    magnate_clothes_trigger = yes
                 }
                 gate_south_ogre_portrait_trigger = yes
             }
@@ -377,7 +381,10 @@
                     military_clothes_trigger = yes
                     AND = {
                         armed_forces_clothes_trigger = yes
-                        politician_clothes_trigger = yes
+                        OR = {
+                            politician_clothes_trigger = yes
+                            gate_arcanist_portrait_trigger = yes
+                        }
                     }
                 }
             }
@@ -425,7 +432,10 @@
                     }
                     AND = {
                         armed_forces_clothes_trigger = yes
-                        politician_clothes_trigger = yes
+                        OR = {
+                            politician_clothes_trigger = yes
+                            gate_arcanist_portrait_trigger = yes
+                        }
                         monarchy_clothes_trigger = no
                     }
                 }
@@ -590,7 +600,11 @@
                 AND = {
                     gate_south_ogre_portrait_trigger = yes
                     OR = {
-                        politician_clothes_trigger = yes
+                        OR = {
+                            politician_clothes_trigger = yes
+                            gate_arcanist_portrait_trigger = yes
+                            magnate_clothes_trigger = yes
+                        }
                         AND = {
                             executive_clothes_trigger = yes
                             NOT = {
@@ -653,7 +667,10 @@
                 add = 100
                 AND = {
                     gate_south_ogre_portrait_trigger = yes
-                    politician_clothes_trigger = yes
+                    OR = {
+                        politician_clothes_trigger = yes
+                        gate_arcanist_portrait_trigger = yes
+                    }
                     armed_forces_clothes_trigger = no
                     scope:character ?= {
                         OR = {
@@ -885,7 +902,10 @@
                 add = 10000
                 has_dlc_feature = ep1_cosmetics
                 gate_south_ogre_portrait_trigger = yes
-                politician_clothes_trigger = yes
+                OR = {
+                    politician_clothes_trigger = yes
+                    gate_arcanist_portrait_trigger = yes
+                }
                 NOR = {
                     military_clothes_trigger = yes
                     armed_forces_clothes_trigger = yes

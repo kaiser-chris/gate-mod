@@ -34,7 +34,14 @@ STATES = {
 			}
 		}
 		add_homeland = cu:elven
-		add_state_trait = state_trait_mana_mines_zambia
+		change_resource_potential = {
+			type = building_iron_mine
+			amount = 20
+		}
+		change_resource_potential = {
+			type = building_sulfur_mine
+			amount = 20
+		}
 	}
 	s:STATE_BOTSWANA = {
 		create_state = {

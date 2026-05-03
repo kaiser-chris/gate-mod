@@ -77,12 +77,7 @@ can_hire_magic_researcher = {
 				has_journal_entry = je_gate_researching_magic
 			}
 		}
-		custom_tooltip = {
-			text = magic_researcher_decision_no_researcher_tooltip
-			NOT = {
-				has_variable = magic_researcher
-			}
-		}
+		has_magic_researcher = no
 		custom_tooltip = {
 			text = magic_researcher_decision_actively_searching_tooltip
 			NOT = {
@@ -97,6 +92,9 @@ has_magic_researcher = {
         text = gate_has_magic_researcher
         subject = this
 		has_variable = magic_researcher
+		var:magic_researcher ?= {
+			is_character_alive = yes
+		}
 	}
 }
 

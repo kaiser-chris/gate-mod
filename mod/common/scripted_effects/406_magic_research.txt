@@ -244,6 +244,118 @@ gate_hire_researcher = {
 	}
 }
 
+gate_create_and_activate_magic_researcher = {
+	debug_log_scopes = yes
+	if = {
+		limit = {
+			is_magic_country = yes
+		}
+		create_character = {
+			template = gate_magic_researcher_template
+			interest_group = ig_gate_magic_users
+			save_scope_as = magic_researcher
+		}
+	}
+	else = {
+		create_character = {
+			template = gate_magic_researcher_template
+			interest_group = ig_intelligentsia
+			save_scope_as = magic_researcher
+		}
+	}
+	scope:magic_researcher = {
+		gate_activate_magic_researcher = yes
+	}
+}
+
+gate_activate_magic_researcher = {
+	custom_tooltip = {
+		text = effect_gate_activate_magic_researcher
+		set_local_variable = {
+			name = magic_researcher
+			value = this
+		}
+
+		set_variable = is_magic_researcher
+
+		if = {
+			limit = {
+				NOT = {
+					has_variable = com_opinion
+				}
+			}
+			set_variable = {
+				name = com_opinion
+				value = flag:character_opinion_magic_researcher
+			}
+		}
+
+		if = {
+			limit = {
+				NOT = {
+					has_variable = magic_experience
+				}
+			}
+			set_variable = {
+				name = magic_experience
+				value = {
+					value = 0
+					add = {
+						integer_range = {
+							min = 5
+							max = 15
+						}
+					}
+				}
+			}
+		}
+
+		replace_character_roles = {
+			remove_all = yes
+			add = {
+				gate_arcanist
+			}
+		}
+
+		home_country = {
+			set_variable = {
+				name = magic_researcher
+				value = prev
+			}
+			reset_research_institute_pm = yes
+			if = {
+				limit = {
+					has_journal_entry = je_gate_researching_magic
+				}
+				je:je_gate_researching_magic = {
+					clear_variable_list = com_journal_characters
+					add_to_variable_list = {
+						name = com_journal_characters
+						target = scope:magic_researcher
+					}
+				}
+				# Our researcher complaining about the missing institute
+				if = {
+					limit = {
+						capital = {
+							NOT = {
+								has_building = building_magic_research_institute
+							}
+						}
+					}
+					scope:magic_researcher = {
+						set_variable = {
+							name = com_opinion
+							value = flag:character_opinion_magic_researcher_missing_institute
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
+
 gate_add_researcher_experience = {
 	if = {
 		limit = {
