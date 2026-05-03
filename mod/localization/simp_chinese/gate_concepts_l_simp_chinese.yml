@@ -17,6 +17,7 @@
  concept_monster_hordes: "魔物潮"
  concept_monster_horde_desc: "当[concept_mana_density]达到中等水平时，当地动植物可能会发生大规模突变，并疯狂地攻击平民。"
  concept_mana_density: "魔能浓度"
+ concept_mana_density_mana: "Mana"
  concept_mana_density_desc: "自魔法门开启以来，魔能不断涌入地球。[concept_magic_knowledge]在地球上的应用进一步增加了大气中的魔能含量。若某一区域的$concept_mana_density$达到最大值，[concept_magical_phenomena]将在此地常态化。在此之前，该区域不同等级的$concept_mana_density$会引发不可预测的异变与事件。\n\n#header 魔能浓度等级：#!\n• 低魔能浓度起始于#v [GuiScope.ScriptValue('low_mana_density_threshhold')]%#!\n• 中魔能浓度起始于#v [GuiScope.ScriptValue('medium_mana_density_threshhold')]%#!\n• 高魔能浓度起始于#v [GuiScope.ScriptValue('high_mana_density_threshhold')]%#!"
  concept_magical_phenomena: "魔法现象"
  concept_magical_phenomena_desc: "魔法现象是由区域内不断上升的[concept_mana_density]所引发的事件，其表现形式从温和有益到骇人可怖不等。"
@@ -44,6 +45,8 @@
  concept_gate_mana_well_desc: "魔能井是[Concept('concept_gate_ley_lines','$concept_gate_ley_line$')]上的节点。魔能井几乎可以产生无尽的$mana$。\n\n但它们可能引发当地[Concept('concept_gate_ley_lines','$concept_gate_ley_line$')]的#v 不稳定#!，进而导致#v 事故#!。"
  concept_gate_expedition: "$gate_planet$远征"
  concept_gate_expedition_desc: "当我们掌控[GetBuildingType('building_gate_alxa').GetName]并完成[GetTechnology('gate_expeditions').GetName]的开发后，即可发起一场对[concept_gate_planet]的远征。"
+ concept_gate_expedition_location: "Expedition Location"
+ concept_gate_expedition_location_desc: "" #TODO
  concept_gate_expedition_leader: "远征领队"
  concept_gate_expedition_leaders: "远征领队"
  concept_gate_expedition_leader_desc: "[concept_gate_expedition]的领队人选将决定我们能在[concept_gate_planet]上开展何种[concept_gate_expedition_activities]。\n\n领队分为三类：\n• [concept_gate_expedition_leader_militarist]\n• [concept_gate_expedition_leader_politician]\n• [concept_gate_expedition_leader_industrialist]"

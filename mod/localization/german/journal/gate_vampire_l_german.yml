@@ -3,12 +3,21 @@
  je_gate_vampire_emergence: "[GetReligion('gate_lunar_masquerade').GetNameNoFormatting]" #deepl:3860346585
  je_gate_vampire_emergence_reason: "Geflüster verbreitet sich wie Seide in den Salons und Gassen - die Mondmaskerade wächst. Jedes Jahr werden mehr Seelen von ihrem geheimnisvollen Reiz angezogen. Im silbernen Mondlicht und bei Kerzenschein spricht der rätselhafte Constantin de Reuss-Mirza von der Befreiung vom Verfall, von der Schönheit, die von der Zeit unbefleckt bleibt, von der Kraft, die im Blut erwacht. Was einst nur am Rande vorkam, stößt heute bei den Desillusionierten und Ehrgeizigen auf offene Ohren. Adlige tarnen ihre Besuche als Neugier, Kaufleute nennen es eine Gelegenheit, und Bürgerliche flüstern dem silbernen Schleier Gebete zu. Die Maskerade ist kein Gerücht mehr - sie ist eine Bewegung. Und ihr Tanz hat gerade erst begonnen." #deepl:99740704
  je_gate_vampire_emergence_fail: "Wir säubern die Sekte [GetReligion('gate_lunar_masquerade').GetName] aus unserem Land." #deepl:1622777019
+ je_gate_vampire_emergence_invalid: "Wir integrieren die „[GetCulture('vampire').GetName]“-Rennserie, bevor sie die Führung übernimmt." #deepl:271412993
  je_gate_vampire_emergence_complete: "Wir haben uns [concept_gate_vampirism] zu eigen gemacht." #deepl:3617232718
  je_gate_vampire_emergence_activate: "[SCOPE.sCountry('gate_vampire_country').MakeScope.Var('gate_character_vampire').GetCharacter.GetFullName] hat die [GetReligion('gate_lunar_masquerade').GetName] gegründet." #deepl:4204343519
  je_gate_vampire_emergence_allure: "Die Menschen sehnen sich nach Unsterblichkeit und strömen auf die [GetReligion('gate_lunar_masquerade').GetNameNoFormatting]." #deepl:2188732153
  je_gate_vampire_emergence_truth_known: "Die Menschen kennen die Wahrheit über Vampire, aber einige sind immer noch an der [GetReligion('gate_lunar_masquerade').GetNameNoFormatting] interessiert." #deepl:4113550510
+ je_gate_vampire_emergence_decapitated: "Die „[GetReligion('gate_lunar_masquerade').GetNameNoFormatting]“ haben ihren geheimnisvollen Anführer verloren." #deepl:1687077479
  je_gate_vampire_emergence_button_purge: "Beseitigen Sie diese Ungeheuer" #deepl:1381176758
  je_gate_vampire_emergence_button_purge_desc: "Diese [GetCulture('vampire').GetName] Ungeheuer müssen aus unserem Land entfernt werden!" #deepl:3608770772
+ je_gate_vampire_emergence_button_decapitate: "Den Anführer entfernen" #deepl:1036669402
+ je_gate_vampire_emergence_button_decapitate_desc: "Der Anführer der Sekte muss sterben!" #deepl:3977557813
+ je_gate_vampire_emergence_button_integrate: "Die Bevölkerung v[GetCulture('vampire').GetNameNoFormatting]s integrieren" #deepl:2939045735
+ je_gate_vampire_emergence_button_integrate_desc: "Da ihr Anführer tot ist, könnten wir vielleicht die Bevölkerung von „[GetCulture('vampire').GetName]“ integrieren, anstatt sie alle zu töten." #deepl:271430658
+ je_gate_vampire_emergence_trigger_truth_known: "Die Menschen kennen die Wahrheit über [concept_gate_vampirism]" #deepl:847730844
+ je_gate_vampire_emergence_trigger_decapitated_true: "Der Vorsitzende der „[GetReligion('gate_lunar_masquerade').GetName]“ ist verstorben" #deepl:1713254295
+ je_gate_vampire_emergence_trigger_decapitated_false: "Der Anführer der „[GetReligion('gate_lunar_masquerade').GetName]“ ist am Leben" #deepl:1292677351
 # Flags
  gate_vampire_cult_flag: "Lasst die [GetReligion('gate_lunar_masquerade').GetNameNoFormatting] beginnen." #deepl:3937286745
 # Events
@@ -32,8 +41,7 @@
  gate_vampire.5.t: "Die Abrechnung mit dem Karmin" #deepl:3797306922
  gate_vampire.5.d: "Die Menschen haben die Wahrheit erfahren! Eine [GetCulture('vampire').GetName] braucht Blut zum Leben. Jetzt müssen wir eine Entscheidung treffen." #deepl:2821794296
  gate_vampire.5.f: "Geflüster wird zu einem Aufschrei, als sich die Wahrheit wie ein Lauffeuer verbreitet - die Ewige Gabe fordert Blut. Die Bevölkerung, die einst von den Versprechungen der Unsterblichkeit und Stärke begeistert war, schreckt nun entsetzt zurück, als Berichte über vermisste Landstreicher, geheimnisvolle Versammlungen und die stille Ausmerzung der Schwachen auftauchen. Die Mondmaskerade, einst ein Randkult, hat sich in die höchsten Ränge der Macht eingewoben, und ihr Einfluss hält die Gerichte und Räte mit eiserner, in Samt gehüllter Hand fest. Priester prangern den Fluch von ihren Kanzeln an, während Händler und Bauern gleichermaßen wissen wollen, welchen Preis sie zu zahlen haben. Doch unter der Elite wird die Frage in anderen Tönen geflüstert: Ist das Grauen die Macht wert? Das Schicksal der Nation steht auf dem Spiel - wird sich das Volk auflehnen oder wird der Durst der Herrscher zum Gesetz?" #deepl:3260825427
- gate_vampire.5.a: "Die Ewigkeit ist es wert!" #deepl:12607464
- gate_vampire.5.b: "Diese Bestien müssen ausgemerzt werden!" #deepl:3192572604
+ gate_vampire.5.a: "Das ist abscheulich." #deepl:2233457907
  gate_vampire.6.t: "Der Patron der Unsterblichkeit" #deepl:2490983486
  gate_vampire.6.d: "[SCOPE.sCharacter('gate_vampire_leader').GetFullName] ist der Anführer der [SCOPE.sCharacter('gate_vampire_leader').GetInterestGroup.GetNameWithCountryVariant] geworden." #deepl:31771902
  gate_vampire.6.f: "Die Kaufleute, Handwerker und kleinen Landbesitzer der #v [SCOPE.sCharacter('gate_vampire_leader').GetInterestGroup.GetNameNoFormatting] #! haben in #v [SCOPE.sCharacter('gate_vampire_leader').GetFullNameNoFormatting] #! einen ungewöhnlichen Fürsprecher gefunden. Einst als rätselhafter Kultführer angesehen, spricht er nun direkt zu ihren Zielen und bietet Stabilität, Wohlstand und Schutz vor dem Chaos der sterblichen Schwäche. Sein Einfluss breitet sich nicht durch Gewalt, sondern durch Gefälligkeiten aus: ein Darlehen, das im Flüsterton zurückgezahlt wird, ein Rivale, der auf mysteriöse Weise ruiniert wird, eine sich abmühende Werkstatt, die unter unsichtbaren Wohltätern plötzlich aufblüht." #deepl:1061605999
@@ -46,3 +54,40 @@
  gate_vampire.8.d: "Der Anführer der [SCOPE.sCharacter('gate_landowner_leader').GetInterestGroup.GetNameWithCountryVariant], [SCOPE.sCharacter('gate_landowner_leader').GetFullName] hat sich bekehrt und [concept_gate_vampirism] umarmt." #deepl:3221801249
  gate_vampire.8.f: "Die großen #v [SCOPE.sCharacter('gate_landowner_leader').GetInterestGroup.GetNameWithCountryVariant] #! haben schon immer über riesige Ländereien geherrscht, aber #v [SCOPE.sCharacter('gate_landowner_leader').GetFullNameNoFormatting] #! hat ihre Herrschaft zu neuen, beunruhigenden Höhen geführt. Einst nur ein gewiefter Aristokrat, sind sie aus ihrem abgelegenen Herrenhaus mit einer seltsamen neuen Vitalität zurückgekehrt - ihre einst müde Haltung ist nun königlich, ihre einst gealterten Gesichtszüge sind nun von der Zeit unberührt." #deepl:3170070533
  gate_vampire.8.a: "Betreffend." #deepl:2089514037
+ gate_vampire.9.t: "Der Untergang des Blutmonarchen" #deepl:24657491
+ gate_vampire.9.d: "Es wurde ein Anschlag auf das Leben von „[GetPlayer.MakeScope.Var('gate_character_vampire').GetCharacter.GetFullName]“ vorbereitet." #deepl:3618505831
+ gate_vampire.9.f: "Unter gedämpften Lampen und hinter verschlossenen Türen versammelten sich die schwarzen Bataillone der Regierung in stiller Entschlossenheit; Priester und Artillerieoffiziere standen Schulter an Schulter, während die letzten Befehle verlesen wurden. In der ganzen Hauptstadt sperrten loyale Regimenter die Alleen ab, Dragonerabteilungen umzingelten das Adelsviertel, und geweihten Klingen wurden an die handverlesene Stoßtruppe ausgehändigt, die ausgewählt worden war, um noch vor Tagesanbruch die Höhle des Vampirs zu stürmen." #deepl:3791721179
+ gate_vampire.9.a: "Töte ihn." #deepl:4093082665
+ gate_vampire.9.b: "Den Vorgang abbrechen." #deepl:3592045309
+ gate_vampire.9.b.delay: "Es wird noch eine Weile dauern, bis wir es erneut versuchen können" #deepl:1612212464
+ gate_vampire.10.t: "Die Crimson-Siedlung" #deepl:3124419516
+ gate_vampire.10.desc: "Nun, da der Anführer der „[GetReligion('gate_lunar_masquerade').GetName]“ nicht mehr da ist, wie werden wir unsere Bevölkerung in „[GetCulture('vampire').GetName]“ behandeln?" #deepl:1669865962
+ gate_vampire.10.f: "Nachdem der Blutmonarch verschwunden war, wandte sich die Nation vom Krieg dem Gericht zu. Im Parlament, in den Kasernen und auf den von Kerzen beleuchteten Straßen stellte nun eine Frage alle anderen in den Schatten: Würden die verbliebenen Vampire als Bürger anerkannt werden, nur geduldet werden oder einen minderwertigen Status unter dem Gesetz einnehmen?" #deepl:108441323
+ gate_vampire.10.a: "Nehmt sie in eure Mitte auf." #deepl:165305267
+ gate_vampire.10.b: "Lass sie einfach in Ruhe." #deepl:601514909
+ gate_vampire.10.c: "Sie sind Bürger zweiter Klasse." #deepl:202607558
+ gate_vampire.10.d: "Diese Bestien müssen ausgerottet werden!" #deepl:3192572604
+ gate_vampire.11.t: "Die scharlachrote Kommunion" #deepl:3186904668
+ gate_vampire.11.d: "Die „[GetReligion('gate_lunar_masquerade').GetName]“ hat eine Massenbekehrungsveranstaltung abgehalten, bei der sich Tausende zum „[concept_gate_vampirism]“ bekehrten." #deepl:2589796941
+ gate_vampire.11.f: "Unter laternenbeleuchteten Bögen und dem kalten Blick des Mondes versammelte die „[GetReligion('gate_lunar_masquerade').GetNameNoFormatting]“ Tausende von Gläubigen. Bei Tagesanbruch lagen die Plätze still da, und diejenigen, die als Sterbliche eingetreten waren, gingen mit blassen Gesichtern, scharfem Lächeln und ewigen Gelübden auf den Lippen fort." #deepl:1685243371
+ gate_vampire.11.a: "Besorgniserregend." #deepl:2089514037
+ gate_vampire.12.t: "Die Nacht der roten Taufe" #deepl:2917672190
+ gate_vampire.12.d: "Die „[GetReligion('gate_lunar_masquerade').GetName]“ hat eine Massenbekehrungsveranstaltung abgehalten, bei der sich Tausende zum „[concept_gate_vampirism]“ bekehrten." #deepl:2589796941
+ gate_vampire.12.f: "Was als Fest der Musik, der Masken und der geflüsterten Versprechen begann, endete in einem Blutopfer. Noch bevor die Sonne wieder aufging, hatten sich ganze Stadtteile der Umarmung der „[GetReligion('gate_lunar_masquerade').GetNameNoFormatting]“ hingegeben und waren wie neu geboren auferstanden." #deepl:671848860
+ gate_vampire.12.a: "Besorgniserregend." #deepl:2089514037
+ gate_vampire.13.t: "Die Mondbeschienene Wende" #deepl:3872132078
+ gate_vampire.13.d: "Die „[GetReligion('gate_lunar_masquerade').GetName]“ hat eine Massenbekehrungsveranstaltung abgehalten, bei der sich Tausende zum „[concept_gate_vampirism]“ bekehrten." #deepl:2589796941
+ gate_vampire.13.f: "Unter silbernen Fahnen und samtenen Baldachinen legte der Kult jede Geheimhaltung ab und rief das Volk herbei. Einer nach dem anderen, dann die ganze Menge – Männer und Frauen gaben ihre schlagenden Herzen auf, um sich der stillen Anmut des Untodes hinzugeben." #deepl:4198794884
+ gate_vampire.13.a: "Besorgniserregend." #deepl:2089514037
+ gate_vampire.14.t: "Die verschleierte Himmelfahrt" #deepl:287594170
+ gate_vampire.14.d: "Die „[GetReligion('gate_lunar_masquerade').GetName]“ hat eine Massenbekehrungsveranstaltung abgehalten, bei der sich Tausende zum „[concept_gate_vampirism]“ bekehrten." #deepl:2589796941
+ gate_vampire.14.f: "In einer einzigen Nacht voller Zeremonien und Verzückung verwandelte die „[GetReligion('gate_lunar_masquerade').GetNameNoFormatting]“ die Bekehrung in ein Spektakel. Adlige, Arbeiter und Wanderer traten gleichermaßen hinter den Schleier und traten als Kinder des Mondes und des Blutes wieder hervor." #deepl:720644547
+ gate_vampire.14.a: "Besorgniserregend." #deepl:2089514037
+ gate_vampire.15.t: "Der zerrissene Schleier" #deepl:1821040819
+ gate_vampire.15.d: "Die „[GetReligion('gate_lunar_masquerade').GetName]“ erlitten einen Rückschlag bei ihren Aktivitäten." #deepl:2243246028
+ gate_vampire.15.f: "Ein verheerender Überfall legte verborgene Tempel frei, führte zur Beschlagnahmung blutbefleckter Register und zwang verehrte Persönlichkeiten der „[GetReligion('gate_lunar_masquerade').GetNameNoFormatting]“ in öffentliche Fesseln. Zum ersten Mal wich die geheimnisvolle Aura des Kultes Panik, Demütigung und offener Flucht." #deepl:1127793931
+ gate_vampire.15.a: "Gut." #deepl:3593588592
+ gate_vampire.16.t: "Die Nacht der aschgrauen Altäre" #deepl:4214743448
+ gate_vampire.16.d: "Die „[GetReligion('gate_lunar_masquerade').GetName]“ erlitten einen Rückschlag bei ihren Aktivitäten." #deepl:2243246028
+ gate_vampire.16.f: "Ob durch Sabotage, Verrat oder göttlichen Zorn – mehrere große Bekehrungsriten endeten in Feuer und Gemetzel. An einem einzigen Abend verlor die „[GetReligion('gate_lunar_masquerade').GetNameNoFormatting]“ nicht nur Hunderte von Anhängern, sondern auch die Illusion, dass ihr Aufstieg unausweichlich sei." #deepl:3621514589
+ gate_vampire.16.a: "Faszinierend." #deepl:654744515

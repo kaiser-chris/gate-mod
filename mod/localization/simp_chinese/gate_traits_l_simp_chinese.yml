@@ -18,16 +18,9 @@
  state_trait_gate_ganges: "恒河灵脉节点"
  state_trait_gate_healing_ganges: "恒河疗愈灵脉"
  state_trait_gate_venkateswara: "文卡特斯瓦拉"
- state_trait_dwarven_mines: "矮人矿井"
- state_trait_dwarven_mines_tyrol: "$state_trait_dwarven_mines$"
- state_trait_dwarven_mines_south_tyrol: "$state_trait_dwarven_mines$"
- state_trait_mana_mines: "奥秘矿脉"
- state_trait_mana_mines_zambia: "$state_trait_mana_mines$"
 # Character Traits
  gate_monster_killer: "怪物杀手"
  gate_monster_killer_desc: "这位将军成功地保护了民众免受怪物的袭击。"
- gate_magic_researcher: "奥术师"
- gate_magic_researcher_desc: "此人对魔法及其应用非常着迷。"
  gate_expedition_leader: "$gate_planet$远征领队"
  gate_expedition_leader_desc: "该角色是或曾经是[concept_gate_planet]远征队的队长。"
  gate_eternal_monarch: "永恒君主"
@@ -44,3 +37,10 @@
  gate_race_trait_gnomish_desc: "该角色属于[GetCulture('gnomish').GetName]种族。"
  gate_race_trait_bear: "熊"
  gate_race_trait_bear_desc: "该角色属于熊种族。"
+# Expedition Character Traits
+ gate_expedition_leader_industrialist: "$concept_gate_expedition_leader_industrialist$ 探险队队长" #deepl:3582275680
+ gate_expedition_leader_industrialist_desc: "$concept_gate_expedition_leader_industrialist_desc$" #deepl:80292566
+ gate_expedition_leader_militarist: "$concept_gate_expedition_leader_militarist$ 探险队队长" #deepl:2932517021
+ gate_expedition_leader_militarist_desc: "$concept_gate_expedition_leader_militarist_desc$" #deepl:2470971615
+ gate_expedition_leader_politician: "$concept_gate_expedition_leader_politician$ 探险队队长" #deepl:2754848422
+ gate_expedition_leader_politician_desc: "$concept_gate_expedition_leader_politician_desc$" #deepl:3459419064
