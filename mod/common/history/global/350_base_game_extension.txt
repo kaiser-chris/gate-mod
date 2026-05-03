@@ -27,13 +27,6 @@ GLOBAL = {
 			name = je_investigate_gate_progress
 			value = 29
 		}
-
-		# Add Magic Researcher
-		create_character = {
-			template = gate_magic_researcher_template
-			interest_group = ig_intelligentsia
-			ig_leader = yes
-		}
 	}
 
 	# Joseon / Korea
@@ -50,13 +43,6 @@ GLOBAL = {
 				name = pb_gate_researching_magic
 				value = 21
 			}
-		}
-
-		# Add Magic Researcher
-		create_character = {
-			template = gate_magic_researcher_template
-			interest_group = ig_intelligentsia
-			ig_leader = yes
 		}
 	}
 
@@ -75,13 +61,6 @@ GLOBAL = {
 				value = 13
 			}
 		}
-
-		# Add Magic Researcher
-		create_character = {
-			template = gate_magic_researcher_template
-			interest_group = ig_intelligentsia
-			ig_leader = yes
-		}
 	}
 
 	# Portugal
@@ -98,12 +77,6 @@ GLOBAL = {
 				name = pb_gate_researching_magic
 				value = 7
 			}
-		}
-
-		# Add Magic Researcher
-		create_character = {
-			template = gate_magic_researcher_template
-			interest_group = ig_intelligentsia
 		}
 	}
 
@@ -122,12 +95,6 @@ GLOBAL = {
 				value = 18
 			}
 		}
-
-		# Add Magic Researcher
-		create_character = {
-			template = gate_magic_researcher_template
-			interest_group = ig_intelligentsia
-		}
 	}
 
 	# United States
@@ -145,26 +112,12 @@ GLOBAL = {
 				value = 13
 			}
 		}
-
-		# Add Magic Researcher
-		create_character = {
-			template = gate_magic_researcher_template
-			interest_group = ig_intelligentsia
-		}
 	}
 
 	# Texas
 	c:TEX = {
 		# Add Bears culture
 		add_primary_culture = cu:gate_south_ogre
-
-		# Add Magic Researcher
-		create_character = {
-			template = gate_magic_researcher_template
-			interest_group = ig_intelligentsia
-			culture = gate_south_ogre
-			ig_leader = yes
-		}
 	}
 
 }

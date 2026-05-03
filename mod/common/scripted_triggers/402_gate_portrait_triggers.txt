@@ -10,36 +10,8 @@
         vampire_portrait_pop_trigger = yes
         orcish_portrait_trigger = yes
         orcish_portrait_pop_trigger = yes
-    }
-}
-
-gate_no_portrait_trigger = {
-    OR = {
-        scope:character ?= {
-            culture = {
-                OR = {
-                    has_discrimination_trait = heritage_gate_bird
-                    has_discrimination_trait = heritage_gate_lizardfolk
-                    has_discrimination_trait = heritage_gate_mechanical
-                    has_discrimination_trait = heritage_gate_dragon
-                    has_discrimination_trait = heritage_gate_mouse
-                    has_discrimination_trait = heritage_gate_bear
-                }
-            }
-        }
-        scope:pop ?= {
-            culture = {
-                OR = {
-                    has_discrimination_trait = heritage_gate_dragon
-                    has_discrimination_trait = heritage_gate_lizardfolk
-                    has_discrimination_trait = heritage_gate_mechanical
-                    has_discrimination_trait = heritage_gate_bird
-                    has_discrimination_trait = heritage_gate_mouse
-                    has_discrimination_trait = heritage_gate_bear
-                }
-
-            }
-        }
+        gate_ogre_portrait_trigger = yes
+        gate_ogre_portrait_pop_trigger = yes
     }
 }
 
@@ -176,5 +148,11 @@ gate_bear_portrait_pop_trigger = {
             culture = cu:gate_south_ogre
             culture = cu:gate_arctic_ogre
         }
+    }
+}
+
+gate_arcanist_portrait_trigger = {
+    scope:character ?= {
+        has_role = gate_arcanist
     }
 }

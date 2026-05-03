@@ -191,7 +191,7 @@ types gate_base_panel_types {
                     gate_character_small = {
                         visible = "[Not(ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End))]"
                         blockoverride "gate_character_tooltip" {
-                            tooltip = gate_expedition_leader_missing_tooltip
+                            tooltip = gg_panel_base_no_researcher
                         }
                         blockoverride "gate_character_portrait" {
                             icon = {

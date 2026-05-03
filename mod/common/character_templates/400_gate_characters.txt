@@ -1,12 +1,10 @@
 ﻿gate_magic_researcher_template = {
 	ideology = ideology_magic_hopeful
 
-	traits = {
-		gate_magic_researcher
-	}
+	role = gate_arcanist
 
 	on_created = {
-		place_character_in_void = 10000
+		#place_character_in_void = 10000
 		set_variable = is_magic_researcher
 		set_variable = {
 			name = com_opinion
@@ -19,29 +17,10 @@
 				add = {
 					integer_range = {
 						min = 5
-						max = 10
+						max = 15
 					}
 				}
 			}
-		}
-		home_country = {
-			if = {
-				limit = {
-					has_journal_entry = je_gate_researching_magic
-				}
-				je:je_gate_researching_magic = {
-					clear_variable_list = com_journal_characters
-					add_to_variable_list = {
-						name = com_journal_characters
-						target = root
-					}
-				}
-			}
-			set_variable = {
-				name = magic_researcher
-				value = root
-			}
-			reset_research_institute_pm = yes
 		}
 	}
 }

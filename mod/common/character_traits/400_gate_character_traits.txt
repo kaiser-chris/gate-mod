@@ -34,24 +34,6 @@
     value = 2
 }
 
-gate_magic_researcher = {
-    type = personality
-
-    texture = gfx/interface/icons/character_trait_icons/innovative.dds
-
-    # Reminder: this would only come into effect if this character is or becomes a Ruler
-    country_modifier = {
-        country_weekly_innovation_mult = 0.05
-        country_gate_magical_innovation_add = 20
-    }
-
-    possible = {
-        NOT = { age < define:NCharacters|ADULT_AGE }
-    }
-
-    weight = 0
-}
-
 gate_eternal_monarch = {
     type = condition
 

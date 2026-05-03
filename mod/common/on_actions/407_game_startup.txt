@@ -1,0 +1,85 @@
+﻿on_game_started = {
+    on_actions = {
+        on_gate_game_setup
+    }
+}
+
+on_gate_game_setup = {
+    effect = {
+        # Statistics GUI
+        gate_collect_magic_countries = yes
+
+        every_in_global_list = {
+            variable = magic_countries
+            limit = {
+                NOT = {
+                    # Exclude Texas since it will lead
+                    # to issues. This is handled in:
+                    # 350_base_game_extension.txt
+                    c:TEX ?= this
+                }
+            }
+
+            # Add magic researcher to all magic
+            # countries
+            gate_create_and_activate_magic_researcher = yes
+        }
+
+        # Add race traits to all
+        # automatically generated characters
+        gate_add_race_traits = yes
+
+        # Add arable land for balancing
+        gate_setup_arable_land = yes
+
+        # Great Qing
+        c:CHI = {
+            # Add Magic Researcher
+            gate_create_and_activate_magic_researcher = yes
+        }
+
+        # Great Qing
+        c:KOR = {
+            # Add Magic Researcher
+            gate_create_and_activate_magic_researcher = yes
+        }
+
+        # Great Qing
+        c:GBR = {
+            # Add Magic Researcher
+            gate_create_and_activate_magic_researcher = yes
+        }
+
+        # Great Qing
+        c:POR = {
+            # Add Magic Researcher
+            gate_create_and_activate_magic_researcher = yes
+        }
+
+        # Great Qing
+        c:MEX = {
+            # Add Magic Researcher
+            gate_create_and_activate_magic_researcher = yes
+        }
+
+        # Great Qing
+        c:USA = {
+            # Add Magic Researcher
+            gate_create_and_activate_magic_researcher = yes
+        }
+
+        # Great Qing
+        c:TEX = {
+            # Add Magic Researcher
+            create_character = {
+                template = gate_magic_researcher_template
+                interest_group = ig_intelligentsia
+                culture = gate_south_ogre
+                save_scope_as = magic_researcher_south_ogre
+            }
+            scope:magic_researcher_south_ogre = {
+                gate_activate_magic_researcher = yes
+            }
+        }
+    }
+}
