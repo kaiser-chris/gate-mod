@@ -17,6 +17,7 @@
  concept_monster_hordes: "Monster Hordes"
  concept_monster_horde_desc: "Starting from a medium amount of [concept_mana_density] local fauna and flora may mutate in huge numbers and attack civilians brutally."
  concept_mana_density: "Mana Density"
+ concept_mana_density_mana: "Mana"
  concept_mana_density_desc: "Since the Magic Gates opened, mana is spewing onto Earth. Applications of [concept_magic_knowledge] on Earth has further increased the amount of mana in the atmosphere. Should the $concept_mana_density$ in a state reach its maximum, [concept_magical_phenomena] will become common place. Until then different levels of $concept_mana_density$ in a state will lead to unpredictable changes and events.\n\n#header Mana Density Levels:#!\n• Low Mana Density starts from #v [GuiScope.ScriptValue('low_mana_density_threshhold')]%#!\n• Medium Mana Density starts from #v [GuiScope.ScriptValue('medium_mana_density_threshhold')]%#!\n• High Mana Density starts from #v [GuiScope.ScriptValue('high_mana_density_threshhold')]%#!"
  concept_magical_phenomena: "Magical Phenomena"
  concept_magical_phenomena_desc: "Magical phenomena are events driven by the increased [concept_mana_density] in a state. They range from benign over helpful to terrifying."
@@ -44,6 +45,8 @@
  concept_gate_mana_well_desc: "A mana well is a tap on a [Concept('concept_gate_ley_lines','$concept_gate_ley_line$')]. Mana wells can produce an almost unlimited amount of $mana$.\n\nBut they can lead #v instability#! in the local [Concept('concept_gate_ley_lines','$concept_gate_ley_line$')], which may lead to #v accidents#!."
  concept_gate_expedition: "Expedition to $gate_planet$"
  concept_gate_expedition_desc: "When we have control over a [GetBuildingType('building_gate_alxa').GetName] and have developed our control over them with [GetTechnology('gate_expeditions').GetName], we can start an Expedition to [concept_gate_planet]."
+ concept_gate_expedition_location: "Expedition Location"
+ concept_gate_expedition_location_desc: "" #TODO
  concept_gate_expedition_leader: "Expedition Leader"
  concept_gate_expedition_leaders: "Expedition Leaders"
  concept_gate_expedition_leader_desc: "The leader of our [concept_gate_expedition]. Depending on our leader we can do different [concept_gate_expedition_activities] on [concept_gate_planet].\n\nThere are three types of leaders:\n• [concept_gate_expedition_leader_militarist]\n• [concept_gate_expedition_leader_politician]\n• [concept_gate_expedition_leader_industrialist]"
