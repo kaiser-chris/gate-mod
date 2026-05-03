@@ -27,6 +27,14 @@
  trigger_gate_expedition_budget: "#default_text Hat eine [concept_gate_expedition_budget] von [SCOPE.GetValue('budget_cost')|0v] oder mehr.#!" #deepl:2216446202
  trigger_gate_expedition_has_covered: "#default_text Hat einen unerforschten Teil der [concept_gate_expedition] Karte.#!" #deepl:663241663
  trigger_gate_expedition_has_no_activity: "#default_text Wir machen nicht schon eine [Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')].#!" #deepl:3118854392
+
  trigger_gate_requirement_low_mana_density: "Um diese [concept_building] zu erstellen, muss ein Staat eine [concept_mana_density] von mindestens [TopScope.ScriptValue('low_mana_density_threshhold')] haben." #deepl:2217222028
  trigger_gate_requirement_medium_mana_density: "Um diese [concept_building] zu erstellen, muss ein Staat eine [concept_mana_density] von mindestens [TopScope.ScriptValue('medium_mana_density_threshhold')] haben." #deepl:3057879360
  trigger_gate_requirement_max_mana_density: "Um diese [concept_building] zu erstellen, muss ein Staat eine [concept_mana_density] von mindestens [TopScope.ScriptValue('maximum_mana_density')] haben." #deepl:1165809799
+
+ trigger_gate_ethic_has_all: "Hat alle möglichen [Concept('concept_magic_ethic','$concept_magic_ethics$')] ausgewählt" #deepl:416649158
+ trigger_gate_ethic_has_all_not: "Hat nicht alle möglichen Optionen ausgewählt [Concept('concept_magic_ethic','$concept_magic_ethics$')]" #deepl:683386360
+ trigger_gate_ethic_has_all_third: "[COUNTRY.GetNameNoFlag] hat alle möglichen [Concept('concept_magic_ethic','$concept_magic_ethics$')] ausgewählt" #deepl:1106211777
+ trigger_gate_ethic_has_all_third_not: "[COUNTRY.GetNameNoFlag] hat nicht alle möglichen [Concept('concept_magic_ethic','$concept_magic_ethics$')] ausgewählt" #deepl:1027956228
+
+ trigger_gate_is_not_magic_researcher: "Ist das nicht bereits unser [concept_magic_researcher]" #deepl:1487154086
