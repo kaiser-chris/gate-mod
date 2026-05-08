@@ -1,0 +1,40 @@
+﻿gate_combat_unit_type_dragon_spawn = {
+    group = gate_combat_unit_group_creatures
+    max_manpower = 10
+    supply_capacity = 30
+
+    conscript_peasant_levies = yes
+
+    can_build = {
+        c:GATE_DIH ?= this
+    }
+
+    battle_modifier = {
+        unit_offense_add = 25
+        unit_defense_add = 40
+        unit_kill_rate_add = 0.2
+        unit_devastation_mult = 0.2
+        unit_naval_invasion_efficiency_mult = -0.50
+        unit_morale_recovery_mult = 0.2
+        unit_morale_loss_mult = -0.2
+    }
+
+    upkeep_modifier = {
+    }
+
+    combat_unit_image = {
+        trigger = {
+            OR = {
+                has_culture_graphics = east_asian
+                has_culture_graphics = south_asian
+            }
+        }
+        texture = "gfx/unit_illustrations/gate_dragon_asian.dds"
+    }
+
+    combat_unit_image = {
+        # fallback
+        texture = "gfx/unit_illustrations/gate_dragon_european.dds"
+    }
+}
+

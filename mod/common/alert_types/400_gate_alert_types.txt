@@ -3,7 +3,15 @@
 	texture = gfx/interface/icons/alert_icons/gate_has_no_magic_research.dds
 
 	valid = {
-		var:magic_innovation >= global_var:magic_innovation_bank_max
+		trigger_if = {
+			limit = {
+				has_variable = magic_innovation
+			}
+			var:magic_innovation >= global_var:magic_innovation_bank_max
+		}
+		trigger_else = {
+			always = no
+		}
 	}
 
 	type = alert

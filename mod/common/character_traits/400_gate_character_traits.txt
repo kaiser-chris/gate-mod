@@ -183,3 +183,40 @@ gate_race_trait_bear = {
 
     weight = 0
 }
+
+gate_dragon_health = {
+    type = condition
+
+    texture = gfx/interface/icons/character_trait_icons/gate_dragon_blessing.dds
+
+    character_modifier = {
+        character_prominence_add = 10
+        character_loyalty_add = 10
+        character_health_add = 0.1
+    }
+
+    possible = {
+        c:GATE_DIH ?= owner
+    }
+
+    weight = 25
+}
+
+gate_dragon_general = {
+    type = skill
+
+    texture = gfx/interface/icons/character_trait_icons/gate_dragon_blessing.dds
+
+    character_modifier = {
+        character_prominence_add = 10
+        character_loyalty_add = 10
+        military_formation_army_movement_speed_mult = 0.1
+        unit_gate_combat_unit_type_dragon_spawn_offense_mult = 0.2
+    }
+
+    possible = {
+        c:GATE_DIH ?= owner
+    }
+
+    weight = 25
+}

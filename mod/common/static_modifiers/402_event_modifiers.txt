@@ -81,3 +81,10 @@ modifier_gate_orcish_expansion_failure = {
 	building_group_bg_plantations_throughput_add = -0.3
 	building_group_bg_agriculture_throughput_add = -0.3
 }
+
+modifier_gate_dragon_invasion_boost = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_country_formation_positive.dds
+	building_training_rate_mult = 100
+	military_formation_mobilization_speed_mult = 100
+	unit_supply_consumption_mult = -1
+}
