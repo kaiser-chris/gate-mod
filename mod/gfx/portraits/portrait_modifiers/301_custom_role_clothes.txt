@@ -1,0 +1,293 @@
+﻿gate_custom_role_clothes = {
+    usage = game
+    selection_behavior = weighted_random
+    fallback = default_clothes
+
+    default_clothes = {
+        weight = {
+            base = 1
+        }
+    }
+
+    arcanist_common_executive_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = top_layer
+                template = executive_overcoat
+                range = { 0 1 } # For the randomness to work correctly
+            }
+
+            accessory = {
+                mode = add
+                gene = civilian_coats
+                template = european_executive_coats
+                range = { 0 1 } # For the randomness to work correctly
+            }
+
+            accessory = {
+                mode = add
+                gene = legwear
+                template = european_legwear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+
+            accessory = {
+                mode = add
+                gene = props
+                template = gene_lences
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 1000
+                has_dlc_feature = mp1_cosmetics
+                AND = {
+                    gate_arcanist_portrait_trigger = yes
+                    scope:character ?= {
+                        is_interest_group_type = ig_industrialists
+                    }
+                }
+            }
+        }
+    }
+
+    arcanist_military_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = coats
+                template = european_uniform_coats
+                range = { 0.15 0.35 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = aiguillettes
+                template = all_aiguillettes
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = european_legwear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 1000
+                armed_forces_clothes_trigger = yes
+                gate_arcanist_portrait_trigger = yes
+            }
+        }
+    }
+
+    arcanist_late_military_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = coats
+                template = european_late_military_coats
+                range = { 0 1 }
+            }
+
+            accessory = {
+                mode = add
+                gene = epaulettes
+                template = late_military_epaulettes
+                accessory = male_epaulettes_military_01
+            }
+
+            accessory = {
+                mode = add
+                gene = legwear
+                template = european_late_military_legwear
+                range = { 0 1 }
+            }
+
+            accessory = {
+                mode = add
+                gene = belts
+                template = late_military_belts
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 2000
+                armed_forces_clothes_trigger = yes
+                gate_arcanist_portrait_trigger = yes
+                monarchy_clothes_trigger = no
+            }
+        }
+    }
+
+    arcanist_fancy_politician_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = waistcoats
+                template = european_waistcoats
+                range = { 0 0.66 } # Omitting male_waistcoat_european_03
+            }
+
+            accessory = {
+                mode = add
+                gene = civilian_coats
+                template = european_civilian_coats
+                range = { 0 1 } # For the randomness to work correctly
+            }
+
+            accessory = {
+                mode = add
+                gene = legwear
+                template = european_legwear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+
+            accessory = {
+                mode = add
+                gene = props
+                template = gene_lences
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                AND = {
+                    gate_arcanist_portrait_trigger = yes
+                    scope:character ?= {
+                        age >= define:NCharacters|ADULT_AGE
+                        NOR = {
+                            is_interest_group_type = ig_intelligentsia
+                            is_interest_group_type = ig_rural_folk
+                            is_interest_group_type = ig_trade_unions
+                        }
+                    }
+                }
+            }
+            modifier = { #If we want rulers to dress like politicians later.
+                add = 100
+                AND = {
+                    gate_arcanist_portrait_trigger = yes
+                    ruler_clothes_trigger = yes
+                    monarchy_clothes_trigger = no
+                }
+            }
+        }
+    }
+
+    arcanist_common_politician_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = waistcoats
+                template = european_waistcoats
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = civilian_coats
+                template = european_civilian_coats
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = european_legwear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = props
+                template = gene_lences
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                AND = {
+                    gate_arcanist_portrait_trigger = yes
+                    armed_forces_clothes_trigger = no
+                    scope:character ?= {
+                        OR = {
+                            is_interest_group_type = ig_intelligentsia
+                            is_interest_group_type = ig_rural_folk
+                            is_interest_group_type = ig_trade_unions
+                        }
+                    }
+                }
+            }
+            modifier = { #If we want rulers to dress like politicians later.
+                add = 100
+                AND = {
+                    gate_arcanist_portrait_trigger = yes
+                    ruler_clothes_trigger = yes
+                    monarchy_clothes_trigger = no
+                }
+            }
+        }
+    }
+
+    arcanist_greatcoat = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = civilian_coats
+                template = greatcoat
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = legwear
+                template = brazilian_white_legwear
+                accessory = male_legwear_south_american_01_brazilian
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 10000
+                has_dlc_feature = ep1_cosmetics
+                gate_arcanist_portrait_trigger = yes
+                NOR = {
+                    military_clothes_trigger = yes
+                    armed_forces_clothes_trigger = yes
+                }
+                scope:character ?= {
+                    OR = {
+                        is_interest_group_type = ig_landowners
+                        is_interest_group_type = ig_industrialists
+                        is_interest_group_type = ig_intelligentsia
+                        is_interest_group_type = ig_petty_bourgeoisie
+                    }
+                    OR = {
+                        is_ruler_of_any_country = no
+                        AND = {
+                            is_ruler_of_any_country = yes
+                            republic_clothes_trigger = yes
+                        }
+                    }
+                    is_heir_of_own_country = no
+                    OR = {  # November to February
+                        month < 3
+                        month > 10
+                    }
+                }
+            }
+        }
+    }
+}
