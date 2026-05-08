@@ -1,0 +1,227 @@
+﻿gate_start_dragon_invasion_himalayas = {
+    create_country = {
+        tag = GATE_DIH
+
+        province = p:x1c3876
+        province = p:x2070e0
+        province = p:x218ffe
+        province = p:x3dd93c
+        province = p:x422487
+        province = p:x445e17
+        province = p:x48f15f
+        province = p:x5d87c2
+        province = p:x61cfd5
+        province = p:x63cf7d
+        province = p:x71143f
+        province = p:x80da49
+        province = p:x87a015
+        province = p:x92480a
+        province = p:xb53246
+        province = p:xc17aa1
+        province = p:xcea5fb
+        province = p:xe0b0e0
+        province = p:xe51929
+        province = p:xeee60b
+
+        on_created = {
+            add_era_researched = era_1
+            add_modifier = {
+                name = modifier_gate_dragon_invasion_boost
+                months = 48
+                is_decaying = yes
+            }
+            learn_magic = yes
+
+            # Northern Horde
+            create_military_formation = {
+                type = army
+                hq_region = sr:region_himalayas
+                combat_unit = {
+                    type = unit_type:gate_combat_unit_type_dragon_spawn
+                    count = 50
+                    service_type = regular
+                    state_region = s:STATE_LHASA
+                }
+                save_scope_as = northern_horde
+            }
+            create_character = {
+                role = character_role_general
+                traits = {
+                    gate_dragon_general
+                }
+                on_created = {
+                    transfer_to_formation = scope:northern_horde
+                }
+            }
+
+            # Southern Horde
+            create_military_formation = {
+                type = army
+                hq_region = sr:region_himalayas
+                combat_unit = {
+                    type = unit_type:gate_combat_unit_type_dragon_spawn
+                    count = 50
+                    service_type = regular
+                    state_region = s:STATE_HIMALAYAS
+                }
+                save_scope_as = southern_horde
+            }
+            create_character = {
+                role = character_role_general
+                traits = {
+                    gate_dragon_general
+                }
+                on_created = {
+                    transfer_to_formation = scope:southern_horde
+                }
+            }
+
+            # Western Horde
+            create_military_formation = {
+                type = army
+                hq_region = sr:region_himalayas
+                combat_unit = {
+                    type = unit_type:gate_combat_unit_type_dragon_spawn
+                    count = 50
+                    service_type = regular
+                    state_region = s:STATE_NGARI
+                }
+                save_scope_as = western_horde
+            }
+            create_character = {
+                role = character_role_general
+                traits = {
+                    gate_dragon_general
+                }
+                on_created = {
+                    transfer_to_formation = scope:western_general
+                }
+            }
+
+            # Eastern Horde
+            create_military_formation = {
+                type = army
+                hq_region = sr:region_himalayas
+                combat_unit = {
+                    type = unit_type:gate_combat_unit_type_dragon_spawn
+                    count = 50
+                    service_type = regular
+                    state_region = s:STATE_EASTERN_HIMALAYAS
+                }
+                save_scope_as = eastern_horde
+            }
+            create_character = {
+                role = character_role_general
+                traits = {
+                    gate_dragon_general
+                }
+                on_created = {
+                    transfer_to_formation = scope:eastern_horde
+                }
+            }
+
+            s:STATE_LHASA = {
+                random_scope_state = {
+                    limit = {
+                        is_largest_state_in_region = yes
+                    }
+                    owner = {
+                        save_scope_as = initial_target_country
+                    }
+                    save_scope_as = initial_target_state
+                }
+            }
+
+            create_diplomatic_play = {
+                type = dp_conquer_state
+                target_country = scope:initial_target_country
+                target_state = scope:initial_target_state
+                escalation = 80
+            }
+            save_scope_as = initiator
+
+            every_diplomatic_play = {
+                limit = {
+                    initiator = prev
+                }
+                save_scope_as = invasion_war
+            }
+
+            s:STATE_LHASA = {
+                add_arable_land = 26
+                every_scope_state = {
+                    limit = {
+                        NOT = {
+                            this = scope:initial_target_state
+                        }
+                    }
+                    scope:invasion_war = {
+                        add_war_goal = {
+                            holder = scope:initiator
+                            type = conquer_state
+                            target_state = prev
+                            target_country = prev.owner
+                            primary_demand = yes
+                        }
+                    }
+                }
+            }
+            s:STATE_EASTERN_HIMALAYAS = {
+                add_arable_land = 32
+                every_scope_state = {
+                    scope:invasion_war = {
+                        add_war_goal = {
+                            holder = scope:initiator
+                            type = conquer_state
+                            target_state = prev
+                            target_country = prev.owner
+                            primary_demand = yes
+                        }
+                    }
+                }
+            }
+            s:STATE_NGARI = {
+                add_arable_land = 14
+                every_scope_state = {
+                    scope:invasion_war = {
+                        add_war_goal = {
+                            holder = scope:initiator
+                            type = conquer_state
+                            target_state = prev
+                            target_country = prev.owner
+                            primary_demand = yes
+                        }
+                    }
+                }
+            }
+            s:STATE_HIMALAYAS = {
+                add_arable_land = 19
+                every_scope_state = {
+                    scope:invasion_war = {
+                        add_war_goal = {
+                            holder = scope:initiator
+                            type = conquer_state
+                            target_state = prev
+                            target_country = prev.owner
+                            primary_demand = yes
+                        }
+                    }
+                }
+            }
+
+            every_scope_state = {
+                create_building = {
+                    building = building_rice_farm
+                    level = 1
+                    reserves = 1
+                }
+            }
+
+            every_military_formation = {
+                fully_mobilize_army = yes
+                teleport_to_front = p:x445E17.front
+                add_organization = 100
+            }
+        }
+    }
+}

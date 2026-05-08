@@ -133,3 +133,21 @@ GATE_BN = {
 		}
 	}
 }
+
+GATE_DIH = {
+	pattern = "pattern_solid.tga"
+	color1 = green_dark
+	color2 = yellow
+	color3 = black
+
+	colored_emblem = {
+		texture = ce_gate_asian_dragon.dds
+		color1 = color2
+		color2 = color3
+		instance = {
+			scale = { 0.9 0.9 }
+			position = { 0.5 0.5 }
+
+		}
+	}
+}

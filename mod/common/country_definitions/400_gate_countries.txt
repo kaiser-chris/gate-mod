@@ -86,7 +86,6 @@ GATE_NS = {
 }
 
 GATE_BN = {
-	#TODO: Define color for bear nation
 	color = rgb{ 29  112  200 }
 
 	country_type = unrecognized
@@ -100,4 +99,22 @@ GATE_BN = {
 	}
 
 	capital = STATE_YUKON_TERRITORY
+}
+
+GATE_DIH = {
+	color = rgb { 43 51 57 }
+
+	country_type = unrecognized
+
+	tier = kingdom
+
+	religion = animist
+
+	cultures = {
+		tibetan
+		nepali
+		bihari
+	}
+
+	capital = STATE_LHASA
 }
