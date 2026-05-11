@@ -1,0 +1,89 @@
+# INHERITED FROM BASE GAME
+@panel_width_minus_30 = 510
+@panel_width_minus_20 = 520
+@panel_width_minus_10 = 530			# used to be 450
+@panel_width = 540  				# used to be 460
+@panel_width_half = 270				# used to be 230
+@panel_width_plus_10 = 550  		# used to be 470
+@panel_width_plus_14 = 554			# used to be 474
+@panel_width_plus_14_half = 277		# used to be 237
+@panel_width_plus_20 = 560			# used to be 480
+@panel_width_plus_30 = 570			# used to be 490
+@panel_width_plus_70 = 610			# used to be 530
+
+#### WIDGETS
+flowcontainer = {
+	name = "gate_inject_mage_council"
+	ignoreinvisible = yes
+	
+	flowcontainer = {
+		direction = vertical
+		spacing = 10
+
+		com_international_organization_header = {
+			blockoverride "spacer size" {
+				size = { 540 35 }
+			}
+		}
+		com_international_organization_panel = {
+			blockoverride "interorg_icon_frame_texture" {
+				texture = "gfx/coat_of_arms/textured_emblems/pb_frame_00.dds"
+			}
+			blockoverride "journal_icon_size" {
+				size = { 60 60 }
+			}
+			blockoverride "journal_icon_position" {
+				position = { -2 -13 }
+			}
+			blockoverride "interorg_detail_1_visibility" {
+				visible = yes
+			}
+			blockoverride "interorg_detail_1_name" {
+				text = io_gate_leader
+				default_format = "#header"
+			}
+			blockoverride "interorg_detail_1_content" {
+				text = "[JournalEntry.MakeScope.Var('com_interorg_leader_character_var').GetCharacter.GetCountry.GetNameNoFlag]"
+			}
+			blockoverride "interorg_detail_1_texture" {
+				texture = "gfx/interface/icons/generic_icons/leading_interest_group_icon.dds"
+			}
+			blockoverride "interorg_detail_2_name" {
+				text = io_gate_headquarters
+				default_format = "#header"
+			}
+			blockoverride "interorg_detail_2_texture" {
+				texture = "gfx/interface/icons/alert_icons/formable_possible.dds"
+			}
+			blockoverride "interorg_detail_3_visibility" {}
+			blockoverride "interorg_detail_3_name" {
+				text = io_gate_members
+				default_format = "#header"
+			}
+			blockoverride "interorg_detail_3_content" {
+				text = "[GetDataModelSize(JournalEntry.GetInvolvedCountries)]"
+			}
+			blockoverride "interorg_detail_3_texture" {
+				texture = "gfx/interface/icons/military_icons/organization.dds"
+			}
+			blockoverride "interorg_leader_icon" {
+				texture = "gfx/interface/icons/io_icons/gate_arcane_council_leader.dds"
+			}
+			blockoverride "interorg_leader_title" {
+				text = io_gate_arcane_council_leader_title
+			}
+			blockoverride "interorg_leader_name" {
+				text = "[JournalEntry.MakeScope.Var('com_interorg_leader_character_var').GetCharacter.GetFullName]"
+			}
+		}
+		com_international_organization_reason = {}
+		com_international_organization_reason = {
+			blockoverride "interorg_reason_text" {
+				text = io_gate_arcane_council_election
+			}
+		}
+		com_international_organization_buttons = {}
+		com_international_organization_modifiers = {}
+		com_international_organization_members = {}
+	}
+}

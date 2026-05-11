@@ -1,0 +1,222 @@
+﻿namespace = gate_arcane_council
+
+gate_arcane_council.1 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:target_state
+
+	title = gate_arcane_council.1.t
+	desc = gate_arcane_council.1.d
+	flavor = gate_arcane_council.1.f
+
+	event_image = {
+		video = "unspecific_devastation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+
+	trigger = {
+		gate_trigger_incident_events = yes
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				is_magic_country = yes
+				NOT = {
+					this = root
+				}
+				has_overlapping_interests = root
+			}
+			save_scope_as = source_country
+		}
+		random_scope_state = {
+			save_scope_as = target_state
+		}
+		set_variable = gate_foreign_mage_incident
+		set_variable = {
+			name = gate_foreign_mage_incident_cooldown
+			months = { 24 36 }
+		}
+	}
+
+	option = {
+		name = gate_arcane_council.1.a
+		default_option = yes
+		change_relations = {
+			country = scope:source_country
+			value = -20
+		}
+		scope:target_state ?= {
+			add_loyalists_in_state = {
+				value = 0.02
+			}
+			add_devastation = 10
+		}
+	}
+
+	option = {
+		name = gate_arcane_council.1.b
+		scope:target_state ?= {
+			add_radicals_in_state = {
+				value = 0.05
+			}
+			add_devastation = 10
+		}
+	}
+}
+
+gate_arcane_council.2 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:target_state
+
+	title = gate_arcane_council.2.t
+	desc = gate_arcane_council.2.d
+	flavor = gate_arcane_council.2.f
+
+	event_image = {
+		video = "asia_dead_cattle_poor_harvest"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+
+	trigger = {
+		gate_trigger_incident_events = yes
+		any_scope_state = {
+			state_region = {
+				NOT = {
+					has_harvest_condition = drought
+				}
+			}
+		}
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				is_magic_country = yes
+				NOT = {
+					this = root
+				}
+				has_overlapping_interests = root
+			}
+			save_scope_as = source_country
+		}
+		random_scope_state = {
+			limit = {
+				state_region = {
+					NOT = {
+						has_harvest_condition = drought
+					}
+				}
+			}
+			save_scope_as = target_state
+		}
+		set_variable = gate_foreign_mage_incident
+		set_variable = {
+			name = gate_foreign_mage_incident_cooldown
+			months = { 24 36 }
+		}
+	}
+
+	option = {
+		name = gate_arcane_council.1.a
+		default_option = yes
+		change_relations = {
+			country = scope:source_country
+			value = -20
+		}
+		scope:target_state ?= {
+			add_loyalists_in_state = {
+				pop_type = farmers
+				value = 0.05
+			}
+			state_region = {
+				start_harvest_condition_with_params = {
+					type = drought
+					duration = 12
+					intensity = 3
+				}
+			}
+		}
+	}
+
+	option = {
+		name = gate_arcane_council.1.b
+		scope:target_state ?= {
+			add_radicals_in_state = {
+				value = 0.10
+				pop_type = farmers
+			}
+			state_region = {
+				start_harvest_condition_with_params = {
+					type = drought
+					duration = 12
+					intensity = 3
+				}
+			}
+		}
+	}
+}
+
+gate_arcane_council.3 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = capital
+
+	title = gate_arcane_council.3.t
+	desc = gate_arcane_council.3.d
+	flavor = gate_arcane_council.3.f
+
+	event_image = {
+		video = "unspecific_politicians_arguing"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	gui_window = event_window_1char_tabloid
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	left_icon = scope:new_high_mage
+
+	duration = 3
+
+	trigger = {
+		exists = je:io_gate_arcane_council
+	}
+
+	immediate = {
+		scope:journal_entry = {
+			remove_variable = gate_arcane_council_elections
+			ordered_scope_je_involved = {
+				limit = {
+					has_variable = magic_researcher
+				}
+				order_by = gate_arcane_council_election_score
+				max = 1
+				var:magic_researcher = {
+					save_scope_as = new_high_mage
+				}
+			}
+			set_variable = {
+				name = com_interorg_leader_character_var
+				value = scope:new_high_mage
+			}
+		}
+	}
+
+	option = {
+		name = gate_arcane_council.3.a
+		default_option = yes
+	}
+}

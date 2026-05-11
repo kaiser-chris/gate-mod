@@ -1,0 +1,91 @@
+﻿io_gate_arcane_council = {
+    group = je_group_com_supranational_organizations
+    icon = "gfx/interface/icons/generic_icons/gate_magic_innovation.dds"
+    weight = 100
+
+    widget = {
+        gui = "gui/journal_injects/gate_io_injects.gui"
+        name = "gate_inject_mage_council"
+        container = "custom_widget_container_je_icon"
+    }
+
+    modifiers_while_active = {
+        modifier_gate_arcane_council_base
+    }
+
+    scripted_button = sb_gate_arcane_council_research_cooperation
+
+    immediate = {
+        scope:journal_entry = {
+            com_set_international_organization_headquaters_effect = {
+                state_region = global_var:gate_mage_council_headquarters
+            }
+            set_variable = com_hide_scripted_buttons
+            set_variable = com_hide_journal_reason
+            set_variable = com_hide_involved_countries
+            set_variable = com_hide_complete_triggers
+            set_variable = com_hide_fail_triggers
+            set_variable = com_hide_modifiers
+            random_scope_je_involved = {
+                prev = {
+                    set_variable = {
+                        name = com_interorg_leader_character_var
+                        value = prev.var:magic_researcher
+                    }
+                }
+            }
+        }
+    }
+
+    should_be_involved = {
+        gate_is_arcane_council_member = yes
+        is_magic_country = yes
+    }
+
+    should_show_when_not_involved = {
+        is_magic_country = yes
+    }
+
+    on_monthly_pulse = {
+        effect = {
+            scope:journal_entry = {
+                if = {
+                    limit = {
+                        has_variable = com_interorg_leader_character_var
+                        OR = {
+                            NOT = {
+                                exists = var:com_interorg_leader_character_var
+                            }
+                            var:com_interorg_leader_character_var ?= {
+                                is_character_alive = no
+                            }
+                        }
+                    }
+                    remove_variable = com_interorg_leader_character_var
+                    set_variable = gate_arcane_council_elections
+                    every_scope_je_involved = {
+                        limit = {
+                            is_player = yes
+                        }
+                        trigger_event = gate_arcane_council.3
+                    }
+                }
+            }
+        }
+    }
+
+    complete = {
+        hidden_trigger = {
+            always = no
+        }
+    }
+
+    fail = {
+        hidden_trigger = {
+            always = no
+        }
+    }
+
+    should_be_pinned_by_default_involved = yes
+    should_be_pinned_by_default_uninvolved_or_context = yes
+}

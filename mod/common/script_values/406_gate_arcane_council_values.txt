@@ -1,0 +1,73 @@
+﻿gate_arcane_council_election_score = {
+    add = {
+        value = 10
+        desc = base_values
+    }
+    if = {
+        limit = {
+            has_variable = magic_researcher
+            exists = var:magic_researcher
+            var:magic_researcher ?= {
+                is_character_alive = yes
+            }
+        }
+        var:magic_researcher ?= {
+            add = {
+                value = var:magic_experience
+                desc = gate_arcane_council_election_score_experience
+            }
+            if = {
+                limit = {
+                    has_trait = gate_arcanist_bound_name
+                }
+                add = {
+                    value = -5
+                    desc = gate_arcane_council_election_score_trait_bound_name
+                }
+            }
+            if = {
+                limit = {
+                    has_trait = gate_arcanist_magic_sight
+                }
+                add = {
+                    value = 15
+                    desc = gate_arcane_council_election_score_trait_magic_sight
+                }
+            }
+            if = {
+                limit = {
+                    has_trait = gate_arcanist_magic_voice
+                }
+                add = {
+                    value = 20
+                    desc = gate_arcane_council_election_score_trait_magic_voice
+                }
+            }
+        }
+        if = {
+            limit = {
+                country_rank >= rank_value:major_power
+                country_rank < rank_value:great_power
+            }
+            multiply = {
+                value = 1.1
+                desc = major_power
+            }
+        }
+        if = {
+            limit = {
+                country_rank >= rank_value:great_power
+            }
+            multiply = {
+                value = 1.2
+                desc = great_power
+            }
+        }
+    }
+    else = {
+        subtract = {
+            value = 10
+            desc = gate_arcane_council_election_score_no_researcher
+        }
+    }
+}

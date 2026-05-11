@@ -318,6 +318,9 @@ gate_activate_magic_researcher = {
 		}
 
 		home_country = {
+			var:magic_researcher ?= {
+				retire_character = yes
+			}
 			set_variable = {
 				name = magic_researcher
 				value = prev
