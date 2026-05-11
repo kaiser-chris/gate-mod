@@ -1,0 +1,20 @@
+﻿gate_arcane_council_election_indicator = {
+	type = country
+
+	text = {
+		localization_key = io_gate_arcane_council_election_indicator_loss
+		trigger = {
+			je:io_gate_arcane_council ?= {
+				any_scope_je_involved = {
+					this != root
+					gate_arcane_council_election_score > root.gate_arcane_council_election_score
+				}
+			}
+		}
+	}
+
+	text = {
+		fallback = yes
+		localization_key =  io_gate_arcane_council_election_indicator_win
+	}
+}

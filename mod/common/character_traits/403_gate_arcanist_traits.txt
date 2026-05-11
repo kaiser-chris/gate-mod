@@ -1,0 +1,81 @@
+﻿gate_arcanist_magic_sight = {
+    type = skill
+
+    #TODO
+    texture = gfx/interface/icons/character_trait_icons/convoy_raider_commander.dds
+
+    command_modifier = {
+        character_popularity_add = -15
+        character_prominence_add = 10
+    }
+
+    possible = {
+        has_role = gate_arcanist
+    }
+
+    weight = {
+        value = 2
+        multiply = {
+            value = var:magic_experience
+            divide = 2
+        }
+    }
+
+    value = 2
+}
+
+gate_arcanist_magic_voice = {
+    type = skill
+
+    #TODO
+    texture = gfx/interface/icons/character_trait_icons/convoy_raider_commander.dds
+
+    command_modifier = {
+        character_popularity_add = 25
+        character_prominence_add = 25
+    }
+
+    possible = {
+        has_role = gate_arcanist
+    }
+
+    weight = {
+        value = 2
+        multiply = {
+            value = var:magic_experience
+            divide = 2
+        }
+    }
+
+    value = 2
+}
+
+gate_arcanist_bound_name = {
+    type = skill
+
+    #TODO
+    texture = gfx/interface/icons/character_trait_icons/convoy_raider_commander.dds
+
+    command_modifier = {
+        character_popularity_add = -25
+        character_prominence_add = -25
+        character_health_add = 0.3
+    }
+
+    possible = {
+        has_role = gate_arcanist
+        owner = {
+            has_technology_researched = ethereal_messaging
+        }
+    }
+
+    weight = {
+        value = 2
+        multiply = {
+            value = var:magic_experience
+            divide = 2
+        }
+    }
+
+    value = 2
+}

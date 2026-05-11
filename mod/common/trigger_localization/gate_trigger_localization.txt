@@ -51,3 +51,21 @@ gate_ethic_has_all = {
     third = trigger_gate_ethic_has_all_third
     third_not = trigger_gate_ethic_has_all_third_not
 }
+
+gate_is_arcane_council_leader = {
+    global = trigger_gate_is_arcane_council_leader
+    global_not = trigger_gate_is_arcane_council_leader_not
+    first = trigger_gate_is_arcane_council_leader_third
+    first_not = trigger_gate_is_arcane_council_leader_third_not
+    third = trigger_gate_is_arcane_council_leader_third
+    third_not = trigger_gate_is_arcane_council_leader_third_not
+}
+
+gate_is_arcane_council_member = {
+    global = trigger_gate_is_arcane_council_member
+    global_not = trigger_gate_is_arcane_council_member_not
+    first = trigger_gate_is_arcane_council_member_third
+    first_not = trigger_gate_is_arcane_council_member_third_not
+    third = trigger_gate_is_arcane_council_member_third
+    third_not = trigger_gate_is_arcane_council_member_third_not
+}

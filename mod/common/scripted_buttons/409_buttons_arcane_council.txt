@@ -1,0 +1,37 @@
+﻿sb_gate_arcane_council_research_cooperation = {
+	name = sb_gate_arcane_council_research_cooperation
+	desc = sb_gate_arcane_council_research_cooperation_desc
+
+	ai_chance = {
+        # more research?
+        # yes please
+		value = 100
+	}
+
+	possible = {
+        gate_is_arcane_council_leader = yes
+        influence > 100
+        scope:journal_entry = {
+            NOT = {
+                has_modifier = modifier_gate_arcane_council_research_cooperation
+            }
+        }
+	}
+
+	effect = {
+        scope:journal_entry = {
+            add_modifier = {
+                name = modifier_gate_arcane_council_research_cooperation
+                months = 12
+            }
+        }
+        add_modifier = {
+            name = modifier_gate_arcane_council_research_cooperation_cost
+            months = 12
+        }
+	}
+
+    cooldown = {
+        months = 12
+    }
+}

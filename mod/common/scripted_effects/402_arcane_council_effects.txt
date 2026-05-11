@@ -1,0 +1,42 @@
+﻿gate_found_arcane_council = {
+    custom_tooltip = {
+        text = effect_gate_found_arcane_council
+        set_global_variable = {
+            name = gate_mage_council_headquarters
+            value = capital.state_region
+        }
+        set_variable = gate_joined_mage_council
+        add_contextless_journal_entry = io_gate_arcane_council
+        random_country = {
+            limit = {
+                NOT = {
+                    this = prev
+                }
+                is_magic_country = yes
+                has_overlapping_interests = root
+                relations:root >= relations_threshold:cordial
+            }
+            gate_join_arcane_council = yes
+        }
+    }
+}
+
+gate_join_arcane_council = {
+    custom_tooltip = {
+        text = effect_gate_join_arcane_council
+        set_variable = gate_joined_mage_council
+        je:io_gate_arcane_council = {
+            add_involved_country = prev
+        }
+    }
+}
+
+gate_leave_arcane_council = {
+    custom_tooltip = {
+        text = effect_gate_leave_arcane_council
+        remove_variable = gate_joined_mage_council
+        je:io_gate_arcane_council = {
+            remove_involved_country = prev
+        }
+    }
+}
