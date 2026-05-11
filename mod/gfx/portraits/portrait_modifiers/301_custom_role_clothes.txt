@@ -46,6 +46,7 @@
                 add = 1000
                 has_dlc_feature = mp1_cosmetics
                 AND = {
+                    gate_race_trigger = no
                     gate_arcanist_portrait_trigger = yes
                     scope:character ?= {
                         is_interest_group_type = ig_industrialists
@@ -80,6 +81,7 @@
             base = 0
             modifier = {
                 add = 1000
+                gate_race_trigger = no
                 armed_forces_clothes_trigger = yes
                 gate_arcanist_portrait_trigger = yes
             }
@@ -120,6 +122,7 @@
             base = 0
             modifier = {
                 add = 2000
+                gate_race_trigger = no
                 armed_forces_clothes_trigger = yes
                 gate_arcanist_portrait_trigger = yes
                 monarchy_clothes_trigger = no
@@ -163,6 +166,7 @@
             modifier = {
                 add = 100
                 AND = {
+                    gate_race_trigger = no
                     gate_arcanist_portrait_trigger = yes
                     scope:character ?= {
                         age >= define:NCharacters|ADULT_AGE
@@ -177,6 +181,7 @@
             modifier = { #If we want rulers to dress like politicians later.
                 add = 100
                 AND = {
+                    gate_race_trigger = no
                     gate_arcanist_portrait_trigger = yes
                     ruler_clothes_trigger = yes
                     monarchy_clothes_trigger = no
@@ -218,6 +223,7 @@
             modifier = {
                 add = 100
                 AND = {
+                    gate_race_trigger = no
                     gate_arcanist_portrait_trigger = yes
                     armed_forces_clothes_trigger = no
                     scope:character ?= {
@@ -232,6 +238,7 @@
             modifier = { #If we want rulers to dress like politicians later.
                 add = 100
                 AND = {
+                    gate_race_trigger = no
                     gate_arcanist_portrait_trigger = yes
                     ruler_clothes_trigger = yes
                     monarchy_clothes_trigger = no
@@ -262,6 +269,7 @@
             modifier = {
                 add = 10000
                 has_dlc_feature = ep1_cosmetics
+                gate_race_trigger = no
                 gate_arcanist_portrait_trigger = yes
                 NOR = {
                     military_clothes_trigger = yes
