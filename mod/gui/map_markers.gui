@@ -1129,10 +1129,10 @@ container = {
 
         ### Interest Tier Icon
         container = {
+            visible = "[Or(NotZero_CFixedPoint(Country.GetTargetInvolvementIn(StrategicRegion.Self)), NotZero_CFixedPoint(Country.GetCurrentInvolvementIn(StrategicRegion.Self)))]"
             parentanchor = hcenter
             datacontext = "[GetPlayer]"
             datacontext = "[GetPlayer.GetCurrentInterestTierTypeIn(StrategicRegion.Self)]"
-            visible = "[Or(NotZero_CFixedPoint(Country.GetTargetInvolvementIn(StrategicRegion.Self)), NotZero_CFixedPoint(Country.GetCurrentInvolvementIn(StrategicRegion.Self)))]"
 
             button = {
                 size = { 65 65 }
