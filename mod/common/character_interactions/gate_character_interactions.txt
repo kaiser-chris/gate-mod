@@ -20,7 +20,27 @@
     }
 
     ai_will_do = {
-        always = no
+        NOR = {
+            has_variable = magic_researcher
+            exists = var:magic_researcher
+            var:magic_researcher ?= {
+                is_character_alive = yes
+            }
+        }
+    }
+
+    ai_chance = {
+        value = 100
+    }
+
+    should_ai_evaluate = {
+        NOR = {
+            has_variable = magic_researcher
+            exists = var:magic_researcher
+            var:magic_researcher ?= {
+                is_character_alive = yes
+            }
+        }
     }
 
     possible = {

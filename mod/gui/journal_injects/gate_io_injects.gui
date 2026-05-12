@@ -43,7 +43,7 @@ flowcontainer = {
 				default_format = "#header"
 			}
 			blockoverride "interorg_detail_1_content" {
-				text = "[JournalEntry.MakeScope.Var('com_interorg_leader_character_var').GetCharacter.GetCountry.GetNameNoFlag]"
+				text = "[JournalEntry.MakeScope.Var('com_interorg_chair_var').GetCharacter.GetCountry.GetNameNoFlag]"
 			}
 			blockoverride "interorg_detail_1_texture" {
 				texture = "gfx/interface/icons/generic_icons/leading_interest_group_icon.dds"
@@ -73,7 +73,7 @@ flowcontainer = {
 				text = io_gate_arcane_council_leader_title
 			}
 			blockoverride "interorg_leader_name" {
-				text = "[JournalEntry.MakeScope.Var('com_interorg_leader_character_var').GetCharacter.GetFullName]"
+				text = "[JournalEntry.MakeScope.Var('com_interorg_chair_var').GetCharacter.GetFullName]"
 			}
 		}
 		com_international_organization_reason = {}

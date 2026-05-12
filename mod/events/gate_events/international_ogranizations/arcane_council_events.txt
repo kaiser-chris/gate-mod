@@ -68,6 +68,21 @@ gate_arcane_council.1 = {
 			add_devastation = 10
 		}
 	}
+
+	option = {
+		name = gate_arcane_council.1.c
+		scope:target_state ?= {
+			add_radicals_in_state = {
+				value = 0.02
+			}
+			add_devastation = 5
+		}
+		add_modifier = {
+			name = modifier_gate_arcane_council_incident_cost
+			multiplier = money_amount_multiplier_medium
+			months = 12
+		}
+	}
 }
 
 gate_arcane_council.2 = {
@@ -166,6 +181,28 @@ gate_arcane_council.2 = {
 			}
 		}
 	}
+
+	option = {
+		name = gate_arcane_council.1.c
+		scope:target_state ?= {
+			add_radicals_in_state = {
+				value = 0.02
+				pop_type = farmers
+			}
+			state_region = {
+				start_harvest_condition_with_params = {
+					type = drought
+					duration = 12
+					intensity = 3
+				}
+			}
+		}
+		add_modifier = {
+			name = modifier_gate_arcane_council_incident_cost
+			multiplier = money_amount_multiplier_medium
+			months = 12
+		}
+	}
 }
 
 gate_arcane_council.3 = {
@@ -209,7 +246,7 @@ gate_arcane_council.3 = {
 				}
 			}
 			set_variable = {
-				name = com_interorg_leader_character_var
+				name = com_interorg_chair_var
 				value = scope:new_high_mage
 			}
 		}
