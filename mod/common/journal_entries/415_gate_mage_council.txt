@@ -63,14 +63,7 @@
                             }
                         }
                     }
-                    remove_variable = com_interorg_chair_var
-                    set_variable = gate_arcane_council_elections
-                    every_scope_je_involved = {
-                        limit = {
-                            is_player = yes
-                        }
-                        trigger_event = gate_arcane_council.3
-                    }
+                    gate_elect_arcane_council_high_mage = yes
                 }
             }
         }

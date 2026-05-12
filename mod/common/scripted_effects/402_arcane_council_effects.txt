@@ -40,3 +40,23 @@ gate_leave_arcane_council = {
         }
     }
 }
+
+gate_elect_arcane_council_high_mage = {
+    ordered_scope_je_involved = {
+        limit = {
+            has_variable = magic_researcher
+        }
+        order_by = gate_arcane_council_election_score
+        max = 1
+        var:magic_researcher = {
+            save_scope_as = new_high_mage
+        }
+    }
+    set_variable = {
+        name = com_interorg_chair_var
+        value = scope:new_high_mage
+    }
+    every_scope_je_involved = {
+        post_notification = gate_new_high_mage
+    }
+}
