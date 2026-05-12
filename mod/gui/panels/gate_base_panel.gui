@@ -191,13 +191,67 @@ types gate_base_panel_types {
                     gate_character_small = {
                         visible = "[Not(ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End))]"
                         blockoverride "gate_character_tooltip" {
-                            tooltip = gg_panel_base_no_researcher
+                            tooltip = gg_panel_base_no_researcher_tooltip
                         }
                         blockoverride "gate_character_portrait" {
                             icon = {
                                 size = { 100% 100% }
                                 using = generic_highlight
                                 texture = "gfx/interface/portraits/portrait_frame_head_historical_info_link.dds"
+                            }
+                            button = {
+                                size = { 100% 100% }
+                                onclick = "[InformationPanelBar.OpenPanelTab('pops_overview', 'national_cast')]"
+
+                                ### show
+                                state = {
+                                    name = _show
+                                    on_start = "[PdxGuiWidget.AccessChild('icon').TriggerAnimation('show')]"
+                                    on_start = "[PdxGuiWidget.AccessChild('frame').TriggerAnimation('show')]"
+                                    on_start = "[PdxGuiWidget.AccessChild('wood').TriggerAnimation('show')]"
+                                }
+
+                                ### enter
+                                state = {
+                                    name = _mouse_enter
+                                    on_start = "[PdxGuiWidget.AccessChild('icon').TriggerAnimation('enter')]"
+                                    on_start = "[PdxGuiWidget.AccessChild('frame').TriggerAnimation('enter')]"
+                                    on_start = "[PdxGuiWidget.AccessChild('wood').TriggerAnimation('enter')]"
+                                }
+
+                                ### leave
+                                state = {
+                                    name = _mouse_leave
+                                    on_start = "[PdxGuiWidget.AccessChild('icon').InterruptThenTriggerAnimation('enter','leave')]"
+                                    on_start = "[PdxGuiWidget.AccessChild('frame').InterruptThenTriggerAnimation('enter','leave')]"
+                                    on_start = "[PdxGuiWidget.AccessChild('wood').InterruptThenTriggerAnimation('enter','leave')]"
+                                }
+
+                                ### press
+                                state = {
+                                    name = _mouse_press
+                                    on_start = "[PdxGuiWidget.AccessChild('icon').TriggerAnimation('press')]"
+                                    on_start = "[PdxGuiWidget.AccessChild('frame').TriggerAnimation('press')]"
+                                    on_start = "[PdxGuiWidget.AccessChild('wood').TriggerAnimation('press')]"
+                                }
+
+                                ### release
+                                state = {
+                                    name = _mouse_release
+                                    on_start = "[PdxGuiWidget.AccessChild('icon').TriggerAnimation('release')]"
+                                    on_start = "[PdxGuiWidget.AccessChild('frame').TriggerAnimation('release')]"
+                                    on_start = "[PdxGuiWidget.AccessChild('wood').TriggerAnimation('release')]"
+                                }
+                                
+                                button_icon_properties = {
+                                    blockoverride "icon_size" {
+                                        size = { 50% 50% }
+                                    }
+                                    blockoverride "icon" {
+                                        texture = "gfx/interface/buttons/button_icons/plus.dds"
+                                    }
+                                }
+                                using = select_button_sound
                             }
                         }
                         blockoverride "gate_opinion_visible" {

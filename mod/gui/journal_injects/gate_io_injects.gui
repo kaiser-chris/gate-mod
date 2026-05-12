@@ -66,6 +66,18 @@ flowcontainer = {
 			blockoverride "interorg_detail_3_texture" {
 				texture = "gfx/interface/icons/military_icons/organization.dds"
 			}
+			blockoverride "interorg_leader_tooltip" {
+				tooltipwidget = {
+					RegularTooltip = {
+						blockoverride "tooltip_content" {
+							custom_tooltip_textbox = {
+								text = io_gate_arcane_council_leader_tooltip
+							}
+						}
+					}
+				}
+				using = tooltip_center
+			}
 			blockoverride "interorg_leader_icon" {
 				texture = "gfx/interface/icons/io_icons/gate_arcane_council_leader.dds"
 			}
