@@ -3,7 +3,7 @@
         text = gate_is_arcane_council_leader
         subject = this
 
-        je:io_gate_arcane_council.var:com_interorg_leader_character_var ?= {
+        je:io_gate_arcane_council.var:com_interorg_chair_var ?= {
             owner = prev
         }
     }
@@ -15,6 +15,15 @@ gate_is_arcane_council_member = {
         subject = this
 
         has_variable = gate_joined_mage_council
+    }
+}
+
+gate_recently_joined_arcane_council = {
+    custom_description = {
+        text = gate_recently_joined_arcane_council
+        subject = this
+
+        has_variable = gate_arcane_council_leave_cooldown
     }
 }
 

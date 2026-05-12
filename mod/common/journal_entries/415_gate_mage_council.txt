@@ -20,20 +20,22 @@
             com_set_international_organization_headquaters_effect = {
                 state_region = global_var:gate_mage_council_headquarters
             }
-            set_variable = com_hide_scripted_buttons
-            set_variable = com_hide_journal_reason
-            set_variable = com_hide_involved_countries
-            set_variable = com_hide_complete_triggers
-            set_variable = com_hide_fail_triggers
-            set_variable = com_hide_modifiers
+            com_hide_all_journal_elements_for_interorg_effect = yes
             random_scope_je_involved = {
                 prev = {
                     set_variable = {
-                        name = com_interorg_leader_character_var
+                        name = com_interorg_chair_var
                         value = prev.var:magic_researcher
                     }
                 }
             }
+        }
+    }
+
+    on_become_involved_after_activation = {
+        set_variable = {
+            name = gate_arcane_council_leave_cooldown
+            months = 12
         }
     }
 
@@ -51,17 +53,17 @@
             scope:journal_entry = {
                 if = {
                     limit = {
-                        has_variable = com_interorg_leader_character_var
+                        has_variable = com_interorg_chair_var
                         OR = {
                             NOT = {
-                                exists = var:com_interorg_leader_character_var
+                                exists = var:com_interorg_chair_var
                             }
-                            var:com_interorg_leader_character_var ?= {
+                            var:com_interorg_chair_var ?= {
                                 is_character_alive = no
                             }
                         }
                     }
-                    remove_variable = com_interorg_leader_character_var
+                    remove_variable = com_interorg_chair_var
                     set_variable = gate_arcane_council_elections
                     every_scope_je_involved = {
                         limit = {
