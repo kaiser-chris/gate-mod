@@ -1,0 +1,121 @@
+﻿namespace = gate_pelly
+
+gate_pelly.1 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:murder_state
+
+	title = gate_pelly.1.t
+	desc = gate_pelly.1.d
+	flavor = gate_pelly.1.f
+
+	event_image = {
+		video = "southamerica_public_figure_assassination"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		NOT = {
+			has_variable = gate_pelly_event_happened
+			has_variable = gate_pelly_event_cooldown
+		}
+	}
+
+	immediate = {
+		set_variable = gate_pelly_event_happened
+		random_scope_state = {
+			save_scope_as = murder_state
+		}
+		random_scope_character = {
+			limit = {
+				is_character_alive = yes
+				is_interest_group_leader = yes
+			}
+			save_scope_as = clone
+		}
+	}
+
+	option = {
+		name = gate_pelly.1.a
+		default_option = yes
+		hidden_effect = {
+			trigger_event = {
+				id = gate_pelly.2
+				months = { 6 12 }
+			}
+		}
+	}
+}
+
+gate_pelly.2 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:diary_state
+
+	title = gate_pelly.2.t
+	desc = gate_pelly.2.d
+	flavor = gate_pelly.2.f
+
+	event_image = {
+		video = "ip3_police_raid"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	immediate = {
+		random_scope_state = {
+			save_scope_as = diary_state
+		}
+	}
+
+	option = {
+		name = gate_pelly.2.a
+		default_option = yes
+		hidden_effect = {
+			trigger_event = {
+				id = gate_pelly.3
+				months = { 6 12 }
+			}
+		}
+	}
+}
+
+gate_pelly.3 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:flight_state
+
+	title = gate_pelly.3.t
+	desc = gate_pelly.3.d
+	flavor = gate_pelly.3.f
+
+	event_image = {
+		video = "middleeast_police_breaking_door"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	immediate = {
+		random_scope_state = {
+			save_scope_as = flight_state
+		}
+	}
+
+	option = {
+		name = gate_pelly.3.a
+		default_option = yes
+	}
+}

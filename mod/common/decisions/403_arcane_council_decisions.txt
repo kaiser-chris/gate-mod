@@ -1,0 +1,73 @@
+﻿decision_gate_found_arcane_council = {
+	is_shown = {
+		has_variable = gate_foreign_mage_incident
+		NOT = {
+			has_global_variable = gate_mage_council_headquarters
+		}
+		is_magic_country = yes
+	}
+
+	possible = {
+		any_country = {
+			NOT = {
+				this = root
+				has_law_or_variant = law_type:law_isolationism
+			}
+			is_magic_country = yes
+			has_overlapping_interests = root
+			relations:root >= relations_threshold:cordial
+		}
+		NOT = {
+			# need to interact with other countries
+			has_law_or_variant = law_type:law_isolationism
+		}
+		NOT = {
+			# need to be able to regulate spellcasters
+			has_law_or_variant = law_type:law_gate_free_magic_users
+		}
+	}
+
+	when_taken = {
+		gate_found_arcane_council = yes
+	}
+}
+
+decision_gate_join_arcane_council = {
+	is_shown = {
+		has_variable = gate_foreign_mage_incident
+		gate_is_arcane_council_member = no
+		has_global_variable = gate_mage_council_headquarters
+		is_magic_country = yes
+	}
+
+	possible = {
+		NOT = {
+			# need to interact with other countries
+			has_law_or_variant = law_type:law_isolationism
+		}
+		NOT = {
+			# need to be able to regulate spellcasters
+			has_law_or_variant = law_type:law_gate_free_magic_users
+		}
+	}
+
+	when_taken = {
+		gate_join_arcane_council = yes
+	}
+}
+
+decision_gate_leave_arcane_council = {
+	is_shown = {
+		gate_is_arcane_council_member = yes
+	}
+
+	possible = {
+		gate_is_arcane_council_leader = no
+		gate_is_arcane_council_member = yes
+		gate_recently_joined_arcane_council = no
+	}
+
+	when_taken = {
+		gate_join_arcane_council = yes
+	}
+}

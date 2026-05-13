@@ -70,4 +70,17 @@ GLOBAL = {
     }
 
     setup_mana_density = yes
+
+    # These events can only happen once per game
+    # and only happen in 50% of countries
+    every_country = {
+        random = {
+            chance = 50
+            set_variable = gate_pelly_event_happened
+            set_variable = {
+                name = gate_pelly_event_cooldown
+                years = { 20 40 }
+            }
+        }
+    }
 }
