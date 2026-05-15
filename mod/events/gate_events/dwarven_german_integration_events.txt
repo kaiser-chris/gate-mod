@@ -28,11 +28,8 @@ gate_dwarven_german_integration.1 = {
 		name = gate_dwarven_german_integration.1.a
 		default_option = yes
 
-		scope:journal_entry = {
-			add_progress = {
-				name = pb_gate_german_integration
-				value = -5
-			}
+		gate_change_german_integration_progress = {
+			amount = -5
 		}
 		add_radicals = {
 			value = small_radicals
@@ -59,13 +56,9 @@ gate_dwarven_german_integration.1 = {
 	option = {
 		name = gate_dwarven_german_integration.1.b
 
-		scope:journal_entry = {
-			add_progress = {
-				name = pb_gate_german_integration
-				value = 5
-			}
+		gate_change_german_integration_progress = {
+			amount = 5
 		}
-
 		add_loyalists = {
 			value = small_radicals
 			culture = cu:alemannic
@@ -116,13 +109,9 @@ gate_dwarven_german_integration.2 = {
 		name = gate_dwarven_german_integration.2.a
 		default_option = yes
 
-		scope:journal_entry = {
-			add_progress = {
-				name = pb_gate_german_integration
-				value = -5
-			}
+		gate_change_german_integration_progress = {
+			amount = -5
 		}
-
 		add_radicals = {
 			value = small_radicals
 			culture = cu:alemannic
@@ -148,13 +137,9 @@ gate_dwarven_german_integration.2 = {
 	option = {
 		name = gate_dwarven_german_integration.2.b
 
-		scope:journal_entry = {
-			add_progress = {
-				name = pb_gate_german_integration
-				value = 10
-			}
+		gate_change_german_integration_progress = {
+			amount = 10
 		}
-
 		add_loyalists = {
 			value = small_radicals
 			culture = cu:alemannic
@@ -199,11 +184,9 @@ gate_dwarven_german_integration.3 = {
 	option = {
 		name = gate_dwarven_german_integration.3.a
 		default_option = yes
-		scope:journal_entry = {
-			add_progress = {
-				name = pb_gate_german_integration
-				value = 5
-			}
+
+		gate_change_german_integration_progress = {
+			amount = 5
 		}
 		add_loyalists = {
 			value = small_radicals
@@ -244,11 +227,9 @@ gate_dwarven_german_integration.4 = {
 	option = {
 		name = gate_dwarven_german_integration.4.a
 		default_option = yes
-		scope:journal_entry = {
-			add_progress = {
-				name = pb_gate_german_integration
-				value = 5
-			}
+
+		gate_change_german_integration_progress = {
+			amount = 5
 		}
 		add_magic_innovation = {
 			amount = 200
@@ -280,11 +261,9 @@ gate_dwarven_german_integration.5 = {
 	option = {
 		name = gate_dwarven_german_integration.5.a
 		default_option = yes
-		scope:journal_entry = {
-			add_progress = {
-				name = pb_gate_german_integration
-				value = 2
-			}
+
+		gate_change_german_integration_progress = {
+			amount = 5
 		}
 		add_loyalists = {
 			value = small_radicals
@@ -306,11 +285,8 @@ gate_dwarven_german_integration.5 = {
 	option = {
 		name = gate_dwarven_german_integration.5.b
 		default_option = yes
-		scope:journal_entry = {
-			add_progress = {
-				name = pb_gate_german_integration
-				value = -2
-			}
+		gate_change_german_integration_progress = {
+			amount = -2
 		}
 		ai_chance = {
 			base = 100
@@ -339,11 +315,8 @@ gate_dwarven_german_integration.6 = {
 	option = {
 		name = gate_dwarven_german_integration.5.a
 		default_option = yes
-		scope:journal_entry = {
-			add_progress = {
-				name = pb_gate_german_integration
-				value = 2
-			}
+		gate_change_german_integration_progress = {
+			amount = 2
 		}
 		add_radicals = {
 			value = small_radicals
@@ -365,11 +338,8 @@ gate_dwarven_german_integration.6 = {
 	option = {
 		name = gate_dwarven_german_integration.6.b
 		default_option = yes
-		scope:journal_entry = {
-			add_progress = {
-				name = pb_gate_german_integration
-				value = -2
-			}
+		gate_change_german_integration_progress = {
+			amount = -2
 		}
 		ai_chance = {
 			base = 50

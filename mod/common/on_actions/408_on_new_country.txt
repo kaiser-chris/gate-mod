@@ -1,0 +1,88 @@
+﻿# Root = Country
+# scope:target = Uprising country
+on_revolution_start = {
+    on_actions = {
+        on_gate_revolution_unlock_ethic
+    }
+}
+
+# Root = Country
+# scope:target = Uprising country
+on_gate_revolution_unlock_ethic = {
+    effect = {
+        set_variable = {
+            name = magic_ethics
+            value = 0
+        }
+        if = {
+            limit = {
+                has_modifier = ethic_diplomacy
+            }
+            scope:target = {
+                gate_unlock_ethic = {
+                    ethic = ethic_diplomacy
+                }
+            }
+        }
+        if = {
+            limit = {
+                has_modifier = ethic_discord
+            }
+            scope:target = {
+                gate_unlock_ethic = {
+                    ethic = ethic_discord
+                }
+            }
+        }
+        if = {
+            limit = {
+                has_modifier = ethic_environment
+            }
+            scope:target = {
+                gate_unlock_ethic = {
+                    ethic = ethic_environment
+                }
+            }
+        }
+        if = {
+            limit = {
+                has_modifier = ethic_economy
+            }
+            scope:target = {
+                gate_unlock_ethic = {
+                    ethic = ethic_economy
+                }
+            }
+        }
+        if = {
+            limit = {
+                has_modifier = ethic_harmony
+            }
+            scope:target = {
+                gate_unlock_ethic = {
+                    ethic = ethic_harmony
+                }
+            }
+        }
+        if = {
+            limit = {
+                has_modifier = ethic_neutral
+            }
+            scope:target = {
+                gate_unlock_ethic = {
+                    ethic = ethic_neutral
+                }
+            }
+        }
+        if = {
+            limit = {
+                has_modifier = ethic_war
+            }
+            scope:target = {
+                gate_unlock_ethic = {
+                    ethic = ethic_war
+                }
+            }
+        }
+    }
+}

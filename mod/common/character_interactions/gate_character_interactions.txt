@@ -4,7 +4,6 @@
     }
 
     potential = {
-        has_role = gate_arcanist
         home_country = {
             OR = {
                 is_magic_country = yes
@@ -20,7 +19,7 @@
     }
 
     ai_will_do = {
-        NOR = {
+        NAND = {
             has_variable = magic_researcher
             exists = var:magic_researcher
             var:magic_researcher ?= {
@@ -34,7 +33,7 @@
     }
 
     should_ai_evaluate = {
-        NOR = {
+        NAND = {
             has_variable = magic_researcher
             exists = var:magic_researcher
             var:magic_researcher ?= {
@@ -58,7 +57,18 @@
                     has_variable = actively_hiring_magic_researcher
                 }
             }
-            has_active_magic_project = no
+            OR = {
+                hidden_trigger = {
+                    NAND = {
+                        has_variable = magic_researcher
+                        exists = var:magic_researcher
+                        var:magic_researcher ?= {
+                            is_character_alive = yes
+                        }
+                    }
+                }
+                has_active_magic_project = no
+            }
         }
     }
 }

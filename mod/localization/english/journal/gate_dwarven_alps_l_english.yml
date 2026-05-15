@@ -18,6 +18,7 @@
  dwarven_tunnels_decision: "Digging Dwarven Tunnels"
  dwarven_tunnels_decision_desc: "Add $state_trait_dwarven_tunnels$ trait to mountainous states."
  dwarven_tunnels_decision_cooldown_tt: "Has not dug #v $state_trait_dwarven_tunnels$#! in the last 6 months"
+ effect_gate_change_german_integration_progress: "Change the German integration progress by [SCOPE.GetLocalVariable('integration_change').GetValue|+=0]%"
  pb_gate_german_integration_name: "Current state of Integration"
  pb_gate_german_integration_desc: "Progress: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|0%]#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]/100)%"
  pb_gate_german_integration_support_name: "Public Support of Integration"

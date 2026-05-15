@@ -21,6 +21,10 @@ gate_arcane_council.1 = {
 
 	trigger = {
 		gate_trigger_incident_events = yes
+		gate_is_arcane_council_member = no
+		NOT = {
+			has_global_variable = gate_spellcaster_incidents_grace_period
+		}
 	}
 
 	immediate = {
@@ -106,12 +110,16 @@ gate_arcane_council.2 = {
 
 	trigger = {
 		gate_trigger_incident_events = yes
+		gate_is_arcane_council_member = no
 		any_scope_state = {
 			state_region = {
 				NOT = {
 					has_harvest_condition = drought
 				}
 			}
+		}
+		NOT = {
+			has_global_variable = gate_spellcaster_incidents_grace_period
 		}
 	}
 

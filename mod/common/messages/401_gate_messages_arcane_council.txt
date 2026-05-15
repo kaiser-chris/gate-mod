@@ -1,6 +1,20 @@
 ﻿gate_new_high_mage = {
 	type = country
-	texture = "gfx/interface/icons/io_icons/gate_arcane_council_leader.dds"
+	texture = gfx/interface/icons/io_icons/gate_arcane_council_leader.dds
+
+	notification_type = toast
+}
+
+gate_arcane_council_member_join = {
+	type = country
+	texture = gfx/interface/icons/event_icons/event_gate_magic_knowledge.dds
+
+	notification_type = toast
+}
+
+gate_arcane_council_member_leave = {
+	type = country
+	texture = gfx/interface/icons/event_icons/event_gate_magic_knowledge.dds
 
 	notification_type = toast
 }

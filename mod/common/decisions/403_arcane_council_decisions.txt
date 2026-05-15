@@ -25,6 +25,7 @@
 			# need to be able to regulate spellcasters
 			has_law_or_variant = law_type:law_gate_free_magic_users
 		}
+		has_technology_researched = formalized_magic
 	}
 
 	when_taken = {
@@ -68,6 +69,6 @@ decision_gate_leave_arcane_council = {
 	}
 
 	when_taken = {
-		gate_join_arcane_council = yes
+		gate_leave_arcane_council = yes
 	}
 }
