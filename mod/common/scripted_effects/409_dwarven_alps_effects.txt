@@ -1,0 +1,16 @@
+﻿gate_change_german_integration_progress = {
+    custom_tooltip = {
+        text = effect_gate_change_german_integration_progress
+        set_local_variable = {
+            name = integration_change
+            value = $amount$
+        }
+        fix_variable_error = { variable = integration_change }
+        scope:journal_entry = {
+            add_progress = {
+                name = pb_gate_german_integration
+                value = $amount$
+            }
+        }
+    }
+}

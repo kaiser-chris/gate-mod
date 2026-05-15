@@ -196,7 +196,7 @@
 				text = je_gate_mbudye_fail_annex
                 OR = {
                     has_global_variable = mbudye_unification
-                    NOR = {
+                    NAND = {
                         exists = c:LND
                         exists = c:CHK
                         exists = c:KZM

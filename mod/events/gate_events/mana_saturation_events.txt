@@ -151,11 +151,18 @@ gate_mana_saturation.3 = {
 				state_region = {
 					var:mana_density >= medium_mana_density_threshhold
 				}
+				owner = {
+					has_overlapping_interests = root
+				}
 				arable_land >= 5
 			}
 			save_scope_as = magic_growing_state
 		}
 		save_scope_as = player_country
+	}
+
+	cooldown = {
+		years = { 2 4 }
 	}
 
 	# Our state

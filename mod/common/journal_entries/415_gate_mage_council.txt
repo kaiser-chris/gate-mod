@@ -37,6 +37,27 @@
             name = gate_arcane_council_leave_cooldown
             months = 12
         }
+        save_scope_as = joining_member
+        scope:journal_entry = {
+            every_scope_je_involved = {
+                limit = {
+                    this != root
+                }
+                post_notification = gate_arcane_council_member_join
+            }
+        }
+    }
+
+    on_no_longer_involved = {
+        save_scope_as = leaving_member
+        scope:journal_entry = {
+            every_scope_je_involved = {
+                limit = {
+                    this != root
+                }
+                post_notification = gate_arcane_council_member_leave
+            }
+        }
     }
 
     should_be_involved = {

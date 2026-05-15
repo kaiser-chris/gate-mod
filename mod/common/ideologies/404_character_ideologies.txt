@@ -355,3 +355,130 @@ ideology_gate_vampirism_purge = {
 
     character_ideology = yes
 }
+
+ideology_gate_dwarven_technocrat = {
+    icon = "gfx/interface/icons/ideology_icons/ideology_leader/idealogy_leader_technocratic.dds"
+
+    lawgroup_distribution_of_power = {
+        law_universal_suffrage = disapprove
+        law_census_voting = disapprove
+        law_wealth_voting = neutral
+        law_landed_voting = strongly_disapprove
+        law_single_party_state = approve
+        law_technocracy = strongly_approve
+        law_oligarchy = neutral
+        law_autocracy = neutral
+        law_anarchy = strongly_disapprove
+    }
+
+    lawgroup_economic_system = {
+        law_laissez_faire = strongly_approve
+        law_interventionism = strongly_approve
+        law_agrarianism = disapprove
+        law_traditionalism = disapprove
+        law_cooperative_ownership = strongly_disapprove
+        law_command_economy = strongly_disapprove
+        law_industry_banned = strongly_disapprove
+        law_extraction_economy = strongly_disapprove
+    }
+
+    lawgroup_labour_associations = {
+        law_combination_acts = disapprove
+        law_guild_system = strongly_approve
+        law_anti_strike_laws = strongly_disapprove
+        law_factory_councils = strongly_disapprove
+        law_corporatized_unions = neutral
+        law_right_to_associate = approve
+    }
+
+    country_trigger = {
+        country_has_primary_culture = cu:dwarven
+    }
+
+    interest_group_leader_trigger = {
+        owner = {
+            OR = {
+                has_journal_entry = je_gate_vampire_emergence
+                has_law = law_type:law_gate_vampire_monarchy
+            }
+        }
+        is_interest_group_type = ig_devout
+    }
+
+    non_interest_group_leader_trigger = {
+        # Agitators should have an ideology at odds with current laws
+        AND = {
+            has_role_of_type = agitator
+            owner = {
+                has_law = law_type:law_gate_vampire_monarchy
+            }
+        }
+        interest_group = {
+            is_interest_group_type = ig_devout
+        }
+    }
+
+    interest_group_leader_weight = {
+        value = {
+            add = 100
+            desc = "base_value"
+        }
+
+        # More likely if issues are relevant
+        if = {
+            limit = {
+                owner.ideology_gate_dwarven_technocrat_disfavoured_laws > 0
+            }
+            add = {
+                value = owner.ideology_gate_dwarven_technocrat_disfavoured_laws
+                multiply = 25
+                desc = "DISFAVORED_LAWS"
+            }
+        }
+
+        # Less likely if issues are not relevant
+        if = {
+            limit = {
+                owner.ideology_gate_dwarven_technocrat_disfavoured_laws > 0
+            }
+            subtract = {
+                value = owner.ideology_gate_dwarven_technocrat_disfavoured_laws
+                multiply = 25
+                desc = "FAVORED_LAWS"
+            }
+        }
+    }
+
+    non_interest_group_leader_weight = {
+        value = {
+            add = 100
+            desc = "base_value"
+        }
+
+        # More likely if issues are relevant
+        if = {
+            limit = {
+                owner.ideology_gate_dwarven_technocrat_disfavoured_laws > 0
+            }
+            add = {
+                value = owner.ideology_gate_dwarven_technocrat_disfavoured_laws
+                multiply = 25
+                desc = "DISFAVORED_LAWS"
+            }
+        }
+
+        # Less likely if issues are not relevant
+        if = {
+            limit = {
+                owner.ideology_gate_dwarven_technocrat_disfavoured_laws > 0
+            }
+            subtract = {
+                value = owner.ideology_gate_dwarven_technocrat_disfavoured_laws
+                multiply = 25
+                desc = "FAVORED_LAWS"
+            }
+        }
+    }
+
+    character_ideology = yes
+}

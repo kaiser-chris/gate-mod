@@ -1,0 +1,34 @@
+﻿ideology_gate_dwarven_technocrat_disfavoured_laws = {
+    # Laws that ideology_gate_dwarven_technocrat likes the least.
+    # Maximum value = 3
+    value = 0
+    if = {
+        limit = {
+            OR = {
+                has_law_or_variant = law_type:law_landed_voting
+                has_law_or_variant = law_type:law_anarchy
+            }
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            OR = {
+                has_law_or_variant = law_type:law_cooperative_ownership
+                has_law_or_variant = law_type:law_command_economy
+                has_law_or_variant = law_type:law_industry_banned
+                has_law_or_variant = law_type:law_extraction_economy
+            }
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            OR = {
+                has_law_or_variant = law_type:law_anti_strike_laws
+                has_law_or_variant = law_type:law_factory_councils
+            }
+        }
+        add = 1
+    }
+}

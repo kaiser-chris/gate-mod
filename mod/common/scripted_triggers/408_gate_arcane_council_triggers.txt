@@ -14,7 +14,14 @@ gate_is_arcane_council_member = {
         text = gate_is_arcane_council_member
         subject = this
 
-        has_variable = gate_joined_mage_council
+        OR = {
+            has_variable = gate_joined_mage_council
+            je:io_gate_arcane_council ?= {
+                any_scope_je_involved = {
+                    this = root
+                }
+            }
+        }
     }
 }
 
