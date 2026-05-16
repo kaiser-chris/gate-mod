@@ -54,11 +54,17 @@ gate_project_can_start_expand_research_institute = {
 
 gate_project_can_start_domain = {
 	has_technology_researched = formalized_magic
-	trigger_if = {
-		limit = {
-			exists = var:magic_ethics
+	custom_tooltip = {
+		text = je_gate_project_domain_condition_domain_slot
+		trigger_if = {
+			limit = {
+				exists = var:magic_ethics
+			}
+			var:magic_ethics < 3
 		}
-		var:magic_ethics < 3
+		trigger_else = {
+			always = no
+		}
 	}
 	is_magic_country = yes
 	has_magic_researcher = yes
@@ -67,6 +73,31 @@ gate_project_can_start_domain = {
 		text = je_gate_project_domain_condition_not_researched
 		NOT = {
 			has_variable = gate_has_researched_domain
+		}
+	}
+}
+
+gate_project_can_start_change_domain = {
+	has_technology_researched = formalized_magic
+	is_magic_country = yes
+	has_magic_researcher = yes
+	has_active_magic_project = no
+	custom_tooltip = {
+		text = je_gate_project_change_domain_condition_max_domains
+		trigger_if = {
+			limit = {
+				exists = var:magic_ethics
+			}
+			var:magic_ethics >= 3
+		}
+		trigger_else = {
+			always = no
+		}
+	}
+	custom_tooltip = {
+		text = je_gate_project_change_domain_condition_not_researched
+		NOT = {
+			has_variable = gate_has_researched_change_domains
 		}
 	}
 }

@@ -22,7 +22,15 @@
  je_gate_project_domain: "Research $concept_magic_ethics$"
  je_gate_project_domain_reason: "[concept_magic_researcher] [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName] is currently working on #bold $je_gate_project_domain$#!.\n$gate_journal_delimiter$\n$je_gate_project_domain_description$"
  je_gate_project_domain_description: "[Concept('concept_magic_ethic','$concept_magic_ethics$')] represent our view of magic in our society and provide massive boosts to our country. This project will let us choose an additional [concept_magic_ethic]."
- je_gate_project_domain_condition_not_researched: "Not already researched a new [concept_magic_ethic]"
+ je_gate_project_domain_condition_not_researched: "[THIS.GetCountry.GetNameNoFlag] has not already researched a new [concept_magic_ethic]"
+ je_gate_project_domain_condition_domain_slot: "[THIS.GetCountry.GetNameNoFlag] has at least one free [concept_magic_ethic] slot"
+ # Change Arcane Domains
+ button_project_change_domain: "Change $concept_magic_ethics$"
+ je_gate_project_change_domain: "Change $concept_magic_ethics$"
+ je_gate_project_change_domain_reason: "[concept_magic_researcher] [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName] is currently working on #bold $je_gate_project_change_domain$#!.\n$gate_journal_delimiter$\n$je_gate_project_change_domain_description$"
+ je_gate_project_change_domain_description: "[Concept('concept_magic_ethic','$concept_magic_ethics$')] represent our view of magic in our society and provide massive boosts to our country. This project will let us change our active [Concept('concept_magic_ethic','$concept_magic_ethics$')]. #r We can only change our [Concept('concept_magic_ethic','$concept_magic_ethics$')] domains once!#!"
+ je_gate_project_change_domain_condition_max_domains: "[THIS.GetCountry.GetNameNoFlag] is using all three [concept_magic_ethic] slots"
+ je_gate_project_change_domain_condition_not_researched: "[THIS.GetCountry.GetNameNoFlag] has not already changed their [Concept('concept_magic_ethic','$concept_magic_ethics$')]"
 # Improve Mana Extraction
  button_project_improve_mana_extraction: "Improve Mana Extraction"
  je_gate_project_improve_mana_extraction: "Improve Mana Extraction"

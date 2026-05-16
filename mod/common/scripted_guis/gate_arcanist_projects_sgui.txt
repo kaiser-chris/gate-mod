@@ -30,6 +30,22 @@ gg_project_domain = {
     }
 }
 
+gg_project_change_domain = {
+    scope = country
+
+    is_valid = {
+        gate_project_can_start_change_domain = yes
+    }
+
+    effect = {
+        gate_start_magic_project = {
+            project = je_gate_project_change_domain
+            monthly_cost = money_amount_multiplier_large
+            months = gate_project_journal_entry_very_long
+        }
+    }
+}
+
 gg_project_improve_mana_extraction = {
     scope = country
 

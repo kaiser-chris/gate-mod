@@ -1762,7 +1762,7 @@ types gate_base_panel_types {
                             RegularTooltip = {
                                 blockoverride "tooltip_content" {
                                     custom_tooltip_textbox = {
-                                        text = "[concept_gate_project]"
+                                        text = "[Localize('je_gate_project_expand_research_institute')] [concept_gate_project]"
                                         default_format = "#header"
                                     }
                                     custom_tooltip_textbox_with_empty_line = {
@@ -1784,18 +1784,47 @@ types gate_base_panel_types {
                         text = button_project_domain
                     }
                     blockoverride "icon" {
-                        texture = "gfx/interface/icons/gui_icons/gate_magic_researcher.dds"
+                        texture = "gfx/interface/icons/gui_icons/projects/gate_project_domain.dds"
                     }
                     blockoverride "tooltip" {
                         tooltipwidget = {
                             RegularTooltip = {
                                 blockoverride "tooltip_content" {
                                     custom_tooltip_textbox = {
-                                        text = "[concept_gate_project]"
+                                        text = "[Localize('je_gate_project_domain')] [concept_gate_project]"
                                         default_format = "#header"
                                     }
                                     custom_tooltip_textbox_with_empty_line = {
                                         text = je_gate_project_domain_description
+                                    }
+                                    custom_tooltip_textbox = {
+                                        text = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(Country.MakeScope).End)]"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                gate_left_icon_button = {
+                    blockoverride "datacontext" {
+                        datacontext = "[GetScriptedGui('gg_project_change_domain')]"
+                    }
+                    blockoverride "button_content" {
+                        text = button_project_change_domain
+                    }
+                    blockoverride "icon" {
+                        texture = "gfx/interface/icons/gui_icons/projects/gate_project_change_domain.dds"
+                    }
+                    blockoverride "tooltip" {
+                        tooltipwidget = {
+                            RegularTooltip = {
+                                blockoverride "tooltip_content" {
+                                    custom_tooltip_textbox = {
+                                        text = "[Localize('je_gate_project_change_domain')] [concept_gate_project]"
+                                        default_format = "#header"
+                                    }
+                                    custom_tooltip_textbox_with_empty_line = {
+                                        text = je_gate_project_change_domain_description
                                     }
                                     custom_tooltip_textbox = {
                                         text = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(Country.MakeScope).End)]"
@@ -1828,7 +1857,7 @@ types gate_base_panel_types {
                             RegularTooltip = {
                                 blockoverride "tooltip_content" {
                                     custom_tooltip_textbox = {
-                                        text = "[concept_gate_project]"
+                                        text = "[Localize('je_gate_project_improve_mana_extraction')] [concept_gate_project]"
                                         default_format = "#header"
                                     }
                                     custom_tooltip_textbox_with_empty_line = {
@@ -1857,7 +1886,7 @@ types gate_base_panel_types {
                             RegularTooltip = {
                                 blockoverride "tooltip_content" {
                                     custom_tooltip_textbox = {
-                                        text = "[concept_gate_project]"
+                                        text = "[Localize('je_gate_project_modernize_seed_selection')] [concept_gate_project]"
                                         default_format = "#header"
                                     }
                                     custom_tooltip_textbox_with_empty_line = {
@@ -1886,7 +1915,7 @@ types gate_base_panel_types {
                             RegularTooltip = {
                                 blockoverride "tooltip_content" {
                                     custom_tooltip_textbox = {
-                                        text = "[concept_gate_project]"
+                                        text = "[Localize('je_gate_project_artificial_ecosystem')] [concept_gate_project]"
                                         default_format = "#header"
                                     }
                                     custom_tooltip_textbox_with_empty_line = {
