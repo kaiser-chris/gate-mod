@@ -39,4 +39,11 @@
 		set_relations = { country = c:GATE_OK value = -30 }
 	}
 
+	c:GATE_BN = {
+		set_relations = { country = c:RUS value = 10 }
+	}
+	c:RUS = {
+		set_relations = { country = c:GATE_BN value = 10 }
+	}
+
 }

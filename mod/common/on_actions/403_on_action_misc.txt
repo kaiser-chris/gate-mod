@@ -199,11 +199,16 @@ on_gate_game_started = {
                 country = c:GATE_BN
                 provinces = { xFFEF4A }
             }
+            # Cleaning up some impassable provinces
+            set_owner_of_provinces = {
+                country = c:ALK
+                provinces = { x5c9007 x63a92c xf423db }
+            }
         }
         s:STATE_YUKON_TERRITORY = {
             set_owner_of_provinces = {
                 country = c:GATE_BN
-                provinces = { xB3CC99 }
+                provinces = { xB3CC99 xFBEEDF }
             }
         }
 

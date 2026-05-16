@@ -1,0 +1,35 @@
+﻿COUNTRIES = {
+    c:GATE_BN = {
+        effect_starting_technology_tier_4_tech = yes
+        effect_starting_politics_conservative = yes
+        effect_starting_pop_literacy_low = yes
+        effect_starting_pop_wealth_low = yes
+
+        # Technology
+        learn_magic = yes
+        add_technology_researched = bear_gate_immigration # Ursalith Concord
+        add_technology_researched = mana_lanterns
+        add_technology_researched = mage_infantry
+        add_technology_researched = mage_artillery
+        add_technology_researched = gate_mana_extraction
+        add_technology_researched = magic_farming
+        add_technology_researched = colonization
+
+        # Laws
+        activate_law = law_type:law_private_monster_hunters
+        activate_law = law_type:law_guild_system
+        activate_law = law_type:law_no_schools
+        activate_law = law_type:law_peasant_levies
+        activate_law = law_type:law_autocracy
+        activate_law = law_type:law_freedom_of_conscience
+        activate_law = law_type:law_gate_noble_magic_users
+        activate_law = law_type:law_land_based_taxation
+        activate_law = law_type:law_right_of_assembly
+
+        # Institutions
+        set_institution_investment_level = {
+            institution = institution_gate_monster_hunting
+            level = 1
+        }
+    }
+}

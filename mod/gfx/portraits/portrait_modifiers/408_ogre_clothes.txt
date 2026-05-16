@@ -37,6 +37,7 @@
                         clergy_clothes_pop_trigger = yes
                         soldier_clothes_pop_trigger = yes
                         officers_clothes_pop_trigger = yes
+                        magic_users_clothes_pop_trigger = yes
                     }
                 }
             }
@@ -786,7 +787,10 @@
                 add = 500
                 AND = {
                     gate_south_ogre_portrait_pop_trigger = yes
-                    upper_clothes_pop_trigger = yes
+                    OR = {
+                        upper_clothes_pop_trigger = yes
+                        magic_users_clothes_pop_trigger = yes
+                    }
                 }
             }
         }

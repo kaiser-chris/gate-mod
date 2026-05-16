@@ -19,4 +19,40 @@
         }
     }
 
+    # Trade agreement
+    create_treaty = {
+        first_country = c:GATE_BN
+        second_country = c:RUS
+
+        is_draft = no
+        entered_into_force_on = 1828.9.4
+        binding_period = { years = 20 }
+
+        articles_to_create = {
+            {
+                article = goods_transfer
+                source_country = c:RUS
+                target_country = c:GATE_BN
+                inputs = {
+                    { goods = g:grain }
+                    { quantity = 30 }
+                }
+            }
+            {
+                article = foreign_investment_rights
+                source_country = c:GATE_BN
+                target_country = c:RUS
+            }
+            {
+                article = acquire_monopoly_for_company
+                source_country = c:GATE_BN
+                target_country = c:RUS
+                inputs = {
+                    { building_type = bt:building_whaling_station }
+                    { company = c:RUS.company:company_russian_american_company }
+                }
+            }
+        }
+    }
+
 }
