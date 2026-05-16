@@ -1,21 +1,5 @@
 ﻿STATES = {
 
-    s:STATE_TEXAS = {
-        add_homeland = cu:gate_south_ogre
-    }
-
-    s:STATE_NEW_MEXICO = {
-        add_homeland = cu:gate_south_ogre
-    }
-
-    s:STATE_KANSAS = {
-        add_homeland = cu:gate_south_ogre
-    }
-
-    s:STATE_OKLAHOMA = {
-        add_homeland = cu:gate_south_ogre
-    }
-
     s:STATE_ALASKA = {
         create_state = {
             country = c:GATE_BN
@@ -28,37 +12,37 @@
                 x187903 x19A941 x1A3FD2 x1ACBF6
                 x1AF72A x1BB4AE x1C1D5C x1C913E
                 x1EA9EC x1F8C10 x1F91CD x1F9404
-                x1FD8CA x20542B x22FF97 x234E0D
+                x1FD8CA x20542B x22FF97 xFAB0F8
                 x23D48A x23DD75 x24370A x24BE2A
                 x253FF9 x26FFD5 x2833EA xFFA2D9
                 x28B754 x2AD37E x2BABD1 x2C6A78
                 x2CF213 x2ECA46 x2FAD9F x2FDB96
-                x305FA1 x32B588 x338931 x34B2EB
+                x305FA1 x32B588 x338931 xFA8312
                 x363D7D x3A610F x3A820B x3E24C2
                 x3F3355 x3F5233 x4178F3 x428625
-                x4303A0 x43BD4A x4439B6 x45AD0B
+                x43BD4A x4439B6 xFB1C89 xFB564A
                 x4611B7 x46B363 x480772 x482346
                 x4882E2 x4892C6 x49B6A7 x4ACA7D
                 x4B9FCF x4BD9C0 x4BF073 x4E2DE8
-                x500225 x503546 x50E9C9 x5252F1
+                x500225 x50E9C9 x5252F1 xF8D55C
                 x525437 x530023 x53460F x54420B
                 x5493CE x54CCD1 x556A9C x5691E1
                 x578EC0 x586777 x597D5B x5BCBEF
-                x5C16DA x5C1B94 x5C2504 x5C9007
+                x5C16DA x5C1B94 x5C2504 xF98C57
                 x5D47CB x5D85E6 x5E40F0 x5FEBC5
                 x60097A x60FD80 x60FF15 x61044C
-                x621713 x63763A x63A92C xFEE042
+                x621713 x63763A xFEE042 xF9970B
                 x65F4A4 x66FD83 x6849EB x686709
                 x68C2CF x69404C x6A2079 x6AC829
                 x6D881E x6E9306 x6F0069 x6F0EE2
-                x6F939A x727644 x73119D x747BC4
+                x6F939A x727644 x747BC4 xF9F1F9
                 x757B4E x75E9F3 x779C7E x77EABF
                 x78DB78 x79EDDF x7A5194 x7A9E4A
                 x7B0564 x7B4B44 x7BA13E x7BEC33
                 x7BFA16 x7CBA6B x7CF944 x7E592E
-                x7EA5BE x7EDDFF x7F2642 x829FA5
+                x7EA5BE x7F2642 x829FA5 xFA9725
                 x82A904 x82AFA4 x83CBFA x845384
-                x845ADE x873584 x88609E x89EE66
+                x845ADE x88609E x89EE66 xFC2D40
                 x8A9C85 x8C4397 x8FE2A1 x907257
                 x9168F2 x92CFCD x93D9AF x94668A
                 x949950 x960E69 x97C429 x980CEE
@@ -73,22 +57,22 @@
                 xB85DF0 xB8D69A xB94969 xB95C03
                 xBBE899 xBBEFB1 xBC6EEB xBD645E
                 xBDDFD3 xBE50E0 xBE7EF2 xBED6A4
-                xBF19E4 xBF25ED xBFCBCE xC00000
+                xBF19E4 xBF25ED xBFCBCE xFCA5FD
                 xC06675 xC12EDD xC2B7E3 xC43B66
                 xC5F076 xC68367 xC69FDD xC71793
                 xC7D17E xC90E0E xC91FE0 xCBAB01
                 xCC907A xCCB18D xCCE598 xCDD6E6
-                xCDDE8C xCDEC4F xD051DB xD065F1
+                xCDDE8C xCDEC4F xD065F1 xFD9F16
                 xD34196 xD43DAE xD67098 xD6791C
                 xD82BF2 xD89E7C xD93A7E xD9F1D6
                 xDB358C xDB754C xE13BE7 xE22E41
-                xE2E073 xE335C5 xE412C4 xE4F7C8
+                xE2E073 xE412C4 xE4F7C8 xFDA67A
                 xE5C832 xE5CA6A xE66B32 xE7BB84
                 xE8B145 xE99351 xEC0F84 xEC7C72
                 xED1257 xEE840F xEF956E xF0CB3D
-                xF181C1 xF2A65E xF2C82C xF2D85D
+                xF181C1 xF2A65E xF2C82C xFDB4ED
                 xF323DB xF3569C xF35E72 xF3698C
-                xF39AB9 xF3DC5C xF423DB xF4A312
+                xF39AB9 xF3DC5C xF4A312 xFE1835
                 xF54742 xF55596 xF61916 xF62433
                 xF692C4 xF7F983 xF86B0B xF8E85E
                 xF9A1A2 xFEA40C x0017A3 x01014E
@@ -161,13 +145,13 @@
                 x583292 x5944CF x59792F x598AE1
                 x5993E2 x5A3AC0 x5A76D4 x5AB097
                 x5B4881 x5BF345 x5C1431 x5C153E
-                x5C257E x5C3A5B x5C61D9 x5C9007
+                x5C257E x5C3A5B x5C61D9 xFE76E8
                 x5C9E7F x5CF8E8 x5D05D1 x5D3DBE
                 x5D63E2 x5E8C2F x5EB7E7 x5EDA62
                 x5EDB0A x5FCC5F x6023B2 x602C66
                 x603022 x612D4C x614A0B x6153B9
                 x615B55 x6191B6 x62CBC5 x62CD2D
-                x62DCD3 x6382DD x63A349 x63A92C
+                x62DCD3 x6382DD x63A349 xFECC2E
                 x63D2B4 x641A73 x645235 x648923
                 x650AF8 x651ABF x657466 x65AFCB
                 x66DDBD x66E939 x6703FD x67FE84
@@ -269,15 +253,10 @@
                 xEC738A xEC87AD xED30D2 xED78CE
                 xEE6D5F xEE75BD xEEA176 xEF0536
                 xEFA80C xF04A61 xF0F89B xF20258
-                xF34270 xF38808 xF423DB xF48040
+                xF34270 xF38808 xF48040 xFF0829
                 xF49BDC xF4E6EE xF4F758 xF504B3
                 xF59546 xF5FFDC xF66766 xF76975
-                xF81433 xF8A372 xF8D55C xF98C57
-                xF9970B xF9F1F9 xFA8312 xFA9725
-                xFAB0F8 xFB1C89 xFB564A xFC2D40
-                xFCA5FD xFD9F16 xFDA67A xFDB4ED
-                xFE1835 xFE76E8 xFECC2E xFF0829
-
+                xF81433 xF8A372
                 # Provinces that need to be annexed in global:
                 # - c:ATB: xFFEF4A
             }
@@ -292,6 +271,11 @@
             type = building_iron_mine
             amount = 12
         }
+        change_resource_potential = {
+            type = building_whaling_station
+            amount = 8
+        }
+        add_resource_potential = building_wheat_farm
     }
 
     s:STATE_BRITISH_COLUMBIA = {
@@ -328,6 +312,7 @@
             state_type = incorporated
         }
         add_homeland = cu:gate_arctic_ogre
+        add_claim = c:GATE_BN
     }
 
     s:STATE_YUKON_TERRITORY = {
@@ -418,7 +403,7 @@
                 xC0D262 xF8016C x65CD76 xB605A8
                 x3E2CBF xCFC665 xCC1729 x4EC559
                 x8FCD85 x8B7244 x0BB9B5 xEE94F4
-                xDAE588 x44D809 xFBEEDF x646CD4
+                xDAE588 x44D809 x646CD4 x7D3108
                 x17C9D9 x61DCFE xBEF70D xEF10B4
                 x5D50CD x4209BE xAF1060 xD1FE3A
                 xD905FA xA9AFA9 x07ECF5 x504A1A
@@ -429,7 +414,7 @@
                 x0DBA60 x6D753E xADA6D6 x1C7F21
                 xAD0039 xE7C2E0 x07A351 xFA64B0
                 x2CA985 x62AE36 xE46B89 xE7EF77
-                x787004 x354974 x7D3108
+                x787004 x354974
 
                 # Provinces that need to be annexed in global:
                 # - c:HBC: xB3CC99
@@ -437,6 +422,7 @@
             state_type = incorporated
         }
         add_homeland = cu:gate_arctic_ogre
+        add_resource_potential = building_wheat_farm
     }
 
 }

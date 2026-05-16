@@ -748,7 +748,10 @@
                 add = 500
                 AND = {
                     vampire_portrait_pop_trigger = yes
-                    upper_clothes_pop_trigger = yes
+                    OR = {
+                        upper_clothes_pop_trigger = yes
+                        upper_clothes_pop_trigger = yes
+                    }
                 }
             }
         }

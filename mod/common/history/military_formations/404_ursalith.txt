@@ -1,0 +1,31 @@
+﻿MILITARY_FORMATIONS = {
+	c:GATE_BN = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_pacific_coast
+			combat_unit = {
+				type = unit_type:combat_unit_type_mage_infantry
+				state_region = s:STATE_YUKON_TERRITORY
+				count = 10
+			}
+			save_scope_as = gbn_army
+		}
+
+		create_character = {
+			birth_date = 1799.5.11
+			culture = gate_arctic_ogre
+			hq = region_pacific_coast
+			is_general = yes
+			interest_group = ig_armed_forces
+			commander_rank = commander_rank_1
+			traits = {
+
+			}
+			save_scope_as = gbn_commander
+		}
+
+		scope:gbn_commander = {
+			transfer_to_formation = scope:gbn_army
+		}
+	}
+}

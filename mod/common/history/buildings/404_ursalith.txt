@@ -14,12 +14,28 @@ BUILDINGS = {
                 add_ownership = {
                     country = {
                         country = c:GATE_BN
+                        levels = 3
+                    }
+                }
+                reserves = 1
+                subsidized = no
+                activate_production_methods = {
+                    pm_basic_port
+                }
+            }
+            create_building = {
+                building = building_shipyard
+                add_ownership = {
+                    building = {
+                        type = building_shipyard
+                        country = c:GATE_BN
                         levels = 1
+                        region = STATE_ALASKA
                     }
                 }
                 reserves = 1
                 activate_production_methods = {
-                    pm_basic_port
+                    pm_basic_shipbuilding
                 }
             }
             create_building = {
@@ -70,21 +86,51 @@ BUILDINGS = {
                 }
             }
             create_building = {
-                building = "building_livestock_ranch"
+                building = "building_whaling_station"
                 add_ownership = {
-                    building = {
-                        type = "building_manor_house"
-                        country = "c:GATE_BN"
-                        levels = 5
-                        region = "STATE_ALASKA"
+                    company = {
+                        country = c:RUS
+                        type = company_russian_american_company
+                        levels = 1
                     }
                 }
                 reserves = 1
                 activate_production_methods = {
-                    "pm_simple_ranch"
-                    "pm_slaughterhouses"
-                    "pm_standard_fences"
+                    "pm_simple_whaling"
                     "pm_unrefrigerated"
+                }
+            }
+            create_building = {
+                building = building_livestock_ranch
+                add_ownership = {
+                    building = {
+                        type = building_manor_house
+                        country = c:GATE_BN
+                        levels = 9
+                        region = STATE_ALASKA
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_simple_ranch
+                    pm_butchering_tools
+                    pm_standard_fences
+                    pm_unrefrigerated
+                }
+            }
+            create_building = {
+                building = building_druid_grove
+                add_ownership = {
+                    building = {
+                        type = building_mage_tower
+                        country = c:GATE_BN
+                        levels = 3
+                        region = STATE_ALASKA
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_classic_magic_seed
                 }
             }
             create_building = {
@@ -98,23 +144,55 @@ BUILDINGS = {
                 }
             }
             create_building = {
-                building = "building_paper_mill"
+                building = building_paper_mill
                 add_ownership = {
                     building = {
-                        type = "building_financial_district"
-                        country = "c:GATE_BN"
+                        type = building_financial_district
+                        country = c:GATE_BN
                         levels = 1
-                        region = "STATE_ALASKA"
+                        region = STATE_ALASKA
                     }
                 }
                 reserves = 1
                 activate_production_methods = {
-                    "pm_pulp_pressing"
-                    "pm_automation_disabled"
+                    pm_pulp_pressing
+                    pm_automation_disabled
                 }
             }
-
-            # Add buildings here
+            create_building = {
+                building = building_wheat_farm
+                add_ownership = {
+                    building = {
+                        type = building_manor_house
+                        country = c:GATE_BN
+                        levels = 4
+                        region = STATE_ALASKA
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_soil_enriching_farming
+                    pm_citrus_orchards
+                    pm_tools
+                    pm_magic_seeds
+                }
+            }
+            create_building = {
+                building = building_fishing_wharf
+                add_ownership = {
+                    building = {
+                        type = building_fishing_wharf
+                        country = c:GATE_BN
+                        levels = 2
+                        region = STATE_ALASKA
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_fishing_trawlers
+                    pm_unrefrigerated
+                }
+            }
         }
     }
 
@@ -129,14 +207,14 @@ BUILDINGS = {
                     building = {
                         type = "building_manor_house"
                         country = "c:GATE_BN"
-                        levels = 1
+                        levels = 2
                         region = "STATE_YUKON_TERRITORY"
                     }
                 }
                 reserves = 1
                 activate_production_methods = {
                     "pm_simple_ranch"
-                    "pm_slaughterhouses"
+                    "pm_butchering_tools"
                     "pm_standard_fences"
                     "pm_unrefrigerated"
                 }
@@ -174,6 +252,21 @@ BUILDINGS = {
                 }
             }
             create_building = {
+                building = building_mana_extractor
+                add_ownership = {
+                    building = {
+                        levels = 2
+                        type = building_mana_extractor
+                        country = c:GATE_BN
+                        region = STATE_YUKON_TERRITORY
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_mage_mana_extraction
+                }
+            }
+            create_building = {
                 building = building_magic_research_institute
                 level = 1
                 reserves = 1
@@ -181,8 +274,92 @@ BUILDINGS = {
                     pm_novice_researcher
                 }
             }
-
-            # Add buildings here
+            create_building = {
+                building = building_textile_mill
+                add_ownership = {
+                    building = {
+                        levels = 1
+                        type = building_financial_district
+                        country = c:GATE_BN
+                        region = STATE_YUKON_TERRITORY
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    "pm_handsewn_clothes"
+                    "pm_no_luxury_clothes"
+                    "pm_traditional_looms"
+                }
+            }
+            create_building = {
+                building = building_furniture_manufactory
+                add_ownership = {
+                    building = {
+                        levels = 1
+                        type = building_furniture_manufactory
+                        country = c:GATE_BN
+                        region = STATE_YUKON_TERRITORY
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    "pm_lathe"
+                    "pm_no_luxuries"
+                    "pm_automation_disabled"
+                }
+            }
+            create_building = {
+                building = building_tooling_workshop
+                add_ownership = {
+                    building = {
+                        levels = 1
+                        type = building_financial_district
+                        country = c:GATE_BN
+                        region = STATE_YUKON_TERRITORY
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    "pm_pig_iron"
+                    "pm_automation_disabled"
+                }
+            }
+            create_building = {
+                building = building_logging_camp
+                add_ownership = {
+                    building = {
+                        levels = 2
+                        type = building_logging_camp
+                        country = c:GATE_BN
+                        region = STATE_YUKON_TERRITORY
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    "pm_saw_mills"
+                    "pm_no_equipment"
+                    "pm_road_carts"
+                    "pm_hardwood"
+                }
+            }
+            create_building = {
+                building = building_wheat_farm
+                add_ownership = {
+                    building = {
+                        type = building_manor_house
+                        country = c:GATE_BN
+                        levels = 2
+                        region = STATE_YUKON_TERRITORY
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_soil_enriching_farming
+                    pm_citrus_orchards
+                    pm_tools
+                    pm_magic_seeds
+                }
+            }
         }
 
     }
@@ -193,21 +370,39 @@ BUILDINGS = {
 
         region_state:GATE_BN = {
             create_building = {
-                building = "building_livestock_ranch"
+                building = building_livestock_ranch
                 add_ownership = {
                     building = {
-                        type = "building_manor_house"
-                        country = "c:GATE_BN"
-                        levels = 1
-                        region = "STATE_ALASKA"
+                        type = building_manor_house
+                        country = c:GATE_BN
+                        levels = 5
+                        region = STATE_ALASKA
                     }
                 }
                 reserves = 1
                 activate_production_methods = {
-                    "pm_simple_ranch"
-                    "pm_slaughterhouses"
-                    "pm_standard_fences"
-                    "pm_unrefrigerated"
+                    pm_butchering_tools
+                    pm_sheep_farms
+                    pm_standard_fences
+                    pm_unrefrigerated
+                }
+            }
+            create_building = {
+                building = building_wheat_farm
+                add_ownership = {
+                    building = {
+                        type = building_manor_house
+                        country = c:GATE_BN
+                        levels = 3
+                        region = STATE_BRITISH_COLUMBIA
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_soil_enriching_farming
+                    pm_citrus_orchards
+                    pm_tools
+                    pm_magic_seeds
                 }
             }
             # Add buildings here
@@ -283,18 +478,21 @@ BUILDINGS = {
                     "pm_unrefrigerated"
                 }
             }
-            create_building={
-				building="building_fishing_wharf"
-				add_ownership={
-					building={
-						type="building_fishing_wharf"
-						country="c:TEX"
-						levels=3
-						region="STATE_TEXAS"
+            create_building = {
+				building = "building_fishing_wharf"
+				add_ownership = {
+					building = {
+						type = "building_fishing_wharf"
+						country = "c:TEX"
+						levels = 3
+						region = "STATE_TEXAS"
 					}
 				}
-				reserves=1
-				activate_production_methods={ "pm_unrefrigerated" "pm_fishing_trawlers" }
+				reserves = 1
+				activate_production_methods = {
+                    "pm_unrefrigerated"
+                    "pm_fishing_trawlers"
+                }
 			}
             create_building = {
                 building = "building_paper_mill"
