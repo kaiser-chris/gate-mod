@@ -284,6 +284,14 @@
             state_type = incorporated
         }
         add_homeland = cu:gate_arctic_ogre
+        change_resource_potential = {
+            type = building_lead_mine
+            amount = 8
+        }
+        change_resource_potential = {
+            type = building_iron_mine
+            amount = 12
+        }
     }
 
     s:STATE_BRITISH_COLUMBIA = {
