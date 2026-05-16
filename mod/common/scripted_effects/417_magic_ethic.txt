@@ -7,3 +7,51 @@
         add = 1
     }
 }
+
+gate_reset_ethics = {
+    custom_tooltip = {
+        text = effect_gate_reset_ethics
+        if = {
+            limit = {
+                has_modifier = ethic_war
+            }
+            remove_modifier = ethic_war
+        }
+        if = {
+            limit = {
+                has_modifier = ethic_discord
+            }
+            remove_modifier = ethic_discord
+        }
+        if = {
+            limit = {
+                has_modifier = ethic_diplomacy
+            }
+            remove_modifier = ethic_diplomacy
+        }
+        if = {
+            limit = {
+                has_modifier = ethic_neutral
+            }
+            remove_modifier = ethic_neutral
+        }
+        if = {
+            limit = {
+                has_modifier = ethic_harmony
+            }
+            remove_modifier = ethic_harmony
+        }
+        if = {
+            limit = {
+                has_modifier = ethic_economy
+            }
+            remove_modifier = ethic_economy
+        }
+        if = {
+            limit = {
+                has_modifier = ethic_environment
+            }
+            remove_modifier = ethic_environment
+        }
+    }
+}
