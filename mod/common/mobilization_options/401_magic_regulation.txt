@@ -1,0 +1,146 @@
+﻿mobilization_option_gate_no_regulations = {
+	texture = "gfx/interface/icons/mobilization_options/gate_no_regulations.dds"
+
+	unlocking_technologies = {
+		magic_understanding_military
+	}
+
+	possible = {
+		scope:military_formation = {
+			NOR = {
+				has_mobilization_option = mobilization_option:mobilization_option_gate_basic_regulations
+				has_mobilization_option = mobilization_option:mobilization_option_gate_strict_regulations
+			}
+		}
+		NOT = {
+			modifier:country_gate_military_formation_forbid_no_magic_user_regulations = yes
+		}
+	}
+
+	on_deactivate_while_mobilized = {
+		custom_tooltip = {
+			text = mobilization_option_it_hurts_morale_when_you_remove_supplies_while_in_combat_tt
+			every_combat_unit = {
+				add_morale = {
+					value = morale
+					multiply = -0.5
+				}
+			}
+		}
+	}
+	
+	unit_modifier = {
+		unit_morale_recovery_mult = -0.05
+		unit_devastation_mult = 0.10
+		unit_combat_unit_type_mage_infantry_offense_mult = 0.05
+		unit_combat_unit_type_arcane_vangard_offense_mult = 0.05
+		unit_combat_unit_type_mana_rifle_infantry_offense_mult = 0.05
+		unit_combat_unit_type_rune_guard_infantry_offense_mult = 0.05
+		unit_combat_unit_type_thaumaturgic_commandos_offense_mult = 0.05
+	}
+
+	ai_weight = {
+		value = 1
+	}
+
+	group = gate_magic_user_regulation
+}
+
+mobilization_option_gate_basic_regulations = {
+	texture = "gfx/interface/icons/mobilization_options/gate_basic_regulations.dds"
+
+	unlocking_technologies = {
+		magic_understanding_military
+	}
+
+	upkeep_modifier = {
+		goods_input_paper_add = 0.5
+	}
+
+	possible = {
+		scope:military_formation = {
+			NOR = {
+				has_mobilization_option = mobilization_option:mobilization_option_gate_no_regulations
+				has_mobilization_option = mobilization_option:mobilization_option_gate_strict_regulations
+			}
+		}
+		NOT = {
+			modifier:country_gate_military_formation_forbid_basic_magic_user_regulations = yes
+		}
+	}
+
+	on_deactivate_while_mobilized = {
+		custom_tooltip = {
+			text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
+			add_organization = {
+				value = organization
+				multiply = -0.5
+			}
+		}
+	}
+
+	unit_modifier = {
+		unit_morale_recovery_mult = 0.05
+		military_formation_organization_gain_mult = 0.05
+		military_formation_mobilization_speed_mult = 0.05
+	}
+
+	ai_weight = {
+		value = 20
+	}
+
+	group = gate_magic_user_regulation
+}
+
+mobilization_option_gate_strict_regulations = {
+	texture = "gfx/interface/icons/mobilization_options/gate_strict_regulations.dds"
+
+	unlocking_technologies = {
+		magic_understanding_military
+	}
+
+	upkeep_modifier = {
+		goods_input_paper_add = 0.5
+	}
+
+	possible = {
+		scope:military_formation = {
+			NOR = {
+				has_mobilization_option = mobilization_option:mobilization_option_gate_no_regulations
+				has_mobilization_option = mobilization_option:mobilization_option_gate_basic_regulations
+			}
+		}
+		NOT = {
+			modifier:country_gate_military_formation_forbid_strict_magic_user_regulations = yes
+		}
+	}
+
+	on_deactivate_while_mobilized = {
+		custom_tooltip = {
+			text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
+			add_organization = {
+				value = organization
+				multiply = -0.5
+			}
+		}
+	}
+
+	unit_modifier = {
+		military_formation_organization_gain_mult = 0.10
+		unit_devastation_mult = -0.05
+		battle_defense_owned_province_mult = 0.05
+		battle_offense_owned_province_mult = 0.05
+		military_formation_mobilization_speed_mult = 0.10
+		unit_combat_unit_type_mage_infantry_offense_mult = -0.05
+		unit_combat_unit_type_arcane_vangard_offense_mult = -0.05
+		unit_combat_unit_type_mana_rifle_infantry_offense_mult = -0.05
+		unit_combat_unit_type_rune_guard_infantry_offense_mult = -0.05
+		unit_combat_unit_type_thaumaturgic_commandos_offense_mult = -0.05
+	}
+
+	ai_weight = {
+		value = 1
+	}
+
+	group = gate_magic_user_regulation
+}

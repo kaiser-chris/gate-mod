@@ -34,6 +34,17 @@ gate_recently_joined_arcane_council = {
     }
 }
 
+gate_arcane_council_recently_changed_military_regulations = {
+    custom_description = {
+        text = gate_arcane_council_recently_changed_military_regulations
+        subject = this
+
+        scope:journal_entry = {
+            has_variable = gate_arcane_council_regulations_cooldown
+        }
+    }
+}
+
 gate_trigger_incident_events = {
     is_magic_country = yes
     NOT = {

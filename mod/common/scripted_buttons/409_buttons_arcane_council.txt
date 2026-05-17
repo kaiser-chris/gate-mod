@@ -18,6 +18,12 @@
         }
 	}
 
+    selected = {
+        scope:journal_entry = {
+            has_modifier = modifier_gate_arcane_council_research_cooperation
+        }
+    }
+
 	effect = {
         scope:journal_entry = {
             add_modifier = {
@@ -26,12 +32,189 @@
             }
         }
         add_modifier = {
-            name = modifier_gate_arcane_council_research_cooperation_cost
+            name = modifier_gate_arcane_council_action_cost
+            multiplier = -100
             months = 12
         }
 	}
 
     cooldown = {
-        months = 24
+        months = 48
+    }
+}
+
+sb_gate_arcane_council_forbid_no_regulations = {
+    name = sb_gate_arcane_council_forbid_no_regulations
+    desc = sb_gate_arcane_council_forbid_no_regulations_desc
+
+    ai_chance = {
+        # Not being done by the AI
+        value = 0
+    }
+
+    selected = {
+        scope:journal_entry = {
+            OR = {
+                has_modifier = modifier_gate_arcane_council_forbid_no_regulations
+                has_modifier = modifier_gate_arcane_council_forbid_basic_regulations
+            }
+        }
+    }
+
+    possible = {
+        gate_is_arcane_council_leader = yes
+        influence > 50
+        scope:journal_entry = {
+            NOT = {
+                AND = {
+                    has_modifier = modifier_gate_arcane_council_forbid_no_regulations
+                    has_modifier = modifier_gate_arcane_council_forbid_basic_regulations
+                }
+            }
+        }
+        gate_arcane_council_recently_changed_military_regulations = no
+    }
+
+    effect = {
+        scope:journal_entry = {
+            add_modifier = modifier_gate_arcane_council_forbid_no_regulations
+            hidden_effect = {
+                set_variable = {
+                    name = gate_arcane_council_regulations_cooldown
+                    months = 24
+                }
+            }
+        }
+        add_modifier = {
+            name = modifier_gate_arcane_council_action_cost
+            multiplier = -50
+            months = 24
+        }
+    }
+
+    cooldown = {
+        months = 48
+    }
+}
+
+sb_gate_arcane_council_forbid_basic_regulations = {
+    name = sb_gate_arcane_council_forbid_basic_regulations
+    desc = sb_gate_arcane_council_forbid_basic_regulations_desc
+
+    ai_chance = {
+        # Not being done by the AI
+        value = 0
+    }
+
+    visible = {
+        scope:journal_entry = {
+            OR = {
+                has_modifier = modifier_gate_arcane_council_forbid_no_regulations
+                has_modifier = modifier_gate_arcane_council_forbid_basic_regulations
+            }
+        }
+    }
+
+    selected = {
+        scope:journal_entry = {
+            has_modifier = modifier_gate_arcane_council_forbid_basic_regulations
+        }
+    }
+
+    possible = {
+        gate_is_arcane_council_leader = yes
+        influence > 50
+        scope:journal_entry = {
+            has_modifier = modifier_gate_arcane_council_forbid_no_regulations
+            NOT = {
+                has_modifier = modifier_gate_arcane_council_forbid_basic_regulations
+            }
+        }
+        gate_arcane_council_recently_changed_military_regulations = no
+    }
+
+    effect = {
+        scope:journal_entry = {
+            remove_modifier = modifier_gate_arcane_council_forbid_no_regulations
+            add_modifier = modifier_gate_arcane_council_forbid_basic_regulations
+            hidden_effect = {
+                set_variable = {
+                    name = gate_arcane_council_regulations_cooldown
+                    months = 24
+                }
+            }
+        }
+        add_modifier = {
+            name = modifier_gate_arcane_council_action_cost
+            multiplier = -50
+            months = 24
+        }
+    }
+
+    cooldown = {
+        months = 48
+    }
+}
+
+sb_gate_arcane_council_cancel_regulations = {
+    name = sb_gate_arcane_council_cancel_regulations
+    desc = sb_gate_arcane_council_cancel_regulations_desc
+
+    ai_chance = {
+        # Not being done by the AI
+        value = 0
+    }
+
+    visible = {
+        scope:journal_entry = {
+            OR = {
+                has_modifier = modifier_gate_arcane_council_forbid_no_regulations
+                has_modifier = modifier_gate_arcane_council_forbid_basic_regulations
+            }
+        }
+    }
+
+    possible = {
+        gate_is_arcane_council_leader = yes
+        influence > 50
+        scope:journal_entry = {
+            OR = {
+                has_modifier = modifier_gate_arcane_council_forbid_no_regulations
+                has_modifier = modifier_gate_arcane_council_forbid_basic_regulations
+            }
+        }
+        gate_arcane_council_recently_changed_military_regulations = no
+    }
+
+    effect = {
+        scope:journal_entry = {
+            if = {
+                limit = {
+                    has_modifier = modifier_gate_arcane_council_forbid_no_regulations
+                }
+                remove_modifier = modifier_gate_arcane_council_forbid_no_regulations
+            }
+            if = {
+                limit = {
+                    has_modifier = modifier_gate_arcane_council_forbid_basic_regulations
+                }
+                remove_modifier = modifier_gate_arcane_council_forbid_basic_regulations
+            }
+            hidden_effect = {
+                set_variable = {
+                    name = gate_arcane_council_regulations_cooldown
+                    months = 24
+                }
+            }
+        }
+        add_modifier = {
+            name = modifier_gate_arcane_council_action_cost
+            multiplier = -50
+            months = 24
+        }
+    }
+
+    cooldown = {
+        months = 48
     }
 }
