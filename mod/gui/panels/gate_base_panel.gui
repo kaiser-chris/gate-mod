@@ -1153,8 +1153,8 @@ types gate_base_panel_types {
                     }
                     gate_tech_tree_node = {
                         blockoverride "context" {
-                            datacontext = "[GetTechnology('gate_battlefield_scrying')]"
-                            datacontext = "[GetScriptedGui('gate_battlefield_scrying')]"
+                            datacontext = "[GetTechnology('gate_scrying_rituals')]"
+                            datacontext = "[GetScriptedGui('gate_scrying_rituals')]"
                         }
                     }
                 }
