@@ -266,3 +266,23 @@ building_gate_venkateswara_temple = {
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_gate_magic.dds"
 }
+
+building_gate_arcane_council_headquarters = {
+	building_group = bg_monuments
+	icon = "gfx/interface/icons/building_icons/building_gate_arcane_council.dds"
+	buildable = no
+	expandable = no
+	downsizeable = no
+
+	production_method_groups = {
+		pmg_gate_arcane_council_headquarters
+	}
+
+	can_build_private = {
+		always = no
+	}
+
+	required_construction = construction_cost_monument
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_gate_magic.dds"
+}
