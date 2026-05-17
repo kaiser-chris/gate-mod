@@ -14,9 +14,22 @@ modifier_gate_arcane_council_research_cooperation = {
 	country_gate_magical_innovation_max_add = 50
 }
 
-modifier_gate_arcane_council_research_cooperation_cost = {
+modifier_gate_arcane_council_forbid_no_regulations = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	country_gate_military_formation_forbid_no_magic_user_regulations = yes
+	country_diplomatic_reputation_add = 5
+}
+
+modifier_gate_arcane_council_forbid_basic_regulations = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	country_gate_military_formation_forbid_basic_magic_user_regulations = yes
+	country_gate_military_formation_forbid_no_magic_user_regulations = yes
+	country_diplomatic_reputation_add = 10
+}
+
+modifier_gate_arcane_council_action_cost = {
 	icon = gfx/interface/icons/timed_modifier_icons/gate_modifier_magic_innovation_negative.dds
-	country_influence_add = -100
+	country_influence_add = 1
 }
 
 modifier_gate_arcane_council_incident_cost = {
