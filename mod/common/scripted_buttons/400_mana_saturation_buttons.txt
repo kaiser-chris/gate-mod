@@ -1,6 +1,6 @@
-﻿je_mana_saturation_button_slave_ritual = {
-	name = je_mana_saturation_button_slave_ritual
-	desc = je_mana_saturation_button_slave_ritual_desc
+﻿je_gate_mana_saturation_button_slave_ritual = {
+	name = je_gate_mana_saturation_button_slave_ritual
+	desc = je_gate_mana_saturation_button_slave_ritual_desc
 
 	visible = {
 		is_magic_country = yes
@@ -15,18 +15,18 @@
 				has_law = law_type:law_slavery_banned
 			}
 			custom_tooltip = {
-				text = je_mana_saturation_button_slave_ritual_cooldown
+				text = je_gate_mana_saturation_button_slave_ritual_cooldown
 				NOT = {
 					has_variable = slave_ritual_cooldown
 				}
 			}
 			custom_tooltip = {
 				# Seems infamy_less_than trigger loc is broken
-				text = je_mana_saturation_button_slave_ritual_infamy
+				text = je_gate_mana_saturation_button_slave_ritual_infamy
 				infamy < infamy_threshold:pariah
 			}
 			custom_tooltip = {
-				text = je_mana_saturation_button_slave_ritual_mana_density
+				text = je_gate_mana_saturation_button_slave_ritual_mana_density
 				any_scope_state = {
 					state_region = {
 						var:mana_density < 100

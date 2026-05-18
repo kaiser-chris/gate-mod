@@ -9,15 +9,15 @@
  trigger_is_gate_planet_country_third: "[COUNTRY.GetNameNoFlag] 是一个来自[concept_gate_planet]" #deepl:498334440
  trigger_is_gate_planet_country_third_not: "[COUNTRY.GetNameNoFlag] 不是一个来自[concept_gate_planet]" #deepl:1709490938
 
- trigger_gate_is_magic_country: "拥有[concept_magic_knowledge]"
- trigger_gate_is_magic_country_not: "没有[concept_magic_knowledge]" #deepl:63607955
- trigger_gate_is_magic_country_third: "[COUNTRY.GetNameNoFlag] 有[concept_magic_knowledge]" #deepl:4259156759
- trigger_gate_is_magic_country_third_not: "[COUNTRY.GetNameNoFlag] 没有[concept_magic_knowledge]" #deepl:1565322128
+ trigger_gate_is_magic_country: "拥有[concept_gate_magic_knowledge]"
+ trigger_gate_is_magic_country_not: "没有[concept_gate_magic_knowledge]" #deepl:63607955
+ trigger_gate_is_magic_country_third: "[COUNTRY.GetNameNoFlag] 有[concept_gate_magic_knowledge]" #deepl:4259156759
+ trigger_gate_is_magic_country_third_not: "[COUNTRY.GetNameNoFlag] 没有[concept_gate_magic_knowledge]" #deepl:1565322128
 
- trigger_gate_has_magic_researcher: "有[concept_magic_researcher]"
- trigger_gate_has_magic_researcher_not: "没有[concept_magic_researcher]" #deepl:1463586438
- trigger_gate_has_magic_researcher_third: "[COUNTRY.GetNameNoFlag] 有一个[concept_magic_researcher]" #deepl:3451463689
- trigger_gate_has_magic_researcher_third_not: "[COUNTRY.GetNameNoFlag] 没有[concept_magic_researcher]" #deepl:1362137834
+ trigger_gate_has_magic_researcher: "有[concept_gate_magic_researcher]"
+ trigger_gate_has_magic_researcher_not: "没有[concept_gate_magic_researcher]" #deepl:1463586438
+ trigger_gate_has_magic_researcher_third: "[COUNTRY.GetNameNoFlag] 有一个[concept_gate_magic_researcher]" #deepl:3451463689
+ trigger_gate_has_magic_researcher_third_not: "[COUNTRY.GetNameNoFlag] 没有[concept_gate_magic_researcher]" #deepl:1362137834
 
  trigger_gate_has_active_magic_project: "有可用的[concept_gate_project]"
  trigger_gate_has_active_magic_project_not: "没有激活[concept_gate_project]" #deepl:2442006880
@@ -28,13 +28,13 @@
  trigger_gate_expedition_has_covered: "#default_text [concept_gate_expedition]地图中有未探索部分。#!"
  trigger_gate_expedition_has_no_activity: "#default_text 我们未进行一项[Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')]。#!"
 
- trigger_gate_requirement_low_mana_density: "要建造该[concept_building]，地区[concept_mana_density]至少为[TopScope.ScriptValue('low_mana_density_threshhold')]。"
- trigger_gate_requirement_medium_mana_density: "要建造该[concept_building]，地区[concept_mana_density]至少为[TopScope.ScriptValue('medium_mana_density_threshhold')]。"
- trigger_gate_requirement_max_mana_density: "要建造该[concept_building]，地区[concept_mana_density]至少为[TopScope.ScriptValue('maximum_mana_density')]。"
+ trigger_gate_requirement_low_mana_density: "要建造该[concept_building]，地区[concept_gate_mana_density]至少为[TopScope.ScriptValue('low_mana_density_threshhold')]。"
+ trigger_gate_requirement_medium_mana_density: "要建造该[concept_building]，地区[concept_gate_mana_density]至少为[TopScope.ScriptValue('medium_mana_density_threshhold')]。"
+ trigger_gate_requirement_max_mana_density: "要建造该[concept_building]，地区[concept_gate_mana_density]至少为[TopScope.ScriptValue('maximum_mana_density')]。"
 
- trigger_gate_ethic_has_all: "Has chosen all possible [Concept('concept_magic_ethic','$concept_magic_ethics$')]"
- trigger_gate_ethic_has_all_not: "Hasn't chosen all possible [Concept('concept_magic_ethic','$concept_magic_ethics$')]"
- trigger_gate_ethic_has_all_third: "[COUNTRY.GetNameNoFlag] has chosen all possible [Concept('concept_magic_ethic','$concept_magic_ethics$')]"
- trigger_gate_ethic_has_all_third_not: "[COUNTRY.GetNameNoFlag] hasn't chosen all possible [Concept('concept_magic_ethic','$concept_magic_ethics$')]"
+ trigger_gate_ethic_has_all: "Has chosen all possible [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')]"
+ trigger_gate_ethic_has_all_not: "Hasn't chosen all possible [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')]"
+ trigger_gate_ethic_has_all_third: "[COUNTRY.GetNameNoFlag] has chosen all possible [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')]"
+ trigger_gate_ethic_has_all_third_not: "[COUNTRY.GetNameNoFlag] hasn't chosen all possible [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')]"
 
- trigger_gate_is_not_magic_researcher: "Is not already our [concept_magic_researcher]"
+ trigger_gate_is_not_magic_researcher: "Is not already our [concept_gate_magic_researcher]"

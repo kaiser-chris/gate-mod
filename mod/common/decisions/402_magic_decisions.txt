@@ -20,17 +20,17 @@
 		}
 		has_magic_gate = yes
 		hidden_trigger = {
-			NOT = { has_variable = je_investigate_gate_progress }
+			NOT = { has_variable = je_gate_investigate_gate_progress }
 		}
 	}
 
 	when_taken = {
 		set_variable = {
-			name = je_investigate_gate_progress
+			name = je_gate_investigate_gate_progress
 			value = 0
 		}
 		add_journal_entry = {
-			type = je_investigate_gate
+			type = je_gate_investigate_gate
 		}
 	}
 

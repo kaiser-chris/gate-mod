@@ -1,9 +1,9 @@
-﻿je_mana_saturation = {
+﻿je_gate_mana_saturation = {
 	icon = "gfx/interface/icons/event_icons/event_gate_magic_world.dds"
 
 	group = je_group_global_international_situations
 
-	scripted_button = je_mana_saturation_button_slave_ritual
+	scripted_button = je_gate_mana_saturation_button_slave_ritual
 
 	widget = {
 		gui = "gui/com_journal_injects/injects.gui"
@@ -59,19 +59,19 @@
 	status_desc = {
 		first_valid = {
 			triggered_desc = {
-				desc = je_mana_saturation_low_progress
+				desc = je_gate_mana_saturation_low_progress
 				trigger = {
 					global_var:global_mana_saturation < 50
 				}
 			}
 			triggered_desc = {
-				desc = je_mana_saturation_medium_progress
+				desc = je_gate_mana_saturation_medium_progress
 				trigger = {
 					global_var:global_mana_saturation < 80
 				}
 			}
 			triggered_desc = {
-				desc = je_mana_saturation_high_progress
+				desc = je_gate_mana_saturation_high_progress
 				trigger = {
 					global_var:global_mana_saturation < 100
 				}

@@ -2,7 +2,19 @@
 # NOTE: When adding new Groups, add corresponding entry to texticons.gui
 #
 
-gate_combat_unit_group_creatures = {
+combat_unit_group_gate_magic_infantry = {
+    color = rgb { 49 73 60 }
+    icon = "gfx/interface/icons/generic_icons/battalions.dds"
+    default_group = yes
+}
+
+combat_unit_group_gate_magic_artillery = {
+    color = rgb { 99 17 46 }
+    icon = "gfx/interface/icons/generic_icons/battalions.dds"
+    default_group = yes
+}
+
+combat_unit_group_gate_creatures = {
     color = rgb { 132 51 138 }
     icon = "gfx/interface/icons/generic_icons/battalions.dds"
     default_group = yes

@@ -1,4 +1,4 @@
-﻿dwarven_tunnels_decision = {
+﻿decision_gate_dwarven_tunnels = {
 	is_shown = {
 		exists = c:GATE_MK
 		this = c:GATE_MK
@@ -17,7 +17,7 @@
 			}
 		}
 		custom_tooltip = {
-			text = dwarven_tunnels_decision_cooldown_tt
+			text = decision_gate_dwarven_tunnels_cooldown_tt
 			NOT = {
 				has_variable = dwarven_tunnels_cooldown
 			}
@@ -26,7 +26,7 @@
 
 	when_taken = {
 		trigger_event = {
-			id = dwarven_alps.2
+			id = gate_dwarven_alps.2
 			popup = yes
 		}
 	}
@@ -36,7 +36,7 @@
 	}
 }
 
-gate_germanic_decision = {
+decision_gate_germanic = {
 	is_shown = {
 		any_primary_culture = {
 			has_discrimination_trait = heritage_germanic

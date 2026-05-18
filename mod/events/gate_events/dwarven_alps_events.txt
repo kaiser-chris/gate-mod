@@ -1,12 +1,12 @@
-﻿namespace = dwarven_alps
+﻿namespace = gate_dwarven_alps
 
-dwarven_alps.1 = {
+gate_dwarven_alps.1 = {
 	type = country_event
 	dlc = dlc_magic_gate
 
-	title = dwarven_alps.1.t
-	desc = dwarven_alps.1.d
-	flavor = dwarven_alps.1.f
+	title = gate_dwarven_alps.1.t
+	desc = gate_dwarven_alps.1.d
+	flavor = gate_dwarven_alps.1.f
 	
 	event_image = {
 		video = "europenorthamerica_capitalists_meeting"
@@ -28,7 +28,7 @@ dwarven_alps.1 = {
 	}
 
 	option = {
-		name = dwarven_alps.1.a
+		name = gate_dwarven_alps.1.a
 		default_option = yes
 		gate_treaty_tooltip = {
 			treaty = treaty_name_gate_dwarven_swiss_alliance
@@ -64,14 +64,14 @@ dwarven_alps.1 = {
 	}
 }
 
-dwarven_alps.2 = {
+gate_dwarven_alps.2 = {
 	type = country_event
 	dlc = dlc_magic_gate
 	placement = scope:digging_state
 
-	title = dwarven_alps.2.t
-	desc = dwarven_alps.2.d
-	flavor = dwarven_alps.2.f
+	title = gate_dwarven_alps.2.t
+	desc = gate_dwarven_alps.2.d
+	flavor = gate_dwarven_alps.2.f
 
 	event_image = {
 		video = "gate_unspecified_magic_mines"
@@ -116,7 +116,7 @@ dwarven_alps.2 = {
 	}
 
 	option = {
-		name = dwarven_alps.2.a
+		name = gate_dwarven_alps.2.a
 		default_option = yes
 		scope:digging_state ?= {
 			state_region = {
@@ -126,13 +126,13 @@ dwarven_alps.2 = {
 	}
 }
 
-dwarven_alps.3 = {
+gate_dwarven_alps.3 = {
 	type = country_event
 	dlc = dlc_magic_gate
 
-	title = dwarven_alps.3.t
-	desc = dwarven_alps.3.d
-	flavor = dwarven_alps.3.f
+	title = gate_dwarven_alps.3.t
+	desc = gate_dwarven_alps.3.d
+	flavor = gate_dwarven_alps.3.f
 
 	event_image = {
 		video = "unspecific_military_parade"
@@ -145,18 +145,18 @@ dwarven_alps.3 = {
 	duration = 3
 
 	option = {
-		name = dwarven_alps.3.a
+		name = gate_dwarven_alps.3.a
 		default_option = yes
 	}
 }
 
-dwarven_alps.4 = {
+gate_dwarven_alps.4 = {
 	type = country_event
 	dlc = dlc_magic_gate
 
-	title = dwarven_alps.4.t
-	desc = dwarven_alps.4.d
-	flavor = dwarven_alps.4.f
+	title = gate_dwarven_alps.4.t
+	desc = gate_dwarven_alps.4.d
+	flavor = gate_dwarven_alps.4.f
 
 	event_image = {
 		video = "unspecific_military_parade"
@@ -169,7 +169,7 @@ dwarven_alps.4 = {
 	duration = 3
 
 	option = {
-		name = dwarven_alps.4.a
+		name = gate_dwarven_alps.4.a
 		default_option = yes
 		add_primary_culture = cu:dwarven_south_german
 		add_primary_culture = cu:alemannic
@@ -197,13 +197,13 @@ dwarven_alps.4 = {
 	}
 }
 
-dwarven_alps.5 = {
+gate_dwarven_alps.5 = {
 	type = country_event
 	dlc = dlc_magic_gate
 
-	title = dwarven_alps.5.t
-	desc = dwarven_alps.5.d
-	flavor = dwarven_alps.5.f
+	title = gate_dwarven_alps.5.t
+	desc = gate_dwarven_alps.5.d
+	flavor = gate_dwarven_alps.5.f
 
 	event_image = {
 		video = "europenorthamerica_capitalists_meeting"
@@ -222,7 +222,7 @@ dwarven_alps.5 = {
 	}
 
 	option = {
-		name = dwarven_alps.5.a
+		name = gate_dwarven_alps.5.a
 		default_option = yes
 		annex_with_incorporation = c:SWI
 	}

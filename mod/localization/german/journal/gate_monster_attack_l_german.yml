@@ -1,24 +1,24 @@
 ﻿l_german:
 # Monster Congress
- je_monster_congress: "Nationaler Kongress über Monster" #deepl:1976123507
- je_monster_congress_custom_goal: "Der Kongress ist abgeschlossen." #deepl:1613369695
- je_monster_congress_reason: "In der großen Halle herrschte große Spannung, als der Nationale Monsterkongress zusammentrat, der Politiker, Forscher und militärische Führer unter einem Dach versammelte. An den Wänden hingen Schaubilder, die die Verwüstungen vergangener Angriffe zeigten. Forscher sprachen eindringlich über Muster und Anomalien im Verhalten von Monstern, ihre Stimmen waren von Unbehagen geprägt. Militärische Befehlshaber skizzierten neue Strategien, ihre Pläne strotzten vor Feuerkraft und Präzision. Politiker diskutierten heftig, hin- und hergerissen zwischen der Zuweisung von Ressourcen für die Verteidigung und Investitionen in die Forschung, um die Ursache aufzudecken." #deepl:1168039375
- je_monster_congress_in_progress: "Der Kongress ist im Gange." #deepl:878801234
- je_monster_congress_not_started: "Der Kongress hat noch nicht begonnen." #deepl:3048554545
- je_monster_congress_button_start: "Start Kongress" #deepl:3169281530
- je_monster_congress_button_start_desc: "Startet unseren Kongress mit der Frage, wie wir mit künftigen Monsterangriffen umgehen sollen." #deepl:1604072552
- je_monster_congress_button_start_block_started: "Der Kongress hat noch nicht begonnen." #deepl:3048554545
+ je_gate_monster_congress: "Nationaler Kongress über Monster" #deepl:1976123507
+ je_gate_monster_congress_custom_goal: "Der Kongress ist abgeschlossen." #deepl:1613369695
+ je_gate_monster_congress_reason: "In der großen Halle herrschte große Spannung, als der Nationale Monsterkongress zusammentrat, der Politiker, Forscher und militärische Führer unter einem Dach versammelte. An den Wänden hingen Schaubilder, die die Verwüstungen vergangener Angriffe zeigten. Forscher sprachen eindringlich über Muster und Anomalien im Verhalten von Monstern, ihre Stimmen waren von Unbehagen geprägt. Militärische Befehlshaber skizzierten neue Strategien, ihre Pläne strotzten vor Feuerkraft und Präzision. Politiker diskutierten heftig, hin- und hergerissen zwischen der Zuweisung von Ressourcen für die Verteidigung und Investitionen in die Forschung, um die Ursache aufzudecken." #deepl:1168039375
+ je_gate_monster_congress_in_progress: "Der Kongress ist im Gange." #deepl:878801234
+ je_gate_monster_congress_not_started: "Der Kongress hat noch nicht begonnen." #deepl:3048554545
+ je_gate_monster_congress_button_start: "Start Kongress" #deepl:3169281530
+ je_gate_monster_congress_button_start_desc: "Startet unseren Kongress mit der Frage, wie wir mit künftigen Monsterangriffen umgehen sollen." #deepl:1604072552
+ je_gate_monster_congress_button_start_block_started: "Der Kongress hat noch nicht begonnen." #deepl:3048554545
  je_monster_congress_button_start_effect: "Eröffnet den Kongress." #deepl:1253112261
- pb_monster_congress_name: "Kongress Fortschritte" #deepl:2342159062
- pb_monster_congress_desc: "Fortschritt: #v [Multiply_float(JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self), '(float)6')|0]#! von 6 Monaten" #deepl:3179089928
- pb_monster_congress_block: "der Kongress hat nicht begonnen" #deepl:1703468592
- pb_monster_congress_progress: "der Kongress ist im Gange" #deepl:2430811871
+ pb_gate_monster_congress_name: "Kongress Fortschritte" #deepl:2342159062
+ pb_gate_monster_congress_desc: "Fortschritt: #v [Multiply_float(JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self), '(float)6')|0]#! von 6 Monaten" #deepl:3179089928
+ pb_gate_monster_congress_block: "der Kongress hat nicht begonnen" #deepl:1703468592
+ pb_gate_monster_congress_progress: "der Kongress ist im Gange" #deepl:2430811871
 # Modifiers
  modifier_gate_monster_horde_cost: "Monsterhorden-Hilfe" #deepl:4278962805
  modifier_gate_monster_congress: "Monsterkongress im Gange" #deepl:4122085941
 # Events
  gate_monster_attack.1.t: "Eine Horde von Monstern" #deepl:1619751511
- gate_monster_attack.1.d: "Eine Horde von Ungeheuern hat sich aus dem aufsteigenden [concept_mana_density] in [SCOPE.sState('gate_monster_horde_state').GetName] gebildet." #deepl:1683511959
+ gate_monster_attack.1.d: "Eine Horde von Ungeheuern hat sich aus dem aufsteigenden [concept_gate_mana_density] in [SCOPE.sState('gate_monster_horde_state').GetName] gebildet." #deepl:1683511959
  gate_monster_attack.1.f: "Als das Mana in die Erde sickerte, setzte es eine Flut uralter, vergessener Schrecken frei. Aus den Rissen im Boden brach eine Horde monströser Kreaturen hervor, deren Augen mit der wilden, ungezähmten Energie des Arkanen glühten." #deepl:1712104880
  gate_monster_attack.1.a1: "Wir werden mit allem, was wir haben, helfen." #deepl:2444909786
  gate_monster_attack.1.b1: "Senden Sie Hilfe und Forscher." #deepl:2865930560

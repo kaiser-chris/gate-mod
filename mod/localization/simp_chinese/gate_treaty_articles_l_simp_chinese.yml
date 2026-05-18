@@ -1,8 +1,8 @@
 ﻿l_simp_chinese:
- DIPLOMATIC_ACCEPTANCE_GATE_LEARNING_MAGIC: "正在研究[concept_magic_knowledge]"
- DIPLOMATIC_ACCEPTANCE_GATE_NO_MAGIC: "尚未拥有[concept_magic_knowledge]"
+ DIPLOMATIC_ACCEPTANCE_GATE_LEARNING_MAGIC: "正在研究[concept_gate_magic_knowledge]"
+ DIPLOMATIC_ACCEPTANCE_GATE_NO_MAGIC: "尚未拥有[concept_gate_magic_knowledge]"
 
- gate_magic_knowledge: "$concept_magic_knowledge$"
+ gate_magic_knowledge: "$concept_gate_magic_knowledge$"
  gate_magic_knowledge_desc: ""
- gate_magic_knowledge_effects_desc: "•两个[Concept('concept_country', '$concept_countries$')]达成协议，其中一个$concept_country$正式将[concept_magic_knowledge]传授给另一$concept_country$"
- gate_magic_knowledge_article_short_desc: "[SOURCE_COUNTRY.GetNameNoFormatting]将[concept_magic_knowledge]传授给[TARGET_COUNTRY.GetNameNoFormatting]"
+ gate_magic_knowledge_effects_desc: "•两个[Concept('concept_country', '$concept_countries$')]达成协议，其中一个$concept_country$正式将[concept_gate_magic_knowledge]传授给另一$concept_country$"
+ gate_magic_knowledge_article_short_desc: "[SOURCE_COUNTRY.GetNameNoFormatting]将[concept_gate_magic_knowledge]传授给[TARGET_COUNTRY.GetNameNoFormatting]"

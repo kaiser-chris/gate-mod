@@ -1,0 +1,217 @@
+﻿combat_unit_type_gate_mage_infantry = {
+    group = combat_unit_group_gate_magic_infantry
+    max_manpower = 1000
+    supply_capacity = 10
+
+    conscript_peasant_levies = yes
+
+    upkeep_modifier = {
+        goods_input_mana_add = 1
+        goods_input_small_arms_add = 0.50
+    }
+
+    battle_modifier = {
+        unit_offense_add = 25
+        unit_defense_add = 20
+        unit_morale_loss_add = 10
+    }
+
+    unlocking_technologies = {
+        gate_mage_infantry
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = gate_dwarven
+        }
+        texture = "gfx/unit_illustrations/gate_infantry_dwarven_mage.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = gate_orcish
+        }
+        texture = gfx/unit_illustrations/gate_infantry_orc_mage.dds
+    }
+
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/gate_infantry_european_mage.dds"
+    }
+
+    upgrades = {
+        combat_unit_type_line_infantry
+        combat_unit_type_gate_arcane_vangard
+        combat_unit_type_skirmish_infantry
+        combat_unit_type_gate_mana_rifle_infantry
+        combat_unit_type_trench_infantry
+        combat_unit_type_gate_rune_guard_infantry
+        combat_unit_type_squad_infantry
+        combat_unit_type_gate_thaumaturgic_commandos
+        combat_unit_type_mechanized_infantry
+    }
+}
+
+combat_unit_type_gate_arcane_vangard = {
+    group = combat_unit_group_gate_magic_infantry
+    max_manpower = 1000
+    supply_capacity = 12
+
+    conscript_peasant_levies = yes
+
+    upkeep_modifier = {
+        goods_input_small_arms_add = 1
+        goods_input_mana_add = 1
+    }
+
+    battle_modifier = {
+        unit_offense_add = 25
+        unit_defense_add = 30
+        unit_morale_loss_add = 8
+    }
+
+    unlocking_technologies = { gate_arcane_warfare_doctrine }
+
+    combat_unit_image = {
+        # fallback
+        texture = "gfx/unit_illustrations/gate_infantry_european_arcane_vanguard.dds"
+    }
+
+    upgrades = {
+        combat_unit_type_skirmish_infantry
+        combat_unit_type_gate_mana_rifle_infantry
+        combat_unit_type_trench_infantry
+        combat_unit_type_gate_rune_guard_infantry
+        combat_unit_type_squad_infantry
+        combat_unit_type_gate_thaumaturgic_commandos
+        combat_unit_type_mechanized_infantry
+    }
+}
+
+combat_unit_type_gate_mana_rifle_infantry = {
+    group = combat_unit_group_gate_magic_infantry
+    max_manpower = 1000
+    supply_capacity = 15
+
+    conscript_peasant_levies = yes
+
+    upkeep_modifier = {
+        goods_input_small_arms_add = 2
+        goods_input_mana_add = 1
+    }
+
+    battle_modifier = {
+        unit_offense_add = 30
+        unit_defense_add = 35
+        unit_morale_loss_add = 10
+    }
+
+    unlocking_technologies = { gate_mana_weaponization }
+
+    combat_unit_image = {
+        # fallback
+        texture = "gfx/unit_illustrations/gate_infantry_european_mana_rifles.dds"
+    }
+
+    upgrades = {
+        combat_unit_type_trench_infantry
+        combat_unit_type_gate_rune_guard_infantry
+        combat_unit_type_squad_infantry
+        combat_unit_type_gate_thaumaturgic_commandos
+        combat_unit_type_mechanized_infantry
+    }
+}
+
+combat_unit_type_gate_wraithwalkers = {
+    group = combat_unit_group_gate_magic_infantry
+    max_manpower = 1000
+    supply_capacity = 18
+
+    upkeep_modifier = {
+        goods_input_small_arms_add = 2
+        goods_input_mana_core_add = 2
+        goods_input_ammunition_add = 1
+    }
+
+    battle_modifier = {
+        unit_offense_add = 40
+        unit_defense_add = 20
+        unit_morale_loss_add = 6
+        unit_kill_rate_add = 0.05
+        unit_occupation_mult = 0.3
+    }
+
+    unlocking_technologies = { gate_shadow_infiltration_tactics }
+
+    combat_unit_image = {
+        # fallback
+        texture = "gfx/unit_illustrations/gate_infantry_european_wraithwalkers.dds"
+    }
+
+    upgrades = {
+        combat_unit_type_light_tanks
+    }
+}
+
+combat_unit_type_gate_rune_guard_infantry = {
+    group = combat_unit_group_gate_magic_infantry
+    max_manpower = 1000
+    supply_capacity = 18
+
+    conscript_peasant_levies = yes
+
+    upkeep_modifier = {
+        goods_input_small_arms_add = 2
+        goods_input_runic_paper_add = 1
+    }
+
+    battle_modifier = {
+        unit_offense_add = 25
+        unit_defense_add = 50
+        unit_morale_loss_add = 5
+    }
+
+    unlocking_technologies = { gate_runic_armor_forging }
+
+    combat_unit_image = {
+        # fallback
+        texture = "gfx/unit_illustrations/gate_infantry_european_rune_guard_infantry.dds"
+    }
+
+    upgrades = {
+        combat_unit_type_squad_infantry
+        combat_unit_type_gate_thaumaturgic_commandos
+        combat_unit_type_mechanized_infantry
+    }
+}
+
+combat_unit_type_gate_thaumaturgic_commandos = {
+    group = combat_unit_group_gate_magic_infantry
+    max_manpower = 1000
+    supply_capacity = 22
+
+    conscript_peasant_levies = yes
+
+    upkeep_modifier = {
+        goods_input_small_arms_add = 3
+        goods_input_ammunition_add = 3
+        goods_input_mana_core_add = 1
+    }
+
+    battle_modifier = {
+        unit_offense_add = 50
+        unit_defense_add = 50
+        unit_morale_loss_add = 4
+    }
+
+    unlocking_technologies = { gate_commando_thaumaturgy }
+
+    combat_unit_image = {
+        # fallback
+        texture = "gfx/unit_illustrations/gate_infantry_european_thaumaturgic_commandos.dds"
+    }
+
+    upgrades = {
+        combat_unit_type_mechanized_infantry
+    }
+}
+
