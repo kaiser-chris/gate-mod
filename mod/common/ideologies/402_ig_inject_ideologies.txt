@@ -5,9 +5,9 @@
         law_gate_elven_supremacy_not_enforced = strongly_approve
     }
 
-    lawgroup_orcish_hegemony = {
-        law_orcish_hegemony_enforced = disapprove
-        law_orcish_hegemony_not_enforced = approve
+    lawgroup_gate_orcish_hegemony = {
+        law_gate_orcish_hegemony_enforced = disapprove
+        law_gate_orcish_hegemony_not_enforced = approve
     }
 }
 
@@ -18,18 +18,18 @@ INJECT:ideology_loyalist = {
         law_gate_elven_supremacy_not_enforced = neutral
     }
 
-    lawgroup_orcish_hegemony = {
-        law_orcish_hegemony_enforced = approve
-        law_orcish_hegemony_not_enforced = neutral
+    lawgroup_gate_orcish_hegemony = {
+        law_gate_orcish_hegemony_enforced = approve
+        law_gate_orcish_hegemony_not_enforced = neutral
     }
 }
 
 INJECT:ideology_liberal = {
     lawgroup_gate_monster_hunting = {
-        law_no_organized_monster_hunting = neutral
-        law_dedicated_monster_hunters = neutral
-        law_private_monster_hunters = disapprove
-        law_militarized_monster_hunters = disapprove
+        law_gate_no_organized_monster_hunting = neutral
+        law_gate_dedicated_monster_hunters = neutral
+        law_gate_private_monster_hunters = disapprove
+        law_gate_militarized_monster_hunters = disapprove
     }
 
     lawgroup_gate_magic_users = {
@@ -44,10 +44,10 @@ INJECT:ideology_liberal = {
 
 INJECT:ideology_liberal_modern = {
     lawgroup_gate_monster_hunting = {
-        law_no_organized_monster_hunting = neutral
-        law_dedicated_monster_hunters = neutral
-        law_private_monster_hunters = disapprove
-        law_militarized_monster_hunters = disapprove
+        law_gate_no_organized_monster_hunting = neutral
+        law_gate_dedicated_monster_hunters = neutral
+        law_gate_private_monster_hunters = disapprove
+        law_gate_militarized_monster_hunters = disapprove
     }
 
     lawgroup_gate_magic_users = {
@@ -59,18 +59,18 @@ INJECT:ideology_liberal_modern = {
         law_gate_noble_magic_users = strongly_disapprove
     }
 
-    lawgroup_orcish_hegemony = {
-        law_orcish_hegemony_enforced = strongly_disapprove
-        law_orcish_hegemony_not_enforced = strongly_approve
+    lawgroup_gate_orcish_hegemony = {
+        law_gate_orcish_hegemony_enforced = strongly_disapprove
+        law_gate_orcish_hegemony_not_enforced = strongly_approve
     }
 }
 
 INJECT:ideology_isolationist = {
     lawgroup_gate_monster_hunting = {
-        law_no_organized_monster_hunting = strongly_disapprove
-        law_dedicated_monster_hunters = approve
-        law_private_monster_hunters = disapprove
-        law_militarized_monster_hunters = neutral
+        law_gate_no_organized_monster_hunting = strongly_disapprove
+        law_gate_dedicated_monster_hunters = approve
+        law_gate_private_monster_hunters = disapprove
+        law_gate_militarized_monster_hunters = neutral
     }
 
     lawgroup_gate_magic_users = {
@@ -85,10 +85,10 @@ INJECT:ideology_isolationist = {
 
 INJECT:ideology_jingoist = {
     lawgroup_gate_monster_hunting = {
-        law_no_organized_monster_hunting = disapprove
-        law_dedicated_monster_hunters = approve
-        law_private_monster_hunters = neutral
-        law_militarized_monster_hunters = strongly_approve
+        law_gate_no_organized_monster_hunting = disapprove
+        law_gate_dedicated_monster_hunters = approve
+        law_gate_private_monster_hunters = neutral
+        law_gate_militarized_monster_hunters = strongly_approve
     }
 
     lawgroup_gate_magic_users = {
@@ -108,9 +108,9 @@ INJECT:ideology_pious = {
         law_gate_elven_supremacy_not_enforced = strongly_disapprove
     }
 
-    lawgroup_orcish_hegemony = {
-        law_orcish_hegemony_enforced = approve
-        law_orcish_hegemony_not_enforced = disapprove
+    lawgroup_gate_orcish_hegemony = {
+        law_gate_orcish_hegemony_enforced = approve
+        law_gate_orcish_hegemony_not_enforced = disapprove
     }
 }
 
@@ -154,32 +154,32 @@ INJECT:ideology_meritocratic = {
         law_gate_noble_magic_users = strongly_disapprove
     }
 
-    lawgroup_orcish_hegemony = {
-        law_orcish_hegemony_enforced = neutral
-        law_orcish_hegemony_not_enforced = approve
+    lawgroup_gate_orcish_hegemony = {
+        law_gate_orcish_hegemony_enforced = neutral
+        law_gate_orcish_hegemony_not_enforced = approve
     }
 }
 
 INJECT:ideology_patriotic = {
     lawgroup_gate_monster_hunting = {
-        law_no_organized_monster_hunting = strongly_disapprove
-        law_dedicated_monster_hunters = approve
-        law_private_monster_hunters = neutral
-        law_militarized_monster_hunters = strongly_approve
+        law_gate_no_organized_monster_hunting = strongly_disapprove
+        law_gate_dedicated_monster_hunters = approve
+        law_gate_private_monster_hunters = neutral
+        law_gate_militarized_monster_hunters = strongly_approve
     }
 }
 
 INJECT:ideology_populist = {
     lawgroup_gate_monster_hunting = {
-        law_no_organized_monster_hunting = neutral
-        law_dedicated_monster_hunters = approve
-        law_private_monster_hunters = disapprove
-        law_militarized_monster_hunters = disapprove
+        law_gate_no_organized_monster_hunting = neutral
+        law_gate_dedicated_monster_hunters = approve
+        law_gate_private_monster_hunters = disapprove
+        law_gate_militarized_monster_hunters = disapprove
     }
 
-    lawgroup_orcish_hegemony = {
-        law_orcish_hegemony_enforced = strongly_disapprove
-        law_orcish_hegemony_not_enforced = neutral
+    lawgroup_gate_orcish_hegemony = {
+        law_gate_orcish_hegemony_enforced = strongly_disapprove
+        law_gate_orcish_hegemony_not_enforced = neutral
     }
 
     lawgroup_gate_elven_supremacy = {
@@ -213,10 +213,10 @@ INJECT:ideology_egalitarian_modern = {
 
 INJECT:ideology_paternalistic = {
     lawgroup_gate_monster_hunting = {
-        law_no_organized_monster_hunting = disapprove
-        law_dedicated_monster_hunters = neutral
-        law_private_monster_hunters = approve
-        law_militarized_monster_hunters = neutral
+        law_gate_no_organized_monster_hunting = disapprove
+        law_gate_dedicated_monster_hunters = neutral
+        law_gate_private_monster_hunters = approve
+        law_gate_militarized_monster_hunters = neutral
     }
 }
 
@@ -230,9 +230,9 @@ INJECT:ideology_hierarchic = {
         law_gate_noble_magic_users = strongly_approve
     }
 
-    lawgroup_orcish_hegemony = {
-        law_orcish_hegemony_enforced = strongly_approve
-        law_orcish_hegemony_not_enforced = disapprove
+    lawgroup_gate_orcish_hegemony = {
+        law_gate_orcish_hegemony_enforced = strongly_approve
+        law_gate_orcish_hegemony_not_enforced = disapprove
     }
 
     lawgroup_gate_elven_supremacy = {
@@ -244,10 +244,10 @@ INJECT:ideology_hierarchic = {
 
 INJECT:ideology_laissez_faire = {
     lawgroup_gate_monster_hunting = {
-        law_no_organized_monster_hunting = strongly_disapprove
-        law_dedicated_monster_hunters = neutral
-        law_private_monster_hunters = strongly_approve
-        law_militarized_monster_hunters = neutral
+        law_gate_no_organized_monster_hunting = strongly_disapprove
+        law_gate_dedicated_monster_hunters = neutral
+        law_gate_private_monster_hunters = strongly_approve
+        law_gate_militarized_monster_hunters = neutral
     }
 }
 
