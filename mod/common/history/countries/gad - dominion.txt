@@ -44,7 +44,7 @@
         activate_law = law_type:law_per_capita_based_taxation
 		activate_law = law_type:law_isolationism
 		activate_law = law_type:law_no_organized_monster_hunting
-		activate_law = law_type:law_elven_supremacy_religious_preaching
+		activate_law = law_type:law_gate_elven_supremacy_religious_preaching
 		activate_law = law_type:law_charitable_health_system
 		activate_law = law_type:law_gate_free_magic_users
 
@@ -58,7 +58,7 @@
 
 		set_variable = {
 			name = custom_social_hierarchy
-			value = active_law:lawgroup_elven_supremacy
+			value = active_law:lawgroup_gate_elven_supremacy
 		}
 
 		ig:ig_devout = {

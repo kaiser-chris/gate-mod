@@ -16,8 +16,8 @@
  je_dwarven_alps_integrate_germans: "Integration der deutschen Bevölkerung" #deepl:3568626407
  je_dwarven_alps_integrate_germans_desc: "Beginnt den Prozess der Integration der Kulturen [SCOPE.sCulture('loc_south_german_scope').GetName] und [SCOPE.sCulture('loc_alemannic_scope').GetName] als [concept_primary_cultures]. Dies könnte einen Teil unserer Bevölkerung verärgern." #deepl:1214659788
  dwarven_tunnels_decision: "Graben von Zwergen-Tunneln" #deepl:2525967142
- dwarven_tunnels_decision_desc: "Fügen Sie die Eigenschaft $state_trait_dwarven_tunnels$ für gebirgige Staaten hinzu." #deepl:631732085
- dwarven_tunnels_decision_cooldown_tt: "Hat in den letzten 6 Monaten nicht gegraben #v $state_trait_dwarven_tunnels$#!" #deepl:3932744473
+ dwarven_tunnels_decision_desc: "Fügen Sie die Eigenschaft $state_trait_gate_dwarven_tunnels$ für gebirgige Staaten hinzu." #deepl:631732085
+ dwarven_tunnels_decision_cooldown_tt: "Hat in den letzten 6 Monaten nicht gegraben #v $state_trait_gate_dwarven_tunnels$#!" #deepl:3932744473
  pb_gate_german_integration_name: "Aktueller Stand der Integration" #deepl:2208921378
  pb_gate_german_integration_desc: "Fortschritt: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|0%]#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]/100)%" #deepl:2288376918
  pb_gate_german_integration_support_name: "Öffentliche Unterstützung der Integration" #deepl:2681059307
@@ -31,7 +31,7 @@
  dwarven_alps.1.f: "In den frostigen Gipfeln von $GATE_MK$ kamen die Zwerge aus ihren verborgenen Schmieden und trugen Geheimnisse mit sich, die älter waren als die Berge selbst. Unter dem wachsamen Blick uralter steinerner Wächter trafen sie sich mit den Gesandten der Schweiz, deren Augen mit einer Mischung aus Vorsicht und Hoffnung funkelten. Als Gegenleistung für die Weitergabe ihres arkanen Wissens versprachen sich die Zwerge die Stärke eines Bündnisses mit den Oberflächenbewohnern. Der Pakt wurde mit einem Handschlag besiegelt und verband Berg und Tal in einem Bündnis, das versprach, das Schicksal beider Reiche neu zu gestalten." #deepl:1658510880
  dwarven_alps.1.a: "Wir werden uns das Gebirge teilen." #deepl:1035871269
  dwarven_alps.2.t: "Zwergen-Tunnel abgeschlossen" #deepl:2756466823
- dwarven_alps.2.d: "Fügen Sie die Eigenschaft #v $state_trait_dwarven_tunnels$#! zu [SCOPE.sState('digging_state').GetName] hinzu." #deepl:3690780931
+ dwarven_alps.2.d: "Fügen Sie die Eigenschaft #v $state_trait_gate_dwarven_tunnels$#! zu [SCOPE.sState('digging_state').GetName] hinzu." #deepl:3690780931
  dwarven_alps.2.f: "Nach unermüdlichen Anstrengungen und meisterhafter Ingenieurskunst wurde das verschlungene Tunnelnetz der Zwerge fertiggestellt und der Staat [SCOPE.sState('digging_state').GetName] vollständig in unser Reich integriert. Diese unterirdischen Gänge festigen nicht nur unseren Anspruch, sondern dienen auch als lebenswichtige Arterien für Handel, Verteidigung und Erkundung. Das Echo der Spitzhacken und die Gesänge der zwergischen Steinmetzen sind geschäftigen Korridoren des Handels und der Einheit gewichen und symbolisieren die immer größer werdende Stärke und Reichweite unserer Nation." #deepl:1149495808
  dwarven_alps.2.a: "Dies wird für immer unser Zuhause sein." #deepl:3381860407
  dwarven_alps.3.t: "Eigentümer der Alpen" #deepl:1603304319
