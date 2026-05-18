@@ -1,17 +1,17 @@
-﻿je_dwarven_alps_button_switzerland_magic = {
-	name = je_dwarven_alps_button_switzerland_magic
-	desc = je_dwarven_alps_button_switzerland_magic_desc
+﻿je_gate_dwarven_alps_button_switzerland_magic = {
+	name = je_gate_dwarven_alps_button_switzerland_magic
+	desc = je_gate_dwarven_alps_button_switzerland_magic_desc
 
 	possible = {
 		is_diplomatic_play_committed_participant = no
 		is_at_war = no
 		custom_tooltip = {
-			text = je_dwarven_alps_button_switzerland_exists
+			text = je_gate_dwarven_alps_button_switzerland_exists
 			exists = c:SWI
 		}
 		c:SWI ?= {
 			custom_tooltip = {
-				text = je_dwarven_alps_button_switzerland_magic_already
+				text = je_gate_dwarven_alps_button_switzerland_magic_already
 				NOT = {
 					has_variable = swiss_magic_var
 				}
@@ -38,21 +38,21 @@
 
 	effect = {
 		trigger_event = {
-			id = dwarven_alps.1
+			id = gate_dwarven_alps.1
 			popup = yes
 		}
 	}
 }
 
-je_dwarven_alps_button_switzerland_integrate = {
-	name = je_dwarven_alps_button_switzerland_integrate
-	desc = je_dwarven_alps_button_switzerland_integrate_desc
+je_gate_dwarven_alps_button_switzerland_integrate = {
+	name = je_gate_dwarven_alps_button_switzerland_integrate
+	desc = je_gate_dwarven_alps_button_switzerland_integrate_desc
 
 	possible = {
 		is_diplomatic_play_committed_participant = no
 		is_at_war = no
 		custom_tooltip = {
-			text = je_dwarven_alps_button_switzerland_exists
+			text = je_gate_dwarven_alps_button_switzerland_exists
 			exists = c:SWI
 		}
 		OR = {
@@ -80,15 +80,15 @@ je_dwarven_alps_button_switzerland_integrate = {
 
 	effect = {
 		trigger_event = {
-			id = dwarven_alps.5
+			id = gate_dwarven_alps.5
 			popup = yes
 		}
 	}
 }
 
-je_dwarven_alps_integrate_germans = {
-	name = je_dwarven_alps_integrate_germans
-	desc = je_dwarven_alps_integrate_germans_desc
+je_gate_dwarven_alps_integrate_germans = {
+	name = je_gate_dwarven_alps_integrate_germans
+	desc = je_gate_dwarven_alps_integrate_germans_desc
 
 	possible = {
 		is_diplomatic_play_committed_participant = no
@@ -98,7 +98,7 @@ je_dwarven_alps_integrate_germans = {
 				country_has_primary_culture = cu:dwarven_south_german
 				country_has_primary_culture = cu:alemannic
 			}
-			has_journal_entry = je_dwarven_integration_of_germans
+			has_journal_entry = je_gate_dwarven_integration_of_germans
 		}
 	}
 
@@ -108,7 +108,7 @@ je_dwarven_alps_integrate_germans = {
 
 	effect = {
 		add_journal_entry = {
-			type = je_dwarven_integration_of_germans
+			type = je_gate_dwarven_integration_of_germans
 		}
 	}
 }

@@ -1,9 +1,9 @@
 ﻿l_spanish:
  gate_rule_mod_tooltip: "#header $dlc_magic_gate$#!\n$dlc_magic_gate_desc$"
- rule_gate_magic_start: "#tooltip:[GetRawTextTooltipTag('gate_rule_mod_tooltip')] @gate_mod_logo!#! $concept_magic_knowledge$ at Game Start"
+ rule_gate_magic_start: "#tooltip:[GetRawTextTooltipTag('gate_rule_mod_tooltip')] @gate_mod_logo!#! $concept_gate_magic_knowledge$ at Game Start"
  setting_gate_deactivate_magic_start: "Historical"
- setting_gate_deactivate_magic_start_desc: "Only [Concept('concept_country', '$concept_countries$')] with relevant history will start with [concept_magic_knowledge]."
+ setting_gate_deactivate_magic_start_desc: "Only [Concept('concept_country', '$concept_countries$')] with relevant history will start with [concept_gate_magic_knowledge]."
  setting_gate_activate_magic_start_player: "Player Country + Historical"
- setting_gate_activate_magic_start_player_desc: "All player [Concept('concept_country', '$concept_countries$')], as well as [Concept('concept_country', '$concept_countries$')] with relevant history will start with [concept_magic_knowledge]."
+ setting_gate_activate_magic_start_player_desc: "All player [Concept('concept_country', '$concept_countries$')], as well as [Concept('concept_country', '$concept_countries$')] with relevant history will start with [concept_gate_magic_knowledge]."
  setting_gate_activate_magic_start_all: "All Countries"
- setting_gate_activate_magic_start_all_desc: "All [Concept('concept_country', '$concept_countries$')] will start with [concept_magic_knowledge]."
+ setting_gate_activate_magic_start_all_desc: "All [Concept('concept_country', '$concept_countries$')] will start with [concept_gate_magic_knowledge]."

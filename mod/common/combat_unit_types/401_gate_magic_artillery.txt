@@ -1,0 +1,70 @@
+﻿combat_unit_type_gate_mage_artillery = {
+    group = combat_unit_group_gate_magic_artillery
+    max_manpower = 1000
+    supply_capacity = 12
+
+    upkeep_modifier = {
+        goods_input_mana_add = 2
+    }
+
+    battle_modifier = {
+        unit_offense_add = 20
+        unit_defense_add = 20
+        unit_morale_loss_add = 8
+        unit_kill_rate_add = 0.1
+        unit_devastation_mult = 0.1
+    }
+
+    formation_modifier = {
+        military_formation_mobilization_speed_mult = -0.1
+    }
+
+    unlocking_technologies = {
+        gate_mage_artillery
+    }
+
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/gate_artillery_european_mage.dds"
+    }
+
+    upgrades = {
+        combat_unit_type_mobile_artillery
+        combat_unit_type_shrapnel_artillery
+        combat_unit_type_siege_artillery
+    }
+}
+
+combat_unit_type_gate_mana_artillery = {
+    group = combat_unit_group_gate_magic_artillery
+    max_manpower = 1000
+    supply_capacity = 20
+
+    upkeep_modifier = {
+        goods_input_artillery_add = 4
+        goods_input_ammunition_add = 4
+        goods_input_mana_core_add = 1
+    }
+
+    battle_modifier = {
+        unit_offense_add = 50
+        unit_defense_add = 30
+        unit_morale_loss_add = 6
+        unit_kill_rate_add = 0.30
+        unit_devastation_mult = 0.2
+    }
+
+    formation_modifier = {
+        military_formation_mobilization_speed_mult = -0.2
+        military_formation_army_movement_speed_mult = -0.2
+    }
+
+    unlocking_technologies = {
+        gate_mana_weaponization
+    }
+
+    combat_unit_image = {
+        # fallback
+        texture = "gfx/unit_illustrations/gate_artillery_european_mana_artillery.dds"
+    }
+}
+

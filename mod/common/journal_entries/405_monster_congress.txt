@@ -1,9 +1,9 @@
-﻿je_monster_congress = {
+﻿je_gate_monster_congress = {
 	icon = "gfx/interface/icons/event_icons/event_gate_monster.dds"
 
-	group = je_group_magical_affairs
+	group = je_group_gate_magical_affairs
 
-	scripted_button = je_monster_congress_button_start
+	scripted_button = je_gate_monster_congress_button_start
 
 	widget = {
 		gui = "gui/com_journal_injects/injects.gui"
@@ -18,13 +18,13 @@
 	status_desc = {
 		first_valid = {
 			triggered_desc = {
-				desc = je_monster_congress_in_progress
+				desc = je_gate_monster_congress_in_progress
 				trigger = {
 					has_variable = monster_congress_in_progress
 				}
 			}
 			triggered_desc = {
-				desc = je_monster_congress_not_started
+				desc = je_gate_monster_congress_not_started
 			}
 		}
 	}
@@ -45,10 +45,10 @@
 
 	complete = {
 		custom_tooltip = {
-			text = je_monster_congress_custom_goal
+			text = je_gate_monster_congress_custom_goal
 			scope:journal_entry = {
 				scripted_bar_progress = {
-					name = pb_monster_congress
+					name = pb_gate_monster_congress
 					value >= 6 # Months
 				}
 			}
@@ -67,7 +67,7 @@
 
 	progressbar = no
 
-	scripted_progress_bar = pb_monster_congress
+	scripted_progress_bar = pb_gate_monster_congress
 
 	transferable = no
 	can_revolution_inherit = yes

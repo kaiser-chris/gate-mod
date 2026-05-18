@@ -195,7 +195,7 @@
 			custom_tooltip = {
 				text = je_gate_mbudye_fail_annex
                 OR = {
-                    has_global_variable = mbudye_unification
+                    has_global_variable = gate_mbudye_unification
                     NAND = {
                         exists = c:LND
                         exists = c:CHK

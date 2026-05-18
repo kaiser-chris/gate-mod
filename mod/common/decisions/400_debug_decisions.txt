@@ -1,4 +1,4 @@
-﻿debug_complete_sg_magic_knowledge = {
+﻿debug_decision_gate_complete_sg_magic_knowledge = {
 	is_shown = {
 		has_global_variable = com_debug
 		is_player = yes
@@ -16,7 +16,7 @@
 	}
 }
 
-debug_complete_sg_magic_academy = {
+debug_decision_gate_complete_sg_magic_academy = {
 	is_shown = {
 		has_global_variable = com_debug
 		is_player = yes
@@ -34,7 +34,7 @@ debug_complete_sg_magic_academy = {
 	}
 }
 
-debug_gate_dragon_greenland_decision = {
+debug_decision_gate_dragon_greenland_decision = {
 	is_shown = {
 		has_global_variable = com_debug
 		is_player = yes
@@ -54,7 +54,7 @@ debug_gate_dragon_greenland_decision = {
 	}
 }
 
-debug_gate_dragon_california_decision = {
+debug_decision_gate_dragon_california_decision = {
 	is_shown = {
 		has_global_variable = com_debug
 		is_player = yes
@@ -74,7 +74,7 @@ debug_gate_dragon_california_decision = {
 	}
 }
 
-debug_gate_dragon_kolyma_decision = {
+debug_decision_gate_dragon_kolyma_decision = {
 	is_shown = {
 		has_global_variable = com_debug
 		is_player = yes
@@ -94,7 +94,7 @@ debug_gate_dragon_kolyma_decision = {
 	}
 }
 
-debug_gate_dragon_himalaya_decision = {
+debug_decision_gate_dragon_himalaya_decision = {
 	is_shown = {
 		has_global_variable = com_debug
 		is_player = yes
@@ -114,7 +114,7 @@ debug_gate_dragon_himalaya_decision = {
 	}
 }
 
-debug_magic_growing_decision = {
+debug_decision_gate_magic_growing_decision = {
 	is_shown = {
 		has_global_variable = com_debug
 		is_player = yes
@@ -132,7 +132,7 @@ debug_magic_growing_decision = {
 	}
 }
 
-debug_gate_monster_horde_decision = {
+debug_decision_gate_monster_horde_decision = {
 	is_shown = {
 		has_global_variable = com_debug
 		is_player = yes
@@ -149,7 +149,7 @@ debug_gate_monster_horde_decision = {
 	}
 }
 
-debug_gate_monster_attack_decision = {
+debug_decision_gate_monster_attack_decision = {
 	is_shown = {
 		has_global_variable = com_debug
 		is_player = yes
@@ -171,7 +171,7 @@ debug_gate_monster_attack_decision = {
 	}
 }
 
-debug_mana_saturation_decision = {
+debug_decision_gate_mana_saturation_decision = {
 	is_shown = {
 		has_global_variable = com_debug
 		is_player = yes
@@ -197,7 +197,7 @@ debug_mana_saturation_decision = {
 	}
 }
 
-debug_toggle_busy_researcher_decision = {
+debug_decision_gate_toggle_busy_researcher_decision = {
 	is_shown = {
 		has_global_variable = com_debug
 		is_player = yes
@@ -223,32 +223,7 @@ debug_toggle_busy_researcher_decision = {
 	}
 }
 
-debug_kill_researcher_decision = {
-	is_shown = {
-		has_global_variable = com_debug
-		is_player = yes
-		AND = {
-			has_variable = magic_researcher
-			exists = var:magic_researcher
-			var:magic_researcher = {
-				is_character_alive = yes
-			}
-		}
-	}
-
-	when_taken = {
-		var:magic_researcher = {
-			kill_character = yes
-		}
-		remove_variable = magic_researcher
-	}
-
-	ai_chance = {
-		value = 0
-	}
-}
-
-debug_trigger_ethics_decision = {
+debug_decision_gate_trigger_ethics_decision = {
 	is_shown = {
 		has_global_variable = com_debug
 		is_player = yes
@@ -265,7 +240,7 @@ debug_trigger_ethics_decision = {
 	}
 }
 
-debug_increase_magical_innovation_decision = {
+debug_decision_gate_increase_magical_innovation_decision = {
 	is_shown = {
 		has_global_variable = com_debug
 		is_player = yes
@@ -283,7 +258,7 @@ debug_increase_magical_innovation_decision = {
 	}
 }
 
-debug_gate_accept_vampires = {
+debug_decision_gate_accept_vampires = {
 	is_shown = {
 		has_global_variable = com_debug
 		is_player = yes
@@ -310,7 +285,7 @@ debug_gate_accept_vampires = {
 	}
 }
 
-debug_gate_enact_vampire_monarchy = {
+debug_decision_gate_enact_vampire_monarchy = {
 	is_shown = {
 		has_global_variable = com_debug
 		is_player = yes
@@ -326,7 +301,7 @@ debug_gate_enact_vampire_monarchy = {
 	}
 }
 
-debug_gate_reset_reytu = {
+debug_decision_gate_reset_reytu = {
 	is_shown = {
 		has_global_variable = com_debug
 		is_player = yes
@@ -349,7 +324,7 @@ debug_gate_reset_reytu = {
 	}
 }
 
-debug_gate_start_reytu = {
+debug_decision_gate_start_reytu = {
 	is_shown = {
 		has_global_variable = com_debug
 		is_player = yes
@@ -403,7 +378,7 @@ debug_gate_start_reytu = {
 	}
 }
 
-debug_gate_join_mage_council = {
+debug_decision_gate_join_mage_council = {
 	is_shown = {
 		has_global_variable = com_debug
 		is_player = yes

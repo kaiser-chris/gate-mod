@@ -68,7 +68,7 @@
  mbudye_defaced_temple_flag: "die #v Verunstaltung#! unseres #v Tempels#!" #deepl:625563090
 # Modifiers
  modifier_gate_lunda_uprising: "Geist der Revolution" #deepl:116156328
- modifier_gate_lunda_bambudye_liberty: "Die [concept_bambudye] Verschwörung" #deepl:1252766707
+ modifier_gate_lunda_bambudye_liberty: "Die [concept_gate_bambudye] Verschwörung" #deepl:1252766707
  modifier_gate_lunda_conversion: "Enthusiastische Umwandlung" #deepl:503332567
  dp_lunda_uprising: "Lunda-Aufstand" #deepl:3356900361
 # Events
@@ -84,11 +84,11 @@
  gate_mbudye.3.desc: "Ein Priester der [GetReligion('gate_golden_religion').GetName] ist aus einem Dorf im Bundesstaat [SCOPE.sState('mbudye_event_state').GetName] in [SCOPE.sCountry('mbudye_event_country').GetNameNoFlag] abgewiesen worden." #deepl:4238747768
  gate_mbudye.3.f: "Ein Elfenpriester in den schimmernden Gewändern des arkturianischen Dominions näherte sich einem Lunda-Dorf, in der Absicht, den himmlischen Glauben zu verbreiten. Doch die Dorfbewohner blieben entschlossen am Eingang stehen und versperrten dem Priester den Weg. "Wir ehren unsere Vorfahren und ihre Weisheit", erklärte der Dorfälteste. Der Priester, obwohl äußerlich gefasst, kehrte mit schwerem Herzen zurück - und mit einem Bericht an die Führer des Dominion, die nun entscheiden müssen, wie sie mit diesem Akt der Missachtung umgehen sollen." #deepl:4135514001
  gate_mbudye.3.a: "Brennt das Dorf nieder" #deepl:548230620
- gate_mbudye.3.b: "Senden Sie ein strenges Schreiben an [SCOPE.sCountry('mbudye_event_country').GetNameNoFlag] [concept_mbudye_council] ." #deepl:86206412
+ gate_mbudye.3.b: "Senden Sie ein strenges Schreiben an [SCOPE.sCountry('mbudye_event_country').GetNameNoFlag] [concept_gate_mbudye_council] ." #deepl:86206412
  gate_mbudye.3.c: "Es ist nur ein Dorf." #deepl:4143180907
  gate_mbudye.4.t: "Elfen-Beamter ermordet" #deepl:3619028707
  gate_mbudye.4.desc: "Ein elfischer Beamter wurde bei einem Besuch des Staates [SCOPE.sState('mbudye_event_state').GetName] in [SCOPE.sCountry('mbudye_event_country').GetNameNoFlag] ermordet." #deepl:3086421051
- gate_mbudye.4.f: "Die Spannungen in den Lunda-Ländern brachen aus, als sich die Nachricht von der Ermordung eines prominenten elfischen Beamten durch einen zwielichtigen [concept_bambudye] -Agenten verbreitete. Der Anschlag war präzise und überlegt, eine klare Botschaft des Geheimbundes, der entschlossen ist, sein Volk von der arkturianischen Herrschaft zu befreien. Während die Priester des Dominion die Tat als barbarisch verurteilten, flüsterte man unter den Lunda von Trotz und Hoffnung. Das Gleichgewicht zwischen Rebellion und Vergeltung steht nun auf dem Spiel und droht, die Region ins Chaos zu stürzen." #deepl:3723883217
+ gate_mbudye.4.f: "Die Spannungen in den Lunda-Ländern brachen aus, als sich die Nachricht von der Ermordung eines prominenten elfischen Beamten durch einen zwielichtigen [concept_gate_bambudye] -Agenten verbreitete. Der Anschlag war präzise und überlegt, eine klare Botschaft des Geheimbundes, der entschlossen ist, sein Volk von der arkturianischen Herrschaft zu befreien. Während die Priester des Dominion die Tat als barbarisch verurteilten, flüsterte man unter den Lunda von Trotz und Hoffnung. Das Gleichgewicht zwischen Rebellion und Vergeltung steht nun auf dem Spiel und droht, die Region ins Chaos zu stürzen." #deepl:3723883217
  gate_mbudye.4.a: "Machen Sie ein Beispiel in [SCOPE.sState('mbudye_event_state').GetName]." #deepl:1775792892
  gate_mbudye.4.b: "Schicken Sie unsere Geheimpolizei rein." #deepl:948829720
  gate_mbudye.4.c: "Leiten Sie eine offizielle Untersuchung ein." #deepl:472688273
@@ -150,7 +150,7 @@
  gate_mbudye.14.f: "Elfengelehrte haben nach monatelanger akribischer Arbeit eine übersetzte Fassung eines verehrten historischen Textes der Lunda vorgelegt. Das Projekt bewahrte das reiche Erbe des Lunda-Volkes und machte es gleichzeitig einem breiteren Publikum im Dominion zugänglich. Diese Geste des Respekts und der Bewahrung erntete die Dankbarkeit der Lunda-Führer und die Bewunderung beider Kulturen und wurde zu einem seltenen Beispiel für gemeinsamen intellektuellen und kulturellen Stolz." #deepl:1153212932
  gate_mbudye.14.a: "Gut." #deepl:3593588592
  gate_mbudye.15.t: "Sabotage im Verborgenen" #deepl:1775829490
- gate_mbudye.15.desc: "[concept_bambudye] Agenten sabotierten den Nachschub unserer Armeen und reduzierten unsere [concept_organization] und [concept_morale]." #deepl:3283717390
+ gate_mbudye.15.desc: "[concept_gate_bambudye] Agenten sabotierten den Nachschub unserer Armeen und reduzierten unsere [concept_organization] und [concept_morale]." #deepl:3283717390
  gate_mbudye.15.f: "Als der Aufstand ausbrach, schlugen die Bambudye schnell und entschlossen zu. Im Schutze der Dunkelheit infiltrierten ihre Agenten arkturianische Versorgungslager und setzten Vorräte an Lebensmitteln, Waffen und Manakristallen in Brand. Die Streitkräfte des Dominion erwachten im Chaos, ihre Versorgungslinien waren unterbrochen und ihre Moral durch die schattenhafte Hand der Rebellion erschüttert." #deepl:2442865322
  gate_mbudye.15.a: "Diese Barbaren werden dafür bezahlen." #deepl:1544735610
  gate_mbudye.16.t: "Ein schwerwiegender Fehler" #deepl:2943156908
