@@ -1,9 +1,9 @@
 ﻿### ERA 1
 
-magic_understanding_military = {
+gate_magic_understanding_military = {
 	# Unlocks all magic military research
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/magic_understanding.dds"
+	texture = "gfx/interface/icons/invention_icons/gate_magic_understanding.dds"
 	category = military
 	can_research = no
 
@@ -12,14 +12,14 @@ magic_understanding_military = {
 	}
 }
 
-mage_infantry = {
+gate_mage_infantry = {
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/gate_mage_infantry.dds"
 	category = military
 	can_research = no
 
 	unlocking_technologies = {
-		magic_understanding_military
+		gate_magic_understanding_military
 	}
 
 	ai_weight = {
@@ -27,14 +27,14 @@ mage_infantry = {
 	}
 }
 
-battlefield_wards = {
+gate_battlefield_wards = {
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/gate_battlefield_wards.dds"
 	category = military
 	can_research = no
 
 	unlocking_technologies = {
-		mage_infantry
+		gate_mage_infantry
 	}
 
 	ai_weight = {
@@ -49,7 +49,7 @@ gate_arcane_warfare_doctrine = {
 	can_research = no
 
 	unlocking_technologies = {
-		mage_infantry
+		gate_mage_infantry
 		line_infantry
 	}
 
@@ -121,14 +121,14 @@ gate_commando_thaumaturgy = {
 	}
 }
 
-mage_artillery = {
+gate_mage_artillery = {
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/gate_mage_artillery.dds"
 	category = military
 	can_research = no
 
 	unlocking_technologies = {
-		magic_understanding_military
+		gate_magic_understanding_military
 	}
 
 	ai_weight = {
@@ -136,14 +136,14 @@ mage_artillery = {
 	}
 }
 
-ritual_magic = {
+gate_ritual_magic = {
 	era = era_2
-	texture = "gfx/interface/icons/invention_icons/ritual_magic.dds"
+	texture = "gfx/interface/icons/invention_icons/gate_ritual_magic.dds"
 	category = military
 	can_research = no
 
 	unlocking_technologies = {
-		mage_artillery
+		gate_mage_artillery
 	}
 
 	modifier = {
@@ -162,7 +162,7 @@ gate_scrying_rituals = {
 	can_research = no
 
 	unlocking_technologies = {
-		ritual_magic
+		gate_ritual_magic
 	}
 
 	ai_weight = {

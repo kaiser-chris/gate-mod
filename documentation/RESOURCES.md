@@ -40,7 +40,7 @@ building_dwarven_gold_mine = {
     }
 
     unlocking_technologies = {
-        magic_dwarf_murk
+        gate_magic_dwarf_murk
         prospecting
     }
 

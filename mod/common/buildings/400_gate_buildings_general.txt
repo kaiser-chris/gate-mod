@@ -6,14 +6,14 @@
 	has_max_level = yes
 
 	unlocking_technologies = {
-		magic_dwarf_murk
+		gate_magic_dwarf_murk
 	}
 
 	potential = {
 		AND = {
 			# Don't show building when necessary technology is missing
 			owner = {
-				has_technology_researched = magic_dwarf_murk
+				has_technology_researched = gate_magic_dwarf_murk
 			}
 			# Murk Ways can only be build in states with mountains.
 			is_dwarven_mountainous_state = yes
@@ -40,7 +40,7 @@ building_magic_academy = {
 	expandable = no
 
 	unlocking_technologies = {
-		formalized_magic
+		gate_formalized_magic
 	}
 
 	potential = {
@@ -459,7 +459,7 @@ building_mage_tower = {
 }
 
 building_elven_forest = {
-	building_group = bg_elven_forests
+	building_group = bg_gate_elven_forests
 	icon = "gfx/interface/icons/building_icons/building_gate_elven_forest.dds"
 	city_type = none
 	levels_per_mesh = 50
@@ -475,13 +475,13 @@ building_elven_forest = {
 	ai_value = 100
 
 	unlocking_technologies = {
-		elven_forests
+		gate_elven_forests
 	}
 	ownership_type = no_ownership
 
 	potential = {
 		owner = {
-			has_technology_researched = elven_forests
+			has_technology_researched = gate_elven_forests
 		}
 		# Are there even fields/forests
 		arable_land > 0

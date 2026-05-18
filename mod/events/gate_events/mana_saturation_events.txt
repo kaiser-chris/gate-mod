@@ -622,16 +622,16 @@ gate_mana_saturation.9 = {
 		if = {
 			limit = {
 				NOT = {
-					has_technology_researched = simple_rune_carving
+					has_technology_researched = gate_simple_rune_carving
 				}
 			}
-			add_technology_researched = simple_rune_carving
+			add_technology_researched = gate_simple_rune_carving
 		}
 		if = {
 			limit = {
 				c:NOR ?= {
 					NOT = {
-						has_technology_researched = simple_rune_carving
+						has_technology_researched = gate_simple_rune_carving
 					}
 				}
 				has_diplomatic_pact = {
@@ -641,7 +641,7 @@ gate_mana_saturation.9 = {
 				}
 			}
 			c:NOR ?= {
-				add_technology_researched = simple_rune_carving
+				add_technology_researched = gate_simple_rune_carving
 			}
 		}
 		add_magic_innovation = {

@@ -3,7 +3,7 @@
 gate_magic_understanding_production = {
 	# Unlocks all magic production research
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/magic_understanding.dds"
+	texture = "gfx/interface/icons/invention_icons/gate_magic_understanding.dds"
 	category = production
 	can_research = no
 
@@ -16,7 +16,7 @@ gate_mana_extraction = {
 	# Unlocks Mana Extractor
 	# Unlocks Mage Mana Extraction PM
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/mana_extraction.dds"
+	texture = "gfx/interface/icons/invention_icons/gate_mana_extraction.dds"
 	category = production
 	can_research = no
 
@@ -33,7 +33,7 @@ gate_mana_extraction = {
 	}
 }
 
-magic_dwarf_murk = {
+gate_magic_dwarf_murk = {
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/gate_murk.dds"
 	category = production
@@ -69,7 +69,7 @@ gate_improved_extraction = {
 	}
 }
 
-simple_rune_carving = {
+gate_simple_rune_carving = {
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/gate_simple_rune_carving.dds"
 	category = production
@@ -85,7 +85,7 @@ simple_rune_carving = {
 	}
 }
 
-magic_farming = {
+gate_magic_farming = {
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/gate_magic_farming.dds"
 	category = production
@@ -100,14 +100,14 @@ magic_farming = {
 	}
 }
 
-living_irrigation = {
+gate_living_irrigation = {
 	era = era_2
-	texture = "gfx/interface/icons/invention_icons/living_irrigation.dds"
+	texture = "gfx/interface/icons/invention_icons/gate_living_irrigation.dds"
 	category = production
 	can_research = no
 
 	unlocking_technologies = {
-		magic_farming
+		gate_magic_farming
 	}
 
 	ai_weight = {
@@ -115,14 +115,14 @@ living_irrigation = {
 	}
 }
 
-magic_dwarf_murk_railways = {
+gate_magic_dwarf_murk_railways = {
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/gate_murk.dds"
 	category = production
 	can_research = no
 
 	unlocking_technologies = {
-		magic_dwarf_murk
+		gate_magic_dwarf_murk
 		railways
 	}
 
@@ -135,9 +135,9 @@ magic_dwarf_murk_railways = {
 	}
 }
 
-mana_cores = {
+gate_mana_cores = {
 	era = era_2
-	texture = "gfx/interface/icons/invention_icons/mana_core.dds"
+	texture = "gfx/interface/icons/invention_icons/gate_mana_core.dds"
 	category = production
 	can_research = no
 
@@ -150,15 +150,15 @@ mana_cores = {
 	}
 }
 
-arcane_foundries = {
+gate_arcane_foundries = {
 	era = era_2
-	texture = "gfx/interface/icons/invention_icons/arcane_foundry.dds"
+	texture = "gfx/interface/icons/invention_icons/gate_arcane_foundry.dds"
 	category = production
 	can_research = no
 
 	unlocking_technologies = {
 		bessemer_process
-		mana_cores
+		gate_mana_cores
 	}
 
 	ai_weight = {
@@ -187,14 +187,14 @@ gate_ley_line_tap = {
 	}
 }
 
-regenerative_timber = {
+gate_regenerative_timber = {
 	era = era_3
-	texture = "gfx/interface/icons/invention_icons/regenerative_timber.dds"
+	texture = "gfx/interface/icons/invention_icons/gate_regenerative_timber.dds"
 	category = production
 	can_research = no
 
 	unlocking_technologies = {
-		living_irrigation
+		gate_living_irrigation
 	}
 
 	ai_weight = {
@@ -202,14 +202,14 @@ regenerative_timber = {
 	}
 }
 
-mana_infused_fertilizers = {
+gate_mana_infused_fertilizers = {
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/gate_mana_fertilizer.dds"
 	category = production
 	can_research = no
 
 	unlocking_technologies = {
-		magic_farming
+		gate_magic_farming
 		improved_fertilizer
 	}
 
@@ -218,15 +218,15 @@ mana_infused_fertilizers = {
 	}
 }
 
-magic_golems = {
+gate_magic_golems = {
 	era = era_3
-	texture = "gfx/interface/icons/invention_icons/magic_golems.dds"
+	texture = "gfx/interface/icons/invention_icons/gate_magic_golems.dds"
 	category = production
 	can_research = no
 
 	unlocking_technologies = {
-		simple_rune_carving
-		mana_cores
+		gate_simple_rune_carving
+		gate_mana_cores
 	}
 
 	ai_weight = {

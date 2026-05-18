@@ -53,7 +53,7 @@ gate_project_can_start_expand_research_institute = {
 }
 
 gate_project_can_start_domain = {
-	has_technology_researched = formalized_magic
+	has_technology_researched = gate_formalized_magic
 	custom_tooltip = {
 		text = je_gate_project_domain_condition_domain_slot
 		trigger_if = {
@@ -78,7 +78,7 @@ gate_project_can_start_domain = {
 }
 
 gate_project_can_start_change_domain = {
-	has_technology_researched = formalized_magic
+	has_technology_researched = gate_formalized_magic
 	is_magic_country = yes
 	has_magic_researcher = yes
 	has_active_magic_project = no
@@ -119,7 +119,7 @@ gate_project_can_start_improve_mana_extraction = {
 }
 
 gate_project_can_start_modernize_seed_selection = {
-	has_technology_researched = magic_farming
+	has_technology_researched = gate_magic_farming
 	custom_tooltip = {
 		text = trigger_gate_project_can_has_unimproved_magic_seed
 		any_scope_building = {

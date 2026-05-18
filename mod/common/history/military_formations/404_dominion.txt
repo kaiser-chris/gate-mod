@@ -5,17 +5,17 @@
 			hq_region = sr:region_east_africa
 
 			mobilization_options = {
-				mobilization_option:mobilization_option_ritual_magic
+				mobilization_option:mobilization_option_gate_ritual_magic
 			}
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_mage_infantry
+				type = unit_type:combat_unit_type_gate_mage_infantry
 				state_region = s:STATE_ZAMBIA
 				count = 10
 			}
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_mage_artillery
+				type = unit_type:combat_unit_type_gate_mage_artillery
 				state_region = s:STATE_ZAMBIA
 				count = 5
 			}
