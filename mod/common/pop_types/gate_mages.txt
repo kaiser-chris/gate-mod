@@ -1,5 +1,5 @@
-﻿mages = {
-	texture = "gfx/interface/icons/pops_icons/mages.dds"
+﻿gate_mages = {
+	texture = "gfx/interface/icons/pops_icons/gate_mages.dds"
 	color = hsv{ 0.94 0.51 0.37 }
 	start_quality_of_life = 15
 	wage_weight = 6
@@ -81,7 +81,7 @@
 				}
 				multiply = {
 					value = 5
-					desc = mages_qualifications_academy
+					desc = gate_mages_qualifications_academy
 				}
 			}
 			if = {

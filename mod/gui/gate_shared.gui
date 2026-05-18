@@ -284,7 +284,7 @@ types gate_shared {
                 visible = "[LessThan_CFixedPoint(State.AccessStateRegion.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('medium_mana_density_threshhold'))]"
             }
             blockoverride "background_color" {
-                texture = "gfx/interface/icons/gui_icons/low_mana_density.dds"
+                texture = "gfx/interface/icons/gui_icons/gate_low_mana_density.dds"
                 tintcolor = { 0.6 0.6 0.6 1 }
             }
         }
@@ -296,7 +296,7 @@ types gate_shared {
 							)]"
             }
             blockoverride "background_color" {
-                texture = "gfx/interface/icons/gui_icons/mid_mana_density.dds"
+                texture = "gfx/interface/icons/gui_icons/gate_mid_mana_density.dds"
                 tintcolor = { 0.6 0.6 0.6 1 }
             }
         }
@@ -305,7 +305,7 @@ types gate_shared {
                 visible = "[GreaterThanOrEqualTo_CFixedPoint(State.AccessStateRegion.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('high_mana_density_threshhold'))]"
             }
             blockoverride "background_color" {
-                texture = "gfx/interface/icons/gui_icons/high_mana_density.dds"
+                texture = "gfx/interface/icons/gui_icons/gate_high_mana_density.dds"
                 tintcolor = { 0.6 0.6 0.6 1 }
             }
         }

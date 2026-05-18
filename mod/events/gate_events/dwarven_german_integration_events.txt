@@ -14,7 +14,7 @@ gate_dwarven_german_integration.1 = {
 
 	trigger = {
 		NOT = {
-			has_modifier = dwarven_help_germans
+			has_modifier = modifier_gate_dwarven_help_germans
 		}
 	}
 
@@ -76,7 +76,7 @@ gate_dwarven_german_integration.1 = {
 			culture = cu:dwarven
 		}
 		add_modifier = {
-			name = dwarven_help_germans
+			name = modifier_gate_dwarven_help_germans
 			days = short_modifier_time
 			multiplier = money_amount_multiplier_small
 		}

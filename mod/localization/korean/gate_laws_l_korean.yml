@@ -23,7 +23,7 @@
  law_gnomish_integration_desc: "존중과 협력을 바탕으로 하는 노움 통합 정책은 정복이 아닌 교류를 지향합니다. 이 식민 정책은 대화를 통한 이해, 공동 번영, 그리고 상호 존중을 통해 다른 문화를 자발적으로 국가에 포용하는 것을 강조합니다. 지배보다 통합을 우선시함으로써, 이 접근법은 식민지를 종속된 영토가 아닌 번영하는 동반자로 만들고자 합니다. 물론 복잡한 요소가 따르지만, 노움 통합 정책은 조화와 공동 성장에 기반한 식민지 경영의 비전을 제시합니다."
 # Monster Hunting
  lawgroup_gate_monster_hunting: "괴물 사냥"
- lawgroup_gate_monster_hunting_desc: "[Concept('concept_monster_attack','$concept_monster_attacks$')]를 방지하기 위한 괴물 사냥 체계입니다."
+ lawgroup_gate_monster_hunting_desc: "[Concept('concept_gate_monster_attack','$concept_monster_attacks$')]를 방지하기 위한 괴물 사냥 체계입니다."
  law_no_organized_monster_hunting: "조직적인 괴물 사냥 금지"
  law_no_organized_monster_hunting_desc: "해당 국가에는 괴물을 사냥하는 조직적인 세력이 없으며, [Concept('concept_monster_attack','$concept_monster_attacks$')]이 빈번하게 발생할 것입니다."
  law_private_monster_hunters: "민간 괴물 사냥단"
@@ -42,11 +42,11 @@
  law_gate_noble_magic_users: "비전 귀족"
  law_gate_noble_magic_users_desc: "해당 국가는 [GetInterestGroupVariant('ig_gate_magic_users',GetPlayer).GetNameNoFormatting]을 타고난 귀족이라고 위협하며 일반 시민보다 더 많은 권리를 부여합니다."
  law_gate_druidic_circles: "드루이드 집회"
- law_gate_druidic_circles_desc: "[GetPopType('druids').GetName]은 자연과 교감하여 식물과 동물의 힘을 활용합니다. 신성한 숲과 자연의 순환에 맞춰 이들은 치유, 보호, 그리고 야생을 제어하는 능력을 지닙니다."
+ law_gate_druidic_circles_desc: "[GetPopType('gate_druids').GetName]은 자연과 교감하여 식물과 동물의 힘을 활용합니다. 신성한 숲과 자연의 순환에 맞춰 이들은 치유, 보호, 그리고 야생을 제어하는 능력을 지닙니다."
  law_gate_mage_guilds: "마법사 길드"
  law_gate_mage_guilds_desc: "이 마법 체계는 숙련된 [GetPopType('mages').GetName]들이 운영하는 마법사 길드의 전문성에 기반합니다. 정련된 수련, 마법 도구, 그리고 신비로운 주문을 통해 이들은 마법 산업을 증진시킬 수 있습니다."
  law_gate_arcane_bureau: "비전국"
- law_gate_arcane_bureau_desc: "[GetPopType('mages').GetName]와 [GetPopType('druids').GetName]를 하나의 조직 아래 통합하는 국가 운영 기관입니다."
+ law_gate_arcane_bureau_desc: "[GetPopType('mages').GetName]와 [GetPopType('gate_druids').GetName]를 하나의 조직 아래 통합하는 국가 운영 기관입니다."
 # Government Principles
  law_gate_vampire_monarchy: "영원한 군주제"
  law_gate_vampire_monarchy_desc: "이 나라는 [concept_gate_vampirism]를 받아들였고 군주는 영원한 존재로 여겨집니다."
@@ -54,4 +54,4 @@
  law_gate_magocracy_desc: "국가에서 가장 강력한 마법사가 능력, 지위 또는 혈통에 따라 평생 통치하는 형태의 정부입니다. 이들은 $RULER_TITLE_GATE_ARCHWIZARD$ 또는 $RULER_TITLE_GATE_ARCHWITCH$로 선포됩니다."
 # Distribution of Power
  law_gate_arcane_council: "비전 의회"
- law_gate_arcane_council_desc: "국가 원수는 소수의 강력한 비선출 [GetPopType('mages').GetName] 및 [GetPopType('druids').GetName]들과 권력과 책임을 공유합니다."
+ law_gate_arcane_council_desc: "국가 원수는 소수의 강력한 비선출 [GetPopType('mages').GetName] 및 [GetPopType('gate_druids').GetName]들과 권력과 책임을 공유합니다."

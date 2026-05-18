@@ -4,13 +4,13 @@
 
 	visible = {
 		NOT = {
-			has_modifier = focus_investigate_gate_cost_modifier
+			has_modifier = modifier_gate_focus_investigate_gate_cost
 		}
 	}
 
 	possible = {
 		NOT = {
-			has_modifier = focus_investigate_gate_cost_modifier
+			has_modifier = modifier_gate_focus_investigate_gate_cost
 		}
 	}
 
@@ -20,7 +20,7 @@
 
 	effect = {
 		add_modifier = {
-			name = focus_investigate_gate_cost_modifier
+			name = modifier_gate_focus_investigate_gate_cost
 			years = 1
 		}
 	}
@@ -31,11 +31,11 @@ je_investigate_gate_button_cancel_focus_academia = {
 	desc = je_gate_researching_magic_button_cancel_focus_academia_desc
 
 	visible = {
-		has_modifier = focus_investigate_gate_cost_modifier
+		has_modifier = modifier_gate_focus_investigate_gate_cost
 	}
 
 	possible = {
-		has_modifier = focus_investigate_gate_cost_modifier
+		has_modifier = modifier_gate_focus_investigate_gate_cost
 	}
 
 	ai_chance = {
@@ -43,6 +43,6 @@ je_investigate_gate_button_cancel_focus_academia = {
 	}
 
 	effect = {
-		remove_modifier = focus_investigate_gate_cost_modifier
+		remove_modifier = modifier_gate_focus_investigate_gate_cost
 	}
 }

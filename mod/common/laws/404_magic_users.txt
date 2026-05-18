@@ -26,10 +26,10 @@ law_gate_restricted_magic_users = {
 
     institution = institution_gate_magical_focus
     institution_modifier = {
-        country_mages_pol_str_mult = -0.15
-        country_druids_pol_str_mult = -0.15
-        state_mages_investment_pool_contribution_add = -0.15
-        state_druids_investment_pool_contribution_add = -0.15
+        country_gate_mages_pol_str_mult = -0.15
+        country_gate_druids_pol_str_mult = -0.15
+        state_gate_mages_investment_pool_contribution_add = -0.15
+        state_gate_druids_investment_pool_contribution_add = -0.15
         country_authority_add = 50
     }
 
@@ -94,8 +94,8 @@ law_gate_mage_guilds = {
     institution = institution_gate_magical_focus
     institution_modifier = {
         building_group_bg_gate_magic_industry_throughput_add = 0.05
-        country_mages_pol_str_mult = 0.1
-        state_mages_investment_pool_contribution_add = 0.1
+        country_gate_mages_pol_str_mult = 0.1
+        state_gate_mages_investment_pool_contribution_add = 0.1
     }
 
     modifier = {
@@ -155,11 +155,11 @@ law_gate_druidic_circles = {
     institution = institution_gate_magical_focus
     institution_modifier = {
         state_pollution_reduction_health_mult = -0.02
-        country_druids_pol_str_mult = 0.1
+        country_gate_druids_pol_str_mult = 0.1
         country_farmers_pol_str_mult = 0.05
         building_group_bg_agriculture_throughput_add = 0.05
         building_group_bg_plantations_throughput_add = 0.05
-        state_druids_investment_pool_contribution_add = 0.05
+        state_gate_druids_investment_pool_contribution_add = 0.05
     }
 
     modifier = {
@@ -231,10 +231,10 @@ law_gate_noble_magic_users = {
     institution = institution_gate_magical_focus
     institution_modifier = {
         interest_group_ig_gate_magic_users_pol_str_mult = 0.05
-        country_mages_pol_str_mult = 0.15
-        country_druids_pol_str_mult = 0.15
-        state_mages_investment_pool_contribution_add = 0.1
-        state_druids_investment_pool_contribution_add = 0.1
+        country_gate_mages_pol_str_mult = 0.15
+        country_gate_druids_pol_str_mult = 0.15
+        state_gate_mages_investment_pool_contribution_add = 0.1
+        state_gate_druids_investment_pool_contribution_add = 0.1
     }
 
     is_visible = {

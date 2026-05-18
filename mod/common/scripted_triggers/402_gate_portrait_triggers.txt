@@ -18,8 +18,8 @@
 magic_users_clothes_pop_trigger = {
     scope:pop ?= {
         OR = {
-            is_pop_type = mages
-            is_pop_type = druids
+            is_pop_type = gate_mages
+            is_pop_type = gate_druids
         }
     }
 }

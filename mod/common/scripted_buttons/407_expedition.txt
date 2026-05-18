@@ -52,7 +52,7 @@ je_gate_expedition_preparation_button_hire_leader = {
 		}
 		scope:journal_entry = {
 			add_modifier = {
-				name = gate_expedition_preparation_modifier
+				name = modifier_gate_expedition_preparation
 				multiplier = money_amount_multiplier_small
 				months = 3
 			}
@@ -119,7 +119,7 @@ je_gate_expedition_preparation_button_start_preparations = {
 		}
 		scope:journal_entry = {
 			add_modifier = {
-				name = gate_expedition_preparation_modifier
+				name = modifier_gate_expedition_preparation
 				multiplier = money_amount_multiplier_medium
 			}
 		}
@@ -144,7 +144,7 @@ je_gate_expedition_preparation_button_stop_preparations = {
 			remove_variable = gate_expedition_preparation_active
 		}
 		scope:journal_entry = {
-			remove_modifier = gate_expedition_preparation_modifier
+			remove_modifier = modifier_gate_expedition_preparation
 		}
 	}
 

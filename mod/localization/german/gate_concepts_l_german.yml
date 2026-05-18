@@ -10,12 +10,12 @@
  concept_magic_technology: "Magische Technologie" #deepl:2743819916
  concept_magic_technologies: "Magische Technologien" #deepl:3081127401
  concept_magic_technology_desc: "$concept_magic_technology$ umfasst alle magischen Innovationen in den Bereichen $PRODUCTION_NO_CONCEPT$, $MILITARY$ und $SOCIETY$. $concept_magic_technologies$ haben landesweite Auswirkungen, die von der Änderung der Betriebsparameter von [Concept('concept_country','$concept_country_possessive$')] über [Concept('concept_modifier','$concept_modifiers$')] bis hin zur Erschließung neuer [Concept('concept_production_method','$concept_production_methods$')], [Concept('concept_building','$concept_buildings$')], [Concept('concept_law','$concept_laws$')], [Concept('concept_decree','$concept_decrees$')] und [Concept('concept_diplomatic_pact','$concept_diplomatic_pacts$')] reichen können. \n\nFortschritte auf dem Weg zu neuen $concept_magic_technologies$ werden durch [concept_magic_innovation] erzielt. \n\nDie Höhe des Fortschritts, der bei einem $concept_magic_technology$ erforderlich ist, um es zu erwerben, hängt von seinem [Concept('concept_technology_era','$concept_technology_era_short$')] ab. $concept_technology_era_ahead_of_time_penalty_desc$" #deepl:2675322097
- concept_monster_attack: "Monster-Angriff" #deepl:3876006220
- concept_monster_attacks: "Monster-Angriffe" #deepl:2502313577
- concept_monster_attack_desc: "Ab einer mittleren Menge von [concept_mana_density] kann die lokale Fauna und Flora mutieren und Zivilisten angreifen." #deepl:711178298
- concept_monster_horde: "Monsterhorden" #deepl:477795905
- concept_monster_hordes: "Monsterhorden" #deepl:183185344
- concept_monster_horde_desc: "Ausgehend von einer mittleren Menge an [concept_mana_density] kann die lokale Fauna und Flora in großer Zahl mutieren und Zivilisten brutal angreifen." #deepl:1861164736
+ concept_gate_monster_attack: "Monster-Angriff" #deepl:3876006220
+ concept_gate_monster_attacks: "Monster-Angriffe" #deepl:2502313577
+ concept_gate_monster_attack_desc: "Ab einer mittleren Menge von [concept_mana_density] kann die lokale Fauna und Flora mutieren und Zivilisten angreifen." #deepl:711178298
+ concept_gate_monster_horde: "Monsterhorden" #deepl:477795905
+ concept_gate_monster_hordes: "Monsterhorden" #deepl:183185344
+ concept_gate_monster_horde_desc: "Ausgehend von einer mittleren Menge an [concept_mana_density] kann die lokale Fauna und Flora in großer Zahl mutieren und Zivilisten brutal angreifen." #deepl:1861164736
  concept_mana_density: "Mana-Dichte" #deepl:906003755
  concept_mana_density_mana: "Mana" #deepl:479230379
  concept_mana_density_desc: "Seit sich die Magischen Tore geöffnet haben, strömt Mana auf die Erde. Die Anwendung von [concept_magic_knowledge] auf der Erde hat die Menge des Manas in der Atmosphäre weiter erhöht. Sollte $concept_mana_density$ in einem Staat sein Maximum erreichen, wird [concept_magical_phenomena] alltäglich werden. Bis dahin werden unterschiedliche Niveaus von $concept_mana_density$ in einem Zustand zu unvorhersehbaren Veränderungen und Ereignissen führen.\n\n#header Mana-Dichte-Stufen:#!\n- Niedrige Mana-Dichte beginnt ab #v [GuiScope.ScriptValue('low_mana_density_threshhold')] %#!\n- Mittlere Mana-Dichte beginnt ab #v [GuiScope.ScriptValue('medium_mana_density_threshhold')] %#!\n- Hohe Mana-Dichte beginnt ab #v [GuiScope.ScriptValue('high_mana_density_threshhold')] %#!" #deepl:2596523075
@@ -28,7 +28,7 @@
  concept_gate_magic: "Magie" #deepl:4074079286
  concept_gate_magic_desc: "Magie ist der Akt der Formung von Mana, um eine Wirkung auf die Welt zu erzielen." #deepl:3855567043
  concept_gate_magic_users: "Magische Benutzer" #deepl:676616820
- concept_gate_magic_users_desc: "Magieanwender sind [Concept('concept_pop','$concept_pops$')], die in ihrem täglichen Leben arkane Kräfte einsetzen.\n\n#header Pops:#!\n- [GetPopType('mages').GetName]\n- [GetPopType('druids').GetName]" #deepl:3236821885
+ concept_gate_magic_users_desc: "Magieanwender sind [Concept('concept_pop','$concept_pops$')], die in ihrem täglichen Leben arkane Kräfte einsetzen.\n\n#header Pops:#!\n- [GetPopType('mages').GetName]\n- [GetPopType('gate_druids').GetName]" #deepl:3236821885
  concept_magic_ethic: "Arkane Domäne" #deepl:2675000318
  concept_magic_ethics: "Arkane Domänen" #deepl:3260934101
  concept_magic_ethic_desc: "$concept_magic_ethics$ sind ein entscheidender [concept_country] Modifikator. Sie zeigen, wie ein Land die Magie einsetzen will." #deepl:1321041456

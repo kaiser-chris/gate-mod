@@ -55,7 +55,7 @@ gate_dragon.1 = {
 		default_option = yes
 		scope:gate_dragon_greenland_state ?= {
 			add_modifier = {
-				name = gate_dragon_help_modifier
+				name = modifier_gate_dragon_help
 				days = short_modifier_time
 			}
 		}
@@ -75,7 +75,7 @@ gate_dragon.1 = {
 			}
 		}
 		add_modifier = {
-			name = gate_dragon_cost_modifier
+			name = modifier_gate_dragon_cost
 			days = short_modifier_time
 			multiplier = money_amount_multiplier_small
 		}
@@ -85,7 +85,7 @@ gate_dragon.1 = {
 		name = gate_dragon.victim.b
 		scope:gate_dragon_greenland_state ?= {
 			add_modifier = {
-				name = gate_dragon_no_help_modifier
+				name = modifier_gate_dragon_no_help
 				days = short_modifier_time
 			}
 		}
@@ -142,7 +142,7 @@ gate_dragon.2 = {
 				value = 30
 			}
 			add_modifier = {
-				name = gate_dragon_cost_modifier
+				name = modifier_gate_dragon_cost
 				days = short_modifier_time
 				multiplier = money_amount_multiplier_small
 			}
@@ -220,7 +220,7 @@ gate_dragon.3 = {
 		default_option = yes
 		scope:gate_dragon_california_state ?= {
 			add_modifier = {
-				name = gate_dragon_help_modifier
+				name = modifier_gate_dragon_help
 				days = short_modifier_time
 			}
 		}
@@ -240,7 +240,7 @@ gate_dragon.3 = {
 			}
 		}
 		add_modifier = {
-			name = gate_dragon_cost_modifier
+			name = modifier_gate_dragon_cost
 			days = short_modifier_time
 			multiplier = money_amount_multiplier_small
 		}
@@ -250,7 +250,7 @@ gate_dragon.3 = {
 		name = gate_dragon.victim.b
 		scope:gate_dragon_california_state ?= {
 			add_modifier = {
-				name = gate_dragon_no_help_modifier
+				name = modifier_gate_dragon_no_help
 				days = short_modifier_time
 			}
 		}
@@ -307,7 +307,7 @@ gate_dragon.4 = {
 				value = 30
 			}
 			add_modifier = {
-				name = gate_dragon_cost_modifier
+				name = modifier_gate_dragon_cost
 				days = short_modifier_time
 				multiplier = money_amount_multiplier_small
 			}
@@ -385,7 +385,7 @@ gate_dragon.5 = {
 		default_option = yes
 		scope:gate_dragon_kolyma_state ?= {
 			add_modifier = {
-				name = gate_dragon_help_modifier
+				name = modifier_gate_dragon_help
 				days = short_modifier_time
 			}
 		}
@@ -405,7 +405,7 @@ gate_dragon.5 = {
 			}
 		}
 		add_modifier = {
-			name = gate_dragon_cost_modifier
+			name = modifier_gate_dragon_cost
 			days = short_modifier_time
 			multiplier = money_amount_multiplier_small
 		}
@@ -415,7 +415,7 @@ gate_dragon.5 = {
 		name = gate_dragon.victim.b
 		scope:gate_dragon_kolyma_state ?= {
 			add_modifier = {
-				name = gate_dragon_no_help_modifier
+				name = modifier_gate_dragon_no_help
 				days = short_modifier_time
 			}
 		}
@@ -472,7 +472,7 @@ gate_dragon.6 = {
 				value = 30
 			}
 			add_modifier = {
-				name = gate_dragon_cost_modifier
+				name = modifier_gate_dragon_cost
 				days = short_modifier_time
 				multiplier = money_amount_multiplier_small
 			}
@@ -550,7 +550,7 @@ gate_dragon.7 = {
 		default_option = yes
 		scope:gate_dragon_himalaya_state ?= {
 			add_modifier = {
-				name = gate_dragon_help_modifier
+				name = modifier_gate_dragon_help
 				days = short_modifier_time
 			}
 		}
@@ -570,7 +570,7 @@ gate_dragon.7 = {
 			}
 		}
 		add_modifier = {
-			name = gate_dragon_cost_modifier
+			name = modifier_gate_dragon_cost
 			days = short_modifier_time
 			multiplier = money_amount_multiplier_small
 		}
@@ -580,7 +580,7 @@ gate_dragon.7 = {
 		name = gate_dragon.victim.b
 		scope:gate_dragon_himalaya_state = {
 			add_modifier = {
-				name = gate_dragon_no_help_modifier
+				name = modifier_gate_dragon_no_help
 				days = short_modifier_time
 			}
 		}
@@ -637,7 +637,7 @@ gate_dragon.8 = {
 				value = 30
 			}
 			add_modifier = {
-				name = gate_dragon_cost_modifier
+				name = modifier_gate_dragon_cost
 				days = short_modifier_time
 				multiplier = money_amount_multiplier_small
 			}

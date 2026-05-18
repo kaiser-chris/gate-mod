@@ -132,7 +132,7 @@ debug_magic_growing_decision = {
 	}
 }
 
-debug_monster_horde_decision = {
+debug_gate_monster_horde_decision = {
 	is_shown = {
 		has_global_variable = com_debug
 		is_player = yes
@@ -149,7 +149,7 @@ debug_monster_horde_decision = {
 	}
 }
 
-debug_monster_attack_decision = {
+debug_gate_monster_attack_decision = {
 	is_shown = {
 		has_global_variable = com_debug
 		is_player = yes
@@ -161,7 +161,7 @@ debug_monster_attack_decision = {
 				is_capital = yes
 			}
 			state_region = {
-				start_harvest_condition = monster_attack
+				start_harvest_condition = gate_monster_attack
 			}
 		}
 	}

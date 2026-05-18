@@ -51,7 +51,7 @@
 						value = 1
 						if = {
 							limit = {
-								has_modifier = focus_investigate_gate_cost_modifier
+								has_modifier = modifier_gate_focus_investigate_gate_cost
 							}
 							# Focused Efforts
 							add = 2
@@ -65,7 +65,7 @@
 
 	on_complete = {
 		hidden_effect = {
-			remove_modifier = focus_investigate_gate_cost_modifier
+			remove_modifier = modifier_gate_focus_investigate_gate_cost
 		}
 		remove_variable = je_investigate_gate_progress
 		trigger_event = {
@@ -87,7 +87,7 @@
 
 	on_invalid = {
 		hidden_effect = {
-			remove_modifier = focus_investigate_gate_cost_modifier
+			remove_modifier = modifier_gate_focus_investigate_gate_cost
 		}
 		remove_variable = je_investigate_gate_progress
 	}
