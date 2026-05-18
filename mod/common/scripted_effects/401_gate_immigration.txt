@@ -1,7 +1,7 @@
 ﻿add_gate_immigration_dwarven = {
 	if = {
 		limit = {
-			has_technology_researched = dwarven_gate_immigration
+			has_technology_researched = gate_dwarven_immigration
 		}
 		add_gate_immigration = {
 			culture = dwarven
@@ -15,7 +15,7 @@
 add_gate_immigration_orcish = {
 	if = {
 		limit = {
-			has_technology_researched = orcish_gate_immigration
+			has_technology_researched = gate_orcish_immigration
 		}
 		add_gate_immigration = {
 			culture = orcish
@@ -29,7 +29,7 @@ add_gate_immigration_orcish = {
 add_gate_immigration_elven = {
 	if = {
 		limit = {
-			has_technology_researched = elven_gate_immigration
+			has_technology_researched = gate_elven_immigration
 		}
 		add_gate_immigration = {
 			culture = elven
@@ -43,7 +43,7 @@ add_gate_immigration_elven = {
 add_gate_immigration_gnomish = {
 	if = {
 		limit = {
-			has_technology_researched = gnomish_gate_immigration
+			has_technology_researched = gate_gnomish_immigration
 		}
 		add_gate_immigration = {
 			culture = gnomish
@@ -57,7 +57,7 @@ add_gate_immigration_gnomish = {
 add_gate_immigration_bear = {
 	if = {
 		limit = {
-			has_technology_researched = bear_gate_immigration
+			has_technology_researched = gate_ogre_immigration
 		}
 		add_gate_immigration = {
 			culture = gate_arctic_ogre

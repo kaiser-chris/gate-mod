@@ -1,9 +1,9 @@
 ﻿### ERA 1
 
-magic_understanding_society = {
+gate_magic_understanding_society = {
 	# Unlocks all magic society research
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/magic_understanding.dds"
+	texture = "gfx/interface/icons/invention_icons/gate_magic_understanding.dds"
 	category = society
 	can_research = no
 
@@ -16,7 +16,7 @@ magic_understanding_society = {
 	}
 }
 
-dwarven_gate_immigration = {
+gate_dwarven_immigration = {
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/gate_migration.dds"
 	category = society
@@ -31,7 +31,7 @@ dwarven_gate_immigration = {
 	}
 }
 
-orcish_gate_immigration = {
+gate_orcish_immigration = {
     era = era_1
     texture = "gfx/interface/icons/invention_icons/gate_migration.dds"
     category = society
@@ -42,7 +42,7 @@ orcish_gate_immigration = {
     }
 }
 
-elven_gate_immigration = {
+gate_elven_immigration = {
     era = era_1
     texture = "gfx/interface/icons/invention_icons/gate_migration.dds"
     category = society
@@ -53,7 +53,7 @@ elven_gate_immigration = {
     }
 }
 
-gnomish_gate_immigration = {
+gate_gnomish_immigration = {
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/gate_migration.dds"
 	category = society
@@ -64,7 +64,7 @@ gnomish_gate_immigration = {
 	}
 }
 
-bear_gate_immigration = {
+gate_ogre_immigration = {
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/gate_migration.dds"
 	category = society
@@ -75,7 +75,7 @@ bear_gate_immigration = {
 	}
 }
 
-orc_clan_support = {
+gate_orc_clan_support = {
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/gate_orc.dds"
 	category = society
@@ -90,9 +90,9 @@ orc_clan_support = {
 	}
 }
 
-elven_support = {
+gate_elven_support = {
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/elven_support.dds"
+	texture = "gfx/interface/icons/invention_icons/gate_elven_support.dds"
 	category = society
 	can_research = no
 
@@ -106,9 +106,9 @@ elven_support = {
 	}
 }
 
-elven_forests = {
+gate_elven_forests = {
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/elven_forests.dds"
+	texture = "gfx/interface/icons/invention_icons/gate_elven_forests.dds"
 	category = society
 	can_research = no
 
@@ -121,9 +121,9 @@ elven_forests = {
 	}
 }
 
-gnomish_harmony = {
+gate_gnomish_harmony = {
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/gnomish_harmony.dds"
+	texture = "gfx/interface/icons/invention_icons/gate_gnomish_harmony.dds"
 	category = society
 	can_research = no
 
@@ -143,14 +143,14 @@ gate_expeditions = {
 	}
 }
 
-mana_lanterns = {
+gate_mana_lanterns = {
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/mana_lanterns.dds"
+	texture = "gfx/interface/icons/invention_icons/gate_mana_lanterns.dds"
 	category = society
 	can_research = no
 
 	unlocking_technologies = {
-		magic_understanding_society
+		gate_magic_understanding_society
 		urban_planning
 	}
 
@@ -159,7 +159,7 @@ mana_lanterns = {
 	}
 }
 
-formalized_magic = {
+gate_formalized_magic = {
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/gate_formalized_magic.dds"
 	category = society
@@ -172,7 +172,7 @@ formalized_magic = {
 
 	unlocking_technologies = {
 		academia
-		magic_understanding_society
+		gate_magic_understanding_society
 	}
 
 	ai_weight = {
@@ -180,9 +180,9 @@ formalized_magic = {
 	}
 }
 
-healing_circles = {
+gate_healing_circles = {
 	era = era_2
-	texture = "gfx/interface/icons/invention_icons/healing_circle.dds"
+	texture = "gfx/interface/icons/invention_icons/gate_healing_circle.dds"
 	category = society
 	can_research = no
 
@@ -193,7 +193,7 @@ healing_circles = {
 
 	unlocking_technologies = {
 		medical_degrees
-		formalized_magic
+		gate_formalized_magic
 	}
 
 	ai_weight = {
@@ -201,7 +201,7 @@ healing_circles = {
 	}
 }
 
-monster_compendium = {
+gate_monster_compendium = {
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/gate_monster_compendium.dds"
 	category = society
@@ -214,7 +214,7 @@ monster_compendium = {
 	}
 
 	unlocking_technologies = {
-		formalized_magic
+		gate_formalized_magic
 	}
 
 	ai_weight = {
@@ -222,7 +222,7 @@ monster_compendium = {
 	}
 }
 
-arcane_infrastructure = {
+gate_arcane_infrastructure = {
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/gate_arcane_infrastructure.dds"
 	category = society
@@ -236,7 +236,7 @@ arcane_infrastructure = {
 	}
 
 	unlocking_technologies = {
-		mana_lanterns
+		gate_mana_lanterns
 		modern_sewerage
 	}
 
@@ -245,9 +245,9 @@ arcane_infrastructure = {
 	}
 }
 
-ethereal_messaging = {
+gate_ethereal_messaging = {
 	era = era_2
-	texture = "gfx/interface/icons/invention_icons/ethereal_messaging.dds"
+	texture = "gfx/interface/icons/invention_icons/gate_ethereal_messaging.dds"
 	category = society
 	can_research = no
 
@@ -258,7 +258,7 @@ ethereal_messaging = {
 	}
 
 	unlocking_technologies = {
-		formalized_magic
+		gate_formalized_magic
 		central_archives
 	}
 
@@ -267,7 +267,7 @@ ethereal_messaging = {
 	}
 }
 
-magic_science = {
+gate_magic_science = {
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/gate_magic_science.dds"
 	category = society
@@ -290,7 +290,7 @@ magic_science = {
 	}
 
 	unlocking_technologies = {
-		formalized_magic
+		gate_formalized_magic
 	}
 
 	ai_weight = {
@@ -298,7 +298,7 @@ magic_science = {
 	}
 }
 
-mana_linked_education = {
+gate_mana_linked_education = {
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/gate_mana_linked_education.dds"
 	category = society
@@ -309,7 +309,7 @@ mana_linked_education = {
 	}
 
 	unlocking_technologies = {
-		magic_science
+		gate_magic_science
 		dialectics
 	}
 
@@ -318,14 +318,14 @@ mana_linked_education = {
 	}
 }
 
-thaumaturgic_courts = {
+gate_thaumaturgic_courts = {
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/gate_thaumaturgic_courts.dds"
 	category = society
 	can_research = no
 
 	unlocking_technologies = {
-		magic_science
+		gate_magic_science
 	}
 
 	modifier = {
@@ -337,7 +337,7 @@ thaumaturgic_courts = {
 	}
 }
 
-soulbound_currency = {
+gate_soulbound_currency = {
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/gate_soulbound_currency.dds"
 	category = society
@@ -350,7 +350,7 @@ soulbound_currency = {
 
 	unlocking_technologies = {
 		international_exchange_standards
-		magic_science
+		gate_magic_science
 	}
 
 	ai_weight = {

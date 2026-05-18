@@ -1,4 +1,4 @@
-﻿mobilization_option_ritual_magic = {
+﻿mobilization_option_gate_ritual_magic = {
 	texture = "gfx/interface/icons/mobilization_options/gate_ritual_magic.dds"
 
 	upkeep_modifier = {
@@ -6,7 +6,7 @@
 	}
 
 	unlocking_technologies = {
-		ritual_magic
+		gate_ritual_magic
 	}
 
 	on_deactivate_while_mobilized = {
@@ -34,7 +34,7 @@
 	group = magical_support
 }
 
-mobilization_option_battlefield_wards = {
+mobilization_option_gate_battlefield_wards = {
 	texture = "gfx/interface/icons/mobilization_options/gate_battlefield_ward.dds"
 
 	upkeep_modifier = {
@@ -42,7 +42,7 @@ mobilization_option_battlefield_wards = {
 	}
 
 	unlocking_technologies = {
-		battlefield_wards
+		gate_battlefield_wards
 	}
 
 	on_deactivate_while_mobilized = {
@@ -68,7 +68,7 @@ mobilization_option_battlefield_wards = {
 	group = magical_support
 }
 
-mobilization_option_healing_circles = {
+mobilization_option_gate_healing_circles = {
 	texture = "gfx/interface/icons/mobilization_options/gate_healing_circle.dds"
 
 	upkeep_modifier = {
@@ -76,7 +76,7 @@ mobilization_option_healing_circles = {
 	}
 
 	unlocking_technologies = {
-		healing_circles
+		gate_healing_circles
 	}
 
 	on_deactivate_while_mobilized = {

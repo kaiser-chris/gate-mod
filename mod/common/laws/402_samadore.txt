@@ -1,4 +1,4 @@
-﻿law_gnomish_harmony = {
+﻿law_gate_gnomish_harmony = {
 	group = lawgroup_citizenship
 	parent = law_multicultural
 
@@ -11,7 +11,7 @@
 	}
 
 	unlocking_technologies = {
-		gnomish_harmony
+		gate_gnomish_harmony
 	}
 
 	on_enact = {
@@ -19,7 +19,7 @@
 	}
 
 	is_visible = {
-		has_technology_researched = gnomish_harmony
+		has_technology_researched = gate_gnomish_harmony
 	}
 
     # TODO: Adjust this
@@ -99,11 +99,11 @@ law_gnomish_integration = {
 	progressiveness = 25
 
 	unlocking_technologies = {
-		gnomish_harmony
+		gate_gnomish_harmony
 	}
 
 	is_visible = {
-		has_technology_researched = gnomish_harmony
+		has_technology_researched = gate_gnomish_harmony
 	}
 
 	modifier = {

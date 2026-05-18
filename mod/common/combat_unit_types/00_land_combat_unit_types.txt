@@ -80,7 +80,7 @@ combat_unit_type_irregular_infantry = {
 	}
 }
 
-combat_unit_type_mage_infantry = {
+combat_unit_type_gate_mage_infantry = {
     group = combat_unit_group_infantry
     max_manpower = 1000
     supply_capacity = 10
@@ -99,7 +99,7 @@ combat_unit_type_mage_infantry = {
     }
 
     unlocking_technologies = {
-        mage_infantry
+        gate_mage_infantry
     }
 
     combat_unit_image = {
@@ -565,7 +565,7 @@ combat_unit_type_mechanized_infantry = {
 
 ### Artillery
 
-combat_unit_type_mage_artillery = {
+combat_unit_type_gate_mage_artillery = {
     group = combat_unit_group_artillery
     max_manpower = 1000
     supply_capacity = 12
@@ -587,7 +587,7 @@ combat_unit_type_mage_artillery = {
     }
 
     unlocking_technologies = {
-        mage_artillery
+        gate_mage_artillery
     }
 
     combat_unit_image = {

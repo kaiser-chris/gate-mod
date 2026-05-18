@@ -994,8 +994,8 @@ types gate_base_panel_types {
                     }
                     gate_tech_tree_node = {
                         blockoverride "context" {
-                            datacontext = "[GetTechnology('magic_dwarf_murk')]"
-                            datacontext = "[GetScriptedGui('magic_dwarf_murk')]"
+                            datacontext = "[GetTechnology('gate_magic_dwarf_murk')]"
+                            datacontext = "[GetScriptedGui('gate_magic_dwarf_murk')]"
                         }
                     }
                 }
@@ -1012,21 +1012,21 @@ types gate_base_panel_types {
                     }
                     gate_tech_tree_node = {
                         blockoverride "context" {
-                            datacontext = "[GetTechnology('magic_farming')]"
-                            datacontext = "[GetScriptedGui('magic_farming')]"
+                            datacontext = "[GetTechnology('gate_magic_farming')]"
+                            datacontext = "[GetScriptedGui('gate_magic_farming')]"
                         }
                     }
 
                     gate_tech_tree_node = {
                         blockoverride "context" {
-                            datacontext = "[GetTechnology('living_irrigation')]"
-                            datacontext = "[GetScriptedGui('living_irrigation')]"
+                            datacontext = "[GetTechnology('gate_living_irrigation')]"
+                            datacontext = "[GetScriptedGui('gate_living_irrigation')]"
                         }
                     }
                     gate_tech_tree_node = {
                         blockoverride "context" {
-                            datacontext = "[GetTechnology('simple_rune_carving')]"
-                            datacontext = "[GetScriptedGui('simple_rune_carving')]"
+                            datacontext = "[GetTechnology('gate_simple_rune_carving')]"
+                            datacontext = "[GetScriptedGui('gate_simple_rune_carving')]"
                         }
                     }
                 }
@@ -1035,20 +1035,20 @@ types gate_base_panel_types {
                 blockoverride "items" {
                     gate_tech_tree_node = {
                         blockoverride "context" {
-                            datacontext = "[GetTechnology('magic_dwarf_murk_railways')]"
-                            datacontext = "[GetScriptedGui('magic_dwarf_murk_railways')]"
+                            datacontext = "[GetTechnology('gate_magic_dwarf_murk_railways')]"
+                            datacontext = "[GetScriptedGui('gate_magic_dwarf_murk_railways')]"
                         }
                     }
                     gate_tech_tree_node = {
                         blockoverride "context" {
-                            datacontext = "[GetTechnology('mana_cores')]"
-                            datacontext = "[GetScriptedGui('mana_cores')]"
+                            datacontext = "[GetTechnology('gate_mana_cores')]"
+                            datacontext = "[GetScriptedGui('gate_mana_cores')]"
                         }
                     }
                     gate_tech_tree_node = {
                         blockoverride "context" {
-                            datacontext = "[GetTechnology('arcane_foundries')]"
-                            datacontext = "[GetScriptedGui('arcane_foundries')]"
+                            datacontext = "[GetTechnology('gate_arcane_foundries')]"
+                            datacontext = "[GetScriptedGui('gate_arcane_foundries')]"
                         }
                     }
                 }
@@ -1065,14 +1065,14 @@ types gate_base_panel_types {
                     }
                     gate_tech_tree_node = {
                         blockoverride "context" {
-                            datacontext = "[GetTechnology('regenerative_timber')]"
-                            datacontext = "[GetScriptedGui('regenerative_timber')]"
+                            datacontext = "[GetTechnology('gate_regenerative_timber')]"
+                            datacontext = "[GetScriptedGui('gate_regenerative_timber')]"
                         }
                     }
                     gate_tech_tree_node = {
                         blockoverride "context" {
-                            datacontext = "[GetTechnology('mana_infused_fertilizers')]"
-                            datacontext = "[GetScriptedGui('mana_infused_fertilizers')]"
+                            datacontext = "[GetTechnology('gate_mana_infused_fertilizers')]"
+                            datacontext = "[GetScriptedGui('gate_mana_infused_fertilizers')]"
                         }
                     }
                 }
@@ -1083,8 +1083,8 @@ types gate_base_panel_types {
                 blockoverride "items" {
                     gate_tech_tree_node = {
                         blockoverride "context" {
-                            datacontext = "[GetTechnology('magic_golems')]"
-                            datacontext = "[GetScriptedGui('magic_golems')]"
+                            datacontext = "[GetTechnology('gate_magic_golems')]"
+                            datacontext = "[GetScriptedGui('gate_magic_golems')]"
                         }
                     }
                 }
@@ -1098,14 +1098,14 @@ types gate_base_panel_types {
                 blockoverride "items" {
                     gate_tech_tree_node = {
                         blockoverride "context" {
-                            datacontext = "[GetTechnology('mage_infantry')]"
-                            datacontext = "[GetScriptedGui('mage_infantry')]"
+                            datacontext = "[GetTechnology('gate_mage_infantry')]"
+                            datacontext = "[GetScriptedGui('gate_mage_infantry')]"
                         }
                     }
                     gate_tech_tree_node = {
                         blockoverride "context" {
-                            datacontext = "[GetTechnology('battlefield_wards')]"
-                            datacontext = "[GetScriptedGui('battlefield_wards')]"
+                            datacontext = "[GetTechnology('gate_battlefield_wards')]"
+                            datacontext = "[GetScriptedGui('gate_battlefield_wards')]"
                         }
                     }
                 }
@@ -1122,8 +1122,8 @@ types gate_base_panel_types {
                     }
                     gate_tech_tree_node = {
                         blockoverride "context" {
-                            datacontext = "[GetTechnology('ritual_magic')]"
-                            datacontext = "[GetScriptedGui('ritual_magic')]"
+                            datacontext = "[GetTechnology('gate_ritual_magic')]"
+                            datacontext = "[GetScriptedGui('gate_ritual_magic')]"
                         }
                     }
                     gate_tech_tree_node = {
@@ -1135,8 +1135,8 @@ types gate_base_panel_types {
 
                     gate_tech_tree_node = {
                         blockoverride "context" {
-                            datacontext = "[GetTechnology('mage_artillery')]"
-                            datacontext = "[GetScriptedGui('mage_artillery')]"
+                            datacontext = "[GetTechnology('gate_mage_artillery')]"
+                            datacontext = "[GetScriptedGui('gate_mage_artillery')]"
                         }
                     }
                 }
@@ -1192,56 +1192,56 @@ types gate_base_panel_types {
                 blockoverride "items" {
                     gate_tech_tree_node = {
                         blockoverride "context" {
-                            datacontext = "[GetTechnology('dwarven_gate_immigration')]"
-                            datacontext = "[GetScriptedGui('dwarven_gate_immigration')]"
+                            datacontext = "[GetTechnology('gate_dwarven_immigration')]"
+                            datacontext = "[GetScriptedGui('gate_dwarven_immigration')]"
                         }
                     }
                     gate_tech_tree_node = {
                         blockoverride "context" {
-                            datacontext = "[GetTechnology('orcish_gate_immigration')]"
-                            datacontext = "[GetScriptedGui('orcish_gate_immigration')]"
+                            datacontext = "[GetTechnology('gate_orcish_immigration')]"
+                            datacontext = "[GetScriptedGui('gate_orcish_immigration')]"
                         }
                     }
                     gate_tech_tree_node = {
                         blockoverride "context" {
-                            datacontext = "[GetTechnology('orc_clan_support')]"
-                            datacontext = "[GetScriptedGui('orc_clan_support')]"
+                            datacontext = "[GetTechnology('gate_orc_clan_support')]"
+                            datacontext = "[GetScriptedGui('gate_orc_clan_support')]"
                         }
                     }
                     gate_tech_tree_node = {
                         blockoverride "context" {
-                            datacontext = "[GetTechnology('elven_gate_immigration')]"
-                            datacontext = "[GetScriptedGui('elven_gate_immigration')]"
+                            datacontext = "[GetTechnology('gate_elven_immigration')]"
+                            datacontext = "[GetScriptedGui('gate_elven_immigration')]"
                         }
                     }
                     gate_tech_tree_node = {
                         blockoverride "context" {
-                            datacontext = "[GetTechnology('elven_support')]"
-                            datacontext = "[GetScriptedGui('elven_support')]"
+                            datacontext = "[GetTechnology('gate_elven_support')]"
+                            datacontext = "[GetScriptedGui('gate_elven_support')]"
                         }
                     }
                     gate_tech_tree_node = {
                         blockoverride "context" {
-                            datacontext = "[GetTechnology('gnomish_gate_immigration')]"
-                            datacontext = "[GetScriptedGui('gnomish_gate_immigration')]"
+                            datacontext = "[GetTechnology('gate_gnomish_immigration')]"
+                            datacontext = "[GetScriptedGui('gate_gnomish_immigration')]"
                         }
                     }
                     gate_tech_tree_node = {
                         blockoverride "context" {
-                            datacontext = "[GetTechnology('gnomish_harmony')]"
-                            datacontext = "[GetScriptedGui('gnomish_harmony')]"
+                            datacontext = "[GetTechnology('gate_gnomish_harmony')]"
+                            datacontext = "[GetScriptedGui('gate_gnomish_harmony')]"
                         }
                     }
                     gate_tech_tree_node = {
                         blockoverride "context" {
-                            datacontext = "[GetTechnology('bear_gate_immigration')]"
-                            datacontext = "[GetScriptedGui('bear_gate_immigration')]"
+                            datacontext = "[GetTechnology('gate_ogre_immigration')]"
+                            datacontext = "[GetScriptedGui('gate_ogre_immigration')]"
                         }
                     }
                     gate_tech_tree_node = {
                         blockoverride "context" {
-                            datacontext = "[GetTechnology('mana_lanterns')]"
-                            datacontext = "[GetScriptedGui('mana_lanterns')]"
+                            datacontext = "[GetTechnology('gate_mana_lanterns')]"
+                            datacontext = "[GetScriptedGui('gate_mana_lanterns')]"
                         }
                     }
                 }
@@ -1252,27 +1252,27 @@ types gate_base_panel_types {
                 blockoverride "items" {
                     gate_tech_tree_node = {
                         blockoverride "context" {
-                            datacontext = "[GetTechnology('formalized_magic')]"
-                            datacontext = "[GetScriptedGui('formalized_magic')]"
+                            datacontext = "[GetTechnology('gate_formalized_magic')]"
+                            datacontext = "[GetScriptedGui('gate_formalized_magic')]"
                         }
                     }
                     gate_tech_tree_node = {
                         blockoverride "context" {
-                            datacontext = "[GetTechnology('monster_compendium')]"
-                            datacontext = "[GetScriptedGui('monster_compendium')]"
+                            datacontext = "[GetTechnology('gate_monster_compendium')]"
+                            datacontext = "[GetScriptedGui('gate_monster_compendium')]"
                         }
                     }
 
                     gate_tech_tree_node = {
                         blockoverride "context" {
-                            datacontext = "[GetTechnology('healing_circles')]"
-                            datacontext = "[GetScriptedGui('healing_circles')]"
+                            datacontext = "[GetTechnology('gate_healing_circles')]"
+                            datacontext = "[GetScriptedGui('gate_healing_circles')]"
                         }
                     }
                     gate_tech_tree_node = {
                         blockoverride "context" {
-                            datacontext = "[GetTechnology('arcane_infrastructure')]"
-                            datacontext = "[GetScriptedGui('arcane_infrastructure')]"
+                            datacontext = "[GetTechnology('gate_arcane_infrastructure')]"
+                            datacontext = "[GetScriptedGui('gate_arcane_infrastructure')]"
                         }
                     }
                 }
@@ -1281,8 +1281,8 @@ types gate_base_panel_types {
                 blockoverride "items" {
                     gate_tech_tree_node = {
                         blockoverride "context" {
-                            datacontext = "[GetTechnology('ethereal_messaging')]"
-                            datacontext = "[GetScriptedGui('ethereal_messaging')]"
+                            datacontext = "[GetTechnology('gate_ethereal_messaging')]"
+                            datacontext = "[GetScriptedGui('gate_ethereal_messaging')]"
                         }
                     }
                 }
@@ -1293,20 +1293,20 @@ types gate_base_panel_types {
                 blockoverride "items" {
                     gate_tech_tree_node = {
                         blockoverride "context" {
-                            datacontext = "[GetTechnology('magic_science')]"
-                            datacontext = "[GetScriptedGui('magic_science')]"
+                            datacontext = "[GetTechnology('gate_magic_science')]"
+                            datacontext = "[GetScriptedGui('gate_magic_science')]"
                         }
                     }
                     gate_tech_tree_node = {
                         blockoverride "context" {
-                            datacontext = "[GetTechnology('mana_linked_education')]"
-                            datacontext = "[GetScriptedGui('mana_linked_education')]"
+                            datacontext = "[GetTechnology('gate_mana_linked_education')]"
+                            datacontext = "[GetScriptedGui('gate_mana_linked_education')]"
                         }
                     }
                     gate_tech_tree_node = {
                         blockoverride "context" {
-                            datacontext = "[GetTechnology('thaumaturgic_courts')]"
-                            datacontext = "[GetScriptedGui('thaumaturgic_courts')]"
+                            datacontext = "[GetTechnology('gate_thaumaturgic_courts')]"
+                            datacontext = "[GetScriptedGui('gate_thaumaturgic_courts')]"
                         }
                     }
                 }
@@ -1317,8 +1317,8 @@ types gate_base_panel_types {
                 blockoverride "items" {
                     gate_tech_tree_node = {
                         blockoverride "context" {
-                            datacontext = "[GetTechnology('soulbound_currency')]"
-                            datacontext = "[GetScriptedGui('soulbound_currency')]"
+                            datacontext = "[GetTechnology('gate_soulbound_currency')]"
+                            datacontext = "[GetScriptedGui('gate_soulbound_currency')]"
                         }
                     }
                 }

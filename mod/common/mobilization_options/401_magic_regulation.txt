@@ -2,7 +2,7 @@
 	texture = "gfx/interface/icons/mobilization_options/gate_no_regulations.dds"
 
 	unlocking_technologies = {
-		magic_understanding_military
+		gate_magic_understanding_military
 	}
 
 	possible = {
@@ -32,7 +32,7 @@
 	unit_modifier = {
 		unit_morale_recovery_mult = -0.05
 		unit_devastation_mult = 0.10
-		unit_combat_unit_type_mage_infantry_offense_mult = 0.05
+		unit_combat_unit_type_gate_mage_infantry_offense_mult = 0.05
 		unit_combat_unit_type_arcane_vangard_offense_mult = 0.05
 		unit_combat_unit_type_mana_rifle_infantry_offense_mult = 0.05
 		unit_combat_unit_type_rune_guard_infantry_offense_mult = 0.05
@@ -50,7 +50,7 @@ mobilization_option_gate_basic_regulations = {
 	texture = "gfx/interface/icons/mobilization_options/gate_basic_regulations.dds"
 
 	unlocking_technologies = {
-		magic_understanding_military
+		gate_magic_understanding_military
 	}
 
 	upkeep_modifier = {
@@ -96,7 +96,7 @@ mobilization_option_gate_strict_regulations = {
 	texture = "gfx/interface/icons/mobilization_options/gate_strict_regulations.dds"
 
 	unlocking_technologies = {
-		magic_understanding_military
+		gate_magic_understanding_military
 	}
 
 	upkeep_modifier = {
@@ -131,7 +131,7 @@ mobilization_option_gate_strict_regulations = {
 		battle_defense_owned_province_mult = 0.05
 		battle_offense_owned_province_mult = 0.05
 		military_formation_mobilization_speed_mult = 0.10
-		unit_combat_unit_type_mage_infantry_offense_mult = -0.05
+		unit_combat_unit_type_gate_mage_infantry_offense_mult = -0.05
 		unit_combat_unit_type_arcane_vangard_offense_mult = -0.05
 		unit_combat_unit_type_mana_rifle_infantry_offense_mult = -0.05
 		unit_combat_unit_type_rune_guard_infantry_offense_mult = -0.05

@@ -11,8 +11,8 @@ tests = {
             any_country = {
                 country_rank >= rank_value:major_power
                 has_technology_researched = gate_commando_thaumaturgy
-                has_technology_researched = soulbound_currency
-                has_technology_researched = magic_golems
+                has_technology_researched = gate_soulbound_currency
+                has_technology_researched = gate_magic_golems
             }
 		}
 		fail = {
