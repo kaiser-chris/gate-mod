@@ -94,7 +94,7 @@ dwarven_alps.2 = {
 			limit = {
 				is_dwarven_mountainous_state = yes
 				NOT = {
-					has_state_trait = state_trait_dwarven_tunnels
+					has_state_trait = state_trait_gate_dwarven_tunnels
 				}
 			}
 			save_scope_as = digging_state
@@ -120,7 +120,7 @@ dwarven_alps.2 = {
 		default_option = yes
 		scope:digging_state ?= {
 			state_region = {
-				add_state_trait = state_trait_dwarven_tunnels
+				add_state_trait = state_trait_gate_dwarven_tunnels
 			}
 		}
 	}

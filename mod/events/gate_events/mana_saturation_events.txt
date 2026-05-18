@@ -146,7 +146,7 @@ gate_mana_saturation.3 = {
 					has_state_trait = state_trait_arctic_whaling
 					has_state_trait = state_trait_good_soils
 					has_state_trait = state_trait_black_soil
-					has_state_trait = state_trait_magic_soil
+					has_state_trait = state_trait_gate_magic_soil
 				}
 				state_region = {
 					var:mana_density >= medium_mana_density_threshhold
@@ -170,7 +170,7 @@ gate_mana_saturation.3 = {
 		name = gate_mana_saturation.3.a1
 		default_option = yes
 		scope:magic_growing_state.state_region = {
-			add_state_trait = state_trait_magic_soil
+			add_state_trait = state_trait_gate_magic_soil
 			add_arable_land = 5
 		}
 		trigger = {
@@ -180,7 +180,7 @@ gate_mana_saturation.3 = {
 	option = {
 		name = gate_mana_saturation.3.b
 		scope:magic_growing_state.state_region = {
-			add_state_trait = state_trait_magic_soil
+			add_state_trait = state_trait_gate_magic_soil
 			add_arable_land = 5
 		}
 		hidden_effect = {
@@ -203,7 +203,7 @@ gate_mana_saturation.3 = {
 		name = gate_mana_saturation.3.a2
 		default_option = yes
 		scope:magic_growing_state.state_region = {
-			add_state_trait = state_trait_magic_soil
+			add_state_trait = state_trait_gate_magic_soil
 			add_arable_land = 5
 		}
 		trigger = {
@@ -217,7 +217,7 @@ gate_mana_saturation.3 = {
 	option = {
 		name = gate_mana_saturation.3.b
 		scope:magic_growing_state.state_region = {
-			add_state_trait = state_trait_magic_soil
+			add_state_trait = state_trait_gate_magic_soil
 			add_arable_land = 5
 		}
 		hidden_effect = {
