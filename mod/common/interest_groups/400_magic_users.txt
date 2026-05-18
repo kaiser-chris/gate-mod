@@ -1,6 +1,6 @@
 ﻿ig_gate_magic_users = {
 	color = rgb{ 200 200 200 }
-	texture = "gfx/interface/icons/ig_icons/magic_users.dds"
+	texture = "gfx/interface/icons/ig_icons/gate_magic_users.dds"
 	layer = "revolution_dynamic_intelligentsia"
 	index = 8
 
@@ -30,9 +30,9 @@
 				limit = {
 					owner = { c:GATE_OK ?= this }
 				}
-				set_ig_trait = ig_trait:ig_trait_slave_masters
-				set_ig_trait = ig_trait:ig_trait_military_support
-				set_ig_trait = ig_trait:ig_trait_annoyed_masters
+				set_ig_trait = ig_trait:ig_trait_gate_slave_masters
+				set_ig_trait = ig_trait:ig_trait_gate_military_support
+				set_ig_trait = ig_trait:ig_trait_gate_annoyed_masters
 				add_ideology = ideology_gate_orcish_slavery
 				add_ideology = ideology_gate_orchish_patriarchal
 				remove_ideology = ideology_gate_magic_supremacist
@@ -45,15 +45,15 @@
 				}
 				remove_ideology = ideology_anti_clerical
 				add_ideology = ideology_reactionary
-				set_ig_trait = ig_trait:ig_trait_hidden_research
-				set_ig_trait = ig_trait:ig_trait_military_support
-				set_ig_trait = ig_trait:ig_trait_patriotic_research
+				set_ig_trait = ig_trait:ig_trait_gate_hidden_research
+				set_ig_trait = ig_trait:ig_trait_gate_military_support
+				set_ig_trait = ig_trait:ig_trait_gate_patriotic_research
 			}
 			# Default Traits
 			else = {
-				set_ig_trait = ig_trait:ig_trait_hidden_research
-				set_ig_trait = ig_trait:ig_trait_military_support
-				set_ig_trait = ig_trait:ig_trait_patriotic_research
+				set_ig_trait = ig_trait:ig_trait_gate_hidden_research
+				set_ig_trait = ig_trait:ig_trait_gate_military_support
+				set_ig_trait = ig_trait:ig_trait_gate_patriotic_research
 			}
 		}
 
@@ -106,8 +106,8 @@
 	pop_potential = {
 		literacy_rate > 0.25
 		OR = {
-			is_pop_type = mages
-			is_pop_type = druids
+			is_pop_type = gate_mages
+			is_pop_type = gate_druids
 			is_pop_type = academics
 			is_pop_type = aristocrats
 		}
@@ -121,10 +121,10 @@
 
 		# Mages
 		add = {
-			desc = pop_mages
+			desc = pop_gate_mages
 			if = {
 				limit = {
-					is_pop_type = mages
+					is_pop_type = gate_mages
 				}
 				value = 100
 			}
@@ -132,10 +132,10 @@
 
 		# Druids
 		add = {
-			desc = pop_druids
+			desc = pop_gate_druids
 			if = {
 				limit = {
-					is_pop_type = druids
+					is_pop_type = gate_druids
 				}
 				value = 100
 			}

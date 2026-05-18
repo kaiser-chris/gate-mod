@@ -29,9 +29,9 @@ gate_mbudye.1 = {
 				}
 				set_state_religion = rel:gate_golden_religion
 			}
-			remove_modifier = lunda_bambudye_liberty_modifier
+			remove_modifier = modifier_gate_lunda_bambudye_liberty
 			add_modifier = {
-				name = lunda_conversion_modifier
+				name = modifier_gate_lunda_conversion
 				years = 5
 			}
 			activate_law = law_type:law_state_religion
@@ -51,9 +51,9 @@ gate_mbudye.1 = {
 				}
 				set_state_religion = rel:gate_golden_religion
 			}
-			remove_modifier = lunda_bambudye_liberty_modifier
+			remove_modifier = modifier_gate_lunda_bambudye_liberty
 			add_modifier = {
-				name = lunda_conversion_modifier
+				name = modifier_gate_lunda_conversion
 				years = 5
 			}
 			activate_law = law_type:law_state_religion
@@ -73,9 +73,9 @@ gate_mbudye.1 = {
 				}
 				set_state_religion = rel:gate_golden_religion
 			}
-			remove_modifier = lunda_bambudye_liberty_modifier
+			remove_modifier = modifier_gate_lunda_bambudye_liberty
 			add_modifier = {
-				name = lunda_conversion_modifier
+				name = modifier_gate_lunda_conversion
 				years = 5
 			}
 			activate_law = law_type:law_state_religion
@@ -95,9 +95,9 @@ gate_mbudye.1 = {
 				}
 				set_state_religion = rel:gate_golden_religion
 			}
-			remove_modifier = lunda_bambudye_liberty_modifier
+			remove_modifier = modifier_gate_lunda_bambudye_liberty
 			add_modifier = {
-				name = lunda_conversion_modifier
+				name = modifier_gate_lunda_conversion
 				years = 5
 			}
 			activate_law = law_type:law_state_religion
@@ -130,7 +130,7 @@ gate_mbudye.2 = {
 		form_lunda_nation = yes
 		trigger_lunda_uprising = yes
 		c:LND = {
-			remove_modifier = lunda_bambudye_liberty_modifier
+			remove_modifier = modifier_gate_lunda_bambudye_liberty
 		}
 		trigger_event = {
 			id = gate_mbudye.15

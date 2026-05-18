@@ -92,20 +92,20 @@
 		}
 		else_if = {
 			limit = {
-				is_pop_type = mages
+				is_pop_type = gate_mages
 			}
 			add = {
 				value = 100
-				desc = pop_mages
+				desc = pop_gate_mages
 			}
 		}
 		else_if = {
 			limit = {
-				is_pop_type = druids
+				is_pop_type = gate_druids
 			}
 			add = {
 				value = 100
-				desc = pop_druids
+				desc = pop_gate_druids
 			}
 		}
 		else_if = {

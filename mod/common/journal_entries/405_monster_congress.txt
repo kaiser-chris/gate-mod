@@ -33,10 +33,10 @@
 		AND = {
 			is_gate_planet_country = no
 			OR = {
-				has_global_variable = monster_horde_happened
+				has_global_variable = gate_monster_horde_happened
 				any_scope_state = {
 					state_region = {
-						has_harvest_condition = monster_attack
+						has_harvest_condition = gate_monster_attack
 					}
 				}
 			}

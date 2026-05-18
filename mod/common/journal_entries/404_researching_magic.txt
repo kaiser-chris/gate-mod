@@ -105,19 +105,19 @@
 	on_complete = {
 		learn_magic = yes
 		hidden_effect = {
-			remove_modifier = focus_researching_magic_cost_modifier
+			remove_modifier = modifier_gate_focus_researching_magic_cost
 		}
 	}
 
 	on_invalid = {
 		hidden_effect = {
-			remove_modifier = focus_researching_magic_cost_modifier
+			remove_modifier = modifier_gate_focus_researching_magic_cost
 		}
 	}
 
 	on_fail = {
 		hidden_effect = {
-			remove_modifier = focus_researching_magic_cost_modifier
+			remove_modifier = modifier_gate_focus_researching_magic_cost
 		}
 	}
 

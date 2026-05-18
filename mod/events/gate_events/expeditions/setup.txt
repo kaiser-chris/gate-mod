@@ -118,7 +118,7 @@ gate_expedition.1 = {
 
     after = {
         scope:journal_entry ?= {
-            remove_modifier = gate_expedition_preparation_modifier
+            remove_modifier = modifier_gate_expedition_preparation
         }
     }
 }

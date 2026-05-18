@@ -14,11 +14,11 @@
  pb_monster_congress_block: "회의가 시작되지 않음"
  pb_monster_congress_progress: "회의가 진행 중임"
 # Modifiers
- monster_horde_cost_modifier: "괴물 대규모 습격 지원"
- monster_congress_modifier: "괴물 회의 진행 중"
+ modifier_gate_monster_horde_cost: "괴물 대규모 습격 지원"
+ modifier_gate_monster_congress: "괴물 회의 진행 중"
 # Events
  gate_monster_attack.1.t: "괴물 무리"
- gate_monster_attack.1.d: "지역의 [concept_mana_density] 상승으로 인해 [SCOPE.sState('monster_horde_state').GetName]에서 괴물의 무리가 출현했습니다.]"
+ gate_monster_attack.1.d: "지역의 [concept_mana_density] 상승으로 인해 [SCOPE.sState('gate_monster_horde_state').GetName]에서 괴물의 무리가 출현했습니다.]"
  gate_monster_attack.1.f: "마나가 땅 속으로 스며들면서 고대의 잊혀진 공포들을 풀어놓았습니다. 땅의 틈새에서 괴물의 무리가 솟구쳐 나오며, 그들의 눈은 야생적이고 억제되지 않은 마법 에너지로 빛나고 있습니다."
  gate_monster_attack.1.a1: "우리가 가진 모든 것을 다해 도와주겠다."
  gate_monster_attack.1.b1: "지원과 연구원을 보내라."

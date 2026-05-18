@@ -23,7 +23,7 @@ gate_monster_attack.1 = {
         is_player = yes
         global_var:global_mana_saturation >= 20
         NOT = {
-            has_global_variable = monster_horde_grace_period
+            has_global_variable = gate_monster_horde_grace_period
         }
     }
 
@@ -31,10 +31,10 @@ gate_monster_attack.1 = {
         if = {
             limit = {
                 NOT = {
-                    has_global_variable = monster_horde_happened
+                    has_global_variable = gate_monster_horde_happened
                 }
             }
-            set_global_variable = monster_horde_happened
+            set_global_variable = gate_monster_horde_happened
         }
         random_state = {
             limit = {
@@ -50,12 +50,12 @@ gate_monster_attack.1 = {
         # For five to ten years after the horde
         # no more hordes will happen
         set_global_variable = {
-            name = monster_horde_grace_period
+            name = gate_monster_horde_grace_period
             years = { 5 10 }
         }
         scope:monster_horde_state = {
             state_region = {
-                start_harvest_condition = monster_horde
+                start_harvest_condition = gate_monster_horde
             }
         }
     }
@@ -67,7 +67,7 @@ gate_monster_attack.1 = {
             value = very_large_radicals
         }
         add_modifier = {
-            name = monster_horde_cost_modifier
+            name = modifier_gate_monster_horde_cost
             months = 12
             multiplier = money_amount_multiplier_very_small
         }
@@ -81,7 +81,7 @@ gate_monster_attack.1 = {
             value = very_large_radicals
         }
         add_modifier = {
-            name = monster_horde_cost_modifier
+            name = modifier_gate_monster_horde_cost
             months = 12
             multiplier = money_amount_multiplier_small
         }
@@ -119,7 +119,7 @@ gate_monster_attack.1 = {
             value = 20
         }
         add_modifier = {
-            name = monster_horde_cost_modifier
+            name = modifier_gate_monster_horde_cost
             months = 12
             multiplier = money_amount_multiplier_very_small
         }
@@ -136,7 +136,7 @@ gate_monster_attack.1 = {
             value = 10
         }
         add_modifier = {
-            name = monster_horde_cost_modifier
+            name = modifier_gate_monster_horde_cost
             months = 12
             multiplier = money_amount_multiplier_small
         }
