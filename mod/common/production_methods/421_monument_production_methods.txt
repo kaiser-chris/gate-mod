@@ -38,3 +38,26 @@ pm_default_building_gate_arcane_council_headquarters = {
 		}
 	}
 }
+
+pm_default_building_gate_dragon_temple_himalayas = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	is_hidden_when_unavailable = yes
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 200
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_gate_dragon_spawn_add = 50
+		}
+
+		level_scaled = {
+			building_employment_gate_druids_add = 50
+			building_employment_gate_mages_add = 50
+		}
+	}
+}

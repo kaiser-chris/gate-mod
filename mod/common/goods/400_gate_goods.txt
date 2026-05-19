@@ -34,6 +34,18 @@ gate_golem = {
 	convoy_cost_multiplier = 2.0
 }
 
+gate_dragon_spawn = {
+	texture = "gfx/interface/icons/goods_icons/gate_dragon_spawn.dds"
+	cost = 5
+	category = military
+
+	obsession_chance = 0
+	prestige_factor = 0
+	tradeable = no
+	fixed_price = yes
+	convoy_cost_multiplier = 5.0
+}
+
 gate_magic_seed = {
 	texture = "gfx/interface/icons/goods_icons/gate_magic_seeds.dds"
 	cost = 30
