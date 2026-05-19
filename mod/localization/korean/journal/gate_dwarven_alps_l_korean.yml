@@ -18,6 +18,7 @@
  decision_gate_dwarven_tunnels: "드워프 터널 굴착"
  decision_gate_dwarven_tunnels_desc: "산악 지역에 $state_trait_gate_dwarven_tunnels$ 특성을 추가합니다."
  decision_gate_dwarven_tunnels_cooldown_tt: "최근 6개월 동안 #v $state_trait_gate_dwarven_tunnels$#!을 굴착하지 않았음"
+ effect_gate_change_german_integration_progress: "[SCOPE.GetLocalVariable('integration_change').GetValue|+=0]%의 독일 통합 진척도를 변경하세요" #deepl:1102167828
  pb_gate_german_integration_name: "통합 진행 상태"
  pb_gate_german_integration_desc: "진행률: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|0%]#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]/100)%"
  pb_gate_german_integration_support_name: "통합에 대한 대중적 지지"

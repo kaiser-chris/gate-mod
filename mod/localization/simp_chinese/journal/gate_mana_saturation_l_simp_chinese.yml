@@ -1,15 +1,15 @@
 ﻿l_simp_chinese:
- je_mana_saturation: "全球魔能饱和度"
- je_mana_saturation_goal: "[concept_gate_mana_saturation]已达到上限"
- je_mana_saturation_reason: "随着不同位面之间的帷幕日渐稀薄，神秘的魔能开始渗入我们的世界，其存在感与日俱增。空气中充斥着新生的能量嗡鸣，现实的经纬线仿佛镀上了流转的辉光，每一道纹路都闪烁着无限可能。这股持续涌入的魔法能量注定要重塑我们对魔法与力量的认知，预示着一个充满空前变革与机遇的时代即将来临。"
- je_mana_saturation_low_progress: "全球平均[concept_gate_mana_density]较低。"
- je_mana_saturation_medium_progress: "全球平均[concept_gate_mana_density]越来越高。"
- je_mana_saturation_high_progress: "全球平均[concept_gate_mana_density]很高。"
- je_mana_saturation_button_slave_ritual: "献祭奴隶"
- je_mana_saturation_button_slave_ritual_desc: "献祭[GetPopType('slaves').GetName]来增加我们某个地区的[concept_gate_mana_density]。"
- je_mana_saturation_button_slave_ritual_infamy: "[SCOPE.sCountry('loc_country_scope').GetName]的恶名低于100."
- je_mana_saturation_button_slave_ritual_mana_density: "我们的某个地区[concept_gate_mana_density]低于100%。"
- je_mana_saturation_button_slave_ritual_cooldown: "一年没有执行过献祭仪式"
+ je_gate_mana_saturation: "全球法力饱和度" #deepl:171745877
+ je_gate_mana_saturation_goal: "[concept_gate_mana_saturation] 已达到上限" #deepl:2322385364
+ je_gate_mana_saturation_reason: "随着不同位面之间的屏障日渐薄弱，魔力开始渗入我们的世界，其存在感也随着每一天的流逝而日益增强。空气中回荡着崭新的能量，现实的结构似乎也因蕴含的潜力而闪烁生辉。这股源源不断的魔力涌入，必将重塑我们对魔法与力量的认知，预示着一个充满前所未有变革与机遇的新时代的到来。" #deepl:455482982
+ je_gate_mana_saturation_low_progress: "全球[concept_gate_mana_density]的平均水平较低。" #deepl:1289296367
+ je_gate_mana_saturation_medium_progress: "全球各地的[concept_gate_mana_density]平均值正在上升。" #deepl:1707466708
+ je_gate_mana_saturation_high_progress: "全球[concept_gate_mana_density]的平均水平较高。" #deepl:3024880114
+ je_gate_mana_saturation_button_slave_ritual: "祭品奴隶" #deepl:2127545356
+ je_gate_mana_saturation_button_slave_ritual_desc: "牺牲[GetPopType('slaves').GetName]，以提升我方某一州的[concept_gate_mana_density]。" #deepl:3207125767
+ je_gate_mana_saturation_button_slave_ritual_infamy: "[SCOPE.sCountry('loc_country_scope').GetName]的恶名值低于100。" #deepl:2238047500
+ je_gate_mana_saturation_button_slave_ritual_mana_density: "[concept_gate_mana_density] 我们其中一个州的比例低于100%。" #deepl:2301164875
+ je_gate_mana_saturation_button_slave_ritual_cooldown: "已有一年未举行奴隶仪式" #deepl:1814410812
  gate_mana_saturation_buildings_progress_bar_balance: "建筑内的$mana$使用者"
  gate_mana_saturation_mages_progress_bar_balance: "[GetPopType('mages').GetName]"
  gate_mana_saturation_ritual_progress_bar_balance: "仪式"

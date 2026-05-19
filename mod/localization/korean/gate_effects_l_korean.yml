@@ -13,4 +13,8 @@
  effect_gate_start_magic_project: "#bold [SCOPE.GetLocalVariable('gate_project_name').GetFlagName]#! [concept_gate_project]를 시작합니다. 이 프로젝트는 #v [SCOPE.GetLocalVariable('months').GetValue|0] 개월#!이 소요되며, 매달 @money!#r -#![SCOPE.GetLocalVariable('monthly_cost').GetValue|-0v]의 비용이 듭니다."
  effect_gate_start_magic_infrastructure_project: "Start #bold [SCOPE.GetLocalVariable('gate_project_name').GetFlagName]#! [concept_gate_project]. This project will take #v [SCOPE.GetLocalVariable('construction').GetValue|0]#! [concept_construction] and will cost us @money!#r -#![SCOPE.GetLocalVariable('monthly_cost').GetValue|-0v] every month. While active infrastructure focused [Concept('concept_gate_project','$concept_gate_projects$')] will reduce our normal [concept_construction] output by #v half#!!"
  effect_gate_stop_magic_project: "현재 진행 중인 [concept_gate_project]를 중단함"
- effect_gate_activate_magic_researcher: "[SCOPE.GetLocalVariable('magic_researcher').GetCharacter.GetFullNameWithTitle] 이것이 우리의 새로운 [concept_gate_magic_researcher]이 될 것입니다" #deepl:140893545
+ effect_gate_activate_magic_researcher: "[SCOPE.GetLocalVariable('magic_researcher').GetCharacter.GetFullNameWithTitle] 우리의 새로운 [concept_gate_magic_researcher]가 될 것입니다" #deepl:3813005440
+ effect_gate_found_arcane_council: "[THIS.GetCountry.GetName] [concept_gate_arcane_council]를 설립했다." #deepl:3518858866
+ effect_gate_join_arcane_council: "[THIS.GetCountry.GetName] [concept_gate_arcane_council]에 합류합니다." #deepl:3903757967
+ effect_gate_leave_arcane_council: "[THIS.GetCountry.GetName] [concept_gate_arcane_council]를 떠난다." #deepl:3594380064
+ effect_gate_reset_ethics: "모든 `[Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')]`을 제거하십시오." #deepl:368403448

@@ -1,7 +1,7 @@
 ﻿l_german:
 # Orcish Hegemony
  lawgroup_gate_orcish_hegemony: "$orcish$ Hegemonie" #deepl:326626184
- lawgroup_gate_orcish_hegemony_desc: "Die $lawgroup_gate_orcish_hegemony$ ist ein brutales und unnachgiebiges System, in dem Macht und Hierarchie jeden Aspekt des Lebens bestimmen. Für die Orks ist Herrschaft nicht nur ein Recht, sondern ein Glaubensbekenntnis, und alle Nicht-Orks sind versklavt, ihrer Identität und Freiheit beraubt und verpflichtet, ihren grünhäutigen Herren zu dienen. Doch selbst unter den Orks ist das Leben keine einfache Frage der Stärke; sie sind nach Berufen geschichtet, und jede Rolle wird streng kontrolliert." #deepl:3175376002
+ lawgroup_gate_orcish_hegemony_desc: "Das Reich der Orks ($lawgroup_gate_orcish_hegemony$) ist ein brutales und unerbittliches System, in dem Macht und Hierarchie jeden Aspekt des Lebens bestimmen. Für die Orks ist Herrschaft nicht nur ein Recht, sondern ein Glaubensbekenntnis, und alle Nicht-Orks werden versklavt, ihrer Identität und Freiheit beraubt und dazu verdammt, ihren grünhäutigen Herren zu dienen. Doch selbst unter den Orks ist das Leben keine reine Frage der Stärke; sie sind nach Berufen in Klassen unterteilt, wobei jede Rolle streng kontrolliert wird." #deepl:2942349649
  law_gate_orcish_hegemony_enforced: "Erzwungene Hegemonie" #deepl:891062246
  law_gate_orcish_hegemony_enforced_desc: "Die soziale Hegemonie von $orcish$ [concept_culture] wird durchgesetzt." #deepl:2235038345
  law_gate_orcish_hegemony_not_enforced: "Hegemonie nicht durchgesetzt" #deepl:3415917689
@@ -23,9 +23,9 @@
  law_gate_gnomish_integration_desc: "Die gnomische Integration, die auf Respekt und Zusammenarbeit beruht, verzichtet auf Eroberung und setzt stattdessen auf Verbindung. Diese koloniale Politik betont die freiwillige Einbeziehung anderer Kulturen in die Nation durch Dialog, gemeinsamen Wohlstand und gegenseitigen Respekt. Indem sie der Integration Vorrang vor der Beherrschung einräumt, will sie dauerhafte Bindungen aufbauen und Kolonien in blühende Partner statt in unterjochte Länder verwandeln. Obwohl die gnomische Integration nicht unproblematisch ist, stellt sie eine Vision der Kolonisierung dar, die von Harmonie und gemeinsamem Wachstum geprägt ist." #deepl:2047348424
 # Monster Hunting
  lawgroup_gate_monster_hunting: "Monsterjagd" #deepl:976278123
- lawgroup_gate_monster_hunting_desc: "Das System der Monsterjagd zu verhindern [Concept('concept_gate_monster_attack','$concept_gate_monster_attacks$')]." #deepl:1743280833
+ lawgroup_gate_monster_hunting_desc: "Das System der Monsterjagd zur Verhinderung von „[Concept('concept_gate_monster_attack','$concept_gate_monster_attacks$')]“." #deepl:215089838
  law_gate_no_organized_monster_hunting: "Keine organisierte Monsterjagd" #deepl:3363287864
- law_gate_no_organized_monster_hunting_desc: "In diesem Land gibt es keine organisierte Truppe, die nach Monstern jagt, und [Concept('concept_gate_monster_attack','$concept_gate_monster_attacks$')] wird häufig vorkommen." #deepl:2235162294
+ law_gate_no_organized_monster_hunting_desc: "In diesem Land gibt es keine organisierte Truppe, die Monster jagt, und es wird häufig zu „[Concept('concept_gate_monster_attack','$concept_gate_monster_attacks$')]“ kommen." #deepl:1805353442
  law_gate_private_monster_hunters: "Private Monsterjäger" #deepl:4183403945
  law_gate_private_monster_hunters_desc: "Dieses Land vergibt Lizenzen und bezahlt Privatpersonen oder Unternehmen dafür, Monster zu töten." #deepl:1513633388
  law_gate_dedicated_monster_hunters: "Engagierte Monsterjäger" #deepl:2050591764
@@ -42,7 +42,7 @@
  law_gate_noble_magic_users: "Arkaner Adel" #deepl:1191407859
  law_gate_noble_magic_users_desc: "Dieses Land bedroht [GetInterestGroupVariant('ig_gate_magic_users',GetPlayer).GetNameNoFormatting] als natürlich geborene Adlige und bietet ihnen mehr Rechte als den Durchschnittsbürgern." #deepl:3858097587
  law_gate_druidic_circles: "Druidische Kreise" #deepl:1668777127
- law_gate_druidic_circles_desc: "[GetPopType('gate_druids').GetName] mit der Natur kommunizieren, um die Kräfte von Flora und Fauna zu nutzen. Durch heilige Haine und die Ausrichtung auf natürliche Zyklen können sie die Wildnis heilen, schützen und kontrollieren." #deepl:358338620
+ law_gate_druidic_circles_desc: "[GetPopType('gate_druids').GetName] Sie leben im Einklang mit der Natur, um sich die Kräfte von Flora und Fauna zunutze zu machen. Durch heilige Haine und die Ausrichtung auf die Zyklen der Natur können sie heilen, beschützen und die Wildnis beherrschen." #deepl:2107755802
  law_gate_mage_guilds: "Magiergilden" #deepl:2956300017
  law_gate_mage_guilds_desc: "Dieser magische Rahmen dreht sich um das Fachwissen von Magiergilden, die von erfahrenen [GetPopType('mages').GetName] geführt werden. Durch geschickte Praxis, verzauberte Werkzeuge und arkane Zauberei können sie die Magieindustrie ankurbeln." #deepl:3978805145
  law_gate_arcane_bureau: "Büro für Arkanes" #deepl:942969032

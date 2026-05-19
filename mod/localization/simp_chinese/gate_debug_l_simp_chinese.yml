@@ -22,14 +22,12 @@
  debug_decision_gate_dragon_himalaya_decision_desc: "触发喜马拉雅山脉的$gate_dragon.t$事件"
  debug_decision_gate_magic_growing_decision: "调试：触发$gate_mana_saturation.3.t$"
  debug_decision_gate_magic_growing_decision_desc: "触发$gate_mana_saturation.3.t$事件"
- debug_monster_horde_decision: "调试：触发$gate_monster_attack.1.t$"
- debug_monster_horde_decision_desc: "触发$gate_monster_attack.1.t$事件"
+ debug_decision_gate_monster_horde_decision: "调试：触发 $gate_monster_attack.1.t$" #deepl:4049363566
+ debug_decision_gate_monster_horde_decision_desc: "触发 $gate_monster_attack.1.t$ 事件。" #deepl:2577002312
  debug_decision_gate_monster_attack_decision: "调试：触发$monster_attack$"
  debug_decision_gate_monster_attack_decision_desc: "在首都触发$monster_attack$收获状况。"
  debug_decision_gate_toggle_busy_researcher_decision: "调试：切换奥术师忙碌状态"
  debug_decision_gate_toggle_busy_researcher_decision_desc: "改变我国[concept_gate_magic_researcher]的忙碌状态。"
- debug_kill_researcher_decision: "调试：杀死我们需要征服更多的领土！"
- debug_kill_researcher_decision_desc: "杀死我国存在的[concept_gate_magic_researcher]。"
  debug_decision_gate_trigger_ethics_decision: "调试：选择魔法伦理"
  debug_decision_gate_trigger_ethics_decision_desc: "选择新的魔法伦理"
  debug_decision_gate_increase_magical_innovation_decision: "调试：增加魔法创新力"
@@ -42,6 +40,8 @@
  debug_decision_gate_reset_reytu_desc: "重新加载星门远征的配置。"
  debug_decision_gate_start_reytu: "调试：开启星门远征"
  debug_decision_gate_start_reytu_desc: "直接开启星门远征。"
+ debug_decision_gate_join_mage_council: "调试：加入 $io_gate_arcane_council$" #deepl:3074797784
+ debug_decision_gate_join_mage_council_desc: "创建并加入该组织。" #deepl:3320028284
 # Debug Alerts
  alert_alert_gate_debug_base_panel_name: "Base Panel" #TODO: Write alert_gate_space_alert_name
  alert_alert_gate_debug_base_panel_desc: "TODO" #TODO: Write alert_gate_space_alert_desc

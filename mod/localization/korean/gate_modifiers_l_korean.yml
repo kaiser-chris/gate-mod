@@ -35,15 +35,87 @@
  interest_group_ig_gate_magic_users_pol_str_mult_desc: "$ig_variant_magic_users$ [concept_interest_group]의 총 [concept_political_strength]에 대한 보너스 또는 페널티"
  state_gate_arable_land_add: "경작지"
  state_gate_arable_land_add_desc: "[concept_state_region] 내 [concept_arable_land]의 증가 또는 감소."
- state_harvest_condition_gate_monster_attack_impact_mult: "[Concept('concept_gate_monster_attack','$concept_monster_attacks$')]의 영향"
- state_harvest_condition_monster_attack_impact_mult_desc: "[Concept('concept_monster_attack','$concept_monster_attacks$')]의 영향이 증가하거나 감소함."
- state_harvest_condition_monster_horde_impact_mult: "Impact of [Concept('concept_monster_horde','$concept_monster_hordes$')]의 영향"
- state_harvest_condition_monster_horde_impact_mult_desc: "Concept('concept_monster_horde','$concept_monster_hordes$')]의 영향이 증가하거나 감소함."
+ state_harvest_condition_gate_monster_attack_impact_mult: "[Concept('concept_gate_monster_attack','$concept_gate_monster_attacks$')]의 영향"
+ state_harvest_condition_gate_monster_attack_impact_mult_desc: "[Concept('concept_gate_monster_attack','$concept_gate_monster_attacks$')]의 영향이 확대되거나 축소되는 것." #deepl:4213245805
+ state_harvest_condition_gate_monster_horde_impact_mult: "[Concept('concept_gate_monster_horde','$concept_gate_monster_hordes$')]의 영향" #deepl:2849853117
+ state_harvest_condition_gate_monster_horde_impact_mult_desc: "[Concept('concept_gate_monster_horde','$concept_gate_monster_hordes$')]의 영향이 확대되거나 축소되는 것." #deepl:1743468824
  character_gate_immortal: "불멸"
  character_gate_immortal_desc: "이 [concept_character]는 불멸자입니다."
+ country_gate_military_formation_forbid_no_magic_user_regulations: "[GetMobilizationOption('mobilization_option_gate_no_regulations').GetNameNoFormatting] 사용 금지 [concept_mobilization_option]" #deepl:1314032214
+ country_gate_military_formation_forbid_no_magic_user_regulations_desc: "해당 국가가 [GetMobilizationOption('mobilization_option_gate_no_regulations').GetName] [concept_mobilization_option]를 사용하는 것을 금지합니다." #deepl:2764280692
+ country_gate_military_formation_forbid_basic_magic_user_regulations: "[GetMobilizationOption('mobilization_option_gate_basic_regulations').GetNameNoFormatting] 사용 금지 [concept_mobilization_option]" #deepl:1811768055
+ country_gate_military_formation_forbid_basic_magic_user_regulations_desc: "해당 국가가 [GetMobilizationOption('mobilization_option_gate_basic_regulations').GetName] [concept_mobilization_option]를 사용하는 것을 금지합니다." #deepl:619416017
+ country_gate_military_formation_forbid_strict_magic_user_regulations: "[GetMobilizationOption('mobilization_option_gate_strict_regulations').GetNameNoFormatting] 사용 금지 [concept_mobilization_option]" #deepl:2384373141
+ country_gate_military_formation_forbid_strict_magic_user_regulations_desc: "해당 국가가 [GetMobilizationOption('mobilization_option_gate_strict_regulations').GetName] [concept_mobilization_option]를 사용하는 것을 금지합니다" #deepl:616856323
  character_gate_expedition_interaction_success_chance_industrial_add: "산업용 [Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')]의 성공 가능성" #deepl:1617170201
  character_gate_expedition_interaction_success_chance_industrial_add_desc: "산업용 [Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')]에서 성공할 확률이 일정 비율만큼 증가합니다." #deepl:1854837493
  character_gate_expedition_interaction_success_chance_military_add: "군사 작전의 성공 확률 [Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')]" #deepl:4014877400
  character_gate_expedition_interaction_success_chance_military_add_desc: "군사 작전([Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')])의 성공 확률이 일정 비율만큼 증가한다." #deepl:4026009015
  character_gate_expedition_interaction_success_chance_political_add: "정치적[Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')]의 성공 가능성" #deepl:2810762813
  character_gate_expedition_interaction_success_chance_political_add_desc: "정치적[Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')]에서 성공할 확률이 일정 비율만큼 증가한다." #deepl:3475599416
+ unit_gate_combat_unit_type_dragon_spawn_offense_mult: "$gate_combat_unit_type_dragon_spawn$ $unit_offense_mult$" #deepl:1662839498
+ unit_gate_combat_unit_type_dragon_spawn_offense_mult_desc: "$gate_combat_unit_type_dragon_spawn$ $unit_offense_mult_desc$" #deepl:4029883174
+ unit_combat_unit_type_gate_mage_infantry_defense_add: "$combat_unit_type_gate_mage_infantry$ $unit_defense_add$" #deepl:1035359422
+ unit_combat_unit_type_gate_mage_infantry_defense_add_desc: "$combat_unit_type_gate_mage_infantry$ $unit_defense_add_desc$" #deepl:2002860873
+ unit_combat_unit_type_gate_mage_infantry_defense_mult: "$combat_unit_type_gate_mage_infantry$ $unit_defense_mult$" #deepl:523175940
+ unit_combat_unit_type_gate_mage_infantry_defense_mult_desc: "$combat_unit_type_gate_mage_infantry$ $unit_defense_mult_desc$" #deepl:362829851
+ unit_combat_unit_type_gate_mage_infantry_offense_add: "$combat_unit_type_gate_mage_infantry$ $unit_offense_add$" #deepl:3037306795
+ unit_combat_unit_type_gate_mage_infantry_offense_add_desc: "$combat_unit_type_gate_mage_infantry$ $unit_offense_add_desc$" #deepl:1604314499
+ unit_combat_unit_type_gate_mage_infantry_offense_mult: "$combat_unit_type_gate_mage_infantry$ $unit_offense_mult$" #deepl:2378796017
+ unit_combat_unit_type_gate_mage_infantry_offense_mult_desc: "$combat_unit_type_gate_mage_infantry$ $unit_offense_mult_desc$" #deepl:2058615195
+ unit_combat_unit_type_gate_arcane_vangard_defense_add: "$combat_unit_type_gate_arcane_vangard$ $unit_defense_add$" #deepl:571206966
+ unit_combat_unit_type_gate_arcane_vangard_defense_add_desc: "$combat_unit_type_gate_arcane_vangard$ $unit_defense_add_desc$" #deepl:1795917716
+ unit_combat_unit_type_gate_arcane_vangard_defense_mult: "$combat_unit_type_gate_arcane_vangard$ $unit_defense_mult$" #deepl:1467558949
+ unit_combat_unit_type_gate_arcane_vangard_defense_mult_desc: "$combat_unit_type_gate_arcane_vangard$ $unit_defense_mult_desc$" #deepl:1893225664
+ unit_combat_unit_type_gate_arcane_vangard_offense_add: "$combat_unit_type_gate_arcane_vangard$ $unit_offense_add$" #deepl:2863932963
+ unit_combat_unit_type_gate_arcane_vangard_offense_add_desc: "$combat_unit_type_gate_arcane_vangard$ $unit_offense_add_desc$" #deepl:1140152670
+ unit_combat_unit_type_gate_arcane_vangard_offense_mult: "$combat_unit_type_gate_arcane_vangard$ $unit_offense_mult$" #deepl:3315576784
+ unit_combat_unit_type_gate_arcane_vangard_offense_mult_desc: "$combat_unit_type_gate_arcane_vangard$ $unit_offense_mult_desc$" #deepl:533460288
+ unit_combat_unit_type_gate_mana_rifle_infantry_defense_add: "$combat_unit_type_gate_mana_rifle_infantry$ $unit_defense_add$" #deepl:2111129214
+ unit_combat_unit_type_gate_mana_rifle_infantry_defense_add_desc: "$combat_unit_type_gate_mana_rifle_infantry$ $unit_defense_add_desc$" #deepl:172818551
+ unit_combat_unit_type_gate_mana_rifle_infantry_defense_mult: "$combat_unit_type_gate_mana_rifle_infantry$ $unit_defense_mult$" #deepl:1974348374
+ unit_combat_unit_type_gate_mana_rifle_infantry_defense_mult_desc: "$combat_unit_type_gate_mana_rifle_infantry$ $unit_defense_mult_desc$" #deepl:2448438627
+ unit_combat_unit_type_gate_mana_rifle_infantry_offense_add: "$combat_unit_type_gate_mana_rifle_infantry$ $unit_offense_add$" #deepl:4117400939
+ unit_combat_unit_type_gate_mana_rifle_infantry_offense_add_desc: "$combat_unit_type_gate_mana_rifle_infantry$ $unit_offense_add_desc$" #deepl:582213309
+ unit_combat_unit_type_gate_mana_rifle_infantry_offense_mult: "$combat_unit_type_gate_mana_rifle_infantry$ $unit_offense_mult$" #deepl:3880298915
+ unit_combat_unit_type_gate_mana_rifle_infantry_offense_mult_desc: "$combat_unit_type_gate_mana_rifle_infantry$ $unit_offense_mult_desc$" #deepl:4276327651
+ unit_combat_unit_type_gate_rune_guard_infantry_defense_add: "$combat_unit_type_gate_rune_guard_infantry$ $unit_defense_add$" #deepl:1197665198
+ unit_combat_unit_type_gate_rune_guard_infantry_defense_add_desc: "$combat_unit_type_gate_rune_guard_infantry$ $unit_defense_add_desc$" #deepl:1789745248
+ unit_combat_unit_type_gate_rune_guard_infantry_defense_mult: "$combat_unit_type_gate_rune_guard_infantry$ $unit_defense_mult$" #deepl:2412179338
+ unit_combat_unit_type_gate_rune_guard_infantry_defense_mult_desc: "$combat_unit_type_gate_rune_guard_infantry$ $unit_defense_mult_desc$" #deepl:2614094850
+ unit_combat_unit_type_gate_rune_guard_infantry_offense_add: "$combat_unit_type_gate_rune_guard_infantry$ $unit_offense_add$" #deepl:3487375547
+ unit_combat_unit_type_gate_rune_guard_infantry_offense_add_desc: "$combat_unit_type_gate_rune_guard_infantry$ $unit_offense_add_desc$" #deepl:1112770218
+ unit_combat_unit_type_gate_rune_guard_infantry_offense_mult: "$combat_unit_type_gate_rune_guard_infantry$ $unit_offense_mult$" #deepl:488664191
+ unit_combat_unit_type_gate_rune_guard_infantry_offense_mult_desc: "$combat_unit_type_gate_rune_guard_infantry$ $unit_offense_mult_desc$" #deepl:4108078466
+ unit_combat_unit_type_gate_thaumaturgic_commandos_defense_add: "$combat_unit_type_gate_thaumaturgic_commandos$ $unit_defense_add$" #deepl:1740261265
+ unit_combat_unit_type_gate_thaumaturgic_commandos_defense_add_desc: "$combat_unit_type_gate_thaumaturgic_commandos$ $unit_defense_add_desc$" #deepl:2655398021
+ unit_combat_unit_type_gate_thaumaturgic_commandos_defense_mult: "$combat_unit_type_gate_thaumaturgic_commandos$ $unit_defense_mult$" #deepl:2454812263
+ unit_combat_unit_type_gate_thaumaturgic_commandos_defense_mult_desc: "$combat_unit_type_gate_thaumaturgic_commandos$ $unit_defense_mult_desc$" #deepl:2032413276
+ unit_combat_unit_type_gate_thaumaturgic_commandos_offense_add: "$combat_unit_type_gate_thaumaturgic_commandos$ $unit_offense_add$" #deepl:4010118276
+ unit_combat_unit_type_gate_thaumaturgic_commandos_offense_add_desc: "$combat_unit_type_gate_thaumaturgic_commandos$ $unit_offense_add_desc$" #deepl:3065574991
+ unit_combat_unit_type_gate_thaumaturgic_commandos_offense_mult: "$combat_unit_type_gate_thaumaturgic_commandos$ $unit_offense_mult$" #deepl:12055954
+ unit_combat_unit_type_gate_thaumaturgic_commandos_offense_mult_desc: "$combat_unit_type_gate_thaumaturgic_commandos$ $unit_offense_mult_desc$" #deepl:372739036
+ unit_combat_unit_type_gate_mage_artillery_defense_add: "$combat_unit_type_gate_mage_artillery$ $unit_defense_add$" #deepl:3484128952
+ unit_combat_unit_type_gate_mage_artillery_defense_add_desc: "$combat_unit_type_gate_mage_artillery$ $unit_defense_add_desc$" #deepl:3067176420
+ unit_combat_unit_type_gate_mage_artillery_defense_mult: "$combat_unit_type_gate_mage_artillery$ $unit_defense_mult$" #deepl:478879692
+ unit_combat_unit_type_gate_mage_artillery_defense_mult_desc: "$combat_unit_type_gate_mage_artillery$ $unit_defense_mult_desc$" #deepl:3589676467
+ unit_combat_unit_type_gate_mage_artillery_offense_add: "$combat_unit_type_gate_mage_artillery$ $unit_offense_add$" #deepl:1192517037
+ unit_combat_unit_type_gate_mage_artillery_offense_add_desc: "$combat_unit_type_gate_mage_artillery$ $unit_offense_add_desc$" #deepl:2653928238
+ unit_combat_unit_type_gate_mage_artillery_offense_mult: "$combat_unit_type_gate_mage_artillery$ $unit_offense_mult$" #deepl:2389548089
+ unit_combat_unit_type_gate_mage_artillery_offense_mult_desc: "$combat_unit_type_gate_mage_artillery$ $unit_offense_mult_desc$" #deepl:3135618099
+ unit_combat_unit_type_gate_mana_artillery_defense_add: "$combat_unit_type_gate_mana_artillery$ $unit_defense_add$" #deepl:3240244562
+ unit_combat_unit_type_gate_mana_artillery_defense_add_desc: "$combat_unit_type_gate_mana_artillery$ $unit_defense_add_desc$" #deepl:1394397715
+ unit_combat_unit_type_gate_mana_artillery_defense_mult: "$combat_unit_type_gate_mana_artillery$ $unit_defense_mult$" #deepl:4187859536
+ unit_combat_unit_type_gate_mana_artillery_defense_mult_desc: "$combat_unit_type_gate_mana_artillery$ $unit_defense_mult_desc$" #deepl:1068419868
+ unit_combat_unit_type_gate_mana_artillery_offense_add: "$combat_unit_type_gate_mana_artillery$ $unit_offense_add$" #deepl:1235091015
+ unit_combat_unit_type_gate_mana_artillery_offense_add_desc: "$combat_unit_type_gate_mana_artillery$ $unit_offense_add_desc$" #deepl:2078411993
+ unit_combat_unit_type_gate_mana_artillery_offense_mult: "$combat_unit_type_gate_mana_artillery$ $unit_offense_mult$" #deepl:1803233701
+ unit_combat_unit_type_gate_mana_artillery_offense_mult_desc: "$combat_unit_type_gate_mana_artillery$ $unit_offense_mult_desc$" #deepl:1354590876
+ unit_combat_unit_type_gate_wraithwalkers_defense_add: "$combat_unit_type_gate_wraithwalkers$ $unit_defense_add$" #deepl:2432708153
+ unit_combat_unit_type_gate_wraithwalkers_defense_add_desc: "$combat_unit_type_gate_wraithwalkers$ $unit_defense_add_desc$" #deepl:3492172665
+ unit_combat_unit_type_gate_wraithwalkers_defense_mult: "$combat_unit_type_gate_wraithwalkers$ $unit_defense_mult$" #deepl:1355626231
+ unit_combat_unit_type_gate_wraithwalkers_defense_mult_desc: "$combat_unit_type_gate_wraithwalkers$ $unit_defense_mult_desc$" #deepl:263671587
+ unit_combat_unit_type_gate_wraithwalkers_offense_add: "$combat_unit_type_gate_wraithwalkers$ $unit_offense_add$" #deepl:432006444
+ unit_combat_unit_type_gate_wraithwalkers_offense_add_desc: "$combat_unit_type_gate_wraithwalkers$ $unit_offense_add_desc$" #deepl:4174941619
+ unit_combat_unit_type_gate_wraithwalkers_offense_mult: "$combat_unit_type_gate_wraithwalkers$ $unit_offense_mult$" #deepl:3257644290
+ unit_combat_unit_type_gate_wraithwalkers_offense_mult_desc: "$combat_unit_type_gate_wraithwalkers$ $unit_offense_mult_desc$" #deepl:1621421731

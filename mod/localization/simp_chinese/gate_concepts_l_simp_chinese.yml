@@ -10,23 +10,25 @@
  concept_gate_magic_technology: "魔法科技"
  concept_gate_magic_technologies: "魔法科技"
  concept_gate_magic_technology_desc: "$concept_gate_magic_technology$包含$PRODUCTION_NO_CONCEPT$、$MILITARY$和$SOCIETY$领域的所有发明。$concept_gate_magic_technologies$有着全国范围的效果，可以通过[Concept('concept_modifier','$concept_modifiers$')]改变[Concept('concept_country','$concept_country_possessive$')]的运转参数，解锁新[Concept('concept_production_method','$concept_production_methods$')]、[Concept('concept_building','$concept_buildings$')]、[Concept('concept_law','$concept_laws$')]、[Concept('concept_decree','$concept_decrees$')]和[Concept('concept_diplomatic_pact','$concept_diplomatic_pacts$')]。\n\n通向新$concept_gate_magic_technologies$的进度要通过[concept_gate_magic_innovation]取得。\n\n要获取一项$concept_gate_magic_technology$所需的进度取决于其[Concept('concept_technology_era','$concept_technology_era_short$')]。$concept_technology_era_ahead_of_time_penalty_desc$"
- concept_monster_attack: "魔物袭击"
- concept_monster_attacks: "魔物袭击"
- concept_monster_attack_desc: "当[concept_gate_mana_density]达到中等水平时，当地动植物可能会发生突变，并攻击平民。"
- concept_monster_horde: "魔物潮"
- concept_monster_hordes: "魔物潮"
- concept_monster_horde_desc: "当[concept_gate_mana_density]达到中等水平时，当地动植物可能会发生大规模突变，并疯狂地攻击平民。"
+ concept_gate_monster_attack: "魔物袭击"
+ concept_gate_monster_attacks: "魔物袭击"
+ concept_gate_monster_attack_desc: "当[concept_gate_mana_density]达到中等水平时，当地动植物可能会发生突变，并攻击平民。"
+ concept_gate_monster_horde: "魔物潮"
+ concept_gate_monster_hordes: "魔物潮"
+ concept_gate_monster_horde_desc: "当[concept_gate_mana_density]达到中等水平时，当地动植物可能会发生大规模突变，并疯狂地攻击平民。"
  concept_gate_mana_density: "魔能浓度"
  concept_gate_mana_density_mana: "Mana"
  concept_gate_mana_density_desc: "自魔法门开启以来，魔能不断涌入地球。[concept_gate_magic_knowledge]在地球上的应用进一步增加了大气中的魔能含量。若某一区域的$concept_gate_mana_density$达到最大值，[concept_gate_magical_phenomena]将在此地常态化。在此之前，该区域不同等级的$concept_gate_mana_density$会引发不可预测的异变与事件。\n\n#header 魔能浓度等级：#!\n• 低魔能浓度起始于#v [GuiScope.ScriptValue('low_mana_density_threshhold')]%#!\n• 中魔能浓度起始于#v [GuiScope.ScriptValue('medium_mana_density_threshhold')]%#!\n• 高魔能浓度起始于#v [GuiScope.ScriptValue('high_mana_density_threshhold')]%#!"
  concept_gate_magical_phenomena: "魔法现象"
  concept_gate_magical_phenomena_desc: "魔法现象是由区域内不断上升的[concept_gate_mana_density]所引发的事件，其表现形式从温和有益到骇人可怖不等。"
  concept_gate_magic_researcher: "奥术师"
+ concept_gate_magic_researchers: "秘术师" #deepl:1992873455
  concept_gate_magic_researcher_desc: "效力于国家的奥术师，领导[GetBuildingType('building_gate_magic_research_institute').GetName]，并主导其[concept_gate_magic_innovation]的研究方向。他们领导[Concept('concept_gate_project','$concept_gate_projects$')]，致力于提升魔法产业水平，并促进魔法在社会中的应用。"
  concept_gate_character_experience: "角色经验"
  concept_gate_character_experience_desc: "某些角色，如我们的[concept_gate_magic_researcher]，能在工作中积累经验。等级越高的角色工作能力越强，能提升日常工作的成果。\n\n#header 经验等级：#!\n• $gg_character_experience_novice$\n• $gg_character_experience_experienced$\n• $gg_character_experience_master$"
  concept_gate_magic: "魔法"
  concept_gate_magic_desc: "魔法即通过操控魔能改变现实的行为。"
+ concept_gate_magic_user: "法师" #deepl:1834431947
  concept_gate_magic_users: "魔法使用者"
  concept_gate_magic_users_desc: "魔法使用者是能够在日常生活中运用奥秘能量的[Concept('concept_pop','$concept_pops$')]。\n\n#header 人群：#!\n• [GetPopType('mages').GetName]\n• [GetPopType('druids').GetName]"
  concept_gate_magic_ethic: "奥秘领域"
@@ -69,3 +71,7 @@
  concept_gate_magic_country: "奥术国家"
  concept_gate_magic_countries: "奥术国家"
  concept_gate_magic_country_desc: "已经获得[concept_gate_magic_knowledge]的国家。"
+ concept_gate_arcane_council: "$io_gate_arcane_council$" #deepl:1295515093
+ concept_gate_arcane_council_desc: "联合国维和部队（$io_gate_arcane_council$）是一支联合国维和部队（[concept_com_international_organization]），旨在维持和限制联合国维和行动（[concept_gate_magic_users]）。其主要目标是防止国际事件的发生，由一名联合国维和行动负责人（[concept_gate_arcane_council_high_mage]）领导。" #deepl:3641084166
+ concept_gate_arcane_council_high_mage: "$io_gate_arcane_council_leader_title$" #deepl:2352763780
+ concept_gate_arcane_council_high_mage_desc: "欧洲经济与社会委员会（$io_gate_arcane_council_leader_title$）领导欧洲委员会（[concept_gate_arcane_council]）[concept_com_international_organization]。其成员由所有成员国选举产生[Concept('concept_gate_magic_researcher','$concept_gate_magic_researchers$')]。" #deepl:139972148

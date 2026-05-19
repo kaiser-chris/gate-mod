@@ -37,4 +37,24 @@
  trigger_gate_ethic_has_all_third: "[COUNTRY.GetNameNoFlag] has chosen all possible [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')]"
  trigger_gate_ethic_has_all_third_not: "[COUNTRY.GetNameNoFlag] hasn't chosen all possible [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')]"
 
- trigger_gate_is_not_magic_researcher: "이미 우리 [concept_gate_magic_researcher]에 있지 않나요?" #deepl:1487154086
+ trigger_gate_is_arcane_council_leader: "아케인 의회를 이끌고 있다 [concept_com_international_organization]" #deepl:684660458
+ trigger_gate_is_arcane_council_leader_not: "#bold 가 #!가 아니라 [concept_com_international_organization]를 통해 아케인 의회를 이끌고 있는 건가요?" #deepl:2885476714
+ trigger_gate_is_arcane_council_leader_third: "[COUNTRY.GetNameNoFlag] 아케인 의회를 이끌고 있다 [concept_com_international_organization]" #deepl:3627784794
+ trigger_gate_is_arcane_council_leader_third_not: "[COUNTRY.GetNameNoFlag] #bold 가 #!가 아니라 Arcane Council을 이끌고 있나요? [concept_com_international_organization]" #deepl:4073069933
+
+ trigger_gate_is_arcane_council_member: "아케인 의회의 일원입니다 [concept_com_international_organization]" #deepl:1911391672
+ trigger_gate_is_arcane_council_member_not: "#bold 는 #!가 아니라 Arcane Council의 일원인가요? [concept_com_international_organization]" #deepl:1651142944
+ trigger_gate_is_arcane_council_member_third: "[COUNTRY.GetNameNoFlag] 아케인 의회의 일원입니다 [concept_com_international_organization]" #deepl:1165631019
+ trigger_gate_is_arcane_council_member_third_not: "[COUNTRY.GetNameNoFlag] #bold 는 #!와 달리 아케인 의회의 일원인가요? [concept_com_international_organization]" #deepl:359315930
+
+ trigger_gate_recently_joined_arcane_council: "최근 아케인 의회에 합류했습니다 [concept_com_international_organization]" #deepl:3170588523
+ trigger_gate_recently_joined_arcane_council_not: "#bold 는 #! 최근 아케인 의회에 합류하지 않았나요? [concept_com_international_organization]" #deepl:2576317359
+ trigger_gate_recently_joined_arcane_council_third: "[COUNTRY.GetNameNoFlag] 최근 아케인 의회에 합류했습니다 [concept_com_international_organization]" #deepl:682054670
+ trigger_gate_recently_joined_arcane_council_third_not: "[COUNTRY.GetNameNoFlag] #bold (#!가 아닌)이 최근 아케인 의회에 합류했습니다. [concept_com_international_organization]" #deepl:1575520797
+
+ trigger_gate_arcane_council_recently_changed_military_regulations: "최근 아케인 의회에서 규정을 도입했습니다. [concept_com_international_organization]" #deepl:3484248743
+ trigger_gate_arcane_council_recently_changed_military_regulations_not: "#bold 는 최근 Arcane Council에서 #!  [concept_com_international_organization] 규정을 도입하지 않았나요?" #deepl:3684220206
+ trigger_gate_arcane_council_recently_changed_military_regulations_third: "[COUNTRY.GetNameNoFlag] 최근 아케인 의회에서 관련 규정을 도입했습니다. [concept_com_international_organization]" #deepl:3170767611
+ trigger_gate_arcane_council_recently_changed_military_regulations_third_not: "[COUNTRY.GetNameNoFlag] 최근 아케인 의회(Arcane Council)에서 #bold  (#!가 아님)가 규정을 도입했나요? [concept_com_international_organization]" #deepl:1947453675
+
+ trigger_gate_is_not_magic_researcher: "이미 우리 [concept_gate_magic_researcher]에 있지 않나요?" #deepl:2797499724

@@ -1,4 +1,13 @@
 ﻿l_korean:
+ notification_gate_new_high_mage_name: "[TopScope.sCha('new_high_mage').GetFullName] [TopScope.sCha('new_high_mage').GetCountry.GetName]는 [concept_gate_arcane_council_high_mage]로 변경됩니다." #deepl:397944399
+ notification_gate_new_high_mage_desc: "[TopScope.sCha('new_high_mage').GetFullName] [TopScope.sCha('new_high_mage').GetCountry.GetName]의 [이름] 씨가 미국 공인회계사 협회([concept_gate_arcane_council])의 신임 부회장([concept_gate_arcane_council_high_mage])으로 선출되었습니다." #deepl:1940945003
+ notification_gate_new_high_mage_tooltip: "[TopScope.sCha('new_high_mage').GetFullName] [TopScope.sCha('new_high_mage').GetCountry.GetName]의 [이름] 씨가 미국 공인회계사 협회([concept_gate_arcane_council])의 신임 부회장([concept_gate_arcane_council_high_mage])으로 선출되었습니다." #deepl:1940945003
+ notification_gate_arcane_council_member_join_name: "[TopScope.sC('joining_member').GetName] [concept_gate_arcane_council]에 합류한다" #deepl:4014001939
+ notification_gate_arcane_council_member_join_desc: "[TopScope.sC('joining_member').GetName] [concept_gate_arcane_council]에 가입하고, [concept_gate_magic_users]를 국제적으로 규제하겠다고 다짐했다." #deepl:3865435726
+ notification_gate_arcane_council_member_join_tooltip: "[TopScope.sC('joining_member').GetName] [concept_gate_arcane_council]에 가입하고, [concept_gate_magic_users]를 국제적으로 규제하겠다고 다짐했다." #deepl:3865435726
+ notification_gate_arcane_council_member_leave_name: "[TopScope.sC('leaving_member').GetName] [concept_gate_arcane_council]를 떠난다" #deepl:3960073511
+ notification_gate_arcane_council_member_leave_desc: "[TopScope.sC('leaving_member').GetName] [concept_gate_arcane_council]를 떠나, 더 이상 [concept_gate_magic_users]에 대한 국제적 규제를 수행하지 않게 됩니다." #deepl:2294614661
+ notification_gate_arcane_council_member_leave_tooltip: "[TopScope.sC('leaving_member').GetName] [concept_gate_arcane_council]에 가입함에 따라, 더 이상 [concept_gate_magic_users]에 대한 국제적 규제를 하지 않게 됩니다." #deepl:38507578
 # Prestige Goods
  notification_prestige_good_gate_generic_mana_unlocked_name: "[SCOPE.sCompany('relevant_company').GetName]은 @prestige_good_gate_generic_mana! #b $prestige_good_gate_generic_mana$#!를 개발함"
  notification_prestige_good_gate_generic_mana_unlocked_desc: "[SCOPE.sCompany('relevant_company').GetName]이 소유한 [Concept('concept_building', '$concept_buildings$')]은 이제 @prestige_good_gate_generic_mana! #b $prestige_good_gate_generic_mana$#! 생산을 시작할 수 있음"
