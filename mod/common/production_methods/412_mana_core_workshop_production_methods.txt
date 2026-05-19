@@ -1,12 +1,12 @@
-﻿pm_mana_core_workshop_no_production = {
+﻿pm_gate_mana_core_workshop_no_production = {
 	texture = "gfx/interface/icons/production_method_icons/gate_no_cores.dds"
 
-	replacement_if_valid = pm_mana_core_workshop_artisan_production
+	replacement_if_valid = pm_gate_mana_core_workshop_artisan_production
 
 	is_default = yes
 }
 
-pm_mana_core_workshop_artisan_production = {
+pm_gate_mana_core_workshop_artisan_production = {
 	texture = "gfx/interface/icons/production_method_icons/gate_artisan_cores.dds"
 
 	unlocking_technologies = {
@@ -32,7 +32,7 @@ pm_mana_core_workshop_artisan_production = {
 	}
 }
 
-pm_mana_core_workshop_formalized_production = {
+pm_gate_mana_core_workshop_formalized_production = {
 	texture = "gfx/interface/icons/production_method_icons/gate_formalized_cores.dds"
 
 	unlocking_technologies = {

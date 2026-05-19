@@ -1,6 +1,6 @@
-﻿pm_unused_elven_forest = {
+﻿pm_gate_unused_elven_forest = {
 	texture = "gfx/interface/icons/production_method_icons/plantation_production.dds"
-	replacement_if_valid = pm_elven_forest
+	replacement_if_valid = pm_gate_elven_forest
 
 	state_modifiers = {
 		level_scaled = {
@@ -9,7 +9,7 @@
 	}
 }
 
-pm_elven_forest = {
+pm_gate_elven_forest = {
 	texture = "gfx/interface/icons/production_method_icons/plantation_production.dds"
 
 	unlocking_technologies = {

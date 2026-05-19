@@ -1,10 +1,10 @@
-﻿pmg_mana_extraction = {
+﻿pmg_gate_mana_extraction = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
 
 	production_methods = {
-		pm_mage_mana_extraction
-		pm_mage_ritual_extraction
+		pm_gate_mage_mana_extraction
+		pm_gate_mage_ritual_extraction
 	}
 }
 
@@ -17,152 +17,152 @@ pmg_gate_mana_well = {
 	}
 }
 
-pmg_murk_transportation = {
+pmg_gate_murk_transportation = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
 
 	production_methods = {
-		pm_murk_unused
-		pm_murk_transportation
-		pm_murk_rail_transportation
+		pm_gate_murk_unused
+		pm_gate_murk_transportation
+		pm_gate_murk_rail_transportation
 	}
 }
 
-pmg_magic_academy_support = {
+pmg_gate_magic_academy_support = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
 
 	production_methods = {
-		pm_magic_academy_no_support
-		pm_magic_academy_partial_support
-		pm_magic_academy_full_support
+		pm_gate_magic_academy_no_support
+		pm_gate_magic_academy_partial_support
+		pm_gate_magic_academy_full_support
 	}
 }
 
-pmg_university_magic_research = {
+pmg_gate_university_magic_research = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
 
 	production_methods = {
-		pm_university_no_magic_research
-		pm_university_simple_magic_research
-		pm_university_advanced_magic_research
+		pm_gate_university_no_magic_research
+		pm_gate_university_simple_magic_research
+		pm_gate_university_advanced_magic_research
 	}
 }
 
-pmg_mana_core_workshop_production = {
+pmg_gate_mana_core_workshop_production = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
 
 	production_methods = {
-		pm_mana_core_workshop_no_production
-		pm_mana_core_workshop_artisan_production
-		pm_mana_core_workshop_formalized_production
+		pm_gate_mana_core_workshop_no_production
+		pm_gate_mana_core_workshop_artisan_production
+		pm_gate_mana_core_workshop_formalized_production
 	}
 }
 
-pmg_golem_workshop_production = {
+pmg_gate_golem_workshop_production = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
 
 	production_methods = {
-		pm_golem_workshop_no_production
-		pm_golem_workshop_simple_production
-		pm_golem_workshop_electric_production
+		pm_gate_golem_workshop_no_production
+		pm_gate_golem_workshop_simple_production
+		pm_gate_golem_workshop_electric_production
 	}
 }
 
-pmg_golem_workshop_automation = {
+pmg_gate_golem_workshop_automation = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
 
 	production_methods = {
 		pm_automation_disabled
-		pm_rotary_valve_engine_building_gate_golem_workshop
-		pm_assembly_lines_building_gate_golem_workshop
+		pm_gate_rotary_valve_engine_building_gate_golem_workshop
+		pm_gate_assembly_lines_building_gate_golem_workshop
 	}
 }
 
-pmg_golem_depot_mining = {
+pmg_gate_golem_depot_mining = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
 
 	production_methods = {
-		pm_golem_depot_mining_none
-		pm_golem_depot_mining_normal_golems
+		pm_gate_golem_depot_mining_none
+		pm_gate_golem_depot_mining_normal_golems
 	}
 }
 
-pmg_golem_depot_agriculture = {
+pmg_gate_golem_depot_agriculture = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
 
 	production_methods = {
-		pm_golem_depot_agriculture_none
-		pm_golem_depot_agriculture_normal_golems
+		pm_gate_golem_depot_agriculture_none
+		pm_gate_golem_depot_agriculture_normal_golems
 	}
 }
 
-pmg_golem_depot_plantation = {
+pmg_gate_golem_depot_plantation = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
 
 	production_methods = {
-		pm_golem_depot_plantation_none
-		pm_golem_depot_plantation_normal_golems
+		pm_gate_golem_depot_plantation_none
+		pm_gate_golem_depot_plantation_normal_golems
 	}
 }
 
-pmg_mage_tower = {
+pmg_gate_mage_tower = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
 
 	production_methods = {
-		pm_basic_mage_tower
-		pm_cooperative_mage_tower
+		pm_gate_basic_mage_tower
+		pm_gate_cooperative_mage_tower
 	}
 }
 
-pmg_druid_grove = {
+pmg_gate_druid_grove = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
 
 	production_methods = {
-		pm_classic_magic_seed
-		pm_industrial_magic_seed
+		pm_gate_classic_magic_seed
+		pm_gate_industrial_magic_seed
 	}
 }
 
-pmg_magic_researcher = {
+pmg_gate_magic_researcher = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
 
 	production_methods = {
-		pm_no_researcher
-		pm_novice_researcher
-		pm_experienced_researcher
-		pm_archmage_researcher
+		pm_gate_no_researcher
+		pm_gate_novice_researcher
+		pm_gate_experienced_researcher
+		pm_gate_archmage_researcher
 	}
 }
 
-pmg_elven_forest = {
+pmg_gate_elven_forest = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
 
 	production_methods = {
-		pm_unused_elven_forest
-		pm_elven_forest
+		pm_gate_unused_elven_forest
+		pm_gate_elven_forest
 	}
 }
 
-pmg_runic_paper = {
+pmg_gate_runic_paper = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
 
 	production_methods = {
-		pm_no_runic_paper
-		pm_runic_paper
-		pm_focus_runic_paper
+		pm_gate_no_runic_paper
+		pm_gate_runic_paper
+		pm_gate_focus_runic_paper
 	}
 }
 
@@ -171,7 +171,7 @@ pmg_gate_seeds = {
 
 	production_methods = {
 		pm_gate_normal_seeds
-		pm_magic_seeds
+		pm_gate_magic_seeds
 	}
 }
 
@@ -180,16 +180,16 @@ pmg_gate_seeds_building_rice_farm = {
 
 	production_methods = {
 		pm_gate_normal_seeds
-		pm_magic_seeds_building_rice_farm
+		pm_gate_magic_seeds_building_rice_farm
 	}
 }
 
-pmg_mana_fertilizer = {
+pmg_gate_mana_fertilizer = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 
 	production_methods = {
 		pm_gate_normal_production
-		pm_magic_seed_fertilizer
+		pm_gate_magic_seed_fertilizer
 	}
 }
 
@@ -197,7 +197,7 @@ pmg_gate_tree_regeneration = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		pm_gate_normal_tree_regeneration
-		pm_magic_tree_regeneration
+		pm_gate_magic_tree_regeneration
 	}
 }
 

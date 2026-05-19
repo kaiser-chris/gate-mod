@@ -106,7 +106,7 @@
                 building = "building_gate_magic_research_institute"
                 level = 1
                 reserves = 1
-                activate_production_methods = { pm_novice_researcher }
+                activate_production_methods = { pm_gate_novice_researcher }
             }
             create_building = {
                 building = "building_gate_mana_extractor"
@@ -117,7 +117,7 @@
                     }
                 }
                 reserves = 1
-                activate_production_methods = { "pm_mage_mana_extraction" }
+                activate_production_methods = { "pm_gate_mage_mana_extraction" }
             }
             create_building = {
                 building = "building_gate_druid_grove"
@@ -130,7 +130,7 @@
                     }
                 }
                 reserves = 1
-                activate_production_methods = { "pm_classic_magic_seed" }
+                activate_production_methods = { "pm_gate_classic_magic_seed" }
             }
             create_building = {
                 building = "building_millet_farm"
@@ -143,7 +143,7 @@
                     }
                 }
                 reserves = 1
-                activate_production_methods = { "pm_simple_farming" "pm_magic_seeds" "pm_no_secondary" "pm_tools_disabled" }
+                activate_production_methods = { "pm_simple_farming" "pm_gate_magic_seeds" "pm_no_secondary" "pm_tools_disabled" }
             }
             create_building = {
                 building = "building_coffee_plantation"

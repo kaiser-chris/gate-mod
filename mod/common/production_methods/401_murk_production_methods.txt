@@ -1,11 +1,11 @@
-﻿pm_murk_unused = {
+﻿pm_gate_murk_unused = {
 	texture = "gfx/interface/icons/production_method_icons/no_rail_transport.dds"
 	is_default = yes
 
-	replacement_if_valid = pm_murk_transportation
+	replacement_if_valid = pm_gate_murk_transportation
 }
 
-pm_murk_transportation = {
+pm_gate_murk_transportation = {
 	texture = "gfx/interface/icons/production_method_icons/no_rail_transport.dds"
 
 	unlocking_technologies = {
@@ -34,7 +34,7 @@ pm_murk_transportation = {
 	}
 }
 
-pm_murk_rail_transportation = {
+pm_gate_murk_rail_transportation = {
 	texture = "gfx/interface/icons/production_method_icons/rail_transport.dds"
 
 	unlocking_technologies = {

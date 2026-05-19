@@ -1,9 +1,9 @@
-﻿pm_no_researcher = {
+﻿pm_gate_no_researcher = {
 	texture = "gfx/interface/icons/production_method_icons/gate_no_researcher.dds"
 	is_default = yes
 
 	unlocking_production_methods = {
-		pm_no_researcher
+		pm_gate_no_researcher
 	}
 
 	country_modifiers = {
@@ -19,11 +19,11 @@
 	}
 }
 
-pm_novice_researcher = {
+pm_gate_novice_researcher = {
 	texture = "gfx/interface/icons/production_method_icons/gate_magic_researcher.dds"
 
 	unlocking_production_methods = {
-		pm_novice_researcher
+		pm_gate_novice_researcher
 	}
 
 	is_hidden_when_unavailable = yes
@@ -41,11 +41,11 @@ pm_novice_researcher = {
 	}
 }
 
-pm_experienced_researcher = {
+pm_gate_experienced_researcher = {
 	texture = "gfx/interface/icons/production_method_icons/gate_magic_researcher.dds"
 
 	unlocking_production_methods = {
-		pm_experienced_researcher
+		pm_gate_experienced_researcher
 	}
 
 	is_hidden_when_unavailable = yes
@@ -63,11 +63,11 @@ pm_experienced_researcher = {
 	}
 }
 
-pm_archmage_researcher = {
+pm_gate_archmage_researcher = {
 	texture = "gfx/interface/icons/production_method_icons/gate_magic_researcher.dds"
 
 	unlocking_production_methods = {
-		pm_archmage_researcher
+		pm_gate_archmage_researcher
 	}
 
 	is_hidden_when_unavailable = yes

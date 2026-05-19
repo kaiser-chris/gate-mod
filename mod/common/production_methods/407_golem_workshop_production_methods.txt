@@ -1,12 +1,12 @@
-﻿pm_golem_workshop_no_production = {
+﻿pm_gate_golem_workshop_no_production = {
 	texture = "gfx/interface/icons/production_method_icons/gate_no_golems.dds"
 
-	replacement_if_valid = pm_golem_workshop_simple_production
+	replacement_if_valid = pm_gate_golem_workshop_simple_production
 
 	is_default = yes
 }
 
-pm_golem_workshop_simple_production = {
+pm_gate_golem_workshop_simple_production = {
 	texture = "gfx/interface/icons/production_method_icons/gate_normal_golems.dds"
 
 	unlocking_technologies = {
@@ -32,7 +32,7 @@ pm_golem_workshop_simple_production = {
 	}
 }
 
-pm_golem_workshop_electric_production = {
+pm_gate_golem_workshop_electric_production = {
 	texture = "gfx/interface/icons/production_method_icons/gate_electrical_golems.dds"
 
 	unlocking_technologies = {
@@ -63,7 +63,7 @@ pm_golem_workshop_electric_production = {
 }
 
 
-pm_rotary_valve_engine_building_gate_golem_workshop = {
+pm_gate_rotary_valve_engine_building_gate_golem_workshop = {
 	texture = "gfx/interface/icons/production_method_icons/rotary_valve_engine.dds"
 
 	unlocking_technologies = {
@@ -75,7 +75,7 @@ pm_rotary_valve_engine_building_gate_golem_workshop = {
 	}
 
     unlocking_production_methods = {
-        pm_golem_workshop_simple_production
+        pm_gate_golem_workshop_simple_production
     }
 
 	state_modifiers = {
@@ -95,7 +95,7 @@ pm_rotary_valve_engine_building_gate_golem_workshop = {
 	}
 }
 
-pm_assembly_lines_building_gate_golem_workshop = {
+pm_gate_assembly_lines_building_gate_golem_workshop = {
 	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
 
 	unlocking_technologies = {
@@ -103,7 +103,7 @@ pm_assembly_lines_building_gate_golem_workshop = {
 	}
 
     unlocking_production_methods = {
-        pm_golem_workshop_electric_production
+        pm_gate_golem_workshop_electric_production
     }
 
 	disallowing_laws = {

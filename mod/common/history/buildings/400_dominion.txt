@@ -31,7 +31,7 @@
                     }
                 }
                 reserves = 1
-                activate_production_methods = { pm_novice_researcher }
+                activate_production_methods = { pm_gate_novice_researcher }
             }
             create_building = {
                 building = building_university
@@ -42,7 +42,7 @@
                     }
                 }
                 reserves = 1
-                activate_production_methods = { pm_scholastic_education pm_university_simple_magic_research }
+                activate_production_methods = { pm_scholastic_education pm_gate_university_simple_magic_research }
             }
             create_building = {
                 building = building_millet_farm
@@ -55,7 +55,7 @@
                     }
                 }
                 reserves = 1
-                activate_production_methods = { pm_simple_farming pm_magic_seeds pm_no_secondary pm_tools }
+                activate_production_methods = { pm_simple_farming pm_gate_magic_seeds pm_no_secondary pm_tools }
             }
             create_building = {
                 building = building_gate_mana_extractor
@@ -68,7 +68,7 @@
                     }
                 }
                 reserves = 1
-                activate_production_methods = { pm_mage_ritual_extraction }
+                activate_production_methods = { pm_gate_mage_ritual_extraction }
             }
             create_building = {
                 building = building_tooling_workshop
@@ -179,7 +179,7 @@
                     }
                 }
                 reserves = 1
-                activate_production_methods = { pm_classic_magic_seed }
+                activate_production_methods = { pm_gate_classic_magic_seed }
             }
             create_building = {
                 building = building_logging_camp
@@ -268,7 +268,7 @@
                     }
                 }
                 reserves = 1
-                activate_production_methods = { pm_simple_farming pm_magic_seeds pm_no_secondary pm_tools }
+                activate_production_methods = { pm_simple_farming pm_gate_magic_seeds pm_no_secondary pm_tools }
             }
             create_building = {
                 building = building_tobacco_plantation
@@ -360,7 +360,7 @@
                 reserves = 1
                 activate_production_methods = {
                     pm_simple_farming
-                    pm_magic_seeds
+                    pm_gate_magic_seeds
                     pm_no_secondary
                     pm_tools
                 }
@@ -474,7 +474,7 @@
                 reserves = 1
                 activate_production_methods = {
                     pm_simple_farming
-                    pm_magic_seeds
+                    pm_gate_magic_seeds
                     pm_no_secondary
                     pm_tools
                 }
@@ -492,7 +492,7 @@
                 reserves = 1
                 activate_production_methods = {
                     pm_picks_and_shovels_building_lead_mine
-                    pm_crystal_explosives_building_lead_mine
+                    pm_gate_crystal_explosives_building_lead_mine
                     pm_no_steam_automation
                     pm_road_carts
                 }
@@ -518,7 +518,7 @@
                 reserves = 1
                 activate_production_methods = {
                     pm_simple_farming
-                    pm_magic_seeds
+                    pm_gate_magic_seeds
                     pm_no_secondary
                     pm_tools
                 }
@@ -590,7 +590,7 @@
                     }
                 }
                 reserves = 1
-                activate_production_methods = { pm_simple_farming pm_magic_seeds pm_no_secondary pm_tools }
+                activate_production_methods = { pm_simple_farming pm_gate_magic_seeds pm_no_secondary pm_tools }
             }
             create_building = {
                 building = building_sugar_plantation
@@ -700,7 +700,7 @@
                 reserves = 1
                 activate_production_methods = {
                     pm_simple_farming
-                    pm_magic_seeds
+                    pm_gate_magic_seeds
                     pm_no_secondary
                     pm_tools
                 }

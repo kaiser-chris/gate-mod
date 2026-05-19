@@ -24,7 +24,7 @@
 	}
 
 	production_method_groups = {
-		pmg_mana_extraction
+		pmg_gate_mana_extraction
 	}
 
 	ai_value = {
@@ -88,7 +88,7 @@ building_gate_mana_core_workshop = {
 	}
 
 	production_method_groups = {
-		pmg_mana_core_workshop_production
+		pmg_gate_mana_core_workshop_production
 	}
 
 	required_construction = construction_cost_high
@@ -113,8 +113,8 @@ building_gate_golem_workshop = {
 	}
 
 	production_method_groups = {
-		pmg_golem_workshop_production
-		pmg_golem_workshop_automation
+		pmg_gate_golem_workshop_production
+		pmg_gate_golem_workshop_automation
 	}
 
 	required_construction = construction_cost_very_high
@@ -144,9 +144,9 @@ building_gate_golem_depot = {
 	}
 
 	production_method_groups = {
-		pmg_golem_depot_mining
-		pmg_golem_depot_agriculture
-		pmg_golem_depot_plantation
+		pmg_gate_golem_depot_mining
+		pmg_gate_golem_depot_agriculture
+		pmg_gate_golem_depot_plantation
 	}
 
 	required_construction = construction_cost_very_high
@@ -220,7 +220,7 @@ building_gate_druid_grove = {
 	}
 
 	production_method_groups = {
-		pmg_druid_grove
+		pmg_gate_druid_grove
 	}
 
 	required_construction = construction_cost_medium
