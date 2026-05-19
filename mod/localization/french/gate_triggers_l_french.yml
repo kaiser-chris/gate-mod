@@ -1,28 +1,28 @@
 ﻿l_french:
  trigger_has_magic_gate: "Controls a [GetBuildingType('building_gate_alxa').GetName]"
- trigger_has_magic_gate_not: "Does not controls a [GetBuildingType('building_gate_alxa').GetName]"
+ trigger_has_magic_gate_not: "Does #bold not#! controls a [GetBuildingType('building_gate_alxa').GetName]"
  trigger_has_magic_gate_third: "[COUNTRY.GetNameNoFlag] controls a [GetBuildingType('building_gate_alxa').GetName]"
- trigger_has_magic_gate_third_not: "[COUNTRY.GetNameNoFlag] does not controls a [GetBuildingType('building_gate_alxa').GetName]"
+ trigger_has_magic_gate_third_not: "[COUNTRY.GetNameNoFlag] does #bold not#! controls a [GetBuildingType('building_gate_alxa').GetName]"
 
  trigger_is_gate_planet_country: "Is a country from [concept_gate_planet]"
- trigger_is_gate_planet_country_not: "Is not a country from [concept_gate_planet]"
+ trigger_is_gate_planet_country_not: "Is #bold not#! a country from [concept_gate_planet]"
  trigger_is_gate_planet_country_third: "[COUNTRY.GetNameNoFlag] is a country from [concept_gate_planet]"
- trigger_is_gate_planet_country_third_not: "[COUNTRY.GetNameNoFlag] is not a country from [concept_gate_planet]"
+ trigger_is_gate_planet_country_third_not: "[COUNTRY.GetNameNoFlag] is #bold not#! a country from [concept_gate_planet]"
 
  trigger_gate_is_magic_country: "Has [concept_gate_magic_knowledge]"
- trigger_gate_is_magic_country_not: "Does not have [concept_gate_magic_knowledge]"
+ trigger_gate_is_magic_country_not: "Does #bold not#! have [concept_gate_magic_knowledge]"
  trigger_gate_is_magic_country_third: "[COUNTRY.GetNameNoFlag] has [concept_gate_magic_knowledge]"
- trigger_gate_is_magic_country_third_not: "[COUNTRY.GetNameNoFlag] does not have [concept_gate_magic_knowledge]"
+ trigger_gate_is_magic_country_third_not: "[COUNTRY.GetNameNoFlag] does #bold not#! have [concept_gate_magic_knowledge]"
 
  trigger_gate_has_magic_researcher: "Has a [concept_gate_magic_researcher]"
- trigger_gate_has_magic_researcher_not: "Does not have a [concept_gate_magic_researcher]"
+ trigger_gate_has_magic_researcher_not: "Does #bold not#! have a [concept_gate_magic_researcher]"
  trigger_gate_has_magic_researcher_third: "[COUNTRY.GetNameNoFlag] has a [concept_gate_magic_researcher]"
- trigger_gate_has_magic_researcher_third_not: "[COUNTRY.GetNameNoFlag] does not have a [concept_gate_magic_researcher]"
+ trigger_gate_has_magic_researcher_third_not: "[COUNTRY.GetNameNoFlag] does #bold not#! have a [concept_gate_magic_researcher]"
 
  trigger_gate_has_active_magic_project: "Has an active [concept_gate_project]"
- trigger_gate_has_active_magic_project_not: "Does not have an active [concept_gate_project]"
+ trigger_gate_has_active_magic_project_not: "Does #bold not#! have an active [concept_gate_project]"
  trigger_gate_has_active_magic_project_third: "[COUNTRY.GetNameNoFlag] has an active [concept_gate_project]"
- trigger_gate_has_active_magic_project_third_not: "[COUNTRY.GetNameNoFlag] does not have an active [concept_gate_project]"
+ trigger_gate_has_active_magic_project_third_not: "[COUNTRY.GetNameNoFlag] does #bold not#! have an active [concept_gate_project]"
 
  trigger_gate_expedition_budget: "#default_text Has an [concept_gate_expedition_budget] of [SCOPE.GetValue('budget_cost')|0v] or more.#!"
  trigger_gate_expedition_has_covered: "#default_text Has an unexplored part of the [concept_gate_expedition] map.#!"
@@ -36,5 +36,25 @@
  trigger_gate_ethic_has_all_not: "Hasn't chosen all possible [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')]"
  trigger_gate_ethic_has_all_third: "[COUNTRY.GetNameNoFlag] has chosen all possible [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')]"
  trigger_gate_ethic_has_all_third_not: "[COUNTRY.GetNameNoFlag] hasn't chosen all possible [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')]"
+
+ trigger_gate_is_arcane_council_leader: "Leads the Arcane Council [concept_com_international_organization]"
+ trigger_gate_is_arcane_council_leader_not: "Does #bold not#! lead the Arcane Council [concept_com_international_organization]"
+ trigger_gate_is_arcane_council_leader_third: "[COUNTRY.GetNameNoFlag] leads the Arcane Council [concept_com_international_organization]"
+ trigger_gate_is_arcane_council_leader_third_not: "[COUNTRY.GetNameNoFlag] does #bold not#! lead the Arcane Council [concept_com_international_organization]"
+
+ trigger_gate_is_arcane_council_member: "Is a member of the Arcane Council [concept_com_international_organization]"
+ trigger_gate_is_arcane_council_member_not: "Is #bold not#! a member of the Arcane Council [concept_com_international_organization]"
+ trigger_gate_is_arcane_council_member_third: "[COUNTRY.GetNameNoFlag] is a member of the Arcane Council [concept_com_international_organization]"
+ trigger_gate_is_arcane_council_member_third_not: "[COUNTRY.GetNameNoFlag] is #bold not#! a member of the Arcane Council [concept_com_international_organization]"
+
+ trigger_gate_recently_joined_arcane_council: "Has recently joined the Arcane Council [concept_com_international_organization]"
+ trigger_gate_recently_joined_arcane_council_not: "Has #bold not#! recently joined the Arcane Council [concept_com_international_organization]"
+ trigger_gate_recently_joined_arcane_council_third: "[COUNTRY.GetNameNoFlag] has recently joined the Arcane Council [concept_com_international_organization]"
+ trigger_gate_recently_joined_arcane_council_third_not: "[COUNTRY.GetNameNoFlag] has #bold not#! recently joined the Arcane Council [concept_com_international_organization]"
+
+ trigger_gate_arcane_council_recently_changed_military_regulations: "Has recently introduced regulations in the Arcane Council [concept_com_international_organization]"
+ trigger_gate_arcane_council_recently_changed_military_regulations_not: "Has #bold not#! recently introduced regulations in the Arcane Council [concept_com_international_organization]"
+ trigger_gate_arcane_council_recently_changed_military_regulations_third: "[COUNTRY.GetNameNoFlag] has recently introduced regulations in the Arcane Council [concept_com_international_organization]"
+ trigger_gate_arcane_council_recently_changed_military_regulations_third_not: "[COUNTRY.GetNameNoFlag] has #bold not#! recently introduced regulations in the Arcane Council [concept_com_international_organization]"
 
  trigger_gate_is_not_magic_researcher: "Is not already our [concept_gate_magic_researcher]"

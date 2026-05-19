@@ -1,4 +1,13 @@
 ﻿l_russian:
+ notification_gate_new_high_mage_name: "[TopScope.sCha('new_high_mage').GetFullName] of [TopScope.sCha('new_high_mage').GetCountry.GetName] becomes [concept_gate_arcane_council_high_mage]"
+ notification_gate_new_high_mage_desc: "[TopScope.sCha('new_high_mage').GetFullName] of [TopScope.sCha('new_high_mage').GetCountry.GetName] has been elected as the new [concept_gate_arcane_council_high_mage] for the [concept_gate_arcane_council]."
+ notification_gate_new_high_mage_tooltip: "[TopScope.sCha('new_high_mage').GetFullName] of [TopScope.sCha('new_high_mage').GetCountry.GetName] has been elected as the new [concept_gate_arcane_council_high_mage] for the [concept_gate_arcane_council]."
+ notification_gate_arcane_council_member_join_name: "[TopScope.sC('joining_member').GetName] joins the [concept_gate_arcane_council]"
+ notification_gate_arcane_council_member_join_desc: "[TopScope.sC('joining_member').GetName] joins the [concept_gate_arcane_council] and vows to regulate [concept_gate_magic_users] internationally."
+ notification_gate_arcane_council_member_join_tooltip: "[TopScope.sC('joining_member').GetName] joins the [concept_gate_arcane_council] and vows to regulate [concept_gate_magic_users] internationally."
+ notification_gate_arcane_council_member_leave_name: "[TopScope.sC('leaving_member').GetName] leaves the [concept_gate_arcane_council]"
+ notification_gate_arcane_council_member_leave_desc: "[TopScope.sC('leaving_member').GetName] leaves the [concept_gate_arcane_council], no longer regulating [concept_gate_magic_users] internationally."
+ notification_gate_arcane_council_member_leave_tooltip: "[TopScope.sC('leaving_member').GetName] joins the [concept_gate_arcane_council], no longer regulating [concept_gate_magic_users] internationally."
 # Prestige Goods
  notification_prestige_good_gate_generic_mana_unlocked_name: "[SCOPE.sCompany('relevant_company').GetName] develops @prestige_good_gate_generic_mana! #b $prestige_good_gate_generic_mana$#!"
  notification_prestige_good_gate_generic_mana_unlocked_desc: "[Concept('concept_building', '$concept_buildings$')] owned by [SCOPE.sCompany('relevant_company').GetName] may now begin producing @prestige_good_gate_generic_mana! #b $prestige_good_gate_generic_mana$#!"
