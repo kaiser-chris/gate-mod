@@ -1,8 +1,8 @@
 ﻿l_german:
- DIPLOMATIC_ACCEPTANCE_GATE_LEARNING_MAGIC: "Erforscht [concept_gate_magic_knowledge]" #deepl:3540471904
- DIPLOMATIC_ACCEPTANCE_GATE_NO_MAGIC: "Hat nicht [concept_gate_magic_knowledge]" #deepl:63607955
+ DIPLOMATIC_ACCEPTANCE_GATE_LEARNING_MAGIC: "Recherchiert unter [concept_gate_magic_knowledge]" #deepl:3057739498
+ DIPLOMATIC_ACCEPTANCE_GATE_NO_MAGIC: "[concept_gate_magic_knowledge] ist nicht vorhanden" #deepl:1130413324
 
- gate_magic_knowledge: "$concept_gate_magic_knowledge$" #deepl:3581261840
+ gate_magic_knowledge: "$concept_gate_magic_knowledge$" #deepl:2876794548
  gate_magic_knowledge_desc: ""
- gate_magic_knowledge_effects_desc: "- Errichtet eine Vereinbarung zwischen zwei [Concept('concept_country', '$concept_countries$')], bei der ein $concept_country$ dem anderen [concept_gate_magic_knowledge] überträgt." #deepl:1007169874
- gate_magic_knowledge_article_short_desc: "[SOURCE_COUNTRY.GetNameNoFormatting] überträgt [concept_gate_magic_knowledge] an [TARGET_COUNTRY.GetNameNoFormatting]" #deepl:2177576491
+ gate_magic_knowledge_effects_desc: "• Regelt eine Vereinbarung zwischen zwei „[Concept('concept_country', '$concept_countries$')]“, bei der eine „$concept_country$“ „[concept_gate_magic_knowledge]“ an die andere überträgt" #deepl:404986172
+ gate_magic_knowledge_article_short_desc: "[SOURCE_COUNTRY.GetNameNoFormatting] Weiterleitung von [concept_gate_magic_knowledge] zu [TARGET_COUNTRY.GetNameNoFormatting]" #deepl:658189371

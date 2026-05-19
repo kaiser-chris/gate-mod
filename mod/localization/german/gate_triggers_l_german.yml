@@ -1,40 +1,60 @@
 ﻿l_german:
  trigger_has_magic_gate: "Steuert eine [GetBuildingType('building_gate_alxa').GetName]" #deepl:2728419724
- trigger_has_magic_gate_not: "Steuert nicht eine [GetBuildingType('building_gate_alxa').GetName]" #deepl:2766616975
+ trigger_has_magic_gate_not: "Steuert „#bold “ nicht „#!“ auf „[GetBuildingType('building_gate_alxa').GetName]“?" #deepl:2572303860
  trigger_has_magic_gate_third: "[COUNTRY.GetNameNoFlag] steuert eine [GetBuildingType('building_gate_alxa').GetName]" #deepl:3482540568
- trigger_has_magic_gate_third_not: "[COUNTRY.GetNameNoFlag] steuert nicht eine [GetBuildingType('building_gate_alxa').GetName]" #deepl:349052751
+ trigger_has_magic_gate_third_not: "[COUNTRY.GetNameNoFlag] #bold , nicht #! steuert [GetBuildingType('building_gate_alxa').GetName]" #deepl:3722190554
 
  trigger_is_gate_planet_country: "Ist ein Land aus [concept_gate_planet]" #deepl:1127581163
- trigger_is_gate_planet_country_not: "Ist nicht ein Land aus [concept_gate_planet]" #deepl:1445886546
+ trigger_is_gate_planet_country_not: "Ist #bold  nicht #! ein Land aus [concept_gate_planet]" #deepl:2955442265
  trigger_is_gate_planet_country_third: "[COUNTRY.GetNameNoFlag] ist ein Land aus [concept_gate_planet]" #deepl:498334440
- trigger_is_gate_planet_country_third_not: "[COUNTRY.GetNameNoFlag] ist nicht ein Land aus [concept_gate_planet]" #deepl:1709490938
+ trigger_is_gate_planet_country_third_not: "[COUNTRY.GetNameNoFlag] Ist #bold  nicht #! ein Land aus [concept_gate_planet]" #deepl:4077905385
 
- trigger_gate_is_magic_country: "Hat [concept_gate_magic_knowledge]" #deepl:3230436468
- trigger_gate_is_magic_country_not: "Hat nicht [concept_gate_magic_knowledge]" #deepl:63607955
- trigger_gate_is_magic_country_third: "[COUNTRY.GetNameNoFlag] hat [concept_gate_magic_knowledge]" #deepl:4259156759
- trigger_gate_is_magic_country_third_not: "[COUNTRY.GetNameNoFlag] hat nicht [concept_gate_magic_knowledge]" #deepl:1565322128
+ trigger_gate_is_magic_country: "Hat [concept_gate_magic_knowledge]" #deepl:3565200313
+ trigger_gate_is_magic_country_not: "Gibt es #bold  nicht unter #! unter [concept_gate_magic_knowledge]" #deepl:3625515335
+ trigger_gate_is_magic_country_third: "[COUNTRY.GetNameNoFlag] [concept_gate_magic_knowledge]" #deepl:1515518016
+ trigger_gate_is_magic_country_third_not: "[COUNTRY.GetNameNoFlag] Liegt es an #bold  oder #!, dass [concept_gate_magic_knowledge] nicht funktioniert?" #deepl:392760331
 
- trigger_gate_has_magic_researcher: "Hat eine [concept_gate_magic_researcher]" #deepl:1269013119
- trigger_gate_has_magic_researcher_not: "Hat keine [concept_gate_magic_researcher]" #deepl:1463586438
- trigger_gate_has_magic_researcher_third: "[COUNTRY.GetNameNoFlag] hat eine [concept_gate_magic_researcher]" #deepl:3451463689
- trigger_gate_has_magic_researcher_third_not: "[COUNTRY.GetNameNoFlag] nicht über eine [concept_gate_magic_researcher]" #deepl:1362137834
+ trigger_gate_has_magic_researcher: "Verfügt über eine „[concept_gate_magic_researcher]“" #deepl:418844877
+ trigger_gate_has_magic_researcher_not: "Hat #bold  nicht #! eine [concept_gate_magic_researcher]" #deepl:3162827090
+ trigger_gate_has_magic_researcher_third: "[COUNTRY.GetNameNoFlag] hat eine „[concept_gate_magic_researcher]“" #deepl:208062177
+ trigger_gate_has_magic_researcher_third_not: "[COUNTRY.GetNameNoFlag] Hat #bold  nicht #! eine [concept_gate_magic_researcher]" #deepl:1275279449
 
  trigger_gate_has_active_magic_project: "Hat eine aktive [concept_gate_project]" #deepl:4219602973
- trigger_gate_has_active_magic_project_not: "Hat keine aktive [concept_gate_project]" #deepl:2442006880
+ trigger_gate_has_active_magic_project_not: "Hat #bold  nicht #! eine aktive [concept_gate_project]" #deepl:3505193838
  trigger_gate_has_active_magic_project_third: "[COUNTRY.GetNameNoFlag] hat eine aktive [concept_gate_project]" #deepl:3559282227
- trigger_gate_has_active_magic_project_third_not: "[COUNTRY.GetNameNoFlag] nicht über eine aktive [concept_gate_project]" #deepl:3765575407
+ trigger_gate_has_active_magic_project_third_not: "[COUNTRY.GetNameNoFlag] Hat #bold  oder #! eine aktive [concept_gate_project]" #deepl:1517764777
 
  trigger_gate_expedition_budget: "#default_text Hat eine [concept_gate_expedition_budget] von [SCOPE.GetValue('budget_cost')|0v] oder mehr.#!" #deepl:2216446202
  trigger_gate_expedition_has_covered: "#default_text Hat einen unerforschten Teil der [concept_gate_expedition] Karte.#!" #deepl:663241663
  trigger_gate_expedition_has_no_activity: "#default_text Wir machen nicht schon eine [Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')].#!" #deepl:3118854392
 
- trigger_gate_requirement_low_mana_density: "Um diese [concept_building] zu erstellen, muss ein Staat eine [concept_gate_mana_density] von mindestens [TopScope.ScriptValue('low_mana_density_threshhold')] haben." #deepl:2217222028
- trigger_gate_requirement_medium_mana_density: "Um diese [concept_building] zu erstellen, muss ein Staat eine [concept_gate_mana_density] von mindestens [TopScope.ScriptValue('medium_mana_density_threshhold')] haben." #deepl:3057879360
- trigger_gate_requirement_max_mana_density: "Um diese [concept_building] zu erstellen, muss ein Staat eine [concept_gate_mana_density] von mindestens [TopScope.ScriptValue('maximum_mana_density')] haben." #deepl:1165809799
+ trigger_gate_requirement_low_mana_density: "Um diese [concept_building] zu erstellen, muss ein Bundesstaat über eine [concept_gate_mana_density] mit mindestens [TopScope.ScriptValue('low_mana_density_threshhold')] verfügen." #deepl:2491139237
+ trigger_gate_requirement_medium_mana_density: "Um diese [concept_building] zu erstellen, muss ein Bundesstaat über eine [concept_gate_mana_density] mit mindestens [TopScope.ScriptValue('medium_mana_density_threshhold')] verfügen." #deepl:3625281176
+ trigger_gate_requirement_max_mana_density: "Um diese [concept_building] zu erstellen, muss ein Bundesstaat über eine [concept_gate_mana_density] mit mindestens [TopScope.ScriptValue('maximum_mana_density')] verfügen." #deepl:2986345094
 
- trigger_gate_ethic_has_all: "Hat alle möglichen [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')] ausgewählt" #deepl:416649158
- trigger_gate_ethic_has_all_not: "Hat nicht alle möglichen Optionen ausgewählt [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')]" #deepl:683386360
- trigger_gate_ethic_has_all_third: "[COUNTRY.GetNameNoFlag] hat alle möglichen [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')] ausgewählt" #deepl:1106211777
- trigger_gate_ethic_has_all_third_not: "[COUNTRY.GetNameNoFlag] hat nicht alle möglichen [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')] ausgewählt" #deepl:1027956228
+ trigger_gate_ethic_has_all: "Hat alle möglichen [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')] ausgewählt" #deepl:1152229089
+ trigger_gate_ethic_has_all_not: "Hat nicht alle möglichen Optionen ausgewählt [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')]" #deepl:4243568538
+ trigger_gate_ethic_has_all_third: "[COUNTRY.GetNameNoFlag] hat alle möglichen [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')] ausgewählt" #deepl:2160750419
+ trigger_gate_ethic_has_all_third_not: "[COUNTRY.GetNameNoFlag] hat nicht alle möglichen [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')] ausgewählt" #deepl:50095710
 
- trigger_gate_is_not_magic_researcher: "Ist das nicht bereits unser [concept_gate_magic_researcher]" #deepl:1487154086
+ trigger_gate_is_arcane_council_leader: "Leitet den Arkanen Rat [concept_com_international_organization]" #deepl:684660458
+ trigger_gate_is_arcane_council_leader_not: "Leitet nicht #bold  #! den Arkanen Rat [concept_com_international_organization]" #deepl:2885476714
+ trigger_gate_is_arcane_council_leader_third: "[COUNTRY.GetNameNoFlag] leitet den Arkanen Rat [concept_com_international_organization]" #deepl:3627784794
+ trigger_gate_is_arcane_council_leader_third_not: "[COUNTRY.GetNameNoFlag] Leitet nicht #bold  #! den Arkanen Rat [concept_com_international_organization]" #deepl:4073069933
+
+ trigger_gate_is_arcane_council_member: "Ist Mitglied des Arkanen Rates [concept_com_international_organization]" #deepl:1911391672
+ trigger_gate_is_arcane_council_member_not: "Ist #bold  nicht #! ein Mitglied des Arkanen Rates [concept_com_international_organization]" #deepl:1651142944
+ trigger_gate_is_arcane_council_member_third: "[COUNTRY.GetNameNoFlag] ist Mitglied des Arkanen Rates [concept_com_international_organization]" #deepl:1165631019
+ trigger_gate_is_arcane_council_member_third_not: "[COUNTRY.GetNameNoFlag] Ist #bold  (nicht #!) Mitglied des Arkanen Rates? [concept_com_international_organization]" #deepl:359315930
+
+ trigger_gate_recently_joined_arcane_council: "Ist kürzlich dem Arkanen Rat beigetreten [concept_com_international_organization]" #deepl:3170588523
+ trigger_gate_recently_joined_arcane_council_not: "Ist #bold  nicht #! vor Kurzem dem Arcane Council beigetreten [concept_com_international_organization]" #deepl:2576317359
+ trigger_gate_recently_joined_arcane_council_third: "[COUNTRY.GetNameNoFlag] ist kürzlich dem Arcane Council beigetreten [concept_com_international_organization]" #deepl:682054670
+ trigger_gate_recently_joined_arcane_council_third_not: "[COUNTRY.GetNameNoFlag] #bold , nicht #!, ist kürzlich dem Arcane Council beigetreten [concept_com_international_organization]" #deepl:1575520797
+
+ trigger_gate_arcane_council_recently_changed_military_regulations: "Hat kürzlich im Arkanen Rat Vorschriften eingeführt [concept_com_international_organization]" #deepl:3484248743
+ trigger_gate_arcane_council_recently_changed_military_regulations_not: "Hat #bold  nicht #! kürzlich im Arkanen Rat Vorschriften eingeführt [concept_com_international_organization]" #deepl:3684220206
+ trigger_gate_arcane_council_recently_changed_military_regulations_third: "[COUNTRY.GetNameNoFlag] hat kürzlich im Arkanen Rat Vorschriften erlassen [concept_com_international_organization]" #deepl:3170767611
+ trigger_gate_arcane_council_recently_changed_military_regulations_third_not: "[COUNTRY.GetNameNoFlag] Hat #bold  (nicht #!) kürzlich im Arkanen Rat Vorschriften eingeführt? [concept_com_international_organization]" #deepl:1947453675
+
+ trigger_gate_is_not_magic_researcher: "Ist das nicht schon unser „[concept_gate_magic_researcher]“?" #deepl:2797499724

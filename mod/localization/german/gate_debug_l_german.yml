@@ -6,8 +6,8 @@
  commander_vs_left: "$gate_create_bug_report$" #deepl:33573425
  commander_vs_right: "$gate_create_bug_report$" #deepl:33573425
 # Debug Decisions
- debug_decision_gate_mana_saturation_decision: "DEBUG: Vollständig $je_gate_mana_saturation$" #deepl:1562175711
- debug_decision_gate_mana_saturation_decision_desc: "Vervollständigen Sie $je_gate_mana_saturation$ Journaleintrag." #deepl:1886909990
+ debug_decision_gate_mana_saturation_decision: "DEBUG: Vollständiger Text unter $je_gate_mana_saturation$" #deepl:1638206971
+ debug_decision_gate_mana_saturation_decision_desc: "Vollständiger Eintrag im „$je_gate_mana_saturation$“-Tagebuch." #deepl:1679800254
  debug_decision_gate_complete_sg_magic_knowledge: "DEBUG: Vollständig $je_obj_gate_magic_knowledge$" #deepl:355723446
  debug_decision_gate_complete_sg_magic_knowledge_desc: "Vollständige $je_obj_gate_magic_knowledge$ Zielsetzung." #deepl:488042211
  debug_decision_gate_complete_sg_magic_academy: "DEBUG: Vollständig $je_obj_gate_magic_academy$" #deepl:1392035428
@@ -27,11 +27,11 @@
  debug_decision_gate_monster_attack_decision: "DEBUG: Auslöser $gate_monster_attack$" #deepl:2160915127
  debug_decision_gate_monster_attack_decision_desc: "$gate_monster_attack$ Erntebedingungen in unserer Hauptstadt auslösen." #deepl:3874727789
  debug_decision_gate_toggle_busy_researcher_decision: "DEBUG: Arkanist umschalten Beschäftigt" #deepl:767390061
- debug_decision_gate_toggle_busy_researcher_decision_desc: "Das macht unsere Länder [concept_gate_magic_researcher] beschäftigt oder nicht." #deepl:1142157950
+ debug_decision_gate_toggle_busy_researcher_decision_desc: "Das macht unsere Länder [concept_gate_magic_researcher] – ob viel los ist oder nicht." #deepl:4154228807
  debug_decision_gate_trigger_ethics_decision: "DEBUG: Magische Ethik wählen" #deepl:2317249057
  debug_decision_gate_trigger_ethics_decision_desc: "Wählen Sie ein neues magisches Ethos" #deepl:2845178760
  debug_decision_gate_increase_magical_innovation_decision: "DEBUG: Magische Innovation hinzufügen" #deepl:3281996766
- debug_decision_gate_increase_magical_innovation_decision_desc: "Fügt #v 10000#! [concept_gate_magic_innovation] hinzu und ignoriert dabei das Banklimit." #deepl:1549266479
+ debug_decision_gate_increase_magical_innovation_decision_desc: "Fügt „#v “, „10000“, „#!“ und „[concept_gate_magic_innovation]“ hinzu, wobei das Banklimit ignoriert wird." #deepl:533578562
  debug_decision_gate_accept_vampires: "DEBUG: Vampire akzeptieren" #deepl:198253640
  debug_decision_gate_accept_vampires_desc: "Startet die Bewegung [concept_gate_vampirism]." #deepl:2374500357
  debug_decision_gate_enact_vampire_monarchy: "DEBUG: Ewige Monarchie einführen" #deepl:639900410
@@ -40,6 +40,8 @@
  debug_decision_gate_reset_reytu_desc: "Laden Sie die Konfiguration von Reytu Expedition neu." #deepl:2907062808
  debug_decision_gate_start_reytu: "DEBUG: Reytu-Expedition starten" #deepl:736139186
  debug_decision_gate_start_reytu_desc: "Starten Sie direkt die Reytu-Expedition." #deepl:2271213561
+ debug_decision_gate_join_mage_council: "DEBUG: Melde dich bei „$io_gate_arcane_council$“ an" #deepl:3074797784
+ debug_decision_gate_join_mage_council_desc: "Gründe diese Organisation und trete ihr bei." #deepl:3320028284
 # Debug Alerts
  alert_alert_gate_debug_base_panel_name: "Base Panel" #TODO: Write alert_gate_space_alert_name
  alert_alert_gate_debug_base_panel_desc: "TODO" #TODO: Write alert_gate_space_alert_desc

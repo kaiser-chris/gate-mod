@@ -1,6 +1,6 @@
 ﻿l_simp_chinese:
  je_gate_dwarven_alps: "阿尔卑斯山之主"
- je_gate_dwarven_alps_lobby: "$je_gate_dwarven_alps_reason$" #deepl:3023396651
+ je_gate_dwarven_alps_lobby: "$je_gate_dwarven_alps_reason$" #deepl:2170888463
  je_gate_dwarven_alps_status: "这片山脉将成为我们的新家园。"
  je_gate_dwarven_alps_reason: "$GATE_MK$的终极目标是将阿尔卑斯地区统一在他们的旗帜之下，这一抱负使瑞士成为其核心关注对象。与许多倾向于武力征服的国家不同，$GATE_MK$的矮人族群更加推崇外交手段，力求通过和平说服使瑞士自愿加入他们的阵营。他们设想的并非一国对另一国的统治，而是共享繁荣与文化交融的平等伙伴关系。\n$gate_journal_delimiter$\n为实现这一愿景，$GATE_MK$深知必须证明自身具备公正治理与文化融合的能力。其现有德语人口的成功同化不仅关乎内政稳定，更是一项至关重要的实证。瑞士必须确信，在任何形式的联合中，自己都将作为与矮人族利益对等的合作伙伴存在，而非屈从于附属地位。"
  je_gate_dwarven_integration_of_germans: "整合德意志"
@@ -8,7 +8,7 @@
  je_gate_dwarven_integration_of_germans_success: "将于我们的德意志公民被整合时完成"
  je_gate_dwarven_integration_of_germans_failure: "若整合失去公众支持将会失败"
  je_gate_dwarven_alps_button_switzerland_exists: "[SCOPE.sCountry('loc_swiss_scope').GetName]存在。"
- je_dwarven_alps_button_switzerland_magic: "向$SWI$提议缔结魔法同盟"
+ je_gate_dwarven_alps_button_switzerland_magic: "向$SWI$发出“魔法联盟”邀请" #deepl:2531356222
  je_gate_dwarven_alps_button_switzerland_magic_desc: "提议以共享[concept_gate_magic_knowledge]为条件，与[SCOPE.sCountry('loc_swiss_scope').GetName]缔结[concept_alliance]。"
  je_gate_dwarven_alps_button_switzerland_magic_already: "[SCOPE.sCountry('loc_swiss_scope').GetName]#bold 尚未#!知晓魔法。"
  je_gate_dwarven_alps_button_switzerland_integrate: "吞并$SWI$"
@@ -18,6 +18,7 @@
  decision_gate_dwarven_tunnels: "挖掘矮人隧道"
  decision_gate_dwarven_tunnels_desc: "将$state_trait_gate_dwarven_tunnels$特质添加到山脉地区。"
  decision_gate_dwarven_tunnels_cooldown_tt: "在6个月内未挖掘过#v $state_trait_gate_dwarven_tunnels$#!"
+ effect_gate_change_german_integration_progress: "[SCOPE.GetLocalVariable('integration_change').GetValue|+=0]% 改变了德国的融合进程" #deepl:1102167828
  pb_gate_german_integration_name: "当前整合进展"
  pb_gate_german_integration_desc: "进度：#v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|0%]#!（[JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]/100）%"
  pb_gate_german_integration_support_name: "公众支持融合"

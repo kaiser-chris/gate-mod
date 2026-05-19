@@ -1,0 +1,49 @@
+﻿l_korean:
+ io_gate_arcane_council: "비전의 의회" #deepl:899135299
+ io_gate_arcane_council_reason: "[concept_gate_magic]가 널리 퍼져 있고, [concept_gate_magic_users]가 주와 국가 사이를 자유롭게 오갈 수 있는 세상에서, 각국은 협력할 필요성을 느끼게 되었습니다. 이에 따라 [concept_gate_arcane_council]가 설립되어, 마법 수행에 관한 국제적 규칙과 제한 사항을 조정하고 있습니다." #deepl:1916466954
+ io_gate_arcane_council_election: "[concept_gate_arcane_council_high_mage]는 임기 전체에 걸쳐 선출됩니다. 현직 [concept_gate_arcane_council_high_mage]가 은퇴하거나 사망할 경우 새로운 선거가 실시됩니다. 모든 회원 [Concept('concept_country','$concept_countries$')]의 [concept_gate_magic_researcher]는 선거에 출마할 자격이 있습니다. [AddLocalizationIf(GetPlayer.MakeScope.Var('gate_joined_mage_council').IsSet, 'io_gate_arcane_council_election_involved')]" #deepl:272868124
+ io_gate_arcane_council_election_involved: "\n \n 저희 ‘[concept_gate_magic_researcher]’의 선거 평가 점수는 #tooltippable  입니다. #tooltip: [GetRawTextTooltipTag('io_gate_arcane_council_election_score_tooltip')] [GetPlayer.MakeScope.ScriptValue('gate_arcane_council_election_score')|v] #! #! 다음 선거에서는 아마 [GetPlayer.GetCustom('gate_arcane_council_election_indicator')] 할 것입니다." #deepl:2891667291
+ io_gate_arcane_council_election_indicator_loss: "#r  #!을(를) 삭제합니다" #deepl:3926816450
+ io_gate_arcane_council_election_indicator_win: "#g  #!에서 승리" #deepl:3291145026
+ io_gate_arcane_council_election_score_tooltip: "우리의 ‘[concept_gate_magic_researcher]’가 ‘[concept_gate_arcane_council_high_mage]’ 선거 평가에서 받은 총점은 [GetPlayer.MakeScope.ScriptValue('gate_arcane_council_election_score')|v]이며, 그 이유는 다음과 같습니다:#indent_newline:3 \n [GetPlayer.MakeScope.GetScriptValueDesc('gate_arcane_council_election_score')] #!" #deepl:2154648864
+ io_gate_arcane_council_status_election: "이 단체는 현재 차기 회장([concept_gate_arcane_council_high_mage])을 선출하고 있습니다." #deepl:2521965666
+ io_gate_arcane_council_leader_title: "대마도사" #deepl:3032438028
+ io_gate_arcane_council_leader_tooltip: "#header  [concept_gate_arcane_council_high_mage] [JournalEntry.MakeScope.Var('com_interorg_chair_var').GetCharacter.GetFullName] #! \n [JournalEntry.MakeScope.Var('com_interorg_chair_var').GetCharacter.GetFullName] [JournalEntry.MakeScope.Var('com_interorg_chair_var').GetCharacter.GetCountry.GetName]은 현재 [concept_gate_arcane_council]의 [concept_gate_arcane_council_high_mage]입니다. \n \n 이 단체의 선거 성적은 [JournalEntry.MakeScope.Var('com_interorg_chair_var').GetCharacter.GetCountry.MakeScope.ScriptValue('gate_arcane_council_election_score')|v]이며, 다음 선거에서는 아마도 [JournalEntry.MakeScope.Var('com_interorg_chair_var').GetCharacter.GetCountry.GetCustom('gate_arcane_council_election_indicator')]할 것으로 보입니다." #deepl:175225360
+ sb_gate_arcane_council_research_cooperation: "연구 협력 시작" #deepl:347480126
+ sb_gate_arcane_council_research_cooperation_desc: "모든 회원 간의 공동 연구 활동을 장려하기 위해 ‘[concept_influence]’를 활용해 주십시오." #deepl:1676093222
+ sb_gate_arcane_council_forbid_no_regulations: "전장의 마법을 억제하라" #deepl:1287721504
+ sb_gate_arcane_council_forbid_no_regulations_desc: "회원들이 [GetMobilizationOption('mobilization_option_gate_no_regulations').GetName] [concept_mobilization_option]을 이용하지 못하도록 제한하십시오." #deepl:1505616966
+ sb_gate_arcane_council_forbid_basic_regulations: "전장의 마법을 더욱 제한하다" #deepl:2013390894
+ sb_gate_arcane_council_forbid_basic_regulations_desc: "회원들이 [GetMobilizationOption('mobilization_option_gate_no_regulations').GetName], [GetMobilizationOption('mobilization_option_gate_basic_regulations').GetName] 및 [concept_mobilization_option]을 이용하지 못하도록 제한하십시오." #deepl:1353173836
+ sb_gate_arcane_council_cancel_regulations: "전장 규정 폐지" #deepl:2138714939
+ sb_gate_arcane_council_cancel_regulations_desc: "회원들이 [GetMobilizationOption('mobilization_option_gate_no_regulations').GetName], [GetMobilizationOption('mobilization_option_gate_basic_regulations').GetName] 및 [concept_mobilization_option]을 다시 이용할 수 있도록 허용합니다." #deepl:4008094272
+ modifier_gate_arcane_council_base: "기본 마법 규정" #deepl:443057317
+ modifier_gate_arcane_council_research_cooperation: "연구 협력" #deepl:3645043162
+ modifier_gate_arcane_council_forbid_no_regulations: "$mobilization_option_gate_no_regulations$ 사용 금지 $concept_mobilization_option$" #deepl:2362881304
+ modifier_gate_arcane_council_forbid_basic_regulations: "$mobilization_option_gate_basic_regulations$ 사용 금지 $concept_mobilization_option$" #deepl:3078314941
+ modifier_gate_arcane_council_action_cost: "[concept_gate_arcane_council] 행동 비용" #deepl:2855658571
+ modifier_gate_arcane_council_incident_cost: "마법사 사건 비용" #deepl:223225525
+ decision_gate_found_arcane_council: "$io_gate_arcane_council$를 찾았습니다" #deepl:2510747295
+ decision_gate_found_arcane_council_desc: "[concept_gate_arcane_council]를 찾았습니다." #deepl:3262111014
+ decision_gate_join_arcane_council: "$io_gate_arcane_council$에 가입하세요" #deepl:3999137856
+ decision_gate_join_arcane_council_desc: "[concept_gate_arcane_council]에 가입하세요." #deepl:71247284
+ decision_gate_leave_arcane_council: "$io_gate_arcane_council$에서 탈퇴하기" #deepl:1141878380
+ decision_gate_leave_arcane_council_desc: "[concept_gate_arcane_council]를 떠나세요." #deepl:1159437865
+ gate_arcane_council_event_hint: "국제 사이버 보안 협약([concept_gate_arcane_council])을 통해 인터넷 프로토콜 500([concept_gate_magic])을 규제한다면, 앞으로 이와 같은 사고를 예방할 수 있을 것입니다." #deepl:767825992
+ gate_arcane_council.1.t: "외부의 마법, 국내의 파장" #deepl:2618697781
+ gate_arcane_council.1.d: "[TopScope.sC('source_country').GetName] 소속의 방문 차량이 [TopScope.sS('target_state').GetName]에서 통제력을 잃고 [concept_devastation]을 일으켰습니다. \n \n $gate_arcane_council_event_hint$" #deepl:1275259305
+ gate_arcane_council.1.f: "[TopScope.sC('source_country').GetNameNoFormatting]에서 온 한 마법사가 [GetPlayer.GetAdjectiveNoFormatting] 지역 주민들과의 대치 상황에서 통제력을 잃었습니다. 이로 인해 발생한 마법 폭발은 인근 거리를 초토화시켰으며, 이미 시민, 상인, 행정관들 사이에서 불안을 야기하고 있습니다. 이 사태를 제대로 수습하지 못할 경우, 자국의 치안과 [TopScope.sC('source_country').GetNameNoFormatting]와의 관계 모두에 심각한 타격을 줄 수 있습니다." #deepl:1079261975
+ gate_arcane_council.1.a: "[TopScope.sC('source_country').GetNameNoFlag]에 답변을 요구하십시오." #deepl:2732754887
+ gate_arcane_council.1.b: "그 일은 신경 쓰지 마세요." #deepl:1652035745
+ gate_arcane_council.1.c: "재건에 집중합시다." #deepl:38167414
+ gate_arcane_council.2.t: "이방인의 재앙" #deepl:4133570612
+ gate_arcane_council.2.d: "[TopScope.sC('source_country').GetName]의 드루이드 [Concept('concept_gate_magic_users','$concept_gate_magic_user$')]가 [TopScope.sS('target_state').GetName]에서 [GetHarvestConditionType('drought').GetName] [concept_harvest_condition]를 일으켰습니다. \n \n $gate_arcane_council_event_hint$" #deepl:3839380
+ gate_arcane_council.2.f: "[TopScope.sC('source_country').GetNameNoFormatting] 출신의 한 드루이드가 [TopScope.sS('target_state').GetNameNoFormatting]의 농경지에 재앙을 불러온 것으로 추정된다. 불과 몇 주 전만 해도 풍요를 약속했던 들판은 이제 황량하고 회색빛으로 변해버렸지만, 초기 보고에 따르면 이는 국가의 공식적인 조치가 아니라 한 명의 광신도가 저지른 소행일 가능성이 있다. 이러한 구분은 외교적으로는 중요할지 모르나, 생계 수단이 흙속으로 사라지는 것을 지켜봐야 하는 농부들에게는 별다른 위안이 되지 못한다." #deepl:1987967690
+ gate_arcane_council.2.a: "[TopScope.sC('source_country').GetNameNoFlag]에 답변을 요구하십시오." #deepl:2732754887
+ gate_arcane_council.2.b: "그 일은 신경 쓰지 마세요." #deepl:1652035745
+ gate_arcane_council.2.c: "우리 농민들을 돕는 데 주력합시다." #deepl:2871400520
+ gate_arcane_council_election_score_no_researcher: "[concept_gate_magic_researcher]" #deepl:1059847779
+ gate_arcane_council_election_score_experience: "[concept_gate_character_experience]" #deepl:3056872711
+ gate_arcane_council_election_score_trait_bound_name: "[GetCharacterTrait('gate_arcanist_bound_name').GetName] [concept_character_trait]" #deepl:3244357862
+ gate_arcane_council_election_score_trait_magic_sight: "[GetCharacterTrait('gate_arcanist_magic_sight').GetName] [concept_character_trait]" #deepl:2022435642
+ gate_arcane_council_election_score_trait_magic_voice: "[GetCharacterTrait('gate_arcanist_magic_voice').GetName] [concept_character_trait]" #deepl:3718386369

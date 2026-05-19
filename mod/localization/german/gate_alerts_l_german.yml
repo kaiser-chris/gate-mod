@@ -3,31 +3,31 @@
  ag_gate_alerts_desc: "Dies sind Warnungen des Mods #header $dlc_magic_gate$#!" #deepl:1724064972
  ag_gate_alerts_tooltip: "Dies sind Warnungen von der Mod #header Manaflow#!" #deepl:3066754853
  alert_has_maximum_magic_innovation_alert_name: "Maximale magische Innovation" #deepl:3926949426
- alert_has_maximum_magic_innovation_alert_desc: "Wir haben unser Maximum von [concept_gate_magic_innovation] erreicht. [concept_gate_magic_innovation], das wir generieren, ist somit #v verloren#!" #deepl:932517374
- alert_has_maximum_magic_innovation_alert_hint: "Sie verwenden [concept_gate_magic_innovation], um [concept_gate_magic_technology] in der Magischen Technologie-Tafel freizuschalten." #deepl:1490637103
+ alert_has_maximum_magic_innovation_alert_desc: "Wir haben unser Limit von [concept_gate_magic_innovation] erreicht. Daher gehen alle von uns generierten [concept_gate_magic_innovation]-Adressen verloren und werden unter #v  #! nicht mehr angezeigt." #deepl:72648298
+ alert_has_maximum_magic_innovation_alert_hint: "Über „[concept_gate_magic_innovation]“ kannst du „[concept_gate_magic_technology]“ im Magic Technology Panel freischalten." #deepl:2924263652
  alert_has_maximum_magic_innovation_alert_action: "$gg_panel_base_action$" #deepl:3768099815
- has_maximum_magic_innovation_alert_setting_name: "Maximum [concept_gate_magic_innovation]" #deepl:1616761868
+ has_maximum_magic_innovation_alert_setting_name: "Maximal[concept_gate_magic_innovation]" #deepl:464145550
  alert_can_unlock_magic_technology_alert_name: "Kann magische Technologie freischalten" #deepl:2040866794
- alert_can_unlock_magic_technology_alert_desc: "Wir haben genug [concept_gate_magic_innovation] gesammelt, um eine neue [concept_gate_magic_technology] freizuschalten." #deepl:1959831426
- alert_can_unlock_magic_technology_alert_hint: "Sie verwenden [concept_gate_magic_innovation], um [concept_gate_magic_technology] in der Magischen Technologie-Tafel freizuschalten." #deepl:1490637103
+ alert_can_unlock_magic_technology_alert_desc: "Wir haben genug „[concept_gate_magic_innovation]“ gesammelt, um ein neues „[concept_gate_magic_technology]“ freizuschalten." #deepl:1196437822
+ alert_can_unlock_magic_technology_alert_hint: "Über „[concept_gate_magic_innovation]“ kannst du „[concept_gate_magic_technology]“ im Magic Technology Panel freischalten." #deepl:2924263652
  alert_can_unlock_magic_technology_alert_action: "$gg_panel_base_action$" #deepl:3768099815
- can_unlock_magic_technology_alert_setting_name: "Kann eine neue Funktion freischalten [concept_gate_magic_technology]" #deepl:3469430314
+ can_unlock_magic_technology_alert_setting_name: "Damit lässt sich ein neues „[concept_gate_magic_technology]“ freischalten" #deepl:2115473197
  alert_has_not_started_research_of_magic_alert_name: "Magie nicht erforschen" #deepl:2771093643
- alert_has_not_started_research_of_magic_alert_desc: "Wir sind derzeit nicht aktiv in der Forschung tätig [concept_gate_magic_knowledge]." #deepl:1532927505
- alert_has_not_started_research_of_magic_alert_hint: "Sie beginnen Ihre Recherchen auf [concept_gate_magic_knowledge], indem Sie eine Entscheidung treffen: #header $research_magic_decision$#!" #deepl:1314664763
+ alert_has_not_started_research_of_magic_alert_desc: "Wir beschäftigen uns derzeit nicht aktiv mit der Erforschung von „[concept_gate_magic_knowledge]“." #deepl:3808618755
+ alert_has_not_started_research_of_magic_alert_hint: "Sie beginnen Ihre Recherche zu „[concept_gate_magic_knowledge]“, indem Sie folgende Entscheidung treffen: #header  $research_magic_decision$ #!" #deepl:2491193583
  alert_has_not_started_research_of_magic_alert_action: "Journal-Panel" #deepl:3794789643
  has_not_started_research_of_magic_alert_setting_name: "Kann mit der Erforschung von Magie beginnen" #deepl:362936121
- alert_has_no_magic_researcher_alert_name: "Wir haben keine [concept_gate_magic_researcher]" #deepl:2273054153
- alert_has_no_magic_researcher_alert_desc: "Wir brauchen eine aktive [concept_gate_magic_researcher], damit wir unser Verständnis von Magie verbessern können." #deepl:3253747582
- alert_has_no_magic_researcher_alert_hint: "Sie können einen „[concept_gate_magic_researcher]“ buchen, indem Sie einen aus dem „#bold “ auswählen: #!. Die Interaktion mit der Figur finden Sie hier: #header , $gate_promote_arcanist$ und #!" #deepl:3682659106
- alert_has_no_magic_researcher_alert_action: "Journal-Panel" #deepl:3794789643
- has_no_magic_researcher_alert_setting_name: "Hat keine [concept_gate_magic_researcher]" #deepl:1765805134
+ alert_has_no_magic_researcher_alert_name: "Wir haben keine Web[concept_gate_magic_researcher]" #deepl:2696409564
+ alert_has_no_magic_researcher_alert_desc: "Wir brauchen eine aktive „[concept_gate_magic_researcher]“, damit wir unser Verständnis von Magie vertiefen können." #deepl:1687770164
+ alert_has_no_magic_researcher_alert_hint: "Sie können einen „[concept_gate_magic_researcher]“ mieten, indem Sie einen der folgenden auswählen: #bold  $NATIONAL_CAST$ #! mit den folgenden Charakter-Interaktionen: #header  $gate_promote_arcanist$ #!" #deepl:1174618721
+ alert_has_no_magic_researcher_alert_action: "$NATIONAL_CAST$ Bedienfeld" #deepl:4104758833
+ has_no_magic_researcher_alert_setting_name: "Hat keine Web[concept_gate_magic_researcher]" #deepl:1690860577
  alert_alert_gate_expedition_no_activity_name: "$gate_planet$ Expedition ist im Leerlauf" #deepl:2113638393
  alert_alert_gate_expedition_no_activity_desc: "Unsere [concept_gate_expedition] ist untätig." #deepl:1004469122
  alert_alert_gate_expedition_no_activity_hint: "Sie können eine neue [Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')] auf der [concept_gate_expedition_map] starten, indem Sie auf einen Ort klicken und eine Interaktion auswählen." #deepl:1684026104
  alert_alert_gate_expedition_no_activity_action: "$gg_panel_expedition_action$" #deepl:4261063976
  alert_gate_expedition_no_activity_setting_name: "Nein [Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')]" #deepl:3083321520
- alert_alert_gate_project_no_activity_name: "Unser [concept_gate_magic_researcher] ist untätig" #deepl:646414347
+ alert_alert_gate_project_no_activity_name: "Unser „[concept_gate_magic_researcher]“ ist inaktiv" #deepl:1739553853
  alert_alert_gate_project_no_activity_desc: "Sie können eine neue [concept_gate_project] im Manaflow-Panel starten." #deepl:1585258968
  alert_alert_gate_project_no_activity_hint: "Diese gezielten Forschungsanstrengungen ermöglichen magische Verbesserungen, die die Industrie, die Gesellschaft und die Infrastruktur verbessern und den Weg in eine zauberhaftere Zukunft ebnen." #deepl:88762333
  alert_alert_gate_project_no_activity_action: "$gg_panel_base_action$" #deepl:3768099815

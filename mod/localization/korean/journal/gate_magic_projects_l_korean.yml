@@ -23,6 +23,14 @@
  je_gate_project_domain_reason: "[concept_gate_magic_researcher] [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName]가 현재 #bold $je_gate_project_domain$#!를 진행 중입니다.\n$gate_journal_delimiter$\n$je_gate_project_domain_description$"
  je_gate_project_domain_description: "[Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')]은 우리 사회에서 마법에 대한 관점을 나타내며, 국가에 큰 이점을 제공합니다. 이 프로젝트를 통해 추가로 하나의 [concept_gate_magic_ethic]을 선택할 수 있게 됩니다."
  je_gate_project_domain_condition_not_researched: "Not already researched a new [concept_gate_magic_ethic]"
+ je_gate_project_domain_condition_domain_slot: "[THIS.GetCountry.GetNameNoFlag] [concept_gate_magic_ethic] 슬롯이 하나 이상 비어 있는 경우" #deepl:3894320359
+ # Change Arcane Domains
+ button_project_change_domain: "$concept_gate_magic_ethics$ 변경" #deepl:211201186
+ je_gate_project_change_domain: "$concept_gate_magic_ethics$ 변경" #deepl:211201186
+ je_gate_project_change_domain_reason: "[concept_gate_magic_researcher] [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName] 현재 #bold , $je_gate_project_change_domain$, #!, \n, $gate_journal_delimiter$, \n, $je_gate_project_change_domain_description$에서 활동 중입니다." #deepl:2314560093
+ je_gate_project_change_domain_description: "[Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')] 이는 우리 사회의 마법에 대한 관점을 대변하며 국가에 막대한 활력을 불어넣을 것입니다. 이 프로젝트를 통해 [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')] 도메인을 변경할 수 있습니다. #r  [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')] 도메인은 단 한 번만 변경할 수 있습니다!#!" #deepl:1371592778
+ je_gate_project_change_domain_condition_max_domains: "[THIS.GetCountry.GetNameNoFlag] [concept_gate_magic_ethic]의 세 슬롯을 모두 사용하고 있습니다" #deepl:4252664512
+ je_gate_project_change_domain_condition_not_researched: "[THIS.GetCountry.GetNameNoFlag] 아직 [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')]를 변경하지 않은 경우" #deepl:2895666181
 # Improve Mana Extraction
  button_project_improve_mana_extraction: "마나 추출 향상"
  je_gate_project_improve_mana_extraction: "마나 추출 향상"
