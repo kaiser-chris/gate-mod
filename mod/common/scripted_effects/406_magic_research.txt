@@ -50,14 +50,14 @@ reset_research_institute_pm = {
 					any_scope_building = {
 						is_building_type = building_gate_magic_research_institute
 						NOT = {
-							has_active_production_method = pm_no_researcher
+							has_active_production_method = pm_gate_no_researcher
 						}
 					}
 				}
 			}
 			activate_production_method = {
 				building_type = building_gate_magic_research_institute
-				production_method = pm_no_researcher
+				production_method = pm_gate_no_researcher
 			}
 		}
 		else_if = {
@@ -70,14 +70,14 @@ reset_research_institute_pm = {
 					any_scope_building = {
 						is_building_type = building_gate_magic_research_institute
 						NOT = {
-							has_active_production_method = pm_archmage_researcher
+							has_active_production_method = pm_gate_archmage_researcher
 						}
 					}
 				}
 			}
 			activate_production_method = {
 				building_type = building_gate_magic_research_institute
-				production_method = pm_archmage_researcher
+				production_method = pm_gate_archmage_researcher
 			}
 		}
 		else_if = {
@@ -90,14 +90,14 @@ reset_research_institute_pm = {
 					any_scope_building = {
 						is_building_type = building_gate_magic_research_institute
 						NOT = {
-							has_active_production_method = pm_experienced_researcher
+							has_active_production_method = pm_gate_experienced_researcher
 						}
 					}
 				}
 			}
 			activate_production_method = {
 				building_type = building_gate_magic_research_institute
-				production_method = pm_experienced_researcher
+				production_method = pm_gate_experienced_researcher
 			}
 		}
 		else_if = {
@@ -106,14 +106,14 @@ reset_research_institute_pm = {
 					any_scope_building = {
 						is_building_type = building_gate_magic_research_institute
 						NOT = {
-							has_active_production_method = pm_novice_researcher
+							has_active_production_method = pm_gate_novice_researcher
 						}
 					}
 				}
 			}
 			activate_production_method = {
 				building_type = building_gate_magic_research_institute
-				production_method = pm_novice_researcher
+				production_method = pm_gate_novice_researcher
 			}
 		}
 	}
@@ -208,7 +208,7 @@ cleanup_researchers = {
 		}
 		activate_production_method = {
 			building_type = building_gate_magic_research_institute
-			production_method = pm_no_researcher
+			production_method = pm_gate_no_researcher
 		}
 		remove_variable = magic_researcher
 	}
