@@ -44,7 +44,7 @@
  concept_gate_ley_lines: "Ley-Linien" #deepl:2253266362
  concept_gate_ley_lines_desc: "Für die meisten unsichtbar, aber für das Arkane von entscheidender Bedeutung, sind Ley-Linien Ströme von rohem Mana, die unter dem Land fließen. Wo sie zusammenlaufen, strömt das Mana in die Höhe, verwandelt die Regionen in mächtige magische Hotspots und verstärkt alle Zaubersprüche in der Nähe." #deepl:910414221
  concept_gate_mana_well: "Mana-Brunnen" #deepl:2373238792
- concept_gate_mana_well_desc: "Ein Mana-Brunnen ist eine Anzapfstelle auf [Concept('concept_gate_ley_lines','$concept_gate_ley_line$')]. Mana-Brunnen können eine fast unbegrenzte Menge an $mana$ produzieren. \n\nSie können aber zu #v Instabilität#! in der lokalen [Concept('concept_gate_ley_lines','$concept_gate_ley_line$')] führen, was zu #v Unfällen#! führen kann." #deepl:972959992
+ concept_gate_mana_well_desc: "Ein Mana-Brunnen ist eine Anzapfstelle auf [Concept('concept_gate_ley_lines','$concept_gate_ley_line$')]. Mana-Brunnen können eine fast unbegrenzte Menge an $gate_mana$ produzieren. \n\nSie können aber zu #v Instabilität#! in der lokalen [Concept('concept_gate_ley_lines','$concept_gate_ley_line$')] führen, was zu #v Unfällen#! führen kann." #deepl:972959992
  concept_gate_expedition: "Expedition nach $gate_planet$" #deepl:3102698085
  concept_gate_expedition_desc: "Wenn wir die Kontrolle über eine [GetBuildingType('building_gate_alxa').GetName] haben und unsere Kontrolle über sie mit [GetTechnology('gate_expeditions').GetName] entwickelt haben, können wir eine Expedition zu [concept_gate_planet] starten." #deepl:1393633916
  concept_gate_expedition_location: "Ort der Expedition" #deepl:921117409

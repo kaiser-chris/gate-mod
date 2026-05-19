@@ -44,7 +44,7 @@
  concept_gate_ley_lines: "灵脉"
  concept_gate_ley_lines_desc: "灵脉是潜藏于地表之下的原始魔能脉络，常人不可见却维系着神秘学的根基。当其交汇之时，魔能会激涌而出，将所在区域化为强效魔法节点，并强化附近一切法术效果。"
  concept_gate_mana_well: "魔能井"
- concept_gate_mana_well_desc: "魔能井是[Concept('concept_gate_ley_lines','$concept_gate_ley_line$')]上的节点。魔能井几乎可以产生无尽的$mana$。\n\n但它们可能引发当地[Concept('concept_gate_ley_lines','$concept_gate_ley_line$')]的#v 不稳定#!，进而导致#v 事故#!。"
+ concept_gate_mana_well_desc: "魔能井是[Concept('concept_gate_ley_lines','$concept_gate_ley_line$')]上的节点。魔能井几乎可以产生无尽的$gate_mana$。\n\n但它们可能引发当地[Concept('concept_gate_ley_lines','$concept_gate_ley_line$')]的#v 不稳定#!，进而导致#v 事故#!。"
  concept_gate_expedition: "$gate_planet$远征"
  concept_gate_expedition_desc: "当我们掌控[GetBuildingType('building_gate_alxa').GetName]并完成[GetTechnology('gate_expeditions').GetName]的开发后，即可发起一场对[concept_gate_planet]的远征。"
  concept_gate_expedition_location: "Expedition Location"

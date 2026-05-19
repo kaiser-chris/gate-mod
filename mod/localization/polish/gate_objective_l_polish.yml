@@ -35,7 +35,7 @@
  je_obj_gate_finish_magic_project_reason: "Arcanist Projects are vital research initiatives led by your nation's top magical expert. These projects transform raw arcane theory into tangible improvements—enhancing industry, empowering society, and enriching infrastructure. By investing in Arcanist Projects, you shape a future where magic becomes a cornerstone of national progress."
  je_obj_gate_finish_magic_project_status: "[Concept('concept_gate_project','$concept_gate_projects$')] are started from the Manaflow panel."
  je_obj_gate_finish_magic_project_goal_tooltip: "Successfully finished an [concept_gate_project]"
- je_obj_gate_produce_magic_goods: "Produce [GetGoods('mana').GetNameNoFormatting] & [GetGoods('magic_seed').GetNameNoFormatting]"
+ je_obj_gate_produce_magic_goods: "Produce [GetGoods('gate_mana').GetNameNoFormatting] & [GetGoods('gate_magic_seed').GetNameNoFormatting]"
  je_obj_gate_produce_magic_goods_reason: "Mana Crystals and Magic Seeds form the backbone of any thriving magical economy. Mana Crystals, extracted from the atmosphere by skilled Mages, are essential for powering magical industries and technologies. Meanwhile, Druids cultivate Magic Seeds in sacred Groves to boost agricultural output—freeing up labor and fueling industrial growth. Together, they lay the foundation for a magically empowered nation."
  je_obj_gate_produce_magic_goods_status: "Build a [GetBuildingType('building_gate_mana_extractor').GetName] and a [GetBuildingType('building_gate_druid_grove').GetName]."
  je_obj_gate_magic_academy: "Build Magic Academy"

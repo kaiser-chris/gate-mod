@@ -35,7 +35,7 @@
  je_obj_gate_finish_magic_project_reason: "비전주의자 프로젝트는 국가 최고의 마법 전문가가 이끄는 핵심 연구 과제입니다. 이러한 프로젝트는 추상적인 비전 이론을 실질적인 개선으로 전환하여, 산업을 향상시키고, 사회를 강화하며, 기반 시설을 풍요롭게 만든다. 비전주의자 프로젝트에 투자함으로써, 마법이 국가 발전의 주춧돌이 되는 미래를 만들어 나갈 수 있습니다."
  je_obj_gate_finish_magic_project_status: "[Concept('concept_gate_project','$concept_gate_projects$')]는 마나플로우 패널에서 시작됩니다."
  je_obj_gate_finish_magic_project_goal_tooltip: "[concept_gate_project]를 성공적으로 완료했습니다."
- je_obj_gate_produce_magic_goods: "[GetGoods('mana').GetNameNoFormatting] & [GetGoods('magic_seed').GetNameNoFormatting] 생산"
+ je_obj_gate_produce_magic_goods: "[GetGoods('gate_mana').GetNameNoFormatting] & [GetGoods('gate_magic_seed').GetNameNoFormatting] 생산"
  je_obj_gate_produce_magic_goods_reason: "마나 크리스탈과 마법의 씨앗은 번성하는 마법 경제의 핵심입니다. 숙련된 마법사들이 대기에서 추출하는 마나 크리스탈은 마법 산업과 기술에 에너지를 공급하는 데 필수적입니다. 한편, 드루이드는 신성한 숲에서 마법의 씨앗을 재배하여 농업 생산량을 증대시키고, 노동력을 절약하며 산업 성장을 촉진합니다. 이 둘은 함께 마법으로 강화된 국가의 토대를 마련합니다."
  je_obj_gate_produce_magic_goods_status: "[GetBuildingType('building_gate_mana_extractor').GetName]과 [GetBuildingType('building_gate_druid_grove').GetName]을 건설하세요."
  je_obj_gate_magic_academy: "마법 아카데미 건설"

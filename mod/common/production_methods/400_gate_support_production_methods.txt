@@ -42,7 +42,7 @@ pm_gate_closed = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
-			goods_output_mana_add = 10
+			goods_output_gate_mana_add = 10
 		}
 
 		level_scaled = {
@@ -76,7 +76,7 @@ pm_gate_support_orcs = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
-			goods_output_mana_add = 20
+			goods_output_gate_mana_add = 20
 		}
 		level_scaled = {
 			building_employment_gate_mages_add = 100
@@ -116,7 +116,7 @@ pm_gate_support_elves = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
-			goods_output_mana_add = 20
+			goods_output_gate_mana_add = 20
 		}
 		level_scaled = {
 			building_employment_gate_mages_add = 100
@@ -141,7 +141,7 @@ pm_gate_reverse_support_elves = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
-			goods_output_mana_add = 20
+			goods_output_gate_mana_add = 20
 			# input goods
 			goods_input_small_arms_add = 25
 			goods_input_artillery_add = 5
@@ -169,7 +169,7 @@ pm_gate_reverse_support_elves_plus = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
-			goods_output_mana_add = 20
+			goods_output_gate_mana_add = 20
 			# input goods
 			goods_input_small_arms_add = 50
 			goods_input_artillery_add = 20
