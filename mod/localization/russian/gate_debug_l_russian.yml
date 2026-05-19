@@ -22,14 +22,12 @@
  debug_decision_gate_dragon_himalaya_decision_desc: "Trigger $gate_dragon.t$ Event in the Himalayas."
  debug_decision_gate_magic_growing_decision: "DEBUG: Trigger $gate_mana_saturation.3.t$"
  debug_decision_gate_magic_growing_decision_desc: "Trigger $gate_mana_saturation.3.t$ Event."
- debug_monster_horde_decision: "DEBUG: Trigger $gate_monster_attack.1.t$"
- debug_monster_horde_decision_desc: "Trigger $gate_monster_attack.1.t$ Event."
+ debug_decision_gate_monster_horde_decision: "DEBUG: Trigger $gate_monster_attack.1.t$"
+ debug_decision_gate_monster_horde_decision_desc: "Trigger $gate_monster_attack.1.t$ Event."
  debug_decision_gate_monster_attack_decision: "DEBUG: Trigger $monster_attack$"
  debug_decision_gate_monster_attack_decision_desc: "Trigger $monster_attack$ harvest condition in our capital."
  debug_decision_gate_toggle_busy_researcher_decision: "DEBUG: Toggle Arcanist Busy"
  debug_decision_gate_toggle_busy_researcher_decision_desc: "Makes our countries [concept_gate_magic_researcher] busy or not."
- debug_kill_researcher_decision: "DEBUG: Kill Arcanist"
- debug_kill_researcher_decision_desc: "Kills our countries active [concept_gate_magic_researcher]."
  debug_decision_gate_trigger_ethics_decision: "DEBUG: Choose Magic Ethic"
  debug_decision_gate_trigger_ethics_decision_desc: "Choose a new Magic Ethic"
  debug_decision_gate_increase_magical_innovation_decision: "DEBUG: Add Magic Innovation"
@@ -42,6 +40,8 @@
  debug_decision_gate_reset_reytu_desc: "Reload the Reytu Expedition configuration."
  debug_decision_gate_start_reytu: "DEBUG: Start Reytu Expedition"
  debug_decision_gate_start_reytu_desc: "Directly start the Reytu Expedition."
+ debug_decision_gate_join_mage_council: "DEBUG: Join $io_gate_arcane_council$"
+ debug_decision_gate_join_mage_council_desc: "Create and join this organization."
 # Debug Alerts
  alert_alert_gate_debug_base_panel_name: "Base Panel" #TODO: Write alert_gate_space_alert_name
  alert_alert_gate_debug_base_panel_desc: "TODO" #TODO: Write alert_gate_space_alert_desc
