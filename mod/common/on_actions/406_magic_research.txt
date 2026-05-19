@@ -41,13 +41,13 @@ on_half_yearly_gate_ai_rebuild_magic_institute = {
         is_ai = yes
         capital = {
             NOT = {
-                has_building = building_magic_research_institute
+                has_building = building_gate_magic_research_institute
             }
         }
     }
     effect = {
         capital = {
-            start_building_construction = building_magic_research_institute
+            start_building_construction = building_gate_magic_research_institute
         }
     }
 }
@@ -56,7 +56,7 @@ on_half_yearly_gate_cleanup_research_institutes = {
     trigger = {
         any_scope_state = {
             is_capital = no
-            has_building = building_magic_research_institute
+            has_building = building_gate_magic_research_institute
         }
     }
     effect = {
@@ -96,7 +96,7 @@ on_monthly_gate_clean_magic_researcher = {
 on_monthly_gate_set_research_production_method = {
     trigger = {
         capital = {
-            has_building = building_magic_research_institute
+            has_building = building_gate_magic_research_institute
         }
     }
     effect = {

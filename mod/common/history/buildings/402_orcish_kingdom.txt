@@ -103,13 +103,13 @@
                 activate_production_methods = { "default_building_sugar_plantation" "pm_road_carts" }
             }
             create_building = {
-                building = "building_magic_research_institute"
+                building = "building_gate_magic_research_institute"
                 level = 1
                 reserves = 1
                 activate_production_methods = { pm_novice_researcher }
             }
             create_building = {
-                building = "building_mana_extractor"
+                building = "building_gate_mana_extractor"
                 add_ownership = {
                     country = {
                         country = "c:GATE_OK"
@@ -120,7 +120,7 @@
                 activate_production_methods = { "pm_mage_mana_extraction" }
             }
             create_building = {
-                building = "building_druid_grove"
+                building = "building_gate_druid_grove"
                 add_ownership = {
                     building = {
                         type = "building_manor_house"

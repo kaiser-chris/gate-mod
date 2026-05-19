@@ -4,8 +4,8 @@
  gate_mages_only_icon: "@gate_mages!" #deepl:2519370184
  gate_mages_no_icon: "Magier" #deepl:1773414191
  gate_mages_desc: "Gebildete [concept_gate_magic_users], die oft der wohlhabenden Elite angehören. Ihre politischen Interessen werden am häufigsten von der [GetInterestGroupVariant('ig_gate_magic_users',GetPlayer).GetNameWithCountryVariant] vertreten." #deepl:877185503
- GATE_MAGES_QUALIFICATIONS_DESC: "Nur Knackis mit ausreichend [concept_literacy] können #v $gate_mages$ #! werden. Das Potenzial steigt mit größerem [concept_literacy] und [concept_wealth]. Pops, deren [concept_culture] Gesichter [concept_discrimination] viel länger brauchen. #v $aristocrats$ #! und #v $academics$ #! haben es besonders leicht, #v $gate_mages$ #! zu werden. Ein [GetBuildingType('building_magic_academy').GetName] [concept_building] erleichtert auch die Ausbildung neuer #v $gate_mages$ #! ." #deepl:3355709172
- gate_mages_qualifications_academy: "von unserem [GetBuildingType('building_magic_academy').GetName]" #deepl:962771589
+ GATE_MAGES_QUALIFICATIONS_DESC: "Nur Knackis mit ausreichend [concept_literacy] können #v $gate_mages$ #! werden. Das Potenzial steigt mit größerem [concept_literacy] und [concept_wealth]. Pops, deren [concept_culture] Gesichter [concept_discrimination] viel länger brauchen. #v $aristocrats$ #! und #v $academics$ #! haben es besonders leicht, #v $gate_mages$ #! zu werden. Ein [GetBuildingType('building_gate_magic_academy').GetName] [concept_building] erleichtert auch die Ausbildung neuer #v $gate_mages$ #! ." #deepl:3355709172
+ gate_mages_qualifications_academy: "von unserem [GetBuildingType('building_gate_magic_academy').GetName]" #deepl:962771589
  pop_gate_mages: "$gate_mages$ [concept_profession]" #deepl:4056154339
  building_employment_gate_mages_add: "$gate_mages$ Pro Stufe" #deepl:74696181
  building_employment_gate_mages_add_desc: "Ändert die Anzahl der $gate_mages$, die ein Gebäude pro Level anheuern kann" #deepl:1754950371

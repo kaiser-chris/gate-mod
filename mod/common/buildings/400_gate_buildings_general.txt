@@ -1,4 +1,4 @@
-﻿building_murk_ways = {
+﻿building_gate_murk_ways = {
 	building_group = bg_public_infrastructure
 	icon = "gfx/interface/icons/building_icons/building_gate_murk_ways.dds"
 	city_type = none
@@ -33,8 +33,8 @@
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_gate_magic.dds"
 }
 
-building_magic_academy = {
-	building_group = bg_magic_technology
+building_gate_magic_academy = {
+	building_group = bg_gate_magic_technology
 	icon = "gfx/interface/icons/building_icons/building_gate_magic_academy.dds"
 	city_type = none
 	expandable = no
@@ -72,8 +72,8 @@ building_magic_academy = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_gate_magic.dds"
 }
 
-building_magic_research_institute = {
-	building_group = bg_magic_technology
+building_gate_magic_research_institute = {
+	building_group = bg_gate_magic_technology
 	icon = "gfx/interface/icons/building_icons/building_gate_magic_research_institute.dds"
 	city_type = none
 	expandable = no
@@ -114,8 +114,8 @@ building_magic_research_institute = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_gate_magic.dds"
 }
 
-building_mage_tower = {
-	building_group = bg_mage_tower
+building_gate_mage_tower = {
+	building_group = bg_gate_mage_tower
 	icon = "gfx/interface/icons/building_icons/building_gate_mage_tower.dds"
 	city_type = none
 	levels_per_mesh = 10
@@ -428,8 +428,8 @@ building_mage_tower = {
 				}
 			}
 		}
-		bg_mana_extraction_score = {
-			group = "bg_mana_extraction"
+		bg_gate_mana_extraction_score = {
+			group = "bg_gate_mana_extraction"
 			score = {
 				if = {
 					limit = {
@@ -458,7 +458,7 @@ building_mage_tower = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_gate_magic.dds"
 }
 
-building_elven_forest = {
+building_gate_elven_forest = {
 	building_group = bg_gate_elven_forests
 	icon = "gfx/interface/icons/building_icons/building_gate_elven_forest.dds"
 	city_type = none
@@ -489,7 +489,7 @@ building_elven_forest = {
 		# to prevent split state abuse
 		state_region = {
 			NOT = {
-				has_building = building_elven_forest
+				has_building = building_gate_elven_forest
 			}
 		}
 	}

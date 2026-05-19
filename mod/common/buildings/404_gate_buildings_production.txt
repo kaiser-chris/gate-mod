@@ -1,5 +1,5 @@
-﻿building_mana_extractor = {
-	building_group = bg_mana_extraction
+﻿building_gate_mana_extractor = {
+	building_group = bg_gate_mana_extraction
 	icon = "gfx/interface/icons/building_icons/building_gate_mana_extractor.dds"
 	city_type = none
 	has_max_level = yes
@@ -39,7 +39,7 @@
 }
 
 building_gate_mana_well = {
-	building_group = bg_mana_extraction
+	building_group = bg_gate_mana_extraction
 	icon = "gfx/interface/icons/building_icons/building_gate_mana_well.dds"
 	city_type = none
 
@@ -72,7 +72,7 @@ building_gate_mana_well = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_gate_magic.dds"
 }
 
-building_mana_core_workshop = {
+building_gate_mana_core_workshop = {
 	building_group = bg_gate_magic_industry
 	icon = "gfx/interface/icons/building_icons/building_gate_mana_core_workshop.dds"
 	city_type = none
@@ -97,7 +97,7 @@ building_mana_core_workshop = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_gate_magic.dds"
 }
 
-building_golem_workshop = {
+building_gate_golem_workshop = {
 	building_group = bg_gate_magic_industry
 	icon = "gfx/interface/icons/building_icons/building_gate_golem_workshop.dds"
 	city_type = none
@@ -123,7 +123,7 @@ building_golem_workshop = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_gate_magic.dds"
 }
 
-building_golem_depot = {
+building_gate_golem_depot = {
 	building_group = bg_public_infrastructure
 	icon = "gfx/interface/icons/building_icons/building_gate_golem_depot.dds"
 	city_type = none
@@ -194,8 +194,8 @@ building_golem_depot = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_gate_magic.dds"
 }
 
-building_druid_grove = {
-	building_group = bg_druid_groves
+building_gate_druid_grove = {
+	building_group = bg_gate_druid_groves
 	icon = "gfx/interface/icons/building_icons/building_gate_druid_grove.dds"
 	city_type = none
 	levels_per_mesh = 50
