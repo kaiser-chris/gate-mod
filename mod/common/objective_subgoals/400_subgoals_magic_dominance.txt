@@ -26,7 +26,7 @@ sg_gate_build_research_institute = {
 		if = {
 			limit = {
 				capital = {
-					has_building = building_magic_research_institute
+					has_building = building_gate_magic_research_institute
 				}
 			}
 			complete_objective_subgoal = sg_gate_build_research_institute
@@ -93,10 +93,10 @@ sg_gate_produce_magic_goods = {
 		if = {
 			limit = {
 				any_scope_building = {
-					is_building_group = bg_mana_extraction
+					is_building_group = bg_gate_mana_extraction
 				}
 				any_scope_building = {
-					is_building_group = bg_druid_groves
+					is_building_group = bg_gate_druid_groves
 				}
 			}
 			complete_objective_subgoal = sg_gate_produce_magic_goods

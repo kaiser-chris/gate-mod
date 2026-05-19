@@ -18,12 +18,12 @@
 gate_project_is_paused = {
     NOT = {
         scope:journal_entry = {
-            has_modifier = gate_modifier_project_cost
+            has_modifier = modifier_gate_project_cost
             trigger_if = {
                 limit = {
                     var:gate_magic_project_type ?= gate_project_type_infrastructure
                 }
-                has_modifier = gate_modifier_project_infrastructure_cost
+                has_modifier = modifier_gate_project_infrastructure_cost
             }
         }
     }
@@ -40,12 +40,12 @@ gate_project_can_start_any = {
 
 gate_project_can_start_expand_research_institute = {
 	capital = {
-		has_building = building_magic_research_institute
+		has_building = building_gate_magic_research_institute
 	}
 	NAND = {
-		has_modifier = gate_modifier_project_institute_new_wing
-		has_modifier = gate_modifier_project_institute_improved_instruments
-		has_modifier = gate_modifier_project_institute_better_mana_conduits
+		has_modifier = modifier_gate_project_institute_new_wing
+		has_modifier = modifier_gate_project_institute_improved_instruments
+		has_modifier = modifier_gate_project_institute_better_mana_conduits
 	}
 	is_magic_country = yes
 	has_magic_researcher = yes
@@ -107,9 +107,9 @@ gate_project_can_start_improve_mana_extraction = {
 	custom_tooltip = {
 		text = trigger_gate_project_can_has_unimproved_mana_extraction
 		any_scope_building = {
-			is_building_group = bg_mana_extraction
+			is_building_group = bg_gate_mana_extraction
 			NOT = {
-				has_modifier = gate_modifier_project_improved_mana_extraction
+				has_modifier = modifier_gate_project_improved_mana_extraction
 			}
 		}
 	}
@@ -123,9 +123,9 @@ gate_project_can_start_modernize_seed_selection = {
 	custom_tooltip = {
 		text = trigger_gate_project_can_has_unimproved_magic_seed
 		any_scope_building = {
-			is_building_group = bg_druid_groves
+			is_building_group = bg_gate_druid_groves
 			NOT = {
-				has_modifier = gate_modifier_project_modernize_seed_selection
+				has_modifier = modifier_gate_project_modernize_seed_selection
 			}
 		}
 	}

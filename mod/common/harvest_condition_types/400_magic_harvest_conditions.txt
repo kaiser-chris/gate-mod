@@ -66,7 +66,7 @@
 			limit = {
 				AND = {
 					var:mana_density >= medium_mana_density_threshhold
-					has_building = building_mana_extractor
+					has_building = building_gate_mana_extractor
 				}
 			}
 			divide = 2
@@ -213,7 +213,7 @@ gate_mana_condensation = {
 			limit = {
 				AND = {
 					var:mana_density >= medium_mana_density_threshhold
-					has_building = building_mana_extractor
+					has_building = building_gate_mana_extractor
 				}
 			}
 			divide = 2

@@ -45,7 +45,7 @@ je_obj_gate_build_research_institute = {
 
 	complete = {
 		capital = {
-			has_building = building_magic_research_institute
+			has_building = building_gate_magic_research_institute
 		}
 	}
 
@@ -131,10 +131,10 @@ je_obj_gate_produce_magic_goods = {
 
 	complete = {
 		any_scope_building = {
-			is_building_group = bg_mana_extraction
+			is_building_group = bg_gate_mana_extraction
 		}
 		any_scope_building = {
-			is_building_group = bg_druid_groves
+			is_building_group = bg_gate_druid_groves
 		}
 	}
 
@@ -163,7 +163,7 @@ je_obj_gate_magic_academy = {
 
 	complete = {
 		capital = {
-			has_building = building_magic_academy
+			has_building = building_gate_magic_academy
 		}
 	}
 

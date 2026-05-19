@@ -27,7 +27,7 @@
                 value = $monthly_cost$
             }
             add_modifier = {
-                name = gate_modifier_project_cost
+                name = modifier_gate_project_cost
                 multiplier = $monthly_cost$
             }
         }
@@ -78,11 +78,11 @@ gate_start_magic_infrastructure_project = {
                 value = $monthly_cost$
             }
             add_modifier = {
-                name = gate_modifier_project_cost
+                name = modifier_gate_project_cost
                 multiplier = $monthly_cost$
             }
             add_modifier = {
-                name = gate_modifier_project_infrastructure_cost
+                name = modifier_gate_project_infrastructure_cost
             }
         }
 
@@ -105,12 +105,12 @@ gate_start_magic_infrastructure_project = {
 
 gate_pause_magic_project = {
     scope:journal_entry = {
-        remove_modifier = gate_modifier_project_cost
+        remove_modifier = modifier_gate_project_cost
         if = {
             limit = {
                 var:gate_magic_project_type ?= gate_project_type_infrastructure
             }
-            remove_modifier = gate_modifier_project_infrastructure_cost
+            remove_modifier = modifier_gate_project_infrastructure_cost
         }
     }
 }
@@ -118,14 +118,14 @@ gate_pause_magic_project = {
 gate_continue_magic_project = {
     scope:journal_entry = {
         add_modifier = {
-            name = gate_modifier_project_cost
+            name = modifier_gate_project_cost
             multiplier = scope:journal_entry.var:gate_magic_project_monthly_cost
         }
         if = {
             limit = {
                 var:gate_magic_project_type ?= gate_project_type_infrastructure
             }
-            add_modifier = gate_modifier_project_infrastructure_cost
+            add_modifier = modifier_gate_project_infrastructure_cost
         }
     }
 }

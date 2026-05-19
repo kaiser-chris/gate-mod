@@ -18,12 +18,12 @@
                 }
             }
             create_building = {
-                building = building_elven_forest
+                building = building_gate_elven_forest
                 reserves = 1
                 level = 1
             }
             create_building = {
-                building = building_magic_research_institute
+                building = building_gate_magic_research_institute
                 add_ownership = {
                     country = {
                         country = c:GATE_AD
@@ -58,10 +58,10 @@
                 activate_production_methods = { pm_simple_farming pm_magic_seeds pm_no_secondary pm_tools }
             }
             create_building = {
-                building = building_mana_extractor
+                building = building_gate_mana_extractor
                 add_ownership = {
                     building = {
-                        type = building_mage_tower
+                        type = building_gate_mage_tower
                         country = c:GATE_AD
                         levels = 1
                         region = STATE_ZAMBIA
@@ -169,10 +169,10 @@
                 activate_production_methods = { pm_pulp_pressing }
             }
             create_building = {
-                building = building_druid_grove
+                building = building_gate_druid_grove
                 add_ownership = {
                     building = {
-                        type = building_mage_tower
+                        type = building_gate_mage_tower
                         country = c:GATE_AD
                         levels = 1
                         region = STATE_ZAMBIA
@@ -189,7 +189,7 @@
                         levels = 2
                     }
                     building = {
-                        type = building_mage_tower
+                        type = building_gate_mage_tower
                         country = c:GATE_AD
                         levels = 2
                         region = STATE_ZAMBIA
@@ -261,7 +261,7 @@
                 building = building_millet_farm
                 add_ownership = {
                     building = {
-                        type = building_mage_tower
+                        type = building_gate_mage_tower
                         country = c:GATE_AD
                         levels = 2
                         region = STATE_ZAMBEZI
@@ -274,7 +274,7 @@
                 building = building_tobacco_plantation
                 add_ownership = {
                     building = {
-                        type = building_mage_tower
+                        type = building_gate_mage_tower
                         country = c:GATE_AD
                         levels = 1
                         region = STATE_ZAMBEZI
@@ -289,7 +289,7 @@
                 building = building_sugar_plantation
                 add_ownership = {
                     building = {
-                        type = building_mage_tower
+                        type = building_gate_mage_tower
                         country = c:GATE_AD
                         levels = 1
                         region = STATE_ZAMBEZI
@@ -319,7 +319,7 @@
                 }
             }
             create_building = {
-                building = building_elven_forest
+                building = building_gate_elven_forest
                 reserves = 1
                 level = 1
             }
@@ -333,7 +333,7 @@
                 building = building_logging_camp
                 add_ownership = {
                     building = {
-                        type = building_mage_tower
+                        type = building_gate_mage_tower
                         country = c:GATE_AD
                         levels = 2
                         region = STATE_ZAMBIA
@@ -465,7 +465,7 @@
                 building = building_millet_farm
                 add_ownership = {
                     building = {
-                        type = building_mage_tower
+                        type = building_gate_mage_tower
                         country = c:GATE_AD
                         levels = 3
                         region = STATE_ZAMBIA
@@ -483,7 +483,7 @@
                 building = building_lead_mine
                 add_ownership = {
                     building = {
-                        type = building_mage_tower
+                        type = building_gate_mage_tower
                         country = c:GATE_AD
                         levels = 1
                         region = STATE_ZAMBIA
@@ -503,7 +503,7 @@
                 building = building_millet_farm
                 add_ownership = {
                     building = {
-                        type = building_mage_tower
+                        type = building_gate_mage_tower
                         country = c:GATE_AD
                         levels = 1
                         region = STATE_ZAMBIA
@@ -623,7 +623,7 @@
                 building = building_livestock_ranch
                 add_ownership = {
                     building = {
-                        type = building_mage_tower
+                        type = building_gate_mage_tower
                         country = c:GATE_AD
                         levels = 1
                         region = STATE_ZAMBIA
@@ -675,7 +675,7 @@
                 building = building_logging_camp
                 add_ownership = {
                     building = {
-                        type = building_mage_tower
+                        type = building_gate_mage_tower
                         country = c:GATE_AD
                         levels = 2
                         region = STATE_ZAMBIA

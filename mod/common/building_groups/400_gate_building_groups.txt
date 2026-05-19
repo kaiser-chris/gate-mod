@@ -1,13 +1,13 @@
-﻿bg_mage_tower = {
+﻿bg_gate_mage_tower = {
     parent_group = bg_owner_buildings
-    default_building = building_mage_tower
+    default_building = building_gate_mage_tower
 }
 
-bg_druid_groves = {
+bg_gate_druid_groves = {
     parent_group = bg_agriculture
     always_possible = yes
 
-    default_building = building_druid_grove
+    default_building = building_gate_druid_grove
 
     cash_reserves_max = 25000
 }
@@ -26,10 +26,10 @@ bg_gate_elven_forests = {
     ignores_productivity_when_hiring = yes
     can_use_slaves = no
 
-    default_building = building_elven_forest
+    default_building = building_gate_elven_forest
 }
 
-bg_magic_technology = {
+bg_gate_magic_technology = {
     parent_group = bg_technology
     economy_of_scale = no
 }
@@ -43,7 +43,7 @@ bg_gate_magic_industry = {
     infrastructure_usage_per_level = 2
 }
 
-bg_mana_extraction = {
+bg_gate_mana_extraction = {
     parent_group = bg_gate_magic_industry
     category = rural
     economy_of_scale = yes
@@ -59,5 +59,5 @@ bg_mana_extraction = {
     }
     economy_of_scale_ai_factor = 2.0
     foreign_investment_ai_factor = 1.0
-    default_building = building_mana_extractor
+    default_building = building_gate_mana_extractor
 }

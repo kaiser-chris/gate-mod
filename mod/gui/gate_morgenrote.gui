@@ -105,7 +105,7 @@ types gate_main_panel_types {
         blockoverride "big_box_content" {
             margin = { 20 20 }
             gate_mr_institute_details = {
-                datacontext = "[Country.GetCapital.GetBuilding('building_magic_research_institute')]"
+                datacontext = "[Country.GetCapital.GetBuilding('building_gate_magic_research_institute')]"
             }
         }
     }

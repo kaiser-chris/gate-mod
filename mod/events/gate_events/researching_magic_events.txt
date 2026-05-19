@@ -227,13 +227,13 @@ researching_magic.4 = {
                 limit = {
                     capital ?= {
                         NOT = {
-                            has_building = building_magic_research_institute
+                            has_building = building_gate_magic_research_institute
                         }
                     }
                     is_ai = yes
                 }
                 capital = {
-                    start_building_construction = building_magic_research_institute
+                    start_building_construction = building_gate_magic_research_institute
                 }
             }
         }
