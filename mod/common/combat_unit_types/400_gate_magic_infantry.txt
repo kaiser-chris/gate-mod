@@ -6,7 +6,7 @@
     conscript_peasant_levies = yes
 
     upkeep_modifier = {
-        goods_input_mana_add = 1
+        goods_input_gate_mana_add = 1
         goods_input_small_arms_add = 0.50
     }
 
@@ -60,7 +60,7 @@ combat_unit_type_gate_arcane_vangard = {
 
     upkeep_modifier = {
         goods_input_small_arms_add = 1
-        goods_input_mana_add = 1
+        goods_input_gate_mana_add = 1
     }
 
     battle_modifier = {
@@ -96,7 +96,7 @@ combat_unit_type_gate_mana_rifle_infantry = {
 
     upkeep_modifier = {
         goods_input_small_arms_add = 2
-        goods_input_mana_add = 1
+        goods_input_gate_mana_add = 1
     }
 
     battle_modifier = {
@@ -128,7 +128,7 @@ combat_unit_type_gate_wraithwalkers = {
 
     upkeep_modifier = {
         goods_input_small_arms_add = 2
-        goods_input_mana_core_add = 2
+        goods_input_gate_mana_core_add = 2
         goods_input_ammunition_add = 1
     }
 
@@ -161,7 +161,7 @@ combat_unit_type_gate_rune_guard_infantry = {
 
     upkeep_modifier = {
         goods_input_small_arms_add = 2
-        goods_input_runic_paper_add = 1
+        goods_input_gate_runic_paper_add = 1
     }
 
     battle_modifier = {
@@ -194,7 +194,7 @@ combat_unit_type_gate_thaumaturgic_commandos = {
     upkeep_modifier = {
         goods_input_small_arms_add = 3
         goods_input_ammunition_add = 3
-        goods_input_mana_core_add = 1
+        goods_input_gate_mana_core_add = 1
     }
 
     battle_modifier = {

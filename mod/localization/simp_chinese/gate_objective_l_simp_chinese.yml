@@ -35,7 +35,7 @@
  je_obj_gate_finish_magic_project_reason: "奥术师项目是由你国家的顶级魔法专家主导的重要研究计划。这些项目将原始的奥术理论转化为切实的提升——增强工业、赋能社会、丰富基础设施。通过投资奥术师项目， 你将塑造一个魔法成为国家进步基石的未来。"
  je_obj_gate_finish_magic_project_status: "[Concept('concept_gate_project','$concept_gate_projects$')]已在魔潮面板启动。"
  je_obj_gate_finish_magic_project_goal_tooltip: "成功完成一项[concept_gate_project]"
- je_obj_gate_produce_magic_goods: "生产[GetGoods('mana').GetNameNoFormatting]和[GetGoods('magic_seed').GetNameNoFormatting]"
+ je_obj_gate_produce_magic_goods: "生产[GetGoods('gate_mana').GetNameNoFormatting]和[GetGoods('gate_magic_seed').GetNameNoFormatting]"
  je_obj_gate_produce_magic_goods_reason: "魔能水晶和魔法种子是任何繁荣魔法经济的支柱。法力水晶由法师从大气中提炼，对于驱动魔法工业和科技至关重要。与此同时，德鲁伊在圣林中培育魔法种子，以提高农业产出——解放劳动力并推动工业发展。它们共同为一个魔法强国奠定了基础。"
  je_obj_gate_produce_magic_goods_status: "建造[GetBuildingType('building_gate_mana_extractor').GetName]和[GetBuildingType('building_gate_druid_grove').GetName]"
  je_obj_gate_magic_academy: "建造魔法学院"

@@ -1,14 +1,14 @@
 ﻿l_simp_chinese:
 # Generic Mana Crystals
  je_prestige_goods_gate_mana: "$prestige_good_gate_generic_mana$"
- je_prestige_goods_gate_mana_reason: "[SCOPE.sCompany('relevant_company').GetName]已成为我们经济中的重要参与者。该公司试图利用当前的繁荣，开发出其@prestige_good_gate_generic_mana!#b $prestige_good_gate_generic_mana$#!的品牌。如果成功，它将可以扩大在全球@mana!#b $mana$#!市场的竞争力。"
+ je_prestige_goods_gate_mana_reason: "[SCOPE.sCompany('relevant_company').GetName]已成为我们经济中的重要参与者。该公司试图利用当前的繁荣，开发出其@prestige_good_gate_generic_mana!#b $prestige_good_gate_generic_mana$#!的品牌。如果成功，它将可以扩大在全球@gate_mana!#b $gate_mana$#!市场的竞争力。"
  je_prestige_goods_gate_mana_goal: "以下条件维持#v [GetPlayer.MakeScope.ScriptValue('prestige_good_journal_entry_months')]个月#!（当前为#v [ROOT.GetCountry.MakeScope.Var('prestige_mana_timer_var').GetValue]#!）：#indent_newline:3 "
  je_prestige_goods_gate_mana_complete_tt: "已经完成了#b $je_prestige_goods_gate_mana$#![concept_journal_entry]"
  je_prestige_goods_gate_mana_reward_tt: "[SCOPE.sCompany('relevant_company').GetName]将可以生产@prestige_good_gate_generic_mana!#b $prestige_good_gate_generic_mana$#!"
  not_prestige_good_gate_generic_mana_var_tt: "#b 尚未#!开发@prestige_good_gate_generic_mana!#b $prestige_good_gate_generic_mana$#!"
  # Generic Golems
  je_prestige_goods_gate_golem: "$prestige_good_gate_generic_golem$"
- je_prestige_goods_gate_golem_reason: "[SCOPE.sCompany('relevant_company').GetName]已成为我们经济中的重要参与者。该公司试图利用当前的繁荣，开发出其@prestige_good_gate_generic_golem!#b $prestige_good_gate_generic_golem$#!的品牌。如果成功，它将可以扩大在全球@golem!#b $golem$#!市场的竞争力。"
+ je_prestige_goods_gate_golem_reason: "[SCOPE.sCompany('relevant_company').GetName]已成为我们经济中的重要参与者。该公司试图利用当前的繁荣，开发出其@prestige_good_gate_generic_golem!#b $prestige_good_gate_generic_golem$#!的品牌。如果成功，它将可以扩大在全球@gate_golem!#b $gate_golem$#!市场的竞争力。"
  je_prestige_goods_gate_golem_goal: "以下条件维持#v [GetPlayer.MakeScope.ScriptValue('prestige_good_journal_entry_months')]个月#!（当前为#v [ROOT.GetCountry.MakeScope.Var('prestige_golem_timer_var').GetValue]#!）：#indent_newline:3 "
  je_prestige_goods_gate_golem_complete_tt: "已经完成了#b $je_prestige_goods_gate_golem$#![concept_journal_entry]"
  je_prestige_goods_gate_golem_reward_tt: "[SCOPE.sCompany('relevant_company').GetName]将可以生产@prestige_good_gate_generic_golem!#b $prestige_good_gate_generic_golem$#!"

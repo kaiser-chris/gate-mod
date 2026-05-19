@@ -35,7 +35,7 @@
  button_project_improve_mana_extraction: "改进魔能提取"
  je_gate_project_improve_mana_extraction: "改进魔能提取"
  je_gate_project_improve_mana_extraction_reason: "[concept_gate_magic_researcher][GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName]正在研究#bold $je_gate_project_improve_mana_extraction$#!。\n$gate_journal_delimiter$\n$je_gate_project_improve_mana_extraction_description$"
- je_gate_project_improve_mana_extraction_description: "魔能提取是我们[GetGoods('mana').GetName]的主要来源，这对魔法产业的繁荣至关重要。该项目将$modifier_gate_project_improved_mana_extraction_with_tooltip$修正添加到我们的一个魔能提取建筑上。"
+ je_gate_project_improve_mana_extraction_description: "魔能提取是我们[GetGoods('gate_mana').GetName]的主要来源，这对魔法产业的繁荣至关重要。该项目将$modifier_gate_project_improved_mana_extraction_with_tooltip$修正添加到我们的一个魔能提取建筑上。"
  modifier_gate_project_improved_mana_extraction: "改进的提取"
  modifier_gate_project_improved_mana_extraction_tooltip: "#V $modifier_gate_project_improved_mana_extraction$#!\n[GetStaticModifier('modifier_gate_project_improved_mana_extraction').GetDesc]"
  modifier_gate_project_improved_mana_extraction_with_tooltip: "#bold #tooltip:[GetRawTextTooltipTag('modifier_gate_project_improved_mana_extraction_tooltip')] #underline $modifier_gate_project_improved_mana_extraction$#!#!#!"
@@ -44,7 +44,7 @@
  button_project_modernize_seed_selection: "选种现代化"
  je_gate_project_modernize_seed_selection: "选种现代化"
  je_gate_project_modernize_seed_selection_reason: "[concept_gate_magic_researcher][GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName]正在研究#bold $je_gate_project_modernize_seed_selection$#!。\n$gate_journal_delimiter$\n$je_gate_project_modernize_seed_selection_description$"
- je_gate_project_modernize_seed_selection_description: "[GetGoods('magic_seed').GetName]用于提高作物产量。现代选种会获得更好的产量以改善我们的生产。该项目将$modifier_gate_project_modernize_seed_selection_with_tooltip$修正添加到我们的一个[GetBuildingType('building_gate_druid_grove').GetName]。"
+ je_gate_project_modernize_seed_selection_description: "[GetGoods('gate_magic_seed').GetName]用于提高作物产量。现代选种会获得更好的产量以改善我们的生产。该项目将$modifier_gate_project_modernize_seed_selection_with_tooltip$修正添加到我们的一个[GetBuildingType('building_gate_druid_grove').GetName]。"
  modifier_gate_project_modernize_seed_selection: "现代选种"
  modifier_gate_project_modernize_seed_selection_tooltip: "#V $modifier_gate_project_modernize_seed_selection$#!\n[GetStaticModifier('modifier_gate_project_modernize_seed_selection').GetDesc]"
  modifier_gate_project_modernize_seed_selection_with_tooltip: "#bold #tooltip:[GetRawTextTooltipTag('modifier_gate_project_modernize_seed_selection_tooltip')] #underline $modifier_gate_project_modernize_seed_selection$#!#!#!"
@@ -53,4 +53,4 @@
  button_project_artificial_ecosystem: "构建人工生态系统" #deepl:1402757762
  je_gate_project_artificial_ecosystem: "构建人工生态系统" #deepl:2735770378
  je_gate_project_artificial_ecosystem_reason: "[concept_gate_magic_researcher] [GetPlayer.MakeScope.Var('magic_researcher').GetCharacter.GetFullName] 目前正在开发 #bold  $je_gate_project_artificial_ecosystem$ #!. \n $gate_journal_delimiter$ \n $je_gate_project_artificial_ecosystem_description$" #deepl:2881712934
- je_gate_project_artificial_ecosystem_description: "[GetGoods('magic_seed').GetName] 用于提高作物产量。通过现代化选种以获得更高产量，将有助于提升我们的生产水平。该项目将$modifier_gate_project_modernize_seed_selection_with_tooltip$（[concept_modifier]）引入了我们的[GetBuildingType('building_gate_druid_grove').GetBuildingGroupName]之一。" #deepl:50056444
+ je_gate_project_artificial_ecosystem_description: "[GetGoods('gate_magic_seed').GetName] 用于提高作物产量。通过现代化选种以获得更高产量，将有助于提升我们的生产水平。该项目将$modifier_gate_project_modernize_seed_selection_with_tooltip$（[concept_modifier]）引入了我们的[GetBuildingType('building_gate_druid_grove').GetBuildingGroupName]之一。" #deepl:50056444
