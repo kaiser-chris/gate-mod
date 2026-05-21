@@ -98,12 +98,12 @@
 
 	invalid = {
 		hidden_trigger = {
-			is_magic_country = yes
+			is_gate_magic_country = yes
 		}
 	}
 
 	on_complete = {
-		learn_magic = yes
+		gate_learn_magic = yes
 		hidden_effect = {
 			remove_modifier = modifier_gate_focus_researching_magic_cost
 		}

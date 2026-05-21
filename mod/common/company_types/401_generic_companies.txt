@@ -20,12 +20,12 @@
 	}
 	
 	potential = {
-		is_magic_country = yes
+		is_gate_magic_country = yes
 	}
 	
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			is_magic_country = yes
+			is_gate_magic_country = yes
 		}
 	}
 
@@ -89,12 +89,12 @@ company_gate_generic_golem_production = {
 	}
 
 	potential = {
-		is_magic_country = yes
+		is_gate_magic_country = yes
 	}
 
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			is_magic_country = yes
+			is_gate_magic_country = yes
 		}
 	}
 

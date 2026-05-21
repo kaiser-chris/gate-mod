@@ -6,7 +6,7 @@
     potential = {
         home_country = {
             OR = {
-                is_magic_country = yes
+                is_gate_magic_country = yes
                 has_journal_entry = je_gate_researching_magic
             }
         }
@@ -67,7 +67,7 @@
                         }
                     }
                 }
-                has_active_magic_project = no
+                has_gate_active_magic_project = no
             }
         }
     }

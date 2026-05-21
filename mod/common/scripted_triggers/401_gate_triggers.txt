@@ -1,5 +1,5 @@
 ﻿# Trigger to check whether a country has magic unlocked
-is_magic_country = {
+is_gate_magic_country = {
     custom_description = {
         text = gate_is_magic_country
         subject = this
@@ -46,7 +46,7 @@ has_magic_gate = {
 
 # Trigger to check whether a state has mountains or not
 # Used to check for dwarven murk buildings
-is_dwarven_mountainous_state = {
+is_gate_dwarven_mountainous_state = {
 	OR = {
 		has_state_trait = state_trait_scottish_highlands
 		has_state_trait = state_trait_cascades
@@ -69,15 +69,15 @@ is_dwarven_mountainous_state = {
 	}
 }
 
-can_hire_magic_researcher = {
+can_gate_hire_magic_researcher = {
 	AND = {
 		hidden_trigger = {
 			OR = {
-				is_magic_country = yes
+				is_gate_magic_country = yes
 				has_journal_entry = je_gate_researching_magic
 			}
 		}
-		has_magic_researcher = no
+		has_gate_magic_researcher = no
 		custom_tooltip = {
 			text = magic_researcher_decision_actively_searching_tooltip
 			NOT = {
@@ -87,7 +87,7 @@ can_hire_magic_researcher = {
 	}
 }
 
-has_magic_researcher = {
+has_gate_magic_researcher = {
     custom_description = {
         text = gate_has_magic_researcher
         subject = this
@@ -98,7 +98,7 @@ has_magic_researcher = {
 	}
 }
 
-has_active_magic_project = {
+has_gate_active_magic_project = {
     custom_description = {
         text = gate_has_active_magic_project
         subject = this

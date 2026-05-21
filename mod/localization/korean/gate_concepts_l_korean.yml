@@ -18,7 +18,7 @@
  concept_gate_monster_horde_desc: "중간 정도의 [concept_gate_mana_density] 이상에서 대규모로 돌연변이한 동식물이 잔혹하게 민간인을 공격할 수 있습니다."
  concept_gate_mana_density: "마나 밀도"
  concept_gate_mana_density_mana: "마나" #deepl:479230379
- concept_gate_mana_density_desc: "마법의 문이 열린 이후, 마나가 지구로 흘러들어오고 있습니다. 지구에서 [concept_gate_magic_knowledge]을 활용한 연구가 진행될수록 대기 중 마나의 양은 더욱 증가합니다. 특정 주에서 $concept_gate_mana_density$가 최대치에 도달하면 [concept_gate_magical_phenomena]가 일반적인 현상이 됩니다. 그 전까지는 $concept_gate_mana_density$의 수준에 따라 다양한 예측 불가능한 변화와 사건이 발생할 수 있습니다.\n\n#header 마나 밀도 단계:#!\n • 낮은 마나 밀도: #v [GuiScope.ScriptValue('low_mana_density_threshhold')]%#! 이상\n • 중간 마나 밀도: #v [GuiScope.ScriptValue('medium_mana_density_threshhold')]%#! 이상\n • 높은 마나 밀도: #v [GuiScope.ScriptValue('high_mana_density_threshhold')]%#! 이상"
+ concept_gate_mana_density_desc: "마법의 문이 열린 이후, 마나가 지구로 흘러들어오고 있습니다. 지구에서 [concept_gate_magic_knowledge]을 활용한 연구가 진행될수록 대기 중 마나의 양은 더욱 증가합니다. 특정 주에서 $concept_gate_mana_density$가 최대치에 도달하면 [concept_gate_magical_phenomena]가 일반적인 현상이 됩니다. 그 전까지는 $concept_gate_mana_density$의 수준에 따라 다양한 예측 불가능한 변화와 사건이 발생할 수 있습니다.\n\n#header 마나 밀도 단계:#!\n • 낮은 마나 밀도: #v [GuiScope.ScriptValue('gate_low_mana_density_threshhold')]%#! 이상\n • 중간 마나 밀도: #v [GuiScope.ScriptValue('gate_medium_mana_density_threshhold')]%#! 이상\n • 높은 마나 밀도: #v [GuiScope.ScriptValue('gate_high_mana_density_threshhold')]%#! 이상"
  concept_gate_magical_phenomena: "마법 현상"
  concept_gate_magical_phenomena_desc: "마법 현상은 특정 지역에서 증가한 [concept_gate_mana_density]로 인해 발생하는 사건입니다. 이들은 무해하거나 유익할 수도 있으며, 때로는 끔찍한 재앙이 될 수도 있습니다."
  concept_gate_magic_researcher: "비전주의자"

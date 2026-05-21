@@ -39,7 +39,7 @@ gg_mr_magic_researcher_experience_custom_loc = {
 	text = {
 		trigger = {
 			var:magic_researcher ?= {
-				var:magic_experience >= character_master_threshhold
+				var:magic_experience >= gate_character_master_threshhold
 			}
 		}
 		localization_key = gg_character_experience_master
@@ -48,7 +48,7 @@ gg_mr_magic_researcher_experience_custom_loc = {
 	text = {
 		trigger = {
 			var:magic_researcher ?= {
-				var:magic_experience >= character_experienced_threshhold
+				var:magic_experience >= gate_character_experienced_threshhold
 			}
 		}
 		localization_key = gg_character_experience_experienced

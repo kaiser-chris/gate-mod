@@ -28,9 +28,9 @@
  trigger_gate_expedition_has_covered: "#default_text [concept_gate_expedition]地图中有未探索部分。#!"
  trigger_gate_expedition_has_no_activity: "#default_text 我们未进行一项[Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')]。#!"
 
- trigger_gate_requirement_low_mana_density: "要建造该[concept_building]，地区[concept_gate_mana_density]至少为[TopScope.ScriptValue('low_mana_density_threshhold')]。"
- trigger_gate_requirement_medium_mana_density: "要建造该[concept_building]，地区[concept_gate_mana_density]至少为[TopScope.ScriptValue('medium_mana_density_threshhold')]。"
- trigger_gate_requirement_max_mana_density: "要建造该[concept_building]，地区[concept_gate_mana_density]至少为[TopScope.ScriptValue('maximum_mana_density')]。"
+ trigger_gate_requirement_low_mana_density: "要建造该[concept_building]，地区[concept_gate_mana_density]至少为[TopScope.ScriptValue('gate_low_mana_density_threshhold')]。"
+ trigger_gate_requirement_medium_mana_density: "要建造该[concept_building]，地区[concept_gate_mana_density]至少为[TopScope.ScriptValue('gate_medium_mana_density_threshhold')]。"
+ trigger_gate_requirement_max_mana_density: "要建造该[concept_building]，地区[concept_gate_mana_density]至少为[TopScope.ScriptValue('gate_maximum_mana_density')]。"
 
  trigger_gate_ethic_has_all: "Has chosen all possible [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')]"
  trigger_gate_ethic_has_all_not: "Hasn't chosen all possible [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')]"

@@ -18,7 +18,7 @@
  concept_gate_monster_horde_desc: "当[concept_gate_mana_density]达到中等水平时，当地动植物可能会发生大规模突变，并疯狂地攻击平民。"
  concept_gate_mana_density: "魔能浓度"
  concept_gate_mana_density_mana: "Mana"
- concept_gate_mana_density_desc: "自魔法门开启以来，魔能不断涌入地球。[concept_gate_magic_knowledge]在地球上的应用进一步增加了大气中的魔能含量。若某一区域的$concept_gate_mana_density$达到最大值，[concept_gate_magical_phenomena]将在此地常态化。在此之前，该区域不同等级的$concept_gate_mana_density$会引发不可预测的异变与事件。\n\n#header 魔能浓度等级：#!\n• 低魔能浓度起始于#v [GuiScope.ScriptValue('low_mana_density_threshhold')]%#!\n• 中魔能浓度起始于#v [GuiScope.ScriptValue('medium_mana_density_threshhold')]%#!\n• 高魔能浓度起始于#v [GuiScope.ScriptValue('high_mana_density_threshhold')]%#!"
+ concept_gate_mana_density_desc: "自魔法门开启以来，魔能不断涌入地球。[concept_gate_magic_knowledge]在地球上的应用进一步增加了大气中的魔能含量。若某一区域的$concept_gate_mana_density$达到最大值，[concept_gate_magical_phenomena]将在此地常态化。在此之前，该区域不同等级的$concept_gate_mana_density$会引发不可预测的异变与事件。\n\n#header 魔能浓度等级：#!\n• 低魔能浓度起始于#v [GuiScope.ScriptValue('gate_low_mana_density_threshhold')]%#!\n• 中魔能浓度起始于#v [GuiScope.ScriptValue('gate_medium_mana_density_threshhold')]%#!\n• 高魔能浓度起始于#v [GuiScope.ScriptValue('gate_high_mana_density_threshhold')]%#!"
  concept_gate_magical_phenomena: "魔法现象"
  concept_gate_magical_phenomena_desc: "魔法现象是由区域内不断上升的[concept_gate_mana_density]所引发的事件，其表现形式从温和有益到骇人可怖不等。"
  concept_gate_magic_researcher: "奥术师"

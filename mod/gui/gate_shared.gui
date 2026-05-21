@@ -194,7 +194,7 @@ types gate_shared {
                 default_progressbar_horizontal = {
                     minimumsize = { -1 20 }
                     maximumsize = { -1 20 }
-                    visible = "[LessThan_CFixedPoint(Character.MakeScope.Var('magic_experience').GetValue, Character.MakeScope.ScriptValue('character_experienced_threshhold'))]"
+                    visible = "[LessThan_CFixedPoint(Character.MakeScope.Var('magic_experience').GetValue, Character.MakeScope.ScriptValue('gate_character_experienced_threshhold'))]"
                     tooltip = gg_character_experience_novice_tooltip
 
                     blockoverride "values" {
@@ -215,8 +215,8 @@ types gate_shared {
                     minimumsize = { -1 20 }
                     maximumsize = { -1 20 }
                     visible = "[And(
-                                    GreaterThanOrEqualTo_CFixedPoint(Character.MakeScope.Var('magic_experience').GetValue, Character.MakeScope.ScriptValue('character_experienced_threshhold')),
-                                    Not(GreaterThanOrEqualTo_CFixedPoint(Character.MakeScope.Var('magic_experience').GetValue, Character.MakeScope.ScriptValue('character_master_threshhold')))
+                                    GreaterThanOrEqualTo_CFixedPoint(Character.MakeScope.Var('magic_experience').GetValue, Character.MakeScope.ScriptValue('gate_character_experienced_threshhold')),
+                                    Not(GreaterThanOrEqualTo_CFixedPoint(Character.MakeScope.Var('magic_experience').GetValue, Character.MakeScope.ScriptValue('gate_character_master_threshhold')))
                                )]"
                     tooltip = gg_character_experience_experienced_tooltip
 
@@ -237,7 +237,7 @@ types gate_shared {
                 default_progressbar_horizontal = {
                     minimumsize = { -1 20 }
                     maximumsize = { -1 20 }
-                    visible = "[GreaterThanOrEqualTo_CFixedPoint(Character.MakeScope.Var('magic_experience').GetValue, Character.MakeScope.ScriptValue('character_master_threshhold'))]"
+                    visible = "[GreaterThanOrEqualTo_CFixedPoint(Character.MakeScope.Var('magic_experience').GetValue, Character.MakeScope.ScriptValue('gate_character_master_threshhold'))]"
                     tooltip = gg_character_experience_master_tooltip
 
                     blockoverride "values" {
@@ -281,7 +281,7 @@ types gate_shared {
 
         gate_mana_density = {
             blockoverride "visibility" {
-                visible = "[LessThan_CFixedPoint(State.AccessStateRegion.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('medium_mana_density_threshhold'))]"
+                visible = "[LessThan_CFixedPoint(State.AccessStateRegion.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('gate_medium_mana_density_threshhold'))]"
             }
             blockoverride "background_color" {
                 texture = "gfx/interface/icons/gui_icons/gate_low_mana_density.dds"
@@ -291,8 +291,8 @@ types gate_shared {
         gate_mana_density = {
             blockoverride "visibility" {
                 visible = "[And(
-								GreaterThanOrEqualTo_CFixedPoint(State.AccessStateRegion.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('medium_mana_density_threshhold')),
-								LessThan_CFixedPoint(State.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('high_mana_density_threshhold'))
+								GreaterThanOrEqualTo_CFixedPoint(State.AccessStateRegion.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('gate_medium_mana_density_threshhold')),
+								LessThan_CFixedPoint(State.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('gate_high_mana_density_threshhold'))
 							)]"
             }
             blockoverride "background_color" {
@@ -302,7 +302,7 @@ types gate_shared {
         }
         gate_mana_density = {
             blockoverride "visibility" {
-                visible = "[GreaterThanOrEqualTo_CFixedPoint(State.AccessStateRegion.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('high_mana_density_threshhold'))]"
+                visible = "[GreaterThanOrEqualTo_CFixedPoint(State.AccessStateRegion.MakeScope.Var('mana_density').GetValue, State.MakeScope.ScriptValue('gate_high_mana_density_threshhold'))]"
             }
             blockoverride "background_color" {
                 texture = "gfx/interface/icons/gui_icons/gate_high_mana_density.dds"

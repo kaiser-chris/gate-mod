@@ -30,7 +30,7 @@
                 months = 48
                 is_decaying = yes
             }
-            learn_magic = yes
+            gate_learn_magic = yes
 
             # Northern Horde
             create_military_formation = {
@@ -49,6 +49,7 @@
             }
             create_character = {
                 role = character_role_general
+                commander_rank = commander_rank_2
                 traits = {
                     gate_dragon_general
                 }
@@ -74,6 +75,7 @@
             }
             create_character = {
                 role = character_role_general
+                commander_rank = commander_rank_2
                 traits = {
                     gate_dragon_general
                 }
@@ -99,6 +101,7 @@
             }
             create_character = {
                 role = character_role_general
+                commander_rank = commander_rank_2
                 traits = {
                     gate_dragon_general
                 }
@@ -124,6 +127,7 @@
             }
             create_character = {
                 role = character_role_general
+                commander_rank = commander_rank_2
                 traits = {
                     gate_dragon_general
                 }
@@ -137,6 +141,11 @@
                 region_state:GATE_DIH = {
                     create_building = {
                         building = building_gate_dragon_temple_himalayas
+                        level = 1
+                        reserves = 1
+                    }
+                    create_building = {
+                        building = building_government_administration
                         level = 1
                         reserves = 1
                     }

@@ -3,9 +3,9 @@
  gg_character_role_researcher: "#bold [concept_gate_magic_researcher]#!" #deepl:3472457494
  gg_character_experience_header: "[concept_gate_character_experience]:" #deepl:222720106
  gg_character_experience_novice: "Neuling" #deepl:3154392611
- gg_character_experience_novice_tooltip: "[Character.GetFullName] ist ein #v $gg_character_experience_novice$ #! mit [Character.MakeScope.Var('magic_experience').GetValue|0v] Erfahrung.\nUm #v $gg_character_experience_experienced$ #! zu werden, braucht dieser Charakter [Character.MakeScope.ScriptValue('character_experienced_threshhold')|0v] Erfahrung." #deepl:2412676662
+ gg_character_experience_novice_tooltip: "[Character.GetFullName] ist ein #v $gg_character_experience_novice$ #! mit [Character.MakeScope.Var('magic_experience').GetValue|0v] Erfahrung.\nUm #v $gg_character_experience_experienced$ #! zu werden, braucht dieser Charakter [Character.MakeScope.ScriptValue('gate_character_experienced_threshhold')|0v] Erfahrung." #deepl:2412676662
  gg_character_experience_experienced: "Erfahrene" #deepl:3520582853
- gg_character_experience_experienced_tooltip: "[Character.GetFullName] ist #v $gg_character_experience_experienced$ #! mit [Character.MakeScope.Var('magic_experience').GetValue|0v] Erfahrung.\nUm ein #v $gg_character_experience_master$ #! zu werden, braucht dieser Charakter [Character.MakeScope.ScriptValue('character_master_threshhold')|0v] Erfahrung." #deepl:2921814102
+ gg_character_experience_experienced_tooltip: "[Character.GetFullName] ist #v $gg_character_experience_experienced$ #! mit [Character.MakeScope.Var('magic_experience').GetValue|0v] Erfahrung.\nUm ein #v $gg_character_experience_master$ #! zu werden, braucht dieser Charakter [Character.MakeScope.ScriptValue('gate_character_master_threshhold')|0v] Erfahrung." #deepl:2921814102
  gg_character_experience_master: "Meister" #deepl:265555093
  gg_character_experience_master_tooltip: "[Character.GetFullName] ist eine #v $gg_character_experience_master$ #! und hat die Spitze ihres Fachs erreicht." #deepl:1724085786
  gg_panel_map_drag_hint: "Sie können die Karte mit der linken Maustaste #v #! ziehen und mit dem Mausrad #v zoomen.#!" #deepl:4243408496

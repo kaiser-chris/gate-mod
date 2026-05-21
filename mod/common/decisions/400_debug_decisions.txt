@@ -211,10 +211,10 @@ debug_decision_gate_toggle_busy_researcher_decision = {
 					is_busy = no
 				}
 			}
-			make_magic_researcher_busy = yes
+			gate_make_magic_researcher_busy = yes
 		}
 		else = {
-			make_magic_researcher_not_busy = yes
+			gate_make_magic_researcher_not_busy = yes
 		}
 	}
 

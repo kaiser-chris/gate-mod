@@ -18,7 +18,7 @@
 	}
 
 	visible = {
-		is_magic_country = yes
+		is_gate_magic_country = yes
 	}
 
 	possible = {
@@ -27,14 +27,14 @@
 
 	can_ratify = {
 		scope:target_country = {
-			is_magic_country = no
+			is_gate_magic_country = no
 		}
 	}
 
 	on_entry_into_force = {
 		scope:article_options = {
 			target_country = {
-				learn_magic = yes
+				gate_learn_magic = yes
 			}
 		}
 	}
@@ -178,7 +178,7 @@
 					desc = "DIPLOMATIC_ACCEPTANCE_GATE_NO_MAGIC"
 					if = {
 						limit = {
-							is_magic_country = no
+							is_gate_magic_country = no
 						}
 						value = 20
 					}

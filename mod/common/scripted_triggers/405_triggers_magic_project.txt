@@ -47,9 +47,9 @@ gate_project_can_start_expand_research_institute = {
 		has_modifier = modifier_gate_project_institute_improved_instruments
 		has_modifier = modifier_gate_project_institute_better_mana_conduits
 	}
-	is_magic_country = yes
-	has_magic_researcher = yes
-	has_active_magic_project = no
+	is_gate_magic_country = yes
+	has_gate_magic_researcher = yes
+	has_gate_active_magic_project = no
 }
 
 gate_project_can_start_domain = {
@@ -66,9 +66,9 @@ gate_project_can_start_domain = {
 			always = no
 		}
 	}
-	is_magic_country = yes
-	has_magic_researcher = yes
-	has_active_magic_project = no
+	is_gate_magic_country = yes
+	has_gate_magic_researcher = yes
+	has_gate_active_magic_project = no
 	custom_tooltip = {
 		text = je_gate_project_domain_condition_not_researched
 		NOT = {
@@ -79,9 +79,9 @@ gate_project_can_start_domain = {
 
 gate_project_can_start_change_domain = {
 	has_technology_researched = gate_formalized_magic
-	is_magic_country = yes
-	has_magic_researcher = yes
-	has_active_magic_project = no
+	is_gate_magic_country = yes
+	has_gate_magic_researcher = yes
+	has_gate_active_magic_project = no
 	custom_tooltip = {
 		text = je_gate_project_change_domain_condition_max_domains
 		trigger_if = {
@@ -113,9 +113,9 @@ gate_project_can_start_improve_mana_extraction = {
 			}
 		}
 	}
-	is_magic_country = yes
-	has_magic_researcher = yes
-	has_active_magic_project = no
+	is_gate_magic_country = yes
+	has_gate_magic_researcher = yes
+	has_gate_active_magic_project = no
 }
 
 gate_project_can_start_modernize_seed_selection = {
@@ -129,9 +129,9 @@ gate_project_can_start_modernize_seed_selection = {
 			}
 		}
 	}
-	is_magic_country = yes
-	has_magic_researcher = yes
-	has_active_magic_project = no
+	is_gate_magic_country = yes
+	has_gate_magic_researcher = yes
+	has_gate_active_magic_project = no
 }
 
 gate_project_can_improve_building = {

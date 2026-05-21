@@ -254,7 +254,7 @@ law_gate_magocracy = {
     }
 
     is_visible = {
-        is_magic_country = yes
+        is_gate_magic_country = yes
     }
 
     can_impose = {
@@ -269,7 +269,7 @@ law_gate_magocracy = {
             can_impose_law_default = yes
         }
         scope:target_country = {
-            is_magic_country = yes
+            is_gate_magic_country = yes
         }
     }
 

@@ -1,4 +1,4 @@
-﻿calculate_magic_research = {
+﻿gate_calculate_magic_research = {
     # Banking
     if = {
         limit = {
@@ -34,7 +34,7 @@ gate_cleanup_research_institutes = {
 	}
 }
 
-reset_research_institute_pm = {
+gate_reset_research_institute_pm = {
 	if = {
 		limit = {
 			capital = {
@@ -64,7 +64,7 @@ reset_research_institute_pm = {
 			limit = {
 				var:magic_researcher ?= {
 					has_variable = magic_experience
-					var:magic_experience >= character_master_threshhold
+					var:magic_experience >= gate_character_master_threshhold
 				}
 				capital = {
 					any_scope_building = {
@@ -84,7 +84,7 @@ reset_research_institute_pm = {
 			limit = {
 				var:magic_researcher ?= {
 					has_variable = magic_experience
-					var:magic_experience >= character_experienced_threshhold
+					var:magic_experience >= gate_character_experienced_threshhold
 				}
 				capital = {
 					any_scope_building = {
@@ -119,7 +119,7 @@ reset_research_institute_pm = {
 	}
 }
 
-make_magic_researcher_busy = {
+gate_make_magic_researcher_busy = {
 	var:magic_researcher ?= {
 		set_character_busy_and_immortal = yes
 		set_variable = {
@@ -129,7 +129,7 @@ make_magic_researcher_busy = {
 	}
 }
 
-make_magic_researcher_not_busy = {
+gate_make_magic_researcher_not_busy = {
 	var:magic_researcher ?= {
 		set_character_busy_and_immortal = no
 		set_variable = {
@@ -139,12 +139,12 @@ make_magic_researcher_not_busy = {
 	}
 }
 
-calculate_researcher_experience = {
+gate_calculate_researcher_experience = {
 	var:magic_researcher ?= {
 		if = {
 			limit = {
 				has_variable = magic_experience
-				var:magic_experience < character_experienced_maximum
+				var:magic_experience < gate_character_experienced_maximum
 			}
 			save_temporary_scope_value_as = {
 				name = prev_exp
@@ -161,31 +161,31 @@ calculate_researcher_experience = {
 			}
 			clamp_variable = {
 				name = magic_experience
-				min = character_experienced_minimum
-				max = character_experienced_maximum
+				min = gate_character_experienced_minimum
+				max = gate_character_experienced_maximum
 			}
 			if = {
 				limit = {
 					OR = {
 						AND = {
-							var:magic_experience >= character_experienced_threshhold
-							scope:prev_exp < character_experienced_threshhold
+							var:magic_experience >= gate_character_experienced_threshhold
+							scope:prev_exp < gate_character_experienced_threshhold
 						}
 						AND = {
-							var:magic_experience >= character_master_threshhold
-							scope:prev_exp < character_master_threshhold
+							var:magic_experience >= gate_character_master_threshhold
+							scope:prev_exp < gate_character_master_threshhold
 						}
 					}
 				}
 				root = {
-					reset_research_institute_pm = yes
+					gate_reset_research_institute_pm = yes
 				}
 			}
 		}
 	}
 }
 
-cleanup_researchers = {
+gate_cleanup_researchers = {
 	if = {
 		limit = {
 			has_variable = magic_researcher
@@ -214,13 +214,13 @@ cleanup_researchers = {
 	}
 }
 
-add_magic_innovation = {
+gate_add_magic_innovation = {
 	save_temporary_scope_value_as = {
 		name = added_innovation
 		value = $amount$
 	}
 	custom_tooltip = {
-		text = effect_add_magic_innovation
+		text = effect_gate_add_magic_innovation
 		change_variable = {
 			name = magic_innovation
 			add = $amount$
@@ -248,7 +248,7 @@ gate_create_and_activate_magic_researcher = {
 	debug_log_scopes = yes
 	if = {
 		limit = {
-			is_magic_country = yes
+			is_gate_magic_country = yes
 		}
 		create_character = {
 			template = gate_magic_researcher_template
@@ -325,7 +325,7 @@ gate_activate_magic_researcher = {
 				name = magic_researcher
 				value = prev
 			}
-			reset_research_institute_pm = yes
+			gate_reset_research_institute_pm = yes
 			if = {
 				limit = {
 					has_journal_entry = je_gate_researching_magic
@@ -379,7 +379,7 @@ gate_add_researcher_experience = {
 				clamp_variable = {
 					name = magic_experience
 					min = 0
-					max = character_experienced_maximum
+					max = gate_character_experienced_maximum
 				}
 			}
 		}

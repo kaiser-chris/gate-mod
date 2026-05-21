@@ -28,9 +28,9 @@
  trigger_gate_expedition_has_covered: "#default_text [concept_gate_expedition] 지도에 미탐험 지역이 있습니다.#!"
  trigger_gate_expedition_has_no_activity: "#default_text 현재 [Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')]를 진행 중이지 않습니다.#!"
 
- trigger_gate_requirement_low_mana_density: "이 [concept_building]을(를) 건설하려면, 주는 최소 [TopScope.ScriptValue('low_mana_density_threshhold')] 이상의 [concept_gate_mana_density]를 보유해야 합니다."
- trigger_gate_requirement_medium_mana_density: "이 [concept_building]을(를) 건설하려면, 주는 최소 [TopScope.ScriptValue('medium_mana_density_threshhold')] 이상의 [concept_gate_mana_density]를 보유해야 합니다."
- trigger_gate_requirement_max_mana_density: "이 [concept_building]을(를) 건설하려면, 주는 최소 [TopScope.ScriptValue('maximum_mana_density')] 이상의 [concept_gate_mana_density]를 보유해야 합니다."
+ trigger_gate_requirement_low_mana_density: "이 [concept_building]을(를) 건설하려면, 주는 최소 [TopScope.ScriptValue('gate_low_mana_density_threshhold')] 이상의 [concept_gate_mana_density]를 보유해야 합니다."
+ trigger_gate_requirement_medium_mana_density: "이 [concept_building]을(를) 건설하려면, 주는 최소 [TopScope.ScriptValue('gate_medium_mana_density_threshhold')] 이상의 [concept_gate_mana_density]를 보유해야 합니다."
+ trigger_gate_requirement_max_mana_density: "이 [concept_building]을(를) 건설하려면, 주는 최소 [TopScope.ScriptValue('gate_maximum_mana_density')] 이상의 [concept_gate_mana_density]를 보유해야 합니다."
 
  trigger_gate_ethic_has_all: "Has chosen all possible [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')]"
  trigger_gate_ethic_has_all_not: "Hasn't chosen all possible [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')]"

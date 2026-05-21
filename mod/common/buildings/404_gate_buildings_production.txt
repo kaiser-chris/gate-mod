@@ -10,7 +10,7 @@
 
 	potential = {
 		owner = {
-			is_magic_country = yes
+			is_gate_magic_country = yes
 		}
 	}
 
@@ -18,7 +18,7 @@
 		custom_tooltip = {
 			text = trigger_gate_requirement_low_mana_density
 			state_region = {
-				var:mana_density >= low_mana_density_threshhold
+				var:mana_density >= gate_low_mana_density_threshhold
 			}
 		}
 	}
@@ -49,7 +49,7 @@ building_gate_mana_well = {
 
 	potential = {
 		owner = {
-			is_magic_country = yes
+			is_gate_magic_country = yes
 		}
 	}
 
@@ -57,7 +57,7 @@ building_gate_mana_well = {
 		custom_tooltip = {
 			text = trigger_gate_requirement_max_mana_density
 			state_region = {
-				var:mana_density >= maximum_mana_density
+				var:mana_density >= gate_maximum_mana_density
 			}
 		}
 	}
@@ -79,7 +79,7 @@ building_gate_mana_core_workshop = {
 
 	potential = {
 		owner = {
-			is_magic_country = yes
+			is_gate_magic_country = yes
 		}
 	}
 
@@ -104,7 +104,7 @@ building_gate_golem_workshop = {
 
 	potential = {
 		owner = {
-			is_magic_country = yes
+			is_gate_magic_country = yes
 		}
 	}
 
@@ -131,7 +131,7 @@ building_gate_golem_depot = {
 
 	potential = {
 		owner = {
-			is_magic_country = yes
+			is_gate_magic_country = yes
 		}
 	}
 
@@ -206,7 +206,7 @@ building_gate_druid_grove = {
 
 	potential = {
 		owner = {
-			is_magic_country = yes
+			is_gate_magic_country = yes
 		}
 	}
 
@@ -214,7 +214,7 @@ building_gate_druid_grove = {
 		custom_tooltip = {
 			text = trigger_gate_requirement_medium_mana_density
 			state_region = {
-				var:mana_density >= medium_mana_density_threshhold
+				var:mana_density >= gate_medium_mana_density_threshhold
 			}
 		}
 	}

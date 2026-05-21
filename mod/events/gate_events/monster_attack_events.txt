@@ -39,7 +39,7 @@ gate_monster_attack.1 = {
         random_state = {
             limit = {
                 state_region = {
-                    var:mana_density >= medium_mana_density_threshhold
+                    var:mana_density >= gate_medium_mana_density_threshhold
                 }
             }
             save_scope_as = monster_horde_state
@@ -91,7 +91,7 @@ gate_monster_attack.1 = {
                 months = 3
             }
         }
-        make_magic_researcher_busy = yes
+        gate_make_magic_researcher_busy = yes
         trigger = {
             has_variable = magic_researcher
             var:magic_researcher ?= {
@@ -146,7 +146,7 @@ gate_monster_attack.1 = {
                 months = 3
             }
         }
-        make_magic_researcher_busy = yes
+        gate_make_magic_researcher_busy = yes
         trigger = {
             has_variable = magic_researcher
             var:magic_researcher ?= {

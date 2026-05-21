@@ -3,7 +3,7 @@
 
 	# Mana Storms starts from medium mana density
 	trigger = {
-		var:mana_density >= medium_mana_density_threshhold
+		var:mana_density >= gate_medium_mana_density_threshhold
 	}
 
 	incompatible_with = drought
@@ -56,7 +56,7 @@
 		value = 0.0025
 		if = {
 			limit = {
-				var:mana_density >= high_mana_density_threshhold
+				var:mana_density >= gate_high_mana_density_threshhold
 			}
 			multiply = 1.2
 		}
@@ -65,7 +65,7 @@
 		if = {
 			limit = {
 				AND = {
-					var:mana_density >= medium_mana_density_threshhold
+					var:mana_density >= gate_medium_mana_density_threshhold
 					has_building = building_gate_mana_extractor
 				}
 			}
@@ -86,7 +86,7 @@ gate_mana_bloom = {
 
 	# Mana Fever starts from medium mana density
 	trigger = {
-		var:mana_density >= medium_mana_density_threshhold
+		var:mana_density >= gate_medium_mana_density_threshhold
 	}
 
 	incompatible_with = drought
@@ -137,7 +137,7 @@ gate_mana_bloom = {
 		value = 0.0025
 		if = {
 			limit = {
-				var:mana_density >= high_mana_density_threshhold
+				var:mana_density >= gate_high_mana_density_threshhold
 			}
 			multiply = 1.2
 		}
@@ -155,7 +155,7 @@ gate_mana_condensation = {
 
 	# Mana Condensations starts from medium mana density
 	trigger = {
-		var:mana_density >= medium_mana_density_threshhold
+		var:mana_density >= gate_medium_mana_density_threshhold
 	}
 
 	incompatible_with = disease_outbreak
@@ -203,7 +203,7 @@ gate_mana_condensation = {
 		value = 0.0025
 		if = {
 			limit = {
-				var:mana_density >= high_mana_density_threshhold
+				var:mana_density >= gate_high_mana_density_threshhold
 			}
 			multiply = 1.2
 		}
@@ -212,7 +212,7 @@ gate_mana_condensation = {
 		if = {
 			limit = {
 				AND = {
-					var:mana_density >= medium_mana_density_threshhold
+					var:mana_density >= gate_medium_mana_density_threshhold
 					has_building = building_gate_mana_extractor
 				}
 			}

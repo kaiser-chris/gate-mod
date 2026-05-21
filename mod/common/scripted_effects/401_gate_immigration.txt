@@ -5,8 +5,6 @@
 		}
 		add_gate_immigration = {
 			culture = dwarven
-			amount_normal = 10000
-			amount_mass = 30000
 			modifier = state_gate_monthly_dwarven_immigration_add
 		}
 	}
@@ -19,8 +17,6 @@ add_gate_immigration_orcish = {
 		}
 		add_gate_immigration = {
 			culture = orcish
-			amount_normal = 30000
-			amount_mass = 60000
 			modifier = state_gate_monthly_orcish_immigration_add
 		}
 	}
@@ -33,8 +29,6 @@ add_gate_immigration_elven = {
 		}
 		add_gate_immigration = {
 			culture = elven
-			amount_normal = 10000
-			amount_mass = 20000
 			modifier = state_gate_monthly_elven_immigration_add
 		}
 	}
@@ -47,8 +41,6 @@ add_gate_immigration_gnomish = {
 		}
 		add_gate_immigration = {
 			culture = gnomish
-			amount_normal = 10000
-			amount_mass = 30000
 			modifier = state_gate_monthly_gnomish_immigration_add
 		}
 	}
@@ -61,8 +53,6 @@ add_gate_immigration_bear = {
 		}
 		add_gate_immigration = {
 			culture = gate_arctic_ogre
-			amount_normal = 10000
-			amount_mass = 30000
 			modifier = state_gate_monthly_bear_immigration_add
 		}
 	}
@@ -74,80 +64,35 @@ add_gate_immigration = {
 			has_magic_gate = yes
 			modifier:$modifier$ > 0
 		}
-		# Create pop throws errors after game start
-		# but still works
-		# Also size can not accept variables or modifiers
 		if = {
 			limit = {
-				modifier:$modifier$ = $amount_normal$
+				literacy_rate <= 0.5
 			}
-			if = {
-				limit = {
-					literacy_rate <= 0.5
-				}
-				create_pop = {
-					culture = $culture$
-					size = $amount_normal$
-					pop_type = officers # Fix illiterate pops
-				}
+			create_pop = {
+				culture = $culture$
+				size = modifier:$modifier$
+				pop_type = officers # Fix illiterate pops
 			}
-			else_if = {
-				limit = {
-					literacy_rate > 0.5
-					literacy_rate <= 0.6
-				}
-				create_pop = {
-					culture = $culture$
-					size = $amount_normal$
-					pop_type = aristocrats # Fix illiterate pops
-				}
-			}
-			else_if = {
-				limit = {
-					literacy_rate > 0.6
-				}
-				create_pop = {
-					culture = $culture$
-					size = $amount_normal$
-					pop_type = academics # Fix illiterate pops
-				}
-			}
-
 		}
 		else_if = {
 			limit = {
-				modifier:$modifier$ = $amount_mass$
+				literacy_rate > 0.5
+				literacy_rate <= 0.6
 			}
-			if = {
-				limit = {
-					literacy_rate <= 0.5
-				}
-				create_pop = {
-					culture = $culture$
-					size = $amount_mass$
-					pop_type = officers # Fix illiterate pops
-				}
+			create_pop = {
+				culture = $culture$
+				size = modifier:$modifier$
+				pop_type = aristocrats # Fix illiterate pops
 			}
-			else_if = {
-				limit = {
-					literacy_rate > 0.5
-					literacy_rate <= 0.6
-				}
-				create_pop = {
-					culture = $culture$
-					size = $amount_mass$
-					pop_type = aristocrats # Fix illiterate pops
-				}
+		}
+		else_if = {
+			limit = {
+				literacy_rate > 0.6
 			}
-			else_if = {
-				limit = {
-					literacy_rate > 0.6
-				}
-				create_pop = {
-					culture = $culture$
-					size = $amount_mass$
-					pop_type = academics # Fix illiterate pops
-				}
+			create_pop = {
+				culture = $culture$
+				size = modifier:$modifier$
+				pop_type = academics # Fix illiterate pops
 			}
 		}
 	}

@@ -24,7 +24,7 @@ gate_dragon.1 = {
 		any_scope_state = {
 			state_region = s:STATE_GREENLAND
 			state_region = {
-				var:mana_density > medium_mana_density_threshhold
+				var:mana_density > gate_medium_mana_density_threshhold
 			}
 		}
 	}
@@ -189,7 +189,7 @@ gate_dragon.3 = {
 		any_scope_state = {
 			state_region = s:STATE_CALIFORNIA
 			state_region = {
-				var:mana_density > medium_mana_density_threshhold
+				var:mana_density > gate_medium_mana_density_threshhold
 			}
 		}
 	}
@@ -354,7 +354,7 @@ gate_dragon.5 = {
 		any_scope_state = {
 			state_region = s:STATE_KOLYMA
 			state_region = {
-				var:mana_density > medium_mana_density_threshhold
+				var:mana_density > gate_medium_mana_density_threshhold
 			}
 		}
 	}
@@ -519,7 +519,7 @@ gate_dragon.7 = {
 		any_scope_state = {
 			state_region = s:STATE_HIMALAYAS
 			state_region = {
-				var:mana_density > medium_mana_density_threshhold
+				var:mana_density > gate_medium_mana_density_threshhold
 			}
 		}
 	}

@@ -127,8 +127,8 @@ gate_mbudye.2 = {
 	}
 
 	immediate = {
-		form_lunda_nation = yes
-		trigger_lunda_uprising = yes
+		gate_form_lunda_nation = yes
+		gate_trigger_lunda_uprising = yes
 		c:LND = {
 			remove_modifier = modifier_gate_lunda_bambudye_liberty
 		}
@@ -157,7 +157,7 @@ gate_mbudye.3 = {
 	placement = scope:mbudye_event_state
 
 	immediate = {
-		scope_random_lunda_subject = yes
+		gate_scope_random_lunda_subject = yes
 	}
 
 	title = gate_mbudye.3.t
@@ -184,7 +184,7 @@ gate_mbudye.3 = {
 		custom_tooltip = {
 			text = je_gate_mbudye_change_fear
 		}
-		add_conversion_progress = {
+		gate_add_mbudye_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = 8
 			support_change = -8
@@ -208,7 +208,7 @@ gate_mbudye.3 = {
 			religion = rel:animist
 			value = small_radicals
 		}
-		add_conversion_progress = {
+		gate_add_mbudye_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = 3
 			support_change = 0
@@ -232,7 +232,7 @@ gate_mbudye.3 = {
 			religion = rel:gate_golden_religion
 			value = small_radicals
 		}
-		add_conversion_progress = {
+		gate_add_mbudye_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = 0
 			support_change = 5
@@ -257,7 +257,7 @@ gate_mbudye.4 = {
 	placement = scope:mbudye_event_state
 
 	immediate = {
-		scope_random_lunda_subject = yes
+		gate_scope_random_lunda_subject = yes
 	}
 
 	trigger = {
@@ -297,7 +297,7 @@ gate_mbudye.4 = {
 		custom_tooltip = {
 			text = je_gate_mbudye_change_fear
 		}
-		add_conversion_progress = {
+		gate_add_mbudye_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = 15
 			support_change = -15
@@ -318,7 +318,7 @@ gate_mbudye.4 = {
 	option = {
 		name = gate_mbudye.4.b
 		hidden_effect = {
-			trigger_random_mbudye_investigation_result = {
+			gate_trigger_random_mbudye_investigation_result = {
 				chance_success = 80
 				investigation_duration = 3
 			}
@@ -337,13 +337,13 @@ gate_mbudye.4 = {
 
 	option = {
 		name = gate_mbudye.4.c
-		add_conversion_progress = {
+		gate_add_mbudye_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = 0
 			support_change = 2
 		}
 		hidden_effect = {
-			trigger_random_mbudye_investigation_result = {
+			gate_trigger_random_mbudye_investigation_result = {
 				chance_success = 30
 				investigation_duration = 3
 			}
@@ -367,7 +367,7 @@ gate_mbudye.4 = {
 
 	option = {
 		name = gate_mbudye.4.d
-		add_conversion_progress = {
+		gate_add_mbudye_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = 3
 			support_change = -1
@@ -414,7 +414,7 @@ gate_mbudye.5 = {
 		custom_tooltip = {
 			text = je_gate_mbudye_change_fear
 		}
-		add_conversion_progress = {
+		gate_add_mbudye_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = 10
 			support_change = -5
@@ -439,7 +439,7 @@ gate_mbudye.5 = {
 			culture = cu:elven
 			value = medium_radicals
 		}
-		add_conversion_progress = {
+		gate_add_mbudye_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = 5
 			support_change = 4
@@ -484,7 +484,7 @@ gate_mbudye.6 = {
 		custom_tooltip = {
 			text = je_gate_mbudye_change_fear
 		}
-		add_conversion_progress = {
+		gate_add_mbudye_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = 8
 			support_change = -5
@@ -509,7 +509,7 @@ gate_mbudye.6 = {
 			culture = cu:elven
 			value = large_radicals
 		}
-		add_conversion_progress = {
+		gate_add_mbudye_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = -3
 			support_change = 0
@@ -535,7 +535,7 @@ gate_mbudye.7 = {
 	placement = scope:mbudye_event_state
 
 	immediate = {
-		scope_random_lunda_subject = yes
+		gate_scope_random_lunda_subject = yes
 		random_scope_general = {
 			limit = {
 				is_character_alive = yes
@@ -592,7 +592,7 @@ gate_mbudye.7 = {
 		custom_tooltip = {
 			text = je_gate_mbudye_change_fear
 		}
-		add_conversion_progress = {
+		gate_add_mbudye_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = 15
 			support_change = -15
@@ -613,7 +613,7 @@ gate_mbudye.7 = {
 	option = {
 		name = gate_mbudye.7.b
 		hidden_effect = {
-			trigger_random_mbudye_investigation_result = {
+			gate_trigger_random_mbudye_investigation_result = {
 				chance_success = 80
 				investigation_duration = 3
 			}
@@ -640,13 +640,13 @@ gate_mbudye.7 = {
 
 	option = {
 		name = gate_mbudye.7.c
-		add_conversion_progress = {
+		gate_add_mbudye_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = 0
 			support_change = 2
 		}
 		hidden_effect = {
-			trigger_random_mbudye_investigation_result = {
+			gate_trigger_random_mbudye_investigation_result = {
 				chance_success = 30
 				investigation_duration = 3
 			}
@@ -670,7 +670,7 @@ gate_mbudye.7 = {
 
 	option = {
 		name = gate_mbudye.7.d
-		add_conversion_progress = {
+		gate_add_mbudye_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = 1
 			support_change = -1
@@ -698,7 +698,7 @@ gate_mbudye.8 = {
 	placement = scope:mbudye_event_state
 
 	immediate = {
-		scope_random_lunda_subject = yes
+		gate_scope_random_lunda_subject = yes
 		random_scope_admiral = {
 			limit = {
 				is_character_alive = yes
@@ -755,7 +755,7 @@ gate_mbudye.8 = {
 		custom_tooltip = {
 			text = je_gate_mbudye_change_fear
 		}
-		add_conversion_progress = {
+		gate_add_mbudye_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = 15
 			support_change = -15
@@ -776,7 +776,7 @@ gate_mbudye.8 = {
 	option = {
 		name = gate_mbudye.8.b
 		hidden_effect = {
-			trigger_random_mbudye_investigation_result = {
+			gate_trigger_random_mbudye_investigation_result = {
 				chance_success = 80
 				investigation_duration = 3
 			}
@@ -803,13 +803,13 @@ gate_mbudye.8 = {
 
 	option = {
 		name = gate_mbudye.8.c
-		add_conversion_progress = {
+		gate_add_mbudye_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = 0
 			support_change = 2
 		}
 		hidden_effect = {
-			trigger_random_mbudye_investigation_result = {
+			gate_trigger_random_mbudye_investigation_result = {
 				chance_success = 30
 				investigation_duration = 3
 			}
@@ -833,7 +833,7 @@ gate_mbudye.8 = {
 
 	option = {
 		name = gate_mbudye.7.d
-		add_conversion_progress = {
+		gate_add_mbudye_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = 1
 			support_change = -1
@@ -861,7 +861,7 @@ gate_mbudye.9 = {
 	placement = scope:mbudye_event_state
 
 	immediate = {
-		scope_random_lunda_subject = yes
+		gate_scope_random_lunda_subject = yes
 		random_scope_politician = {
 			limit = {
 				is_character_alive = yes
@@ -921,7 +921,7 @@ gate_mbudye.9 = {
 		custom_tooltip = {
 			text = je_gate_mbudye_change_fear
 		}
-		add_conversion_progress = {
+		gate_add_mbudye_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = 15
 			support_change = -15
@@ -942,7 +942,7 @@ gate_mbudye.9 = {
 	option = {
 		name = gate_mbudye.9.b
 		hidden_effect = {
-			trigger_random_mbudye_investigation_result = {
+			gate_trigger_random_mbudye_investigation_result = {
 				chance_success = 80
 				investigation_duration = 3
 			}
@@ -969,13 +969,13 @@ gate_mbudye.9 = {
 
 	option = {
 		name = gate_mbudye.9.c
-		add_conversion_progress = {
+		gate_add_mbudye_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = 0
 			support_change = 2
 		}
 		hidden_effect = {
-			trigger_random_mbudye_investigation_result = {
+			gate_trigger_random_mbudye_investigation_result = {
 				chance_success = 30
 				investigation_duration = 3
 			}
@@ -999,7 +999,7 @@ gate_mbudye.9 = {
 
 	option = {
 		name = gate_mbudye.7.d
-		add_conversion_progress = {
+		gate_add_mbudye_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = 1
 			support_change = -1
@@ -1027,7 +1027,7 @@ gate_mbudye.10 = {
 	placement = scope:mbudye_event_state
 
 	immediate = {
-		scope_random_lunda_subject = yes
+		gate_scope_random_lunda_subject = yes
 	}
 
 	trigger = {
@@ -1061,7 +1061,7 @@ gate_mbudye.10 = {
 		custom_tooltip = {
 			text = je_gate_mbudye_change_fear
 		}
-		add_conversion_progress = {
+		gate_add_mbudye_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = 10
 			support_change = -5
@@ -1081,13 +1081,13 @@ gate_mbudye.10 = {
 
 	option = {
 		name = gate_mbudye.10.b
-		add_conversion_progress = {
+		gate_add_mbudye_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = 0
 			support_change = 2
 		}
 		hidden_effect = {
-			trigger_random_mbudye_investigation_result = {
+			gate_trigger_random_mbudye_investigation_result = {
 				chance_success = 90
 				investigation_duration = 3
 			}
@@ -1115,7 +1115,7 @@ gate_mbudye.10 = {
 			religion = rel:gate_golden_religion
 			value = small_radicals
 		}
-		add_conversion_progress = {
+		gate_add_mbudye_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = 1
 			support_change = 4
@@ -1140,7 +1140,7 @@ gate_mbudye.11 = {
 	placement = scope:mbudye_event_state
 
 	immediate = {
-		scope_random_lunda_subject = yes
+		gate_scope_random_lunda_subject = yes
 	}
 
 	title = gate_mbudye.11.t
@@ -1167,7 +1167,7 @@ gate_mbudye.11 = {
 		custom_tooltip = {
 			text = je_gate_mbudye_change_fear
 		}
-		add_conversion_progress = {
+		gate_add_mbudye_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = 10
 			support_change = -5
@@ -1187,7 +1187,7 @@ gate_mbudye.11 = {
 
 	option = {
 		name = gate_mbudye.11.b
-		add_conversion_progress = {
+		gate_add_mbudye_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = 4
 			support_change = 0
@@ -1214,7 +1214,7 @@ gate_mbudye.11 = {
 			religion = rel:gate_golden_religion
 			value = small_radicals
 		}
-		add_conversion_progress = {
+		gate_add_mbudye_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = 1
 			support_change = -1
@@ -1239,7 +1239,7 @@ gate_mbudye.12 = {
 	placement = scope:mbudye_event_state
 
 	immediate = {
-		scope_random_lunda_subject = yes
+		gate_scope_random_lunda_subject = yes
 	}
 
 	title = gate_mbudye.12.t
@@ -1266,7 +1266,7 @@ gate_mbudye.12 = {
 		custom_tooltip = {
 			text = je_gate_mbudye_change_fear
 		}
-		add_conversion_progress = {
+		gate_add_mbudye_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = 10
 			support_change = -5
@@ -1290,7 +1290,7 @@ gate_mbudye.12 = {
 			religion = rel:gate_golden_religion
 			value = small_radicals
 		}
-		add_conversion_progress = {
+		gate_add_mbudye_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = 1
 			support_change = 5
@@ -1315,7 +1315,7 @@ gate_mbudye.13 = {
 	placement = scope:mbudye_event_state
 
 	immediate = {
-		scope_random_lunda_subject = yes
+		gate_scope_random_lunda_subject = yes
 	}
 
 	title = gate_mbudye.13.t
@@ -1338,7 +1338,7 @@ gate_mbudye.13 = {
 		add_loyalists = {
 			value = medium_radicals
 		}
-		add_conversion_progress = {
+		gate_add_mbudye_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = 10
 			support_change = 5
@@ -1363,7 +1363,7 @@ gate_mbudye.14 = {
 	placement = scope:mbudye_event_state
 
 	immediate = {
-		scope_random_lunda_subject = yes
+		gate_scope_random_lunda_subject = yes
 	}
 
 	title = gate_mbudye.14.t
@@ -1386,7 +1386,7 @@ gate_mbudye.14 = {
 		add_loyalists = {
 			value = medium_radicals
 		}
-		add_conversion_progress = {
+		gate_add_mbudye_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = 10
 			support_change = 5
@@ -1452,7 +1452,7 @@ gate_mbudye.16 = {
 	placement = capital
 
 	immediate = {
-		scope_random_lunda_subject = yes
+		gate_scope_random_lunda_subject = yes
 		every_military_formation = {
 			limit = {
 				organization > 50
@@ -1489,7 +1489,7 @@ gate_mbudye.16 = {
 			religion = rel:gate_golden_religion
 			value = medium_radicals
 		}
-		add_conversion_progress = {
+		gate_add_mbudye_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = -2
 			support_change = -2
@@ -1510,7 +1510,7 @@ gate_mbudye.16 = {
 	option = {
 		name = gate_mbudye.16.b
 		default_option = yes
-		add_conversion_progress = {
+		gate_add_mbudye_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = -5
 			support_change = -5
@@ -1531,7 +1531,7 @@ gate_mbudye.16 = {
 	option = {
 		name = gate_mbudye.16.c
 		default_option = yes
-		add_conversion_progress = {
+		gate_add_mbudye_conversion_progress = {
 			country = scope:mbudye_event_country
 			conversion_progress = -1
 			support_change = -1
