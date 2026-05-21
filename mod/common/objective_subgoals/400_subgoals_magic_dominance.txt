@@ -5,7 +5,7 @@
 	on_start = {
 		if = {
 			limit = {
-				has_magic_researcher = yes
+				has_gate_magic_researcher = yes
 			}
 			complete_objective_subgoal = sg_gate_hire_researcher
 		}
@@ -52,7 +52,7 @@ sg_gate_magic_knowledge = {
 	on_start = {
 		if = {
 			limit = {
-				is_magic_country = yes
+				is_gate_magic_country = yes
 			}
 			complete_objective_subgoal = sg_gate_magic_knowledge
 		}

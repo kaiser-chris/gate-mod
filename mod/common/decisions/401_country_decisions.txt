@@ -10,7 +10,7 @@
 		is_at_war = no
 		any_scope_state = {
 			# Murk Ways can only be build in mountains.
-			is_dwarven_mountainous_state = yes
+			is_gate_dwarven_mountainous_state = yes
 			is_incorporated = yes
 			NOT = {
 				has_state_trait = state_trait_gate_dwarven_tunnels
@@ -52,7 +52,7 @@ decision_gate_germanic = {
 	possible = {
 		is_diplomatic_play_committed_participant = no
 		is_at_war = no
-		is_magic_country = yes
+		is_gate_magic_country = yes
 		owns_entire_state_region = STATE_HESSE
 		hidden_trigger = {
 			is_ai = no

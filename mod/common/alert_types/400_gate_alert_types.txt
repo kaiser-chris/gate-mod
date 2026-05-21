@@ -42,7 +42,7 @@ has_not_started_research_of_magic_alert = {
 
 	valid = {
 		AND = {
-			is_magic_country = no
+			is_gate_magic_country = no
 			NOT = {
 				has_journal_entry = je_gate_researching_magic
 			}
@@ -63,7 +63,7 @@ has_no_magic_researcher_alert = {
 	texture = gfx/interface/icons/alert_icons/gate_has_no_magic_research.dds
 
 	valid = {
-		can_hire_magic_researcher = yes
+		can_gate_hire_magic_researcher = yes
 	}
 
 	open_panel = pops_overview|national_cast

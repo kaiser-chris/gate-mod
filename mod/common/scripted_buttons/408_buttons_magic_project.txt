@@ -8,7 +8,7 @@
 
 	possible = {
 		hidden_trigger = {
-			has_active_magic_project = yes
+			has_gate_active_magic_project = yes
 		}
 	}
 
@@ -27,14 +27,14 @@ gate_project_button_pause = {
 
     visible = {
         hidden_trigger = {
-            has_active_magic_project = yes
+            has_gate_active_magic_project = yes
         }
         gate_project_is_paused = no
     }
 
     possible = {
         hidden_trigger = {
-            has_active_magic_project = yes
+            has_gate_active_magic_project = yes
         }
     }
 
@@ -53,14 +53,14 @@ gate_project_button_continue = {
 
     visible = {
         hidden_trigger = {
-            has_active_magic_project = yes
+            has_gate_active_magic_project = yes
         }
         gate_project_is_paused = yes
     }
 
     possible = {
         hidden_trigger = {
-            has_active_magic_project = yes
+            has_gate_active_magic_project = yes
         }
     }
 

@@ -1,4 +1,4 @@
-﻿calculate_mana_saturation = {
+﻿gate_calculate_mana_saturation = {
 	set_global_variable = {
 		name = global_mana_saturation
 		value = {
@@ -19,7 +19,7 @@ gate_propogate_mana_density = {
 	every_state_region = {
 		limit = {
 			has_variable = mana_density
-			var:mana_density >= medium_mana_density_threshhold
+			var:mana_density >= gate_medium_mana_density_threshhold
             is_state_region_land = yes
 		}
 		save_temporary_scope_value_as = {
@@ -29,12 +29,12 @@ gate_propogate_mana_density = {
 		every_neighbouring_state = {
 			limit = {
 				state_region = {
-					var:mana_density < maximum_mana_density
+					var:mana_density < gate_maximum_mana_density
 					var:mana_density < scope:origin_density
 				}
 			}
 			state_region = {
-				add_mana_density = {
+				gate_add_mana_density = {
 					amount = $amount$
 				}
 			}
@@ -46,10 +46,10 @@ gate_propogate_mana_density = {
 			every_in_list = {
 				variable = mana_propogation_states
 				limit = {
-					var:mana_density < maximum_mana_density
+					var:mana_density < gate_maximum_mana_density
 					var:mana_density < scope:origin_density
 				}
-				add_mana_density = {
+				gate_add_mana_density = {
 					amount = $amount$
 				}
 			}
@@ -57,18 +57,18 @@ gate_propogate_mana_density = {
 	}
 }
 
-add_mana_density = {
+gate_add_mana_density = {
 	if = {
 		limit = {
 			has_variable = mana_density
-			var:mana_density < maximum_mana_density
+			var:mana_density < gate_maximum_mana_density
 		}
 		save_temporary_scope_value_as = {
 			name = added_mana_density
 			value = $amount$
 		}
 		custom_tooltip = {
-			text = effect_add_mana_density
+			text = effect_gate_add_mana_density
 			# Propagation
 			change_variable = {
 				name = mana_density
@@ -76,21 +76,21 @@ add_mana_density = {
 			}
 			clamp_variable = {
 				name = mana_density
-				max = maximum_mana_density
-				min = minimum_mana_density
+				max = gate_maximum_mana_density
+				min = gate_minimum_mana_density
 			}
-			add_mana_density_modifier = yes
+			gate_add_mana_density_modifier = yes
 		}
 	}
 }
 
-add_mana_density_modifier = {
+gate_add_mana_density_modifier = {
 	every_scope_state = {
 		if = {
 			limit = {
 				state_region = {
-					var:mana_density >= medium_mana_density_threshhold
-					var:mana_density < high_mana_density_threshhold
+					var:mana_density >= gate_medium_mana_density_threshhold
+					var:mana_density < gate_high_mana_density_threshhold
 				}
 				NOT = {
 					has_modifier = medium_mana_density_modifier
@@ -107,7 +107,7 @@ add_mana_density_modifier = {
 		else_if = {
 			limit = {
 				state_region = {
-					var:mana_density >= high_mana_density_threshhold
+					var:mana_density >= gate_high_mana_density_threshhold
 				}
 				NOT = {
 					has_modifier = high_mana_density_modifier
@@ -134,9 +134,9 @@ initial_gate_propogate_mana_density = {
 		}
 		set_variable = {
 			name = mana_density
-			value = maximum_mana_density
+			value = gate_maximum_mana_density
 		}
-		add_mana_density_modifier = yes
+		gate_add_mana_density_modifier = yes
 	}
 
 	# Hidden Gate in Amazonas
@@ -144,9 +144,9 @@ initial_gate_propogate_mana_density = {
 		set_variable = gate_veiled_gate
 		set_variable = {
 			name = mana_density
-			value = maximum_mana_density
+			value = gate_maximum_mana_density
 		}
-		add_mana_density_modifier = yes
+		gate_add_mana_density_modifier = yes
 	}
 
 	# Propagate initial mana density fall off
@@ -162,7 +162,7 @@ initial_gate_propogate_mana_density = {
                 always = no
             }
 		}
-		propogate_from_state_region = {
+		gate_propogate_from_state_region = {
 			amount = 70
 		}
 	}
@@ -178,7 +178,7 @@ initial_gate_propogate_mana_density = {
                 always = no
             }
 		}
-		propogate_from_state_region = {
+		gate_propogate_from_state_region = {
 			amount = 40
 		}
 	}
@@ -194,13 +194,13 @@ initial_gate_propogate_mana_density = {
                 always = no
             }
 		}
-		propogate_from_state_region = {
+		gate_propogate_from_state_region = {
 			amount = 10
 		}
 	}
 }
 
-propogate_from_state_region = {
+gate_propogate_from_state_region = {
 	save_temporary_scope_value_as = {
 		name = origin_density
 		value = var:mana_density
@@ -208,7 +208,7 @@ propogate_from_state_region = {
 	every_neighbouring_state = {
 		limit = {
 			state_region = {
-				var:mana_density < maximum_mana_density
+				var:mana_density < gate_maximum_mana_density
 				var:mana_density < scope:origin_density
 			}
 		}
@@ -217,7 +217,7 @@ propogate_from_state_region = {
 				name = mana_density
 				value = $amount$
 			}
-			add_mana_density_modifier = yes
+			gate_add_mana_density_modifier = yes
 		}
 	}
 	if = {
@@ -227,19 +227,19 @@ propogate_from_state_region = {
 		every_in_list = {
 			variable = mana_propogation_states
 			limit = {
-				var:mana_density < maximum_mana_density
+				var:mana_density < gate_maximum_mana_density
 				var:mana_density < scope:origin_density
 			}
 			set_variable = {
 				name = mana_density
 				value = $amount$
 			}
-			add_mana_density_modifier = yes
+			gate_add_mana_density_modifier = yes
 		}
 	}
 }
 
-setup_mana_density = {
+gate_setup_mana_density = {
     # Get amount of states for
     # later calculation and
     # initialize mana density variable
@@ -280,5 +280,5 @@ setup_mana_density = {
     }
 
     # Calculate initial saturation
-    calculate_mana_saturation = yes
+    gate_calculate_mana_saturation = yes
 }

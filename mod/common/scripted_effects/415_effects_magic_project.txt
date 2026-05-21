@@ -140,7 +140,7 @@ gate_stop_magic_project = {
 gate_project_progress = {
 	if = {
 		limit = {
-			has_magic_researcher = yes
+			has_gate_magic_researcher = yes
             gate_project_is_paused = no
 		}
         scope:journal_entry = {

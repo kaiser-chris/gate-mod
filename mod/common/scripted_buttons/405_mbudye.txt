@@ -6,7 +6,7 @@
 		custom_tooltip = {
 			text = je_gate_mbudye_button_aggressive_block
 			NOT = {
-				var:mbudye_conversion_type ?= mbudye_conversion_aggressive
+				var:mbudye_conversion_type ?= gate_mbudye_conversion_aggressive
 			}
 		}
 	}
@@ -19,7 +19,7 @@
 		hidden_effect = {
 			set_variable = {
 				name = mbudye_conversion_type
-				value = mbudye_conversion_aggressive
+				value = gate_mbudye_conversion_aggressive
 			}
 		}
 		custom_tooltip = {
@@ -39,7 +39,7 @@ je_gate_mbudye_button_balanced = {
 		custom_tooltip = {
 			text = je_gate_mbudye_button_balanced_block
 			NOT = {
-				var:mbudye_conversion_type ?= mbudye_conversion_balanced
+				var:mbudye_conversion_type ?= gate_mbudye_conversion_balanced
 			}
 		}
 	}
@@ -52,7 +52,7 @@ je_gate_mbudye_button_balanced = {
 		hidden_effect = {
 			set_variable = {
 				name = mbudye_conversion_type
-				value = mbudye_conversion_balanced
+				value = gate_mbudye_conversion_balanced
 			}
 		}
 		custom_tooltip = {
@@ -72,7 +72,7 @@ je_gate_mbudye_button_passive = {
 		custom_tooltip = {
 			text = je_gate_mbudye_button_passive_block
 			NOT = {
-				var:mbudye_conversion_type ?= mbudye_conversion_passive
+				var:mbudye_conversion_type ?= gate_mbudye_conversion_passive
 			}
 		}
 	}
@@ -85,7 +85,7 @@ je_gate_mbudye_button_passive = {
 		hidden_effect = {
 			set_variable = {
 				name = mbudye_conversion_type
-				value = mbudye_conversion_passive
+				value = gate_mbudye_conversion_passive
 			}
 		}
 		custom_tooltip = {

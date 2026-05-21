@@ -3,7 +3,7 @@
 
 	# Cycle through tabs or close window
 	effect = {
-		cycle_tabs = {
+		gate_cycle_tabs = {
 			tab_count = 4
 			tab_variable = gate_base_panel_active_tab
 		}
@@ -138,7 +138,7 @@ sgui_gate_has_magic = {
 	scope = country
 
 	is_valid = {
-		is_magic_country = yes
+		is_gate_magic_country = yes
 	}
 }
 

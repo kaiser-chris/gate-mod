@@ -30,7 +30,7 @@ gate_arcane_council.1 = {
 	immediate = {
 		random_country = {
 			limit = {
-				is_magic_country = yes
+				is_gate_magic_country = yes
 				NOT = {
 					this = root
 				}
@@ -126,7 +126,7 @@ gate_arcane_council.2 = {
 	immediate = {
 		random_country = {
 			limit = {
-				is_magic_country = yes
+				is_gate_magic_country = yes
 				NOT = {
 					this = root
 				}

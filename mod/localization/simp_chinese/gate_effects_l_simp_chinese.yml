@@ -1,7 +1,7 @@
 ﻿l_simp_chinese:
- effect_add_magic_innovation: "增加[SCOPE.GetValue('added_innovation')|+=0][concept_gate_magic_innovation]"
- effect_add_mana_density: "增加[SCOPE.GetValue('added_mana_density')|+=0][concept_gate_mana_density]"
- effect_learn_magic: "[SCOPE.sCountry('gate_magic_learner').GetName]学习[concept_gate_magic_knowledge]"
+ effect_gate_add_magic_innovation: "增加[SCOPE.GetValue('added_innovation')|+=0][concept_gate_magic_innovation]"
+ effect_gate_add_mana_density: "增加[SCOPE.GetValue('added_mana_density')|+=0][concept_gate_mana_density]"
+ effect_gate_learn_magic: "[SCOPE.sCountry('gate_magic_learner').GetName]学习[concept_gate_magic_knowledge]"
  effect_gate_establish_treaty: "在[SCOPE.GetLocalVariable('gate_treaty_source').GetCountry.GetName]与[SCOPE.GetLocalVariable('gate_treaty_target').GetCountry.GetName]之间建立#bold [SCOPE.GetLocalVariable('gate_treaty_name').GetFlagName]#![concept_treaty]"
  effect_pops_embrace_vampirism: "我国部分人口接受了[concept_gate_vampirism]，并转变为[GetCulture('vampire').GetName]文化与[GetReligion('gate_lunar_masquerade').GetName]宗教"
  effect_characters_embrace_vampirism: "我们的领袖和政治家接受了[concept_gate_vampirism]，并转变为[GetCulture('vampire').GetName]文化与[GetReligion('gate_lunar_masquerade').GetName]宗教"

@@ -60,9 +60,9 @@ GLOBAL = {
         }
         if = {
             limit = {
-                is_magic_country = yes
+                is_gate_magic_country = yes
             }
-            calculate_magic_research = yes
+            gate_calculate_magic_research = yes
         }
     }
 
@@ -72,7 +72,7 @@ GLOBAL = {
         gate_setup_expeditions = yes
     }
 
-    setup_mana_density = yes
+    gate_setup_mana_density = yes
 
     # These events can only happen once per game
     # and only happen in 50% of countries

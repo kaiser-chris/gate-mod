@@ -92,7 +92,7 @@ gate_dwarven_alps.2 = {
 	immediate = {
 		random_scope_state = {
 			limit = {
-				is_dwarven_mountainous_state = yes
+				is_gate_dwarven_mountainous_state = yes
 				NOT = {
 					has_state_trait = state_trait_gate_dwarven_tunnels
 				}

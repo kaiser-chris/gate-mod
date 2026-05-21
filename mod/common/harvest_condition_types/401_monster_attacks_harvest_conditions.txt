@@ -3,7 +3,7 @@
 
 	# Monster attacks can happen in any state
 	trigger = {
-		var:mana_density >= medium_mana_density_threshhold
+		var:mana_density >= gate_medium_mana_density_threshhold
 	}
 
 	range = {
@@ -39,21 +39,21 @@
 		value = 0.005
 		if = {
 			limit = {
-				var:mana_density >= low_mana_density_threshhold
-				var:mana_density < medium_mana_density_threshhold
+				var:mana_density >= gate_low_mana_density_threshhold
+				var:mana_density < gate_medium_mana_density_threshhold
 			}
 			multiply = 1.5
 		}
 		if = {
 			limit = {
-				var:mana_density >= medium_mana_density_threshhold
-				var:mana_density < high_mana_density_threshhold
+				var:mana_density >= gate_medium_mana_density_threshhold
+				var:mana_density < gate_high_mana_density_threshhold
 			}
 			multiply = 2
 		}
 		if = {
 			limit = {
-				var:mana_density >= high_mana_density_threshhold
+				var:mana_density >= gate_high_mana_density_threshhold
 			}
 			multiply = 3
 		}
@@ -72,7 +72,7 @@ gate_monster_horde = {
 
 	# Monster attacks can happen in any state
 	trigger = {
-		var:mana_density >= medium_mana_density_threshhold
+		var:mana_density >= gate_medium_mana_density_threshhold
 	}
 
 	range = {

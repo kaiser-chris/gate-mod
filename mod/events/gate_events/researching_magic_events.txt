@@ -13,7 +13,7 @@ researching_magic.1 = {
 	trigger = {
 		OR = {
 			has_journal_entry = je_gate_researching_magic
-			is_magic_country = yes
+			is_gate_magic_country = yes
 		}
 	}
 
@@ -52,7 +52,7 @@ researching_magic.1 = {
 				}
 			}
 		}
-		make_magic_researcher_not_busy = yes
+		gate_make_magic_researcher_not_busy = yes
 		trigger = {
 			has_journal_entry = je_gate_researching_magic
 		}
@@ -64,12 +64,12 @@ researching_magic.1 = {
 		gate_add_researcher_experience = {
 			amount = 5
 		}
-		add_magic_innovation = {
+		gate_add_magic_innovation = {
 			amount = 200
 		}
-		make_magic_researcher_not_busy = yes
+		gate_make_magic_researcher_not_busy = yes
 		trigger = {
-			is_magic_country = yes
+			is_gate_magic_country = yes
 		}
 	}
 }
@@ -87,7 +87,7 @@ researching_magic.2 = {
 	trigger = {
 		OR = {
 			has_journal_entry = je_gate_researching_magic
-			is_magic_country = yes
+			is_gate_magic_country = yes
 		}
 	}
 
@@ -126,7 +126,7 @@ researching_magic.2 = {
 				}
 			}
 		}
-		make_magic_researcher_not_busy = yes
+		gate_make_magic_researcher_not_busy = yes
 	}
 
 	option = {
@@ -135,12 +135,12 @@ researching_magic.2 = {
 		gate_add_researcher_experience = {
 			amount = 5
 		}
-		add_magic_innovation = {
+		gate_add_magic_innovation = {
 			amount = 200
 		}
-		make_magic_researcher_not_busy = yes
+		gate_make_magic_researcher_not_busy = yes
 		trigger = {
-			is_magic_country = yes
+			is_gate_magic_country = yes
 		}
 	}
 }
@@ -194,7 +194,7 @@ researching_magic.4 = {
 	trigger = {
 		OR = {
 			has_journal_entry = je_gate_researching_magic
-			is_magic_country = yes
+			is_gate_magic_country = yes
 		}
 	}
 
@@ -251,7 +251,7 @@ researching_magic.5 = {
 	flavor = researching_magic.5.f
 
 	trigger = {
-		is_magic_country = yes
+		is_gate_magic_country = yes
 	}
 
 	event_image = {
@@ -270,7 +270,7 @@ researching_magic.5 = {
 		gate_add_researcher_experience = {
 			amount = 5
 		}
-		add_magic_innovation = {
+		gate_add_magic_innovation = {
 			amount = 200
 		}
 	}

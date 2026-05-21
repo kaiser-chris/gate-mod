@@ -1,7 +1,7 @@
 ﻿investigate_gate_decision = {
 	is_shown = {
 		NOT = {
-			is_magic_country = yes
+			is_gate_magic_country = yes
 		}
 		NOT = {
 			is_country_type = decentralized
@@ -41,7 +41,7 @@
 
 research_magic_decision = {
 	is_shown = {
-		is_magic_country = no
+		is_gate_magic_country = no
 		NOT = {
 			has_journal_entry = je_gate_researching_magic
 		}
@@ -51,7 +51,7 @@ research_magic_decision = {
 	}
 
 	possible = {
-		is_magic_country = no
+		is_gate_magic_country = no
 		hidden_trigger = {
 			NOT = { has_journal_entry = je_gate_researching_magic }
 		}
