@@ -1,0 +1,63 @@
+﻿gate_immiration_average_unemployed_literacy = {
+    if = {
+        limit = {
+            any_scope_pop = {
+                is_employed = no
+            }
+        }
+        every_scope_pop = {
+            limit = {
+                is_employed = no
+            }
+            add = literacy_rate
+        }
+        divide = {
+            value = 0
+            every_scope_pop = {
+                limit = {
+                    is_employed = no
+                }
+                add = 1
+            }
+        }
+    }
+    else = {
+        value = literacy_rate
+    }
+}
+
+gate_immiration_average_unemployed_wealth = {
+    if = {
+        limit = {
+            any_scope_pop = {
+                is_employed = no
+            }
+        }
+        every_scope_pop = {
+            limit = {
+                is_employed = no
+            }
+            add = wealth
+        }
+        divide = {
+            value = 0
+            every_scope_pop = {
+                limit = {
+                    is_employed = no
+                }
+                add = 1
+            }
+        }
+    }
+    else = {
+        every_scope_pop = {
+            add = wealth
+        }
+        divide = {
+            value = 0
+            every_scope_pop = {
+                add = 1
+            }
+        }
+    }
+}
