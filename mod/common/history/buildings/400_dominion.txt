@@ -99,7 +99,9 @@
             create_building = {
                 building = building_textile_mill
                 add_ownership = {
-                    country = {
+                    building = {
+                        type = building_textile_mill
+                        region = STATE_ZAMBIA
                         country = c:GATE_AD
                         levels = 2
                     }
@@ -110,7 +112,9 @@
             create_building = {
                 building = building_furniture_manufactory
                 add_ownership = {
-                    country = {
+                    building = {
+                        type = building_furniture_manufactory
+                        region = STATE_ZAMBIA
                         country = c:GATE_AD
                         levels = 1
                     }
@@ -184,7 +188,9 @@
             create_building = {
                 building = building_logging_camp
                 add_ownership = {
-                    country = {
+                    building = {
+                        type = building_logging_camp
+                        region = STATE_ZAMBIA
                         country = c:GATE_AD
                         levels = 2
                     }
@@ -286,6 +292,17 @@
                 reserves = 1
             }
             create_building = {
+                building = building_government_administration
+                add_ownership = {
+                    country = {
+                        country = c:GATE_AD
+                        levels = 2
+                    }
+                }
+                reserves = 1
+                activate_production_methods = { pm_horizontal_drawer_cabinets }
+            }
+            create_building = {
                 building = building_sugar_plantation
                 add_ownership = {
                     building = {
@@ -297,6 +314,32 @@
                 }
                 activate_production_methods = {
                     pm_gate_living_irrigation_building_sugar_plantation
+                }
+                reserves = 1
+            }
+            create_building = {
+                building = building_livestock_ranch
+                add_ownership = {
+                    building = {
+                        type = building_gate_mage_tower
+                        country = c:GATE_AD
+                        levels = 1
+                        region = STATE_ZAMBEZI
+                    }
+                }
+                activate_production_methods = {
+                    pm_butchering_tools
+                    pm_simple_ranch
+                    pm_standard_fences
+                    pm_unrefrigerated
+                }
+                reserves = 1
+            }
+            create_building = {
+                building = building_gate_mana_extractor
+                level = 2
+                activate_production_methods = {
+                    pm_gate_mage_ritual_extraction
                 }
                 reserves = 1
             }
@@ -315,6 +358,24 @@
                     pm_saw_mills
                     pm_increased_hardwood
                     pm_no_equipment
+                    pm_road_carts
+                }
+            }
+            create_building = {
+                building = building_coal_mine
+                add_ownership = {
+                    building = {
+                        type = building_financial_district
+                        country = c:GATE_AD
+                        levels = 1
+                        region = STATE_ZAMBEZI
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_picks_and_shovels_building_coal_mine
+                    pm_gate_crystal_explosives_building_coal_mine
+                    pm_no_steam_automation
                     pm_road_carts
                 }
             }

@@ -214,7 +214,7 @@
                     building = {
                         type = building_financial_district
                         country = c:GATE_MK
-                        levels = 5
+                        levels = 6
                         region = STATE_TYROL
                     }
                 }
@@ -271,6 +271,39 @@
                 activate_production_methods = {
                     pm_sulfite_pulping
                     pm_automation_disabled
+                }
+            }
+            create_building = {
+                building = building_wheat_farm
+                add_ownership = {
+                    building = {
+                        type = building_financial_district
+                        country = c:GATE_MK
+                        levels = 4
+                        region = STATE_TYROL
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_soil_enriching_farming
+                    pm_citrus_orchards
+                    pm_tools
+                }
+            }
+            create_building = {
+                building = building_vineyard
+                add_ownership = {
+                    building = {
+                        type = building_vineyard
+                        country = c:GATE_MK
+                        levels = 2
+                        region = STATE_TYROL
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    default_building_vineyard
+                    pm_road_carts
                 }
             }
         }
