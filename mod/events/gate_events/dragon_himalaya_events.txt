@@ -1,0 +1,124 @@
+﻿namespace = gate_dragon_himalaya
+
+gate_dragon_himalaya.1 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = capital
+
+	title = gate_dragon_himalaya.1.t
+	desc = gate_dragon_himalaya.1.d
+	flavor = gate_dragon_himalaya.1.f
+
+	event_image = {
+		video = "ip2_india_urban_scene"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	duration = 6
+
+	trigger = {
+		exists = c:GATE_DIH
+	}
+
+	immediate = {
+		c:GATE_DIH = {
+			save_scope_as = dragon_country
+		}
+	}
+
+	option = {
+		name = gate_dragon_himalaya.1.a
+		default_option = yes
+	}
+
+	option = {
+		name = gate_dragon_himalaya.1.b
+	}
+}
+
+gate_dragon_himalaya.2 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = capital
+
+	title = gate_dragon_himalaya.2.t
+	desc = gate_dragon_himalaya.2.d
+	flavor = gate_dragon_himalaya.2.f
+
+	event_image = {
+		video = "unspecific_politicians_arguing"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	duration = 6
+
+	trigger = {
+		trigger_if = {
+			limit = {
+				exists = c:GATE_DIH
+			}
+			any_scope_state = {
+				has_claim_by = c:GATE_DIH
+			}
+		}
+		trigger_else = {
+			always = no
+		}
+	}
+
+	immediate = {
+		c:GATE_DIH = {
+			save_scope_as = dragon_country
+		}
+	}
+
+	option = {
+		name = gate_dragon_himalaya.2.a
+		scope:dragon_country = {
+			change_relations = {
+				country = root
+				value = -50
+			}
+		}
+		hidden_effect = {
+			set_variable = gate_refused_dragon_proposal
+		}
+	}
+
+	option = {
+		name = gate_dragon_himalaya.2.b
+		default_option = yes
+		scope:dragon_country = {
+			change_relations = {
+				country = root
+				value = -25
+			}
+		}
+		hidden_effect = {
+			set_variable = gate_refused_dragon_proposal
+		}
+	}
+
+	option = {
+		name = gate_dragon_himalaya.2.c
+		every_scope_state = {
+			limit = {
+				has_claim_by = scope:dragon_country
+			}
+			set_state_owner = scope:dragon_country
+		}
+		scope:dragon_country = {
+			change_relations = {
+				country = root
+				value = 50
+			}
+			change_infamy = 10
+		}
+	}
+}

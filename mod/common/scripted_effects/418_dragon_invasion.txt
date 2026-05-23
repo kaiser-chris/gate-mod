@@ -1,4 +1,19 @@
 ﻿gate_start_dragon_invasion_himalayas = {
+    # Create and setup the country
+    gate_start_dragon_invasion_himalayas_country = yes
+    gate_start_dragon_invasion_himalayas_event = yes
+}
+
+gate_start_dragon_invasion_himalayas_event = {
+    every_country = {
+        limit = {
+            has_interest_marker_in_region = sr:region_himalayas
+        }
+        trigger_event = gate_dragon_himalaya.1
+    }
+}
+
+gate_start_dragon_invasion_himalayas_country = {
     create_country = {
         tag = GATE_DIH
 
