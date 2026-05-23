@@ -323,4 +323,50 @@
         }
     }
 
+    # 'Lualaba' (actually Congo Orientale)
+    s:STATE_CONGO_ORIENTALE = {
+        region_state:GATE_OK = {
+            create_building = {
+                building = building_millet_farm
+                add_ownership = {
+                    building = {
+                        type = building_millet_farm
+                        country = c:GATE_OK
+                        levels = 1
+                        region = STATE_CONGO_ORIENTALE
+                    }
+                }
+                reserves = 1
+            }
+        }
+    }
+
+    s:STATE_GABON = {
+        region_state:GATE_OK = {
+            create_building = {
+                building = building_fishing_wharf
+                add_ownership = {
+                    building = {
+                        type = building_fishing_wharf
+                        country = c:GATE_OK
+                        levels = 1
+                        region = STATE_GABON
+                    }
+                }
+                reserves = 1
+            }
+            create_building = {
+                building = building_banana_plantation
+                add_ownership = {
+                    building = {
+                        type = building_banana_plantation
+                        country = c:GATE_OK
+                        levels = 1
+                        region = STATE_GABON
+                    }
+                }
+                reserves = 1
+            }
+        }
+    }
 }
