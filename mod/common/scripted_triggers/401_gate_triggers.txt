@@ -91,8 +91,8 @@ has_gate_magic_researcher = {
     custom_description = {
         text = gate_has_magic_researcher
         subject = this
-		has_variable = magic_researcher
-		var:magic_researcher ?= {
+		has_variable = gate_magic_researcher
+		var:gate_magic_researcher ?= {
 			is_character_alive = yes
 		}
 	}

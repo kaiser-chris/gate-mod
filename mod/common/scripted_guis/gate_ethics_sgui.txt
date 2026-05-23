@@ -1,0 +1,50 @@
+﻿sgui_gate_has_one_ethic = {
+	scope = country
+
+	is_shown = {
+		exists = var:magic_ethics
+		var:magic_ethics >= 1
+	}
+}
+
+sgui_gate_has_two_ethics = {
+	scope = country
+
+	is_shown = {
+		exists = var:magic_ethics
+		var:magic_ethics >= 2
+	}
+}
+
+sgui_gate_has_three_ethics = {
+	scope = country
+
+	is_shown = {
+		exists = var:magic_ethics
+		var:magic_ethics >= 3
+	}
+}
+
+sgui_gate_ethic_unlocked_magic_knowledge = {
+	scope = country
+
+	is_shown = {
+		is_gate_magic_country = yes
+	}
+}
+
+sgui_gate_ethic_unlocked_project = {
+	scope = country
+
+	is_shown = {
+		has_variable = gate_has_researched_domain
+	}
+}
+
+sgui_gate_ethic_unlocked_magic_science = {
+	scope = country
+
+	is_shown = {
+		has_technology_researched = gate_magic_science
+	}
+}

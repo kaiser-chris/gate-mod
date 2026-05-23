@@ -201,13 +201,13 @@ debug_decision_gate_toggle_busy_researcher_decision = {
 	is_shown = {
 		has_global_variable = com_debug
 		is_player = yes
-		has_variable = magic_researcher
+		has_variable = gate_magic_researcher
 	}
 
 	when_taken = {
 		if = {
 			limit = {
-				var:magic_researcher = {
+				var:gate_magic_researcher = {
 					is_busy = no
 				}
 			}

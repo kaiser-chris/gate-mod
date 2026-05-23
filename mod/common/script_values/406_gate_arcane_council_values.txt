@@ -5,13 +5,13 @@
     }
     if = {
         limit = {
-            has_variable = magic_researcher
-            exists = var:magic_researcher
-            var:magic_researcher ?= {
+            has_variable = gate_magic_researcher
+            exists = var:gate_magic_researcher
+            var:gate_magic_researcher ?= {
                 is_character_alive = yes
             }
         }
-        var:magic_researcher ?= {
+        var:gate_magic_researcher ?= {
             add = {
                 value = var:magic_experience
                 desc = gate_arcane_council_election_score_experience

@@ -44,7 +44,7 @@ gate_reset_research_institute_pm = {
 		if = {
 			limit = {
 				NOT = {
-					has_variable = magic_researcher
+					has_variable = gate_magic_researcher
 				}
 				capital = {
 					any_scope_building = {
@@ -62,7 +62,7 @@ gate_reset_research_institute_pm = {
 		}
 		else_if = {
 			limit = {
-				var:magic_researcher ?= {
+				var:gate_magic_researcher ?= {
 					has_variable = magic_experience
 					var:magic_experience >= gate_character_master_threshhold
 				}
@@ -82,7 +82,7 @@ gate_reset_research_institute_pm = {
 		}
 		else_if = {
 			limit = {
-				var:magic_researcher ?= {
+				var:gate_magic_researcher ?= {
 					has_variable = magic_experience
 					var:magic_experience >= gate_character_experienced_threshhold
 				}
@@ -120,7 +120,7 @@ gate_reset_research_institute_pm = {
 }
 
 gate_make_magic_researcher_busy = {
-	var:magic_researcher ?= {
+	var:gate_magic_researcher ?= {
 		set_character_busy_and_immortal = yes
 		set_variable = {
 			name = com_opinion
@@ -130,7 +130,7 @@ gate_make_magic_researcher_busy = {
 }
 
 gate_make_magic_researcher_not_busy = {
-	var:magic_researcher ?= {
+	var:gate_magic_researcher ?= {
 		set_character_busy_and_immortal = no
 		set_variable = {
 			name = com_opinion
@@ -140,7 +140,7 @@ gate_make_magic_researcher_not_busy = {
 }
 
 gate_calculate_researcher_experience = {
-	var:magic_researcher ?= {
+	var:gate_magic_researcher ?= {
 		if = {
 			limit = {
 				has_variable = magic_experience
@@ -188,12 +188,12 @@ gate_calculate_researcher_experience = {
 gate_cleanup_researchers = {
 	if = {
 		limit = {
-			has_variable = magic_researcher
+			has_variable = gate_magic_researcher
 			OR = {
 				NOT = {
-					exists = var:magic_researcher
+					exists = var:gate_magic_researcher
 				}
-				var:magic_researcher ?= {
+				var:gate_magic_researcher ?= {
 					is_character_alive = no
 				}
 			}
@@ -210,7 +210,7 @@ gate_cleanup_researchers = {
 			building_type = building_gate_magic_research_institute
 			production_method = pm_gate_no_researcher
 		}
-		remove_variable = magic_researcher
+		remove_variable = gate_magic_researcher
 	}
 }
 
@@ -272,7 +272,7 @@ gate_activate_magic_researcher = {
 	custom_tooltip = {
 		text = effect_gate_activate_magic_researcher
 		set_local_variable = {
-			name = magic_researcher
+			name = gate_magic_researcher
 			value = this
 		}
 
@@ -313,16 +313,16 @@ gate_activate_magic_researcher = {
 		replace_character_roles = {
 			remove_all = yes
 			add = {
-				gate_arcanist
+				gate_active_arcanist
 			}
 		}
 
 		home_country = {
-			var:magic_researcher ?= {
+			var:gate_magic_researcher ?= {
 				retire_character = yes
 			}
 			set_variable = {
-				name = magic_researcher
+				name = gate_magic_researcher
 				value = prev
 			}
 			gate_reset_research_institute_pm = yes
@@ -362,7 +362,7 @@ gate_activate_magic_researcher = {
 gate_add_researcher_experience = {
 	if = {
 		limit = {
-			has_variable = magic_researcher
+			has_variable = gate_magic_researcher
 		}
 		save_temporary_scope_value_as = {
 			name = added_experience
@@ -371,7 +371,7 @@ gate_add_researcher_experience = {
 		custom_tooltip = {
 			text = effect_gate_magic_experience
 			# Propagation
-			var:magic_researcher ?= {
+			var:gate_magic_researcher ?= {
 				change_variable = {
 					name = magic_experience
 					add = $amount$
