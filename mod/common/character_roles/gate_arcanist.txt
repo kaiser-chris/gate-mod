@@ -34,3 +34,23 @@
         15
     }
 }
+
+gate_active_arcanist = {
+    texture = "gfx/interface/icons/character_role_icons/gate_arcanist.dds"
+
+    priority = 100
+
+    character_modifier = {
+        country_weekly_innovation_mult = 0.05
+        country_gate_magical_innovation_add = 10
+    }
+
+    spawn_characters_to_pool = no
+
+    title_format = custom
+
+    career_length = {
+        10
+        15
+    }
+}

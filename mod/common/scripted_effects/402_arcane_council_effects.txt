@@ -51,11 +51,11 @@ gate_leave_arcane_council = {
 gate_elect_arcane_council_high_mage = {
     ordered_scope_je_involved = {
         limit = {
-            has_variable = magic_researcher
+            has_variable = gate_magic_researcher
         }
         order_by = gate_arcane_council_election_score
         max = 1
-        var:magic_researcher = {
+        var:gate_magic_researcher = {
             save_scope_as = new_high_mage
         }
     }

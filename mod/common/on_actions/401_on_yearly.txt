@@ -53,7 +53,7 @@ on_yearly_gate_vampire_start = {
 
 on_yearly_gate_magic_researcher_experience = {
     trigger = {
-        has_variable = magic_researcher
+        has_variable = gate_magic_researcher
     }
     effect = {
         gate_calculate_researcher_experience = yes

@@ -176,13 +176,13 @@ types gate_base_panel_types {
                     gate_character_small = {
                         visible = "[ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
                         blockoverride "character_context" {
-                            datacontext = "[Country.MakeScope.Var('magic_researcher').GetCharacter]"
+                            datacontext = "[Country.MakeScope.Var('gate_magic_researcher').GetCharacter]"
                         }
                     }
                     default_header_clean_faded = {
                         visible = "[ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
                         blockoverride "text" {
-                            text = "[Country.MakeScope.Var('magic_researcher').GetCharacter.GetFullName]"
+                            text = "[Country.MakeScope.Var('gate_magic_researcher').GetCharacter.GetFullName]"
                         }
                         blockoverride "size" {
                             size = { 250 40 }
@@ -548,7 +548,7 @@ types gate_base_panel_types {
                         }
                         gate_ethic = {
                             blockoverride "visible" {
-                                visible = "[Not(GetScriptedGui('sgui_has_one_ethic').IsShown(GuiScope.SetRoot(Country.MakeScope).End))]"
+                                visible = "[Not(GetScriptedGui('sgui_gate_has_one_ethic').IsShown(GuiScope.SetRoot(Country.MakeScope).End))]"
                             }
                             blockoverride "tooltip" {
                                 tooltip = gg_ethic_empty_slot_tooltip
@@ -558,7 +558,7 @@ types gate_base_panel_types {
 
                         gate_ethic = {
                             blockoverride "visible" {
-                                visible = "[Not(GetScriptedGui('sgui_has_two_ethics').IsShown(GuiScope.SetRoot(Country.MakeScope).End))]"
+                                visible = "[Not(GetScriptedGui('sgui_gate_has_two_ethics').IsShown(GuiScope.SetRoot(Country.MakeScope).End))]"
                             }
                             blockoverride "tooltip" {
                                 tooltip = gg_ethic_empty_slot_tooltip
@@ -568,7 +568,7 @@ types gate_base_panel_types {
 
                         gate_ethic = {
                             blockoverride "visible" {
-                                visible = "[Not(GetScriptedGui('sgui_has_three_ethics').IsShown(GuiScope.SetRoot(Country.MakeScope).End))]"
+                                visible = "[Not(GetScriptedGui('sgui_gate_has_three_ethics').IsShown(GuiScope.SetRoot(Country.MakeScope).End))]"
                             }
                             blockoverride "tooltip" {
                                 tooltip = gg_ethic_empty_slot_tooltip

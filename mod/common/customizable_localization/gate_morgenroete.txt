@@ -6,7 +6,7 @@
 	
 	text = {
 		trigger = {
-			has_variable = magic_researcher
+			has_variable = gate_magic_researcher
 		}
 		localization_key = gg_mr_has_magic_researcher_gui_loc
 	}
@@ -14,7 +14,7 @@
 	text = {
 		trigger = {
 			NOT = {
-				has_variable = magic_researcher
+				has_variable = gate_magic_researcher
 			}
 		}
 		localization_key = gg_mr_has_no_magic_researcher_gui_loc
@@ -30,7 +30,7 @@ gg_mr_magic_researcher_experience_custom_loc = {
 	text = {
 		trigger = {
 			NOT = {
-				has_variable = magic_researcher
+				has_variable = gate_magic_researcher
 			}
 		}
 		localization_key = gg_mr_no_magic_researcher_experience
@@ -38,7 +38,7 @@ gg_mr_magic_researcher_experience_custom_loc = {
 
 	text = {
 		trigger = {
-			var:magic_researcher ?= {
+			var:gate_magic_researcher ?= {
 				var:magic_experience >= gate_character_master_threshhold
 			}
 		}
@@ -47,7 +47,7 @@ gg_mr_magic_researcher_experience_custom_loc = {
 
 	text = {
 		trigger = {
-			var:magic_researcher ?= {
+			var:gate_magic_researcher ?= {
 				var:magic_experience >= gate_character_experienced_threshhold
 			}
 		}

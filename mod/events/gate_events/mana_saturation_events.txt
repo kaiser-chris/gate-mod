@@ -193,7 +193,7 @@ gate_mana_saturation.3 = {
 		trigger = {
 			AND = {
 				scope:magic_growing_state.owner = scope:player_country
-				has_variable = magic_researcher
+				has_variable = gate_magic_researcher
 			}
 		}
 	}
@@ -231,7 +231,7 @@ gate_mana_saturation.3 = {
 			scope:magic_growing_state = {
 				AND = {
 					# We have a researcher
-					has_variable = magic_researcher
+					has_variable = gate_magic_researcher
 
 					# Country is in a region we have interest in
 					scope:player_country = {

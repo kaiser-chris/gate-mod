@@ -32,3 +32,38 @@
 		}
 	}
 }
+
+gate_active_arcanist_custom_loc = {
+	type = character
+	random_valid = yes
+
+	text = {
+		localization_key = gate_title_professor
+		trigger = {
+			is_noble = no
+		}
+	}
+
+	text = {
+		localization_key = gate_title_doctor
+		trigger = {
+			is_noble = no
+		}
+	}
+
+	text = {
+		localization_key = gate_title_sir
+		trigger = {
+			is_female = no
+			is_noble = yes
+		}
+	}
+
+	text = {
+		localization_key = gate_title_dame
+		trigger = {
+			is_female = yes
+			is_noble = yes
+		}
+	}
+}

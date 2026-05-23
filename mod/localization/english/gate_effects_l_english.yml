@@ -13,7 +13,7 @@
  effect_gate_start_magic_project: "Start #bold [SCOPE.GetLocalVariable('gate_project_name').GetFlagName]#! [concept_gate_project]. This project will take #v [SCOPE.GetLocalVariable('months').GetValue|0] months#! and will cost us @money!#r -#![SCOPE.GetLocalVariable('monthly_cost').GetValue|-0v] every month"
  effect_gate_start_magic_infrastructure_project: "Start #bold [SCOPE.GetLocalVariable('gate_project_name').GetFlagName]#! [concept_gate_project]. This project will take #v [SCOPE.GetLocalVariable('construction').GetValue|0]#! [concept_construction] and will cost us @money!#r -#![SCOPE.GetLocalVariable('monthly_cost').GetValue|-0v] every month. While active infrastructure focused [Concept('concept_gate_project','$concept_gate_projects$')] will reduce our normal [concept_construction] output by #v half#!!"
  effect_gate_stop_magic_project: "Stop currently active [concept_gate_project]"
- effect_gate_activate_magic_researcher: "[SCOPE.GetLocalVariable('magic_researcher').GetCharacter.GetFullNameWithTitle] will become our new [concept_gate_magic_researcher]"
+ effect_gate_activate_magic_researcher: "[SCOPE.GetLocalVariable('gate_magic_researcher').GetCharacter.GetFullNameWithTitle] will become our new [concept_gate_magic_researcher]"
  effect_gate_found_arcane_council: "[THIS.GetCountry.GetName] founds the [concept_gate_arcane_council]."
  effect_gate_join_arcane_council: "[THIS.GetCountry.GetName] joins the [concept_gate_arcane_council]."
  effect_gate_leave_arcane_council: "[THIS.GetCountry.GetName] leaves the [concept_gate_arcane_council]."

@@ -20,9 +20,9 @@
 
     ai_will_do = {
         NAND = {
-            has_variable = magic_researcher
-            exists = var:magic_researcher
-            var:magic_researcher ?= {
+            has_variable = gate_magic_researcher
+            exists = var:gate_magic_researcher
+            var:gate_magic_researcher ?= {
                 is_character_alive = yes
             }
         }
@@ -34,9 +34,9 @@
 
     should_ai_evaluate = {
         NAND = {
-            has_variable = magic_researcher
-            exists = var:magic_researcher
-            var:magic_researcher ?= {
+            has_variable = gate_magic_researcher
+            exists = var:gate_magic_researcher
+            var:gate_magic_researcher ?= {
                 is_character_alive = yes
             }
         }
@@ -48,7 +48,7 @@
             custom_tooltip = {
                 text = trigger_gate_is_not_magic_researcher
                 NOT = {
-                    var:magic_researcher ?= prev
+                    var:gate_magic_researcher ?= prev
                 }
             }
             custom_tooltip = {
@@ -60,9 +60,9 @@
             OR = {
                 hidden_trigger = {
                     NAND = {
-                        has_variable = magic_researcher
-                        exists = var:magic_researcher
-                        var:magic_researcher ?= {
+                        has_variable = gate_magic_researcher
+                        exists = var:gate_magic_researcher
+                        var:gate_magic_researcher ?= {
                             is_character_alive = yes
                         }
                     }
