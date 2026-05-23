@@ -64,35 +64,45 @@ add_gate_immigration = {
 			has_magic_gate = yes
 			modifier:$modifier$ > 0
 		}
+		set_local_variable = {
+			name = average_literacy
+			value = gate_immiration_average_unemployed_literacy
+		}
+		set_local_variable = {
+			name = average_wealth
+			value = gate_immiration_average_unemployed_wealth
+		}
 		if = {
 			limit = {
-				literacy_rate <= 0.5
+				local_var:average_wealth > 20
 			}
-			create_pop = {
-				culture = $culture$
-				size = modifier:$modifier$
-				pop_type = officers # Fix illiterate pops
-			}
-		}
-		else_if = {
-			limit = {
-				literacy_rate > 0.5
-				literacy_rate <= 0.6
-			}
-			create_pop = {
-				culture = $culture$
-				size = modifier:$modifier$
-				pop_type = aristocrats # Fix illiterate pops
+			set_local_variable = {
+				name = average_wealth
+				value = 20
 			}
 		}
-		else_if = {
+		if = {
 			limit = {
-				literacy_rate > 0.6
+				local_var:average_literacy > 0.6
 			}
-			create_pop = {
-				culture = $culture$
-				size = modifier:$modifier$
-				pop_type = academics # Fix illiterate pops
+			set_local_variable = {
+				name = average_literacy
+				value = 0.6
+			}
+		}
+		create_pop = {
+			culture = $culture$
+			size = modifier:$modifier$
+		}
+		every_scope_pop = {
+			limit = {
+				is_employed = no
+			}
+			set_pop_literacy = {
+				literacy_rate = local_var:average_literacy
+			}
+			set_pop_wealth = {
+				wealth_distribution = local_var:average_wealth
 			}
 		}
 	}
