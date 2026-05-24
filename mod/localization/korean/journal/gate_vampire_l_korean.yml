@@ -1,26 +1,14 @@
 ﻿l_korean:
-# Conversion Journal Entry
  je_gate_vampire_emergence: "[GetReligion('gate_lunar_masquerade').GetNameNoFormatting]"
  je_gate_vampire_emergence_reason: "소문은 살롱과 골목을 가로질러 실크처럼 퍼져 나갑니다—달의 가장무도회가 성장하고 있습니다. 해가 갈수록 더 많은 영혼들이 그 신비로운 매력에 이끌리고 있습니다. 은빛 달빛과 촛불로 밝힌 모임 속에서, 수수께끼 같은 콘스탄틴 드 르우스-미르자가 부패에서의 해방, 시간에 의해 훼손되지 않은 아름다움, 그리고 혈육에서 깨어나는 힘에 대해 이야기합니다. 한때 주변적인 것이었던 이 말은 이제 실망한 자들과 야망을 가진 자들 사이에서 열렬히 귀 기울여지고 있습니다. 귀족들은 호기심이라 가장하며, 상인들은 기회라 부르며, 평민들은 은빛 베일에 기도를 속삭입니다. 가장무도회는 더 이상 소문이 아닙니다—이것은 하나의 운동입니다. 그리고 그 춤은 이제 막 시작되었습니다."
  je_gate_vampire_emergence_fail: "우리 나라에서 [GetReligion('gate_lunar_masquerade').GetName] 종파를 근절하겠다."
- je_gate_vampire_emergence_invalid: "그들이 주도권을 잡기 전에 ‘[GetCulture('vampire').GetName]’ 레이스를 통합합니다." #deepl:271412993
  je_gate_vampire_emergence_complete: "우리는 [concept_gate_vampirism] 종파를 수용하겠다."
  je_gate_vampire_emergence_activate: "[SCOPE.sCountry('gate_vampire_country').MakeScope.Var('gate_character_vampire').GetCharacter.GetFullName]는 [GetReligion('gate_lunar_masquerade').GetName]을 창립했습니다."
  je_gate_vampire_emergence_allure: "사람들은 불사의 삶을 갈망하며 [GetReligion('gate_lunar_masquerade').GetNameNoFormatting]으로 몰려듭니다."
  je_gate_vampire_emergence_truth_known: "사람들은 뱀파이어에 대한 진실을 알고 있지만, 여전히 [GetReligion('gate_lunar_masquerade').GetNameNoFormatting]에 관심을 가진 이들도 있습니다."
- je_gate_vampire_emergence_decapitated: "[GetReligion('gate_lunar_masquerade').GetNameNoFormatting]가 그들의 신비로운 리더를 잃었다." #deepl:1687077479
  je_gate_vampire_emergence_button_purge: "괴물 제거"
  je_gate_vampire_emergence_button_purge_desc: "이 [GetCulture('vampire').GetName]라는 괴물을 우리나라에서 제거해야 한다!"
- je_gate_vampire_emergence_button_decapitate: "리더 제거" #deepl:1036669402
- je_gate_vampire_emergence_button_decapitate_desc: "그 이단 교주의 목숨은 반드시 끊어져야 한다!" #deepl:3977557813
- je_gate_vampire_emergence_button_integrate: "[GetCulture('vampire').GetNameNoFormatting] 사용자 통합" #deepl:2939045735
- je_gate_vampire_emergence_button_integrate_desc: "그들의 지도자가 죽었으니, 그들을 모두 죽이는 대신 우리[GetCulture('vampire').GetName] 주민들을 통합할 수 있을지도 모르겠습니다." #deepl:271430658
- je_gate_vampire_emergence_trigger_truth_known: "사람들은 [concept_gate_vampirism]에 대한 진실을 알고 있다" #deepl:847730844
- je_gate_vampire_emergence_trigger_decapitated_true: "[GetReligion('gate_lunar_masquerade').GetName]의 지도자가 사망했다" #deepl:1713254295
- je_gate_vampire_emergence_trigger_decapitated_false: "[GetReligion('gate_lunar_masquerade').GetName]의 지도자는 살아 있다" #deepl:1292677351
-# Flags
  gate_vampire_cult_flag: "[GetReligion('gate_lunar_masquerade').GetNameNoFormatting]가 시작되게 하라."
-# Events
  gate_vampire.1.t: "피와 영광의 영원한 통치"
  gate_vampire.1.d: "[SCOPE.sCharacter('gate_vampire_ruler').GetFullName]은 영원한 생명과 번영을 가져다줄 것입니다."
  gate_vampire.1.f: "붉은 황혼에 물든 하늘 아래, 장대한 의식에서 #v [SCOPE.sCharacter('gate_vampire_ruler').GetFullNameNoFormatting]#!는 단순한 인간을 넘어 영원한 통치자로 거듭납니다. 그의 말은 숭배와 힘이 섞여 거리를 울립니다: #lore \"더 이상 우리는 약함에 얽매이지 않을 것이며, 더 이상 시간이 우리의 힘을 시들게 하지 않을 것이다. 내 통치 아래 우리는 영원히, 꺾이지 않고, 승리할 것이다!\"#!"
@@ -41,7 +29,7 @@
  gate_vampire.5.t: "크림슨의 심판"
  gate_vampire.5.d: "사람들은 진실을 알게 되었습니다! [GetCulture('vampire').GetName]은 생존을 위해 피를 필요로 합니다. 이제 우리는 결정을 내려야 합니다."
  gate_vampire.5.f: "영원한 선물이 피를 요구한다는 진실이 들불처럼 퍼지며 소문은 외침으로 변해가고 있습니다. 한때 불멸과 힘에 대한 약속에 매료되었던 대중은 이제 실종된 부랑자들, 비밀 모임, 조용한 약자들의 학살에 대한 보도가 나오자 공포와 분노 속에 반발하고 있습니다. 한때 변두리 신앙이였던 달의 가장무도회는 이제 최고 권력층으로 자리잡았으며, 벨벳으로 감싼 철제 손으로 법원과 의회를 장악하고 영향력을 행사하고 있습니다.\n\n거리는 불안으로 가득 차 있습니다. 사제들은 강단에서 저주를 외치고, 상인과 농부들은 자신들이 치러야 할 대가를 알고 싶다고 요구합니다. 하지만 엘리트들 사이에서는 다른 목소리로 이 질문을 속삭이고 있습니다: 공포가 그만한 가치가 있는가? 반대의 목소리가 커지는 가운데, 국가의 운명은 민중이 반란을 일으킬 것인가, 아니면 통치자들의 갈증이 법이 될 것인가에 달려 있습니다."
- gate_vampire.5.a: "영원은 그만한 가치가 있다!"
+ gate_vampire.5.a: "정말 비열하군."
  gate_vampire.6.t: "불멸의 수호자"
  gate_vampire.6.d: "[SCOPE.sCharacter('gate_vampire_leader').GetFullName]가 [SCOPE.sCharacter('gate_vampire_leader').GetInterestGroup.GetNameWithCountryVariant]의 지도자가 되었다."
  gate_vampire.6.f: "#v [SCOPE.sCharacter('gate_vampire_leader').GetInterestGroup.GetNameNoFormatting]#!의 상인들, 장인들, 소지주들은 뜻밖의 인물인 #v [SCOPE.sCharacter('gate_vampire_leader').GetFullNameNoFormatting]#!을 자신들의 대변자로 받아들이게 되었습니다. 한때는 수수께끼 같은 종교의 지도자로 여겨졌으나, 이제 그는 그들의 야망에 직접 호소하며 필멸자의 나약함을 넘어선 안정과 번영, 보호를 약속하고 있습니다. 그의 영향력은 무력으로 퍼지는 것이 아니라 은밀한 호의로 확산되고 있습니다. 속삭임 속에 상환된 대출, 정체불명의 몰락을 맞이한 경쟁자, 보이지 않는 후원 덕분에 갑작스레 번창한 쇠락한 공방 등, 그의 지지는 눈에 띄지 않는 은혜를 통해 확장되고 있는 중입니다."
@@ -54,40 +42,49 @@
  gate_vampire.8.d: "[SCOPE.sCharacter('gate_landowner_leader').GetInterestGroup.GetNameWithCountryVariant]의 지도자, [SCOPE.sCharacter('gate_landowner_leader').GetFullName]는 [concept_gate_vampirism]을 받아들이고 불멸의 존재로 거듭났습니다."
  gate_vampire.8.f: "위대한 #v [SCOPE.sCharacter('gate_landowner_leader').GetInterestGroup.GetNameWithCountryVariant]#!는 언제나 광대한 영지를 다스려왔지만, #v [SCOPE.sCharacter('gate_landowner_leader').GetFullNameNoFormatting]#!는 그 지배를 새로운—그리고 불길한—차원으로 끌어올렸습니다. 한때 단순히 노련한 귀족이었던 그는 외딴 영지에서 돌아온 뒤, 기묘한 생기로 가득 차 있었습니다. 지쳐 있던 자세는 이제 위엄으로 빛나고, 세월의 흔적이 깃들었던 얼굴은 더 이상 시간의 자취를 찾아볼 수 없게 되었습니다."
  gate_vampire.8.a: "불안한데."
- gate_vampire.9.t: "피의 군주의 몰락" #deepl:24657491
- gate_vampire.9.d: "[GetPlayer.MakeScope.Var('gate_character_vampire').GetCharacter.GetFullName]를 제거하기 위한 작전이 준비되었다." #deepl:3618505831
- gate_vampire.9.f: "등불을 끄고 문을 단단히 닫은 채, 정부의 암흑 부대들이 침묵 속에 집결했다. 사제들과 포병 장교들이 어깨를 나란히 한 가운데 최종 명령이 낭독되었다. 수도 전역에서 충성스러운 연대들이 거리를 봉쇄했고, 기병 부대가 귀족 지구를 포위했으며, 새벽이 오기 전 뱀파이어의 소굴을 습격하도록 엄선된 특공대원들에게는 신성한 검이 지급되었다." #deepl:3791721179
- gate_vampire.9.a: "그를 죽여라." #deepl:4093082665
- gate_vampire.9.b: "작업을 중단하십시오." #deepl:3592045309
- gate_vampire.9.b.delay: "다시 시도하기까지는 시간이 좀 걸릴 것 같습니다" #deepl:1612212464
- gate_vampire.10.t: "크림슨 정착지" #deepl:3124419516
- gate_vampire.10.desc: "[GetReligion('gate_lunar_masquerade').GetName]의 지도자가 사라진 지금, 과연 우리는 [GetCulture('vampire').GetName]의 주민들을 어떻게 대할 것인가?" #deepl:1669865962
- gate_vampire.10.f: "피의 군주가 사라지자, 국가는 전쟁에서 심판의 시대로 접어들었다. 의회와 병영, 촛불이 밝혀진 거리 어디에서나 이제 단 하나의 질문이 다른 모든 것을 압도했다. 남아 있는 뱀파이어들이 시민으로서 인정받을 것인가, 용인된 존재로 살아갈 것인가, 아니면 법 아래에서 더 낮은 지위를 감내해야 할 것인가 하는 문제였다." #deepl:108441323
- gate_vampire.10.a: "그들을 우리 편으로 끌어들여라." #deepl:165305267
- gate_vampire.10.b: "그냥 내버려 두세요." #deepl:601514909
- gate_vampire.10.c: "그들은 2등 시민이다." #deepl:202607558
- gate_vampire.10.d: "저 짐승들은 반드시 제거해야 한다!" #deepl:3192572604
- gate_vampire.11.t: "스칼렛의 성찬" #deepl:3186904668
- gate_vampire.11.d: "기독교 복음 선교회([GetReligion('gate_lunar_masquerade').GetName])는 수천 명이 예수 그리스도 후기 성도 교회([concept_gate_vampirism])로 개종하는 대규모 개종 행사를 개최했다." #deepl:2589796941
- gate_vampire.11.f: "등불이 밝혀진 아치 아래와 차가운 달빛 아래, 성스러운 사원([GetReligion('gate_lunar_masquerade').GetNameNoFormatting])은 수천 명의 신도들을 모았다. 새벽이 되자 광장은 고요해졌고, 한때는 평범한 인간이었던 이들은 창백한 얼굴에 날카로운 미소를 띠고, 입술에는 영원한 서약을 머금은 채 그곳을 떠났다." #deepl:1685243371
- gate_vampire.11.a: "우려스러운." #deepl:2089514037
- gate_vampire.12.t: "붉은 세례의 밤" #deepl:2917672190
- gate_vampire.12.d: "기독교 복음 선교회([GetReligion('gate_lunar_masquerade').GetName])는 수천 명이 예수 그리스도 후기 성도 교회([concept_gate_vampirism])로 개종하는 대규모 개종 행사를 개최했다." #deepl:2589796941
- gate_vampire.12.f: "음악과 가면, 그리고 속삭이는 약속들로 시작된 축제는 피의 성사로 끝을 맺었다. 태양이 다시 떠오르기 전, 온 동네가 ‘[GetReligion('gate_lunar_masquerade').GetNameNoFormatting]’의 품에 안기며 스스로를 바쳤고, 새롭게 태어나 다시 일어섰다." #deepl:671848860
- gate_vampire.12.a: "우려스러운." #deepl:2089514037
- gate_vampire.13.t: "달빛이 비치는 갈림길" #deepl:3872132078
- gate_vampire.13.d: "기독교 복음 선교회([GetReligion('gate_lunar_masquerade').GetName])는 수천 명이 예수 그리스도 후기 성도 교회([concept_gate_vampirism])로 개종하는 대규모 개종 행사를 개최했다." #deepl:2589796941
- gate_vampire.13.f: "은빛 깃발과 벨벳 천막 아래, 그 교단은 모든 비밀을 벗어던지고 사람들을 앞으로 불러 모았다. 한 명씩, 그리고 이내 수많은 군중이 되어, 남녀들은 고동치는 심장을 내려놓고 불사의 고요한 은총을 받아들였다." #deepl:4198794884
- gate_vampire.13.a: "우려스러운." #deepl:2089514037
- gate_vampire.14.t: "가려진 승천" #deepl:287594170
- gate_vampire.14.d: "기독교 복음 선교회([GetReligion('gate_lunar_masquerade').GetName])는 수천 명이 예수 그리스도 후기 성도 교회([concept_gate_vampirism])로 개종하는 대규모 개종 행사를 개최했다." #deepl:2589796941
- gate_vampire.14.f: "의식과 황홀함이 가득했던 그 하룻밤 동안, ‘달의 자매단([GetReligion('gate_lunar_masquerade').GetNameNoFormatting])’은 개종을 장엄한 광경으로 탈바꿈시켰다. 귀족, 노동자, 방랑자 가릴 것 없이 모두 베일 뒤로 들어섰고, 달과 피의 자식들로 거듭나 나왔다." #deepl:720644547
- gate_vampire.14.a: "우려스러운." #deepl:2089514037
- gate_vampire.15.t: "찢어진 베일" #deepl:1821040819
- gate_vampire.15.d: "[GetReligion('gate_lunar_masquerade').GetName]의 활동에 차질이 생겼습니다." #deepl:2243246028
- gate_vampire.15.f: "참혹한 급습으로 숨겨져 있던 사원들이 드러났고, 피의 장부가 압수되었으며, ‘[GetReligion('gate_lunar_masquerade').GetNameNoFormatting]’의 존경받던 인물들이 공개적으로 쇠사슬에 묶여 끌려나왔다. 이 교단의 신비로운 분위기는 사상 처음으로 공포와 굴욕, 그리고 노골적인 도피로 바뀌었다." #deepl:1127793931
- gate_vampire.15.a: "좋아요." #deepl:3593588592
- gate_vampire.16.t: "재의 제단이 있는 밤" #deepl:4214743448
- gate_vampire.16.d: "[GetReligion('gate_lunar_masquerade').GetName]의 활동에 차질이 생겼습니다." #deepl:2243246028
- gate_vampire.16.f: "사보타주든, 배신이든, 아니면 신의 진노 때문이든 간에, 몇몇 거대한 개종 의식은 화염과 학살로 끝을 맺었다. 단 하룻밤 사이에, ‘[GetReligion('gate_lunar_masquerade').GetNameNoFormatting]’는 수백 명의 추종자뿐만 아니라 자신들의 부상이 필연적이라는 환상마저 잃고 말았다." #deepl:3621514589
- gate_vampire.16.a: "정말 흥미롭네요." #deepl:654744515
+ je_gate_vampire_emergence_invalid: "[GetCulture('vampire').GetName] 종족이 권력을 장악하기 전에 이들을 통합한다."
+ je_gate_vampire_emergence_decapitated: "[GetReligion('gate_lunar_masquerade').GetNameNoFormatting]은 그 수수께끼 같은 지도자를 잃었다."
+ je_gate_vampire_emergence_button_decapitate: "지도자 제거"
+ je_gate_vampire_emergence_button_decapitate_desc: "그 사이비 종교의 지도자는 반드시 죽어야 한다!"
+ je_gate_vampire_emergence_button_integrate: "[GetCulture('vampire').GetNameNoFormatting] 인구 통합"
+ je_gate_vampire_emergence_button_integrate_desc: "그들의 지도자가 죽은 지금, 어쩌면 우리 [GetCulture('vampire').GetName] 주민들을 모두 죽이는 대신 통합할 수도 있을 것이다."
+ je_gate_vampire_emergence_trigger_truth_known: "사람들은 [concept_gate_vampirism]에 대한 진실을 알고 있음"
+ je_gate_vampire_emergence_trigger_decapitated_true: "[GetReligion('gate_lunar_masquerade').GetName]의 지도자가 사망함"
+ je_gate_vampire_emergence_trigger_decapitated_false: "[GetReligion('gate_lunar_masquerade').GetName]의 지도자가 살아 있음"
+ gate_vampire.9.t: "피의 군주의 몰락"
+ gate_vampire.9.d: "[GetPlayer.MakeScope.Var('gate_character_vampire').GetCharacter.GetFullName]을 처치하기 위한 공격이 준비되었습니다."
+ gate_vampire.9.f: "닫힌 등불 아래, 봉인된 문 뒤에서 정부의 흑색 대대들이 침묵 속에 집결했고, 사제들과 포병 장교들은 어깨를 나란히 한 채 최종 명령을 들었습니다. 수도 전역에서는 충성파 연대들이 대로를 봉쇄하고, 용기병 분견대가 귀족 구역을 둘러쌌으며, 새벽이 오기 전 흡혈귀의 은신처를 급습하도록 선발된 타격대에는 성별된 칼날이 지급되었습니다."
+ gate_vampire.9.a: "그를 죽여라."
+ gate_vampire.9.b: "작업을 중단하라."
+ gate_vampire.9.b.delay: "다시 시도하기까지는 시간이 좀 걸릴 것 같군"
+ gate_vampire.10.t: "핏빛 정착지"
+ gate_vampire.10.desc: "[GetReligion('gate_lunar_masquerade').GetName]의 지도자가 사라진 지금, 과연 우리는 [GetCulture('vampire').GetName] 주민들을 어떻게 대할 것인가?"
+ gate_vampire.10.f: "피의 군주가 사라지자, 국가는 전쟁에서 심판으로 눈을 돌렸습니다. 의회와 병영, 촛불 켜진 거리마다 이제 다른 모든 문제를 압도하는 하나의 질문이 떠올랐습니다. 남겨진 흡혈귀들이 시민으로 설 것인가, 묵인 아래 존재할 것인가, 아니면 법 아래에서 열등한 지위를 감내할 것인가 하는 문제였습니다."
+ gate_vampire.10.a: "그들을 우리 편으로 끌어들여라."
+ gate_vampire.10.b: "그냥 내버려 둬라."
+ gate_vampire.10.c: "그들은 2등 시민이다."
+ gate_vampire.10.d: "저 짐승들은 반드시 제거해야 한다!"
+ gate_vampire.11.t: "주홍빛 성찬"
+ gate_vampire.11.d: "[GetReligion('gate_lunar_masquerade').GetName]은 수천 명이 [concept_gate_vampirism]을 받아들인 대규모 개종 행사를 개최했습니다."
+ gate_vampire.11.f: "등불이 밝혀진 아치 아래, 차가운 달빛의 시선 속에서 [GetReligion('gate_lunar_masquerade').GetNameNoFormatting]은 수천 명의 신도를 불러 모았습니다. 새벽이 되자 광장은 고요해졌고, 필멸자로 들어섰던 이들은 창백한 얼굴과 날카로워진 미소, 그리고 영원의 맹세를 입술에 올린 채 떠나갔습니다."
+ gate_vampire.11.a: "불안한데."
+ gate_vampire.12.t: "붉은 세례의 밤"
+ gate_vampire.12.d: "[GetReligion('gate_lunar_masquerade').GetName]은 수천 명이 [concept_gate_vampirism]을 받아들인 대규모 개종 행사를 개최했습니다."
+ gate_vampire.12.f: "음악과 가면, 그리고 속삭이는 약속의 축제로 시작된 것은 결국 피의 성찬으로 끝을 맺었습니다. 태양이 다시 떠오르기 전, 도시의 여러 구역은 스스로를 [GetReligion('gate_lunar_masquerade').GetNameNoFormatting]의 품에 바쳤고, 새로운 존재로 다시 태어났습니다."
+ gate_vampire.12.a: "불안한데."
+ gate_vampire.13.t: "달빛이 비치는 갈림길"
+ gate_vampire.13.d: "[GetReligion('gate_lunar_masquerade').GetName]은 수천 명이 [concept_gate_vampirism]을 받아들인 대규모 개종 행사를 개최했습니다."
+ gate_vampire.13.f: "은빛 깃발과 벨벳 천막 아래에서, 그 교단은 모든 비밀주의를 벗어던지고 사람들을 앞으로 불러냈습니다. 한 사람씩, 그리고 마침내 군중 전체가 뛰는 심장을 포기하고, 불사의 고요한 은총에 자신을 맡겼습니다."
+ gate_vampire.13.a: "불안한데."
+ gate_vampire.14.t: "가려진 승천"
+ gate_vampire.14.d: "[GetReligion('gate_lunar_masquerade').GetName]은 수천 명이 [concept_gate_vampirism]을 받아들인 대규모 개종 행사를 개최했습니다."
+ gate_vampire.14.f: "단 하룻밤의 의식과 황홀경 속에서, [GetReligion('gate_lunar_masquerade').GetNameNoFormatting]은 개종을 하나의 장관으로 바꾸어 놓았습니다. 귀족과 노동자, 방랑자 모두가 장막 너머로 발을 들였고, 달과 피의 자식으로 다시 나타났습니다."
+ gate_vampire.14.a: "불안한데."
+ gate_vampire.15.t: "찢어진 베일"
+ gate_vampire.15.d: "[GetReligion('gate_lunar_masquerade').GetName]은 활동에서 차질을 빚었습니다."
+ gate_vampire.15.f: "참혹한 급습 끝에 숨겨진 사원들이 드러나고, 피의 장부들이 압수되었으며, [GetReligion('gate_lunar_masquerade').GetNameNoFormatting]의 존경받던 인물들은 공개적으로 사슬에 묶여 끌려 나왔습니다. 처음으로, 그 교단을 둘러싸던 신비의 분위기는 공포와 치욕, 그리고 노골적인 도주로 바뀌었습니다."
+ gate_vampire.15.a: "좋아."
+ gate_vampire.16.t: "잿빛 제단의 밤"
+ gate_vampire.16.d: "[GetReligion('gate_lunar_masquerade').GetName]은 활동에서 차질을 빚었습니다."
+ gate_vampire.16.f: "파괴공작이었든, 배신이었든, 혹은 신의 분노였든 간에, 여러 대규모 개종 의식은 화염과 학살 속에서 끝을 맞았습니다. 단 하룻밤 사이, [GetReligion('gate_lunar_masquerade').GetNameNoFormatting]은 수백 명의 신도뿐만 아니라 자신들의 부상이 필연적이라는 환상마저 잃어버렸습니다."
+ gate_vampire.16.a: "흥미롭군."
