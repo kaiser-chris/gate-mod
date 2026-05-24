@@ -39,15 +39,11 @@
     }
 
     upgrades = {
-        combat_unit_type_line_infantry
         combat_unit_type_gate_arcane_vangard
-        combat_unit_type_skirmish_infantry
         combat_unit_type_gate_mana_rifle_infantry
-        combat_unit_type_trench_infantry
+        combat_unit_type_gate_wraithwalkers
         combat_unit_type_gate_rune_guard_infantry
-        combat_unit_type_squad_infantry
         combat_unit_type_gate_thaumaturgic_commandos
-        combat_unit_type_mechanized_infantry
     }
 }
 
@@ -77,13 +73,10 @@ combat_unit_type_gate_arcane_vangard = {
     }
 
     upgrades = {
-        combat_unit_type_skirmish_infantry
         combat_unit_type_gate_mana_rifle_infantry
-        combat_unit_type_trench_infantry
+        combat_unit_type_gate_wraithwalkers
         combat_unit_type_gate_rune_guard_infantry
-        combat_unit_type_squad_infantry
         combat_unit_type_gate_thaumaturgic_commandos
-        combat_unit_type_mechanized_infantry
     }
 }
 
@@ -113,11 +106,9 @@ combat_unit_type_gate_mana_rifle_infantry = {
     }
 
     upgrades = {
-        combat_unit_type_trench_infantry
+        combat_unit_type_gate_wraithwalkers
         combat_unit_type_gate_rune_guard_infantry
-        combat_unit_type_squad_infantry
         combat_unit_type_gate_thaumaturgic_commandos
-        combat_unit_type_mechanized_infantry
     }
 }
 
@@ -148,7 +139,8 @@ combat_unit_type_gate_wraithwalkers = {
     }
 
     upgrades = {
-        combat_unit_type_light_tanks
+        combat_unit_type_gate_rune_guard_infantry
+        combat_unit_type_gate_thaumaturgic_commandos
     }
 }
 
@@ -178,9 +170,7 @@ combat_unit_type_gate_rune_guard_infantry = {
     }
 
     upgrades = {
-        combat_unit_type_squad_infantry
         combat_unit_type_gate_thaumaturgic_commandos
-        combat_unit_type_mechanized_infantry
     }
 }
 
@@ -208,10 +198,6 @@ combat_unit_type_gate_thaumaturgic_commandos = {
     combat_unit_image = {
         # fallback
         texture = "gfx/unit_illustrations/gate_infantry_european_thaumaturgic_commandos.dds"
-    }
-
-    upgrades = {
-        combat_unit_type_mechanized_infantry
     }
 }
 
