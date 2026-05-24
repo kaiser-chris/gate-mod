@@ -1,8 +1,4 @@
 ﻿l_korean:
- effect_gate_add_magic_innovation: "[SCOPE.GetValue('added_innovation')|+=0] [concept_gate_magic_innovation] 추가"
- effect_gate_add_mana_density: "[SCOPE.GetValue('added_mana_density')|+=0] [concept_gate_mana_density] 추가"
- effect_gate_learn_magic: "[SCOPE.sCountry('gate_magic_learner').GetName]가 [concept_gate_magic_knowledge]를 배우고 있음"
- effect_gate_establish_treaty: "#bold [SCOPE.GetLocalVariable('gate_treaty_name').GetFlagName]#! [concept_treaty]를 [SCOPE.GetLocalVariable('gate_treaty_source').GetCountry.GetName]와(과) [SCOPE.GetLocalVariable('gate_treaty_target').GetCountry.GetName] 사이에 체결함"
  effect_pops_embrace_vampirism: "우리 인구의 일부가 [concept_gate_vampirism]을 받아들이고 [GetCulture('vampire').GetName] 문화와 [GetReligion('gate_lunar_masquerade').GetName] 종교로 개종함"
  effect_characters_embrace_vampirism: "우리의 지도자들과 정치인들은 [concept_gate_vampirism]을 받아들이고 [GetCulture('vampire').GetName] 문화와 [GetReligion('gate_lunar_masquerade').GetName] 종교로 개종함"
  effect_gate_magic_experience: "[SCOPE.GetValue('added_experience')|+=0]만큼의 [concept_gate_character_experience]이(가) [concept_gate_magic_researcher]에게 추가됨"
@@ -10,11 +6,15 @@
  effect_gate_expedition_open_map: "[concept_gate_expedition_map] 개방"
  effect_gate_expedition_change_budget: "우리 [concept_gate_expedition_budget]이(가) [SCOPE.GetValue('budget_change')|+=0]만큼 변동됨"
  effect_gate_expedition_start_activity: "[SCOPE.GetValue('months')|0v]개월 동안 [Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')]를 시작함"
- effect_gate_start_magic_project: "#bold [SCOPE.GetLocalVariable('gate_project_name').GetFlagName]#! [concept_gate_project]를 시작합니다. 이 프로젝트는 #v [SCOPE.GetLocalVariable('months').GetValue|0] 개월#!이 소요되며, 매달 @money!#r -#![SCOPE.GetLocalVariable('monthly_cost').GetValue|-0v]의 비용이 듭니다."
- effect_gate_start_magic_infrastructure_project: "Start #bold [SCOPE.GetLocalVariable('gate_project_name').GetFlagName]#! [concept_gate_project]. This project will take #v [SCOPE.GetLocalVariable('construction').GetValue|0]#! [concept_construction] and will cost us @money!#r -#![SCOPE.GetLocalVariable('monthly_cost').GetValue|-0v] every month. While active infrastructure focused [Concept('concept_gate_project','$concept_gate_projects$')] will reduce our normal [concept_construction] output by #v half#!!"
+ effect_gate_establish_treaty: "#bold [SCOPE.GetLocalVariable('gate_treaty_name').GetFlagName]#! [concept_treaty]를 [SCOPE.GetLocalVariable('gate_treaty_source').GetCountry.GetName]와(과) [SCOPE.GetLocalVariable('gate_treaty_target').GetCountry.GetName] 사이에 체결함"
+ effect_gate_start_magic_project: "#bold [SCOPE.GetLocalVariable('gate_project_name').GetFlagName]#! [concept_gate_project]를 시작합니다. 이 프로젝트는 #v [SCOPE.GetLocalVariable('months').GetValue|0] 개월#!이 소요되며, 매달 @money!#r -#![SCOPE.GetLocalVariable('monthly_cost').GetValue|-0v]의 비용이 듭니다"
  effect_gate_stop_magic_project: "현재 진행 중인 [concept_gate_project]를 중단함"
- effect_gate_activate_magic_researcher: "[SCOPE.GetLocalVariable('gate_magic_researcher').GetCharacter.GetFullNameWithTitle] 우리의 새로운 [concept_gate_magic_researcher]가 될 것입니다" #deepl:3813005440
- effect_gate_found_arcane_council: "[THIS.GetCountry.GetName] [concept_gate_arcane_council]를 설립했다." #deepl:3518858866
- effect_gate_join_arcane_council: "[THIS.GetCountry.GetName] [concept_gate_arcane_council]에 합류합니다." #deepl:3903757967
- effect_gate_leave_arcane_council: "[THIS.GetCountry.GetName] [concept_gate_arcane_council]를 떠난다." #deepl:3594380064
- effect_gate_reset_ethics: "모든 `[Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')]`을 제거하십시오." #deepl:368403448
+ effect_gate_start_magic_infrastructure_project: "#bold [SCOPE.GetLocalVariable('gate_project_name').GetFlagName]#! [concept_gate_project]을(를) 시작합니다. 이 사업에는 #v [SCOPE.GetLocalVariable('construction').GetValue|0]#! [concept_construction]이 소요되며, 매달 @money!#r -#![SCOPE.GetLocalVariable('monthly_cost').GetValue|-0v]의 비용이 듭니다. 또한 이 프로젝트가 진행되는 동안, 기반시설 중심의 [Concept('concept_gate_project','$concept_gate_projects$')]로 인해 기존 [concept_construction] 생산이 #v 절반#!으로 감소합니다!"
+ effect_gate_activate_magic_researcher: "[SCOPE.GetLocalVariable('gate_magic_researcher').GetCharacter.GetFullNameWithTitle]가 우리의 새로운 [concept_gate_magic_researcher]가 될 것이다."
+ effect_gate_add_magic_innovation: "[SCOPE.GetValue('added_innovation')|+=0] [concept_gate_magic_innovation] 추가"
+ effect_gate_add_mana_density: "[SCOPE.GetValue('added_mana_density')|+=0] [concept_gate_mana_density] 추가"
+ effect_gate_learn_magic: "[SCOPE.sCountry('gate_magic_learner').GetName]이 [concept_gate_magic_knowledge]을 습득"
+ effect_gate_found_arcane_council: "[THIS.GetCountry.GetName]이 [concept_gate_arcane_council]을 설립함."
+ effect_gate_join_arcane_council: "[THIS.GetCountry.GetName]이 [concept_gate_arcane_council]에 가입함."
+ effect_gate_leave_arcane_council: "[THIS.GetCountry.GetName]이 [concept_gate_arcane_council]에서 탈퇴함."
+ effect_gate_reset_ethics: "모든 [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')] 제거."

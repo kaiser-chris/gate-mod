@@ -1,10 +1,6 @@
 ﻿l_korean:
-# Culture Traits
  common_speaking: "$gate_planet$ 공용어 사용자"
  gate_heritage: "$gate_planet$ 명맥"
-# State Traits
- state_trait_gate_dwarven_tunnels: "드워프 터널"
- state_trait_gate_magic_soil: "마법 토양"
  state_trait_gate_stonehenge: "스톤헨지"
  state_trait_gate_ise_shrine: "이세 신궁"
  state_trait_gate_qin_mausoleum: "진시황릉"
@@ -15,14 +11,8 @@
  state_trait_gate_beatus_caves: "성 베아투스 동굴"
  state_trait_gate_baba_gurgur: "바바 구르구르"
  state_trait_gate_ateshgah: "바쿠의 아테쉬가흐"
- state_trait_gate_ganges: "갠지스 레이 라인 넥서스"
- state_trait_gate_healing_ganges: "갠지스 치유 레이 라인"
- state_trait_gate_venkateswara: "벤카테스와라"
-# Character Traits
  gate_monster_killer: "괴물 사냥꾼"
  gate_monster_killer_desc: "이 장군은 괴물들로부터 국민들을 성공적으로 지켜냈습니다."
- gate_expedition_leader: "$gate_planet$ 원정대장"
- gate_expedition_leader_desc: "해당 인물은 [concept_gate_planet]로의 탐사의 지도자이거나 과거 지도자였습니다."
  gate_eternal_monarch: "영원한 군주"
  gate_eternal_monarch_desc: "해당 통치자는 불멸의 [GetCulture('vampire').GetName]입니다."
  gate_race_trait_vampire: "[GetCulture('vampire').GetNameNoFormatting]"
@@ -35,22 +25,28 @@
  gate_race_trait_orcish_desc: "해당 인물은 [GetCulture('orcish').GetName]입니다."
  gate_race_trait_gnomish: "[GetCulture('gnomish').GetNameNoFormatting]"
  gate_race_trait_gnomish_desc: "해당 인물은 [GetCulture('gnomish').GetName]입니다."
- gate_race_trait_bear: "곰"
- gate_race_trait_bear_desc: "해당 인물은 곰 종족입니다."
- gate_dragon_health: "드라코닉 헬스" #deepl:239568392
- gate_dragon_health_desc: "이 캐릭터는 위대한 용으로부터 건강의 축복을 받았습니다." #deepl:512876274
- gate_dragon_general: "드래곤 전술" #deepl:3363918749
- gate_dragon_general_desc: "이 캐릭터는 위대한 용으로부터 군사 지식의 축복을 받았습니다." #deepl:3928334919
- gate_arcanist_magic_sight: "아케인 아이즈" #deepl:819776185
- gate_arcanist_magic_sight_desc: "이 캐릭터는 ‘[concept_gate_magic]’ 주문을 통해 육안의 시력을 소진시켰습니다. 이 캐릭터의 눈은 타인에게 깊은 불안을 주지만, 그 눈으로 ‘[concept_gate_magic]’의 흐름을 감지할 수 있게 해줍니다." #deepl:1310620690
- gate_arcanist_magic_voice: "잿빛 목소리" #deepl:2242472114
- gate_arcanist_magic_voice_desc: "이 인물은 금지된 주문을 거듭 외우는 바람에 목이 타버렸다. 그 대가로 그가 내뱉는 모든 말에는 비정상적인 울림이 실려 있어, 주문을 더 쉽게 구사할 수 있게 되었으며 그의 명령은 무시하기 더 어려워졌다." #deepl:3141797067
- gate_arcanist_bound_name: "인장 명칭" #deepl:2665726043
- gate_arcanist_bound_name_desc: "이 캐릭터는 적대적인 마법적 힘([concept_gate_magic])으로부터 자신을 보호하기 위해 자신의 본명의 일부를 봉인했습니다. 이로 인해 저주, 강박, 소환 의식에 대한 저항력을 얻게 되지만, 마치 자신의 정체성 중 핵심적인 부분이 더 이상 타인에게 온전히 전달되지 못하는 것처럼 사회적 위상이 약화됩니다." #deepl:1622693922
-# Expedition Character Traits
- gate_expedition_leader_industrialist: "$concept_gate_expedition_leader_industrialist$ 탐험대장" #deepl:3582275680
- gate_expedition_leader_industrialist_desc: "$concept_gate_expedition_leader_industrialist_desc$" #deepl:80292566
- gate_expedition_leader_militarist: "$concept_gate_expedition_leader_militarist$ 탐험대장" #deepl:2932517021
- gate_expedition_leader_militarist_desc: "$concept_gate_expedition_leader_militarist_desc$" #deepl:2470971615
- gate_expedition_leader_politician: "$concept_gate_expedition_leader_politician$ 탐험대장" #deepl:2754848422
- gate_expedition_leader_politician_desc: "$concept_gate_expedition_leader_politician_desc$" #deepl:3459419064
+ state_trait_gate_ganges: "갠지스 레이 라인 넥서스"
+ state_trait_gate_healing_ganges: "갠지스 치유 레이 라인"
+ state_trait_gate_venkateswara: "벤카테스와라"
+ gate_expedition_leader: "$gate_planet$ 원정대장"
+ gate_expedition_leader_desc: "해당 인물은 [concept_gate_planet]로의 탐사의 지도자이거나 과거 지도자였습니다."
+ gate_race_trait_bear: "오거"
+ gate_race_trait_bear_desc: "해당 인물은 오거 종족입니다."
+ gate_expedition_leader_industrialist: "$concept_gate_expedition_leader_industrialist$ 원정대장"
+ gate_expedition_leader_industrialist_desc: "$concept_gate_expedition_leader_industrialist_desc$"
+ gate_expedition_leader_militarist: "$concept_gate_expedition_leader_militarist$ 원정대장"
+ gate_expedition_leader_militarist_desc: "$concept_gate_expedition_leader_militarist_desc$"
+ gate_expedition_leader_politician: "$concept_gate_expedition_leader_politician$ 원정대장"
+ gate_expedition_leader_politician_desc: "$concept_gate_expedition_leader_politician_desc$"
+ state_trait_gate_dwarven_tunnels: "드워프의 터널"
+ state_trait_gate_magic_soil: "마법 토양"
+ gate_dragon_health: "드래곤의 건강"
+ gate_dragon_health_desc: "이 인물은 위대한 드래곤으로부터 건강의 축복을 받았습니다."
+ gate_dragon_general: "드래곤 전술"
+ gate_dragon_general_desc: "이 인물은 위대한 드래곤으로부터 군사 지식의 축복을 받았습니다."
+ gate_arcanist_magic_sight: "비전의 눈"
+ gate_arcanist_magic_sight_desc: "이 인물은 [concept_gate_magic]으로 인해 평범한 시력을 불태워버렸습니다. 그의 눈은 타인에게 깊은 불쾌감과 섬뜩함을 안겨주지만, 대신 [concept_gate_magic]의 흐름을 감지할 수 있게 해줍니다."
+ gate_arcanist_magic_voice: "잿빛 목소리"
+ gate_arcanist_magic_voice_desc: "이 인물은 금단의 공식들을 반복적으로 읊조리다 목을 태워버렸다. 그 대가로 그가 내뱉는 모든 말에는 부자연스러운 울림이 깃들어, 주문은 더 쉽게 형성되고 명령은 더 거역하기 어려워진다."
+ gate_arcanist_bound_name: "인장 명칭"
+ gate_arcanist_bound_name_desc: "이 인물은 적대적인 [concept_gate_magic]으로부터 자신을 보호하기 위해 자신의 진명을 일부 봉인했습니다. 그 덕분에 저주와 강제, 소환 의식에 대한 저항력을 얻었지만, 그 대가로 사회적으로 위축된 존재가 되었습니다. 마치 정체성의 본질적인 일부가 더 이상 타인에게 온전히 닿지 못하는 것처럼 말입니다."
