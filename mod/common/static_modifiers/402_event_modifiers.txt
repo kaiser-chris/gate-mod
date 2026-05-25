@@ -56,6 +56,16 @@ modifier_gate_lunda_conversion = {
 	state_conversion_mult = 0.5
 }
 
+modifier_gate_lunda_tax_mugging = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	country_expenses_add = 1
+}
+
+modifier_gate_lunda_double_tax = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	state_animist_standard_of_living_add = -1
+}
+
 modifier_gate_monster_congress = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_bureaucrat_negative.dds
 	country_bureaucracy_add = -50

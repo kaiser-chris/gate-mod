@@ -1659,3 +1659,186 @@ gate_mbudye.17 = {
 		}
 	}
 }
+
+gate_mbudye.18 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:mbudye_event_state
+
+	immediate = {
+		gate_scope_random_lunda_subject = yes
+		create_character = {
+			culture = elven
+			save_scope_as = mbudye_event_character
+		}
+	}
+
+	trigger = {
+		# Only one crime at a time
+		NOT = {
+			has_variable = mbudye_investigation
+		}
+		NOT = {
+			has_modifier = modifier_gate_lunda_tax_mugging
+		}
+	}
+
+	minor_left_icon = scope:mbudye_event_character
+
+	title = gate_mbudye.18.t
+	desc = gate_mbudye.18.desc
+	flavor = gate_mbudye.18.f
+
+	event_image = {
+		video = "southamerica_public_figure_assassination"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/religion_icons/gate_golden_faith.dds
+
+	duration = 3
+
+	option = {
+		name = gate_mbudye.18.a
+		default_option = yes
+		scope:mbudye_event_state = {
+			add_modifier = {
+				name = modifier_gate_lunda_double_tax
+				months = 12
+			}
+		}
+		add_radicals = {
+			religion = rel:animist
+			value = medium_radicals
+		}
+		gate_add_mbudye_conversion_progress = {
+			country = scope:mbudye_event_country
+			conversion_progress = 5
+			support_change = -10
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					check_mbudye_support = {
+						support_change = -10
+					}
+				}
+				add = 90
+			}
+		}
+	}
+
+	option = {
+		name = gate_mbudye.18.b
+		gate_add_mbudye_conversion_progress = {
+			country = scope:mbudye_event_country
+			conversion_progress = -1
+			support_change = 0
+		}
+		hidden_effect = {
+			gate_trigger_random_mbudye_investigation_result = {
+				chance_success = 80
+				investigation_duration = 3
+			}
+			set_variable = {
+				name = mbudye_investigation
+				value = flag:mbudye_tax_collector_mugging_flag
+			}
+		}
+		add_modifier = {
+			name = modifier_gate_lunda_tax_mugging
+			multiplier = money_amount_multiplier_small
+			months = 12
+		}
+		trigger = {
+			has_law = law_type:law_secret_police
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					check_mbudye_support = {
+						support_change = 0
+					}
+				}
+				add = 90
+			}
+		}
+	}
+
+	option = {
+		name = gate_mbudye.18.c
+		gate_add_mbudye_conversion_progress = {
+			country = scope:mbudye_event_country
+			conversion_progress = -1
+			support_change = 2
+		}
+		hidden_effect = {
+			gate_trigger_random_mbudye_investigation_result = {
+				chance_success = 30
+				investigation_duration = 3
+			}
+			set_variable = {
+				name = mbudye_investigation
+				value = flag:mbudye_tax_collector_mugging_flag
+			}
+		}
+		add_modifier = {
+			name = modifier_gate_lunda_tax_mugging
+			multiplier = money_amount_multiplier_small
+			months = 12
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					check_mbudye_support = {
+						support_change = 2
+					}
+				}
+				add = 90
+			}
+		}
+	}
+
+	option = {
+		name = gate_mbudye.18.d
+		gate_add_mbudye_conversion_progress = {
+			country = scope:mbudye_event_country
+			conversion_progress = 1
+			support_change = -1
+		}
+		add_modifier = {
+			name = modifier_gate_lunda_tax_mugging
+			multiplier = money_amount_multiplier_small
+			months = 12
+		}
+		trigger = {
+			has_law = law_type:law_censorship
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					check_mbudye_support = {
+						support_change = -1
+					}
+				}
+				add = 90
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			scope:mbudye_event_character = {
+				retire_character = {
+					value = yes
+					hidden = yes
+				}
+			}
+		}
+	}
+}
