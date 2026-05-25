@@ -21,12 +21,18 @@
 	}
 
 	potential = {
-		c:GATE_MK ?= this
+		OR = {
+			c:GATE_MK ?= this
+			was_formed_from = GATE_MK
+		}
 	}
 	
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			c:GATE_MK ?= this
+			OR = {
+				c:GATE_MK ?= this
+				was_formed_from = GATE_MK
+			}
 		}
 	}	
 	
