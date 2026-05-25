@@ -1,11 +1,16 @@
 ﻿decision_gate_dwarven_tunnels = {
 	is_shown = {
-		exists = c:GATE_MK
-		this = c:GATE_MK
+		OR = {
+			c:GATE_MK ?= this
+			was_formed_from = GATE_MK
+		}
 	}
 
 	possible = {
-		this = c:GATE_MK
+		OR = {
+			c:GATE_MK ?= this
+			was_formed_from = GATE_MK
+		}
 		is_diplomatic_play_committed_participant = no
 		is_at_war = no
 		any_scope_state = {
