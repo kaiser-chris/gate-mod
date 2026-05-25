@@ -83,6 +83,12 @@ building_gate_mana_core_workshop = {
 		}
 	}
 
+	possible = {
+		owner = {
+			has_technology_researched = gate_mana_cores
+		}
+	}
+
 	unlocking_technologies = {
 		gate_mana_cores
 	}
@@ -105,6 +111,12 @@ building_gate_golem_workshop = {
 	potential = {
 		owner = {
 			is_gate_magic_country = yes
+		}
+	}
+
+	possible = {
+		owner = {
+			has_technology_researched = gate_magic_golems
 		}
 	}
 
@@ -132,6 +144,12 @@ building_gate_golem_depot = {
 	potential = {
 		owner = {
 			is_gate_magic_country = yes
+		}
+	}
+
+	possible = {
+		owner = {
+			has_technology_researched = gate_magic_golems
 		}
 	}
 
