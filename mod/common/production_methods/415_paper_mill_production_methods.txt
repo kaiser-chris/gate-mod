@@ -4,23 +4,48 @@
 
 pm_gate_runic_paper = {
 	texture = "gfx/interface/icons/production_method_icons/gate_runic_paper.dds"
+	replacement_if_valid = pm_gate_bleached_runic_paper
 
 	unlocking_technologies = {
 		gate_simple_rune_carving
 	}
 
-	building_modifiers = {
+	building_modifiers = {			# Aim 1p/6w - Vanilla range 1p/10w to 1p/6.25w to 1p/5w
 		workforce_scaled = {
 			# output goods
-			goods_output_paper_add = -20
-			goods_output_gate_runic_paper_add = 50
-		}
+			goods_output_paper_add = -20			# -600
+			goods_output_gate_runic_paper_add = 30	# +1200
+		}											# =600
 		level_scaled = {
-			building_employment_clerks_add = 500
-			building_employment_laborers_add = -1000
-			building_employment_gate_mages_add = 500
-		}
+			building_employment_clerks_add = 400		# Weight +600
+			building_employment_gate_mages_add = 500	# Weight +3000
+		}												# =3600
+	}					# 1p/6w - tasteful upgrade at sulphite pulping, meaningful upgrade at pulp pressing
+}
+
+pm_gate_bleached_runic_paper = {
+	texture = "gfx/interface/icons/production_method_icons/gate_runic_paper.dds"
+	is_hidden_when_unavailable = yes
+
+	unlocking_technologies = {
+		gate_simple_rune_carving
 	}
+	
+	unlocking_production_methods = {
+		pm_bleached_paper
+	}
+
+	building_modifiers = {			# Aim 1p/4w - Vanilla range 1p/10w to 1p/6.25w to 1p/5w
+		workforce_scaled = {
+			# output goods
+			goods_output_paper_add = -20			# -600
+			goods_output_gate_runic_paper_add = 30	# +1200
+		}											# =600
+		level_scaled = {
+			building_employment_clerks_add = 400		# Weight +600
+			building_employment_gate_mages_add = 300	# Weight +1800
+		}												# =2400
+	}					# 1p/4w - tasteful upgrade at bleached paper
 }
 
 pm_gate_focus_runic_paper = {
@@ -29,17 +54,35 @@ pm_gate_focus_runic_paper = {
 	unlocking_technologies = {
 		gate_simple_rune_carving
 	}
+	
+	unlocking_production_methods = {
+		pm_sulfite_pulping
+		pm_bleached_paper
+	}
 
-	building_modifiers = {
+	building_modifiers = {			# Aim 1p/4.5w - Vanilla range 1p/10w to 1p/6.25w to 1p/5w
 		workforce_scaled = {
 			# output goods
-			goods_output_paper_add = -40
-			goods_output_gate_runic_paper_add = 100
-		}
+			goods_output_paper_add = -40			# -1200
+			goods_output_gate_runic_paper_add = 60	# +2400
+		}											# =1200
 		level_scaled = {
-			building_employment_clerks_add = 500
-			building_employment_laborers_add = -1000
-			building_employment_gate_mages_add = 500
-		}
-	}
-}
+			building_employment_clerks_add = 1200		# Weight +1800
+			building_employment_gate_mages_add = 600	# Weight +3600
+		}												# =5400
+	}					# 1p/4.5w - tasteful upgrade at bleached paper, strong export option at sulphite pulping
+}						# too much runic to be worth it otherwise unless you have a disproportionate need for runic
+
+# OG For reference:
+#	building_modifiers = {			# Vanilla range 1p/10w to 1p/5w
+#		workforce_scaled = {
+#			# output goods
+#			goods_output_paper_add = -20			# -600
+#			goods_output_gate_runic_paper_add = 50	# +2000
+#		}											# =1400
+#		level_scaled = {
+#			building_employment_clerks_add = 500		# Weight +750
+#			building_employment_laborers_add = -1000	# Weight -1000
+#			building_employment_gate_mages_add = 500	# Weight +3000
+#		}												# =2750
+#	}					# 1p/1.96w - no good.
