@@ -42,6 +42,7 @@ gate_eternal_monarch = {
     character_modifier = {
         character_gate_immortal = yes
         character_popularity_add = 50
+        character_prominence_add = 50
     }
 
     # Reminder: this would only come into effect if this character is or becomes an Interest Group Leader
@@ -59,7 +60,7 @@ gate_eternal_monarch = {
         owner ?= {
             has_law = law_type:law_gate_vampire_monarchy
         }
-        is_ruler_of_any_country = yes
+        is_ruler_of_own_country = yes
         has_template = gate_vampire_ruler_template
     }
 
