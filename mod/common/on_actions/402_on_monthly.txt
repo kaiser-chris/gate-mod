@@ -16,7 +16,7 @@ on_monthly_ui_check = {
                 NOT = {
                     any_in_global_list = {
                         variable = com_topbar_items
-                        var:com_name ?= flag:gg_topbar_mana_saturation
+                        this = flag:gg_topbar_mana_saturation
                     }
                 }
             }
@@ -35,7 +35,7 @@ on_monthly_ui_check = {
                 NOT = {
                     any_in_global_list = {
                         variable = com_topbar_items
-                        var:com_name ?= flag:gg_topbar_magic_innovation
+                        this = flag:gg_topbar_magic_innovation
                     }
                 }
             }

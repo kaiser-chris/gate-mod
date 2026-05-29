@@ -334,7 +334,7 @@ gate_activate_magic_researcher = {
 					clear_variable_list = com_journal_characters
 					add_to_variable_list = {
 						name = com_journal_characters
-						target = scope:magic_researcher
+						target = prev.var:gate_magic_researcher
 					}
 				}
 				# Our researcher complaining about the missing institute
@@ -346,7 +346,7 @@ gate_activate_magic_researcher = {
 							}
 						}
 					}
-					scope:magic_researcher = {
+					var:gate_magic_researcher = {
 						set_variable = {
 							name = com_opinion
 							value = flag:character_opinion_magic_researcher_missing_institute
