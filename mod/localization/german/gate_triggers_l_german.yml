@@ -28,9 +28,9 @@
  trigger_gate_expedition_has_covered: "#default_text Hat einen unerforschten Teil der [concept_gate_expedition] Karte.#!" #deepl:663241663
  trigger_gate_expedition_has_no_activity: "#default_text Wir machen nicht schon eine [Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')].#!" #deepl:3118854392
 
- trigger_gate_requirement_low_mana_density: "Um diese [concept_building] zu erstellen, muss ein Bundesstaat über eine [concept_gate_mana_density] mit mindestens [TopScope.ScriptValue('gate_low_mana_density_threshhold')] verfügen." #deepl:2491139237
- trigger_gate_requirement_medium_mana_density: "Um diese [concept_building] zu erstellen, muss ein Bundesstaat über eine [concept_gate_mana_density] mit mindestens [TopScope.ScriptValue('gate_medium_mana_density_threshhold')] verfügen." #deepl:3625281176
- trigger_gate_requirement_max_mana_density: "Um diese [concept_building] zu erstellen, muss ein Bundesstaat über eine [concept_gate_mana_density] mit mindestens [TopScope.ScriptValue('gate_maximum_mana_density')] verfügen." #deepl:2986345094
+ trigger_gate_requirement_low_mana_density: "Um diese [concept_building] einzurichten, muss ein Bundesstaat über eine [concept_gate_mana_density] mit der Adresse [TopScope.ScriptValue('gate_low_mana_density_threshhold')] verfügen." #deepl:2132890702
+ trigger_gate_requirement_medium_mana_density: "Um diese [concept_building] zu erstellen, muss ein Bundesstaat über eine [concept_gate_mana_density] von mindestens [TopScope.ScriptValue('gate_medium_mana_density_threshhold')] verfügen." #deepl:2646883508
+ trigger_gate_requirement_max_mana_density: "Um diese [concept_building] zu erstellen, muss ein Bundesstaat über eine [concept_gate_mana_density] mit mindestens [TopScope.ScriptValue('gate_maximum_mana_density')] verfügen." #deepl:3902263656
 
  trigger_gate_ethic_has_all: "Hat alle möglichen [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')] ausgewählt" #deepl:1152229089
  trigger_gate_ethic_has_all_not: "Hat nicht alle möglichen Optionen ausgewählt [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')]" #deepl:4243568538

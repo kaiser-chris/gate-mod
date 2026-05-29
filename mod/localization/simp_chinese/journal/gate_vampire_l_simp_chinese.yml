@@ -12,11 +12,11 @@
  je_gate_vampire_emergence_button_purge: "清洗这些怪物！"
  je_gate_vampire_emergence_button_purge_desc: "这些[GetCulture('vampire').GetName]怪物必须滚出我们的国家！"
  je_gate_vampire_emergence_button_decapitate: "撤换领导人" #deepl:1036669402
- je_gate_vampire_emergence_button_decapitate_desc: "邪教头目必须死！" #deepl:3977557813
- je_gate_vampire_emergence_button_integrate: "整合[GetCulture('vampire').GetNameNoFormatting]用户群" #deepl:2939045735
- je_gate_vampire_emergence_button_integrate_desc: "既然他们的首领已死，也许我们可以将[GetCulture('vampire').GetName]的居民纳入我们的体系，而不是把他们全都杀光。" #deepl:271430658
- je_gate_vampire_emergence_trigger_truth_known: "人们已经知道了关于[concept_gate_vampirism]的真相" #deepl:847730844
- je_gate_vampire_emergence_trigger_decapitated_true: "“[GetReligion('gate_lunar_masquerade').GetName]”的领导人已去世" #deepl:1713254295
+ je_gate_vampire_emergence_button_decapitate_desc: "邪教头目必须死！"
+ je_gate_vampire_emergence_button_integrate: "整合[GetCulture('vampire').GetNameNoFormatting]人口"
+ je_gate_vampire_emergence_button_integrate_desc: "既然他们的首领已死，也许我们可以将[GetCulture('vampire').GetName]的居民纳入我们的体系，而不是把他们全都杀光。"
+ je_gate_vampire_emergence_trigger_truth_known: "人们已经知道了关于[concept_gate_vampirism]的真相"
+ je_gate_vampire_emergence_trigger_decapitated_true: "[GetReligion('gate_lunar_masquerade').GetName]的领导人已去世" #deepl:1713254295
  je_gate_vampire_emergence_trigger_decapitated_false: "“[GetReligion('gate_lunar_masquerade').GetName]”组织的头目还活着" #deepl:1292677351
 # Flags
  gate_vampire_cult_flag: "让[GetReligion('gate_lunar_masquerade').GetNameNoFormatting]就此开始吧。"
@@ -41,7 +41,7 @@
  gate_vampire.5.t: "绯红审判"
  gate_vampire.5.d: "人们已经知晓真相！[GetCulture('vampire').GetName]需要血液才能生存。现在我们需要做出决定。"
  gate_vampire.5.f: "低语化作呐喊，真相如野火燎原——永恒恩赐需要鲜血献祭。民众曾痴迷于永生与力量的承诺，如今却在惊恐中退缩：流浪者接连失踪，隐秘集会暗流涌动，羸弱者在寂静中遭到清洗的传闻甚嚣尘上。月影舞会这个昔日的边缘教派，已将触角伸向权力巅峰，用天鹅绒包裹的铁腕掌控着宫廷与议会。\n\n街头巷尾沸腾着不安。牧师在布道坛上厉声谴责诅咒，商贾与农夫同声质问将要付出的代价。然而权贵阶层的耳语别有深意：这份恐怖是否与获得的力量等价？当反抗的暗潮涌动，整个国度的命运悬于一线——民众会揭竿而起，还是统治者的嗜血渴求将成为律法？"
- gate_vampire.5.a: "永恒是值得的！"
+ gate_vampire.5.a: "这太恶心了。" #deepl:2233457907
  gate_vampire.6.t: "不朽赞助"
  gate_vampire.6.d: "[SCOPE.sCharacter('gate_vampire_leader').GetFullName]成为[SCOPE.sCharacter('gate_vampire_leader').GetInterestGroup.GetNameWithCountryVariant]的领袖。"
  gate_vampire.6.f: "#v [SCOPE.sCharacter('gate_vampire_leader').GetInterestGroup.GetNameNoFormatting]#!的商人、工匠与小土地所有者们，找到了意想不到的庇护者——#v [SCOPE.sCharacter('gate_vampire_leader').GetFullNameNoFormatting]#!。这位曾被视作神秘邪教首领的存在，如今却直指他们内心最深层的渴望——秩序、繁荣，以及庇护。他的影响力并非源于武力，而源于恩惠：悄悄偿还的贷款、莫名身败名裂的竞争对手、因无名资助者奇迹般起死回生的作坊......"
@@ -56,38 +56,38 @@
  gate_vampire.8.a: "令人担忧。"
  gate_vampire.9.t: "《血之君主的陨落》" #deepl:24657491
  gate_vampire.9.d: "针对[GetPlayer.MakeScope.Var('gate_character_vampire').GetCharacter.GetFullName]的致命打击已准备就绪。" #deepl:3618505831
- gate_vampire.9.f: "在熄灭的灯火下，紧闭的门后，政府的黑衣军团悄然集结，神父与炮兵军官并肩而立，聆听着最后的命令。首都各处，效忠的军团封锁了大道，龙骑兵分队包围了贵族区，而那些被赋予神圣力量的利刃，已发给了这支精挑细选的突击队——他们将要在黎明前突袭吸血鬼的巢穴。" #deepl:3791721179
- gate_vampire.9.a: "杀了他。" #deepl:4093082665
- gate_vampire.9.b: "中止该操作。" #deepl:3592045309
+ gate_vampire.9.f: "在熄灭的灯火下，紧闭的门后，政府的黑衣军团悄然集结，神父与炮兵军官并肩而立，聆听着最后的命令。首都各处，效忠的军团封锁了大街小巷，龙骑兵分队包围了贵族区，而那些被选中在黎明前突袭吸血鬼巢穴的精锐突击队，也已领到了神圣的利刃。" #deepl:3791721179
+ gate_vampire.9.a: "杀了他。"
+ gate_vampire.9.b: "中止该操作。"
  gate_vampire.9.b.delay: "我们还要过一阵子才能再试一次" #deepl:1612212464
  gate_vampire.10.t: "《深红聚落》" #deepl:3124419516
- gate_vampire.10.desc: "随着“[GetReligion('gate_lunar_masquerade').GetName]”的领袖离去，哇，我们将如何对待“[GetCulture('vampire').GetName]”的民众呢？" #deepl:1669865962
- gate_vampire.10.f: "随着“血君主”的陨落，国家从战争转向了审判。无论是在议会、军营，还是烛光映照的街头，一个问题如今盖过了其他一切：那些幸存的吸血鬼究竟是作为公民立足，还是在容忍下生存，抑或在法律之下屈居次等地位。" #deepl:108441323
+ gate_vampire.10.desc: "随着“[GetReligion('gate_lunar_masquerade').GetName]”的领袖离去，我们该如何对待“[GetCulture('vampire').GetName]”的民众呢？" #deepl:1669865962
+ gate_vampire.10.f: "随着“血君主”的陨落，国家从战争转向了审判。无论是在议会、军营，还是烛光映照的街头，一个问题如今盖过了其他所有议题：那些幸存的吸血鬼究竟是作为公民立足，还是在容忍下生存，抑或是在法律之下屈居次等地位。" #deepl:108441323
  gate_vampire.10.a: "把他们纳入麾下。" #deepl:165305267
- gate_vampire.10.b: "就让他们随它去吧。" #deepl:601514909
+ gate_vampire.10.b: "就别管他们了。" #deepl:601514909
  gate_vampire.10.c: "他们是二等公民。" #deepl:202607558
  gate_vampire.10.d: "必须铲除那些野兽！" #deepl:3192572604
  gate_vampire.11.t: "《猩红圣餐》" #deepl:3186904668
  gate_vampire.11.d: "“[GetReligion('gate_lunar_masquerade').GetName]”举办了一场大规模皈依活动，数千人皈依了[concept_gate_vampirism]。" #deepl:2589796941
- gate_vampire.11.f: "在灯火通明的拱门之下，在冷月凝视之下，圣殿骑士团（[GetReligion('gate_lunar_masquerade').GetNameNoFormatting]）聚集了成千上万的信徒。破晓时分，广场归于寂静，那些以凡人之身进入的人，离去时面色苍白，嘴角带着锋利的微笑，唇间铭刻着永恒的誓言。" #deepl:1685243371
- gate_vampire.11.a: "关于。" #deepl:2089514037
+ gate_vampire.11.f: "在灯火通明的拱门之下，在冷月凝视之下，圣殿骑士团（[GetReligion('gate_lunar_masquerade').GetNameNoFormatting]）聚集了成千上万的信徒。破晓时分，广场归于寂静，那些以凡人之身进入的人，离去时面色苍白，嘴角挂着冷笑，唇间呢喃着永恒的誓言。" #deepl:1685243371
+ gate_vampire.11.a: "令人担忧。" #deepl:2089514037
  gate_vampire.12.t: "《红色洗礼之夜》" #deepl:2917672190
  gate_vampire.12.d: "“[GetReligion('gate_lunar_masquerade').GetName]”举办了一场大规模皈依活动，数千人皈依了[concept_gate_vampirism]。" #deepl:2589796941
- gate_vampire.12.f: "这场始于音乐、面具与低语誓言的庆典，最终演变成一场血祭。在太阳重返之前，整个城区已投身于[GetReligion('gate_lunar_masquerade').GetNameNoFormatting]的怀抱，并以崭新的面貌重生。" #deepl:671848860
- gate_vampire.12.a: "关于。" #deepl:2089514037
+ gate_vampire.12.f: "这场始于音乐、面具与低语誓言的庆典，最终演变成了一场血祭。在太阳重返之前，整个街区已投身于“[GetReligion('gate_lunar_masquerade').GetNameNoFormatting]”的怀抱，并以崭新的面貌重生。" #deepl:671848860
+ gate_vampire.12.a: "令人担忧。" #deepl:2089514037
  gate_vampire.13.t: "月光下的转角" #deepl:3872132078
  gate_vampire.13.d: "“[GetReligion('gate_lunar_masquerade').GetName]”举办了一场大规模皈依活动，数千人皈依了[concept_gate_vampirism]。" #deepl:2589796941
- gate_vampire.13.f: "在银色旗帜与天鹅绒帷幕之下，邪教抛开了所有的隐秘，召唤民众上前。先是一人接一人，继而人潮涌动，男女们纷纷将自己跳动的心脏献出，换取不死之身的静谧恩典。" #deepl:4198794884
- gate_vampire.13.a: "关于。" #deepl:2089514037
+ gate_vampire.13.f: "在银色旗帜与天鹅绒帷幔之下，邪教抛开了所有的隐秘，召唤民众上前。先是一人接一人，继而人潮涌动，男女们纷纷将自己跳动的心脏献出，换取不死之身的静谧恩典。" #deepl:4198794884
+ gate_vampire.13.a: "令人担忧。" #deepl:2089514037
  gate_vampire.14.t: "《蒙面升天》" #deepl:287594170
  gate_vampire.14.d: "“[GetReligion('gate_lunar_masquerade').GetName]”举办了一场大规模皈依活动，数千人皈依了[concept_gate_vampirism]。" #deepl:2589796941
- gate_vampire.14.f: "在一个充满仪式与狂喜的夜晚，月血教团（[GetReligion('gate_lunar_masquerade').GetNameNoFormatting]）将皈依转化为一场盛大的仪式。贵族、劳工与流浪者皆步入帷幕之后，再现世时已化身为月与血之子。" #deepl:720644547
- gate_vampire.14.a: "关于。" #deepl:2089514037
+ gate_vampire.14.f: "在那充满仪式与狂喜的漫漫长夜里，月血仪式（[GetReligion('gate_lunar_masquerade').GetNameNoFormatting]）将皈依化作了一场壮观的盛宴。贵族、劳工与流浪者皆步入帷幕之后，重生为月之子与血之子。" #deepl:720644547
+ gate_vampire.14.a: "令人担忧。" #deepl:2089514037
  gate_vampire.15.t: "《破碎的面纱》" #deepl:1821040819
  gate_vampire.15.d: "“[GetReligion('gate_lunar_masquerade').GetName]”的行动遭遇了挫折。" #deepl:2243246028
- gate_vampire.15.f: "一次灾难性的突袭行动揭露了隐秘的庙宇，查获了血腥的账簿，并将“[GetReligion('gate_lunar_masquerade').GetNameNoFormatting]”教派中备受尊崇的人物拖上了公开的审判台。该教派的神秘光环首次让位于恐慌、屈辱和公开的溃逃。" #deepl:1127793931
+ gate_vampire.15.f: "一场灾难性的突袭行动揭露了隐秘的庙宇，查获了血之账簿，并将“血之圣殿”（[GetReligion('gate_lunar_masquerade').GetNameNoFormatting]）中备受尊崇的人物拖上了公开的审判台。该教派的神秘氛围首次让位于恐慌、屈辱和公开的溃逃。" #deepl:1127793931
  gate_vampire.15.a: "好。" #deepl:3593588592
  gate_vampire.16.t: "灰烬祭坛之夜" #deepl:4214743448
  gate_vampire.16.d: "“[GetReligion('gate_lunar_masquerade').GetName]”的行动遭遇了挫折。" #deepl:2243246028
  gate_vampire.16.f: "无论是出于破坏、背叛还是神怒，几场盛大的皈依仪式都以烈火与屠杀告终。仅在一个夜晚，[GetReligion('gate_lunar_masquerade').GetNameNoFormatting]不仅失去了数百名追随者，更失去了对其崛起势在必行的幻想。" #deepl:3621514589
- gate_vampire.16.a: "真有趣。" #deepl:654744515
+ gate_vampire.16.a: "真有意思。" #deepl:654744515

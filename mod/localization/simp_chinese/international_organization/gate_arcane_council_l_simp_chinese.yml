@@ -1,13 +1,13 @@
 ﻿l_simp_chinese:
- io_gate_arcane_council: "奥术议会" #deepl:899135299
- io_gate_arcane_council_reason: "在[concept_gate_magic]（奥术魔法）普遍且威力强大的世界里，[concept_gate_magic_users]（奥术师）能够自由穿梭于各州之间，各国因此意识到有必要开展合作。[concept_gate_arcane_council]（奥术魔法协调委员会）的成立，正是为了协调针对奥术实践的国际规则与限制。" #deepl:1916466954
+ io_gate_arcane_council: "奥术委员会"
+ io_gate_arcane_council_reason: "在一个[concept_gate_magic]普遍存在且强大的[concept_gate_magic_users]可以自由穿梭于各个国家之间的世界里，各国发现有必要进行合作。[concept_gate_arcane_council]应运而生，负责协调国际间关于秘法实践的规则与限制。"
  io_gate_arcane_council_election: "[concept_gate_arcane_council_high_mage]的任期贯穿其整个职业生涯。当现任[concept_gate_arcane_council_high_mage]退休或去世时，将举行新的选举。所有成员[Concept('concept_country','$concept_countries$')]的[concept_gate_magic_researcher]均有资格参选。[AddLocalizationIf(GetPlayer.MakeScope.Var('gate_joined_mage_council').IsSet, 'io_gate_arcane_council_election_involved')]" #deepl:272868124
- io_gate_arcane_council_election_involved: "\n \n 我们的[concept_gate_magic_researcher]网站的选举评分是#tooltippable  #tooltip: [GetRawTextTooltipTag('io_gate_arcane_council_election_score_tooltip')] [GetPlayer.MakeScope.ScriptValue('gate_arcane_council_election_score')|v] #! #!，我们很可能会在下次选举中[GetPlayer.GetCustom('gate_arcane_council_election_indicator')]。" #deepl:2891667291
+ io_gate_arcane_council_election_involved: "\n \n 我们的[concept_gate_magic_researcher]网站的选举评分是#tooltippable  #tooltip: [GetRawTextTooltipTag('io_gate_arcane_council_election_score_tooltip')] [GetPlayer.MakeScope.ScriptValue('gate_arcane_council_election_score')|v] #! #! 而且我们很可能会在下次选举中[GetPlayer.GetCustom('gate_arcane_council_election_indicator')]。" #deepl:2891667291
  io_gate_arcane_council_election_indicator_loss: "#r  访问 #!" #deepl:3926816450
  io_gate_arcane_council_election_indicator_win: "#g  win #!" #deepl:3291145026
  io_gate_arcane_council_election_score_tooltip: "我们的[concept_gate_magic_researcher]在[concept_gate_arcane_council_high_mage]上的总评分为[GetPlayer.MakeScope.ScriptValue('gate_arcane_council_election_score')|v]，原因如下：#indent_newline:3 \n [GetPlayer.MakeScope.GetScriptValueDesc('gate_arcane_council_election_score')] #!" #deepl:2154648864
  io_gate_arcane_council_status_election: "该组织目前正在选举新一届[concept_gate_arcane_council_high_mage]。" #deepl:2521965666
- io_gate_arcane_council_leader_title: "大魔导师" #deepl:3032438028
+ io_gate_arcane_council_leader_title: "至高法师"
  io_gate_arcane_council_leader_tooltip: "#header  [concept_gate_arcane_council_high_mage] [JournalEntry.MakeScope.Var('com_interorg_chair_var').GetCharacter.GetFullName] #! \n [JournalEntry.MakeScope.Var('com_interorg_chair_var').GetCharacter.GetFullName] [JournalEntry.MakeScope.Var('com_interorg_chair_var').GetCharacter.GetCountry.GetName] 目前是 [concept_gate_arcane_council] 的 [concept_gate_arcane_council_high_mage]。\n \n 他们的选举评分是 [JournalEntry.MakeScope.Var('com_interorg_chair_var').GetCharacter.GetCountry.MakeScope.ScriptValue('gate_arcane_council_election_score')|v]，预计将在下次选举中 [JournalEntry.MakeScope.Var('com_interorg_chair_var').GetCharacter.GetCountry.GetCustom('gate_arcane_council_election_indicator')]。" #deepl:175225360
  sb_gate_arcane_council_research_cooperation: "开展科研合作" #deepl:347480126
  sb_gate_arcane_council_research_cooperation_desc: "请使用我们的“[concept_influence]”来推动全体成员之间的联合研究计划。" #deepl:1676093222
@@ -18,32 +18,32 @@
  sb_gate_arcane_council_cancel_regulations: "废除战场条例" #deepl:2138714939
  sb_gate_arcane_council_cancel_regulations_desc: "允许会员再次使用 [GetMobilizationOption('mobilization_option_gate_no_regulations').GetName] 和 [GetMobilizationOption('mobilization_option_gate_basic_regulations').GetName] [concept_mobilization_option]。" #deepl:4008094272
  modifier_gate_arcane_council_base: "《基础奥术条例》" #deepl:443057317
- modifier_gate_arcane_council_research_cooperation: "研究合作" #deepl:3645043162
- modifier_gate_arcane_council_forbid_no_regulations: "禁止 $mobilization_option_gate_no_regulations$ $concept_mobilization_option$" #deepl:2362881304
- modifier_gate_arcane_council_forbid_basic_regulations: "禁止 $mobilization_option_gate_basic_regulations$ $concept_mobilization_option$" #deepl:3078314941
- modifier_gate_arcane_council_action_cost: "[concept_gate_arcane_council] 行动成本" #deepl:2855658571
+ modifier_gate_arcane_council_research_cooperation: "研究合作"
+ modifier_gate_arcane_council_forbid_no_regulations: "禁止$mobilization_option_gate_no_regulations$$concept_mobilization_option$"
+ modifier_gate_arcane_council_forbid_basic_regulations: "禁止$mobilization_option_gate_basic_regulations$$concept_mobilization_option$"
+ modifier_gate_arcane_council_action_cost: "[concept_gate_arcane_council]行动花费"
  modifier_gate_arcane_council_incident_cost: "法师事件成本" #deepl:223225525
  decision_gate_found_arcane_council: "找到了$io_gate_arcane_council$" #deepl:2510747295
  decision_gate_found_arcane_council_desc: "找到了[concept_gate_arcane_council]。" #deepl:3262111014
- decision_gate_join_arcane_council: "加入$io_gate_arcane_council$" #deepl:3999137856
- decision_gate_join_arcane_council_desc: "加入[concept_gate_arcane_council]。" #deepl:71247284
- decision_gate_leave_arcane_council: "退出$io_gate_arcane_council$" #deepl:1141878380
- decision_gate_leave_arcane_council_desc: "退出[concept_gate_arcane_council]。" #deepl:1159437865
- gate_arcane_council_event_hint: "通过建立一个国际网络安全监管机构（[concept_gate_arcane_council]），对[concept_gate_magic]进行国际监管，有望防止此类事件在未来再次发生。" #deepl:767825992
+ decision_gate_join_arcane_council: "加入$io_gate_arcane_council$"
+ decision_gate_join_arcane_council_desc: "加入[concept_gate_arcane_council]"
+ decision_gate_leave_arcane_council: "退出$io_gate_arcane_council$"
+ decision_gate_leave_arcane_council_desc: "退出[concept_gate_arcane_council]"
+ gate_arcane_council_event_hint: "通过建立一个国际网络安全监管机构（[concept_gate_arcane_council]）来对[concept_gate_magic]进行监管，有望防止此类事件在未来再次发生。" #deepl:767825992
  gate_arcane_council.1.t: "外来魔法，本土影响" #deepl:2618697781
  gate_arcane_council.1.d: "一辆来自 [TopScope.sC('source_country').GetName] 的[Concept('concept_gate_magic_users','$concept_gate_magic_user$')]轿车在 [TopScope.sS('target_state').GetName] 发生失控，导致 [concept_devastation]。\n \n $gate_arcane_council_event_hint$" #deepl:1275259305
- gate_arcane_council.1.f: "一位来自[TopScope.sC('source_country').GetNameNoFormatting]的造访法师在与[GetPlayer.GetAdjectiveNoFormatting]当地居民发生冲突时失去了控制。由此引发的魔法爆炸摧毁了附近的街道，并已引发市民、商人和行政官员的骚动。如果处理不当，这一事件可能会同时损害本国的公共秩序以及与[TopScope.sC('source_country').GetNameNoFormatting]的关系。" #deepl:1079261975
+ gate_arcane_council.1.f: "一位来自[TopScope.sC('source_country').GetNameNoFormatting]的造访法师在与[GetPlayer.GetAdjectiveNoFormatting]当地居民发生冲突时失去了控制。由此引发的魔法爆炸摧毁了附近的街道，并已引发市民、商人和行政官员的普遍不安。如果处理不当，这一事件可能会同时损害本地的公共秩序以及与[TopScope.sC('source_country').GetNameNoFormatting]的关系。" #deepl:1079261975
  gate_arcane_council.1.a: "要求[TopScope.sC('source_country').GetNameNoFlag]作出解释。" #deepl:2732754887
  gate_arcane_council.1.b: "别理那件事。" #deepl:1652035745
  gate_arcane_council.1.c: "专注于重建。" #deepl:38167414
  gate_arcane_council.2.t: "《异乡人的诅咒》" #deepl:4133570612
  gate_arcane_council.2.d: "来自 [TopScope.sC('source_country').GetName] 的德鲁伊 [Concept('concept_gate_magic_users','$concept_gate_magic_user$')] 在 [TopScope.sS('target_state').GetName] 引发了 [GetHarvestConditionType('drought').GetName] [concept_harvest_condition]。\n \n $gate_arcane_council_event_hint$" #deepl:3839380
- gate_arcane_council.2.f: "据信，一位来自[TopScope.sC('source_country').GetNameNoFormatting]的德鲁伊给[TopScope.sS('target_state').GetNameNoFormatting]的田野带来了毁灭。几周前还生机勃勃的田野，如今已变得荒芜灰暗，但初步报告显示，这可能是某位狂热分子的单独行动，而非官方行为。这种区别在外交层面或许重要，但对于眼睁睁看着生计在土地中消亡的农民来说，却毫无慰藉。" #deepl:1987967690
+ gate_arcane_council.2.f: "据信，一位来自[TopScope.sC('source_country').GetNameNoFormatting]的德鲁伊给[TopScope.sS('target_state').GetNameNoFormatting]的田野带来了毁灭。几周前还生机勃勃、丰饶富饶的田野，如今已变得荒芜灰暗，但初步报告显示，这可能是某位狂热分子的单独行动，而非官方行为。这种区别在外交层面或许重要，但对于眼睁睁看着生计在土地中消亡的农民来说，却毫无慰藉可言。" #deepl:1987967690
  gate_arcane_council.2.a: "要求[TopScope.sC('source_country').GetNameNoFlag]作出解释。" #deepl:2732754887
  gate_arcane_council.2.b: "别理那件事。" #deepl:1652035745
  gate_arcane_council.2.c: "重点是帮助我们的农民。" #deepl:2871400520
  gate_arcane_council_election_score_no_researcher: "编号：[concept_gate_magic_researcher]" #deepl:1059847779
- gate_arcane_council_election_score_experience: "[concept_gate_character_experience]" #deepl:3056872711
- gate_arcane_council_election_score_trait_bound_name: "[GetCharacterTrait('gate_arcanist_bound_name').GetName] [concept_character_trait]" #deepl:3244357862
- gate_arcane_council_election_score_trait_magic_sight: "[GetCharacterTrait('gate_arcanist_magic_sight').GetName] [concept_character_trait]" #deepl:2022435642
- gate_arcane_council_election_score_trait_magic_voice: "[GetCharacterTrait('gate_arcanist_magic_voice').GetName] [concept_character_trait]" #deepl:3718386369
+ gate_arcane_council_election_score_experience: "[concept_gate_character_experience]"
+ gate_arcane_council_election_score_trait_bound_name: "[GetCharacterTrait('gate_arcanist_bound_name').GetName] [concept_character_trait]"
+ gate_arcane_council_election_score_trait_magic_sight: "[GetCharacterTrait('gate_arcanist_magic_sight').GetName] [concept_character_trait]"
+ gate_arcane_council_election_score_trait_magic_voice: "[GetCharacterTrait('gate_arcanist_magic_voice').GetName] [concept_character_trait]"
