@@ -1,7 +1,7 @@
 ﻿l_simp_chinese:
  effect_gate_add_magic_innovation: "增加[SCOPE.GetValue('added_innovation')|+=0][concept_gate_magic_innovation]"
  effect_gate_add_mana_density: "增加[SCOPE.GetValue('added_mana_density')|+=0][concept_gate_mana_density]"
- effect_gate_learn_magic: "[SCOPE.sCountry('gate_magic_learner').GetName]学习[concept_gate_magic_knowledge]"
+ effect_gate_learn_magic: "[SCOPE.sCountry('gate_magic_learner').GetName]掌握了[concept_gate_magic_knowledge]"
  effect_gate_establish_treaty: "在[SCOPE.GetLocalVariable('gate_treaty_source').GetCountry.GetName]与[SCOPE.GetLocalVariable('gate_treaty_target').GetCountry.GetName]之间建立#bold [SCOPE.GetLocalVariable('gate_treaty_name').GetFlagName]#![concept_treaty]"
  effect_pops_embrace_vampirism: "我国部分人口接受了[concept_gate_vampirism]，并转变为[GetCulture('vampire').GetName]文化与[GetReligion('gate_lunar_masquerade').GetName]宗教"
  effect_characters_embrace_vampirism: "我们的领袖和政治家接受了[concept_gate_vampirism]，并转变为[GetCulture('vampire').GetName]文化与[GetReligion('gate_lunar_masquerade').GetName]宗教"
@@ -10,11 +10,11 @@
  effect_gate_expedition_open_map: "打开[concept_gate_expedition_map]"
  effect_gate_expedition_change_budget: "[concept_gate_expedition_budget]改变[SCOPE.GetValue('budget_change')|+=0]"
  effect_gate_expedition_start_activity: "开启为期[SCOPE.GetValue('months')|0v]个月的[Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')]"
- effect_gate_start_magic_project: "启动#bold [SCOPE.GetLocalVariable('gate_project_name').GetFlagName]#![concept_gate_project]。该项目将耗时#v [SCOPE.GetLocalVariable('months').GetValue|0]个月#!，并将每月耗费我们@money!#r ‑#![SCOPE.GetLocalVariable('monthly_cost').GetValue|-0v]资金。"
- effect_gate_start_magic_infrastructure_project: "开始#bold [SCOPE.GetLocalVariable('gate_project_name').GetFlagName] #! [concept_gate_project] 。该项目将耗费#v [SCOPE.GetLocalVariable('construction').GetValue|0] #! [concept_construction] ，每月将花费我们@money!#r  -#![SCOPE.GetLocalVariable('monthly_cost').GetValue|-0v] 。而以活动基础设施为重点的[Concept('concept_gate_project','$concept_gate_projects$')] 将使我们的正常[concept_construction] 产出减少一半#v #! ！" #deepl:4011660078
+ effect_gate_start_magic_project: "启动#bold [SCOPE.GetLocalVariable('gate_project_name').GetFlagName]#![concept_gate_project]。该项目将耗时#v [SCOPE.GetLocalVariable('months').GetValue|0]个月#!，并将每月耗费我们@money!#r ‑#![SCOPE.GetLocalVariable('monthly_cost').GetValue|-0v]资金"
+ effect_gate_start_magic_infrastructure_project: "开始 #bold [SCOPE.GetLocalVariable('gate_project_name').GetFlagName]#! [concept_gate_project]。这项工程将消耗 #v [SCOPE.GetLocalVariable('construction').GetValue|0]#! [concept_construction]，并每月花费我们 @money!#r -#![SCOPE.GetLocalVariable('monthly_cost').GetValue|-0v]。在激活期间，专注于基础设施的 [Concept('concept_gate_project','$concept_gate_projects$')] 将使我们的常规 [concept_construction] 产出减少 #v 一半#!。"
  effect_gate_stop_magic_project: "停止当前进行的[concept_gate_project]"
- effect_gate_activate_magic_researcher: "[SCOPE.GetLocalVariable('gate_magic_researcher').GetCharacter.GetFullNameWithTitle] 将成为我们的新[concept_gate_magic_researcher]" #deepl:3813005440
- effect_gate_found_arcane_council: "[THIS.GetCountry.GetName] 创立了[concept_gate_arcane_council]。" #deepl:3518858866
- effect_gate_join_arcane_council: "[THIS.GetCountry.GetName] 加入[concept_gate_arcane_council]。" #deepl:3903757967
- effect_gate_leave_arcane_council: "[THIS.GetCountry.GetName] 离开[concept_gate_arcane_council]。" #deepl:3594380064
- effect_gate_reset_ethics: "删除所有[Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')]。" #deepl:368403448
+ effect_gate_activate_magic_researcher: "[SCOPE.GetLocalVariable('gate_magic_researcher').GetCharacter.GetFullNameWithTitle]将成为我们新的[concept_gate_magic_researcher]"
+ effect_gate_found_arcane_council: "[THIS.GetCountry.GetName] 建立了[concept_gate_arcane_council]。"
+ effect_gate_join_arcane_council: "[THIS.GetCountry.GetName]加入了[concept_gate_arcane_council]。"
+ effect_gate_leave_arcane_council: "[THIS.GetCountry.GetName]退出了[concept_gate_arcane_council]。"
+ effect_gate_reset_ethics: "移除所有[Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')]。"

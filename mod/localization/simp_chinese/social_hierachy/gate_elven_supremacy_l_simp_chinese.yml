@@ -1,7 +1,7 @@
 ﻿l_simp_chinese:
- gate_elven_supremacy: "$elven$ 至高无上" #deepl:3321457681
- gate_elven_supremacy_desc: "“精灵至上”制度确立了一套严苛的社会秩序，精灵在权力、声望和魔法方面享有不可撼动的垄断地位。其他种族虽融入社会结构，却被局限于社会底层，无权担任神职人员、贵族或魔法师等职位。这一制度植根于精灵天生优越的信念，在确保精灵统治地位的同时，也剥削着其他种族的劳动和技能。" #deepl:4168647767
- gate_elven_supremacy_trigger_desc: "每个人都受制于这个体系" #deepl:2639333999
+ gate_elven_supremacy: "$elven$至尊制"
+ gate_elven_supremacy_desc: "精灵至上主义构建了一种僵化的社会秩序，精灵独揽着不可撼动的权力、威望与魔法垄断。其他种族虽被编织进社会肌理，却被禁锢于森严的等级桎梏之中——神职圣坛禁止他们踏足，贵族纹章拒绝为他们镌刻，魔法秘典更永不对异族开启。这种建立在\"精灵血统先天优越\"信条上的制度，犹如双生荆棘冠冕，既以精金锁链固守精灵的永恒王座，又从他族被压弯的脊梁上榨取血汗浇灌权杖的宝石。"
+ gate_elven_supremacy_trigger_desc: "所有人都被体制支配"
 # Classes
  gate_elven_upper_class: "精灵上层"
  gate_elven_upper_class_desc: "精灵上层阶级"
@@ -24,7 +24,7 @@
  country_gate_elven_human_middle_class_qualification_growth_same_class_mult_desc: "百分比提高或降低$gate_elven_human_middle_class$[concept_social_class]对$gate_elven_human_middle_class$[concept_social_class]内其他[Concept('concept_profession', '$concept_professions$')]的资质增长"
  country_gate_elven_human_lower_class_qualification_growth_same_class_mult: "$gate_elven_human_lower_class$[concept_social_class]内的资质增长"
  country_gate_elven_human_lower_class_qualification_growth_same_class_mult_desc: "百分比提高或降低$gate_elven_human_lower_class$[concept_social_class]对$gate_elven_human_lower_class$[concept_social_class]内其他[Concept('concept_profession', '$concept_professions$')]的资质增长"
- country_gate_elven_upper_class_education_access_mult: "[concept_education_access] $gate_elven_upper_class$ [concept_social_class]" #deepl:1138401124
+ country_gate_elven_upper_class_education_access_mult: "$gate_elven_upper_class$[concept_social_class]的[concept_education_access]"
  country_gate_elven_upper_class_education_access_mult_desc: "对$gate_elven_upper_class$[concept_social_class][concept_education_access]的百分比增益或惩罚"
  country_gate_elven_middle_class_education_access_mult: "$gate_elven_middle_class$[concept_social_class]的[concept_education_access]"
  country_gate_elven_middle_class_education_access_mult_desc: "对$gate_elven_middle_class$[concept_social_class][concept_education_access]的百分比增益或惩罚"

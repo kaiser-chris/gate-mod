@@ -19,16 +19,16 @@
  has_not_started_research_of_magic_alert_setting_name: "可以开始研究魔法"
  alert_has_no_magic_researcher_alert_name: "我们没有[concept_gate_magic_researcher]"
  alert_has_no_magic_researcher_alert_desc: "我们需要一位活跃的[concept_gate_magic_researcher]来增进我们对魔法的理解。"
- alert_has_no_magic_researcher_alert_hint: "你可以通过#header $magic_researcher_decision$#!决议雇佣一位[concept_gate_magic_researcher]"
- alert_has_no_magic_researcher_alert_action: "日志面板"
+ alert_has_no_magic_researcher_alert_hint: "你可以在角色互动：#header $gate_promote_arcanist$#!选择一位#bold $NATIONAL_CAST$#!，将其雇佣为[concept_gate_magic_researcher]"
+ alert_has_no_magic_researcher_alert_action: "$NATIONAL_CAST$面板"
  has_no_magic_researcher_alert_setting_name: "没有[concept_gate_magic_researcher]"
  alert_alert_gate_expedition_no_activity_name: "$gate_planet$远征处于空闲状态"
  alert_alert_gate_expedition_no_activity_desc: "我们的[concept_gate_expedition]处于空闲状态。"
  alert_alert_gate_expedition_no_activity_hint: "你可以通过在[concept_gate_expedition_map]上点击某个地点并选择互动方式，开启新的[Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')]。"
  alert_alert_gate_expedition_no_activity_action: "$gg_panel_expedition_action$"
  alert_gate_expedition_no_activity_setting_name: "无[Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')]"
- alert_alert_gate_project_no_activity_name: "我们的[concept_gate_magic_researcher]处于空闲状态" #deepl:1739553853
- alert_alert_gate_project_no_activity_desc: "您可以在 Manaflow 面板中启动一个新的[concept_gate_project] 。" #deepl:1585258968
- alert_alert_gate_project_no_activity_hint: "这些专注的研究工作释放出神奇的能量，提升了工业、社会和基础设施的水平，开辟了一条通往更迷人未来的道路。" #deepl:88762333
- alert_alert_gate_project_no_activity_action: "$gg_panel_base_action$" #deepl:3768099815
- alert_gate_project_no_activity_setting_name: "没有[concept_gate_project]" #deepl:2097173737
+ alert_alert_gate_project_no_activity_name: "我们的[concept_gate_magic_researcher]处于空闲状态。"
+ alert_alert_gate_project_no_activity_desc: "你可以在魔潮面板中启动新的[concept_gate_project]。"
+ alert_alert_gate_project_no_activity_hint: "这些重点研究工作将解锁魔法增效，提高工业、社会和基础设施水平，为迈向更迷人的未来铺就道路。"
+ alert_alert_gate_project_no_activity_action: "$gg_panel_base_action$"
+ alert_gate_project_no_activity_setting_name: "无[concept_gate_project]"

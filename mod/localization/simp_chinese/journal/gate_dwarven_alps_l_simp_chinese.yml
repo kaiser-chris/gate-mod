@@ -1,23 +1,23 @@
 ﻿l_simp_chinese:
  je_gate_dwarven_alps: "阿尔卑斯山之主"
- je_gate_dwarven_alps_lobby: "$je_gate_dwarven_alps_reason$" #deepl:2170888463
+ je_gate_dwarven_alps_lobby: "$je_gate_dwarven_alps_reason$"
  je_gate_dwarven_alps_status: "这片山脉将成为我们的新家园。"
  je_gate_dwarven_alps_reason: "$GATE_MK$的终极目标是将阿尔卑斯地区统一在他们的旗帜之下，这一抱负使瑞士成为其核心关注对象。与许多倾向于武力征服的国家不同，$GATE_MK$的矮人族群更加推崇外交手段，力求通过和平说服使瑞士自愿加入他们的阵营。他们设想的并非一国对另一国的统治，而是共享繁荣与文化交融的平等伙伴关系。\n$gate_journal_delimiter$\n为实现这一愿景，$GATE_MK$深知必须证明自身具备公正治理与文化融合的能力。其现有德语人口的成功同化不仅关乎内政稳定，更是一项至关重要的实证。瑞士必须确信，在任何形式的联合中，自己都将作为与矮人族利益对等的合作伙伴存在，而非屈从于附属地位。"
- je_gate_dwarven_integration_of_germans: "整合德意志"
+ je_gate_dwarven_integration_of_germans: "整合德意志人"
  je_gate_dwarven_integration_of_germans_reason: "深藏在阿尔卑斯山脉中的矮人王国$GATE_MK$，正经历着前所未有的变革。自从与德语邻邦结成联盟，一种融合矮人古老传统与巴伐利亚人文风俗的阿尔卑斯新认同正在成形。矮人公会开始与人类议会共同议事，锻造锤的铿锵声里开始回荡巴伐利亚的新旋律。\n$gate_journal_delimiter$\n但融合之路布满荆棘。矮人对动摇百年传统的改革激烈抵抗，人类则在以石砌厅堂与森严行会等级为主导的社会中无所适从。不满的低语在双方阵营中愈发响亮——人类担忧文化被矮人洪流吞没，矮人则抱怨妥协让步正稀释血脉传承。在冰川投下的阴影里，脆弱的联盟如同未开采的矿脉，随时可能被古老骄傲与崭新盟约的重压碾得粉碎。"
  je_gate_dwarven_integration_of_germans_success: "将于我们的德意志公民被整合时完成"
  je_gate_dwarven_integration_of_germans_failure: "若整合失去公众支持将会失败"
  je_gate_dwarven_alps_button_switzerland_exists: "[SCOPE.sCountry('loc_swiss_scope').GetName]存在。"
- je_gate_dwarven_alps_button_switzerland_magic: "向$SWI$发出“魔法联盟”邀请" #deepl:2531356222
- je_gate_dwarven_alps_button_switzerland_magic_desc: "提议以共享[concept_gate_magic_knowledge]为条件，与[SCOPE.sCountry('loc_swiss_scope').GetName]缔结[concept_alliance]。"
- je_gate_dwarven_alps_button_switzerland_magic_already: "[SCOPE.sCountry('loc_swiss_scope').GetName]#bold 尚未#!知晓魔法。"
- je_gate_dwarven_alps_button_switzerland_integrate: "吞并$SWI$"
- je_gate_dwarven_alps_button_switzerland_integrate_desc: "将[SCOPE.sCountry('loc_swiss_scope').GetName]并入[SCOPE.sCountry('loc_raetia_scope').GetName]"
- je_gate_dwarven_alps_integrate_germans: "整合德意志人"
- je_gate_dwarven_alps_integrate_germans_desc: "启动将[SCOPE.sCulture('loc_south_german_scope').GetName]与[SCOPE.sCulture('loc_alemannic_scope').GetName]文化纳入[concept_primary_cultures]的进程。此举将使我们卷入德意志政治，并可能激怒部分民众。"
- decision_gate_dwarven_tunnels: "挖掘矮人隧道"
- decision_gate_dwarven_tunnels_desc: "将$state_trait_gate_dwarven_tunnels$特质添加到山脉地区。"
- decision_gate_dwarven_tunnels_cooldown_tt: "在6个月内未挖掘过#v $state_trait_gate_dwarven_tunnels$#!"
+ je_gate_dwarven_alps_button_switzerland_magic: "向$SWI$提议缔结魔法同盟"
+ je_gate_dwarven_alps_button_switzerland_magic_desc: "我们愿意将[concept_gate_magic_knowledge]与[SCOPE.sCountry('loc_swiss_scope').GetName]交换，以换取[concept_alliance]。" #deepl:347998969
+ je_gate_dwarven_alps_button_switzerland_magic_already: "[SCOPE.sCountry('loc_swiss_scope').GetName] #bold  难道不知道 #! 已经掌握了魔法吗？" #deepl:1433899868
+ je_gate_dwarven_alps_button_switzerland_integrate: "集成 $SWI$" #deepl:990036817
+ je_gate_dwarven_alps_button_switzerland_integrate_desc: "将 [SCOPE.sCountry('loc_swiss_scope').GetName] 集成到 [SCOPE.sCountry('loc_raetia_scope').GetName] 中。" #deepl:2954477084
+ je_gate_dwarven_alps_integrate_germans: "德国人口统计" #deepl:3568626407
+ je_gate_dwarven_alps_integrate_germans_desc: "启动将[SCOPE.sCulture('loc_south_german_scope').GetName]和[SCOPE.sCulture('loc_alemannic_scope').GetName]文化整合为[concept_primary_cultures]的进程。此举可能会激怒部分民众。" #deepl:1214659788
+ decision_gate_dwarven_tunnels: "挖掘矮人隧道" #deepl:2525967142
+ decision_gate_dwarven_tunnels_desc: "为山区州添加$state_trait_gate_dwarven_tunnels$属性。" #deepl:1116110579
+ decision_gate_dwarven_tunnels_cooldown_tt: "过去6个月内未访问过 #v 、$state_trait_gate_dwarven_tunnels$ 和 #!" #deepl:1465771874
  effect_gate_change_german_integration_progress: "[SCOPE.GetLocalVariable('integration_change').GetValue|+=0]% 改变了德国的融合进程" #deepl:1102167828
  pb_gate_german_integration_name: "当前整合进展"
  pb_gate_german_integration_desc: "进度：#v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|0%]#!（[JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]/100）%"
@@ -27,22 +27,22 @@
  pb_gate_german_integration_support_desc_anti: "反对"
  pb_gate_german_integration_support_state_peace: "低[concept_turmoil]的[Concept('concept_incorporated_state', '$concept_incorporated_states$')]"
  pb_gate_german_integration_support_state_turmoil: "高[concept_turmoil]的[Concept('concept_incorporated_state', '$concept_incorporated_states$')]"
- gate_dwarven_alps.1.t: "魔法同盟"
- gate_dwarven_alps.1.d: "[SCOPE.sCountry('loc_raetia_scope').GetName]与[SCOPE.sCountry('loc_swiss_scope').GetName]缔结奥秘[concept_alliance]。"
- gate_dwarven_alps.1.f: "在霜雪覆盖的$GATE_MK$群峰之巅，矮人族携着比山脉更古老的秘辛，从隐秘的熔炉深处现身。在古老石像守卫的凝视下，他们与瑞士的使者会面，眼中跃动着谨慎与希冀交织的光芒。矮人以分享奥秘知识为交换，寻求与地表居民缔结同盟。随着双手紧紧一握，契约就此铸成，山峦与谷地自此血脉相连，这场盟誓注定重写两国的命运。"
- gate_dwarven_alps.1.a: "我们将共享这片山脉。"
- gate_dwarven_alps.2.t: "矮人隧道完工"
- gate_dwarven_alps.2.d: "将#v $state_trait_gate_dwarven_tunnels$#!特质添加到[SCOPE.sState('digging_state').GetName]。"
- gate_dwarven_alps.2.f: "经过不懈努力与精湛工程技艺的锤炼，错综复杂的矮人隧道网络已全面竣工，将[SCOPE.sState('digging_state').GetName]地区全境纳入我国版图。这些地下通道不仅巩固了我国的主权主张，更成为贯通贸易往来、军事防御与疆域勘探的重要命脉。昔日的矿镐敲击声与矮人石匠的号子声，如今已化作熙熙攘攘的商贸通途与团结纽带，象征着我邦国力与疆域正日益向纵深拓展。"
- gate_dwarven_alps.2.a: "这里将永远是我们的家。"
- gate_dwarven_alps.3.t: "阿尔卑斯山之主"
- gate_dwarven_alps.3.d: "所有阿尔卑斯地区都在我们的控制之下。"
- gate_dwarven_alps.3.f: "整个阿尔卑斯山脉终归我们所有，我们将永驻于此！"
- gate_dwarven_alps.3.a: "阿尔卑斯山属于我们。"
- gate_dwarven_alps.4.t: "整合德意志人"
- gate_dwarven_alps.4.d: "将[SCOPE.sCulture('loc_south_german_scope').GetName]和[SCOPE.sCulture('loc_alemannic_scope').GetName]文化纳入[concept_primary_cultures]。"
- gate_dwarven_alps.4.f: "在巍峨的阿尔卑斯雪峰的阴影下，$GATE_MK$的矮人聚集于此，手中的斧锤寒光凛凛，透着坚定决心。那些曾在嶙峋山地间开辟家园的德意志拓荒者，此刻正迎来新的命运篇章。随着一道正式法令颁布，矮人主动提出融合倡议，将传承千年的古老技艺与山民勤勉务实的开拓精神相熔铸。凛冽山风呼啸而过，这场在群山腹地缔结的盟约，让不同文明在锻炉中交融共生。自此，每一块矿石都铭刻着两个民族共同的智慧，每一条矿脉都奔涌着血脉相连的未来。"
- gate_dwarven_alps.4.a: "终将把他们锻为矮人。"
+ gate_dwarven_alps.1.t: "魔法联盟" #deepl:759580272
+ gate_dwarven_alps.1.d: "[SCOPE.sCountry('loc_raetia_scope').GetName] 使用“[SCOPE.sCountry('loc_swiss_scope').GetName]”锻造了一把奥术[concept_alliance]。" #deepl:471135945
+ gate_dwarven_alps.1.f: "在冰霜啃噬的$GATE_MK$峰峦间，矮人们从隐秘的锻造坊中现身，肩负着比群山本身更为古老的秘密。在古老石像守卫的注视下，他们与瑞士的使者会面，眼中闪烁着警惕与希望交织的光芒。为了分享他们的玄奥知识，矮人们寻求与地表居民结盟以获得力量。 双方以紧握的双手缔结盟约，将山峦与山谷紧密联结，这一联盟注定将重塑两个世界的命运。" #deepl:1658510880
+ gate_dwarven_alps.1.a: "我们将共享这片山脉。" #deepl:1035871269
+ gate_dwarven_alps.2.t: "矮人隧道全图" #deepl:2756466823
+ gate_dwarven_alps.2.d: "将#v 、$state_trait_gate_dwarven_tunnels$、#!的特性添加到[SCOPE.sState('digging_state').GetName]中。" #deepl:1641800128
+ gate_dwarven_alps.2.f: "经过不懈的努力和精湛的工程技艺，错综复杂的矮人隧道网络已然建成，将[SCOPE.sState('digging_state').GetName]王国完全纳入了我们的疆域。这些地下通道不仅巩固了我们的主权，更成为了贸易、防御和探索的重要动脉。昔日镐头敲击的回响与矮人石匠的歌声，已然让位于熙熙攘攘、充满商贸与团结气息的通道，这象征着我国日益深厚的实力与日益广阔的疆域。" #deepl:1149495808
+ gate_dwarven_alps.2.a: "这里将永远是我们的家。" #deepl:3381860407
+ gate_dwarven_alps.3.t: "阿尔卑斯山的主人" #deepl:1603304319
+ gate_dwarven_alps.3.d: "所有阿尔卑斯山脉沿线的国家均已处于我们的控制之下。" #deepl:2128780974
+ gate_dwarven_alps.3.f: "终于，整个阿尔卑斯山脉都归我们了，我们定要留在这里！" #deepl:2678563017
+ gate_dwarven_alps.3.a: "阿尔卑斯山是我们的。" #deepl:127135170
+ gate_dwarven_alps.4.t: "德国人口统计" #deepl:3568626407
+ gate_dwarven_alps.4.d: "将 [SCOPE.sCulture('loc_south_german_scope').GetName] 和 [SCOPE.sCulture('loc_alemannic_scope').GetName] 的培养物添加为 [concept_primary_cultures]。" #deepl:307164883
+ gate_dwarven_alps.4.f: "在巍峨的高山峰峦的阴影下，$GATE_MK$的矮人们齐聚一堂，他们的斧头和铁锤在阳光下闪烁着坚定不移的决心。 那些在这崎岖高地开垦出新生的德国移民，如今迎来了人生的新篇章。随着一道正式诏令的颁布，矮人们伸出了融合之手，将古老的传统与山民勤劳的精神相融合。当凛冽的寒风在他们周围呼啸时，一座新的联盟在群山深处铸就，它融合了不同的文化，并塑造了一个未来——在那里，每一块石头与每一个故事都将交织在一起。" #deepl:1054912044
+ gate_dwarven_alps.4.a: "我们迟早要把他们变成矮人。" #deepl:2953530722
  gate_dwarven_alps.5.t: "整合瑞士"
  gate_dwarven_alps.5.d: "我们已完全整合[SCOPE.sCountry('loc_swiss_scope').GetName]。"
  gate_dwarven_alps.5.f: "在阿尔卑斯山脉的腹地，群峰直插云霄。$GATE_MK$与$SWI$的领袖并肩立于古老的殿堂之中，他们的声音在石砌穹顶下回荡。矮人国王的王冠闪烁着地核之光，庄严宣告两国人民合而为一。$SWI$将以矮人为主导，将磐石的力量与血肉的坚韧融为一体。山呼万岁，两个国度就此铸成一体，开创繁荣与力量并存的新纪元，魔法与力量将在这个纪元至高无上、主宰一切。"

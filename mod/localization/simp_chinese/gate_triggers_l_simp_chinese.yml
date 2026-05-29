@@ -1,41 +1,41 @@
 ﻿l_simp_chinese:
- trigger_has_magic_gate: "拥有[GetBuildingType('building_gate_alxa').GetName]"
+ trigger_has_magic_gate: "控制[GetBuildingType('building_gate_alxa').GetName]" #deepl:2728419724
  trigger_has_magic_gate_not: "#bold  是否不 #! 控制 [GetBuildingType('building_gate_alxa').GetName]" #deepl:2572303860
- trigger_has_magic_gate_third: "[COUNTRY.GetNameNoFlag] 控制 a[GetBuildingType('building_gate_alxa').GetName]" #deepl:3482540568
+ trigger_has_magic_gate_third: "[COUNTRY.GetNameNoFlag] 控制一个[GetBuildingType('building_gate_alxa').GetName]" #deepl:3482540568
  trigger_has_magic_gate_third_not: "[COUNTRY.GetNameNoFlag] #bold  是否不 #! 控制 [GetBuildingType('building_gate_alxa').GetName]" #deepl:3722190554
 
  trigger_is_gate_planet_country: "是来自[concept_gate_planet]的国家"
  trigger_is_gate_planet_country_not: "#bold  是否不是 #! 来自 [concept_gate_planet] 的一个国家？" #deepl:2955442265
- trigger_is_gate_planet_country_third: "[COUNTRY.GetNameNoFlag] 是一个来自[concept_gate_planet]" #deepl:498334440
+ trigger_is_gate_planet_country_third: "[COUNTRY.GetNameNoFlag] 是[concept_gate_planet]上的一个国家" #deepl:498334440
  trigger_is_gate_planet_country_third_not: "[COUNTRY.GetNameNoFlag] #bold  是否是 [concept_gate_planet] 上的一个国家，而不是 #!？" #deepl:4077905385
 
  trigger_gate_is_magic_country: "拥有[concept_gate_magic_knowledge]"
- trigger_gate_is_magic_country_not: "#bold  是否不包含 #! 以及 [concept_gate_magic_knowledge]" #deepl:3625515335
+ trigger_gate_is_magic_country_not: "#bold  是否没有 #! 以及 [concept_gate_magic_knowledge]" #deepl:3625515335
  trigger_gate_is_magic_country_third: "[COUNTRY.GetNameNoFlag] 包含 [concept_gate_magic_knowledge]" #deepl:1515518016
- trigger_gate_is_magic_country_third_not: "[COUNTRY.GetNameNoFlag] 是 #bold  而不是 #! 吗？[concept_gate_magic_knowledge]" #deepl:392760331
+ trigger_gate_is_magic_country_third_not: "[COUNTRY.GetNameNoFlag] 是 #bold  而不是 #! 吗？ [concept_gate_magic_knowledge]简体中文（大陆）" #deepl:392760331
 
- trigger_gate_has_magic_researcher: "有[concept_gate_magic_researcher]"
+ trigger_gate_has_magic_researcher: "是否拥有[concept_gate_magic_researcher]" #deepl:418844877
  trigger_gate_has_magic_researcher_not: "#bold  是否没有 #! 上的 [concept_gate_magic_researcher]" #deepl:3162827090
  trigger_gate_has_magic_researcher_third: "[COUNTRY.GetNameNoFlag] 拥有一个 [concept_gate_magic_researcher]" #deepl:208062177
  trigger_gate_has_magic_researcher_third_not: "[COUNTRY.GetNameNoFlag] 是 #bold  而不是 #! 吗？ [concept_gate_magic_researcher]" #deepl:1275279449
 
  trigger_gate_has_active_magic_project: "有可用的[concept_gate_project]"
  trigger_gate_has_active_magic_project_not: "#bold  是否没有 #! 且 [concept_gate_project] 处于非活动状态？" #deepl:3505193838
- trigger_gate_has_active_magic_project_third: "[COUNTRY.GetNameNoFlag] 有一个活跃的[concept_gate_project]" #deepl:3559282227
+ trigger_gate_has_active_magic_project_third: "[COUNTRY.GetNameNoFlag] 拥有一个活跃的 [concept_gate_project]" #deepl:3559282227
  trigger_gate_has_active_magic_project_third_not: "[COUNTRY.GetNameNoFlag] #bold  是否有效，而 #! 是否有效？[concept_gate_project]" #deepl:1517764777
 
  trigger_gate_expedition_budget: "#default_text 拥有一项或更多[SCOPE.GetValue('budget_cost')|0v][concept_gate_expedition_budget]#!"
  trigger_gate_expedition_has_covered: "#default_text [concept_gate_expedition]地图中有未探索部分。#!"
  trigger_gate_expedition_has_no_activity: "#default_text 我们未进行一项[Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')]。#!"
 
- trigger_gate_requirement_low_mana_density: "要建造该[concept_building]，地区[concept_gate_mana_density]至少为[TopScope.ScriptValue('gate_low_mana_density_threshhold')]。"
- trigger_gate_requirement_medium_mana_density: "要建造该[concept_building]，地区[concept_gate_mana_density]至少为[TopScope.ScriptValue('gate_medium_mana_density_threshhold')]。"
- trigger_gate_requirement_max_mana_density: "要建造该[concept_building]，地区[concept_gate_mana_density]至少为[TopScope.ScriptValue('gate_maximum_mana_density')]。"
+ trigger_gate_requirement_low_mana_density: "要构建此[concept_building]，该州必须拥有至少[TopScope.ScriptValue('gate_low_mana_density_threshhold')]的[concept_gate_mana_density]。" #deepl:2132890702
+ trigger_gate_requirement_medium_mana_density: "要构建此[concept_building]，该州必须拥有至少[TopScope.ScriptValue('gate_medium_mana_density_threshhold')]的[concept_gate_mana_density]。" #deepl:2646883508
+ trigger_gate_requirement_max_mana_density: "要构建此[concept_building]，该州必须拥有至少[TopScope.ScriptValue('gate_maximum_mana_density')]的[concept_gate_mana_density]。" #deepl:3902263656
 
- trigger_gate_ethic_has_all: "Has chosen all possible [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')]"
- trigger_gate_ethic_has_all_not: "Hasn't chosen all possible [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')]"
- trigger_gate_ethic_has_all_third: "[COUNTRY.GetNameNoFlag] has chosen all possible [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')]"
- trigger_gate_ethic_has_all_third_not: "[COUNTRY.GetNameNoFlag] hasn't chosen all possible [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')]"
+ trigger_gate_ethic_has_all: "已选中所有可能的[Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')]" #deepl:1152229089
+ trigger_gate_ethic_has_all_not: "尚未选中所有可用的[Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')]" #deepl:4243568538
+ trigger_gate_ethic_has_all_third: "[COUNTRY.GetNameNoFlag] 已选中所有可能的 [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')]" #deepl:2160750419
+ trigger_gate_ethic_has_all_third_not: "[COUNTRY.GetNameNoFlag] 尚未选中所有可用的[Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')]" #deepl:50095710
 
  trigger_gate_is_arcane_council_leader: "领导奥术议会 [concept_com_international_organization]" #deepl:684660458
  trigger_gate_is_arcane_council_leader_not: "难道不是 #bold  而不是 #! 领导奥术议会 [concept_com_international_organization]" #deepl:2885476714
@@ -50,11 +50,11 @@
  trigger_gate_recently_joined_arcane_council: "最近加入了奥术议会 [concept_com_international_organization]" #deepl:3170588523
  trigger_gate_recently_joined_arcane_council_not: "#bold  是否已加入奥术议会？ [concept_com_international_organization]" #deepl:2576317359
  trigger_gate_recently_joined_arcane_council_third: "[COUNTRY.GetNameNoFlag] 最近加入了奥术议会 [concept_com_international_organization]" #deepl:682054670
- trigger_gate_recently_joined_arcane_council_third_not: "[COUNTRY.GetNameNoFlag] 是 #bold  而不是 #! 最近加入了奥术议会 [concept_com_international_organization]" #deepl:1575520797
+ trigger_gate_recently_joined_arcane_council_third_not: "[COUNTRY.GetNameNoFlag] 是 #bold  还是 #! 最近加入了奥术议会 [concept_com_international_organization]" #deepl:1575520797
 
  trigger_gate_arcane_council_recently_changed_military_regulations: "最近在奥术议会中出台了相关规定 [concept_com_international_organization]" #deepl:3484248743
- trigger_gate_arcane_council_recently_changed_military_regulations_not: "#bold  是否已 #! 最近在奥术议会中 [concept_com_international_organization]" #deepl:3684220206
+ trigger_gate_arcane_council_recently_changed_military_regulations_not: "#bold  是否已 #! 近期在奥术议会中 [concept_com_international_organization]" #deepl:3684220206
  trigger_gate_arcane_council_recently_changed_military_regulations_third: "[COUNTRY.GetNameNoFlag] 最近在奥术议会中出台了相关规定 [concept_com_international_organization]" #deepl:3170767611
  trigger_gate_arcane_council_recently_changed_military_regulations_third_not: "[COUNTRY.GetNameNoFlag] 是 #bold  还是 #! 最近在奥术议会中出台了新规 [concept_com_international_organization]" #deepl:1947453675
 
- trigger_gate_is_not_magic_researcher: "Is not already our [concept_gate_magic_researcher]"
+ trigger_gate_is_not_magic_researcher: "难道我们的 [concept_gate_magic_researcher] 不是已经存在了吗？" #deepl:2797499724
