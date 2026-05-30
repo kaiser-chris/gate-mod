@@ -32,44 +32,38 @@ on_gate_game_setup = {
         # Add arable land for balancing
         gate_setup_arable_land = yes
 
-        # Great Qing
         c:CHI = {
+            # Great Qing
             # Add Magic Researcher
             gate_create_and_activate_magic_researcher = yes
         }
-
-        # Great Qing
         c:KOR = {
+            # Korea
             # Add Magic Researcher
             gate_create_and_activate_magic_researcher = yes
         }
-
-        # Great Qing
         c:GBR = {
+            # Great Britain
             # Add Magic Researcher
             gate_create_and_activate_magic_researcher = yes
         }
-
-        # Great Qing
         c:POR = {
+            # Portugal
             # Add Magic Researcher
             gate_create_and_activate_magic_researcher = yes
         }
-
-        # Great Qing
         c:MEX = {
+            # Mexico
             # Add Magic Researcher
             gate_create_and_activate_magic_researcher = yes
         }
-
-        # Great Qing
         c:USA = {
+            # United States
             # Add Magic Researcher
             gate_create_and_activate_magic_researcher = yes
         }
-
-        # Great Qing
         c:TEX = {
+            # Texas
             # Add Magic Researcher
             create_character = {
                 template = gate_magic_researcher_template
@@ -80,6 +74,28 @@ on_gate_game_setup = {
             scope:magic_researcher_south_ogre = {
                 gate_activate_magic_researcher = yes
             }
+        }
+
+        # Starting literacy for gate countries and races
+        c:GATE_AD = {
+            effect_starting_pop_literacy_low = yes
+            effect_starting_pop_literacy_gate = yes
+        }
+        c:GATE_MK = {
+            effect_starting_pop_literacy_high = yes
+            effect_starting_pop_literacy_gate = yes
+        }
+        c:GATE_OK = {
+            effect_starting_pop_literacy_low = yes
+            effect_starting_pop_literacy_gate = yes
+        }
+        c:GATE_NS = {
+            effect_starting_pop_literacy_middling = yes
+            effect_starting_pop_literacy_gate = yes
+        }
+        c:GATE_BN = {
+            effect_starting_pop_literacy_low = yes
+            effect_starting_pop_literacy_gate = yes
         }
     }
 }
