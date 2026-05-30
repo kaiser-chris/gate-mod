@@ -1,0 +1,48 @@
+﻿effect_starting_pop_literacy_gate = {
+    every_scope_pop = {
+        limit = {
+            OR = {
+                culture = cu:elven
+                culture = cu:dwarven
+                culture = cu:gnomish
+                culture = cu:gate_arctic_ogre
+            }
+        }
+        set_pop_literacy = {
+            literacy_rate = {
+                if = {
+                    limit = {
+                        literacy_rate < 0.4
+                    }
+                    # Minimum for gate races (except orcs)
+                    value = 0.4
+                }
+                else_if = {
+                    limit = {
+                        OR = {
+                            culture = cu:dwarven
+                            culture = cu:gnomish
+                        }
+                        literacy_rate < 0.6
+                    }
+                    # Minimum for dwarves and gnomes
+                    value = 0.6
+                }
+                else_if = {
+                    limit = {
+                        OR = {
+                            culture = cu:elven
+                        }
+                        literacy_rate < 0.9
+                    }
+                    # Minimum for elves
+                    value = 0.9
+                }
+                else = {
+                    # already have a high literacy we do not want to change
+                    value = literacy_rate
+                }
+            }
+        }
+    }
+}
