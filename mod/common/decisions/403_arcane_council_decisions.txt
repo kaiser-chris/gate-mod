@@ -60,6 +60,11 @@ decision_gate_join_arcane_council = {
 decision_gate_leave_arcane_council = {
 	is_shown = {
 		gate_is_arcane_council_member = yes
+		OR = {
+			is_player = yes
+			has_law_or_variant = law_type:law_isolationism
+			has_law_or_variant = law_type:law_gate_free_magic_users
+		}
 	}
 
 	possible = {

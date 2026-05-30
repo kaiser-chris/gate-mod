@@ -1,0 +1,12 @@
+﻿je_gate_harmony_pledge = {
+    group = je_group_internal_affairs
+    icon = "gfx/interface/icons/religion_icons/gate_harmony_pledge.dds"
+    weight = 100
+
+    scripted_progress_bar = pb_gate_harmony_pledge_society
+    scripted_progress_bar = pb_gate_harmony_pledge_economy
+    scripted_progress_bar = pb_gate_harmony_pledge_legislative
+
+    should_be_pinned_by_default_involved = yes
+    should_be_pinned_by_default_uninvolved_or_context = yes
+}
