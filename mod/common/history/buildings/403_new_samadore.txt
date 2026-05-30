@@ -15,10 +15,10 @@ BUILDINGS = {
                 building = building_gate_mana_extractor
                 add_ownership = {
                     building = {
-                        region = STATE_WESTERN_NEW_GUINEA
+                        type = building_gate_mage_tower
                         country = c:GATE_NS
                         levels = 1
-                        type = building_gate_mage_tower
+                        region = STATE_WESTERN_NEW_GUINEA
                     }
                 }
                 reserves = 1
@@ -29,9 +29,11 @@ BUILDINGS = {
             create_building = {
                 building = building_logging_camp
                 add_ownership = {
-                    country = {
+                    building = {
+                        region = STATE_WESTERN_NEW_GUINEA
                         country = c:GATE_NS
-                        levels = 5
+                        levels = 1
+                        type = building_financial_district
                     }
                 }
                 reserves = 1
@@ -45,9 +47,11 @@ BUILDINGS = {
             create_building = {
                 building = building_port
                 add_ownership = {
-                    country = {
+                    building = {
+                        region = STATE_WESTERN_NEW_GUINEA
                         country = c:GATE_NS
                         levels = 1
+                        type = building_financial_district
                     }
                 }
                 reserves = 1
@@ -58,9 +62,11 @@ BUILDINGS = {
             create_building = {
                 building = building_trade_center
                 add_ownership = {
-                    country = {
+                    building = {
+                        region = STATE_WESTERN_NEW_GUINEA
                         country = c:GATE_NS
                         levels = 2
+                        type = building_financial_district
                     }
                 }
                 reserves = 1
@@ -88,9 +94,11 @@ BUILDINGS = {
             create_building = {
                 building = building_tooling_workshop
                 add_ownership = {
-                    country = {
+                    building = {
+                        region = STATE_WESTERN_NEW_GUINEA
                         country = c:GATE_NS
                         levels = 2
+                        type = building_financial_district
                     }
                 }
                 reserves = 1
@@ -101,9 +109,11 @@ BUILDINGS = {
             create_building = {
                 building = building_shipyard
                 add_ownership = {
-                    country = {
+                    building = {
+                        region = STATE_WESTERN_NEW_GUINEA
                         country = c:GATE_NS
                         levels = 2
+                        type = building_financial_district
                     }
                 }
                 reserves = 1
@@ -114,9 +124,11 @@ BUILDINGS = {
             create_building = {
                 building = building_livestock_ranch
                 add_ownership = {
-                    country = {
+                    building = {
+                        region = STATE_WESTERN_NEW_GUINEA
                         country = c:GATE_NS
                         levels = 3
+                        type = building_gate_mage_tower
                     }
                 }
                 reserves = 1
@@ -130,9 +142,11 @@ BUILDINGS = {
             create_building = {
                 building = building_banana_plantation
                 add_ownership = {
-                    country = {
+                    building = {
+                        region = STATE_WESTERN_NEW_GUINEA
                         country = c:GATE_NS
                         levels = 1
+                        type = building_gate_mage_tower
                     }
                 }
                 reserves = 1
@@ -164,9 +178,11 @@ BUILDINGS = {
             create_building = {
                 building = building_fishing_wharf
                 add_ownership = {
-                    country = {
+                    building = {
+                        region = STATE_WESTERN_NEW_GUINEA
                         country = c:GATE_NS
                         levels = 2
+                        type = building_financial_district
                     }
                 }
                 reserves = 1
@@ -211,10 +227,10 @@ BUILDINGS = {
                 building = building_gate_mana_extractor
                 add_ownership = {
                     building = {
-                        region = STATE_EASTERN_NEW_GUINEA
+                        type = building_gate_mage_tower
                         country = c:GATE_NS
                         levels = 1
-                        type = building_gate_mage_tower
+                        region = STATE_EASTERN_NEW_GUINEA
                     }
                 }
                 reserves = 1
@@ -254,9 +270,11 @@ BUILDINGS = {
             create_building = {
                 building = building_textile_mill
                 add_ownership = {
-                    country = {
+                    building = {
+                        region = STATE_EASTERN_NEW_GUINEA
                         country = c:GATE_NS
-                        levels = 1
+                        levels = 2
+                        type = building_financial_district
                     }
                 }
                 reserves = 1
@@ -284,9 +302,11 @@ BUILDINGS = {
             create_building = {
                 building = building_port
                 add_ownership = {
-                    country = {
+                    building = {
+                        region = STATE_EASTERN_NEW_GUINEA
                         country = c:GATE_NS
                         levels = 1
+                        type = building_financial_district
                     }
                 }
                 reserves = 1
@@ -297,9 +317,11 @@ BUILDINGS = {
             create_building = {
                 building = building_paper_mill
                 add_ownership = {
-                    country = {
+                    building = {
+                        region = STATE_EASTERN_NEW_GUINEA
                         country = c:GATE_NS
                         levels = 1
+                        type = building_financial_district
                     }
                 }
                 reserves = 1
@@ -311,9 +333,11 @@ BUILDINGS = {
             create_building = {
                 building = building_iron_mine
                 add_ownership = {
-                    country = {
+                    building = {
+                        region = STATE_EASTERN_NEW_GUINEA
                         country = c:GATE_NS
                         levels = 2
+                        type = building_financial_district
                     }
                 }
                 reserves = 1
@@ -324,9 +348,11 @@ BUILDINGS = {
             create_building = {
                 building = building_gate_druid_grove
                 add_ownership = {
-                    country = {
+                    building = {
+                        type = building_gate_mage_tower
                         country = c:GATE_NS
                         levels = 2
+                        region = STATE_EASTERN_NEW_GUINEA
                     }
                 }
                 reserves = 1
@@ -338,9 +364,11 @@ BUILDINGS = {
             create_building = {
                 building = building_livestock_ranch
                 add_ownership = {
-                    country = {
+                    building = {
+                        type = building_gate_mage_tower
                         country = c:GATE_NS
                         levels = 3
+                        region = STATE_EASTERN_NEW_GUINEA
                     }
                 }
                 reserves = 1
@@ -355,9 +383,11 @@ BUILDINGS = {
             create_building = {
                 building = building_banana_plantation
                 add_ownership = {
-                    country = {
+                    building = {
+                        type = building_gate_mage_tower
                         country = c:GATE_NS
                         levels = 2
+                        region = STATE_EASTERN_NEW_GUINEA
                     }
                 }
                 reserves = 1
@@ -369,9 +399,11 @@ BUILDINGS = {
             create_building = {
                 building = building_fishing_wharf
                 add_ownership = {
-                    country = {
+                    building = {
+                        region = STATE_EASTERN_NEW_GUINEA
                         country = c:GATE_NS
                         levels = 2
+                        type = building_financial_district
                     }
                 }
                 reserves = 1
@@ -382,9 +414,11 @@ BUILDINGS = {
             create_building = {
                 building = building_rice_farm
                 add_ownership = {
-                    country = {
+                    building = {
+                        type = building_gate_mage_tower
                         country = c:GATE_NS
                         levels = 2
+                        region = STATE_EASTERN_NEW_GUINEA
                     }
                 }
                 reserves = 1
@@ -431,9 +465,11 @@ BUILDINGS = {
             create_building = {
                 building = building_tea_plantation
                 add_ownership = {
-                    country = {
+                    building = {
+                        type = building_gate_mage_tower
                         country = c:GATE_NS
                         levels = 2
+                        region = STATE_MOLUCCAS
                     }
                 }
                 reserves = 1
@@ -445,9 +481,11 @@ BUILDINGS = {
             create_building = {
                 building = building_tobacco_plantation
                 add_ownership = {
-                    country = {
+                    building = {
+                        type = building_gate_mage_tower
                         country = c:GATE_NS
                         levels = 3
+                        region = STATE_MOLUCCAS
                     }
                 }
                 reserves = 1
@@ -459,9 +497,11 @@ BUILDINGS = {
             create_building = {
                 building = building_dye_plantation
                 add_ownership = {
-                    country = {
+                    building = {
+                        type = building_gate_mage_tower
                         country = c:GATE_NS
                         levels = 3
+                        region = STATE_MOLUCCAS
                     }
                 }
                 reserves = 1
@@ -473,9 +513,11 @@ BUILDINGS = {
             create_building = {
                 building = building_rice_farm
                 add_ownership = {
-                    country = {
+                    building = {
+                        type = building_gate_mage_tower
                         country = c:GATE_NS
-                        levels = 2
+                        levels = 3
+                        region = STATE_MOLUCCAS
                     }
                 }
                 reserves = 1
@@ -489,9 +531,11 @@ BUILDINGS = {
             create_building = {
                 building = building_port
                 add_ownership = {
-                    country = {
+                    building = {
+                        region = STATE_MOLUCCAS
                         country = c:GATE_NS
                         levels = 2
+                        type = building_financial_district
                     }
                 }
                 reserves = 1
@@ -502,9 +546,11 @@ BUILDINGS = {
             create_building = {
                 building = building_fishing_wharf
                 add_ownership = {
-                    country = {
+                    building = {
+                        region = STATE_MOLUCCAS
                         country = c:GATE_NS
                         levels = 1
+                        type = building_financial_district
                     }
                 }
                 reserves = 1
@@ -519,9 +565,11 @@ BUILDINGS = {
             create_building = {
                 building = building_port
                 add_ownership = {
-                    country = {
+                    building = {
+                        region = STATE_BOUGAINVILLE
                         country = c:GATE_NS
                         levels = 1
+                        type = building_financial_district
                     }
                 }
                 reserves = 1
@@ -532,9 +580,11 @@ BUILDINGS = {
             create_building = {
                 building = building_fishing_wharf
                 add_ownership = {
-                    country = {
+                    building = {
+                        region = STATE_BOUGAINVILLE
                         country = c:GATE_NS
                         levels = 1
+                        type = building_financial_district
                     }
                 }
                 reserves = 1
@@ -545,9 +595,11 @@ BUILDINGS = {
             create_building = {
                 building = building_rice_farm
                 add_ownership = {
-                    country = {
+                    building = {
+                        type = building_gate_mage_tower
                         country = c:GATE_NS
                         levels = 1
+                        region = STATE_BOUGAINVILLE
                     }
                 }
                 reserves = 1
