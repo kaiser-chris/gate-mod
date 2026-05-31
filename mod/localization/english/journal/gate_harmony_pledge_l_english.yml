@@ -1,9 +1,19 @@
 ﻿l_english:
  je_gate_harmony_pledge: "$gate_harmony_pledge$"
- je_gate_harmony_pledge_reason: "In gnomish lands, harmony is no accident, it is architecture. The Harmony Pledge, oft mistaken by outsiders as gentle philosophy, is in truth a careful design: a lattice of laws, customs, and quiet corrections meant to temper a people of boundless extremes.\n\nLeft unchecked, gnomes surge towards brilliance or ruin, indulgence or austerity, unity or splendid chaos. The Pledge does not deny this nature; it channels it. Institutions nudge, traditions anchor, and each decree shifts the delicate balance upon which society rests.\n\nYet balance is never permanent. Sudden passions, new ideas, or unforeseen crises can tip the scales in an instant. And so the gnomes watch themselves as closely as they watch the world, ever adjusting, ever correcting, ensuring that their excess fuels their strength, rather than their collapse."
- pb_gate_harmony_pledge_economy: "Economic Harmony"
- pb_gate_harmony_pledge_economy_desc: "$pb_gate_harmony_pledge_economy$" # TODO
- pb_gate_harmony_pledge_legislative: "Legislative Harmony"
- pb_gate_harmony_pledge_legislative_desc: "TODO" # TODO
+ je_gate_harmony_pledge_reason: "$concept_gate_harmony_pledge_desc$"
+ je_gate_harmony_pledge_fail: "Any facet of the [concept_gate_harmony_pledge] reaches #v 0#! or #v 100#!."
+ je_gate_harmony_pledge_status_hamony: "Our country is $je_gate_harmony_pledge_harmonious$."
+ je_gate_harmony_pledge_status_tilting: "Our country is $je_gate_harmony_pledge_tilting$."
+ je_gate_harmony_pledge_status_dishamony: "Our country is $je_gate_harmony_pledge_disharmonious$."
+ je_gate_harmony_pledge_harmonious: "#g Harmonious#!"
+ je_gate_harmony_pledge_tilting: "#o;bold Tilting#!"
+ je_gate_harmony_pledge_disharmonious: "#r Disharmonious#!"
  pb_gate_harmony_pledge_society: "Societal Harmony"
- pb_gate_harmony_pledge_society_desc: "TODO" # TODO
+ pb_gate_harmony_pledge_society_desc_left: "#v Society ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]/100)#!"
+ pb_gate_harmony_pledge_society_desc_right: "[JournalEntry.GetCustom('gate_harmony_pledge_indicator_society')]"
+ pb_gate_harmony_pledge_economy: "Economic Harmony"
+ pb_gate_harmony_pledge_economy_desc_left: "#v Economy ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]/100)#!"
+ pb_gate_harmony_pledge_economy_desc_right: "[JournalEntry.GetCustom('gate_harmony_pledge_indicator_economy')]"
+ pb_gate_harmony_pledge_legislative: "Legislative Harmony"
+ pb_gate_harmony_pledge_legislative_desc_left: "#v Legislative ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]/100)#!"
+ pb_gate_harmony_pledge_legislative_desc_right: "[JournalEntry.GetCustom('gate_harmony_pledge_indicator_legislative')]"

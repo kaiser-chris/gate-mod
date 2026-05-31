@@ -1,0 +1,236 @@
+# INHERITED FROM BASE GAME
+@panel_width_minus_30 = 510
+@panel_width_minus_20 = 520
+@panel_width_minus_10 = 530			# used to be 450
+@panel_width = 540  				# used to be 460
+@panel_width_half = 270				# used to be 230
+@panel_width_plus_10 = 550  		# used to be 470
+@panel_width_plus_14 = 554			# used to be 474
+@panel_width_plus_14_half = 277		# used to be 237
+@panel_width_plus_20 = 560			# used to be 480
+@panel_width_plus_30 = 570			# used to be 490
+@panel_width_plus_70 = 610			# used to be 530
+
+#### WIDGETS
+flowcontainer = {
+	name = "gate_inject_harmony_pledge_progress_bars"
+	parentanchor = hcenter
+	direction = vertical
+
+	datamodel = "[JournalEntry.GetScriptedProgressBars]"
+	visible = "[Not(IsDataModelEmpty(JournalEntry.GetScriptedProgressBars))]"
+	spacing = 15
+
+	item = {
+		flowcontainer = {
+			direction = vertical
+			widget = {
+				size = { 504 30 }
+				textbox = {
+					text = "[ScriptedProgressBar.GetDesc]"
+					autoresize = yes
+					align = nobaseline
+					parentanchor = vcenter
+				}
+
+				textbox = {
+					text = "[ScriptedProgressBar.GetSecondDesc]"
+					autoresize = yes
+					align = right|nobaseline
+					parentanchor = right|vcenter
+				}
+			}
+			gate_split_progressbar = {}
+		}
+	}
+}
+
+types gate_harmony_pledge_progress_bars {
+
+	type gate_split_progressbar = widget {
+		size = { 504 30 }
+		tooltip = "[ScriptedProgressBar.GetPeriodicProgressBreakdown]"
+
+		widget = {
+			size = { 100% 100% }
+			scissor = yes
+
+			block "background" {
+				background = {
+					texture = "gfx/interface/progressbar/progressbar_empty.dds"
+					spriteType = Corneredtiled
+					spriteborder = { 4 4 }
+					texture_density = 2
+
+					using = progressbar_texture_properties
+				}
+			}
+			progressbar = {
+				size = { 100% 100% }
+				noprogresstexture = "gfx/interface/icons/generic_icons/transparent.dds"
+				progresstexture = "gfx/interface/icons/generic_icons/transparent.dds"
+
+				min = 0
+				max = 1
+				value = "[JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)]"
+
+				marker = {
+					icon = {
+						texture = "gfx/interface/progressbar/progressbar_gold_glow_line.dds"
+						size = { 3 100% }
+						spriteType = Corneredtiled
+						spriteborder = { 0 0 }
+						block "color" {}
+					}
+				}
+			}
+		}
+
+		widget = {
+			size = { 100% 100% }
+
+			background = {
+				name = "frame"
+				texture = "gfx/interface/progressbar/progressbar_frame.dds"
+				spriteType = Corneredstretched
+				spriteborder = { 6 6 }
+				texture_density = 2
+				margin = { 3 3 }
+			}
+		}
+
+		hbox = {
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = expanding
+
+			block "levels" {
+				gate_progressbar_level = {
+					blockoverride "level_active" {
+						visible = "[BetweenInclusiveOfMax_float(
+							JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self),
+							'(float)0.0',
+							'(float)0.2'
+						)]"
+					}
+					blockoverride "texture" {
+						texture = "gfx/interface/progressbar/progressbar_bad.dds"
+					}
+				}
+
+				gate_progressbar_level = {
+					blockoverride "level_active" {
+						visible = "[BetweenInclusiveOfMax_float(
+							JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self),
+							'(float)0.2',
+							'(float)0.4'
+						)]"
+					}
+					blockoverride "texture" {
+						texture = "gfx/interface/progressbar/progressbar_gold.dds"
+					}
+				}
+
+				gate_progressbar_level = {
+					blockoverride "level_active" {
+						visible = "[BetweenInclusiveOfMax_float(
+							JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self),
+							'(float)0.4',
+							'(float)0.6'
+						)]"
+					}
+					blockoverride "texture" {
+						texture = "gfx/interface/progressbar/progressbar_green.dds"
+					}
+				}
+
+				gate_progressbar_level = {
+					blockoverride "level_active" {
+						visible = "[BetweenInclusiveOfMax_float(
+							JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self),
+							'(float)0.6',
+							'(float)0.8'
+						)]"
+					}
+					blockoverride "texture" {
+						texture = "gfx/interface/progressbar/progressbar_gold.dds"
+					}
+				}
+
+				gate_progressbar_level = {
+					blockoverride "level_active" {
+						visible = "[BetweenInclusiveOfMax_float(
+							JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self),
+							'(float)0.8',
+							'(float)1'
+						)]"
+					}
+					blockoverride "divider_visibility" {
+						visible = no
+					}
+					blockoverride "texture" {
+						texture = "gfx/interface/progressbar/progressbar_bad.dds"
+					}
+				}
+			}
+		}
+
+	}
+
+	type gate_progressbar_level = hbox {
+		layoutpolicy_horizontal = expanding
+		layoutpolicy_vertical = expanding
+
+		gate_progressbar_level_divider = {
+			block "divider_visibility" {}
+		}
+
+		background = {
+			block "texture" {}
+			alpha = 0.3
+			spriteborder = { 3 3 }
+			spriteType = Corneredstretched
+			texture_density = 5
+		}
+
+		background = {
+			block "texture" {}
+			alpha = 0.4
+			spriteborder = { 3 3 }
+			spriteType = Corneredstretched
+			texture_density = 5
+			block "level_active" {
+				visible = no
+			}
+		}
+
+		background = {
+			size = { 100% 100% }
+			texture = "gfx/interface/progressbar/progressbar_active_level.dds"
+			spriteType = Corneredstretched
+			spriteborder = { 6 6 }
+			texture_density = 2
+			alpha = 0.5
+
+			using = shimmer
+			block "level_active" {
+				visible = no
+			}
+		}
+	}
+
+	type gate_progressbar_level_divider = widget {
+		size = { 100% 100% }
+		widget = {
+			size = { 4 100% }
+			position = { 3 0 }
+			parentanchor = right
+			background = {
+				margin = { 0 1 }
+				texture = "gfx/interface/progressbar/progressbar_center_divider.dds"
+				spriteType = Corneredstretched
+				spriteborder = { 0 0 }
+				texture_density = 2
+			}
+		}
+	}
+}
