@@ -78,6 +78,7 @@ jobs:
         shell: bash
         run: |
           (cd script; ./generate-localization.sh english ../mod/)
+          git add --all
           git commit -am "Updated localizations" || echo "No Localization changes"
 
       - name: Push Version and Localizations

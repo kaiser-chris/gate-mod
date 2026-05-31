@@ -7,12 +7,12 @@ permissions:
 on:
   pull_request:
     paths:
-      - '**mod/**'
+      - 'mod/**'
     branches:
       - master
   push:
     paths:
-      - '**mod/**'
+      - 'mod/**'
     branches:
       - master
 
