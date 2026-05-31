@@ -1,0 +1,21 @@
+﻿# These are "seed" needs - they create harmless demand in a market before either supply or demand exist.
+# This allows an industry to actually get started, or pms using an outside good to actually get used by AI.
+TRY_INJECT:popneed_luxury_items = {
+	entry = {
+		goods = gate_magic_seed
+	
+		weight = 4
+		max_supply_share = 0.02		# Grow your own for fancy parties?
+		min_supply_share = 0.0
+	}
+}
+
+TRY_INJECT:popneed_leisure = {
+	entry = {
+		goods = gate_golem
+		
+		weight = 4
+		max_supply_share = 0.02		# Personal attendants that don't complain?
+		min_supply_share = 0.0
+	}
+}

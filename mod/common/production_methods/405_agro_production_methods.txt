@@ -1,42 +1,76 @@
-﻿pm_gate_normal_seeds = {
+﻿REPLACE_OR_CREATE:pm_gate_normal_seeds = {
 	texture = "gfx/interface/icons/production_method_icons/gate_normal_seeds.dds"
 
 	is_default = yes
 }
 
 
-pm_gate_magic_seeds = {
+REPLACE_OR_CREATE:pm_gate_magic_seeds = {
 	texture = "gfx/interface/icons/production_method_icons/gate_magic_seeds.dds"
 
-	building_modifiers = {
+	building_modifiers = {	# 20 - grain seeds are basic, don't need tech to use
 		workforce_scaled = {
-			# input goods
-			goods_input_gate_magic_seed_add = 5
-
-			# output goods
-			goods_output_grain_add = 20
-		}
+			goods_input_gate_magic_seed_add = 4		# -120
+			goods_output_grain_add = 36				# +720
+		}									# Profit = 600
 
 		level_scaled = {
-			building_employment_gate_druids_add = 1000
+			building_employment_gate_druids_add = 100
 		}
 	}
 }
 
-pm_gate_magic_seeds_building_rice_farm = {
-	texture = "gfx/interface/icons/production_method_icons/gate_magic_seeds.dds"
+REPLACE_OR_CREATE:pm_gate_magic_seeds_adv = {
+	texture = "gfx/interface/icons/production_method_icons/gate_magic_seeds_adv.dds"
+
+	unlocking_technologies = {
+		gate_living_irrigation		# Advanced PM unlocked at higher tech	#900 profit target
+	}
 
 	building_modifiers = {
 		workforce_scaled = {
-			# input goods
-			goods_input_gate_magic_seed_add = 10
-
-			# output goods
-			goods_output_grain_add = 40
-		}
+			goods_input_gate_magic_seed_add = 4		#  -120
+			goods_input_gate_mana_add = 2			#  - 60
+			goods_output_grain_add = 54				# +1080
+		}									# Profit =  900
 
 		level_scaled = {
-			building_employment_gate_druids_add = 2000
+			building_employment_gate_druids_add = 100
 		}
+	}
+}
+
+REPLACE_OR_CREATE:pm_gate_magic_seeds_building_rice_farm = {
+	texture = "gfx/interface/icons/production_method_icons/gate_magic_seeds.dds"
+
+	building_modifiers = {	# 20 - grain seeds are basic, don't need tech to use
+		workforce_scaled = {
+			goods_input_gate_magic_seed_add = 8		#  -180
+			goods_output_grain_add = 52				# +1020
+		}									# Profit =  860	# 43% more profit
+
+		level_scaled = {
+			building_employment_gate_druids_add = 140		# 40% more workforce
+		}												# (Rice is super marginally more efficient)
+	}
+}
+
+REPLACE_OR_CREATE:pm_gate_magic_seeds_building_rice_farm_adv = {
+	texture = "gfx/interface/icons/production_method_icons/gate_magic_seeds_adv.dds"
+
+	unlocking_technologies = {
+		gate_living_irrigation		# Advanced PM unlocked at higher tech	#1280 (+43%) profit target
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_gate_magic_seed_add = 8		#  -240
+			goods_input_gate_mana_add = 4			#  -120
+			goods_output_grain_add = 82				# +1640
+		}									# Profit = 1280	# 42% more profit
+
+		level_scaled = {
+			building_employment_gate_druids_add = 140		# 40% more workforce
+		}												# (Rice is super marginally more efficient)
 	}
 }
