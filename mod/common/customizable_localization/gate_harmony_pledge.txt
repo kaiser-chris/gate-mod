@@ -1,0 +1,73 @@
+﻿gate_harmony_pledge_indicator_society = {
+	type = journal_entry
+	random_valid = no
+
+	text = {
+		localization_key = je_gate_harmony_pledge_disharmonious
+		trigger = {
+			gate_harmony_pledge_disharmonious_society = yes
+		}
+	}
+
+	text = {
+		localization_key = je_gate_harmony_pledge_tilting
+		trigger = {
+			gate_harmony_pledge_tilting_society = yes
+		}
+	}
+
+	text = {
+		localization_key = je_gate_harmony_pledge_harmonious
+		fallback = yes
+	}
+}
+
+gate_harmony_pledge_indicator_economy = {
+	type = journal_entry
+	random_valid = no
+
+	text = {
+		localization_key = je_gate_harmony_pledge_disharmonious
+		trigger = {
+			gate_harmony_pledge_disharmonious_economy = yes
+		}
+	}
+
+	text = {
+		localization_key = je_gate_harmony_pledge_tilting
+		trigger = {
+			gate_harmony_pledge_tilting_economy = yes
+		}
+	}
+
+	text = {
+		localization_key = je_gate_harmony_pledge_harmonious
+		fallback = yes
+	}
+}
+
+gate_harmony_pledge_indicator_legislative = {
+	type = journal_entry
+	random_valid = no
+
+	text = {
+		localization_key = je_gate_harmony_pledge_disharmonious
+		trigger = {
+			gate_harmony_pledge_disharmonious_legislative = yes
+		}
+	}
+
+	text = {
+		localization_key = je_gate_harmony_pledge_tilting
+		trigger = {
+			gate_harmony_pledge_tilting_legislative = yes
+		}
+	}
+
+	text = {
+		localization_key = je_gate_harmony_pledge_harmonious
+		trigger = {
+			gate_harmony_pledge_harmonious_legislative = yes
+		}
+	}
+}
