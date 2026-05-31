@@ -134,6 +134,13 @@ types gate_technologies {
             }
         }
 
+        gate_technology_placeholder = {
+            blockoverride "context" {
+                datacontext = "[GetTechnology('gate_mage_artillery')]"
+                datacontext = "[GetScriptedGui('gate_mage_artillery')]"
+            }
+        }
+
         ### Era 2
 
         gate_technology_placeholder = {
@@ -147,13 +154,6 @@ types gate_technologies {
             blockoverride "context" {
                 datacontext = "[GetTechnology('gate_mana_weaponization')]"
                 datacontext = "[GetScriptedGui('gate_mana_weaponization')]"
-            }
-        }
-
-        gate_technology_placeholder = {
-            blockoverride "context" {
-                datacontext = "[GetTechnology('gate_mage_artillery')]"
-                datacontext = "[GetScriptedGui('gate_mage_artillery')]"
             }
         }
 

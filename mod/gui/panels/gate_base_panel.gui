@@ -1108,6 +1108,12 @@ types gate_base_panel_types {
                             datacontext = "[GetScriptedGui('gate_battlefield_wards')]"
                         }
                     }
+                    gate_tech_tree_node = {
+                        blockoverride "context" {
+                            datacontext = "[GetTechnology('gate_mage_artillery')]"
+                            datacontext = "[GetScriptedGui('gate_mage_artillery')]"
+                        }
+                    }
                 }
             }
         }
@@ -1130,13 +1136,6 @@ types gate_base_panel_types {
                         blockoverride "context" {
                             datacontext = "[GetTechnology('gate_mana_weaponization')]"
                             datacontext = "[GetScriptedGui('gate_mana_weaponization')]"
-                        }
-                    }
-
-                    gate_tech_tree_node = {
-                        blockoverride "context" {
-                            datacontext = "[GetTechnology('gate_mage_artillery')]"
-                            datacontext = "[GetScriptedGui('gate_mage_artillery')]"
                         }
                     }
                 }
