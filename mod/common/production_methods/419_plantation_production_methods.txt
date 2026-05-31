@@ -1,229 +1,440 @@
-﻿pm_gate_living_irrigation_building_coffee_plantation = {
+﻿pm_gate_magic_seeds_wine = {
 	texture = "gfx/interface/icons/production_method_icons/gate_magic_seeds.dds"
 
 	unlocking_technologies = {
-		gate_living_irrigation
+		gate_magic_understanding_production		# MAKING the seeds needs magic farming
+	}											# Merely using some just requires base aptitude
+
+	building_modifiers = {	# 50
+		workforce_scaled = {
+			goods_input_gate_magic_seed_add = 5		# -150
+			goods_output_wine_add = 12				# +600
+		}									# Profit = 450 
+
+		level_scaled = {
+			building_employment_gate_druids_add = 100
+		}
+	}
+}
+
+pm_gate_magic_seeds_wine_adv = {
+	texture = "gfx/interface/icons/production_method_icons/gate_magic_seeds_adv.dds"
+
+	unlocking_technologies = {
+		gate_living_irrigation		# Advanced PM unlocked at higher tech	#700 profit target
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
-			# output goods
-			goods_input_gate_magic_seed_add = 5
-			goods_output_coffee_add = 30
-		}
+			goods_input_gate_magic_seed_add = 5		# -150
+			goods_input_gate_mana_add = 3			# - 90
+			goods_output_wine_add = 19				# +950
+		}									# Profit = 710
 
 		level_scaled = {
-			# profit
-			building_employment_laborers_add = 3000
-			building_employment_farmers_add = 1500
-			building_employment_gate_druids_add = 500
+			building_employment_gate_druids_add = 100
 		}
 	}
+}
+
+pm_gate_magic_seeds_coffee = {
+	texture = "gfx/interface/icons/production_method_icons/gate_magic_seeds.dds"
+
+	unlocking_technologies = {
+		gate_magic_understanding_production
+	}
+
+	building_modifiers = {	# 50
+		workforce_scaled = {
+			goods_input_gate_magic_seed_add = 5		# -150
+			goods_output_coffee_add = 12			# +600
+		}									# Profit = 450 
+
+		level_scaled = {
+			building_employment_gate_druids_add = 100
+		}
+	}
+}
+
+pm_gate_magic_seeds_coffee_adv = {
+	texture = "gfx/interface/icons/production_method_icons/gate_magic_seeds_adv.dds"
+
+	unlocking_technologies = {
+		gate_living_irrigation		# Advanced PM unlocked at higher tech	#700 profit target
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_gate_magic_seed_add = 5		# -150
+			goods_input_gate_mana_add = 3			# - 90
+			goods_output_coffee_add = 19			# +950
+		}									# Profit = 710
+
+		level_scaled = {
+			building_employment_gate_druids_add = 100
+		}
+	}
+}
+
+pm_gate_magic_seeds_cotton = {
+	texture = "gfx/interface/icons/production_method_icons/gate_magic_seeds.dds"
+
+	unlocking_technologies = {
+		gate_magic_understanding_production
+	}
+
+	building_modifiers = {	# 20
+		workforce_scaled = {
+			goods_input_gate_magic_seed_add = 5		# -150
+			goods_output_fabric_add = 30			# +600
+		}									# Profit = 450
+
+		level_scaled = {
+			building_employment_gate_druids_add = 100
+		}
+	}
+}
+
+pm_gate_magic_seeds_cotton_adv = {
+	texture = "gfx/interface/icons/production_method_icons/gate_magic_seeds_adv.dds"
+
+	unlocking_technologies = {
+		gate_living_irrigation		# Advanced PM unlocked at higher tech	#700 profit target
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_gate_magic_seed_add = 5		# -150
+			goods_input_gate_mana_add = 3			# - 90
+			goods_output_fabric_add = 47			# +940
+		}									# Profit = 700
+
+		level_scaled = {
+			building_employment_gate_druids_add = 100
+		}
+	}
+}
+
+pm_gate_magic_seeds_dye = {
+	texture = "gfx/interface/icons/production_method_icons/gate_magic_seeds.dds"
+
+	unlocking_technologies = {
+		gate_magic_understanding_production
+	}
+
+	building_modifiers = {	# 40
+		workforce_scaled = {
+			goods_input_gate_magic_seed_add = 5		# -150
+			goods_output_dye_add = 15				# +600
+		}									# Profit = 450 
+
+		level_scaled = {
+			building_employment_gate_druids_add = 100
+		}
+	}
+}
+
+pm_gate_magic_seeds_dye_adv = {
+	texture = "gfx/interface/icons/production_method_icons/gate_magic_seeds_adv.dds"
+
+	unlocking_technologies = {
+		gate_living_irrigation		# Advanced PM unlocked at higher tech	#700 profit target
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_gate_magic_seed_add = 5		# -150
+			goods_input_gate_mana_add = 3			# - 90
+			goods_output_dye_add = 24				# +960
+		}									# Profit = 720
+
+		level_scaled = {
+			building_employment_gate_druids_add = 100
+		}
+	}
+}
+
+pm_gate_magic_seeds_opium = {
+	texture = "gfx/interface/icons/production_method_icons/gate_magic_seeds.dds"
+
+	unlocking_technologies = {
+		gate_magic_understanding_production
+	}
+
+	building_modifiers = {	# 50
+		workforce_scaled = {
+			goods_input_gate_magic_seed_add = 5		# -150
+			goods_output_opium_add = 12				# +600
+		}									# Profit = 450 
+
+		level_scaled = {
+			building_employment_gate_druids_add = 100
+		}
+	}
+}
+
+pm_gate_magic_seeds_opium_adv = {
+	texture = "gfx/interface/icons/production_method_icons/gate_magic_seeds_adv.dds"
+
+	unlocking_technologies = {
+		gate_living_irrigation		# Advanced PM unlocked at higher tech	#700 profit target
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_gate_magic_seed_add = 5		# -150
+			goods_input_gate_mana_add = 3			# - 90
+			goods_output_opium_add = 19				# +950
+		}									# Profit = 710
+
+		level_scaled = {
+			building_employment_gate_druids_add = 100
+		}
+	}
+}
+
+pm_gate_magic_seeds_tea = {
+	texture = "gfx/interface/icons/production_method_icons/gate_magic_seeds.dds"
+
+	unlocking_technologies = {
+		gate_magic_understanding_production
+	}
+
+	building_modifiers = {	# 50
+		workforce_scaled = {
+			goods_input_gate_magic_seed_add = 5		# -150
+			goods_output_tea_add = 12				# +600
+		}									# Profit = 450 
+
+		level_scaled = {
+			building_employment_gate_druids_add = 100
+		}
+	}
+}
+
+pm_gate_magic_seeds_tea_adv = {
+	texture = "gfx/interface/icons/production_method_icons/gate_magic_seeds_adv.dds"
+
+	unlocking_technologies = {
+		gate_living_irrigation		# Advanced PM unlocked at higher tech	#700 profit target
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_gate_magic_seed_add = 5		# -150
+			goods_input_gate_mana_add = 3			# - 90
+			goods_output_tea_add = 19				# +950
+		}									# Profit = 710
+
+		level_scaled = {
+			building_employment_gate_druids_add = 100
+		}
+	}
+}
+
+pm_gate_magic_seeds_tobacco = {
+	texture = "gfx/interface/icons/production_method_icons/gate_magic_seeds.dds"
+
+	unlocking_technologies = {
+		gate_magic_understanding_production
+	}
+
+	building_modifiers = {	# 40
+		workforce_scaled = {
+			goods_input_gate_magic_seed_add = 5		# -150
+			goods_output_tobacco_add = 15			# +600
+		}									# Profit = 450 
+
+		level_scaled = {
+			building_employment_gate_druids_add = 100
+		}
+	}
+}
+
+pm_gate_magic_seeds_tobacco_adv = {
+	texture = "gfx/interface/icons/production_method_icons/gate_magic_seeds_adv.dds"
+
+	unlocking_technologies = {
+		gate_living_irrigation		# Advanced PM unlocked at higher tech	#700 profit target
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_gate_magic_seed_add = 5		# -150
+			goods_input_gate_mana_add = 3			# - 90
+			goods_output_tobacco_add = 24			# +960
+		}									# Profit = 720
+
+		level_scaled = {
+			building_employment_gate_druids_add = 100
+		}
+	}
+}
+
+pm_gate_magic_seeds_sugar = {
+	texture = "gfx/interface/icons/production_method_icons/gate_magic_seeds.dds"
+
+	unlocking_technologies = {
+		gate_magic_understanding_production
+	}
+
+	building_modifiers = {	# 30
+		workforce_scaled = {
+			goods_input_gate_magic_seed_add = 5		# -150
+			goods_output_sugar_add = 20				# +600
+		}									# Profit = 450 
+
+		level_scaled = {
+			building_employment_gate_druids_add = 100
+		}
+	}
+}
+
+pm_gate_magic_seeds_sugar_adv = {
+	texture = "gfx/interface/icons/production_method_icons/gate_magic_seeds_adv.dds"
+
+	unlocking_technologies = {
+		gate_living_irrigation		# Advanced PM unlocked at higher tech	#700 profit target
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_gate_magic_seed_add = 5		# -150
+			goods_input_gate_mana_add = 3			# - 90
+			goods_output_sugar_add = 32				# +960
+		}									# Profit = 720
+
+		level_scaled = {
+			building_employment_gate_druids_add = 100
+		}
+	}
+}
+
+pm_gate_magic_seeds_banana = {
+	texture = "gfx/interface/icons/production_method_icons/gate_magic_seeds.dds"
+
+	unlocking_technologies = {
+		gate_magic_understanding_production
+	}
+
+	building_modifiers = {	# 30
+		workforce_scaled = {
+			goods_input_gate_magic_seed_add = 5		# -150
+			goods_output_fruit_add = 20				# +600
+		}									# Profit = 450 
+
+		level_scaled = {
+			building_employment_gate_druids_add = 100
+		}
+	}
+}
+
+pm_gate_magic_seeds_banana_adv = {
+	texture = "gfx/interface/icons/production_method_icons/gate_magic_seeds_adv.dds"
+
+	unlocking_technologies = {
+		gate_living_irrigation		# Advanced PM unlocked at higher tech	#700 profit target
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_gate_magic_seed_add = 5		# -150
+			goods_input_gate_mana_add = 3			# - 90
+			goods_output_fruit_add = 32				# +960
+		}									# Profit = 720
+
+		level_scaled = {
+			building_employment_gate_druids_add = 100
+		}
+	}
+}
+
+pm_gate_magic_seeds_silk = {
+	texture = "gfx/interface/icons/production_method_icons/gate_magic_seeds.dds"
+
+	unlocking_technologies = {
+		gate_magic_understanding_production
+	}
+
+	building_modifiers = {	# 40
+		workforce_scaled = {
+			goods_input_gate_magic_seed_add = 5		# -150
+			goods_output_silk_add = 15				# +600
+		}									# Profit = 450 
+
+		level_scaled = {
+			building_employment_gate_druids_add = 100
+		}
+	}
+}
+
+pm_gate_magic_seeds_silk_adv = {
+	texture = "gfx/interface/icons/production_method_icons/gate_magic_seeds_adv.dds"
+
+	unlocking_technologies = {
+		gate_living_irrigation		# Advanced PM unlocked at higher tech	#700 profit target
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_gate_magic_seed_add = 5		# -150
+			goods_input_gate_mana_add = 3			# - 90
+			goods_output_silk_add = 24				# +960
+		}									# Profit = 720
+
+		level_scaled = {
+			building_employment_gate_druids_add = 100
+		}
+	}
+}
+
+# Keep temporarily for save-compatibility
+pm_gate_living_irrigation_building_coffee_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/gate_magic_seeds.dds"
+	replacement_if_valid = coffee_plantation_dry_process
 }
 
 pm_gate_living_irrigation_building_cotton_plantation = {
 	texture = "gfx/interface/icons/production_method_icons/gate_magic_seeds.dds"
-
-	unlocking_technologies = {
-		gate_living_irrigation
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			# output goods
-			goods_input_gate_magic_seed_add = 5
-			goods_output_fabric_add = 65
-		}
-
-		level_scaled = {
-			# profit
-			building_employment_laborers_add = 3000
-			building_employment_farmers_add = 1500
-			building_employment_gate_druids_add = 500
-		}
-	}
+	replacement_if_valid = default_building_cotton_plantation
 }
 
 pm_gate_living_irrigation_building_dye_plantation = {
 	texture = "gfx/interface/icons/production_method_icons/gate_magic_seeds.dds"
-
-	unlocking_technologies = {
-		gate_living_irrigation
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			# output goods
-			goods_input_gate_magic_seed_add = 5
-			goods_output_dye_add = 35
-		}
-
-		level_scaled = {
-			# profit
-			building_employment_laborers_add = 3000
-			building_employment_farmers_add = 1500
-			building_employment_gate_druids_add = 500
-		}
-	}
+	replacement_if_valid = default_building_dye_plantation
 }
 
 pm_gate_living_irrigation_building_opium_plantation = {
 	texture = "gfx/interface/icons/production_method_icons/gate_magic_seeds.dds"
-
-	unlocking_technologies = {
-		gate_living_irrigation
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			# output goods
-			goods_input_gate_magic_seed_add = 5
-			goods_output_opium_add = 35
-		}
-
-		level_scaled = {
-			# profit
-			building_employment_laborers_add = 3000
-			building_employment_farmers_add = 1500
-			building_employment_gate_druids_add = 500
-		}
-	}
+	replacement_if_valid = default_building_opium_plantation
 }
 
 pm_gate_living_irrigation_building_tea_plantation = {
 	texture = "gfx/interface/icons/production_method_icons/gate_magic_seeds.dds"
-
-	unlocking_technologies = {
-		gate_living_irrigation
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			# output goods
-			goods_input_gate_magic_seed_add = 5
-			goods_output_tea_add = 30
-		}
-
-		level_scaled = {
-			# profit
-			building_employment_laborers_add = 3000
-			building_employment_farmers_add = 1500
-			building_employment_gate_druids_add = 500
-		}
-	}
+	replacement_if_valid = default_building_tea_plantation
 }
 
 pm_gate_living_irrigation_building_tobacco_plantation = {
 	texture = "gfx/interface/icons/production_method_icons/gate_magic_seeds.dds"
-
-	unlocking_technologies = {
-		gate_living_irrigation
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			# output goods
-			goods_input_gate_magic_seed_add = 5
-			goods_output_tobacco_add = 35
-		}
-
-		level_scaled = {
-			# profit
-			building_employment_laborers_add = 3000
-			building_employment_farmers_add = 1500
-			building_employment_gate_druids_add = 500
-		}
-	}
+	replacement_if_valid = default_building_tobacco_plantation
 }
 
 pm_gate_living_irrigation_building_sugar_plantation = {
 	texture = "gfx/interface/icons/production_method_icons/gate_magic_seeds.dds"
-
-	unlocking_technologies = {
-		gate_living_irrigation
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			# output goods
-			goods_input_gate_magic_seed_add = 5
-			goods_output_sugar_add = 45
-		}
-
-		level_scaled = {
-			# profit
-			building_employment_laborers_add = 3000
-			building_employment_farmers_add = 1500
-			building_employment_gate_druids_add = 500
-		}
-	}
+	replacement_if_valid = default_building_sugar_plantation
 }
 
 pm_gate_living_irrigation_building_banana_plantation = {
 	texture = "gfx/interface/icons/production_method_icons/gate_magic_seeds.dds"
-
-	unlocking_technologies = {
-		gate_living_irrigation
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			# output goods
-			goods_input_gate_magic_seed_add = 5
-			goods_output_fruit_add = 45
-		}
-
-		level_scaled = {
-			# profit
-			building_employment_laborers_add = 3000
-			building_employment_farmers_add = 1500
-			building_employment_gate_druids_add = 500
-		}
-	}
+	replacement_if_valid = default_building_banana_plantation
 }
 
 pm_gate_living_irrigation_building_silk_plantation = {
 	texture = "gfx/interface/icons/production_method_icons/gate_magic_seeds.dds"
-
-	unlocking_technologies = {
-		gate_living_irrigation
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			# output goods
-			goods_input_gate_magic_seed_add = 5
-			goods_output_silk_add = 30
-		}
-
-		level_scaled = {
-			# profit
-			building_employment_laborers_add = 3000
-			building_employment_farmers_add = 1500
-			building_employment_gate_druids_add = 500
-		}
-	}
+	replacement_if_valid = default_building_silk_plantation
 }
 
 pm_gate_living_irrigation_building_vineyard = {
 	texture = "gfx/interface/icons/production_method_icons/gate_magic_seeds.dds"
-
-	unlocking_technologies = {
-		gate_living_irrigation
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			# output goods
-			goods_input_gate_magic_seed_add = 5
-			goods_output_wine_add = 30
-		}
-
-		level_scaled = {
-			# profit
-			building_employment_laborers_add = 3000
-			building_employment_farmers_add = 1500
-			building_employment_gate_druids_add = 500
-		}
-	}
+	replacement_if_valid = default_building_vineyard
 }
