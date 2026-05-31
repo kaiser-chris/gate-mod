@@ -1,11 +1,11 @@
-﻿pm_gate_normal_seeds = {
+﻿REPLACE_OR_CREATE:pm_gate_normal_seeds = {
 	texture = "gfx/interface/icons/production_method_icons/gate_normal_seeds.dds"
 
 	is_default = yes
 }
 
 
-pm_gate_magic_seeds = {
+REPLACE_OR_CREATE:pm_gate_magic_seeds = {
 	texture = "gfx/interface/icons/production_method_icons/gate_magic_seeds.dds"
 
 	building_modifiers = {	# 20 - grain seeds are basic, don't need tech to use
@@ -20,7 +20,7 @@ pm_gate_magic_seeds = {
 	}
 }
 
-pm_gate_magic_seeds_adv = {
+REPLACE_OR_CREATE:pm_gate_magic_seeds_adv = {
 	texture = "gfx/interface/icons/production_method_icons/gate_magic_seeds_adv.dds"
 
 	unlocking_technologies = {
@@ -40,7 +40,7 @@ pm_gate_magic_seeds_adv = {
 	}
 }
 
-pm_gate_magic_seeds_building_rice_farm = {
+REPLACE_OR_CREATE:pm_gate_magic_seeds_building_rice_farm = {
 	texture = "gfx/interface/icons/production_method_icons/gate_magic_seeds.dds"
 
 	building_modifiers = {	# 20 - grain seeds are basic, don't need tech to use
@@ -55,7 +55,7 @@ pm_gate_magic_seeds_building_rice_farm = {
 	}
 }
 
-pm_gate_magic_seeds_building_rice_farm_adv = {
+REPLACE_OR_CREATE:pm_gate_magic_seeds_building_rice_farm_adv = {
 	texture = "gfx/interface/icons/production_method_icons/gate_magic_seeds_adv.dds"
 
 	unlocking_technologies = {
