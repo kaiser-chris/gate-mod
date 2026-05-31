@@ -55,7 +55,7 @@
                     }
                 }
                 reserves = 1
-                activate_production_methods = { pm_simple_farming pm_gate_magic_seeds pm_no_secondary pm_tools }
+                activate_production_methods = { pm_simple_farming pm_gate_magic_seeds_advanced pm_no_secondary pm_tools }
             }
             create_building = {
                 building = building_gate_mana_extractor
@@ -226,7 +226,7 @@
                     }
                 }
                 activate_production_methods = {
-                    pm_gate_living_irrigation_building_cotton_plantation
+                    pm_gate_magic_seeds_cotton_advanced
                 }
                 reserves = 1
             }
@@ -239,7 +239,7 @@
                     }
                 }
                 activate_production_methods = {
-                    pm_gate_living_irrigation_building_tobacco_plantation
+                    pm_gate_magic_seeds_tobacco_advanced
                 }
                 reserves = 1
             }
@@ -274,7 +274,7 @@
                     }
                 }
                 reserves = 1
-                activate_production_methods = { pm_simple_farming pm_gate_magic_seeds pm_no_secondary pm_tools }
+                activate_production_methods = { pm_simple_farming pm_gate_magic_seeds_advanced pm_no_secondary pm_tools }
             }
             create_building = {
                 building = building_tobacco_plantation
@@ -287,7 +287,7 @@
                     }
                 }
                 activate_production_methods = {
-                    pm_gate_living_irrigation_building_tobacco_plantation
+                    pm_gate_magic_seeds_tobacco_advanced
                 }
                 reserves = 1
             }
@@ -313,7 +313,7 @@
                     }
                 }
                 activate_production_methods = {
-                    pm_gate_living_irrigation_building_sugar_plantation
+                    pm_gate_magic_seeds_sugar_advanced
                 }
                 reserves = 1
             }
@@ -439,6 +439,7 @@
                 reserves = 1
                 activate_production_methods = {
                     default_building_tobacco_plantation
+                    pm_gate_magic_seeds_tobacco
                     pm_road_carts
                 }
             }
@@ -453,6 +454,7 @@
                 reserves = 1
                 activate_production_methods = {
                     coffee_plantation_dry_process
+                    pm_gate_magic_seeds_coffee
                     pm_road_carts
                 }
             }
@@ -467,6 +469,7 @@
                 reserves = 1
                 activate_production_methods = {
                     default_building_cotton_plantation
+                    pm_gate_magic_seeds_cotton
                     pm_road_carts
                 }
             }
@@ -519,6 +522,7 @@
                 reserves = 1
                 activate_production_methods = {
                     default_building_cotton_plantation
+                    pm_gate_magic_seeds_cotton
                     pm_road_carts
                 }
             }
@@ -612,7 +616,10 @@
                     }
                 }
                 reserves = 1
-                activate_production_methods = { default_building_dye_plantation }
+                activate_production_methods = {
+                    default_building_dye_plantation
+                    pm_gate_magic_seeds_dye
+                }
             }
             create_building = {
                 building = building_banana_plantation
@@ -625,7 +632,10 @@
                     }
                 }
                 reserves = 1
-                activate_production_methods = { default_building_banana_plantation }
+                activate_production_methods = {
+                    default_building_banana_plantation
+                    pm_gate_magic_seeds_banana
+                }
             }
             create_building = {
                 building = building_tea_plantation
@@ -651,7 +661,11 @@
                     }
                 }
                 reserves = 1
-                activate_production_methods = { pm_simple_farming pm_gate_magic_seeds pm_no_secondary pm_tools }
+                activate_production_methods = {
+                    pm_simple_farming
+                    pm_gate_magic_seeds
+                    pm_no_secondary
+                    pm_tools }
             }
             create_building = {
                 building = building_sugar_plantation
@@ -664,7 +678,10 @@
                     }
                 }
                 reserves = 1
-                activate_production_methods = { default_building_sugar_plantation }
+                activate_production_methods = {
+                    default_building_sugar_plantation
+                    pm_gate_magic_seeds_sugar
+                }
             }
         }
         region_state:LND = {
@@ -726,7 +743,10 @@
                     }
                 }
                 reserves = 1
-                activate_production_methods = { default_building_cotton_plantation }
+                activate_production_methods = {
+                    default_building_cotton_plantation
+                    pm_gate_magic_seeds_cotton
+                }
             }
         }
     }
