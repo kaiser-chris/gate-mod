@@ -9,6 +9,12 @@
         container = "custom_widget_container_je_icon"
     }
 
+    widget = {
+        gui = "gui/com_journal_injects/injects.gui"
+        name = "com_journal_entry_dlc_icon"
+        container = "custom_widget_container_7"
+    }
+
     modifiers_while_active = {
         modifier_gate_arcane_council_base
     }
@@ -19,6 +25,7 @@
     scripted_button = sb_gate_arcane_council_cancel_regulations
 
     immediate = {
+        add_gate_dlc_icon = yes
         scope:journal_entry = {
             com_set_international_organization_headquaters_effect = {
                 state_region = global_var:gate_mage_council_headquarters

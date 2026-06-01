@@ -16,6 +16,7 @@ flowcontainer = {
 	name = "gate_inject_harmony_pledge_progress_bars"
 	parentanchor = hcenter
 	direction = vertical
+	margin_bottom = 10
 
 	datamodel = "[JournalEntry.GetScriptedProgressBars]"
 	visible = "[Not(IsDataModelEmpty(JournalEntry.GetScriptedProgressBars))]"
@@ -75,12 +76,23 @@ types gate_harmony_pledge_progress_bars {
 				value = "[JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)]"
 
 				marker = {
-					icon = {
-						texture = "gfx/interface/progressbar/progressbar_gold_glow_line.dds"
-						size = { 3 100% }
-						spriteType = Corneredtiled
-						spriteborder = { 0 0 }
-						block "color" {}
+					widget = {
+						size = { 4 100% }
+						icon = {
+							texture = "gfx/interface/progressbar/progressbar_gold_glow_line.dds"
+							size = { 2 100% }
+							spriteType = Corneredtiled
+							spriteborder = { 0 0 }
+							parentanchor = hcenter|left
+							mirror = horizontal
+						}
+						icon = {
+							texture = "gfx/interface/progressbar/progressbar_gold_glow_line.dds"
+							size = { 2 100% }
+							spriteType = Corneredtiled
+							spriteborder = { 0 0 }
+							parentanchor = hcenter|right
+						}
 					}
 				}
 			}
@@ -115,6 +127,9 @@ types gate_harmony_pledge_progress_bars {
 					blockoverride "texture" {
 						texture = "gfx/interface/progressbar/progressbar_bad.dds"
 					}
+					blockoverride "shimmer_margin_right" {
+						margin_right = -1
+					}
 				}
 
 				gate_progressbar_level = {
@@ -127,6 +142,12 @@ types gate_harmony_pledge_progress_bars {
 					}
 					blockoverride "texture" {
 						texture = "gfx/interface/progressbar/progressbar_gold.dds"
+					}
+					blockoverride "shimmer_margin_left" {
+						margin_left = -3
+					}
+					blockoverride "shimmer_margin_right" {
+						margin_right = -1
 					}
 				}
 
@@ -141,6 +162,12 @@ types gate_harmony_pledge_progress_bars {
 					blockoverride "texture" {
 						texture = "gfx/interface/progressbar/progressbar_green.dds"
 					}
+					blockoverride "shimmer_margin_left" {
+						margin_left = -3
+					}
+					blockoverride "shimmer_margin_right" {
+						margin_right = -1
+					}
 				}
 
 				gate_progressbar_level = {
@@ -153,6 +180,12 @@ types gate_harmony_pledge_progress_bars {
 					}
 					blockoverride "texture" {
 						texture = "gfx/interface/progressbar/progressbar_gold.dds"
+					}
+					blockoverride "shimmer_margin_left" {
+						margin_left = -3
+					}
+					blockoverride "shimmer_margin_right" {
+						margin_right = -1
 					}
 				}
 
@@ -169,6 +202,9 @@ types gate_harmony_pledge_progress_bars {
 					}
 					blockoverride "texture" {
 						texture = "gfx/interface/progressbar/progressbar_bad.dds"
+					}
+					blockoverride "shimmer_margin_left" {
+						margin_left = -3
 					}
 				}
 			}
@@ -190,6 +226,8 @@ types gate_harmony_pledge_progress_bars {
 			spriteborder = { 3 3 }
 			spriteType = Corneredstretched
 			texture_density = 5
+			block "shimmer_margin_left" {}
+			block "shimmer_margin_right" {}
 		}
 
 		background = {
@@ -201,6 +239,8 @@ types gate_harmony_pledge_progress_bars {
 			block "level_active" {
 				visible = no
 			}
+			block "shimmer_margin_left" {}
+			block "shimmer_margin_right" {}
 		}
 
 		background = {
@@ -209,8 +249,9 @@ types gate_harmony_pledge_progress_bars {
 			spriteType = Corneredstretched
 			spriteborder = { 6 6 }
 			texture_density = 2
-			alpha = 0.5
-
+			alpha = 0.3
+			margin_right = -1
+			block "shimmer_margin_left" {}
 			using = shimmer
 			block "level_active" {
 				visible = no

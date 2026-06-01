@@ -13,6 +13,12 @@
         container = "com_custom_widget_container_scripted_progress_bars"
     }
 
+    widget = {
+        gui = "gui/com_journal_injects/injects.gui"
+        name = "com_journal_entry_dlc_icon"
+        container = "custom_widget_container_7"
+    }
+
     status_desc = {
         first_valid = {
             triggered_desc = {
@@ -52,7 +58,18 @@
         }
     }
 
+    on_monthly_pulse = {
+        random_events = {
+            chance_of_no_event = 80
+            1 = gate_harmony_pledge.1
+            1 = gate_harmony_pledge.2
+            1 = gate_harmony_pledge.3
+            1 = gate_harmony_pledge.4
+        }
+    }
+
     immediate = {
+        add_gate_dlc_icon = yes
     }
 
     fail = {
