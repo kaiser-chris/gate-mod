@@ -1,0 +1,246 @@
+﻿namespace = gate_harmony_pledge
+
+gate_harmony_pledge.1 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:event_state
+
+	title = gate_harmony_pledge.1.t
+	desc = gate_harmony_pledge.1.d
+	flavor = gate_harmony_pledge.1.f
+
+	event_image = {
+		video = "unspecific_ruler_speaking_to_people"
+	}
+
+	trigger = {
+		any_scope_pop = {
+			culture = cu:gnomish
+		}
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				any_scope_pop = {
+					culture = cu:gnomish
+				}
+			}
+			save_scope_as = event_state
+		}
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	cooldown = {
+		months = { 12 24 }
+	}
+
+	icon = gfx/interface/icons/religion_icons/gate_harmony_pledge.dds
+
+	duration = 3
+
+	option = {
+		name = gate_harmony_pledge.1.a
+		default_option = yes
+	}
+
+	option = {
+		name = gate_harmony_pledge.1.b
+		default_option = yes
+	}
+
+	option = {
+		name = gate_harmony_pledge.1.c
+		default_option = yes
+	}
+}
+
+gate_harmony_pledge.2 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = capital
+
+	title = gate_harmony_pledge.2.t
+	desc = gate_harmony_pledge.2.d
+	flavor = gate_harmony_pledge.2.f
+
+	event_image = {
+		video = "unspecific_gears_pistons"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	cooldown = {
+		months = { 12 24 }
+	}
+
+	icon = gfx/interface/icons/religion_icons/gate_harmony_pledge.dds
+
+	duration = 3
+
+	#TODO: MasterOfGrey balance
+	option = {
+		name = gate_harmony_pledge.2.a
+		add_gate_economy_harmony_progress = {
+			amount = -5
+		}
+		add_modifier = {
+			name = modifier_gate_harmony_pledge_rewritten_ledger
+			months = 12
+			multiplier = -1
+		}
+	}
+
+	#TODO: MasterOfGrey balance
+	option = {
+		name = gate_harmony_pledge.2.b
+		default_option = yes
+		add_gate_economy_harmony_progress = {
+			amount = 2
+		}
+		add_modifier = {
+			name = modifier_gate_harmony_pledge_rewritten_ledger
+			months = 12
+		}
+	}
+
+	#TODO: MasterOfGrey balance
+	option = {
+		name = gate_harmony_pledge.2.c
+		add_gate_economy_harmony_progress = {
+			amount = 5
+		}
+		add_modifier = {
+			name = modifier_gate_harmony_pledge_rewritten_ledger
+			months = 12
+			multiplier = 2
+		}
+	}
+}
+
+gate_harmony_pledge.3 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = capital
+
+	title = gate_harmony_pledge.3.t
+	desc = gate_harmony_pledge.3.d
+	flavor = gate_harmony_pledge.3.f
+
+	event_image = {
+		video = "unspecific_gears_pistons"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	cooldown = {
+		months = { 12 24 }
+	}
+
+	icon = gfx/interface/icons/religion_icons/gate_harmony_pledge.dds
+
+	duration = 3
+
+	#TODO: MasterOfGrey balance
+	option = {
+		name = gate_harmony_pledge.3.a
+		add_gate_economy_harmony_progress = {
+			amount = -5
+		}
+		add_modifier = {
+			name = modifier_gate_harmony_pledge_refinement_without_end
+			months = 12
+			multiplier = -1
+		}
+	}
+
+	#TODO: MasterOfGrey balance
+	option = {
+		name = gate_harmony_pledge.3.b
+		default_option = yes
+		add_gate_economy_harmony_progress = {
+			amount = 2
+		}
+		add_modifier = {
+			name = modifier_gate_harmony_pledge_refinement_without_end
+			months = 12
+		}
+	}
+
+	#TODO: MasterOfGrey balance
+	option = {
+		name = gate_harmony_pledge.3.c
+		add_gate_economy_harmony_progress = {
+			amount = 5
+		}
+		add_modifier = {
+			name = modifier_gate_harmony_pledge_refinement_without_end
+			months = 12
+			multiplier = 2
+		}
+	}
+}
+
+gate_harmony_pledge.4 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = capital
+
+	title = gate_harmony_pledge.4.t
+	desc = gate_harmony_pledge.4.d
+	flavor = gate_harmony_pledge.4.f
+
+	event_image = {
+		video = "unspecific_gears_pistons"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	cooldown = {
+		months = { 12 24 }
+	}
+
+	icon = gfx/interface/icons/religion_icons/gate_harmony_pledge.dds
+
+	duration = 3
+
+	#TODO: MasterOfGrey balance
+	option = {
+		name = gate_harmony_pledge.4.a
+		add_gate_economy_harmony_progress = {
+			amount = -5
+		}
+		add_modifier = {
+			name = modifier_gate_harmony_pledge_construction_drive
+			months = 12
+			multiplier = -1
+		}
+	}
+
+	#TODO: MasterOfGrey balance
+	option = {
+		name = gate_harmony_pledge.4.b
+		default_option = yes
+		add_gate_economy_harmony_progress = {
+			amount = 2
+		}
+		add_modifier = {
+			name = modifier_gate_harmony_pledge_construction_drive
+			months = 12
+		}
+	}
+
+	#TODO: MasterOfGrey balance
+	option = {
+		name = gate_harmony_pledge.4.c
+		add_gate_economy_harmony_progress = {
+			amount = 5
+		}
+		add_modifier = {
+			name = modifier_gate_harmony_pledge_construction_drive
+			months = 12
+			multiplier = 2
+		}
+	}
+}

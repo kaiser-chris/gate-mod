@@ -1,0 +1,68 @@
+﻿add_gate_economy_harmony_progress = {
+    if = {
+        limit = {
+            exists = je:je_gate_harmony_pledge
+        }
+        custom_description = {
+            text = add_gate_economy_harmony_progress
+            subject = this
+            value = $amount$
+
+            je:je_gate_harmony_pledge = {
+                add_progress = {
+                    name = pb_gate_harmony_pledge_economy
+                    value = $amount$
+                }
+            }
+        }
+    }
+    else = {
+        custom_tooltip = gate_create_bug_report
+    }
+}
+
+add_gate_society_harmony_progress = {
+    if = {
+        limit = {
+            exists = je:je_gate_harmony_pledge
+        }
+        custom_description = {
+            text = add_gate_society_harmony_progress
+            subject = this
+            value = $amount$
+
+            je:je_gate_harmony_pledge = {
+                add_progress = {
+                    name = pb_gate_harmony_pledge_society
+                    value = $amount$
+                }
+            }
+        }
+    }
+    else = {
+        custom_tooltip = gate_create_bug_report
+    }
+}
+
+add_gate_legislative_harmony_progress = {
+    if = {
+        limit = {
+            exists = je:je_gate_harmony_pledge
+        }
+        custom_description = {
+            text = add_gate_legislative_harmony_progress
+            subject = this
+            value = $amount$
+
+            je:je_gate_harmony_pledge = {
+                add_progress = {
+                    name = pb_gate_harmony_pledge_legislative
+                    value = $amount$
+                }
+            }
+        }
+    }
+    else = {
+        custom_tooltip = gate_create_bug_report
+    }
+}
