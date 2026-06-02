@@ -31,6 +31,10 @@
         container = "custom_widget_container_7"
     }
 
+    is_shown_in_lobby = {
+        c:GATE_NS ?= this
+    }
+
     status_desc = {
         first_valid = {
             triggered_desc = {
