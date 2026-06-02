@@ -1,40 +1,44 @@
-﻿modifier_gate_harmony_pledge_society_harmonious = {
+﻿#TODO: MasterOfGrey balance
+modifier_gate_harmony_pledge_society_harmonious = {
 	icon = gfx/interface/icons/timed_modifier_icons/gate_modifier_harmony_pledge_society_harmonious.dds
-	state_assimilation_mult = -0.1
+	state_assimilation_mult = 0.1
 }
 modifier_gate_harmony_pledge_society_tilting = {
 	icon = gfx/interface/icons/timed_modifier_icons/gate_modifier_harmony_pledge_society_tilting.dds
-	state_assimilation_mult = -0.1
 }
 modifier_gate_harmony_pledge_society_disharmonious = {
 	icon = gfx/interface/icons/timed_modifier_icons/gate_modifier_harmony_pledge_society_disharmonious.dds
 	state_assimilation_mult = -0.1
 }
 
+#TODO: MasterOfGrey balance
 modifier_gate_harmony_pledge_economy_harmonious = {
 	icon = gfx/interface/icons/timed_modifier_icons/gate_modifier_harmony_pledge_economy_harmonious.dds
-	state_assimilation_mult = -0.1
+	building_goods_input_mult = -0.05
+	building_throughput_add = 0.05
 }
 modifier_gate_harmony_pledge_economy_tilting = {
 	icon = gfx/interface/icons/timed_modifier_icons/gate_modifier_harmony_pledge_economy_tilting.dds
-	state_assimilation_mult = -0.1
 }
 modifier_gate_harmony_pledge_economy_disharmonious = {
 	icon = gfx/interface/icons/timed_modifier_icons/gate_modifier_harmony_pledge_economy_disharmonious.dds
-	state_assimilation_mult = -0.1
+	building_goods_input_mult = 0.05
+	building_throughput_add = -0.05
 }
 
+#TODO: MasterOfGrey balance
 modifier_gate_harmony_pledge_legislative_harmonious = {
 	icon = gfx/interface/icons/timed_modifier_icons/gate_modifier_harmony_pledge_legislative_harmonious.dds
-	state_assimilation_mult = -0.1
+	country_law_enactment_time_mult = -0.05
+	country_law_enactment_stall_mult = -0.05
 }
 modifier_gate_harmony_pledge_legislative_tilting = {
 	icon = gfx/interface/icons/timed_modifier_icons/gate_modifier_harmony_pledge_legislative_tilting.dds
-	state_assimilation_mult = -0.1
 }
 modifier_gate_harmony_pledge_legislative_disharmonious = {
 	icon = gfx/interface/icons/timed_modifier_icons/gate_modifier_harmony_pledge_legislative_disharmonious.dds
-	state_assimilation_mult = -0.1
+	country_law_enactment_time_mult = 0.05
+	country_law_enactment_stall_mult = 0.05
 }
 
 modifier_gate_harmony_pledge_enthusiasm_without_boundaries = {
