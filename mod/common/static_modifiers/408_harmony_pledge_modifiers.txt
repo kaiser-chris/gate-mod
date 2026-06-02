@@ -15,3 +15,21 @@ modifier_gate_harmony_pledge_construction_drive = {
 	building_group_bg_agriculture_throughput_add = -0.05
 	state_construction_mult = 0.05
 }
+
+modifier_gate_harmony_pledge_excess_theory = {
+	icon = gfx/interface/icons/timed_modifier_icons/gate_modifier_harmony_pledge_neutral.dds
+	country_weekly_innovation_mult = 0.05
+	state_construction_mult = -0.05
+}
+
+modifier_gate_harmony_pledge_abstract_wealth = {
+	icon = gfx/interface/icons/timed_modifier_icons/gate_modifier_harmony_pledge_neutral.dds
+	building_cash_reserves_mult = -0.2
+	state_capitalists_investment_pool_efficiency_mult = 0.05
+}
+
+modifier_gate_harmony_pledge_subterranean_fixation = {
+	icon = gfx/interface/icons/timed_modifier_icons/gate_modifier_harmony_pledge_neutral.dds
+	building_group_bg_extraction_throughput_add = 0.05
+	building_group_bg_plantations_throughput_add = -0.05
+}
