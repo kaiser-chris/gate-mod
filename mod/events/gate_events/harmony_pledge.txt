@@ -10,7 +10,7 @@ gate_harmony_pledge.1 = {
 	flavor = gate_harmony_pledge.1.f
 
 	event_image = {
-		video = "unspecific_ruler_speaking_to_people"
+		video = "ip3_official_reading_dictate"
 	}
 
 	trigger = {
@@ -40,19 +40,33 @@ gate_harmony_pledge.1 = {
 
 	duration = 3
 
+	#TODO: MasterOfGrey balance
 	option = {
 		name = gate_harmony_pledge.1.a
-		default_option = yes
+		add_gate_society_harmony_progress = {
+			amount = -5
+		}
+		je:je_gate_harmony_pledge ?= {
+			add_modifier = {
+				name = modifier_gate_harmony_pledge_enthusiasm_without_boundaries
+				months = 12
+			}
+		}
 	}
 
+	#TODO: MasterOfGrey balance
 	option = {
 		name = gate_harmony_pledge.1.b
 		default_option = yes
-	}
-
-	option = {
-		name = gate_harmony_pledge.1.c
-		default_option = yes
+		add_gate_society_harmony_progress = {
+			amount = 5
+		}
+		scope:event_state ?= {
+			add_radicals_in_state = {
+				culture = cu:gnomish
+				value = 0.02
+			}
+		}
 	}
 }
 

@@ -18,6 +18,7 @@
  pb_gate_harmony_pledge_legislative_desc_left: "#v Legislative ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]/100)#!"
  pb_gate_harmony_pledge_legislative_desc_right: "[JournalEntry.GetCustom('gate_harmony_pledge_indicator_legislative')]"
 # Modifiers
+ modifier_gate_harmony_pledge_enthusiasm_without_boundaries: "$gate_harmony_pledge.1.t$"
  modifier_gate_harmony_pledge_rewritten_ledger: "$gate_harmony_pledge.2.t$"
  modifier_gate_harmony_pledge_refinement_without_end: "$gate_harmony_pledge.3.t$"
  modifier_gate_harmony_pledge_construction_drive: "$gate_harmony_pledge.4.t$"
@@ -26,11 +27,10 @@
  modifier_gate_harmony_pledge_subterranean_fixation: "$gate_harmony_pledge.7.t$"
 # Events
  gate_harmony_pledge.1.t: "Enthusiasm Without Boundaries"
- gate_harmony_pledge.1.d: "A [GetCulture('gnomish').GetName] person in [TopScope.sS('event_state').GetName] caused public outrage."
+ gate_harmony_pledge.1.d: "A [GetCulture('gnomish').GetName] person in [TopScope.sS('event_state').GetName] caused public outrage. This public outrage will decrease [concept_assimilation] if not handled correctly."
  gate_harmony_pledge.1.f: "In a crowded square, a gnome, utterly captivated, subjects an unfortunate guest to a torrent of questions. Personal, technical, philosophical, and increasingly invasive, the inquiry unfolds with cheerful intensity and no regard for propriety. What is, to one, genuine fascination becomes, to others, a public breach of comfort."
  gate_harmony_pledge.1.a: "They were just curious."
- gate_harmony_pledge.1.b: "b" #TODO: gate_harmony_pledge.1.b
- gate_harmony_pledge.1.c: "c" #TODO: gate_harmony_pledge.1.c
+ gate_harmony_pledge.1.b: "Condemn this behavior."
  gate_harmony_pledge.2.t: "The Ledger Rewritten"
  gate_harmony_pledge.2.d: "A new management style improves [concept_bureaucracy] output, but also stifles [concept_innovation]."
  gate_harmony_pledge.2.f: "Our civil service has successfully implemented new, highly sophisticated systems of oversight and allocation. Administrative efficiency has peaked, and bureaucratic waste is virtually nonexistent. However, academic and cultural advisors report that this relentless structural optimization is stifling initiative, causing independent research and creative pursuits to stall across the country."
