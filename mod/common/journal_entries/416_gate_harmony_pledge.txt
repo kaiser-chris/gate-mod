@@ -9,7 +9,19 @@
 
     widget = {
         gui = "gui/journal_injects/gate_harmony_pledge_injects.gui"
+        name = "gate_inject_harmony_pledge_icon"
+        container = "custom_widget_container_je_icon"
+    }
+
+    widget = {
+        gui = "gui/journal_injects/gate_harmony_pledge_injects.gui"
         name = "gate_inject_harmony_pledge_progress_bars"
+        container = "com_custom_widget_container_scripted_progress_bars"
+    }
+
+    widget = {
+        gui = "gui/journal_injects/gate_harmony_pledge_injects.gui"
+        name = "gate_inject_harmony_pledge_modifiers"
         container = "com_custom_widget_container_scripted_progress_bars"
     }
 
@@ -60,16 +72,22 @@
 
     on_monthly_pulse = {
         random_events = {
-            chance_of_no_event = 80
+            chance_of_no_event = 90
             1 = gate_harmony_pledge.1
             1 = gate_harmony_pledge.2
             1 = gate_harmony_pledge.3
             1 = gate_harmony_pledge.4
+            1 = gate_harmony_pledge.5
+            1 = gate_harmony_pledge.6
+            1 = gate_harmony_pledge.7
         }
     }
 
     immediate = {
         add_gate_dlc_icon = yes
+        scope:journal_entry = {
+            set_variable = com_hide_modifiers
+        }
     }
 
     fail = {

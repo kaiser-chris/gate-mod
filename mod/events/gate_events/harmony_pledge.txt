@@ -85,10 +85,12 @@ gate_harmony_pledge.2 = {
 		add_gate_economy_harmony_progress = {
 			amount = -5
 		}
-		add_modifier = {
-			name = modifier_gate_harmony_pledge_rewritten_ledger
-			months = 12
-			multiplier = -1
+		je:je_gate_harmony_pledge ?= {
+			add_modifier = {
+				name = modifier_gate_harmony_pledge_rewritten_ledger
+				months = 12
+				multiplier = -1
+			}
 		}
 	}
 
@@ -99,9 +101,11 @@ gate_harmony_pledge.2 = {
 		add_gate_economy_harmony_progress = {
 			amount = 2
 		}
-		add_modifier = {
-			name = modifier_gate_harmony_pledge_rewritten_ledger
-			months = 12
+		je:je_gate_harmony_pledge ?= {
+			add_modifier = {
+				name = modifier_gate_harmony_pledge_rewritten_ledger
+				months = 12
+			}
 		}
 	}
 
@@ -111,10 +115,12 @@ gate_harmony_pledge.2 = {
 		add_gate_economy_harmony_progress = {
 			amount = 5
 		}
-		add_modifier = {
-			name = modifier_gate_harmony_pledge_rewritten_ledger
-			months = 12
-			multiplier = 2
+		je:je_gate_harmony_pledge ?= {
+			add_modifier = {
+				name = modifier_gate_harmony_pledge_rewritten_ledger
+				months = 12
+				multiplier = 2
+			}
 		}
 	}
 }
@@ -148,10 +154,12 @@ gate_harmony_pledge.3 = {
 		add_gate_economy_harmony_progress = {
 			amount = -5
 		}
-		add_modifier = {
-			name = modifier_gate_harmony_pledge_refinement_without_end
-			months = 12
-			multiplier = -1
+		je:je_gate_harmony_pledge ?= {
+			add_modifier = {
+				name = modifier_gate_harmony_pledge_refinement_without_end
+				months = 12
+				multiplier = -1
+			}
 		}
 	}
 
@@ -162,9 +170,11 @@ gate_harmony_pledge.3 = {
 		add_gate_economy_harmony_progress = {
 			amount = 2
 		}
-		add_modifier = {
-			name = modifier_gate_harmony_pledge_refinement_without_end
-			months = 12
+		je:je_gate_harmony_pledge ?= {
+			add_modifier = {
+				name = modifier_gate_harmony_pledge_refinement_without_end
+				months = 12
+			}
 		}
 	}
 
@@ -174,10 +184,12 @@ gate_harmony_pledge.3 = {
 		add_gate_economy_harmony_progress = {
 			amount = 5
 		}
-		add_modifier = {
-			name = modifier_gate_harmony_pledge_refinement_without_end
-			months = 12
-			multiplier = 2
+		je:je_gate_harmony_pledge ?= {
+			add_modifier = {
+				name = modifier_gate_harmony_pledge_refinement_without_end
+				months = 12
+				multiplier = 2
+			}
 		}
 	}
 }
@@ -211,10 +223,12 @@ gate_harmony_pledge.4 = {
 		add_gate_economy_harmony_progress = {
 			amount = -5
 		}
-		add_modifier = {
-			name = modifier_gate_harmony_pledge_construction_drive
-			months = 12
-			multiplier = -1
+		je:je_gate_harmony_pledge ?= {
+			add_modifier = {
+				name = modifier_gate_harmony_pledge_construction_drive
+				months = 12
+				multiplier = -1
+			}
 		}
 	}
 
@@ -225,9 +239,11 @@ gate_harmony_pledge.4 = {
 		add_gate_economy_harmony_progress = {
 			amount = 2
 		}
-		add_modifier = {
-			name = modifier_gate_harmony_pledge_construction_drive
-			months = 12
+		je:je_gate_harmony_pledge ?= {
+			add_modifier = {
+				name = modifier_gate_harmony_pledge_construction_drive
+				months = 12
+			}
 		}
 	}
 
@@ -237,10 +253,219 @@ gate_harmony_pledge.4 = {
 		add_gate_economy_harmony_progress = {
 			amount = 5
 		}
-		add_modifier = {
-			name = modifier_gate_harmony_pledge_construction_drive
-			months = 12
-			multiplier = 2
+		je:je_gate_harmony_pledge ?= {
+			add_modifier = {
+				name = modifier_gate_harmony_pledge_construction_drive
+				months = 12
+				multiplier = 2
+			}
+		}
+	}
+}
+
+gate_harmony_pledge.5 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = capital
+
+	title = gate_harmony_pledge.5.t
+	desc = gate_harmony_pledge.5.d
+	flavor = gate_harmony_pledge.5.f
+
+	event_image = {
+		video = "ip4_university_lecture"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	cooldown = {
+		months = { 12 24 }
+	}
+
+	icon = gfx/interface/icons/religion_icons/gate_harmony_pledge.dds
+
+	duration = 3
+
+	#TODO: MasterOfGrey balance
+	option = {
+		name = gate_harmony_pledge.5.a
+		add_gate_economy_harmony_progress = {
+			amount = -5
+		}
+		je:je_gate_harmony_pledge ?= {
+			add_modifier = {
+				name = modifier_gate_harmony_pledge_excess_theory
+				months = 12
+				multiplier = -1
+			}
+		}
+	}
+
+	#TODO: MasterOfGrey balance
+	option = {
+		name = gate_harmony_pledge.5.b
+		default_option = yes
+		add_gate_economy_harmony_progress = {
+			amount = 2
+		}
+		je:je_gate_harmony_pledge ?= {
+			add_modifier = {
+				name = modifier_gate_harmony_pledge_excess_theory
+				months = 12
+			}
+		}
+	}
+
+	#TODO: MasterOfGrey balance
+	option = {
+		name = gate_harmony_pledge.5.c
+		add_gate_economy_harmony_progress = {
+			amount = 5
+		}
+		je:je_gate_harmony_pledge ?= {
+			add_modifier = {
+				name = modifier_gate_harmony_pledge_excess_theory
+				months = 12
+				multiplier = 2
+			}
+		}
+	}
+}
+
+gate_harmony_pledge.6 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = capital
+
+	title = gate_harmony_pledge.6.t
+	desc = gate_harmony_pledge.6.d
+	flavor = gate_harmony_pledge.6.f
+
+	event_image = {
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	cooldown = {
+		months = { 12 24 }
+	}
+
+	icon = gfx/interface/icons/religion_icons/gate_harmony_pledge.dds
+
+	duration = 3
+
+	#TODO: MasterOfGrey balance
+	option = {
+		name = gate_harmony_pledge.6.a
+		add_gate_economy_harmony_progress = {
+			amount = -5
+		}
+		je:je_gate_harmony_pledge ?= {
+			add_modifier = {
+				name = modifier_gate_harmony_pledge_abstract_wealth
+				months = 12
+				multiplier = -1
+			}
+		}
+	}
+
+	#TODO: MasterOfGrey balance
+	option = {
+		name = gate_harmony_pledge.6.b
+		default_option = yes
+		add_gate_economy_harmony_progress = {
+			amount = 2
+		}
+		je:je_gate_harmony_pledge ?= {
+			add_modifier = {
+				name = modifier_gate_harmony_pledge_abstract_wealth
+				months = 12
+			}
+		}
+	}
+
+	#TODO: MasterOfGrey balance
+	option = {
+		name = gate_harmony_pledge.6.c
+		add_gate_economy_harmony_progress = {
+			amount = 5
+		}
+		je:je_gate_harmony_pledge ?= {
+			add_modifier = {
+				name = modifier_gate_harmony_pledge_abstract_wealth
+				months = 12
+				multiplier = 2
+			}
+		}
+	}
+}
+
+gate_harmony_pledge.7 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = capital
+
+	title = gate_harmony_pledge.7.t
+	desc = gate_harmony_pledge.7.d
+	flavor = gate_harmony_pledge.7.f
+
+	event_image = {
+		video = "ip4_mining_scene"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	cooldown = {
+		months = { 12 24 }
+	}
+
+	icon = gfx/interface/icons/religion_icons/gate_harmony_pledge.dds
+
+	duration = 3
+
+	#TODO: MasterOfGrey balance
+	option = {
+		name = gate_harmony_pledge.7.a
+		add_gate_economy_harmony_progress = {
+			amount = -5
+		}
+		je:je_gate_harmony_pledge ?= {
+			add_modifier = {
+				name = modifier_gate_harmony_pledge_subterranean_fixation
+				months = 12
+				multiplier = -1
+			}
+		}
+	}
+
+	#TODO: MasterOfGrey balance
+	option = {
+		name = gate_harmony_pledge.7.b
+		default_option = yes
+		add_gate_economy_harmony_progress = {
+			amount = 2
+		}
+		je:je_gate_harmony_pledge ?= {
+			add_modifier = {
+				name = modifier_gate_harmony_pledge_subterranean_fixation
+				months = 12
+			}
+		}
+	}
+
+	#TODO: MasterOfGrey balance
+	option = {
+		name = gate_harmony_pledge.7.c
+		add_gate_economy_harmony_progress = {
+			amount = 5
+		}
+		je:je_gate_harmony_pledge ?= {
+			add_modifier = {
+				name = modifier_gate_harmony_pledge_subterranean_fixation
+				months = 12
+				multiplier = 2
+			}
 		}
 	}
 }
