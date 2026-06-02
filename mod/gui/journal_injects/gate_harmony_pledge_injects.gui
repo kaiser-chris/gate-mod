@@ -79,7 +79,10 @@ flowcontainer = {
 		direction = vertical
 		spacing = 10
 		minimumsize = { 512 -1 }
-		using = entry_bg_fancy
+		background = {
+			using = entry_bg
+		}
+		margin_top = -2
 		margin_bottom = 20
 
 		default_header_clean_faded = {
@@ -88,11 +91,47 @@ flowcontainer = {
 				text = "MODIFIERS"
 			}
 			blockoverride "size" {
-				size = { 496 45 }
+				size = { 512 45 }
 			}
 		}
 
 		flowcontainer = {
+			datamodel = "[JournalEntry.GetTimedModifiers]"
+			spacing = 20
+			parentanchor = hcenter
+
+			item = {
+				icon = {
+					size = { 130 130 }
+					texture = "[TimedModifier.GetIcon]"
+					visible = "[Or3(
+						Or3(
+							EqualTo_string(TimedModifier.GetName, Localize('modifier_gate_harmony_pledge_society_harmonious')),
+							EqualTo_string(TimedModifier.GetName, Localize('modifier_gate_harmony_pledge_society_tilting')),
+							EqualTo_string(TimedModifier.GetName, Localize('modifier_gate_harmony_pledge_society_disharmonious'))
+						),
+						Or3(
+							EqualTo_string(TimedModifier.GetName, Localize('modifier_gate_harmony_pledge_economy_harmonious')),
+							EqualTo_string(TimedModifier.GetName, Localize('modifier_gate_harmony_pledge_economy_tilting')),
+							EqualTo_string(TimedModifier.GetName, Localize('modifier_gate_harmony_pledge_economy_disharmonious'))
+						),
+						Or3(
+							EqualTo_string(TimedModifier.GetName, Localize('modifier_gate_harmony_pledge_legislative_harmonious')),
+							EqualTo_string(TimedModifier.GetName, Localize('modifier_gate_harmony_pledge_legislative_tilting')),
+							EqualTo_string(TimedModifier.GetName, Localize('modifier_gate_harmony_pledge_legislative_disharmonious'))
+						)
+					)]"
+					tooltip = "[TimedModifier.GetTooltip]"
+				}
+			}
+		}
+
+		divider_decorative = {
+			visible = "[GreaterThanOrEqualTo_int32(GetDataModelSize(JournalEntry.GetTimedModifiers), '(int32)4')]"
+		}
+
+		flowcontainer = {
+			visible = "[GreaterThanOrEqualTo_int32(GetDataModelSize(JournalEntry.GetTimedModifiers), '(int32)4')]"
 			datamodel = "[JournalEntry.GetTimedModifiers]"
 			spacing = 5
 			minimumsize = { 464 -1 }
@@ -101,6 +140,23 @@ flowcontainer = {
 
 			item = {
 				container = {
+					visible = "[Not(Or3(
+						Or3(
+							EqualTo_string(TimedModifier.GetName, Localize('modifier_gate_harmony_pledge_society_harmonious')),
+							EqualTo_string(TimedModifier.GetName, Localize('modifier_gate_harmony_pledge_society_tilting')),
+							EqualTo_string(TimedModifier.GetName, Localize('modifier_gate_harmony_pledge_society_disharmonious'))
+						),
+						Or3(
+							EqualTo_string(TimedModifier.GetName, Localize('modifier_gate_harmony_pledge_economy_harmonious')),
+							EqualTo_string(TimedModifier.GetName, Localize('modifier_gate_harmony_pledge_economy_tilting')),
+							EqualTo_string(TimedModifier.GetName, Localize('modifier_gate_harmony_pledge_economy_disharmonious'))
+						),
+						Or3(
+							EqualTo_string(TimedModifier.GetName, Localize('modifier_gate_harmony_pledge_legislative_harmonious')),
+							EqualTo_string(TimedModifier.GetName, Localize('modifier_gate_harmony_pledge_legislative_tilting')),
+							EqualTo_string(TimedModifier.GetName, Localize('modifier_gate_harmony_pledge_legislative_disharmonious'))
+						)
+					))]"
 					minimumsize = { 464 -1 }
 					tooltip = "[TimedModifier.GetTooltip]"
 
