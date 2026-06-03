@@ -204,14 +204,23 @@ flowcontainer = {
 			widget = {
 				size = { 504 30 }
 				textbox = {
-					text = "[ScriptedProgressBar.GetDesc]"
+					raw_text = "[concept_gate_harmony_pledge_order]"
+					default_format = "#bold"
 					autoresize = yes
 					align = nobaseline
-					parentanchor = vcenter
+					parentanchor = left|vcenter
 				}
 
 				textbox = {
-					text = "[ScriptedProgressBar.GetSecondDesc]"
+					raw_text = "[ScriptedProgressBar.GetSecondDesc] [ScriptedProgressBar.GetDesc]"
+					autoresize = yes
+					align = right|nobaseline
+					parentanchor = hcenter|vcenter
+				}
+
+				textbox = {
+					raw_text = "[concept_gate_harmony_pledge_chaos]"
+					default_format = "#bold"
 					autoresize = yes
 					align = right|nobaseline
 					parentanchor = right|vcenter

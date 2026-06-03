@@ -44,7 +44,7 @@ gate_harmony_pledge.1 = {
 	option = {
 		name = gate_harmony_pledge.1.a
 		add_gate_society_harmony_progress = {
-			amount = -5
+			amount = 5
 		}
 		je:je_gate_harmony_pledge ?= {
 			add_modifier = {
@@ -59,7 +59,7 @@ gate_harmony_pledge.1 = {
 		name = gate_harmony_pledge.1.b
 		default_option = yes
 		add_gate_society_harmony_progress = {
-			amount = 5
+			amount = -5
 		}
 		scope:event_state ?= {
 			add_radicals_in_state = {
