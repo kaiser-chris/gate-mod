@@ -208,40 +208,6 @@
         }
     }
 
-    fail = {
-        custom_tooltip = {
-            text = je_gate_harmony_pledge_fail
-            scope:journal_entry = {
-                OR = {
-                    scripted_bar_progress = {
-                        name = pb_gate_harmony_pledge_society
-                        value >= 100
-                    }
-                    scripted_bar_progress = {
-                        name = pb_gate_harmony_pledge_society
-                        value <= 0
-                    }
-                    scripted_bar_progress = {
-                        name = pb_gate_harmony_pledge_economy
-                        value >= 100
-                    }
-                    scripted_bar_progress = {
-                        name = pb_gate_harmony_pledge_economy
-                        value <= 0
-                    }
-                    scripted_bar_progress = {
-                        name = pb_gate_harmony_pledge_legislative
-                        value >= 100
-                    }
-                    scripted_bar_progress = {
-                        name = pb_gate_harmony_pledge_legislative
-                        value <= 0
-                    }
-                }
-            }
-        }
-    }
-
     should_be_pinned_by_default_involved = yes
     should_be_pinned_by_default_uninvolved_or_context = yes
 }
