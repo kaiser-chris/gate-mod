@@ -57,7 +57,7 @@ law_gate_restricted_magic_users = {
                     is_interest_group_type = ig_devout
                 }
             }
-            has_law = law_type:law_theocracy
+            has_law_or_variant = law_type:law_theocracy
         }
     }
 
@@ -78,7 +78,7 @@ law_gate_restricted_magic_users = {
                             is_interest_group_type = ig_devout
                         }
                     }
-                    has_law = law_type:law_theocracy
+                    has_law_or_variant = law_type:law_theocracy
                 }
             }
             add = 1000

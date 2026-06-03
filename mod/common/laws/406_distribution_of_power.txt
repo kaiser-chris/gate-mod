@@ -16,7 +16,7 @@
     on_activate = {
         if = {
             limit = {
-                has_law = law_type:law_gate_restricted_magic_users
+                has_law_or_variant = law_type:law_gate_restricted_magic_users
             }
             deactivate_law = law_type:law_gate_restricted_magic_users
             activate_law = law_type:law_gate_arcane_bureau
@@ -62,7 +62,7 @@
 
         if = {
             limit = {
-                has_law = law_type:law_gate_arcane_council
+                has_law_or_variant = law_type:law_gate_arcane_council
                 OR = {
                     AND = {
                         power_bloc ?= { has_identity = identity:identity_ideological_union }
@@ -72,8 +72,8 @@
                 }
                 scope:target_country = {
                     NOR = { # Is their law different enough from what we want to impose?
-                        has_law = law_type:law_oligarchy
-                        has_law = law_type:law_technocracy
+                        has_law_or_variant = law_type:law_oligarchy
+                        has_law_or_variant = law_type:law_technocracy
                     }
                 }
             }

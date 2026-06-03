@@ -272,10 +272,10 @@
 					limit = {
 						owner ?= {
 							OR = {
-								has_law = law_type:law_council_republic
-								has_law = law_type:law_oligarchy
-								has_law = law_type:law_theocracy
-								has_law = law_type:law_presidential_republic
+								has_law_or_variant = law_type:law_council_republic
+								has_law_or_variant = law_type:law_oligarchy
+								has_law_or_variant = law_type:law_theocracy
+								has_law_or_variant = law_type:law_presidential_republic
 							}
 						}
 					}

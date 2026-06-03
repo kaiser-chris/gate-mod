@@ -328,7 +328,7 @@ gate_mbudye.4 = {
 			}
 		}
 		trigger = {
-			has_law = law_type:law_secret_police
+			has_law_or_variant = law_type:law_secret_police
 		}
 		ai_chance = {
 			base = 200
@@ -373,7 +373,7 @@ gate_mbudye.4 = {
 			support_change = -1
 		}
 		trigger = {
-			has_law = law_type:law_censorship
+			has_law_or_variant = law_type:law_censorship
 		}
 		ai_chance = {
 			base = 10
@@ -623,7 +623,7 @@ gate_mbudye.7 = {
 			}
 		}
 		trigger = {
-			has_law = law_type:law_secret_police
+			has_law_or_variant = law_type:law_secret_police
 		}
 		ai_chance = {
 			base = 10

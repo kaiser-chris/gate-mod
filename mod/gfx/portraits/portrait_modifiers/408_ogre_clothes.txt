@@ -481,13 +481,13 @@
                                 AND = {
                                     is_ruler_of_any_country = no
                                     home_country ?= {
-                                        has_law = law_type:law_monarchy
+                                        has_law_or_variant = law_type:law_monarchy
                                     }
                                 }
                                 AND = {
                                     is_ruler_of_any_country = yes
                                     home_country ?= {
-                                        NOT = { has_law = law_type:law_monarchy }
+                                        NOT = { has_law_or_variant = law_type:law_monarchy }
                                     }
                                 }
                             }
@@ -542,13 +542,13 @@
                                 AND = {
                                     is_ruler_of_any_country = no
                                     home_country ?= {
-                                        has_law = law_type:law_monarchy
+                                        has_law_or_variant = law_type:law_monarchy
                                     }
                                 }
                                 AND = {
                                     is_ruler_of_any_country = yes
                                     home_country ?= {
-                                        NOT = { has_law = law_type:law_monarchy }
+                                        NOT = { has_law_or_variant = law_type:law_monarchy }
                                     }
                                 }
                             }
