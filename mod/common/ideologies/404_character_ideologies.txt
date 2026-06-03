@@ -18,7 +18,7 @@
         NAND = {
             has_role_of_type = agitator
             owner = {
-                has_law = law_type:law_gate_noble_magic_users
+                has_law_or_variant = law_type:law_gate_noble_magic_users
             }
         }
         interest_group = {
@@ -64,7 +64,7 @@ ideology_magic_hopeful = {
         NAND = {
             has_role_of_type = agitator
             owner = {
-                has_law = law_type:law_gate_free_magic_users
+                has_law_or_variant = law_type:law_gate_free_magic_users
             }
         }
         interest_group = {
@@ -115,7 +115,7 @@ ideology_magic_sceptic = {
         NAND = {
             has_role_of_type = agitator
             owner = {
-                has_law = law_type:law_gate_mage_guilds
+                has_law_or_variant = law_type:law_gate_mage_guilds
             }
         }
         interest_group = {
@@ -165,7 +165,7 @@ ideology_magic_cynic = {
         NAND = {
             has_role_of_type = agitator
             owner = {
-                has_law = law_type:law_gate_restricted_magic_users
+                has_law_or_variant = law_type:law_gate_restricted_magic_users
             }
         }
         interest_group = {
@@ -221,12 +221,12 @@ ideology_gate_vampirism = {
             has_role_of_type = agitator
             owner = {
                 OR = {
-                    has_law = law_type:law_chiefdom
-                    has_law = law_type:law_monarchy
-                    has_law = law_type:law_presidential_republic
-                    has_law = law_type:law_theocracy
-                    has_law = law_type:law_council_republic
-                    has_law = law_type:law_corporate_state
+                    has_law_or_variant = law_type:law_chiefdom
+                    has_law_or_variant = law_type:law_monarchy
+                    has_law_or_variant = law_type:law_presidential_republic
+                    has_law_or_variant = law_type:law_theocracy
+                    has_law_or_variant = law_type:law_council_republic
+                    has_law_or_variant = law_type:law_corporate_state
                 }
             }
         }
@@ -285,12 +285,12 @@ ideology_gate_vampirism_interested = {
             has_role_of_type = agitator
             owner = {
                 OR = {
-                    has_law = law_type:law_chiefdom
-                    has_law = law_type:law_monarchy
-                    has_law = law_type:law_presidential_republic
-                    has_law = law_type:law_theocracy
-                    has_law = law_type:law_council_republic
-                    has_law = law_type:law_corporate_state
+                    has_law_or_variant = law_type:law_chiefdom
+                    has_law_or_variant = law_type:law_monarchy
+                    has_law_or_variant = law_type:law_presidential_republic
+                    has_law_or_variant = law_type:law_theocracy
+                    has_law_or_variant = law_type:law_council_republic
+                    has_law_or_variant = law_type:law_corporate_state
                 }
             }
         }

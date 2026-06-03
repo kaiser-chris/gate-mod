@@ -118,8 +118,8 @@ gnomish_court_portrait_trigger = {
                 is_ruler_of_any_country = yes
                 home_country = {
                     OR = {
-                        has_law = law_type:law_monarchy
-                        has_law = law_type:law_theocracy
+                        has_law_or_variant = law_type:law_monarchy
+                        has_law_or_variant = law_type:law_theocracy
                     }
                 }
             }

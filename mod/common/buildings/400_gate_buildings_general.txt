@@ -148,7 +148,7 @@ building_gate_mage_tower = {
 					value = 1
 					if = {
 						limit = {
-							has_law = law_type:law_gate_restricted_magic_users
+							has_law_or_variant = law_type:law_gate_restricted_magic_users
 						}
 						divide = 2
 					}
@@ -169,16 +169,16 @@ building_gate_mage_tower = {
 					if = {
 						limit = {
 							OR = {
-								has_law = law_type:law_agrarianism
-								has_law = law_type:law_industry_banned
-								has_law = law_type:law_extraction_economy
+								has_law_or_variant = law_type:law_agrarianism
+								has_law_or_variant = law_type:law_industry_banned
+								has_law_or_variant = law_type:law_extraction_economy
 							}
 						}
 						multiply = 2.0
 					}
 					if = {
 						limit = {
-							has_law = law_type:law_gate_restricted_magic_users
+							has_law_or_variant = law_type:law_gate_restricted_magic_users
 						}
 						divide = 2
 					}
@@ -199,16 +199,16 @@ building_gate_mage_tower = {
 					if = {
 						limit = {
 							OR = {
-								has_law = law_type:law_agrarianism
-								has_law = law_type:law_industry_banned
-								has_law = law_type:law_extraction_economy
+								has_law_or_variant = law_type:law_agrarianism
+								has_law_or_variant = law_type:law_industry_banned
+								has_law_or_variant = law_type:law_extraction_economy
 							}
 						}
 						multiply = 2.0
 					}
 					if = {
 						limit = {
-							has_law = law_type:law_gate_restricted_magic_users
+							has_law_or_variant = law_type:law_gate_restricted_magic_users
 						}
 						divide = 2
 					}
@@ -229,16 +229,16 @@ building_gate_mage_tower = {
 					if = {
 						limit = {
 							OR = {
-								has_law = law_type:law_agrarianism
-								has_law = law_type:law_industry_banned
-								has_law = law_type:law_extraction_economy
+								has_law_or_variant = law_type:law_agrarianism
+								has_law_or_variant = law_type:law_industry_banned
+								has_law_or_variant = law_type:law_extraction_economy
 							}
 						}
 						multiply = 2.0
 					}
 					if = {
 						limit = {
-							has_law = law_type:law_gate_restricted_magic_users
+							has_law_or_variant = law_type:law_gate_restricted_magic_users
 						}
 						divide = 2
 					}
