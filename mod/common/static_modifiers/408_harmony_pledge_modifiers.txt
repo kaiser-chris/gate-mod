@@ -42,7 +42,7 @@ modifier_gate_harmony_pledge_legislative_disharmonious = {
 }
 
 modifier_gate_harmony_pledge_enthusiasm_without_boundaries = {
-	icon = gfx/interface/icons/timed_modifier_icons/gate_modifier_harmony_pledge_neutral.dds
+	icon = gfx/interface/icons/timed_modifier_icons/gate_modifier_harmony_pledge_negative.dds
 	state_assimilation_mult = -0.1
 }
 
@@ -80,4 +80,21 @@ modifier_gate_harmony_pledge_subterranean_fixation = {
 	icon = gfx/interface/icons/timed_modifier_icons/gate_modifier_harmony_pledge_neutral.dds
 	building_group_bg_extraction_throughput_add = 0.05
 	building_group_bg_plantations_throughput_add = -0.05
+}
+
+modifier_gate_harmony_pledge_cash_crop_fever = {
+	icon = gfx/interface/icons/timed_modifier_icons/gate_modifier_harmony_pledge_neutral.dds
+	building_group_bg_agriculture_throughput_add = -0.05
+	building_group_bg_plantations_throughput_add = 0.05
+}
+
+modifier_gate_harmony_pledge_agrarian_security = {
+	icon = gfx/interface/icons/timed_modifier_icons/gate_modifier_harmony_pledge_neutral.dds
+	building_group_bg_agriculture_throughput_add = 0.05
+	building_group_bg_plantations_throughput_add = -0.05
+}
+
+modifier_gate_harmony_pledge_woven_monument = {
+	icon = gfx/interface/icons/timed_modifier_icons/gate_modifier_harmony_pledge_positive.dds
+	country_gate_harmony_pledge_society_drift_center = 2
 }

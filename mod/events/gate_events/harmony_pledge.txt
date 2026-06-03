@@ -483,3 +483,176 @@ gate_harmony_pledge.7 = {
 		}
 	}
 }
+
+gate_harmony_pledge.8 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = capital
+
+	title = gate_harmony_pledge.8.t
+	desc = gate_harmony_pledge.8.d
+	flavor = gate_harmony_pledge.8.f
+
+	event_image = {
+		video = "ip4_mining_scene"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	cooldown = {
+		months = { 12 24 }
+	}
+
+	icon = gfx/interface/icons/religion_icons/gate_harmony_pledge.dds
+
+	duration = 3
+
+	#TODO: MasterOfGrey balance
+	option = {
+		name = gate_harmony_pledge.8.a
+		add_gate_economy_harmony_progress = {
+			amount = -5
+		}
+		je:je_gate_harmony_pledge ?= {
+			add_modifier = {
+				name = modifier_gate_harmony_pledge_cash_crop_fever
+				months = 12
+				multiplier = -1
+			}
+		}
+	}
+
+	#TODO: MasterOfGrey balance
+	option = {
+		name = gate_harmony_pledge.8.b
+		default_option = yes
+		add_gate_economy_harmony_progress = {
+			amount = 2
+		}
+		je:je_gate_harmony_pledge ?= {
+			add_modifier = {
+				name = modifier_gate_harmony_pledge_cash_crop_fever
+				months = 12
+			}
+		}
+	}
+
+	#TODO: MasterOfGrey balance
+	option = {
+		name = gate_harmony_pledge.8.c
+		add_gate_economy_harmony_progress = {
+			amount = 5
+		}
+		je:je_gate_harmony_pledge ?= {
+			add_modifier = {
+				name = modifier_gate_harmony_pledge_cash_crop_fever
+				months = 12
+				multiplier = 2
+			}
+		}
+	}
+}
+
+gate_harmony_pledge.9 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = capital
+
+	title = gate_harmony_pledge.9.t
+	desc = gate_harmony_pledge.9.d
+	flavor = gate_harmony_pledge.9.f
+
+	event_image = {
+		video = "ip4_mining_scene"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	cooldown = {
+		months = { 12 24 }
+	}
+
+	icon = gfx/interface/icons/religion_icons/gate_harmony_pledge.dds
+
+	duration = 3
+
+	#TODO: MasterOfGrey balance
+	option = {
+		name = gate_harmony_pledge.9.a
+		add_gate_economy_harmony_progress = {
+			amount = -5
+		}
+		je:je_gate_harmony_pledge ?= {
+			add_modifier = {
+				name = modifier_gate_harmony_pledge_agrarian_security
+				months = 12
+				multiplier = -1
+			}
+		}
+	}
+
+	#TODO: MasterOfGrey balance
+	option = {
+		name = gate_harmony_pledge.9.b
+		default_option = yes
+		add_gate_economy_harmony_progress = {
+			amount = 2
+		}
+		je:je_gate_harmony_pledge ?= {
+			add_modifier = {
+				name = modifier_gate_harmony_pledge_agrarian_security
+				months = 12
+			}
+		}
+	}
+
+	#TODO: MasterOfGrey balance
+	option = {
+		name = gate_harmony_pledge.9.c
+		add_gate_economy_harmony_progress = {
+			amount = 5
+		}
+		je:je_gate_harmony_pledge ?= {
+			add_modifier = {
+				name = modifier_gate_harmony_pledge_agrarian_security
+				months = 12
+				multiplier = 2
+			}
+		}
+	}
+}
+
+gate_harmony_pledge.10 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = capital
+
+	title = gate_harmony_pledge.10.t
+	desc = gate_harmony_pledge.10.d
+	flavor = gate_harmony_pledge.10.f
+
+	event_image = {
+		video = "ip2_cross_cultural_festival"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	cooldown = {
+		months = { 48 60 }
+	}
+
+	icon = gfx/interface/icons/religion_icons/gate_harmony_pledge.dds
+
+	duration = 3
+
+	#TODO: MasterOfGrey balance
+	option = {
+		name = gate_harmony_pledge.10.a
+		je:je_gate_harmony_pledge ?= {
+			add_modifier = {
+				name = modifier_gate_harmony_pledge_woven_monument
+				months = 48
+			}
+		}
+	}
+}
