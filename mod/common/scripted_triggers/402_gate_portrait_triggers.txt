@@ -15,6 +15,21 @@
     }
 }
 
+gate_character_has_archetype_role_trigger = {
+    scope:character ?= {
+        OR = {
+            has_role_of_type = agitator
+            has_role_of_type = ruler
+            has_role_of_type = heir
+            has_role_of_type = magnate
+            has_role_of_type = executive
+            has_role_of_type = admiral
+            has_role_of_type = general
+            has_role_of_type = politician
+        }
+    }
+}
+
 magic_users_clothes_pop_trigger = {
     scope:pop ?= {
         OR = {
