@@ -304,7 +304,7 @@ types gate_harmony_pledge_progress_bars {
 						visible = "[BetweenInclusiveOfMax_float(
 							JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self),
 							'(float)0.0',
-							'(float)0.2'
+							'(float)0.19'
 						)]"
 					}
 					blockoverride "texture" {
@@ -319,7 +319,7 @@ types gate_harmony_pledge_progress_bars {
 					blockoverride "level_active" {
 						visible = "[BetweenInclusiveOfMax_float(
 							JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self),
-							'(float)0.2',
+							'(float)0.19',
 							'(float)0.4'
 						)]"
 					}
@@ -358,7 +358,7 @@ types gate_harmony_pledge_progress_bars {
 						visible = "[BetweenInclusiveOfMax_float(
 							JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self),
 							'(float)0.6',
-							'(float)0.8'
+							'(float)0.81'
 						)]"
 					}
 					blockoverride "texture" {
@@ -376,7 +376,7 @@ types gate_harmony_pledge_progress_bars {
 					blockoverride "level_active" {
 						visible = "[BetweenInclusiveOfMax_float(
 							JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self),
-							'(float)0.8',
+							'(float)0.81',
 							'(float)1'
 						)]"
 					}

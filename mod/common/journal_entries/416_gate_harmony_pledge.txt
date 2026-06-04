@@ -89,114 +89,6 @@
             1 = gate_harmony_pledge.10
             1 = gate_harmony_pledge.11
         }
-        effect = {
-            scope:journal_entry = {
-                # Society
-                if = {
-                    limit = {
-                        gate_harmony_pledge_disharmonious_society = yes
-                        NOT = {
-                            has_modifier = modifier_gate_harmony_pledge_society_disharmonious
-                        }
-                    }
-                    remove_modifier = modifier_gate_harmony_pledge_society_harmonious
-                    remove_modifier = modifier_gate_harmony_pledge_society_tilting
-                    add_modifier = modifier_gate_harmony_pledge_society_disharmonious
-                }
-                else_if = {
-                    limit = {
-                        gate_harmony_pledge_tilting_society = yes
-                        NOT = {
-                            has_modifier = modifier_gate_harmony_pledge_society_tilting
-                        }
-                    }
-                    remove_modifier = modifier_gate_harmony_pledge_society_harmonious
-                    add_modifier = modifier_gate_harmony_pledge_society_tilting
-                    remove_modifier = modifier_gate_harmony_pledge_society_disharmonious
-                }
-                else_if = {
-                    limit = {
-                        gate_harmony_pledge_harmonious_society = yes
-                        NOT = {
-                            has_modifier = modifier_gate_harmony_pledge_society_harmonious
-                        }
-                    }
-                    add_modifier = modifier_gate_harmony_pledge_society_harmonious
-                    remove_modifier = modifier_gate_harmony_pledge_society_tilting
-                    remove_modifier = modifier_gate_harmony_pledge_society_disharmonious
-                }
-
-                # Economy
-                if = {
-                    limit = {
-                        gate_harmony_pledge_disharmonious_economy = yes
-                        NOT = {
-                            has_modifier = modifier_gate_harmony_pledge_economy_disharmonious
-                        }
-                    }
-                    remove_modifier = modifier_gate_harmony_pledge_economy_harmonious
-                    remove_modifier = modifier_gate_harmony_pledge_economy_tilting
-                    add_modifier = modifier_gate_harmony_pledge_economy_disharmonious
-                }
-                else_if = {
-                    limit = {
-                        gate_harmony_pledge_tilting_economy = yes
-                        NOT = {
-                            has_modifier = modifier_gate_harmony_pledge_economy_tilting
-                        }
-                    }
-                    remove_modifier = modifier_gate_harmony_pledge_economy_harmonious
-                    add_modifier = modifier_gate_harmony_pledge_economy_tilting
-                    remove_modifier = modifier_gate_harmony_pledge_economy_disharmonious
-                }
-                else_if = {
-                    limit = {
-                        gate_harmony_pledge_harmonious_economy = yes
-                        NOT = {
-                            has_modifier = modifier_gate_harmony_pledge_economy_harmonious
-                        }
-                    }
-                    add_modifier = modifier_gate_harmony_pledge_economy_harmonious
-                    remove_modifier = modifier_gate_harmony_pledge_economy_tilting
-                    remove_modifier = modifier_gate_harmony_pledge_economy_disharmonious
-                }
-
-                # Legislative
-                if = {
-                    limit = {
-                        gate_harmony_pledge_disharmonious_legislative = yes
-                        NOT = {
-                            has_modifier = modifier_gate_harmony_pledge_legislative_disharmonious
-                        }
-                    }
-                    remove_modifier = modifier_gate_harmony_pledge_legislative_harmonious
-                    remove_modifier = modifier_gate_harmony_pledge_legislative_tilting
-                    add_modifier = modifier_gate_harmony_pledge_legislative_disharmonious
-                }
-                else_if = {
-                    limit = {
-                        gate_harmony_pledge_tilting_legislative = yes
-                        NOT = {
-                            has_modifier = modifier_gate_harmony_pledge_legislative_tilting
-                        }
-                    }
-                    remove_modifier = modifier_gate_harmony_pledge_legislative_harmonious
-                    add_modifier = modifier_gate_harmony_pledge_legislative_tilting
-                    remove_modifier = modifier_gate_harmony_pledge_legislative_disharmonious
-                }
-                else_if = {
-                    limit = {
-                        gate_harmony_pledge_harmonious_legislative = yes
-                        NOT = {
-                            has_modifier = modifier_gate_harmony_pledge_legislative_harmonious
-                        }
-                    }
-                    add_modifier = modifier_gate_harmony_pledge_legislative_harmonious
-                    remove_modifier = modifier_gate_harmony_pledge_legislative_tilting
-                    remove_modifier = modifier_gate_harmony_pledge_legislative_disharmonious
-                }
-            }
-        }
     }
 
     immediate = {
@@ -220,7 +112,6 @@
             years = 10
             is_decaying = yes
         }
-        #start_enactment = law_type:law_state_atheism
     }
 
     should_be_pinned_by_default_involved = yes
