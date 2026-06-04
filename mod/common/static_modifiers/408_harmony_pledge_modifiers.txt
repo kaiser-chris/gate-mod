@@ -1,4 +1,15 @@
 ﻿#TODO: MasterOfGrey balance
+# This one should hurt
+modifier_gate_harmony_pledge_abandoned = {
+	icon = gfx/interface/icons/timed_modifier_icons/gate_modifier_harmony_pledge_negative.dds
+	state_loyalists_from_political_movements_mult = -0.3
+	state_radicals_from_political_movements_mult = 0.3
+	country_law_enactment_stall_mult = 0.3
+	country_law_enactment_time_mult = -0.3
+	state_tax_waste_add = 0.2
+}
+
+#TODO: MasterOfGrey balance
 modifier_gate_harmony_pledge_society_harmonious = {
 	icon = gfx/interface/icons/timed_modifier_icons/gate_modifier_harmony_pledge_society_harmonious.dds
 	state_assimilation_mult = 0.1
@@ -97,4 +108,9 @@ modifier_gate_harmony_pledge_agrarian_security = {
 modifier_gate_harmony_pledge_woven_monument = {
 	icon = gfx/interface/icons/timed_modifier_icons/gate_modifier_harmony_pledge_positive.dds
 	country_gate_harmony_pledge_society_drift_center = 2
+}
+
+modifier_gate_harmony_pledge_unwanted_inquiry = {
+	icon = gfx/interface/icons/timed_modifier_icons/gate_modifier_harmony_pledge_negative.dds
+	state_conversion_mult = -0.1
 }
