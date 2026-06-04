@@ -39,39 +39,75 @@ gate_harmony_pledge_disharmonious_legislative = {
 
 gate_harmony_pledge_tilting_society = {
     OR = {
-        scripted_bar_progress = {
-            name = pb_gate_harmony_pledge_society
-            value > 60
+        AND = {
+            scripted_bar_progress = {
+                name = pb_gate_harmony_pledge_society
+                value <= 80
+            }
+            scripted_bar_progress = {
+                name = pb_gate_harmony_pledge_society
+                value > 60
+            }
         }
-        scripted_bar_progress = {
-            name = pb_gate_harmony_pledge_society
-            value < 40
+        AND = {
+            scripted_bar_progress = {
+                name = pb_gate_harmony_pledge_society
+                value < 40
+            }
+            scripted_bar_progress = {
+                name = pb_gate_harmony_pledge_society
+                value >= 20
+            }
         }
     }
 }
 
 gate_harmony_pledge_tilting_economy = {
     OR = {
-        scripted_bar_progress = {
-            name = pb_gate_harmony_pledge_economy
-            value > 60
+        AND = {
+            scripted_bar_progress = {
+                name = pb_gate_harmony_pledge_economy
+                value <= 80
+            }
+            scripted_bar_progress = {
+                name = pb_gate_harmony_pledge_economy
+                value > 60
+            }
         }
-        scripted_bar_progress = {
-            name = pb_gate_harmony_pledge_economy
-            value < 40
+        AND = {
+            scripted_bar_progress = {
+                name = pb_gate_harmony_pledge_economy
+                value < 40
+            }
+            scripted_bar_progress = {
+                name = pb_gate_harmony_pledge_economy
+                value >= 20
+            }
         }
     }
 }
 
 gate_harmony_pledge_tilting_legislative = {
     OR = {
-        scripted_bar_progress = {
-            name = pb_gate_harmony_pledge_legislative
-            value > 60
+        AND = {
+            scripted_bar_progress = {
+                name = pb_gate_harmony_pledge_legislative
+                value <= 80
+            }
+            scripted_bar_progress = {
+                name = pb_gate_harmony_pledge_legislative
+                value > 60
+            }
         }
-        scripted_bar_progress = {
-            name = pb_gate_harmony_pledge_legislative
-            value < 40
+        AND = {
+            scripted_bar_progress = {
+                name = pb_gate_harmony_pledge_legislative
+                value < 40
+            }
+            scripted_bar_progress = {
+                name = pb_gate_harmony_pledge_legislative
+                value >= 20
+            }
         }
     }
 }

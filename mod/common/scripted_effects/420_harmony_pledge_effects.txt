@@ -13,6 +13,7 @@
                     name = pb_gate_harmony_pledge_economy
                     value = $amount$
                 }
+                set_gate_harmony_pledge_modifiers = yes
             }
         }
     }
@@ -36,6 +37,7 @@ add_gate_society_harmony_progress = {
                     name = pb_gate_harmony_pledge_society
                     value = $amount$
                 }
+                set_gate_harmony_pledge_modifiers = yes
             }
         }
     }
@@ -59,10 +61,101 @@ add_gate_legislative_harmony_progress = {
                     name = pb_gate_harmony_pledge_legislative
                     value = $amount$
                 }
+                set_gate_harmony_pledge_modifiers = yes
             }
         }
     }
     else = {
         custom_tooltip = gate_create_bug_report
+    }
+}
+
+set_gate_harmony_pledge_modifiers = {
+    remove_modifier = modifier_gate_harmony_pledge_society_disharmonious
+    remove_modifier = modifier_gate_harmony_pledge_society_tilting
+    remove_modifier = modifier_gate_harmony_pledge_society_harmonious
+    remove_modifier = modifier_gate_harmony_pledge_economy_disharmonious
+    remove_modifier = modifier_gate_harmony_pledge_economy_tilting
+    remove_modifier = modifier_gate_harmony_pledge_economy_harmonious
+    remove_modifier = modifier_gate_harmony_pledge_legislative_disharmonious
+    remove_modifier = modifier_gate_harmony_pledge_legislative_tilting
+    remove_modifier = modifier_gate_harmony_pledge_legislative_harmonious
+
+    # Society
+    if = {
+        limit = {
+            gate_harmony_pledge_harmonious_society = yes
+        }
+        add_modifier = modifier_gate_harmony_pledge_society_harmonious
+        remove_modifier = modifier_gate_harmony_pledge_society_tilting
+        remove_modifier = modifier_gate_harmony_pledge_society_disharmonious
+    }
+    else_if = {
+        limit = {
+            gate_harmony_pledge_tilting_society = yes
+        }
+        remove_modifier = modifier_gate_harmony_pledge_society_harmonious
+        add_modifier = modifier_gate_harmony_pledge_society_tilting
+        remove_modifier = modifier_gate_harmony_pledge_society_disharmonious
+    }
+    else_if = {
+        limit = {
+            gate_harmony_pledge_disharmonious_society = yes
+        }
+        remove_modifier = modifier_gate_harmony_pledge_society_harmonious
+        remove_modifier = modifier_gate_harmony_pledge_society_tilting
+        add_modifier = modifier_gate_harmony_pledge_society_disharmonious
+    }
+
+    # Economy
+    if = {
+        limit = {
+            gate_harmony_pledge_harmonious_economy = yes
+        }
+        add_modifier = modifier_gate_harmony_pledge_economy_harmonious
+        remove_modifier = modifier_gate_harmony_pledge_economy_tilting
+        remove_modifier = modifier_gate_harmony_pledge_economy_disharmonious
+    }
+    else_if = {
+        limit = {
+            gate_harmony_pledge_tilting_economy = yes
+        }
+        remove_modifier = modifier_gate_harmony_pledge_economy_harmonious
+        add_modifier = modifier_gate_harmony_pledge_economy_tilting
+        remove_modifier = modifier_gate_harmony_pledge_economy_disharmonious
+    }
+    else_if = {
+        limit = {
+            gate_harmony_pledge_disharmonious_economy = yes
+        }
+        remove_modifier = modifier_gate_harmony_pledge_economy_harmonious
+        remove_modifier = modifier_gate_harmony_pledge_economy_tilting
+        add_modifier = modifier_gate_harmony_pledge_economy_disharmonious
+    }
+
+    # Legislative
+    if = {
+        limit = {
+            gate_harmony_pledge_harmonious_legislative = yes
+        }
+        add_modifier = modifier_gate_harmony_pledge_legislative_harmonious
+        remove_modifier = modifier_gate_harmony_pledge_legislative_tilting
+        remove_modifier = modifier_gate_harmony_pledge_legislative_disharmonious
+    }
+    else_if = {
+        limit = {
+            gate_harmony_pledge_tilting_legislative = yes
+        }
+        remove_modifier = modifier_gate_harmony_pledge_legislative_harmonious
+        add_modifier = modifier_gate_harmony_pledge_legislative_tilting
+        remove_modifier = modifier_gate_harmony_pledge_legislative_disharmonious
+    }
+    else_if = {
+        limit = {
+            gate_harmony_pledge_disharmonious_legislative = yes
+        }
+        remove_modifier = modifier_gate_harmony_pledge_legislative_harmonious
+        remove_modifier = modifier_gate_harmony_pledge_legislative_tilting
+        add_modifier = modifier_gate_harmony_pledge_legislative_disharmonious
     }
 }
