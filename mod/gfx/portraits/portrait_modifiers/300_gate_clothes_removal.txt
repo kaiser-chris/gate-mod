@@ -95,6 +95,12 @@
             modifier = {
                 add = 1000
                 gate_race_trigger = yes
+                OR = {
+                    # Only undress characters using archetype roles since the assumption is
+                    # that others have custom mod logic
+                    gate_character_has_archetype_role_trigger = yes
+                    exists = scope:pop
+                }
             }
             modifier = {
                 add = 1000
