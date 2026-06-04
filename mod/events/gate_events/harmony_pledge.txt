@@ -656,3 +656,129 @@ gate_harmony_pledge.10 = {
 		}
 	}
 }
+
+gate_harmony_pledge.11 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = capital
+
+	title = gate_harmony_pledge.11.t
+	desc = gate_harmony_pledge.11.d
+	flavor = gate_harmony_pledge.11.f
+
+	event_image = {
+		video = "ip2_cross_cultural_festival"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	cooldown = {
+		months = { 36 48 }
+	}
+
+	icon = gfx/interface/icons/religion_icons/gate_harmony_pledge.dds
+
+	duration = 3
+
+	#TODO: MasterOfGrey balance
+	option = {
+		name = gate_harmony_pledge.11.a
+		add_gate_economy_harmony_progress = {
+			amount = 5
+		}
+		je:je_gate_harmony_pledge ?= {
+			add_modifier = {
+				name = modifier_gate_harmony_pledge_unwanted_inquiry
+				months = 36
+			}
+		}
+	}
+
+	#TODO: MasterOfGrey balance
+	option = {
+		name = gate_harmony_pledge.11.b
+		default_option = yes
+		add_gate_society_harmony_progress = {
+			amount = -5
+		}
+		scope:event_state ?= {
+			add_radicals_in_state = {
+				culture = cu:gnomish
+				value = 0.02
+			}
+		}
+	}
+}
+
+gate_harmony_pledge.12 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = capital
+
+	title = gate_harmony_pledge.12.t
+	desc = gate_harmony_pledge.12.d
+	flavor = gate_harmony_pledge.12.f
+
+	event_image = {
+		video = "unspecific_ruler_speaking_to_people"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/religion_icons/gate_harmony_pledge.dds
+
+	duration = 3
+
+	immediate = {
+		currently_enacting_law = {
+			save_scope_as = atheism_law
+		}
+	}
+
+	option = {
+		name = gate_harmony_pledge.12.a
+		trigger = {
+			# We don't want the AI to
+			# abandon the pledge
+			is_ai = no
+		}
+		custom_tooltip = je_gate_harmony_pledge_abandon_warning
+	}
+
+	option = {
+		name = gate_harmony_pledge.12.b
+		default_option = yes
+		cancel_enactment = yes
+	}
+}
+
+gate_harmony_pledge.13 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = capital
+
+	title = gate_harmony_pledge.13.t
+	desc = gate_harmony_pledge.13.d
+	flavor = gate_harmony_pledge.13.f
+
+	event_image = {
+		video = "asia_buddhism"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/religion_icons/gate_harmony_pledge.dds
+
+	duration = 3
+
+	option = {
+		name = gate_harmony_pledge.13.a
+		default_option = yes
+		if = {
+			limit = {
+				has_modifier = modifier_gate_harmony_pledge_abandoned
+			}
+			remove_modifier = modifier_gate_harmony_pledge_abandoned
+		}
+	}
+}

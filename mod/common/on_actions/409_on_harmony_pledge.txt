@@ -1,0 +1,58 @@
+﻿# Root = owner Country of the Law
+# Executed when enactment of any law begins
+on_law_enactment_started = {
+    on_actions = {
+        on_law_enactment_started_gate_harmony_pledge_warning
+    }
+}
+
+on_law_enactment_started_gate_harmony_pledge_warning = {
+    trigger = {
+        has_journal_entry = je_gate_harmony_pledge
+        currently_enacting_law = {
+            type = law_type:law_state_atheism
+        }
+    }
+    effect = {
+        trigger_event = {
+            id = gate_harmony_pledge.12
+            popup = yes
+        }
+    }
+}
+
+# owner = owner country of the Law
+# root = law
+on_law_activated = {
+    on_actions = {
+        on_law_activated_gate_harmony_pledge_reactivate
+    }
+}
+
+on_law_activated_gate_harmony_pledge_reactivate = {
+    trigger = {
+        owner = {
+            has_variable = gate_harmony_pledge_country
+            NOT = {
+                has_journal_entry = je_gate_harmony_pledge
+            }
+            NOT = {
+                has_law_or_variant = law_type:law_state_atheism
+            }
+        }
+        type = {
+            is_same_law_group_as = law_type:law_state_atheism
+        }
+    }
+    effect = {
+        owner = {
+            add_journal_entry = {
+                type = je_gate_harmony_pledge
+            }
+            trigger_event = {
+                id = gate_harmony_pledge.13
+                popup = yes
+            }
+        }
+    }
+}

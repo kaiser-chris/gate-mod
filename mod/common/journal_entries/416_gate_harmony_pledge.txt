@@ -87,6 +87,7 @@
             1 = gate_harmony_pledge.8
             1 = gate_harmony_pledge.9
             1 = gate_harmony_pledge.10
+            1 = gate_harmony_pledge.11
         }
         effect = {
             scope:journal_entry = {
@@ -199,6 +200,7 @@
     }
 
     immediate = {
+        set_variable = gate_harmony_pledge_country
         add_gate_dlc_icon = yes
         scope:journal_entry = {
             set_variable = com_hide_modifiers
@@ -206,6 +208,19 @@
             add_modifier = modifier_gate_harmony_pledge_economy_harmonious
             add_modifier = modifier_gate_harmony_pledge_legislative_harmonious
         }
+    }
+
+    fail = {
+        has_law_or_variant = law_type:law_state_atheism
+    }
+
+    on_fail = {
+        add_modifier = {
+            name = modifier_gate_harmony_pledge_abandoned
+            years = 10
+            is_decaying = yes
+        }
+        #start_enactment = law_type:law_state_atheism
     }
 
     should_be_pinned_by_default_involved = yes
