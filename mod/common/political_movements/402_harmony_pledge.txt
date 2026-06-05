@@ -1,0 +1,265 @@
+﻿movement_gate_gnomish_fascist_anarchy = {
+	category = movement_category_ideological
+	
+	ideology = ideology_gate_gnomish_fascist_anarchy_movement
+	character_ideologies = {
+		ideology_gate_gnomish_fascist_anarchy
+	}
+
+	# Triggered via event
+	creation_trigger = {
+		always = no
+	}
+	creation_weight = {
+		value = 0
+	}
+
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+	
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_anarchist
+			has_ideology = ideology:ideology_utopian
+			has_ideology = ideology:ideology_fascist
+			has_ideology = ideology:ideology_integralist
+			has_ideology = ideology:ideology_corporatist_leader
+			has_ideology = ideology:ideology_gate_gnomish_fascist_anarchy
+			AND = {
+				is_interest_group_type = ig_trade_unions
+				has_ideology = ideology:ideology_humanitarian
+			}
+		}
+	}
+	character_support_weight = {
+		value = 200
+		if = {
+			limit = {
+				has_ideology = ideology:ideology_gate_gnomish_fascist_anarchy
+			}
+			multiply = {
+				value = 5
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_fascist
+					has_ideology = ideology:ideology_integralist
+					has_ideology = ideology:ideology_anarchist
+				}
+			}
+			multiply = {
+				value = 3
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_corporatist_leader
+					has_ideology = ideology:ideology_ethno_nationalist
+					has_ideology = ideology:ideology_utopian
+				}
+			}
+			multiply = {
+				value = 2
+			}
+		}
+	}
+	
+	pop_support_trigger = {
+		culture = cu:gnomish
+		NOT = {
+			is_pop_type = slaves
+		}
+	}
+
+	pop_support_factors = {
+		movement_support_high_literacy
+		movement_support_below_expected_sol
+		movement_support_radicalization
+		movement_support_capitalists
+		movement_support_aristocrats
+		movement_support_shopkeepers
+		movement_support_machinists
+		movement_support_engineers
+		movement_support_tenant_farmers_law
+		movement_support_rural
+		movement_support_soldiers
+		movement_support_number_of_claims
+	}
+	
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= {
+					OR = {
+						is_being_suppressed = yes
+						is_being_bolstered = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					scope:political_movement = {
+						is_being_suppressed = yes
+					}
+				}
+				add = {
+					value = suppression_base_value
+					multiply = {
+						value = -0.5
+						add = owner.modifier:country_suppression_attraction_factor
+					}
+					desc = "concept_suppressed"
+				}
+			}
+			else = {
+				add = {
+					value = bolstering_base_value
+					multiply = {
+						value = 0.5
+						add = owner.modifier:country_bolster_attraction_factor
+					}
+					desc = "concept_bolstered"
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				strata = upper
+			}
+			if = {
+				limit = {
+					is_pop_type = capitalists
+				}
+				add = {
+					value = 12
+					desc = "POP_CAPITALISTS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = aristocrats
+				}
+				add = {
+					value = 5
+					desc = "POP_ARISTOCRATS" # Fascism is too populist
+				}
+			}
+			else = {
+				add = {
+					value = 5
+					desc = "UPPER_NO_ICON"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				strata = middle
+			}
+			if = {
+				limit = {
+					is_pop_type = shopkeepers
+				}
+				add = {
+					value = 15
+					desc = "POP_SHOPKEEPERS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = bureaucrats
+				}
+				add = {
+					value = 8
+					desc = "POP_BUREAUCRATS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = officers
+				}
+				add = {
+					value = 8
+					desc = "POP_OFFICERS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = farmers
+				}
+				add = {
+					value = 5
+					desc = "POP_FARMERS"
+				}
+			}
+			else = {
+				add = {
+					value = 4
+					desc = "MIDDLE_NO_ICON"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				strata = lower
+			}
+			if = {
+				limit = {
+					is_pop_type = clerks
+				}
+				add = {
+					value = 5
+					desc = "POP_CLERKS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = soldiers
+				}
+				add = {
+					value = 3
+					desc = "POP_SOLDIERS"
+				}
+			}
+			else = {
+				add = {
+					value = 2
+					desc = "LOWER_NO_ICON"
+				}
+			}
+		}
+	}
+
+	revolution = {
+		possible = {
+			political_movement_support >= 0.05
+		}
+
+		weight = {
+			value = 100
+		}
+
+		state_weight = {
+			value = 0.25
+			add = scope:clout
+			add = { value = this.turmoil divide = 2 }
+			subtract = this.loyalists
+		}
+	}
+
+	secession = {
+		possible = {
+			political_movement_support >= 0.05
+			scope:clout <= 0
+		}
+
+		weight = {
+			value = 1000
+		}
+	}
+}

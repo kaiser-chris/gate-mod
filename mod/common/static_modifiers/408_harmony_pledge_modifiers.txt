@@ -114,3 +114,16 @@ modifier_gate_harmony_pledge_unwanted_inquiry = {
 	icon = gfx/interface/icons/timed_modifier_icons/gate_modifier_harmony_pledge_negative.dds
 	state_conversion_mult = -0.1
 }
+
+modifier_gate_harmony_pledge_land_rush = {
+	icon = gfx/interface/icons/timed_modifier_icons/gate_modifier_harmony_pledge_neutral.dds
+	state_birth_rate_mult = 0.1
+	state_pollution_generation_add = 50
+}
+
+modifier_gate_harmony_pledge_animistic_engineering = {
+	icon = gfx/interface/icons/timed_modifier_icons/gate_modifier_harmony_pledge_neutral.dds
+	building_group_bg_manufacturing_throughput_add = -0.05
+	state_conversion_mult = -0.1
+
+}
