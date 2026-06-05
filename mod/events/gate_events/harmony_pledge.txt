@@ -667,7 +667,7 @@ gate_harmony_pledge.11 = {
 	flavor = gate_harmony_pledge.11.f
 
 	event_image = {
-		video = "ip2_cross_cultural_festival"
+		video = "middleeast_courtroom_upheaval"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -779,6 +779,242 @@ gate_harmony_pledge.13 = {
 				has_modifier = modifier_gate_harmony_pledge_abandoned
 			}
 			remove_modifier = modifier_gate_harmony_pledge_abandoned
+		}
+	}
+}
+
+gate_harmony_pledge.14 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = capital
+
+	title = gate_harmony_pledge.14.t
+	desc = gate_harmony_pledge.14.d
+	flavor = gate_harmony_pledge.14.f
+
+	event_image = {
+		video = "rp1_amazon_exploitation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	cooldown = {
+		months = { 12 24 }
+	}
+
+	icon = gfx/interface/icons/religion_icons/gate_harmony_pledge.dds
+
+	duration = 3
+
+	#TODO: MasterOfGrey balance
+	option = {
+		name = gate_harmony_pledge.14.a
+		add_gate_society_harmony_progress = {
+			amount = -5
+		}
+		je:je_gate_harmony_pledge ?= {
+			add_modifier = {
+				name = modifier_gate_harmony_pledge_land_rush
+				months = 12
+				multiplier = -1
+			}
+		}
+	}
+
+	#TODO: MasterOfGrey balance
+	option = {
+		name = gate_harmony_pledge.14.b
+		default_option = yes
+		add_gate_society_harmony_progress = {
+			amount = 2
+		}
+		je:je_gate_harmony_pledge ?= {
+			add_modifier = {
+				name = modifier_gate_harmony_pledge_land_rush
+				months = 12
+			}
+		}
+	}
+
+	#TODO: MasterOfGrey balance
+	option = {
+		name = gate_harmony_pledge.14.c
+		add_gate_society_harmony_progress = {
+			amount = 5
+		}
+		je:je_gate_harmony_pledge ?= {
+			add_modifier = {
+				name = modifier_gate_harmony_pledge_land_rush
+				months = 12
+				multiplier = 2
+			}
+		}
+	}
+}
+
+gate_harmony_pledge.15 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = capital
+
+	title = gate_harmony_pledge.15.t
+	desc = gate_harmony_pledge.15.d
+	flavor = gate_harmony_pledge.15.f
+
+	event_image = {
+		video = "ip2_india_factory_floor"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	cooldown = {
+		months = { 12 24 }
+	}
+
+	trigger = {
+		has_technology_researched = atmospheric_engine
+	}
+
+	icon = gfx/interface/icons/religion_icons/gate_harmony_pledge.dds
+
+	duration = 3
+
+	#TODO: MasterOfGrey balance
+	option = {
+		name = gate_harmony_pledge.15.a
+		add_gate_society_harmony_progress = {
+			amount = -5
+		}
+		add_radicals = {
+			religion = rel:animist
+			value = 0.1
+		}
+		add_loyalists = {
+			culture = cu:gnomish
+			pop_type = engineers
+			value = 0.02
+		}
+		add_loyalists = {
+			culture = cu:gnomish
+			pop_type = machinists
+			value = 0.02
+		}
+	}
+
+	#TODO: MasterOfGrey balance
+	option = {
+		name = gate_harmony_pledge.15.b
+		default_option = yes
+		add_gate_society_harmony_progress = {
+			amount = 2
+		}
+		add_loyalists = {
+			religion = rel:animist
+			value = 0.1
+		}
+		add_radicals = {
+			religion = rel:animist
+			value = 0.05
+		}
+		add_radicals = {
+			culture = cu:gnomish
+			pop_type = engineers
+			value = 0.05
+		}
+		add_radicals = {
+			culture = cu:gnomish
+			pop_type = machinists
+			value = 0.05
+		}
+	}
+
+	#TODO: MasterOfGrey balance
+	option = {
+		name = gate_harmony_pledge.15.c
+		add_gate_society_harmony_progress = {
+			amount = 5
+		}
+		add_loyalists = {
+			religion = rel:animist
+			value = 0.2
+		}
+		add_radicals = {
+			culture = cu:gnomish
+			pop_type = engineers
+			value = 0.1
+		}
+		add_radicals = {
+			culture = cu:gnomish
+			pop_type = machinists
+			value = 0.1
+		}
+		je:je_gate_harmony_pledge ?= {
+			add_modifier = {
+				name = modifier_gate_harmony_pledge_animistic_engineering
+				months = 12
+				multiplier = 2
+			}
+		}
+	}
+}
+
+gate_harmony_pledge.16 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = capital
+
+	title = gate_harmony_pledge.16.t
+	desc = gate_harmony_pledge.16.d
+	flavor = gate_harmony_pledge.16.f
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	cooldown = {
+		years = { 5 10 }
+	}
+
+	immediate = {
+		create_political_movement = {
+			type = movement_gate_gnomish_fascist_anarchy
+		}
+		create_character = {
+			ideology = ideology_gate_gnomish_fascist_anarchy
+			role = character_role_agitator
+			culture = cu:gnomish
+			save_scope_as = event_character
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_gate_gnomish_fascist_anarchy
+			}
+			save_scope_as = event_movement
+		}
+	}
+
+	gui_window = event_window_1char_tabloid
+
+	left_icon = scope:event_character
+
+	trigger = {
+		has_technology_researched = anarchism
+		has_technology_researched = political_agitation
+		country_should_exclusively_focus_on_modernization = no
+		NOT = {
+			any_political_movement = {
+				is_political_movement_type = movement_gate_gnomish_fascist_anarchy
+			}
+		}
+	}
+
+	icon = gfx/interface/icons/religion_icons/gate_harmony_pledge.dds
+
+	duration = 3
+
+	#TODO: MasterOfGrey balance
+	option = {
+		name = gate_harmony_pledge.16.a
+		add_gate_legislative_harmony_progress = {
+			amount = 5
 		}
 	}
 }

@@ -482,3 +482,93 @@ ideology_gate_dwarven_technocrat = {
 
     character_ideology = yes
 }
+
+ideology_gate_gnomish_fascist_anarchy = {
+    icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_anarchist.dds"
+
+    character_ideology = yes
+
+    lawgroup_internal_security = {
+        law_guaranteed_liberties = strongly_disapprove
+        law_no_home_affairs = neutral
+        law_national_guard = approve
+        law_secret_police = strongly_approve
+    }
+
+    lawgroup_citizenship = {
+        law_ethnostate = strongly_disapprove
+        law_national_supremacy = strongly_disapprove
+        law_subjecthood = strongly_disapprove
+        law_racial_segregation = disapprove
+        law_cultural_exclusion = approve
+        law_multicultural = strongly_approve
+    }
+
+    lawgroup_church_and_state = {
+        law_state_religion = strongly_disapprove
+        law_freedom_of_conscience = disapprove
+        law_total_separation = strongly_approve
+        law_state_atheism = strongly_disapprove
+    }
+
+    lawgroup_distribution_of_power = {
+        law_anarchy = strongly_approve
+        law_universal_suffrage = neutral
+        law_census_voting = disapprove
+        law_wealth_voting = disapprove
+        law_landed_voting = disapprove
+        law_technocracy = strongly_disapprove
+        law_oligarchy = strongly_disapprove
+        law_autocracy = strongly_disapprove
+        law_single_party_state = disapprove
+    }
+
+    lawgroup_free_speech = {
+        law_protected_speech = strongly_disapprove
+        law_right_of_assembly = disapprove
+        law_censorship = neutral
+        law_outlawed_dissent = strongly_approve
+    }
+
+    lawgroup_policing = {
+        law_local_police = approve
+        law_dedicated_police = approve
+        law_militarized_police = strongly_approve
+        law_no_police = disapprove
+    }
+
+    lawgroup_governance_principles = {
+        law_theocracy = strongly_disapprove
+        law_monarchy = neutral
+        law_presidential_republic = neutral
+        law_parliamentary_republic = neutral
+        law_corporate_state = strongly_approve
+        law_social_monarchy = approve
+        law_council_republic = strongly_disapprove
+    }
+
+    country_trigger = {
+        has_technology_researched = anarchism
+        has_technology_researched = political_agitation
+        OR = {
+            c:GATE_NS ?= this
+            was_formed_from = GATE_NS
+        }
+    }
+
+    interest_group_leader_trigger = {
+        always = no
+    }
+
+    non_interest_group_leader_trigger = {
+        always = no
+    }
+
+    interest_group_leader_weight = {
+        value = 0
+    }
+
+    non_interest_group_leader_weight = {
+        value = 0
+    }
+}
