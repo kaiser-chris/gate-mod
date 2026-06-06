@@ -1,4 +1,20 @@
-﻿# Root = owner Country of the Law
+﻿# Root = any
+on_monthly_pulse = {
+    on_actions = {
+        on_monthly_gate_harmony_pledge_cache_update
+    }
+}
+
+on_monthly_gate_harmony_pledge_cache_update = {
+    trigger = {
+        c:GATE_NS = { has_journal_entry = je_gate_harmony_pledge }
+    }
+    effect = {
+        gate_hp_population_percentages_cache_update = yes
+    }
+}
+
+# Root = owner Country of the Law
 # Executed when enactment of any law begins
 on_law_enactment_started = {
     on_actions = {
