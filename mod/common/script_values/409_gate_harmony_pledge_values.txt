@@ -12,11 +12,11 @@
 	add = {
 		value = gate_hp_society_bureaucracy
 		desc = GATE_HP_SOC_BUREAUCRACY
-	}
+	}
 	add = {
 		value = gate_hp_society_internal_security
 		desc = GATE_HP_SOC_INTERNAL_SECURITY
-	}
+	}
 	add = {
 		value = gate_hp_society_education	
 		desc = GATE_HP_SOC_EDUCATION
@@ -28,15 +28,15 @@
 	add = {
 		value = gate_hp_society_welfare
 		desc = GATE_HP_SOC_WELFARE
-	}
+	}
 	add = {
 		value = gate_hp_society_slavery
 		desc = GATE_HP_SOC_SLAVERY
-	}
+	}
 	add = {
 		value = gate_hp_society_citizenship
 		desc = GATE_HP_SOC_INTERNAL_SECURITY
-	}
+	}
 	min = 0
 	max = 100
 }
@@ -258,7 +258,7 @@ gate_hp_society_welfare = {
 		add = 30
 	}
 	else_if = {
-		limit = { has_law_or_variant = law_type:law_poor_laws }		# Any safety net has its advantages
+		limit = { has_law_or_variant = law_type:law_poor_laws }        # Any safety net has its advantages
 		add = 25
 		add = {
 			value = -3
@@ -281,12 +281,14 @@ gate_hp_society_welfare = {
 			multiply = institution:institution_social_security.investment
 		}
 	}
-	else = {	# For Random Modded laws
+	else = {
+		# For Random Modded laws
 		add = gate_hp_society_welfare_modded
 		owner.institution:institution_social_security ?= {
-		add = {
-			value = -7
-			multiply = investment	# institution:institution_social_security.investment # already in institution scope
+			add = {
+				value = -7
+				multiply = investment    # institution:institution_social_security.investment # already in institution scope
+			}
 		}
 	}
 }
@@ -330,7 +332,7 @@ gate_hp_society_citizenship = {
 				value = -50
 				multiply = {								# More gnomes = more chaos
 					value = var:gate_hp_gnomish_percent
-					divide = var:gate_hp_total_population
+					divide = var:gate_hp_total_population
 				}
 			}
 			add = {
@@ -338,7 +340,7 @@ gate_hp_society_citizenship = {
 				multiply = {								# More non-gnomes = more order
 					value = var:gate_hp_citizenship_percent
 					subtract = var:gate_hp_gnomish_percent
-					divide = var:gate_hp_total_population
+					divide = var:gate_hp_total_population
 				}
 			}
 			add = -50			# Temporarily set "harmonious" = 0
@@ -346,7 +348,7 @@ gate_hp_society_citizenship = {
 				value = 1
 				subtract = {
 					value = var:gate_hp_pledge_percent
-					divide = var:gate_hp_total_population
+					divide = var:gate_hp_total_population
 				}
 			}
 			add = 50			# Restore "harmonious" = 50

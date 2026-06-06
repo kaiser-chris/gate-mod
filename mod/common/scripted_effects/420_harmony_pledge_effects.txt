@@ -216,7 +216,7 @@ gate_hp_population_percentages_cache_update = {
 								add = prev.total_size
 							}
 						}
-					}
+					}
 					if = {
 						limit = {
 							has_state_religion = yes
@@ -234,15 +234,15 @@ gate_hp_population_percentages_cache_update = {
 		# Save the percents
 		scope:country = {
 			save_temporary_scope_value_as = {	# Total Pop
-				name = gate_hp_tot_population
+				name = gate_hp_tot_population
 				value = var:gate_hp_pop_total
 			}
 			set_variable = {
-				name = gate_hp_total_population
-				value = scope:gate_hp_tot_population
+				name = gate_hp_total_population
+				value = scope:gate_hp_tot_population
 			}
 			save_temporary_scope_value_as = {	# All Citizens
-				name = gate_hp_citizens_percent
+				name = gate_hp_citizens_percent
 				value = {
 					value = var:gate_hp_pop_citizens
 					divide = {
@@ -256,7 +256,7 @@ gate_hp_population_percentages_cache_update = {
 				value = scope:gate_hp_citizens_percent
 			}
 			save_temporary_scope_value_as = {	# Gnomish Portion
-				name = gate_hp_gnomish_percent
+				name = gate_hp_gnomish_percent
 				value = {
 					value = var:gate_hp_pop_gnomish
 					divide = {
@@ -270,7 +270,7 @@ gate_hp_population_percentages_cache_update = {
 				value = scope:gate_hp_gnomish_percent
 			}
 			save_temporary_scope_value_as = {	# Pledge Adherents
-				name = gate_hp_pledge_percent
+				name = gate_hp_pledge_percent
 				value = {
 					value = var:gate_hp_pop_pledge
 					divide = {
