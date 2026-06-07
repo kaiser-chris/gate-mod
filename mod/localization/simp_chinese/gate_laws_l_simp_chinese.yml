@@ -44,9 +44,9 @@
  law_gate_druidic_circles: "德鲁伊结社"
  law_gate_druidic_circles_desc: "[GetPopType('gate_druids').GetName]通过与自然共鸣来驾驭动植物之力。借助圣林和自然节律的调和，他们能够治愈生灵、守护疆域、统御荒野。"
  law_gate_mage_guilds: "法师公会"
- law_gate_mage_guilds_desc: "该魔法体系以[GetPopType('mages').GetName]主导的法师公会为核心。通过精湛技艺、附魔器具与奥秘法术，他们可以有力推动魔法工业的发展。"
+ law_gate_mage_guilds_desc: "该魔法体系以[GetPopType('gate_mages').GetName]主导的法师公会为核心。通过精湛技艺、附魔器具与奥秘法术，他们可以有力推动魔法工业的发展。"
  law_gate_arcane_bureau: "奥秘管理局"
- law_gate_arcane_bureau_desc: "由国家统一管理的机构，将[GetPopType('mages').GetName]与[GetPopType('druids').GetName]整合于同一组织之下。"
+ law_gate_arcane_bureau_desc: "由国家统一管理的机构，将[GetPopType('gate_mages').GetName]与[GetPopType('gate_druids').GetName]整合于同一组织之下。"
 # Government Principles
  law_gate_vampire_monarchy: "永恒君主制"
  law_gate_vampire_monarchy_desc: "该国已接受[concept_gate_vampirism]，其君主被视为永恒不朽的存在。"
@@ -54,4 +54,4 @@
  law_gate_magocracy_desc: "一种治理形式，由国家中最强大的施法者（根据能力、地位或出身选出）终身统治，该统治者被授予$RULER_TITLE_GATE_ARCHWIZARD$或$RULER_TITLE_GATE_ARCHWITCH$称号。"
 # Distribution of Power
  law_gate_arcane_council: "奥术委员会"
- law_gate_arcane_council_desc: "国家元首与一小群有影响力、未经选举的[GetPopType('mages').GetName]和[GetPopType('druids').GetName]共享权力与责任。"
+ law_gate_arcane_council_desc: "国家元首与一小群有影响力、未经选举的[GetPopType('gate_mages').GetName]和[GetPopType('gate_druids').GetName]共享权力与责任。"
