@@ -34,11 +34,11 @@ widget = {
         widget = {
             # Expedition
             datacontext = "[GetScriptedGui('sgui_gate_expedition_open')]"
-            visible = "[ScriptedGui.IsValid(GuiScope.End)]"
+            visible = "[ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
             state = {
                 name = _show
                 on_finish = "[GetVariableSystem.Set('com_open_window', 'gate_button_expedition')]"
-                on_finish = "[ScriptedGui.Execute(GuiScope.End)]"
+                on_finish = "[ScriptedGui.Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
             }
         }
     }
