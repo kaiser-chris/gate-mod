@@ -39,6 +39,60 @@
 	}
 	min = 0
 	max = 100
+	
+	save_temporary_value_as = gate_pre_scaling_value
+	
+	# SCALING NORMALISATION
+	if = {
+		limit = {
+			scope:gate_pre_scaling_value < 0
+			"je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_society)" < 50
+		}
+		# Complete block rework allows non-scaled factors to be added to the "Status Quo" resistance
+		add = {
+			add = gate_pre_scaling_value
+			multiply = {
+				add = je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_society)
+				divide = 50
+			}
+			subtract = scope:gate_pre_scaling_value
+			# Base SQ resistance unrelated to speed of change.
+			if = {
+				limit = { "je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_society)" < 40 }
+				add = {
+					add = 40
+					subtract = "je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_society)"
+					divide = 100
+				}
+			}
+			desc = ""
+		}
+	}
+	else_if = {
+		limit = {
+			scope:gate_pre_scaling_value > 0
+			"je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_society)" > 50
+		}
+		add = {
+			add = scope:gate_pre_scaling_value
+			multiply = {
+				add = 100
+				subtract = "je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_society)"
+				divide = 50
+			}
+			subtract = scope:gate_pre_scaling_value
+			# Base SQ resistance unrelated to speed of change.
+			if = {
+				limit = { "je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_society)" > 50 }
+				add = {
+					add = 60
+					subtract = "je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_society)"
+					divide = 200
+				}
+			}
+			desc = ""
+		}
+	}
 }
 
 gate_hp_society_dist_of_power = {
