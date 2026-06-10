@@ -10,7 +10,7 @@ on_monthly_gate_harmony_pledge_cache_update = {
         c:GATE_NS = { has_journal_entry = je_gate_harmony_pledge }
     }
     effect = {
-        gate_hp_population_percentages_cache_update = yes
+        c:GATE_NS = { gate_hp_population_percentages_cache_update = yes }
     }
 }
 

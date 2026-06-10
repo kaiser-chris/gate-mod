@@ -166,7 +166,7 @@ set_gate_harmony_pledge_modifiers = {
 gate_hp_population_percentages_cache_update = {
 	if = {
 		limit = { NOT = { is_country_type = decentralized } }
-		save_temporary_scope_as = country
+		save_temporary_scope_as = pledge_country
 		# Initialize pop counters
 		set_variable = {
 			name = gate_hp_pop_total
@@ -189,7 +189,7 @@ gate_hp_population_percentages_cache_update = {
 			if = {
 				limit = { is_incorporated = yes }
 				every_scope_pop = {
-					scope:country = {
+					scope:pledge_country = {
 						change_variable = {
 							name = gate_hp_pop_total
 							add = prev.total_size
@@ -199,7 +199,7 @@ gate_hp_population_percentages_cache_update = {
 						limit = {
 							pop_acceptance >= acceptance_status_4
 						}
-						scope:country = {
+						scope:pledge_country = {
 							change_variable = {
 								name = gate_hp_pop_citizens
 								add = prev.total_size
@@ -210,7 +210,7 @@ gate_hp_population_percentages_cache_update = {
 						limit = {
 							culture = cu:gnomish
 						}
-						scope:country = {
+						scope:pledge_country = {
 							change_variable = {
 								name = gate_hp_pop_gnomish
 								add = prev.total_size
@@ -221,7 +221,7 @@ gate_hp_population_percentages_cache_update = {
 						limit = {
 							has_state_religion = yes
 						}
-						scope:country = {
+						scope:pledge_country = {
 							change_variable = {
 								name = gate_hp_pop_pledge
 								add = prev.total_size
@@ -232,7 +232,7 @@ gate_hp_population_percentages_cache_update = {
 			}
 		}
 		# Save the percents
-		scope:country = {
+		scope:pledge_country = {
 			save_temporary_scope_value_as = {	# Total Pop
 				name = gate_hp_tot_population
 				value = var:gate_hp_pop_total
