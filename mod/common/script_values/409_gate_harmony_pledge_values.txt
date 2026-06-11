@@ -1,74 +1,41 @@
-﻿gate_harmony_pledge_society_trend = {	# +ve = stratified (order), -ve = anarchich (chaos)
+﻿#### SOCIETY ####
+gate_harmony_pledge_society_trend = {	# +ve = anarchich (chaos), -ve = stratified (order)
 	add = {
 		value = gate_harmony_pledge_society_trend_from_laws
-		desc = GATE_HP_TREND_FROM_LAWS
+		desc = GATE_HP_SOC_TREND_FROM_LAWS
 		format = GATE_HP_TOP_VALUE_FORMAT
 	}
 	
 	add = {
-		value = gate_harmony_pledge_society_trend_from_citizenship
-		desc = GATE_HP_TREND_FROM_CITIZENSHIP
+		value = gate_harmony_pledge_society_trend_from_demographics
+		desc = GATE_HP_SOC_TREND_FROM_DEMOGRAPHICS
 		format = GATE_HP_TOP_VALUE_FORMAT
 	}
 	
-	
-	save_temporary_value_as = gate_pre_scaling_value
 	add = {
-		# SCALING NORMALISATION
-		if = {
-			limit = {
-				gate_pre_scaling_value < 0
-				"je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_society)" < 50
-			}
-			# Complete block rework allows non-scaled factors to be added to the "Status Quo" resistance
-			add = {
-				add = gate_pre_scaling_value
-				multiply = {
-					add = je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_society)
-					divide = 50
-				}
-				subtract = scope:gate_pre_scaling_value
-				# Base SQ resistance unrelated to speed of change.
-				if = {
-					limit = { "je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_society)" < 40 }
-					add = {
-						add = 40
-						subtract = "je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_society)"
-						divide = 100
-					}
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				gate_pre_scaling_value > 0
-				"je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_society)" > 50
-			}
-			add = {
-				add = scope:gate_pre_scaling_value
-				multiply = {
-					add = 100
-					subtract = "je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_society)"
-					divide = 50
-				}
-				subtract = scope:gate_pre_scaling_value
-				# Base SQ resistance unrelated to speed of change.
-				if = {
-					limit = { "je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_society)" > 50 }
-					add = {
-						add = 60
-						subtract = "je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_society)"
-						divide = 200
-					}
-				}
-			}
-		}
-		desc = GATE_HP_STATUS_QUO_HARMONY
+		value = gate_harmony_pledge_society_trend_from_modifiers
+		desc = GATE_HP_SOC_TREND_FROM_MODIFIERS
+		format = GATE_HP_TOP_VALUE_FORMAT
+	}
+	
+	# ^ Base part above | scaling part below
+	
+	add = { 
+		value = gate_harmony_pledge_society_trend_scaling
+		desc = GATE_HP_SOC_STATUS_QUO_HARMONY
 		format = GATE_HP_TOP_VALUE_FORMAT
 	}
 }
 
-gate_harmony_pledge_society_trend_from_laws = {	# +ve = anarchich (chaos), -ve = stratified (order)
+gate_harmony_pledge_society_trend_base = { # used as an input to make the scaling part work
+	value = 0
+	add = gate_harmony_pledge_society_trend_from_laws
+	add = gate_harmony_pledge_society_trend_from_demographics
+	add = gate_harmony_pledge_society_trend_from_modifiers
+}
+
+# LAWS were done +ve = stratified (order), -ve = anarchich (chaos) then flipped later
+gate_harmony_pledge_society_trend_from_laws = {
 	add = {
 		value = gate_hp_society_dist_of_power
 		desc = GATE_HP_SOC_DIST_OF_POWER
@@ -405,36 +372,134 @@ gate_hp_society_slavery = {
 }
 gate_hp_society_slavery_modded = 15	# Replace this value for modded laws compatibility
 
-gate_harmony_pledge_society_trend_from_citizenship = {
+gate_harmony_pledge_society_trend_from_demographics = {	# +ve = anarchich (chaos), -ve = stratified (order)
 	value = 0
 	if = {
 		limit = { has_law = law_type:law_gate_gnomish_harmony }
 		add = {
 			add = {
-				value = -50
-				multiply = {								# More gnomes = more chaos
-					value = var:gate_hp_gnomish_percent
-					divide = var:gate_hp_total_population
-				}
+				value = 0.5
+				multiply = var:gate_hp_gnomish_percent		# gnomes/total				# More gnomes = more chaos
+				desc = GATE_HP_GNOMISH_POP_PERCENT
+				format = GATE_HP_SCRIPT_VALUE_FORMAT	# (optional)
 			}
 			add = {
-				value = 100
-				multiply = {								# More non-gnomes = more order
-					value = var:gate_hp_citizenship_percent
-					subtract = var:gate_hp_gnomish_percent
-					divide = var:gate_hp_total_population
-				}
+				value = -1.0
+				multiply = var:gate_hp_non_gnomish_percent
+				desc = GATE_HP_NON_GNOME_POP_PERCENT
+				format = GATE_HP_SCRIPT_VALUE_FORMAT	# (optional)
 			}
-			#add = -50			# Temporarily set "harmonious" = 0
 			multiply = {		# More pledge adherents = more regression towards harmony
-				value = 1
-				subtract = {
-					value = var:gate_hp_pledge_percent
-					divide = var:gate_hp_total_population
+				value = 1		# Above value is *reduced* proportionally i.e. 100% pledge adoption = multiply by 0
+				subtract = var:gate_hp_pledge_percent
+				desc = GATE_HP_PLEDGE_PERCENT
+				format = GATE_HP_SCRIPT_VALUE_FORMAT	# (optional)
+			}
+		}				# Net effect - large % of non-gnomes who are also non-pledgers will destabilise.
+	}
+}
+
+gate_harmony_pledge_society_trend_from_modifiers = {	# works away/towards center point
+	# Center drift modifiers
+	if = {
+		limit = {
+			scope:journal_entry = {
+				scripted_bar_progress = {
+					name = pb_gate_harmony_pledge_society
+					value >= 50
 				}
 			}
-			#add = 50			# Restore "harmonious" = 50
-		}				# Net effect - large % of non-gnomes who are also non-pledgers will destabilise.
-		divide = -100
+			modifier:country_gate_harmony_pledge_society_drift_center != 0
+		}
+		subtract = {
+			value = modifier:country_gate_harmony_pledge_society_drift_center
+			desc = pb_gate_harmony_pledge_society_center_drift_modifier
+		}
+	}
+	else_if = {
+		limit = {
+			scope:journal_entry = {
+				scripted_bar_progress = {
+					name = pb_gate_harmony_pledge_society
+					value < 50
+				}
+			}
+			modifier:country_gate_harmony_pledge_society_drift_center != 0
+		}
+		add = {
+			value = modifier:country_gate_harmony_pledge_society_drift_center
+			desc = pb_gate_harmony_pledge_society_center_drift_modifier
+		}
+	}
+	# Modifiers in only 1 direction (un-comment this + LOC entries if we decide we need them).
+#	add = {
+#		value = modifier:country_gate_harmony_pledge_society_drift_negative
+#		desc = "GATE_HP_SOC_TREND_FROM_MODIFIERS_NEGATIVE"
+#	}
+#	add = {
+#		value = modifier:country_gate_harmony_pledge_society_drift_positive
+#		desc = "GATE_HP_SOC_TREND_FROM_MODIFIERS_POSITIVE"
+#	}
+}
+
+gate_harmony_pledge_society_trend_scaling = {	# works against movement towards disharmony
+	if = {
+		limit = {
+			gate_harmony_pledge_society_trend_base < 0
+			"je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_society)" < 50
+		}
+		add = {
+			add = gate_harmony_pledge_society_trend_base
+			multiply = {
+				add = "je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_society)"
+				divide = 50
+			}
+			subtract = gate_harmony_pledge_society_trend_base
+			# Base SQ resistance unrelated to speed of change.
+			if = {
+				limit = { "je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_society)" < 40 }
+				add = {
+					add = 40
+					subtract = "je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_society)"
+					divide = 100
+				}
+			}
+			multiply = var:gate_hp_non_gnomish_percent
+			desc = GATE_HP_NATURAL_CHANGE_RESISTANCE
+			format = GATE_HP_SCRIPT_VALUE_FORMAT	# (optional)
+		}
+	}
+	else_if = {
+		limit = {
+			gate_harmony_pledge_society_trend_base > { value = 0 }
+			"je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_society)" > 50
+		}
+		add = {
+			add = gate_harmony_pledge_society_trend_base
+			multiply = {
+				add = 100
+				subtract = "je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_society)"
+				divide = 50
+			}
+			subtract = gate_harmony_pledge_society_trend_base
+			# Base SQ resistance unrelated to speed of change.
+			if = {
+				limit = { "je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_society)" > 50 }
+				add = {
+					add = 60
+					subtract = "je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_society)"
+					divide = 200
+				}
+			}
+			multiply = var:gate_hp_non_gnomish_percent
+			desc = GATE_HP_NATURAL_CHANGE_RESISTANCE
+			format = GATE_HP_SCRIPT_VALUE_FORMAT	# (optional)
+		}
+	}
+	multiply = {
+		value = 1
+		add = var:gate_hp_pledge_percent
+		desc = GATE_HP_PLEDGE_PERCENT_SCALING
+		format = GATE_HP_SCRIPT_VALUE_FORMAT	# (optional)
 	}
 }

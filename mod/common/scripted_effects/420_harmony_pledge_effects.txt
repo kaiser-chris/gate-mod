@@ -233,16 +233,12 @@ gate_hp_population_percentages_cache_update = {
 		}
 		# Save the percents
 		scope:pledge_country = {
-			save_temporary_scope_value_as = {	# Total Pop
-				name = gate_hp_tot_population
+			set_variable = {
+				name = gate_hp_total_population	# Total Pop
 				value = var:gate_hp_pop_total
 			}
 			set_variable = {
-				name = gate_hp_total_population
-				value = scope:gate_hp_tot_population
-			}
-			save_temporary_scope_value_as = {	# All Citizens
-				name = gate_hp_citizens_percent
+				name = gate_hp_citizenship_percent	# All Citizens
 				value = {
 					value = var:gate_hp_pop_citizens
 					divide = {
@@ -252,11 +248,14 @@ gate_hp_population_percentages_cache_update = {
 				}
 			}
 			set_variable = {
-				name = gate_hp_citizenship_percent
-				value = scope:gate_hp_citizens_percent
+				name = gate_hp_non_citizen_percent	# Non-Citizens
+				value = {
+					value = 1
+					subtract = var:gate_hp_citizenship_percent
+				}
 			}
-			save_temporary_scope_value_as = {	# Gnomish Portion
-				name = gate_hp_gnomish_percent
+			set_variable = {
+				name = gate_hp_gnomish_percent		# Gnomish Portion
 				value = {
 					value = var:gate_hp_pop_gnomish
 					divide = {
@@ -266,8 +265,11 @@ gate_hp_population_percentages_cache_update = {
 				}
 			}
 			set_variable = {
-				name = gate_hp_gnomish_percent
-				value = scope:gate_hp_gnomish_percent
+				name = gate_hp_non_gnomish_percent	# Non-Gnomish
+				value = {
+					value = 1
+					subtract = var:gate_hp_gnomish_percent
+				}
 			}
 			save_temporary_scope_value_as = {	# Pledge Adherents
 				name = gate_hp_pledge_percent

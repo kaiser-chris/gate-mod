@@ -5,6 +5,12 @@ on_monthly_pulse = {
     }
 }
 
+on_game_started_after_lobby = {
+    on_actions = {
+        on_monthly_gate_harmony_pledge_cache_update
+    }
+}
+
 on_monthly_gate_harmony_pledge_cache_update = {
     trigger = {
         c:GATE_NS = { has_journal_entry = je_gate_harmony_pledge }
