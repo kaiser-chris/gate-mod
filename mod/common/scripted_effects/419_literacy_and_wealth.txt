@@ -30,9 +30,7 @@
                 }
                 else_if = {
                     limit = {
-                        OR = {
-                            culture = cu:elven
-                        }
+                        culture = cu:elven
                         literacy_rate < 0.9
                     }
                     # Minimum for elves
