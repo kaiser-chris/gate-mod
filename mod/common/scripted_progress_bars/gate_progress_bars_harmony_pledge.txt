@@ -7,39 +7,9 @@
 
 	weekly_progress = {
 		add = gate_harmony_pledge_society_trend
-	#	if = {
-	#		limit = {
-	#			scope:journal_entry = {
-	#				scripted_bar_progress = {
-	#					name = pb_gate_harmony_pledge_society
-	#					value >= 50
-	#				}
-	#			}
-	#			modifier:country_gate_harmony_pledge_society_drift_center != 0
-	#		}
-	#		subtract = {
-	#			value = modifier:country_gate_harmony_pledge_society_drift_center
-	#			desc = pb_gate_harmony_pledge_society_center_drift_modifier
-	#		}
-	#	}
-	#	else_if = {
-	#		limit = {
-	#			scope:journal_entry = {
-	#				scripted_bar_progress = {
-	#					name = pb_gate_harmony_pledge_society
-	#					value < 50
-	#				}
-	#			}
-	#			modifier:country_gate_harmony_pledge_society_drift_center != 0
-	#		}
-	#		add = {
-	#			value = modifier:country_gate_harmony_pledge_society_drift_center
-	#			desc = pb_gate_harmony_pledge_society_center_drift_modifier
-	#		}
-	#	}
 	}
 
-	start_value = gate_harmony_pledge_society_trend_from_laws # 50
+	start_value = 45 # derive from gate_harmony_pledge_society_trend_from_laws
 	min_value = 0
 	max_value = 100
 }
