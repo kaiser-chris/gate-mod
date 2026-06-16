@@ -116,14 +116,10 @@ gate_mana_saturation.3 = {
 	duration = 3
 
 	trigger = {
-		# Player gets the event but could
-		# happen in any state.
-		is_player = yes
-
 		# We do not want every state
 		# to have this trait so we
 		# limit it to 20 states.
-		global_var:magic_growing_var <= 20
+		global_var:magic_growing_var <= 30
 
 		# We wait a while before giving
 		# out this trait so non magic
@@ -131,16 +127,41 @@ gate_mana_saturation.3 = {
 		# get them through propagated
 		# mana density.
 		game_date > 1845.1.1
+
+		# Shared cooldown between all countries
+		NOT = {
+			has_global_variable = gate_magic_soil_cooldown
+		}
+
+		# Do we have a state that can have this modifier?
+		any_scope_state = {
+			NOR = {
+				has_state_trait = state_trait_northern_canadian_terrain
+				has_state_trait = state_trait_siberian_terrain
+				has_state_trait = state_trait_arctic_whaling
+				has_state_trait = state_trait_good_soils
+				has_state_trait = state_trait_black_soil
+				has_state_trait = state_trait_gate_magic_soil
+			}
+			state_region = {
+				var:mana_density >= gate_medium_mana_density_threshhold
+			}
+			arable_land >= 5
+		}
 	}
 
 	immediate = {
+		set_global_variable = {
+			name = gate_magic_soil_cooldown
+			years = { 1 4 }
+		}
 		change_global_variable = {
 			name = magic_growing_var
 			add = 1
 		}
-		random_state = {
+		random_scope_state = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_state_trait = state_trait_northern_canadian_terrain
 					has_state_trait = state_trait_siberian_terrain
 					has_state_trait = state_trait_arctic_whaling
@@ -151,18 +172,10 @@ gate_mana_saturation.3 = {
 				state_region = {
 					var:mana_density >= gate_medium_mana_density_threshhold
 				}
-				owner = {
-					has_overlapping_interests = root
-				}
 				arable_land >= 5
 			}
 			save_scope_as = magic_growing_state
 		}
-		save_scope_as = player_country
-	}
-
-	cooldown = {
-		years = { 2 4 }
 	}
 
 	# Our state
@@ -173,8 +186,8 @@ gate_mana_saturation.3 = {
 			add_state_trait = state_trait_gate_magic_soil
 			add_arable_land = 5
 		}
-		trigger = {
-			scope:magic_growing_state.owner = scope:player_country
+		ai_chance = {
+			base = 50
 		}
 	}
 	option = {
@@ -191,68 +204,10 @@ gate_mana_saturation.3 = {
 		}
 		gate_make_magic_researcher_busy = yes
 		trigger = {
-			AND = {
-				scope:magic_growing_state.owner = scope:player_country
-				has_variable = gate_magic_researcher
-			}
+			has_gate_magic_researcher = yes
 		}
-	}
-
-	# Other countries state
-	option = {
-		name = gate_mana_saturation.3.a2
-		default_option = yes
-		scope:magic_growing_state.state_region = {
-			add_state_trait = state_trait_gate_magic_soil
-			add_arable_land = 5
-		}
-		trigger = {
-			scope:magic_growing_state = {
-				NOT = {
-					scope:magic_growing_state.owner = scope:player_country
-				}
-			}
-		}
-	}
-	option = {
-		name = gate_mana_saturation.3.b
-		scope:magic_growing_state.state_region = {
-			add_state_trait = state_trait_gate_magic_soil
-			add_arable_land = 5
-		}
-		hidden_effect = {
-			trigger_event = {
-				id = researching_magic.2
-				months = 3
-			}
-		}
-		gate_make_magic_researcher_busy = yes
-		trigger = {
-			scope:magic_growing_state = {
-				AND = {
-					# We have a researcher
-					has_variable = gate_magic_researcher
-
-					# Country is in a region we have interest in
-					scope:player_country = {
-						has_interest_marker_in_region = scope:magic_growing_state.region
-					}
-
-					# Country does not hate us
-					scope:player_country.relations:owner >= relations_threshold:neutral
-					NOT = {
-						scope:magic_growing_state.owner = scope:player_country
-					}
-				}
-			}
-		}
-	}
-	option = {
-		name = gate_mana_saturation.3.a1
-		trigger = {
-			NOT = {
-				exists = scope:magic_growing_state
-			}
+		ai_chance = {
+			base = 100
 		}
 	}
 }
@@ -267,7 +222,7 @@ gate_mana_saturation.4 = {
 	flavor = gate_mana_saturation.4.f
 
 	event_image = {
-		video = "gate_unspecified_magic_phenomena"
+		video = "gate_unspecified_obelisk"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -327,7 +282,7 @@ gate_mana_saturation.5 = {
 	flavor = gate_mana_saturation.5.f
 
 	event_image = {
-		video = "gate_unspecified_magic_phenomena"
+		video = "gate_unspecified_obelisk"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -387,7 +342,7 @@ gate_mana_saturation.6 = {
 	flavor = gate_mana_saturation.6.f
 
 	event_image = {
-		video = "gate_unspecified_magic_phenomena"
+		video = "gate_unspecified_obelisk"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -447,7 +402,7 @@ gate_mana_saturation.7 = {
 	flavor = gate_mana_saturation.7.f
 
 	event_image = {
-		video = "gate_unspecified_magic_phenomena"
+		video = "gate_unspecified_obelisk"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -510,7 +465,7 @@ gate_mana_saturation.8 = {
 	flavor = gate_mana_saturation.8.f
 
 	event_image = {
-		video = "gate_unspecified_magic_phenomena"
+		video = "gate_unspecified_obelisk"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -579,7 +534,7 @@ gate_mana_saturation.9 = {
 	flavor = gate_mana_saturation.9.f
 
 	event_image = {
-		video = "gate_unspecified_magic_phenomena"
+		video = "gate_unspecified_obelisk"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -664,7 +619,7 @@ gate_mana_saturation.10 = {
 	flavor = gate_mana_saturation.10.f
 
 	event_image = {
-		video = "gate_unspecified_magic_phenomena"
+		video = "gate_unspecified_obelisk"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -727,7 +682,7 @@ gate_mana_saturation.11 = {
 	flavor = gate_mana_saturation.11.f
 
 	event_image = {
-		video = "gate_unspecified_magic_phenomena"
+		video = "gate_unspecified_obelisk"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -799,7 +754,7 @@ gate_mana_saturation.12 = {
 	flavor = gate_mana_saturation.12.f
 
 	event_image = {
-		video = "gate_unspecified_magic_phenomena"
+		video = "gate_unspecified_obelisk"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -865,7 +820,7 @@ gate_mana_saturation.13 = {
 	flavor = gate_mana_saturation.13.f
 
 	event_image = {
-		video = "gate_unspecified_magic_phenomena"
+		video = "gate_unspecified_obelisk"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -925,7 +880,7 @@ gate_mana_saturation.14 = {
 	flavor = gate_mana_saturation.14.f
 
 	event_image = {
-		video = "gate_unspecified_magic_phenomena"
+		video = "gate_unspecified_obelisk"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -1003,7 +958,7 @@ gate_mana_saturation.15 = {
 	flavor = gate_mana_saturation.15.f
 
 	event_image = {
-		video = "gate_unspecified_magic_phenomena"
+		video = "gate_unspecified_obelisk"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
