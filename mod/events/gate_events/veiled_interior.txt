@@ -38,12 +38,13 @@ gate_veiled_interior.1 = {
 		highlighted_option = yes
 		custom_tooltip = {
 			text = gate_veiled_interior.1.a.tooltip
-			every_scope_state = {
+			every_state = {
 				limit = {
 					OR = {
 						state_region = s:STATE_EASTERN_NEW_GUINEA
 						state_region = s:STATE_WESTERN_NEW_GUINEA
 					}
+					is_largest_state_in_region = yes
 				}
 				create_pop = {
 					culture = melanesian
@@ -58,12 +59,13 @@ gate_veiled_interior.1 = {
 		s:STATE_WESTERN_NEW_GUINEA = {
 			add_arable_land = { 20 30 }
 		}
-		every_scope_state = {
+		every_state = {
 			limit = {
 				OR = {
 					state_region = s:STATE_EASTERN_NEW_GUINEA
 					state_region = s:STATE_WESTERN_NEW_GUINEA
 				}
+				is_largest_state_in_region = yes
 			}
 			add_modifier = {
 				name = modifier_veiled_interior_lifted
@@ -90,6 +92,15 @@ gate_veiled_interior.2 = {
 
 	event_image = {
 		video = "middleeast_jungle_expedition"
+	}
+
+	trigger = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_EASTERN_NEW_GUINEA
+				state_region = s:STATE_WESTERN_NEW_GUINEA
+			}
+		}
 	}
 
 	immediate = {
@@ -146,6 +157,15 @@ gate_veiled_interior.3 = {
 		video = "middleeast_jungle_expedition"
 	}
 
+	trigger = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_EASTERN_NEW_GUINEA
+				state_region = s:STATE_WESTERN_NEW_GUINEA
+			}
+		}
+	}
+
 	immediate = {
 		random_scope_state = {
 			limit = {
@@ -161,8 +181,6 @@ gate_veiled_interior.3 = {
 	cooldown = {
 		years = 100
 	}
-
-	is_popup = yes
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -189,6 +207,15 @@ gate_veiled_interior.4 = {
 		video = "middleeast_jungle_expedition"
 	}
 
+	trigger = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_EASTERN_NEW_GUINEA
+				state_region = s:STATE_WESTERN_NEW_GUINEA
+			}
+		}
+	}
+
 	immediate = {
 		random_scope_state = {
 			limit = {
@@ -204,8 +231,6 @@ gate_veiled_interior.4 = {
 	cooldown = {
 		years = 100
 	}
-
-	is_popup = yes
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -232,6 +257,15 @@ gate_veiled_interior.5 = {
 		video = "middleeast_jungle_expedition"
 	}
 
+	trigger = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_EASTERN_NEW_GUINEA
+				state_region = s:STATE_WESTERN_NEW_GUINEA
+			}
+		}
+	}
+
 	immediate = {
 		random_scope_state = {
 			limit = {
@@ -247,8 +281,6 @@ gate_veiled_interior.5 = {
 	cooldown = {
 		years = 100
 	}
-
-	is_popup = yes
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -275,6 +307,15 @@ gate_veiled_interior.6 = {
 		video = "middleeast_jungle_expedition"
 	}
 
+	trigger = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_EASTERN_NEW_GUINEA
+				state_region = s:STATE_WESTERN_NEW_GUINEA
+			}
+		}
+	}
+
 	cooldown = {
 		years = 100
 	}
@@ -290,8 +331,6 @@ gate_veiled_interior.6 = {
 			save_scope_as = expedition_state
 		}
 	}
-
-	is_popup = yes
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -318,6 +357,15 @@ gate_veiled_interior.7 = {
 		video = "middleeast_jungle_expedition"
 	}
 
+	trigger = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_EASTERN_NEW_GUINEA
+				state_region = s:STATE_WESTERN_NEW_GUINEA
+			}
+		}
+	}
+
 	cooldown = {
 		years = 100
 	}
@@ -334,8 +382,6 @@ gate_veiled_interior.7 = {
 		}
 	}
 
-	is_popup = yes
-
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = gfx/interface/icons/event_icons/event_map.dds
@@ -344,6 +390,119 @@ gate_veiled_interior.7 = {
 
 	option = {
 		name = gate_veiled_interior.7.a
+		default_option = yes
+	}
+}
+
+gate_veiled_interior.8 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:expedition_state
+
+	title = gate_veiled_interior.8.t
+	desc = gate_veiled_interior.8.d
+	flavor = gate_veiled_interior.8.f
+
+	event_image = {
+		video = "africa_prosperous_farm"
+	}
+
+	trigger = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_EASTERN_NEW_GUINEA
+				state_region = s:STATE_WESTERN_NEW_GUINEA
+			}
+		}
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_EASTERN_NEW_GUINEA
+					state_region = s:STATE_WESTERN_NEW_GUINEA
+				}
+			}
+			save_scope_as = expedition_state
+		}
+		if = {
+			limit = {
+				NOT = {
+					exists = scope:journal_entry
+				}
+			}
+			je:je_gate_veiled_interior ?= {
+				save_scope_as = journal_entry
+			}
+		}
+		scope:journal_entry = {
+			set_variable = {
+				name = gate_veiled_interior_phase
+				value = flag:je_gate_veiled_interior_phase_diplomacy
+			}
+		}
+	}
+
+	is_popup = yes
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/event_icons/event_map.dds
+
+	option = {
+		name = gate_veiled_interior.8.a
+		default_option = yes
+		custom_tooltip = je_gate_veiled_interior_effect_phase_change_diplomacy
+	}
+}
+
+gate_veiled_interior.9 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:expedition_state
+
+	title = gate_veiled_interior.9.t
+	desc = gate_veiled_interior.9.d
+	flavor = gate_veiled_interior.9.f
+
+	event_image = {
+		video = "middleeast_jungle_expedition"
+	}
+
+	trigger = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_EASTERN_NEW_GUINEA
+				state_region = s:STATE_WESTERN_NEW_GUINEA
+			}
+		}
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_EASTERN_NEW_GUINEA
+					state_region = s:STATE_WESTERN_NEW_GUINEA
+				}
+			}
+			save_scope_as = expedition_state
+		}
+	}
+
+	cooldown = {
+		years = 100
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/event_icons/event_map.dds
+
+	duration = 3
+
+	option = {
+		name = gate_veiled_interior.9.a
 		default_option = yes
 	}
 }

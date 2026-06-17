@@ -20,6 +20,7 @@
     }
 
     scripted_button = sb_gate_veiled_interior_expedition
+    scripted_button = sb_gate_veiled_interior_scout
 
     status_desc = {
         first_valid = {
@@ -30,6 +31,14 @@
                     }
                 }
                 desc = je_gate_veiled_interior_status_expedition
+            }
+            triggered_desc = {
+                trigger = {
+                    scope:journal_entry = {
+                        has_variable = gate_veiled_interior_scouting
+                    }
+                }
+                desc = je_gate_veiled_interior_status_scouting
             }
             triggered_desc = {
                 trigger = {
