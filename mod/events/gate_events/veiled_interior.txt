@@ -141,6 +141,10 @@ gate_veiled_interior.2 = {
 		name = gate_veiled_interior.2.a
 		default_option = yes
 		custom_tooltip = je_gate_veiled_interior_effect_phase_change_early_contact
+		add_modifier = {
+			name = modifier_gate_veiled_interior_social_harmony
+			years = 3
+		}
 	}
 }
 
@@ -191,6 +195,9 @@ gate_veiled_interior.3 = {
 	option = {
 		name = gate_veiled_interior.3.a
 		default_option = yes
+		add_gate_society_harmony_progress = {
+			amount = -2
+		}
 	}
 }
 
@@ -241,6 +248,9 @@ gate_veiled_interior.4 = {
 	option = {
 		name = gate_veiled_interior.4.a
 		default_option = yes
+		add_gate_society_harmony_progress = {
+			amount = -2
+		}
 	}
 }
 
@@ -291,6 +301,9 @@ gate_veiled_interior.5 = {
 	option = {
 		name = gate_veiled_interior.5.a
 		default_option = yes
+		add_gate_society_harmony_progress = {
+			amount = -2
+		}
 	}
 }
 
@@ -341,6 +354,9 @@ gate_veiled_interior.6 = {
 	option = {
 		name = gate_veiled_interior.6.a
 		default_option = yes
+		add_gate_society_harmony_progress = {
+			amount = -2
+		}
 	}
 }
 
@@ -391,6 +407,9 @@ gate_veiled_interior.7 = {
 	option = {
 		name = gate_veiled_interior.7.a
 		default_option = yes
+		add_gate_society_harmony_progress = {
+			amount = -2
+		}
 	}
 }
 
@@ -454,6 +473,10 @@ gate_veiled_interior.8 = {
 		name = gate_veiled_interior.8.a
 		default_option = yes
 		custom_tooltip = je_gate_veiled_interior_effect_phase_change_diplomacy
+		add_modifier = {
+			name = modifier_gate_veiled_interior_social_harmony
+			years = 3
+		}
 	}
 }
 
@@ -504,5 +527,8 @@ gate_veiled_interior.9 = {
 	option = {
 		name = gate_veiled_interior.9.a
 		default_option = yes
+		add_gate_society_harmony_progress = {
+			amount = -2
+		}
 	}
 }
