@@ -17,10 +17,14 @@
  sb_gate_veiled_interior_scout: "Scout the Interior"
  sb_gate_veiled_interior_scout_desc: "Now that we have a reliable path to the interior we should scout the area."
  sb_gate_veiled_interior_scout_possible: "We do #bold not#! have an active scouting party in the field"
+ je_gate_veiled_interior_diplomacy_discussions: "Discussions"
+ je_gate_veiled_interior_diplomacy_alignment: "Alignment"
+ je_gate_veiled_interior_diplomacy_implementation: "Implementation"
 # Modifiers
  modifier_veiled_interior_lifted: "Insufficient Infrastructure"
  modifier_veiled_interior_expedition_cost: "Expedition Cost"
  modifier_veiled_interior_scouting_cost: "Scouting Cost"
+ modifier_gate_veiled_interior_social_harmony: "Frontier Harmony"
 # Effects
  je_gate_veiled_interior_effect_phase_change_early_contact: "#tooltip:[GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow [TopScope.sJE('journal_entry').GetName]#!#! advances towards the #v Early Contact#! phase"
  je_gate_veiled_interior_effect_phase_change_diplomacy: "#tooltip:[GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow [TopScope.sJE('journal_entry').GetName]#!#! advances towards the #v Diplomacy#! phase"
