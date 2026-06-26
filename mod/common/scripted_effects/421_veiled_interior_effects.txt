@@ -1,0 +1,69 @@
+﻿gate_switch_veiled_interior_phase = {
+    if = {
+        limit = {
+            hidden_trigger = {
+                flag:je_gate_veiled_interior_phase_diplomacy = flag:$phase$
+                exists = je:je_gate_veiled_interior
+            }
+        }
+        custom_tooltip = {
+            text = je_gate_veiled_interior_effect_phase_change_diplomacy
+            je:je_gate_veiled_interior = {
+                set_variable = {
+                    name = gate_veiled_interior_phase
+                    value = flag:je_gate_veiled_interior_phase_diplomacy
+                }
+                set_variable = com_hide_status_desc
+                com_setup_enactment_journal = {
+                    title = je_gate_veiled_interior_diplomacy_title
+                    phase_progress = 0
+                    success_chance = 0.2
+                    stall_chance = 0.2
+                    current_phase = je_gate_veiled_interior_diplomacy_discussions
+                    phase_one = je_gate_veiled_interior_diplomacy_discussions
+                    phase_two = je_gate_veiled_interior_diplomacy_alignment
+                    phase_three = je_gate_veiled_interior_diplomacy_implementation
+                }
+                com_set_enactment_journal_icon = {
+                    icon = gate_button_main
+                }
+            }
+        }
+    }
+    if = {
+        limit = {
+            hidden_trigger = {
+                flag:je_gate_veiled_interior_phase_early_contact = flag:$phase$
+                exists = je:je_gate_veiled_interior
+            }
+        }
+        custom_tooltip = {
+            text = je_gate_veiled_interior_effect_phase_change_early_contact
+            je:je_gate_veiled_interior = {
+                set_variable = {
+                    name = gate_veiled_interior_phase
+                    value = flag:je_gate_veiled_interior_phase_early_contact
+                }
+                remove_variable = com_hide_status_desc
+            }
+        }
+    }
+    if = {
+        limit = {
+            hidden_trigger = {
+                flag:je_gate_veiled_interior_phase_veiled = flag:$phase$
+                exists = je:je_gate_veiled_interior
+            }
+        }
+        custom_tooltip = {
+            text = je_gate_veiled_interior_effect_phase_change_veiled
+            je:je_gate_veiled_interior = {
+                set_variable = {
+                    name = gate_veiled_interior_phase
+                    value = flag:je_gate_veiled_interior_phase_veiled
+                }
+                remove_variable = com_hide_status_desc
+            }
+        }
+    }
+}

@@ -123,12 +123,6 @@ gate_veiled_interior.2 = {
 				save_scope_as = journal_entry
 			}
 		}
-		scope:journal_entry = {
-			set_variable = {
-				name = gate_veiled_interior_phase
-				value = flag:je_gate_veiled_interior_phase_early_contact
-			}
-		}
 	}
 
 	is_popup = yes
@@ -140,7 +134,9 @@ gate_veiled_interior.2 = {
 	option = {
 		name = gate_veiled_interior.2.a
 		default_option = yes
-		custom_tooltip = je_gate_veiled_interior_effect_phase_change_early_contact
+		gate_switch_veiled_interior_phase = {
+			phase = je_gate_veiled_interior_phase_early_contact
+		}
 		add_modifier = {
 			name = modifier_gate_veiled_interior_social_harmony
 			years = 3
@@ -455,12 +451,6 @@ gate_veiled_interior.8 = {
 				save_scope_as = journal_entry
 			}
 		}
-		scope:journal_entry = {
-			set_variable = {
-				name = gate_veiled_interior_phase
-				value = flag:je_gate_veiled_interior_phase_diplomacy
-			}
-		}
 	}
 
 	is_popup = yes
@@ -472,7 +462,9 @@ gate_veiled_interior.8 = {
 	option = {
 		name = gate_veiled_interior.8.a
 		default_option = yes
-		custom_tooltip = je_gate_veiled_interior_effect_phase_change_diplomacy
+		gate_switch_veiled_interior_phase = {
+			phase = je_gate_veiled_interior_phase_diplomacy
+		}
 		add_modifier = {
 			name = modifier_gate_veiled_interior_social_harmony
 			years = 3
