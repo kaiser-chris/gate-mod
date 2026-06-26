@@ -16,6 +16,14 @@ gate_veiled_interior.1 = {
 	gui_window = event_window_widescreen_classic
 
 	trigger = {
+		# Is only valid when everything is done
+		scope:journal_entry ?= {
+			var:gate_veiled_interior_phase ?= flag:je_gate_veiled_interior_phase_diplomacy
+			com_is_phase_enactment_journal = {
+				phase = je_gate_veiled_interior_diplomacy_implementation
+			}
+		}
+		# Do we even have a relevant state?
 		any_scope_state = {
 			OR = {
 				state_region = s:STATE_EASTERN_NEW_GUINEA
@@ -475,7 +483,7 @@ gate_veiled_interior.8 = {
 gate_veiled_interior.9 = {
 	type = country_event
 	dlc = dlc_magic_gate
-	placement = scope:expedition_state
+	placement = capital
 
 	title = gate_veiled_interior.9.t
 	desc = gate_veiled_interior.9.d
@@ -493,18 +501,6 @@ gate_veiled_interior.9 = {
 				state_region = s:STATE_EASTERN_NEW_GUINEA
 				state_region = s:STATE_WESTERN_NEW_GUINEA
 			}
-		}
-	}
-
-	immediate = {
-		random_scope_state = {
-			limit = {
-				OR = {
-					state_region = s:STATE_EASTERN_NEW_GUINEA
-					state_region = s:STATE_WESTERN_NEW_GUINEA
-				}
-			}
-			save_scope_as = expedition_state
 		}
 	}
 
@@ -528,7 +524,7 @@ gate_veiled_interior.9 = {
 gate_veiled_interior.10 = {
 	type = country_event
 	dlc = dlc_magic_gate
-	placement = scope:expedition_state
+	placement = capital
 
 	title = gate_veiled_interior.10.t
 	desc = gate_veiled_interior.10.d
@@ -549,15 +545,44 @@ gate_veiled_interior.10 = {
 		}
 	}
 
-	immediate = {
-		random_scope_state = {
-			limit = {
-				OR = {
-					state_region = s:STATE_EASTERN_NEW_GUINEA
-					state_region = s:STATE_WESTERN_NEW_GUINEA
-				}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/event_icons/event_map.dds
+
+	duration = 3
+
+	is_popup = yes
+
+	option = {
+		name = gate_veiled_interior.10.a
+		default_option = yes
+		gate_veiled_interior_enactment_stall = {
+			months = 4
+		}
+	}
+}
+
+gate_veiled_interior.11 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = capital
+
+	title = gate_veiled_interior.11.t
+	desc = gate_veiled_interior.11.d
+	flavor = gate_veiled_interior.11.f
+
+	category = gate_veiled_interior_enactment
+
+	event_image = {
+		video = "middleeast_jungle_expedition"
+	}
+
+	trigger = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_EASTERN_NEW_GUINEA
+				state_region = s:STATE_WESTERN_NEW_GUINEA
 			}
-			save_scope_as = expedition_state
 		}
 	}
 
@@ -570,13 +595,7 @@ gate_veiled_interior.10 = {
 	is_popup = yes
 
 	option = {
-		name = gate_veiled_interior.10.a
+		name = gate_veiled_interior.11.a
 		default_option = yes
-		scope:journal_entry = {
-			com_set_enactment_journal_stalled = {
-				duration = months
-				duration_amount = 2
-			}
-		}
 	}
 }

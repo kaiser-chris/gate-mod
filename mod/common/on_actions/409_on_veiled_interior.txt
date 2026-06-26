@@ -87,3 +87,29 @@ on_gate_veiled_interior_scouting_complete = {
         1 = gate_veiled_interior.9
     }
 }
+
+# Root = Country
+# scope:journal_entry = Journal
+on_gate_veiled_interior_diplomacy_stall = {
+    random_events = {
+        1 = gate_veiled_interior.10
+    }
+}
+
+# Root = Country
+# scope:journal_entry = Journal
+on_gate_veiled_interior_diplomacy_success = {
+    first_valid = {
+        gate_veiled_interior.1
+        gate_veiled_interior.9
+    }
+}
+
+# Root = Country
+# scope:journal_entry = Journal
+on_gate_veiled_interior_diplomacy_nothing = {
+    random_events = {
+        chance_of_no_event = 80
+        1 = gate_veiled_interior.11
+    }
+}
