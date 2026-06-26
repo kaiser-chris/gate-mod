@@ -5,7 +5,7 @@ modifier_gate_harmony_pledge_abandoned = {
 	state_loyalists_from_political_movements_mult = -0.3
 	state_radicals_from_political_movements_mult = 0.3
 	country_law_enactment_stall_mult = 0.3
-	country_law_enactment_time_mult = -0.3
+	country_law_enactment_speed_mult = -0.3
 	state_tax_waste_add = 0.2
 }
 
@@ -41,7 +41,7 @@ modifier_gate_harmony_pledge_economy_disharmonious = {
 #TODO: MasterOfGrey balance
 modifier_gate_harmony_pledge_legislative_harmonious = {
 	icon = gfx/interface/icons/timed_modifier_icons/gate_modifier_harmony_pledge_legislative_harmonious.dds
-	country_law_enactment_time_mult = -0.05
+	country_law_enactment_speed_mult = -0.05
 	country_law_enactment_stall_mult = -0.05
 }
 modifier_gate_harmony_pledge_legislative_tilting = {
@@ -49,7 +49,7 @@ modifier_gate_harmony_pledge_legislative_tilting = {
 }
 modifier_gate_harmony_pledge_legislative_disharmonious = {
 	icon = gfx/interface/icons/timed_modifier_icons/gate_modifier_harmony_pledge_legislative_disharmonious.dds
-	country_law_enactment_time_mult = 0.05
+	country_law_enactment_speed_mult = 0.05
 	country_law_enactment_stall_mult = 0.05
 }
 

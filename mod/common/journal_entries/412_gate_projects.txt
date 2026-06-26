@@ -9,8 +9,27 @@
 		container = "custom_widget_container_7"
 	}
 
+	widget = {
+		gui = "gui/com_journal_injects/injects.gui"
+		name = "com_journal_entry_building"
+		container = "custom_widget_container_1"
+	}
+
 	immediate = {
         add_gate_dlc_icon = yes
+		capital = {
+			random_scope_building = {
+				limit = {
+					is_building_type = building_gate_magic_research_institute
+				}
+				scope:journal_entry = {
+					set_variable = {
+						name = com_journal_entry_building
+						value = prev
+					}
+				}
+			}
+		}
 	}
 
 	complete = {
@@ -111,6 +130,7 @@
     scripted_button = gate_project_button_continue
 	scripted_button = gate_project_button_stop
 
+	display_progressbar_as_months = yes
 	progressbar = yes
 
 	weight = 1000
@@ -186,6 +206,7 @@ je_gate_project_domain = {
     scripted_button = gate_project_button_continue
 	scripted_button = gate_project_button_stop
 
+	display_progressbar_as_months = yes
 	progressbar = yes
 
 	weight = 1000
@@ -266,6 +287,7 @@ je_gate_project_change_domain = {
 	scripted_button = gate_project_button_continue
 	scripted_button = gate_project_button_stop
 
+	display_progressbar_as_months = yes
 	progressbar = yes
 
 	weight = 1000
@@ -284,6 +306,12 @@ je_gate_project_improve_mana_extraction = {
 		container = "custom_widget_container_7"
 	}
 
+	widget = {
+		gui = "gui/com_journal_injects/injects.gui"
+		name = "com_journal_entry_building"
+		container = "custom_widget_container_1"
+	}
+
 	immediate = {
         add_gate_dlc_icon = yes
 		random_scope_building = {
@@ -294,6 +322,12 @@ je_gate_project_improve_mana_extraction = {
 				}
 			}
 			save_scope_as = building
+		}
+		scope:journal_entry = {
+			set_variable = {
+				name = com_journal_entry_building
+				value = scope:building
+			}
 		}
 	}
 
@@ -353,6 +387,7 @@ je_gate_project_improve_mana_extraction = {
     scripted_button = gate_project_button_continue
 	scripted_button = gate_project_button_stop
 
+	display_progressbar_as_months = yes
 	progressbar = yes
 
 	weight = 1000
@@ -371,6 +406,12 @@ je_gate_project_modernize_seed_selection = {
 		container = "custom_widget_container_7"
 	}
 
+	widget = {
+		gui = "gui/com_journal_injects/injects.gui"
+		name = "com_journal_entry_building"
+		container = "custom_widget_container_1"
+	}
+
 	immediate = {
         add_gate_dlc_icon = yes
 		random_scope_building = {
@@ -381,6 +422,12 @@ je_gate_project_modernize_seed_selection = {
 				}
 			}
 			save_scope_as = building
+		}
+		scope:journal_entry = {
+			set_variable = {
+				name = com_journal_entry_building
+				value = scope:building
+			}
 		}
 	}
 
@@ -440,6 +487,7 @@ je_gate_project_modernize_seed_selection = {
     scripted_button = gate_project_button_continue
 	scripted_button = gate_project_button_stop
 
+	display_progressbar_as_months = yes
 	progressbar = yes
 
 	weight = 1000

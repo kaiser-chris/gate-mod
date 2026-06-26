@@ -1,0 +1,99 @@
+﻿je_gate_veiled_interior = {
+    group = je_group_internal_affairs
+    icon = "gfx/interface/icons/event_icons/event_map.dds"
+    weight = 100
+
+    widget = {
+        gui = "gui/com_journal_injects/injects.gui"
+        name = "com_journal_entry_enactment"
+        container = "custom_widget_container_2"
+    }
+
+    widget = {
+        gui = "gui/journal_injects/gate_veiled_interior_injects.gui"
+        name = "gate_inject_veiled_interior_phase"
+        container = "custom_widget_container_4"
+    }
+
+    widget = {
+        gui = "gui/com_journal_injects/injects.gui"
+        name = "com_journal_entry_dlc_icon"
+        container = "custom_widget_container_7"
+    }
+
+    is_shown_in_lobby = {
+        c:GATE_NS ?= this
+    }
+
+    scripted_button = sb_gate_veiled_interior_expedition
+    scripted_button = sb_gate_veiled_interior_scout
+
+    status_desc = {
+        first_valid = {
+            triggered_desc = {
+                trigger = {
+                    scope:journal_entry = {
+                        has_variable = gate_veiled_interior_expedition
+                    }
+                }
+                desc = je_gate_veiled_interior_status_expedition
+            }
+            triggered_desc = {
+                trigger = {
+                    scope:journal_entry = {
+                        has_variable = gate_veiled_interior_scouting
+                    }
+                }
+                desc = je_gate_veiled_interior_status_scouting
+            }
+            triggered_desc = {
+                trigger = {
+                    scope:journal_entry = {
+                        var:gate_veiled_interior_phase ?= flag:je_gate_veiled_interior_phase_veiled
+                    }
+                }
+                desc = je_gate_veiled_interior_status_veiled
+            }
+            triggered_desc = {
+                trigger = {
+                    scope:journal_entry = {
+                        var:gate_veiled_interior_phase ?= flag:je_gate_veiled_interior_phase_early_contact
+                    }
+                }
+                desc = je_gate_veiled_interior_status_early_contact
+            }
+            triggered_desc = {
+                trigger = {
+                    scope:journal_entry = {
+                        var:gate_veiled_interior_phase ?= flag:je_gate_veiled_interior_phase_diplomacy
+                    }
+                }
+                desc = je_gate_veiled_interior_status_diplomacy
+            }
+        }
+    }
+
+    immediate = {
+        add_gate_dlc_icon = yes
+        scope:journal_entry = {
+            set_variable = {
+                name = gate_veiled_interior_phase
+                value = flag:je_gate_veiled_interior_phase_veiled
+            }
+        }
+    }
+
+    invalid = {
+        NOT = {
+            any_scope_state = {
+                OR = {
+                    state_region = s:STATE_EASTERN_NEW_GUINEA
+                    state_region = s:STATE_WESTERN_NEW_GUINEA
+                }
+            }
+        }
+    }
+
+    should_be_pinned_by_default_involved = yes
+    should_be_pinned_by_default_uninvolved_or_context = yes
+}

@@ -1,0 +1,89 @@
+﻿# Root = Country
+# scope:journal_entry = Journal
+on_gate_veiled_interior_expedition_complete = {
+    # Is the journal still in the relevant phase?
+    trigger = {
+        any_scope_state = {
+            OR = {
+                state_region = s:STATE_EASTERN_NEW_GUINEA
+                state_region = s:STATE_WESTERN_NEW_GUINEA
+            }
+        }
+        scope:journal_entry ?= {
+            var:gate_veiled_interior_phase ?= flag:je_gate_veiled_interior_phase_veiled
+        }
+    }
+
+    # Tell the journal that the expedition is over
+    effect = {
+        scope:journal_entry ?= {
+            if = {
+                limit = {
+                    has_modifier = modifier_veiled_interior_expedition_cost
+                }
+                remove_modifier = modifier_veiled_interior_expedition_cost
+            }
+            remove_variable = gate_veiled_interior_expedition
+        }
+    }
+
+    # Lucky draw whether you advance to the next phase
+    # Each of the failure events can only happen once
+    # So with each failure the chance of success goes up
+    random_events = {
+        chance_to_happen = 100
+
+        # Success event, advances to the next phase
+        1 = gate_veiled_interior.2
+
+        # Different types of failures
+        1 = gate_veiled_interior.3
+        1 = gate_veiled_interior.4
+        1 = gate_veiled_interior.5
+        1 = gate_veiled_interior.6
+        1 = gate_veiled_interior.7
+    }
+}
+
+# Root = Country
+# scope:journal_entry = Journal
+on_gate_veiled_interior_scouting_complete = {
+    # Is the journal still in the relevant phase?
+    trigger = {
+        any_scope_state = {
+            OR = {
+                state_region = s:STATE_EASTERN_NEW_GUINEA
+                state_region = s:STATE_WESTERN_NEW_GUINEA
+            }
+        }
+        scope:journal_entry ?= {
+            var:gate_veiled_interior_phase ?= flag:je_gate_veiled_interior_phase_early_contact
+        }
+    }
+
+    # Tell the journal that the expedition is over
+    effect = {
+        scope:journal_entry ?= {
+            if = {
+                limit = {
+                    has_modifier = modifier_veiled_interior_scouting_cost
+                }
+                remove_modifier = modifier_veiled_interior_scouting_cost
+            }
+            remove_variable = gate_veiled_interior_scouting
+        }
+    }
+
+    # Lucky draw whether you advance to the next phase
+    # Each of the failure events can only happen once
+    # So with each failure the chance of success goes up
+    random_events = {
+        chance_to_happen = 100
+
+        # Success event, advances to the next phase
+        1 = gate_veiled_interior.8
+
+        # Different types of failures
+        1 = gate_veiled_interior.9
+    }
+}

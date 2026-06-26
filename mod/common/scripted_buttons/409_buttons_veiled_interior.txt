@@ -1,0 +1,109 @@
+﻿sb_gate_veiled_interior_expedition = {
+	name = sb_gate_veiled_interior_expedition
+	desc = sb_gate_veiled_interior_expedition_desc
+
+	ai_chance = {
+        # needed to progress
+		value = 100
+	}
+
+    visible = {
+        scope:journal_entry = {
+            var:gate_veiled_interior_phase ?= flag:je_gate_veiled_interior_phase_veiled
+        }
+    }
+
+	possible = {
+        custom_tooltip = {
+            text = sb_gate_veiled_interior_expedition_possible
+            scope:journal_entry = {
+                NOT = {
+                    has_variable = gate_veiled_interior_expedition
+                }
+            }
+        }
+	}
+
+    selected = {
+        scope:journal_entry = {
+            has_variable = gate_veiled_interior_expedition
+        }
+    }
+
+	effect = {
+        scope:journal_entry = {
+            hidden_effect = {
+                set_variable = gate_veiled_interior_expedition
+            }
+            add_modifier = {
+                name = modifier_veiled_interior_expedition_cost
+                multiplier = money_amount_multiplier_medium
+            }
+        }
+        hidden_effect = {
+            trigger_event = {
+                on_action = on_gate_veiled_interior_expedition_complete
+                months = { 6 8 }
+            }
+        }
+	}
+
+    cooldown = {
+        months = 12
+    }
+}
+
+sb_gate_veiled_interior_scout = {
+    name = sb_gate_veiled_interior_scout
+    desc = sb_gate_veiled_interior_scout_desc
+
+    ai_chance = {
+        # needed to progress
+        value = 100
+    }
+
+    visible = {
+        scope:journal_entry = {
+            var:gate_veiled_interior_phase ?= flag:je_gate_veiled_interior_phase_early_contact
+        }
+    }
+
+    possible = {
+        custom_tooltip = {
+            text = sb_gate_veiled_interior_scout_possible
+            scope:journal_entry = {
+                NOT = {
+                    has_variable = gate_veiled_interior_scouting
+                }
+            }
+        }
+    }
+
+    selected = {
+        scope:journal_entry = {
+            has_variable = gate_veiled_interior_scouting
+        }
+    }
+
+    effect = {
+        scope:journal_entry = {
+            hidden_effect = {
+                set_variable = gate_veiled_interior_scouting
+            }
+            add_modifier = {
+                name = modifier_veiled_interior_scouting_cost
+                multiplier = money_amount_multiplier_small
+            }
+        }
+        hidden_effect = {
+            trigger_event = {
+                on_action = on_gate_veiled_interior_scouting_complete
+                months = { 6 8 }
+            }
+        }
+    }
+
+    cooldown = {
+        months = 12
+    }
+}
