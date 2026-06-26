@@ -1,4 +1,5 @@
-﻿add_gate_economy_harmony_progress = {
+﻿### Manual Effects
+add_gate_economy_harmony_progress = {
     if = {
         limit = {
             exists = je:je_gate_harmony_pledge
@@ -158,4 +159,137 @@ set_gate_harmony_pledge_modifiers = {
         remove_modifier = modifier_gate_harmony_pledge_legislative_tilting
         add_modifier = modifier_gate_harmony_pledge_legislative_disharmonious
     }
+}
+
+### Automatic Effects
+# scope = country
+gate_hp_population_percentages_cache_update = {
+	if = {
+		limit = { NOT = { is_country_type = decentralized } }
+		save_temporary_scope_as = pledge_country
+		# Initialize pop counters
+		set_variable = {
+			name = gate_hp_pop_total
+			value = 0
+		}
+		set_variable = {
+			name = gate_hp_pop_citizens
+			value = 0
+		}
+		set_variable = {
+			name = gate_hp_pop_gnomish
+			value = 0
+		}
+		set_variable = {
+			name = gate_hp_pop_pledge
+			value = 0
+		}
+		# Count the pops
+		every_scope_state = {
+			if = {
+				limit = { is_incorporated = yes }
+				every_scope_pop = {
+					scope:pledge_country = {
+						change_variable = {
+							name = gate_hp_pop_total
+							add = prev.total_size
+						}
+					}
+					if = {
+						limit = {
+							pop_acceptance >= acceptance_status_4
+						}
+						scope:pledge_country = {
+							change_variable = {
+								name = gate_hp_pop_citizens
+								add = prev.total_size
+							}
+						}
+					}
+					if = {
+						limit = {
+							culture = cu:gnomish
+						}
+						scope:pledge_country = {
+							change_variable = {
+								name = gate_hp_pop_gnomish
+								add = prev.total_size
+							}
+						}
+					}
+					if = {
+						limit = {
+							has_state_religion = yes
+						}
+						scope:pledge_country = {
+							change_variable = {
+								name = gate_hp_pop_pledge
+								add = prev.total_size
+							}
+						}
+					}
+				}
+			}
+		}
+		# Save the percents
+		scope:pledge_country = {
+			set_variable = {
+				name = gate_hp_total_population	# Total Pop
+				value = var:gate_hp_pop_total
+			}
+			set_variable = {
+				name = gate_hp_citizenship_percent	# All Citizens
+				value = {
+					value = var:gate_hp_pop_citizens
+					divide = {
+						value = var:gate_hp_pop_total
+						min = 1
+					}
+				}
+			}
+			set_variable = {
+				name = gate_hp_non_citizen_percent	# Non-Citizens
+				value = {
+					value = 1
+					subtract = var:gate_hp_citizenship_percent
+				}
+			}
+			set_variable = {
+				name = gate_hp_gnomish_percent		# Gnomish Portion
+				value = {
+					value = var:gate_hp_pop_gnomish
+					divide = {
+						value = var:gate_hp_pop_total
+						min = 1
+					}
+				}
+			}
+			set_variable = {
+				name = gate_hp_non_gnomish_percent	# Non-Gnomish
+				value = {
+					value = 1
+					subtract = var:gate_hp_gnomish_percent
+				}
+			}
+			save_temporary_scope_value_as = {	# Pledge Adherents
+				name = gate_hp_pledge_percent
+				value = {
+					value = var:gate_hp_pop_pledge
+					divide = {
+						value = var:gate_hp_pop_total
+						min = 1
+					}
+				}
+			}
+			set_variable = {
+				name = gate_hp_pledge_percent
+				value = scope:gate_hp_pledge_percent
+			}
+		}
+		# Cleanup working variables
+		remove_variable = gate_hp_pop_total
+		remove_variable = gate_hp_pop_citizens
+		remove_variable = gate_hp_pop_gnomish
+		remove_variable = gate_hp_pop_pledge
+	}
 }
