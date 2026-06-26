@@ -106,7 +106,7 @@
     }
 
     fail = {
-        has_law_or_variant = law_type:law_state_atheism
+        NOT = { country_has_state_religion = rel:gate_harmony_pledge }
     }
 
     on_fail = {
