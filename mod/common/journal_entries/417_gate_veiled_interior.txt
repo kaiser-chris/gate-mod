@@ -83,6 +83,80 @@
         }
     }
 
+    on_weekly_pulse = {
+        trigger = {
+            scope:journal_entry = {
+                var:gate_veiled_interior_phase ?= flag:je_gate_veiled_interior_phase_diplomacy
+                com_is_stalled_enactment_journal = no
+            }
+            num_pending_events:gate_veiled_interior_enactment = 0
+        }
+        effect = {
+            scope:journal_entry = {
+                set_local_variable = {
+                    name = new_step_progress
+                    value = {
+                        value = com_enactment_journal_step_progress
+                        add = { 0.1 0.2 }
+                    }
+                }
+                clamp_local_variable = {
+                    name = new_step_progress
+                    min = 0
+                    max = 1
+                }
+                com_set_enactment_journal_step_progress = {
+                    value = local_var:new_step_progress
+                }
+
+                if = {
+                    limit = {
+                        local_var:new_step_progress >= 1
+                    }
+                    set_local_variable = {
+                        name = chance
+                        value = { 0 1 }
+                    }
+                    if = {
+                        # Stalled
+                        limit = {
+                            local_var:chance <= com_enactment_journal_stall_chance
+                        }
+                        root = {
+                            random_list = {
+                                1 = {
+                                    trigger_event = gate_veiled_interior.10
+                                }
+                            }
+                        }
+                    }
+                    else_if = {
+                        # Success
+                        limit = {
+                            local_var:chance >= {
+                                value = 1
+                                subtract = com_enactment_journal_success_chance
+                            }
+                        }
+                        root = {
+                            random_list = {
+                                1 = {
+                                    trigger_event = gate_veiled_interior.9
+                                }
+                            }
+                        }
+                    }
+                    else = {
+                        # Nothing
+                    }
+                    com_set_enactment_journal_step_progress = {
+                        value = 0
+                    }
+                }
+            }
+        }
+    }
+
     invalid = {
         NOT = {
             any_scope_state = {
