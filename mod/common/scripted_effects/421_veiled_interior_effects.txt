@@ -16,7 +16,7 @@
                 set_variable = com_hide_status_desc
                 com_setup_enactment_journal = {
                     title = je_gate_veiled_interior_diplomacy_title
-                    phase_progress = 0
+                    step_progress = 0
                     success_chance = 0.2
                     stall_chance = 0.2
                     current_phase = je_gate_veiled_interior_diplomacy_discussions
@@ -64,6 +64,25 @@
                 }
                 remove_variable = com_hide_status_desc
             }
+        }
+    }
+}
+
+gate_advance_veiled_interior_enactment_phase = {
+    if = {
+        limit = {
+            "variable_map(com_enactment_widget|flag:current_phase)" = flag:je_gate_veiled_interior_diplomacy_discussions
+        }
+        com_set_enactment_journal_current_phase = {
+            phase = je_gate_veiled_interior_diplomacy_alignment
+        }
+    }
+    else_if = {
+        limit = {
+            "variable_map(com_enactment_widget|flag:current_phase)" = flag:je_gate_veiled_interior_diplomacy_alignment
+        }
+        com_set_enactment_journal_current_phase = {
+            phase = je_gate_veiled_interior_diplomacy_implementation
         }
     }
 }
