@@ -25,8 +25,9 @@
                     phase_three = je_gate_veiled_interior_diplomacy_implementation
                 }
                 com_set_enactment_journal_icon = {
-                    icon = gate_button_main
+                    icon = gate_icon_veiled_interior_negotiations
                 }
+                gate_veiled_interior_enactment_calculate_chances = yes
             }
         }
     }
@@ -71,18 +72,57 @@
 gate_advance_veiled_interior_enactment_phase = {
     if = {
         limit = {
-            "variable_map(com_enactment_widget|flag:current_phase)" = flag:je_gate_veiled_interior_diplomacy_discussions
+            com_is_phase_enactment_journal = {
+                phase = je_gate_veiled_interior_diplomacy_discussions
+            }
         }
-        com_set_enactment_journal_current_phase = {
-            phase = je_gate_veiled_interior_diplomacy_alignment
+        custom_tooltip = {
+            text = je_gate_veiled_interior_effect_phase_change_diplomacy_alignment
+            com_set_enactment_journal_current_phase = {
+                phase = je_gate_veiled_interior_diplomacy_alignment
+            }
         }
     }
     else_if = {
         limit = {
-            "variable_map(com_enactment_widget|flag:current_phase)" = flag:je_gate_veiled_interior_diplomacy_alignment
+            com_is_phase_enactment_journal = {
+                phase = je_gate_veiled_interior_diplomacy_alignment
+            }
         }
-        com_set_enactment_journal_current_phase = {
-            phase = je_gate_veiled_interior_diplomacy_implementation
+        custom_tooltip = {
+            text = je_gate_veiled_interior_effect_phase_change_diplomacy_implementation
+            com_set_enactment_journal_current_phase = {
+                phase = je_gate_veiled_interior_diplomacy_implementation
+            }
         }
+    }
+}
+
+gate_veiled_interior_enactment_stall = {
+    custom_tooltip = {
+        text = je_gate_veiled_interior_effect_diplomacy_stall
+        set_local_variable = {
+            name = stall_length
+            value = $months$
+        }
+        scope:journal_entry ?= {
+            com_set_enactment_journal_stalled = {
+                duration = months
+                duration_amount = $months$
+            }
+        }
+        fix_variable_error = { variable = stall_length }
+    }
+}
+
+gate_veiled_interior_enactment_calculate_chances = {
+    # Always starts at 15%
+    com_set_enactment_journal_stall_chance = {
+        value = 0.15
+    }
+
+    # Always starts at 5%
+    com_set_enactment_journal_success_chance = {
+        value = 0.05
     }
 }

@@ -33,6 +33,44 @@
             triggered_desc = {
                 trigger = {
                     scope:journal_entry = {
+                        com_is_stalled_enactment_journal = yes
+                    }
+                }
+                desc = je_gate_veiled_interior_status_diplomacy_stall
+            }
+            triggered_desc = {
+                trigger = {
+                    scope:journal_entry = {
+                        com_is_phase_enactment_journal = {
+                            phase = je_gate_veiled_interior_diplomacy_discussions
+                        }
+                    }
+                }
+                desc = je_gate_veiled_interior_status_diplomacy_discussions
+            }
+            triggered_desc = {
+                trigger = {
+                    scope:journal_entry = {
+                        com_is_phase_enactment_journal = {
+                            phase = je_gate_veiled_interior_diplomacy_alignment
+                        }
+                    }
+                }
+                desc = je_gate_veiled_interior_status_diplomacy_alignment
+            }
+            triggered_desc = {
+                trigger = {
+                    scope:journal_entry = {
+                        com_is_phase_enactment_journal = {
+                            phase = je_gate_veiled_interior_diplomacy_implementation
+                        }
+                    }
+                }
+                desc = je_gate_veiled_interior_status_diplomacy_implementation
+            }
+            triggered_desc = {
+                trigger = {
+                    scope:journal_entry = {
                         has_variable = gate_veiled_interior_expedition
                     }
                 }
@@ -61,14 +99,6 @@
                     }
                 }
                 desc = je_gate_veiled_interior_status_early_contact
-            }
-            triggered_desc = {
-                trigger = {
-                    scope:journal_entry = {
-                        var:gate_veiled_interior_phase ?= flag:je_gate_veiled_interior_phase_diplomacy
-                    }
-                }
-                desc = je_gate_veiled_interior_status_diplomacy
             }
         }
     }
@@ -123,10 +153,8 @@
                             local_var:chance <= com_enactment_journal_stall_chance
                         }
                         root = {
-                            random_list = {
-                                1 = {
-                                    trigger_event = gate_veiled_interior.10
-                                }
+                            trigger_event = {
+                                on_action = on_gate_veiled_interior_diplomacy_stall
                             }
                         }
                     }
@@ -139,19 +167,23 @@
                             }
                         }
                         root = {
-                            random_list = {
-                                1 = {
-                                    trigger_event = gate_veiled_interior.9
-                                }
+                            trigger_event = {
+                                on_action = on_gate_veiled_interior_diplomacy_success
                             }
                         }
                     }
                     else = {
                         # Nothing
+                        root = {
+                            trigger_event = {
+                                on_action = on_gate_veiled_interior_diplomacy_nothing
+                            }
+                        }
                     }
                     com_set_enactment_journal_step_progress = {
                         value = 0
                     }
+                    gate_veiled_interior_enactment_calculate_chances = yes
                 }
             }
         }
