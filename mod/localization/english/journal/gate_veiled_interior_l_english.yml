@@ -24,6 +24,7 @@
  je_gate_veiled_interior_diplomacy_discussions: "Discussions"
  je_gate_veiled_interior_diplomacy_alignment: "Alignment"
  je_gate_veiled_interior_diplomacy_implementation: "Implementation"
+ je_gate_veiled_interior_diplomacy_tooltip: "#header $je_gate_veiled_interior_diplomacy_title$#!\nThese negotiations happen in #bold steps#! and #bold phases#!. Every week the step progress advances and when it is completed there is a chance for events to happen. These events can either advance to the next phase of the negotiations, stall the discussions for a few months or modify the success and stall chance."
  gate_icon_veiled_interior_negotiations: "gate_icon_veiled_interior_negotiations"
  gate_icon_veiled_interior_negotiations_desc: "$gate_create_bug_report$"
 # Modifiers
@@ -38,6 +39,8 @@
  je_gate_veiled_interior_effect_phase_change_early_contact: "#tooltip:[GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow [TopScope.sJE('journal_entry').GetName]#!#! advances towards the #v Early Contact#! phase"
  je_gate_veiled_interior_effect_phase_change_diplomacy: "#tooltip:[GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow [TopScope.sJE('journal_entry').GetName]#!#! advances towards the #v Negotiations#! phase"
  je_gate_veiled_interior_effect_diplomacy_stall: "#tooltip:[GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow [TopScope.sJE('journal_entry').GetName]#!#! negotiations #bold stall#! for [TopScope.GetLocalVariable('stall_length').GetValue|v0] months"
+ je_gate_veiled_interior_effect_diplomacy_change_stall_change: "#tooltip:[GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow [TopScope.sJE('journal_entry').GetName]#!#! negotiation #bold stall chance#! changes by [TopScope.GetLocalVariable('chance_change').GetValue|-%0]"
+ je_gate_veiled_interior_effect_diplomacy_change_success_change: "#tooltip:[GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow [TopScope.sJE('journal_entry').GetName]#!#! negotiation #bold success chance#! changes by [TopScope.GetLocalVariable('chance_change').GetValue|+%0]"
 # Events
  gate_veiled_interior.1.t: "A shared future"
  gate_veiled_interior.1.d: "The [GetCulture('melanesian').GetName] people of the New Guinean highland join [TopScope.GetRootScope.GetCountry.GetName]."
@@ -72,7 +75,7 @@
  gate_veiled_interior.8.d: "Our scouts estimate there are roughly #v one million#! [GetCulture('melanesian').GetName] people in the interior!"
  gate_veiled_interior.8.f: "Reports from the interior have overturned all prior assumptions. Following the discovery of the first settlement, further exploration now indicates a dense network of communities throughout the highlands. The population is far from marginal; estimates suggest it numbers in the hundreds of thousands, perhaps even approaching a million."
  gate_veiled_interior.8.a: "Send the diplomatic corps!"
- gate_veiled_interior.9.t: "Success"
+ gate_veiled_interior.9.t: "Successful Discussions"
  gate_veiled_interior.9.d: ""
  gate_veiled_interior.9.f: ""
  gate_veiled_interior.9.a: ""
