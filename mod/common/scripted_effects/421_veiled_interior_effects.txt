@@ -27,6 +27,9 @@
                 com_set_enactment_journal_icon = {
                     icon = gate_icon_veiled_interior_negotiations
                 }
+                com_set_enactment_journal_progress_tooltip = {
+                    tooltip = je_gate_veiled_interior_diplomacy_tooltip
+                }
                 gate_veiled_interior_enactment_calculate_chances = yes
             }
         }
@@ -124,5 +127,59 @@ gate_veiled_interior_enactment_calculate_chances = {
     # Always starts at 5%
     com_set_enactment_journal_success_chance = {
         value = 0.05
+    }
+}
+
+gate_change_veiled_interior_enactment_stall_chance = {
+    custom_tooltip = {
+        text = je_gate_veiled_interior_effect_diplomacy_change_stall_change
+        scope:journal_entry ?= {
+            set_local_variable = {
+                name = chance_change
+                value = $value$
+            }
+            set_local_variable = {
+                name = chance
+                value = {
+                    value = com_enactment_journal_stall_chance
+                    add = local_var:chance_change
+                }
+            }
+            clamp_local_variable = {
+                name = chance
+                min = 0
+                max = 1
+            }
+            com_set_enactment_journal_stall_chance = {
+                value = local_var:chance
+            }
+        }
+    }
+}
+
+gate_change_veiled_interior_enactment_success_chance = {
+    custom_tooltip = {
+        text = je_gate_veiled_interior_effect_diplomacy_change_success_change
+        scope:journal_entry ?= {
+            set_local_variable = {
+                name = chance_change
+                value = $value$
+            }
+            set_local_variable = {
+                name = chance
+                value = {
+                    value = com_enactment_journal_success_chance
+                    add = local_var:chance_change
+                }
+            }
+            clamp_local_variable = {
+                name = chance
+                min = 0
+                max = 1
+            }
+            com_set_enactment_journal_success_chance = {
+                value = local_var:chance
+            }
+        }
     }
 }

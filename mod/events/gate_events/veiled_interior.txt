@@ -492,10 +492,30 @@ gate_veiled_interior.9 = {
 	category = gate_veiled_interior_enactment
 
 	event_image = {
-		video = "middleeast_jungle_expedition"
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					exists = scope:journal_entry
+				}
+			}
+			je:je_gate_veiled_interior ?= {
+				save_scope_as = journal_entry
+			}
+		}
 	}
 
 	trigger = {
+		# Is only valid when everything is done
+		scope:journal_entry ?= {
+			var:gate_veiled_interior_phase ?= flag:je_gate_veiled_interior_phase_diplomacy
+			com_is_phase_enactment_journal = {
+				phase = je_gate_veiled_interior_diplomacy_discussions
+			}
+		}
 		any_scope_state = {
 			OR = {
 				state_region = s:STATE_EASTERN_NEW_GUINEA
@@ -533,7 +553,20 @@ gate_veiled_interior.10 = {
 	category = gate_veiled_interior_enactment
 
 	event_image = {
-		video = "middleeast_jungle_expedition"
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					exists = scope:journal_entry
+				}
+			}
+			je:je_gate_veiled_interior ?= {
+				save_scope_as = journal_entry
+			}
+		}
 	}
 
 	trigger = {
@@ -574,7 +607,20 @@ gate_veiled_interior.11 = {
 	category = gate_veiled_interior_enactment
 
 	event_image = {
-		video = "middleeast_jungle_expedition"
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					exists = scope:journal_entry
+				}
+			}
+			je:je_gate_veiled_interior ?= {
+				save_scope_as = journal_entry
+			}
+		}
 	}
 
 	trigger = {
@@ -597,5 +643,11 @@ gate_veiled_interior.11 = {
 	option = {
 		name = gate_veiled_interior.11.a
 		default_option = yes
+		gate_change_veiled_interior_enactment_stall_chance = {
+			value = -0.05
+		}
+		gate_change_veiled_interior_enactment_success_chance = {
+			value = 0.05
+		}
 	}
 }
