@@ -13,6 +13,12 @@ gate_harmony_pledge_society_trend = {	# +ve = antinomian (chaos), -ve = stratifi
 	}
 	
 	add = {
+		value = gate_harmony_pledge_society_trend_from_other_spheres 
+		desc = GATE_HP_SOC_TREND_FROM_OTHER_SPHERES
+		format = GATE_HP_TOP_VALUE_FORMAT
+	}
+	
+	add = {
 		value = gate_harmony_pledge_society_trend_from_modifiers
 		desc = GATE_HP_SOC_TREND_FROM_MODIFIERS
 		format = GATE_HP_TOP_VALUE_FORMAT
@@ -31,6 +37,7 @@ gate_harmony_pledge_society_trend_base = { # used as an input to make the scalin
 	value = 0
 	add = gate_harmony_pledge_society_trend_from_laws
 	add = gate_harmony_pledge_society_trend_from_demographics
+	add = gate_harmony_pledge_society_trend_from_other_spheres
 	add = gate_harmony_pledge_society_trend_from_modifiers
 }
 
@@ -230,10 +237,25 @@ gate_hp_society_internal_security = {
 		add = 0.30
 	}
 	else = {	# For Random Modded laws
-		add = gate_hp_society_internal_security_modded
+		add = {
+			value = gate_hp_society_internal_security_modded
+			owner.institution:institution_home_affairs ?= {	# for modded variants with an institution
+				desc = GATE_HP_BASE_LAW
+				format = GATE_HP_SCRIPT_VALUE_FORMAT
+			}
+		}
+		owner.institution:institution_home_affairs ?= {			
+			add = {
+				value = investment
+				multiply = gate_hp_society_internal_security_investment_modded
+				desc = GATE_HP_INSTITUTION_LEVEL
+				format = GATE_HP_SCRIPT_VALUE_FORMAT
+			}
+		}
 	}
 }
 gate_hp_society_internal_security_modded = 0	# Replace this value for modded laws compatibility
+gate_hp_society_internal_security_investment_modded = 0
 
 gate_hp_society_free_speech = {
 	if = {
@@ -293,12 +315,17 @@ gate_hp_society_education = {
 		}
 	}
 	else = {	# For Random Modded laws
-		add = gate_hp_society_education_modded
+		add = {
+			value = gate_hp_society_education_modded
+			owner.institution:institution_schools ?= {	# for modded variants with an institution
+				desc = GATE_HP_BASE_LAW
+				format = GATE_HP_SCRIPT_VALUE_FORMAT
+			}
+		}
 	}
 	owner.institution:institution_schools ?= {
 		multiply = {
 			value = investment	# institution:institution_schools.investment # already in institution scope
-			add = 1				# level 1 = 0
 			desc = GATE_HP_INSTITUTION_LEVEL
 			format = GATE_HP_SCRIPT_VALUE_FORMAT
 		}
@@ -338,14 +365,15 @@ gate_hp_society_healthcare = {
 	else = {	# For Random Modded laws
 		add = {
 			value = gate_hp_society_healthcare_modded
-			desc = GATE_HP_BASE_LAW
-			format = GATE_HP_SCRIPT_VALUE_FORMAT
+			institution:institution_health_system ?= {	# for modded variants with an institution
+				desc = GATE_HP_BASE_LAW
+				format = GATE_HP_SCRIPT_VALUE_FORMAT
+			}
 		}
 	}
 	owner.institution:institution_health_system ?= {
 		multiply = {
 			value = investment	# institution:institution_health_system.investment # already in institution scope
-			add = 1				# level 1 = 0
 			desc = GATE_HP_INSTITUTION_LEVEL
 			format = GATE_HP_SCRIPT_VALUE_FORMAT
 		}
@@ -402,7 +430,13 @@ gate_hp_society_welfare = {
 	}
 	else = {
 		# For Random Modded laws
-		add = gate_hp_society_welfare_modded
+		add = {
+			value = gate_hp_society_welfare_modded
+			institution:institution_social_security ?= {	# for modded variants with an institution
+				desc = GATE_HP_BASE_LAW
+				format = GATE_HP_SCRIPT_VALUE_FORMAT
+			}
+		}
 		owner.institution:institution_social_security ?= {
 			add = {
 				value = 0.07
@@ -450,8 +484,11 @@ gate_hp_society_gate_magic_users = {
 		limit = { has_law_or_variant = law_type:law_gate_free_magic_users }
 		add = {
 			value = -0.3	# institution doesn't exist
-			desc = GATE_HP_BASE_LAW
-			format = GATE_HP_SCRIPT_VALUE_FORMAT
+			owner.institution:institution_gate_magical_focus ?= {
+				value = -0.06	# in case someone adds a variant with an institution
+				desc = GATE_HP_BASE_LAW
+				format = GATE_HP_SCRIPT_VALUE_FORMAT
+			}
 		}
 	}
 	else_if = {
@@ -497,14 +534,15 @@ gate_hp_society_gate_magic_users = {
 	else = {	# For Random Modded laws
 		add = {
 			value = gate_hp_society_gate_magic_users_modded
-			desc = GATE_HP_BASE_LAW
-			format = GATE_HP_SCRIPT_VALUE_FORMAT
+			institution:institution_gate_magical_focus ?= {	# for modded variants with an institution
+				desc = GATE_HP_BASE_LAW
+				format = GATE_HP_SCRIPT_VALUE_FORMAT
+			}
 		}
 	}
-	owner.institution:institution_workplace_safety ?= {
+	owner.institution:institution_gate_magical_focus ?= {
 		multiply = {
-			value = investment	# institution:institution_workplace_safety # already in institution scope
-			add = 1				# level 1 = 0
+			value = investment	# institution:institution_gate_magical_focus # already in institution scope
 			desc = GATE_HP_INSTITUTION_LEVEL
 			format = GATE_HP_SCRIPT_VALUE_FORMAT
 		}
@@ -536,6 +574,76 @@ gate_harmony_pledge_society_trend_from_demographics = {	# +ve = antinomian (chao
 				format = GATE_HP_SCRIPT_VALUE_FORMAT	# (optional)
 			}
 		}				# Net effect - large % of non-gnomes who are also non-pledgers will destabilise.
+	}
+}
+
+gate_harmony_pledge_society_trend_from_other_spheres = {
+	add = {
+		value = gate_harmony_pledge_society_trend_from_economy
+		desc = GATE_HP_SOC_TREND_FROM_ECONOMY
+		format = GATE_HP_SCRIPT_VALUE_FORMAT	# (optional)
+	}
+	add = {
+		value = gate_harmony_pledge_society_trend_from_legislative
+		desc = GATE_HP_SOC_TREND_FROM_STATE
+		format = GATE_HP_SCRIPT_VALUE_FORMAT	# (optional)
+	}
+}
+gate_harmony_pledge_society_trend_from_economy = {
+	value = "je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_economy)"
+	add = -50
+	divide = 100
+}
+gate_harmony_pledge_society_trend_from_legislative = {
+	add = {
+		value = gate_harmony_pledge_society_economy_modification_from_legislative
+		multiply = gate_harmony_pledge_society_trend_from_economy
+		multiply = -1
+		desc = GATE_HP_SOC_TREND_MOD_FROM_STATE
+		format = GATE_HP_SCRIPT_VALUE_FORMAT	# (optional)
+	}
+	add = {
+		value = gate_harmony_pledge_society_trend_from_legislative_base
+		desc = GATE_HP_SOC_TREND_FROM_STATE_BASE
+		format = GATE_HP_SCRIPT_VALUE_FORMAT	# (optional)
+	}
+}
+gate_harmony_pledge_society_economy_modification_from_legislative = {
+	if = {
+		limit = { "je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_legislative)" < 50 }
+		value = 1
+		add = {
+			value = "je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_legislative)"
+			add = -50
+			divide = 100
+		}
+	}
+	else = {	# >50 = positive value
+		value = 1
+		subtract = {
+			value = "je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_legislative)"
+			add = -50
+			divide = 100
+		}
+	}
+	divide = 2
+}
+gate_harmony_pledge_society_trend_from_legislative_base = {
+	add = {
+		value = "je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_legislative)"
+		add = -50
+		divide = 100
+	}
+	if = {
+		limit = { "je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_legislative)" < 50 }
+		add = 0.1
+		max = 0
+		multiply = -1
+	}
+	else = {	# >50 = positive value
+		add = -0.1
+		min = 0
+		multiply = 1
 	}
 }
 
@@ -665,6 +773,12 @@ gate_harmony_pledge_economy_trend = {	# +ve = febrile (chaos), -ve = cartelised 
 	}
 	
 	add = {
+		value = gate_harmony_pledge_economy_trend_from_other_spheres
+		desc = GATE_HP_ECO_TREND_FROM_OTHER_SPHERES
+		format = GATE_HP_TOP_VALUE_FORMAT
+	}
+	
+	add = {
 		value = gate_harmony_pledge_economy_trend_from_modifiers
 		desc = GATE_HP_ECO_TREND_FROM_MODIFIERS
 		format = GATE_HP_TOP_VALUE_FORMAT
@@ -683,6 +797,8 @@ gate_harmony_pledge_economy_trend_base = { # used as an input to make the scalin
 	value = 0
 	add = gate_harmony_pledge_economy_trend_from_laws
 	add = gate_harmony_pledge_economy_trend_from_citizenship
+	add = gate_harmony_pledge_economy_trend_from_taxation
+	add = gate_harmony_pledge_economy_trend_from_other_spheres
 	add = gate_harmony_pledge_economy_trend_from_modifiers
 }
 
@@ -910,14 +1026,15 @@ gate_hp_economy_policing = {
 	else = {	# For Random Modded laws
 		add = {
 			value = gate_hp_economy_policing_modded
-			desc = GATE_HP_BASE_LAW
-			format = GATE_HP_SCRIPT_VALUE_FORMAT
+			owner.institution:institution_police ?= {	# for modded variants with an institution
+				desc = GATE_HP_BASE_LAW
+				format = GATE_HP_SCRIPT_VALUE_FORMAT
+			}
 		}
 	}
 	owner.institution:institution_police ?= {
 		multiply = {
 			value = investment	# institution:institution_police.investment # already in institution scope
-			add = 1				# level 1 = 0
 			desc = GATE_HP_INSTITUTION_LEVEL
 			format = GATE_HP_SCRIPT_VALUE_FORMAT
 		}
@@ -930,8 +1047,11 @@ gate_hp_economy_labor_rights = {
 		limit = { has_law_or_variant = law_type:law_no_workers_rights }
 		add = {
 			value = -0.3	# institution doesn't exist
-			desc = GATE_HP_BASE_LAW
-			format = GATE_HP_SCRIPT_VALUE_FORMAT
+			owner.institution:institution_workplace_safety ?= {
+				value = -0.06	# in case someone adds a variant with an institution
+				desc = GATE_HP_BASE_LAW
+				format = GATE_HP_SCRIPT_VALUE_FORMAT
+			}
 		}
 	}
 	else_if = {
@@ -953,14 +1073,15 @@ gate_hp_economy_labor_rights = {
 	else = {	# For Random Modded laws
 		add = {
 			value = gate_hp_economy_labor_rights_modded
-			desc = GATE_HP_BASE_LAW
-			format = GATE_HP_SCRIPT_VALUE_FORMAT
+			owner.institution:institution_workplace_safety ?= {	# for modded variants with an institution
+				desc = GATE_HP_BASE_LAW
+				format = GATE_HP_SCRIPT_VALUE_FORMAT
+			}
 		}
 	}
 	owner.institution:institution_workplace_safety ?= {
 		multiply = {
 			value = investment	# institution:institution_workplace_safety # already in institution scope
-			add = 1				# level 1 = 0
 			desc = GATE_HP_INSTITUTION_LEVEL
 			format = GATE_HP_SCRIPT_VALUE_FORMAT
 		}
@@ -1005,8 +1126,11 @@ gate_hp_economy_gate_magic_users = {
 		limit = { has_law_or_variant = law_type:law_gate_free_magic_users }
 		add = {
 			value = 0.3	# institution doesn't exist
-			desc = GATE_HP_BASE_LAW
-			format = GATE_HP_SCRIPT_VALUE_FORMAT
+			owner.institution:institution_gate_magical_focus ?= {
+				value = 0.06	# in case someone adds a variant with an institution
+				desc = GATE_HP_BASE_LAW
+				format = GATE_HP_SCRIPT_VALUE_FORMAT
+			}
 		}
 	}
 	else_if = {
@@ -1052,14 +1176,15 @@ gate_hp_economy_gate_magic_users = {
 	else = {	# For Random Modded laws
 		add = {
 			value = gate_hp_economy_gate_magic_users_modded
-			desc = GATE_HP_BASE_LAW
-			format = GATE_HP_SCRIPT_VALUE_FORMAT
+			institution:institution_gate_magical_focus ?= {	# for modded variants with an institution
+				desc = GATE_HP_BASE_LAW
+				format = GATE_HP_SCRIPT_VALUE_FORMAT
+			}
 		}
 	}
-	owner.institution:institution_workplace_safety ?= {
+	owner.institution:institution_gate_magical_focus ?= {
 		multiply = {
-			value = investment	# institution:institution_workplace_safety # already in institution scope
-			add = 1				# level 1 = 0
+			value = investment	# institution:institution_gate_magical_focus # already in institution scope
 			desc = GATE_HP_INSTITUTION_LEVEL
 			format = GATE_HP_SCRIPT_VALUE_FORMAT
 		}
@@ -1170,6 +1295,19 @@ gate_hp_economy_taxation_law_value = {
 	divide = -100
 }
 gate_hp_economy_taxation_modded = 20	# Replace this value for modded laws compatibility
+
+gate_harmony_pledge_economy_trend_from_other_spheres = {
+	add = {
+		value = gate_harmony_pledge_economy_trend_from_legislative
+		desc = GATE_HP_ECO_TREND_FROM_LEGISLATIVE
+		format = GATE_HP_SCRIPT_VALUE_FORMAT	# (optional)
+	}
+}
+gate_harmony_pledge_economy_trend_from_legislative = {
+	value = "je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_legislative)"
+	add = -50
+	divide = 100
+}
 
 gate_harmony_pledge_economy_trend_from_modifiers = {	# works away/towards center point
 	# Center drift modifiers
