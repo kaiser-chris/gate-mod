@@ -1,0 +1,88 @@
+﻿types project_selectors {
+
+    type gate_project_select_improve_mana_extraction_window = gate_selector_window_single_element {
+        blockoverride "selector_visibility" {
+            visible = "[DataModelHasItems(Country.MakeScope.GetList('gate_project_improve_mana_extraction_selector'))]"
+        }
+        blockoverride "selector_title" {
+            text = gate_project_select_improve_mana_extraction_window
+        }
+        blockoverride "selector_button_close" {
+            datacontext = "[GetScriptedGui('gg_project_improve_mana_extraction_selector_close')]"
+            onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
+            onclick = "[GetVariableSystem.Clear('gate_project_select_mana_extraction_window_sort_size_reverse')]"
+            onclick = "[GetVariableSystem.Clear('gate_project_select_mana_extraction_window_sort_productivity_reverse')]"
+            onclick = "[GetVariableSystem.Clear('gate_project_select_mana_extraction_window_sort_employment_reverse')]"
+        }
+        blockoverride "selector_datamodel" {
+            datamodel = "[Country.MakeScope.GetList('gate_project_improve_mana_extraction_selector')]"
+        }
+        blockoverride "selector_element_context" {
+            datacontext = "[Scope.GetBuilding]"
+        }
+        blockoverride "selector_element_button" {
+            datacontext = "[GetScriptedGui('gg_project_improve_mana_extraction')]"
+            onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('building', Building.MakeScope).End)]"
+            tooltip = gate_project_select_improve_mana_extraction_window_select
+        }
+        blockoverride "selector_sort_buttons" {
+            gate_selector_building_sort_buttons = {
+                blockoverride "sort_button_size" {
+                    datacontext = "[GetScriptedGui('gg_project_improve_mana_extraction_selector_sort_size')]"
+                }
+                blockoverride "sort_button_productivity" {
+                    datacontext = "[GetScriptedGui('gg_project_improve_mana_extraction_selector_sort_productivity')]"
+                }
+                blockoverride "sort_button_employment" {
+                    datacontext = "[GetScriptedGui('gg_project_improve_mana_extraction_selector_sort_employment')]"
+                }
+            }
+        }
+        blockoverride "selector_element_content" {
+            gate_selector_building_element = {}
+        }
+
+    }
+
+    type gate_project_select_modernize_seed_selection_window = gate_selector_window_single_element {
+        blockoverride "selector_visibility" {
+            visible = "[DataModelHasItems(Country.MakeScope.GetList('gate_project_modernize_seed_selection_selector'))]"
+        }
+        blockoverride "selector_title" {
+            text = gate_project_select_modernize_seed_selection_window
+        }
+        blockoverride "selector_button_close" {
+            datacontext = "[GetScriptedGui('gg_project_modernize_seed_selection_selector_close')]"
+            onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
+        }
+        blockoverride "selector_datamodel" {
+            datamodel = "[Country.MakeScope.GetList('gate_project_modernize_seed_selection_selector')]"
+        }
+        blockoverride "selector_element_context" {
+            datacontext = "[Scope.GetBuilding]"
+        }
+        blockoverride "selector_element_button" {
+            datacontext = "[GetScriptedGui('gg_project_modernize_seed_selection')]"
+            onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('building', Building.MakeScope).End)]"
+            tooltip = gate_project_select_modernize_seed_selection_window_select
+        }
+        blockoverride "selector_sort_buttons" {
+            gate_selector_building_sort_buttons = {
+                blockoverride "sort_button_size" {
+                    datacontext = "[GetScriptedGui('gg_project_modernize_seed_selection_selector_sort_size')]"
+                }
+                blockoverride "sort_button_productivity" {
+                    datacontext = "[GetScriptedGui('gg_project_modernize_seed_selection_selector_sort_productivity')]"
+                }
+                blockoverride "sort_button_employment" {
+                    datacontext = "[GetScriptedGui('gg_project_modernize_seed_selection_selector_sort_employment')]"
+                }
+            }
+        }
+        blockoverride "selector_element_content" {
+            gate_selector_building_element = {}
+        }
+
+    }
+
+}

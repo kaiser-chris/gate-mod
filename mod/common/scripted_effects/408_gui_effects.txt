@@ -35,3 +35,26 @@ add_gate_magic_main_button = {
         }
     }
 }
+
+gate_order_list_with_reverse = {
+    if = {
+        limit = {
+            scope:reverse = yes
+        }
+        sort_variable_list = {
+            name = $list$
+            order = {
+                value = $order$
+                multiply = -1
+            }
+        }
+        error_log = "reverse"
+    }
+    else = {
+        sort_variable_list = {
+            name = $list$
+            order = $order$
+        }
+        error_log = "normal"
+    }
+}

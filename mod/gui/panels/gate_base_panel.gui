@@ -1849,7 +1849,7 @@ types gate_base_panel_types {
 
                 gate_left_icon_button = {
                     blockoverride "datacontext" {
-                        datacontext = "[GetScriptedGui('gg_project_improve_mana_extraction')]"
+                        datacontext = "[GetScriptedGui('gg_project_improve_mana_extraction_selector_open')]"
                     }
                     blockoverride "button_content" {
                         text = button_project_improve_mana_extraction
@@ -1878,7 +1878,7 @@ types gate_base_panel_types {
                 }
                 gate_left_icon_button = {
                     blockoverride "datacontext" {
-                        datacontext = "[GetScriptedGui('gg_project_modernize_seed_selection')]"
+                        datacontext = "[GetScriptedGui('gg_project_modernize_seed_selection_selector_open')]"
                     }
                     blockoverride "button_content" {
                         text = button_project_modernize_seed_selection

@@ -1,0 +1,385 @@
+﻿types selector_shared {
+
+    # Blocks:
+    # - selector_title
+    # - selector_second_line
+    # - selector_content
+    # - selector_visibility
+    # - selector_button_close
+    # - selector_window_size
+    type gate_selector_window = window {
+        layer = popups
+        using = clickthrough_blocker
+        filter_mouse = all
+        parentanchor = hcenter|vcenter
+
+        block "selector_visibility" {
+            visible = no
+        }
+
+        block "selector_window_size" {
+            size = { 700 400 }
+        }
+
+        background = {
+            texture = "gfx/interface/backgrounds/popup_bg.dds"
+            spriteType = Corneredstretched
+            spriteborder = { 90 90 }
+            texture_density = 2
+
+            modify_texture = {
+                texture = "gfx/interface/backgrounds/default_bg_shading.dds"
+                spriteType = Corneredstretched
+                spriteborder = { 0 0 }
+                blend_mode = overlay
+            }
+            modify_texture = {
+                using = texture_velvet
+            }
+        }
+
+        ### HEADER
+        widget = {
+            size = { 100% 82 }
+
+            popup_top_header = {}
+
+            textbox = {
+                block "first_line_position" {
+                    position = { 0 24 }
+                }
+                size = { 75% 40 }
+                block "selector_title" {
+                    raw_text = "#debug selector_title#!"
+                }
+                elide = right
+                fontsize_min = 14
+                parentanchor = hcenter
+                align = hcenter|nobaseline
+                using = header_font
+                using = header_font_size
+                default_format = "#header"
+            }
+
+            block "selector_second_line" {}
+        }
+
+        ### FRAME
+        popup_bg_frame = {}
+
+        vbox = {
+            margin = { 20 50 }
+            margin_top = 82
+            layoutpolicy_horizontal = expanding
+            layoutpolicy_vertical = expanding
+
+            block "selector_content" {
+                textbox = {
+                    align = center
+                    layoutpolicy_horizontal = expanding
+                    layoutpolicy_vertical = expanding
+                    raw_text = "#debug selector_content#!"
+                }
+            }
+        }
+
+        #Close button
+        button_icon_round = {
+            name = "tutorial_highlight_close_button"
+            parentanchor = top|right
+            size = { 42 42 }
+            position = { -5 13 }
+            shortcut = "close_window"
+            onclick = "[GetVariableSystem.Clear('sort_size_reverse')]"
+            onclick = "[GetVariableSystem.Clear('sort_productivity_reverse')]"
+            onclick = "[GetVariableSystem.Clear('sort_employment_reverse')]"
+            onclick = "[GetVariableSystem.Clear('gate_sort_active')]"
+
+            block "selector_button_close" {}
+
+            blockoverride "icon" {
+                texture = "gfx/interface/buttons/button_icons/close.dds"
+            }
+            blockoverride "icon_size" {
+                size = { 100% 100% }
+            }
+        }
+    }
+
+    # Blocks
+    # - selector_sort_buttons
+    # - selector_datamodel
+    type gate_selector_window_single_element = gate_selector_window {
+        blockoverride "selector_window_size" {
+            size = { 650 600 }
+        }
+        blockoverride "selector_content" {
+            block "selector_sort_buttons" {
+
+            }
+
+            scrollarea = {
+                layoutpolicy_horizontal = expanding
+                layoutpolicy_vertical = expanding
+
+                scrollbarpolicy_horizontal = always_off
+                scrollbarpolicy_vertical = as_needed
+
+                scrollbar_vertical = {
+                    using = Scrollbar_Vertical
+                }
+
+                scrollwidget = {
+                    vbox = {
+                        margin = { 10 10 }
+                        vbox = {
+                            layoutpolicy_horizontal = expanding
+                            spacing = 5
+                            block "selector_datamodel" {
+
+                            }
+
+                            item = {
+                                hbox = {
+                                    block "selector_element_context" {
+
+                                    }
+
+                                    block "selector_element_size" {
+                                        minimumsize = { -1 70 }
+                                        maximumsize = { -1 70 }
+                                        margin = { 10 10 }
+                                    }
+                                    layoutpolicy_horizontal = expanding
+                                    using = entry_bg_fancy
+                                    spacing = 10
+
+                                    block "selector_element_content" {
+                                        expand = { }
+                                    }
+
+                                    button_icon_move_right = {
+                                        size = { 30 50 }
+                                        block "selector_element_button" { }
+                                        using = tooltip_above
+                                        blockoverride "icon_size" {
+                                            size = { 30 75% }
+                                        }
+                                        using = tooltip_nw
+                                    }
+                                }
+                            }
+                        }
+
+                        expand = {}
+                    }
+                }
+            }
+        }
+    }
+
+    # Blocks
+    # - sort_button_name
+    # - sort_button_size
+    # - sort_button_productivity
+    # - sort_button_employment
+    type gate_selector_building_sort_buttons = hbox {
+        margin = { 10 0 }
+        margin_top = 5
+        spacing = 2
+        layoutpolicy_horizontal = expanding
+
+        gate_selector_sort_button = {
+            layoutpolicy_horizontal = expanding
+            layoutpolicy_vertical = expanding
+            tooltip = "SORT_BY_BUILDING_SIZE"
+            blockoverride "text" {
+                text = "SIZE"
+            }
+            blockoverride "selected_visibility" {
+                visible = "[GetVariableSystem.HasValue('gate_sort_active', 'sort_size')]"
+            }
+            onclick = "[GetVariableSystem.Set('gate_sort_active', 'sort_size')]"
+            block "sort_button_size" {
+                enabled = no
+            }
+            onclick = "[ScriptedGui.Execute(GuiScope
+                .SetRoot(Country.MakeScope)
+                .AddScope('reverse', MakeScopeBool(GetVariableSystem.Exists('sort_size_reverse')))
+                .End
+            )]"
+            onclick = "[GetVariableSystem.Toggle('sort_size_reverse')]"
+            onclick = "[GetVariableSystem.Clear('sort_productivity_reverse')]"
+            onclick = "[GetVariableSystem.Clear('sort_employment_reverse')]"
+        }
+
+        gate_selector_sort_button = {
+            layoutpolicy_horizontal = expanding
+            layoutpolicy_vertical = expanding
+            tooltip = "SORT_BY_BUILDING_PRODUCTIVITY"
+            blockoverride "text" {
+                text = "concept_productivity"
+            }
+            blockoverride "selected_visibility" {
+                visible = "[GetVariableSystem.HasValue('gate_sort_active', 'sort_productivity')]"
+            }
+            onclick = "[GetVariableSystem.Set('gate_sort_active', 'sort_productivity')]"
+            block "sort_button_productivity" {
+                enabled = no
+            }
+            onclick = "[ScriptedGui.Execute(GuiScope
+                .SetRoot(Country.MakeScope)
+                .AddScope('reverse', MakeScopeBool(GetVariableSystem.Exists('sort_productivity_reverse')))
+                .End
+            )]"
+            onclick = "[GetVariableSystem.Clear('sort_size_reverse')]"
+            onclick = "[GetVariableSystem.Toggle('sort_productivity_reverse')]"
+            onclick = "[GetVariableSystem.Clear('sort_employment_reverse')]"
+        }
+
+        gate_selector_sort_button = {
+            layoutpolicy_horizontal = expanding
+            layoutpolicy_vertical = expanding
+            blockoverride "text" {
+                text = "EMPLOYMENT"
+            }
+            tooltip = "SORT_BY_NUMBER_OF_EMPLOYED"
+            blockoverride "selected_visibility" {
+                visible = "[GetVariableSystem.HasValue('gate_sort_active', 'sort_employment')]"
+            }
+            onclick = "[GetVariableSystem.Set('gate_sort_active', 'sort_employment')]"
+            block "sort_button_employment" {
+                enabled = no
+            }
+            onclick = "[ScriptedGui.Execute(GuiScope
+                .SetRoot(Country.MakeScope)
+                .AddScope('reverse', MakeScopeBool(GetVariableSystem.Exists('sort_employment_reverse')))
+                .End
+            )]"
+            onclick = "[GetVariableSystem.Clear('sort_size_reverse')]"
+            onclick = "[GetVariableSystem.Clear('sort_productivity_reverse')]"
+            onclick = "[GetVariableSystem.Toggle('sort_employment_reverse')]"
+        }
+    }
+
+    type gate_selector_building_element = hbox {
+        layoutpolicy_horizontal = expanding
+        layoutpolicy_vertical = expanding
+        spacing = 5
+
+        icon = {
+            size = { 70 70 }
+            texture = "[Building.GetIcon]"
+
+            tooltipwidget = {
+                FancyTooltip_Building = {}
+            }
+        }
+
+        # Name
+        vbox = {
+            textbox = {
+                text = "[Building.GetName]"
+                size = { 130 25 }
+                elide = right
+                align = nobaseline
+                using = fontsize_medium
+            }
+            textbox = {
+                text = "gg_selector_state_building_text"
+                size = { 130 25 }
+                elide = right
+                align = nobaseline
+                using = fontsize_medium
+            }
+        }
+
+        # Divider
+        vertical_divider = {
+            blockoverride "size" {
+                size = { 3 70 }
+            }
+        }
+
+        # Level
+        textbox = {
+            raw_text = "BUILDING_SIZE"
+            size = { 50 70 }
+            elide = right
+            align = center|nobaseline
+            using = fontsize_medium
+            using = building_size_tooltip_with_ownership
+            using = tooltip_ne
+        }
+
+        # Divider
+        vertical_divider = {
+            blockoverride "size" {
+                size = { 3 70 }
+            }
+        }
+
+        # Productivity
+        textbox = {
+            raw_text = "@money![Building.GetAverageAnnualEarningsPerEmployeeFormatted|+]"
+            size = { 60 70 }
+            elide = right
+            align = center|nobaseline
+            using = fontsize_medium
+            using = productivity_tooltip_with_graph
+            using = tooltip_ne
+        }
+
+        # Divider
+        vertical_divider = {
+            blockoverride "size" {
+                size = { 3 70 }
+            }
+        }
+
+        vbox = {
+            minimumsize = { 130 0 }
+            maximumsize = { 130 0 }
+
+            building_progressbars = {
+                blockoverride "progressbar_size" {
+                    size = { 110 20 }
+                }
+            }
+        }
+
+        # Divider
+        vertical_divider = {
+            blockoverride "size" {
+                size = { 3 70 }
+            }
+        }
+    }
+
+    type gate_selector_sort_button = button {
+        using = sort_button_sound
+        using = sort_button_bg
+        using = tooltip_ne
+
+        ### HIGHLIGHT
+        icon = {
+            block "selected_visibility" {
+                visible = no
+            }
+
+            using = highlighted_square_selection
+        }
+
+        block "text" {
+            raw_text = "#debug gate_selector_sort_button - text#!"
+        }
+
+        minimumsize = { -1 30 }
+        maximumsize = { -1 30 }
+        align = hcenter|nobaseline
+        margin_left = 10
+        margin_right = 10
+        elide = right
+    }
+
+}
