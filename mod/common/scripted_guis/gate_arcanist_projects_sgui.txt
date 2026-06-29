@@ -3,6 +3,7 @@
 
     is_valid = {
         gate_project_can_start_expand_research_institute = yes
+        gate_project_has_any_selector_open = no
     }
 
     effect = {
@@ -19,6 +20,7 @@ gg_project_domain = {
 
     is_valid = {
         gate_project_can_start_domain = yes
+        gate_project_has_any_selector_open = no
     }
 
     effect = {
@@ -35,6 +37,7 @@ gg_project_change_domain = {
 
     is_valid = {
         gate_project_can_start_change_domain = yes
+        gate_project_has_any_selector_open = no
     }
 
     effect = {
@@ -46,34 +49,205 @@ gg_project_change_domain = {
     }
 }
 
+gg_project_improve_mana_extraction_selector_open = {
+    scope = country
+
+    is_valid = {
+        gate_project_can_start_improve_mana_extraction = yes
+        gate_project_has_any_selector_open = no
+    }
+
+    effect = {
+        every_scope_building = {
+            limit = {
+                is_building_group = bg_gate_mana_extraction
+                NOT = {
+                    has_modifier = modifier_gate_project_improved_mana_extraction
+                }
+            }
+            root = {
+                add_to_variable_list = {
+                    name = gate_project_improve_mana_extraction_selector
+                    target = prev
+                }
+            }
+        }
+    }
+}
+gg_project_improve_mana_extraction_selector_close = {
+    scope = country
+
+    effect = {
+        clear_variable_list = gate_project_improve_mana_extraction_selector
+    }
+}
+gg_project_improve_mana_extraction_selector_sort_size = {
+    scope = country
+
+    saved_scopes = {
+        reverse
+    }
+
+    effect = {
+        gate_order_list_with_reverse = {
+            list = gate_project_improve_mana_extraction_selector
+            order = level
+        }
+    }
+}
+gg_project_improve_mana_extraction_selector_sort_productivity = {
+    scope = country
+
+    saved_scopes = {
+        reverse
+    }
+
+    effect = {
+        gate_order_list_with_reverse = {
+            list = gate_project_improve_mana_extraction_selector
+            order = earnings
+        }
+    }
+}
+gg_project_improve_mana_extraction_selector_sort_employment = {
+    scope = country
+
+    saved_scopes = {
+        reverse
+    }
+
+    effect = {
+        gate_order_list_with_reverse = {
+            list = gate_project_improve_mana_extraction_selector
+            order = occupancy
+        }
+    }
+}
 gg_project_improve_mana_extraction = {
     scope = country
+
+    saved_scopes = {
+        building
+    }
 
     is_valid = {
         gate_project_can_start_improve_mana_extraction = yes
     }
 
     effect = {
+        clear_variable_list = gate_project_improve_mana_extraction_selector
         gate_start_magic_project = {
             project = je_gate_project_improve_mana_extraction
             monthly_cost = money_amount_multiplier_small
             months = gate_project_journal_entry_short
         }
+        je:je_gate_project_improve_mana_extraction = {
+            set_variable = {
+                name = com_journal_entry_building
+                value = scope:building
+            }
+        }
     }
 }
 
+
+gg_project_modernize_seed_selection_selector_open = {
+    scope = country
+
+    is_valid = {
+        gate_project_can_start_modernize_seed_selection = yes
+        gate_project_has_any_selector_open = no
+    }
+
+    effect = {
+        every_scope_building = {
+            limit = {
+                is_building_group = bg_gate_druid_groves
+                NOT = {
+                    has_modifier = modifier_gate_project_modernize_seed_selection
+                }
+            }
+            root = {
+                add_to_variable_list = {
+                    name = gate_project_modernize_seed_selection_selector
+                    target = prev
+                }
+            }
+        }
+    }
+}
+gg_project_modernize_seed_selection_selector_close = {
+    scope = country
+
+    effect = {
+        clear_variable_list = gate_project_modernize_seed_selection_selector
+    }
+}
+gg_project_modernize_seed_selection_selector_sort_size = {
+    scope = country
+
+    saved_scopes = {
+        reverse
+    }
+
+    effect = {
+        gate_order_list_with_reverse = {
+            list = gate_project_modernize_seed_selection_selector
+            order = level
+        }
+    }
+}
+gg_project_modernize_seed_selection_selector_sort_productivity = {
+    scope = country
+
+    saved_scopes = {
+        reverse
+    }
+
+    effect = {
+        gate_order_list_with_reverse = {
+            list = gate_project_modernize_seed_selection_selector
+            order = earnings
+        }
+    }
+}
+gg_project_modernize_seed_selection_selector_sort_employment = {
+    scope = country
+
+    saved_scopes = {
+        reverse
+    }
+
+    effect = {
+        gate_order_list_with_reverse = {
+            list = gate_project_modernize_seed_selection_selector
+            order = occupancy
+        }
+    }
+}
 gg_project_modernize_seed_selection = {
     scope = country
+
+    saved_scopes = {
+        building
+    }
 
     is_valid = {
         gate_project_can_start_modernize_seed_selection = yes
     }
 
     effect = {
+        clear_variable_list = gate_project_modernize_seed_selection_selector
         gate_start_magic_project = {
             project = je_gate_project_modernize_seed_selection
             monthly_cost = money_amount_multiplier_small
             months = gate_project_journal_entry_short
+        }
+        je:je_gate_project_modernize_seed_selection = {
+            set_variable = {
+                name = com_journal_entry_building
+                value = scope:building
+            }
         }
     }
 }

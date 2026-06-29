@@ -315,18 +315,12 @@ je_gate_project_improve_mana_extraction = {
 	immediate = {
         add_gate_dlc_icon = yes
 		random_scope_building = {
-			limit = {
-				is_building_group = bg_gate_mana_extraction
-				NOT = {
-					has_modifier = modifier_gate_project_improved_mana_extraction
+			# Selected outside this
+			scope:journal_entry = {
+				set_variable = {
+					name = com_journal_entry_building
+					value = prev
 				}
-			}
-			save_scope_as = building
-		}
-		scope:journal_entry = {
-			set_variable = {
-				name = com_journal_entry_building
-				value = scope:building
 			}
 		}
 	}
@@ -347,7 +341,7 @@ je_gate_project_improve_mana_extraction = {
 				has_gate_active_magic_project = no
 				# Relevant Building has been removed
 				NOT = {
-					exists = scope:building
+					exists = scope:journal_entry.var:com_journal_entry_building
 				}
 			}
 		}
@@ -360,7 +354,7 @@ je_gate_project_improve_mana_extraction = {
 	}
 
 	on_complete = {
-		scope:building ?= {
+		scope:journal_entry.var:com_journal_entry_building ?= {
 			add_modifier = modifier_gate_project_improved_mana_extraction
 		}
 		gate_add_magic_innovation = {
@@ -415,18 +409,12 @@ je_gate_project_modernize_seed_selection = {
 	immediate = {
         add_gate_dlc_icon = yes
 		random_scope_building = {
-			limit = {
-				is_building_group = bg_gate_druid_groves
-				NOT = {
-					has_modifier = modifier_gate_project_modernize_seed_selection
+			# Selected outside this
+			scope:journal_entry = {
+				set_variable = {
+					name = com_journal_entry_building
+					value = prev
 				}
-			}
-			save_scope_as = building
-		}
-		scope:journal_entry = {
-			set_variable = {
-				name = com_journal_entry_building
-				value = scope:building
 			}
 		}
 	}
@@ -447,7 +435,7 @@ je_gate_project_modernize_seed_selection = {
 				has_gate_active_magic_project = no
 				# Relevant Building has been removed
 				NOT = {
-					exists = scope:building
+					exists = scope:journal_entry.var:com_journal_entry_building
 				}
 			}
 		}
@@ -460,7 +448,7 @@ je_gate_project_modernize_seed_selection = {
 	}
 
 	on_complete = {
-		scope:building ?= {
+		scope:journal_entry.var:com_journal_entry_building ?= {
 			add_modifier = modifier_gate_project_modernize_seed_selection
 		}
 		gate_add_magic_innovation = {

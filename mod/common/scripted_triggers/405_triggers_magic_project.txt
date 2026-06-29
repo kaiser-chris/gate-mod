@@ -29,6 +29,16 @@ gate_project_is_paused = {
     }
 }
 
+gate_project_has_any_selector_open = {
+	custom_description = {
+		text = gate_project_has_any_selector_open
+		OR = {
+			has_variable_list = gate_project_improve_mana_extraction_selector
+			has_variable_list = gate_project_modernize_seed_selection_selector
+		}
+	}
+}
+
 gate_project_can_start_any = {
 	OR = {
 		gate_project_can_start_expand_research_institute = yes
@@ -132,7 +142,4 @@ gate_project_can_start_modernize_seed_selection = {
 	is_gate_magic_country = yes
 	has_gate_magic_researcher = yes
 	has_gate_active_magic_project = no
-}
-
-gate_project_can_improve_building = {
 }

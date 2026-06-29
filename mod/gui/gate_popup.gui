@@ -4,9 +4,16 @@ widget = {
     size = { 100% 100% }
     layer = popups
     datacontext = "[GetMetaPlayer.GetPlayedOrObservedCountry]"
-    visible = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
+    visible = "[And4(
+        GetMetaPlayer.GetPlayedOrObservedCountry.IsValid,
+        IsInGame,
+        Not(IsPauseMenuShown),
+        Not(IsGameOverScreenShown)
+    )]"
 
     gate_missing_dependency_popup = {}
+    gate_project_select_improve_mana_extraction_window = {}
+    gate_project_select_modernize_seed_selection_window = {}
 }
 
 types gate_popups {
@@ -22,12 +29,7 @@ types gate_popups {
         }
 
         block "visible" {
-            visible = "[And4(
-                            Not(GetScriptedGui('gate_dependency_cmf').IsValid(GuiScope.End)),
-                            IsInGame,
-                            Not(IsPauseMenuShown),
-                            Not(IsGameOverScreenShown)
-                       )]"
+            visible = "[Not(GetScriptedGui('gate_dependency_cmf').IsValid(GuiScope.End))]"
         }
 
         window = {
