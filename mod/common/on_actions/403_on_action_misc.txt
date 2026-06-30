@@ -264,6 +264,11 @@ on_gate_research_institute_built = {
                 is_building_type = building_gate_magic_research_institute
             }
             owner = {
+                activate_production_method = {
+                    building_type = building_gate_magic_research_institute
+                    production_method = pm_gate_no_researcher
+                }
+                gate_reset_research_institute_pm = yes
                 trigger_event = researching_magic.3
             }
         }

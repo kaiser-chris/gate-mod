@@ -97,5 +97,19 @@ on_gate_game_setup = {
             effect_starting_pop_literacy_low = yes
             effect_starting_pop_literacy_gate = yes
         }
+
+        # Making 100% sure self requiring PM is set
+        every_country = {
+            limit = {
+                capital = {
+                    has_building = building_gate_magic_research_institute
+                }
+            }
+            activate_production_method = {
+                building_type = building_gate_magic_research_institute
+                production_method = pm_gate_no_researcher
+            }
+            gate_reset_research_institute_pm = yes
+        }
     }
 }
