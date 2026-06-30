@@ -82,9 +82,6 @@ on_gate_veiled_interior_scouting_complete = {
 
         # Success event, advances to the next phase
         1 = gate_veiled_interior.8
-
-        # Different types of failures
-        1 = gate_veiled_interior.9
     }
 }
 
@@ -92,7 +89,8 @@ on_gate_veiled_interior_scouting_complete = {
 # scope:journal_entry = Journal
 on_gate_veiled_interior_diplomacy_stall = {
     random_events = {
-        1 = gate_veiled_interior.10
+        1 = gate_veiled_interior.104
+        1 = gate_veiled_interior.105
     }
 }
 
@@ -100,8 +98,9 @@ on_gate_veiled_interior_diplomacy_stall = {
 # scope:journal_entry = Journal
 on_gate_veiled_interior_diplomacy_success = {
     first_valid = {
-        gate_veiled_interior.1
-        gate_veiled_interior.9
+        gate_veiled_interior.103
+        gate_veiled_interior.102
+        gate_veiled_interior.101
     }
 }
 
