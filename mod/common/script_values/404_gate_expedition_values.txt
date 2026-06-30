@@ -48,6 +48,20 @@ gate_expedition_budget_total = {
         add = var:gate_expedition.var:expedition_budget_total
     }
 }
+gate_expedition_budget_percent = {
+    value = 0
+    if = {
+        limit = {
+            gate_expedition_budget > 0
+        }
+        add = {
+            value = gate_expedition_budget
+            divide = gate_expedition_budget_total
+        }
+    }
+    min = 0
+    max = 1
+}
 
 gate_expedition_activity_time = {
     value = 0
