@@ -37,11 +37,11 @@ on_gate_veiled_interior_expedition_complete = {
         1 = gate_veiled_interior.2
 
         # Different types of failures
-        1 = gate_veiled_interior.3
-        1 = gate_veiled_interior.4
-        1 = gate_veiled_interior.5
-        1 = gate_veiled_interior.6
-        1 = gate_veiled_interior.7
+        2 = gate_veiled_interior.3
+        2 = gate_veiled_interior.4
+        2 = gate_veiled_interior.5
+        2 = gate_veiled_interior.6
+        2 = gate_veiled_interior.7
     }
 }
 
@@ -91,6 +91,11 @@ on_gate_veiled_interior_diplomacy_stall = {
     random_events = {
         1 = gate_veiled_interior.104
         1 = gate_veiled_interior.105
+        1 = gate_veiled_interior.106
+        1 = gate_veiled_interior.107
+        1 = gate_veiled_interior.108
+        1 = gate_veiled_interior.109
+        1 = gate_veiled_interior.112
     }
 }
 
@@ -106,9 +111,12 @@ on_gate_veiled_interior_diplomacy_success = {
 
 # Root = Country
 # scope:journal_entry = Journal
-on_gate_veiled_interior_diplomacy_nothing = {
+on_gate_veiled_interior_diplomacy_continue = {
     random_events = {
         chance_of_no_event = 80
-        1 = gate_veiled_interior.11
+        1 = gate_veiled_interior.110
+        1 = gate_veiled_interior.111
+        1 = gate_veiled_interior.113
+        1 = gate_veiled_interior.114
     }
 }

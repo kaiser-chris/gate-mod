@@ -174,7 +174,7 @@ gate_change_veiled_interior_enactment_success_chance = {
             }
             clamp_local_variable = {
                 name = chance
-                min = 0
+                min = 0.05 # Always have a chance
                 max = 1
             }
             com_set_enactment_journal_success_chance = {

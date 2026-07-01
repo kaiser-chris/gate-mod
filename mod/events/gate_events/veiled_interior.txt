@@ -943,20 +943,186 @@ gate_veiled_interior.108 = {
 
 	option = {
 		name = gate_veiled_interior.108.b
+		default_option = yes
 		gate_veiled_interior_enactment_stall = {
 			months = 6
 		}
 	}
 }
 
-gate_veiled_interior.11 = {
+gate_veiled_interior.109 = {
 	type = country_event
 	dlc = dlc_magic_gate
 	placement = capital
 
-	title = gate_veiled_interior.11.t
-	desc = gate_veiled_interior.11.d
-	flavor = gate_veiled_interior.11.f
+	title = gate_veiled_interior.109.t
+	desc = gate_veiled_interior.109.d
+	flavor = gate_veiled_interior.109.f
+
+	category = gate_veiled_interior_enactment
+
+	event_image = {
+		video = "southamerica_aristocrats"
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					exists = scope:journal_entry
+				}
+			}
+			je:je_gate_veiled_interior ?= {
+				save_scope_as = journal_entry
+			}
+		}
+	}
+
+	trigger = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_EASTERN_NEW_GUINEA
+				state_region = s:STATE_WESTERN_NEW_GUINEA
+			}
+		}
+		scope:journal_entry ?= {
+			var:gate_veiled_interior_phase ?= flag:je_gate_veiled_interior_phase_diplomacy
+		}
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/event_icons/event_gate_veiled_interior.dds
+
+	duration = 3
+
+	is_popup = yes
+
+	cooldown = {
+		months = 12
+	}
+
+	option = {
+		name = gate_veiled_interior.109.a
+		scope:journal_entry = {
+			add_modifier = {
+				name = modifier_veiled_interior_diplomacy_appeasement_cost
+				multiplier = money_amount_multiplier_medium
+				months = 24
+			}
+		}
+	}
+
+	option = {
+		name = gate_veiled_interior.109.b
+		default_option = yes
+		gate_veiled_interior_enactment_stall = {
+			months = 8
+		}
+	}
+}
+
+gate_veiled_interior.110 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = capital
+
+	title = gate_veiled_interior.110.t
+	desc = gate_veiled_interior.110.d
+	flavor = gate_veiled_interior.110.f
+
+	category = gate_veiled_interior_enactment
+
+	event_image = {
+		video = "unspecific_ruler_speaking_to_people"
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					exists = scope:journal_entry
+				}
+			}
+			je:je_gate_veiled_interior ?= {
+				save_scope_as = journal_entry
+			}
+		}
+		random_interest_group = {
+			limit = {
+				ig_counts_as_marginal = no
+			}
+			save_scope_as = orator_ig_scope
+			leader = {
+				save_scope_as = orator_ig_leader_scope
+			}
+		}
+	}
+
+	trigger = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_EASTERN_NEW_GUINEA
+				state_region = s:STATE_WESTERN_NEW_GUINEA
+			}
+		}
+		scope:journal_entry ?= {
+			var:gate_veiled_interior_phase ?= flag:je_gate_veiled_interior_phase_diplomacy
+		}
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/event_icons/event_gate_veiled_interior.dds
+
+	duration = 3
+
+	is_popup = yes
+
+	cooldown = {
+		months = 36
+	}
+
+	option = {
+		name = gate_veiled_interior.110.a
+		default_option = yes
+		scope:journal_entry = {
+			gate_change_veiled_interior_enactment_success_chance = {
+				value = 0.15
+			}
+		}
+	}
+
+	option = {
+		name = gate_veiled_interior.110.b
+		scope:journal_entry = {
+			gate_change_veiled_interior_enactment_success_chance = {
+				value = 0.05
+			}
+		}
+		scope:orator_ig_leader_scope = {
+			add_modifier = {
+				name = skilled_orator
+				days = normal_modifier_time
+			}
+		}
+		scope:orator_ig_scope = {
+			add_modifier = {
+				name = rising_support_for_ig_minor
+				days = normal_modifier_time
+			}
+		}
+	}
+}
+
+gate_veiled_interior.111 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = capital
+
+	title = gate_veiled_interior.111.t
+	desc = gate_veiled_interior.111.d
+	flavor = gate_veiled_interior.111.f
 
 	category = gate_veiled_interior_enactment
 
@@ -994,14 +1160,282 @@ gate_veiled_interior.11 = {
 
 	is_popup = yes
 
+	cooldown = {
+		months = 12
+	}
+
 	option = {
-		name = gate_veiled_interior.11.a
+		name = gate_veiled_interior.111.a
 		default_option = yes
 		gate_change_veiled_interior_enactment_stall_chance = {
 			value = -0.05
 		}
 		gate_change_veiled_interior_enactment_success_chance = {
 			value = 0.05
+		}
+	}
+
+	option = {
+		name = gate_veiled_interior.111.b
+		gate_change_veiled_interior_enactment_stall_chance = {
+			value = -0.05
+		}
+		add_modifier = {
+			name = renowned_playwright
+			days = normal_modifier_time
+		}
+	}
+}
+
+gate_veiled_interior.112 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = capital
+
+	title = gate_veiled_interior.112.t
+	desc = gate_veiled_interior.112.d
+	flavor = gate_veiled_interior.112.f
+
+	category = gate_veiled_interior_enactment
+
+	event_image = {
+		video = "southamerica_election"
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					exists = scope:journal_entry
+				}
+			}
+			je:je_gate_veiled_interior ?= {
+				save_scope_as = journal_entry
+			}
+		}
+		random_interest_group = {
+			limit = {
+				ig_counts_as_marginal = no
+			}
+			save_scope_as = publicaddress_ig_scope
+			leader = {
+				save_scope_as = publicaddress_ig_leader_scope
+			}
+		}
+	}
+
+	trigger = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_EASTERN_NEW_GUINEA
+				state_region = s:STATE_WESTERN_NEW_GUINEA
+			}
+		}
+		scope:journal_entry ?= {
+			var:gate_veiled_interior_phase ?= flag:je_gate_veiled_interior_phase_diplomacy
+			com_enactment_journal_stall_chance < 0.8
+		}
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/event_icons/event_gate_veiled_interior.dds
+
+	duration = 3
+
+	is_popup = yes
+
+	cooldown = {
+		months = 12
+	}
+
+	option = {
+		name = gate_veiled_interior.112.a
+		scope:journal_entry = {
+			gate_change_veiled_interior_enactment_stall_chance = {
+				value = 0.1
+			}
+		}
+		scope:publicaddress_ig_leader_scope = {
+			add_modifier = {
+				name = hapless_orator
+				days = normal_modifier_time
+			}
+		}
+		scope:publicaddress_ig_scope = {
+			add_modifier = {
+				name = tainted_by_incompetence
+				days = normal_modifier_time
+			}
+		}
+	}
+}
+
+gate_veiled_interior.113 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = capital
+
+	title = gate_veiled_interior.113.t
+	desc = gate_veiled_interior.113.d
+	flavor = gate_veiled_interior.113.f
+
+	category = gate_veiled_interior_enactment
+
+	event_image = {
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					exists = scope:journal_entry
+				}
+			}
+			je:je_gate_veiled_interior ?= {
+				save_scope_as = journal_entry
+			}
+		}
+		random_interest_group = {
+			limit = {
+				ig_counts_as_marginal = no
+			}
+			save_scope_as = underhanded_instigator_ig_scope
+			leader = {
+				save_scope_as = underhanded_instigator_leader_scope
+			}
+		}
+	}
+
+	trigger = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_EASTERN_NEW_GUINEA
+				state_region = s:STATE_WESTERN_NEW_GUINEA
+			}
+		}
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/event_icons/event_gate_veiled_interior.dds
+
+	duration = 3
+
+	is_popup = yes
+
+	cooldown = {
+		months = 12
+	}
+
+	option = {
+		name = gate_veiled_interior.113.a
+		scope:journal_entry = {
+			add_modifier = {
+				name = modifier_veiled_interior_diplomacy_speed_increase
+				multiplier = 0.1
+			}
+		}
+		scope:underhanded_instigator_ig_scope = {
+			add_modifier = {
+				name = dishonest_methods
+				days = normal_modifier_time
+			}
+		}
+	}
+
+	option = {
+		name = gate_veiled_interior.113.b
+		default_option = yes
+		scope:journal_entry = {
+			add_modifier = {
+				name = modifier_veiled_interior_diplomacy_speed_reduction
+				multiplier = 0.5
+				months = 25
+			}
+		}
+	}
+}
+
+gate_veiled_interior.114 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = capital
+
+	title = gate_veiled_interior.114.t
+	desc = gate_veiled_interior.114.d
+	flavor = gate_veiled_interior.114.f
+
+	category = gate_veiled_interior_enactment
+
+	event_image = {
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					exists = scope:journal_entry
+				}
+			}
+			je:je_gate_veiled_interior ?= {
+				save_scope_as = journal_entry
+			}
+		}
+		random_scope_state = {
+			limit = {
+				has_building = building_art_academy
+			}
+			save_scope_as = degenerate_art_state
+		}
+	}
+
+	trigger = {
+		any_scope_state = {
+			has_building = building_art_academy
+		}
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_EASTERN_NEW_GUINEA
+				state_region = s:STATE_WESTERN_NEW_GUINEA
+			}
+		}
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/event_icons/event_gate_veiled_interior.dds
+
+	duration = 3
+
+	is_popup = yes
+
+	cooldown = {
+		months = 12
+	}
+
+	option = {
+		name = gate_veiled_interior.114.a
+		scope:journal_entry = {
+			gate_change_veiled_interior_enactment_success_chance = {
+				value = -0.15
+			}
+		}
+	}
+
+	option = {
+		name = gate_veiled_interior.114.b
+		default_option = yes
+		scope:journal_entry = {
+			gate_change_veiled_interior_enactment_success_chance = {
+				value = 0.15
+			}
+		}
+		add_radicals = {
+			value = medium_radicals
+			strata = middle
 		}
 	}
 }
