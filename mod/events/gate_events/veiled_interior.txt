@@ -735,7 +735,7 @@ gate_veiled_interior.105 = {
 			add_modifier = {
 				name = modifier_veiled_interior_diplomacy_appeasement_cost
 				multiplier = money_amount_multiplier_medium
-				months = 24
+				months = 25
 			}
 		}
 	}
@@ -1437,5 +1437,59 @@ gate_veiled_interior.114 = {
 			value = medium_radicals
 			strata = middle
 		}
+	}
+}
+
+# Generic stall notification
+gate_veiled_interior.115 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	hidden = yes
+
+	category = gate_veiled_interior_enactment
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					exists = scope:journal_entry
+				}
+			}
+			je:je_gate_veiled_interior ?= {
+				save_scope_as = journal_entry
+			}
+		}
+		set_local_variable = {
+			name = stall_length
+			value = 6
+		}
+		gate_veiled_interior_enactment_stall = {
+			months = 6
+		}
+		post_notification = gate_veiled_interior_diplomacy_stall
+	}
+}
+
+# Generic continue notification
+# Doing nothing
+gate_veiled_interior.116 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	hidden = yes
+
+	category = gate_veiled_interior_enactment
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					exists = scope:journal_entry
+				}
+			}
+			je:je_gate_veiled_interior ?= {
+				save_scope_as = journal_entry
+			}
+		}
+		post_notification = gate_veiled_interior_diplomacy_continue
 	}
 }

@@ -96,6 +96,7 @@ on_gate_veiled_interior_diplomacy_stall = {
         1 = gate_veiled_interior.108
         1 = gate_veiled_interior.109
         1 = gate_veiled_interior.112
+        5 = gate_veiled_interior.115
     }
 }
 
@@ -113,10 +114,10 @@ on_gate_veiled_interior_diplomacy_success = {
 # scope:journal_entry = Journal
 on_gate_veiled_interior_diplomacy_continue = {
     random_events = {
-        chance_of_no_event = 80
-        1 = gate_veiled_interior.110
-        1 = gate_veiled_interior.111
-        1 = gate_veiled_interior.113
-        1 = gate_veiled_interior.114
+        80 = gate_veiled_interior.116
+        5 = gate_veiled_interior.110
+        5 = gate_veiled_interior.111
+        5 = gate_veiled_interior.113
+        5 = gate_veiled_interior.114
     }
 }
