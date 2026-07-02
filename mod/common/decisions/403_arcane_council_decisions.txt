@@ -8,6 +8,7 @@
 	}
 
 	possible = {
+		country_rank >= rank_value:major_power
 		any_country = {
 			NOT = {
 				this = root
@@ -26,6 +27,12 @@
 			has_law_or_variant = law_type:law_gate_free_magic_users
 		}
 		has_technology_researched = gate_formalized_magic
+		trigger_if = {
+			limit = {
+				is_ai = yes
+			}
+			game_date > 1860.1.1
+		}
 	}
 
 	when_taken = {
