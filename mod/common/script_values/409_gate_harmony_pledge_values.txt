@@ -1443,8 +1443,14 @@ gate_harmony_pledge_legislative_trend = {	# +ve = anaemic (chaos), -ve = despoti
 	}
 	
 	add = {
-		value = gate_harmony_pledge_legislative_trend_from_bureaucracy_institution
-		desc = GATE_HP_LEG_TREND_FROM_BUREACRACY_INSTITUTION
+		value = gate_harmony_pledge_legislative_trend_from_bureaucracy
+		desc = GATE_HP_LEG_TREND_FROM_BUREACRACY
+		format = GATE_HP_TOP_VALUE_FORMAT
+	}
+	
+	add = {
+		value = gate_harmony_pledge_legislative_trend_from_modifiers
+		desc = GATE_HP_LEG_TREND_FROM_MODIFIERS
 		format = GATE_HP_TOP_VALUE_FORMAT
 	}
 	
@@ -1462,8 +1468,8 @@ gate_harmony_pledge_legislative_trend_base = { # used as an input to make the sc
 	add = gate_harmony_pledge_legislative_trend_from_laws
 	add = gate_harmony_pledge_legislative_trend_from_authority
 	add = gate_harmony_pledge_legislative_trend_from_influence
+	add = gate_harmony_pledge_legislative_trend_from_bureaucracy
 	add = gate_harmony_pledge_legislative_trend_from_modifiers
-	add = gate_harmony_pledge_legislative_trend_from_bureaucracy_institution
 }
 
 # LAWS were done +ve = despotic (order), -ve = anaemic (chaos) then flipped later, only some cleaned up
@@ -1505,7 +1511,7 @@ gate_harmony_pledge_legislative_trend_from_laws = {
 	}
 }
 
-gate_hp_legislative_dist_of_power
+gate_hp_legislative_dist_of_power = {
 	if = {
 		limit = { # Absolute Power / No Power
 			OR = { 
@@ -1718,7 +1724,7 @@ gate_hp_legislative_policing = {
 		limit = {
 			has_law_or_variant = law_type:law_militarized_police
 		}
-		add = 
+		add = {
 			value = -0.10	# limit = -0.50
 			desc = GATE_HP_BASE_LAW
 			format = GATE_HP_SCRIPT_VALUE_FORMAT
@@ -1868,9 +1874,55 @@ gate_harmony_pledge_legislative_trend_from_influence = {	# +ve = anaemic (chaos)
 }					# excess influence -> towards chaos (unused influence atrophies the state apparatus)
 
 # Math with bureaucracy, relative_bureaucracy, & produced_bureaucracy
+gate_harmony_pledge_legislative_trend_from_bureaucracy = {
+	value = 0 	# Have this push away from the centre with negative bureaucracy ( max 1 towards aneamic, or 0.5 towards despotic)
+				# and towards the centre with up to 10% excess bureaucracy		( max 0.2 towards centre )
+				# halve this effect for elected and hereditary
+}
 
 # Modifiers
-# bureaucracy law based centre drift
+gate_harmony_pledge_legislative_trend_from_modifiers = {	# works away/towards center point
+	# Center drift modifiers
+	if = {
+		limit = {
+			scope:journal_entry = {
+				scripted_bar_progress = {
+					name = pb_gate_harmony_pledge_legislative
+					value >= 50
+				}
+			}
+			modifier:country_gate_harmony_pledge_legislative_drift_center != 0
+		}
+		subtract = {
+			value = modifier:country_gate_harmony_pledge_legislative_drift_center
+			desc = pb_gate_harmony_pledge_legislative_center_drift_modifier
+		}
+	}
+	else_if = {
+		limit = {
+			scope:journal_entry = {
+				scripted_bar_progress = {
+					name = pb_gate_harmony_pledge_legislative
+					value < 50
+				}
+			}
+			modifier:country_gate_harmony_pledge_legislative_drift_center != 0
+		}
+		add = {
+			value = modifier:country_gate_harmony_pledge_legislative_drift_center
+			desc = pb_gate_harmony_pledge_legislative_center_drift_modifier
+		}
+	}
+	# Modifiers in only 1 direction (un-comment this + LOC entries if we decide we need them).
+#	add = {
+#		value = modifier:country_gate_harmony_pledge_legislative_drift_negative
+#		desc = "GATE_HP_LEG_TREND_FROM_MODIFIERS_NEGATIVE"
+#	}
+#	add = {
+#		value = modifier:country_gate_harmony_pledge_legislative_drift_positive
+#		desc = "GATE_HP_LEG_TREND_FROM_MODIFIERS_POSITIVE"
+#	}
+}
 
 gate_harmony_pledge_legislative_trend_scaling = {	# works against movement towards disharmony
 	if = {
