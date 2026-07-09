@@ -95,6 +95,32 @@ on_monthly_gate_mana_density = {
     }
 }
 
+on_monthly_pulse_state = {
+    on_actions = {
+        on_monthly_gate_mana_density_modifier
+    }
+}
+
+on_monthly_gate_mana_density_modifier = {
+    trigger = {
+        modifier:state_gate_mana_density_increase_add != 0
+        OR = {
+            # Every three months
+            month = 0
+            month = 3
+            month = 6
+            month = 9
+        }
+    }
+    effect = {
+        state_region = {
+            gate_change_mana_density = {
+                amount = root.modifier:state_gate_mana_density_increase_add
+            }
+        }
+    }
+}
+
 # Root = country
 on_monthly_pulse_country = {
     on_actions = {

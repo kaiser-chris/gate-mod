@@ -63,25 +63,31 @@ gate_add_mana_density = {
 			has_variable = mana_density
 			var:mana_density < gate_maximum_mana_density
 		}
-		save_temporary_scope_value_as = {
+		set_local_variable = {
 			name = added_mana_density
 			value = $amount$
 		}
 		custom_tooltip = {
 			text = effect_gate_add_mana_density
 			# Propagation
-			change_variable = {
-				name = mana_density
-				add = $amount$
+			gate_change_mana_density = {
+				amount = local_var:added_mana_density
 			}
-			clamp_variable = {
-				name = mana_density
-				max = gate_maximum_mana_density
-				min = gate_minimum_mana_density
-			}
-			gate_add_mana_density_modifier = yes
 		}
 	}
+}
+
+gate_change_mana_density = {
+	change_variable = {
+		name = mana_density
+		add = $amount$
+	}
+	clamp_variable = {
+		name = mana_density
+		max = gate_maximum_mana_density
+		min = gate_minimum_mana_density
+	}
+	gate_add_mana_density_modifier = yes
 }
 
 gate_add_mana_density_modifier = {

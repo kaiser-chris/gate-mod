@@ -1,0 +1,17 @@
+﻿# Trigger to check whether a country has magic unlocked
+has_gate_max_mana_density = {
+    custom_description = {
+        text = has_gate_max_mana_density
+        subject = this
+
+		trigger_if = {
+			limit = {
+				has_variable = mana_density
+			}
+			var:mana_density >= gate_maximum_mana_density
+		}
+		trigger_else = {
+			always = no
+		}
+    }
+}

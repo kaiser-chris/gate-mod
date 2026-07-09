@@ -215,7 +215,7 @@ gate_cleanup_researchers = {
 }
 
 gate_add_magic_innovation = {
-	save_temporary_scope_value_as = {
+	set_local_variable = {
 		name = added_innovation
 		value = $amount$
 	}
@@ -223,7 +223,7 @@ gate_add_magic_innovation = {
 		text = effect_gate_add_magic_innovation
 		change_variable = {
 			name = magic_innovation
-			add = $amount$
+			add = local_var:added_innovation
 		}
 		clamp_variable = {
 			name = magic_innovation
