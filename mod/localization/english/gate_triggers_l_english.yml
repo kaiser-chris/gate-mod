@@ -61,3 +61,6 @@
  trigger_gate_project_has_any_selector_open_not: "No [concept_gate_project] selectors are open"
 
  trigger_gate_is_not_magic_researcher: "Is not already our [concept_gate_magic_researcher]"
+
+ trigger_has_gate_max_mana_density: "[STATE_REGION.GetName] has reached the maximum [concept_gate_mana_density] of [STATE_REGION.MakeScope.ScriptValue('gate_maximum_mana_density')|v0]"
+ trigger_has_gate_max_mana_density_not: "[STATE_REGION.GetName] has #bold not#! reached the maximum [concept_gate_mana_density] of [STATE_REGION.MakeScope.ScriptValue('gate_maximum_mana_density')|v0]"

@@ -92,3 +92,10 @@ gate_project_has_any_selector_open = {
     global = trigger_gate_project_has_any_selector_open
     global_not = trigger_gate_project_has_any_selector_open_not
 }
+
+has_gate_max_mana_density = {
+    global = trigger_has_gate_max_mana_density
+    global_not = trigger_has_gate_max_mana_density_not
+    third = trigger_has_gate_max_mana_density
+    third_not = trigger_has_gate_max_mana_density_not
+}

@@ -1,0 +1,41 @@
+﻿decree_gate_increase_mana_density = {
+    country_trigger = {
+        is_gate_magic_country = yes
+    }
+
+    state_trigger = {
+        state_region = {
+            NOT = {
+                has_gate_max_mana_density = yes
+            }
+        }
+    }
+
+    unlocking_technologies = {
+        gate_mana_extraction
+    }
+
+    texture = gfx/interface/icons/decree/decree_gate_increase_mana_density.dds
+
+    modifier = {
+        state_gate_mana_density_increase_add = 1
+    }
+
+    cost = 50
+
+    ai_weight = {
+        value = 25
+
+        # We want the AI to have at least one state
+        # with some mana density
+        if = {
+            limit = {
+                is_capital = yes
+                state_region = {
+                    var:mana_density < 50
+                }
+            }
+            add = 100
+        }
+    }
+}
