@@ -23,13 +23,13 @@ lesson_gate_magic_research = {
 		text = "lesson_gate_magic_research_1_desc"
 		header_info = "lesson_step_1_of_4"
 
+		highlight_widget = tutorial_highlight_com_sidebar
+
 		gui_transition = {
 			button_id = "skip"
 			button_text = "tutorial_lesson_button_skip"
 			target = lesson_finish
 		}
-
-		highlight_widget = tutorial_highlight_com_sidebar
 
 		trigger_transition = {
 			button_id = "next"
@@ -54,6 +54,14 @@ lesson_gate_magic_research = {
 			button_id = "back"
 			button_text = "tutorial_lesson_button_back"
 			target = lesson_gate_magic_research_1
+			enabled = {
+				custom_tooltip = {
+					text = "lesson_gate_magic_research_2_back"
+					NOT = {
+						has_variable = gg_tutorial_base_panel_open
+					}
+				}
+			}
 		}
 
 		gui_transition = {
@@ -104,6 +112,14 @@ lesson_gate_magic_research = {
 			button_id = "back"
 			button_text = "tutorial_lesson_button_back"
 			target = lesson_gate_magic_research_3
+			enabled = {
+				custom_tooltip = {
+					text = "lesson_gate_magic_research_4_back"
+					NOT = {
+						has_variable = gg_tutorial_base_panel_technology_tab_production_open
+					}
+				}
+			}
 		}
 
 		gui_transition = {
@@ -114,6 +130,100 @@ lesson_gate_magic_research = {
 				custom_tooltip = {
 					text = "lesson_gate_magic_research_4_continue"
 					has_variable = gg_tutorial_base_panel_technology_tab_production_open
+				}
+			}
+		}
+	}
+}
+
+lesson_gate_new_arcanist = {
+	start_automatically = yes
+	chain = lesson_chain_gate_magic
+
+	# Start tutorial if player hasn't hired a new
+	# Arcanist for 5 minutes
+	delay = @short_delay_timer
+
+	trigger = {
+		is_gate_magic_country = yes
+		has_gate_magic_researcher = no
+	}
+
+	lesson_gate_new_arcanist_1 = {
+		text = "lesson_gate_new_arcanist_1_desc"
+		header_info = "lesson_step_1_of_3"
+
+		highlight_widget = tutorial_highlight_pops
+		highlight_widget = tutorial_highlight_pops_national_cast
+
+		gui_transition = {
+			button_id = "skip"
+			button_text = "tutorial_lesson_button_skip"
+			target = lesson_finish
+		}
+
+		trigger_transition = {
+			button_id = "next"
+			button_text = "tutorial_lesson_button_next"
+			target = lesson_gate_new_arcanist_2
+			trigger = {
+				custom_tooltip = {
+					text = "lesson_gate_new_arcanist_1_continue"
+					is_panel_open = { panel_name = pops_overview tab_name = national_cast }
+				}
+			}
+		}
+	}
+
+	lesson_gate_new_arcanist_2 = {
+		text = "lesson_gate_new_arcanist_2_desc"
+		header_info = "lesson_step_2_of_3"
+
+		highlight_widget = search_edit
+
+		gui_transition = {
+			button_id = "back"
+			button_text = "tutorial_lesson_button_back"
+			target = lesson_gate_new_arcanist_1
+			enabled = {
+				custom_tooltip = {
+					text = "lesson_gate_new_arcanist_2_back"
+					NOT = { is_panel_open = { panel_name = pops_overview tab_name = national_cast } }
+				}
+			}
+		}
+
+		gui_transition = {
+			button_id = "next"
+			button_text = "tutorial_lesson_button_next"
+			target = lesson_gate_new_arcanist_3
+			enabled = {
+				custom_tooltip = {
+					text = "lesson_gate_new_arcanist_2_continue"
+					is_panel_open = { panel_name = pops_overview tab_name = national_cast }
+				}
+			}
+		}
+	}
+
+	lesson_gate_new_arcanist_3 = {
+		text = "lesson_gate_new_arcanist_3_desc"
+		header_info = "lesson_step_3_of_3"
+
+		gui_transition = {
+			button_id = "back"
+			button_text = "tutorial_lesson_button_back"
+			target = lesson_gate_new_arcanist_2
+		}
+
+		trigger_transition = {
+			button_id = "next"
+			button_text = "tutorial_lesson_button_complete"
+			target = lesson_finish
+			trigger = {
+				custom_tooltip = {
+					text = "lesson_gate_new_arcanist_3_finish"
+					has_gate_magic_researcher = yes
 				}
 			}
 		}
