@@ -14,6 +14,14 @@ widget = {
     max_update_rate = 8
     visible = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 
+    widget = {
+        visible = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
+        state = {
+            name = _show
+            on_finish = "[GetScriptedGui('gg_tutorial_reset_variables').Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
+        }
+    }
+
     # Custom Shortcuts
     widget = {
         visible = "[Country.IsValid]"

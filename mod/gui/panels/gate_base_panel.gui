@@ -14,6 +14,8 @@ types gate_base_panel_types {
                 on_finish = "[MapListPanelManager.CloseCurrentPanel]"
                 # Fullscreen panels hide topbar
                 on_finish = "[GetVariableSystem.Set('com_fullscreen', 'com_fullscreen')]"
+                # Tutorial: Set "gg_tutorial_base_panel_open" variable
+                on_finish = "[GetScriptedGui('gg_tutorial_base_panel_open').Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
                 start_sound = {
                     soundeffect = "event:/SFX/UI/SideBar/markets"
                 }
@@ -29,6 +31,12 @@ types gate_base_panel_types {
                 name = _hide
                 on_finish = "[GetVariableSystem.Clear('com_fullscreen')]"
                 on_finish = "[GetScriptedGui('sgui_gate_base_tab_reset').Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
+                # Tutorial: Remove tutorial variables
+                on_finish = "[GetScriptedGui('gg_tutorial_base_panel_close').Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
+                on_finish = "[GetScriptedGui('gg_tutorial_base_panel_general_tab_close').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                on_finish = "[GetScriptedGui('gg_tutorial_base_panel_technology_tab_production_close').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                on_finish = "[GetScriptedGui('gg_tutorial_base_panel_technology_tab_military_close').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                on_finish = "[GetScriptedGui('gg_tutorial_base_panel_technology_tab_society_close').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
                 start_sound = {
                     soundeffect = "event:/SFX/UI/SideBar/markets_stop"
                 }
@@ -65,8 +73,6 @@ types gate_base_panel_types {
         blockoverride "fixed_top" {
             tab_buttons_fullscreen = {
                 # Researcher
-                blockoverride "first_button_icon" {
-                }
                 blockoverride "first_button" {
                     text = gg_panel_base_tab_general
                 }
@@ -100,6 +106,9 @@ types gate_base_panel_types {
                         alpha = 0.5
                     }
                 }
+                blockoverride "first_button_name" {
+                    name = "tutorial_highlight_gate_projects_tab"
+                }
 
                 # Production
                 blockoverride "second_button" {
@@ -119,6 +128,9 @@ types gate_base_panel_types {
                 }
                 blockoverride "second_button_selected" {
                     text = "PRODUCTION_NO_CONCEPT"
+                }
+                blockoverride "second_button_name" {
+                    name = "tutorial_highlight_gate_production_tab"
                 }
 
                 # Military
@@ -140,6 +152,9 @@ types gate_base_panel_types {
                 blockoverride "third_button_selected" {
                     text = "MILITARY"
                 }
+                blockoverride "third_button_name" {
+                    name = "tutorial_highlight_gate_military_tab"
+                }
 
                 # Society
                 blockoverride "fourth_button" {
@@ -159,6 +174,9 @@ types gate_base_panel_types {
                 }
                 blockoverride "fourth_button_selected" {
                     text = "SOCIETY"
+                }
+                blockoverride "fourth_button_name" {
+                    name = "tutorial_highlight_gate_society_tab"
                 }
             }
             hbox = {
@@ -331,6 +349,7 @@ types gate_base_panel_types {
 
                 # Magic Innovation
                 hbox = {
+                    name = tutorial_highlight_gate_magic_innovation
                     datacontext = "[GetScriptedGui('sgui_gate_has_magic')]"
                     layoutpolicy_horizontal = expanding
                     layoutpolicy_vertical = expanding
@@ -473,14 +492,69 @@ types gate_base_panel_types {
 
                 gate_base_panel_general = {
                     visible = "[GetScriptedGui('sgui_gate_base_tab_general').IsShown(GuiScope.SetRoot(Country.MakeScope).End)]"
+                    state = {
+                        name = _show
+                        # Tutorial: Set "gg_tutorial_base_panel_general_tab_open" variable
+                        on_finish = "[GetScriptedGui('gg_tutorial_base_panel_general_tab_open').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                    }
+                    state = {
+                        name = _hide
+                        # Tutorial: Remove "gg_tutorial_base_panel_general_tab_open" variable
+                        on_finish = "[GetScriptedGui('gg_tutorial_base_panel_general_tab_close').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                    }
                 }
 
                 gate_tech_tree = {
-                    visible = "[Or3(
-                        GetScriptedGui('sgui_gate_base_tab_production').IsShown(GuiScope.SetRoot(Country.MakeScope).End),
-                        GetScriptedGui('sgui_gate_base_tab_military').IsShown(GuiScope.SetRoot(Country.MakeScope).End),
-                        GetScriptedGui('sgui_gate_base_tab_society').IsShown(GuiScope.SetRoot(Country.MakeScope).End)
-                    )]"
+                    visible = "[GetScriptedGui('sgui_gate_base_tab_production').IsShown(GuiScope.SetRoot(Country.MakeScope).End)]"
+                    state = {
+                        name = _show
+                        # Tutorial: Set "gg_tutorial_base_panel_technology_tab_production_open" variable
+                        on_finish = "[GetScriptedGui('gg_tutorial_base_panel_technology_tab_production_open').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                    }
+                    state = {
+                        name = _hide
+                        # Tutorial: Remove "gg_tutorial_base_panel_technology_tab_production_open" variable
+                        on_finish = "[GetScriptedGui('gg_tutorial_base_panel_technology_tab_production_close').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                    }
+
+                    blockoverride "gate_tech_tree_content" {
+                        gate_tech_tree_production = {}
+                    }
+                }
+
+                gate_tech_tree = {
+                    visible = "[GetScriptedGui('sgui_gate_base_tab_military').IsShown(GuiScope.SetRoot(Country.MakeScope).End)]"
+                    state = {
+                        name = _show
+                        # Tutorial: Set "gg_tutorial_base_panel_technology_tab_military_open" variable
+                        on_finish = "[GetScriptedGui('gg_tutorial_base_panel_technology_tab_military_open').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                    }
+                    state = {
+                        name = _hide
+                        # Tutorial: Remove "gg_tutorial_base_panel_technology_tab_military_open" variable
+                        on_finish = "[GetScriptedGui('gg_tutorial_base_panel_technology_tab_military_close').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                    }
+
+                    blockoverride "gate_tech_tree_content" {
+                        gate_tech_tree_military = {}
+                    }
+                }
+                gate_tech_tree = {
+                    visible = "[GetScriptedGui('sgui_gate_base_tab_society').IsShown(GuiScope.SetRoot(Country.MakeScope).End)]"
+                    state = {
+                        name = _show
+                        # Tutorial: Set "gg_tutorial_base_panel_technology_tab_society_open" variable
+                        on_finish = "[GetScriptedGui('gg_tutorial_base_panel_technology_tab_society_open').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                    }
+                    state = {
+                        name = _hide
+                        # Tutorial: Remove "gg_tutorial_base_panel_technology_tab_society_open" variable
+                        on_finish = "[GetScriptedGui('gg_tutorial_base_panel_technology_tab_society_close').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                    }
+
+                    blockoverride "gate_tech_tree_content" {
+                        gate_tech_tree_society = {}
+                    }
                 }
             }
         }
@@ -961,22 +1035,8 @@ types gate_base_panel_types {
                 layoutpolicy_vertical = expanding
                 layoutpolicy_horizontal = expanding
 
-                gate_tech_tree_production = {
-                    blockoverride "visible" {
-                        visible = "[GetScriptedGui('sgui_gate_base_tab_production').IsShown(GuiScope.SetRoot(Country.MakeScope).End)]"
-                    }
-                }
+                block "gate_tech_tree_content" {
 
-                gate_tech_tree_military = {
-                    blockoverride "visible" {
-                        visible = "[GetScriptedGui('sgui_gate_base_tab_military').IsShown(GuiScope.SetRoot(Country.MakeScope).End)]"
-                    }
-                }
-
-                gate_tech_tree_society = {
-                    blockoverride "visible" {
-                        visible = "[GetScriptedGui('sgui_gate_base_tab_society').IsShown(GuiScope.SetRoot(Country.MakeScope).End)]"
-                    }
                 }
             }
         }

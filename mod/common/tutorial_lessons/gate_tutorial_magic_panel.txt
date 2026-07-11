@@ -1,0 +1,121 @@
+﻿# Values in seconds
+@debug_timer = 5
+@very_short_delay_timer = 60 # 1 minute
+@short_delay_timer = 300   # 5 minutes
+@medium_delay_timer = 900 # 15 minutes
+@long_delay_timer = 1800 # 30 minutes
+@very_long_delay_timer = 3600 # 60 minutes
+
+lesson_gate_magic_research = {
+	start_automatically = yes
+	chain = lesson_chain_gate_magic
+
+	# Start tutorial if player hasn't chosen a technology
+	# for 5 minutes
+	delay = @short_delay_timer
+
+	trigger = {
+		is_gate_magic_country = yes
+		has_variable = can_research_magic
+	}
+
+	lesson_gate_magic_research_1 = {
+		text = "lesson_gate_magic_research_1_desc"
+		header_info = "lesson_step_1_of_4"
+
+		gui_transition = {
+			button_id = "skip"
+			button_text = "tutorial_lesson_button_skip"
+			target = lesson_finish
+		}
+
+		highlight_widget = tutorial_highlight_com_sidebar
+
+		trigger_transition = {
+			button_id = "next"
+			button_text = "tutorial_lesson_button_next"
+			target = lesson_gate_magic_research_2
+			trigger = {
+				custom_tooltip = {
+					text = "lesson_gate_magic_research_1_continue"
+					has_variable = gg_tutorial_base_panel_open
+				}
+			}
+		}
+	}
+
+	lesson_gate_magic_research_2 = {
+		text = "lesson_gate_magic_research_2_desc"
+		header_info = "lesson_step_2_of_4"
+
+		highlight_widget = tutorial_highlight_gate_magic_innovation
+
+		gui_transition = {
+			button_id = "back"
+			button_text = "tutorial_lesson_button_back"
+			target = lesson_gate_magic_research_1
+		}
+
+		gui_transition = {
+			button_id = "next"
+			button_text = "tutorial_lesson_button_next"
+			target = lesson_gate_magic_research_3
+			enabled = {
+				custom_tooltip = {
+					text = "lesson_gate_magic_research_2_continue"
+					has_variable = gg_tutorial_base_panel_open
+				}
+			}
+		}
+	}
+
+	lesson_gate_magic_research_3 = {
+		text = "lesson_gate_magic_research_3_desc"
+		header_info = "lesson_step_3_of_4"
+
+		highlight_widget = tutorial_highlight_gate_production_tab
+		highlight_widget = tutorial_highlight_gate_military_tab
+		highlight_widget = tutorial_highlight_gate_society_tab
+
+		gui_transition = {
+			button_id = "back"
+			button_text = "tutorial_lesson_button_back"
+			target = lesson_gate_magic_research_2
+		}
+
+		trigger_transition = {
+			button_id = "next"
+			button_text = "tutorial_lesson_button_next"
+			target = lesson_gate_magic_research_4
+			trigger = {
+				custom_tooltip = {
+					text = "lesson_gate_magic_research_3_continue"
+					has_variable = gg_tutorial_base_panel_technology_tab_production_open
+				}
+			}
+		}
+	}
+
+	lesson_gate_magic_research_4 = {
+		text = "lesson_gate_magic_research_4_desc"
+		header_info = "lesson_step_4_of_4"
+
+		gui_transition = {
+			button_id = "back"
+			button_text = "tutorial_lesson_button_back"
+			target = lesson_gate_magic_research_3
+		}
+
+		gui_transition = {
+			button_id = "next"
+			button_text = "tutorial_lesson_button_complete"
+			target = lesson_finish
+			enabled = {
+				custom_tooltip = {
+					text = "lesson_gate_magic_research_4_continue"
+					has_variable = gg_tutorial_base_panel_technology_tab_production_open
+				}
+			}
+		}
+	}
+}
