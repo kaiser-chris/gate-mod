@@ -1,0 +1,16 @@
+﻿
+#####
+## Time Variables
+#####
+
+# Values in seconds
+@debug_timer = 5
+@very_short_delay_timer = 60 # 1 minute
+@short_delay_timer = 300   # 5 minutes
+@medium_delay_timer = 900 # 15 minutes
+@long_delay_timer = 1800 # 30 minutes
+@very_long_delay_timer = 3600 # 60 minutes
+
+lesson_chain_gate_magic = {
+	save_progress_in_gamestate = no
+}

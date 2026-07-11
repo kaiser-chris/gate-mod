@@ -1,0 +1,90 @@
+﻿gg_tutorial_reset_variables = {
+    scope = country
+
+    effect = {
+        remove_variable = gg_tutorial_base_panel_open
+        remove_variable = gg_tutorial_base_panel_technology_tab_society_open
+        remove_variable = gg_tutorial_base_panel_technology_tab_production_open
+        remove_variable = gg_tutorial_base_panel_technology_tab_military_open
+    }
+}
+
+gg_tutorial_base_panel_open = {
+    scope = country
+
+    effect = {
+        set_variable = gg_tutorial_base_panel_open
+    }
+}
+
+gg_tutorial_base_panel_close = {
+    scope = country
+
+    effect = {
+        remove_variable = gg_tutorial_base_panel_open
+    }
+}
+
+gg_tutorial_base_panel_technology_tab_society_open = {
+    scope = country
+
+    effect = {
+        set_variable = gg_tutorial_base_panel_technology_tab_society_open
+    }
+}
+
+gg_tutorial_base_panel_technology_tab_society_close = {
+    scope = country
+
+    effect = {
+        remove_variable = gg_tutorial_base_panel_technology_tab_society_open
+    }
+}
+
+gg_tutorial_base_panel_technology_tab_production_open = {
+    scope = country
+
+    effect = {
+        set_variable = gg_tutorial_base_panel_technology_tab_production_open
+    }
+}
+
+gg_tutorial_base_panel_technology_tab_production_close = {
+    scope = country
+
+    effect = {
+        remove_variable = gg_tutorial_base_panel_technology_tab_production_open
+    }
+}
+
+gg_tutorial_base_panel_technology_tab_military_open = {
+    scope = country
+
+    effect = {
+        set_variable = gg_tutorial_base_panel_technology_tab_military_open
+    }
+}
+
+gg_tutorial_base_panel_technology_tab_military_close = {
+    scope = country
+
+    effect = {
+        remove_variable = gg_tutorial_base_panel_technology_tab_military_open
+    }
+}
+
+gg_tutorial_base_panel_general_tab_open = {
+    scope = country
+
+    effect = {
+        set_variable = gg_tutorial_base_panel_general_tab_open
+    }
+}
+
+gg_tutorial_base_panel_general_tab_close = {
+    scope = country
+
+    effect = {
+        remove_variable = gg_tutorial_base_panel_general_tab_open
+    }
+}
