@@ -318,8 +318,15 @@ gate_activate_magic_researcher = {
 		}
 
 		home_country = {
-			var:gate_magic_researcher ?= {
-				retire_character = yes
+			if = {
+				limit = {
+					var:gate_magic_researcher ?= {
+						is_character_alive = yes
+					}
+				}
+				var:gate_magic_researcher ?= {
+					retire_character = yes
+				}
 			}
 			set_variable = {
 				name = gate_magic_researcher

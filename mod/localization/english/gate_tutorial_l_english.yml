@@ -3,15 +3,25 @@
  lesson_gate_magic_research_1: "What are [Concept('concept_gate_magic_technology', '$concept_gate_magic_technologies$')]?"
  lesson_gate_magic_research_1_desc: "$concept_gate_magic_technologies$ are separate type of research done in the #v $gg_panel_base_title$#! panel."
  lesson_gate_magic_research_1_continue: "Open the #v $gg_panel_base_title$#! panel to continue."
-
  lesson_gate_magic_research_2: "$lesson_gate_magic_research_1$"
  lesson_gate_magic_research_2_desc: "[concept_gate_magic_innovation] is different from normal [concept_innovation] in that it is accumulated until used or a maximum is reached. You can find the current amount of accumulated [concept_gate_magic_innovation] in the $gg_panel_base_title$ panel."
+ lesson_gate_magic_research_2_back: "Close the #v $gg_panel_base_title$#! panel to backtrack."
  lesson_gate_magic_research_2_continue: "Open the #v $gg_panel_base_title$#! panel to see your [concept_gate_magic_innovation]."
-
  lesson_gate_magic_research_3: "$lesson_gate_magic_research_1$"
  lesson_gate_magic_research_3_desc: "[Concept('concept_gate_magic_technology', '$concept_gate_magic_technologies$')] come in three distinct flavors: #v $PRODUCTION_NO_CONCEPT$#!, #v $MILITARY$#! and #v $SOCIETY$#!"
  lesson_gate_magic_research_3_continue: "Open the #v $PRODUCTION_NO_CONCEPT$#! tab in the #v $gg_panel_base_title$#! panel to continue."
-
  lesson_gate_magic_research_4: "$lesson_gate_magic_research_1$"
  lesson_gate_magic_research_4_desc: "[Concept('concept_gate_magic_technology', '$concept_gate_magic_technologies$')] follow the normal cost structure of normal technologies and are separated by eras. Different than normal [Concept('concept_gate_magic_technology', '$concept_gate_magic_technologies$')] need to be unlocked with your accumulated [concept_gate_magic_innovation]."
+ lesson_gate_magic_research_4_back: "Close the #v $PRODUCTION_NO_CONCEPT$#! tab in the #v $gg_panel_base_title$#! panel to backtrack"
  lesson_gate_magic_research_4_continue: "Open the #v $PRODUCTION_NO_CONCEPT$#! tab in the #v $gg_panel_base_title$#! panel to see your the technologies."
+ # Tutorial: Magic Research
+ lesson_gate_new_arcanist_1: "How to hire a new [concept_gate_magic_researcher]?"
+ lesson_gate_new_arcanist_1_desc: "[Concept('concept_gate_magic_researcher','$concept_gate_magic_researchers$')] are essential for generating [concept_gate_magic_innovation] and running [Concept('concept_gate_project', Localize('concept_gate_projects'))]."
+ lesson_gate_new_arcanist_1_continue: "Open the #v $POPULATION$#! panel on the #v $NATIONAL_CAST$#! tab to continue."
+ lesson_gate_new_arcanist_2: "$lesson_gate_new_arcanist_1$"
+ lesson_gate_new_arcanist_2_desc: "The best way to find your available [Concept('concept_gate_magic_researcher','$concept_gate_magic_researchers$')] is to use the search bar. Just type in '$concept_gate_magic_researcher$' to see all available characters."
+ lesson_gate_new_arcanist_2_back: "Close the #v $POPULATION$#! panel on the #v $NATIONAL_CAST$#! tab to backtrack"
+ lesson_gate_new_arcanist_2_continue: "Keep the #v $POPULATION$#! panel on the #v $NATIONAL_CAST$#! tab to continue."
+ lesson_gate_new_arcanist_3: "$lesson_gate_new_arcanist_1$"
+ lesson_gate_new_arcanist_3_desc: "Now right click the new [concept_gate_magic_researcher] and choose '$gate_promote_arcanist$' in the character interactions menu."
+ lesson_gate_new_arcanist_3_finish: "Hire a new [concept_gate_magic_researcher] to finish the tutorial."
