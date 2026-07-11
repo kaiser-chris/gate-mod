@@ -76,3 +76,148 @@ gate_eternal_monarch = {
         sickly
     }
 }
+
+character_trait_gate_mage = {
+    type = skill
+
+    texture = gfx/interface/icons/character_trait_icons/character_trait_gate_mage.dds
+
+    character_modifier = {
+        character_popularity_add = 15
+        character_prominence_add = 15
+    }
+
+    # Reminder: this would only come into effect if this character is or becomes an Interest Group Leader
+    interest_group_modifier = {
+        interest_group_pol_str_mult = 0.1
+    }
+
+    # Reminder: this would only come into effect if this character is or becomes a Ruler
+    country_modifier = {
+        country_gate_magical_innovation_add = 25
+        country_gate_magical_innovation_max_add = 25
+    }
+
+    possible = {
+        owner ?= {
+            is_gate_magic_country = yes
+        }
+        is_adult = yes
+    }
+
+    weight = {
+        value = 10
+
+        if = {
+            limit = {
+                owner ?= {
+                    has_technology_researched = gate_magic_science
+                }
+            }
+            multiply = 3
+        }
+        else_if = {
+            limit = {
+                owner ?= {
+                    has_technology_researched = gate_formalized_magic
+                }
+            }
+            multiply = 2
+        }
+
+        if = {
+            limit = {
+                interest_group ?= {
+                    OR = {
+                        is_interest_group_type = ig_intelligentsia
+                        is_interest_group_type = ig_gate_magic_users
+                    }
+                }
+            }
+            multiply = 1.5
+        }
+
+        if = {
+            limit = {
+                OR = {
+                    has_role = gate_active_arcanist
+                    has_role = gate_arcanist
+                }
+            }
+            multiply = 3
+        }
+    }
+}
+
+character_trait_gate_druid = {
+    type = skill
+
+    texture = gfx/interface/icons/character_trait_icons/character_trait_gate_druid.dds
+
+    character_modifier = {
+        character_popularity_add = 15
+        character_prominence_add = 15
+    }
+
+    # Reminder: this would only come into effect if this character is or becomes an Interest Group Leader
+    interest_group_modifier = {
+        interest_group_pol_str_mult = 0.1
+    }
+
+    # Reminder: this would only come into effect if this character is or becomes a Ruler
+    country_modifier = {
+        country_gate_magical_innovation_add = 25
+        country_gate_magical_innovation_max_add = 25
+    }
+
+    possible = {
+        owner ?= {
+            is_gate_magic_country = yes
+            has_technology_researched = gate_magic_farming
+        }
+        is_adult = yes
+    }
+
+    weight = {
+        value = 10
+
+        if = {
+            limit = {
+                owner ?= {
+                    has_technology_researched = gate_elven_forests
+                }
+            }
+            multiply = 3
+        }
+        else_if = {
+            limit = {
+                owner ?= {
+                    has_technology_researched = gate_living_irrigation
+                }
+            }
+            multiply = 2
+        }
+
+        if = {
+            limit = {
+                interest_group ?= {
+                    OR = {
+                        is_interest_group_type = ig_rural_folk
+                        is_interest_group_type = ig_gate_magic_users
+                    }
+                }
+            }
+            multiply = 1.5
+        }
+
+        if = {
+            limit = {
+                OR = {
+                    has_role = gate_active_arcanist
+                    has_role = gate_arcanist
+                }
+            }
+            multiply = 3
+        }
+    }
+}
