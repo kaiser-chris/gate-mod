@@ -1,6 +1,10 @@
 ﻿pm_gate_mage_mana_extraction = {
 	texture = "gfx/interface/icons/production_method_icons/gate_mage_extraction.dds"
 
+	disallowing_laws = {
+		law_gate_druidic_agrarianism
+	}
+
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
@@ -16,11 +20,37 @@
 	}
 }
 
+pm_gate_druid_mana_extraction = {
+	texture = "gfx/interface/icons/production_method_icons/gate_mage_extraction.dds"
+
+	unlocking_laws = {
+		law_gate_druidic_agrarianism
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_output_gate_mana_add = 35
+		}
+
+		level_scaled = {
+			# profit
+			building_employment_gate_druids_add = 1000
+			building_employment_laborers_add = 2000
+			building_employment_shopkeepers_add = 500
+		}
+	}
+}
+
 pm_gate_mage_ritual_extraction = {
 	texture = "gfx/interface/icons/production_method_icons/gate_ritual_extraction.dds"
 
 	unlocking_technologies = {
 		gate_ritual_magic
+	}
+
+	disallowing_laws = {
+		law_gate_druidic_agrarianism
 	}
 
 	building_modifiers = {
@@ -38,7 +68,33 @@ pm_gate_mage_ritual_extraction = {
 	}
 }
 
-pm_gate_simple_ley_line_tap = {
+pm_gate_druid_ritual_extraction = {
+	texture = "gfx/interface/icons/production_method_icons/gate_ritual_extraction.dds"
+
+	unlocking_technologies = {
+		gate_ritual_magic
+	}
+
+	unlocking_laws = {
+		law_gate_druidic_agrarianism
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_output_gate_mana_add = 85
+		}
+
+		level_scaled = {
+			# profit
+			building_employment_gate_druids_add = 1500
+			building_employment_laborers_add = 2000
+			building_employment_shopkeepers_add = 500
+		}
+	}
+}
+
+pm_gate_mage_simple_ley_line_tap = {
 	texture = "gfx/interface/icons/production_method_icons/gate_simple_ley_line_tap.dds"
 
 	building_modifiers = {
@@ -50,6 +106,22 @@ pm_gate_simple_ley_line_tap = {
 		level_scaled = {
 			# profit
 			building_employment_gate_mages_add = 1500
+		}
+	}
+}
+
+pm_gate_druid_simple_ley_line_tap = {
+	texture = "gfx/interface/icons/production_method_icons/gate_simple_ley_line_tap.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_output_gate_mana_add = 25
+		}
+
+		level_scaled = {
+			# profit
+			building_employment_gate_druids_add = 1500
 		}
 	}
 }

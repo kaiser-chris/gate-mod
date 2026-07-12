@@ -1,0 +1,98 @@
+﻿law_gate_druidic_agrarianism = {
+	group = lawgroup_economic_system
+	parent = law_agrarianism
+
+	icon = gfx/interface/icons/law_icons/gate_druidic_agrarianism.dds
+
+	progressiveness = 0
+
+	disallowing_laws = {
+		law_anarchy
+		law_factory_councils
+	}
+
+	unlocking_technologies = {
+		romanticism
+	}
+
+	on_activate = {
+	}
+
+	is_visible = {
+		is_gate_magic_country = yes
+	}
+
+	modifier = {
+		state_aristocrats_investment_pool_efficiency_mult = 0.5
+		state_clergymen_investment_pool_efficiency_mult = 0.5
+		state_farmers_investment_pool_efficiency_mult = 0.3
+		state_gate_druids_investment_pool_efficiency_mult = 0.5
+		state_capitalists_investment_pool_efficiency_mult = -0.25
+		state_gate_mages_investment_pool_efficiency_mult = -0.25
+		country_private_construction_allocation_mult = 0.5
+		building_nationalization_investment_return_add = 0.5
+		country_government_dividends_reinvestment_add = 0.5
+		country_government_dividends_efficiency_add = 0.3
+		country_free_charters_add = 1
+		country_disable_nationalization_without_compensation_bool = yes
+		country_gate_druids_pol_str_mult = 0.1
+	}
+
+	# Magic users are power full and
+	# there are more druids than mages
+	ai_will_do = {
+		ig:ig_gate_magic_users ?= {
+			is_powerful = yes
+		}
+		pop_type_percent_country:gate_druids > pop_type_percent_country:gate_mages
+	}
+
+	ai_enact_weight_modifier = { #Petitions
+		value = 0
+
+		if = {
+			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
+			add = 750
+		}
+
+		# Once the AI gets to a certain society tech level they should try to ditch Traditionalism for either Agrarianism or Interventionism
+		if = {
+			limit = {
+				OR = {
+					has_technology_researched = civilizing_mission
+					has_technology_researched = human_rights
+					has_technology_researched = pan-nationalism
+				}
+				has_law_or_variant = law_type:law_traditionalism
+			}
+
+			add = 1000
+		}
+
+		if = {
+			limit = {
+				has_journal_entry = je_great_reforms_serfdom
+			}
+			add = 1000 # Less preferred than either laissez-faire or interventionism
+		}
+
+		# AI should really try to get out of Traditionalism under the right circumstances
+		if = {
+			limit = {
+				has_law_or_variant = law_type:law_traditionalism
+				NOT = { has_strategy = ai_strategy_reactionary_agenda }
+				OR = {
+					NOT = { has_strategy = ai_strategy_conservative_agenda }
+					any_political_movement = {
+						law_enactment_stance = {
+							law = law_type:law_agrarianism
+							value > neutral
+						}
+						political_movement_support >= 0.10
+					}
+				}
+			}
+			add = 1000
+		}
+	}
+}
