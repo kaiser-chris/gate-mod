@@ -233,10 +233,10 @@ gate_hp_population_percentages_cache_update = {
 		}
 		# Save the percents
 		scope:pledge_country = {
-			set_variable = {
-				name = gate_hp_total_population	# Total Pop
-				value = var:gate_hp_pop_total
-			}
+			# set_variable = {
+			# 	name = gate_hp_total_population	# Total Pop
+			# 	value = var:gate_hp_pop_total
+			# }
 			set_variable = {
 				name = gate_hp_citizenship_percent	# All Citizens
 				value = {
