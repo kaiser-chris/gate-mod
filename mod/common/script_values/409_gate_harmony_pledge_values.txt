@@ -123,6 +123,10 @@ gate_hp_society_dist_of_power = {
 		add = 20
 	}
 	else_if = {
+		limit = { has_law_or_variant = law_type:law_wealth_voting }
+		add = 10
+	}
+	else_if = {
 		limit = { has_law_or_variant = law_type:law_census_voting }
 		add = 0
 	}
@@ -866,8 +870,12 @@ gate_hp_economy_dist_of_power = {
 		add = 40
 	}
 	else_if = {
+		limit = { has_law_or_variant = law_type:law_wealth_voting }
+		add = 35
+	}
+	else_if = {
 		limit = { has_law_or_variant = law_type:law_landed_voting }
-		add = 30
+		add = 25
 	}
 	else_if = {
 		limit = { has_law_or_variant = law_type:law_technocracy  }
@@ -1400,6 +1408,570 @@ gate_harmony_pledge_economy_trend_scaling = {	# works against movement towards d
 				add = {
 					add = 60
 					subtract = "je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_economy)"
+					divide = 200
+				}
+			}
+			multiply = var:gate_hp_non_gnomish_percent
+			desc = GATE_HP_NATURAL_CHANGE_RESISTANCE
+			format = GATE_HP_SCRIPT_VALUE_FORMAT	# (optional)
+		}
+	}
+	multiply = {
+		value = 1
+		add = var:gate_hp_pledge_percent
+		desc = GATE_HP_PLEDGE_PERCENT_SCALING
+		format = GATE_HP_SCRIPT_VALUE_FORMAT	# (optional)
+	}
+}
+
+#### LEGISLATIVE ####
+gate_harmony_pledge_legislative_trend = {	# +ve = anaemic (chaos), -ve = despotic (order)
+	add = {
+		value = gate_harmony_pledge_legislative_trend_from_laws
+		desc = GATE_HP_LEG_TREND_FROM_LAWS
+		format = GATE_HP_TOP_VALUE_FORMAT
+	}
+	
+	add = {
+		value = gate_harmony_pledge_legislative_trend_from_authority
+		desc = GATE_HP_LEG_TREND_FROM_DEMOGRAPHICS
+		format = GATE_HP_TOP_VALUE_FORMAT
+	}
+	
+	add = {
+		value = gate_harmony_pledge_legislative_trend_from_influence
+		desc = GATE_HP_LEG_TREND_FROM_MODIFIERS
+		format = GATE_HP_TOP_VALUE_FORMAT
+	}
+	
+	add = {
+		value = gate_harmony_pledge_legislative_trend_from_bureaucracy
+		desc = GATE_HP_LEG_TREND_FROM_BUREACRACY
+		format = GATE_HP_TOP_VALUE_FORMAT
+	}
+	
+	add = {
+		value = gate_harmony_pledge_legislative_trend_from_modifiers
+		desc = GATE_HP_LEG_TREND_FROM_MODIFIERS
+		format = GATE_HP_TOP_VALUE_FORMAT
+	}
+	
+	# ^ Base part above | scaling part below
+	
+	add = { 
+		value = gate_harmony_pledge_legislative_trend_scaling
+		desc = GATE_HP_LEG_STATUS_QUO_HARMONY
+		format = GATE_HP_TOP_VALUE_FORMAT
+	}
+}
+
+gate_harmony_pledge_legislative_trend_base = { # used as an input to make the scaling part work
+	value = 0
+	add = gate_harmony_pledge_legislative_trend_from_laws
+	add = gate_harmony_pledge_legislative_trend_from_authority
+	add = gate_harmony_pledge_legislative_trend_from_influence
+	add = gate_harmony_pledge_legislative_trend_from_bureaucracy
+	add = gate_harmony_pledge_legislative_trend_from_modifiers
+}
+
+# LAWS were done +ve = despotic (order), -ve = anaemic (chaos) then flipped later, only some cleaned up
+gate_harmony_pledge_legislative_trend_from_laws = {
+	add = {
+		value = gate_hp_legislative_dist_of_power
+		desc = GATE_HP_LEG_DIST_OF_POWER
+		format = GATE_HP_SCRIPT_VALUE_FORMAT	# (optional)
+	}
+	add = {
+		value = gate_hp_legislative_bureaucracy
+		desc = GATE_HP_LEG_BUREAUCRACY
+		format = GATE_HP_SCRIPT_VALUE_FORMAT	# (optional)
+	}
+	add = {
+		value = gate_hp_legislative_internal_security
+		desc = GATE_HP_LEG_INTERNAL_SECURITY
+		format = GATE_HP_SCRIPT_VALUE_FORMAT	# (optional)
+	}
+	add = {
+		value = gate_hp_legislative_economic_system
+		desc = GATE_HP_LEG_ECONOMIC_SYSTEM
+		format = GATE_HP_SCRIPT_VALUE_FORMAT	# (optional)
+	}
+	add = {
+		value = gate_hp_legislative_policing
+		desc = GATE_HP_LEG_POLICING
+		format = GATE_HP_SCRIPT_VALUE_FORMAT	# (optional)
+	}
+	add = {
+		value = gate_hp_legislative_labor_associations
+		desc = GATE_HP_LEG_LABOR_ASSOCIATIONS
+		format = GATE_HP_SCRIPT_VALUE_FORMAT	# (optional)
+	}
+	add = {
+		value = gate_hp_legislative_gate_magic_users
+		desc = GATE_HP_LEG_MAGIC_USERS
+		format = GATE_HP_SCRIPT_VALUE_FORMAT	# (optional)
+	}
+}
+
+gate_hp_legislative_dist_of_power = {
+	if = {
+		limit = { # Absolute Power / No Power
+			OR = { 
+				has_law_or_variant = law_type:law_autocracy
+				has_law_or_variant = law_type:law_single_party_state
+			}
+		}
+		add = 50
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_oligarchy }
+		add = 40
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_technocracy  }
+		add = 20
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_census_voting }
+		add = 0
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_universal_suffrage }
+		add = -10
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_wealth_voting }
+		add = -20
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_landed_voting }
+		add = -30
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_elder_council }
+		add = -40
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_anarchy }
+		add = -50
+	}
+	else = {		# For random modded laws
+		add = gate_hp_legislative_dist_of_power_modded
+	}
+	divide = -100
+}
+gate_hp_legislative_dist_of_power_modded = 0	# Replace this value for modded laws compatibility
+
+gate_hp_legislative_bureaucracy = {
+	if = {
+		limit = { has_law_or_variant = law_type:law_appointed_bureaucrats }
+		add = 20
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_hereditary_bureaucrats }
+		add = 10
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_elected_bureaucrats }
+		add = -10
+	}
+	else = {		# For random modded laws
+		add = gate_hp_legislative_bureaucracy_modded
+	}
+	divide = -100
+}
+gate_hp_legislative_bureaucracy_modded = 0			# Replace this value for modded laws compatibility
+
+gate_hp_legislative_internal_security = {
+	if = {
+		limit = { has_law_or_variant = law_type:law_secret_police }
+		add = {
+			value = 0.15		# Weak Secret Police make the state vulnerable
+			desc = GATE_HP_BASE_LAW
+			format = GATE_HP_SCRIPT_VALUE_FORMAT
+		}
+		add = {
+			add = -0.10	# But, the stronger this institution is, the tighter control gets...
+			multiply = {
+				value = institution:institution_home_affairs.investment
+			}
+			desc = GATE_HP_INSTITUTION_LEVEL
+			format = GATE_HP_SCRIPT_VALUE_FORMAT
+		}
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_national_guard }
+		add = {
+			value = -0.10		# Minimal National Guard can be deployed for state control
+			desc = GATE_HP_BASE_LAW
+			format = GATE_HP_SCRIPT_VALUE_FORMAT
+		}
+		add = {			# Using the investment level as a proxy for level of societal involvement:
+			add = 0.05	# Extensive NG empowers resistance to State meddling.
+			multiply = {
+				value = institution:institution_home_affairs.investment
+			}
+			desc = GATE_HP_INSTITUTION_LEVEL
+			format = GATE_HP_SCRIPT_VALUE_FORMAT
+		}
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_guaranteed_liberties }
+		add = {
+			value = 0.05
+			desc = GATE_HP_BASE_LAW
+			format = GATE_HP_SCRIPT_VALUE_FORMAT
+		}
+		multiply = {
+			value = institution:institution_home_affairs.investment
+			desc = GATE_HP_INSTITUTION_LEVEL
+			format = GATE_HP_SCRIPT_VALUE_FORMAT
+		}
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_no_home_affairs }
+		add = 0.5
+	}
+	else = {	# For Random Modded laws
+		add = {
+			value = gate_hp_legislative_internal_security_modded
+			owner.institution:institution_home_affairs ?= {	# for modded variants with an institution
+				desc = GATE_HP_BASE_LAW
+				format = GATE_HP_SCRIPT_VALUE_FORMAT
+			}
+		}
+		owner.institution:institution_home_affairs ?= {			
+			add = {
+				value = investment
+				multiply = gate_hp_legislative_internal_security_investment_modded
+				desc = GATE_HP_INSTITUTION_LEVEL
+				format = GATE_HP_SCRIPT_VALUE_FORMAT
+			}
+		}
+	}
+}
+gate_hp_legislative_internal_security_modded = 0	# Replace this value for modded laws compatibility
+gate_hp_legislative_internal_security_investment_modded = -0.05
+
+gate_hp_legislative_economic_system = {
+	if = {
+		limit = { has_law_or_variant = law_type:law_extraction_economy }
+		add = 50
+	}
+	else_if = {
+		limit = {
+			OR = { 
+				has_law_or_variant = law_type:law_industry_banned
+				has_law_or_variant = law_type:law_command_economy
+			}
+		}
+		add = 30
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_interventionism }
+		add = 10
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_traditionalism }
+		add = 0
+	}
+	else_if = {
+		limit = {
+			OR = { 
+				has_law_or_variant = law_type:law_agrarianism
+				has_law_or_variant = law_type:law_laissez_faire
+			}
+		}
+		add = -10
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_cooperative_ownership }
+		add = -30
+	}
+	else = {		# For random modded laws
+		add = gate_hp_legislative_economic_system_modded
+	}
+	divide = -100
+}
+gate_hp_legislative_economic_system_modded = 0		# Replace this value for modded laws compatibility
+
+gate_hp_legislative_policing = {
+	if = {
+		limit = {	# Gotta Defend your own Investments
+			has_law_or_variant = law_type:law_no_police
+		}
+		add = 0.5
+	}
+	else_if = {
+		limit = {
+			has_law_or_variant = law_type:law_local_police
+		}
+		add = {				# Local police are difficult to work through
+			value = 0.05	# limit = 0.25
+			desc = GATE_HP_BASE_LAW
+			format = GATE_HP_SCRIPT_VALUE_FORMAT
+		}
+	}
+	else_if = {
+		limit = {
+			has_law_or_variant = law_type:law_dedicated_police
+		}
+		add = {				# An excessive police state becomes a convenient tool for despotism
+			value = -0.04	# limit = -0.20
+			desc = GATE_HP_BASE_LAW
+			format = GATE_HP_SCRIPT_VALUE_FORMAT
+		}
+	}
+	else_if = {
+		limit = {
+			has_law_or_variant = law_type:law_militarized_police
+		}
+		add = {
+			value = -0.10	# limit = -0.50
+			desc = GATE_HP_BASE_LAW
+			format = GATE_HP_SCRIPT_VALUE_FORMAT
+		}
+	}
+	else = {	# For Random Modded laws
+		add = {
+			value = gate_hp_economy_policing_modded
+			owner.institution:institution_police ?= {	# for modded variants with an institution
+				desc = GATE_HP_BASE_LAW
+				format = GATE_HP_SCRIPT_VALUE_FORMAT
+			}
+		}
+	}
+	owner.institution:institution_police ?= {
+		multiply = {
+			value = investment	# institution:institution_police.investment # already in institution scope
+			desc = GATE_HP_INSTITUTION_LEVEL
+			format = GATE_HP_SCRIPT_VALUE_FORMAT
+		}
+	}
+}
+gate_hp_legislative_policing_modded = 0.02	# limit = 0.10		# Replace this value for modded laws compatibility
+
+gate_hp_legislative_labor_associations = {	# Scales on degree of organisation (even corporatised unions can lobby for their interests)
+	if = {
+		limit = { has_law_or_variant = law_type:law_combination_acts }
+		add = 20
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_anti_strike_laws }
+		add = 10
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_corporatized_unions }
+		add = 0
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_guild_system }
+		add = -10
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_right_to_associate }
+		add = -20
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_factory_councils }
+		add = -40
+	}
+	else = {	# For Random Modded laws
+		add = gate_hp_legislative_labor_associations_modded
+	}
+	divide = -100
+}
+gate_hp_legislative_labor_associations_modded = 10
+
+gate_hp_legislative_gate_magic_users = {
+	if = {
+		limit = { has_law_or_variant = law_type:law_gate_free_magic_users }
+		add = {
+			value = 0.3	# institution doesn't exist
+			owner.institution:institution_gate_magical_focus ?= {
+				value = 0.06	# in case someone adds a variant with an institution
+				desc = GATE_HP_BASE_LAW
+				format = GATE_HP_SCRIPT_VALUE_FORMAT
+			}
+		}
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_gate_restricted_magic_users }
+		add = {
+			value = 0.08	# limit = 0.4		# State capacity is harmed by actively ostracising people born powerful.
+			desc = GATE_HP_BASE_LAW
+			format = GATE_HP_SCRIPT_VALUE_FORMAT
+		}
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_gate_druidic_circles }
+		add = {
+			value = 0.04	# limit = 0.2
+			desc = GATE_HP_BASE_LAW
+			format = GATE_HP_SCRIPT_VALUE_FORMAT
+		}
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_gate_mage_guilds }
+		add = {
+			value = 0.02	# limit = 0.1
+			desc = GATE_HP_BASE_LAW
+			format = GATE_HP_SCRIPT_VALUE_FORMAT
+		}
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_gate_arcane_bureau }
+		add = {
+			value = -0.02	# limit = -0.1
+			desc = GATE_HP_BASE_LAW
+			format = GATE_HP_SCRIPT_VALUE_FORMAT
+		}
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_gate_noble_magic_users }
+		add = {
+			value = -0.04	# limit = -0.2
+			desc = GATE_HP_BASE_LAW
+			format = GATE_HP_SCRIPT_VALUE_FORMAT
+		}
+	}
+	else = {	# For Random Modded laws
+		add = {
+			value = gate_hp_economy_gate_magic_users_modded
+			institution:institution_gate_magical_focus ?= {	# for modded variants with an institution
+				desc = GATE_HP_BASE_LAW
+				format = GATE_HP_SCRIPT_VALUE_FORMAT
+			}
+		}
+	}
+	owner.institution:institution_gate_magical_focus ?= {
+		multiply = {
+			value = investment	# institution:institution_gate_magical_focus # already in institution scope
+			desc = GATE_HP_INSTITUTION_LEVEL
+			format = GATE_HP_SCRIPT_VALUE_FORMAT
+		}
+	}
+}
+gate_hp_legislative_gate_magic_users_modded = 0		# Replace this value for modded laws compatibility
+
+gate_harmony_pledge_legislative_trend_from_authority = {	# -ve = despotic (order)
+	value = {
+		add = authority
+		divide = 100
+		min = 0
+	}
+	multiply = 0.5
+	multiply = relative_authority
+	multiply = -1	# excess authority -> towards order
+}
+
+gate_harmony_pledge_legislative_trend_from_influence = {	# +ve = anaemic (chaos)
+	value = {
+		add = influence
+		divide = 300
+		min = 0
+	}
+	multiply = 0.5
+	multiply = relative_influence
+}					# excess influence -> towards chaos (unused influence atrophies the state apparatus)
+
+# Math with bureaucracy, relative_bureaucracy, & produced_bureaucracy
+gate_harmony_pledge_legislative_trend_from_bureaucracy = {
+	value = 0 	# Have this push away from the centre with negative bureaucracy ( max 1 towards aneamic, or 0.5 towards despotic)
+				# and towards the centre with up to 10% excess bureaucracy		( max 0.2 towards centre )
+				# halve this effect for elected and hereditary
+}
+
+# Modifiers
+gate_harmony_pledge_legislative_trend_from_modifiers = {	# works away/towards center point
+	# Center drift modifiers
+	if = {
+		limit = {
+			scope:journal_entry = {
+				scripted_bar_progress = {
+					name = pb_gate_harmony_pledge_legislative
+					value >= 50
+				}
+			}
+			modifier:country_gate_harmony_pledge_legislative_drift_center != 0
+		}
+		subtract = {
+			value = modifier:country_gate_harmony_pledge_legislative_drift_center
+			desc = pb_gate_harmony_pledge_legislative_center_drift_modifier
+		}
+	}
+	else_if = {
+		limit = {
+			scope:journal_entry = {
+				scripted_bar_progress = {
+					name = pb_gate_harmony_pledge_legislative
+					value < 50
+				}
+			}
+			modifier:country_gate_harmony_pledge_legislative_drift_center != 0
+		}
+		add = {
+			value = modifier:country_gate_harmony_pledge_legislative_drift_center
+			desc = pb_gate_harmony_pledge_legislative_center_drift_modifier
+		}
+	}
+	# Modifiers in only 1 direction (un-comment this + LOC entries if we decide we need them).
+#	add = {
+#		value = modifier:country_gate_harmony_pledge_legislative_drift_negative
+#		desc = "GATE_HP_LEG_TREND_FROM_MODIFIERS_NEGATIVE"
+#	}
+#	add = {
+#		value = modifier:country_gate_harmony_pledge_legislative_drift_positive
+#		desc = "GATE_HP_LEG_TREND_FROM_MODIFIERS_POSITIVE"
+#	}
+}
+
+gate_harmony_pledge_legislative_trend_scaling = {	# works against movement towards disharmony
+	if = {
+		limit = {
+			gate_harmony_pledge_legislative_trend_base < 0
+			"je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_legislative)" < 50
+		}
+		add = {
+			add = gate_harmony_pledge_legislative_trend_base
+			multiply = {
+				add = "je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_legislative)"
+				divide = 50
+			}
+			subtract = gate_harmony_pledge_legislative_trend_base
+			# Base SQ resistance unrelated to speed of change.
+			if = {
+				limit = { "je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_legislative)" < 40 }
+				add = {
+					add = 40
+					subtract = "je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_legislative)"
+					divide = 100
+				}
+			}
+			multiply = var:gate_hp_non_gnomish_percent
+			desc = GATE_HP_NATURAL_CHANGE_RESISTANCE
+			format = GATE_HP_SCRIPT_VALUE_FORMAT	# (optional)
+		}
+	}
+	else_if = {
+		limit = {
+			gate_harmony_pledge_legislative_trend_base > { value = 0 }
+			"je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_legislative)" > 50
+		}
+		add = {
+			add = gate_harmony_pledge_legislative_trend_base
+			multiply = {
+				add = 100
+				subtract = "je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_legislative)"
+				divide = 50
+			}
+			subtract = gate_harmony_pledge_legislative_trend_base
+			# Base SQ resistance unrelated to speed of change.
+			if = {
+				limit = { "je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_legislative)" > 50 }
+				add = {
+					add = 60
+					subtract = "je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_legislative)"
 					divide = 200
 				}
 			}
