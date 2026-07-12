@@ -15,6 +15,9 @@
 		add_technology_researched = law_enforcement
 		add_technology_researched = cotton_gin
 		add_technology_researched = lathe
+		add_technology_researched = empiricism
+		add_technology_researched = romanticism
+		add_technology_researched = dialectics
 
 		# Laws
 		activate_law = law_type:law_no_colonial_affairs # Overwritten later
@@ -27,9 +30,10 @@
 		activate_law = law_type:law_gate_dedicated_monster_hunters
 		activate_law = law_type:law_appointed_bureaucrats
 		activate_law = law_type:law_gate_mage_guilds
+		activate_law = law_type:law_gate_druidic_agrarianism
 
 		set_ruling_interest_groups = {
-			ig_intelligentsia
+			ig_gate_magic_users
 			ig_rural_folk
 		}
 

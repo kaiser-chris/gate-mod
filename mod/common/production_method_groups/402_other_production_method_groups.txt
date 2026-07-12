@@ -5,6 +5,9 @@
 	production_methods = {
 		pm_gate_mage_mana_extraction
 		pm_gate_mage_ritual_extraction
+		pm_gate_druid_mana_extraction
+		pm_gate_druid_ritual_extraction
+
 	}
 }
 
@@ -13,7 +16,8 @@ pmg_gate_mana_well = {
 	ai_selection = most_productive
 
 	production_methods = {
-		pm_gate_simple_ley_line_tap
+		pm_gate_mage_simple_ley_line_tap
+		pm_gate_druid_simple_ley_line_tap
 	}
 }
 

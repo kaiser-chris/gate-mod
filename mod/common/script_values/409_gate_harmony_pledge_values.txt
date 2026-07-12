@@ -17,7 +17,7 @@ gate_harmony_pledge_society_trend = {	# +ve = antinomian (chaos), -ve = stratifi
 		desc = GATE_HP_SOC_TREND_FROM_OTHER_SPHERES
 		format = GATE_HP_TOP_VALUE_FORMAT
 	}
-	
+
 	add = {
 		value = gate_harmony_pledge_society_trend_from_modifiers
 		desc = GATE_HP_SOC_TREND_FROM_MODIFIERS
@@ -777,7 +777,7 @@ gate_harmony_pledge_economy_trend = {	# +ve = febrile (chaos), -ve = cartelised 
 		desc = GATE_HP_ECO_TREND_FROM_OTHER_SPHERES
 		format = GATE_HP_TOP_VALUE_FORMAT
 	}
-	
+
 	add = {
 		value = gate_harmony_pledge_economy_trend_from_modifiers
 		desc = GATE_HP_ECO_TREND_FROM_MODIFIERS
@@ -908,15 +908,17 @@ gate_hp_economy_economic_system = {
 	}
 	else_if = {
 		limit = {
-			OR = { 
-				has_law_or_variant = law_type:law_agrarianism
-				has_law_or_variant = law_type:law_command_economy
-			}
+			has_law_or_variant = law_type:law_command_economy
 		}
 		add = 30
 	}
 	else_if = {
-		limit = { has_law_or_variant = law_type:law_interventionism }
+		limit = {
+			OR = {
+				has_law_or_variant = law_type:law_interventionism
+				has_law_or_variant = law_type:law_agrarianism
+			}
+		}
 		add = -10
 	}
 	else_if = {
