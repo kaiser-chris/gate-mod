@@ -1,0 +1,85 @@
+﻿party_gate_druidic = {
+	color = rgb { 46 99 43 }
+	name = {
+		first_valid = {
+			triggered_desc = {
+				desc = party_gate_harmony_druids
+				trigger = {
+					country_has_state_religion = rel:gate_harmony_pledge
+				}
+			}
+			triggered_desc = {
+				desc = party_gate_druidic
+				trigger = {
+					always = yes
+				}
+			}
+		}
+	}
+	icon = {
+		default = gfx/interface/icons/political_parties/party_gate_druidic.dds
+	}
+
+	# THIS IS RUN ONLY ONCE AT GAME START
+	valid_for_country = {
+		always = yes
+	}
+	available_for_interest_group = {
+		owner = {
+			country_has_voting_franchise = yes
+			is_gate_magic_country = yes
+			OR = {
+				py:agrarian_party ?= {
+					any_member = {}
+				}
+				ig:ig_rural_folk ?= {
+					ig_counts_as_marginal = no
+				}
+				ig:ig_gate_magic_users ?= {
+					ig_counts_as_marginal = no
+				}
+			}
+			# only available when there are more druids than mages
+			gate_druids_population > gate_mages_population
+		}
+	}
+
+	# Root - IG considering joining
+	# scope:number - the number of IGs that would join this party before the root IG
+	join_weight = {
+		value = {
+			value = -5
+			desc = "base_value"
+		}
+		if = { # druid lead magic users
+			limit = {
+				is_interest_group_type = ig_gate_magic_users
+			}
+			add = {
+				desc = "from_gate_druids"
+				add = 30
+			}
+		}
+		if = { # rural folk
+			limit = {
+				is_interest_group_type = ig_rural_folk
+			}
+			add = {
+				value = 30
+				desc = "from_archetype_party"
+			}
+		}
+		if = { # from harmony pledge
+			limit = {
+				is_interest_group_type = ig_devout
+				owner = {
+					country_has_state_religion = rel:gate_harmony_pledge
+				}
+			}
+			add = {
+				desc = from_gate_harmony_pledge
+				value = 30
+			}
+		}
+	}
+}

@@ -1,0 +1,11 @@
+﻿l_english:
+# party_gate_druidic
+ party_gate_druidic: "Druidic Party"
+ party_gate_harmony_druids: "Druidic Harmony Party"
+
+# Factors
+ from_gate_harmony_pledge: "[GetReligion('gate_harmony_pledge').GetNameNoIcon]"
+ from_gate_druids: "[GetPopType('gate_druids').GetName]"
+ from_gate_mages: "[GetPopType('gate_mages').GetName]"
+ from_gate_no_magic_users_in_party: "Lack of $ig_variant_magic_users$ Backing"
+ from_gate_powerful_druids: "Powerful Druids"

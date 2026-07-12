@@ -17,12 +17,6 @@ gate_harmony_pledge_society_trend = {	# +ve = antinomian (chaos), -ve = stratifi
 		desc = GATE_HP_SOC_TREND_FROM_OTHER_SPHERES
 		format = GATE_HP_TOP_VALUE_FORMAT
 	}
-
-	add = {
-		value = gate_harmony_pledge_society_trend_from_modifiers
-		desc = GATE_HP_SOC_TREND_FROM_MODIFIERS
-		format = GATE_HP_TOP_VALUE_FORMAT
-	}
 	
 	# ^ Base part above | scaling part below
 	
@@ -38,7 +32,6 @@ gate_harmony_pledge_society_trend_base = { # used as an input to make the scalin
 	add = gate_harmony_pledge_society_trend_from_laws
 	add = gate_harmony_pledge_society_trend_from_demographics
 	add = gate_harmony_pledge_society_trend_from_other_spheres
-	add = gate_harmony_pledge_society_trend_from_modifiers
 }
 
 # LAWS were done +ve = stratified (order), -ve = antinomian (chaos) then flipped later, only some cleaned up
@@ -781,12 +774,6 @@ gate_harmony_pledge_economy_trend = {	# +ve = febrile (chaos), -ve = cartelised 
 		desc = GATE_HP_ECO_TREND_FROM_OTHER_SPHERES
 		format = GATE_HP_TOP_VALUE_FORMAT
 	}
-
-	add = {
-		value = gate_harmony_pledge_economy_trend_from_modifiers
-		desc = GATE_HP_ECO_TREND_FROM_MODIFIERS
-		format = GATE_HP_TOP_VALUE_FORMAT
-	}
 	
 	# ^ Base part above | scaling part below
 	
@@ -803,7 +790,6 @@ gate_harmony_pledge_economy_trend_base = { # used as an input to make the scalin
 	add = gate_harmony_pledge_economy_trend_from_citizenship
 	add = gate_harmony_pledge_economy_trend_from_taxation
 	add = gate_harmony_pledge_economy_trend_from_other_spheres
-	add = gate_harmony_pledge_economy_trend_from_modifiers
 }
 
 # LAWS were done +ve = cartelised (order), -ve = febrile (chaos) then flipped later

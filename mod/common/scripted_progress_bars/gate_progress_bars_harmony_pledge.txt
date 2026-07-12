@@ -9,6 +9,14 @@
 		add = gate_harmony_pledge_society_trend
 	}
 
+	yearly_progress = {
+		add = {
+			value = gate_harmony_pledge_society_trend_from_modifiers
+			desc = GATE_HP_SOC_TREND_FROM_MODIFIERS
+			format = GATE_HP_TOP_VALUE_FORMAT
+		}
+	}
+
 	start_value = 45 # derive from gate_harmony_pledge_society_trend_from_laws
 	min_value = 0
 	max_value = 100
@@ -23,6 +31,14 @@ pb_gate_harmony_pledge_economy = {
 
 	weekly_progress = {
 		add = gate_harmony_pledge_economy_trend
+	}
+
+	yearly_progress = {
+		add = {
+			value = gate_harmony_pledge_economy_trend_from_modifiers
+			desc = GATE_HP_ECO_TREND_FROM_MODIFIERS
+			format = GATE_HP_TOP_VALUE_FORMAT
+		}
 	}
 
  	start_value = 35

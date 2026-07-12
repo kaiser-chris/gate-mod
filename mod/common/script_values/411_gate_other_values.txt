@@ -1,0 +1,17 @@
+﻿gate_druids_population = {
+    every_scope_pop = {
+        limit = {
+            is_pop_type = gate_druids
+        }
+        add = total_size
+    }
+}
+
+gate_mages_population = {
+    every_scope_pop = {
+        limit = {
+            is_pop_type = gate_mages
+        }
+        add = total_size
+    }
+}
