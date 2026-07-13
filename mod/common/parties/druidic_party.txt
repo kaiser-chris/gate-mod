@@ -81,5 +81,29 @@
 				value = 30
 			}
 		}
+		else_if = { # allow a random marginal ig if devout are not part of the party
+			limit = {
+				scope:number > 1
+				scope:number < 3
+				owner = {
+					NOT = {
+						country_has_state_religion = rel:gate_harmony_pledge
+					}
+					OR = {
+						ig:ig_rural_folk ?= {
+							is_powerful = yes
+						}
+						ig:ig_gate_magic_users ?= {
+							is_powerful = yes
+						}
+					}
+				}
+				ig_counts_as_marginal = yes
+			}
+			add = {
+				desc = from_gate_powerful_druids
+				value = 10
+			}
+		}
 	}
 }
