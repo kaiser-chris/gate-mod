@@ -195,7 +195,7 @@ types gate_shared {
                     minimumsize = { -1 20 }
                     maximumsize = { -1 20 }
                     visible = "[LessThan_CFixedPoint(Character.MakeScope.Var('magic_experience').GetValue, Character.MakeScope.ScriptValue('gate_character_experienced_threshhold'))]"
-                    tooltip = gg_character_experience_novice_tooltip
+                    tooltip = gg_character_experience_basic_tooltip
 
                     blockoverride "values" {
                         value = "[FixedPointToFloat(Character.MakeScope.Var('magic_experience').GetValue)]"
@@ -205,7 +205,7 @@ types gate_shared {
                     blockoverride "on_top_of_the_progressbar" {
                         textbox = {
                             size = { 100% 20 }
-                            text = gg_character_experience_novice
+                            text = gg_character_experience_basic
                             align = center
                         }
                     }
@@ -238,7 +238,7 @@ types gate_shared {
                     minimumsize = { -1 20 }
                     maximumsize = { -1 20 }
                     visible = "[GreaterThanOrEqualTo_CFixedPoint(Character.MakeScope.Var('magic_experience').GetValue, Character.MakeScope.ScriptValue('gate_character_master_threshhold'))]"
-                    tooltip = gg_character_experience_master_tooltip
+                    tooltip = gg_character_experience_expert_tooltip
 
                     blockoverride "values" {
                         value = 100
@@ -248,7 +248,7 @@ types gate_shared {
                     blockoverride "on_top_of_the_progressbar" {
                         textbox = {
                             size = { 100% 20 }
-                            text = gg_character_experience_master
+                            text = gg_character_experience_expert
                             align = center
                         }
                     }

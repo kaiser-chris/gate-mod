@@ -54,6 +54,7 @@
 				gate_reset_research_institute_pm = yes
 			}
 		}
+		gate_set_arcanist_traits = yes
 	}
 }
 
@@ -92,11 +93,118 @@ gate_increase_character_experience = {
 	}
 }
 
-gate_add_researcher_experience = {
+gate_set_arcanist_traits = {
 	if = {
 		limit = {
-			has_variable = gate_magic_researcher
+			has_local_variable = added_experience
 		}
+		set_local_variable = {
+			name = future_experience
+			value = {
+				value = var:magic_experience
+				add = local_var:added_experience
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_trait = character_trait_gate_arcanist_basic
+				}
+				local_var:future_experience < gate_character_experienced_threshhold
+			}
+			custom_tooltip = effect_gate_set_arcanist_traits_basic
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_trait = character_trait_gate_arcanist_experienced
+				}
+				local_var:future_experience >= gate_character_experienced_threshhold
+				local_var:future_experience < gate_character_master_threshhold
+			}
+			custom_tooltip = effect_gate_set_arcanist_traits_experienced
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_trait = character_trait_gate_arcanist_expert
+				}
+				local_var:future_experience >= gate_character_master_threshhold
+			}
+			custom_tooltip = effect_gate_set_arcanist_traits_expert
+		}
+	}
+
+	hidden_effect = {
+		if = {
+			limit = {
+				NOT = {
+					has_trait = character_trait_gate_arcanist_basic
+				}
+				var:magic_experience < gate_character_experienced_threshhold
+			}
+			add_trait = character_trait_gate_arcanist_basic
+			if = {
+				limit = {
+					has_trait = character_trait_gate_arcanist_experienced
+				}
+				remove_trait = character_trait_gate_arcanist_experienced
+			}
+			if = {
+				limit = {
+					has_trait = character_trait_gate_arcanist_expert
+				}
+				remove_trait = character_trait_gate_arcanist_expert
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_trait = character_trait_gate_arcanist_experienced
+				}
+				var:magic_experience >= gate_character_experienced_threshhold
+				var:magic_experience < gate_character_master_threshhold
+			}
+			add_trait = character_trait_gate_arcanist_experienced
+			if = {
+				limit = {
+					has_trait = character_trait_gate_arcanist_basic
+				}
+				remove_trait = character_trait_gate_arcanist_basic
+			}
+			if = {
+				limit = {
+					has_trait = character_trait_gate_arcanist_expert
+				}
+				remove_trait = character_trait_gate_arcanist_expert
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_trait = character_trait_gate_arcanist_expert
+				}
+				var:magic_experience >= gate_character_master_threshhold
+			}
+			add_trait = character_trait_gate_arcanist_expert
+			if = {
+				limit = {
+					has_trait = character_trait_gate_arcanist_basic
+				}
+				remove_trait = character_trait_gate_arcanist_basic
+			}
+			if = {
+				limit = {
+					has_trait = character_trait_gate_arcanist_experienced
+				}
+				remove_trait = character_trait_gate_arcanist_experienced
+			}
+		}
+	}
+}
+
+gate_add_researcher_experience = {
+	var:gate_magic_researcher ?= {
 		set_local_variable = {
 			name = added_experience
 			value = {
@@ -109,11 +217,11 @@ gate_add_researcher_experience = {
 		}
 		custom_tooltip = {
 			text = effect_gate_magic_experience
-			var:gate_magic_researcher ?= {
-				gate_increase_character_experience = {
-					amount = local_var:added_experience
-				}
+
+			gate_increase_character_experience = {
+				amount = local_var:added_experience
 			}
 		}
+		gate_set_arcanist_traits = yes
 	}
 }

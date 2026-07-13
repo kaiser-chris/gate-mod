@@ -85,6 +85,10 @@
 			limit = {
 				scope:number > 1
 				scope:number < 3
+				NOT = {
+					is_interest_group_type = ig_rural_folk
+					is_interest_group_type = ig_gate_magic_users
+				}
 				owner = {
 					NOT = {
 						country_has_state_religion = rel:gate_harmony_pledge
