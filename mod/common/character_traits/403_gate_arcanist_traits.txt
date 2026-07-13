@@ -1,23 +1,91 @@
-﻿gate_arcanist_magic_sight = {
+﻿character_trait_gate_arcanist_basic = {
     type = skill
 
-    #TODO
-    texture = gfx/interface/icons/character_trait_icons/convoy_raider_commander.dds
+    texture = gfx/interface/icons/character_trait_icons/character_trait_gate_arcanist_basic.dds
 
-    command_modifier = {
+    character_modifier = {
+        character_popularity_add = 5
+        character_prominence_add = 5
+    }
+
+    weight = 0
+
+    value = 0
+}
+
+character_trait_gate_arcanist_experienced = {
+    type = skill
+
+    texture = gfx/interface/icons/character_trait_icons/character_trait_gate_arcanist_experienced.dds
+
+    character_modifier = {
+        character_popularity_add = 10
+        character_prominence_add = 10
+    }
+
+    weight = 0
+
+    value = 0
+}
+
+character_trait_gate_arcanist_expert = {
+    type = skill
+
+    texture = gfx/interface/icons/character_trait_icons/character_trait_gate_arcanist_expert.dds
+
+    character_modifier = {
+        character_popularity_add = 15
+        character_prominence_add = 15
+    }
+
+    weight = 0
+
+    value = 0
+}
+
+gate_arcanist_magic_sight = {
+    type = skill
+
+    texture = gfx/interface/icons/character_trait_icons/gate_arcanist_magic_sight.dds
+
+    character_modifier = {
         character_popularity_add = -15
         character_prominence_add = 10
     }
 
     possible = {
-        has_role = gate_arcanist
+        OR = {
+            has_role = gate_arcanist
+            has_role = gate_active_arcanist
+            owner = {
+                is_gate_magic_country = yes
+            }
+        }
     }
 
     weight = {
         value = 2
-        multiply = {
-            value = var:magic_experience
-            divide = 2
+
+        # More likely for experienced characters
+        if = {
+            limit = {
+                has_variable = magic_experience
+            }
+            multiply = {
+                value = var:magic_experience
+                divide = 2
+            }
+        }
+
+        # More likely for arcanists
+        if = {
+            limit = {
+                OR = {
+                    has_role = gate_arcanist
+                    has_role = gate_active_arcanist
+                }
+            }
+            add = 10
         }
     }
 
@@ -27,23 +95,46 @@
 gate_arcanist_magic_voice = {
     type = skill
 
-    #TODO
-    texture = gfx/interface/icons/character_trait_icons/convoy_raider_commander.dds
+    texture = gfx/interface/icons/character_trait_icons/gate_arcanist_magic_voice.dds
 
-    command_modifier = {
+    character_modifier = {
         character_popularity_add = 25
         character_prominence_add = 25
     }
 
     possible = {
-        has_role = gate_arcanist
+        OR = {
+            has_role = gate_arcanist
+            has_role = gate_active_arcanist
+            owner = {
+                is_gate_magic_country = yes
+            }
+        }
     }
 
     weight = {
         value = 2
-        multiply = {
-            value = var:magic_experience
-            divide = 2
+
+        # More likely for experienced characters
+        if = {
+            limit = {
+                has_variable = magic_experience
+            }
+            multiply = {
+                value = var:magic_experience
+                divide = 2
+            }
+        }
+
+        # More likely for arcanists
+        if = {
+            limit = {
+                OR = {
+                    has_role = gate_arcanist
+                    has_role = gate_active_arcanist
+                }
+            }
+            add = 10
         }
     }
 
@@ -53,17 +144,22 @@ gate_arcanist_magic_voice = {
 gate_arcanist_bound_name = {
     type = skill
 
-    #TODO
-    texture = gfx/interface/icons/character_trait_icons/convoy_raider_commander.dds
+    texture = gfx/interface/icons/character_trait_icons/gate_arcanist_bound_name.dds
 
-    command_modifier = {
+    character_modifier = {
         character_popularity_add = -25
         character_prominence_add = -25
         character_health_add = 0.3
     }
 
     possible = {
-        has_role = gate_arcanist
+        OR = {
+            has_role = gate_arcanist
+            has_role = gate_active_arcanist
+            owner = {
+                is_gate_magic_country = yes
+            }
+        }
         owner = {
             has_technology_researched = gate_ethereal_messaging
         }
@@ -71,9 +167,80 @@ gate_arcanist_bound_name = {
 
     weight = {
         value = 2
-        multiply = {
-            value = var:magic_experience
-            divide = 2
+
+        # More likely for experienced characters
+        if = {
+            limit = {
+                has_variable = magic_experience
+            }
+            multiply = {
+                value = var:magic_experience
+                divide = 2
+            }
+        }
+
+        # More likely for arcanists
+        if = {
+            limit = {
+                OR = {
+                    has_role = gate_arcanist
+                    has_role = gate_active_arcanist
+                }
+            }
+            add = 10
+        }
+    }
+
+    value = 2
+}
+
+gate_arcanist_split_mind = {
+    type = skill
+
+    texture = gfx/interface/icons/character_trait_icons/gate_arcanist_split_mind.dds
+
+    character_modifier = {
+        character_popularity_add = -10
+        character_prominence_add = 10
+        character_gate_experience_gain_mult = 0.2
+    }
+
+    possible = {
+        OR = {
+            has_role = gate_arcanist
+            has_role = gate_active_arcanist
+            owner = {
+                is_gate_magic_country = yes
+            }
+        }
+        owner = {
+            has_technology_researched = gate_mana_linked_education
+        }
+    }
+
+    weight = {
+        value = 2
+
+        # More likely for experienced characters
+        if = {
+            limit = {
+                has_variable = magic_experience
+            }
+            multiply = {
+                value = var:magic_experience
+                divide = 2
+            }
+        }
+
+        # More likely for arcanists
+        if = {
+            limit = {
+                OR = {
+                    has_role = gate_arcanist
+                    has_role = gate_active_arcanist
+                }
+            }
+            add = 10
         }
     }
 
