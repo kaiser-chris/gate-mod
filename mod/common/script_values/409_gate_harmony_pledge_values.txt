@@ -1420,27 +1420,22 @@ gate_harmony_pledge_legislative_trend = {	# +ve = anaemic (chaos), -ve = despoti
 	
 	add = {
 		value = gate_harmony_pledge_legislative_trend_from_authority
-		desc = GATE_HP_LEG_TREND_FROM_DEMOGRAPHICS
+		desc = GATE_HP_LEG_TREND_FROM_AUTHORITY
 		format = GATE_HP_TOP_VALUE_FORMAT
 	}
 	
 	add = {
 		value = gate_harmony_pledge_legislative_trend_from_influence
-		desc = GATE_HP_LEG_TREND_FROM_MODIFIERS
+		desc = GATE_HP_LEG_TREND_FROM_INFLUENCE
 		format = GATE_HP_TOP_VALUE_FORMAT
 	}
-	
-	add = {
-		value = gate_harmony_pledge_legislative_trend_from_bureaucracy
-		desc = GATE_HP_LEG_TREND_FROM_BUREACRACY
-		format = GATE_HP_TOP_VALUE_FORMAT
-	}
-	
-	add = {
-		value = gate_harmony_pledge_legislative_trend_from_modifiers
-		desc = GATE_HP_LEG_TREND_FROM_MODIFIERS
-		format = GATE_HP_TOP_VALUE_FORMAT
-	}
+
+	# Not done yet
+	# add = {
+	# 	value = gate_harmony_pledge_legislative_trend_from_bureaucracy
+	# 	desc = GATE_HP_LEG_TREND_FROM_BUREACRACY
+	# 	format = GATE_HP_TOP_VALUE_FORMAT
+	# }
 	
 	# ^ Base part above | scaling part below
 	
@@ -1686,7 +1681,7 @@ gate_hp_legislative_policing = {
 		limit = {	# Gotta Defend your own Investments
 			has_law_or_variant = law_type:law_no_police
 		}
-		add = 0.5
+		add = 0.3
 	}
 	else_if = {
 		limit = {
@@ -1784,7 +1779,7 @@ gate_hp_legislative_gate_magic_users = {
 	else_if = {
 		limit = { has_law_or_variant = law_type:law_gate_restricted_magic_users }
 		add = {
-			value = 0.08	# limit = 0.4		# State capacity is harmed by actively ostracising people born powerful.
+			value = -0.08	# limit = 0.4		# State capacity is harmed by actively ostracising people born powerful.
 			desc = GATE_HP_BASE_LAW
 			format = GATE_HP_SCRIPT_VALUE_FORMAT
 		}
@@ -1792,7 +1787,7 @@ gate_hp_legislative_gate_magic_users = {
 	else_if = {
 		limit = { has_law_or_variant = law_type:law_gate_druidic_circles }
 		add = {
-			value = 0.04	# limit = 0.2
+			value = 0.01	# limit = 0.05
 			desc = GATE_HP_BASE_LAW
 			format = GATE_HP_SCRIPT_VALUE_FORMAT
 		}
@@ -1800,7 +1795,7 @@ gate_hp_legislative_gate_magic_users = {
 	else_if = {
 		limit = { has_law_or_variant = law_type:law_gate_mage_guilds }
 		add = {
-			value = 0.02	# limit = 0.1
+			value = -0.01	# limit = 0.05
 			desc = GATE_HP_BASE_LAW
 			format = GATE_HP_SCRIPT_VALUE_FORMAT
 		}
@@ -1847,7 +1842,13 @@ gate_harmony_pledge_legislative_trend_from_authority = {	# -ve = despotic (order
 		min = 0
 	}
 	multiply = 0.5
-	multiply = relative_authority
+	if = {
+		limit = {
+			authority_usage > 0
+		}
+		multiply = relative_authority
+	}
+	round_to = 1.23
 	multiply = -1	# excess authority -> towards order
 }
 
@@ -1858,7 +1859,13 @@ gate_harmony_pledge_legislative_trend_from_influence = {	# +ve = anaemic (chaos)
 		min = 0
 	}
 	multiply = 0.5
-	multiply = relative_influence
+	if = {
+		limit = {
+			influence_usage > 0
+		}
+		multiply = relative_influence
+	}
+	round_to = 1.23
 }					# excess influence -> towards chaos (unused influence atrophies the state apparatus)
 
 # Math with bureaucracy, relative_bureaucracy, & produced_bureaucracy
