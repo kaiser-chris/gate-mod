@@ -10,10 +10,15 @@
 	}
 
 	yearly_progress = {
-		add = {
-			value = gate_harmony_pledge_society_trend_from_modifiers
-			desc = GATE_HP_SOC_TREND_FROM_MODIFIERS
-			format = GATE_HP_TOP_VALUE_FORMAT
+		if = {
+			limit = {
+				gate_harmony_pledge_society_trend_from_modifiers != 0
+			}
+			add = {
+				value = gate_harmony_pledge_society_trend_from_modifiers
+				desc = GATE_HP_SOC_TREND_FROM_MODIFIERS
+				format = GATE_HP_TOP_VALUE_FORMAT
+			}
 		}
 	}
 
@@ -34,10 +39,15 @@ pb_gate_harmony_pledge_economy = {
 	}
 
 	yearly_progress = {
-		add = {
-			value = gate_harmony_pledge_economy_trend_from_modifiers
-			desc = GATE_HP_ECO_TREND_FROM_MODIFIERS
-			format = GATE_HP_TOP_VALUE_FORMAT
+		if = {
+			limit = {
+				gate_harmony_pledge_economy_trend_from_modifiers != 0
+			}
+			add = {
+				value = gate_harmony_pledge_economy_trend_from_modifiers
+				desc = GATE_HP_ECO_TREND_FROM_MODIFIERS
+				format = GATE_HP_TOP_VALUE_FORMAT
+			}
 		}
 	}
 
@@ -53,35 +63,19 @@ pb_gate_harmony_pledge_legislative = {
 
 	double_sided_gold = yes
 
+	weekly_progress = {
+		add = gate_harmony_pledge_legislative_trend
+	}
+
 	yearly_progress = {
 		if = {
 			limit = {
-				scope:journal_entry = {
-					scripted_bar_progress = {
-						name = pb_gate_harmony_pledge_legislative
-						value >= 50
-					}
-				}
-				modifier:country_gate_harmony_pledge_legislative_drift_center != 0
-			}
-			subtract = {
-				value = modifier:country_gate_harmony_pledge_legislative_drift_center
-				desc = pb_gate_harmony_pledge_legislative_center_drift_modifier
-			}
-		}
-		else_if = {
-			limit = {
-				scope:journal_entry = {
-					scripted_bar_progress = {
-						name = pb_gate_harmony_pledge_legislative
-						value < 50
-					}
-				}
-				modifier:country_gate_harmony_pledge_legislative_drift_center != 0
+				gate_harmony_pledge_legislative_trend_from_modifiers != 0
 			}
 			add = {
-				value = modifier:country_gate_harmony_pledge_legislative_drift_center
-				desc = pb_gate_harmony_pledge_legislative_center_drift_modifier
+				value = gate_harmony_pledge_legislative_trend_from_modifiers
+				desc = GATE_HP_ECO_TREND_FROM_MODIFIERS
+				format = GATE_HP_TOP_VALUE_FORMAT
 			}
 		}
 	}

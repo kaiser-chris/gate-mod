@@ -7,3 +7,4 @@
 - bound circle by papillon from <a href="https://thenounproject.com/browse/icons/term/bound-circle/" target="_blank" title="bound circle Icons">Noun Project</a> (CC BY 3.0)
 - voice by Adrien Coquet from <a href="https://thenounproject.com/browse/icons/term/voice/" target="_blank" title="voice Icons">Noun Project</a> (CC BY 3.0)
 - Face fragmentation by Zky Icon from <a href="https://thenounproject.com/browse/icons/term/face-fragmentation/" target="_blank" title="Face fragmentation Icons">Noun Project</a> (CC BY 3.0)
+- Rose by Lewen Design from <a href="https://thenounproject.com/browse/icons/term/rose/" target="_blank" title="Rose Icons">Noun Project</a> (CC BY 3.0)
