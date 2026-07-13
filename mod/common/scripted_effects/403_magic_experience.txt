@@ -1,0 +1,119 @@
+﻿gate_calculate_researcher_experience = {
+	if = {
+		limit = {
+			NOT = {
+				has_variable = magic_experience
+			}
+		}
+		set_variable = {
+			name = magic_experience
+			value = {
+				integer_range = {
+					min = 5
+					max = 15
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			var:magic_experience < gate_character_experienced_maximum
+		}
+		set_local_variable = {
+			name = prev_exp
+			value = var:magic_experience
+		}
+		set_local_variable = {
+			name = exp_increase
+			value = {
+				integer_range = {
+					min = 2
+					max = 3
+				}
+			}
+		}
+		gate_increase_character_experience = {
+			amount = local_var:exp_increase
+		}
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						var:magic_experience >= gate_character_experienced_threshhold
+						local_var:prev_exp < gate_character_experienced_threshhold
+					}
+					AND = {
+						var:magic_experience >= gate_character_master_threshhold
+						local_var:prev_exp < gate_character_master_threshhold
+					}
+				}
+				has_role = gate_active_arcanist
+			}
+			owner = {
+				gate_reset_research_institute_pm = yes
+			}
+		}
+	}
+}
+
+gate_increase_character_experience = {
+	if = {
+		limit = {
+			has_variable = magic_experience
+		}
+		change_variable = {
+			name = magic_experience
+			add = {
+				value = $amount$
+				multiply = {
+					value = 1
+					add = modifier:character_gate_experience_gain_mult
+				}
+			}
+		}
+	}
+	else = {
+		set_variable = {
+			name = magic_experience
+			value = {
+				value = $amount$
+				multiply = {
+					value = 1
+					add = modifier:character_gate_experience_gain_mult
+				}
+			}
+		}
+	}
+	clamp_variable = {
+		name = magic_experience
+		min = gate_character_experienced_minimum
+		max = gate_character_experienced_maximum
+	}
+}
+
+gate_add_researcher_experience = {
+	if = {
+		limit = {
+			has_variable = gate_magic_researcher
+		}
+		set_local_variable = {
+			name = added_experience
+			value = {
+				value = $amount$
+				multiply = {
+					value = 1
+					add = modifier:character_gate_experience_gain_mult
+				}
+			}
+		}
+		custom_tooltip = {
+			text = effect_gate_magic_experience
+			var:gate_magic_researcher ?= {
+				gate_increase_character_experience = {
+					amount = local_var:added_experience
+				}
+			}
+		}
+	}
+}

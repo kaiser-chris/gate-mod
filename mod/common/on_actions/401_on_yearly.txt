@@ -3,7 +3,6 @@
         on_yearly_gate_mana_saturation_other_events
         on_yearly_gate_dragon_events
         on_yearly_gate_vampire_start
-        on_yearly_gate_magic_researcher_experience
     }
 }
 
@@ -51,9 +50,18 @@ on_yearly_gate_vampire_start = {
     }
 }
 
+on_yearly_pulse_character = {
+    on_actions = {
+        on_yearly_gate_magic_researcher_experience
+    }
+}
+
 on_yearly_gate_magic_researcher_experience = {
     trigger = {
-        has_variable = gate_magic_researcher
+        OR = {
+            has_role = gate_arcanist
+            has_role = gate_active_arcanist
+        }
     }
     effect = {
         gate_calculate_researcher_experience = yes
