@@ -1466,7 +1466,7 @@ gate_veiled_interior.115 = {
 		gate_veiled_interior_enactment_stall = {
 			months = 6
 		}
-		post_notification = gate_veiled_interior_diplomacy_stall
+		post_notification = message_gate_veiled_interior_diplomacy_stall
 	}
 }
 
@@ -1490,6 +1490,6 @@ gate_veiled_interior.116 = {
 				save_scope_as = journal_entry
 			}
 		}
-		post_notification = gate_veiled_interior_diplomacy_continue
+		post_notification = message_gate_veiled_interior_diplomacy_continue
 	}
 }

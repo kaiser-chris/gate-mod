@@ -64,6 +64,6 @@ gate_elect_arcane_council_high_mage = {
         value = scope:new_high_mage
     }
     every_scope_je_involved = {
-        post_notification = gate_new_high_mage
+        post_notification = message_gate_new_high_mage
     }
 }

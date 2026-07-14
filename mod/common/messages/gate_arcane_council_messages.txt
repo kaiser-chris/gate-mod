@@ -1,20 +1,26 @@
-﻿gate_new_high_mage = {
+﻿message_gate_new_high_mage = {
 	type = country
 	texture = gfx/interface/icons/io_icons/gate_arcane_council_leader.dds
+	group = "notification_group_gate_arcane_council"
 
 	notification_type = toast
+	color = neutral
 }
 
-gate_arcane_council_member_join = {
+message_gate_arcane_council_member_join = {
 	type = country
 	texture = gfx/interface/icons/event_icons/event_gate_magic_knowledge.dds
+	group = "notification_group_gate_arcane_council"
 
 	notification_type = feed
+	color = neutral
 }
 
-gate_arcane_council_member_leave = {
+message_gate_arcane_council_member_leave = {
 	type = country
 	texture = gfx/interface/icons/event_icons/event_gate_magic_knowledge.dds
+	group = "notification_group_gate_arcane_council"
 
 	notification_type = feed
+	color = neutral
 }

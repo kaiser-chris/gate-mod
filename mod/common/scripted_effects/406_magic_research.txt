@@ -219,6 +219,7 @@ gate_create_and_activate_magic_researcher = {
 	scope:magic_researcher = {
 		gate_activate_magic_researcher = yes
 	}
+	post_notification = message_gate_arcanist_hired
 }
 
 gate_activate_magic_researcher = {
@@ -263,7 +264,9 @@ gate_activate_magic_researcher = {
 			}
 		}
 
-		home_country = {
+		save_scope_as = magic_researcher
+		owner = {
+			post_notification = message_gate_arcanist_hired
 			if = {
 				limit = {
 					var:gate_magic_researcher ?= {
@@ -271,7 +274,10 @@ gate_activate_magic_researcher = {
 					}
 				}
 				var:gate_magic_researcher ?= {
-					retire_character = yes
+					retire_character = {
+						value = yes
+						hidden = yes
+					}
 				}
 			}
 			set_variable = {
