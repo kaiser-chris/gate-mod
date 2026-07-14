@@ -1,0 +1,37 @@
+﻿# Root = Character
+on_yearly_pulse_character = {
+    on_actions = {
+        on_yearly_gate_magic_researcher_experience
+    }
+}
+
+on_yearly_gate_magic_researcher_experience = {
+    trigger = {
+        OR = {
+            has_role = gate_arcanist
+            has_role = gate_active_arcanist
+        }
+    }
+    effect = {
+        gate_calculate_researcher_experience = yes
+    }
+}
+
+# Root = Character
+on_character_death = {
+    on_actions = {
+        on_gate_magic_researcher_death
+    }
+}
+
+on_gate_magic_researcher_death = {
+    trigger = {
+        has_role = gate_active_arcanist
+    }
+    effect = {
+        save_scope_as = magic_researcher
+        owner = {
+            post_notification = message_gate_arcanist_died
+        }
+    }
+}

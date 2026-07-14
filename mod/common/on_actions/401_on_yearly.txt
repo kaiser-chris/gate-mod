@@ -49,21 +49,3 @@ on_yearly_gate_vampire_start = {
         set_global_variable = gate_vampirism_started
     }
 }
-
-on_yearly_pulse_character = {
-    on_actions = {
-        on_yearly_gate_magic_researcher_experience
-    }
-}
-
-on_yearly_gate_magic_researcher_experience = {
-    trigger = {
-        OR = {
-            has_role = gate_arcanist
-            has_role = gate_active_arcanist
-        }
-    }
-    effect = {
-        gate_calculate_researcher_experience = yes
-    }
-}
