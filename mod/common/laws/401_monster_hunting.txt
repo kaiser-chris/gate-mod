@@ -38,16 +38,7 @@ law_gate_private_monster_hunters = {
     # or after the first big monster attack happened
     # and a player had their monster conclave
     is_visible = {
-        OR = {
-            is_gate_planet_country = yes
-            AND = {
-                has_global_variable = gate_monster_horde_happened
-                OR = {
-                    is_player = no
-                    has_variable = monster_congress_happened
-                }
-            }
-        }
+        gate_allow_monster_hunting = yes
     }
 
     # When industrialists are in power they want
@@ -93,16 +84,7 @@ law_gate_dedicated_monster_hunters = {
     # or after the first big monster attack happened
     # and a player had their monster conclave
     is_visible = {
-        OR = {
-            is_gate_planet_country = yes
-            AND = {
-                has_global_variable = gate_monster_horde_happened
-                OR = {
-                    is_player = no
-                    has_variable = monster_congress_happened
-                }
-            }
-        }
+        gate_allow_monster_hunting = yes
     }
 
     # Petitions
@@ -146,16 +128,7 @@ law_gate_militarized_monster_hunters = {
     # or after the first big monster attack happened
     # and a player had their monster conclave
     is_visible = {
-        OR = {
-            is_gate_planet_country = yes
-            AND = {
-                has_global_variable = gate_monster_horde_happened
-                OR = {
-                    is_player = no
-                    has_variable = monster_congress_happened
-                }
-            }
-        }
+        gate_allow_monster_hunting = yes
     }
 
     # Petitions
