@@ -42,8 +42,8 @@ on_game_started_after_lobby = {
     }
 }
 
-# Randomize arcanist hiring date so they are not
-# 0 at game start
+# Randomize arcanist hiring date
+# so they are not 0 at game start
 on_game_started_randomize_hiring_dates = {
     effect = {
         every_country = {
