@@ -10,35 +10,36 @@
 	}
 
 	possible = {
-		AND = {
+		NOT = {
+			has_law_or_variant = law_type:law_slavery_banned
+		}
+		custom_tooltip = {
+			text = je_gate_mana_saturation_button_slave_ritual_cooldown
 			NOT = {
-				has_law_or_variant = law_type:law_slavery_banned
+				has_variable = slave_ritual_cooldown
 			}
-			custom_tooltip = {
-				text = je_gate_mana_saturation_button_slave_ritual_cooldown
-				NOT = {
-					has_variable = slave_ritual_cooldown
-				}
-			}
-			custom_tooltip = {
-				# Seems infamy_less_than trigger loc is broken
-				text = je_gate_mana_saturation_button_slave_ritual_infamy
-				infamy < infamy_threshold:pariah
-			}
-			custom_tooltip = {
-				text = je_gate_mana_saturation_button_slave_ritual_mana_density
-				any_scope_state = {
-					state_region = {
-						var:mana_density < 100
-					}
+		}
+		custom_tooltip = {
+			# Seems infamy_less_than trigger loc is broken
+			text = je_gate_mana_saturation_button_slave_ritual_infamy
+			infamy < infamy_threshold:pariah
+		}
+		custom_tooltip = {
+			text = je_gate_mana_saturation_button_slave_ritual_mana_density
+			any_scope_state = {
+				state_region = {
+					var:mana_density < 100
 				}
 			}
 		}
+		hidden_trigger = {
+			num_pending_events:gate_gate_mana_saturation = 0
+		}
 	}
 
-	# We do not want the UI to press the button every time
 	ai_chance = {
-		value = 1
+		# Not meant for the AI
+		value = 0
 	}
 
 	effect = {

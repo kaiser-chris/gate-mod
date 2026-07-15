@@ -1,0 +1,18 @@
+﻿state_trait_gate_magic_soil = {
+	icon = gfx/interface/icons/state_trait_icons/gate_magic_soil.dds
+
+	modifier = {
+		building_group_bg_agriculture_throughput_add = 0.2
+		building_group_bg_plantations_throughput_add = 0.2
+	}
+}
+
+state_trait_gate_crystallizing_air = {
+	icon = gfx/interface/icons/state_trait_icons/gate_crystallizing_air.dds
+
+	modifier = {
+		building_group_bg_gate_mana_extraction_throughput_add = 0.3
+		building_group_bg_gate_mana_extraction_employee_mult = -0.2
+		state_mortality_mult = 0.2
+	}
+}
