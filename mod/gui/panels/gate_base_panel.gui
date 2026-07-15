@@ -179,173 +179,18 @@ types gate_base_panel_types {
                     name = "tutorial_highlight_gate_society_tab"
                 }
             }
+
             hbox = {
+                visible = "[Or3(
+                    GetScriptedGui('sgui_gate_base_tab_military').IsShown(GuiScope.SetRoot(Country.MakeScope).End),
+                    GetScriptedGui('sgui_gate_base_tab_production').IsShown(GuiScope.SetRoot(Country.MakeScope).End),
+                    GetScriptedGui('sgui_gate_base_tab_society').IsShown(GuiScope.SetRoot(Country.MakeScope).End)
+                )]"
                 maximumsize = { -1 140 }
                 layoutpolicy_horizontal = expanding
                 margin = { 20 10 }
                 margin_bottom = 15
                 spacing = 20
-
-                # Magic Researcher
-                vbox = {
-                    datacontext = "[GetScriptedGui('sgui_gate_has_researcher')]"
-                    spacing = -20
-                    layoutpolicy_vertical = expanding
-                    gate_character_small = {
-                        visible = "[ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
-                        blockoverride "character_context" {
-                            datacontext = "[Country.MakeScope.Var('gate_magic_researcher').GetCharacter]"
-                        }
-                    }
-                    default_header_clean_faded = {
-                        visible = "[ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
-                        blockoverride "text" {
-                            text = "[Country.MakeScope.Var('gate_magic_researcher').GetCharacter.GetFullName]"
-                        }
-                        blockoverride "size" {
-                            size = { 250 40 }
-                        }
-                    }
-                    gate_character_small = {
-                        visible = "[Not(ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End))]"
-                        blockoverride "gate_character_tooltip" {
-                            tooltip = gg_panel_base_no_researcher_tooltip
-                        }
-                        blockoverride "gate_character_portrait" {
-                            icon = {
-                                size = { 100% 100% }
-                                using = generic_highlight
-                                texture = "gfx/interface/portraits/portrait_frame_head_historical_info_link.dds"
-                            }
-                            button = {
-                                size = { 100% 100% }
-                                onclick = "[InformationPanelBar.OpenPanelTab('pops_overview', 'national_cast')]"
-
-                                ### show
-                                state = {
-                                    name = _show
-                                    on_start = "[PdxGuiWidget.AccessChild('icon').TriggerAnimation('show')]"
-                                    on_start = "[PdxGuiWidget.AccessChild('frame').TriggerAnimation('show')]"
-                                    on_start = "[PdxGuiWidget.AccessChild('wood').TriggerAnimation('show')]"
-                                }
-
-                                ### enter
-                                state = {
-                                    name = _mouse_enter
-                                    on_start = "[PdxGuiWidget.AccessChild('icon').TriggerAnimation('enter')]"
-                                    on_start = "[PdxGuiWidget.AccessChild('frame').TriggerAnimation('enter')]"
-                                    on_start = "[PdxGuiWidget.AccessChild('wood').TriggerAnimation('enter')]"
-                                }
-
-                                ### leave
-                                state = {
-                                    name = _mouse_leave
-                                    on_start = "[PdxGuiWidget.AccessChild('icon').InterruptThenTriggerAnimation('enter','leave')]"
-                                    on_start = "[PdxGuiWidget.AccessChild('frame').InterruptThenTriggerAnimation('enter','leave')]"
-                                    on_start = "[PdxGuiWidget.AccessChild('wood').InterruptThenTriggerAnimation('enter','leave')]"
-                                }
-
-                                ### press
-                                state = {
-                                    name = _mouse_press
-                                    on_start = "[PdxGuiWidget.AccessChild('icon').TriggerAnimation('press')]"
-                                    on_start = "[PdxGuiWidget.AccessChild('frame').TriggerAnimation('press')]"
-                                    on_start = "[PdxGuiWidget.AccessChild('wood').TriggerAnimation('press')]"
-                                }
-
-                                ### release
-                                state = {
-                                    name = _mouse_release
-                                    on_start = "[PdxGuiWidget.AccessChild('icon').TriggerAnimation('release')]"
-                                    on_start = "[PdxGuiWidget.AccessChild('frame').TriggerAnimation('release')]"
-                                    on_start = "[PdxGuiWidget.AccessChild('wood').TriggerAnimation('release')]"
-                                }
-                                
-                                button_icon_properties = {
-                                    blockoverride "icon_size" {
-                                        size = { 50% 50% }
-                                    }
-                                    blockoverride "icon" {
-                                        texture = "gfx/interface/buttons/button_icons/plus.dds"
-                                    }
-                                }
-                                using = select_button_sound
-                            }
-                        }
-                        blockoverride "gate_opinion_visible" {
-                            visible = no
-                        }
-                    }
-                    default_header_clean_faded = {
-                        visible = "[Not(ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End))]"
-                        blockoverride "text" {
-                            text = gg_panel_base_no_researcher
-                        }
-                        blockoverride "size" {
-                            minimumsize = { 150 40 }
-                        }
-                    }
-                }
-
-                # Magic Researcher Project
-                vbox = {
-                    layoutpolicy_vertical = expanding
-                    background = {
-                        using = simple_frame
-                    }
-                    margin = { 20 20 }
-                    minimumsize = { 300 -1 }
-                    maximumsize = { 300 -1 }
-
-                    textbox = {
-                        visible = "[Not(Country.MakeScope.Var('gate_magic_project').IsSet)]"
-                        minimumsize = { 300 -1 }
-                        maximumsize = { 300 -1 }
-                        multiline = yes
-                        autoresize = yes
-                        text = gg_projects_no_active_project
-                        align = center
-                        using = fontsize_large
-                    }
-
-                    vbox = {
-                        visible = "[Country.MakeScope.Var('gate_magic_project').IsSet]"
-                        layoutpolicy_vertical = expanding
-                        spacing = 20
-
-                        textbox = {
-                            minimumsize = { 300 -1 }
-                            maximumsize = { 300 -1 }
-                            multiline = yes
-                            autoresize = yes
-                            text = gg_projects_active_project
-                            align = center
-                            using = fontsize_large
-                        }
-
-                        green_progressbar_horizontal = {
-                            size = { 300 25 }
-
-                            blockoverride "values" {
-                                value = "[GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.CalcCurrentGoalValue]"
-                                min = 0
-                                max = "[GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.GetTotalGoalValue]"
-                            }
-                            textbox = {
-                                visible = "[EqualTo_CFixedPoint(GetPlayer.MakeScope.Var('gate_magic_project').Var('gate_magic_project_type').GetValue, GetPlayer.MakeScope.ScriptValue('gate_project_type_normal'))]"
-                                size = { 300 25 }
-                                text = gg_projects_progress_months
-                                align = center
-                            }
-                            textbox = {
-                                visible = "[EqualTo_CFixedPoint(GetPlayer.MakeScope.Var('gate_magic_project').Var('gate_magic_project_type').GetValue, GetPlayer.MakeScope.ScriptValue('gate_project_type_infrastructure'))]"
-                                size = { 300 25 }
-                                text = gg_projects_progress_construction
-                                align = center
-                            }
-                        }
-                    }
-                }
 
                 # Magic Innovation
                 hbox = {
@@ -401,6 +246,11 @@ types gate_base_panel_types {
 
             }
             hbox = {
+                visible = "[Or3(
+                    GetScriptedGui('sgui_gate_base_tab_military').IsShown(GuiScope.SetRoot(Country.MakeScope).End),
+                    GetScriptedGui('sgui_gate_base_tab_production').IsShown(GuiScope.SetRoot(Country.MakeScope).End),
+                    GetScriptedGui('sgui_gate_base_tab_society').IsShown(GuiScope.SetRoot(Country.MakeScope).End)
+                )]"
                 minimumsize = { -1 2 }
                 layoutpolicy_horizontal = expanding
                 spacing = -2
@@ -566,397 +416,124 @@ types gate_base_panel_types {
         margin = { 20 20 }
         spacing = 20
 
+        # Arcanist
+        vbox = {
+            layoutpolicy_vertical = expanding
+            spacing = 20
+            vbox = {
+                margin_top = -2
+                layoutpolicy_vertical = expanding
+                background = {
+                    using = simple_frame
+                }
+
+                default_header_clean_faded = {
+                    blockoverride "text" {
+                        raw_text = "[concept_gate_magic_researcher]"
+                    }
+                    blockoverride "size" {
+                        size = { 0 45 }
+                        layoutpolicy_horizontal = expanding
+                    }
+                }
+
+                gate_arcanist = {}
+            }
+        }
+
         # Projects
         vbox = {
             layoutpolicy_vertical = expanding
             layoutpolicy_horizontal = expanding
             spacing = 20
+
             vbox = {
-                margin_top = -2
                 layoutpolicy_vertical = expanding
                 layoutpolicy_horizontal = expanding
-                background = {
-                    using = simple_frame
-                }
-
-                default_header_clean_faded = {
-                    blockoverride "text" {
-                        raw_text = "[Concept('concept_gate_project', Localize('concept_gate_projects'))]"
-                    }
-                    layoutpolicy_horizontal = expanding
-                }
-                gate_projects = {}
-            }
-        }
-
-        # Domains
-        vbox = {
-            layoutpolicy_vertical = expanding
-            spacing = 20
-
-            vbox = {
-                margin_top = -2
-                layoutpolicy_vertical = expanding
-                background = {
-                    using = simple_frame
-                }
-
-                default_header_clean_faded = {
-                    blockoverride "text" {
-                        text = gg_header_magic_ethic
-                    }
-                    blockoverride "size" {
-                        size = { 280 45 }
-                    }
-                }
+                spacing = 20
                 vbox = {
+                    margin_top = -2
                     layoutpolicy_vertical = expanding
+                    layoutpolicy_horizontal = expanding
+                    background = {
+                        using = simple_frame
+                    }
 
-                    vbox = {
-                        vbox = {
-                            datamodel = "[Country.GetTimedModifiers]"
-
-                            item = {
-                                gate_ethic = {}
-                            }
+                    default_header_clean_faded = {
+                        blockoverride "text" {
+                            raw_text = "[Concept('concept_gate_project', Localize('concept_gate_projects'))]"
                         }
-                        gate_ethic = {
-                            blockoverride "visible" {
-                                visible = "[Not(GetScriptedGui('sgui_gate_has_one_ethic').IsShown(GuiScope.SetRoot(Country.MakeScope).End))]"
-                            }
-                            blockoverride "tooltip" {
-                                tooltip = gg_ethic_empty_slot_tooltip
-                            }
-                            blockoverride "icon" {}
-                        }
+                        layoutpolicy_horizontal = expanding
+                    }
+                    gate_projects = {}
+                }
+            }
 
-                        gate_ethic = {
-                            blockoverride "visible" {
-                                visible = "[Not(GetScriptedGui('sgui_gate_has_two_ethics').IsShown(GuiScope.SetRoot(Country.MakeScope).End))]"
-                            }
-                            blockoverride "tooltip" {
-                                tooltip = gg_ethic_empty_slot_tooltip
-                            }
-                            blockoverride "icon" {}
-                        }
+            # Domains
+            vbox = {
+                layoutpolicy_horizontal = expanding
+                spacing = 20
 
-                        gate_ethic = {
-                            blockoverride "visible" {
-                                visible = "[Not(GetScriptedGui('sgui_gate_has_three_ethics').IsShown(GuiScope.SetRoot(Country.MakeScope).End))]"
-                            }
-                            blockoverride "tooltip" {
-                                tooltip = gg_ethic_empty_slot_tooltip
-                            }
-                            blockoverride "icon" {}
+                vbox = {
+                    margin_top = -2
+                    layoutpolicy_horizontal = expanding
+                    background = {
+                        using = simple_frame
+                    }
+
+                    default_header_clean_faded = {
+                        blockoverride "text" {
+                            text = gg_header_magic_ethic
+                        }
+                        blockoverride "size" {
+                            size = { 0 45 }
+                            layoutpolicy_horizontal = expanding
                         }
                     }
-                }
-            }
-        }
-    }
+                    hbox = {
+                        layoutpolicy_horizontal = expanding
 
-    type gate_base_panel_magic_country = flowcontainer {
-        datacontext = "[Scope.GetCountry]"
-        direction = vertical
-        parentanchor = hcenter
+                        hbox = {
+                            layoutpolicy_horizontal = expanding
 
-        widget = {
-            size = { 530 140 }
+                            hbox = {
+                                datamodel = "[Country.GetTimedModifiers]"
 
-            widget = {
-                visible = "[Not(ObjectsEqual(Scope.GetCountry.MakeScope, GetPlayer.MakeScope))]"
-                size = { 100 140 }
-                parentanchor = right|vcenter
-                button_icon_round = {
-                    parentanchor = right|vcenter
-                    position = { -30 0 }
-                    onclick = "[InformationPanelBar.OpenTreatyDraftPanelForNewDraft(GetPlayer.Self, Country.Self)]"
-                    enabled = "[GetPlayer.CanSignTreatyWith(Country.Self)]"
-                    tooltip = "TREATY_CAN_SIGN_WITH"
-                    blockoverride "size" {
-                        size = { 70 70 }
-                    }
-                    blockoverride "icon" {
-                        texture = "gfx/interface/icons/generic_icons/diplomatic_treaties.dds"
-                    }
+                                item = {
+                                    gate_ethic = {}
+                                }
+                            }
+                            gate_ethic = {
+                                blockoverride "visible" {
+                                    visible = "[Not(GetScriptedGui('sgui_gate_has_one_ethic').IsShown(GuiScope.SetRoot(Country.MakeScope).End))]"
+                                }
+                                blockoverride "tooltip" {
+                                    tooltip = gg_ethic_empty_slot_tooltip
+                                }
+                                blockoverride "icon" {}
+                            }
 
-                    blockoverride "icon_size" {
-                        size = { 70% 70% }
-                    }
-                }
-            }
+                            gate_ethic = {
+                                blockoverride "visible" {
+                                    visible = "[Not(GetScriptedGui('sgui_gate_has_two_ethics').IsShown(GuiScope.SetRoot(Country.MakeScope).End))]"
+                                }
+                                blockoverride "tooltip" {
+                                    tooltip = gg_ethic_empty_slot_tooltip
+                                }
+                                blockoverride "icon" {}
+                            }
 
-            icon = {
-                using = dark_area
-                using = frame_small_mask
-                parentanchor = right
-                size = { 240 140 }
-                alpha = 0.2
-                position = { 0 0 }
-
-                modify_texture = {
-                    texture = "gfx/interface/masks/fade_horizontal_left.dds"
-                    spriteType = Corneredstretched
-                    spriteborder = { 0 0 }
-                    blend_mode = alphamultiply
-                }
-            }
-
-            background = {
-                texture = "gfx/interface/backgrounds/subject_liberty_desire_frame.dds"
-            }
-
-            fancy_flag_ui = {
-                size = { 80 60 }
-                position = { 10 10 }
-
-                blockoverride "overlay_button_and_bg_glow_position" {
-                    position = { -9 -4 }
-                }
-
-                blockoverride "rank_badge_block" {}
-            }
-
-            container = {
-                parentanchor = bottom
-
-                gate_relations_bar_and_buttons = {}
-
-                flowcontainer = {
-                    parentanchor = hcenter
-                    position = { 0 7 }
-                    spacing = 5
-                    tooltip = "COUNTRY_RELATIONS_TOOLTIP"
-                    using = tooltip_se
-
-                    flowcontainer = {
-                        visible = "[Not(ObjectsEqual(Scope.GetCountry.MakeScope, GetPlayer.MakeScope))]"
-                        textbox = {
-                            parentanchor = vcenter
-                            autoresize = yes
-                            align = nobaseline
-                            max_width = 190
-                            fontsize_min = 12
-                            elide = right
-                            text = gg_magic_countries_relations
+                            gate_ethic = {
+                                blockoverride "visible" {
+                                    visible = "[Not(GetScriptedGui('sgui_gate_has_three_ethics').IsShown(GuiScope.SetRoot(Country.MakeScope).End))]"
+                                }
+                                blockoverride "tooltip" {
+                                    tooltip = gg_ethic_empty_slot_tooltip
+                                }
+                                blockoverride "icon" {}
+                            }
                         }
                     }
-
-                    flowcontainer = {
-                        visible = "[ObjectsEqual(Scope.GetCountry.MakeScope, GetPlayer.MakeScope)]"
-                        textbox = {
-                            parentanchor = vcenter
-                            autoresize = yes
-                            align = nobaseline
-                            max_width = 100
-                            fontsize_min = 12
-                            elide = right
-                            text = gg_magic_countries_us
-                        }
-                    }
-                }
-            }
-
-            flowcontainer = {
-                position = { 100 10 }
-                spacing = 15
-
-                flowcontainer = {
-                    parentanchor = vcenter
-                    direction = vertical
-
-                    textbox = {
-                        minimumsize = { 225 -1 }
-                        maximumsize = { 225 -1 }
-                        autoresize = yes
-                        align = nobaseline
-                        elide = right
-                        fontsize_min = 12
-                        using = fontsize_large
-                        raw_text = "[Country.GetNameNoFlag]"
-                    }
-
-                    textbox = {
-                        autoresize = yes
-                        align = nobaseline
-                        raw_text = "[Country.GetDefinition.GetTier]"
-                    }
-                }
-            }
-
-            rank_badge = {
-                size = { 45 45 }
-                position = { -15 -15 }
-
-                blockoverride "datacontext " {}
-
-                blockoverride "font_size_under_100_rank" {
-                    using = fontsize_medium
-                }
-            }
-        }
-
-        widget = {
-            size = { 5 5 }
-        }
-    }
-
-    type gate_relations_bar_and_buttons = container {
-        parentanchor = bottom
-        position = { -4 9 }
-
-        # Progressbar and Frame
-        widget = {
-            parentanchor = bottom
-
-            size = { 307 52 }
-
-            widget = {
-                visible = "[Not(ObjectsEqual(Scope.GetCountry.MakeScope, GetPlayer.MakeScope))]"
-                parentanchor = center
-                allow_outside = yes
-
-                block "bar_position" {
-                    position = { 0 6 }
-                }
-
-                block "bar_size" {
-                    size = { 220 17 }
-                }
-
-                gold_progressbar_horizontal = {
-                    size = { 100% 100% }
-                    blockoverride "background" {}
-                    blockoverride "frame" {}
-
-                    blockoverride "values" {
-                        value = "[Country.GetRelationsWith(GetPlayer)]"
-                        min = -100
-                        max = 100
-                    }
-                }
-
-                green_progressbar_horizontal = {
-                    size = { 100% 100% }
-                    visible = "[GreaterThanOrEqualTo_int32(Country.GetRelationsWith(GetPlayer), '(int32)20')]"
-                    blockoverride "background" {}
-                    blockoverride "frame" {}
-
-                    blockoverride "values" {
-                        value = "[Country.GetRelationsWith(GetPlayer)]"
-                        min = -100
-                        max = 100
-                    }
-                }
-
-                bad_progressbar_horizontal = {
-                    size = { 100% 100% }
-                    visible = "[LessThanOrEqualTo_int32(Country.GetRelationsWith(GetPlayer), '(int32)-20')]"
-                    blockoverride "background" {}
-                    blockoverride "frame" {}
-
-                    blockoverride "values" {
-                        value = "[Country.GetRelationsWith(GetPlayer)]"
-                        min = -100
-                        max = 100
-                    }
-                }
-
-                changed_value_increased_progressbar_horizontal_green = {
-                    size = { 100% 100% }
-                    visible = "[GreaterThan_CFixedPoint(Country.GetDailyRelationsProgress(GetPlayer), '(CFixedPoint)0')]"
-
-                    blockoverride "second_progressbar" {}
-
-                    blockoverride "values" {
-                        value = "[Country.GetRelationsWith(GetPlayer)]"
-                        min = -100
-                        max = 100
-                        tooltip = "[Country.GetRelationsProgressDesc(GetPlayer)]"
-                    }
-
-                    blockoverride "glow_size" {
-                        size = { 40 100% }
-                    }
-
-                    blockoverride "arrow_texture_density" {
-                        texture_density = 10 #use to match height of progressbar
-                    }
-                }
-
-                changed_value_decreased_progressbar_horizontal_bad = {
-                    size = { 100% 100% }
-                    visible = "[LessThan_CFixedPoint(Country.GetDailyRelationsProgress(GetPlayer), '(CFixedPoint)0')]"
-
-                    blockoverride "second_progressbar" {}
-
-                    blockoverride "values" {
-                        value = "[Country.GetRelationsWith(GetPlayer)]"
-                        min = -100
-                        max = 100
-                    }
-
-                    blockoverride "glow_size" {
-                        size = { 40 100% }
-                    }
-
-                    blockoverride "arrow_texture_density" {
-                        texture_density = 10 #use to match height of progressbar
-                    }
-                }
-            }
-
-            icon = {
-                size = { 100% 100% }
-
-                texture = "gfx/interface/backgrounds/subject_liberty_desire_bar.dds"
-            }
-        }
-
-        # Relation increase/damage buttons
-        widget = {
-            parentanchor = center
-            size = { 100% 100% }
-
-            button_icon_round = {
-                blockoverride "wood_texture" {
-                    texture = "gfx/interface/buttons/round_button_small_wood_action.dds"
-                }
-                blockoverride "frame_visible" {}
-                size = { 38 38 }
-                position = { 8 0 }
-                enabled = no
-                visible = "[ObjectsEqual(Scope.GetCountry.MakeScope, GetPlayer.MakeScope)]"
-                parentanchor = vcenter
-            }
-
-            button_icon_round = {
-                blockoverride "wood_texture" {
-                    texture = "gfx/interface/buttons/round_button_small_wood_action.dds"
-                }
-                blockoverride "frame_visible" {}
-                size = { 38 38 }
-                position = { -6 0 }
-                enabled = no
-                visible = "[ObjectsEqual(Scope.GetCountry.MakeScope, GetPlayer.MakeScope)]"
-                parentanchor = right|vcenter
-            }
-
-            gate_diplo_button = {
-                visible = "[Not(ObjectsEqual(Scope.GetCountry.MakeScope, GetPlayer.MakeScope))]"
-                parentanchor = vcenter
-                position = { 8 0 }
-                blockoverride "datacontext" {
-                    datacontext = "[GetPlayer.GetDiplomaticAction('increase_relations', Country.Self)]"
-                }
-            }
-
-            gate_diplo_button = {
-                visible = "[Not(ObjectsEqual(Scope.GetCountry.MakeScope, GetPlayer.MakeScope))]"
-                parentanchor = right|vcenter
-                position = { -6 0 }
-                blockoverride "datacontext" {
-                    datacontext = "[GetPlayer.GetDiplomaticAction('damage_relations', Country.Self)]"
                 }
             }
         }
@@ -1005,10 +582,6 @@ types gate_base_panel_types {
                         texture = "gfx/interface/backgrounds/round_frame_dec.dds"
                     }
                 }
-
-                # background = {
-                #     using = entry_bg
-                # }
             }
         }
     }
@@ -1750,39 +1323,6 @@ types gate_base_panel_types {
         }
     }
 
-    type gate_diplo_button = button_icon_round_action {
-        using = tooltip_se
-
-        block "datacontext" {}
-
-        block "button_properties" {
-            enabled = "[IsValid(DiplomaticAction.ExecuteAction)]"
-            onclick = "[DiplomaticAction.ExecuteWithConfirmation]"
-        }
-
-        block "clicksound" {
-            using = generic_diplomatic_action_sound
-        }
-
-        tooltipwidget = {
-            FancyTooltip_DiplomaticActionWithTargetCountry = {}
-        }
-
-        blockoverride "size" {
-            block "autonomy_button_size" {
-                size = { 38	38 }
-            }
-        }
-
-        blockoverride "icon_size" {
-            size = { 60% 60% }
-        }
-
-        blockoverride "icon" {
-            texture = "[DiplomaticAction.GetType.GetTexture]"
-        }
-    }
-
     type gate_projects = vbox {
         layoutpolicy_vertical = expanding
         spacing = 20
@@ -1999,6 +1539,414 @@ types gate_base_panel_types {
             }
         }
 
+    }
+
+    type gate_arcanist = vbox {
+        datacontext = "[GetScriptedGui('sgui_gate_has_researcher')]"
+        layoutpolicy_vertical = expanding
+        spacing = 20
+        margin = { 40 20 }
+
+        gate_arcanist_widget = {}
+
+        # Magic Researcher Project
+        vbox = {
+            margin = { 20 20 }
+            minimumsize = { 360 -1 }
+            maximumsize = { 360 -1 }
+            background = {
+                using = entry_bg_simple
+            }
+
+            # No project
+            textbox = {
+                visible = "[Not(Country.MakeScope.Var('gate_magic_project').IsSet)]"
+                minimumsize = { 360 -1 }
+                maximumsize = { 360 -1 }
+                multiline = yes
+                autoresize = yes
+                text = gg_projects_no_active_project
+                align = center
+                using = fontsize_large
+            }
+
+            # Project but no researcher
+            textbox = {
+                visible = "[And(
+                    Country.MakeScope.Var('gate_magic_project').IsSet,
+                    Not(ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End))
+                )]"
+                minimumsize = { 360 -1 }
+                maximumsize = { 360 -1 }
+                multiline = yes
+                autoresize = yes
+                text = gg_projects_invalid_arcanist
+                align = center
+                using = fontsize_large
+            }
+
+            # Normal Project
+            vbox = {
+                visible = "[And(
+                    Country.MakeScope.Var('gate_magic_project').IsSet,
+                    ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End)
+                )]"
+                spacing = 20
+
+                textbox = {
+                    minimumsize = { 360 -1 }
+                    maximumsize = { 360 -1 }
+                    multiline = yes
+                    autoresize = yes
+                    text = gg_projects_active_project
+                    align = center
+                    using = fontsize_large
+                }
+
+                green_progressbar_horizontal = {
+                    size = { 300 25 }
+
+                    blockoverride "values" {
+                        value = "[GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.CalcCurrentGoalValue]"
+                        min = 0
+                        max = "[GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.GetTotalGoalValue]"
+                    }
+                    textbox = {
+                        visible = "[EqualTo_CFixedPoint(GetPlayer.MakeScope.Var('gate_magic_project').Var('gate_magic_project_type').GetValue, GetPlayer.MakeScope.ScriptValue('gate_project_type_normal'))]"
+                        size = { 300 25 }
+                        text = gg_projects_progress_months
+                        align = center
+                    }
+                    textbox = {
+                        visible = "[EqualTo_CFixedPoint(GetPlayer.MakeScope.Var('gate_magic_project').Var('gate_magic_project_type').GetValue, GetPlayer.MakeScope.ScriptValue('gate_project_type_infrastructure'))]"
+                        size = { 300 25 }
+                        text = gg_projects_progress_construction
+                        align = center
+                    }
+                }
+            }
+        }
+
+        # Lifetime
+        vbox = {
+            margin = { 20 20 }
+            minimumsize = { 360 -1 }
+            maximumsize = { 360 -1 }
+            background = {
+                using = entry_bg_simple
+            }
+
+            # No Arcanist
+            textbox = {
+                minimumsize = { 360 -1 }
+                maximumsize = { 360 -1 }
+                visible = "[Not(ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End))]"
+                multiline = yes
+                autoresize = yes
+                text = gg_panel_base_no_researcher
+                align = center
+                using = fontsize_large
+            }
+
+            vbox = {
+                layoutpolicy_horizontal = expanding
+                visible = "[ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
+                spacing = 20
+                datacontext = "[Country.MakeScope.Var('gate_magic_researcher').GetCharacter]"
+
+                textbox = {
+                    minimumsize = { 360 -1 }
+                    maximumsize = { 360 -1 }
+                    multiline = yes
+                    autoresize = yes
+                    text = gg_arcanist_statistics_flavor
+                    align = center
+                }
+
+                vbox = {
+                    layoutpolicy_horizontal = expanding
+                    textbox = {
+                        minimumsize = { 360 -1 }
+                        maximumsize = { 360 -1 }
+                        multiline = yes
+                        autoresize = yes
+                        text = gg_arcanist_statistics_header
+                        align = center
+                        default_format = "#header"
+                    }
+
+                    hbox = {
+                        layoutpolicy_horizontal = expanding
+                        textbox = {
+                            multiline = yes
+                            autoresize = yes
+                            text = AGE
+                            align = left
+                        }
+
+                        expand = {}
+
+                        textbox = {
+                            multiline = yes
+                            autoresize = yes
+                            raw_text = "[Character.GetAge|v]"
+                            align = right
+                        }
+                    }
+
+                    hbox = {
+                        layoutpolicy_horizontal = expanding
+                        textbox = {
+                            multiline = yes
+                            autoresize = yes
+                            raw_text = "[Concept('concept_gate_character_experience',Localize('concept_gate_character_experience_simple'))]"
+                            align = left
+                        }
+
+                        expand = {}
+
+                        textbox = {
+                            multiline = yes
+                            autoresize = yes
+                            text = gg_arcanist_statistics_experience
+                            align = right
+                        }
+                    }
+
+                    hbox = {
+                        visible = "[Character.IsBusy]"
+                        layoutpolicy_horizontal = expanding
+                        textbox = {
+                            multiline = yes
+                            autoresize = yes
+                            text = gg_arcanist_statistics_status
+                            align = left
+                        }
+
+                        expand = {}
+
+                        textbox = {
+                            multiline = yes
+                            autoresize = yes
+                            raw_text = "[concept_busy]"
+                            align = right
+                        }
+                    }
+
+                    hbox = {
+                        layoutpolicy_horizontal = expanding
+                        textbox = {
+                            multiline = yes
+                            autoresize = yes
+                            raw_text = "[concept_popularity]"
+                            align = left
+                        }
+
+                        expand = {}
+
+                        textbox = {
+                            multiline = yes
+                            autoresize = yes
+                            text = gg_arcanist_statistics_popularity
+                            align = right
+                        }
+                    }
+
+                    hbox = {
+                        layoutpolicy_horizontal = expanding
+                        textbox = {
+                            multiline = yes
+                            autoresize = yes
+                            raw_text = "[concept_prominence]"
+                            align = left
+                        }
+
+                        expand = {}
+
+                        textbox = {
+                            multiline = yes
+                            autoresize = yes
+                            text = gg_arcanist_statistics_prominence
+                            align = right
+                        }
+                    }
+                }
+
+
+
+            }
+        }
+
+        expand = {}
+
+    }
+    type gate_arcanist_widget = widget {
+        # FRAME SIZE
+        size = { 400 280 }
+        using = Animation_Character_Panel_Refresh
+
+        # BACKGROUND
+        background = {
+            texture = "gfx/interface/illustrations/background/illustration_gate_lecture.dds"
+            fittype = centercrop
+            using = frame_small_mask
+        }
+
+        # VFX
+        vfx = {
+            blockoverride "entity_instance" {
+                entity_instance = com_vfx_entity_ui_bg_com_env_char_left_standard_glow
+            }
+        }
+
+        # Arcanist
+        character_portrait_base_no_mask = {
+            visible = "[ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
+            parentanchor = center
+            ignore_in_debug_draw = yes
+            size = { 200 280 }
+
+            datacontext = "[Country.MakeScope.Var('gate_magic_researcher').GetCharacter]"
+
+            position = { 0 0 }
+
+            blockoverride "portrait_size" {
+                size = { 200 300 }
+            }
+            blockoverride "portrait_texture" {
+                portrait_texture = "[Character.GetAnimatedPortrait(
+					'ruler_environment',
+					'camera_body',
+					'idle',
+					GetPortraitRenderSize(PdxGuiWidget.Self))
+				]"
+            }
+            blockoverride "portrait_icons" {}
+            blockoverride "tooltip" {
+                tooltipwidget = {
+                    FancyTooltip_Character = {}
+                }
+            }
+        }
+
+        icon = {
+            visible = "[Not(ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End))]"
+            parentanchor = center
+            size = { 300 300 }
+            texture = gfx/portraits/example_portraits/unknown.dds
+            button = {
+                size = { 100% 100% }
+                position = { 0 20 }
+                onclick = "[InformationPanelBar.OpenPanelTab('pops_overview', 'national_cast')]"
+
+                tooltip = gg_panel_base_no_researcher_tooltip
+
+                ### show
+                state = {
+                    name = _show
+                    on_start = "[PdxGuiWidget.AccessChild('icon').TriggerAnimation('show')]"
+                }
+
+                ### enter
+                state = {
+                    name = _mouse_enter
+                    on_start = "[PdxGuiWidget.AccessChild('icon').TriggerAnimation('enter')]"
+                }
+
+                ### leave
+                state = {
+                    name = _mouse_leave
+                    on_start = "[PdxGuiWidget.AccessChild('icon').InterruptThenTriggerAnimation('enter','leave')]"
+                }
+
+                ### press
+                state = {
+                    name = _mouse_press
+                    on_start = "[PdxGuiWidget.AccessChild('icon').TriggerAnimation('press')]"
+                }
+
+                ### release
+                state = {
+                    name = _mouse_release
+                    on_start = "[PdxGuiWidget.AccessChild('icon').TriggerAnimation('release')]"
+                }
+
+                button_icon_properties = {
+                    blockoverride "icon_size" {
+                        size = { 50% 50% }
+                    }
+                    blockoverride "icon" {
+                        texture = "gfx/interface/buttons/button_icons/plus.dds"
+                    }
+                }
+                using = select_button_sound
+            }
+        }
+
+        default_header_clean_faded = {
+            parentanchor = hcenter|bottom
+            position = { 0 -30 }
+            blockoverride "text" {
+                default_format = "#default_text"
+                text = "[GetPlayer.GetCustom('gg_mr_has_magic_researcher_custom_loc')]"
+            }
+            blockoverride "size" {
+                minimumsize = { 200 40 }
+            }
+        }
+
+        # TOP/BOTTOM FADE
+        icon = {
+            using = dark_area
+            parentanchor = top|hcenter
+            size = { 100% 15% }
+            alpha = 0.65
+            position = { 0 2 }
+
+            modify_texture = {
+                texture = "gfx/interface/masks/fade_vertical_bottom.dds"
+                spriteType = Corneredstretched
+                spriteborder = { 0 0 }
+                blend_mode = alphamultiply
+            }
+        }
+        icon = {
+            using = dark_area
+            parentanchor = bottom|hcenter
+            size = { 100% 12% }
+            alpha = 0.65
+
+            modify_texture = {
+                texture = "gfx/interface/masks/fade_vertical_top.dds"
+                spriteType = Corneredstretched
+                spriteborder = { 0 0 }
+                blend_mode = alphamultiply
+            }
+        }
+
+        # FRAME
+        widget = {
+            size = { 100% 100% }
+            background = {
+                texture = "gfx/interface/character_panel/char_bg_frame.dds"
+                margin_left = 18
+                margin_right = 10
+                margin_bottom = 8
+                spriteType = Corneredtiled
+
+                spriteborder_left = 200
+                spriteborder_right = 60
+                spriteborder_top = 170
+                spriteborder_bottom = 180
+
+                texture_density = 2
+            }
+        }
+
+        character_interactions_button = {
+            visible = "[ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
+            datacontext = "[Country.MakeScope.Var('gate_magic_researcher').GetCharacter]"
+        }
     }
 
 }

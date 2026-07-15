@@ -1,0 +1,40 @@
+﻿gate_character_experienced_minimum = 0
+gate_character_experienced_maximum = 100
+gate_character_experienced_threshhold = 40
+gate_character_master_threshhold = 80
+
+gate_character_experience_percentage = {
+    if = {
+        limit = {
+            OR = {
+                NOT = {
+                    has_variable = magic_experience
+                }
+                var:magic_experience ?= 0
+            }
+        }
+        # Fallback
+        value = 0
+    }
+    else = {
+        value = var:magic_experience
+        divide = gate_character_experienced_maximum
+    }
+}
+
+gate_character_hired_days = {
+    if = {
+        limit = {
+            NOT = {
+                has_variable = gate_hired
+            }
+        }
+        value = 0
+    }
+    else = {
+        value = {
+            value = game_date
+            subtract = var:gate_hired
+        }
+    }
+}

@@ -15,6 +15,15 @@
 		container = "custom_widget_container_1"
 	}
 
+	status_desc = {
+		triggered_desc = {
+			trigger = {
+				has_gate_magic_researcher = no
+			}
+			desc = gg_projects_invalid_arcanist
+		}
+	}
+
 	immediate = {
         add_gate_dlc_icon = yes
 		capital = {
@@ -149,6 +158,15 @@ je_gate_project_domain = {
 		container = "custom_widget_container_7"
 	}
 
+	status_desc = {
+		triggered_desc = {
+			trigger = {
+				has_gate_magic_researcher = no
+			}
+			desc = gg_projects_invalid_arcanist
+		}
+	}
+
 	immediate = {
         add_gate_dlc_icon = yes
 	}
@@ -223,6 +241,15 @@ je_gate_project_change_domain = {
 		gui = "gui/com_journal_injects/injects.gui"
 		name = "com_journal_entry_dlc_icon"
 		container = "custom_widget_container_7"
+	}
+
+	status_desc = {
+		triggered_desc = {
+			trigger = {
+				has_gate_magic_researcher = no
+			}
+			desc = gg_projects_invalid_arcanist
+		}
 	}
 
 	immediate = {
@@ -310,6 +337,15 @@ je_gate_project_improve_mana_extraction = {
 		gui = "gui/com_journal_injects/injects.gui"
 		name = "com_journal_entry_building"
 		container = "custom_widget_container_1"
+	}
+
+	status_desc = {
+		triggered_desc = {
+			trigger = {
+				has_gate_magic_researcher = no
+			}
+			desc = gg_projects_invalid_arcanist
+		}
 	}
 
 	immediate = {
@@ -404,6 +440,15 @@ je_gate_project_modernize_seed_selection = {
 		gui = "gui/com_journal_injects/injects.gui"
 		name = "com_journal_entry_building"
 		container = "custom_widget_container_1"
+	}
+
+	status_desc = {
+		triggered_desc = {
+			trigger = {
+				has_gate_magic_researcher = no
+			}
+			desc = gg_projects_invalid_arcanist
+		}
 	}
 
 	immediate = {
