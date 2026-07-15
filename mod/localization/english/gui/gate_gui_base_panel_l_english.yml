@@ -7,7 +7,7 @@
 # Panel
  gg_panel_base_title: "Manaflow"
  gg_panel_base_tab_general: "General"
- gg_panel_base_no_researcher: "No Arcanist"
+ gg_panel_base_no_researcher: "No [concept_gate_magic_researcher]"
  gg_panel_base_no_researcher_tooltip: "#header No [concept_gate_magic_researcher]#!\n$alert_has_no_magic_researcher_alert_desc$\n\n$alert_has_no_magic_researcher_alert_hint$\n\n#instruction Click to open the $NATIONAL_CAST$ panel#!"
  gg_panel_base_no_researcher_blink: "#BOLD Hire a new Arcanist#!"
  gg_mana_saturation: "Mana Saturation"
@@ -32,6 +32,15 @@
  gg_monthly_magic_innovation_tooltip: "#header [concept_gate_magic_innovation]#!\nWe are generating #bold [AccessMetaPlayer.AccessPlayedOrObservedCountry.MakeScope.ScriptValue('gate_magic_innovation')|g]#! [concept_gate_magic_innovation] each month:\n[AccessMetaPlayer.AccessPlayedOrObservedCountry.AccessModifier.GetBreakdownFor('country_gate_magical_innovation_add').GetBreakdown]\n\nWith a multiplier of [AccessMetaPlayer.AccessPlayedOrObservedCountry.AccessModifier.GetValueWithBreakdownFor('country_gate_magical_innovation_mult')]\n\nUp to a maximum of [AccessMetaPlayer.AccessPlayedOrObservedCountry.MakeScope.ScriptValue('gate_magic_innovation_max')|v] [concept_gate_magic_innovation] per month:\n[AccessMetaPlayer.AccessPlayedOrObservedCountry.MakeScope.ScriptValue('gate_magic_innovation_max')|+=] [GetMetaPlayer.GetPlayedOrObservedCountry.GetName]\n  [AccessMetaPlayer.AccessPlayedOrObservedCountry.MakeScope.ScriptValue('gate_magic_innovation_max_base')|+=] Base Value\n  [AccessMetaPlayer.AccessPlayedOrObservedCountry.MakeScope.ScriptValue('gate_magic_innovation_max_literacy')|+=] [concept_literacy]\n  [AccessMetaPlayer.AccessPlayedOrObservedCountry.AccessModifier.GetValueWithBreakdownFor('country_gate_magical_innovation_max_add')] Modifiers"
 # Projects
  gg_projects_no_active_project: "Our [concept_gate_magic_researcher] is currently idle."
+ gg_projects_invalid_arcanist: "Our [concept_gate_project] is stalled until we hire a new [concept_gate_magic_researcher]."
  gg_projects_active_project: "Our [concept_gate_magic_researcher] is currently working on #v [GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.GetName]#!."
+ gg_projects_active_project_desc: "[SelectLocalization(GetScriptedGui('sgui_gate_has_researcher').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End), 'gg_projects_active_project', 'gg_projects_invalid_arcanist')]"
  gg_projects_progress_months: "[GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.CalcCurrentGoalValue|v0] of [GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.GetTotalGoalValue|v0] months"
  gg_projects_progress_construction: "[GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.CalcCurrentGoalValue|v0] of [GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.GetTotalGoalValue|v0K] [concept_construction]"
+# Arcanist Stats
+ gg_arcanist_statistics_header: "Statistics"
+ gg_arcanist_statistics_flavor: "Our [concept_gate_magic_researcher] [GetPlayer.MakeScope.Var('gate_magic_researcher').GetCharacter.GetPrimaryRoleTitle] [GetPlayer.MakeScope.Var('gate_magic_researcher').GetCharacter.GetFullName] has been in his [concept_character_role] for [LabelingHelper.GetDaysLocWithoutTooltip(FixedPointToInt(GetPlayer.MakeScope.Var('gate_magic_researcher').ScriptValue('gate_character_hired_days')))]."
+ gg_arcanist_statistics_experience: "[GetPlayer.GetCustom('gg_mr_magic_researcher_experience_custom_loc')] ([Character.MakeScope.Var('magic_experience').GetValue|v0])"
+ gg_arcanist_statistics_status: "Status"
+ gg_arcanist_statistics_popularity: "#tooltippable_name #tooltip:[Character.GetTooltipTag],POPULARITY_BREAKDOWN [LabelingHelper.GetLabelForPopularityCFixedPoint(Character.GetPopularity)]#!#! (#tooltippable #tooltip:[Character.GetTooltipTag],POPULARITY_BREAKDOWN [Character.GetPopularity|0]#!#!)"
+ gg_arcanist_statistics_prominence: "#tooltippable_name #tooltip:[Character.GetTooltipTag],PROMINENCE_BREAKDOWN [LabelingHelper.GetLabelForProminenceCFixedPoint(Character.GetProminence)]#!#! (#tooltippable #tooltip:[Character.GetTooltipTag],PROMINENCE_BREAKDOWN [Character.GetProminence|0]#!#!)"

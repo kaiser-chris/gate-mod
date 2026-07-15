@@ -35,3 +35,27 @@ on_gate_magic_researcher_death = {
         }
     }
 }
+
+on_game_started_after_lobby = {
+    on_actions = {
+        on_game_started_randomize_hiring_dates
+    }
+}
+
+# Randomize arcanist hiring date so they are not
+# 0 at game start
+on_game_started_randomize_hiring_dates = {
+    effect = {
+        every_country = {
+            var:gate_magic_researcher ?= {
+                set_variable = {
+                    name = gate_hired
+                    value = {
+                        value = game_date
+                        subtract = { 60 90 }
+                    }
+                }
+            }
+        }
+    }
+}
