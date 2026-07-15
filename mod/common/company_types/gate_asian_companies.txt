@@ -1,0 +1,88 @@
+﻿company_gate_asian_runic_paper = {
+	icon = "gfx/interface/icons/company_icons/gate_asian_runic_paper.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	building_types = {
+		building_paper_mill
+		building_gate_mana_extractor
+	}
+
+	uses_dynamic_naming = yes
+	dynamic_company_type_names = {
+		dynamic_company_type_company
+		dynamic_company_type_consortium
+		dynamic_company_type_guild
+		dynamic_company_type_fellowship
+		dynamic_company_type_syndicate
+		dynamic_company_type_gate_clan
+	}
+
+	extension_building_types = {
+		building_gate_mana_well
+		building_tooling_workshop
+	}
+	
+	potential = {
+		is_gate_magic_country = yes
+		capital = {
+			OR = {
+				region = sr:region_northeast_asia
+				region = sr:region_north_china
+				region = sr:region_south_china
+			}
+		}
+	}
+	
+	attainable = {
+		has_technology_researched = gate_simple_rune_carving
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			is_gate_magic_country = yes
+			capital = {
+				OR = {
+					region = sr:region_northeast_asia
+					region = sr:region_north_china
+					region = sr:region_south_china
+				}
+			}
+		}
+	}
+
+	possible = { 
+		any_scope_state = {
+			any_scope_building = {
+				is_building_type = building_paper_mill
+				level >= 2
+			}
+		}
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			any_scope_building = {
+				is_building_type = building_paper_mill
+				level >= 3
+			}
+		}
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_gate_asian_runic_paper_complete_tt
+			has_variable = gate_prestige_good_asian_runic_paper
+		}
+	}
+	
+	prosperity_modifier = {
+		building_tooling_workshop_throughput_add = 0.1
+		building_artillery_foundry_throughput_add = 0.05
+		building_arms_industry_throughput_add = 0.05
+	}
+
+	possible_prestige_goods = {
+		prestige_good_gate_asian_runic_paper
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
