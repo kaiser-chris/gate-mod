@@ -1,28 +1,25 @@
 ﻿on_yearly_pulse_country = {
     on_actions = {
-        on_yearly_gate_mana_saturation_other_events
+        on_yearly_gate_ley_line_events
         on_yearly_gate_dragon_events
-        on_yearly_gate_vampire_start
     }
 }
 
-on_yearly_gate_mana_saturation_other_events = {
+on_yearly_gate_ley_line_events = {
     random_events = {
         chance_of_no_event = 20
-        20 = gate_mana_saturation.3 # Magic Soils
-        20 = gate_mana_saturation.4
-        20 = gate_mana_saturation.5
-        20 = gate_mana_saturation.6
-        20 = gate_mana_saturation.7
-        20 = gate_mana_saturation.8
-        20 = gate_mana_saturation.9
-        20 = gate_mana_saturation.10
-        20 = gate_mana_saturation.11
-        20 = gate_mana_saturation.12
-        20 = gate_mana_saturation.13
-        20 = gate_mana_saturation.14
-        20 = gate_mana_saturation.15
-        20 = gate_monster_attack.1
+        20 = gate_ley_line.1
+        20 = gate_ley_line.2
+        20 = gate_ley_line.3
+        20 = gate_ley_line.4
+        20 = gate_ley_line.5
+        20 = gate_ley_line.6
+        20 = gate_ley_line.7
+        20 = gate_ley_line.8
+        20 = gate_ley_line.9
+        20 = gate_ley_line.10
+        20 = gate_ley_line.11
+        20 = gate_ley_line.12
     }
 }
 
@@ -33,6 +30,15 @@ on_yearly_gate_dragon_events = {
         1 = gate_dragon.3 # Dragon - California
         1 = gate_dragon.5 # Dragon - Siberia
         1 = gate_dragon.7 # Dragon - Himalayas
+    }
+}
+
+on_yearly_pulse = {
+    on_actions = {
+        on_yearly_gate_vampire_start
+        on_yearly_gate_magic_soils
+        on_yearly_gate_crystallizing_air
+        on_yearly_gate_monster_horde
     }
 }
 
@@ -47,5 +53,125 @@ on_yearly_gate_vampire_start = {
     effect = {
         gate_start_vampirism = yes
         set_global_variable = gate_vampirism_started
+    }
+}
+
+# Trigger monster horde
+on_yearly_gate_monster_horde = {
+    trigger = {
+        global_var:global_mana_saturation >= 20
+        NOT = {
+            has_global_variable = gate_monster_horde_grace_period
+        }
+    }
+    effect = {
+        random_country = {
+            limit = {
+                is_player = yes
+            }
+            trigger_event = {
+                id = gate_monster_attack.1
+            }
+        }
+    }
+}
+
+on_yearly_gate_magic_soils = {
+    trigger = {
+        # We do not want every state
+        # to have this trait so we
+        # limit it to 30 states.
+        trigger_if = {
+            limit = {
+                has_global_variable = magic_growing_var
+            }
+            global_var:magic_growing_var <= 30
+        }
+        trigger_else = {
+            always = yes
+        }
+
+        # We wait a while before giving
+        # out this trait so non magic
+        # countries have a chance to
+        # get them through propagated
+        # mana density.
+        game_date > 1845.1.1
+
+        # Shared cooldown between all countries
+        NOT = {
+            has_global_variable = gate_magic_soil_cooldown
+        }
+    }
+    effect = {
+        random_state = {
+            limit = {
+                NOR = {
+                    has_state_trait = state_trait_northern_canadian_terrain
+                    has_state_trait = state_trait_siberian_terrain
+                    has_state_trait = state_trait_arctic_whaling
+                    has_state_trait = state_trait_good_soils
+                    has_state_trait = state_trait_black_soil
+                    has_state_trait = state_trait_gate_magic_soil
+                }
+                state_region = {
+                    var:mana_density >= gate_medium_mana_density_threshhold
+                }
+                arable_land >= 5
+            }
+            save_scope_as = magic_growing_state
+            owner = {
+                trigger_event = {
+                    id = gate_mana_saturation.3
+                    days = { 30 60 }
+                }
+            }
+        }
+    }
+}
+
+on_yearly_gate_crystallizing_air = {
+    trigger = {
+        # We do not want every state
+        # to have this trait so we
+        # limit it to 15 states.
+        trigger_if = {
+            limit = {
+                has_global_variable = gate_mana_crystalizing_count
+            }
+            global_var:gate_mana_crystalizing_count <= 15
+        }
+        trigger_else = {
+            always = yes
+        }
+
+        # Starts late since it needs a
+        # high mana density
+        game_date > 1880.1.1
+
+        # Shared cooldown between all countries
+        NOT = {
+            has_global_variable = gate_mana_crystalizing_cooldown
+        }
+    }
+    effect = {
+        random_state = {
+            limit = {
+                state_region = {
+                    var:mana_density >= gate_maximum_mana_density
+                }
+
+                # This strong trait shouldn't be
+                # applied to capitals
+                is_capital = no
+            }
+            save_scope_as = mana_crystalizing_state
+            owner = {
+                trigger_event = {
+                    id = gate_mana_saturation.4
+                    days = { 30 60 }
+                }
+            }
+        }
     }
 }

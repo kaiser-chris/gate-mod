@@ -7,7 +7,7 @@
 				has_variable = gate_rejected_vampirism
 			}
 		}
-		save_temporary_scope_as = player_vampire_target
+		save_scope_as = player_vampire_target
 	}
 	if = {
 		limit = {
@@ -29,7 +29,7 @@
 					has_variable = gate_rejected_vampirism
 				}
 			}
-			save_temporary_scope_as = ai_vampire_target
+			save_scope_as = ai_vampire_target
 		}
 		scope:ai_vampire_target ?= {
 			trigger_event = {

@@ -17,10 +17,26 @@ building_group_bg_gate_magic_industry_throughput_add = {
         ai_value = 0
     }
 }
+building_group_bg_gate_magic_industry_employee_mult = {
+    decimals = 1
+    color = bad
+    percent = yes
+    game_data = {
+        ai_value = 0
+    }
+}
 
 building_group_bg_gate_mana_extraction_throughput_add = {
     decimals = 0
     color = good
+    percent = yes
+    game_data = {
+        ai_value = 0
+    }
+}
+building_group_bg_gate_mana_extraction_employee_mult = {
+    decimals = 1
+    color = bad
     percent = yes
     game_data = {
         ai_value = 0
