@@ -105,3 +105,13 @@ has_gate_active_magic_project = {
 		has_variable = gate_magic_project
 	}
 }
+
+gate_allow_monster_hunting = {
+	OR = {
+		is_gate_planet_country = yes
+		OR = {
+			has_global_variable = gate_monster_horde_happened
+			has_variable = monster_congress_happened
+		}
+	}
+}
