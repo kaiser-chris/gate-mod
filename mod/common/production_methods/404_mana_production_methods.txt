@@ -1,5 +1,6 @@
 ﻿pm_gate_mage_mana_extraction = {
 	texture = "gfx/interface/icons/production_method_icons/gate_mage_extraction.dds"
+	is_hidden_when_unavailable = yes
 
 	disallowing_laws = {
 		law_gate_druidic_agrarianism
@@ -21,7 +22,8 @@
 }
 
 pm_gate_druid_mana_extraction = {
-	texture = "gfx/interface/icons/production_method_icons/gate_mage_extraction.dds"
+	texture = "gfx/interface/icons/production_method_icons/gate_druid_extraction.dds"
+	is_hidden_when_unavailable = yes
 
 	unlocking_laws = {
 		law_gate_druidic_agrarianism
@@ -44,6 +46,7 @@ pm_gate_druid_mana_extraction = {
 
 pm_gate_mage_ritual_extraction = {
 	texture = "gfx/interface/icons/production_method_icons/gate_ritual_extraction.dds"
+	is_hidden_when_unavailable = yes
 
 	unlocking_technologies = {
 		gate_ritual_magic
@@ -69,7 +72,8 @@ pm_gate_mage_ritual_extraction = {
 }
 
 pm_gate_druid_ritual_extraction = {
-	texture = "gfx/interface/icons/production_method_icons/gate_ritual_extraction.dds"
+	texture = "gfx/interface/icons/production_method_icons/gate_druid_ritual_extraction.dds"
+	is_hidden_when_unavailable = yes
 
 	unlocking_technologies = {
 		gate_ritual_magic
@@ -112,6 +116,7 @@ pm_gate_mage_simple_ley_line_tap = {
 
 pm_gate_druid_simple_ley_line_tap = {
 	texture = "gfx/interface/icons/production_method_icons/gate_simple_ley_line_tap.dds"
+	is_hidden_when_unavailable = yes
 
 	building_modifiers = {
 		workforce_scaled = {
