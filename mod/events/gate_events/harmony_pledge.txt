@@ -3,50 +3,38 @@
 ## Master AI Chance Modifiers Reference:
 #
 #		ai_chance = {
+#			# Base is always 10
 #			base = 10
-#						# For modifier alignment. (example)
+#
+#			# Base chance modification based on progress bar
+#			#= Positive
+# 			event_option_gate_harmony_pledge_chaos = {
+# 				type = economy
+# 			}
+#			#= Negative
+# 			event_option_gate_harmony_pledge_order = {
+# 				type = economy
+# 			}
+#
+#			# For modifier alignment.
+#			# example: modifier which changes bureaucracy
 #			modifier = {
 #				trigger = {
 #					bureaucracy < 0		# Modifier reduces bureaucracy.
 #				}
-#				divide = 2				# Divide proportionally if misaligned.
+#				factor = 0.5			# Divide proportionally if misaligned.
 #			}
-#			OR
+#			# OR
 #			modifier = {
 #				trigger = {
 #					bureaucracy < 0		# Modifier adds bureaucracy.
 #				}
-#				multiply = 2			# Use Modifier Multiplier if aligned.
-#			}
-#						# For Negative Progress
-#			modifier = {
-#				trigger = {
-#					"je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_<type>)" < 50 - add_gate_<type>_harmony_progress [50-(-5) = 55]
-#				}
-#				add = -5	# If current value is < 50 - add_gate_<type>_harmony_progress don't flip across the centreline if there's a better option. 
-#			}
-#			modifier = {
-#				trigger = {
-#					"je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_<type>)" < 40 - add_gate_<type>_harmony_progress
-#				}
-#				value = 0	# If current value is < 40 - add_gate_<type>_harmony_progress do not move further from harmony.
-#			}
-#						# For Positive Progress
-#			modifier = {
-#				trigger = {
-#					"je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_<type>)" > 50 - add_gate_<type>_harmony_progress [50-(2) = 48]
-#				}
-#				add = -5	# If current value is > 50 - add_gate_<type>_harmony_progress don't flip across the centreline if there's a better option. 
-#			}
-#			modifier = {
-#				trigger = {
-#					"je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_<type>)" > 60 - add_gate_<type>_harmony_progress
-#				}
-#				value = 0	# If current value is > 60 - add_gate_<type>_harmony_progress do not move further from harmony.
+#				factor = 2			# Use Modifier Multiplier if aligned.
 #			}
 #		}
 #
-#		NOTE: If directional drift modifiers get used, compare directly to gate_harmony_pledge_<type>_trend_base script value and prefer the one that trends towards centre unless already harmonious and new drift modifier is >> current drift.
+#		NOTE: If directional drift modifiers get used, compare directly to gate_harmony_pledge_<type>_trend_base script value
+#			  and prefer the one that trends towards centre unless already harmonious and new drift modifier is >> current drift.
 #
 #		NOTE: default_option = yes should only apply for the player, not the AI
 
@@ -147,23 +135,14 @@ gate_harmony_pledge.2 = {
 		name = gate_harmony_pledge.2.a
 		ai_chance = {
 			base = 10
+			event_option_gate_harmony_pledge_order = {
+				type = economy
+			}
 			modifier = {
 				trigger = {
 					bureaucracy < 0		# Modifier reduces bureaucracy.
 				}
-				divide = 2				# Divide proportionally if misaligned.
-			}
-			modifier = {
-				trigger = {
-					"je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_economy)" < 55
-				}
-				add = -5	# Don't flip across the centreline if there's a better option. 
-			}
-			modifier = {
-				trigger = {
-					"je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_economy)" < 45
-				}
-				value = 0	# If current value is < 40 + add_gate_economy_harmony_progress do not move further from harmony.
+				factor = 0.5			# Divide proportionally if misaligned.
 			}
 		}
 		add_gate_economy_harmony_progress = {
@@ -182,23 +161,14 @@ gate_harmony_pledge.2 = {
 		name = gate_harmony_pledge.2.b
 		ai_chance = {
 			base = 10
+			event_option_gate_harmony_pledge_chaos = {
+				type = economy
+			}
 			modifier = {
 				trigger = {
 					bureaucracy < 0		# Modifier adds bureaucracy.
 				}
-				multiply = 1			# Use Modifier Multiplier if aligned.
-			}
-			modifier = {
-				trigger = {
-					"je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_economy)" < 48
-				}
-				add = -5	# Don't flip across the centreline if there's a better option. 
-			}
-			modifier = {
-				trigger = {
-					"je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_economy)" > 58
-				}
-				value = 0	# If current value is < 60 - add_gate_economy_harmony_progress do not move further from harmony.
+				factor = 1				# Use Modifier Multiplier if aligned.
 			}
 		}
 		default_option = yes
@@ -217,23 +187,14 @@ gate_harmony_pledge.2 = {
 		name = gate_harmony_pledge.2.c
 		ai_chance = {
 			base = 10
+			event_option_gate_harmony_pledge_chaos = {
+				type = economy
+			}
 			modifier = {
 				trigger = {
 					bureaucracy < 0		# Modifier adds bureaucracy.
 				}
-				multiply = 2			# Use Modifier Multiplier if aligned.
-			}
-			modifier = {
-				trigger = {
-					"je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_<type>)" > 45
-				}
-				add = -5	# If current value is > 50 - add_gate_<type>_harmony_progress don't flip across the centreline if there's a better option. 
-			}
-			modifier = {
-				trigger = {
-					"je:je_gate_harmony_pledge.scripted_bar_progress(pb_gate_harmony_pledge_<type>)" > 55
-				}
-				value = 0	# If current value is > 60 - add_gate_<type>_harmony_progress do not move further from harmony.
+				factor = 2				# Use Modifier Multiplier if aligned.
 			}
 		}
 		add_gate_economy_harmony_progress = {
