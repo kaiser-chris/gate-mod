@@ -1,0 +1,29 @@
+﻿event_option_gate_harmony_pledge_order = {
+    modifier = {
+        trigger = {
+            je:je_gate_harmony_pledge.scripted_bar_progress:pb_gate_harmony_pledge_$type$ < 55
+        }
+        add = -5	# Don't flip across the centreline if there's a better option.
+    }
+    modifier = {
+        trigger = {
+            je:je_gate_harmony_pledge.scripted_bar_progress:pb_gate_harmony_pledge_$type$ < 45
+        }
+        add = -10	# If current value is < 40 + add_gate_economy_harmony_progress do not move further from harmony.
+    }
+}
+
+event_option_gate_harmony_pledge_chaos = {
+    modifier = {
+        trigger = {
+            je:je_gate_harmony_pledge.scripted_bar_progress:pb_gate_harmony_pledge_$type$ > 45
+        }
+        add = -5	# If current value is > 50 - add_gate_<type>_harmony_progress don't flip across the centreline if there's a better option.
+    }
+    modifier = {
+        trigger = {
+            je:je_gate_harmony_pledge.scripted_bar_progress:pb_gate_harmony_pledge_$type$ > 55
+        }
+        add = -10	# If current value is > 60 - add_gate_<type>_harmony_progress do not move further from harmony.
+    }
+}
