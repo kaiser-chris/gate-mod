@@ -8,3 +8,6 @@
 - voice by Adrien Coquet from <a href="https://thenounproject.com/browse/icons/term/voice/" target="_blank" title="voice Icons">Noun Project</a> (CC BY 3.0)
 - Face fragmentation by Zky Icon from <a href="https://thenounproject.com/browse/icons/term/face-fragmentation/" target="_blank" title="Face fragmentation Icons">Noun Project</a> (CC BY 3.0)
 - Rose by Lewen Design from <a href="https://thenounproject.com/browse/icons/term/rose/" target="_blank" title="Rose Icons">Noun Project</a> (CC BY 3.0)
+- Magic Staff by agus raharjo from <a href="https://thenounproject.com/browse/icons/term/magic-staff/" target="_blank" title="Magic Staff Icons">Noun Project</a> (CC BY 3.0)
+- Light Bulb by Ainsley Agatha from <a href="https://thenounproject.com/browse/icons/term/light-bulb/" target="_blank" title="Light Bulb Icons">Noun Project</a> (CC BY 3.0)
+- Arrow by Harli wafa from <a href="https://thenounproject.com/browse/icons/term/arrow/" target="_blank" title="Arrow Icons">Noun Project</a> (CC BY 3.0)

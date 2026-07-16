@@ -25,6 +25,7 @@ ig_trait_gate_patriotic_research = {
 
 	modifier = {
 		country_gate_magical_innovation_mult = 0.1
+		country_gate_magical_innovation_max_add = 30
 	}
 }
 ig_trait_gate_military_support = {
@@ -32,6 +33,7 @@ ig_trait_gate_military_support = {
 	min_approval = happy
 
 	modifier = {
+		country_gate_magical_innovation_mult = 0.05
 		unit_offense_mult = 0.05
 		unit_defense_mult = 0.05
 	}
@@ -42,5 +44,6 @@ ig_trait_gate_hidden_research = {
 
 	modifier = {
 		country_gate_magical_innovation_mult = -0.1
+		country_gate_magical_innovation_max_add = -20
 	}
 }
