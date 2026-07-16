@@ -17,6 +17,7 @@ lesson_gate_magic_research = {
 	trigger = {
 		is_gate_magic_country = yes
 		has_variable = can_research_magic
+		has_game_rule = gate_tutorials_on
 	}
 
 	lesson_gate_magic_research_1 = {
@@ -147,6 +148,7 @@ lesson_gate_new_arcanist = {
 	trigger = {
 		is_gate_magic_country = yes
 		has_gate_magic_researcher = no
+		has_game_rule = gate_tutorials_on
 	}
 
 	lesson_gate_new_arcanist_1 = {
