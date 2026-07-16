@@ -1,0 +1,49 @@
+﻿# Orkish Supremacy
+# = Magic Users traits
+ig_trait_gate_slave_masters = {
+	icon = "gfx/interface/icons/ig_trait_icons/gate_slave_masters.dds"
+	min_approval = loyal
+	
+	modifier = {
+		state_slaves_mortality_mult = -0.1
+	}
+}
+ig_trait_gate_annoyed_masters = {
+	icon = "gfx/interface/icons/ig_trait_icons/gate_annoyed_masters.dds"
+	max_approval = unhappy
+	
+	modifier = {
+		state_slaves_mortality_mult = 0.1
+	}
+}
+
+# General
+# = Magic Users traits
+ig_trait_gate_patriotic_research = {
+	icon = "gfx/interface/icons/ig_trait_icons/gate_patriotic_research.dds"
+	min_approval = loyal
+
+	modifier = {
+		country_gate_magical_innovation_mult = 0.1
+		country_gate_magical_innovation_max_add = 30
+	}
+}
+ig_trait_gate_military_support = {
+	icon = "gfx/interface/icons/ig_trait_icons/gate_military_support.dds"
+	min_approval = happy
+
+	modifier = {
+		country_gate_magical_innovation_mult = 0.05
+		unit_offense_mult = 0.05
+		unit_defense_mult = 0.05
+	}
+}
+ig_trait_gate_hidden_research = {
+	icon = "gfx/interface/icons/ig_trait_icons/gate_hidden_research.dds"
+	max_approval = unhappy
+
+	modifier = {
+		country_gate_magical_innovation_mult = -0.1
+		country_gate_magical_innovation_max_add = -20
+	}
+}
