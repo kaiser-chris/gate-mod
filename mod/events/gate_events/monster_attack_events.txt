@@ -182,6 +182,14 @@ gate_monster_attack.4 = {
         video = "southamerica_aristocrats"
     }
 
+    immediate = {
+        active_law:lawgroup_gate_monster_hunting = {
+            save_scope_as = selected_law
+        }
+    }
+
+    is_popup = yes
+
     icon = "gfx/interface/icons/event_icons/event_gate_monster.dds"
 
     title = gate_monster_attack.4.t
@@ -190,5 +198,42 @@ gate_monster_attack.4 = {
 
     option = {
         name = gate_monster_attack.4.a
+        default_option = yes
+    }
+}
+
+gate_monster_attack.5 = {
+    type = country_event
+    dlc = dlc_magic_gate
+    placement = scope:monster_attack_state
+
+    event_image = {
+        video = "southamerica_aristocrats"
+    }
+
+    immediate = {
+        random_scope_state = {
+            limit = {
+                state_region = {
+                    has_harvest_condition = gate_monster_attack
+                }
+            }
+            save_scope_as = monster_attack_state
+        }
+    }
+
+    is_popup = yes
+
+    duration = 3
+
+    icon = "gfx/interface/icons/event_icons/event_gate_monster.dds"
+
+    title = gate_monster_attack.5.t
+    desc = gate_monster_attack.5.d
+    flavor = gate_monster_attack.5.f
+
+    option = {
+        name = gate_monster_attack.5.a
+        default_option = yes
     }
 }

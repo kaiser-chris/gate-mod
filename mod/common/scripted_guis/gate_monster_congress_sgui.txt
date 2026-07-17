@@ -1,0 +1,24 @@
+﻿sgui_gate_monster_congress_select_law = {
+    scope = journal_entry
+
+    saved_scopes = {
+        selected_law
+    }
+
+    effect = {
+        set_variable = {
+            name = selected_law
+            value = scope:selected_law
+        }
+    }
+
+    is_valid = {
+        NOT = {
+            has_variable = monster_congress_in_progress
+        }
+    }
+
+    is_shown = {
+        var:selected_law ?= scope:selected_law
+    }
+}

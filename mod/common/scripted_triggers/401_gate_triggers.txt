@@ -14,17 +14,8 @@ is_gate_magic_country = {
 # Trigger to check whether a country originated from
 # the other side of the gate
 is_gate_planet_country = {
-    custom_description = {
-        text = gate_is_magic_country
-        subject = this
-		OR = {
-			country_has_primary_culture = cu:dwarven
-			country_has_primary_culture = cu:orcish
-			country_has_primary_culture = cu:elven
-			country_has_primary_culture = cu:gnomish
-			country_has_primary_culture = cu:gate_arctic_ogre
-			country_has_primary_culture = cu:gate_south_ogre
-		}
+	any_primary_culture = {
+		has_discrimination_trait_group = heritage_group_gate_origin
 	}
 }
 
@@ -106,12 +97,28 @@ has_gate_active_magic_project = {
 	}
 }
 
-gate_allow_monster_hunting = {
+has_finished_monster_congress = {
+	custom_description = {
+		text = has_finished_monster_congress
+		subject = this
+		has_variable = monster_congress_happened
+	}
+}
+
+gate_visible_monster_hunting = {
 	OR = {
 		is_gate_planet_country = yes
-		OR = {
+		has_finished_monster_congress = yes
+		has_journal_entry = je_gate_monster_congress
+		hidden_trigger = {
 			has_global_variable = gate_monster_horde_happened
-			has_variable = monster_congress_happened
 		}
+	}
+}
+
+gate_allow_enacting_monster_hunting = {
+	OR = {
+		is_gate_planet_country = yes
+		has_finished_monster_congress = yes
 	}
 }

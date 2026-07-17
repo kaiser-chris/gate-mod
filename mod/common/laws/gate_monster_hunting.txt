@@ -38,7 +38,10 @@ law_gate_private_monster_hunters = {
     # or after the first big monster attack happened
     # and a player had their monster conclave
     is_visible = {
-        gate_allow_monster_hunting = yes
+        gate_visible_monster_hunting = yes
+    }
+    can_enact = {
+        gate_allow_enacting_monster_hunting = yes
     }
 
     # When industrialists are in power they want
@@ -84,7 +87,10 @@ law_gate_dedicated_monster_hunters = {
     # or after the first big monster attack happened
     # and a player had their monster conclave
     is_visible = {
-        gate_allow_monster_hunting = yes
+        gate_visible_monster_hunting = yes
+    }
+    can_enact = {
+        gate_allow_enacting_monster_hunting = yes
     }
 
     # Petitions
@@ -128,7 +134,10 @@ law_gate_militarized_monster_hunters = {
     # or after the first big monster attack happened
     # and a player had their monster conclave
     is_visible = {
-        gate_allow_monster_hunting = yes
+        gate_visible_monster_hunting = yes
+    }
+    can_enact = {
+        gate_allow_enacting_monster_hunting = yes
     }
 
     # Petitions
