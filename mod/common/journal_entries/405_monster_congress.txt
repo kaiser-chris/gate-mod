@@ -6,6 +6,12 @@
 	scripted_button = je_gate_monster_congress_button_start
 
 	widget = {
+		gui = "gui/journal_injects/gate_monster_congress_injects.gui"
+		name = "gate_monster_congress_law_group"
+		container = "custom_widget_container_2"
+	}
+
+	widget = {
 		gui = "gui/com_journal_injects/injects.gui"
 		name = "com_journal_entry_dlc_icon"
 		container = "custom_widget_container_7"
@@ -13,6 +19,16 @@
 
     immediate = {
 		add_gate_dlc_icon = yes
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = gate_monster_horde_happened
+				}
+			}
+			# When it was not a global horde which triggered the JE
+			# but a local monster attack
+			trigger_event = gate_monster_attack.5
+		}
     }
 
 	status_desc = {
@@ -20,7 +36,9 @@
 			triggered_desc = {
 				desc = je_gate_monster_congress_in_progress
 				trigger = {
-					has_variable = monster_congress_in_progress
+					scope:journal_entry = {
+						has_variable = monster_congress_in_progress
+					}
 				}
 			}
 			triggered_desc = {
@@ -53,6 +71,12 @@
 				}
 			}
 		}
+		custom_tooltip = {
+			text = je_gate_monster_congress_button_start_block_no_law
+			scope:journal_entry = {
+				has_variable = selected_law
+			}
+		}
 	}
 
 	invalid = {
@@ -62,6 +86,14 @@
 	on_complete = {
 		set_variable = monster_congress_happened
 		remove_variable = monster_congress_in_progress
+		if = {
+			limit = {
+				scope:journal_entry = {
+					has_variable = selected_law
+				}
+			}
+			activate_law = scope:journal_entry.var:selected_law
+		}
 		trigger_event = gate_monster_attack.4
 	}
 

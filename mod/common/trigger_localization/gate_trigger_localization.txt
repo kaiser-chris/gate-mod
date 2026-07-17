@@ -99,3 +99,12 @@ has_gate_max_mana_density = {
     third = trigger_has_gate_max_mana_density
     third_not = trigger_has_gate_max_mana_density_not
 }
+
+has_finished_monster_congress = {
+    global = trigger_has_finished_monster_congress
+    global_not = trigger_has_finished_monster_congress_not
+    first = trigger_has_finished_monster_congress_third
+    first_not = trigger_has_finished_monster_congress_third_not
+    third = trigger_has_finished_monster_congress_third
+    third_not = trigger_has_finished_monster_congress_third_not
+}

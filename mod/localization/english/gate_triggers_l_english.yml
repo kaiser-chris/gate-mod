@@ -14,10 +14,10 @@
  trigger_gate_is_magic_country_third: "[COUNTRY.GetNameNoFlag] has [concept_gate_magic_knowledge]"
  trigger_gate_is_magic_country_third_not: "[COUNTRY.GetNameNoFlag] does #bold not#! have [concept_gate_magic_knowledge]"
 
- trigger_gate_has_magic_researcher: "Has a [concept_gate_magic_researcher]"
- trigger_gate_has_magic_researcher_not: "Does #bold not#! have a [concept_gate_magic_researcher]"
- trigger_gate_has_magic_researcher_third: "[COUNTRY.GetNameNoFlag] has a [concept_gate_magic_researcher]"
- trigger_gate_has_magic_researcher_third_not: "[COUNTRY.GetNameNoFlag] does #bold not#! have a [concept_gate_magic_researcher]"
+ trigger_gate_has_magic_researcher: "Has an [concept_gate_magic_researcher]"
+ trigger_gate_has_magic_researcher_not: "Does #bold not#! have an [concept_gate_magic_researcher]"
+ trigger_gate_has_magic_researcher_third: "[COUNTRY.GetNameNoFlag] has an [concept_gate_magic_researcher]"
+ trigger_gate_has_magic_researcher_third_not: "[COUNTRY.GetNameNoFlag] does #bold not#! have an [concept_gate_magic_researcher]"
 
  trigger_gate_has_active_magic_project: "Has an active [concept_gate_project]"
  trigger_gate_has_active_magic_project_not: "Does #bold not#! have an active [concept_gate_project]"
@@ -56,6 +56,11 @@
  trigger_gate_arcane_council_recently_changed_military_regulations_not: "Has #bold not#! recently introduced regulations in the Arcane Council [concept_com_international_organization]"
  trigger_gate_arcane_council_recently_changed_military_regulations_third: "[COUNTRY.GetNameNoFlag] has recently introduced regulations in the Arcane Council [concept_com_international_organization]"
  trigger_gate_arcane_council_recently_changed_military_regulations_third_not: "[COUNTRY.GetNameNoFlag] has #bold not#! recently introduced regulations in the Arcane Council [concept_com_international_organization]"
+
+ trigger_has_finished_monster_congress: "Has had their #yellow #tooltip:[GetRawTextTooltipTag('je_gate_monster_congress_reason')] $je_gate_monster_congress$#!#!"
+ trigger_has_finished_monster_congress_not: "Did #bold not#! have their #yellow #tooltip:[GetRawTextTooltipTag('je_gate_monster_congress_reason')] $je_gate_monster_congress$#!#! yet"
+ trigger_has_finished_monster_congress_third: "[COUNTRY.GetNameNoFlag] has had their #yellow #tooltip:[GetRawTextTooltipTag('je_gate_monster_congress_reason')] $je_gate_monster_congress$#!#!"
+ trigger_has_finished_monster_congress_third_not: "[COUNTRY.GetNameNoFlag] did #bold not#! have their #yellow #tooltip:[GetRawTextTooltipTag('je_gate_monster_congress_reason')] $je_gate_monster_congress$#!#! yet"
 
  trigger_gate_project_has_any_selector_open: "Any [concept_gate_project] selectors are open"
  trigger_gate_project_has_any_selector_open_not: "No [concept_gate_project] selectors are open"

@@ -1,0 +1,124 @@
+﻿# INHERITED FROM BASE GAME
+@panel_width_minus_30 = 510
+@panel_width_minus_20 = 520
+@panel_width_minus_10 = 530			# used to be 450
+@panel_width = 540  				# used to be 460
+@panel_width_half = 270				# used to be 230
+@panel_width_plus_10 = 550  		# used to be 470
+@panel_width_plus_14 = 554			# used to be 474
+@panel_width_plus_14_half = 277		# used to be 237
+@panel_width_plus_20 = 560			# used to be 480
+@panel_width_plus_30 = 570			# used to be 490
+@panel_width_plus_70 = 610			# used to be 530
+
+#### WIDGETS
+flowcontainer = {
+	name = "gate_monster_congress_law_group"
+	parentanchor = hcenter
+	direction = vertical
+	spacing = 10
+	flowcontainer = {
+		direction = vertical
+		using = default_list_position
+		spacing = 10
+		datamodel = "[AccessPlayer.AccessActiveLawFromGroup('lawgroup_gate_monster_hunting').GetLawAlternatives]"
+
+		item = {
+			gate_monster_congress_law = {}
+		}
+	}
+}
+
+types gate_journal_types {
+
+	type gate_monster_congress_law = widget {
+		size = { @panel_width_minus_30 87 }
+		datacontext = "[GetScriptedGui('sgui_gate_monster_congress_select_law')]"
+
+		# Hide "No Organized Monster Hunting"
+		visible = "[Not(Law.IsActive)]"
+
+		button = {
+			visible = "[Not(ScriptedGui.IsShown(GuiScope
+				.SetRoot(JournalEntry.MakeScope)
+				.AddScope('selected_law', Law.GetLawType.MakeScope)
+				.End
+			))]"
+			size = { 100% 100% }
+			using = default_button
+
+			# Select Law
+			onclick = "[ScriptedGui.Execute(GuiScope
+				.SetRoot(JournalEntry.MakeScope)
+				.AddScope('selected_law', Law.GetLawType.MakeScope)
+				.End
+			)]"
+
+			# Can be enacted and is not already selected
+			enabled = "[And3(
+				Law.HasNecessaryTech,
+				Law.HasNecessaryLaws,
+				ScriptedGui.IsValid(GuiScope
+					.SetRoot(JournalEntry.MakeScope)
+					.AddScope('selected_law', Law.GetLawType.MakeScope)
+					.End
+				)
+			)]"
+
+			hbox = {
+				layoutpolicy_horizontal = preferred
+				layoutpolicy_vertical = expanding
+				margin = { 10 0 }
+
+				law_icon = {
+					block "law_icon_size" {
+						size = { 70 70 }
+					}
+
+					tooltipwidget = {
+						FancyTooltip_Law = {}
+					}
+				}
+
+				law_content = {}
+			}
+		}
+
+		widget = {
+			visible = "[ScriptedGui.IsShown(GuiScope
+				.SetRoot(JournalEntry.MakeScope)
+				.AddScope('selected_law', Law.GetLawType.MakeScope)
+				.End
+			)]"
+			size = { 100% 100% }
+
+			background = {
+				using = paper_bg
+			}
+
+			icon = {
+				using = highlighted_selected_square_selection
+			}
+
+			hbox = {
+				layoutpolicy_horizontal = preferred
+				layoutpolicy_vertical = expanding
+				margin = { 10 0 }
+
+				law_icon = {
+					block "law_icon_size" {
+						size = { 70 70 }
+					}
+
+					tooltipwidget = {
+						FancyTooltip_Law = {}
+					}
+				}
+
+				law_content = {}
+			}
+		}
+
+	}
+
+}

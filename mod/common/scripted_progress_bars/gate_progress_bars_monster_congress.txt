@@ -7,7 +7,9 @@
 	monthly_progress = {
 		if = {
 			limit = {
-				has_variable = monster_congress_in_progress
+				scope:journal_entry = {
+					has_variable = monster_congress_in_progress
+				}
 			}
 			add = {
 				value = 1

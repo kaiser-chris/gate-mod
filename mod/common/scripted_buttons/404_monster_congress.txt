@@ -3,10 +3,16 @@
 	desc = je_gate_monster_congress_button_start_desc
 
 	possible = {
-		custom_tooltip = {
-			text = je_gate_monster_congress_button_start_block_started
-			NOT = {
-				has_variable = monster_congress_in_progress
+		scope:journal_entry = {
+			custom_tooltip = {
+				text = je_gate_monster_congress_button_start_block_started
+				NOT = {
+					has_variable = monster_congress_in_progress
+				}
+			}
+			custom_tooltip = {
+				text = je_gate_monster_congress_button_start_block_no_law
+				has_variable = selected_law
 			}
 		}
 	}
@@ -16,13 +22,15 @@
 	}
 
 	effect = {
-		custom_tooltip = {
-			text = je_monster_congress_button_start_effect
-			set_variable = monster_congress_in_progress
-		}
-		add_modifier = {
-			name = modifier_gate_monster_congress
-			months = 7
+		scope:journal_entry = {
+			custom_tooltip = {
+				text = je_monster_congress_button_start_effect
+				set_variable = monster_congress_in_progress
+			}
+			add_modifier = {
+				name = modifier_gate_monster_congress
+				months = 7
+			}
 		}
 	}
 }
