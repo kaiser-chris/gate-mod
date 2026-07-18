@@ -30,6 +30,12 @@
 
 	widget = {
 		gui = "gui/com_journal_injects/injects.gui"
+		name = "com_journal_entry_company"
+		container = "custom_widget_container_2"
+	}
+
+	widget = {
+		gui = "gui/com_journal_injects/injects.gui"
 		name = "com_journal_entry_dlc_icon"
 		container = "custom_widget_container_7"
 	}
@@ -46,6 +52,12 @@
 				}
 			}
 			save_scope_as = relevant_company
+			scope:journal_entry = {
+				set_variable = {
+					name = com_journal_entry_company
+					value = prev
+				}
+			}
 		}
 		set_variable = {
 			name = prestige_mana_timer_var
@@ -166,6 +178,12 @@ je_prestige_goods_gate_golem = {
 
 	widget = {
 		gui = "gui/com_journal_injects/injects.gui"
+		name = "com_journal_entry_company"
+		container = "custom_widget_container_2"
+	}
+
+	widget = {
+		gui = "gui/com_journal_injects/injects.gui"
 		name = "com_journal_entry_dlc_icon"
 		container = "custom_widget_container_7"
 	}
@@ -182,6 +200,12 @@ je_prestige_goods_gate_golem = {
 				}
 			}
 			save_scope_as = relevant_company
+			scope:journal_entry = {
+				set_variable = {
+					name = com_journal_entry_company
+					value = prev
+				}
+			}
 		}
 		set_variable = {
 			name = prestige_golem_timer_var
@@ -302,6 +326,12 @@ je_prestige_goods_gate_runic_paper = {
 
 	widget = {
 		gui = "gui/com_journal_injects/injects.gui"
+		name = "com_journal_entry_company"
+		container = "custom_widget_container_2"
+	}
+
+	widget = {
+		gui = "gui/com_journal_injects/injects.gui"
 		name = "com_journal_entry_dlc_icon"
 		container = "custom_widget_container_7"
 	}
@@ -318,6 +348,12 @@ je_prestige_goods_gate_runic_paper = {
 				}
 			}
 			save_scope_as = relevant_company
+			scope:journal_entry = {
+				set_variable = {
+					name = com_journal_entry_company
+					value = prev
+				}
+			}
 		}
 		set_variable = {
 			name = prestige_runic_paper_timer_var
@@ -439,6 +475,12 @@ je_prestige_goods_gate_dwarven_iron = {
 
 	widget = {
 		gui = "gui/com_journal_injects/injects.gui"
+		name = "com_journal_entry_company"
+		container = "custom_widget_container_2"
+	}
+
+	widget = {
+		gui = "gui/com_journal_injects/injects.gui"
 		name = "com_journal_entry_dlc_icon"
 		container = "custom_widget_container_7"
 	}
@@ -455,6 +497,12 @@ je_prestige_goods_gate_dwarven_iron = {
 				}
 			}
 			save_scope_as = relevant_company
+			scope:journal_entry = {
+				set_variable = {
+					name = com_journal_entry_company
+					value = prev
+				}
+			}
 		}
 		set_variable = {
 			name = prestige_good_dwarven_timer_var
@@ -583,6 +631,12 @@ je_prestige_goods_gate_asian_runic_paper = {
 
 	widget = {
 		gui = "gui/com_journal_injects/injects.gui"
+		name = "com_journal_entry_company"
+		container = "custom_widget_container_2"
+	}
+
+	widget = {
+		gui = "gui/com_journal_injects/injects.gui"
 		name = "com_journal_entry_dlc_icon"
 		container = "custom_widget_container_7"
 	}
@@ -599,6 +653,12 @@ je_prestige_goods_gate_asian_runic_paper = {
 				}
 			}
 			save_scope_as = relevant_company
+			scope:journal_entry = {
+				set_variable = {
+					name = com_journal_entry_company
+					value = prev
+				}
+			}
 		}
 		set_variable = {
 			name = prestige_asian_runic_paper_timer_var
