@@ -1,4 +1,10 @@
 # Credits
+- Thank you to [Realms of Exether](https://steamcommunity.com/sharedfiles/filedetails/?id=3279217222) for giving permission to use their races and other art in Manaflow.
+- Thank you to [Anbennar](https://steamcommunity.com/sharedfiles/filedetails/?id=3579741601) for giving permission to use their races and other art in Manaflow.
+- Thank you to [Dotti Locari](https://steamcommunity.com/profiles/76561198060636122) for giving permission to use their images and also creating original art for Manaflow.
+- Thank you to [Lord R](https://steamcommunity.com/sharedfiles/filedetails/?id=2889925770) from Morgenröte for creating characters for Manaflow.
+- Thank you to [伊恩](https://steamcommunity.com/profiles/76561199142528477/) for his work on the Chinese translation.
+- Thank you to [시아츠](https://steamcommunity.com/profiles/76561198319776515/) and PatronPasta for their work on the Korean translation.
 
 ## Images
 - eyes by Jojoid from <a href="https://thenounproject.com/browse/icons/term/eyes/" target="_blank" title="eyes Icons">Noun Project</a> (CC BY 3.0)
