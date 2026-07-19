@@ -1563,6 +1563,8 @@ gate_mbudye.17 = {
 		video = "ep1_transfer_of_authority"
 	}
 
+	gui_window = event_window_widescreen_classic
+
 	immediate = {
 		save_scope_as = gate_mbudye_dominion
 	}
@@ -1572,6 +1574,8 @@ gate_mbudye.17 = {
 	icon = gfx/interface/icons/religion_icons/gate_golden_faith.dds
 
 	duration = 3
+
+	is_popup = yes
 
 	option = {
 		name = gate_mbudye.17.a

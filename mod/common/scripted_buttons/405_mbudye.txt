@@ -11,6 +11,10 @@
 		}
 	}
 
+	selected = {
+		var:mbudye_conversion_type ?= gate_mbudye_conversion_aggressive
+	}
+
 	ai_chance = {
 		value = 50
 	}
@@ -44,6 +48,10 @@ je_gate_mbudye_button_balanced = {
 		}
 	}
 
+	selected = {
+		var:mbudye_conversion_type ?= gate_mbudye_conversion_balanced
+	}
+
 	ai_chance = {
 		value = 200
 	}
@@ -75,6 +83,10 @@ je_gate_mbudye_button_passive = {
 				var:mbudye_conversion_type ?= gate_mbudye_conversion_passive
 			}
 		}
+	}
+
+	selected = {
+		var:mbudye_conversion_type ?= gate_mbudye_conversion_passive
 	}
 
 	ai_chance = {
