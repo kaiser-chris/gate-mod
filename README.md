@@ -35,5 +35,4 @@ Below is a list of the currently implemented content:
 [//]: # (CONTENT-END)
 
 ## Credits
- - Thank you to [Realms of Exether](https://steamcommunity.com/sharedfiles/filedetails/?id=3279217222) for giving permission to use their races in Manaflow
- - Thank you to [Dotti Locari](https://steamcommunity.com/profiles/76561198060636122) for giving permission to use their unit images in Manaflow
+ - See the [credits file](CREDIT.md)
