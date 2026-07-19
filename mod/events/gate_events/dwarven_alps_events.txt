@@ -129,14 +129,19 @@ gate_dwarven_alps.2 = {
 gate_dwarven_alps.3 = {
 	type = country_event
 	dlc = dlc_magic_gate
+	placement = capital
 
 	title = gate_dwarven_alps.3.t
 	desc = gate_dwarven_alps.3.d
 	flavor = gate_dwarven_alps.3.f
 
+	gui_window = event_window_widescreen_classic
+
 	event_image = {
 		video = "unspecific_military_parade"
 	}
+
+	is_popup = yes
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -147,6 +152,12 @@ gate_dwarven_alps.3 = {
 	option = {
 		name = gate_dwarven_alps.3.a
 		default_option = yes
+		show_as_tooltip = {
+			add_modifier = {
+				name = unification_prestige
+				days = very_long_modifier_time
+			}
+		}
 	}
 }
 
