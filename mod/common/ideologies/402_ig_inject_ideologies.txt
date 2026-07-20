@@ -27,8 +27,9 @@ INJECT:ideology_loyalist = {
 INJECT:ideology_liberal = {
     lawgroup_gate_monster_hunting = {
         law_gate_no_organized_monster_hunting = neutral
+        law_gate_local_monster_hunters = disapprove
         law_gate_dedicated_monster_hunters = neutral
-        law_gate_private_monster_hunters = disapprove
+        law_gate_private_monster_hunters = neutral
         law_gate_militarized_monster_hunters = disapprove
     }
 
@@ -45,8 +46,9 @@ INJECT:ideology_liberal = {
 INJECT:ideology_liberal_modern = {
     lawgroup_gate_monster_hunting = {
         law_gate_no_organized_monster_hunting = neutral
+        law_gate_local_monster_hunters = disapprove
         law_gate_dedicated_monster_hunters = neutral
-        law_gate_private_monster_hunters = disapprove
+        law_gate_private_monster_hunters = neutral
         law_gate_militarized_monster_hunters = disapprove
     }
 
@@ -68,6 +70,7 @@ INJECT:ideology_liberal_modern = {
 INJECT:ideology_isolationist = {
     lawgroup_gate_monster_hunting = {
         law_gate_no_organized_monster_hunting = strongly_disapprove
+        law_gate_local_monster_hunters = neutral
         law_gate_dedicated_monster_hunters = approve
         law_gate_private_monster_hunters = disapprove
         law_gate_militarized_monster_hunters = neutral
@@ -88,6 +91,7 @@ INJECT:ideology_jingoist = {
         law_gate_no_organized_monster_hunting = disapprove
         law_gate_dedicated_monster_hunters = approve
         law_gate_private_monster_hunters = neutral
+        law_gate_local_monster_hunters = disapprove
         law_gate_militarized_monster_hunters = strongly_approve
     }
 
@@ -164,6 +168,7 @@ INJECT:ideology_patriotic = {
     lawgroup_gate_monster_hunting = {
         law_gate_no_organized_monster_hunting = strongly_disapprove
         law_gate_dedicated_monster_hunters = approve
+        law_gate_local_monster_hunters = disapprove
         law_gate_private_monster_hunters = neutral
         law_gate_militarized_monster_hunters = strongly_approve
     }
@@ -173,6 +178,7 @@ INJECT:ideology_populist = {
     lawgroup_gate_monster_hunting = {
         law_gate_no_organized_monster_hunting = neutral
         law_gate_dedicated_monster_hunters = approve
+        law_gate_local_monster_hunters = disapprove
         law_gate_private_monster_hunters = disapprove
         law_gate_militarized_monster_hunters = disapprove
     }
@@ -215,6 +221,7 @@ INJECT:ideology_paternalistic = {
     lawgroup_gate_monster_hunting = {
         law_gate_no_organized_monster_hunting = disapprove
         law_gate_dedicated_monster_hunters = neutral
+        law_gate_local_monster_hunters = strongly_approve
         law_gate_private_monster_hunters = approve
         law_gate_militarized_monster_hunters = neutral
     }
@@ -245,6 +252,7 @@ INJECT:ideology_hierarchic = {
 INJECT:ideology_laissez_faire = {
     lawgroup_gate_monster_hunting = {
         law_gate_no_organized_monster_hunting = strongly_disapprove
+        law_gate_local_monster_hunters = strongly_disapprove
         law_gate_dedicated_monster_hunters = neutral
         law_gate_private_monster_hunters = strongly_approve
         law_gate_militarized_monster_hunters = neutral

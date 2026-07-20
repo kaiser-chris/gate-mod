@@ -22,21 +22,21 @@
 
 	modifier = {
 		# Mortality
-		state_mortality_mult = 0.02
+		state_mortality_mult = 0.10
 
 		# Food Security
-		state_food_security_add = -0.05
+		state_food_security_add = -0.10
 	}
 
 	intensity = {
 		fixed_range = {
-			min = 1
-			max = 4
+			min = 2
+			max = 5
 		}
 	}
 
 	chance = {
-		value = 0.005
+		value = 0.006
 		if = {
 			limit = {
 				var:mana_density >= gate_low_mana_density_threshhold

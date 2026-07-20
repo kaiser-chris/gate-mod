@@ -212,6 +212,11 @@ gate_monster_attack.5 = {
     }
 
     immediate = {
+        active_law_group:lawgroup_gate_monster_hunting = {
+            type = {
+                save_scope_as = selected_law
+            }
+        }
         random_scope_state = {
             limit = {
                 state_region = {
