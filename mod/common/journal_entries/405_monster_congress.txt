@@ -160,9 +160,7 @@
 		set_variable = monster_congress_happened
 		if = {
 			limit = {
-				prev = {
-					has_law = law_type:law_traditionalism
-				}
+				has_law = law_type:law_traditionalism
 			}
 			activate_law = law_type:law_gate_local_monster_hunters
 			law_type:law_gate_local_monster_hunters = {
@@ -171,16 +169,14 @@
 		}
 		else_if = {
 			limit = {
-				prev = {
-					ig:ig_industrialists = {
-						is_powerful = yes
-						is_in_government = yes
-					}
-					NOT = {
-						has_law = law_type:law_traditionalism
-					}
-					has_technology_researched = currency_standards
+				ig:ig_industrialists = {
+					is_powerful = yes
+					is_in_government = yes
 				}
+				NOT = {
+					has_law = law_type:law_traditionalism
+				}
+				has_technology_researched = currency_standards
 			}
 			activate_law = law_type:law_gate_private_monster_hunters
 			law_type:law_gate_private_monster_hunters = {
@@ -189,13 +185,11 @@
 		}
 		else_if = {
 			limit = {
-				prev = {
-					ig:ig_armed_forces = {
-						is_powerful = yes
-						is_in_government = yes
-					}
-					has_technology_researched = logistics
+				ig:ig_armed_forces = {
+					is_powerful = yes
+					is_in_government = yes
 				}
+				has_technology_researched = logistics
 			}
 			activate_law = law_type:law_gate_militarized_monster_hunters
 			law_type:law_gate_militarized_monster_hunters = {
