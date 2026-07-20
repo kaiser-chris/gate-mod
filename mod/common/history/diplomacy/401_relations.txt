@@ -46,4 +46,11 @@
 		set_relations = { country = c:GATE_BN value = 10 }
 	}
 
+	c:GATE_NS = {
+		set_relations = { country = c:DEI value = 10 }
+	}
+	c:DEI = {
+		set_relations = { country = c:GATE_NS value = 10 }
+	}
+
 }

@@ -9,8 +9,9 @@
     }
 
     is_visible = {
-        any_primary_culture = {
-            cu:gnomish ?= this
+        OR = {
+            c:GATE_NS ?= this
+            was_formed_from = GATE_NS
         }
     }
 
@@ -41,13 +42,6 @@
 
     ai_enact_weight_modifier = { #Petitions
         value = 0
-
-        if = {
-            limit = {
-                has_law_or_variant = law_type:law_no_police
-            }
-            add = 500
-        }
 
         if = {
             limit = { ai_has_enact_weight_modifier_journal_entries = yes }
