@@ -178,6 +178,12 @@ gate_monster_attack.4 = {
     dlc = dlc_magic_gate
     placement = capital
 
+    title = gate_monster_attack.4.t
+    desc = gate_monster_attack.4.d
+    flavor = gate_monster_attack.4.f
+
+    icon = "gfx/interface/icons/event_icons/event_gate_monster.dds"
+
     event_image = {
         video = "southamerica_aristocrats"
     }
@@ -190,12 +196,6 @@ gate_monster_attack.4 = {
 
     is_popup = yes
 
-    icon = "gfx/interface/icons/event_icons/event_gate_monster.dds"
-
-    title = gate_monster_attack.4.t
-    desc = gate_monster_attack.4.d
-    flavor = gate_monster_attack.4.f
-
     option = {
         name = gate_monster_attack.4.a
         default_option = yes
@@ -206,6 +206,12 @@ gate_monster_attack.5 = {
     type = country_event
     dlc = dlc_magic_gate
     placement = scope:monster_attack_state
+
+    title = gate_monster_attack.5.t
+    desc = gate_monster_attack.5.d
+    flavor = gate_monster_attack.5.f
+
+    icon = "gfx/interface/icons/event_icons/event_gate_monster.dds"
 
     event_image = {
         video = "gate_unspecified_monster_horde_aftermath"
@@ -230,12 +236,6 @@ gate_monster_attack.5 = {
     is_popup = yes
 
     duration = 3
-
-    icon = "gfx/interface/icons/event_icons/event_gate_monster.dds"
-
-    title = gate_monster_attack.5.t
-    desc = gate_monster_attack.5.d
-    flavor = gate_monster_attack.5.f
 
     option = {
         name = gate_monster_attack.5.a
