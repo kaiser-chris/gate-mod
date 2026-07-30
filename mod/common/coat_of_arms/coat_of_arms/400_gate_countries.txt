@@ -1,4 +1,4 @@
-﻿GATE_AD_HOME = {
+GATE_AD_HOME = {
 	pattern = "pattern_border_fringe.tga"
 	color1 = "green_dark"
 	color2 = "gold"
@@ -81,13 +81,54 @@ GATE_OK = {
 	}
 }
 
+GATE_OK_ELVEN_LANDS = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb{ 119  32  29 }
+	color2 = "black"
+	color3 = "gold"
+
+	colored_emblem = {
+		texture = "ce_tricolor_horizontal.dds"
+		color1 = color2
+		color2 = color3
+	}
+
+	textured_emblem = {
+		texture = "te_gate_coa_skull.dds"
+		instance = {
+			scale = { 1 1 }
+			position = { 0.48 0.5 }
+		}
+	}
+}
+
+GATE_OK_CENTRAL_AFRICA = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb{ 119  32  29 }
+	color2 = "black"
+	color3 = "green"
+
+	colored_emblem = {
+		texture = "ce_tricolor_horizontal.dds"
+		color1 = color2
+		color2 = color3
+	}
+
+	textured_emblem = {
+		texture = "te_gate_coa_skull.dds"
+		instance = {
+			scale = { 1 1 }
+			position = { 0.48 0.5 }
+		}
+	}
+}
+
 GATE_NS = {
 	pattern = "pattern_solid.tga"
 	color1 = rgb{ 197 190 144 }
 	color2 = rgb{ 171 126 41 }
 	color3 = rgb{ 19 48 26 }
 	color4 = rgb{ 136 94 11 }
-
 
 	colored_emblem = {
 		texture = "ce_gate_gnomish_mark.dds"
