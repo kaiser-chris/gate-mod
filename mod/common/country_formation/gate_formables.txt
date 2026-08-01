@@ -42,7 +42,7 @@
 }
 
 GATE_OK_ELVEN_LANDS = {
-	required_states_fraction = 0
+	required_states_fraction = 0.75
 
 	ai_will_do = {
 		always = yes
@@ -80,7 +80,7 @@ GATE_OK_ELVEN_LANDS = {
 }
 
 GATE_OK_CENTRAL_AFRICA = {
-	required_states_fraction = 0
+	required_states_fraction = 0.75
 
 	ai_will_do = {
 		always = yes
@@ -113,5 +113,39 @@ GATE_OK_CENTRAL_AFRICA = {
 		STATE_YORUBA_STATES
 		STATE_BENIN
 		STATE_DAHOMEY
+	}
+}
+
+GATE_AD_EMPIRE = {
+	required_states_fraction = 0.75
+
+	ai_will_do = {
+		always = yes
+	}
+
+	possible = {
+		any_primary_culture = {
+			cu:elven ?= this
+		}
+		has_technology_researched = pan-nationalism
+	}
+
+	states = {
+		STATE_KATANGA
+		STATE_EAST_ANGOLA
+		STATE_NORTH_ANGOLA
+		STATE_SOUTH_ANGOLA
+		STATE_ZAMBIA
+		STATE_KAZEMBE
+		STATE_LINDI
+		STATE_ZANZIBAR
+		STATE_MOCAMBIQUE
+		STATE_HEREROLAND
+		STATE_BOTSWANA
+		STATE_NAMAQUALAND
+		STATE_TRANSVAAL
+		STATE_ZAMBEZI
+		STATE_LOURENCO_MARQUES
+		STATE_ZAMBEZIA
 	}
 }
