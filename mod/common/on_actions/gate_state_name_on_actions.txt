@@ -1,0 +1,34 @@
+﻿on_state_owner_change = {
+    on_actions = {
+        on_gate_evaluate_and_assign_state_hub_dynamic_names
+    }
+}
+on_state_created = {
+    on_actions = {
+        on_gate_evaluate_and_assign_state_hub_dynamic_names
+    }
+}
+on_become_subject = {
+    on_actions = {
+        on_gate_evaluate_and_assign_state_hub_dynamic_names_country
+    }
+}
+on_become_independent = {
+    on_actions = {
+        on_gate_evaluate_and_assign_state_hub_dynamic_names_country
+    }
+}
+
+
+on_gate_evaluate_and_assign_state_hub_dynamic_names = {
+    effect = {
+        gate_evaluate_and_assign_state_hub_dynamic_names = yes
+    }
+}
+on_gate_evaluate_and_assign_state_hub_dynamic_names_country = {
+    effect = {
+        every_scope_state = {
+            gate_evaluate_and_assign_state_hub_dynamic_names = yes
+        }
+    }
+}
