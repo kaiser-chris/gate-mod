@@ -13,11 +13,13 @@
 	}
 
 	states = {
+		# Base claims
 		STATE_SOUTH_TYROL
 		STATE_TYROL
 		STATE_EAST_SWITZERLAND
 		STATE_WEST_SWITZERLAND
 		STATE_SAVOY
+
 		STATE_PIEDMONT
 		STATE_LOMBARDY
 		STATE_VENETIA
@@ -56,6 +58,7 @@ GATE_OK_ELVEN_LANDS = {
 	}
 
 	states = {
+		# Base claims
 		STATE_GABON
 		STATE_CONGO
 		STATE_BAS_CONGO
@@ -94,6 +97,7 @@ GATE_OK_CENTRAL_AFRICA = {
 	}
 
 	states = {
+		# Base claims
 		STATE_GABON
 		STATE_CONGO
 		STATE_BAS_CONGO
@@ -131,12 +135,14 @@ GATE_AD_EMPIRE = {
 	}
 
 	states = {
+		# Base claims
 		STATE_KATANGA
 		STATE_EAST_ANGOLA
 		STATE_NORTH_ANGOLA
 		STATE_SOUTH_ANGOLA
 		STATE_ZAMBIA
 		STATE_KAZEMBE
+
 		STATE_LINDI
 		STATE_ZANZIBAR
 		STATE_MOCAMBIQUE
@@ -147,5 +153,40 @@ GATE_AD_EMPIRE = {
 		STATE_ZAMBEZI
 		STATE_LOURENCO_MARQUES
 		STATE_ZAMBEZIA
+	}
+}
+
+GATE_NS_EMPIRE = {
+	required_states_fraction = 0.75
+
+	ai_will_do = {
+		always = yes
+	}
+
+	possible = {
+		any_primary_culture = {
+			cu:gnomish ?= this
+		}
+		has_technology_researched = pan-nationalism
+	}
+
+	states = {
+		# Base claims
+		STATE_WESTERN_NEW_GUINEA
+		STATE_EASTERN_NEW_GUINEA
+		STATE_MOLUCCAS
+		STATE_BOUGAINVILLE
+		STATE_SOLOMON_ISLANDS
+		STATE_VANUATU
+		STATE_KANAK
+
+		STATE_EAST_BORNEO
+		STATE_NORTH_BORNEO
+		STATE_WEST_BORNEO
+		STATE_CENTRAL_JAVA
+		STATE_EAST_JAVA
+		STATE_WEST_JAVA
+		STATE_SUNDA_ISLANDS
+		STATE_CELEBES
 	}
 }

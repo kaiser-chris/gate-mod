@@ -37,6 +37,25 @@ GATE_AD = {
 	}
 }
 
+GATE_AD_EMPIRE = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+	color2 = "yellow_dark"
+	color3 = "green"
+
+	colored_emblem = {
+		texture = "ce_gate_dominion.dds"
+		color1 = color2
+		color2 = color3
+
+		instance = {
+			rotation = 0
+			scale = { 1 1 }
+			position = { 0.5 0.500 }
+		}
+	}
+}
+
 GATE_MK = {
 	pattern = "pattern_solid.tga"
 	color1 = "blue_light"
@@ -182,6 +201,42 @@ GATE_NS = {
 	}
 }
 
+GATE_NS_EMPIRE = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb{ 197 190 144 }
+	color2 = rgb{ 171 126 41 }
+	color3 = rgb{ 19 48 26 }
+	color4 = rgb{ 136 94 11 }
+
+	colored_emblem = {
+		texture = "ce_bicolor_left_third_indented.dds"
+		color1 = color3
+	}
+
+	colored_emblem = {
+		texture = "ce_gate_gnomish_mark.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color4
+
+		instance = {
+			rotation = 0
+			scale = { 1.500 1.500 }
+			position = { 0.666 0.500 }
+		}
+	}
+
+	textured_emblem = {
+		texture = "te_gate_coa_flower.dds"
+
+		instance = {
+			rotation = 0
+			scale = { 0.750 0.900 }
+			position = { 0.668 0.500 }
+		}
+	}
+}
+
 GATE_BN = {
 	pattern = "pattern_solid.tga"
 	color1 = rgb { 0 32 43 }
@@ -222,25 +277,6 @@ GATE_DIH = {
 			scale = { 0.9 0.9 }
 			position = { 0.5 0.5 }
 
-		}
-	}
-}
-
-GATE_AD_EMPIRE = {
-	pattern = "pattern_solid.tga"
-	color1 = "blue"
-	color2 = "yellow_dark"
-	color3 = "green"
-
-	colored_emblem = {
-		texture = "ce_gate_dominion.dds"
-		color1 = color2
-		color2 = color3
-
-		instance = {
-			rotation = 0
-			scale = { 1 1 }
-			position = { 0.5 0.500 }
 		}
 	}
 }
