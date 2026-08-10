@@ -57,4 +57,15 @@
  trigger_gate_arcane_council_recently_changed_military_regulations_third: "[COUNTRY.GetNameNoFlag]은 최근 비전 평의회 [concept_com_international_organization]에서 규제를 도입함"
  trigger_gate_arcane_council_recently_changed_military_regulations_third_not: "[COUNTRY.GetNameNoFlag]은 최근 비전 평의회 [concept_com_international_organization]에서 규제를 도입한 것이 #bold 아님#!"
 
+ trigger_has_finished_monster_congress: "#yellow 를 사용했습니다. #tooltip: [GetRawTextTooltipTag('je_gate_monster_congress_reason')] $je_gate_monster_congress$ #! #!" #deepl:2950009714
+ trigger_has_finished_monster_congress_not: "#bold 는 #!에 #yellow  #tooltip: [GetRawTextTooltipTag('je_gate_monster_congress_reason')] $je_gate_monster_congress$ #! #!을 아직 올리지 않았나요?" #deepl:2159240394
+ trigger_has_finished_monster_congress_third: "[COUNTRY.GetNameNoFlag] #yellow 의 #tooltip이 추가되었습니다: [GetRawTextTooltipTag('je_gate_monster_congress_reason')] $je_gate_monster_congress$ #! #!" #deepl:3095940376
+ trigger_has_finished_monster_congress_third_not: "[COUNTRY.GetNameNoFlag] #bold 는 #!에 #yellow  #tooltip: [GetRawTextTooltipTag('je_gate_monster_congress_reason')] $je_gate_monster_congress$ #! #!을 아직 올리지 않았나요?" #deepl:1240828539
+
+ trigger_gate_project_has_any_selector_open: "[concept_gate_project] 선택기는 모두 열려 있습니다." #deepl:3160324065
+ trigger_gate_project_has_any_selector_open_not: "[concept_gate_project] 선택기가 열려 있는 것이 없습니다." #deepl:2867891
+
  trigger_gate_is_not_magic_researcher: "아직 우리의 [concept_gate_magic_researcher]가 아님"
+
+ trigger_has_gate_max_mana_density: "[STATE_REGION.GetName] [STATE_REGION.MakeScope.ScriptValue('gate_maximum_mana_density')|v0]의 최대 값인 [concept_gate_mana_density]에 도달했습니다." #deepl:3472218671
+ trigger_has_gate_max_mana_density_not: "[STATE_REGION.GetName] #bold (#!가 아님)이 [STATE_REGION.MakeScope.ScriptValue('gate_maximum_mana_density')|v0]의 최대값 [concept_gate_mana_density]에 도달했습니까?" #deepl:1399762633

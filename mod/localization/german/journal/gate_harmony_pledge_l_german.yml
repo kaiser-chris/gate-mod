@@ -1,9 +1,215 @@
 ﻿l_german:
  je_gate_harmony_pledge: "$gate_harmony_pledge$" #deepl:1767427134
- je_gate_harmony_pledge_reason: "In den Ländern der Gnome ist Harmonie kein Zufall, sondern das Ergebnis bewusster Gestaltung. Das Harmonie-Gelöbnis, das von Außenstehenden oft als sanfte Philosophie missverstanden wird, ist in Wahrheit ein sorgfältig ausgearbeitetes Konzept: ein Geflecht aus Gesetzen, Bräuchen und stillen Korrekturen, das dazu dient, ein Volk von grenzenlosen Extremen zu zügeln. \n \n Unkontrolliert stürzen sich Gnome entweder in Glanz oder Ruin, in Genusssucht oder Strenge, in Einheit oder herrliches Chaos. Das Gelübde leugnet diese Natur nicht; es lenkt sie. Institutionen geben Anstöße, Traditionen bieten Halt, und jedes Dekret verschiebt das empfindliche Gleichgewicht, auf dem die Gesellschaft ruht. \n \n Doch das Gleichgewicht ist niemals von Dauer. Plötzliche Leidenschaften, neue Ideen oder unvorhergesehene Krisen können die Waage augenblicklich kippen lassen. Und so beobachten die Gnome sich selbst ebenso genau wie sie die Welt beobachten, passen sich ständig an, korrigieren ständig und stellen sicher, dass ihre Exzesse ihre Stärke nähren, anstatt ihren Untergang." #deepl:4236478007
- pb_gate_harmony_pledge_economy: "Wirtschaftliche Harmonie" #deepl:3033882387
- pb_gate_harmony_pledge_economy_desc: "$pb_gate_harmony_pledge_economy$" # TODO
- pb_gate_harmony_pledge_legislative: "Rechtsharmonisierung" #deepl:1806810520
- pb_gate_harmony_pledge_legislative_desc: "TODO" # TODO
+ je_gate_harmony_pledge_reason: "$concept_gate_harmony_pledge_desc$" #deepl:529090673
+ je_gate_harmony_pledge_lobby: "$concept_gate_harmony_pledge_desc$" #deepl:529090673
+ je_gate_harmony_pledge_fail: "Bei Fragen rund um die „[concept_gate_harmony_pledge]“ wenden Sie sich bitte an #v  0 #! oder #v  100 #!." #deepl:3503512574
+ je_gate_harmony_pledge_status_hamony: "Unser Land ist „$je_gate_harmony_pledge_harmonious$“." #deepl:3156884583
+ je_gate_harmony_pledge_status_tilting: "Unser Land ist „$je_gate_harmony_pledge_tilting$“." #deepl:1406477363
+ je_gate_harmony_pledge_status_dishamony: "Unser Land ist „$je_gate_harmony_pledge_disharmonious$“." #deepl:2817089441
+ je_gate_harmony_pledge_harmonious: "#g  Harmonisches „#!“" #deepl:879973573
+ je_gate_harmony_pledge_tilting: "#o;bold  Kipp#!" #deepl:3587032985
+ je_gate_harmony_pledge_disharmonious: "#r  „Disharmonious“ #!" #deepl:344042362
+ je_gate_harmony_pledge_abandon_warning: "Nachdem wir die „[concept_gate_harmony_pledge]“ aufgegeben haben, erhalten wir die „#tooltippable “ #tooltip: [GetRawTextTooltipTag('je_gate_harmony_pledge_abandon_warning_modifier_tooltip')] [GetStaticModifier('modifier_gate_harmony_pledge_abandoned').GetName] #! #! Modifikator für #v  10 #! Jahre" #deepl:3874407439
+ je_gate_harmony_pledge_abandon_warning_modifier_tooltip: "#v [GetStaticModifier('modifier_gate_harmony_pledge_abandoned').GetName]\n[GetStaticModifier('modifier_gate_harmony_pledge_abandoned').GetDesc]" #deepl:1920641304
  pb_gate_harmony_pledge_society: "Gesellschaftlicher Zusammenhalt" #deepl:3995539092
- pb_gate_harmony_pledge_society_desc: "Zu erledigen" #deepl:4107792734
+ pb_gate_harmony_pledge_society_desc_left: "#v  Gesellschaft ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0] /100)#!" #deepl:1072646362
+ pb_gate_harmony_pledge_society_desc_right: "[JournalEntry.GetCustom('gate_harmony_pledge_indicator_society')]" #deepl:3152704144
+ pb_gate_harmony_pledge_society_center_drift_modifier: "#tooltip: [GetRawTextTooltipTag('country_gate_harmony_pledge_society_drift_center_desc')] #yellow  $country_gate_harmony_pledge_society_drift_center$ #! #! modifier" #deepl:3311055857
+ pb_gate_harmony_pledge_economy: "Wirtschaftliche Harmonie" #deepl:3033882387
+ pb_gate_harmony_pledge_economy_desc_left: "#v  Wirtschaft ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0] /100)#!" #deepl:2390880085
+ pb_gate_harmony_pledge_economy_desc_right: "[JournalEntry.GetCustom('gate_harmony_pledge_indicator_economy')]" #deepl:4082336554
+ pb_gate_harmony_pledge_economy_center_drift_modifier: "#tooltip: [GetRawTextTooltipTag('country_gate_harmony_pledge_economy_drift_center_desc')] #yellow  $country_gate_harmony_pledge_economy_drift_center$ #! #! modifier" #deepl:2121533435
+ pb_gate_harmony_pledge_legislative: "Rechtsharmonisierung" #deepl:1806810520
+ pb_gate_harmony_pledge_legislative_desc_left: "#v  Gesetzgebung ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0] /100)#!" #deepl:3854297798
+ pb_gate_harmony_pledge_legislative_desc_right: "[JournalEntry.GetCustom('gate_harmony_pledge_indicator_legislative')]" #deepl:1163293005
+ pb_gate_harmony_pledge_legislative_center_drift_modifier: "#tooltip: [GetRawTextTooltipTag('country_gate_harmony_pledge_legislative_drift_center_desc')] #yellow  $country_gate_harmony_pledge_legislative_drift_center$ #! #! modifier" #deepl:1342685977
+ pb_gate_harmony_pledge_order: "[AddLocalizationIf(EqualTo_string(ScriptedProgressBar.GetName,Localize('pb_gate_harmony_pledge_society')),'pb_gate_harmony_pledge_order_society')][AddLocalizationIf(EqualTo_string(ScriptedProgressBar.GetName,Localize('pb_gate_harmony_pledge_economy')),'pb_gate_harmony_pledge_order_economy')][AddLocalizationIf(EqualTo_string(ScriptedProgressBar.GetName,Localize('pb_gate_harmony_pledge_legislative')),'pb_gate_harmony_pledge_order_legislative')]" #deepl:504844206
+ pb_gate_harmony_pledge_order_society: "[concept_gate_harmony_pledge_stratified]" #deepl:1388727873
+ pb_gate_harmony_pledge_order_economy: "[concept_gate_harmony_pledge_cartelised]" #deepl:1701209991
+ pb_gate_harmony_pledge_order_legislative: "[concept_gate_harmony_pledge_despotic]" #deepl:527952098
+ pb_gate_harmony_pledge_chaos: "[AddLocalizationIf(EqualTo_string(ScriptedProgressBar.GetName,Localize('pb_gate_harmony_pledge_society')),'pb_gate_harmony_pledge_chaos_society')][AddLocalizationIf(EqualTo_string(ScriptedProgressBar.GetName,Localize('pb_gate_harmony_pledge_economy')),'pb_gate_harmony_pledge_chaos_economy')][AddLocalizationIf(EqualTo_string(ScriptedProgressBar.GetName,Localize('pb_gate_harmony_pledge_legislative')),'pb_gate_harmony_pledge_chaos_legislative')]" #deepl:2222279527
+ pb_gate_harmony_pledge_chaos_society: "[concept_gate_harmony_pledge_antinomian]" #deepl:2119873752
+ pb_gate_harmony_pledge_chaos_economy: "[concept_gate_harmony_pledge_febrile]" #deepl:2041020103
+ pb_gate_harmony_pledge_chaos_legislative: "[concept_gate_harmony_pledge_anaemic]" #deepl:1306970012
+# Breakdown
+ GATE_HP_TOP_VALUE_FORMAT: "#indent_newline:6 $VALUE|=2+$ $KEY$ #!" #deepl:3180551323
+ GATE_HP_SCRIPT_VALUE_FORMAT: "#indent_newline:6 $VALUE|=2+$ $KEY$ #!" #deepl:3180551323
+ GATE_HP_SCRIPT_VALUE_FORMAT_MULT: "#indent_newline:6 $VALUE|%v0$ $KEY$ #!" #deepl:1009269163
+ GATE_HP_BASE_LAW: "Aus: „[concept_law]“ – Baseline" #deepl:2376464757
+ GATE_HP_INSTITUTION_LEVEL: "aus „[concept_institution]“ Level" #deepl:560807368
+## Society
+ GATE_HP_SOC_TREND_FROM_LAWS: "#b  #blue  Geltende Gesetze: #! #! \n [SCOPE.GetScriptValueDesc('gate_harmony_pledge_society_trend_from_laws')]" #deepl:2109354854
+ GATE_HP_SOC_DIST_OF_POWER: "aus [GetLawGroup('lawgroup_distribution_of_power').GetCurrentlyActive.GetName]" #deepl:273555089
+ GATE_HP_SOC_CHURCH_AND_STATE: "aus [GetLawGroup('lawgroup_church_and_state').GetCurrentlyActive.GetName]" #deepl:2147870988
+ GATE_HP_SOC_BUREAUCRACY: "aus [GetLawGroup('lawgroup_bureaucracy').GetCurrentlyActive.GetName]" #deepl:4051431654
+ GATE_HP_SOC_INTERNAL_SECURITY: "aus [GetLawGroup('lawgroup_internal_security').GetCurrentlyActive.GetName] [AddTextIf(Not(StringIsEmpty(GetLawGroup('lawgroup_internal_security').GetCurrentlyActive.GetInstitution.GetDesc)),'\n')] [ROOT.GetScriptValueDesc('gate_hp_society_internal_security')]" #deepl:3152554974
+ GATE_HP_SOC_FREE_SPEECH: "aus [GetLawGroup('lawgroup_free_speech').GetCurrentlyActive.GetName]" #deepl:2579174679
+ GATE_HP_SOC_EDUCATION: "aus [GetLawGroup('lawgroup_education_system').GetCurrentlyActive.GetName] [AddTextIf(Not(StringIsEmpty(GetLawGroup('lawgroup_education_system').GetCurrentlyActive.GetInstitution.GetDesc)),'\n')] [SCOPE.GetScriptValueDesc('gate_hp_society_education')]" #deepl:3332741363
+ GATE_HP_SOC_HEALTHCARE: "aus [GetLawGroup('lawgroup_health_system').GetCurrentlyActive.GetName] [AddTextIf(Not(StringIsEmpty(GetLawGroup('lawgroup_health_system').GetCurrentlyActive.GetInstitution.GetDesc)),'\n')] [SCOPE.GetScriptValueDesc('gate_hp_society_healthcare')]" #deepl:1929910180
+ GATE_HP_SOC_WELFARE: "aus [GetLawGroup('lawgroup_welfare').GetCurrentlyActive.GetName] [AddTextIf(Not(StringIsEmpty(GetLawGroup('lawgroup_welfare').GetCurrentlyActive.GetInstitution.GetDesc)),'\n')] [SCOPE.GetScriptValueDesc('gate_hp_society_welfare')]" #deepl:1990737559
+ GATE_HP_SOC_SLAVERY: "aus [GetLawGroup('lawgroup_slavery').GetCurrentlyActive.GetName]" #deepl:3389607976
+ GATE_HP_SOC_MAGIC_USERS: "aus [GetLawGroup('lawgroup_gate_magic_users').GetCurrentlyActive.GetName] [AddTextIf(Not(StringIsEmpty(GetLawGroup('lawgroup_gate_magic_users').GetCurrentlyActive.GetInstitution.GetDesc)),'\n')] [SCOPE.GetScriptValueDesc('gate_hp_society_gate_magic_users')]" #deepl:748658128
+ GATE_HP_SOC_TREND_FROM_DEMOGRAPHICS: "#b  #blue  Demografische Daten: #! #! \n [SCOPE.GetScriptValueDesc('gate_harmony_pledge_society_trend_from_demographics')]" #deepl:773562607
+ GATE_HP_SOC_TREND_FROM_OTHER_SPHERES: "#b  #blue  Weitere nationale Bereiche: #! #! \n [SCOPE.GetScriptValueDesc('gate_harmony_pledge_society_trend_from_other_spheres')]" #deepl:2565440765
+ GATE_HP_SOC_TREND_FROM_ECONOMY: "aus „Wirtschaftliche Einflüsse“" #deepl:1955267202
+ GATE_HP_SOC_TREND_FROM_STATE: "aus „Legislative Influences“ \n [SCOPE.GetScriptValueDesc('gate_harmony_pledge_society_trend_from_legislative')]" #deepl:468869797
+ GATE_HP_SOC_TREND_MOD_FROM_STATE: "Gesetzliche Beschränkungen wirtschaftlicher Einflüsse" #deepl:208844930
+ GATE_HP_SOC_TREND_FROM_STATE_BASE: "Schwächen in der Gesetzgebungskapazität" #deepl:15785930
+ GATE_HP_SOC_TREND_FROM_MODIFIERS: "#b  #blue  Temporäre Modifikatoren: #! #! [AddTextIf(NotEqualTo_CFixedPoint(SCOPE.ScriptValue('gate_harmony_pledge_society_trend_from_modifiers'),'(CFixedPoint)0'),'\n')] [SCOPE.GetScriptValueDesc('gate_harmony_pledge_society_trend_from_modifiers')]" #deepl:1978969243
+ # GATE_HP_SOC_TREND_FROM_MODIFIERS_NEGATIVE: "#indent_newline:3 Bestelloptionen: \n [ROOT.GetCountry.GetModifier.GetDescFor('country_gate_harmony_pledge_society_drift_negative')] #!" #deepl:4136663304
+ # GATE_HP_SOC_TREND_FROM_MODIFIERS_POSITIVE: "#indent_newline:3 Chaos-Modifikatoren: \n [ROOT.GetCountry.GetModifier.GetDescFor('country_gate_harmony_pledge_society_drift_positive')] #!" #deepl:1293762303
+ GATE_HP_SOC_STATUS_QUO_HARMONY: "#b  #blue  Kultureller Widerstand gegen Disharmonie: #! #! [AddTextIf(NotEqualTo_CFixedPoint(SCOPE.ScriptValue('gate_harmony_pledge_society_trend_scaling'),'(CFixedPoint)0'),'\n')] [SCOPE.GetScriptValueDesc('gate_harmony_pledge_society_trend_scaling')]" #deepl:3863469130
+## Economy
+ GATE_HP_ECO_TREND_FROM_LAWS: "#b  #blue  Geltende Gesetze: #! #! \n [SCOPE.GetScriptValueDesc('gate_harmony_pledge_economy_trend_from_laws')]" #deepl:201400274
+ GATE_HP_ECO_DIST_OF_POWER: "aus [GetLawGroup('lawgroup_distribution_of_power').GetCurrentlyActive.GetName]" #deepl:273555089
+ GATE_HP_ECO_ECONOMIC_SYSTEM: "aus [GetLawGroup('lawgroup_economic_system').GetCurrentlyActive.GetName]" #deepl:279347942
+ GATE_HP_ECO_TRADE_POLICY: "aus [GetLawGroup('lawgroup_trade_policy').GetCurrentlyActive.GetName]" #deepl:1362791199
+ GATE_HP_ECO_LAND_REFORM: "aus [GetLawGroup('lawgroup_land_reform').GetCurrentlyActive.GetName]" #deepl:3454678071
+ GATE_HP_ECO_POLICING: "aus [GetLawGroup('lawgroup_policing').GetCurrentlyActive.GetName] [AddTextIf(Not(StringIsEmpty(GetLawGroup('lawgroup_policing').GetCurrentlyActive.GetInstitution.GetDesc)),'\n')] [SCOPE.GetScriptValueDesc('gate_hp_economy_policing')]" #deepl:3640898407
+ GATE_HP_ECO_LABOR_RIGHTS: "aus [GetLawGroup('lawgroup_labor_rights').GetCurrentlyActive.GetName] [AddTextIf(Not(StringIsEmpty(GetLawGroup('lawgroup_labor_rights').GetCurrentlyActive.GetInstitution.GetDesc)),'\n')] [SCOPE.GetScriptValueDesc('gate_hp_economy_labor_rights')]" #deepl:3526176452
+ GATE_HP_ECO_LABOR_ASSOCIATIONS: "aus [GetLawGroup('lawgroup_labour_associations').GetCurrentlyActive.GetName]" #deepl:1726768423
+ GATE_HP_ECO_MAGIC_USERS: "aus [GetLawGroup('lawgroup_gate_magic_users').GetCurrentlyActive.GetName] [AddTextIf(Not(StringIsEmpty(GetLawGroup('lawgroup_gate_magic_users').GetCurrentlyActive.GetInstitution.GetDesc)),'\n')] [SCOPE.GetScriptValueDesc('gate_hp_economy_gate_magic_users')]" #deepl:2025585440
+ GATE_HP_ECO_TREND_FROM_CITIZENSHIP: "#b  #blue  Staatsangehörigkeit: #! #! \n [SCOPE.GetScriptValueDesc('gate_harmony_pledge_economy_trend_from_citizenship')]" #deepl:2790924573
+ GATE_HP_ECO_TREND_FROM_TAXATION: "#b  #blue  Steuern: #! #! \n [SCOPE.GetScriptValueDesc('gate_harmony_pledge_economy_trend_from_taxation')]" #deepl:3992921682
+ GATE_HP_ECO_TAXATION: "aus [GetLawGroup('lawgroup_taxation').GetCurrentlyActive.GetName]" #deepl:2721741755
+ GATE_HP_ECO_TAXATION_LEVEL: "aus [Concept('concept_taxes','$concept_tax_level$')]" #deepl:1076257550
+ GATE_HP_ECO_TREND_FROM_OTHER_SPHERES: "#b  #blue  Weitere nationale Bereiche: #! #! \n [SCOPE.GetScriptValueDesc('gate_harmony_pledge_economy_trend_from_other_spheres')]" #deepl:836584586
+ GATE_HP_ECO_TREND_FROM_LEGISLATIVE: "aus „Legislative Influences“" #deepl:2518471932
+ GATE_HP_ECO_TREND_FROM_MODIFIERS: "#b  #blue  Temporäre Modifikatoren: #! #! [AddTextIf(NotEqualTo_CFixedPoint(SCOPE.ScriptValue('gate_harmony_pledge_economy_trend_from_modifiers'),'(CFixedPoint)0'),'\n')] [SCOPE.GetScriptValueDesc('gate_harmony_pledge_economy_trend_from_modifiers')]" #deepl:815960214
+ # GATE_HP_ECO_TREND_FROM_MODIFIERS_NEGATIVE: "#indent_newline:3 Bestelloptionen: \n [ROOT.GetCountry.GetModifier.GetDescFor('country_gate_harmony_pledge_economy_drift_negative')] #!" #deepl:2729713656
+ # GATE_HP_ECO_TREND_FROM_MODIFIERS_POSITIVE: "#indent_newline:3 Chaos-Modifikatoren: \n [ROOT.GetCountry.GetModifier.GetDescFor('country_gate_harmony_pledge_economy_drift_positive')] #!" #deepl:423188495
+ GATE_HP_ECO_STATUS_QUO_HARMONY: "#b  #blue  Kultureller Widerstand gegen Disharmonie: #! #! [AddTextIf(NotEqualTo_CFixedPoint(SCOPE.ScriptValue('gate_harmony_pledge_economy_trend_scaling'),'(CFixedPoint)0'),'\n')] [SCOPE.GetScriptValueDesc('gate_harmony_pledge_economy_trend_scaling')]" #deepl:3828478147
+## Legislative
+ GATE_HP_LEG_TREND_FROM_LAWS: "#b  #blue  Geltende Gesetze: #! #! \n [SCOPE.GetScriptValueDesc('gate_harmony_pledge_legislative_trend_from_laws')]" #deepl:2741427054
+ GATE_HP_LEG_DIST_OF_POWER: "aus [GetLawGroup('lawgroup_distribution_of_power').GetCurrentlyActive.GetName]" #deepl:273555089
+ GATE_HP_LEG_BUREAUCRACY: "aus [GetLawGroup('lawgroup_bureaucracy').GetCurrentlyActive.GetName]" #deepl:4051431654
+ GATE_HP_LEG_INTERNAL_SECURITY: "aus [GetLawGroup('lawgroup_internal_security').GetCurrentlyActive.GetName]" #deepl:1130559370
+ GATE_HP_LEG_ECONOMIC_SYSTEM: "aus [GetLawGroup('lawgroup_economic_system').GetCurrentlyActive.GetName]" #deepl:279347942
+ GATE_HP_LEG_POLICING: "aus [GetLawGroup('lawgroup_policing').GetCurrentlyActive.GetName]" #deepl:2353767776
+ GATE_HP_LEG_LABOR_ASSOCIATIONS: "aus [GetLawGroup('lawgroup_labour_associations').GetCurrentlyActive.GetName]" #deepl:1726768423
+ GATE_HP_LEG_MAGIC_USERS: "aus [GetLawGroup('lawgroup_gate_magic_users').GetCurrentlyActive.GetName]" #deepl:1768242513
+ GATE_HP_LEG_TREND_FROM_AUTHORITY: "aus dem ungenutzten [concept_authority]" #deepl:2617420046
+ GATE_HP_LEG_TREND_FROM_INFLUENCE: "aus dem ungenutzten [concept_influence]" #deepl:2734058883
+ GATE_HP_LEG_TREND_FROM_BUREACRACY: "aus [concept_bureaucracy]" #deepl:3604557277
+ GATE_HP_LEG_STATUS_QUO_HARMONY: "#b  #blue  Kultureller Widerstand gegen Disharmonie: #! #! [AddTextIf(NotEqualTo_CFixedPoint(SCOPE.ScriptValue('gate_harmony_pledge_legislative_trend_scaling'),'(CFixedPoint)0'),'\n')] [SCOPE.GetScriptValueDesc('gate_harmony_pledge_legislative_trend_scaling')]" #deepl:4187140369
+ GATE_HP_LEG_TREND_FROM_MODIFIERS: "#b  #blue  Temporäre Modifikatoren: #! #! [AddTextIf(NotEqualTo_CFixedPoint(SCOPE.ScriptValue('gate_harmony_pledge_legislative_trend_from_modifiers'),'(CFixedPoint)0'),'\n')] [SCOPE.GetScriptValueDesc('gate_harmony_pledge_legislative_trend_from_modifiers')]" #deepl:1308323771
+## Shared
+ GATE_HP_NATURAL_CHANGE_RESISTANCE: "Aus: „Non-[GetCulture('gnomish').GetName] Resistance to Change“" #deepl:3262074769
+ GATE_HP_GNOMISH_POP_PERCENT: "Aus: [ROOT.GetCountry.MakeScope.Var('gate_hp_gnomish_percent').GetValue|%1] [GetCulture('gnomish').GetName] Bevölkerung" #deepl:1258130712
+ GATE_HP_NON_GNOME_POP_PERCENT: "aus [ROOT.GetCountry.MakeScope.Var('gate_hp_non_gnomish_percent').GetValue|%1] Nicht-[GetCulture('gnomish').GetName]-Bevölkerung" #deepl:1561752062
+ GATE_HP_CITIZEN_POP_PERCENT: "aus [ROOT.GetCountry.MakeScope.Var('gate_hp_citizenship_percent').GetValue|%1] [concept_gate_harmony_pledge_citizens]" #deepl:2485422644
+ GATE_HP_NON_CITIZEN_POP_PERCENT: "aus [ROOT.GetCountry.MakeScope.Var('gate_hp_non_citizen_percent').GetValue|%1] Non-[concept_gate_harmony_pledge_citizens]" #deepl:434864772
+ GATE_HP_PLEDGE_PERCENT: "Abgewandelt nach [ROOT.GetCountry.MakeScope.Var('gate_hp_pledge_percent').GetValue|%1] [GetReligion('gate_harmony_pledge').GetName] Anhänger" #deepl:1178107763
+ GATE_HP_PLEDGE_PERCENT_SCALING: "Ergänzung von [ROOT.GetCountry.MakeScope.Var('gate_hp_pledge_percent').GetValue|%1] [GetReligion('gate_harmony_pledge').GetName] Anhänger" #deepl:1415264399
+# Modifiers
+ modifier_gate_harmony_pledge_abandoned: "Nicht eingehaltenes Versprechen" #deepl:535689830
+ modifier_gate_harmony_pledge_society_harmonious: "Unsere E-Mail-Adresse „[concept_gate_harmony_pledge_society]“ lautet $je_gate_harmony_pledge_harmonious$" #deepl:2867902875
+ modifier_gate_harmony_pledge_society_tilting: "Unsere E-Mail-Adresse „[concept_gate_harmony_pledge_society]“ lautet $je_gate_harmony_pledge_tilting$" #deepl:2586416020
+ modifier_gate_harmony_pledge_society_disharmonious: "Unsere E-Mail-Adresse „[concept_gate_harmony_pledge_society]“ lautet $je_gate_harmony_pledge_disharmonious$" #deepl:3725460851
+ modifier_gate_harmony_pledge_economy_harmonious: "Unsere E-Mail-Adresse „[concept_gate_harmony_pledge_economy]“ lautet $je_gate_harmony_pledge_harmonious$" #deepl:1218889220
+ modifier_gate_harmony_pledge_economy_tilting: "Unsere E-Mail-Adresse „[concept_gate_harmony_pledge_economy]“ lautet $je_gate_harmony_pledge_tilting$" #deepl:1370881737
+ modifier_gate_harmony_pledge_economy_disharmonious: "Unsere E-Mail-Adresse „[concept_gate_harmony_pledge_economy]“ lautet $je_gate_harmony_pledge_disharmonious$" #deepl:1848921
+ modifier_gate_harmony_pledge_legislative_harmonious: "Unsere E-Mail-Adresse „[concept_gate_harmony_pledge_legislative]“ lautet $je_gate_harmony_pledge_harmonious$" #deepl:3110269305
+ modifier_gate_harmony_pledge_legislative_tilting: "Unsere E-Mail-Adresse „[concept_gate_harmony_pledge_legislative]“ lautet $je_gate_harmony_pledge_tilting$" #deepl:2790751481
+ modifier_gate_harmony_pledge_legislative_disharmonious: "Unsere E-Mail-Adresse „[concept_gate_harmony_pledge_legislative]“ lautet $je_gate_harmony_pledge_disharmonious$" #deepl:3723725320
+ modifier_gate_harmony_pledge_enthusiasm_without_boundaries: "$gate_harmony_pledge.1.t$" #deepl:1084110770
+ modifier_gate_harmony_pledge_rewritten_ledger: "$gate_harmony_pledge.2.t$" #deepl:2320696223
+ modifier_gate_harmony_pledge_refinement_without_end: "$gate_harmony_pledge.3.t$" #deepl:1427434629
+ modifier_gate_harmony_pledge_construction_drive: "$gate_harmony_pledge.4.t$" #deepl:3033296582
+ modifier_gate_harmony_pledge_excess_theory: "$gate_harmony_pledge.5.t$" #deepl:1804304860
+ modifier_gate_harmony_pledge_abstract_wealth: "$gate_harmony_pledge.6.t$" #deepl:2705765873
+ modifier_gate_harmony_pledge_subterranean_fixation: "$gate_harmony_pledge.7.t$" #deepl:2114018027
+ modifier_gate_harmony_pledge_cash_crop_fever: "$gate_harmony_pledge.8.t$" #deepl:3388126324
+ modifier_gate_harmony_pledge_agrarian_security: "$gate_harmony_pledge.9.t$" #deepl:380984174
+ modifier_gate_harmony_pledge_woven_monument: "$gate_harmony_pledge.10.t$" #deepl:2253197101
+ modifier_gate_harmony_pledge_unwanted_inquiry: "$gate_harmony_pledge.11.t$" #deepl:1493884983
+ modifier_gate_harmony_pledge_land_rush: "$gate_harmony_pledge.14.t$" #deepl:2908272963
+ modifier_gate_harmony_pledge_animistic_engineering: "$gate_harmony_pledge.15.t$" #deepl:1914656345
+# Events
+ gate_harmony_pledge.1.t: "Begeisterung ohne Grenzen" #deepl:3398040805
+ gate_harmony_pledge.1.d: "Eine Person aus „[GetCulture('gnomish').GetName]“ in „[TopScope.sS('event_state').GetName]“ hat für öffentliche Empörung gesorgt. Diese öffentliche Empörung wird [concept_assimilation] nachlassen, wenn nicht richtig damit umgegangen wird." #deepl:767208063
+ gate_harmony_pledge.1.f: "Auf einem überfüllten Platz unterzieht ein völlig faszinierter Gnom einen unglücklichen Besucher einer Flut von Fragen. Die Fragen – persönliche, fachliche, philosophische und zunehmend indiskrete – werden mit fröhlicher Intensität und ohne Rücksicht auf Anstand gestellt. Was für den einen echte Faszination ist, wird für andere zu einer öffentlichen Verletzung der Privatsphäre." #deepl:978833871
+ gate_harmony_pledge.1.a: "Sie waren einfach nur neugierig." #deepl:1356077208
+ gate_harmony_pledge.1.b: "Verurteilen Sie dieses Verhalten." #deepl:2455540265
+ gate_harmony_pledge.2.t: "Das Ledger neu geschrieben" #deepl:686309308
+ gate_harmony_pledge.2.d: "Ein neuer Führungsstil steigert zwar die Produktivität unter [concept_bureaucracy], schränkt aber auch die [concept_innovation] ein." #deepl:1040782432
+ gate_harmony_pledge.2.f: "Unser öffentlicher Dienst hat erfolgreich neue, hochentwickelte Kontroll- und Verteilungssysteme eingeführt. Die Verwaltungseffizienz hat ihren Höhepunkt erreicht, und bürokratische Verschwendung gibt es praktisch nicht mehr. Akademische und kulturelle Berater berichten jedoch, dass diese unerbittliche strukturelle Optimierung Eigeninitiative erstickt und dazu führt, dass unabhängige Forschung und kreative Bestrebungen im ganzen Land ins Stocken geraten." #deepl:2507388011
+ gate_harmony_pledge.2.a: "Verbieten Sie diesen neuen Führungsstil." #deepl:2819019753
+ gate_harmony_pledge.2.b: "Die schlimmsten Auswirkungen abmildern." #deepl:410557116
+ gate_harmony_pledge.2.c: "Nutzen Sie das Potenzial." #deepl:2727038369
+ gate_harmony_pledge.3.t: "Unendliche Verfeinerung" #deepl:1065897276
+ gate_harmony_pledge.3.d: "Diese Verfeinerung verringert [GetBuildingType('building_trade_center').GetName] [concept_throughput] und erhöht gleichzeitig [GetBuildingGroup('bg_light_industry').GetName] [concept_throughput]." #deepl:2944350912
+ gate_harmony_pledge.3.f: "Berichte aus unseren Produktionssektoren deuten auf einen beispiellosen Aufschwung im Handwerk hin. Die Werkstätten arbeiten mit voller Kapazität und treiben die inländische Produktion auf neue Höchststände. Die Handelsminister warnen jedoch davor, dass in dieser Euphorie der kommerzielle Vertrieb vernachlässigt wird; Fertigwaren stapeln sich in den Lagern, anstatt lokale oder ausländische Märkte zu erreichen." #deepl:1479994007
+ gate_harmony_pledge.3.a: "Bestellen Sie eine Mindestanzahl an Vertriebsmitarbeitern." #deepl:2053133893
+ gate_harmony_pledge.3.b: "Die schlimmsten Auswirkungen abmildern." #deepl:410557116
+ gate_harmony_pledge.3.c: "Nutzen Sie das Potenzial." #deepl:2727038369
+ gate_harmony_pledge.4.t: "Bauoffensive" #deepl:1868878426
+ gate_harmony_pledge.4.d: "Ein Anstieg des Interesses an Architektur führt zu Produktionssteigerungen bei „[concept_construction]“, während die Produktion von „[GetBuildingGroup('bg_agriculture').GetName]“ landesweit zurückgeht." #deepl:2253421195
+ gate_harmony_pledge.4.f: "Berichte aus dem ganzen Land deuten auf einen koordinierten Aufschwung im Architektur- und Tiefbau hin. Planer und Bauunternehmer treiben umfassende Umgestaltungsmaßnahmen mit ungewöhnlicher Intensität voran, wodurch die Bautätigkeit stark zugenommen hat. Begleitende Einschätzungen weisen jedoch auf eine nachlassende Aufmerksamkeit für die Landwirtschaft hin, wobei weniger Arbeitskräfte auf den Feldern eingesetzt werden und erste Anzeichen für eine Belastung der Nahrungsmittelreserven zu erkennen sind." #deepl:2088678352
+ gate_harmony_pledge.4.a: "Schickt sie auf die Felder." #deepl:4018618871
+ gate_harmony_pledge.4.b: "Die schlimmsten Auswirkungen abmildern." #deepl:410557116
+ gate_harmony_pledge.4.c: "Nutzen Sie das Potenzial." #deepl:2727038369
+ gate_harmony_pledge.5.t: "Ein Übermaß an Theorie" #deepl:3548768388
+ gate_harmony_pledge.5.d: "Die Konzentration auf theoretisches Wissen fördert [concept_innovation], hemmt jedoch [concept_construction]." #deepl:3715153279
+ gate_harmony_pledge.5.f: "Berichte unserer akademischen Einrichtungen deuten auf einen massiven Anstieg der theoretischen Forschung und wissenschaftlichen Entdeckungen hin. Wissenschaftler entwickeln in beispiellosem Tempo neue Theorien und erweitern damit unsere nationale Wissensbasis rasant. Die Gouverneure der Provinzen warnen jedoch davor, dass die praktische Umsetzung vernachlässigt wird; wichtige Infrastruktur- und öffentliche Bauprojekte verzeichnen erhebliche Verzögerungen, da sich der intellektuelle Fokus vollständig auf abstrakte Themen verlagert." #deepl:1215646789
+ gate_harmony_pledge.5.a: "Die Forschungsmittel auf praktische Anwendungen ausrichten." #deepl:403732231
+ gate_harmony_pledge.5.b: "Die schlimmsten Auswirkungen abmildern." #deepl:410557116
+ gate_harmony_pledge.5.c: "Nutzen Sie das Potenzial." #deepl:2727038369
+ gate_harmony_pledge.6.t: "Abstrakter Reichtum" #deepl:3374874366
+ gate_harmony_pledge.6.d: "Neue Finanzinstrumente erhöhen den Beitrag von „[concept_investment_pool]“, verringern jedoch die maximale „[concept_cash_reserves]“ unserer Branche." #deepl:805899902
+ gate_harmony_pledge.6.f: "Berichte aus den Finanzzentren zeugen von einer plötzlichen, intensiven Begeisterung für komplexe Finanzinstrumente. Banker und Zunftführer handeln in schwindelerregendem Tempo mit spekulativen Kontrakten und Anlagen, wodurch die staatlichen Einnahmen und der Kapitalfluss drastisch steigen. Die Realwirtschaft warnt jedoch vor einem gravierenden Kapitalabfluss; die Mittel fließen vollständig in Papiervermögen, was dazu führt, dass die verarbeitende Industrie und die Schwerindustrie ins Stocken geraten." #deepl:2095828964
+ gate_harmony_pledge.6.a: "Die gesetzlich vorgeschriebenen Mindestreservebeiträge erhöhen." #deepl:3977047276
+ gate_harmony_pledge.6.b: "Die schlimmsten Auswirkungen abmildern." #deepl:410557116
+ gate_harmony_pledge.6.c: "Nutzen Sie das Potenzial." #deepl:2727038369
+ gate_harmony_pledge.7.t: "Unterirdische Fixierung" #deepl:101694213
+ gate_harmony_pledge.7.d: "Eine Fixierung auf die [GetBuildingGroup('bg_extraction').GetName]-Branche steigert [concept_throughput], führt aber auch zu einem Rückgang bei [concept_throughput] der [GetBuildingGroup('bg_plantations').GetName]-Branche." #deepl:927365228
+ gate_harmony_pledge.7.f: "Berichte aus den Grenzgebieten deuten auf eine massive, koordinierte Zunahme der Rohstoffgewinnung hin. Bergleute und Ingenieure haben aggressive neue Abbauverfahren eingeführt, wodurch unsere Lager mit Roherz und Mineralien überflutet werden. Provinzrichter warnen jedoch davor, dass dieser unkontrollierte Abbau die lokalen Ökosysteme stört; Ackerland wird zerstört und Wasserquellen umgeleitet, was zu einem starken Rückgang der Erträge auf unseren Plantagen führt." #deepl:4159305287
+ gate_harmony_pledge.7.a: "Wir müssen unsere Rohstoffindustrie dazu verpflichten, die umliegenden Ackerflächen zu erhalten." #deepl:77699677
+ gate_harmony_pledge.7.b: "Die schlimmsten Auswirkungen abmildern." #deepl:410557116
+ gate_harmony_pledge.7.c: "Nutzen Sie das Potenzial." #deepl:2727038369
+ gate_harmony_pledge.8.t: "Das Fieber um die Cash Crops" #deepl:1069755938
+ gate_harmony_pledge.8.d: "Eine Fixierung auf die [GetBuildingGroup('bg_plantations').GetName]-Branche steigert [concept_throughput], führt aber auch zu einem Rückgang bei [concept_throughput] der [GetBuildingGroup('bg_agriculture').GetName]-Branche." #deepl:288115478
+ gate_harmony_pledge.8.f: "Berichte aus den landwirtschaftlichen Provinzen deuten auf eine weit verbreitete Besessenheit von lukrativen Exportkulturen hin. Angetrieben von der plötzlichen, leidenschaftlichen Überzeugung, dass Plantagenwirtschaft immensen Reichtum garantiert, reißen Landbesitzer und ländliche Gemeinden eifrig ihre Grundnahrungsmittelkulturen aus, um stattdessen Gewürze, Kaffee und Kautschuk anzubauen. Während die Handelsminister berichten, dass unsere Exporteinnahmen in die Höhe schnellen, warnen lokale Amtsträger, dass sich die Dorfmärkte allmählich leeren, was ernsthafte Bedenken hinsichtlich drohender Nahrungsmittelknappheit aufkommen lässt." #deepl:2362294843
+ gate_harmony_pledge.8.a: "Legen Sie ein Mindestniveau für die Nahrungsmittelproduktion pro landwirtschaftlichem Betrieb fest." #deepl:1576472696
+ gate_harmony_pledge.8.b: "Die schlimmsten Auswirkungen abmildern." #deepl:410557116
+ gate_harmony_pledge.8.c: "Nutzen Sie das Potenzial." #deepl:2727038369
+ gate_harmony_pledge.9.t: "Agrarsicherheit" #deepl:288080293
+ gate_harmony_pledge.9.d: "Eine Fixierung auf die [GetBuildingGroup('bg_agriculture').GetName]-Branche steigert [concept_throughput], führt aber auch zu einem Rückgang bei [concept_throughput] der [GetBuildingGroup('bg_plantations').GetName]-Branche." #deepl:3228164820
+ gate_harmony_pledge.9.f: "In den ländlichen Gebieten hat sich eine reaktionäre Bewegung etabliert, die von einer intensiven, kollektiven Fixierung auf Ernährungssicherheit und Selbstversorgung angetrieben wird. Landwirte und lokale Führungskräfte reduzieren systematisch die Erträge kommerzieller Plantagen, um die Erträge von Wurzelgemüse und Getreide zu maximieren. Während unsere nationalen Getreidespeicher überquellen und sich die Ernährungslage im Inland verbessert, sind die Erträge der Plantagen eingebrochen." #deepl:3116472441
+ gate_harmony_pledge.9.a: "Steigerung des Ertrags der Plantagen durch die Einschränkung der Nahrungsmittelproduktion." #deepl:2902570733
+ gate_harmony_pledge.9.b: "Die schlimmsten Auswirkungen abmildern." #deepl:410557116
+ gate_harmony_pledge.9.c: "Nutzen Sie das Potenzial." #deepl:2727038369
+ gate_harmony_pledge.10.t: "Gewebtes Denkmal" #deepl:6943227
+ gate_harmony_pledge.10.d: "Ein Kulturdenkmal wird unser „[concept_gate_harmony_pledge_society]“ stärken." #deepl:4054858405
+ gate_harmony_pledge.10.f: "Unter unseren Handwerkern ist eine wundervolle, spontane Zusammenarbeit entstanden. Menschliche Schnitzer und gnomische Ingenieure haben sich mit ganzer Leidenschaft dem Bau eines großartigen neuen öffentlichen Pavillons gewidmet. Das Bauwerk verbindet auf perfekte Weise die zutiefst spirituelle, fließende Holzarbeit einheimischer menschlicher Traditionen mit dem komplexen, mathematischen Uhrwerk gnomischen Designs. Dieses architektonische Wunderwerk ist eine greifbare Verkörperung des Harmonie-Gelöbnisses und weckt landesweit eine Welle von Bürgerstolz und kulturellem Prestige." #deepl:548123886
+ gate_harmony_pledge.10.a: "Wunderbar." #deepl:2942415708
+ gate_harmony_pledge.11.t: "Unerwünschte Anfrage" #deepl:3472512289
+ gate_harmony_pledge.11.d: "Wenn man bei diesem kulturellen Vorfall nicht mit Bedacht vorgeht, wird „[concept_conversion]“ zu „[GetReligion('gate_harmony_pledge').GetNameNoIcon]“ verkommen." #deepl:1581847826
+ gate_harmony_pledge.11.f: "Wir haben heftige Beschwerden von spirituellen Führern der Menschen bezüglich eines kürzlich abgehaltenen Ahnenritus erhalten. Eine Gruppe von Gnomen-Gelehrten, getrieben von ihrer intensiven und ungezügelten Neugier, nahm an der feierlichen Zeremonie teil, behandelte diese jedoch wie ein interaktives Rätsel. Sie unterbrachen die Gebete mit einer Flut von Fragen, versuchten, heilige Reliquien zu vermessen, und diskutierten lautstark über die Eigenschaften der zeremoniellen Feuer. Auch wenn dies nicht böswillig gemeint war, hat diese aggressive weltliche Faszination Traditionalisten zutiefst gekränkt und die gesellschaftliche Harmonie belastet." #deepl:489344487
+ gate_harmony_pledge.11.a: "Das ist schlimm." #deepl:2087564719
+ gate_harmony_pledge.11.b: "Verurteilen Sie dieses Verhalten." #deepl:2455540265
+ gate_harmony_pledge.12.t: "Die Abkehr vom Gelöbnis" #deepl:3780230732
+ gate_harmony_pledge.12.d: "Die Verabschiedung des „[TopScope.sL('atheism_law').GetName]“ wird dazu führen, dass wir das „[concept_gate_harmony_pledge]“ aufgeben. Dies wird katastrophale Folgen haben." #deepl:3068637803
+ gate_harmony_pledge.12.f: "Berichte aus der Versammlung deuten auf eine wachsende Koalition radikaler Richter hin, die eine vollständige Abschaffung des Harmonie-Gelöbnisses fordern. Mit dem Argument, dass unsere akribische gesellschaftliche Abstimmung ein Käfig sei, der das wahre Potenzial ersticke, verlangen sie, dass wir unseren natürlichen Extremen freien Lauf lassen. Berater warnen davor, dass schon allein die Erwägung dieses Antrags kurzfristig katastrophale Folgen haben werde." #deepl:3395286884
+ gate_harmony_pledge.12.a: "Es aufzugeben ist das Beste." #deepl:2265107712
+ gate_harmony_pledge.12.b: "Denken wir einmal darüber nach." #deepl:2399731022
+ gate_harmony_pledge.13.t: "Das Versprechen zurückgewinnen" #deepl:1485235099
+ gate_harmony_pledge.13.d: "Wir haben uns erneut die Lehren der „[concept_gate_harmony_pledge]“ zu eigen gemacht." #deepl:2063420038
+ gate_harmony_pledge.13.f: "Die Erschöpfung durch ungebremste Extreme hat das Fieber der Nation endlich gebrochen. In allen Provinzen fordern Bürger und Amtsträger gleichermaßen eine Rückkehr zu den wohlüberlegten Grundsätzen des Harmonie-Gelöbnisses." #deepl:2354966606
+ gate_harmony_pledge.13.a: "Wir bekennen uns zur Harmonie." #deepl:2290051607
+ gate_harmony_pledge.14.t: "Landrausch" #deepl:4201529643
+ gate_harmony_pledge.14.d: "Der Ansturm auf Grundstücke wird zu höheren „[concept_pop_growth]“ führen, aber auch die „[concept_generated_pollution]“ massiv in die Höhe treiben." #deepl:2567934868
+ gate_harmony_pledge.14.f: "Dank der ertragreichen landwirtschaftlichen Werkzeuge der Gnome dehnen menschliche Bauernfamilien ihre Gehöfte rasch immer tiefer in den Dschungel hinein aus. Angetrieben von dem einzigartigen menschlichen Wunsch, sich riesige Landbesitze zu sichern und ihren großen Familien ein beträchtliches Erbe zu hinterlassen, roden sie üppiges Land in atemberaubendem Tempo. Während dieser Ehrgeiz einen massiven Boom beim Bevölkerungswachstum und bei der Rohstoffgewinnung auslöst, bringt er unsere Raumplanung völlig aus dem Gleichgewicht und bedroht das ökologische Gleichgewicht, das der „Pledge“ zu bewahren sucht." #deepl:2383172291
+ gate_harmony_pledge.14.a: "Naturschutzgebiete einrichten." #deepl:3058232922
+ gate_harmony_pledge.14.b: "Die schlimmsten Auswirkungen abmildern." #deepl:410557116
+ gate_harmony_pledge.14.c: "Nutzen Sie das Potenzial." #deepl:2727038369
+ gate_harmony_pledge.15.t: "Animistische Technik" #deepl:1278909608
+ gate_harmony_pledge.15.d: "Animistische Überzeugungen reduzieren [concept_conversion] auf die [GetReligion('gate_harmony_pledge').GetNameNoIcon] und steigern zudem [Concept('concept_radical', '$concept_radicalism$')] für unsere [GetCulture('gnomish').GetName] Mitarbeiter." #deepl:2042378649
+ gate_harmony_pledge.15.f: "Die menschlichen Arbeiter haben begonnen, die industriellen Maschinen der Gnome direkt in ihre animistischen Glaubenssysteme zu integrieren und betrachten riesige Dampfmaschinen und Uhrwerk-Webstühle als Gefäße für mächtige lokale Geister. Die Fabrikhallen sind nun mit üppigen Blumenopfern geschmückt, und die Maschinen werden sorgfältig mit heiligen geometrischen Mustern bemalt. Diese wunderschöne kulturelle Synthese hat zu einer starken Loyalität und Einheit unter den Arbeitern geführt. Die gnomenhaften Ingenieure raufen sich jedoch die Haare, da die menschlichen Bediener sich strikt weigern, die Maschinen an „ungünstigen“ Tagen oder mit optimalen, die Geister verärgernden Geschwindigkeiten zu betreiben." #deepl:196278460
+ gate_harmony_pledge.15.a: "Diese Praxis verbieten." #deepl:3854349238
+ gate_harmony_pledge.15.b: "Die schlimmsten Auswirkungen abmildern." #deepl:410557116
+ gate_harmony_pledge.15.c: "Nutzen Sie das Potenzial." #deepl:2727038369
+ gate_harmony_pledge.16.t: "Vorgeschriebenes Chaos" #deepl:3726813281
+ gate_harmony_pledge.16.d: "[TopScope.sCha('event_character').GetFullName] hat die „[TopScope.sPM('event_movement').GetNameNoIcon]“ gegründet." #deepl:1840134710
+ gate_harmony_pledge.16.f: "In der Hauptstadt sind Berichte über eine neu gegründete politische Bewegung eingegangen, die von einem gnomenhaften Ideologen angeführt wird, der offen für eine Verschmelzung von absoluter Anarchie und kompromissloser autoritärer Kontrolle eintritt. In öffentlichen Erklärungen fordert die Fraktion die vollständige Auflösung des Staates und aller formellen Institutionen, betont jedoch gleichzeitig die Notwendigkeit eines permanenten, militarisierten Durchsetzungsapparats zur Aufrechterhaltung dieser „reinen“ Gesetzlosigkeit." #deepl:1348690011
+ gate_harmony_pledge.16.a: "Was?" #deepl:1732307125

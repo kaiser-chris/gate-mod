@@ -8,6 +8,7 @@
  je_gate_monster_congress_button_start: "开始会议"
  je_gate_monster_congress_button_start_desc: "让我们的国会开始讨论如何应对未来的魔物袭击。"
  je_gate_monster_congress_button_start_block_started: "会议尚未开始"
+ je_gate_monster_congress_button_start_block_no_law: "我们选定了一项法律" #deepl:3974900454
  je_monster_congress_button_start_effect: "会议开始"
  pb_gate_monster_congress_name: "会议进展"
  pb_gate_monster_congress_desc: "进度：#v [Multiply_float(JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self), '(float)6')|0]#!/6月"
@@ -42,6 +43,4 @@
  gate_monster_attack.5.t: "魔物袭击"
  gate_monster_attack.5.d: "魔物袭击了我们的平民。"
  gate_monster_attack.5.f: "魔能渗入大地，释放出如潮水般古老而未知的恐怖存在。地面的裂隙中涌现出成群骇人的怪物，它们的双眼闪烁着原始狂野的奥秘辉光。"
- gate_monster_attack.5.a1: "幸好我们有魔物猎人。"
- gate_monster_attack.5.a2: "我们应该建立魔物狩猎制度。"
- gate_monster_attack.5.b1: "派出一些研究人员。"
+ gate_monster_attack.5.a: "我们得采取点行动。" #deepl:925607997

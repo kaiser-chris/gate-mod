@@ -24,6 +24,7 @@
  concept_gate_magic_researcher: "비전술사"
  concept_gate_magic_researchers: "비전술사"
  concept_gate_magic_researcher_desc: "한 국가의 비전술사는 [GetBuildingType('building_gate_magic_research_institute').GetName]을 이끌며 그 [concept_gate_magic_innovation]의 방향을 조정합니다. 이들은 [Concept('concept_gate_project','$concept_gate_projects$')]를 주도하고, 마법 산업과 사회 내 마법 활용을 개선하는 데 기여합니다."
+ concept_gate_character_experience_simple: "경력" #deepl:2887856328
  concept_gate_character_experience: "캐릭터 경험"
  concept_gate_character_experience_desc: "특정 인물들, 예를 들어 우리의 [concept_gate_magic_researcher]는 자신의 업무에서 경험을 쌓을 수 있습니다. 높은 레벨의 인물일수록 업무 능력이 뛰어나며, 일상 업무의 성과를 높여줍니다.\n\n#header 경험 레벨:#!\n• $gg_character_experience_basic$\n• $gg_character_experience_experienced$\n• $gg_character_experience_expert$"
  concept_gate_magic: "마법"
@@ -75,3 +76,29 @@
  concept_gate_arcane_council_desc: "$io_gate_arcane_council$은 [concept_gate_magic_users]를 규제하고 제한하기 위해 설립된 [concept_com_international_organization]입니다. 그 주된 목적은 국제적 사건의 발생을 방지하는 데 있으며, [concept_gate_arcane_council_high_mage]가 이를 이끕니다."
  concept_gate_arcane_council_high_mage: "$io_gate_arcane_council_leader_title$"
  concept_gate_arcane_council_high_mage_desc: "$io_gate_arcane_council_leader_title$은 [concept_gate_arcane_council] [concept_com_international_organization]을 이끕니다. 이들은 모든 회원국의 [Concept('concept_gate_magic_researcher','$concept_gate_magic_researchers$')] 중에서 선출됩니다."
+ concept_gate_harmony_pledge: "조화 서약" #deepl:3265344855
+ concept_gate_harmony_pledge_desc: "이 땅에서 조화는 성격상 우연히 생겨난 행복한 결과가 아니라, 의도적으로 설계된 결과물입니다. ‘균형과 조화의 길([concept_gate_harmony_pledge])’은 노움 특유의 본성에 대한 노움들의 해답으로 시작되었다. 노움은 강렬한 성향을 지닌 민족으로, 탁월함과 집착, 방종과 금욕, 갑작스러운 열정과 돌변을 오가기 쉬운 성향을 지녔다. 이 길은 그러한 본능을 부정하려는 것이 아니라, 그 본능에 형태를 부여하고자 한 것이었다. \n \n 시간이 흐르면서 그 설계는 그 기원을 넘어 성장했습니다. 그놈들을 위한 틀로 시작된 것이, 그 신중한 균형 속에서 힘을 발견한 수많은 민족이 공유하는 더 넓은 사회의 토대가 되었습니다. 법과 제도, 전통은 족쇄가 아니라, 함께 살아가는 지속적인 여정 속에서 균형을 맞추는 도구로 기능합니다. 각각의 충동에는 제자리가 주어지고, 각 과잉에는 배출구가 마련되어, 개인의 에너지가 전체의 회복력을 강화할 수 있도록 한다. \n \n 이러한 점에서 그들의 문명 그 자체가 하나의 발명품이다. 온전히 물려받은 것이 아니라, 그 안에서 살아가는 모든 이들에 의해 끊임없이 조율되고, 조정되며, 다듬어지는 것이다. ‘[concept_gate_harmony_pledge]’ 아래에서 산다는 것은 그 작업의 일부가 되는 것을 의미한다. 즉, 단순히 피지배자나 이웃으로서가 아니라, 수많은 이들을 포용할 만큼 현명한 사회를 빚어내는 수많은 손 중 하나로서 서는 것이다. \n \n ‘[concept_gate_harmony_pledge]’는 세 가지 측면으로 나뉜다:#indent_newline:2 \n• [concept_gate_harmony_pledge_society] #! #indent_newline:2 \n• [concept_gate_harmony_pledge_economy] #! #indent_newline:2 \n• [concept_gate_harmony_pledge_legislative] #!" #deepl:416757848
+ concept_gate_harmony_pledge_society: "사회적 조화" #deepl:3995539092
+ concept_gate_harmony_pledge_society_desc: "‘조화의 서약’은 행동뿐만 아니라 신념에도 구속력을 가집니다. 다양한 문화와 신앙이 공존하는 이 땅에서, 단결은 획일성을 통해 강요되는 것이 아니라 신중한 균형을 통해 가꾸어집니다. 전통에는 충분한 여지가 주어지고, 차이점은 인정되며, 공통의 기반은 의도적으로 유지됩니다. 이를 통해 어떤 목소리도 다른 목소리를 침묵시킬 만큼 지배적이 되거나, 전체에서 벗어날 만큼 멀어지지 않도록 합니다." #deepl:4071144681
+ concept_gate_harmony_pledge_economy: "경제적 조화" #deepl:3033882387
+ concept_gate_harmony_pledge_economy_desc: "‘조화의 서약’은 일과 부의 흐름 속까지 미칩니다. 어떤 산업도 무분별하게 팽창하도록 방치되지 않으며, 방치되어 쇠퇴하도록 내버려 두지도 않습니다. 눈부신 성장은 절제되고, 과잉은 올바른 방향으로 전환되며, 불균형은 바로잡혀, 번영이 덧없는 정점이 아니라 전체에 걸쳐 지속적이고 공유되는 균형으로 자리 잡게 됩니다." #deepl:4805695
+ concept_gate_harmony_pledge_legislative: "입법 조화" #deepl:1806810520
+ concept_gate_harmony_pledge_legislative_desc: "‘조화의 서약’은 사회와 경제뿐만 아니라 권력 그 자체의 움직임까지 규율합니다. 정치적 운동은 확고한 신념과 절박함을 바탕으로 일어나며, 종종 국가를 과감한 개혁이나 경직된 교리로 이끌기도 합니다. 그러나 그 어떤 것도 통제 없이 영속하도록 되어 있지는 않습니다. 견제와 타협, 신중한 조정을 통해 극단적인 경향은 누그러지고 영향력은 재분배되며, 이를 통해 통치는 어느 한 순간이나 이념의 승리가 아닌, 살아 숨 쉬는 균형 상태를 유지하게 됩니다." #deepl:41703841
+ concept_gate_harmony_pledge_order: "주문" #deepl:321190017
+ concept_gate_harmony_pledge_order_desc: "질서란 법, 전통, 제도가 세심하게 짜여진 구조로, 이를 통해 야망에 형태를 부여하고 국가를 굳건히 지탱해 줍니다. ‘[concept_gate_harmony_pledge]’는 이 구조에 의지하여 다양한 공동체가 탄력성을 유지하도록 합니다. 그러나 절대적인 질서는 숨 막힐 듯한 부담이다. 이를 극단적으로 추구할 때, 그것은 자발성을 짓밟고 문화적 표현을 억누르며, 생동감 넘치는 사회를 정체된 기계로 전락시키는 경직되고 수학적인 폭정이 된다." #deepl:3879463152
+ concept_gate_harmony_pledge_chaos: "혼돈" #deepl:842367022
+ concept_gate_harmony_pledge_chaos_desc: "혼돈은 거침없는 창의와 갑작스러운 열정의 불꽃이며, 빛나는 성취와 파멸을 모두 이끄는 원초적인 에너지입니다. ‘[concept_gate_harmony_pledge]’ 내에서는 혼돈이 진보와 문화적 활력을 위한 필수적인 원동력으로 환영받습니다. 그러나 제어가 되지 않으면, 혼돈은 모든 경계를 거부하며 사회를 산발적인 광란 속으로 몰아넣고, 그곳에서는 덧없는 집착과 갑작스러운 변화가 공동체의 기반을 세우는 속도보다 더 빠르게 무너뜨려 버린다." #deepl:1122461110
+ concept_gate_harmony_pledge_stratified: "계층화됨" #deepl:2271008572
+ concept_gate_harmony_pledge_stratified_desc: "계층화란, 사회 내에서 특정 집단이 그 어떤 내재적 가치로도 얻지 못한 특권을 고착적으로 누리고 있는 상태를 말한다. 이는 ‘[concept_gate_harmony_pledge_order]’의 사회적 측면이다." #deepl:1953784642
+ concept_gate_harmony_pledge_antinomian: "반율법주의자" #deepl:2640098410
+ concept_gate_harmony_pledge_antinomian_desc: "반법주의(Antinomianism)란 사회가 개인의 행동을 제약하는 것으로 간주되는 공통된 규범, 의무, 책임 등을 거부함으로써 신뢰, 자제, 또는 집단 행동을 뒷받침할 안정적인 기반을 상실하게 되는 상태를 말한다. 이는 반법주의([concept_gate_harmony_pledge_chaos])의 사회적 측면이다." #deepl:2396210652
+ concept_gate_harmony_pledge_cartelised: "카르텔화됨" #deepl:3134897753
+ concept_gate_harmony_pledge_cartelised_desc: "카르텔화는 경제 내에서 성장의 기회가 보호받는 기존 기업, 독점 기업 및 이권 추구 세력에 집중되어, 이들이 생산적 가치보다는 지배력을 통해 이익을 얻게 되는 상태를 말한다. 이는 ‘[concept_gate_harmony_pledge_order]’의 경제적 측면이다." #deepl:1003161734
+ concept_gate_harmony_pledge_febrile: "발열성" #deepl:294604352
+ concept_gate_harmony_pledge_febrile_desc: "‘발열 현상’이란 경제가 열광, 공황, 혁신, 그리고 반전의 반복적인 급등에 의해 주도되어, 사람들이 확실하게 계획을 세우거나 투자하거나 안정적인 수익을 기대할 수 없는 상태를 말한다. 이는 ‘[concept_gate_harmony_pledge_chaos]’의 경제적 측면이다." #deepl:821818457
+ concept_gate_harmony_pledge_despotic: "독재적인" #deepl:1806636525
+ concept_gate_harmony_pledge_despotic_desc: "독재 국가란 통치자나 중앙 기구가 직접 지휘권을 집중시켜, 주의를 기울이는 분야에 강력한 조치를 취할 수 있도록 하면서도, 법, 권한 위임, 신뢰, 제도를 통해 행동을 가능하게 하는 체계는 약화시키는 국가를 말한다. 이는 ‘통치와 통치권([concept_gate_harmony_pledge_order])’의 국가적 측면이다." #deepl:1248516901
+ concept_gate_harmony_pledge_anaemic: "빈혈이 있는" #deepl:2610147363
+ concept_gate_harmony_pledge_anaemic_desc: "‘무력한 국가’란 형식적인 권한은 갖추고 있으나, 결정을 확실하게 이행할 수 있는 제도적 역량, 영향력, 자원 또는 정당성이 부족하여, 진전이 방해, 방치 및 불이행에 취약한 상태를 말한다. 이는 ‘무력한 국가-정부’[concept_gate_harmony_pledge_chaos]의 국가적 측면에 해당한다." #deepl:2502907869
+ concept_gate_harmony_pledge_citizens: "시비탄스" #deepl:435352840
+ concept_gate_harmony_pledge_citizens_desc: "‘하모니 서약([GetAcceptanceStatus('second_rate_citizen').GetName])’에 따라 통치되는 주에서 완전한 법적 권리를 보장받는, ‘하모니 서약’ 지위 이상을 가진 사람들." #deepl:2456952236

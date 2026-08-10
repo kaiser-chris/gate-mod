@@ -1,9 +1,17 @@
 ﻿l_german:
  gate_rule_mod_tooltip: "#header $dlc_magic_gate$#!\n$dlc_magic_gate_desc$" #deepl:955832897
- rule_gate_magic_start: "#tooltip: [GetRawTextTooltipTag('gate_rule_mod_tooltip')] @gate_mod_logo! #! $concept_gate_magic_knowledge$ beim Spielstart" #deepl:3483166541
+ gate_rule_mod_prefix: "#tooltip: [GetRawTextTooltipTag('gate_rule_mod_tooltip')] @gate_mod_logo! #yellow  Manaflow #!: #!" #deepl:1434762747
+# Magic Starting Countries
+ rule_gate_magic_start: "$gate_rule_mod_prefix$ $concept_gate_magic_knowledge$ zu Spielbeginn" #deepl:1243071351
  setting_gate_deactivate_magic_start: "Historisch" #deepl:711774471
  setting_gate_deactivate_magic_start_desc: "Nur [Concept('concept_country', '$concept_countries$')] mit entsprechender Historie beginnen mit [concept_gate_magic_knowledge]." #deepl:2807387490
  setting_gate_activate_magic_start_player: "Spieler Land + Historisch" #deepl:990927132
  setting_gate_activate_magic_start_player_desc: "Alle Spieler-[Concept('concept_country', '$concept_countries$')] sowie [Concept('concept_country', '$concept_countries$')] mit den entsprechenden Spielverläufen werden unter [concept_gate_magic_knowledge] erreichbar sein." #deepl:2982864521
  setting_gate_activate_magic_start_all: "Alle Länder" #deepl:3544990229
  setting_gate_activate_magic_start_all_desc: "Alle E-Mail-Adressen von [Concept('concept_country', '$concept_countries$')] beginnen mit [concept_gate_magic_knowledge]." #deepl:3665199949
+# Tutorials
+ rule_gate_tutorials: "$gate_rule_mod_prefix$ Anleitungen" #deepl:2120626466
+ setting_gate_tutorials_on: "Am" #deepl:1081340179
+ setting_gate_tutorials_on_desc: "Die Tutorials sind aktiviert." #deepl:2456990880
+ setting_gate_tutorials_off: "Aus" #deepl:3144092767
+ setting_gate_tutorials_off_desc: "Die Tutorials sind deaktiviert." #deepl:550101045

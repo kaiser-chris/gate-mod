@@ -3,12 +3,13 @@
  je_gate_monster_congress: "Nationaler Kongress über Monster" #deepl:1976123507
  je_gate_monster_congress_custom_goal: "Der Kongress ist abgeschlossen." #deepl:1613369695
  je_gate_monster_congress_reason: "In der großen Halle herrschte große Spannung, als der Nationale Monsterkongress zusammentrat, der Politiker, Forscher und militärische Führer unter einem Dach versammelte. An den Wänden hingen Schaubilder, die die Verwüstungen vergangener Angriffe zeigten. Forscher sprachen eindringlich über Muster und Anomalien im Verhalten von Monstern, ihre Stimmen waren von Unbehagen geprägt. Militärische Befehlshaber skizzierten neue Strategien, ihre Pläne strotzten vor Feuerkraft und Präzision. Politiker diskutierten heftig, hin- und hergerissen zwischen der Zuweisung von Ressourcen für die Verteidigung und Investitionen in die Forschung, um die Ursache aufzudecken." #deepl:1168039375
- je_gate_monster_congress_in_progress: "Der Kongress ist im Gange." #deepl:878801234
- je_gate_monster_congress_not_started: "Der Kongress hat noch nicht begonnen." #deepl:3048554545
- je_gate_monster_congress_button_start: "Start Kongress" #deepl:3169281530
+ je_gate_monster_congress_in_progress: "Wir setzen das Gesetz zur Förderung der Entwicklung von „[TopScope.sJE('journal_entry').MakeScope.Var('selected_law').GetLawType.GetName]“ ([concept_law]) um." #deepl:1173441849
+ je_gate_monster_congress_not_started: "Wir müssen ein Gesetz auswählen und den Kongress einberufen." #deepl:475267725
+ je_gate_monster_congress_button_start: "Mit der Umsetzung des ausgewählten Gesetzes beginnen" #deepl:2037091037
  je_gate_monster_congress_button_start_desc: "Startet unseren Kongress mit der Frage, wie wir mit künftigen Monsterangriffen umgehen sollen." #deepl:1604072552
- je_gate_monster_congress_button_start_block_started: "Der Kongress hat noch nicht begonnen." #deepl:3048554545
- je_monster_congress_button_start_effect: "Eröffnet den Kongress." #deepl:1253112261
+ je_gate_monster_congress_button_start_block_started: "Der Kongress hat noch nicht begonnen" #deepl:30844508
+ je_gate_monster_congress_button_start_block_no_law: "Wir haben ein Gesetz ausgewählt" #deepl:3974900454
+ je_monster_congress_button_start_effect: "Die ausgewählte „[concept_law]“ wird nun ausgeführt." #deepl:2669965811
  pb_gate_monster_congress_name: "Kongress Fortschritte" #deepl:2342159062
  pb_gate_monster_congress_desc: "Fortschritt: #v [Multiply_float(JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self), '(float)6')|0]#! von 6 Monaten" #deepl:3179089928
  pb_gate_monster_congress_block: "der Kongress hat nicht begonnen" #deepl:1703468592
@@ -36,12 +37,10 @@
  gate_monster_attack.3.f: "Die Monster kamen, wie es die Zivilbevölkerung schon lange befürchtet hatte, und zogen unter einem blutroten Himmel durch Häuser und Felder. Ihre Bitten um Schutz wurden abgewiesen, ihre Warnungen ignoriert. Auf sich allein gestellt, wehrten sie sich mit allem, was sie auftreiben konnten - behelfsmäßige Barrikaden, Jagdgewehre, Fackeln und schiere Verzweiflung. Der Kampf war chaotisch und erbittert, der Mut aus der Not geboren, als sie sich den Bestien entgegenstellten. Zwar gelang es einigen, die Kreaturen mit Feuer und Stahl zu besiegen, doch der Preis dafür war enorm. Ganze Städte wurden in Schutt und Asche gelegt, und unzählige Menschen verloren ihr Leben." #deepl:460135206
  gate_monster_attack.3.a: "Verheerend." #deepl:3482830678
  gate_monster_attack.4.t: "Der Kongress über Monster ist abgeschlossen" #deepl:4132548999
- gate_monster_attack.4.d: "Wir können jetzt Gesetze in der [concept_law_group] [GetLawGroup('lawgroup_gate_monster_hunting').GetName] erlassen." #deepl:4091075197
+ gate_monster_attack.4.d: "Wir haben das Gesetz zur Förderung der öffentlichen Gesundheit ([TopScope.sLaw('selected_law').GetName]) [concept_law] erfolgreich verabschiedet und sind nun in der Lage, Gesetze im Rahmen des Gesetzes zur Förderung der öffentlichen Gesundheit ([GetLawGroup('lawgroup_gate_monster_hunting').GetName]) [concept_law_group] zu erlassen." #deepl:3195443
  gate_monster_attack.4.f: "Die Debatten auf dem Nationalen Monsterkongress wurden im Laufe der Stunden immer hitziger, und jede Fraktion kämpfte für ihre Vision des Überlebens. Die Forscher forderten ein tieferes Verständnis und mahnten zur Vorsicht und zu Investitionen in die Erforschung der Ursprünge und Schwächen der Monster. Das Militär forderte sofortiges Handeln und schlug Präventivschläge und verstärkte Verteidigungsmaßnahmen vor, während die Politiker darum rangen, diese Strategien mit den Bedürfnissen einer erschütterten Bevölkerung in Einklang zu bringen." #deepl:2538625397
  gate_monster_attack.4.a: "Gut, dass wir dieses Problem jetzt bekämpfen können." #deepl:3568559336
- gate_monster_attack.5.t: "Monster greifen an" #deepl:1830028971
- gate_monster_attack.5.d: "Monster greifen unsere Zivilisten an." #deepl:452892113
+ gate_monster_attack.5.t: "$gate_monster_attack$" #deepl:1703823119
+ gate_monster_attack.5.d: "[GetHarvestConditionType('gate_monster_attack').GetNameNoIcon] Die durch die zunehmende [concept_gate_mana_density] ausgelösten Angriffe richten verheerenden Schaden unter unserer Zivilbevölkerung an: [TopScope.sState('monster_attack_state').GetName] [concept_state]. Unsere Experten haben einen #tooltip eingerichtet: [GetRawTextTooltipTag('je_gate_monster_congress_reason')] #yellow  [TopScope.sJE('journal_entry').GetName] #! #!, um dieses Problem in Zukunft anzugehen." #deepl:1837379229
  gate_monster_attack.5.f: "Als das Mana in die Erde sickerte, setzte es eine Flut uralter, vergessener Schrecken frei. Aus den Rissen im Boden brach eine Horde monströser Kreaturen hervor, deren Augen mit der wilden, ungezähmten Energie des Arkanen glühten." #deepl:1712104880
- gate_monster_attack.5.a1: "Zum Glück haben wir Monsterjäger." #deepl:815690023
- gate_monster_attack.5.a2: "Wir sollten ein System für die Monsterjagd einrichten." #deepl:2660456345
- gate_monster_attack.5.b1: "Schicken Sie einige Forscher." #deepl:2373657228
+ gate_monster_attack.5.a: "Wir müssen etwas unternehmen." #deepl:925607997

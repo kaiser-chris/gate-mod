@@ -1,0 +1,166 @@
+﻿l_simp_chinese:
+ je_gate_veiled_interior: "《蒙面内室》" #deepl:2486240553
+ je_gate_veiled_interior_reason: "在新萨马多尔已开发完好的沿海地区之外，是“面纱内陆”——一片由茂密丛林和耸立的高地组成的广袤区域，迄今为止尚未有任何实质性的探险活动成功进入。 首批[GetCulture('gnomish').GetName]的定居者经由沿海的[GetBuildingType('building_gate_eastern_new_guinea').GetName]抵达，随后定居点沿着可通航的海岸线和河道逐渐向外扩展。然而，更深处的内陆依然笼罩在迷雾之中，其地形尚未被绘制，当地状况也鲜为人知。" #deepl:2120754377
+ je_gate_veiled_interior_lobby: "$je_gate_veiled_interior_reason$" #deepl:1269711188
+ je_gate_veiled_interior_tooltip: "#header $je_gate_veiled_interior$#!\n$je_gate_veiled_interior_reason$" #deepl:181293588
+ je_gate_veiled_interior_status_expedition: "我们已向内陆派遣了一支探险队。" #deepl:3837329184
+ je_gate_veiled_interior_status_veiled: "我们对内部情况一无所知。" #deepl:2099921235
+ je_gate_veiled_interior_status_scouting: "我们已向内陆派遣了一支侦察队。" #deepl:1833239881
+ je_gate_veiled_interior_status_early_contact: "我们在内陆发现了人。" #deepl:2851884957
+ je_gate_veiled_interior_status_diplomacy_stall: "我们的谈判暂时陷入了僵局 #bold  #!。" #deepl:2772661844
+ je_gate_veiled_interior_status_diplomacy_discussions: "我们目前正与#bold 就内饰设计进行初步讨论 #!。" #deepl:2472124882
+ je_gate_veiled_interior_status_diplomacy_alignment: "我们是#bold ，正在将#!与室内设计相协调。" #deepl:3136715447
+ je_gate_veiled_interior_status_diplomacy_implementation: "我们是#bold ，正在实施#!，即内陆地区的并入。" #deepl:1190932724
+ je_gate_veiled_interior_phase_veiled: "阶段：#v  隐蔽 #!" #deepl:1045119121
+ je_gate_veiled_interior_phase_early_contact: "阶段：#v  初步联系 #!" #deepl:2201378918
+ je_gate_veiled_interior_phase_diplomacy: "阶段：#v  谈判 #!" #deepl:215151950
+ sb_gate_veiled_interior_expedition: "开始探险" #deepl:1512280434
+ sb_gate_veiled_interior_expedition_desc: "开启一场深入新几内亚内陆的探险之旅。" #deepl:3655904432
+ sb_gate_veiled_interior_expedition_possible: "我们（#bold ，而非 #!）目前正在实地开展一项探险活动" #deepl:3909284354
+ sb_gate_veiled_interior_scout: "探索内陆地区" #deepl:754570530
+ sb_gate_veiled_interior_scout_desc: "既然我们已经找到了一条通往内陆的可靠路线，就应该去侦察一下该地区。" #deepl:3461395757
+ sb_gate_veiled_interior_scout_possible: "我们（#bold ，而非 #!）目前有一支侦察队正在实地执行任务" #deepl:2942878701
+ je_gate_veiled_interior_diplomacy_title: "并入谈判" #deepl:2940629219
+ je_gate_veiled_interior_diplomacy_discussions: "讨论" #deepl:2733534575
+ je_gate_veiled_interior_diplomacy_alignment: "对齐" #deepl:3705703253
+ je_gate_veiled_interior_diplomacy_implementation: "实施" #deepl:3463684406
+ je_gate_veiled_interior_diplomacy_tooltip: "#header  $je_gate_veiled_interior_diplomacy_title$ #! \n 这些谈判分为#bold 个阶段（#!）和#bold 个阶段（#!）。每周谈判都会推进一个阶段，当某个阶段完成后，可能会触发某些事件。这些事件可能会推动谈判进入下一阶段，也可能使谈判停滞数月，或者改变谈判成功的概率和陷入僵局的概率。" #deepl:3849691867
+ gate_icon_veiled_interior_negotiations: "gate_icon_幕后谈判" #deepl:563753267
+ gate_icon_veiled_interior_negotiations_desc: "$gate_create_bug_report$" #deepl:33573425
+# Modifiers
+ modifier_veiled_interior_lifted: "$je_gate_veiled_interior$：基础设施不足" #deepl:2097483058
+ modifier_veiled_interior_expedition_cost: "探险费用" #deepl:2937676416
+ modifier_veiled_interior_scouting_cost: "侦察费用" #deepl:1370500170
+ modifier_veiled_interior_diplomacy_appeasement_cost: "绥靖代价" #deepl:2089207338
+ modifier_veiled_interior_diplomacy_speed_reduction: "谈判进展放缓" #deepl:1393757265
+ modifier_veiled_interior_diplomacy_speed_increase: "加快谈判进程" #deepl:2057564717
+ modifier_gate_veiled_interior_social_harmony: "边境和谐" #deepl:1722343999
+# Effects
+ je_gate_veiled_interior_effect_phase_change_diplomacy_alignment: "#tooltip: [GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow  [TopScope.sJE('journal_entry').GetName] #! #! 谈判正朝着 #v  $je_gate_veiled_interior_diplomacy_alignment$ #! 阶段推进" #deepl:389045706
+ je_gate_veiled_interior_effect_phase_change_diplomacy_implementation: "#tooltip: [GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow  [TopScope.sJE('journal_entry').GetName] #! #! 谈判正朝着 #v  $je_gate_veiled_interior_diplomacy_implementation$ #! 阶段推进" #deepl:2330268849
+ je_gate_veiled_interior_effect_phase_change_veiled: "#tooltip: [GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow  [TopScope.sJE('journal_entry').GetName] #! #! 正朝着 #v  “蒙面”#! 阶段迈进" #deepl:2985186997
+ je_gate_veiled_interior_effect_phase_change_early_contact: "#tooltip: [GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow  [TopScope.sJE('journal_entry').GetName] #! #! 正朝着 #v  “早期接触” #! 阶段迈进" #deepl:4044200500
+ je_gate_veiled_interior_effect_phase_change_diplomacy: "#tooltip: [GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow  [TopScope.sJE('journal_entry').GetName] #! #! #v  谈判 #! 阶段" #deepl:2640547581
+ je_gate_veiled_interior_effect_diplomacy_stall: "#tooltip: [GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow  [TopScope.sJE('journal_entry').GetName] #! #! 谈判 #bold  拖延 #! 持续 [TopScope.GetLocalVariable('stall_length').GetValue|v0] 个月" #deepl:516528994
+ je_gate_veiled_interior_effect_diplomacy_change_stall_change: "#工具提示：[GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow  [TopScope.sJE('journal_entry').GetName] #! #! 谈判 #bold  拖延几率 #! 由 [TopScope.GetLocalVariable('chance_change').GetValue|-%0] 修改" #deepl:2360559600
+ je_gate_veiled_interior_effect_diplomacy_change_success_change: "#tooltip: [GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow  [TopScope.sJE('journal_entry').GetName] #! #! 谈判 #bold  成功几率 #! 变化由 [TopScope.GetLocalVariable('chance_change').GetValue|+%0] 决定" #deepl:1571856910
+# Events: Veiled and Early Contact
+ gate_veiled_interior.2.t: "内陆地区的人们" #deepl:3832161565
+ gate_veiled_interior.2.d: "我们在新几内亚内陆发现了一处#v 大型聚落 #!。" #deepl:2019896808
+ gate_veiled_interior.2.f: "在树冠层下探险数周后，一支探险队带着令人震惊的消息返回。在高地的深处，他们发现了一个规模可观的聚落，那里的人们组织有序，周围环境也经过精心规划。《面纱内域》并非一片虚无，而是一个自成一体、有人居住的世界。" #deepl:4089355706
+ gate_veiled_interior.2.a: "真有趣。" #deepl:654744515
+ gate_veiled_interior.3.t: "失踪的探险队" #deepl:3974148150
+ gate_veiled_interior.3.d: "该探险队至今未归，目前被视为失踪 #v  #!。" #deepl:3489430636
+ gate_veiled_interior.3.f: "与内陆考察队的联系已中断。尽管补给充足，路线也规划周密，却至今杳无音信。他们究竟是耽搁了、迷路了，还是遭遇了意料之外的情况，目前尚不清楚。" #deepl:3458822023
+ gate_veiled_interior.3.a: "该死！" #deepl:2521213056
+ gate_veiled_interior.4.t: "鳄鱼袭击" #deepl:537396620
+ gate_veiled_interior.4.d: "由于遭到动物袭击，探险队被迫#v 返回#!。" #deepl:3783422195
+ gate_veiled_interior.4.f: "报道证实，在穿越一条内陆河流时，我们的探险队遭遇了一条咸水鳄鱼的致命袭击，被迫撤离。人员当场遇难，探险队认为继续前进风险太大。内陆的水道证明其危险程度不亚于丛林本身。" #deepl:751896903
+ gate_veiled_interior.4.a: "人们将永远铭记他。" #deepl:609304848
+ gate_veiled_interior.5.t: "内陆地区的伏击" #deepl:2869281298
+ gate_veiled_interior.5.d: "由于遭遇伏击，远征队被迫从 #v  撤离至 #!。" #deepl:1410801867
+ gate_veiled_interior.5.f: "内陆探险队在遭到身份不明的当地居民突袭后，仓促撤回。探险队报告称，对方从隐蔽位置发动伏击，并实施了协同攻击，迫使他们立即撤退。未能与对方建立任何联系。" #deepl:2384942616
+ gate_veiled_interior.5.a: "里面有人！" #deepl:2462941592
+ gate_veiled_interior.6.t: "病魔肆虐的远征" #deepl:3553866184
+ gate_veiled_interior.6.d: "一场疫情迫使前往#v 的探险队折返#!。" #deepl:3815323029
+ gate_veiled_interior.6.f: "一支内陆探险队因疾病在队员中迅速蔓延而被迫折返。起初只是发烧和疲劳，但很快就有几名队员无法继续前行。由于补给紧张且手头没有药物，探险队在未能深入探索之前便被迫放弃了此次探险。" #deepl:3559097785
+ gate_veiled_interior.6.a: "把他们送到治疗师那里去。" #deepl:345048250
+ gate_veiled_interior.7.t: "令人困惑的丛林" #deepl:3173247562
+ gate_veiled_interior.7.d: "探险队迷失了方向，被迫#v 返回#!。" #deepl:3118662903
+ gate_veiled_interior.7.f: "勘测队在深入内陆后彻底迷失方向，现已返回。茂密的树冠和不可靠的地标使得导航变得不可能，而多次尝试原路返回均告失败。由于补给即将耗尽，探险队被迫撤离，除了将一片混乱绘制在地图上之外，几乎一无所获。" #deepl:272772775
+ gate_veiled_interior.7.a: "蠢货。" #deepl:855893625
+ gate_veiled_interior.8.t: "一百万！" #deepl:2377273607
+ gate_veiled_interior.8.d: "据我们的侦察员估计，内陆地区大约有 #v  一百万 #! [GetCulture('melanesian').GetName] 人！" #deepl:4278329704
+ gate_veiled_interior.8.f: "来自内陆地区的报告推翻了此前的一切假设。继首个定居点被发现后，进一步的勘探表明，整个高原地区存在着一个密集的聚居点网络。当地人口绝非微不足道；据估计，其数量达数十万，甚至可能接近百万。" #deepl:2685746143
+ gate_veiled_interior.8.a: "派外交使团去吧！" #deepl:771832155
+ gate_veiled_interior.9.t: "无尽丛林" #deepl:1243731867
+ gate_veiled_interior.9.d: "侦察队迷了路，被迫返回 #v  #!。" #deepl:617605326
+ gate_veiled_interior.9.f: "新萨马多尔的侦察队深入新发现的内陆地区，渴望率先揭开这里的秘密。短短数小时内，他们身后的足迹便在茂密的灌木丛中消失无踪，随着天色渐暗，每一处地标似乎都在不断变换位置。 在茂密的树冠下，指南针无助地旋转着，呼吁重新集结的呼喊声在周围的荒野中石沉大海。度过了一个瑟瑟发抖、紧张不安的夜晚后，侦察队员们在黎明时分跌跌撞撞地回到营地，既精疲力尽又一无所获，内陆的秘密依然遥不可及。" #deepl:1791482908
+ gate_veiled_interior.9.a: "蠢货。" #deepl:855893625
+ gate_veiled_interior.10.t: "消失的路标" #deepl:370512209
+ gate_veiled_interior.10.d: "侦察队迷了路，被迫返回 #v  #!。" #deepl:617605326
+ gate_veiled_interior.10.f: "侦察队员们满脸困惑地返回，坚称他们精心设置的路标被挪动了，甚至被完全移除了。无论这是野生动物所为、地形不稳所致，还是其他难以解释的原因，这支队伍迷失了回家的路，不得不花整整两天时间原路折返。" #deepl:3283463078
+ gate_veiled_interior.10.a: "是谁干的？" #deepl:2453727185
+ gate_veiled_interior.11.t: "那座不存在的桥" #deepl:3913125784
+ gate_veiled_interior.11.d: "侦察队遇到了新的障碍，被迫#v 返回#!。" #deepl:1395310129
+ gate_veiled_interior.11.f: "前一次探险队绘制的地图上标有一座横跨深谷的天然石桥。但这座石桥要么并不存在，要么已经坍塌，要么根本就从未存在过。侦察队花了一周时间寻找替代路线，直到补给耗尽才被迫撤退。不过，在被迫返回之前，他们确实找到了一条替代路线。" #deepl:3550087708
+ gate_veiled_interior.11.a: "每次都会遇到新问题。" #deepl:1991188966
+ gate_veiled_interior.12.t: "最漫长的夜晚" #deepl:2088511828
+ gate_veiled_interior.12.d: "侦察队因过于恐惧而不敢深入内陆，被迫 #v  返回 #!。" #deepl:227856334
+ gate_veiled_interior.12.f: "一场突如其来的风暴熄灭了队伍携带的所有火把和灯笼，使他们深陷内陆的漆黑之中。他们蜷缩在一起熬过了一夜，因恐惧而不敢动弹，最终原路折返，连出发时的营地都没能越过。" #deepl:908820202
+ gate_veiled_interior.12.a: "懦夫。" #deepl:1748947490
+ gate_veiled_interior.13.t: "索恩霍洛隘口的伏击" #deepl:2174563210
+ gate_veiled_interior.13.d: "侦察队遭遇伏击，被迫#v 返回#!。" #deepl:3639121303
+ gate_veiled_interior.13.f: "探险队正行经一条狭窄的山隘时，第一批箭矢毫无征兆地射了下来。无论是谁——或者是什么——发动了袭击，袭击者出现得有多快，消失回灌木丛中就有多快，留下三名侦察兵丧生，幸存者们则仓促地将伤员抬回营地。袭击者的踪迹始终未被发现。" #deepl:2016082361
+ gate_veiled_interior.13.a: "该死！" #deepl:2521213056
+ gate_veiled_interior.14.t: "《扭曲者》" #deepl:1666816189
+ gate_veiled_interior.14.d: "侦察队遭到怪物的袭击，被迫#v 返回#!。" #deepl:3840291755
+ gate_veiled_interior.14.f: "深处某种未知的力量将当地的野生动物扭曲成了连自然学家都无法辨认的形态。那些冲进侦察队营地的生物，仅与该地区原生生物有几分相似，而它们的凶残程度让探险队根本没有机会进一步研究它们。幸存者们在夜色中仓皇逃窜，将装备、笔记以及两名同伴遗留在了原地。" #deepl:3227404772
+ gate_veiled_interior.14.a: "这个星球上有怪物吗？" #deepl:2963306331
+# Events: Negotiations
+ gate_veiled_interior.101.t: "视角的转变" #deepl:570692190
+ gate_veiled_interior.101.d: "我们与内政部的谈判已进入 #v  $je_gate_veiled_interior_diplomacy_alignment$ #! 阶段。" #deepl:1031864037
+ gate_veiled_interior.101.f: "最初接触时遭到了公然的冷落，高地代表们将我们的使者视为遥远的奇观，而非严肃的合作伙伴。随着演示活动的展开，这种态度发生了转变。 侏儒的仪器、陌生的技术以及有节制的魔法展示，清楚地表明了内陆地区以外的文明发展程度。当向他们展示准确地图，显示他们的领土完全被我们的海岸线包围时，怀疑态度便让位于冷静的承认。内陆方面现已同意进行正式谈判。" #deepl:1125974512
+ gate_veiled_interior.101.a: "终于。" #deepl:4054877442
+ gate_veiled_interior.102.t: "在摩擦中锻造出的术语" #deepl:2851311478
+ gate_veiled_interior.102.d: "我们与内政部的谈判已进入 #v  $je_gate_veiled_interior_diplomacy_implementation$ #! 阶段。" #deepl:556507168
+ gate_veiled_interior.102.f: "谈判过程漫长，且常常充满紧张气氛。 我们机构不熟悉的文化习俗，加上分散式的权力体系，使协调工作的每个阶段都变得复杂。要将这些因素整合成一套规范化且平衡的体系，不仅需要妥协，更需要创新。如今，经过多次修订，双方代表团已就一个能够行之有效的架构达成一致。协调阶段以一份共同的整合计划圆满结束。" #deepl:4229283661
+ gate_veiled_interior.102.a: "让我们来实现这个框架吧。" #deepl:1345335437
+ gate_veiled_interior.103.t: "共同的未来" #deepl:1410317725
+ gate_veiled_interior.103.d: "新几内亚内陆高地的[GetCulture('melanesian').GetName]人加入了[TopScope.GetRootScope.GetCountry.GetName]。" #deepl:2558057892
+ gate_veiled_interior.103.f: "树冠之外的世界既非空无一物，也并非总是友善。早期的接触充斥着失去与不安，并非所有的和平姿态都能得到同样的回应。尽管如此，对话仍在继续。如今，高地社区已选择加入我们的行列，将这片动荡的边疆转变为共同的未来。" #deepl:3581866704
+ gate_veiled_interior.103.a: "迈向共同未来。" #deepl:721292291
+ gate_veiled_interior.103.a.tooltip: "大约 #v  一百万 #! [GetCulture('melanesian').GetName] 人将加入我国。" #deepl:3514759694
+ gate_veiled_interior.104.t: "一位使者的失踪" #deepl:4188610057
+ gate_veiled_interior.104.d: "我方谈判代表中有一人未能从内陆返回，这可能会 #v  导致 #! 谈判陷入停滞。" #deepl:3592433825
+ gate_veiled_interior.104.f: "首席特使威尔本的突然失踪，使所有外交进展陷入了停滞。他最后一次被目击时，正带着极少的随行人员前往偏远的高地，与当地酋长核实一项管辖权主张。鉴于内陆地区历史上曾存在极端的文化习俗，加之目前在侏儒首都流传的骇人听闻的传闻，我们需要对这一情况展开调查。" #deepl:847026592
+ gate_veiled_interior.104.a: "谈判必须继续进行。" #deepl:218532213
+ gate_veiled_interior.104.b: "对此事进行调查。" #deepl:75044346
+ gate_veiled_interior.105.t: "关于军事存在的争端" #deepl:92114070
+ gate_veiled_interior.105.d: "关于驻军问题上的分歧#v 导致#!谈判陷入僵局。" #deepl:998821550
+ gate_veiled_interior.105.f: "起初只是一桩程序性问题，如今却演变成了核心争议点。新萨马多尔坚持认为，为了保障运输路线安全、保护行政人员，并确保整合期间的平稳过渡，必须保持有限的军事存在。内陆地区的代表对此则持不同看法。 在他们看来，即便是“临时”部署，也意味着自治权的侵蚀，以及以维护秩序为名强加的外来控制。多位酋长警告称，若侏儒武装力量进入他们的领地，将被视为占领行为，而非合作伙伴关系。" #deepl:984678743
+ gate_veiled_interior.105.a: "我们给他们付钱吧。" #deepl:63302891
+ gate_veiled_interior.105.b: "将谈判的重点放在这一点上。" #deepl:229176123
+ gate_veiled_interior.106.t: "议会中一片哗然" #deepl:860659189
+ gate_veiled_interior.106.d: "要通过谈判消除其中的一些漏洞，将需要相当长的时间，并#v 会阻碍#!进一步的进展。" #deepl:151179752
+ gate_veiled_interior.106.f: "计划草案的细节已泄露至议会，随即引发了激烈而猛烈的政治反弹。 法律纯粹主义者和传统主义者对向内政首领们作出的让步感到震惊，尤其是那些以《[GetReligion('gate_harmony_pledge').GetNameNoFormatting]》为幌子、旨在容忍其更为骇人听闻的文化仪式的立法漏洞。议会大厅内的辩论已演变成互相叫嚣的争吵，强硬派代表指责外交使团出卖了[TopScope.GetRootScope.GetCountry.GetNameNoFormatting]的灵魂。" #deepl:99600384
+ gate_veiled_interior.106.a: "别理那些愤怒的反应。" #deepl:1030339218
+ gate_veiled_interior.106.b: "就存在争议的条款重新进行谈判。" #deepl:4188965707
+ gate_veiled_interior.107.t: "高地之疾" #deepl:4184354635
+ gate_veiled_interior.107.d: "谈判必须等到疫情得到控制之后才能进行，因此#v 目前处于停滞状态#!。" #deepl:2634418300
+ gate_veiled_interior.107.f: "有报道称，一种传染性极强的疾病正在几个关键的高地聚居地肆虐，这导致谈判戛然而止。内陆各部落首领已封锁边境，转而举行传统仪式，并拒绝了地精方面早先提出的医疗援助提议，因为他们怀疑此次疫情是外来者带来的诅咒。 与此同时，[TopScope.GetRootScope.GetCountry.GetNameNoFormatting]政府已实施严格的隔离措施，以防止疫情蔓延至人口稠密的沿海地区。" #deepl:1986170573
+ gate_veiled_interior.107.a: "这确实是个问题。" #deepl:535694526
+ gate_veiled_interior.108.t: "翻译中丢失的词语" #deepl:545324101
+ gate_veiled_interior.108.d: "语言障碍拖慢了谈判进程，我们可以#v 拖延#!谈判以寻找合适的解决方案，或者放慢速度继续推进。" #deepl:3105665024
+ gate_veiled_interior.108.f: "起初看似微不足道的困惑，如今已演变成一个严重的障碍。内陆地区的语言具有高度的地方特色且语境丰富，难以精准地翻译成[TopScope.GetRootScope.GetCountry.GetNameNoFormatting]所采用的标准化法律和外交术语。关键概念缺乏确切的对应词，而多次试图弥合这一差距的尝试，反而导致了矛盾和意想不到的让步。" #deepl:2093676139
+ gate_veiled_interior.108.a: "我们的外交官可以在工作中学习这门语言。" #deepl:992917039
+ gate_veiled_interior.108.b: "花点时间编写一本像样的词典。" #deepl:146432088
+ gate_veiled_interior.109.t: "地图上的线条" #deepl:2881631111
+ gate_veiled_interior.109.d: "酋长与我们的测量员之间就领土主张产生的冲突，导致谈判陷入僵局 #v  #!。" #deepl:3474602078
+ gate_veiled_interior.109.f: "[TopScope.GetRootScope.GetCountry.GetNameNoFormatting]的制图师们以绝对精准为荣，但他们的地形测绘结果与高地的实际情况却存在尖锐冲突。当行政官员试图为整合计划划定正式行政区划时，显而易见的矛盾便浮出水面。内陆部落首领们界定领土的依据并非坐标或固定边界，而是随季节变迁的地标、祖传的狩猎场以及错综复杂的血缘关系。 因此，若干关键资源矿脉和交通要道如今正遭到多位酋长的激烈争夺，或被我们的测量员无意中划归为国有土地。随着土地掠夺的指控日益升温，且当地领袖拒绝将领地让渡给纸面上的任意界线，谈判已陷入僵局，直至各方就共同认可的地理范围达成一致。" #deepl:2659272037
+ gate_veiled_interior.109.a: "把钱还给他们。" #deepl:2206164161
+ gate_veiled_interior.109.b: "在问题解决之前，暂停谈判。" #deepl:1534577858
+ gate_veiled_interior.110.t: "振奋人心的演讲令全场为之倾倒" #deepl:1214042784
+ gate_veiled_interior.110.d: "今天下午，“自由之声”组织（[SCOPE.gsInterestGroup('orator_ig_scope').GetName]）领导人克里斯托弗·斯塔尔（[SCOPE.sCharacter('orator_ig_leader_scope').GetFullName]）发表了一篇慷慨激昂的演讲，呼吁将内陆地区并入“自由之声”组织（[TopScope.GetRootScope.GetCountry.GetNameNoFormatting]）。" #deepl:1285951133
+ gate_veiled_interior.110.f: "在[SCOPE.sCharacter('orator_ig_leader_scope').GetCountry.GetCapital.GetCityHubName]议会中，[SCOPE.sCharacter('orator_ig_leader_scope').GetFullNameNoFormatting]向内陆各部落酋长发表讲话时，其极具感染力的演讲甚至让那些最心怀不满的酋长都为之折服。该演讲的节选已在[ROOT.GetCountry.GetNameNoFormatting]各地广为流传，进一步推动了支持整合的声浪。" #deepl:631588611
+ gate_veiled_interior.110.a: "这应该会大大促进整合进程。" #deepl:2967548102
+ gate_veiled_interior.110.b: "此类演出充分彰显了[SCOPE.sCharacter('orator_ig_leader_scope').GetFullNameNoFormatting]和[SCOPE.sCharacter('orator_ig_leader_scope').GetHerHis]所倡导的事业。" #deepl:2430031973
+ gate_veiled_interior.111.t: "知名剧作家支持种族融合" #deepl:1342308187
+ gate_veiled_interior.111.d: "在围绕内陆地区统一问题展开的谈判期间，该国一位顶尖剧作家上演了一部广受好评的戏剧，其充满政治意味的主题毫不掩饰了作者对统一的期盼。" #deepl:1667475773
+ gate_veiled_interior.111.f: "“此人的观点或许有些偏颇，但先生，他的文笔确实无可挑剔！”" #deepl:2750961614
+ gate_veiled_interior.111.a: "现在，整合一词将成为大家热议的话题。" #deepl:443695601
+ gate_veiled_interior.111.b: "让我们确保这部戏剧能吸引更广泛的国际观众。" #deepl:3705933261
+ gate_veiled_interior.112.t: "地址出错" #deepl:1773247892
+ gate_veiled_interior.112.d: "本应由[SCOPE.sCharacter('publicaddress_ig_leader_scope').GetFullName]向各部落首领发表的一篇关于内政部整合政策优点的例行演讲，却迅速演变成了该整合政策的一场公关灾难。" #deepl:4174624145
+ gate_veiled_interior.112.f: "[SCOPE.sCharacter('publicaddress_ig_leader_scope').GetFullNameNoFormatting]在[SCOPE.sCharacter('publicaddress_ig_leader_scope').GetHerHis]的引导下，笨拙地逐一阐述了一系列表述拙劣的论点，其论点已被首领们以犀利且令人信服的方式逐一驳斥。如今大家最关心的问题仅仅是：这场失误究竟是源于融合政策本身的缺陷，还是应归咎于[SCOPE.gsInterestGroup('publicaddress_ig_scope').GetNameNoFormatting]的政治无能。" #deepl:533372747
+ gate_veiled_interior.112.a: "[SCOPE.sCharacter('publicaddress_ig_leader_scope').GetFullNameNoFormatting] 必须为这次挫折承担责任。" #deepl:1548815496
+ gate_veiled_interior.113.t: "曲折的联系" #deepl:1966160296
+ gate_veiled_interior.113.d: "由于对内政整合相关冗长的流程感到沮丧，[SCOPE.gsInterestGroup('underhanded_instigator_ig_scope').GetName]的[SCOPE.sCharacter('underhanded_instigator_leader_scope').GetFullName]向我们提出了一项提议，希望利用[SCOPE.sCharacter('underhanded_instigator_leader_scope').GetHerHis]在内政部门的人脉关系来加快这一进程。" #deepl:2880075690
+ gate_veiled_interior.113.f: "“我只希望有人能向某些关键人物透露几句话。当然，一切都要在法律允许的范围内，尽管我无法保证我们在这一问题上的对手会对这些行动感到多么高兴。”" #deepl:814876041
+ gate_veiled_interior.113.a: "请授予 [SCOPE.sCharacter('underhanded_instigator_leader_scope').GetHerHim] 权限，事关紧要。" #deepl:106440097
+ gate_veiled_interior.113.b: "不，我们要么按章办事，要么干脆不做。" #deepl:27273073
+ gate_veiled_interior.114.t: "文化贡献" #deepl:415947210
+ gate_veiled_interior.114.d: "围绕这一融合的争论，在[SCOPE.sState('degenerate_art_state').GetName]艺术学院引发了讨论：受内陆地区艺术家影响的艺术流派，在[ROOT.GetCountry.GetAdjectiveNoFormatting]艺术界是否有一席之地。" #deepl:660125830
+ gate_veiled_interior.114.f: "“在当代雕塑、绘画和音乐领域，这些所谓‘艺术家’的腐蚀性影响随处可见。这些作品竟被纳入我们的学校课程并在博物馆中展出，这无异于对[ROOT.GetCountry.GetAdjectiveNoFormatting]民族灵魂的一记耳光。为了保护我们民族的情感与价值观免受内心的污秽侵蚀，必须将其彻底清除！”" #deepl:3752426606
+ gate_veiled_interior.114.a: "这完全不像[ROOT.GetCountry.GetAdjectiveNoFormatting]！" #deepl:3991361240
+ gate_veiled_interior.114.b: "他们的作品是我们艺术遗产的一部分。" #deepl:1521507373

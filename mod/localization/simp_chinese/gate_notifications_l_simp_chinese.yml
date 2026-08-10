@@ -1,20 +1,43 @@
 ﻿l_simp_chinese:
- notification_gate_new_high_mage_name: "[TopScope.sCha('new_high_mage').GetFullName] [TopScope.sCha('new_high_mage').GetCountry.GetName] 变为 [concept_gate_arcane_council_high_mage]" #deepl:397944399
- notification_gate_new_high_mage_desc: "[TopScope.sCha('new_high_mage').GetFullName] [TopScope.sCha('new_high_mage').GetCountry.GetName]的代表当选为[concept_gate_arcane_council]的新任[concept_gate_arcane_council_high_mage]。" #deepl:1940945003
- notification_gate_new_high_mage_tooltip: "[TopScope.sCha('new_high_mage').GetFullName] [TopScope.sCha('new_high_mage').GetCountry.GetName]的代表当选为[concept_gate_arcane_council]的新任[concept_gate_arcane_council_high_mage]。" #deepl:1940945003
- notification_gate_arcane_council_member_join_name: "[TopScope.sC('joining_member').GetName] 加入[concept_gate_arcane_council]" #deepl:4014001939
- notification_gate_arcane_council_member_join_desc: "[TopScope.sC('joining_member').GetName] 加入“[concept_gate_arcane_council]”组织，并誓言要在国际层面规范“[concept_gate_magic_users]”。" #deepl:3865435726
- notification_gate_arcane_council_member_join_tooltip: "[TopScope.sC('joining_member').GetName] 加入“[concept_gate_arcane_council]”组织，并誓言要在国际层面规范“[concept_gate_magic_users]”。" #deepl:3865435726
- notification_gate_arcane_council_member_leave_name: "[TopScope.sC('leaving_member').GetName] 离开[concept_gate_arcane_council]" #deepl:3960073511
- notification_gate_arcane_council_member_leave_desc: "[TopScope.sC('leaving_member').GetName] 退出[concept_gate_arcane_council]，不再负责[concept_gate_magic_users]的国际监管工作。" #deepl:2294614661
- notification_gate_arcane_council_member_leave_tooltip: "[TopScope.sC('leaving_member').GetName] 加入[concept_gate_arcane_council]，不再对[concept_gate_magic_users]进行国际监管。" #deepl:38507578
-# Prestige Goods
- notification_prestige_good_gate_generic_mana_unlocked_name: "[SCOPE.sCompany('relevant_company').GetName]开发@prestige_good_gate_generic_mana! #b $prestige_good_gate_generic_mana$#!"
- notification_prestige_good_gate_generic_mana_unlocked_desc: "[SCOPE.sCompany('relevant_company').GetName]拥有的[Concept('concept_building', '$concept_buildings$')]现在可以生产@prestige_good_gate_generic_mana!#b $prestige_good_gate_generic_mana$#!"
- notification_prestige_good_gate_generic_mana_unlocked_tooltip: "#header $notification_prestige_good_gate_generic_mana_unlocked_name$#!\n$TOOLTIP_DELIMITER$\n$notification_prestige_good_gate_generic_mana_unlocked_desc$"
- notification_prestige_good_gate_generic_golem_unlocked_name: "[SCOPE.sCompany('relevant_company').GetName]开发@prestige_good_gate_generic_golem! #b $prestige_good_gate_generic_golem$#!"
- notification_prestige_good_gate_generic_golem_unlocked_desc: "[SCOPE.sCompany('relevant_company').GetName]拥有的[Concept('concept_building', '$concept_buildings$')]现在可以生产@prestige_good_gate_generic_golem!#b $prestige_good_gate_generic_golem$#!"
- notification_prestige_good_gate_generic_golem_unlocked_tooltip: "#header $notification_prestige_good_gate_generic_golem_unlocked_name$#!\n$TOOLTIP_DELIMITER$\n$notification_prestige_good_gate_generic_golem_unlocked_desc$"
- notification_prestige_good_gate_dwarven_iron_unlocked_name: "[SCOPE.sCompany('relevant_company').GetName]开发@prestige_good_gate_dwarven_iron!#b $prestige_good_gate_dwarven_iron$#!"
- notification_prestige_good_gate_dwarven_iron_unlocked_desc: "[SCOPE.sCompany('relevant_company').GetName]拥有的[Concept('concept_building', '$concept_buildings$')]现在可以生产@prestige_good_gate_dwarven_iron!#b $prestige_good_gate_dwarven_iron$#!"
- notification_prestige_good_gate_dwarven_iron_unlocked_tooltip: "#header $notification_prestige_good_gate_dwarven_iron_unlocked_name$#!\n$TOOLTIP_DELIMITER$\n$notification_prestige_good_gate_dwarven_iron_unlocked_desc$"
+## Groups
+ notification_group_gate_arcane_council: "[concept_gate_arcane_council]" #deepl:2819120059
+ notification_group_gate_arcanist: "[concept_gate_magic_researcher]" #deepl:3090025840
+ notification_group_gate_veiled_interior: "$je_gate_veiled_interior$" #deepl:3602665582
+## General
+ notification_message_gate_new_high_mage_name: "[TopScope.sCha('new_high_mage').GetFullName] [TopScope.sCha('new_high_mage').GetCountry.GetName] 变为 [concept_gate_arcane_council_high_mage]简体中文（大陆）" #deepl:397944399
+ notification_message_gate_new_high_mage_desc: "[TopScope.sCha('new_high_mage').GetFullName] [TopScope.sCha('new_high_mage').GetCountry.GetName]的代表当选为[concept_gate_arcane_council]的新任[concept_gate_arcane_council_high_mage]。" #deepl:1940945003
+ notification_message_gate_new_high_mage_tooltip: "#header $notification_message_gate_new_high_mage_name$#!\n$TOOLTIP_DELIMITER$\n$notification_message_gate_new_high_mage_desc$" #deepl:3953363058
+ notification_message_gate_arcane_council_member_join_name: "[TopScope.sC('joining_member').GetName] 加入[concept_gate_arcane_council]" #deepl:4014001939
+ notification_message_gate_arcane_council_member_join_desc: "[TopScope.sC('joining_member').GetName] 加入“[concept_gate_arcane_council]”，并承诺在国际范围内对[concept_gate_magic_users]进行监管。" #deepl:3865435726
+ notification_message_gate_arcane_council_member_join_tooltip: "#header $notification_message_gate_arcane_council_member_join_name$#!\n$TOOLTIP_DELIMITER$\n$notification_message_gate_arcane_council_member_join_desc$" #deepl:3697477677
+ notification_message_gate_arcane_council_member_leave_name: "[TopScope.sC('leaving_member').GetName] 离开[concept_gate_arcane_council]" #deepl:3960073511
+ notification_message_gate_arcane_council_member_leave_desc: "[TopScope.sC('leaving_member').GetName] 退出[concept_gate_arcane_council]，不再负责[concept_gate_magic_users]的国际监管工作。" #deepl:2294614661
+ notification_message_gate_arcane_council_member_leave_tooltip: "#header $notification_message_gate_arcane_council_member_leave_name$#!\n$TOOLTIP_DELIMITER$\n$notification_message_gate_arcane_council_member_leave_desc$" #deepl:343779048
+ notification_message_gate_veiled_interior_diplomacy_stall_name: "#tooltip: [GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow  [TopScope.sJE('journal_entry').GetName] #! #! 谈判陷入僵局" #deepl:191645421
+ notification_message_gate_veiled_interior_diplomacy_stall_desc: "与内政部的谈判已陷入僵局[TopScope.GetLocalVariable('stall_length').GetValue|v0]个月。" #deepl:3036745233
+ notification_message_gate_veiled_interior_diplomacy_stall_tooltip: "#header $notification_message_gate_veiled_interior_diplomacy_stall_name$#!\n$TOOLTIP_DELIMITER$\n$notification_message_gate_veiled_interior_diplomacy_stall_desc$" #deepl:1860743609
+ notification_message_gate_veiled_interior_diplomacy_continue_name: "#tooltip: [GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow  [TopScope.sJE('journal_entry').GetName] #! #! 谈判仍在继续" #deepl:1292074950
+ notification_message_gate_veiled_interior_diplomacy_continue_desc: "与内政部的谈判仍在继续，情况没有变化。" #deepl:2260861827
+ notification_message_gate_veiled_interior_diplomacy_continue_tooltip: "#header $notification_message_gate_veiled_interior_diplomacy_continue_name$#!\n$TOOLTIP_DELIMITER$\n$notification_message_gate_veiled_interior_diplomacy_continue_desc$" #deepl:2728236045
+ notification_message_gate_arcanist_hired_name: "我们已聘请[TopScope.sCha('magic_researcher').GetFullName]担任我们的新任[concept_gate_magic_researcher]" #deepl:3117384334
+ notification_message_gate_arcanist_hired_desc: "我们已聘请[TopScope.sCha('magic_researcher').GetFullName]担任我们的新任[concept_gate_magic_researcher]。" #deepl:3614322275
+ notification_message_gate_arcanist_hired_tooltip: "#header $notification_message_gate_arcanist_hired_name$#!\n$TOOLTIP_DELIMITER$\n$notification_message_gate_arcanist_hired_desc$" #deepl:547480531
+ notification_message_gate_arcanist_died_name: "我们的[concept_gate_magic_researcher] [TopScope.sCha('magic_researcher').GetFullName] 已经去世了" #deepl:1608542516
+ notification_message_gate_arcanist_died_desc: "我们的[concept_gate_magic_researcher] [TopScope.sCha('magic_researcher').GetFullName]已经去世了。" #deepl:3938960785
+ notification_message_gate_arcanist_died_tooltip: "#header $notification_message_gate_arcanist_died_name$#!\n$TOOLTIP_DELIMITER$\n$notification_message_gate_arcanist_died_desc$" #deepl:862153510
+## Prestige Goods
+ notification_message_prestige_good_gate_generic_mana_unlocked_name: "[SCOPE.sCompany('relevant_company').GetName] 开发 @prestige_good_gate_generic_mana! #b  $prestige_good_gate_generic_mana$ #!" #deepl:2809777715
+ notification_message_prestige_good_gate_generic_mana_unlocked_desc: "[Concept('concept_building', '$concept_buildings$')] 由[SCOPE.sCompany('relevant_company').GetName]拥有的该公司现已开始生产@prestige_good_gate_generic_mana! #b  $prestige_good_gate_generic_mana$ #!" #deepl:3369736019
+ notification_message_prestige_good_gate_generic_mana_unlocked_tooltip: "#header $notification_message_prestige_good_gate_generic_mana_unlocked_name$#!\n$TOOLTIP_DELIMITER$\n$notification_message_prestige_good_gate_generic_mana_unlocked_desc$" #deepl:2893658488
+ notification_message_prestige_good_gate_generic_golem_unlocked_name: "[SCOPE.sCompany('relevant_company').GetName] 开发 @prestige_good_gate_generic_golem! #b  $prestige_good_gate_generic_golem$ #!" #deepl:4233080046
+ notification_message_prestige_good_gate_generic_golem_unlocked_desc: "[Concept('concept_building', '$concept_buildings$')] 由[SCOPE.sCompany('relevant_company').GetName]拥有的该公司现已开始生产@prestige_good_gate_generic_golem! #b  $prestige_good_gate_generic_golem$ #!" #deepl:1574447975
+ notification_message_prestige_good_gate_generic_golem_unlocked_tooltip: "#header $notification_message_prestige_good_gate_generic_golem_unlocked_name$#!\n$TOOLTIP_DELIMITER$\n$notification_message_prestige_good_gate_generic_golem_unlocked_desc$" #deepl:3433862894
+ notification_message_prestige_good_gate_generic_runic_paper_unlocked_name: "[SCOPE.sCompany('relevant_company').GetName] 开发 @prestige_good_gate_generic_runic_paper! #b  $prestige_good_gate_generic_runic_paper$ #!" #deepl:1569706560
+ notification_message_prestige_good_gate_generic_runic_paper_unlocked_desc: "[Concept('concept_building', '$concept_buildings$')] 由[SCOPE.sCompany('relevant_company').GetName]拥有的该公司现已开始生产@prestige_good_gate_generic_runic_paper! #b  $prestige_good_gate_generic_runic_paper$ #!" #deepl:1885104332
+ notification_message_prestige_good_gate_generic_runic_paper_unlocked_tooltip: "#header $notification_message_prestige_good_gate_generic_runic_paper_unlocked_name$#!\n$TOOLTIP_DELIMITER$\n$notification_message_prestige_good_gate_generic_runic_paper_unlocked_desc$" #deepl:3212049031
+ notification_message_prestige_good_gate_dwarven_iron_unlocked_name: "[SCOPE.sCompany('relevant_company').GetName] 开发 @prestige_good_gate_dwarven_iron! #b  $prestige_good_gate_dwarven_iron$ #!" #deepl:3809071130
+ notification_message_prestige_good_gate_dwarven_iron_unlocked_desc: "[Concept('concept_building', '$concept_buildings$')] 由[SCOPE.sCompany('relevant_company').GetName]拥有的该公司现已开始生产@prestige_good_gate_dwarven_iron! #b  $prestige_good_gate_dwarven_iron$ #!" #deepl:2359953786
+ notification_message_prestige_good_gate_dwarven_iron_unlocked_tooltip: "#header $notification_message_prestige_good_gate_dwarven_iron_unlocked_name$#!\n$TOOLTIP_DELIMITER$\n$notification_message_prestige_good_gate_dwarven_iron_unlocked_desc$" #deepl:463171416
+ notification_message_prestige_good_gate_asian_runic_paper_unlocked_name: "[SCOPE.sCompany('relevant_company').GetName] 开发 @prestige_good_gate_asian_runic_paper! #b  $prestige_good_gate_asian_runic_paper$ #!" #deepl:3526866098
+ notification_message_prestige_good_gate_asian_runic_paper_unlocked_desc: "[Concept('concept_building', '$concept_buildings$')] 由[SCOPE.sCompany('relevant_company').GetName]拥有的该公司现已开始生产@prestige_good_gate_asian_runic_paper! #b  $prestige_good_gate_asian_runic_paper$ #!" #deepl:180014359
+ notification_message_prestige_good_gate_asian_runic_paper_unlocked_tooltip: "#header $notification_message_prestige_good_gate_asian_runic_paper_unlocked_name$#!\n$TOOLTIP_DELIMITER$\n$notification_message_prestige_good_gate_asian_runic_paper_unlocked_desc$" #deepl:129201737

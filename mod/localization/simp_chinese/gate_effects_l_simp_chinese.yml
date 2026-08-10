@@ -18,3 +18,21 @@
  effect_gate_join_arcane_council: "[THIS.GetCountry.GetName]加入了[concept_gate_arcane_council]。"
  effect_gate_leave_arcane_council: "[THIS.GetCountry.GetName]退出了[concept_gate_arcane_council]。"
  effect_gate_reset_ethics: "移除所有[Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')]。"
+ effect_gate_set_arcanist_traits_basic: "[THIS.GetCharacter.GetFullName] 将变为 [GetCharacterTrait('character_trait_gate_arcanist_basic').GetName]" #deepl:3161098233
+ effect_gate_set_arcanist_traits_experienced: "[THIS.GetCharacter.GetFullName] 将变为 [GetCharacterTrait('character_trait_gate_arcanist_experienced').GetName]" #deepl:2741460078
+ effect_gate_set_arcanist_traits_expert: "[THIS.GetCharacter.GetFullName] 将变为 [GetCharacterTrait('character_trait_gate_arcanist_expert').GetName]" #deepl:112024080
+
+ effect_add_gate_society_harmony_progress: "[concept_gate_harmony_pledge_society] 在 [COUNTRY.GetName] 中，#bold  将 #! 的值增加 $VALUE|v0$，使其趋近于 [concept_gate_harmony_pledge_antinomian]" #deepl:3891418080
+ effect_add_gate_society_harmony_progress_negative: "[concept_gate_harmony_pledge_society] 在 [COUNTRY.GetName] 中，#bold  向 [concept_gate_harmony_pledge_stratified] 方向后退 #! 距离 $VALUE|v0$" #deepl:2259507543
+ effect_add_gate_society_harmony_progress_first: "[concept_gate_harmony_pledge_society] 在 [COUNTRY.GetName] 中，#bold  将 #! 的值增加 $VALUE|v0$，使其趋近于 [concept_gate_harmony_pledge_antinomian]" #deepl:3891418080
+ effect_add_gate_society_harmony_progress_first_negative: "[concept_gate_harmony_pledge_society] 在 [COUNTRY.GetName] 中，#bold  向 [concept_gate_harmony_pledge_stratified] 方向后退 #! 距离 $VALUE|v0$" #deepl:2259507543
+
+ effect_add_gate_economy_harmony_progress: "[concept_gate_harmony_pledge_economy] 在 [COUNTRY.GetName] 中，#bold  将 #! 的值增加 $VALUE|v0$，使其趋近于 [concept_gate_harmony_pledge_febrile]" #deepl:3993073412
+ effect_add_gate_economy_harmony_progress_negative: "[concept_gate_harmony_pledge_economy] 在 [COUNTRY.GetName] 中，#bold  向 [concept_gate_harmony_pledge_cartelised] 方向后退 #! 距离 $VALUE|v0$" #deepl:2824882651
+ effect_add_gate_economy_harmony_progress_first: "[concept_gate_harmony_pledge_economy] 在 [COUNTRY.GetNameNoFlag] 中，#bold  将 #! 的值增加 $VALUE|v0$，使其趋近于 [concept_gate_harmony_pledge_febrile]" #deepl:2247341882
+ effect_add_gate_economy_harmony_progress_first_negative: "[concept_gate_harmony_pledge_economy] 在 [COUNTRY.GetNameNoFlag] 中，#bold  向 [concept_gate_harmony_pledge_cartelised] 方向后退 #! 距离 $VALUE|v0$" #deepl:684244546
+
+ effect_add_gate_legislative_harmony_progress: "[concept_gate_harmony_pledge_legislative] 在 [COUNTRY.GetName] 中，#bold  将 #! 的值增加 $VALUE|v0$，使其趋近于 [concept_gate_harmony_pledge_anaemic]" #deepl:1886031484
+ effect_add_gate_legislative_harmony_progress_negative: "[concept_gate_harmony_pledge_legislative] 在 [COUNTRY.GetName] 中，#bold  向 [concept_gate_harmony_pledge_despotic] 方向后退 #!，后退距离为 $VALUE|v0$。" #deepl:4178695290
+ effect_add_gate_legislative_harmony_progress_first: "[concept_gate_harmony_pledge_legislative] 在 [COUNTRY.GetNameNoFlag] 中，#bold  将 #! 的值增加 $VALUE|v0$，使其趋近于 [concept_gate_harmony_pledge_anaemic]" #deepl:965743047
+ effect_add_gate_legislative_harmony_progress_first_negative: "[concept_gate_harmony_pledge_legislative] 在 [COUNTRY.GetNameNoFlag] 处，#bold  向 [concept_gate_harmony_pledge_despotic] 方向后退 #! 距离 $VALUE|v0$" #deepl:2852839976

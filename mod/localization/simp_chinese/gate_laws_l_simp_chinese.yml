@@ -26,6 +26,8 @@
  lawgroup_gate_monster_hunting_desc: "防止[Concept('concept_gate_monster_attack','$concept_gate_monster_attacks$')]的魔物狩猎制度。"
  law_gate_no_organized_monster_hunting: "无组织化魔物狩猎"
  law_gate_no_organized_monster_hunting_desc: "该国无组织化力量猎杀魔物，[Concept('concept_gate_monster_attack','$concept_gate_monster_attacks$')]将频繁发生。"
+ law_gate_local_monster_hunters: "当地的怪物猎人" #deepl:1359916402
+ law_gate_local_monster_hunters_desc: "该国在当地组织了猎人去猎杀怪物。" #deepl:1935497321
  law_gate_private_monster_hunters: "私营魔物猎人"
  law_gate_private_monster_hunters_desc: "该国授权并雇佣个人或公司猎杀魔物。"
  law_gate_dedicated_monster_hunters: "专职魔物猎人"
@@ -55,3 +57,9 @@
 # Distribution of Power
  law_gate_arcane_council: "奥术委员会"
  law_gate_arcane_council_desc: "国家元首与一小群有影响力、未经选举的[GetPopType('gate_mages').GetName]和[GetPopType('gate_druids').GetName]共享权力与责任。"
+# Economic System
+ law_gate_druidic_agrarianism: "德鲁伊农业主义" #deepl:3871754976
+ law_gate_druidic_agrarianism_desc: "一位德鲁伊引领着以农业发展和社区建设为重点的农村经济。" #deepl:1647015791
+# Policing
+ law_gate_community_police: "社区警务" #deepl:3497311126
+ law_gate_community_police_desc: "正是这种独特的思维方式，使得[GetCulture('gnomish').GetNameNoFormatting]的警队与众不同。他们采取了一种既专业又富有地方特色的警务模式。" #deepl:1855795895

@@ -8,6 +8,7 @@
  je_gate_monster_congress_button_start: "의회 개회"
  je_gate_monster_congress_button_start_desc: "향후 괴물 공격에 대처하는 방안을 논의하기 위한 회의가 시작됨."
  je_gate_monster_congress_button_start_block_started: "회의가 아직 시작되지 않음."
+ je_gate_monster_congress_button_start_block_no_law: "저희는 한 가지 법률을 선정했습니다." #deepl:3974900454
  je_monster_congress_button_start_effect: "회의가 시작됨."
  pb_gate_monster_congress_name: "회의 진행도"
  pb_gate_monster_congress_desc: "진행 상황: #v [Multiply_float(JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self), '(float)6')|0]#! / 6개월"
@@ -42,6 +43,4 @@
  gate_monster_attack.5.t: "괴물의 습격"
  gate_monster_attack.5.d: "괴물들이 시민들을 공격했다."
  gate_monster_attack.5.f: "마나가 땅 속으로 스며들면서 고대의 잊혀진 공포들을 풀어놓았습니다. 땅의 틈새에서 괴물의 무리가 솟구쳐 나오며, 그들의 눈은 야생적이고 억제되지 않은 마법 에너지로 빛나고 있습니다."
- gate_monster_attack.5.a1: "다행히 괴물 사냥꾼이 있었군."
- gate_monster_attack.5.a2: "괴물 사냥을 위한 체계를 꾸려야 한다."
- gate_monster_attack.5.b1: "연구원을 보내라."
+ gate_monster_attack.5.a: "뭔가 조치를 취해야 합니다." #deepl:925607997

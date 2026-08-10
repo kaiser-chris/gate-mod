@@ -24,6 +24,7 @@
  concept_gate_magic_researcher: "奥术师"
  concept_gate_magic_researchers: "奥术师"
  concept_gate_magic_researcher_desc: "A countries Arcanist leads the [GetBuildingType('building_gate_magic_research_institute').GetName] and steers its [concept_gate_magic_innovation]. They lead [Concept('concept_gate_project','$concept_gate_projects$')] and help us improve magical industries and the usage of magic in society."
+ concept_gate_character_experience_simple: "经验" #deepl:2887856328
  concept_gate_character_experience: "角色经验"
  concept_gate_character_experience_desc: "某些角色，如我们的[concept_gate_magic_researcher]，能在工作中积累经验。等级越高的角色工作能力越强，能提升日常工作的成果。\n\n#header 经验等级：#!\n• $gg_character_experience_basic$\n• $gg_character_experience_experienced$\n• $gg_character_experience_expert$"
  concept_gate_magic: "魔法"
@@ -75,3 +76,29 @@
  concept_gate_arcane_council_desc: "The $io_gate_arcane_council$ is an [concept_com_international_organization] meant to regulate and restrict [concept_gate_magic_users]. Its primary goal is to prevent international incidents and it is headed by a [concept_gate_arcane_council_high_mage]."
  concept_gate_arcane_council_high_mage: "$io_gate_arcane_council_leader_title$"
  concept_gate_arcane_council_high_mage_desc: "The $io_gate_arcane_council_leader_title$ leads the [concept_gate_arcane_council] [concept_com_international_organization]. They are elected from all member countries [Concept('concept_gate_magic_researcher','$concept_gate_magic_researchers$')]."
+ concept_gate_harmony_pledge: "和谐承诺" #deepl:3265344855
+ concept_gate_harmony_pledge_desc: "在这片土地上，和谐并非性格上的幸运巧合，而是经过深思熟虑的设计之作。 “和谐之路”（[concept_gate_harmony_pledge]）最初是地精族针对其独特天性所作出的回应：地精族性情激烈，既可能迸发出非凡才智，也可能陷入偏执；既可能纵情享乐，也可能严于律己；既可能热情高涨，也可能骤然冷淡。这一理念并非试图否定这些本能，而是旨在为它们赋予恰当的形态。\n \n 随着时间的推移，这一设计超越了其起源。最初作为侏儒族框架的体系，逐渐成为更广泛社会的基石，许多民族因其精妙的平衡而从中汲取力量。法律、制度和传统并非枷锁，而是在持续的共处艺术中起制衡作用的工具。 每一种冲动都有其容身之处，每一种过激都有其宣泄的渠道，从而使个体的能量能够增强整体的韧性。\n \n 正因如此，他们的文明本身就是一项创造：并非完整地继承而来，而是由所有生活其中的人不断调校、调整和精炼而成。 生活在“[concept_gate_harmony_pledge]”之下，就是成为这项事业的一部分——不仅作为臣民或邻居而存在，更是作为众多之手中的一员，共同塑造一个智慧足以包容万象的社会。\n \n “[concept_gate_harmony_pledge]”分为三个方面：#indent_newline:2 \n• [concept_gate_harmony_pledge_society] #! #indent_newline:2 \n• [concept_gate_harmony_pledge_economy] #! #indent_newline:2 \n• [concept_gate_harmony_pledge_legislative] #!" #deepl:416757848
+ concept_gate_harmony_pledge_society: "社会和谐" #deepl:3995539092
+ concept_gate_harmony_pledge_society_desc: "《和谐誓言》不仅约束行为，也约束信念。在一个拥有多元文化和信仰的国度，团结并非通过求同而实现，而是通过精心平衡来培育。传统被赋予空间，差异得到承认，共同点被有意识地维护，以确保没有任何一种声音变得过于强势以至于压制其他声音，也不至于过于疏远以至于脱离整体。" #deepl:4071144681
+ concept_gate_harmony_pledge_economy: "经济和谐" #deepl:3033882387
+ concept_gate_harmony_pledge_economy_desc: "《和谐誓言》甚至延伸至工作与财富的节奏之中。没有任何一个行业会被放任无节制地膨胀，也不会因被忽视而凋零。璀璨的光芒会被加以调和，过剩之处会被重新引导，失衡之处会被纠正，从而使繁荣不再是转瞬即逝的高峰，而是整个社会中持续且共享的平衡状态。" #deepl:4805695
+ concept_gate_harmony_pledge_legislative: "法律协调" #deepl:1806810520
+ concept_gate_harmony_pledge_legislative_desc: "《和谐誓言》不仅规范社会和经济，也规范权力本身的运作。 政治运动因信念与紧迫感而兴起，往往将国家推向大胆的改革或僵化的教条。然而，没有任何一种运动理应不受制约地长期存在。通过制衡、妥协和审慎的调整，极端倾向得以缓和，影响力得以重新分配，从而确保治理始终保持一种动态平衡，而非任何某个时刻或意识形态的胜利。" #deepl:41703841
+ concept_gate_harmony_pledge_order: "订单" #deepl:321190017
+ concept_gate_harmony_pledge_order_desc: "秩序是由法律、传统和制度精心构建的架构，它为抱负赋予形态，并为国家提供根基。[concept_gate_harmony_pledge] 依靠这一架构，使这个多元化的社区保持韧性。 然而，绝对的秩序却是一副令人窒息的重担。当将其推向极端时，它便会变成一种僵化的、数学式的暴政，扼杀自发性，压制文化表达，并将一个充满生机、鲜活的社会变成一台停滞不前的机器。" #deepl:3879463152
+ concept_gate_harmony_pledge_chaos: "混沌" #deepl:842367022
+ concept_gate_harmony_pledge_chaos_desc: "混乱是无拘无束的创造力和突如其来的激情的火花，是推动辉煌与毁灭的原始能量。在[concept_gate_harmony_pledge]中，它被视为进步与文化活力的必要动力，因而备受推崇。 但若任其肆意蔓延，它便会突破一切界限，将社会瓦解为一片支离破碎的狂热——转瞬即逝的痴迷与突如其来的变迁，摧毁社区根基的速度，远比建立这些根基的速度更快。" #deepl:1122461110
+ concept_gate_harmony_pledge_stratified: "分层" #deepl:2271008572
+ concept_gate_harmony_pledge_stratified_desc: "分层是指一种社会状态，即社会中存在根深蒂固的特权，这些特权归属于特定群体，而该群体并未通过任何内在价值来赢得这些特权。这是[concept_gate_harmony_pledge_order]的社会层面表现。" #deepl:1953784642
+ concept_gate_harmony_pledge_antinomian: "反律法主义者" #deepl:2640098410
+ concept_gate_harmony_pledge_antinomian_desc: "反律主义是指一种社会状态，即社会拒绝将共同的规范、职责和义务视为对个人行为的约束，从而使信任、自律或集体行动失去了稳定的基础。这是[concept_gate_harmony_pledge_chaos]的社会层面。" #deepl:2396210652
+ concept_gate_harmony_pledge_cartelised: "卡特尔化" #deepl:3134897753
+ concept_gate_harmony_pledge_cartelised_desc: "卡特尔化是指一种经济状态，即经济增长机会主要集中在受保护的既得利益者、垄断者以及寻租利益集团手中，使他们能够通过控制权而非生产性价值获利。这是[concept_gate_harmony_pledge_order]的经济层面表现。" #deepl:1003161734
+ concept_gate_harmony_pledge_febrile: "发热" #deepl:294604352
+ concept_gate_harmony_pledge_febrile_desc: "“狂热”是指一种经济状态，其特征是经济由反复出现的热情高涨、恐慌、革新和逆转所驱动，导致人们无法进行可靠的规划、投资，也无法预期稳定的回报。这是“[concept_gate_harmony_pledge_chaos]”现象在经济层面的体现。" #deepl:821818457
+ concept_gate_harmony_pledge_despotic: "专制" #deepl:1806636525
+ concept_gate_harmony_pledge_despotic_desc: "专制国家是指将国家能力集中于统治者或中央机关的直接指挥之下，使其能够在其关注领域采取强力行动，同时削弱那些通过法律、授权、信任和制度来推动行动的体系。这是“[concept_gate_harmony_pledge_order]”在国家层面的体现。" #deepl:1248516901
+ concept_gate_harmony_pledge_anaemic: "贫血" #deepl:2610147363
+ concept_gate_harmony_pledge_anaemic_desc: "“虚弱国家”是指虽拥有名义上的权威，却缺乏可靠的制度实力、影响力、资源或合法性来切实执行其决策，导致各项进展容易受到阻挠、忽视和不遵守的情况。这是“[concept_gate_harmony_pledge_chaos]”理论中关于国家层面的表述。" #deepl:2502907869
+ concept_gate_harmony_pledge_citizens: "Civitans" #deepl:435352840
+ concept_gate_harmony_pledge_citizens_desc: "在《和谐誓言》管辖的州内，享有“[GetAcceptanceStatus('second_rate_citizen').GetName]”或更高身份地位，并被赋予完整法律权利的人士。" #deepl:2456952236

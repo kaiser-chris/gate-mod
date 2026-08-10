@@ -33,6 +33,10 @@
  ig_variant_magic_users: "[GetInterestGroupVariant('ig_gate_magic_users',GetPlayer).GetNameWithCountryVariant]" #deepl:2226626709
  interest_group_ig_gate_magic_users_pol_str_mult: "$ig_variant_magic_users$ [concept_political_strength]" #deepl:2069624553
  interest_group_ig_gate_magic_users_pol_str_mult_desc: "Ein Bonus oder eine Strafe auf die gesamte [concept_political_strength] der $ig_variant_magic_users$ [concept_interest_group]" #deepl:772853015
+ interest_group_ig_gate_magic_users_pop_attraction_mult: "$ig_variant_magic_users$ Pop-Attraktion" #deepl:1046659908
+ interest_group_ig_gate_magic_users_pop_attraction_mult_desc: "Ein Bonus oder Malus dafür, wie sehr sich Pops von der „$ig_variant_magic_users$“ angezogen fühlen [concept_interest_group]" #deepl:2767742789
+ interest_group_ig_gate_magic_users_approval_add: "$ig_variant_magic_users$ [concept_approval]" #deepl:2554779543
+ interest_group_ig_gate_magic_users_approval_add_desc: "Ein Bonus oder Malus auf die Gesamt[concept_approval] der $ig_variant_magic_users$ [concept_interest_group]" #deepl:1240015381
  state_gate_arable_land_add: "Ackerland" #deepl:3395429023
  state_gate_arable_land_add_desc: "Eine Erhöhung oder Verringerung der Menge von [concept_arable_land] in einer [concept_state_region]." #deepl:842137069
  state_harvest_condition_gate_monster_attack_impact_mult: "Auswirkungen von „[Concept('concept_gate_monster_attack','$concept_gate_monster_attacks$')]“" #deepl:140828590
@@ -53,6 +57,18 @@
  character_gate_expedition_interaction_success_chance_military_add_desc: "Ein Anstieg der Erfolgswahrscheinlichkeit bei einer militärischen „[Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')]“ um einen Prozentpunkt." #deepl:4026009015
  character_gate_expedition_interaction_success_chance_political_add: "Erfolgschancen für eine politische „[Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')]“" #deepl:2810762813
  character_gate_expedition_interaction_success_chance_political_add_desc: "Ein Anstieg der Erfolgswahrscheinlichkeit bei einer politischen „[Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')]“ um einen Prozentpunkt." #deepl:3475599416
+ character_gate_experience_gain_mult: "[concept_gate_character_experience]" #deepl:3056872711
+ character_gate_experience_gain_mult_desc: "Wie schnell ein „[concept_character]“ den Titel „[concept_gate_character_experience]“ verdient." #deepl:3284296799
+ country_gate_harmony_pledge_society_drift_center: "„Harmony Drift“ von „[concept_gate_harmony_pledge_society]“" #deepl:22187047
+ country_gate_harmony_pledge_society_drift_center_desc: "Jährliche Annäherung der „[concept_gate_harmony_pledge_society]“ an den Zustand der Harmonie." #deepl:4248025924
+ country_gate_harmony_pledge_economy_drift_center: "„Harmony Drift“ von „[concept_gate_harmony_pledge_economy]“" #deepl:1681607904
+ country_gate_harmony_pledge_economy_drift_center_desc: "Jährliche Annäherung des „[concept_gate_harmony_pledge_economy]“ an den Zustand der Harmonie." #deepl:1214084391
+ country_gate_harmony_pledge_legislative_drift_center: "„Harmony Drift“ von „[concept_gate_harmony_pledge_legislative]“" #deepl:625369974
+ country_gate_harmony_pledge_legislative_drift_center_desc: "Jährliche Annäherung des „[concept_gate_harmony_pledge_legislative]“ an den Zustand der Harmonie." #deepl:2611826622
+ country_gate_veiled_interior_negotiation_speed_mult: "$je_gate_veiled_interior$: Verhandlungsgeschwindigkeit" #deepl:1614337404
+ country_gate_veiled_interior_negotiation_speed_mult_desc: "Beschleunigung der Verhandlungen unter #v  $je_gate_veiled_interior$ #! [concept_journal_entry]." #deepl:1237287482
+ state_gate_mana_density_increase_add: "Mana-Dichte" #deepl:906003755
+ state_gate_mana_density_increase_add_desc: "Eine Erhöhung oder Verringerung der Menge an „[concept_gate_mana_density]“ in einem „[concept_state_region]“." #deepl:1340820506
  unit_gate_combat_unit_type_dragon_spawn_offense_mult: "$gate_combat_unit_type_dragon_spawn$ $unit_offense_mult$" #deepl:1662839498
  unit_gate_combat_unit_type_dragon_spawn_offense_mult_desc: "$gate_combat_unit_type_dragon_spawn$ $unit_offense_mult_desc$" #deepl:4029883174
  unit_combat_unit_type_gate_mage_infantry_defense_add: "$combat_unit_type_gate_mage_infantry$ $unit_defense_add$" #deepl:1035359422

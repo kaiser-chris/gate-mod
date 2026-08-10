@@ -6,13 +6,20 @@
  je_prestige_goods_gate_mana_complete_tt: "Hat die #b $je_prestige_goods_gate_mana$ #! abgeschlossen. [concept_journal_entry]" #deepl:444495528
  je_prestige_goods_gate_mana_reward_tt: "[SCOPE.sCompany('relevant_company').GetName] wird @prestige_good_gate_generic_mana! produzieren können. #b $prestige_good_gate_generic_mana$#!" #deepl:1301396449
  not_prestige_good_gate_generic_mana_var_tt: "Hat #b nicht bereits#! entwickelt @prestige_good_gate_generic_mana! #b $prestige_good_gate_generic_mana$#!" #deepl:3717181701
- # Generic Golems
+# Generic Golems
  je_prestige_goods_gate_golem: "$prestige_good_gate_generic_golem$" #deepl:4171349388
  je_prestige_goods_gate_golem_reason: "[SCOPE.sCompany('relevant_company').GetName] hat sich als wichtiger Akteur in unserer Wirtschaft etabliert. Das Unternehmen möchte seinen derzeitigen Erfolg nutzen, um seine eigene Marke zu entwickeln: @prestige_good_gate_generic_golem! #b  $prestige_good_gate_generic_golem$ #!. Gelingt dies, wird es seine Wettbewerbsfähigkeit auf dem globalen Markt ausbauen können: @gate_golem! #b  $gate_golem$ #!." #deepl:1797256542
  je_prestige_goods_gate_golem_goal: "Pflegen Sie Folgendes für #v [GetPlayer.MakeScope.ScriptValue('prestige_good_journal_entry_months')] Monate#! (derzeit #v [ROOT.GetCountry.MakeScope.Var('prestige_golem_timer_var').GetValue] #! ): #indent_newline:3 " #deepl:4190822651
  je_prestige_goods_gate_golem_complete_tt: "Hat die #b $je_prestige_goods_gate_golem$ #! abgeschlossen. [concept_journal_entry]" #deepl:1444999603
  je_prestige_goods_gate_golem_reward_tt: "[SCOPE.sCompany('relevant_company').GetName] wird @prestige_good_gate_generic_golem! produzieren können. #b $prestige_good_gate_generic_golem$#!" #deepl:4253425780
  not_prestige_good_gate_generic_golem_var_tt: "Hat #b nicht bereits#! entwickelt @prestige_good_gate_generic_golem! #b $prestige_good_gate_generic_golem$#!" #deepl:1955093548
+# Generic Runic Paper
+ je_prestige_goods_gate_runic_paper: "$prestige_good_gate_generic_runic_paper$" #deepl:3997890010
+ je_prestige_goods_gate_runic_paper_reason: "[SCOPE.sCompany('relevant_company').GetName] hat sich als wichtiger Akteur in unserer Wirtschaft etabliert. Das Unternehmen möchte seinen derzeitigen Erfolg nutzen, um seine eigene Marke unter @prestige_good_gate_generic_runic_paper! #b  $prestige_good_gate_generic_runic_paper$ #! weiterzuentwickeln. Im Erfolgsfall wird es in der Lage sein, seine Wettbewerbsfähigkeit auf dem globalen Markt unter @gate_runic_paper! #b  $gate_runic_paper$ #! auszubauen." #deepl:3358099541
+ je_prestige_goods_gate_runic_paper_goal: "Behalte Folgendes für #v  [GetPlayer.MakeScope.ScriptValue('prestige_good_journal_entry_months')] months #! (derzeit #v  [ROOT.GetCountry.MakeScope.Var('prestige_runic_paper_timer_var').GetValue] #!) bei: #indent_newline:3 " #deepl:403435544
+ je_prestige_goods_gate_runic_paper_complete_tt: "Hat die „#b “ absolviert $prestige_good_gate_generic_runic_paper$ #! [concept_journal_entry]" #deepl:3752935609
+ je_prestige_goods_gate_runic_paper_reward_tt: "[SCOPE.sCompany('relevant_company').GetName] wird in der Lage sein, Folgendes zu erstellen: @prestige_good_gate_generic_runic_paper! #b  $prestige_good_gate_generic_runic_paper$ #!" #deepl:2493148203
+ not_prestige_good_gate_runic_paper_var_tt: "Hat #b  nicht bereits #! entwickelt? @prestige_good_gate_generic_runic_paper! #b  $prestige_good_gate_generic_runic_paper$ #!" #deepl:834764624
 # Dwarven Iron
  je_prestige_goods_gate_dwarven_iron: "$prestige_good_gate_dwarven_iron$" #deepl:2319005322
  je_prestige_goods_gate_dwarven_iron_reason: "[SCOPE.sCompany('relevant_company').GetName] hat sich als ein wichtiger Akteur in unserer Wirtschaft etabliert. Das Unternehmen ist bestrebt, seinen derzeitigen Wohlstand zu nutzen, um seine eigene Marke @prestige_good_gate_dwarven_iron! #b  $prestige_good_gate_dwarven_iron$ #! zu entwickeln. Wenn dies gelingt, wird es seine Wettbewerbsfähigkeit auf dem globalen @iron! #b  $iron$ #! Markt ausbauen können." #deepl:761316536
@@ -20,3 +27,10 @@
  je_prestige_goods_gate_dwarven_iron_complete_tt: "Hat die #b $je_prestige_goods_gate_dwarven_iron$ #! abgeschlossen. [concept_journal_entry]" #deepl:1270873347
  je_prestige_goods_gate_dwarven_iron_reward_tt: "[SCOPE.sCompany('relevant_company').GetName] wird @prestige_good_gate_dwarven_iron! produzieren können. #b $prestige_good_gate_dwarven_iron$#!" #deepl:165782984
  not_prestige_good_gate_dwarven_iron_var_tt: "Hat #b nicht bereits#! entwickelt @prestige_good_gate_dwarven_iron! #b $prestige_good_gate_dwarven_iron$#!" #deepl:2583670572
+# Runic Talismans
+ je_prestige_goods_gate_asian_runic_paper: "$prestige_good_gate_asian_runic_paper$" #deepl:3637098132
+ je_prestige_goods_gate_asian_runic_paper_reason: "[SCOPE.sCompany('relevant_company').GetName] hat sich als wichtiger Akteur in unserer Wirtschaft etabliert. Das Unternehmen möchte seinen derzeitigen Erfolg nutzen, um seine eigene Marke unter @prestige_good_gate_asian_runic_paper! #b  $prestige_good_gate_asian_runic_paper$ #! weiterzuentwickeln. Im Erfolgsfall wird es in der Lage sein, seine Wettbewerbsfähigkeit auf dem globalen Markt unter @gate_runic_paper! #b  $gate_runic_paper$ #! auszubauen." #deepl:3043441884
+ je_prestige_goods_gate_asian_runic_paper_goal: "Behalte Folgendes für #v  [GetPlayer.MakeScope.ScriptValue('prestige_good_journal_entry_months')] months #! (derzeit #v  [ROOT.GetCountry.MakeScope.Var('prestige_asian_runic_paper_timer_var').GetValue] #!) bei: #indent_newline:3 " #deepl:1284517566
+ je_prestige_goods_gate_asian_runic_paper_complete_tt: "Hat die „#b “ absolviert $prestige_good_gate_asian_runic_paper$ #! [concept_journal_entry]" #deepl:3646872247
+ je_prestige_goods_gate_asian_runic_paper_reward_tt: "[SCOPE.sCompany('relevant_company').GetName] wird in der Lage sein, folgende Inhalte zu erstellen: @prestige_good_gate_asian_runic_paper! #b  $prestige_good_gate_asian_runic_paper$ #!" #deepl:750230293
+ not_prestige_good_gate_asian_runic_paper_var_tt: "Hat #b  nicht bereits #! entwickelt? @prestige_good_gate_asian_runic_paper! #b  $prestige_good_gate_asian_runic_paper$ #!" #deepl:1990745503
