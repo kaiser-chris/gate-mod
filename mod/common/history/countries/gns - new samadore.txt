@@ -42,6 +42,16 @@
 		}
 		ig:ig_devout = {
 			add_ruling_interest_group = yes
+			set_interest_group_name = ig_gate_wardendry
+
+			remove_ideology = ideology_pious
+			add_ideology = ideology_gate_pious_wardenry
+
+			remove_ideology = ideology_moralist
+			add_ideology = ideology_gate_religious_wardens
+
+			remove_ideology = ideology_patriarchal
+			add_ideology = ideology_gate_societal_wardens
 		}
 
 		set_institution_investment_level = {
