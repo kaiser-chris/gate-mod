@@ -5,6 +5,7 @@
 # State Traits
  state_trait_gate_dwarven_tunnels: "드워프의 터널"
  state_trait_gate_magic_soil: "마법 토양"
+ state_trait_gate_crystallizing_air: "결정화되는 공기" #deepl:666326349
  state_trait_gate_stonehenge: "스톤헨지"
  state_trait_gate_ise_shrine: "이세 신궁"
  state_trait_gate_qin_mausoleum: "진시황릉"
@@ -25,6 +26,10 @@
  gate_expedition_leader_desc: "해당 인물은 [concept_gate_planet]로의 탐사의 지도자이거나 과거 지도자였습니다."
  gate_eternal_monarch: "영원한 군주"
  gate_eternal_monarch_desc: "해당 통치자는 불멸의 [GetCulture('vampire').GetName]입니다."
+ character_trait_gate_mage: "마법사" #deepl:2332035728
+ character_trait_gate_mage_desc: "이 캐릭터는 훈련을 받은 마법사입니다." #deepl:2799318215
+ character_trait_gate_druid: "드루이드" #deepl:1414077998
+ character_trait_gate_druid_desc: "이 캐릭터는 훈련을 받은 드루이드입니다." #deepl:381735163
  gate_race_trait_vampire: "[GetCulture('vampire').GetNameNoFormatting]"
  gate_race_trait_vampire_desc: "해당 인물은 [GetCulture('vampire').GetName]입니다."
  gate_race_trait_elven: "[GetCulture('elven').GetNameNoFormatting]"
@@ -41,12 +46,20 @@
  gate_dragon_health_desc: "이 인물은 위대한 드래곤으로부터 건강의 축복을 받았습니다."
  gate_dragon_general: "드래곤 전술"
  gate_dragon_general_desc: "이 인물은 위대한 드래곤으로부터 군사 지식의 축복을 받았습니다."
+ character_trait_gate_arcanist_basic: "$gg_character_experience_basic$ $concept_gate_magic_researcher$" #deepl:3190198332
+ character_trait_gate_arcanist_basic_desc: "이 캐릭터는 기본적인 ‘[concept_gate_magic_researcher]’입니다." #deepl:636397945
+ character_trait_gate_arcanist_experienced: "$gg_character_experience_experienced$ $concept_gate_magic_researcher$" #deepl:1989722498
+ character_trait_gate_arcanist_experienced_desc: "이 캐릭터는 노련한[concept_gate_magic_researcher]입니다." #deepl:4199474760
+ character_trait_gate_arcanist_expert: "$gg_character_experience_expert$ $concept_gate_magic_researcher$" #deepl:2887524648
+ character_trait_gate_arcanist_expert_desc: "이 캐릭터는 ‘[concept_gate_magic_researcher]’의 전문가입니다." #deepl:2499339616
  gate_arcanist_magic_sight: "비전의 눈"
  gate_arcanist_magic_sight_desc: "이 인물은 [concept_gate_magic]으로 인해 평범한 시력을 불태워버렸습니다. 그의 눈은 타인에게 깊은 불쾌감과 섬뜩함을 안겨주지만, 대신 [concept_gate_magic]의 흐름을 감지할 수 있게 해줍니다."
  gate_arcanist_magic_voice: "잿빛 목소리"
  gate_arcanist_magic_voice_desc: "이 인물은 금단의 공식들을 반복적으로 읊조리다 목을 태워버렸다. 그 대가로 그가 내뱉는 모든 말에는 부자연스러운 울림이 깃들어, 주문은 더 쉽게 형성되고 명령은 더 거역하기 어려워진다."
  gate_arcanist_bound_name: "인장 명칭"
  gate_arcanist_bound_name_desc: "이 인물은 적대적인 [concept_gate_magic]으로부터 자신을 보호하기 위해 자신의 진명을 일부 봉인했습니다. 그 덕분에 저주와 강제, 소환 의식에 대한 저항력을 얻었지만, 그 대가로 사회적으로 위축된 존재가 되었습니다. 마치 정체성의 본질적인 일부가 더 이상 타인에게 온전히 닿지 못하는 것처럼 말입니다."
+ gate_arcanist_split_mind: "분열된 마음" #deepl:1445802388
+ gate_arcanist_split_mind_desc: "이 캐릭터는 ‘마음의 분열([concept_gate_magic])’을 통해 자신의 정신을 여러 부분으로 나눴습니다. 이는 복잡한 개념을 이해하는 데 도움이 되지만, 동시에 다른 사람들을 밀어내는 일종의 정신병을 유발하기도 합니다." #deepl:2247299808
 # Expedition Character Traits
  gate_expedition_leader_industrialist: "$concept_gate_expedition_leader_industrialist$ 원정대장"
  gate_expedition_leader_industrialist_desc: "$concept_gate_expedition_leader_industrialist_desc$"

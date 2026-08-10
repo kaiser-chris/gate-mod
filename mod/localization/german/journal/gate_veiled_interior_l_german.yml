@@ -1,0 +1,166 @@
+﻿l_german:
+ je_gate_veiled_interior: "Das verborgene Innere" #deepl:2486240553
+ je_gate_veiled_interior_reason: "Hinter den besiedelten Küsten von New Samadore liegt das „Veiled Interior“, eine riesige Weite aus dichtem Dschungel und hoch aufragendem Hochland, die sich bislang jedem nennenswerten Eindringen widersetzt hat. Die ersten „[GetCulture('gnomish').GetName]“ gelangten über die Küstenregion „[GetBuildingType('building_gate_eastern_new_guinea').GetName]“ hierher, und von dort aus breitete sich die Besiedlung entlang der schiffbaren Küsten und Flussläufe aus. Doch das tiefere Landesinnere bleibt im Dunkeln, sein Gelände ist unerforscht und seine Gegebenheiten kaum bekannt." #deepl:2120754377
+ je_gate_veiled_interior_lobby: "$je_gate_veiled_interior_reason$" #deepl:1269711188
+ je_gate_veiled_interior_tooltip: "#header $je_gate_veiled_interior$#!\n$je_gate_veiled_interior_reason$" #deepl:181293588
+ je_gate_veiled_interior_status_expedition: "Wir haben eine Expedition ins Landesinnere entsandt." #deepl:3837329184
+ je_gate_veiled_interior_status_veiled: "Über die Innenausstattung wissen wir nichts." #deepl:2099921235
+ je_gate_veiled_interior_status_scouting: "Wir haben einen Aufklärungstrupp ins Landesinnere entsandt." #deepl:1833239881
+ je_gate_veiled_interior_status_early_contact: "Wir haben Menschen im Landesinneren gefunden." #deepl:2851884957
+ je_gate_veiled_interior_status_diplomacy_stall: "Unsere Verhandlungen sind vorübergehend ins Stocken geraten #bold  #!." #deepl:2772661844
+ je_gate_veiled_interior_status_diplomacy_discussions: "Wir befinden uns in einem frühen Stadium der Gespräche über „#bold “ #! mit dem Innenraum." #deepl:2472124882
+ je_gate_veiled_interior_status_diplomacy_alignment: "Wir sind #bold  und stimmen #! auf die Inneneinrichtung ab." #deepl:3136715447
+ je_gate_veiled_interior_status_diplomacy_implementation: "Wir sind „#bold “ und setzen uns unter #! für die Eingliederung des Landesinneren ein." #deepl:1190932724
+ je_gate_veiled_interior_phase_veiled: "Phase: #v  Veiled #!" #deepl:1045119121
+ je_gate_veiled_interior_phase_early_contact: "Phase: „#v “ – Erste Kontakte #!" #deepl:2201378918
+ je_gate_veiled_interior_phase_diplomacy: "Phase: Verhandlungen im Rahmen des „#v “ #!" #deepl:215151950
+ sb_gate_veiled_interior_expedition: "Expedition starten" #deepl:1512280434
+ sb_gate_veiled_interior_expedition_desc: "Begeben Sie sich auf eine Expedition ins Landesinnere von Neuguinea." #deepl:3655904432
+ sb_gate_veiled_interior_expedition_possible: "Wir führen derzeit keine aktive Expedition vor Ort durch (#bold ), wohl aber unter #!." #deepl:3909284354
+ sb_gate_veiled_interior_scout: "Das Innere erkunden" #deepl:754570530
+ sb_gate_veiled_interior_scout_desc: "Da wir nun einen sicheren Weg ins Landesinnere haben, sollten wir die Gegend erkunden." #deepl:3461395757
+ sb_gate_veiled_interior_scout_possible: "Wir haben #bold  – nicht #! – eine aktive Suchmannschaft im Einsatz." #deepl:2942878701
+ je_gate_veiled_interior_diplomacy_title: "Annexionsverhandlungen" #deepl:2940629219
+ je_gate_veiled_interior_diplomacy_discussions: "Diskussionen" #deepl:2733534575
+ je_gate_veiled_interior_diplomacy_alignment: "Ausrichtung" #deepl:3705703253
+ je_gate_veiled_interior_diplomacy_implementation: "Umsetzung" #deepl:3463684406
+ je_gate_veiled_interior_diplomacy_tooltip: "#header  $je_gate_veiled_interior_diplomacy_title$ #! \n Diese Verhandlungen finden in folgenden Schritten statt: #bold , #! und #bold  sowie #!. Jede Woche schreitet der Fortschritt in den einzelnen Schritten voran, und sobald ein Schritt abgeschlossen ist, besteht die Möglichkeit, dass bestimmte Ereignisse eintreten. Diese Ereignisse können entweder den Übergang zur nächsten Verhandlungsphase bewirken, die Gespräche für einige Monate ins Stocken bringen oder die Erfolgswahrscheinlichkeit und die Wahrscheinlichkeit eines Scheiterns verändern." #deepl:3849691867
+ gate_icon_veiled_interior_negotiations: "gate_icon_verdeckte_interne_Verhandlungen" #deepl:563753267
+ gate_icon_veiled_interior_negotiations_desc: "$gate_create_bug_report$" #deepl:33573425
+# Modifiers
+ modifier_veiled_interior_lifted: "$je_gate_veiled_interior$: Unzureichende Infrastruktur" #deepl:2097483058
+ modifier_veiled_interior_expedition_cost: "Kosten der Expedition" #deepl:2937676416
+ modifier_veiled_interior_scouting_cost: "Kosten für die Talentsuche" #deepl:1370500170
+ modifier_veiled_interior_diplomacy_appeasement_cost: "Kosten der Beschwichtigungspolitik" #deepl:2089207338
+ modifier_veiled_interior_diplomacy_speed_reduction: "Verzögerte Verhandlungen" #deepl:1393757265
+ modifier_veiled_interior_diplomacy_speed_increase: "Schnellere Verhandlungen" #deepl:2057564717
+ modifier_gate_veiled_interior_social_harmony: "Frontier Harmony" #deepl:1722343999
+# Effects
+ je_gate_veiled_interior_effect_phase_change_diplomacy_alignment: "#tooltip: [GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow  [TopScope.sJE('journal_entry').GetName] #! #! Verhandlungen schreiten voran in Richtung #v  $je_gate_veiled_interior_diplomacy_alignment$ #! Phase" #deepl:389045706
+ je_gate_veiled_interior_effect_phase_change_diplomacy_implementation: "#tooltip: [GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow  [TopScope.sJE('journal_entry').GetName] #! #! Verhandlungen schreiten voran in Richtung #v  $je_gate_veiled_interior_diplomacy_implementation$ #! Phase" #deepl:2330268849
+ je_gate_veiled_interior_effect_phase_change_veiled: "#tooltip: [GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow  [TopScope.sJE('journal_entry').GetName] #! #! nähert sich der „#v “ „Veiled“ #!-Phase" #deepl:2985186997
+ je_gate_veiled_interior_effect_phase_change_early_contact: "#tooltip: [GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow  [TopScope.sJE('journal_entry').GetName] #! #! schreitet in Richtung der „#v “ („Early Contact“) #!-Phase voran" #deepl:4044200500
+ je_gate_veiled_interior_effect_phase_change_diplomacy: "#tooltip: [GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow  [TopScope.sJE('journal_entry').GetName] #! #! schreitet in Richtung der #v -Verhandlungen #!-Phase voran" #deepl:2640547581
+ je_gate_veiled_interior_effect_diplomacy_stall: "#tooltip: [GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow  [TopScope.sJE('journal_entry').GetName] #! #! Verhandlungen #bold  Stillstand #! für [TopScope.GetLocalVariable('stall_length').GetValue|v0] Monate" #deepl:516528994
+ je_gate_veiled_interior_effect_diplomacy_change_stall_change: "#tooltip: [GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow  [TopScope.sJE('journal_entry').GetName] #! #! Verhandlung #bold  Verhinderungswahrscheinlichkeit #! Änderungen von [TopScope.GetLocalVariable('chance_change').GetValue|-%0]" #deepl:2360559600
+ je_gate_veiled_interior_effect_diplomacy_change_success_change: "#tooltip: [GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow  [TopScope.sJE('journal_entry').GetName] #! #! Verhandlung #bold  Erfolgschance #! Änderungen von [TopScope.GetLocalVariable('chance_change').GetValue|+%0]" #deepl:1571856910
+# Events: Veiled and Early Contact
+ gate_veiled_interior.2.t: "Die Menschen im Landesinneren" #deepl:3832161565
+ gate_veiled_interior.2.d: "Wir haben im Landesinneren von Neuguinea eine große Siedlung #v  #! entdeckt." #deepl:2019896808
+ gate_veiled_interior.2.f: "Nach wochenlangem Aufenthalt unter dem Blätterdach ist eine Expedition mit überraschenden Neuigkeiten zurückgekehrt. Tief im Hochland stießen sie auf eine beträchtliche Siedlung, deren Bewohner gut organisiert waren und deren Umgebung sorgfältig gestaltet war. Das „Veiled Interior“ ist keine Leere, sondern eine eigenständige, bewohnte Welt." #deepl:4089355706
+ gate_veiled_interior.2.a: "Faszinierend." #deepl:654744515
+ gate_veiled_interior.3.t: "Vermisste Expedition" #deepl:3974148150
+ gate_veiled_interior.3.d: "Die Expedition ist nicht zurückgekehrt und gilt nun als #v  verschollen #!." #deepl:3489430636
+ gate_veiled_interior.3.f: "Der Kontakt zur Expedition ins Landesinnere ist abgebrochen. Die Vorräte waren ausreichend und die Route gut geplant, doch es ist keine Nachricht zurückgekommen. Ob sie sich verspätet haben, sich verirrt haben oder auf etwas Unvorhergesehenes gestoßen sind, bleibt unbekannt." #deepl:3458822023
+ gate_veiled_interior.3.a: "Verdammt noch mal!" #deepl:2521213056
+ gate_veiled_interior.4.t: "Krokodilangriff" #deepl:537396620
+ gate_veiled_interior.4.d: "Die Expedition war aufgrund eines Tierangriffs gezwungen, #v  zurückkehren #!." #deepl:3783422195
+ gate_veiled_interior.4.f: "Berichten zufolge musste unsere Expedition nach einem tödlichen Angriff durch ein Salzwasserkrokodil bei der Überquerung eines Flusses im Landesinneren den Rückzug antreten. Der Verlust erfolgte unmittelbar, und die Gruppe hielt ein Weitergehen für zu gefährlich. Die Wasserwege im Landesinneren erweisen sich als ebenso gefährlich wie der Dschungel selbst." #deepl:751896903
+ gate_veiled_interior.4.a: "Man wird sich an ihn erinnern." #deepl:609304848
+ gate_veiled_interior.5.t: "Hinterhalt im Landesinneren" #deepl:2869281298
+ gate_veiled_interior.5.d: "Die Expedition war aufgrund eines Hinterhalts gezwungen, #v  von #! zu fliehen." #deepl:1410801867
+ gate_veiled_interior.5.f: "Die Expedition ins Landesinnere ist nach einem plötzlichen Angriff durch unbekannte Einwohner in Unordnung zurückgekehrt. Die Gruppe berichtet von Hinterhalten aus versteckten Positionen und koordinierten Angriffen, die einen sofortigen Rückzug erzwangen. Es konnte kein Kontakt hergestellt werden." #deepl:2384942616
+ gate_veiled_interior.5.a: "Da sind Leute im Inneren!" #deepl:2462941592
+ gate_veiled_interior.6.t: "Die „Diseased“-Expedition" #deepl:3553866184
+ gate_veiled_interior.6.d: "Ein Krankheitsausbruch zwang die Expedition, nach #v  zurückzukehren #!." #deepl:3815323029
+ gate_veiled_interior.6.f: "Eine Expedition ins Landesinnere musste umkehren, nachdem sich eine Krankheit rasch in der Gruppe ausgebreitet hatte. Was zunächst mit Fieber und Erschöpfung begann, führte bald dazu, dass mehrere Mitglieder nicht mehr weitermachen konnten. Da die Vorräte knapp wurden und keine Heilmittel zur Verfügung standen, wurde die Expedition abgebrochen, bevor man weiter ins Landesinnere vordringen konnte." #deepl:3559097785
+ gate_veiled_interior.6.a: "Bringt sie zu einem Heiler." #deepl:345048250
+ gate_veiled_interior.7.t: "Verwirrender Dschungel" #deepl:3173247562
+ gate_veiled_interior.7.d: "Die Expedition verlor die Orientierung und war gezwungen, #v  zurückkehren #!." #deepl:3118662903
+ gate_veiled_interior.7.f: "Die Vermessungstruppe ist zurückgekehrt, nachdem sie sich im Landesinneren hoffnungslos verirrt hatte. Dichtes Blätterdach und unzuverlässige Orientierungspunkte machten die Navigation unmöglich, und wiederholte Versuche, den zurückgelegten Weg zu finden, schlugen fehl. Da die Vorräte zur Neige gingen, zog sich die Expedition zurück, ohne viel mehr als Verwirrung selbst kartografiert zu haben." #deepl:272772775
+ gate_veiled_interior.7.a: "Idioten." #deepl:855893625
+ gate_veiled_interior.8.t: "Eine Million Menschen!" #deepl:2377273607
+ gate_veiled_interior.8.d: "Unsere Späher schätzen, dass im Landesinneren etwa #v  eine Million #! [GetCulture('melanesian').GetName] Menschen leben!" #deepl:4278329704
+ gate_veiled_interior.8.f: "Berichte aus dem Landesinneren haben alle bisherigen Annahmen widerlegt. Nach der Entdeckung der ersten Siedlung deuten weitere Erkundungen nun auf ein dichtes Netzwerk von Gemeinden im gesamten Hochland hin. Die Bevölkerung ist keineswegs gering; Schätzungen zufolge beläuft sich ihre Zahl auf Hunderttausende, vielleicht sogar auf fast eine Million." #deepl:2685746143
+ gate_veiled_interior.8.a: "Schickt das diplomatische Korps!" #deepl:771832155
+ gate_veiled_interior.9.t: "Endloser Dschungel" #deepl:1243731867
+ gate_veiled_interior.9.d: "Die Erkundungsgruppe hatte sich verirrt und war gezwungen, #v  zurück nach #! zu kehren." #deepl:617605326
+ gate_veiled_interior.9.f: "Die Späher von New Samadore wagten sich in das neu entdeckte Hinterland vor, begierig darauf, als Erste dessen Geheimnisse zu entschlüsseln. Innerhalb weniger Stunden war die Spur hinter ihnen im dichten Unterholz verschwunden, und jeder Orientierungspunkt schien sich im schwindenden Licht zu verschieben. Kompasse drehten sich unter dem dichten Blätterdach nutzlos im Kreis, und Rufe nach einer Neuformierung blieben in der umgebenden Wildnis unbeantwortet. Nach einer angespannten Nacht, die sie eng aneinandergekauert verbracht hatten, stolperten die Späher im Morgengrauen erschöpft und mit leeren Händen zum Lager zurück – den Geheimnissen des Landesinneren kein Stück näher gekommen." #deepl:1791482908
+ gate_veiled_interior.9.a: "Idioten." #deepl:855893625
+ gate_veiled_interior.10.t: "Die verschwindenden Wegmarkierungen" #deepl:370512209
+ gate_veiled_interior.10.d: "Die Erkundungsgruppe hatte sich verirrt und war gezwungen, #v  zurück nach #! zu kehren." #deepl:617605326
+ gate_veiled_interior.10.f: "Die Späher kehrten ratlos zurück und behaupteten, ihre sorgfältig angebrachten Wegmarkierungen seien verschoben oder ganz entfernt worden. Ob nun durch Wildtiere, instabiles Gelände oder etwas weniger Erklärbares – die Gruppe verirrte sich auf dem Heimweg und musste zwei ganze Tage lang denselben Weg zurücklegen." #deepl:3283463078
+ gate_veiled_interior.10.a: "Wer hat das getan?" #deepl:2453727185
+ gate_veiled_interior.11.t: "Die Brücke, die es nie gab" #deepl:3913125784
+ gate_veiled_interior.11.d: "Die Erkundungsgruppe stieß auf neue Hindernisse und war gezwungen, #v  zurückkehren #!." #deepl:1395310129
+ gate_veiled_interior.11.f: "Auf den Karten der vorangegangenen Expedition war eine natürliche Felsbrücke über eine tiefe Schlucht eingezeichnet. Diese existierte jedoch nicht, war entweder eingestürzt oder hatte nie existiert. Die Späher suchten eine Woche lang nach einem alternativen Weg, bevor sie aufgrund ihrer knappen Vorräte zum Rückzug gezwungen waren. Allerdings fanden sie noch einen alternativen Weg, bevor sie umkehren mussten." #deepl:3550087708
+ gate_veiled_interior.11.a: "Jedes Mal neue Probleme." #deepl:1991188966
+ gate_veiled_interior.12.t: "Die längste Nacht" #deepl:2088511828
+ gate_veiled_interior.12.d: "Die Erkundungsgruppe traute sich nicht, ins Landesinnere vorzudringen, und war gezwungen, #v  zurück #! zu kehren." #deepl:227856334
+ gate_veiled_interior.12.f: "Ein plötzlicher Sturm löschte alle Fackeln und Laternen der Gruppe aus und stürzte sie tief im Inneren in völlige Dunkelheit. Sie warteten die Nacht zusammengekauert ab, zu verängstigt, um sich zu bewegen, und kehrten nach Hause zurück, ohne weiter als bis zu ihrem Ausgangslager vorgedrungen zu sein." #deepl:908820202
+ gate_veiled_interior.12.a: "Feiglinge." #deepl:1748947490
+ gate_veiled_interior.13.t: "Hinterhalt am Thornhollow-Pass" #deepl:2174563210
+ gate_veiled_interior.13.d: "Die Erkundungsgruppe geriet in einen Hinterhalt und war gezwungen, #v  zurück nach #! zu kehren." #deepl:3639121303
+ gate_veiled_interior.13.f: "Die Expedition bewegte sich gerade durch eine enge Schlucht, als ohne Vorwarnung die ersten Pfeile einschlugen. Wer – oder was auch immer – sie beschossen hatte, verschwand ebenso schnell wieder im Gebüsch, wie es aufgetaucht war, und hinterließ drei tote Späher, während die Überlebenden sich beeilten, ihre Verwundeten nach Hause zu tragen. Von den Angreifern wurde nie eine Spur gefunden." #deepl:2016082361
+ gate_veiled_interior.13.a: "Verdammt noch mal!" #deepl:2521213056
+ gate_veiled_interior.14.t: "Die Verzerrten" #deepl:1666816189
+ gate_veiled_interior.14.d: "Die Erkundungstruppe wurde von Monstern angegriffen und musste #v  zurückkehren #!." #deepl:3840291755
+ gate_veiled_interior.14.f: "Etwas tief im Inneren hatte die heimische Tierwelt in Gestalten verwandelt, die kein Naturforscher wiedererkennen konnte. Die Kreaturen, die das Lager der Kundschafter überrannten, hatten nur eine vage Ähnlichkeit mit den in dieser Region heimischen Lebewesen, und ihre Wildheit ließ der Gruppe keine Gelegenheit, sie näher zu untersuchen. Die Überlebenden flohen durch die Nacht und ließen Ausrüstung, Notizen und zwei ihrer Kameraden zurück." #deepl:3227404772
+ gate_veiled_interior.14.a: "Gibt es Monster auf diesem Planeten?" #deepl:2963306331
+# Events: Negotiations
+ gate_veiled_interior.101.t: "Ein Perspektivwechsel" #deepl:570692190
+ gate_veiled_interior.101.d: "Unsere Verhandlungen mit dem Innenministerium gehen in die Phase „#v “ über: $je_gate_veiled_interior_diplomacy_alignment$ #!." #deepl:1031864037
+ gate_veiled_interior.101.f: "Der erste Kontakt stieß auf offene Ablehnung; die Vertreter des Hochlands betrachteten unsere Gesandten eher als ferne Kuriositäten denn als ernstzunehmende Partner. Diese Haltung änderte sich, als die Vorführungen begannen. Gnomische Instrumente, ungewohnte Techniken und kontrollierte Zaubervorführungen machten deutlich, wie weit der Fortschritt jenseits des Landesinneren fortgeschritten war. Als ihnen zudem genaue Karten vorgelegt wurden, die zeigten, dass ihre Länder vollständig von unseren Küsten umschlossen sind, wich die Skepsis einer nüchternen Erkenntnis. Das Landesinnere ist nun bereit, formelle Verhandlungen aufzunehmen." #deepl:1125974512
+ gate_veiled_interior.101.a: "Endlich." #deepl:4054877442
+ gate_veiled_interior.102.t: "Begriffe, die durch Reibung entstanden sind" #deepl:2851311478
+ gate_veiled_interior.102.d: "Unsere Verhandlungen mit dem Innenministerium gehen in die Phase „#v “ über: $je_gate_veiled_interior_diplomacy_implementation$ #!." #deepl:556507168
+ gate_veiled_interior.102.f: "Die Verhandlungen waren langwierig und oft angespannt. Unseren Institutionen unbekannte kulturelle Praktiken sowie dezentrale Autoritätsstrukturen erschwerten jede Phase der Angleichung. Die Integration dieser Elemente in einen kodifizierten und ausgewogenen Zustand erforderte nicht nur Kompromisse, sondern auch Innovationskraft. Nun, nach zahlreichen Überarbeitungen, haben sich beide Delegationen auf eine tragfähige Struktur geeinigt. Die Angleichungsphase endet mit einem gemeinsamen Plan für die Integration." #deepl:4229283661
+ gate_veiled_interior.102.a: "Lassen Sie uns dieses Framework implementieren." #deepl:1345335437
+ gate_veiled_interior.103.t: "Eine gemeinsame Zukunft" #deepl:1410317725
+ gate_veiled_interior.103.d: "Die „[GetCulture('melanesian').GetName]“, ein Volk aus dem Hochland im Landesinneren Neuguineas, schließen sich „[TopScope.GetRootScope.GetCountry.GetName]“ an." #deepl:2558057892
+ gate_veiled_interior.103.f: "Was jenseits des Blätterdachs lag, war weder leer noch immer einladend. Die ersten Begegnungen waren von Verlust und Unbehagen geprägt, und nicht alle Friedensgesten wurden erwidert. Dennoch wurde der Dialog fortgesetzt. Nun haben sich die Gemeinden im Hochland dafür entschieden, sich uns anzuschließen, und so eine unruhige Grenzregion in eine gemeinsame Zukunft verwandelt." #deepl:3581866704
+ gate_veiled_interior.103.a: "Auf dem Weg in eine gemeinsame Zukunft." #deepl:721292291
+ gate_veiled_interior.103.a.tooltip: "Etwa #v  eine Million #! [GetCulture('melanesian').GetName] Menschen werden sich unserer Nation anschließen." #deepl:3514759694
+ gate_veiled_interior.104.t: "Das Verschwinden eines Gesandten" #deepl:4188610057
+ gate_veiled_interior.104.d: "Einer unserer Verhandlungspartner ist nicht aus dem Landesinneren zurückgekehrt, was möglicherweise #v  #! unsere Gespräche zum Stillstand bringen könnte." #deepl:3592433825
+ gate_veiled_interior.104.f: "Das plötzliche Verschwinden des Hauptgesandten Wilben hat alle diplomatischen Fortschritte zum Erliegen gebracht. Zuletzt wurde er gesehen, als er mit einer minimalen Eskorte unterwegs war, um einen Hoheitsanspruch bei einem abgelegenen Hochlandhäuptling zu überprüfen. Angesichts der Geschichte extremer kultureller Praktiken im Landesinneren und der grausigen Gerüchte, die derzeit in der Hauptstadt der Gnome kursieren, müssen wir dieser Situation nachgehen." #deepl:847026592
+ gate_veiled_interior.104.a: "Die Verhandlungen müssen fortgesetzt werden." #deepl:218532213
+ gate_veiled_interior.104.b: "Gehen Sie der Sache auf den Grund." #deepl:75044346
+ gate_veiled_interior.105.t: "Streit um die militärische Präsenz" #deepl:92114070
+ gate_veiled_interior.105.d: "Meinungsverschiedenheiten über die Stationierung von Streitkräften haben #v  die Gespräche ins Stocken gebracht #!." #deepl:998821550
+ gate_veiled_interior.105.f: "Was als Verfahrensfrage begann, hat sich zu einem zentralen Streitpunkt ausgeweitet. New Samadore beharrt darauf, dass eine begrenzte militärische Präsenz notwendig sei, um Transitrouten zu sichern, Verwaltungspersonal zu schützen und einen stabilen Übergang während der Integration zu gewährleisten. Vertreter des Landesinneren sehen dies anders. Für sie bedeutet selbst ein „vorübergehender“ Einsatz eine Aushöhlung ihrer Autonomie und die Auferlegung ausländischer Kontrolle unter dem Deckmantel der Ordnung. Mehrere Stammesführer haben gewarnt, dass bewaffnete gnomische Streitkräfte auf ihrem Gebiet als Akt der Besetzung und nicht als Zeichen der Partnerschaft gewertet würden." #deepl:984678743
+ gate_veiled_interior.105.a: "Bezahlen wir sie doch." #deepl:63302891
+ gate_veiled_interior.105.b: "Konzentrieren Sie die Verhandlungen auf diesen Punkt." #deepl:229176123
+ gate_veiled_interior.106.t: "Empörung in der Versammlung" #deepl:860659189
+ gate_veiled_interior.106.d: "Die Beseitigung einiger dieser Schlupflöcher wird viel Zeit in Anspruch nehmen und #v  weitere Fortschritte #! verzögern." #deepl:151179752
+ gate_veiled_interior.106.f: "Einzelheiten zu den Planentwürfen sind an die Versammlung durchgesickert, und die politische Gegenreaktion erfolgte unverzüglich und heftig. Rechtspuristen und Traditionalisten sind entsetzt über die Zugeständnisse an die Stammesführer, insbesondere über die Gesetzeslücken, die darauf abzielen, ihre grausameren kulturellen Riten unter dem Deckmantel des „[GetReligion('gate_harmony_pledge').GetNameNoFormatting]“ zu dulden. Die Debatten im Plenum der Versammlung sind zu lautstarken Auseinandersetzungen ausgeartet, wobei Vertreter der harten Linie dem diplomatischen Corps vorwerfen, die Seele von „[TopScope.GetRootScope.GetCountry.GetNameNoFormatting]“ zu gefährden." #deepl:99600384
+ gate_veiled_interior.106.a: "Ignoriere die Empörung." #deepl:1030339218
+ gate_veiled_interior.106.b: "Verhandeln Sie die strittigen Punkte neu." #deepl:4188965707
+ gate_veiled_interior.107.t: "Eine Krankheit in den Highlands" #deepl:4184354635
+ gate_veiled_interior.107.d: "Die Verhandlungen müssen warten, bis der Ausbruch unter Kontrolle ist, und sind daher #v  ins Stocken geraten #!." #deepl:2634418300
+ gate_veiled_interior.107.f: "Berichte über eine hochansteckende Krankheit, die mehrere wichtige Siedlungen im Hochland heimgesucht hat, haben die Gespräche abrupt zum Erliegen gebracht. Die Häuptlinge im Landesinneren haben ihre Grenzen abgeriegelt, wenden sich traditionellen Riten zu und lehnen frühzeitige Angebote gnomischer medizinischer Hilfe ab, da sie den Ausbruch für einen Fluch halten, den die Außenstehenden mit sich gebracht haben. Unterdessen hat die Regierung v[TopScope.GetRootScope.GetCountry.GetNameNoFormatting] eine strenge Quarantäne verhängt, um zu verhindern, dass die Ansteckung die dicht besiedelten Küstengebiete erreicht." #deepl:1986170573
+ gate_veiled_interior.107.a: "Das ist ein Problem." #deepl:535694526
+ gate_veiled_interior.108.t: "Worte, die bei der Übersetzung verloren gehen" #deepl:545324101
+ gate_veiled_interior.108.d: "Sprachbarrieren haben die Gespräche verlangsamt; wir können #v  die Gespräche #! hinauszögern, um eine geeignete Lösung zu finden, oder mit geringerer Geschwindigkeit weitermachen." #deepl:3105665024
+ gate_veiled_interior.108.f: "Was zunächst als geringfügige Verwirrung erschien, hat sich zu einem ernsthaften Hindernis entwickelt. Die Sprachen des Landesinneren, die stark regional geprägt und kontextreich sind, haben sich als schwer in die standardisierten juristischen und diplomatischen Begriffe von „[TopScope.GetRootScope.GetCountry.GetNameNoFormatting]“ zu übersetzen erwiesen. Für zentrale Begriffe gibt es keine exakten Entsprechungen, und wiederholte Versuche, diese Lücke zu schließen, haben zu Widersprüchen und unbeabsichtigten Zugeständnissen geführt." #deepl:2093676139
+ gate_veiled_interior.108.a: "Unsere Diplomaten können die Sprache im Beruf erlernen." #deepl:992917039
+ gate_veiled_interior.108.b: "Nimm dir die Zeit, ein ordentliches Wörterbuch zu erstellen." #deepl:146432088
+ gate_veiled_interior.109.t: "Linien auf der Karte" #deepl:2881631111
+ gate_veiled_interior.109.d: "Konflikte zwischen den Stammeshäuptlingen und unseren Vermessungsingenieuren hinsichtlich der Gebietsansprüche haben zu einem Stillstand #v  #! in den Verhandlungen geführt." #deepl:3474602078
+ gate_veiled_interior.109.f: "Die Kartografen von „[TopScope.GetRootScope.GetCountry.GetNameNoFormatting]“ sind stolz auf ihre absolute Präzision, doch ihre topografischen Vermessungen stehen in krassem Widerspruch zur Realität des Hochlands. Als die Verwaltungsbeamten versuchten, im Rahmen des Integrationsplans offizielle Bezirke abzugrenzen, traten eklatante Diskrepanzen zutage. Die Häuptlinge im Landesinneren definieren ihr Territorium nicht anhand von Koordinaten oder festen Grenzen, sondern anhand von sich saisonal verändernden Orientierungspunkten, überlieferten Jagdgebieten und komplexen Blutsbande. Infolgedessen werden mehrere wichtige Rohstoffvorkommen und Passwege nun von mehreren Häuptlingen heftig umkämpft oder von unseren Vermessungsingenieuren versehentlich als Staatseigentum ausgewiesen. Angesichts aufkommender Vorwürfe des Landdiebstahls und der Weigerung lokaler Führer, ihre Herrschaftsgebiete willkürlichen Linien auf dem Papier zu überlassen, sind die Verhandlungen ins Stocken geraten, bis man sich auf eine gemeinsame geografische Definition einigen kann." #deepl:2659272037
+ gate_veiled_interior.109.a: "Bezahle sie aus." #deepl:2206164161
+ gate_veiled_interior.109.b: "Die Verhandlungen sollten ausgesetzt werden, bis diese Frage geklärt ist." #deepl:1534577858
+ gate_veiled_interior.110.t: "Mitreißende Rede fesselt das Publikum" #deepl:1214042784
+ gate_veiled_interior.110.d: "Heute Nachmittag hielt „[SCOPE.sCharacter('orator_ig_leader_scope').GetFullName]“, der Anführer der „[SCOPE.gsInterestGroup('orator_ig_scope').GetName]“, eine flammende Rede, in der er sich für die Eingliederung des Landesinneren in „[TopScope.GetRootScope.GetCountry.GetNameNoFormatting]“ aussprach." #deepl:1285951133
+ gate_veiled_interior.110.f: "Als „[SCOPE.sCharacter('orator_ig_leader_scope').GetFullNameNoFormatting]“ vor den Häuptlingen des Landes in der Versammlung von „[SCOPE.sCharacter('orator_ig_leader_scope').GetCountry.GetCapital.GetCityHubName]“ auftrat, beeindruckte die kraftvolle Rhetorik von „“ selbst die verbittertsten Häuptlinge. Auszüge aus der Rede werden bereits in ganz „[ROOT.GetCountry.GetNameNoFormatting]“ verbreitet und schüren die Unterstützung für die Integration." #deepl:631588611
+ gate_veiled_interior.110.a: "Dies dürfte den Weg zur Integration erheblich erleichtern." #deepl:2967548102
+ gate_veiled_interior.110.b: "Leistungen wie diese werfen ein gutes Licht auf [SCOPE.sCharacter('orator_ig_leader_scope').GetFullNameNoFormatting] und das Anliegen von [SCOPE.sCharacter('orator_ig_leader_scope').GetHerHis]." #deepl:2430031973
+ gate_veiled_interior.111.t: "Beliebter Dramatiker spricht sich für Integration aus" #deepl:1342308187
+ gate_veiled_interior.111.d: "Inmitten der Verhandlungen über die Integration des Landesinneren hat einer der führenden Dramatiker des Landes ein vielbeachtetes Theaterstück inszeniert, dessen politisch aufgeladenes Thema keinen Hehl daraus macht, dass der Autor die Integration befürwortet." #deepl:1667475773
+ gate_veiled_interior.111.f: "„Die Ansichten dieses Mannes mögen zwar etwas parteiisch sein, aber, mein Herr, an seiner Prosa gibt es nichts auszusetzen!“" #deepl:2750961614
+ gate_veiled_interior.111.a: "Das Thema Integration wird nun in aller Munde sein." #deepl:443695601
+ gate_veiled_interior.111.b: "Lasst uns dafür sorgen, dass das Stück ein breiteres, internationales Publikum erreicht." #deepl:3705933261
+ gate_veiled_interior.112.t: "Die Adresse geht schief" #deepl:1773247892
+ gate_veiled_interior.112.d: "Was als routinemäßige Rede von „[SCOPE.sCharacter('publicaddress_ig_leader_scope').GetFullName]“ vor den Stammeshäuptlingen über die Vorzüge der Integration des Landesinneren gedacht war, hat sich schnell zu einem PR-Desaster für die Integration entwickelt." #deepl:4174624145
+ gate_veiled_interior.112.f: "[SCOPE.sCharacter('publicaddress_ig_leader_scope').GetFullNameNoFormatting]s Argumente, die sich [SCOPE.sCharacter('publicaddress_ig_leader_scope').GetHerHis] mühsam durch eine Reihe schlecht präsentierter Diskussionspunkte schlängelten, wurden von den Chefs gnadenlos und überzeugend auseinandergenommen. Die Frage, die nun alle beschäftigt, ist lediglich, ob dieses Missgeschick auf die inhärenten Mängel der Integration zurückzuführen ist oder ob es der politischen Inkompetenz der „[SCOPE.gsInterestGroup('publicaddress_ig_scope').GetNameNoFormatting]“ zugeschrieben werden kann." #deepl:533372747
+ gate_veiled_interior.112.a: "[SCOPE.sCharacter('publicaddress_ig_leader_scope').GetFullNameNoFormatting] muss die Verantwortung für diesen Rückschlag übernehmen." #deepl:1548815496
+ gate_veiled_interior.113.t: "Zwielichtige Verbindungen" #deepl:1966160296
+ gate_veiled_interior.113.d: "[SCOPE.sCharacter('underhanded_instigator_leader_scope').GetFullName] von der „[SCOPE.gsInterestGroup('underhanded_instigator_ig_scope').GetName]“ war von den langwierigen Abläufen rund um die Integration des Innenraums frustriert und hat sich mit dem Angebot an uns gewandt, den Prozess mithilfe von [SCOPE.sCharacter('underhanded_instigator_leader_scope').GetHerHis]s persönlichen Kontakten im Innenraum zu beschleunigen." #deepl:2880075690
+ gate_veiled_interior.113.f: "„Ein paar Worte an die richtigen Leute – mehr verlange ich nicht. Natürlich alles im Rahmen des Gesetzes, auch wenn ich nicht garantieren kann, dass unsere Gegner in dieser Angelegenheit solche Maßnahmen mit großer Freude betrachten werden.“" #deepl:814876041
+ gate_veiled_interior.113.a: "Erteilen Sie [SCOPE.sCharacter('underhanded_instigator_leader_scope').GetHerHim] die Berechtigung – es eilt." #deepl:106440097
+ gate_veiled_interior.113.b: "Nein, entweder machen wir das ganz nach Vorschrift oder gar nicht." #deepl:27273073
+ gate_veiled_interior.114.t: "Kulturelle Beiträge" #deepl:415947210
+ gate_veiled_interior.114.d: "Die Debatten rund um die Integration haben an der Kunstakademie in [SCOPE.sState('degenerate_art_state').GetName] eine Diskussion darüber ausgelöst, ob künstlerische Strömungen, die von Künstlern aus dem Landesinneren beeinflusst sind, einen Platz in der Kunstszene von [ROOT.GetCountry.GetAdjectiveNoFormatting] haben." #deepl:660125830
+ gate_veiled_interior.114.f: "„Sowohl in der zeitgenössischen Bildhauerei als auch in der Malerei und der Musik ist der verderbliche Einfluss dieser sogenannten ‚Künstler‘ zu spüren. Dass dies an unseren Schulen gelehrt und in unseren Museen ausgestellt wird, ist ein Schlag ins Gesicht der [ROOT.GetCountry.GetAdjectiveNoFormatting] Seele. Damit die Gefühle und Werte unseres Volkes vor innerem Schmutz geschützt werden, muss dieser beseitigt werden!“" #deepl:3752426606
+ gate_veiled_interior.114.a: "Das ist ganz und gar nicht „[ROOT.GetCountry.GetAdjectiveNoFormatting]“!" #deepl:3991361240
+ gate_veiled_interior.114.b: "Ihr Werk ist Teil unseres künstlerischen Erbes." #deepl:1521507373

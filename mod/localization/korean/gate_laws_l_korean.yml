@@ -26,6 +26,8 @@
  lawgroup_gate_monster_hunting_desc: "[Concept('concept_gate_monster_attack','$concept_gate_monster_attacks$')]를 방지하기 위한 괴물 사냥 체계입니다."
  law_gate_no_organized_monster_hunting: "조직적인 괴물 사냥 금지"
  law_gate_no_organized_monster_hunting_desc: "이 국가는 괴물을 사냥하는 조직적인 세력을 보유하고 있지 않으며, [Concept('concept_gate_monster_attack','$concept_gate_monster_attacks$')]가 빈번하게 발생할 것입니다."
+ law_gate_local_monster_hunters: "지역 몬스터 사냥꾼들" #deepl:1359916402
+ law_gate_local_monster_hunters_desc: "이 나라는 괴물을 사냥하기 위해 지역 사냥꾼들을 조직했다." #deepl:1935497321
  law_gate_private_monster_hunters: "사설 괴물 사냥꾼"
  law_gate_private_monster_hunters_desc: "이국가는 개인이나 기업에 허가를 내주고 보수를 지급하여 괴물을 사냥하게 합니다."
  law_gate_dedicated_monster_hunters: "전문 괴물 사냥꾼"
@@ -55,3 +57,9 @@
 # Distribution of Power
  law_gate_arcane_council: "비전 의회"
  law_gate_arcane_council_desc: "국가 원수는 소수의 강력한 비선출 [GetPopType('gate_mages').GetName] 및 [GetPopType('gate_druids').GetName]들과 권력과 책임을 공유합니다."
+# Economic System
+ law_gate_druidic_agrarianism: "드루이드적 농업주의" #deepl:3871754976
+ law_gate_druidic_agrarianism_desc: "드루이드는 농업 발전과 지역 사회를 중시하며 농촌 경제를 이끌었다." #deepl:1647015791
+# Policing
+ law_gate_community_police: "지역사회 중심 치안 활동" #deepl:3497311126
+ law_gate_community_police_desc: "[GetCulture('gnomish').GetNameNoFormatting] 경찰을 특별하게 만드는 것은 바로 그들의 독특한 사고방식입니다. 이들은 매우 전문적이면서도 지역적 특색을 살린 치안 활동을 펼치고 있습니다." #deepl:1855795895

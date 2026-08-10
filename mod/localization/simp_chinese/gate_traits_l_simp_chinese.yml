@@ -5,6 +5,7 @@
 # State Traits
  state_trait_gate_dwarven_tunnels: "矮人隧道"
  state_trait_gate_magic_soil: "魔法土壤"
+ state_trait_gate_crystallizing_air: "结晶空气" #deepl:666326349
  state_trait_gate_stonehenge: "巨石阵"
  state_trait_gate_ise_shrine: "伊势神宫"
  state_trait_gate_qin_mausoleum: "秦始皇陵"
@@ -25,6 +26,10 @@
  gate_expedition_leader_desc: "该角色是或曾经是[concept_gate_planet]远征队的队长。"
  gate_eternal_monarch: "永恒君主"
  gate_eternal_monarch_desc: "该统治者是一位永生的[GetCulture('vampire').GetName]。"
+ character_trait_gate_mage: "法师" #deepl:2332035728
+ character_trait_gate_mage_desc: "这个角色是一名受过训练的法师。" #deepl:2799318215
+ character_trait_gate_druid: "德鲁伊" #deepl:1414077998
+ character_trait_gate_druid_desc: "这个角色是一名受过训练的德鲁伊。" #deepl:381735163
  gate_race_trait_vampire: "[GetCulture('vampire').GetNameNoFormatting]"
  gate_race_trait_vampire_desc: "该角色属于[GetCulture('vampire').GetName]种族。"
  gate_race_trait_elven: "[GetCulture('elven').GetNameNoFormatting]"
@@ -41,12 +46,20 @@
  gate_dragon_health_desc: "该角色获得了一条更强大的龙赐予的健康祝福。" #deepl:512876274
  gate_dragon_general: "龙族战术"
  gate_dragon_general_desc: "该角色获得了一条巨龙的军事知识祝福。\""
+ character_trait_gate_arcanist_basic: "$gg_character_experience_basic$ $concept_gate_magic_researcher$" #deepl:3190198332
+ character_trait_gate_arcanist_basic_desc: "这个角色是一个基础的[concept_gate_magic_researcher]。" #deepl:636397945
+ character_trait_gate_arcanist_experienced: "$gg_character_experience_experienced$ $concept_gate_magic_researcher$" #deepl:1989722498
+ character_trait_gate_arcanist_experienced_desc: "这个角色是一位经验丰富的[concept_gate_magic_researcher]。" #deepl:4199474760
+ character_trait_gate_arcanist_expert: "$gg_character_experience_expert$ $concept_gate_magic_researcher$" #deepl:2887524648
+ character_trait_gate_arcanist_expert_desc: "该角色是[concept_gate_magic_researcher]的专家。" #deepl:2499339616
  gate_arcanist_magic_sight: "奥术之眼"
  gate_arcanist_magic_sight_desc: "该角色用[concept_gate_magic]烧毁了自己平凡的视力，其眼睛令他人深感不安，却能使其感知[concept_gate_magic]的流动。"
  gate_arcanist_magic_voice: "灰烬之音"
  gate_arcanist_magic_voice_desc: "该角色因反复吟诵禁忌术式而灼伤了喉咙。作为回报，他们吐出的每个字都带有非自然的共鸣，使其法术更易塑形，命令更难忽视。"
  gate_arcanist_bound_name: "封印之名"
  gate_arcanist_bound_name_desc: "该角色封印了自己真名的一部分，以抵御敌对的[concept_gate_magic]。这赋予了对诅咒、强迫和召唤仪式的抵抗力，但在社交上有所减损，仿佛其身份中某些本质部分再也无法完全触达他人。"
+ gate_arcanist_split_mind: "分裂的思维" #deepl:1445802388
+ gate_arcanist_split_mind_desc: "这个角色利用“[concept_gate_magic]”将自己的意识分裂成了多个部分。这虽然有助于他理解复杂的构想，但也导致了一种精神错乱，使他与他人疏远。" #deepl:2247299808
 # Expedition Character Traits
  gate_expedition_leader_industrialist: "$concept_gate_expedition_leader_industrialist$远征领队"
  gate_expedition_leader_industrialist_desc: "$concept_gate_expedition_leader_industrialist_desc$"

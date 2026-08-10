@@ -1,9 +1,215 @@
 ﻿l_simp_chinese:
  je_gate_harmony_pledge: "$gate_harmony_pledge$" #deepl:1767427134
- je_gate_harmony_pledge_reason: "在侏儒的土地上，和谐并非偶然，而是精心构建的架构。《和谐誓约》常被外人误认为是一种温和的哲学，实则是一项周密的设计：由法律、习俗和隐秘的矫正措施构成的网状体系，旨在约束这个充满无限极端特质的民族。\n \n 若不加以约束，侏儒们便会走向辉煌或毁灭、放纵或清苦、团结或绚烂的混乱。 《誓约》并非否认这种天性，而是将其引导至正轨。制度予以引导，传统提供锚点，每一项法令都在调整着维系社会运转的微妙平衡。\n \n 然而，平衡从来都不是一成不变的。突如其来的激情、新生的思想，或是意料之外的危机，都可能在瞬间打破平衡。因此，地精们既密切关注着世界，也同样密切审视着自身，不断调整，不断修正，确保他们的放纵能成为力量的源泉，而非导致崩溃的根源。" #deepl:4236478007
- pb_gate_harmony_pledge_economy: "经济和谐" #deepl:3033882387
- pb_gate_harmony_pledge_economy_desc: "$pb_gate_harmony_pledge_economy$" # TODO
- pb_gate_harmony_pledge_legislative: "法律协调" #deepl:1806810520
- pb_gate_harmony_pledge_legislative_desc: "TODO" # TODO
+ je_gate_harmony_pledge_reason: "$concept_gate_harmony_pledge_desc$" #deepl:529090673
+ je_gate_harmony_pledge_lobby: "$concept_gate_harmony_pledge_desc$" #deepl:529090673
+ je_gate_harmony_pledge_fail: "有关[concept_gate_harmony_pledge]的任何方面，请联系 #v  0 #! 或 #v  100 #!。" #deepl:3503512574
+ je_gate_harmony_pledge_status_hamony: "我国是$je_gate_harmony_pledge_harmonious$。" #deepl:3156884583
+ je_gate_harmony_pledge_status_tilting: "我国是$je_gate_harmony_pledge_tilting$。" #deepl:1406477363
+ je_gate_harmony_pledge_status_dishamony: "我国是$je_gate_harmony_pledge_disharmonious$。" #deepl:2817089441
+ je_gate_harmony_pledge_harmonious: "#g  《和谐》#!" #deepl:879973573
+ je_gate_harmony_pledge_tilting: "#o;bold  #! 倾斜" #deepl:3587032985
+ je_gate_harmony_pledge_disharmonious: "#r  《不和谐》#!" #deepl:344042362
+ je_gate_harmony_pledge_abandon_warning: "放弃[concept_gate_harmony_pledge]后，我们将获得#tooltippable  #tooltip: [GetRawTextTooltipTag('je_gate_harmony_pledge_abandon_warning_modifier_tooltip')] [GetStaticModifier('modifier_gate_harmony_pledge_abandoned').GetName] #! #! 作为#v  10 #! years的修饰符" #deepl:3874407439
+ je_gate_harmony_pledge_abandon_warning_modifier_tooltip: "#v [GetStaticModifier('modifier_gate_harmony_pledge_abandoned').GetName]\n[GetStaticModifier('modifier_gate_harmony_pledge_abandoned').GetDesc]" #deepl:1920641304
  pb_gate_harmony_pledge_society: "社会和谐" #deepl:3995539092
- pb_gate_harmony_pledge_society_desc: "待办事项" #deepl:4107792734
+ pb_gate_harmony_pledge_society_desc_left: "#v  社会 ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0] /100)#!" #deepl:1072646362
+ pb_gate_harmony_pledge_society_desc_right: "[JournalEntry.GetCustom('gate_harmony_pledge_indicator_society')]" #deepl:3152704144
+ pb_gate_harmony_pledge_society_center_drift_modifier: "#tooltip: [GetRawTextTooltipTag('country_gate_harmony_pledge_society_drift_center_desc')] #yellow  $country_gate_harmony_pledge_society_drift_center$ #! #! modifier" #deepl:3311055857
+ pb_gate_harmony_pledge_economy: "经济和谐" #deepl:3033882387
+ pb_gate_harmony_pledge_economy_desc_left: "#v  经济性（[JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]/100）#!" #deepl:2390880085
+ pb_gate_harmony_pledge_economy_desc_right: "[JournalEntry.GetCustom('gate_harmony_pledge_indicator_economy')]" #deepl:4082336554
+ pb_gate_harmony_pledge_economy_center_drift_modifier: "#tooltip: [GetRawTextTooltipTag('country_gate_harmony_pledge_economy_drift_center_desc')] #yellow  $country_gate_harmony_pledge_economy_drift_center$ #! #! modifier" #deepl:2121533435
+ pb_gate_harmony_pledge_legislative: "法律协调" #deepl:1806810520
+ pb_gate_harmony_pledge_legislative_desc_left: "#v  立法 ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0] /100)#!" #deepl:3854297798
+ pb_gate_harmony_pledge_legislative_desc_right: "[JournalEntry.GetCustom('gate_harmony_pledge_indicator_legislative')]" #deepl:1163293005
+ pb_gate_harmony_pledge_legislative_center_drift_modifier: "#tooltip: [GetRawTextTooltipTag('country_gate_harmony_pledge_legislative_drift_center_desc')] #yellow  $country_gate_harmony_pledge_legislative_drift_center$ #! #! modifier" #deepl:1342685977
+ pb_gate_harmony_pledge_order: "[AddLocalizationIf(EqualTo_string(ScriptedProgressBar.GetName,Localize('pb_gate_harmony_pledge_society')),'pb_gate_harmony_pledge_order_society')][AddLocalizationIf(EqualTo_string(ScriptedProgressBar.GetName,Localize('pb_gate_harmony_pledge_economy')),'pb_gate_harmony_pledge_order_economy')][AddLocalizationIf(EqualTo_string(ScriptedProgressBar.GetName,Localize('pb_gate_harmony_pledge_legislative')),'pb_gate_harmony_pledge_order_legislative')]" #deepl:504844206
+ pb_gate_harmony_pledge_order_society: "[concept_gate_harmony_pledge_stratified]" #deepl:1388727873
+ pb_gate_harmony_pledge_order_economy: "[concept_gate_harmony_pledge_cartelised]" #deepl:1701209991
+ pb_gate_harmony_pledge_order_legislative: "[concept_gate_harmony_pledge_despotic]" #deepl:527952098
+ pb_gate_harmony_pledge_chaos: "[AddLocalizationIf(EqualTo_string(ScriptedProgressBar.GetName,Localize('pb_gate_harmony_pledge_society')),'pb_gate_harmony_pledge_chaos_society')][AddLocalizationIf(EqualTo_string(ScriptedProgressBar.GetName,Localize('pb_gate_harmony_pledge_economy')),'pb_gate_harmony_pledge_chaos_economy')][AddLocalizationIf(EqualTo_string(ScriptedProgressBar.GetName,Localize('pb_gate_harmony_pledge_legislative')),'pb_gate_harmony_pledge_chaos_legislative')]" #deepl:2222279527
+ pb_gate_harmony_pledge_chaos_society: "[concept_gate_harmony_pledge_antinomian]" #deepl:2119873752
+ pb_gate_harmony_pledge_chaos_economy: "[concept_gate_harmony_pledge_febrile]" #deepl:2041020103
+ pb_gate_harmony_pledge_chaos_legislative: "[concept_gate_harmony_pledge_anaemic]" #deepl:1306970012
+# Breakdown
+ GATE_HP_TOP_VALUE_FORMAT: "#indent_newline:6 $VALUE|=2+$ $KEY$ #!" #deepl:3180551323
+ GATE_HP_SCRIPT_VALUE_FORMAT: "#indent_newline:6 $VALUE|=2+$ $KEY$ #!" #deepl:3180551323
+ GATE_HP_SCRIPT_VALUE_FORMAT_MULT: "#indent_newline:6 $VALUE|%v0$ $KEY$ #!" #deepl:1009269163
+ GATE_HP_BASE_LAW: "来源：[concept_law] Baseline" #deepl:2376464757
+ GATE_HP_INSTITUTION_LEVEL: "摘自《[concept_institution]》级别" #deepl:560807368
+## Society
+ GATE_HP_SOC_TREND_FROM_LAWS: "#b  #blue  现行法律：#! #! \n [SCOPE.GetScriptValueDesc('gate_harmony_pledge_society_trend_from_laws')]" #deepl:2109354854
+ GATE_HP_SOC_DIST_OF_POWER: "来源：[GetLawGroup('lawgroup_distribution_of_power').GetCurrentlyActive.GetName]" #deepl:273555089
+ GATE_HP_SOC_CHURCH_AND_STATE: "来源：[GetLawGroup('lawgroup_church_and_state').GetCurrentlyActive.GetName]" #deepl:2147870988
+ GATE_HP_SOC_BUREAUCRACY: "来源：[GetLawGroup('lawgroup_bureaucracy').GetCurrentlyActive.GetName]" #deepl:4051431654
+ GATE_HP_SOC_INTERNAL_SECURITY: "来源：[GetLawGroup('lawgroup_internal_security').GetCurrentlyActive.GetName] [AddTextIf(Not(StringIsEmpty(GetLawGroup('lawgroup_internal_security').GetCurrentlyActive.GetInstitution.GetDesc)),'\n')] [ROOT.GetScriptValueDesc('gate_hp_society_internal_security')]" #deepl:3152554974
+ GATE_HP_SOC_FREE_SPEECH: "来源：[GetLawGroup('lawgroup_free_speech').GetCurrentlyActive.GetName]" #deepl:2579174679
+ GATE_HP_SOC_EDUCATION: "来源：[GetLawGroup('lawgroup_education_system').GetCurrentlyActive.GetName] [AddTextIf(Not(StringIsEmpty(GetLawGroup('lawgroup_education_system').GetCurrentlyActive.GetInstitution.GetDesc)),'\n')] [SCOPE.GetScriptValueDesc('gate_hp_society_education')]" #deepl:3332741363
+ GATE_HP_SOC_HEALTHCARE: "来源：[GetLawGroup('lawgroup_health_system').GetCurrentlyActive.GetName] [AddTextIf(Not(StringIsEmpty(GetLawGroup('lawgroup_health_system').GetCurrentlyActive.GetInstitution.GetDesc)),'\n')] [SCOPE.GetScriptValueDesc('gate_hp_society_healthcare')]" #deepl:1929910180
+ GATE_HP_SOC_WELFARE: "来源：[GetLawGroup('lawgroup_welfare').GetCurrentlyActive.GetName] [AddTextIf(Not(StringIsEmpty(GetLawGroup('lawgroup_welfare').GetCurrentlyActive.GetInstitution.GetDesc)),'\n')] [SCOPE.GetScriptValueDesc('gate_hp_society_welfare')]" #deepl:1990737559
+ GATE_HP_SOC_SLAVERY: "来源：[GetLawGroup('lawgroup_slavery').GetCurrentlyActive.GetName]" #deepl:3389607976
+ GATE_HP_SOC_MAGIC_USERS: "来源：[GetLawGroup('lawgroup_gate_magic_users').GetCurrentlyActive.GetName] [AddTextIf(Not(StringIsEmpty(GetLawGroup('lawgroup_gate_magic_users').GetCurrentlyActive.GetInstitution.GetDesc)),'\n')] [SCOPE.GetScriptValueDesc('gate_hp_society_gate_magic_users')]" #deepl:748658128
+ GATE_HP_SOC_TREND_FROM_DEMOGRAPHICS: "#b  #blue  人口统计数据：#! #! \n [SCOPE.GetScriptValueDesc('gate_harmony_pledge_society_trend_from_demographics')]" #deepl:773562607
+ GATE_HP_SOC_TREND_FROM_OTHER_SPHERES: "#b  #blue  其他国家站点：#! #! \n [SCOPE.GetScriptValueDesc('gate_harmony_pledge_society_trend_from_other_spheres')]" #deepl:2565440765
+ GATE_HP_SOC_TREND_FROM_ECONOMY: "摘自《经济影响》" #deepl:1955267202
+ GATE_HP_SOC_TREND_FROM_STATE: "摘自《立法影响》 \n [SCOPE.GetScriptValueDesc('gate_harmony_pledge_society_trend_from_legislative')]" #deepl:468869797
+ GATE_HP_SOC_TREND_MOD_FROM_STATE: "经济影响的立法约束" #deepl:208844930
+ GATE_HP_SOC_TREND_FROM_STATE_BASE: "立法能力的薄弱之处" #deepl:15785930
+ GATE_HP_SOC_TREND_FROM_MODIFIERS: "#b  #blue  临时修饰符：#! #! [AddTextIf(NotEqualTo_CFixedPoint(SCOPE.ScriptValue('gate_harmony_pledge_society_trend_from_modifiers'),'(CFixedPoint)0'),'\n')] [SCOPE.GetScriptValueDesc('gate_harmony_pledge_society_trend_from_modifiers')]" #deepl:1978969243
+ # GATE_HP_SOC_TREND_FROM_MODIFIERS_NEGATIVE: "#indent_newline:3 订单修饰符：\n [ROOT.GetCountry.GetModifier.GetDescFor('country_gate_harmony_pledge_society_drift_negative')] #!" #deepl:4136663304
+ # GATE_HP_SOC_TREND_FROM_MODIFIERS_POSITIVE: "#indent_newline:3 混沌修饰符：\n [ROOT.GetCountry.GetModifier.GetDescFor('country_gate_harmony_pledge_society_drift_positive')] #!" #deepl:1293762303
+ GATE_HP_SOC_STATUS_QUO_HARMONY: "#b  #blue  文化对不和谐的抵制：#! #! [AddTextIf(NotEqualTo_CFixedPoint(SCOPE.ScriptValue('gate_harmony_pledge_society_trend_scaling'),'(CFixedPoint)0'),'\n')] [SCOPE.GetScriptValueDesc('gate_harmony_pledge_society_trend_scaling')]" #deepl:3863469130
+## Economy
+ GATE_HP_ECO_TREND_FROM_LAWS: "#b  #blue  现行法律：#! #! \n [SCOPE.GetScriptValueDesc('gate_harmony_pledge_economy_trend_from_laws')]" #deepl:201400274
+ GATE_HP_ECO_DIST_OF_POWER: "来源：[GetLawGroup('lawgroup_distribution_of_power').GetCurrentlyActive.GetName]" #deepl:273555089
+ GATE_HP_ECO_ECONOMIC_SYSTEM: "来源：[GetLawGroup('lawgroup_economic_system').GetCurrentlyActive.GetName]" #deepl:279347942
+ GATE_HP_ECO_TRADE_POLICY: "来源：[GetLawGroup('lawgroup_trade_policy').GetCurrentlyActive.GetName]" #deepl:1362791199
+ GATE_HP_ECO_LAND_REFORM: "来源：[GetLawGroup('lawgroup_land_reform').GetCurrentlyActive.GetName]" #deepl:3454678071
+ GATE_HP_ECO_POLICING: "来源：[GetLawGroup('lawgroup_policing').GetCurrentlyActive.GetName] [AddTextIf(Not(StringIsEmpty(GetLawGroup('lawgroup_policing').GetCurrentlyActive.GetInstitution.GetDesc)),'\n')] [SCOPE.GetScriptValueDesc('gate_hp_economy_policing')]" #deepl:3640898407
+ GATE_HP_ECO_LABOR_RIGHTS: "来源：[GetLawGroup('lawgroup_labor_rights').GetCurrentlyActive.GetName] [AddTextIf(Not(StringIsEmpty(GetLawGroup('lawgroup_labor_rights').GetCurrentlyActive.GetInstitution.GetDesc)),'\n')] [SCOPE.GetScriptValueDesc('gate_hp_economy_labor_rights')]" #deepl:3526176452
+ GATE_HP_ECO_LABOR_ASSOCIATIONS: "来源：[GetLawGroup('lawgroup_labour_associations').GetCurrentlyActive.GetName]" #deepl:1726768423
+ GATE_HP_ECO_MAGIC_USERS: "来源：[GetLawGroup('lawgroup_gate_magic_users').GetCurrentlyActive.GetName] [AddTextIf(Not(StringIsEmpty(GetLawGroup('lawgroup_gate_magic_users').GetCurrentlyActive.GetInstitution.GetDesc)),'\n')] [SCOPE.GetScriptValueDesc('gate_hp_economy_gate_magic_users')]" #deepl:2025585440
+ GATE_HP_ECO_TREND_FROM_CITIZENSHIP: "#b  #blue  国籍：#! #! \n [SCOPE.GetScriptValueDesc('gate_harmony_pledge_economy_trend_from_citizenship')]" #deepl:2790924573
+ GATE_HP_ECO_TREND_FROM_TAXATION: "#b  #blue  税收：#! #! \n [SCOPE.GetScriptValueDesc('gate_harmony_pledge_economy_trend_from_taxation')]" #deepl:3992921682
+ GATE_HP_ECO_TAXATION: "来源：[GetLawGroup('lawgroup_taxation').GetCurrentlyActive.GetName]" #deepl:2721741755
+ GATE_HP_ECO_TAXATION_LEVEL: "来源：[Concept('concept_taxes','$concept_tax_level$')]" #deepl:1076257550
+ GATE_HP_ECO_TREND_FROM_OTHER_SPHERES: "#b  #blue  其他国家站点：#! #! \n [SCOPE.GetScriptValueDesc('gate_harmony_pledge_economy_trend_from_other_spheres')]" #deepl:836584586
+ GATE_HP_ECO_TREND_FROM_LEGISLATIVE: "摘自《立法影响》" #deepl:2518471932
+ GATE_HP_ECO_TREND_FROM_MODIFIERS: "#b  #blue  临时修饰符：#! #! [AddTextIf(NotEqualTo_CFixedPoint(SCOPE.ScriptValue('gate_harmony_pledge_economy_trend_from_modifiers'),'(CFixedPoint)0'),'\n')] [SCOPE.GetScriptValueDesc('gate_harmony_pledge_economy_trend_from_modifiers')]" #deepl:815960214
+ # GATE_HP_ECO_TREND_FROM_MODIFIERS_NEGATIVE: "#indent_newline:3 订单修饰符：\n [ROOT.GetCountry.GetModifier.GetDescFor('country_gate_harmony_pledge_economy_drift_negative')] #!" #deepl:2729713656
+ # GATE_HP_ECO_TREND_FROM_MODIFIERS_POSITIVE: "#indent_newline:3 混沌修饰符：\n [ROOT.GetCountry.GetModifier.GetDescFor('country_gate_harmony_pledge_economy_drift_positive')] #!" #deepl:423188495
+ GATE_HP_ECO_STATUS_QUO_HARMONY: "#b  #blue  文化对不和谐的抵制：#! #! [AddTextIf(NotEqualTo_CFixedPoint(SCOPE.ScriptValue('gate_harmony_pledge_economy_trend_scaling'),'(CFixedPoint)0'),'\n')] [SCOPE.GetScriptValueDesc('gate_harmony_pledge_economy_trend_scaling')]" #deepl:3828478147
+## Legislative
+ GATE_HP_LEG_TREND_FROM_LAWS: "#b  #blue  现行法律：#! #! \n [SCOPE.GetScriptValueDesc('gate_harmony_pledge_legislative_trend_from_laws')]" #deepl:2741427054
+ GATE_HP_LEG_DIST_OF_POWER: "来源：[GetLawGroup('lawgroup_distribution_of_power').GetCurrentlyActive.GetName]" #deepl:273555089
+ GATE_HP_LEG_BUREAUCRACY: "来源：[GetLawGroup('lawgroup_bureaucracy').GetCurrentlyActive.GetName]" #deepl:4051431654
+ GATE_HP_LEG_INTERNAL_SECURITY: "来源：[GetLawGroup('lawgroup_internal_security').GetCurrentlyActive.GetName]" #deepl:1130559370
+ GATE_HP_LEG_ECONOMIC_SYSTEM: "来源：[GetLawGroup('lawgroup_economic_system').GetCurrentlyActive.GetName]" #deepl:279347942
+ GATE_HP_LEG_POLICING: "来源：[GetLawGroup('lawgroup_policing').GetCurrentlyActive.GetName]" #deepl:2353767776
+ GATE_HP_LEG_LABOR_ASSOCIATIONS: "来源：[GetLawGroup('lawgroup_labour_associations').GetCurrentlyActive.GetName]" #deepl:1726768423
+ GATE_HP_LEG_MAGIC_USERS: "来源：[GetLawGroup('lawgroup_gate_magic_users').GetCurrentlyActive.GetName]" #deepl:1768242513
+ GATE_HP_LEG_TREND_FROM_AUTHORITY: "摘自未使用的 [concept_authority]" #deepl:2617420046
+ GATE_HP_LEG_TREND_FROM_INFLUENCE: "摘自未使用的 [concept_influence]" #deepl:2734058883
+ GATE_HP_LEG_TREND_FROM_BUREACRACY: "来源：[concept_bureaucracy]" #deepl:3604557277
+ GATE_HP_LEG_STATUS_QUO_HARMONY: "#b  #blue  文化对不和谐的抵制：#! #! [AddTextIf(NotEqualTo_CFixedPoint(SCOPE.ScriptValue('gate_harmony_pledge_legislative_trend_scaling'),'(CFixedPoint)0'),'\n')] [SCOPE.GetScriptValueDesc('gate_harmony_pledge_legislative_trend_scaling')]" #deepl:4187140369
+ GATE_HP_LEG_TREND_FROM_MODIFIERS: "#b  #blue  临时修饰符：#! #! [AddTextIf(NotEqualTo_CFixedPoint(SCOPE.ScriptValue('gate_harmony_pledge_legislative_trend_from_modifiers'),'(CFixedPoint)0'),'\n')] [SCOPE.GetScriptValueDesc('gate_harmony_pledge_legislative_trend_from_modifiers')]" #deepl:1308323771
+## Shared
+ GATE_HP_NATURAL_CHANGE_RESISTANCE: "摘自《非[GetCulture('gnomish').GetName]型变革阻力》" #deepl:3262074769
+ GATE_HP_GNOMISH_POP_PERCENT: "来源：[ROOT.GetCountry.MakeScope.Var('gate_hp_gnomish_percent').GetValue|%1] [GetCulture('gnomish').GetName] Population" #deepl:1258130712
+ GATE_HP_NON_GNOME_POP_PERCENT: "来源：[ROOT.GetCountry.MakeScope.Var('gate_hp_non_gnomish_percent').GetValue|%1] 非[GetCulture('gnomish').GetName]群体" #deepl:1561752062
+ GATE_HP_CITIZEN_POP_PERCENT: "来源：[ROOT.GetCountry.MakeScope.Var('gate_hp_citizenship_percent').GetValue|%1] [concept_gate_harmony_pledge_citizens]" #deepl:2485422644
+ GATE_HP_NON_CITIZEN_POP_PERCENT: "来源：[ROOT.GetCountry.MakeScope.Var('gate_hp_non_citizen_percent').GetValue|%1] Non-[concept_gate_harmony_pledge_citizens]" #deepl:434864772
+ GATE_HP_PLEDGE_PERCENT: "改编自 [ROOT.GetCountry.MakeScope.Var('gate_hp_pledge_percent').GetValue|%1] [GetReligion('gate_harmony_pledge').GetName] Adherents" #deepl:1178107763
+ GATE_HP_PLEDGE_PERCENT_SCALING: "来自 [ROOT.GetCountry.MakeScope.Var('gate_hp_pledge_percent').GetValue|%1] 的补充内容 [GetReligion('gate_harmony_pledge').GetName] 支持者" #deepl:1415264399
+# Modifiers
+ modifier_gate_harmony_pledge_abandoned: "被放弃的承诺" #deepl:535689830
+ modifier_gate_harmony_pledge_society_harmonious: "我们的[concept_gate_harmony_pledge_society]是 $je_gate_harmony_pledge_harmonious$" #deepl:2867902875
+ modifier_gate_harmony_pledge_society_tilting: "我们的[concept_gate_harmony_pledge_society]是 $je_gate_harmony_pledge_tilting$" #deepl:2586416020
+ modifier_gate_harmony_pledge_society_disharmonious: "我们的[concept_gate_harmony_pledge_society]是 $je_gate_harmony_pledge_disharmonious$" #deepl:3725460851
+ modifier_gate_harmony_pledge_economy_harmonious: "我们的[concept_gate_harmony_pledge_economy]是 $je_gate_harmony_pledge_harmonious$" #deepl:1218889220
+ modifier_gate_harmony_pledge_economy_tilting: "我们的[concept_gate_harmony_pledge_economy]是 $je_gate_harmony_pledge_tilting$" #deepl:1370881737
+ modifier_gate_harmony_pledge_economy_disharmonious: "我们的[concept_gate_harmony_pledge_economy]是 $je_gate_harmony_pledge_disharmonious$" #deepl:1848921
+ modifier_gate_harmony_pledge_legislative_harmonious: "我们的[concept_gate_harmony_pledge_legislative]是 $je_gate_harmony_pledge_harmonious$" #deepl:3110269305
+ modifier_gate_harmony_pledge_legislative_tilting: "我们的[concept_gate_harmony_pledge_legislative]是 $je_gate_harmony_pledge_tilting$" #deepl:2790751481
+ modifier_gate_harmony_pledge_legislative_disharmonious: "我们的[concept_gate_harmony_pledge_legislative]是 $je_gate_harmony_pledge_disharmonious$" #deepl:3723725320
+ modifier_gate_harmony_pledge_enthusiasm_without_boundaries: "$gate_harmony_pledge.1.t$" #deepl:1084110770
+ modifier_gate_harmony_pledge_rewritten_ledger: "$gate_harmony_pledge.2.t$" #deepl:2320696223
+ modifier_gate_harmony_pledge_refinement_without_end: "$gate_harmony_pledge.3.t$" #deepl:1427434629
+ modifier_gate_harmony_pledge_construction_drive: "$gate_harmony_pledge.4.t$" #deepl:3033296582
+ modifier_gate_harmony_pledge_excess_theory: "$gate_harmony_pledge.5.t$" #deepl:1804304860
+ modifier_gate_harmony_pledge_abstract_wealth: "$gate_harmony_pledge.6.t$" #deepl:2705765873
+ modifier_gate_harmony_pledge_subterranean_fixation: "$gate_harmony_pledge.7.t$" #deepl:2114018027
+ modifier_gate_harmony_pledge_cash_crop_fever: "$gate_harmony_pledge.8.t$" #deepl:3388126324
+ modifier_gate_harmony_pledge_agrarian_security: "$gate_harmony_pledge.9.t$" #deepl:380984174
+ modifier_gate_harmony_pledge_woven_monument: "$gate_harmony_pledge.10.t$" #deepl:2253197101
+ modifier_gate_harmony_pledge_unwanted_inquiry: "$gate_harmony_pledge.11.t$" #deepl:1493884983
+ modifier_gate_harmony_pledge_land_rush: "$gate_harmony_pledge.14.t$" #deepl:2908272963
+ modifier_gate_harmony_pledge_animistic_engineering: "$gate_harmony_pledge.15.t$" #deepl:1914656345
+# Events
+ gate_harmony_pledge.1.t: "无尽的热情" #deepl:3398040805
+ gate_harmony_pledge.1.d: "[TopScope.sS('event_state').GetName] 网站上的一名 [GetCulture('gnomish').GetName] 用户引发了公众的愤怒。如果处理不当，这种公众愤怒将导致 [concept_assimilation] 的访问量下降。" #deepl:767208063
+ gate_harmony_pledge.1.f: "在一个熙熙攘攘的广场上，一位地精完全被眼前的景象迷住了，对着一位倒霉的路人连珠炮般地抛出一连串问题。这些问题涉及个人生活、技术细节和哲学思考，且愈发深入私密，提问者以欢快而热切的语气层层追问，全然不顾礼节。对某人而言，这是一种发自内心的好奇；但对其他人来说，这却是一种公然侵犯他人隐私的行为。" #deepl:978833871
+ gate_harmony_pledge.1.a: "他们只是出于好奇。" #deepl:1356077208
+ gate_harmony_pledge.1.b: "谴责这种行为。" #deepl:2455540265
+ gate_harmony_pledge.2.t: "《分类账》重写版" #deepl:686309308
+ gate_harmony_pledge.2.d: "一种新的管理风格虽然提高了[concept_bureaucracy]的产量，但也扼杀了[concept_innovation]。" #deepl:1040782432
+ gate_harmony_pledge.2.f: "我们的公务员体系已成功实施了一套崭新且高度精密的监督与资源分配体系。行政效率已达巅峰，官僚主义造成的资源浪费几乎不复存在。然而，学术和文化顾问指出，这种无休止的结构优化正在扼杀主动性，导致全国各地的独立研究和创造性探索陷入停滞。" #deepl:2507388011
+ gate_harmony_pledge.2.a: "禁止这种新的管理方式。" #deepl:2819019753
+ gate_harmony_pledge.2.b: "减轻最严重的影响。" #deepl:410557116
+ gate_harmony_pledge.2.c: "拥抱潜力。" #deepl:2727038369
+ gate_harmony_pledge.3.t: "永无止境的精进" #deepl:1065897276
+ gate_harmony_pledge.3.d: "此优化既降低了 [GetBuildingType('building_trade_center').GetName] [concept_throughput]，同时也提高了 [GetBuildingGroup('bg_light_industry').GetName] [concept_throughput]。" #deepl:2944350912
+ gate_harmony_pledge.3.f: "来自制造业领域的报道显示，手工艺活动正呈现前所未有的蓬勃发展态势。各作坊正满负荷运转，推动国内产量攀升至新高度。然而，贸易部长们警告称，在这股热潮中，商业分销环节被忽视了；成品堆积在仓库中，未能进入国内或国外市场。" #deepl:1479994007
+ gate_harmony_pledge.3.a: "安排最低配额的销售人员。" #deepl:2053133893
+ gate_harmony_pledge.3.b: "减轻最严重的影响。" #deepl:410557116
+ gate_harmony_pledge.3.c: "拥抱潜力。" #deepl:2727038369
+ gate_harmony_pledge.4.t: "建设大道" #deepl:1868878426
+ gate_harmony_pledge.4.d: "对建筑的热潮促使[concept_construction]的产量增加，而[GetBuildingGroup('bg_agriculture').GetName]的产量在全国范围内却有所下降。" #deepl:2253421195
+ gate_harmony_pledge.4.f: "来自全国各地的报告显示，建筑和市政工程正呈现出协调一致的激增态势。规划者和建筑商正以前所未有的力度推进大规模重新设计，由此导致建筑产量急剧上升。然而，相关评估指出，农业领域受到的关注度有所下降，分配到田间地头的劳动力减少，且粮食储备已出现紧张的早期迹象。" #deepl:2088678352
+ gate_harmony_pledge.4.a: "让他们去田里干活。" #deepl:4018618871
+ gate_harmony_pledge.4.b: "减轻最严重的影响。" #deepl:410557116
+ gate_harmony_pledge.4.c: "拥抱潜力。" #deepl:2727038369
+ gate_harmony_pledge.5.t: "理论过剩" #deepl:3548768388
+ gate_harmony_pledge.5.d: "对理论知识的重视虽然促进了[concept_innovation]，却抑制了[concept_construction]。" #deepl:3715153279
+ gate_harmony_pledge.5.f: "来自我国各学术机构的报告显示，理论研究和发现正呈现爆发式增长。学者们正以前所未有的速度提出新理论，极大地推动了我国知识体系的快速发展。然而，各省省长警告称，实践应用正遭到忽视；随着学术关注点完全转向抽象领域，关键基础设施和公共工程项目正面临严重延误。" #deepl:1215646789
+ gate_harmony_pledge.5.a: "将研究资金重新导向实际应用。" #deepl:403732231
+ gate_harmony_pledge.5.b: "减轻最严重的影响。" #deepl:410557116
+ gate_harmony_pledge.5.c: "拥抱潜力。" #deepl:2727038369
+ gate_harmony_pledge.6.t: "抽象财富" #deepl:3374874366
+ gate_harmony_pledge.6.d: "新的金融工具增加了[concept_investment_pool]的贡献，但降低了我们行业中[concept_cash_reserves]的上限。" #deepl:805899902
+ gate_harmony_pledge.6.f: "来自金融区的报道显示，人们突然对复杂的经济工具产生了强烈的痴迷。银行家和行业协会领导人正以令人眼花缭乱的速度交易投机性合约和投资，这极大地增加了国家财政收入和资本流动。然而，实体产业界警告称，这将导致严重的资本外流；资金正完全流向纸面财富，导致实体制造业和重工业陷入停滞。" #deepl:2095828964
+ gate_harmony_pledge.6.a: "提高法定最低储备金缴存额。" #deepl:3977047276
+ gate_harmony_pledge.6.b: "减轻最严重的影响。" #deepl:410557116
+ gate_harmony_pledge.6.c: "拥抱潜力。" #deepl:2727038369
+ gate_harmony_pledge.7.t: "地下迷恋" #deepl:101694213
+ gate_harmony_pledge.7.d: "对[GetBuildingGroup('bg_extraction').GetName]行业的过度关注虽然提升了[concept_throughput]，但也导致了[concept_throughput]在[GetBuildingGroup('bg_plantations').GetName]行业中的下降。" #deepl:927365228
+ gate_harmony_pledge.7.f: "来自边境地区的报道显示，资源开采正以大规模、有组织的方式加速进行。 矿工和工程师们采用了激进的新开采技术，使我们的储备堆积如山，充斥着原矿和矿物。然而，各省地方官警告称，这种毫无节制的开采正在破坏当地生态系统；耕地被肆意破坏，水源被改道，导致我们种植园的农业产量急剧下降。" #deepl:4159305287
+ gate_harmony_pledge.7.a: "强制要求我们的采掘业保护周边耕地。" #deepl:77699677
+ gate_harmony_pledge.7.b: "减轻最严重的影响。" #deepl:410557116
+ gate_harmony_pledge.7.c: "拥抱潜力。" #deepl:2727038369
+ gate_harmony_pledge.8.t: "经济作物热潮" #deepl:1069755938
+ gate_harmony_pledge.8.d: "对[GetBuildingGroup('bg_plantations').GetName]行业的过度关注虽然提升了[concept_throughput]，但也导致了[concept_throughput]在[GetBuildingGroup('bg_agriculture').GetName]行业中的下降。" #deepl:288115478
+ gate_harmony_pledge.8.f: "来自农业省份的报告显示，人们对利润丰厚的出口作物普遍趋之若鹜。 受“种植园农业能带来巨大财富”这一突然兴起的狂热信念驱使，地主和农村社区正争先恐后地铲除主粮作物，转而种植香料、咖啡和橡胶。尽管贸易部长们报告称我国出口收入正节节攀升，但地方行政长官却警告说，乡村集市上的商品正逐渐减少，这引发了人们对即将到来的粮食短缺的严重担忧。" #deepl:2362294843
+ gate_harmony_pledge.8.a: "为每个农场设定最低粮食产量标准。" #deepl:1576472696
+ gate_harmony_pledge.8.b: "减轻最严重的影响。" #deepl:410557116
+ gate_harmony_pledge.8.c: "拥抱潜力。" #deepl:2727038369
+ gate_harmony_pledge.9.t: "农业安全" #deepl:288080293
+ gate_harmony_pledge.9.d: "对[GetBuildingGroup('bg_agriculture').GetName]行业的过度关注虽然提升了[concept_throughput]，但也导致了[concept_throughput]在[GetBuildingGroup('bg_plantations').GetName]行业中的下降。" #deepl:3228164820
+ gate_harmony_pledge.9.f: "在对粮食安全和自给自足的强烈集体关注推动下，一股反动浪潮已在农村地区蔓延开来。农民和地方领导人正在系统性地减少商业种植园的产量，以最大限度地提高块根蔬菜和谷物的产量。尽管我们的国家粮仓已满溢，国内粮食供应状况也在改善，但种植园的产量却急剧下滑。" #deepl:3116472441
+ gate_harmony_pledge.9.a: "通过抑制粮食生产来提高种植园产量。" #deepl:2902570733
+ gate_harmony_pledge.9.b: "减轻最严重的影响。" #deepl:410557116
+ gate_harmony_pledge.9.c: "拥抱潜力。" #deepl:2727038369
+ gate_harmony_pledge.10.t: "编织的纪念碑" #deepl:6943227
+ gate_harmony_pledge.10.d: "一座文化古迹将提升我们的[concept_gate_harmony_pledge_society]。" #deepl:4054858405
+ gate_harmony_pledge.10.f: "我们的工匠们之间涌现出了一次美妙而自然的合作。人类雕刻师与地精工程师们全心投入，致力于建造一座宏伟的新公共凉亭。 这座建筑完美融合了人类本土传统中充满灵性、流畅自然的木工技艺，与地精设计中精妙绝伦、遵循数学原理的钟表机械结构。这一建筑奇观是《和谐誓约》的实体体现，在全国范围内掀起了一股公民自豪感与文化声望的浪潮。" #deepl:548123886
+ gate_harmony_pledge.10.a: "太棒了。" #deepl:2942415708
+ gate_harmony_pledge.11.t: "不必要的询问" #deepl:3472512289
+ gate_harmony_pledge.11.d: "如果处理不当，这一文化事件将使[concept_conversion]沦为[GetReligion('gate_harmony_pledge').GetNameNoIcon]。" #deepl:1581847826
+ gate_harmony_pledge.11.f: "针对最近举行的一场祖先祭祀仪式，我们收到了人类精神领袖们愤怒的投诉。一群地精学者受其强烈且毫无节制的求知欲驱使，参加了这场庄严的仪式，却将其当作一场互动解谜游戏。 他们用连珠炮般的问题打断祈祷，试图测量神圣遗物的尺寸，并大声争论仪式用火的特性。尽管他们并无恶意，但这种咄咄逼人的世俗好奇心已深深冒犯了传统主义者，并破坏了社会和谐。" #deepl:489344487
+ gate_harmony_pledge.11.a: "这可不好。" #deepl:2087564719
+ gate_harmony_pledge.11.b: "谴责这种行为。" #deepl:2455540265
+ gate_harmony_pledge.12.t: "背弃誓言" #deepl:3780230732
+ gate_harmony_pledge.12.d: "通过《[TopScope.sL('atheism_law').GetName]》法案将导致我们放弃[concept_gate_harmony_pledge]。这将带来灾难性的后果。" #deepl:3068637803
+ gate_harmony_pledge.12.f: "来自议会的报告显示，越来越多的激进法官正联合起来，要求彻底废除《和谐誓言》。他们认为，我们对社会的精心调适如同牢笼，扼杀了真正的潜能，因此要求我们放任天性的极端面肆意发展。顾问们警告称，即使只是考虑这一动议，也会在短期内引发灾难性的后果。" #deepl:3395286884
+ gate_harmony_pledge.12.a: "放弃它才是最好的选择。" #deepl:2265107712
+ gate_harmony_pledge.12.b: "让我们来思考一下这个问题。" #deepl:2399731022
+ gate_harmony_pledge.13.t: "重申承诺" #deepl:1485235099
+ gate_harmony_pledge.13.d: "我们重新采纳了[concept_gate_harmony_pledge]的教义。" #deepl:2063420038
+ gate_harmony_pledge.13.f: "不受约束的极端行径所带来的疲惫感，终于让这个国家从狂热中清醒过来。全国各地，无论是公民还是地方官，都在呼吁回归《和谐誓言》中审慎周密的规划。" #deepl:2354966606
+ gate_harmony_pledge.13.a: "我们致力于和谐。" #deepl:2290051607
+ gate_harmony_pledge.14.t: "土地抢购热潮" #deepl:4201529643
+ gate_harmony_pledge.14.d: "这场土地抢购热潮将推高[concept_pop_growth]，但也会使[concept_generated_pollution]大幅增加。" #deepl:2567934868
+ gate_harmony_pledge.14.f: "借助高产的侏儒农具，人类农耕家庭正迅速将农庄向丛林深处扩展。 受人类特有的渴望驱使——即确保拥有广阔的土地并为庞大的家族留下丰厚的遗产——他们正以惊人的速度开垦着郁郁葱葱的土地。尽管这种野心正推动人口增长和原材料开采迎来巨大繁荣，但也严重打乱了我们的领土规划，并威胁着《誓约》力图维护的生态平衡。" #deepl:2383172291
+ gate_harmony_pledge.14.a: "设立自然保护区。" #deepl:3058232922
+ gate_harmony_pledge.14.b: "减轻最严重的影响。" #deepl:410557116
+ gate_harmony_pledge.14.c: "拥抱潜力。" #deepl:2727038369
+ gate_harmony_pledge.15.t: "万物有灵工程学" #deepl:1278909608
+ gate_harmony_pledge.15.d: "泛灵信仰可将[concept_conversion]降低至[GetReligion('gate_harmony_pledge').GetNameNoIcon]，同时还能提高我们[GetCulture('gnomish').GetName]工人的[Concept('concept_radical', '$concept_radicalism$')]。" #deepl:2042378649
+ gate_harmony_pledge.15.f: "人类劳动者已开始将地精工业机械直接融入他们的万物有灵信仰体系，将巨大的蒸汽机和发条织机视为当地强大灵体的容器。 如今，工厂车间里摆满了郁郁葱葱的花卉供品，机器上也精心绘制着神圣几何图案。这种美妙的文化融合在劳动者之间培养了强烈的忠诚感和凝聚力。然而，地精工程师们却为此焦头烂额，因为人类操作员坚决拒绝在“不吉利”的日子里运行机器，也不愿以会激怒精魂的最佳速度进行操作。" #deepl:196278460
+ gate_harmony_pledge.15.a: "禁止这种做法。" #deepl:3854349238
+ gate_harmony_pledge.15.b: "减轻最严重的影响。" #deepl:410557116
+ gate_harmony_pledge.15.c: "拥抱潜力。" #deepl:2727038369
+ gate_harmony_pledge.16.t: "强制性的混乱" #deepl:3726813281
+ gate_harmony_pledge.16.d: "[TopScope.sCha('event_character').GetFullName] 已创立了[TopScope.sPM('event_movement').GetNameNoIcon]。" #deepl:1840134710
+ gate_harmony_pledge.16.f: "有消息传至首都，称一个由侏儒思想家领导的新兴政治运动正在公开倡导将绝对无政府状态与毫不妥协的威权控制相结合。 该派系在公开声明中呼吁彻底解散国家及所有正式机构，同时强调需要建立一个永久性的、军事化的执法机构，以维护这种“纯粹”的无政府状态。" #deepl:1348690011
+ gate_harmony_pledge.16.a: "什么？" #deepl:1732307125

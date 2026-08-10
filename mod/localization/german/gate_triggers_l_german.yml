@@ -14,10 +14,10 @@
  trigger_gate_is_magic_country_third: "[COUNTRY.GetNameNoFlag] [concept_gate_magic_knowledge]" #deepl:1515518016
  trigger_gate_is_magic_country_third_not: "[COUNTRY.GetNameNoFlag] Liegt es an #bold  oder #!, dass [concept_gate_magic_knowledge] nicht funktioniert?" #deepl:392760331
 
- trigger_gate_has_magic_researcher: "Verfügt über eine „[concept_gate_magic_researcher]“" #deepl:418844877
- trigger_gate_has_magic_researcher_not: "Hat #bold  nicht #! eine [concept_gate_magic_researcher]" #deepl:3162827090
- trigger_gate_has_magic_researcher_third: "[COUNTRY.GetNameNoFlag] hat eine „[concept_gate_magic_researcher]“" #deepl:208062177
- trigger_gate_has_magic_researcher_third_not: "[COUNTRY.GetNameNoFlag] Hat #bold  nicht #! eine [concept_gate_magic_researcher]" #deepl:1275279449
+ trigger_gate_has_magic_researcher: "Verfügt über eine [concept_gate_magic_researcher]" #deepl:4174480570
+ trigger_gate_has_magic_researcher_not: "Hat #bold  nicht #! eine [concept_gate_magic_researcher]" #deepl:3127072738
+ trigger_gate_has_magic_researcher_third: "[COUNTRY.GetNameNoFlag] hat eine [concept_gate_magic_researcher]" #deepl:1951031833
+ trigger_gate_has_magic_researcher_third_not: "[COUNTRY.GetNameNoFlag] Hat #bold  nicht #! eine [concept_gate_magic_researcher]" #deepl:653512239
 
  trigger_gate_has_active_magic_project: "Hat eine aktive [concept_gate_project]" #deepl:4219602973
  trigger_gate_has_active_magic_project_not: "Hat #bold  nicht #! eine aktive [concept_gate_project]" #deepl:3505193838
@@ -57,4 +57,15 @@
  trigger_gate_arcane_council_recently_changed_military_regulations_third: "[COUNTRY.GetNameNoFlag] hat kürzlich im Arkanen Rat Vorschriften erlassen [concept_com_international_organization]" #deepl:3170767611
  trigger_gate_arcane_council_recently_changed_military_regulations_third_not: "[COUNTRY.GetNameNoFlag] Hat #bold  (nicht #!) kürzlich im Arkanen Rat Vorschriften eingeführt? [concept_com_international_organization]" #deepl:1947453675
 
+ trigger_has_finished_monster_congress: "Hat seine „#yellow “ veröffentlicht #tooltip: [GetRawTextTooltipTag('je_gate_monster_congress_reason')] $je_gate_monster_congress$ #! #!" #deepl:2950009714
+ trigger_has_finished_monster_congress_not: "Hatten #bold  und #! ihren #yellow  #tooltip: [GetRawTextTooltipTag('je_gate_monster_congress_reason')] $je_gate_monster_congress$ #! #! noch nicht?" #deepl:2159240394
+ trigger_has_finished_monster_congress_third: "[COUNTRY.GetNameNoFlag] hat seine „#yellow “ veröffentlicht #tooltip: [GetRawTextTooltipTag('je_gate_monster_congress_reason')] $je_gate_monster_congress$ #! #!" #deepl:3095940376
+ trigger_has_finished_monster_congress_third_not: "[COUNTRY.GetNameNoFlag] Hatten #bold  und #! ihren #yellow  #tooltip: [GetRawTextTooltipTag('je_gate_monster_congress_reason')] $je_gate_monster_congress$ #! #! noch nicht?" #deepl:1240828539
+
+ trigger_gate_project_has_any_selector_open: "Alle „[concept_gate_project]“-Selektoren sind offen" #deepl:3160324065
+ trigger_gate_project_has_any_selector_open_not: "Es sind keine „[concept_gate_project]“-Selektoren geöffnet" #deepl:2867891
+
  trigger_gate_is_not_magic_researcher: "Ist das nicht schon unser „[concept_gate_magic_researcher]“?" #deepl:2797499724
+
+ trigger_has_gate_max_mana_density: "[STATE_REGION.GetName] hat die maximale Anzahl von [concept_gate_mana_density] unter [STATE_REGION.MakeScope.ScriptValue('gate_maximum_mana_density')|v0] erreicht" #deepl:3472218671
+ trigger_has_gate_max_mana_density_not: "[STATE_REGION.GetName] Hat #bold  (nicht #!) die maximale Anzahl [concept_gate_mana_density] von [STATE_REGION.MakeScope.ScriptValue('gate_maximum_mana_density')|v0] erreicht?" #deepl:1399762633

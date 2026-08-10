@@ -5,6 +5,7 @@
 # State Traits
  state_trait_gate_dwarven_tunnels: "Zwergen-Tunnel" #deepl:3857724525
  state_trait_gate_magic_soil: "Magische Böden" #deepl:3615280980
+ state_trait_gate_crystallizing_air: "Kristallisierende Luft" #deepl:666326349
  state_trait_gate_stonehenge: "Stonehenge" #deepl:1531882158
  state_trait_gate_ise_shrine: "Ise-Schrein" #deepl:2928491395
  state_trait_gate_qin_mausoleum: "Mausoleum von Qin Shi Huang" #deepl:2113611716
@@ -25,6 +26,10 @@
  gate_expedition_leader_desc: "Diese Person ist oder war ein Leiter einer Expedition nach [concept_gate_planet]." #deepl:155879429
  gate_eternal_monarch: "Ewiger Monarch" #deepl:3749613076
  gate_eternal_monarch_desc: "Dieser Herrscher ist ein unsterblicher [GetCulture('vampire').GetName]." #deepl:2407699848
+ character_trait_gate_mage: "Magier" #deepl:2332035728
+ character_trait_gate_mage_desc: "Dieser Charakter ist ein ausgebildeter Magier." #deepl:2799318215
+ character_trait_gate_druid: "Druide" #deepl:1414077998
+ character_trait_gate_druid_desc: "Dieser Charakter ist ein ausgebildeter Druide." #deepl:381735163
  gate_race_trait_vampire: "[GetCulture('vampire').GetNameNoFormatting]" #deepl:1399761123
  gate_race_trait_vampire_desc: "Dieser Charakter ist von der Ethnie [GetCulture('vampire').GetName]." #deepl:2654113793
  gate_race_trait_elven: "[GetCulture('elven').GetNameNoFormatting]" #deepl:2201609886
@@ -41,12 +46,20 @@
  gate_dragon_health_desc: "Dieser Charakter erhielt von einem mächtigen Drachen den Segen der Gesundheit." #deepl:512876274
  gate_dragon_general: "Drachen-Taktiken" #deepl:3363918749
  gate_dragon_general_desc: "Dieser Charakter wurde von einem mächtigen Drachen mit militärischem Wissen gesegnet." #deepl:3928334919
+ character_trait_gate_arcanist_basic: "$gg_character_experience_basic$ $concept_gate_magic_researcher$" #deepl:3190198332
+ character_trait_gate_arcanist_basic_desc: "Diese Figur ist ein klassischer „[concept_gate_magic_researcher]“." #deepl:636397945
+ character_trait_gate_arcanist_experienced: "$gg_character_experience_experienced$ $concept_gate_magic_researcher$" #deepl:1989722498
+ character_trait_gate_arcanist_experienced_desc: "Dieser Charakter ist ein erfahrener „[concept_gate_magic_researcher]“." #deepl:4199474760
+ character_trait_gate_arcanist_expert: "$gg_character_experience_expert$ $concept_gate_magic_researcher$" #deepl:2887524648
+ character_trait_gate_arcanist_expert_desc: "Diese Figur ist ein Experte für „[concept_gate_magic_researcher]“." #deepl:2499339616
  gate_arcanist_magic_sight: "Arkane Augen" #deepl:819776185
  gate_arcanist_magic_sight_desc: "Dieser Charakter hat sein normales Sehvermögen mit „[concept_gate_magic]“ zerstört. Seine Augen wirken auf andere zutiefst beunruhigend, ermöglichen es ihnen jedoch, Strömungen von „[concept_gate_magic]“ wahrzunehmen." #deepl:1310620690
  gate_arcanist_magic_voice: "Aschefarbene Stimme" #deepl:2242472114
  gate_arcanist_magic_voice_desc: "Dieser Charakter hat sich durch das wiederholte Anrufen verbotener Formeln die Kehle verbrannt. Dafür hat jedes Wort, das er ausspricht, einen unnatürlichen Nachhall, wodurch sich seine Zaubersprüche leichter formen lassen und seine Befehle schwerer zu ignorieren sind." #deepl:3141797067
  gate_arcanist_bound_name: "Name mit Siegel" #deepl:2665726043
  gate_arcanist_bound_name_desc: "Dieser Charakter hat einen Teil seines wahren Namens versiegelt, um sich vor feindseligen „[concept_gate_magic]“ zu schützen. Dies verleiht ihm Widerstandskraft gegen Flüche, Zwangsmaßnahmen und Beschwörungsrituale, schwächt ihn jedoch in sozialer Hinsicht, als könne ein wesentlicher Teil seiner Identität andere nicht mehr vollständig erreichen." #deepl:1622693922
+ gate_arcanist_split_mind: "Gespaltener Geist" #deepl:1445802388
+ gate_arcanist_split_mind_desc: "Diese Figur hat ihren Geist mithilfe von „[concept_gate_magic]“ in mehrere Teile aufgespalten. Das hilft ihr zwar dabei, komplexe Zusammenhänge zu verstehen, führt aber auch zu einer Form von Psychose, die andere Menschen von ihr fernhält." #deepl:2247299808
 # Expedition Character Traits
  gate_expedition_leader_industrialist: "$concept_gate_expedition_leader_industrialist$ Expeditionsleiter" #deepl:3582275680
  gate_expedition_leader_industrialist_desc: "$concept_gate_expedition_leader_industrialist_desc$" #deepl:80292566

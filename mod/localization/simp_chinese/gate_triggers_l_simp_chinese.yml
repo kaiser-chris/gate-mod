@@ -14,10 +14,10 @@
  trigger_gate_is_magic_country_third: "[COUNTRY.GetNameNoFlag] 包含 [concept_gate_magic_knowledge]" #deepl:1515518016
  trigger_gate_is_magic_country_third_not: "[COUNTRY.GetNameNoFlag] 是 #bold  而不是 #! 吗？ [concept_gate_magic_knowledge]简体中文（大陆）" #deepl:392760331
 
- trigger_gate_has_magic_researcher: "是否拥有[concept_gate_magic_researcher]" #deepl:418844877
- trigger_gate_has_magic_researcher_not: "#bold  是否没有 #! 上的 [concept_gate_magic_researcher]" #deepl:3162827090
- trigger_gate_has_magic_researcher_third: "[COUNTRY.GetNameNoFlag] 拥有一个 [concept_gate_magic_researcher]" #deepl:208062177
- trigger_gate_has_magic_researcher_third_not: "[COUNTRY.GetNameNoFlag] 是 #bold  而不是 #! 吗？ [concept_gate_magic_researcher]" #deepl:1275279449
+ trigger_gate_has_magic_researcher: "是否包含[concept_gate_magic_researcher]" #deepl:4174480570
+ trigger_gate_has_magic_researcher_not: "#bold  是否没有 #! 上的 [concept_gate_magic_researcher]" #deepl:3127072738
+ trigger_gate_has_magic_researcher_third: "[COUNTRY.GetNameNoFlag] 拥有一个 [concept_gate_magic_researcher]" #deepl:1951031833
+ trigger_gate_has_magic_researcher_third_not: "[COUNTRY.GetNameNoFlag] 是 #bold  而不是 #! 才包含 [concept_gate_magic_researcher] 吗？" #deepl:653512239
 
  trigger_gate_has_active_magic_project: "有可用的[concept_gate_project]"
  trigger_gate_has_active_magic_project_not: "#bold  是否没有 #! 且 [concept_gate_project] 处于非活动状态？" #deepl:3505193838
@@ -57,4 +57,15 @@
  trigger_gate_arcane_council_recently_changed_military_regulations_third: "[COUNTRY.GetNameNoFlag] 最近在奥术议会中出台了相关规定 [concept_com_international_organization]" #deepl:3170767611
  trigger_gate_arcane_council_recently_changed_military_regulations_third_not: "[COUNTRY.GetNameNoFlag] 是 #bold  还是 #! 最近在奥术议会中出台了新规 [concept_com_international_organization]" #deepl:1947453675
 
+ trigger_has_finished_monster_congress: "已发布其#yellow  #tooltip：[GetRawTextTooltipTag('je_gate_monster_congress_reason')] $je_gate_monster_congress$ #! #!" #deepl:2950009714
+ trigger_has_finished_monster_congress_not: "#bold  是否还没有 #! 发布他们的 #yellow  #tooltip: [GetRawTextTooltipTag('je_gate_monster_congress_reason')] $je_gate_monster_congress$ #! #! 呢" #deepl:2159240394
+ trigger_has_finished_monster_congress_third: "[COUNTRY.GetNameNoFlag] 已发布其#yellow  #tooltip：[GetRawTextTooltipTag('je_gate_monster_congress_reason')] $je_gate_monster_congress$ #! #!" #deepl:3095940376
+ trigger_has_finished_monster_congress_third_not: "[COUNTRY.GetNameNoFlag] #bold  是否还没有 #! 发布其 #yellow  #tooltip: [GetRawTextTooltipTag('je_gate_monster_congress_reason')] $je_gate_monster_congress$ #! #! 呢" #deepl:1240828539
+
+ trigger_gate_project_has_any_selector_open: "所有[concept_gate_project]选择器均处于开放状态" #deepl:3160324065
+ trigger_gate_project_has_any_selector_open_not: "没有开放的[concept_gate_project]选择器" #deepl:2867891
+
  trigger_gate_is_not_magic_researcher: "难道我们的 [concept_gate_magic_researcher] 不是已经存在了吗？" #deepl:2797499724
+
+ trigger_has_gate_max_mana_density: "[STATE_REGION.GetName] 已达到 [concept_gate_mana_density] 的最大值，网址为 [STATE_REGION.MakeScope.ScriptValue('gate_maximum_mana_density')|v0]" #deepl:3472218671
+ trigger_has_gate_max_mana_density_not: "[STATE_REGION.GetName] #bold （而非 #!）已达到 [concept_gate_mana_density] 的最大值，该值位于 [STATE_REGION.MakeScope.ScriptValue('gate_maximum_mana_density')|v0]" #deepl:1399762633

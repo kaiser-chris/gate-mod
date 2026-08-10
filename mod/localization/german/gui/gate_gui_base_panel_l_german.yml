@@ -7,7 +7,7 @@
 # Panel
  gg_panel_base_title: "Manaflow" #deepl:1361387616
  gg_panel_base_tab_general: "Allgemein" #deepl:972568161
- gg_panel_base_no_researcher: "Kein Arkanist" #deepl:1531408062
+ gg_panel_base_no_researcher: "Nr. [concept_gate_magic_researcher]" #deepl:1059847779
  gg_panel_base_no_researcher_tooltip: "#header  No [concept_gate_magic_researcher] #! \n $alert_has_no_magic_researcher_alert_desc$ \n \n $alert_has_no_magic_researcher_alert_hint$ \n \n #instruction  Klicken Sie hier, um das Fenster „$NATIONAL_CAST$“ zu öffnen #!" #deepl:4284619567
  gg_panel_base_no_researcher_blink: "#BOLD Einen neuen Arkanisten anheuern#!" #deepl:968085008
  gg_mana_saturation: "Mana-Sättigung" #deepl:1203188312
@@ -32,6 +32,15 @@
  gg_monthly_magic_innovation_tooltip: "#header  [concept_gate_magic_innovation] #! \n Wir generieren jeden Monat #bold  [AccessMetaPlayer.AccessPlayedOrObservedCountry.MakeScope.ScriptValue('gate_magic_innovation')|g] #! [concept_gate_magic_innovation]: \n [AccessMetaPlayer.AccessPlayedOrObservedCountry.AccessModifier.GetBreakdownFor('country_gate_magical_innovation_add').GetBreakdown] \n \n Mit einem Multiplikator von [AccessMetaPlayer.AccessPlayedOrObservedCountry.AccessModifier.GetValueWithBreakdownFor('country_gate_magical_innovation_mult')] \n \n Bis zu einem Höchstwert von [AccessMetaPlayer.AccessPlayedOrObservedCountry.MakeScope.ScriptValue('gate_magic_innovation_max')|v] [concept_gate_magic_innovation] pro Monat: \n [AccessMetaPlayer.AccessPlayedOrObservedCountry.MakeScope.ScriptValue('gate_magic_innovation_max')|+=] [GetMetaPlayer.GetPlayedOrObservedCountry.GetName] \n  [AccessMetaPlayer.AccessPlayedOrObservedCountry.MakeScope.ScriptValue('gate_magic_innovation_max_base')|+=] Basiswert \n  [AccessMetaPlayer.AccessPlayedOrObservedCountry.MakeScope.ScriptValue('gate_magic_innovation_max_literacy')|+=] [concept_literacy] \n  [AccessMetaPlayer.AccessPlayedOrObservedCountry.AccessModifier.GetValueWithBreakdownFor('country_gate_magical_innovation_max_add')] Modifikatoren" #deepl:3540634599
 # Projects
  gg_projects_no_active_project: "Unser „[concept_gate_magic_researcher]“ ist derzeit nicht aktiv." #deepl:3108355339
+ gg_projects_invalid_arcanist: "Unser Projekt „[concept_gate_project]“ ist ins Stocken geraten, bis wir einen neuen „[concept_gate_magic_researcher]“ eingestellt haben." #deepl:2921237938
  gg_projects_active_project: "Unser „[concept_gate_magic_researcher]“ arbeitet derzeit an #v , [GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.GetName] und #!." #deepl:609792879
+ gg_projects_active_project_desc: "[SelectLocalization(GetScriptedGui('sgui_gate_has_researcher').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End), 'gg_projects_active_project', 'gg_projects_invalid_arcanist')]" #deepl:3797447690
  gg_projects_progress_months: "[GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.CalcCurrentGoalValue|v0] von [GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.GetTotalGoalValue|v0] Monate" #deepl:3276623840
  gg_projects_progress_construction: "[GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.CalcCurrentGoalValue|v0] von [GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.GetTotalGoalValue|v0K] [concept_construction]" #deepl:990621305
+# Arcanist Stats
+ gg_arcanist_statistics_header: "Statistiken" #deepl:1795275915
+ gg_arcanist_statistics_flavor: "Unser „[concept_gate_magic_researcher]“ [GetPlayer.MakeScope.Var('gate_magic_researcher').GetCharacter.GetPrimaryRoleTitle] [GetPlayer.MakeScope.Var('gate_magic_researcher').GetCharacter.GetFullName] ist in seiner „[concept_character_role]“ für [LabelingHelper.GetDaysLocWithoutTooltip(FixedPointToInt(GetPlayer.MakeScope.Var('gate_magic_researcher').ScriptValue('gate_character_hired_days')))] zu sehen." #deepl:706631620
+ gg_arcanist_statistics_experience: "[GetPlayer.GetCustom('gg_mr_magic_researcher_experience_custom_loc')] ([Character.MakeScope.Var('magic_experience').GetValue|v0])" #deepl:3049108442
+ gg_arcanist_statistics_status: "Status" #deepl:454327976
+ gg_arcanist_statistics_popularity: "#tooltippable_name #tooltip: [Character.GetTooltipTag],POPULARITY_BREAKDOWN [LabelingHelper.GetLabelForPopularityCFixedPoint(Character.GetPopularity)] #! #! (#tooltippable  #tooltip: [Character.GetTooltipTag],POPULARITY_BREAKDOWN [Character.GetPopularity|0] #! #!)" #deepl:944016703
+ gg_arcanist_statistics_prominence: "#tooltippable_name #tooltip: [Character.GetTooltipTag],PROMINENCE_BREAKDOWN [LabelingHelper.GetLabelForProminenceCFixedPoint(Character.GetProminence)] #! #! (#tooltippable  #tooltip: [Character.GetTooltipTag],PROMINENCE_BREAKDOWN [Character.GetProminence|0] #! #!)" #deepl:1075252321
