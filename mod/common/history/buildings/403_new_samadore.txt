@@ -221,6 +221,25 @@ BUILDINGS = {
                 activate_production_methods = {
                     pm_gate_closed
                     pm_gate_immigration_gnomish
+                    pm_gate_situation_normal
+                }
+            }
+            create_building = {
+                building = building_logging_camp
+                add_ownership = {
+                    building = {
+                        region = STATE_EASTERN_NEW_GUINEA
+                        country = c:GATE_NS
+                        levels = 2
+                        type = building_logging_camp
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_saw_mills
+                    pm_no_hardwood
+                    pm_no_equipment
+                    pm_road_carts
                 }
             }
             create_building = {
