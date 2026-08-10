@@ -6,11 +6,10 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_gate_mage_infantry
 				state_region = s:STATE_EASTERN_NEW_GUINEA
-				count = 5
+				count = 15
 			}
 			save_scope_as = gns_army
 		}
-
 		create_character = {
 			birth_date = 1794.2.21
 			culture = gnomish
@@ -19,13 +18,48 @@
 			interest_group = ig_armed_forces
 			commander_rank = commander_rank_1
 			traits = {
-
+				gate_race_trait_gnomish
+				basic_defensive_strategist
 			}
 			save_scope_as = gns_commander
 		}
-
 		scope:gns_commander = {
 			transfer_to_formation = scope:gns_army
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_indonesia
+
+			ship = {
+				type = ship_type:ship_type_frigate
+				count = 3
+				state_region = s:STATE_WESTERN_NEW_GUINEA
+			}
+			ship = {
+				type = ship_type:ship_type_ship_of_the_line
+				count = 1
+				flagship = yes
+				state_region = s:STATE_WESTERN_NEW_GUINEA
+			}
+			save_scope_as = gns_fleet
+		}
+		create_character = {
+			birth_date = 1791.8.4
+			culture = gnomish
+			hq = region_indonesia
+			is_admiral = yes
+			interest_group = ig_armed_forces
+			commander_rank = commander_rank_1
+			traits = {
+				gate_race_trait_gnomish
+				character_trait_gate_mage
+				charismatic
+			}
+			save_scope_as = gns_admiral
+		}
+		scope:gns_admiral = {
+			transfer_to_formation = scope:gns_fleet
 		}
 	}
 }

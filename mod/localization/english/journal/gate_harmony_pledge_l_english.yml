@@ -92,6 +92,7 @@
  GATE_HP_LEG_TREND_FROM_INFLUENCE: "from unused [concept_influence]"
  GATE_HP_LEG_TREND_FROM_BUREACRACY: "from [concept_bureaucracy]"
  GATE_HP_LEG_STATUS_QUO_HARMONY: "#b #blue Cultural Resistance to Disharmony:#!#! [AddTextIf(NotEqualTo_CFixedPoint(SCOPE.ScriptValue('gate_harmony_pledge_legislative_trend_scaling'),'(CFixedPoint)0'),'\n')][SCOPE.GetScriptValueDesc('gate_harmony_pledge_legislative_trend_scaling')]"
+ GATE_HP_LEG_TREND_FROM_MODIFIERS: "#b #blue Temporary Modifiers:#!#! [AddTextIf(NotEqualTo_CFixedPoint(SCOPE.ScriptValue('gate_harmony_pledge_legislative_trend_from_modifiers'),'(CFixedPoint)0'),'\n')][SCOPE.GetScriptValueDesc('gate_harmony_pledge_legislative_trend_from_modifiers')]"
 ## Shared
  GATE_HP_NATURAL_CHANGE_RESISTANCE: "from Non-[GetCulture('gnomish').GetName] Resistance to Change"
  GATE_HP_GNOMISH_POP_PERCENT: "from [ROOT.GetCountry.MakeScope.Var('gate_hp_gnomish_percent').GetValue|%1] [GetCulture('gnomish').GetName] Population"
