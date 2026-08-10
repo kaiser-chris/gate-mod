@@ -1,0 +1,60 @@
+﻿gate_evaluate_and_assign_state_hub_dynamic_names = {
+    if = {
+        limit = {
+            has_game_rule = no_dynamic_naming
+        }
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+    else = {
+        gate_assign_state_hub_dynamic_names = yes
+    }
+}
+
+gate_assign_state_hub_dynamic_names = {
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_EASTERN_NEW_GUINEA ?= this
+            }
+        }
+        gate_STATE_EASTERN_NEW_GUINEA_state_name_assign = yes
+    }
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_WESTERN_NEW_GUINEA ?= this
+            }
+        }
+        gate_STATE_WESTERN_NEW_GUINEA_state_name_assign = yes
+    }
+}
+
+
+gate_STATE_EASTERN_NEW_GUINEA_state_name_assign = {
+    if = {
+        limit = {
+            owner = {
+                any_primary_culture = {
+                    cu:gnomish ?= this
+                }
+            }
+        }
+        set_state_name = STATE_EASTERN_NEW_GUINEA_gnomish
+        set_hub_names = gnomish
+    }
+}
+
+gate_STATE_WESTERN_NEW_GUINEA_state_name_assign = {
+    if = {
+        limit = {
+            owner = {
+                any_primary_culture = {
+                    cu:gnomish ?= this
+                }
+            }
+        }
+        set_state_name = STATE_WESTERN_NEW_GUINEA_gnomish
+        set_hub_names = gnomish
+    }
+}
