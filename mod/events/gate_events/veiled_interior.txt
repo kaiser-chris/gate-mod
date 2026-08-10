@@ -111,7 +111,7 @@ gate_veiled_interior.3 = {
 		name = gate_veiled_interior.3.a
 		default_option = yes
 		add_gate_society_harmony_progress = {
-			amount = -2
+			amount = -1
 		}
 	}
 }
@@ -164,7 +164,7 @@ gate_veiled_interior.4 = {
 		name = gate_veiled_interior.4.a
 		default_option = yes
 		add_gate_society_harmony_progress = {
-			amount = -2
+			amount = -1
 		}
 	}
 }
@@ -217,7 +217,7 @@ gate_veiled_interior.5 = {
 		name = gate_veiled_interior.5.a
 		default_option = yes
 		add_gate_society_harmony_progress = {
-			amount = -2
+			amount = -1
 		}
 	}
 }
@@ -270,7 +270,7 @@ gate_veiled_interior.6 = {
 		name = gate_veiled_interior.6.a
 		default_option = yes
 		add_gate_society_harmony_progress = {
-			amount = -2
+			amount = -1
 		}
 	}
 }
@@ -323,7 +323,7 @@ gate_veiled_interior.7 = {
 		name = gate_veiled_interior.7.a
 		default_option = yes
 		add_gate_society_harmony_progress = {
-			amount = -2
+			amount = -1
 		}
 	}
 }
@@ -387,6 +387,318 @@ gate_veiled_interior.8 = {
 		add_modifier = {
 			name = modifier_gate_veiled_interior_social_harmony
 			years = 3
+		}
+	}
+}
+
+gate_veiled_interior.9 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:expedition_state
+
+	title = gate_veiled_interior.9.t
+	desc = gate_veiled_interior.9.d
+	flavor = gate_veiled_interior.9.f
+
+	event_image = {
+		video = "middleeast_jungle_expedition"
+	}
+
+	trigger = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_EASTERN_NEW_GUINEA
+				state_region = s:STATE_WESTERN_NEW_GUINEA
+			}
+		}
+	}
+
+	cooldown = {
+		years = 100
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_EASTERN_NEW_GUINEA
+					state_region = s:STATE_WESTERN_NEW_GUINEA
+				}
+			}
+			save_scope_as = expedition_state
+		}
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/event_icons/event_gate_veiled_interior.dds
+
+	duration = 3
+
+	option = {
+		name = gate_veiled_interior.9.a
+		default_option = yes
+		add_gate_society_harmony_progress = {
+			amount = -1
+		}
+	}
+}
+
+gate_veiled_interior.10 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:expedition_state
+
+	title = gate_veiled_interior.10.t
+	desc = gate_veiled_interior.10.d
+	flavor = gate_veiled_interior.10.f
+
+	event_image = {
+		video = "middleeast_jungle_expedition"
+	}
+
+	trigger = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_EASTERN_NEW_GUINEA
+				state_region = s:STATE_WESTERN_NEW_GUINEA
+			}
+		}
+	}
+
+	cooldown = {
+		years = 100
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_EASTERN_NEW_GUINEA
+					state_region = s:STATE_WESTERN_NEW_GUINEA
+				}
+			}
+			save_scope_as = expedition_state
+		}
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/event_icons/event_gate_veiled_interior.dds
+
+	duration = 3
+
+	option = {
+		name = gate_veiled_interior.10.a
+		default_option = yes
+		add_gate_society_harmony_progress = {
+			amount = -1
+		}
+	}
+}
+
+gate_veiled_interior.11 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:expedition_state
+
+	title = gate_veiled_interior.11.t
+	desc = gate_veiled_interior.11.d
+	flavor = gate_veiled_interior.11.f
+
+	event_image = {
+		video = "middleeast_jungle_expedition"
+	}
+
+	trigger = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_EASTERN_NEW_GUINEA
+				state_region = s:STATE_WESTERN_NEW_GUINEA
+			}
+		}
+	}
+
+	cooldown = {
+		years = 100
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_EASTERN_NEW_GUINEA
+					state_region = s:STATE_WESTERN_NEW_GUINEA
+				}
+			}
+			save_scope_as = expedition_state
+		}
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/event_icons/event_gate_veiled_interior.dds
+
+	duration = 3
+
+	option = {
+		name = gate_veiled_interior.11.a
+		default_option = yes
+	}
+}
+
+gate_veiled_interior.12 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:expedition_state
+
+	title = gate_veiled_interior.12.t
+	desc = gate_veiled_interior.12.d
+	flavor = gate_veiled_interior.12.f
+
+	event_image = {
+		video = "middleeast_jungle_expedition"
+	}
+
+	trigger = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_EASTERN_NEW_GUINEA
+				state_region = s:STATE_WESTERN_NEW_GUINEA
+			}
+		}
+	}
+
+	cooldown = {
+		years = 100
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_EASTERN_NEW_GUINEA
+					state_region = s:STATE_WESTERN_NEW_GUINEA
+				}
+			}
+			save_scope_as = expedition_state
+		}
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/event_icons/event_gate_veiled_interior.dds
+
+	duration = 3
+
+	option = {
+		name = gate_veiled_interior.12.a
+		default_option = yes
+	}
+}
+
+gate_veiled_interior.13 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:expedition_state
+
+	title = gate_veiled_interior.13.t
+	desc = gate_veiled_interior.13.d
+	flavor = gate_veiled_interior.13.f
+
+	event_image = {
+		video = "middleeast_jungle_expedition"
+	}
+
+	trigger = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_EASTERN_NEW_GUINEA
+				state_region = s:STATE_WESTERN_NEW_GUINEA
+			}
+		}
+	}
+
+	cooldown = {
+		years = 100
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_EASTERN_NEW_GUINEA
+					state_region = s:STATE_WESTERN_NEW_GUINEA
+				}
+			}
+			save_scope_as = expedition_state
+		}
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/event_icons/event_gate_veiled_interior.dds
+
+	duration = 3
+
+	option = {
+		name = gate_veiled_interior.13.a
+		default_option = yes
+		add_gate_society_harmony_progress = {
+			amount = -1
+		}
+	}
+}
+
+gate_veiled_interior.14 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:expedition_state
+
+	title = gate_veiled_interior.14.t
+	desc = gate_veiled_interior.14.d
+	flavor = gate_veiled_interior.14.f
+
+	event_image = {
+		video = "middleeast_jungle_expedition"
+	}
+
+	trigger = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_EASTERN_NEW_GUINEA
+				state_region = s:STATE_WESTERN_NEW_GUINEA
+			}
+		}
+	}
+
+	cooldown = {
+		years = 100
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_EASTERN_NEW_GUINEA
+					state_region = s:STATE_WESTERN_NEW_GUINEA
+				}
+			}
+			save_scope_as = expedition_state
+		}
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/event_icons/event_gate_veiled_interior.dds
+
+	duration = 3
+
+	option = {
+		name = gate_veiled_interior.14.a
+		default_option = yes
+		add_gate_society_harmony_progress = {
+			amount = -1
 		}
 	}
 }
