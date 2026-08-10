@@ -1,5 +1,4 @@
-﻿#TODO: MasterOfGrey balance
-# This one should hurt
+﻿# This one should hurt
 modifier_gate_harmony_pledge_abandoned = {
 	icon = gfx/interface/icons/timed_modifier_icons/gate_modifier_harmony_pledge_negative.dds
 	state_loyalists_from_political_movements_mult = -0.3
@@ -35,8 +34,8 @@ modifier_gate_harmony_pledge_economy_harmonious = {
 }
 modifier_gate_harmony_pledge_economy_tilting = {
 	icon = gfx/interface/icons/timed_modifier_icons/gate_modifier_harmony_pledge_economy_tilting.dds
-	country_production_tech_spread_mult = 20
-	country_production_tech_research_speed_mult = -20
+	country_production_tech_spread_mult = 0.2
+	country_production_tech_research_speed_mult = -0.05
 }
 modifier_gate_harmony_pledge_economy_disharmonious = {
 	icon = gfx/interface/icons/timed_modifier_icons/gate_modifier_harmony_pledge_economy_disharmonious.dds
