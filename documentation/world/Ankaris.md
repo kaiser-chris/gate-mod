@@ -21,5 +21,6 @@ They were poised to take over the island, but before they could the gates opened
 The goblins pivoted their invasion to the gate which linked to Qing China.
 The Qing beat back the goblins, but before the Chinese could take the Gate the goblin shamans closed and sealed it.
 
-While the Qing were left studying the now closed gate the human forces on Reytu destroyed the surviving goblins.
-Though they never learned/found out about the gate, so it was left unattended.
+While the Qing were left studying the now closed gate, local forces on Reytu destroyed the surviving goblins.
+
+Since goblins are considered primitive and are treated as wild monsters the people of Reytu never learned of the Magic Gate when they killed off the fleeing goblin army.
