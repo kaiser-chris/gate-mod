@@ -252,6 +252,20 @@ gg_project_modernize_seed_selection = {
     }
 }
 
+gg_project_investigate_magic_gate = {
+    scope = country
+
+    is_valid = {
+        gate_project_can_start_investigate_magic_gate = yes
+        gate_project_has_any_selector_open = no
+    }
+
+    effect = {
+        gate_start_investigate_magic_gate = yes
+    }
+}
+
+
 gg_project_artificial_ecosystem = {
     scope = country
 
