@@ -9,12 +9,30 @@ gate_investigate_gate.1 = {
 	flavor = gate_investigate_gate.1.f
 	
 	event_image = {
-		video = "asia_confucianism_shinto"
+		video = "gate_unspecified_magic_gate"
+	}
+
+	trigger = {
+		any_scope_building = {
+			is_building_type = building_gate_alxa
+		}
+	}
+
+	immediate = {
+		set_variable = gate_project_building_gate_alxa_unlocked
+		random_scope_building = {
+			limit = {
+				is_building_type = building_gate_alxa
+			}
+			state = {
+				save_scope_as = gate_state
+			}
+		}
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/event_icons/event_default.dds"
+	icon = "gfx/interface/icons/event_icons/event_gate_magic_world.dds"
 	
 	duration = 3
 
@@ -22,5 +40,270 @@ gate_investigate_gate.1 = {
 		name = gate_investigate_gate.1.a
 		default_option = yes
 		add_technology_researched = gate_expeditions
+	}
+}
+
+gate_investigate_gate.2 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:gate_state
+
+	title = gate_investigate_gate.2.t
+	desc = gate_investigate_gate.2.d
+	flavor = gate_investigate_gate.2.f
+
+	event_image = {
+		video = "gate_unspecified_magic_gate"
+	}
+
+	trigger = {
+		any_scope_building = {
+			is_building_type = building_gate_tyrol
+		}
+	}
+
+	immediate = {
+		set_variable = gate_project_building_gate_tyrol_unlocked
+		random_scope_building = {
+			limit = {
+				is_building_type = building_gate_tyrol
+			}
+			state = {
+				save_scope_as = gate_state
+			}
+		}
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_gate_magic_world.dds"
+
+	duration = 3
+
+	option = {
+		name = gate_investigate_gate.2.a
+		default_option = yes
+		add_technology_researched = gate_dwarven_immigration_treaty
+		activate_production_method = {
+			building_type = building_gate_tyrol
+			production_method = pm_gate_situation_treaty_dwarven
+		}
+	}
+
+	option = {
+		name = gate_investigate_gate.2.b
+		custom_tooltip = gate_investigate_gate_closed_forever
+	}
+}
+
+gate_investigate_gate.3 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:gate_state
+
+	title = gate_investigate_gate.3.t
+	desc = gate_investigate_gate.3.d
+	flavor = gate_investigate_gate.3.f
+
+	event_image = {
+		video = "gate_unspecified_magic_gate"
+	}
+
+	trigger = {
+		any_scope_building = {
+			is_building_type = building_gate_zambia
+		}
+	}
+
+	immediate = {
+		set_variable = gate_project_building_gate_zambia_unlocked
+		random_scope_building = {
+			limit = {
+				is_building_type = building_gate_zambia
+			}
+			state = {
+				save_scope_as = gate_state
+			}
+		}
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_gate_magic_world.dds"
+
+	duration = 3
+
+	option = {
+		name = gate_investigate_gate.3.a
+		default_option = yes
+		add_technology_researched = gate_elven_immigration_treaty
+		activate_production_method = {
+			building_type = building_gate_zambia
+			production_method = pm_gate_situation_treaty_elven
+		}
+	}
+
+	option = {
+		name = gate_investigate_gate.3.b
+		custom_tooltip = gate_investigate_gate_closed_forever
+	}
+}
+
+gate_investigate_gate.4 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:gate_state
+
+	title = gate_investigate_gate.4.t
+	desc = gate_investigate_gate.4.d
+	flavor = gate_investigate_gate.4.f
+
+	event_image = {
+		video = "gate_unspecified_magic_gate"
+	}
+
+	trigger = {
+		any_scope_building = {
+			is_building_type = building_gate_yukon
+		}
+	}
+
+	immediate = {
+		set_variable = gate_project_building_gate_yukon_unlocked
+		random_scope_building = {
+			limit = {
+				is_building_type = building_gate_yukon
+			}
+			state = {
+				save_scope_as = gate_state
+			}
+		}
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_gate_magic_world.dds"
+
+	duration = 3
+
+	option = {
+		name = gate_investigate_gate.4.a
+		default_option = yes
+		add_technology_researched = gate_ogre_immigration_treaty
+		activate_production_method = {
+			building_type = building_gate_yukon
+			production_method = pm_gate_situation_treaty_ogre
+		}
+	}
+
+	option = {
+		name = gate_investigate_gate.4.b
+		custom_tooltip = gate_investigate_gate_closed_forever
+	}
+}
+
+gate_investigate_gate.5 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:gate_state
+
+	title = gate_investigate_gate.5.t
+	desc = gate_investigate_gate.5.d
+	flavor = gate_investigate_gate.5.f
+
+	event_image = {
+		video = "gate_unspecified_magic_gate"
+	}
+
+	trigger = {
+		any_scope_building = {
+			is_building_type = building_gate_equateur
+		}
+	}
+
+	immediate = {
+		set_variable = gate_project_building_gate_equateur_unlocked
+		random_scope_building = {
+			limit = {
+				is_building_type = building_gate_equateur
+			}
+			state = {
+				save_scope_as = gate_state
+			}
+		}
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_gate_magic_world.dds"
+
+	duration = 3
+
+	option = {
+		name = gate_investigate_gate.5.a
+		default_option = yes
+		add_technology_researched = gate_orcish_immigration_treaty
+		activate_production_method = {
+			building_type = building_gate_equateur
+			production_method = pm_gate_situation_treaty_orcish
+		}
+	}
+
+	option = {
+		name = gate_investigate_gate.5.b
+		custom_tooltip = gate_investigate_gate_closed_forever
+	}
+}
+
+gate_investigate_gate.6 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	placement = scope:gate_state
+
+	title = gate_investigate_gate.6.t
+	desc = gate_investigate_gate.6.d
+	flavor = gate_investigate_gate.6.f
+
+	event_image = {
+		video = "gate_unspecified_magic_gate"
+	}
+
+	trigger = {
+		any_scope_building = {
+			is_building_type = building_gate_eastern_new_guinea
+		}
+	}
+
+	immediate = {
+		set_variable = gate_project_building_gate_eastern_new_guinea_unlocked
+		random_scope_building = {
+			limit = {
+				is_building_type = building_gate_eastern_new_guinea
+			}
+			state = {
+				save_scope_as = gate_state
+			}
+		}
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_gate_magic_world.dds"
+
+	duration = 3
+
+	option = {
+		name = gate_investigate_gate.6.a
+		default_option = yes
+		add_technology_researched = gate_gnomish_immigration_treaty
+		activate_production_method = {
+			building_type = building_gate_eastern_new_guinea
+			production_method = pm_gate_situation_treaty_gnomish
+		}
+	}
+
+	option = {
+		name = gate_investigate_gate.6.b
+		custom_tooltip = gate_investigate_gate_closed_forever
 	}
 }

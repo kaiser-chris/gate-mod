@@ -168,3 +168,129 @@ gate_infrastructure_project_progress = {
         }
     }
 }
+
+gate_start_investigate_magic_gate = {
+    if = {
+        limit = {
+            any_scope_building = {
+                is_building_type = building_gate_alxa
+            }
+            NOT = {
+                has_technology_researched = gate_expeditions
+            }
+            NOT = {
+                has_variable = gate_project_building_gate_alxa_unlocked
+            }
+        }
+        gate_start_magic_project = {
+            project = je_gate_project_investigate_magic_gate_alxa
+            monthly_cost = money_amount_multiplier_medium
+            months = gate_project_journal_entry_medium
+        }
+    }
+    else_if = {
+        limit = {
+            any_scope_building = {
+                is_building_type = building_gate_tyrol
+            }
+            NOT = {
+                has_technology_researched = gate_dwarven_immigration
+            }
+            NOT = {
+                has_technology_researched = gate_dwarven_immigration_treaty
+            }
+            NOT = {
+                has_variable = gate_project_building_gate_tyrol_unlocked
+            }
+        }
+        gate_start_magic_project = {
+            project = je_gate_project_investigate_magic_gate_tyrol
+            monthly_cost = money_amount_multiplier_medium
+            months = gate_project_journal_entry_medium
+        }
+    }
+    else_if = {
+        limit = {
+            any_scope_building = {
+                is_building_type = building_gate_zambia
+            }
+            NOT = {
+                has_technology_researched = gate_elven_immigration
+            }
+            NOT = {
+                has_technology_researched = gate_elven_immigration_treaty
+            }
+            NOT = {
+                has_variable = gate_project_building_gate_zambia_unlocked
+            }
+        }
+        gate_start_magic_project = {
+            project = je_gate_project_investigate_magic_gate_zambia
+            monthly_cost = money_amount_multiplier_medium
+            months = gate_project_journal_entry_medium
+        }
+    }
+    else_if = {
+        limit = {
+            any_scope_building = {
+                is_building_type = building_gate_equateur
+            }
+            NOT = {
+                has_technology_researched = gate_orcish_immigration
+            }
+            NOT = {
+                has_technology_researched = gate_orcish_immigration_treaty
+            }
+            NOT = {
+                has_variable = gate_project_building_gate_equateur_unlocked
+            }
+        }
+        gate_start_magic_project = {
+            project = je_gate_project_investigate_magic_gate_equateur
+            monthly_cost = money_amount_multiplier_medium
+            months = gate_project_journal_entry_medium
+        }
+    }
+    else_if = {
+        limit = {
+            any_scope_building = {
+                is_building_type = building_gate_yukon
+            }
+            NOT = {
+                has_technology_researched = gate_ogre_immigration
+            }
+            NOT = {
+                has_technology_researched = gate_ogre_immigration_treaty
+            }
+            NOT = {
+                has_variable = gate_project_building_gate_yukon_unlocked
+            }
+        }
+        gate_start_magic_project = {
+            project = je_gate_project_investigate_magic_gate_yukon
+            monthly_cost = money_amount_multiplier_medium
+            months = gate_project_journal_entry_medium
+        }
+    }
+    else_if = {
+        limit = {
+            any_scope_building = {
+                is_building_type = building_gate_eastern_new_guinea
+            }
+            NOT = {
+                has_technology_researched = gate_gnomish_immigration
+            }
+            NOT = {
+                has_technology_researched = gate_gnomish_immigration_treaty
+            }
+            NOT = {
+                has_variable = gate_project_building_gate_eastern_new_guinea_unlocked
+            }
+        }
+        gate_start_magic_project = {
+            project = je_gate_project_investigate_magic_gate_eastern_new_guinea
+            monthly_cost = money_amount_multiplier_medium
+            months = gate_project_journal_entry_medium
+        }
+    }
+}

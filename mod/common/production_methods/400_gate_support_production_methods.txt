@@ -1,36 +1,175 @@
-﻿pm_gate_mr_locked = {
-	texture = gfx/interface/icons/production_method_icons/gate_locked.dds
-	is_hidden_when_unavailable = yes
-
-	unlocking_production_methods = {
-		pm_gate_mr_locked
-	}
-}
-
-pm_gate_defend = {
-	texture = "gfx/interface/icons/production_method_icons/gate_defend.dds"
-
-	replacement_if_valid = pm_gate_closed
+﻿pm_gate_defend = {
+	texture = gfx/interface/icons/production_method_icons/gate_support_locked.dds
 
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_small_arms_add = 25
+			goods_output_gate_mana_add = 10
 		}
 
 		level_scaled = {
-			building_employment_officers_add = 100
-			building_employment_soldiers_add = 900
+			building_employment_officers_add = 500
+			building_employment_soldiers_add = 1000
 		}
 	}
 }
 
-pm_gate_closed = {
-	texture = "gfx/interface/icons/production_method_icons/gate_blocked.dds"
+# Ogre Gate in Yukon
+pm_gate_support_ogres_research = {
+	texture = gfx/interface/icons/production_method_icons/gate_support_research.dds
 
 	is_hidden_when_unavailable = yes
 
 	unlocking_technologies = {
-		gate_magic_understanding_society
+		gate_ogre_immigration
+	}
+
+	country_modifiers = {
+		level_scaled = {
+			country_gate_magical_innovation_add = 50
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_output_gate_mana_add = 10
+		}
+
+		level_scaled = {
+			building_employment_gate_mages_add = 1000
+			building_employment_academics_add = 500
+		}
+	}
+}
+
+# Gnomish Gate in New Guinea
+pm_gate_support_gnomes_research = {
+	texture = gfx/interface/icons/production_method_icons/gate_support_research.dds
+
+	is_hidden_when_unavailable = yes
+
+	unlocking_technologies = {
+		gate_gnomish_immigration
+	}
+
+	country_modifiers = {
+		level_scaled = {
+			country_gate_magical_innovation_add = 50
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_output_gate_mana_add = 10
+		}
+
+		level_scaled = {
+			building_employment_gate_mages_add = 1000
+			building_employment_academics_add = 500
+		}
+	}
+}
+
+# Dwarven Gate in Tyrol
+pm_gate_support_dwarves_research = {
+	texture = gfx/interface/icons/production_method_icons/gate_support_research.dds
+
+	is_hidden_when_unavailable = yes
+
+	unlocking_technologies = {
+		gate_dwarven_immigration
+	}
+
+	country_modifiers = {
+		level_scaled = {
+			country_gate_magical_innovation_add = 50
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_output_gate_mana_add = 10
+		}
+
+		level_scaled = {
+			building_employment_gate_mages_add = 1000
+			building_employment_academics_add = 500
+		}
+	}
+}
+
+# Orkish Gate in Equateur
+pm_gate_support_orcs_research = {
+	texture = gfx/interface/icons/production_method_icons/gate_support_research.dds
+
+	is_hidden_when_unavailable = yes
+
+	unlocking_technologies = {
+		gate_elven_support
+	}
+
+	country_modifiers = {
+		level_scaled = {
+			country_gate_magical_innovation_add = 50
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_output_gate_mana_add = 10
+		}
+
+		level_scaled = {
+			building_employment_gate_mages_add = 1000
+			building_employment_academics_add = 500
+		}
+	}
+}
+pm_gate_support_orcs = {
+	texture = gfx/interface/icons/production_method_icons/gate_support_military.dds
+
+	is_hidden_when_unavailable = yes
+
+	unlocking_technologies = {
+		gate_orc_clan_support
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			unit_offense_mult = 0.2
+			unit_defense_mult = 0.2
+			unit_morale_loss_mult = -0.1
+		}
+
+		level_scaled = {
+			country_gate_magical_innovation_add = 10
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_output_gate_mana_add = 10
+		}
+		level_scaled = {
+			building_employment_gate_mages_add = 100
+			building_employment_bureaucrats_add = 500
+		}
+	}
+}
+
+# Elven Gate in Zambia
+pm_gate_support_elves_research = {
+	texture = gfx/interface/icons/production_method_icons/gate_support_research.dds
+
+	is_hidden_when_unavailable = yes
+
+	unlocking_technologies = {
+		gate_elven_support
 	}
 
 	country_modifiers = {
@@ -51,42 +190,8 @@ pm_gate_closed = {
 		}
 	}
 }
-
-pm_gate_support_orcs = {
-	texture = "gfx/interface/icons/production_method_icons/gate_military_support.dds"
-
-	is_hidden_when_unavailable = yes
-
-	unlocking_technologies = {
-		gate_orc_clan_support
-	}
-
-	country_modifiers = {
-		workforce_scaled = {
-			unit_offense_mult = 0.2
-			unit_defense_mult = 0.2
-			unit_morale_loss_mult = -0.1
-		}
-
-		level_scaled = {
-			country_gate_magical_innovation_add = 50
-		}
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			# output goods
-			goods_output_gate_mana_add = 20
-		}
-		level_scaled = {
-			building_employment_gate_mages_add = 100
-			building_employment_bureaucrats_add = 500
-		}
-	}
-}
-
 pm_gate_support_elves = {
-	texture = "gfx/interface/icons/production_method_icons/gate_elven_gold_support.dds"
+	texture = gfx/interface/icons/production_method_icons/gate_elven_gold_support.dds
 
 	is_hidden_when_unavailable = yes
 
@@ -109,14 +214,14 @@ pm_gate_support_elves = {
 		}
 
 		level_scaled = {
-			country_gate_magical_innovation_add = 50
+			country_gate_magical_innovation_add = 10
 		}
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
-			goods_output_gate_mana_add = 20
+			goods_output_gate_mana_add = 10
 		}
 		level_scaled = {
 			building_employment_gate_mages_add = 100
@@ -124,7 +229,6 @@ pm_gate_support_elves = {
 		}
 	}
 }
-
 pm_gate_reverse_support_elves = {
 	texture = gfx/interface/icons/production_method_icons/muskets.dds
 
@@ -141,7 +245,7 @@ pm_gate_reverse_support_elves = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
-			goods_output_gate_mana_add = 20
+			goods_output_gate_mana_add = 10
 			# input goods
 			goods_input_small_arms_add = 25
 			goods_input_artillery_add = 5
@@ -152,7 +256,6 @@ pm_gate_reverse_support_elves = {
 		}
 	}
 }
-
 pm_gate_reverse_support_elves_plus = {
 	texture = gfx/interface/icons/production_method_icons/rifles.dds
 
@@ -169,7 +272,7 @@ pm_gate_reverse_support_elves_plus = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
-			goods_output_gate_mana_add = 20
+			goods_output_gate_mana_add = 10
 			# input goods
 			goods_input_small_arms_add = 50
 			goods_input_artillery_add = 20

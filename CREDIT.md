@@ -17,3 +17,5 @@
 - Magic Staff by agus raharjo from <a href="https://thenounproject.com/browse/icons/term/magic-staff/" target="_blank" title="Magic Staff Icons">Noun Project</a> (CC BY 3.0)
 - Light Bulb by Ainsley Agatha from <a href="https://thenounproject.com/browse/icons/term/light-bulb/" target="_blank" title="Light Bulb Icons">Noun Project</a> (CC BY 3.0)
 - Arrow by Harli wafa from <a href="https://thenounproject.com/browse/icons/term/arrow/" target="_blank" title="Arrow Icons">Noun Project</a> (CC BY 3.0)
+- treaty by Sulistiana from <a href="https://thenounproject.com/browse/icons/term/treaty/" target="_blank" title="treaty Icons">Noun Project</a> (CC BY 3.0)
+- Shield by Arto Moro from <a href="https://thenounproject.com/browse/icons/term/shield/" target="_blank" title="Shield Icons">Noun Project</a> (CC BY 3.0)

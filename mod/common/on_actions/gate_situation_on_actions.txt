@@ -1,0 +1,14 @@
+﻿on_state_owner_change = {
+    on_actions = {
+        on_gate_check_situation
+    }
+}
+
+on_gate_check_situation = {
+    trigger = {
+        has_magic_gate = yes
+    }
+    effect = {
+        gate_set_situation = yes
+    }
+}

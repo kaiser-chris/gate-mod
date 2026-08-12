@@ -9,10 +9,79 @@
 }
 
 pm_gate_situation_orcish_elven_war = {
-	texture = "gfx/interface/icons/production_method_icons/gate_defend.dds"
+	texture = gfx/interface/icons/production_method_icons/gate_situation_war.dds
 	is_hidden_when_unavailable = yes
 
 	unlocking_production_methods = {
 		pm_gate_situation_orcish_elven_war
+	}
+}
+
+pm_gate_situation_treaty_dwarven = {
+	texture = gfx/interface/icons/production_method_icons/gate_situation_treaty.dds
+	is_hidden_when_unavailable = yes
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_gate_magical_innovation_add = 25
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 500
+			building_employment_gate_mages_add = 500
+		}
+	}
+
+	unlocking_production_methods = {
+		pm_gate_situation_treaty_dwarven
+	}
+}
+
+pm_gate_situation_treaty_orcish = {
+	texture = gfx/interface/icons/production_method_icons/gate_situation_treaty.dds
+	is_hidden_when_unavailable = yes
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_fruit_add = 100
+			goods_input_grain_add = 100
+			goods_input_small_arms_add = 25
+		}
+		level_scaled = {
+			building_employment_clerks_add = 1000
+		}
+	}
+
+	unlocking_production_methods = {
+		pm_gate_situation_treaty_orcish
+	}
+}
+
+pm_gate_situation_treaty_elven = {
+	texture = gfx/interface/icons/production_method_icons/gate_situation_treaty.dds
+	is_hidden_when_unavailable = yes
+
+	unlocking_production_methods = {
+		pm_gate_situation_treaty_elven
+	}
+}
+
+pm_gate_situation_treaty_ogre = {
+	texture = gfx/interface/icons/production_method_icons/gate_situation_treaty.dds
+	is_hidden_when_unavailable = yes
+
+	unlocking_production_methods = {
+		pm_gate_situation_treaty_ogre
+	}
+}
+
+pm_gate_situation_treaty_gnomish = {
+	texture = gfx/interface/icons/production_method_icons/gate_situation_treaty.dds
+	is_hidden_when_unavailable = yes
+
+	unlocking_production_methods = {
+		pm_gate_situation_treaty_gnomish
 	}
 }
