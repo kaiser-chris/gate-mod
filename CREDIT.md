@@ -31,3 +31,7 @@
 - dragon by Vektorify from <a href="https://thenounproject.com/browse/icons/term/dragon/" target="_blank" title="dragon Icons">Noun Project</a> (CC BY 3.0)
 - leaf by Royal Icon from <a href="https://thenounproject.com/browse/icons/term/leaf/" target="_blank" title="leaf Icons">Noun Project</a> (CC BY 3.0)
 - Crystal by Zpoliariumz Zydanez from <a href="https://thenounproject.com/browse/icons/term/crystal/" target="_blank" title="Crystal Icons">Noun Project</a> (CC BY 3.0)
+- item rune stone by Maxicons from <a href="https://thenounproject.com/browse/icons/term/item-rune-stone/" target="_blank" title="item rune stone Icons">Noun Project</a> (CC BY 3.0)
+- ROUND CRYSTAL by Hanna Vernydub from <a href="https://thenounproject.com/browse/icons/term/round-crystal/" target="_blank" title="ROUND CRYSTAL Icons">Noun Project</a> (CC BY 3.0)
+- seed by Arian N. from <a href="https://thenounproject.com/browse/icons/term/seed/" target="_blank" title="seed Icons">Noun Project</a> (CC BY 3.0)
+- Forbidden by zahrotul fuadah from <a href="https://thenounproject.com/browse/icons/term/forbidden/" target="_blank" title="Forbidden Icons">Noun Project</a> (CC BY 3.0)
