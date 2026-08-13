@@ -14,6 +14,155 @@
 	}
 }
 
+pm_gate_defend_research_alxa = {
+	texture = gfx/interface/icons/production_method_icons/gate_support_locked.dds
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_gate_magical_innovation_add = 25
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_small_arms_add = 50
+			goods_output_gate_mana_add = 10
+		}
+
+		level_scaled = {
+			building_employment_officers_add = 500
+			building_employment_soldiers_add = 1000
+			building_employment_academics_add = 1000
+			building_employment_gate_mages_add = 1000
+		}
+	}
+}
+pm_gate_defend_research_zambia = {
+	texture = gfx/interface/icons/production_method_icons/gate_support_locked.dds
+
+	replacement_if_valid = pm_gate_support_elves_research
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_gate_magical_innovation_add = 25
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_small_arms_add = 50
+			goods_output_gate_mana_add = 10
+		}
+
+		level_scaled = {
+			building_employment_officers_add = 500
+			building_employment_soldiers_add = 1000
+			building_employment_academics_add = 1000
+			building_employment_gate_mages_add = 1000
+		}
+	}
+}
+pm_gate_defend_research_equateur = {
+	texture = gfx/interface/icons/production_method_icons/gate_support_locked.dds
+
+	replacement_if_valid = pm_gate_support_orcs_research
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_gate_magical_innovation_add = 25
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_small_arms_add = 50
+			goods_output_gate_mana_add = 10
+		}
+
+		level_scaled = {
+			building_employment_officers_add = 500
+			building_employment_soldiers_add = 1000
+			building_employment_academics_add = 1000
+			building_employment_gate_mages_add = 1000
+		}
+	}
+}
+pm_gate_defend_research_eastern_new_guinea = {
+	texture = gfx/interface/icons/production_method_icons/gate_support_locked.dds
+
+	replacement_if_valid = pm_gate_support_gnomes_research
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_gate_magical_innovation_add = 25
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_small_arms_add = 50
+			goods_output_gate_mana_add = 10
+		}
+
+		level_scaled = {
+			building_employment_officers_add = 500
+			building_employment_soldiers_add = 1000
+			building_employment_academics_add = 1000
+			building_employment_gate_mages_add = 1000
+		}
+	}
+}
+pm_gate_defend_research_yukon = {
+	texture = gfx/interface/icons/production_method_icons/gate_support_locked.dds
+
+	replacement_if_valid = pm_gate_support_ogres_research
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_gate_magical_innovation_add = 25
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_small_arms_add = 50
+			goods_output_gate_mana_add = 10
+		}
+
+		level_scaled = {
+			building_employment_officers_add = 500
+			building_employment_soldiers_add = 1000
+			building_employment_academics_add = 1000
+			building_employment_gate_mages_add = 1000
+		}
+	}
+}
+pm_gate_defend_research_tyrol = {
+	texture = gfx/interface/icons/production_method_icons/gate_support_locked.dds
+
+	replacement_if_valid = pm_gate_support_dwarves_research
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_gate_magical_innovation_add = 25
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_small_arms_add = 50
+			goods_output_gate_mana_add = 10
+		}
+
+		level_scaled = {
+			building_employment_officers_add = 500
+			building_employment_soldiers_add = 1000
+			building_employment_academics_add = 1000
+			building_employment_gate_mages_add = 1000
+		}
+	}
+}
+
 # Ogre Gate in Yukon
 pm_gate_support_ogres_research = {
 	texture = gfx/interface/icons/production_method_icons/gate_support_research.dds
