@@ -64,6 +64,26 @@ pm_gate_situation_treaty_elven = {
 	texture = gfx/interface/icons/production_method_icons/gate_situation_treaty.dds
 	is_hidden_when_unavailable = yes
 
+	country_modifiers = {
+		workforce_scaled = {
+			country_gate_magical_innovation_add = 25
+		}
+	}
+
+	state_modifiers = {
+		level_scaled = {
+			state_gate_situation_golden_religion_conversion = yes
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_clergymen_add = 1000
+			building_employment_academics_add = 500
+			building_employment_gate_mages_add = 500
+		}
+	}
+
 	unlocking_production_methods = {
 		pm_gate_situation_treaty_elven
 	}
