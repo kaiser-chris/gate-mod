@@ -12,3 +12,32 @@ on_gate_check_situation = {
         gate_set_situation = yes
     }
 }
+
+on_half_yearly_pulse_state = {
+    on_actions = {
+        on_gate_situation_conversion
+    }
+}
+
+on_gate_situation_conversion = {
+    trigger = {
+        modifier:state_gate_situation_golden_religion_conversion ?= yes
+    }
+    effect = {
+        convert_population = {
+            target = rel:gate_golden_religion
+            value = {
+                value = 0.01
+                if = {
+                    limit = {
+                        "religion_percent_state(rel:gate_golden_religion)" > 0.1
+                    }
+                    add = {
+                        value = "religion_percent_state(rel:gate_golden_religion)"
+                        divide = 100
+                    }
+                }
+            }
+        }
+    }
+}
