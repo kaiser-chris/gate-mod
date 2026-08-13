@@ -82,6 +82,19 @@ pm_gate_situation_treaty_gnomish = {
 	texture = gfx/interface/icons/production_method_icons/gate_situation_treaty.dds
 	is_hidden_when_unavailable = yes
 
+	country_modifiers = {
+		workforce_scaled = {
+			country_gate_magical_innovation_add = 25
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 500
+			building_employment_gate_mages_add = 500
+		}
+	}
+
 	unlocking_production_methods = {
 		pm_gate_situation_treaty_gnomish
 	}
