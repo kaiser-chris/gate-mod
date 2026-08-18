@@ -26,7 +26,9 @@
  lawgroup_gate_monster_hunting_desc: "The system of monster hunting to prevent [Concept('concept_gate_monster_attack','$concept_gate_monster_attacks$')]."
  law_gate_no_organized_monster_hunting: "No Organized Monster Hunting"
  law_gate_no_organized_monster_hunting_desc: "This country has no organized force hunting for monsters and [Concept('concept_gate_monster_attack','$concept_gate_monster_attacks$')] will occur frequently."
- law_gate_private_monster_hunters: "Private Monster Hunters"
+ law_gate_local_monster_hunters: "Local Monster Hunters"
+ law_gate_local_monster_hunters_desc: "This country locally organized hunters to kill monsters."
+ law_gate_private_monster_hunters: "Commercial Monster Hunting"
  law_gate_private_monster_hunters_desc: "This country licenses and pays private individuals or companies to kill monsters."
  law_gate_dedicated_monster_hunters: "Dedicated Monster Hunters"
  law_gate_dedicated_monster_hunters_desc: "This country has a dedicated monster hunters with standardized training."
@@ -55,3 +57,9 @@
 # Distribution of Power
  law_gate_arcane_council: "Arcane Council"
  law_gate_arcane_council_desc: "The Head of State shares power and responsibility with a small group of powerful, unelected [GetPopType('gate_mages').GetName] and [GetPopType('gate_druids').GetName]."
+# Economic System
+ law_gate_druidic_agrarianism: "Druidic Agrarianism"
+ law_gate_druidic_agrarianism_desc: "A druid lead rural economy emphasizing agricultural development and community."
+# Policing
+ law_gate_community_police: "Community Policing"
+ law_gate_community_police_desc: "Their special mentality makes [GetCulture('gnomish').GetNameNoFormatting] police forces special. They have a quite professional but still local form of policing."
