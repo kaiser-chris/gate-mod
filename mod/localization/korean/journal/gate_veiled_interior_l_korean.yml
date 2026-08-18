@@ -1,166 +1,162 @@
 ﻿l_korean:
- je_gate_veiled_interior: "가려진 내부" #deepl:2486240553
- je_gate_veiled_interior_reason: "뉴 사마도어의 정착지가 형성된 해안 너머에는 ‘베일드 인테리어’가 펼쳐져 있는데, 이곳은 울창한 정글과 솟아오른 고원 지대가 광활하게 펼쳐진 지역으로, 지금까지 그 어떤 실질적인 침입도 허용하지 않은 곳이다. [GetCulture('gnomish').GetName]의 첫 정착민들은 해안가의 [GetBuildingType('building_gate_eastern_new_guinea').GetName]를 통해 들어왔으며, 그곳에서부터 항해 가능한 해안과 강을 따라 정착지가 확산되었다. 그러나 내륙 깊숙한 곳은 여전히 베일에 싸여 있으며, 지형은 미개척 상태이고 그곳의 상황은 제대로 파악되지 않고 있다." #deepl:2120754377
- je_gate_veiled_interior_lobby: "$je_gate_veiled_interior_reason$" #deepl:1269711188
- je_gate_veiled_interior_tooltip: "#header $je_gate_veiled_interior$#!\n$je_gate_veiled_interior_reason$" #deepl:181293588
- je_gate_veiled_interior_status_expedition: "우리는 내륙으로 탐사대를 파견했습니다." #deepl:3837329184
- je_gate_veiled_interior_status_veiled: "내부에 대해서는 아무것도 알지 못합니다." #deepl:2099921235
- je_gate_veiled_interior_status_scouting: "우리는 내륙으로 정찰대를 파견했습니다." #deepl:1833239881
- je_gate_veiled_interior_status_early_contact: "내륙 지역에서 사람들을 발견했습니다." #deepl:2851884957
- je_gate_veiled_interior_status_diplomacy_stall: "우리의 협상은 일시적으로 #bold  교착 상태에 빠졌습니다. #!." #deepl:2772661844
- je_gate_veiled_interior_status_diplomacy_discussions: "현재 인테리어 디자인에 대해 초기 단계의 논의#bold 를 진행 중입니다. #!" #deepl:2472124882
- je_gate_veiled_interior_status_diplomacy_alignment: "저희는 #bold 에서 #!를 실내 인테리어와 조화를 이루도록 조정하고 있습니다." #deepl:3136715447
- je_gate_veiled_interior_status_diplomacy_implementation: "저희는 ‘#bold ’로, ‘#!’를 통해 내륙 지역의 편입을 추진하고 있습니다." #deepl:1190932724
- je_gate_veiled_interior_phase_veiled: "단계: #v  베일드 #!" #deepl:1045119121
- je_gate_veiled_interior_phase_early_contact: "단계: #v  초기 문의 #!" #deepl:2201378918
- je_gate_veiled_interior_phase_diplomacy: "단계: #v  협상 #!" #deepl:215151950
- sb_gate_veiled_interior_expedition: "탐험 시작하기" #deepl:1512280434
- sb_gate_veiled_interior_expedition_desc: "뉴기니 내륙으로 탐험을 떠나보세요." #deepl:3655904432
- sb_gate_veiled_interior_expedition_possible: "현재 현장에서 진행 중인 탐사 활동은 #bold 에서 진행 중이며, #!에서는 진행되지 않습니다." #deepl:3909284354
- sb_gate_veiled_interior_scout: "실내 둘러보기" #deepl:754570530
- sb_gate_veiled_interior_scout_desc: "이제 내부로 통하는 확실한 경로가 확보되었으니, 이 지역을 정찰해야 합니다." #deepl:3461395757
- sb_gate_veiled_interior_scout_possible: "저희는 #bold  (#!가 아님)를 통해 현장에 활동 중인 정찰대를 운영하고 있습니다." #deepl:2942878701
- je_gate_veiled_interior_diplomacy_title: "합병 협상" #deepl:2940629219
- je_gate_veiled_interior_diplomacy_discussions: "토론" #deepl:2733534575
- je_gate_veiled_interior_diplomacy_alignment: "정렬" #deepl:3705703253
- je_gate_veiled_interior_diplomacy_implementation: "구현" #deepl:3463684406
- je_gate_veiled_interior_diplomacy_tooltip: "#header  $je_gate_veiled_interior_diplomacy_title$ #! \n 이러한 협상은 #bold  단계 #!와 #bold  단계 #!로 진행됩니다. 매주 단계별 진척도가 진행되며, 단계가 완료되면 특정 사건이 발생할 가능성이 있습니다. 이러한 사건은 협상을 다음 단계로 진행시키거나, 협상을 몇 달간 교착 상태에 빠뜨리거나, 성공 확률과 교착 상태 발생 확률을 변경할 수 있습니다." #deepl:3849691867
- gate_icon_veiled_interior_negotiations: "gate_icon_비공개 내부 협상" #deepl:563753267
- gate_icon_veiled_interior_negotiations_desc: "$gate_create_bug_report$" #deepl:33573425
-# Modifiers
- modifier_veiled_interior_lifted: "$je_gate_veiled_interior$: 인프라 부족" #deepl:2097483058
- modifier_veiled_interior_expedition_cost: "탐사 비용" #deepl:2937676416
- modifier_veiled_interior_scouting_cost: "스카우팅 비용" #deepl:1370500170
- modifier_veiled_interior_diplomacy_appeasement_cost: "유화 정책의 대가" #deepl:2089207338
- modifier_veiled_interior_diplomacy_speed_reduction: "교착 상태에 빠진 협상" #deepl:1393757265
- modifier_veiled_interior_diplomacy_speed_increase: "협상 속도 향상" #deepl:2057564717
- modifier_gate_veiled_interior_social_harmony: "프론티어 하모니" #deepl:1722343999
-# Effects
- je_gate_veiled_interior_effect_phase_change_diplomacy_alignment: "#tooltip: [GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow  [TopScope.sJE('journal_entry').GetName] #! #! 협상이 #v  $je_gate_veiled_interior_diplomacy_alignment$ #! 단계로 진전되고 있다" #deepl:389045706
- je_gate_veiled_interior_effect_phase_change_diplomacy_implementation: "#tooltip: [GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow  [TopScope.sJE('journal_entry').GetName] #! #! 협상이 #v  $je_gate_veiled_interior_diplomacy_implementation$ #! 단계로 진전되고 있다" #deepl:2330268849
- je_gate_veiled_interior_effect_phase_change_veiled: "#tooltip: [GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow  [TopScope.sJE('journal_entry').GetName] #! #!는 #v 의 ‘Veiled’ #! 단계로 나아가고 있습니다." #deepl:2985186997
- je_gate_veiled_interior_effect_phase_change_early_contact: "#tooltip: [GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow  [TopScope.sJE('journal_entry').GetName] #! #!는 #v 의 ‘초기 접촉(Early Contact)’ 단계#!로 나아가고 있습니다." #deepl:4044200500
- je_gate_veiled_interior_effect_phase_change_diplomacy: "#tooltip: [GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow  [TopScope.sJE('journal_entry').GetName] #! #!는 #v  협상 #! 단계로 나아가고 있습니다." #deepl:2640547581
- je_gate_veiled_interior_effect_diplomacy_stall: "#tooltip: [GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow  [TopScope.sJE('journal_entry').GetName] #! #! negotiations #bold  stall #! for [TopScope.GetLocalVariable('stall_length').GetValue|v0] months" #deepl:516528994
- je_gate_veiled_interior_effect_diplomacy_change_stall_change: "#tooltip: [GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow  [TopScope.sJE('journal_entry').GetName] #! #! 협상 #bold  교착 상태 확률 #! 변경 사항: [TopScope.GetLocalVariable('chance_change').GetValue|-%0]" #deepl:2360559600
- je_gate_veiled_interior_effect_diplomacy_change_success_change: "#tooltip: [GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow  [TopScope.sJE('journal_entry').GetName] #! #! 협상 #bold  성공 확률 #! 변화 요인 [TopScope.GetLocalVariable('chance_change').GetValue|+%0]" #deepl:1571856910
-# Events: Veiled and Early Contact
- gate_veiled_interior.2.t: "내륙의 사람들" #deepl:3832161565
- gate_veiled_interior.2.d: "우리는 뉴기니 내륙에서 #v 에 해당하는 대규모 정착지 #!를 발견했습니다." #deepl:2019896808
- gate_veiled_interior.2.f: "수 주간 숲속 깊은 곳에서 탐사를 벌이던 탐사대가 놀라운 소식을 안고 돌아왔다. 고지대 깊은 곳에서 그들은 꽤 규모가 큰 정착지를 발견했는데, 그곳 주민들은 체계적으로 조직되어 있었고 주변 환경도 정성스럽게 가꿔져 있었다. ‘베일드 인테리어’는 텅 빈 공간이 아니라, 그 자체로 생명이 깃든 세계인 것이다." #deepl:4089355706
- gate_veiled_interior.2.a: "정말 흥미롭네요." #deepl:654744515
- gate_veiled_interior.3.t: "실종된 탐사대" #deepl:3974148150
- gate_veiled_interior.3.d: "이 탐사대는 아직 돌아오지 않았으며, 현재 #v  에서 ‘실종’으로 분류되어 있습니다. #!." #deepl:3489430636
- gate_veiled_interior.3.f: "내륙 탐사대와 연락이 두절되었습니다. 보급품은 충분했고 경로도 철저히 계획되었음에도 불구하고, 아직까지 아무런 소식이 없습니다. 그들이 지연되었는지, 길을 잃었는지, 아니면 예기치 못한 상황에 직면했는지는 여전히 알 수 없습니다." #deepl:3458822023
- gate_veiled_interior.3.a: "젠장!" #deepl:2521213056
- gate_veiled_interior.4.t: "악어 습격" #deepl:537396620
- gate_veiled_interior.4.d: "탐사대는 동물의 공격을 받아 #v  #!로 돌아올 수밖에 없었다." #deepl:3783422195
- gate_veiled_interior.4.f: "보도에 따르면, 우리 탐사대는 내륙 강을 건너던 중 바닷물 악어의 치명적인 공격을 받아 철수할 수밖에 없었던 것으로 확인되었습니다. 인명 피해가 즉시 발생했고, 탐사대는 더 이상 전진하는 것이 너무 위험하다고 판단했습니다. 내륙의 수로들은 정글 그 자체만큼이나 위험한 것으로 드러나고 있습니다." #deepl:751896903
- gate_veiled_interior.4.a: "그는 사람들의 기억에 오래 남을 것입니다." #deepl:609304848
- gate_veiled_interior.5.t: "내륙에서의 매복" #deepl:2869281298
- gate_veiled_interior.5.d: "원정대는 매복 공격을 당해 #v  #!에서 도망칠 수밖에 없었다." #deepl:1410801867
- gate_veiled_interior.5.f: "내륙 탐사대는 정체 불명의 주민들의 갑작스러운 공격을 받고 혼란스러운 상태로 귀환했다. 탐사대는 은신처에서 벌어진 매복 공격과 조직적인 공세로 인해 즉시 후퇴할 수밖에 없었다고 보고했다. 그들과 연락을 시도할 수 없었다." #deepl:2384942616
- gate_veiled_interior.5.a: "내부에 사람들이 있어요!" #deepl:2462941592
- gate_veiled_interior.6.t: "병든 원정대" #deepl:3553866184
- gate_veiled_interior.6.d: "전염병 발생으로 인해 ‘#v ’ 탐사대는 ‘#!’로 돌아갈 수밖에 없었다." #deepl:3815323029
- gate_veiled_interior.6.f: "원정대원들 사이에 질병이 급속히 퍼지면서 내륙 탐사대는 어쩔 수 없이 되돌아와야 했다. 처음에는 발열과 피로 증상으로 시작되었으나, 곧 여러 대원이 더 이상 탐사를 계속할 수 없는 지경에 이르렀다. 보급품이 바닥나고 치료제도 없는 상황에서, 탐사대는 더 깊은 곳까지 진출하기도 전에 탐사를 중단해야 했다." #deepl:3559097785
- gate_veiled_interior.6.a: "그들을 치료사에게 데려가세요." #deepl:345048250
- gate_veiled_interior.7.t: "혼란스러운 정글" #deepl:3173247562
- gate_veiled_interior.7.d: "탐사대는 방향을 잃고 어쩔 수 없이 #v  #!로 되돌아와야만 했다." #deepl:3118662903
- gate_veiled_interior.7.f: "탐사대는 내륙 깊숙이 들어가 방향을 완전히 잃은 끝에 돌아왔다. 울창한 수관과 신뢰할 수 없는 지형 표지들 때문에 항법이 불가능해졌으며, 이동 경로를 되짚어 보려는 반복된 시도도 실패로 돌아갔다. 식량이 바닥나자 탐사대는 혼란 그 자체를 조금이나마 지도에 표시한 것 외에는 별다른 성과를 내지 못한 채 철수했다." #deepl:272772775
- gate_veiled_interior.7.a: "바보들." #deepl:855893625
- gate_veiled_interior.8.t: "백만 명이나 되네요!" #deepl:2377273607
- gate_veiled_interior.8.d: "우리 정찰대원들의 추산에 따르면 내륙 지역에는 대략 #v  백만 명 #! [GetCulture('melanesian').GetName]의 인구가 거주하고 있습니다!" #deepl:4278329704
- gate_veiled_interior.8.f: "내륙에서 전해진 보고들은 기존의 모든 가정을 뒤집어 놓았다. 최초의 정착지가 발견된 데 이어, 추가 탐사 결과 고지대 전역에 걸쳐 밀집된 공동체 네트워크가 존재하는 것으로 나타났다. 인구는 결코 소수에 그치지 않으며, 추정치에 따르면 수십만 명에 달하고, 어쩌면 백만 명에 육박할 수도 있다." #deepl:2685746143
- gate_veiled_interior.8.a: "외교단을 파견하라!" #deepl:771832155
- gate_veiled_interior.9.t: "끝없는 정글" #deepl:1243731867
- gate_veiled_interior.9.d: "정찰대는 길을 잃고 어쩔 수 없이 #v  #!로 되돌아와야만 했다." #deepl:617605326
- gate_veiled_interior.9.f: "뉴 사마도어의 정찰대원들은 그 비밀을 가장 먼저 밝혀내고자 하는 열망에 차, 새로 발견된 내륙 깊숙이 들어갔다. 몇 시간도 채 지나지 않아, 그들이 지나온 흔적은 빽빽한 덤불 아래로 사라졌고, 해가 지면서 모든 랜드마크마저 제자리를 잃은 듯 보였다. 짙은 수관 아래에서 나침반은 무용지물로 빙글빙글 돌았고, 재집결을 촉구하는 외침은 주변의 황야 속에서 메아리조차 없이 사라져 버렸다. 서로 뭉쳐서 보낸 긴장감 넘치는 밤이 지나고, 정찰대원들은 새벽이 되어 지치고 빈손으로 캠프로 비틀거리며 돌아왔지만, 내륙의 비밀을 밝혀내는 데는 한 발자국도 다가서지 못한 채였다." #deepl:1791482908
- gate_veiled_interior.9.a: "바보들." #deepl:855893625
- gate_veiled_interior.10.t: "사라져 가는 길 표지판" #deepl:370512209
- gate_veiled_interior.10.d: "정찰대는 길을 잃고 어쩔 수 없이 #v  #!로 되돌아와야만 했다." #deepl:617605326
- gate_veiled_interior.10.f: "정찰대원들은 당혹스러운 표정을 지으며 돌아왔는데, 정성스럽게 설치해 둔 길 표시가 옮겨졌거나 아예 사라졌다고 주장했다. 야생동물의 소행이든, 지형이 불안정했든, 아니면 더 설명하기 어려운 다른 이유 때문이든 간에, 일행은 집으로 가는 길을 잃고 무려 이틀 동안이나 되돌아와야 했다." #deepl:3283463078
- gate_veiled_interior.10.a: "누가 이런 짓을 한 거죠?" #deepl:2453727185
- gate_veiled_interior.11.t: "존재하지 않았던 다리" #deepl:3913125784
- gate_veiled_interior.11.d: "정찰대는 새로운 장애물에 부딪혀 #v  #!로 되돌아갈 수밖에 없었다." #deepl:1395310129
- gate_veiled_interior.11.f: "이전 탐사대가 그린 지도에는 깊은 계곡을 가로지르는 자연 암석 다리가 표시되어 있었다. 하지만 그 다리는 존재하지 않았거나, 무너졌거나, 애초에 아예 없었던 것이었다. 정찰대는 식량이 바닥나 후퇴할 수밖에 없게 되기 전까지 일주일 동안 우회로를 찾아 헤맸다. 하지만 강제로 돌아와야만 했던 상황에서도 결국 우회로를 찾아냈다." #deepl:3550087708
- gate_veiled_interior.11.a: "매번 새로운 문제가 생기네요." #deepl:1991188966
- gate_veiled_interior.12.t: "가장 긴 밤" #deepl:2088511828
- gate_veiled_interior.12.d: "정찰대는 너무 두려워 내륙으로 들어가지 못하고, #v 를 거쳐 #!로 돌아올 수밖에 없었다." #deepl:227856334
- gate_veiled_interior.12.f: "갑작스레 몰아친 폭풍으로 일행이 들고 있던 횃불과 등불이 모두 꺼져 버렸고, 그들은 내륙 깊숙한 곳에서 칠흑 같은 어둠 속에 갇혀 버렸다. 그들은 너무 무서워 꿈쩍도 하지 못한 채 서로 뭉쳐 밤이 지나가기를 기다렸고, 출발했던 야영지보다 더 나아가지 못한 채 집으로 돌아왔다." #deepl:908820202
- gate_veiled_interior.12.a: "겁쟁이들." #deepl:1748947490
- gate_veiled_interior.13.t: "손홀로우 고개에서의 매복전" #deepl:2174563210
- gate_veiled_interior.13.d: "정찰대는 매복 공격을 받아 #v  #!로 되돌아갈 수밖에 없었다." #deepl:3639121303
- gate_veiled_interior.13.f: "탐사대가 좁은 협곡을 지나고 있을 때, 예고도 없이 첫 화살이 날아들었다. 그들을 공격한 자—혹은 무언가—는 나타났던 것만큼이나 재빨리 덤불 속으로 사라져 버렸고, 그 결과 정찰대원 세 명이 목숨을 잃었으며, 살아남은 이들은 부상자들을 데리고 서둘러 집으로 돌아가야 했다. 공격자들의 흔적은 끝내 발견되지 않았다." #deepl:2016082361
- gate_veiled_interior.13.a: "젠장!" #deepl:2521213056
- gate_veiled_interior.14.t: "‘왜곡된 자들’" #deepl:1666816189
- gate_veiled_interior.14.d: "정찰대는 몬스터들의 공격을 받아 어쩔 수 없이 #v  #!로 돌아와야만 했다." #deepl:3840291755
- gate_veiled_interior.14.f: "깊은 내륙 어딘가의 무언가가 그 지역의 야생동물들을 어떤 자연학자도 알아볼 수 없는 모습으로 뒤틀어 놓았다. 정찰대 캠프를 쑥대밭으로 만든 그 생물들은 이 지역에 서식하는 어떤 생물과도 어렴풋이 닮았을 뿐이었고, 그들의 사나움 탓에 일행은 그들을 더 자세히 관찰할 기회조차 얻지 못했다. 생존자들은 장비와 기록, 그리고 동료 두 명을 뒤로 한 채 밤을 헤치며 도망쳤다." #deepl:3227404772
- gate_veiled_interior.14.a: "이 행성에 괴물이 있다고?" #deepl:2963306331
-# Events: Negotiations
- gate_veiled_interior.101.t: "관점의 변화" #deepl:570692190
- gate_veiled_interior.101.d: "내부와의 협상이 #v  $je_gate_veiled_interior_diplomacy_alignment$ #! 단계로 접어들었습니다." #deepl:1031864037
- gate_veiled_interior.101.f: "초기 접촉은 노골적인 무시로 맞닥뜨렸는데, 고지대 대표들은 우리 사절단을 진지한 파트너라기보다는 멀리 떨어진 기이한 존재로 여겼습니다. 그러나 시연이 시작되자 그 태도는 바뀌었습니다. 그놈족의 악기, 낯선 기술, 그리고 절제된 마법 시연은 내륙 지역을 훨씬 뛰어넘는 발전 수준을 여실히 보여주었다. 그들의 영토가 우리 해안으로 완전히 둘러싸여 있음을 보여주는 정확한 지도가 제시되자, 회의론은 냉철한 인정으로 바뀌었다. 이제 내륙 측도 공식 협상을 진행하기로 동의했다." #deepl:1125974512
- gate_veiled_interior.101.a: "드디어." #deepl:4054877442
- gate_veiled_interior.102.t: "마찰을 통해 다져진 용어들" #deepl:2851311478
- gate_veiled_interior.102.d: "내부와의 협상이 #v  $je_gate_veiled_interior_diplomacy_implementation$ #! 단계로 접어들었습니다." #deepl:556507168
- gate_veiled_interior.102.f: "협상은 오랜 기간에 걸쳐 진행되었으며, 종종 팽팽한 분위기 속에서 이루어졌다. 우리 기관들에 익숙하지 않은 문화적 관행과 분산된 권한 체계가 조율 과정의 모든 단계를 복잡하게 만들었습니다. 이를 체계화되고 균형 잡힌 상태로 통합하기 위해서는 타협뿐만 아니라 혁신도 필요했습니다. 이제 여러 차례의 수정 끝에 양측 대표단은 지속 가능한 구조에 합의했습니다. 조율 단계는 통합을 위한 공동 계획 수립으로 마무리됩니다." #deepl:4229283661
- gate_veiled_interior.102.a: "이 프레임워크를 구현해 봅시다." #deepl:1345335437
- gate_veiled_interior.103.t: "함께하는 미래" #deepl:1410317725
- gate_veiled_interior.103.d: "뉴기니 내륙 고지대에 거주하는 [GetCulture('melanesian').GetName]족이 [TopScope.GetRootScope.GetCountry.GetName]에 합류했습니다." #deepl:2558057892
- gate_veiled_interior.103.f: "수목층 너머의 세상은 텅 비어 있지도 않았고, 언제나 환영받는 곳도 아니었습니다. 초기 만남은 상실과 불안으로 점철되었으며, 평화의 손길을 내민 모든 경우에 상응하는 호의가 돌아온 것은 아니었습니다. 그럼에도 불구하고 대화는 계속되었습니다. 이제 고지대 공동체들은 우리와 함께하기로 선택함으로써, 갈등이 끊이지 않던 변방 지역을 모두가 함께하는 미래로 바꿔 놓았습니다." #deepl:3581866704
- gate_veiled_interior.103.a: "공동의 미래를 향해." #deepl:721292291
- gate_veiled_interior.103.a.tooltip: "대략 #v  100만 #! [GetCulture('melanesian').GetName] 명의 사람들이 우리 나라에 합류할 것입니다." #deepl:3514759694
- gate_veiled_interior.104.t: "사절의 실종" #deepl:4188610057
- gate_veiled_interior.104.d: "우리 협상단 중 한 명이 내륙에서 돌아오지 못했는데, 이로 인해 #v  협상이 지연될 가능성이 있습니다. #!" #deepl:3592433825
- gate_veiled_interior.104.f: "윌벤 수석 사절의 갑작스러운 실종으로 모든 외교적 진전이 완전히 중단되었습니다. 그가 마지막으로 목격된 것은 외딴 고지대의 한 족장과 관할권 주장을 확인하기 위해 최소한의 호위대만 대동하고 이동하던 중이었습니다. 내륙 지역의 극단적인 문화적 관행에 대한 과거 사례와 현재 노움 수도에 퍼지고 있는 끔찍한 소문을 고려할 때, 우리는 이 상황을 조사해야 할 것입니다." #deepl:847026592
- gate_veiled_interior.104.a: "협상은 계속되어야 한다." #deepl:218532213
- gate_veiled_interior.104.b: "해당 사안을 조사해 주십시오." #deepl:75044346
- gate_veiled_interior.105.t: "군사 주둔을 둘러싼 분쟁" #deepl:92114070
- gate_veiled_interior.105.d: "군대 주둔 문제를 둘러싼 의견 차이로 인해 #v  #! 협상이 교착 상태에 빠졌다." #deepl:998821550
- gate_veiled_interior.105.f: "처음에는 절차상의 문제로 시작되었으나, 이제는 핵심적인 논쟁점으로 굳어졌다. 뉴 사마도어는 통행로를 확보하고, 행정 인력을 보호하며, 통합 과정에서 안정적인 전환을 보장하기 위해서는 제한적인 군사 주둔이 필요하다고 주장한다. 반면 내륙 지역 대표들은 이를 다르게 보고 있다. 그들에게 있어 “일시적”인 주둔조차도 자치권의 침식이자 질서라는 명목 하에 외국의 통제가 강요되는 신호로 받아들여진다. 여러 족장들은 자신들의 영토에 노미족 무장 부대가 주둔하는 것을 협력 관계가 아닌 점령 행위로 간주할 것이라고 경고했다." #deepl:984678743
- gate_veiled_interior.105.a: "그들에게 돈을 주자." #deepl:63302891
- gate_veiled_interior.105.b: "협상을 이 점에 집중하십시오." #deepl:229176123
- gate_veiled_interior.106.t: "의회 내의 분노" #deepl:860659189
- gate_veiled_interior.106.d: "이러한 허점 중 일부를 협상을 통해 해소하는 데는 상당한 시간이 소요될 것이며, #v  이로 인해 #! 향후 진전이 지연될 것입니다." #deepl:151179752
- gate_veiled_interior.106.f: "계획안 초안의 세부 내용이 의회에 유출되자, 즉각적이고 격렬한 정치적 반발이 일었다. 법치주의자들과 전통주의자들은 내륙 부족장들에게 제시된 양보 조치, 특히 ‘[GetReligion('gate_harmony_pledge').GetNameNoFormatting]’라는 명목 하에 그들의 잔혹한 문화적 의식을 용인하기 위해 고안된 법적 허점에 경악하고 있다. 의회 본회의장에서의 토론은 고성 대립으로 치달았으며, 강경파 의원들은 외교단이 ‘[TopScope.GetRootScope.GetCountry.GetNameNoFormatting]’의 본질 자체를 훼손하고 있다고 비난하고 있다." #deepl:99600384
- gate_veiled_interior.106.a: "분노의 목소리는 무시하세요." #deepl:1030339218
- gate_veiled_interior.106.b: "논란이 되는 사항들에 대해 재협상하십시오." #deepl:4188965707
- gate_veiled_interior.107.t: "고지대의 질병" #deepl:4184354635
- gate_veiled_interior.107.d: "협상은 이번 발병 사태가 수습될 때까지 기다려야 하므로, #v  이에 따라 #! 협상이 중단된 상태입니다." #deepl:2634418300
- gate_veiled_interior.107.f: "여러 주요 고지대 정착지를 휩쓸고 있는 치명적인 질병에 대한 보고가 전해지자 협상이 갑작스럽게 중단되었다. 내륙 지역 족장들은 국경을 봉쇄하고 전통 의식에 의지하며, 이번 발병이 외부인들이 가져온 저주라고 의심하여 노미족이 초기에 제안한 의료 지원 제안을 거절했다. 한편, ‘[TopScope.GetRootScope.GetCountry.GetNameNoFormatting]’ 정부는 전염병이 인구 밀도가 높은 해안 지역으로 확산되는 것을 막기 위해 엄격한 격리 조치를 시행했다." #deepl:1986170573
- gate_veiled_interior.107.a: "그건 문제가 되겠네요." #deepl:535694526
- gate_veiled_interior.108.t: "번역 과정에서 사라진 말들" #deepl:545324101
- gate_veiled_interior.108.d: "언어 장벽으로 인해 협상 진전이 더뎌졌습니다. 우리는 #v  협상을 지연시켜 #! 적절한 해결책을 모색하거나, 속도를 늦추고 차근차근 진행할 수 있습니다." #deepl:3105665024
- gate_veiled_interior.108.f: "처음에는 사소한 혼란으로 보였던 문제가 점차 심각한 장애물로 커져버렸다. 내륙 지역의 언어들은 지역적 특성이 매우 강하고 맥락이 풍부하여, ‘[TopScope.GetRootScope.GetCountry.GetNameNoFormatting]’의 표준화된 법률 및 외교 용어로 정확하게 번역하기가 어려운 것으로 드러났다. 핵심 개념들에 대한 정확한 대응어가 없으며, 이러한 격차를 해소하기 위한 반복된 시도들은 모순과 의도치 않은 양보를 초래했다." #deepl:2093676139
- gate_veiled_interior.108.a: "우리 외교관들은 업무를 수행하면서 그 언어를 익힐 수 있습니다." #deepl:992917039
- gate_veiled_interior.108.b: "시간을 내어 제대로 된 사전을 만들어 보세요." #deepl:146432088
- gate_veiled_interior.109.t: "지도 위의 선들" #deepl:2881631111
- gate_veiled_interior.109.d: "족장들과 우리 측량사들 간의 영유권 분쟁으로 인해 #v  협상이 교착 상태에 빠졌습니다. #!" #deepl:3474602078
- gate_veiled_interior.109.f: "[TopScope.GetRootScope.GetCountry.GetNameNoFormatting]의 지도 제작자들은 절대적인 정확성을 자부하지만, 그들의 지형 측량 결과는 고지대의 현실과 극명하게 어긋난다. 행정 당국이 통합 계획을 위해 공식적인 구역을 설정하려 하자, 눈에 띄는 불일치가 드러났다. 내륙 지역의 족장들은 좌표나 고정된 경계가 아닌, 계절에 따라 변하는 랜드마크, 조상 대대로 내려온 사냥터, 그리고 복잡한 혈연 관계를 바탕으로 영토를 정의한다. 그 결과, 몇몇 중요한 자원 매장지와 통행로는 현재 여러 족장들 사이에서 치열한 쟁탈전이 벌어지고 있거나, 우리 측량사들에 의해 의도치 않게 국유지로 지정되어 버렸다. 토지 강탈에 대한 비난이 고조되고 지역 지도자들이 종이 위의 자의적인 경계선에 자신의 영토를 내어주기를 거부함에 따라, 공통된 지리적 범위에 합의가 이루어질 때까지 협상은 교착 상태에 빠졌다." #deepl:2659272037
- gate_veiled_interior.109.a: "그들에게 돈을 갚아라." #deepl:2206164161
- gate_veiled_interior.109.b: "이 문제가 해결될 때까지 협상을 중단하십시오." #deepl:1534577858
- gate_veiled_interior.110.t: "감동적인 연설이 청중을 사로잡다" #deepl:1214042784
- gate_veiled_interior.110.d: "오늘 오후, ‘미국 원주민 연합’([SCOPE.gsInterestGroup('orator_ig_scope').GetName])의 지도자인 윌리엄 ‘윌리’ 윌리엄스([SCOPE.sCharacter('orator_ig_leader_scope').GetFullName])는 내륙 지역을 ‘미국 원주민 연합’([TopScope.GetRootScope.GetCountry.GetNameNoFormatting])에 통합해야 한다고 주장하는 열띤 연설을 펼쳤다." #deepl:1285951133
- gate_veiled_interior.110.f: "[SCOPE.sCharacter('orator_ig_leader_scope').GetCountry.GetCapital.GetCityHubName] 의회에서 내륙 지역 추장들 앞에 나선 [SCOPE.sCharacter('orator_ig_leader_scope').GetFullNameNoFormatting]의 강력한 연설은 가장 적대적이었던 추장들조차 감탄하게 만들었다. 연설의 발췌문은 이미 [ROOT.GetCountry.GetNameNoFormatting] 전역에 퍼지고 있으며, 통합에 대한 지지를 고조시키고 있다." #deepl:631588611
- gate_veiled_interior.110.a: "이를 통해 통합 과정이 훨씬 수월해질 것입니다." #deepl:2967548102
- gate_veiled_interior.110.b: "이러한 공연은 ‘[SCOPE.sCharacter('orator_ig_leader_scope').GetFullNameNoFormatting]’와 ‘[SCOPE.sCharacter('orator_ig_leader_scope').GetHerHis]’의 취지를 잘 보여줍니다." #deepl:2430031973
- gate_veiled_interior.111.t: "유명 극작가, 인종 통합 지지 표명" #deepl:1342308187
- gate_veiled_interior.111.d: "내륙 통합을 둘러싼 협상이 한창인 가운데, 이 나라를 대표하는 극작가 중 한 명이 정치적인 메시지가 담긴 연극을 무대에 올렸는데, 이 작품은 통합이 이루어지기를 바라는 작가의 열망을 숨김없이 드러내고 있어 큰 호평을 받고 있다." #deepl:1667475773
- gate_veiled_interior.111.f: ""그 사람의 견해는 다소 편파적일지 모르겠지만, 선생님, 그의 문장력만큼은 누구도 흠잡을 수 없습니다!"" #deepl:2750961614
- gate_veiled_interior.111.a: "이제 이 통합 소식이 모든 사람의 입에 오르내릴 것입니다." #deepl:443695601
- gate_veiled_interior.111.b: "이 연극이 더 많은 국제적인 관객에게 다가갈 수 있도록 함께 노력합시다." #deepl:3705933261
- gate_veiled_interior.112.t: "주소 오류 발생" #deepl:1773247892
- gate_veiled_interior.112.d: "[SCOPE.sCharacter('publicaddress_ig_leader_scope').GetFullName]가 부족장들에게 내무부 통합의 장점에 대해 하려던 일상적인 연설은 순식간에 통합 정책에 대한 대외적 이미지 파탄으로 번져버렸다." #deepl:4174624145
- gate_veiled_interior.112.f: "[SCOPE.sCharacter('publicaddress_ig_leader_scope').GetHerHis]를 어설프게 읊조리며 형편없이 정리된 논점을 차례로 훑어가는 동안, ‘[SCOPE.sCharacter('publicaddress_ig_leader_scope').GetFullNameNoFormatting]’의 주장은 수장들에 의해 가차 없이, 그리고 설득력 있게 반박당했다. 이제 모두가 궁금해하는 점은, 이 실수가 통합 정책 자체의 본질적인 결함 때문인지, 아니면 ‘[SCOPE.gsInterestGroup('publicaddress_ig_scope').GetNameNoFormatting]’의 정치적 무능함 탓으로 돌릴 수 있는 것인지에 불과하다." #deepl:533372747
- gate_veiled_interior.112.a: "[SCOPE.sCharacter('publicaddress_ig_leader_scope').GetFullNameNoFormatting] 이번 좌절에 대한 책임은 반드시 져야 한다." #deepl:1548815496
- gate_veiled_interior.113.t: "비뚤어진 인연" #deepl:1966160296
- gate_veiled_interior.113.d: "인테리어 통합과 관련된 지루한 절차에 답답함을 느낀 ‘[SCOPE.gsInterestGroup('underhanded_instigator_ig_scope').GetName]’의 마이클 윌리엄스([SCOPE.sCharacter('underhanded_instigator_leader_scope').GetFullName])는, ‘[SCOPE.sCharacter('underhanded_instigator_leader_scope').GetHerHis]’가 인테리어 업계 내 인맥을 활용해 절차를 신속히 진행해 주겠다는 제안을 우리에게 해왔습니다." #deepl:2880075690
- gate_veiled_interior.113.f: ""적절한 사람에게 몇 마디만 전해 주시면 됩니다. 물론 모든 것은 법의 테두리 안에서 이루어져야 하겠지만, 이 문제와 관련해 우리 상대방이 그런 조치를 달가워하지는 않을 것임을 장담할 수는 없습니다."" #deepl:814876041
- gate_veiled_interior.113.a: "[SCOPE.sCharacter('underhanded_instigator_leader_scope').GetHerHim]에 권한을 부여해 주십시오. 시간이 촉박합니다." #deepl:106440097
- gate_veiled_interior.113.b: "아니요, 우리는 규정을 철저히 따르거나 아예 하지 않습니다." #deepl:27273073
- gate_veiled_interior.114.t: "문화적 공헌" #deepl:415947210
- gate_veiled_interior.114.d: "이러한 통합을 둘러싼 논쟁은 [SCOPE.sState('degenerate_art_state').GetName]의 미술 아카데미에서, 내륙 지역 예술가들의 영향을 받은 예술 운동이 [ROOT.GetCountry.GetAdjectiveNoFormatting]의 예술계에서 자리를 차지할 수 있는지에 대한 논의를 촉발시켰다." #deepl:660125830
- gate_veiled_interior.114.f: ""현대 조각, 회화, 음악 등 모든 분야에서 이른바 ‘예술가’들이 미치는 타락한 영향력을 느낄 수 있습니다. 이러한 것들이 우리 학교에서 가르쳐지고 박물관에 전시되고 있다는 사실은 이슬람([ROOT.GetCountry.GetAdjectiveNoFormatting])의 영혼에 대한 모욕입니다. 우리 민족의 감정과 가치관을 내면의 오물로부터 보호하기 위해서는 이를 반드시 척결해야 합니다!"" #deepl:3752426606
- gate_veiled_interior.114.a: "이건 확실히 [ROOT.GetCountry.GetAdjectiveNoFormatting]답지 않네요!" #deepl:3991361240
- gate_veiled_interior.114.b: "그들의 작품은 우리의 예술적 유산의 일부입니다." #deepl:1521507373
+ je_gate_veiled_interior: "가려진 내부"
+ je_gate_veiled_interior_reason: "뉴 사마도레의 정착된 해안 너머에는 '장막의 내륙'이라 불리는 광대한 지역이 펼쳐져 있습니다. 울창한 밀림과 점차 높아지는 고지대로 이루어진 이곳은 지금까지 의미 있는 진출을 모두 막아내 왔습니다. 최초의 [GetCulture('gnomish').GetName] 이주민들은 해안의 [GetBuildingType('building_gate_eastern_new_guinea').GetName]을 통해 도착했으며, 이후 정착지는 항해가 가능한 해안과 강줄기를 따라 확산되었습니다. 그러나 더 깊은 내륙은 여전히 베일에 싸여 있습니다. 그 지형은 아직 지도에 제대로 기록되지 않았으며, 현지의 환경과 조건 역시 거의 알려져 있지 않습니다."
+ je_gate_veiled_interior_lobby: "$je_gate_veiled_interior_reason$"
+ je_gate_veiled_interior_tooltip: "#header $je_gate_veiled_interior$#!\n$je_gate_veiled_interior_reason$"
+ je_gate_veiled_interior_status_expedition: "우리는 내륙으로 원정대를 파견했습니다."
+ je_gate_veiled_interior_status_veiled: "내부에 대해서는 아무것도 알지 못한다."
+ je_gate_veiled_interior_status_scouting: "우리는 내륙으로 정찰대를 파견했습니다."
+ je_gate_veiled_interior_status_early_contact: "내륙 지역에서 사람들을 발견했습니다."
+ je_gate_veiled_interior_status_diplomacy_stall: "우리의 협상이 일시적으로 #bold 교착 상태#!에 빠졌습니다."
+ je_gate_veiled_interior_status_diplomacy_discussions: "우리는 내륙과 초기 #bold 협의#!를 진행 중입니다."
+ je_gate_veiled_interior_status_diplomacy_alignment: "우리는 내륙과의 #bold 조율#!을 진행 중입니다."
+ je_gate_veiled_interior_status_diplomacy_implementation: "우리는 내륙의 합병을 #bold 시행#!하고 있습니다."
+ je_gate_veiled_interior_phase_veiled: "단계: #v 장막#!"
+ je_gate_veiled_interior_phase_early_contact: "단계: #v 초기 접촉#!"
+ je_gate_veiled_interior_phase_diplomacy: "단계: #v 협상#!"
+ sb_gate_veiled_interior_expedition: "탐사 개시"
+ sb_gate_veiled_interior_expedition_desc: "뉴기니 내륙으로 탐험을 떠나봅시다."
+ sb_gate_veiled_interior_expedition_possible: "현재 현장에서 진행 중인 탐사 활동은 #bold 없음#!"
+ sb_gate_veiled_interior_scout: "내부 둘러보기"
+ sb_gate_veiled_interior_scout_desc: "이제 내부로 통하는 확실한 경로가 확보되었으니, 이 지역을 정찰해야 합니다."
+ sb_gate_veiled_interior_scout_possible: "현재 현장에서 활동 중인 정찰대가 #bold 없습니다#!"
+ je_gate_veiled_interior_diplomacy_title: "합병 협상"
+ je_gate_veiled_interior_diplomacy_discussions: "토론"
+ je_gate_veiled_interior_diplomacy_alignment: "성향"
+ je_gate_veiled_interior_diplomacy_implementation: "실행"
+ je_gate_veiled_interior_diplomacy_tooltip: "#header $je_gate_veiled_interior_diplomacy_title$#!\n이 협상은 #bold 단계#!와 #bold 국면#!을 거쳐 진행됩니다. 매주 단계 진행도가 상승하며, 진행도가 완료되면 일정 확률로 이벤트가 발생합니다. 이러한 이벤트는 협상을 다음 국면으로 진전시키거나, 논의를 몇 달간 교착 상태에 빠뜨리거나, 성공 확률과 교착 확률을 변경할 수 있습니다."
+ gate_icon_veiled_interior_negotiations: "gate_icon_veiled_interior_negotiations"
+ gate_icon_veiled_interior_negotiations_desc: "$gate_create_bug_report$"
+ modifier_veiled_interior_lifted: "$je_gate_veiled_interior$: 기반시설 미비"
+ modifier_veiled_interior_expedition_cost: "탐사 비용"
+ modifier_veiled_interior_scouting_cost: "스카우팅 비용"
+ modifier_veiled_interior_diplomacy_appeasement_cost: "유화 정책의 대가"
+ modifier_veiled_interior_diplomacy_speed_reduction: "교착 상태에 빠진 협상"
+ modifier_veiled_interior_diplomacy_speed_increase: "협상 속도 향상"
+ modifier_gate_veiled_interior_social_harmony: "개척적 조화"
+ je_gate_veiled_interior_effect_phase_change_diplomacy_alignment: "#tooltip:[GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow [TopScope.sJE('journal_entry').GetName]#!#! 협상이 #v $je_gate_veiled_interior_diplomacy_alignment$#! 국면으로 진전됩니다."
+ je_gate_veiled_interior_effect_phase_change_diplomacy_implementation: "#tooltip:[GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow [TopScope.sJE('journal_entry').GetName]#!#! 협상이 #v $je_gate_veiled_interior_diplomacy_implementation$#! 국면으로 진전됩니다."
+ je_gate_veiled_interior_effect_phase_change_veiled: "#tooltip:[GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow [TopScope.sJE('journal_entry').GetName]#!#!이(가) #v 장막#! 국면으로 진전됩니다."
+ je_gate_veiled_interior_effect_phase_change_early_contact: "#tooltip:[GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow [TopScope.sJE('journal_entry').GetName]#!#!이(가) #v 초기 접촉#! 국면으로 진전됩니다."
+ je_gate_veiled_interior_effect_phase_change_diplomacy: "#tooltip:[GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow [TopScope.sJE('journal_entry').GetName]#!#!이(가) #v 협상#! 국면으로 진전됩니다."
+ je_gate_veiled_interior_effect_diplomacy_stall: "#tooltip:[GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow [TopScope.sJE('journal_entry').GetName]#!#! 협상이 [TopScope.GetLocalVariable('stall_length').GetValue|v0]개월 동안 #bold 교착#! 상태에 빠집니다."
+ je_gate_veiled_interior_effect_diplomacy_change_stall_change: "#tooltip:[GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow [TopScope.sJE('journal_entry').GetName]#!#! 협상의 #bold 교착 확률#!이 [TopScope.GetLocalVariable('chance_change').GetValue|-%0]만큼 변경됩니다."
+ je_gate_veiled_interior_effect_diplomacy_change_success_change: "#tooltip:[GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow [TopScope.sJE('journal_entry').GetName]#!#! 협상의 #bold 성공 확률#!이 [TopScope.GetLocalVariable('chance_change').GetValue|+%0]만큼 변경됩니다."
+ gate_veiled_interior.2.t: "내륙의 사람들"
+ gate_veiled_interior.2.d: "뉴기니 내륙에서 #v 대규모 정착지#!를 발견했습니다."
+ gate_veiled_interior.2.f: "수 주 동안 울창한 수관 아래를 헤맨 끝에, 원정대가 놀라운 소식과 함께 귀환했습니다. 깊은 고지대에서 그들은 상당한 규모의 정착지를 발견했으며, 그곳의 주민들은 체계적인 공동체를 이루고 주변 환경도 세심하게 가꾸고 있었습니다. 장막에 가려진 내륙은 결코 공허한 땅이 아니라, 그 자체로 사람들이 살아가는 하나의 세계였습니다."
+ gate_veiled_interior.2.a: "정말 흥미로워."
+ gate_veiled_interior.3.t: "실종된 원정대"
+ gate_veiled_interior.3.d: "원정대가 귀환하지 않았으며, 현재 #v 실종#!된 것으로 간주됩니다."
+ gate_veiled_interior.3.f: "내륙 원정대와의 연락이 두절되었습니다. 보급품은 충분했고 이동 경로도 철저히 계획되어 있었지만, 어떠한 소식도 전해지지 않고 있습니다. 단순히 지연된 것인지, 길을 잃은 것인지, 아니면 예상치 못한 무언가와 마주친 것인지는 아직 알 수 없습니다."
+ gate_veiled_interior.3.a: "젠장!"
+ gate_veiled_interior.4.t: "악어의 습격"
+ gate_veiled_interior.4.d: "원정대가 동물의 습격을 받아 #v 귀환#!할 수밖에 없었습니다."
+ gate_veiled_interior.4.f: "보고에 따르면, 내륙의 강을 건너던 중 바다악어의 치명적인 습격을 받아 원정대가 철수할 수밖에 없었습니다. 인명 피해가 즉시 발생했고, 원정대는 더 이상의 전진이 지나치게 위험하다고 판단했습니다. 내륙의 수로 역시 밀림만큼이나 위험한 곳임이 드러나고 있습니다."
+ gate_veiled_interior.4.a: "그는 기억되리라."
+ gate_veiled_interior.5.t: "내륙에서의 매복"
+ gate_veiled_interior.5.d: "원정대는 매복 공격을 받아 #v 도망칠#! 수밖에 없었습니다"
+ gate_veiled_interior.5.f: "내륙 원정대가 정체불명의 주민들에게 갑작스러운 공격을 받은 뒤 혼란에 빠진 채 귀환했습니다. 원정대의 보고에 따르면, 은폐된 위치에서 매복 공격이 이어졌고 조직적인 습격까지 가해져 즉시 퇴각할 수밖에 없었습니다. 접촉을 시도할 기회조차 없었습니다."
+ gate_veiled_interior.5.a: "내부에 사람들이 있다고!"
+ gate_veiled_interior.6.t: "병든 원정대"
+ gate_veiled_interior.6.d: "질병이 발생하여 원정대가 #v 귀환#!할 수밖에 없었습니다."
+ gate_veiled_interior.6.f: "내륙 원정대는 일행 사이에 질병이 빠르게 퍼지면서 결국 철수할 수밖에 없었습니다. 처음에는 발열과 피로 증상에 불과했지만, 곧 몇몇 대원들이 더 이상 이동할 수 없는 상태에 이르렀습니다. 보급품까지 부족해지고 마땅한 치료법도 없는 상황에서, 원정대는 더 깊숙이 진입하기 전에 탐사를 중단해야 했습니다."
+ gate_veiled_interior.6.a: "그들을 치료사에게 데려가라."
+ gate_veiled_interior.7.t: "혼란스러운 정글"
+ gate_veiled_interior.7.d: "질병이 발생하여 원정대가 #v 귀환#!할 수밖에 없게 되었습니다."
+ gate_veiled_interior.7.f: "원정대는 내륙에서 완전히 방향을 잃은 끝에 귀환했습니다. 울창한 수관과 믿을 수 없는 지형지물 때문에 길을 찾는 것이 사실상 불가능했고, 지나온 경로를 되짚으려는 시도도 번번이 실패했습니다. 식량과 보급품이 바닥나기 시작하자 원정대는 결국 철수했으며, 혼란 그 자체 외에는 거의 아무것도 지도에 남기지 못했습니다."
+ gate_veiled_interior.7.a: "바보같은 놈들이다."
+ gate_veiled_interior.8.t: "백만명의 사람들!"
+ gate_veiled_interior.8.d: "우리 정찰대는 내륙에 대략 #v 100만 명#!의 [GetCulture('melanesian').GetName] 사람들이 거주하는 것으로 추산하고 있습니다!"
+ gate_veiled_interior.8.f: "내륙에서 전해진 보고는 지금까지의 모든 추정을 뒤엎었습니다. 최초의 정착지가 발견된 이후 추가 탐사가 이루어지면서, 이제 고지대 전역에 걸쳐 조밀한 공동체망이 형성되어 있음이 드러났습니다. 이곳의 인구는 결코 미미한 수준이 아니며, 수십만 명에 달하고 어쩌면 100만 명에 육박할 가능성도 있는 것으로 추산됩니다."
+ gate_veiled_interior.8.a: "외교 사절단을 보내라!"
+ gate_veiled_interior.101.t: "관점의 변화"
+ gate_veiled_interior.101.d: "내륙과의 협상이 #v $je_gate_veiled_interior_diplomacy_alignment$#! 국면으로 진전됩니다."
+ gate_veiled_interior.101.f: "첫 접촉에서 고지대 대표들은 우리 사절단을 진지한 협상 상대라기보다 먼 외부에서 찾아온 기이한 존재 정도로 여기며 노골적으로 무시했습니다. 하지만 여러 시연이 시작되자 그들의 태도도 달라졌습니다. 노움의 장비와 낯선 기술, 통제된 마법 시연은 내륙 바깥 세계의 발전 수준이 얼마나 앞서 있는지를 분명히 보여주었습니다. 여기에 그들의 영토가 우리의 해안 지역에 완전히 둘러싸여 있음을 정확히 표시한 지도를 함께 제시하자, 회의적인 태도는 냉정한 현실 인식으로 바뀌었습니다. 이제 내륙 측은 공식 협상을 진행하는 데 동의했습니다."
+ gate_veiled_interior.101.a: "드디어."
+ gate_veiled_interior.102.t: "마찰 속에서 벼려진 조건"
+ gate_veiled_interior.102.d: "내륙과의 협상이 #v $je_gate_veiled_interior_diplomacy_implementation$#! 국면으로 진전됩니다."
+ gate_veiled_interior.102.f: "협상은 오랜 시간 이어졌고, 그 과정은 자주 난항을 겪었습니다. 우리 제도에는 낯선 문화적 관습과 분권화된 권위 체계가 맞물리면서 조율의 모든 단계가 복잡해졌습니다. 이를 성문화되고 균형 잡힌 국가 체계에 통합하려면 타협뿐만 아니라 새로운 발상도 필요했습니다. 이제 수차례의 수정 끝에 양측 대표단은 지속 가능한 구조에 합의했습니다. 이로써 조율 국면은 통합을 위한 공동 계획과 함께 마무리됩니다."
+ gate_veiled_interior.102.a: "이 체계를 시행하자."
+ gate_veiled_interior.103.t: "함께하는 미래"
+ gate_veiled_interior.103.d: "뉴기니 내륙 고지대의 [GetCulture('melanesian').GetName] 사람들이 [TopScope.GetRootScope.GetCountry.GetName]에 합류합니다."
+ gate_veiled_interior.103.f: "수관 너머에 펼쳐진 세계는 비어 있지도 않았고, 언제나 우호적이지도 않았습니다. 초기의 접촉은 희생과 불안으로 얼룩졌으며, 우리가 내민 모든 평화의 손길이 같은 방식으로 돌아온 것도 아니었습니다. 그럼에도 대화는 계속되었습니다. 그리고 이제 고지대 공동체들은 우리의 품에 합류하기로 선택했습니다. 이로써 갈등으로 점철된 변경은 함께 만들어갈 미래로 거듭나게 되었습니다."
+ gate_veiled_interior.103.a: "함께하는 미래를 향해."
+ gate_veiled_interior.103.a.tooltip: "대략 #v 100만 명#!의 [GetCulture('melanesian').GetName] 사람들이 우리 국가에 합류합니다."
+ gate_veiled_interior.104.t: "사절의 실종"
+ gate_veiled_interior.104.d: "우리 협상단의 일원 한 명이 내륙에서 돌아오지 않았으며, 이로 인해 협상이 #v 교착#!될 가능성이 있습니다."
+ gate_veiled_interior.104.f: "수석 사절 윌벤이 갑작스럽게 실종되면서 모든 외교적 진전이 사실상 완전히 중단되었습니다. 그는 외딴 고지대 추장과 관할권 주장을 확인하기 위해 최소한의 호위만을 대동하고 이동하던 모습이 마지막으로 목격되었습니다. 내륙 지역의 극단적인 문화적 관습에 대한 전례와 현재 노움 수도에 퍼지고 있는 끔찍한 소문을 고려하면, 우리는 이 사태를 조사해야 합니다."
+ gate_veiled_interior.104.a: "협상은 계속되어야 한다."
+ gate_veiled_interior.104.b: "해당 사안을 조사해 보시오."
+ gate_veiled_interior.105.t: "군사 주둔을 둘러싼 분쟁"
+ gate_veiled_interior.105.d: "군대 주둔을 둘러싼 이견으로 협상이 #v 교착#! 상태에 빠졌습니다."
+ gate_veiled_interior.105.f: "처음에는 단순한 절차상의 문제에 불과했던 사안이 이제 협상의 핵심 쟁점으로 굳어졌습니다. 뉴 사마도레 측은 이동로의 안전을 확보하고 행정 인력을 보호하며 통합 과정에서 안정적인 전환을 보장하기 위해 제한적인 군대 주둔이 필요하다고 주장합니다. 그러나 내륙의 대표들은 이를 전혀 다르게 받아들이고 있습니다. 그들에게는 \"임시\" 배치라 할지라도 자치권의 침해이자 질서 유지라는 명분 아래 이루어지는 외부 통제의 강요를 의미합니다. 여러 추장들은 무장한 노움 병력이 자신들의 땅에 주둔할 경우, 이를 협력이 아니라 점령 행위로 받아들일 것이라고 경고했습니다."
+ gate_veiled_interior.105.a: "그들에게 돈을 주자."
+ gate_veiled_interior.105.b: "협상을 이 점에 집중하라."
+ gate_veiled_interior.106.t: "의회 내의 분노"
+ gate_veiled_interior.106.d: "그러한 허점 중 일부를 협상을 통해 없애려면 상당한 시간이 필요하며, 추가적인 진전이 #v 교착#!될 것입니다."
+ gate_veiled_interior.106.f: "협상 초안의 세부 내용이 의회에 유출되면서 정치적 반발이 즉각적이고도 거세게 일어났습니다. 법률적 원칙을 중시하는 이들과 전통주의자들은 내륙 추장들에게 제공된 양보안, 특히 [GetReligion('gate_harmony_pledge').GetNameNoFormatting]의 이름 아래 그들의 더욱 끔찍한 문화적 의례를 용인하도록 설계된 법적 허점에 경악하고 있습니다. 의회 본회의의 토론은 고성과 설전으로 번졌으며, 강경파 의원들은 외교단이 [TopScope.GetRootScope.GetCountry.GetNameNoFormatting]의 근본 정신 자체를 훼손하고 있다고 비난하고 있습니다."
+ gate_veiled_interior.106.a: "분노의 목소리는 무시하겠다."
+ gate_veiled_interior.106.b: "논란이 되는 사항들에 대해 재협상하겠다."
+ gate_veiled_interior.107.t: "고지대의 질병"
+ gate_veiled_interior.107.d: "질병 발생 사태가 해결될 때까지 협상을 재개할 수 없으므로, 협상은 #v 교착#! 상태에 빠졌습니다."
+ gate_veiled_interior.107.f: "여러 주요 고지대 정착지에 치명적인 전염병이 퍼지고 있다는 보고가 전해지면서 협상은 갑작스럽게 중단되었습니다. 내륙의 추장들은 국경을 봉쇄하고 전통적인 의례에 의존하고 있으며, 이번 사태가 외부인들이 가져온 저주라는 의심 때문에 노움 측이 제안한 초기 의료 지원도 거부하고 있습니다. 한편, [TopScope.GetRootScope.GetCountry.GetNameNoFormatting]의 행정부는 전염병이 인구가 밀집한 해안 지역까지 확산되는 것을 막기 위해 엄격한 검역 조치를 시행했습니다."
+ gate_veiled_interior.107.a: "그건 문제가 되겠군."
+ gate_veiled_interior.108.t: "번역 속에 잃어버린 말들"
+ gate_veiled_interior.108.d: "언어 장벽으로 인해 협상이 지연되고 있습니다. 적절한 해결책을 찾기 위해 협상을 #v 교착#!시킬 수도 있고, 아니면 더 느린 속도로 협상을 계속 진행할 수도 있습니다."
+ gate_veiled_interior.108.f: "처음에는 사소한 혼선처럼 보였던 문제가 이제 심각한 장애물로 커졌습니다. 내륙의 언어들은 지역별 차이가 크고 맥락 의존성이 높아, [TopScope.GetRootScope.GetCountry.GetNameNoFormatting]의 표준화된 법률·외교 용어로 정확하게 번역하기가 매우 어렵다는 사실이 드러났습니다. 핵심 개념들 가운데는 정확히 대응하는 표현조차 없는 경우가 있으며, 이러한 간극을 메우려는 반복된 시도는 오히려 모순과 의도치 않은 양보를 낳고 있습니다."
+ gate_veiled_interior.108.a: "우리 외교관들이 현장에서 직접 언어를 익히면 된다."
+ gate_veiled_interior.108.b: "시간을 내어 제대로 된 사전을 만들어 보아라."
+ gate_veiled_interior.109.t: "지도 위의 경계선"
+ gate_veiled_interior.109.d: "추장들과 우리 측량관들 사이의 영유권 주장이 충돌하면서 협상이 #v 교착#! 상태에 빠졌습니다."
+ gate_veiled_interior.109.f: "[TopScope.GetRootScope.GetCountry.GetNameNoFormatting]의 지도 제작자들은 절대적인 정밀성을 자부하지만, 그들의 지형 측량은 고지대의 현실과 심하게 충돌하고 있습니다. 행정관들이 통합 계획을 위해 공식적인 행정 구역을 설정하려 하자, 뚜렷한 불일치가 드러났습니다. 내륙의 추장들은 영토를 좌표나 고정된 경계선이 아니라 계절에 따라 달라지는 지형지물, 조상 대대로 이어져 온 사냥터, 그리고 복잡한 혈연 관계를 기준으로 규정합니다. 그 결과 몇몇 중요한 자원 광맥과 교통로는 여러 추장들이 서로 권리를 주장하는 분쟁지가 되었으며, 일부는 우리 측량관들에 의해 의도치 않게 국유지로 지정되기까지 했습니다. 토지 강탈이라는 비난이 거세지고 지역 지도자들이 종이 위에 임의로 그어진 경계선에 자신들의 영지를 내놓기를 거부하면서, 양측이 공통된 지리적 기준에 합의할 때까지 협상은 교착 상태에 빠졌습니다."
+ gate_veiled_interior.109.a: "그들에게 돈을 갚아라."
+ gate_veiled_interior.109.b: "이 문제가 해결될 때까지 협상을 중단하겠다."
+ gate_veiled_interior.110.t: "청중을 사로잡는 감동적인 연설"
+ gate_veiled_interior.110.d: "오늘 오후, [SCOPE.gsInterestGroup('orator_ig_scope').GetName]의 지도자 [SCOPE.sCharacter('orator_ig_leader_scope').GetFullName](은)는 내륙 지역을 [TopScope.GetRootScope.GetCountry.GetNameNoFormatting]에 통합할 것을 촉구하는 열정적인 연설을 펼쳤습니다."
+ gate_veiled_interior.110.f: "[SCOPE.sCharacter('orator_ig_leader_scope').GetCountry.GetCapital.GetCityHubName]의 의회에서 내륙의 추장들 앞에 모습을 드러낸 [SCOPE.sCharacter('orator_ig_leader_scope').GetFullNameNoFormatting]의 강력한 웅변은 가장 완고하고 적대적인 추장들마저 깊은 인상을 받게 했습니다. 연설의 일부는 이미 [ROOT.GetCountry.GetNameNoFormatting] 전역에 퍼지고 있으며, 내륙 통합에 대한 지지를 더욱 확산시키고 있습니다."
+ gate_veiled_interior.110.a: "이로써 통합 과정이 훨씬 수월해질 것이다."
+ gate_veiled_interior.110.b: "이러한 활약은 [SCOPE.sCharacter('orator_ig_leader_scope').GetFullNameNoFormatting]과 [SCOPE.sCharacter('orator_ig_leader_scope').GetHerHis]가 이끄는 대의에 큰 영광이 될 것이다."
+ gate_veiled_interior.111.t: "유명 극작가의 통합 지지 선언"
+ gate_veiled_interior.111.d: "내륙 통합을 둘러싼 협상이 진행되는 가운데, 국내의 저명한 극작가 중 한 명이 정치적 메시지가 짙게 담긴 작품을 무대에 올려 큰 호평을 받았습니다. 이 작품은 작가가 내륙 통합의 성사를 강하게 바라고 있음을 숨김없이 드러내고 있습니다."
+ gate_veiled_interior.111.f: "\"상당히 당파적인 관점을 갖고 있으나 연극을 쓰는 능력 하나는 알아줘야겠구려!\""
+ gate_veiled_interior.111.a: "이제 이 통합 소식이 모든 사람의 입에 오르내릴 것이다."
+ gate_veiled_interior.111.b: "전 세계 사람이 연극을 즐길 수 있게끔 판을 키워 보자고."
+ gate_veiled_interior.112.t: "어긋난 연설"
+ gate_veiled_interior.112.d: "[SCOPE.sCharacter('publicaddress_ig_leader_scope').GetFullName](이)가 추장들을 상대로 내륙 통합의 이점을 설명하기 위해 행한 평범한 연설은 순식간에 통합 추진에 대한 여론을 악화시키는 홍보 참사로 번지고 말았습니다."
+ gate_veiled_interior.112.f: "[SCOPE.sCharacter('publicaddress_ig_leader_scope').GetFullNameNoFormatting](은)는 제대로 정리되지 않은 주장들을 연이어 더듬거리며 전달했고, 그 논리는 [SCOPE.sCharacter('publicaddress_ig_leader_scope').GetHerHis] 추장들에 의해 신랄하면서도 설득력 있게 하나하나 반박당했습니다. 이제 모두의 관심사는 이번 실수가 통합 자체의 근본적인 결함에서 비롯된 것인지, 아니면 단순히 [SCOPE.gsInterestGroup('publicaddress_ig_scope').GetNameNoFormatting]의 정치적 무능 탓으로 돌릴 수 있는지에 쏠리고 있습니다."
+ gate_veiled_interior.112.a: "추락한 위신에 대한 책임을 [SCOPE.sCharacter('publicaddress_ig_leader_scope').GetFullNameNoFormatting]에게 돌린다."
+ gate_veiled_interior.113.t: "뒤틀린 관계"
+ gate_veiled_interior.113.d: "내륙 통합을 둘러싼 장기간의 절차에 답답함을 느낀 [SCOPE.gsInterestGroup('underhanded_instigator_ig_scope').GetName]의 [SCOPE.sCharacter('underhanded_instigator_leader_scope').GetFullName](이)가 내륙에 있는 [SCOPE.sCharacter('underhanded_instigator_leader_scope').GetHerHis] 개인적 인맥을 활용해 통합 절차를 앞당기겠다는 제안을 해왔습니다."
+ gate_veiled_interior.113.f: "\"그냥 적절한 관련자들에게 몇 마디만 해주면 충분할 겁니다. 법에 저촉될 만한 구석은 없습니다. 물론 반대파가 도끼눈을 뜨지 않을 거란 보장은 없지만...\""
+ gate_veiled_interior.113.a: "제안을 받아들인다. 시간이 생명이다."
+ gate_veiled_interior.113.b: "거절한다. 정해진 규정대로 할 게 아니면 애초에 진행할 이유도 없지."
+ gate_veiled_interior.114.t: "문화적 공헌"
+ gate_veiled_interior.114.d: "내륙 통합을 둘러싼 논쟁은 [SCOPE.sState('degenerate_art_state').GetName]의 예술 아카데미에서도 논의를 촉발했습니다. 내륙 예술가들의 영향을 받은 예술 사조가 [ROOT.GetCountry.GetAdjectiveNoFormatting] 예술계에서 과연 자리를 차지할 수 있는지를 두고 논쟁이 벌어지고 있습니다."
+ gate_veiled_interior.114.f: "\"현대 조각과 회화, 음악에 이르기까지 이른바 '예술가'들이 끼치는 타락한 영향이 곳곳에서 느껴집니다. 이런 것이 우리 학교에서 가르쳐지고 박물관에 전시된다는 것은 [ROOT.GetCountry.GetAdjectiveNoFormatting]의 정신에 대한 모욕입니다. 우리 국민의 감정과 가치관을 내륙의 불결한 영향으로부터 지켜내려면, 반드시 이를 숙청해야 합니다!\""
+ gate_veiled_interior.114.a: "확실히 [ROOT.GetCountry.GetAdjectiveNoFormatting]에 어울리지 않아!"
+ gate_veiled_interior.114.b: "그 사람들의 작품도 엄연히 우리의 예술적 유산이야."
+ gate_veiled_interior.9.t: "끝없는 정글"
+ gate_veiled_interior.9.d: "정찰대가 길을 잃어 #v 귀환#!할 수밖에 없었습니다."
+ gate_veiled_interior.9.f: "뉴 사마도레의 정찰대는 새롭게 발견된 내륙의 비밀을 누구보다 먼저 지도에 담겠다는 열망을 품고 탐사에 나섰습니다. 그러나 불과 몇 시간 만에 그들이 지나온 길은 빽빽한 덤불 아래로 자취를 감췄고, 해가 기울수록 주변의 모든 지형지물이 움직이는 듯 보였습니다. 울창한 수관 아래에서는 나침반마저 쓸모없이 빙글빙글 돌았고, 재집결을 외치는 목소리에도 광활한 야생은 아무런 대답을 돌려주지 않았습니다. 긴장 속에서 서로 몸을 붙인 채 하룻밤을 보낸 정찰대는 새벽이 되어서야 지친 몸으로 가까스로 야영지에 돌아왔습니다. 그러나 손에 쥔 성과는 아무것도 없었고, 내륙의 비밀은 여전히 베일에 싸인 채였습니다."
+ gate_veiled_interior.9.a: "어리석었다."
+ gate_veiled_interior.10.t: "사라진 길표식"
+ gate_veiled_interior.10.d: "정찰대가 길을 잃어 #v 귀환#!할 수밖에 없었습니다."
+ gate_veiled_interior.10.f: "정찰대는 어리둥절한 채 돌아와, 자신들이 신중하게 설치해 둔 길표식들이 옮겨졌거나 아예 사라졌다고 주장했습니다. 야생동물의 소행인지, 불안정한 지형 때문인지, 아니면 설명하기 힘든 무언가의 짓인지는 알 수 없지만, 원정대는 귀환 경로를 잃고 꼬박 이틀 동안 되돌아가야 했습니다."
+ gate_veiled_interior.10.a: "누가 이런 짓을 한 거지?"
+ gate_veiled_interior.11.t: "존재하지 않았던 다리"
+ gate_veiled_interior.11.d: "정찰대가 새로운 장애물에 부딪혀 #v 귀환#!할 수밖에 없었습니다."
+ gate_veiled_interior.11.f: "이전 원정대가 작성한 지도에는 깊은 협곡을 가로지르는 천연 암석 다리가 표시되어 있었습니다. 그러나 그 다리는 존재하지 않았습니다. 무너진 것인지, 아니면 애초부터 존재하지 않았던 것인지는 알 수 없습니다. 정찰대는 대체 경로를 찾기 위해 일주일 동안 수색을 이어갔고, 보급품이 바닥나 철수하기 직전에야 가까스로 우회로를 발견했습니다."
+ gate_veiled_interior.11.a: "매번 새로운 문제가 생기는군."
+ gate_veiled_interior.12.t: "가장 긴 밤"
+ gate_veiled_interior.12.d: "정찰대가 내륙으로 진입하는 것을 지나치게 두려워한 나머지 #v 귀환#!할 수밖에 없었습니다."
+ gate_veiled_interior.12.f: "갑작스러운 폭풍이 탐사대가 지니고 있던 모든 횃불과 등불을 꺼뜨리면서, 그들은 내륙 깊숙한 곳에서 완전한 어둠 속에 빠졌습니다. 대원들은 움직이기조차 두려워 서로 몸을 붙인 채 밤을 지새웠고, 결국 출발했던 야영지에서 거의 한 발짝도 더 나아가지 못한 채 귀환했습니다."
+ gate_veiled_interior.12.a: "겁쟁이들 같으니."
+ gate_veiled_interior.13.t: "쏜할로 고개의 매복 공격"
+ gate_veiled_interior.13.d: "정찰대가 매복 공격을 받아 #v 귀환#!할 수밖에 없었습니다."
+ gate_veiled_interior.13.f: "탐사대가 좁은 협곡을 통과하던 중, 아무런 경고도 없이 화살이 쏟아지기 시작했습니다. 누가, 혹은 무엇이 그들을 습격했는지는 알 수 없었지만, 공격자들은 나타났을 때만큼이나 빠르게 수풀 속으로 사라졌습니다. 그 자리에서 정찰대원 세 명이 목숨을 잃었고, 살아남은 이들은 부상자들을 데리고 황급히 귀환해야 했습니다. 공격자들의 흔적은 끝내 발견되지 않았습니다."
+ gate_veiled_interior.13.a: "젠장!"
+ gate_veiled_interior.14.t: "뒤틀린 자들"
+ gate_veiled_interior.14.d: "정찰대가 괴물들의 습격을 받아 #v 귀환#!할 수밖에 없었습니다."
+ gate_veiled_interior.14.f: "내륙 깊숙한 곳의 무언가가 현지 야생동물들을 어떤 박물학자도 알아볼 수 없는 형태로 뒤틀어 놓았습니다. 정찰대의 야영지를 덮친 괴물들은 이 지역 토착 생물과 희미하게 닮은 흔적만 남아 있었고, 그 흉포함 때문에 탐사대는 더 자세히 관찰할 엄두조차 내지 못했습니다. 생존자들은 장비와 기록, 그리고 두 명의 동료까지 뒤에 남겨둔 채 밤새 달아났습니다."
+ gate_veiled_interior.14.a: "이 행성에 괴물이 있다고?"

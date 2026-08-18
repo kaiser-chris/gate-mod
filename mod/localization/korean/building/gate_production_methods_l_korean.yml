@@ -20,13 +20,12 @@
  pm_gate_reverse_support_elves_plus: "국토 수호 활동 증가"
  pm_gate_situation_normal: "기본"
  pm_gate_situation_orcish_elven_war: "오크-엘프 전쟁"
- pm_gate_mage_mana_extraction: "간단한 마나 추출"
- pm_gate_druid_mana_extraction: "드루이드의 간단한 마나 추출" #deepl:1753807027
- pm_gate_mage_ritual_extraction: "의식적 마나 추출"
- pm_gate_druid_ritual_extraction: "드루이드 의식: 마나 추출" #deepl:755049706
- pm_gate_mage_simple_ley_line_tap: "간단한 레이 라인 연결 장치" #deepl:3795377622
- pm_gate_druid_simple_ley_line_tap: "드루이드의 간단한 레이 라인 활용법" #deepl:4061385024
  pm_gate_venkateswara_temple: "벤카테스와라 사원"
+ pm_gate_normal_seeds: "일반 씨앗"
+ pm_gate_normal_production: "일반 생산"
+ pm_gate_normal_tree_regeneration: "일반 삼림지"
+ pm_gate_mage_mana_extraction: "간단한 마나 추출"
+ pm_gate_mage_ritual_extraction: "의식적 마나 추출"
  pm_default_building_gate_arcane_council_headquarters: "$pm_default$"
  pm_default_building_gate_dragon_temple_himalayas: "질롱을 섬기다"
  pm_gate_murk_unused: "미사용"
@@ -38,11 +37,8 @@
  pm_gate_crystal_explosives_building_lead_mine: "마법 폭탄"
  pm_gate_crystal_explosives_building_sulfur_mine: "마법 폭탄"
  pm_gate_crystal_explosives_building_gold_mine: "마법 폭탄"
- pm_gate_normal_seeds: "일반 씨앗"
  pm_gate_magic_seeds: "마법 씨앗"
- pm_gate_magic_seeds_advanced: "고급 마법 씨앗" #deepl:2097611361
  pm_gate_magic_seeds_building_rice_farm: "$pm_gate_magic_seeds$"
- pm_gate_magic_seeds_building_rice_farm_advanced: "$pm_gate_magic_seeds_advanced$" #deepl:3760020185
  pm_gate_magic_academy_no_support: "공공 지원 없음"
  pm_gate_magic_academy_partial_support: "부분 장학금"
  pm_gate_magic_academy_full_support: "전액 장학금"
@@ -80,35 +76,12 @@
  pm_gate_simple_rune_carving_artillery: "$pm_gate_simple_rune_carving$"
  pm_gate_no_runic_paper: "$gate_runic_paper$ 생산 없음"
  pm_gate_runic_paper: "$gate_runic_paper$ 생산"
- pm_gate_bleached_runic_paper: "표백 처리된 $gate_runic_paper$" #deepl:1193108523
  pm_gate_focus_runic_paper: "$gate_runic_paper$ 집중 생산"
  pm_gate_early_mana_trains: "실험용 마나 열차"
  pm_gate_mana_trains: "마나 열차"
  pm_gate_arcane_foundries: "타우마포지 방식"
- pm_gate_normal_production: "일반 생산"
  pm_gate_magic_seed_fertilizer: "마나 주입"
  pm_gate_living_irrigation: "생태 관개"
- pm_gate_living_irrigation_advanced: "첨단 생활용 관개 시스템" #deepl:3127131329
- pm_gate_magic_seeds_wine: "$pm_gate_living_irrigation$" #deepl:2686827140
- pm_gate_magic_seeds_coffee: "$pm_gate_living_irrigation$" #deepl:2686827140
- pm_gate_magic_seeds_cotton: "$pm_gate_living_irrigation$" #deepl:2686827140
- pm_gate_magic_seeds_dye: "$pm_gate_living_irrigation$" #deepl:2686827140
- pm_gate_magic_seeds_opium: "$pm_gate_living_irrigation$" #deepl:2686827140
- pm_gate_magic_seeds_tea: "$pm_gate_living_irrigation$" #deepl:2686827140
- pm_gate_magic_seeds_tobacco: "$pm_gate_living_irrigation$" #deepl:2686827140
- pm_gate_magic_seeds_sugar: "$pm_gate_living_irrigation$" #deepl:2686827140
- pm_gate_magic_seeds_banana: "$pm_gate_living_irrigation$" #deepl:2686827140
- pm_gate_magic_seeds_silk: "$pm_gate_living_irrigation$" #deepl:2686827140
- pm_gate_magic_seeds_wine_advanced: "$pm_gate_living_irrigation_advanced$" #deepl:4079591313
- pm_gate_magic_seeds_coffee_advanced: "$pm_gate_living_irrigation_advanced$" #deepl:4079591313
- pm_gate_magic_seeds_cotton_advanced: "$pm_gate_living_irrigation_advanced$" #deepl:4079591313
- pm_gate_magic_seeds_dye_advanced: "$pm_gate_living_irrigation_advanced$" #deepl:4079591313
- pm_gate_magic_seeds_opium_advanced: "$pm_gate_living_irrigation_advanced$" #deepl:4079591313
- pm_gate_magic_seeds_tea_advanced: "$pm_gate_living_irrigation_advanced$" #deepl:4079591313
- pm_gate_magic_seeds_tobacco_advanced: "$pm_gate_living_irrigation_advanced$" #deepl:4079591313
- pm_gate_magic_seeds_sugar_advanced: "$pm_gate_living_irrigation_advanced$" #deepl:4079591313
- pm_gate_magic_seeds_banana_advanced: "$pm_gate_living_irrigation_advanced$" #deepl:4079591313
- pm_gate_magic_seeds_silk_advanced: "$pm_gate_living_irrigation_advanced$" #deepl:4079591313
  pm_gate_living_irrigation_building_coffee_plantation: "$pm_gate_living_irrigation$"
  pm_gate_living_irrigation_building_cotton_plantation: "$pm_gate_living_irrigation$"
  pm_gate_living_irrigation_building_dye_plantation: "$pm_gate_living_irrigation$"
@@ -119,7 +92,34 @@
  pm_gate_living_irrigation_building_banana_plantation: "$pm_gate_living_irrigation$"
  pm_gate_living_irrigation_building_silk_plantation: "$pm_gate_living_irrigation$"
  pm_gate_living_irrigation_building_vineyard: "$pm_gate_living_irrigation$"
- pm_gate_normal_tree_regeneration: "일반 삼림지"
  pm_gate_magic_tree_regeneration: "재생 목재"
  pm_gate_mundane_communication: "일상적인 대화"
  pm_gate_scrying_communication: "점술 의식"
+ pm_gate_bleached_runic_paper: "표백된 $gate_runic_paper$"
+ pm_gate_magic_seeds_advanced: "고급 마법 씨앗"
+ pm_gate_magic_seeds_building_rice_farm_advanced: "$pm_gate_magic_seeds_advanced$"
+ pm_gate_living_irrigation_advanced: "고급 생태 관개"
+ pm_gate_magic_seeds_wine: "$pm_gate_living_irrigation$"
+ pm_gate_magic_seeds_coffee: "$pm_gate_living_irrigation$"
+ pm_gate_magic_seeds_cotton: "$pm_gate_living_irrigation$"
+ pm_gate_magic_seeds_dye: "$pm_gate_living_irrigation$"
+ pm_gate_magic_seeds_opium: "$pm_gate_living_irrigation$"
+ pm_gate_magic_seeds_tea: "$pm_gate_living_irrigation$"
+ pm_gate_magic_seeds_tobacco: "$pm_gate_living_irrigation$"
+ pm_gate_magic_seeds_sugar: "$pm_gate_living_irrigation$"
+ pm_gate_magic_seeds_banana: "$pm_gate_living_irrigation$"
+ pm_gate_magic_seeds_silk: "$pm_gate_living_irrigation$"
+ pm_gate_magic_seeds_wine_advanced: "$pm_gate_living_irrigation_advanced$"
+ pm_gate_magic_seeds_coffee_advanced: "$pm_gate_living_irrigation_advanced$"
+ pm_gate_magic_seeds_cotton_advanced: "$pm_gate_living_irrigation_advanced$"
+ pm_gate_magic_seeds_dye_advanced: "$pm_gate_living_irrigation_advanced$"
+ pm_gate_magic_seeds_opium_advanced: "$pm_gate_living_irrigation_advanced$"
+ pm_gate_magic_seeds_tea_advanced: "$pm_gate_living_irrigation_advanced$"
+ pm_gate_magic_seeds_tobacco_advanced: "$pm_gate_living_irrigation_advanced$"
+ pm_gate_magic_seeds_sugar_advanced: "$pm_gate_living_irrigation_advanced$"
+ pm_gate_magic_seeds_banana_advanced: "$pm_gate_living_irrigation_advanced$"
+ pm_gate_magic_seeds_silk_advanced: "$pm_gate_living_irrigation_advanced$"
+ pm_gate_druid_mana_extraction: "드루이드식 간이 마나 추출"
+ pm_gate_druid_ritual_extraction: "드루이드식 의식 마나 추출"
+ pm_gate_mage_simple_ley_line_tap: "간이 지맥 추출"
+ pm_gate_druid_simple_ley_line_tap: "드루이드식 간이 지맥 추출"

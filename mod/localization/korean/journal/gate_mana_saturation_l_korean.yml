@@ -1,24 +1,7 @@
 ﻿l_korean:
- je_gate_mana_saturation: "전 세계 마나 포화도"
- je_gate_mana_saturation_goal: "[concept_gate_mana_saturation]가 최대치에 도달했습니다"
- je_gate_mana_saturation_reason: "영역 사이의 장막이 얇아지면서, 마나가 우리 세계로 스며들기 시작했고 그 존재감은 날이 갈수록 강해지고 있습니다. 공기는 새롭게 깨어난 에너지로 진동하며, 현실의 구조 자체가 가능성으로 일렁이는 듯합니다. 이 꾸준한 마나의 유입은 마법과 힘에 대한 우리의 이해를 재편하고, 전례 없는 변화와 기회의 시대를 예고합니다."
- je_gate_mana_saturation_low_progress: "전 세계적으로 [concept_gate_mana_density]의 평균 수치는 낮은 편입니다."
- je_gate_mana_saturation_medium_progress: "전 세계적으로 [concept_gate_mana_density]의 평균 수치는 점점 높아지고 있습니다."
- je_gate_mana_saturation_high_progress: "전 세계적으로 [concept_gate_mana_density]의 평균 수치는 높은 편입니다."
- je_gate_mana_saturation_button_slave_ritual: "희생 제물"
- je_gate_mana_saturation_button_slave_ritual_desc: "[GetPopType('slaves').GetName]을 희생하여 우리 영토 중 한 곳의 [concept_gate_mana_density]를 높입니다."
- je_gate_mana_saturation_button_slave_ritual_infamy: "[SCOPE.sCountry('loc_country_scope').GetName]의 악명이 100 미만입니다."
- je_gate_mana_saturation_button_slave_ritual_mana_density: "우리 주 중 한 곳의 [concept_gate_mana_density]가 100% 미만입니다."
- je_gate_mana_saturation_button_slave_ritual_cooldown: "1년 동안 노예 의식을 치르지 않음"
  gate_mana_saturation_buildings_progress_bar_balance: "건물의 $gate_mana$ 사용량"
  gate_mana_saturation_mages_progress_bar_balance: "[GetPopType('gate_mages').GetName]"
  gate_mana_saturation_ritual_progress_bar_balance: "의식"
- decision_gate_germanic: "[GetReligion('gate_germanic').GetName] 종교로 개종"
- decision_gate_germanic_desc: "고대 신들이 돌아오고 있는 만큼, 우리는 그들을 받아들일지 말지 결정을 내려야 합니다."
- decision_gate_germanic_conversion_tooltip: "우리 국가 인구의 약 #v 20%#!가 고대 [GetReligion('gate_germanic').GetName] 신앙으로 개종할 것임"
- decision_gate_germanic_heretic_tooltip: "유럽의 대부분 #v $heritage_group_abrahamic$#! [Concept('concept_country','$concept_countries$')]은 우리를 #v;r 이단#!으로 취급할 것임"
-
-## Mana Saturation Events
  gate_mana_saturation.1.t: "마법의 세계"
  gate_mana_saturation.1.d: "[concept_gate_mana_saturation]가 최대치에 도달했습니다."
  gate_mana_saturation.1.f: "세상은 이제 끊임없는 낮은 진동으로 울려 퍼지고, 공기는 보이지 않는 힘들의 스파클로 가득 차 있습니다. 모든 돌, 모든 나뭇잎, 모든 숨결은 마나의 거칠고 맥박치는 에너지로 떨고 있습니다. 바다는 섬뜩한 빛으로 빛나고, 하늘은 인간의 눈으로는 결코 볼 수 없었던 색깔들로 춤을 춥니다. 지구는 이제 살아 있는 에너지의 통로가 되었으며, 그 중심은 마법으로 가득 차 있습니다."
@@ -32,60 +15,73 @@
  gate_mana_saturation.3.t: "마나 개화"
  gate_mana_saturation.3.d: "[concept_gate_mana_density]가 증가함에 따라 [SCOPE.sState('magic_growing_state').GetName] 지역에서는 식물의 성장 속도가 빨라지고 있습니다."
  gate_mana_saturation.3.f: "세계들 사이의 장막이 희미해지면서, 마나는 속삭이는 비밀처럼 대지에 스며들었습니다. 하룻밤 사이에 씨앗은 꽃을 피우고, 덩굴은 하늘을 향해 나아가며, 고대의 나무들은 빛나는 초록색의 잎을 펼쳤습니다. 대지는 새로운 생명으로 가득 차며, 모든 뿌리와 가지에서 활기찬 맥박이 흐르고, 자연은 이 마법의 새벽 속에서 번성했습니다."
- gate_mana_saturation.3.a: "이는 우리가 농작물을 재배하는 방식을 바꿀 것입니다." #deepl:3474751687
- gate_mana_saturation.3.b: "연구원을 보내라."
- gate_mana_saturation.4.t: "흔들리는 스톤헨지"
- gate_mana_saturation.4.d: "지역의 [concept_gate_mana_density] 증가로 인해 스톤헨지에서 고대의 [Concept('concept_gate_ley_lines','$concept_gate_ley_line$')] 넥서스가 깨어났습니다."
- gate_mana_saturation.4.f: "서부 지방의 조용한 안개 속에서, #v 오랫동안 침묵해 있던 고대의 돌들이 점차 울리기 시작했습니다#!. 지역 전역에서 마나 밀도가 급증하면서, 스톤헨지—한때 잊혀진 의식의 엄숙한 기념물이었던—#v 땅 속의 신비로운 에너지와 공명하며 깨어났습니다#!.\n\n빛나는 룬이 이제 그 표면을 미세하게 맴돌며, 이상한 현상들이 시골을 휘감기 시작했습니다: 계절에 맞지 않게 피어나는 작물들, 놀라운 속도로 회복되는 병자들, 그리고 돌들 주위로 신비하게 모여드는 동물들.\n\n드루이드들은 #v 그곳에 몰려들고 있습니다#!, 이를 자연의 힘이 깃든 신성한 넥서스로 주장하며. 날이 갈수록, 그 주변 땅은 점점 더 마법적으로 풍부해지고—급변하는 세계 속에서 원초적인 에너지의 등불이 되어가고 있습니다."
- gate_mana_saturation.4.a: "예상치 못한 일이다."
- gate_mana_saturation.4.b: "[concept_gate_magic_researcher]를 보내주세요." #deepl:2091786985
-
-## Ley Line Events
- gate_ley_line.1.t: "스톤헨지가 움직인다" #deepl:445825544
- gate_ley_line.1.d: "지역의 ‘[concept_gate_mana_density]’가 증가함에 따라 스톤헨지에 있는 고대 ‘[Concept('concept_gate_ley_lines','$concept_gate_ley_line$')]’ 연결점이 깨어났다." #deepl:1360371605
- gate_ley_line.1.f: "웨스트 컨트리의 고요한 안개 속에서, #v  오랫동안 침묵하고 있다고 여겨졌던 고대의 돌들이 #! 윙윙거리기 시작했다. 이 지역 전역에 마나 밀도가 급증함에 따라, 한때 잊혀진 의식을 기리는 엄숙한 기념물이었던 스톤헨지—#v 는 땅속의 신비로운 에너지와 공명하며 깨어나고 있다 #!. \n \n 이제 풍화된 표면 위에는 빛나는 룬 문양이 희미하게 맥동하고 있으며, 시골 전역에 기이한 현상들이 파문을 일으키기 시작했다. 제철이 아닌 작물이 피어오르고, 병자들은 기이할 정도로 빠르게 회복되며, 동물들은 섬뜩할 정도의 침묵 속에서 돌 주위에 모여든다. \n \n 드루이드들(#v )이 그 장소(#!)로 몰려들어, 이곳을 자연의 힘이 모이는 신성한 중심지라고 주장하고 있다. 날이 갈수록 주변 땅은 마법으로 더욱 풍요로워지며, 급변하는 세상 속에서 원초적인 에너지의 등대 역할을 하고 있다." #deepl:1767941998
- gate_ley_line.1.a: "이건 예상치 못한 일이네요." #deepl:1647802493
- gate_ley_line.2.t: "이세에서의 각성" #deepl:3766031496
- gate_ley_line.2.d: "지역의 ‘[concept_gate_mana_density]’가 증가함에 따라, 이세 신사 지하에 잠들어 있던 고대의 ‘[Concept('concept_gate_ley_lines','$concept_gate_ley_line$')]’ 연결 고리가 깨어났다." #deepl:1867384725
- gate_ley_line.2.f: "간사이 전역에 마나 밀도가 치솟으면서, 이세 신사 지하의 레이 라인 교차점에서는 고대의 힘이 요동치고 있다. 눈부신 천상의 빛이 쏟아지는 가운데, 아마테라스 오미카미께서 잠시 내전 안에 모습을 드러내신다. 사제들과 순례자들이 지켜보는 가운데, 그녀는 신성한 잠의 시대가 끝났음을 선포하며, 농업과 산업의 여신인 도요우케히메가 이제 마법과 기계의 시대를 통해 장인과 노동자들의 손을 이끌어 줄 것이라고 선언했다. 아마테라스는 나타난 것만큼이나 순식간에 사라졌고, 그 자리에는 신성한 고요함이 남았으며, 산업계에서는 이미 기이하면서도 영감에 찬 발전들이 보고되고 있다." #deepl:3491136693
- gate_ley_line.2.a: "정말 멋지네요!" #deepl:3289732063
- gate_ley_line.3.t: "초대 황제 아래의 속삭임" #deepl:2384536619
- gate_ley_line.3.d: "지역 내 ‘[concept_gate_mana_density]’ 수치의 증가로 인해 진시황릉 아래에 있던 고대 ‘[Concept('concept_gate_ley_lines','$concept_gate_ley_line$')]’ 연결점이 깨어났다." #deepl:1231881397
- gate_ley_line.3.f: "고대 도시 시안에서 레이 라인이 급격히 요동치며, 진시황릉 아래 오랫동안 잠들어 있던 에너지 결절점을 깨웠다. 근처에서 일하던 농민들은 공기 중에 느껴지는 기묘한 압박감과 쉴 새 없이 일해야만 하는 강박감, 그리고 지하 깊은 곳에서 메아리치는 희미하고 리듬감 있는 행진 소리에 대해 이야기한다. 이 지역 전역의 수련자들은 심오한 동요와, 묻혀 있던 거대한 무언가가 꿈틀거리는 기운을 감지하지만, 점술로는 아무런 답도 얻지 못하고 있다." #deepl:1909395410
- gate_ley_line.3.a: "이건 우려스러운 일입니다." #deepl:2714219379
- gate_ley_line.4.t: "울루루의 노래하는 심장" #deepl:322475842
- gate_ley_line.4.d: "지역 내 ‘[concept_gate_mana_density]’의 증가로 인해 울룰루(Uluru) 아래에 있던 고대 ‘[Concept('concept_gate_ley_lines','$concept_gate_ley_line$')]’ 연결 고리가 깨어났다." #deepl:792567701
- gate_ley_line.4.f: "북부 영토의 레이 라인을 따라 마나가 솟구치자, 신성한 붉은 거석 울루루가 고요한 위엄을 띠며 깨어납니다. 그 기슭에서 수정처럼 맑은 물이 흘러나와, 이전에는 존재하지 않았던 오아시스를 형성합니다. 이 땅은 사막을 거스르며 활짝 피어나고, 조상의 기억이 꽃을 피웁니다. 밤이 되면 물 위를 빛나는 실오라기 같은 빛줄기들이 떠다니며, 이 세상 것이 아닌 듯한 색채로 맥동하는데, 현지인들은 이를 ‘드림타임’의 영혼이라 믿는다. 이 조상의 빛들은 영혼 깊은 곳을 뒤흔들고, 이 지역 전역의 예술가들은 비전과 경외심, 그리고 고대의 노래가 울려 퍼지는 듯한 감성을 담은 작품을 창작하기 시작한다. 이 땅의 심장이 다시 한번 노래한다." #deepl:1325170655
- gate_ley_line.4.a: "정말 멋지네요!" #deepl:3289732063
- gate_ley_line.5.t: "천둥의 오크의 귀환" #deepl:3427693426
- gate_ley_line.5.d: "지역의 ‘[concept_gate_mana_density]’가 증가함에 따라, 도나라이체(Donareiche) 지하에 잠들어 있던 고대 ‘[Concept('concept_gate_ley_lines','$concept_gate_ley_line$')]’ 연결 고리가 깨어났다." #deepl:55014399
- gate_ley_line.5.f: "한때 고대 도나레이히가 자리 잡았던 헤센의 심장부에서 대지가 떨리고, 거대한 참나무가 다시 솟아오른다. 깨어난 레이 라인의 기운을 흡수하며, 그 뿌리는 돌을 쪼개고, 가지와 잎사귀는 넓게 뻗어 나가며 원초적이고 조상 대대로 이어져 온 힘으로 맥박을 뛴다. 비록 주변 공기가 깊은 배신감으로 웅웅거리고 있지만, 이 땅은 번성한다. 농작물은 더 풍성하게 자라고, 동물들은 튼튼하게 태어나며, 비는 필요한 순간에 정확히 내린다. 지역 주민들은 잊혀진 맹세와 고대의 존재감이 주는 무게를 느끼며, 경건한 침묵 속에 모여든다. 옛 신들에 대한 속삭임이 일고, 수세기의 침묵 속에 묻혀 있던 기도들이 다시금 솟아오른다. 천둥이 돌아왔다—분노가 아니라 심판의 형태로." #deepl:3215896656
- gate_ley_line.5.a: "이건 우려스러운 일입니다." #deepl:2714219379
- gate_ley_line.6.t: "돌과 불꽃의 속삭임" #deepl:2358393724
- gate_ley_line.6.d: "지역의 ‘[concept_gate_mana_density]’ 수치가 증가함에 따라, 뢰크 룬석 아래에 있던 고대 ‘[Concept('concept_gate_ley_lines','$concept_gate_ley_line$')]’ 연결점이 깨어났다." #deepl:935157396
- gate_ley_line.6.f: "괴탈란드의 공기에 마나가 짙어지면서, 신비로운 공명의 파동이 북쪽으로 퍼져 나가고—괴탈란드의 고대 뢰크 룬석 아래에 있는 레이 라인 교차점을 깨운다. 그 위에 새겨진 룬들은 찬란한 에너지로 반짝이며, 시골 전역에 깜빡이는 빛을 비춘다. 곧 스칸디나비아 전역의 룬석들이 빛을 발하기 시작하며, 오랫동안 잠들어 있던 마법이 은은한 울림을 내뿜는다. 학자들은 이 신비로운 문양을 해독하기 위해 분주히 움직이며, 오랫동안 잊혀졌던 룬 마법의 원리를 밝혀낸다. 고탈란드에서는 지역 룬 조각가들이 각광받는 장인이 되며, 그들이 새긴 강력한 문양들은 산업 현장의 작업 흐름과 마법의 통합을 가속화한다. 오래된 돌들이 다시금 말을 건넨다. 말이 아니라, 힘으로 말이다." #deepl:2052796929
- gate_ley_line.6.a: "좋아요." #deepl:3593588592
- gate_ley_line.7.t: "다시 불타오른 사냥" #deepl:2942528049
- gate_ley_line.7.d: "지역의 ‘[concept_gate_mana_density]’ 수치가 증가함에 따라, 카르나크 석상 아래에 있던 고대 ‘[Concept('concept_gate_ley_lines','$concept_gate_ley_line$')]’ 연결점이 깨어났다." #deepl:3172764843
- gate_ley_line.7.f: "마나가 대지를 휩쓸자, 카르나크 석상 아래의 레이 라인이 활활 타오르며 고대 거석들을 유령 같은 빛으로 물들입니다. 그 여파로 원초적이고 거친 무언가가 꿈틀거리기 시작합니다. 지역 주민들은 추격과 그림자로 가득 찬 생생한 꿈과, 숲과 해안을 배회하고 싶은 새로 솟아난 충동에 대해 이야기한다. 오랫동안 묻혀 있던 본능이 되살아나고, 그와 함께 조상 대대로 이어져 온 수렵 채집인들의 침묵의 부름이 울려 퍼진다. ‘사냥’이 브리타니로 돌아왔다." #deepl:676709762
- gate_ley_line.7.a: "이건 예상치 못한 일이네요." #deepl:1647802493
- gate_ley_line.8.t: "용의 심장이 요동친다" #deepl:554626291
- gate_ley_line.8.d: "지역의 ‘[concept_gate_mana_density]’ 수치가 증가함에 따라, 세인트 베아투스 동굴 아래에 있던 고대 ‘[Concept('concept_gate_ley_lines','$concept_gate_ley_line$')]’ 연결점이 깨어났다." #deepl:1186389360
- gate_ley_line.8.f: "오랫동안 전설과 경건한 민담의 소재로 여겨져 온, 안개에 가려진 세인트 베아투스 동굴의 깊은 곳에서, 새로 발견된 마나로 인해 대지 자체가 떨리고 있다. 깨어난 레이 라인의 그늘 속에서 탐험가들은 바위 속에 자리 잡은 맥박 치는 유물을 발견했다. 만지면 따뜻하고 고대의 힘이 윙윙거리는 수정 같은 핵이었다. 학자들은 이제 이것이 잊혀진 시대부터 잠들어 있던 ‘용의 심장’이라고 믿고 있다. 심장이 다시 희미하게 뛰기 시작하자, 원시적인 마법의 통찰을 선사하며 동굴 전체에 거친 비전 에너지가 넘쳐흐른다. 한 가지 진실이 분명해진다. 용에 관한 신화에는 불과 공포 이상의 것이 담겨 있었을지 모른다. 바로 지식이었다." #deepl:375314086
- gate_ley_line.8.a: "국보." #deepl:3066318378
- gate_ley_line.9.t: "불타는 정맥" #deepl:3153890219
- gate_ley_line.9.d: "지역의 ‘[concept_gate_mana_density]’가 증가함에 따라, 바바 구르구르의 ‘영원한 불꽃’ 아래에 있던 고대의 ‘[Concept('concept_gate_ley_lines','$concept_gate_ley_line$')]’ 연결 고리가 깨어났습니다." #deepl:3091549453
- gate_ley_line.9.f: "메소포타미아 전역에 마나 밀도가 급증함에 따라, 바바 구르구르의 고대 ‘영원한 불꽃’이 더욱 거세게 타오르며, 청금색 빛이 신비로운 강렬함으로 일렁이고 있다. 이 영원히 타오르는 불꽃 아래에서, 지질학자와 신비주의자들은 ‘검은 금’과 마법의 공명이 함께 펄럭이는 숨겨진 유정을 발견하고 경악을 금치 못한다. 생산량은 상식을 뛰어넘는 수준으로 급증하며, 산업가들과 원소술사들의 관심을 동시에 끌고 있다. 어떤 이들은 대지 자체가 깨어나 힘을 흘리고 있다고 속삭인다." #deepl:3807472037
- gate_ley_line.9.a: "그것이 우리 산업을 한 단계 더 발전시킬 것입니다." #deepl:648939038
- gate_ley_line.10.t: "일곱 겹의 불길" #deepl:1662656748
- gate_ley_line.10.d: "지역 내 ‘[concept_gate_mana_density]’의 증가로 인해 바쿠의 아테슈가(Ateshgah) 아래에 있던 고대 ‘[Concept('concept_gate_ley_lines','$concept_gate_ley_line$')]’ 연결 고리가 깨어났다." #deepl:1851211583
- gate_ley_line.10.f: "수세기 동안 신성한 불꽃이 춤을 추어 온 고대 아테슈가 사원에서는, 마나가 가득한 공기가 이제 불길에 초자연적인 활력을 불어넣고 있다. 일곱 개의 영원한 불꽃은 살아있는 그 누구도 기억하지 못할 만큼 거세게 타오르며, 바쿠의 하늘을 눈부신 빛으로 물들이고 있다. 기이하게도, 이 지역 전역에서 대장간과 용광로의 불길은 더 뜨겁고 효율적으로 타오르며, 거의 신성한 열기로 지역 제철소에 힘을 불어넣고 있다. 어떤 이들은 불의 정령들이 깨어나고 있다고 말하고, 또 다른 이들은 잊혀진 기도가 응답받고 있다고 말한다. 진실이 무엇이든 간에, 대장간 신들은 기뻐하는 듯하다." #deepl:3228369857
- gate_ley_line.10.a: "이건 우려스러운 일입니다." #deepl:2714219379
- gate_ley_line.11.t: "빛나는 순수함의 물" #deepl:817308417
- gate_ley_line.11.d: "지역의 [concept_gate_mana_density] 수치가 상승함에 따라 갠지스 강 밑에 있던 고대 [Concept('concept_gate_ley_lines','$concept_gate_ley_line$')] 연결 고리가 깨어났다." #deepl:930891478
- gate_ley_line.11.f: "오랜 전통과 세월을 통해 신성시되어 온 고대 도시 바라나시는 이제 새롭게 솟아나는 신비로운 에너지로 활기를 띠고 있습니다. 갠지스강 아래의 레이 라인이 깨어나면서, 이 신성한 강은 달빛 아래 희미하게 빛나고, 그 물에는 부드럽고 치유하는 마법이 스며들어 있습니다. 현지인들은 오래된 병들이 사라지고, 가트에서 목욕하는 이들에게 깊은 평온함이 되돌아오고 있다고 말합니다. 순례자와 학자들은 경외심과 경이로움을 품고 모여, 갠지스 강의 재탄생을 목격합니다. 이 강은 더 이상 단순한 영적 생명줄이 아니라, 이제 살아있는 마나의 통로로 거듭난 것입니다." #deepl:3597646721
- gate_ley_line.11.a: "정말 멋지네요!" #deepl:3289732063
- gate_ley_line.12.t: "일곱 언덕의 주님께서 내리시는 축복" #deepl:4278179392
- gate_ley_line.12.d: "지역 내 신성 에너지([concept_gate_mana_density])의 증가로 인해 벤카테스와라 사원(Venkateswara Temple) 아래에 있던 고대 신성 에너지 중심지([Concept('concept_gate_ley_lines','$concept_gate_ley_line$')])가 깨어났습니다." #deepl:996572562
- gate_ley_line.12.f: "벤카테스와라 사원 아래에 흐르는 레이 라인의 각성은 고대의 신성과 현대의 신비주의를 하나로 엮어냈습니다. 순례자와 학자 모두 사원의 그늘 아래 있을 때 환상, 계시, 그리고 믿기 힘든 명료함을 경험한다고 전한다. 벤카테스와라 신께서 이제 레이 라인을 통해 진리를 속삭이시며, 감히 귀를 기울이는 이들에게 통찰력을 내려주신다고 전해진다." #deepl:779027456
- gate_ley_line.12.a: "정말 멋지네요!" #deepl:3289732063
+ gate_mana_saturation.3.b: "우리의 [concept_gate_magic_researcher]를 보내라."
+ gate_mana_saturation.4.t: "결정화되는 공기"
+ gate_mana_saturation.4.d: "[SCOPE.sState('mana_crystalizing_state').GetName]의 [concept_gate_mana_density]가 임계 수준에 도달하여 이제 [Concept('concept_pop_growth', '$concept_pop_growth_mortality$')]을 증가시키는 한편, [GetBuildingType('building_gate_mana_extractor').GetBuildingGroupName]의 생산량도 증가시킵니다."
+ gate_mana_saturation.4.f: "[SCOPE.sState('mana_crystalizing_state').GetNameNoFormatting]에서는 공기 자체가 마나 결정으로 응축되기 시작했으며, 의식이나 마법사의 통제 없이 처마와 들판은 물론 허공에서조차 결정이 형성되고 있습니다. 한때는 숙련된 마법사들이 신중하게 수행해야 했던 일이 이제는 저절로 일어나고 있으며, 이는 지금까지 기록된 그 어떤 수준도 뛰어넘는 마력 포화의 징후입니다. 그 경제적 잠재력은 막대하며, 이미 본격적인 채굴이 시작되었습니다. 그러나 이러한 풍요에는 대가가 따릅니다. 미세한 결정 입자가 폐에 쌓이면서 노동자와 주민 모두 지속적인 질환을 호소하고 있습니다. 의사들은 이를 '결정폐증'이라 명명했으며, 숨을 쉴 때마다 악화되는 느리고 쇠약한 질환입니다. 현재로서는 마나 결정의 흐름이 계속되고 있으며, 이를 멈추려는 이는 거의 없습니다."
+ gate_mana_saturation.4.a: "축복일까, 재앙일까?"
+ je_gate_mana_saturation: "전 세계 마나 포화도"
+ je_gate_mana_saturation_goal: "[concept_gate_mana_saturation]가 최대치에 도달했습니다"
+ je_gate_mana_saturation_reason: "영역 사이의 장막이 얇아지면서, 마나가 우리 세계로 스며들기 시작했고 그 존재감은 날이 갈수록 강해지고 있습니다. 공기는 새롭게 깨어난 에너지로 진동하며, 현실의 구조 자체가 가능성으로 일렁이는 듯합니다. 이 꾸준한 마나의 유입은 마법과 힘에 대한 우리의 이해를 재편하고, 전례 없는 변화와 기회의 시대를 예고합니다."
+ je_gate_mana_saturation_low_progress: "전 세계적으로 [concept_gate_mana_density]의 평균 수치는 낮은 편입니다."
+ je_gate_mana_saturation_medium_progress: "전 세계적으로 [concept_gate_mana_density]의 평균 수치는 점점 높아지고 있습니다."
+ je_gate_mana_saturation_high_progress: "전 세계적으로 [concept_gate_mana_density]의 평균 수치는 높은 편입니다."
+ je_gate_mana_saturation_button_slave_ritual: "희생 제물"
+ je_gate_mana_saturation_button_slave_ritual_desc: "[GetPopType('slaves').GetName]을 희생하여 우리 영토 중 한 곳의 [concept_gate_mana_density]를 높입니다."
+ je_gate_mana_saturation_button_slave_ritual_infamy: "[SCOPE.sCountry('loc_country_scope').GetName]의 악명이 100 미만입니다."
+ je_gate_mana_saturation_button_slave_ritual_mana_density: "우리 주 중 한 곳의 [concept_gate_mana_density]가 100% 미만입니다."
+ je_gate_mana_saturation_button_slave_ritual_cooldown: "1년 동안 노예 의식을 치르지 않음"
+ decision_gate_germanic: "[GetReligion('gate_germanic').GetName] 종교로 개종"
+ decision_gate_germanic_desc: "고대 신들이 돌아오고 있는 만큼, 우리는 그들을 받아들일지 말지 결정을 내려야 합니다."
+ decision_gate_germanic_conversion_tooltip: "우리 국가 인구의 약 #v 20%#!가 고대 [GetReligion('gate_germanic').GetName] 신앙으로 개종할 것임"
+ decision_gate_germanic_heretic_tooltip: "유럽의 대부분 #v $heritage_group_abrahamic$#! [Concept('concept_country','$concept_countries$')]은 우리를 #v;r 이단#!으로 취급할 것임"
+ gate_mana_saturation.3.a: "이는 농작물을 재배하는 방식을 바꿀 것이다."
+ gate_mana_saturation.4.b: "우리의 [concept_gate_magic_researcher]를 보내라."
+ gate_ley_line.1.t: "움직이는 스톤헨지"
+ gate_ley_line.1.d: "현지의 [concept_gate_mana_density] 증가로 인해 스톤헨지에 잠들어 있던 고대 [Concept('concept_gate_ley_lines','$concept_gate_ley_line$')]의 결절점이 깨어났습니다."
+ gate_ley_line.1.f: "웨스트컨트리의 고요한 안개 속에서, #v 오랫동안 침묵해 왔다고 여겨진 고대의 돌들이 낮게 울리기 시작했습니다#!. 지역 전역의 마나 밀도가 급증하면서, 한때 잊힌 의식을 기리는 장엄한 유적에 불과했던 스톤헨지가 #v 대지 아래 흐르는 신비한 마력과 공명하며 깨어나고 있습니다#!.\n\n이제 풍화된 석면 곳곳에서 빛나는 룬이 희미하게 맥동하고 있으며, 기이한 현상들이 주변 농촌 지역으로 퍼져 나가기 시작했습니다. 농작물은 제철이 아닌 때에 꽃을 피우고, 병자들은 기이할 정도로 빠르게 회복하며, 동물들은 섬뜩한 침묵 속에서 돌무더기 주변으로 모여듭니다.\n\n드루이드들은 #v 이곳으로 몰려들어#! 이 장소가 자연의 힘이 집중되는 신성한 결절점이라고 주장하고 있습니다. 날이 갈수록 주변 대지는 더욱 짙은 마력으로 충만해지고 있으며, 빠르게 변화하는 세계 속에서 원초적인 에너지를 내뿜는 등대가 되어가고 있습니다."
+ gate_ley_line.1.a: "이건 예상치 못한 일인데."
+ gate_ley_line.2.t: "이세에서의 각성"
+ gate_ley_line.2.d: "현지의 [concept_gate_mana_density] 증가로 인해 이세 신궁 아래에 잠들어 있던 고대 [Concept('concept_gate_ley_lines','$concept_gate_ley_line$')]의 결절점이 깨어났습니다."
+ gate_ley_line.2.f: "간사이 전역의 마나 밀도가 높아지면서, 이세 신궁 아래의 지맥 결절점이 고대의 힘과 함께 요동치기 시작합니다. 눈부신 천상의 빛이 폭포처럼 쏟아지는 가운데, 아마테라스 자신이 내궁에 잠시 모습을 드러냅니다. 사제들과 순례자들이 지켜보는 앞에서, 아마테라스는 신들의 오랜 잠이 끝났음을 선언하고 농업과 산업의 여신 도요우케히메가 이제 마법과 기계의 시대를 헤쳐 나가는 장인과 노동자들의 손길을 인도할 것이라 선포합니다. 아마테라스는 나타났을 때만큼이나 순식간에 자취를 감추고, 그 자리에는 성스러운 정적만이 남습니다. 그리고 얼마 지나지 않아, 각지의 산업 현장에서는 기묘할 정도로 영감을 받은 새로운 발전이 잇달아 보고되기 시작합니다."
+ gate_ley_line.2.a: "정말 멋지군!"
+ gate_ley_line.3.t: "초대 황제 아래의 속삭임"
+ gate_ley_line.3.d: "현지의 [concept_gate_mana_density] 증가로 인해 진시황릉 아래에 잠들어 있던 고대 [Concept('concept_gate_ley_lines','$concept_gate_ley_line$')]의 결절점이 깨어났습니다."
+ gate_ley_line.3.f: "고대 도시 시안에서 지맥이 급격히 요동치며, 진시황릉 아래 오랫동안 잠들어 있던 결절점이 깨어났습니다. 인근에서 일하는 농민들은 공기 중에 감도는 기묘한 압박감과 쉬지 않고 일해야만 할 것 같은 충동, 그리고 깊은 지하에서 희미하고 규칙적으로 울려오는 행군 소리에 대해 이야기하고 있습니다. 지역 곳곳의 수련자들 또한 심상치 않은 동요를 감지하고 있습니다. 거대하고 깊이 묻힌 무언가가 꿈틀거리기 시작한 듯한 느낌이지만, 아무리 점술과 탐지를 시도해도 그 정체에 대한 답은 얻지 못하고 있습니다."
+ gate_ley_line.3.a: "이건 우려스러운 일이다."
+ gate_ley_line.4.t: "울루루의 노래하는 심장"
+ gate_ley_line.4.d: "현지의 [concept_gate_mana_density] 증가로 인해 울루루 아래에 잠들어 있던 고대 [Concept('concept_gate_ley_lines','$concept_gate_ley_line$')]의 결절점이 깨어났습니다."
+ gate_ley_line.4.f: "마나가 북부 준주의 지맥을 따라 세차게 흐르자, 신성한 붉은 거석 울루루가 고요한 장엄함 속에서 깨어납니다. 그 기슭에서는 수정처럼 맑은 물이 솟아 흐르기 시작하며, 존재하지 않던 곳에 오아시스를 만들어 냅니다. 대지는 사막에 맞서 꽃피기 시작하고, 조상들의 기억을 품은 생명으로 뒤덮입니다. 밤이 되면 빛나는 도깨비불 같은 형상들이 수면 위를 떠다니며 이세계의 색채로 맥동합니다. 현지인들은 이를 드리밍의 영혼들이라고 믿고 있습니다. 이 조상들의 빛은 영혼 깊은 곳의 무언가를 일깨우며, 지역 곳곳의 예술가들은 환시와 경외심, 그리고 고대 노래의 메아리가 스며든 작품을 창작하기 시작합니다. 대지의 심장이 다시 한번 노래하기 시작합니다."
+ gate_ley_line.4.a: "정말 멋지군!"
+ gate_ley_line.5.t: "천둥 오크의 귀환"
+ gate_ley_line.5.d: "현지의 [concept_gate_mana_density] 증가로 인해 도나르의 참나무 아래에 잠들어 있던 고대 [Concept('concept_gate_ley_lines','$concept_gate_ley_line$')]의 결절점이 깨어났습니다."
+ gate_ley_line.5.f: "고대의 도나르의 참나무가 한때 서 있었던 헤센의 중심부에서, 대지가 흔들리고 거대한 참나무가 다시 솟아오릅니다. 깨어난 지맥의 힘을 머금은 그 뿌리는 돌을 갈라 버리고, 그 수관은 원초적이고 조상 대대로 이어진 힘으로 맥동하며 넓게 뻗어 나갑니다. 그 주위를 감도는 공기에는 깊은 배신의 기운이 울리고 있지만, 대지는 번영하고 있습니다. 곡식은 더욱 풍성하게 자라고, 짐승들은 튼튼하게 태어나며, 비는 꼭 필요한 때에 맞춰 내립니다. 현지인들은 잊힌 맹세와 오래된 존재의 무게를 느끼며 숨죽인 경외심 속에 모여듭니다. 옛 신들에 대한 속삭임이 다시 피어오르고, 수세기 동안 침묵 아래 묻혀 있던 기도 또한 다시금 떠오릅니다. 천둥이 돌아옵니다. 그것은 분노가 아니라, 심판으로서 돌아온 것입니다."
+ gate_ley_line.5.a: "이건 우려스러운 일이다."
+ gate_ley_line.6.t: "돌과 불꽃의 속삭임"
+ gate_ley_line.6.d: "현지의 [concept_gate_mana_density] 증가로 인해 뢰크 룬석 아래에 잠들어 있던 고대 [Concept('concept_gate_ley_lines','$concept_gate_ley_line$')]의 결절점이 깨어났습니다."
+ gate_ley_line.6.f: "예탈란드의 공기 속에 마나가 짙어지자, 신비한 공명의 파동이 북쪽으로 퍼져 나가며 예탈란드에 있는 고대 뢰크 룬석 아래의 지맥 결절점을 일깨웁니다. 그 위에 새겨진 룬은 눈부신 에너지로 빛나며, 그 깜빡이는 광채를 시골 전역에 드리웁니다. 이윽고 스칸디나비아 전역의 룬석들이 빛나기 시작하고, 오랫동안 잠들어 있던 마법이 낮게 울리듯 되살아납니다. 학자들은 그 신비로운 문양을 해독하기 위해 분주히 움직이며, 오랫동안 잊혀졌던 룬 마법의 원리를 하나둘 밝혀내고 있습니다. 예탈란드에서는 현지의 룬 조각 장인들이 각광받는 장인이 되었으며, 그들이 새긴 힘 있는 각인은 산업 공정을 가속하고 마법의 통합을 촉진하고 있습니다. 오래된 돌들은 다시 한번 말을 하기 시작했습니다. 말로써가 아니라, 힘으로써 말입니다."
+ gate_ley_line.6.a: "좋다."
+ gate_ley_line.7.t: "다시 불타오른 사냥"
+ gate_ley_line.7.d: "현지의 [concept_gate_mana_density] 증가로 인해 카르나크 열석 아래에 잠들어 있던 고대 [Concept('concept_gate_ley_lines','$concept_gate_ley_line$')]의 결절점이 깨어났습니다."
+ gate_ley_line.7.f: "대지 전역에 마나가 격류처럼 퍼져 나가자, 카르나크 열석 아래의 지맥이 타오르듯 깨어나며 고대 거석들을 유령 같은 빛으로 물들입니다. 그리고 그 여파 속에서 무언가가 꿈틀거리기 시작합니다. 그것은 원초적이고도 야성적인 존재입니다. 현지인들은 추격과 그림자로 가득한 선명한 꿈을 꾸기 시작했으며, 숲과 해안을 떠돌고 싶다는 새로운 충동을 느끼고 있다고 말합니다. 오랫동안 묻혀 있던 본능이 다시 깨어나고, 그와 함께 조상 대대로 이어져 온 수렵채집인의 말없는 부름도 되살아납니다. 사냥이 브르타뉴로 돌아왔습니다."
+ gate_ley_line.7.a: "이건 예상치 못한 일인데."
+ gate_ley_line.8.t: "요동치는 용의 심장"
+ gate_ley_line.8.d: "현지의 [concept_gate_mana_density] 증가로 인해 성 베아투스 동굴 아래에 잠들어 있던 고대 [Concept('concept_gate_ley_lines','$concept_gate_ley_line$')]의 결절점이 깨어났습니다."
+ gate_ley_line.8.f: "안개에 가려진 성 베아투스 동굴 깊은 곳에서는, 오랫동안 전설과 경건한 민간 설화로만 여겨지던 그 장소에 새롭게 깃든 마나로 인해 대지 자체가 흔들렸습니다. 깨어난 지맥의 그림자 아래에서 탐험가들은 바위 속에 자리한, 맥동하는 유물을 발견했습니다. 손에 닿으면 따뜻하고 고대의 힘으로 낮게 울리는 수정핵이었습니다. 학자들은 이제 이것이 잊혀진 시대부터 잠든 채 보존되어 온 '용의 심장'이라고 믿고 있습니다. 그것이 다시 희미하게 박동하기 시작하자, 동굴 전체는 원초적인 비전 에너지로 가득 차 올랐고, 사람들은 태고의 마법에 대한 통찰을 얻게 되었습니다. 이제 한 가지 진실은 분명해졌습니다. 용에 관한 신화는 단지 불과 공포만을 품고 있던 것이 아니라, 지식 또한 품고 있었습니다."
+ gate_ley_line.8.a: "국보급이다."
+ gate_ley_line.9.t: "불타는 정맥"
+ gate_ley_line.9.d: "현지의 [concept_gate_mana_density] 증가로 인해 바바 구르구르의 영원한 불꽃 아래에 잠들어 있던 고대 [Concept('concept_gate_ley_lines','$concept_gate_ley_line$')]의 결절점이 깨어났습니다."
+ gate_ley_line.9.f: "메소포타미아 전역에서 마나 밀도가 급증하자, 고대의 바바 구르구르 영원한 불꽃은 더욱 높이 치솟으며, 그 푸른빛과 금빛 불꽃은 신비한 강도로 일렁이고 있습니다. 그 꺼지지 않는 불길 아래에서 지질학자들과 신비주의자들은 모두 경악할 만한 발견을 하게 되었습니다. 바로 흑색 황금과 마법적 공명을 동시에 품은 숨겨진 유전들이었던 것입니다. 산출량은 상식을 넘어설 정도로 급증했고, 이는 산업가들과 정령술사들의 시선을 한꺼번에 끌어모으고 있습니다. 어떤 이들은 대지 자체가 깨어나 힘을 흘리고 있다고 수군거리고 있습니다."
+ gate_ley_line.9.a: "그것이 우리 산업을 한 단계 더 발전시킬 것이다."
+ gate_ley_line.10.t: "일곱 겹의 불길"
+ gate_ley_line.10.d: "현지의 [concept_gate_mana_density] 증가로 인해 바쿠 아테슈가 아래에 잠들어 있던 고대 [Concept('concept_gate_ley_lines','$concept_gate_ley_line$')]의 결절점이 깨어났습니다."
+ gate_ley_line.10.f: "수세기 동안 신성한 불꽃이 춤춰 온 고대의 아테슈가 사원에서는, 이제 마나로 가득한 공기가 그 불길에 초자연적인 활력을 불어넣고 있습니다. 일곱 개의 영원한 불꽃은 살아 있는 누구의 기억 속에서도 본 적 없을 만큼 높이 타오르며, 그 찬란한 빛을 바쿠의 하늘 위로 드리우고 있습니다. 이상하게도 지역 전역의 대장간과 용광로의 불길 또한 더 뜨겁고 더 효율적으로 타오르기 시작했으며, 이는 현지 제철업에 거의 신성하다고 할 만한 열기를 부여하고 있습니다. 어떤 이들은 불의 정령들이 꿈틀거리기 시작했다고 말하고, 또 어떤 이들은 잊혀진 기도가 응답받고 있다고 말합니다. 진실이 무엇이든, 대장간의 신들은 분명 흡족해하고 있는 듯합니다."
+ gate_ley_line.10.a: "이건 우려스러운 일이다."
+ gate_ley_line.11.t: "빛나는 순수함의 물"
+ gate_ley_line.11.d: "현지의 [concept_gate_mana_density] 증가로 인해 갠지스강 아래에 잠들어 있던 고대 [Concept('concept_gate_ley_lines','$concept_gate_ley_line$')]의 결절점이 깨어났습니다."
+ gate_ley_line.11.f: "오랜 전통과 세월 속에서 신성한 도시로 여겨져 온 바라나시가 이제 새롭게 깃든 비전의 에너지와 함께 꿈틀거리기 시작합니다. 갠지스강 아래의 지맥이 깨어나면서, 신성한 강물은 달빛 아래에서 희미하게 빛나고 그 물에는 온화한 치유의 마력이 스며듭니다. 현지인들은 오래된 질병이 서서히 사라지고, 강가의 가트에서 몸을 씻은 이들에게 깊은 평온이 되돌아오고 있다고 말합니다. 순례자들과 학자들은 경외심과 존경심을 품고 갠지스강의 재탄생을 지켜보기 위해 모여듭니다. 이제 갠지스강은 단순한 영적 생명의 젖줄을 넘어, 살아 있는 마나가 흐르는 통로로 다시 태어나고 있습니다."
+ gate_ley_line.11.a: "정말 멋지군!"
+ gate_ley_line.12.t: "일곱 언덕의 주님께서 내리시는 축복"
+ gate_ley_line.12.d: "현지의 [concept_gate_mana_density] 증가로 인해 벤카테스와라 사원 아래에 잠들어 있던 고대 [Concept('concept_gate_ley_lines','$concept_gate_ley_line$')]의 결절점이 깨어났습니다."
+ gate_ley_line.12.f: "벤카테스와라 사원 아래의 지맥이 깨어나면서, 고대의 신성과 현대의 비전 마법이 하나로 얽히기 시작했습니다. 순례자와 학자들은 사원의 그늘 아래에서 환시와 계시, 그리고 불가능할 정도로 선명한 통찰을 경험하고 있다고 보고합니다. 이제 벤카테스와라 신이 지맥의 흐름을 통해 진실을 속삭이며, 그 목소리에 귀 기울일 용기가 있는 이들에게 통찰을 내려준다고 전해집니다."
+ gate_ley_line.12.a: "정말 멋지군!"
