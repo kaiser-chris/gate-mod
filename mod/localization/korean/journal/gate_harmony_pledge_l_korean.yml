@@ -1,215 +1,204 @@
 ﻿l_korean:
- je_gate_harmony_pledge: "$gate_harmony_pledge$" #deepl:1767427134
- je_gate_harmony_pledge_reason: "$concept_gate_harmony_pledge_desc$" #deepl:529090673
- je_gate_harmony_pledge_lobby: "$concept_gate_harmony_pledge_desc$" #deepl:529090673
- je_gate_harmony_pledge_fail: "[concept_gate_harmony_pledge]의 모든 관련 문의는 #v  0 #! 또는 #v  100 #!으로 연락해 주시기 바랍니다." #deepl:3503512574
- je_gate_harmony_pledge_status_hamony: "우리나라는 $je_gate_harmony_pledge_harmonious$입니다." #deepl:3156884583
- je_gate_harmony_pledge_status_tilting: "우리나라는 $je_gate_harmony_pledge_tilting$입니다." #deepl:1406477363
- je_gate_harmony_pledge_status_dishamony: "우리나라는 $je_gate_harmony_pledge_disharmonious$입니다." #deepl:2817089441
- je_gate_harmony_pledge_harmonious: "#g  조화로운 #!" #deepl:879973573
- je_gate_harmony_pledge_tilting: "#o;bold  #! 기울이기" #deepl:3587032985
- je_gate_harmony_pledge_disharmonious: "#r  조화를 이루지 못하는 #!" #deepl:344042362
- je_gate_harmony_pledge_abandon_warning: "[concept_gate_harmony_pledge]를 포기하면 #tooltippable  #tooltip: [GetRawTextTooltipTag('je_gate_harmony_pledge_abandon_warning_modifier_tooltip')] [GetStaticModifier('modifier_gate_harmony_pledge_abandoned').GetName] #! #! 수정자를 받게 됩니다. #v  10 #! years" #deepl:3874407439
- je_gate_harmony_pledge_abandon_warning_modifier_tooltip: "#v [GetStaticModifier('modifier_gate_harmony_pledge_abandoned').GetName]\n[GetStaticModifier('modifier_gate_harmony_pledge_abandoned').GetDesc]" #deepl:1920641304
- pb_gate_harmony_pledge_society: "사회적 화합" #deepl:3995539092
- pb_gate_harmony_pledge_society_desc_left: "#v  사회 ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0] /100)#!" #deepl:1072646362
- pb_gate_harmony_pledge_society_desc_right: "[JournalEntry.GetCustom('gate_harmony_pledge_indicator_society')]" #deepl:3152704144
- pb_gate_harmony_pledge_society_center_drift_modifier: "#tooltip: [GetRawTextTooltipTag('country_gate_harmony_pledge_society_drift_center_desc')] #yellow  $country_gate_harmony_pledge_society_drift_center$ #! #! 수정자" #deepl:3311055857
- pb_gate_harmony_pledge_economy: "경제적 조화" #deepl:3033882387
- pb_gate_harmony_pledge_economy_desc_left: "#v  경제성 ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0] /100)#!" #deepl:2390880085
- pb_gate_harmony_pledge_economy_desc_right: "[JournalEntry.GetCustom('gate_harmony_pledge_indicator_economy')]" #deepl:4082336554
- pb_gate_harmony_pledge_economy_center_drift_modifier: "#tooltip: [GetRawTextTooltipTag('country_gate_harmony_pledge_economy_drift_center_desc')] #yellow  $country_gate_harmony_pledge_economy_drift_center$ #! #! 수정자" #deepl:2121533435
- pb_gate_harmony_pledge_legislative: "입법 조화" #deepl:1806810520
- pb_gate_harmony_pledge_legislative_desc_left: "#v  입법 ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0] /100)#!" #deepl:3854297798
- pb_gate_harmony_pledge_legislative_desc_right: "[JournalEntry.GetCustom('gate_harmony_pledge_indicator_legislative')]" #deepl:1163293005
- pb_gate_harmony_pledge_legislative_center_drift_modifier: "#tooltip: [GetRawTextTooltipTag('country_gate_harmony_pledge_legislative_drift_center_desc')] #yellow  $country_gate_harmony_pledge_legislative_drift_center$ #! #! 수정자" #deepl:1342685977
- pb_gate_harmony_pledge_order: "[AddLocalizationIf(EqualTo_string(ScriptedProgressBar.GetName,Localize('pb_gate_harmony_pledge_society')),'pb_gate_harmony_pledge_order_society')][AddLocalizationIf(EqualTo_string(ScriptedProgressBar.GetName,Localize('pb_gate_harmony_pledge_economy')),'pb_gate_harmony_pledge_order_economy')][AddLocalizationIf(EqualTo_string(ScriptedProgressBar.GetName,Localize('pb_gate_harmony_pledge_legislative')),'pb_gate_harmony_pledge_order_legislative')]" #deepl:504844206
- pb_gate_harmony_pledge_order_society: "[concept_gate_harmony_pledge_stratified]" #deepl:1388727873
- pb_gate_harmony_pledge_order_economy: "[concept_gate_harmony_pledge_cartelised]" #deepl:1701209991
- pb_gate_harmony_pledge_order_legislative: "[concept_gate_harmony_pledge_despotic]" #deepl:527952098
- pb_gate_harmony_pledge_chaos: "[AddLocalizationIf(EqualTo_string(ScriptedProgressBar.GetName,Localize('pb_gate_harmony_pledge_society')),'pb_gate_harmony_pledge_chaos_society')][AddLocalizationIf(EqualTo_string(ScriptedProgressBar.GetName,Localize('pb_gate_harmony_pledge_economy')),'pb_gate_harmony_pledge_chaos_economy')][AddLocalizationIf(EqualTo_string(ScriptedProgressBar.GetName,Localize('pb_gate_harmony_pledge_legislative')),'pb_gate_harmony_pledge_chaos_legislative')]" #deepl:2222279527
- pb_gate_harmony_pledge_chaos_society: "[concept_gate_harmony_pledge_antinomian]" #deepl:2119873752
- pb_gate_harmony_pledge_chaos_economy: "[concept_gate_harmony_pledge_febrile]" #deepl:2041020103
- pb_gate_harmony_pledge_chaos_legislative: "[concept_gate_harmony_pledge_anaemic]" #deepl:1306970012
-# Breakdown
- GATE_HP_TOP_VALUE_FORMAT: "#indent_newline:6 $VALUE|=2+$ $KEY$ #!" #deepl:3180551323
- GATE_HP_SCRIPT_VALUE_FORMAT: "#indent_newline:6 $VALUE|=2+$ $KEY$ #!" #deepl:3180551323
- GATE_HP_SCRIPT_VALUE_FORMAT_MULT: "#indent_newline:6 $VALUE|%v0$ $KEY$ #!" #deepl:1009269163
- GATE_HP_BASE_LAW: "[concept_law]의 ‘Baseline’에서 발췌" #deepl:2376464757
- GATE_HP_INSTITUTION_LEVEL: "[concept_institution] 레벨에서" #deepl:560807368
-## Society
- GATE_HP_SOC_TREND_FROM_LAWS: "#b  #blue  관련 법률: #! #! \n [SCOPE.GetScriptValueDesc('gate_harmony_pledge_society_trend_from_laws')]" #deepl:2109354854
- GATE_HP_SOC_DIST_OF_POWER: "출처: [GetLawGroup('lawgroup_distribution_of_power').GetCurrentlyActive.GetName]" #deepl:273555089
- GATE_HP_SOC_CHURCH_AND_STATE: "출처: [GetLawGroup('lawgroup_church_and_state').GetCurrentlyActive.GetName]" #deepl:2147870988
- GATE_HP_SOC_BUREAUCRACY: "출처: [GetLawGroup('lawgroup_bureaucracy').GetCurrentlyActive.GetName]" #deepl:4051431654
- GATE_HP_SOC_INTERNAL_SECURITY: "출처: [GetLawGroup('lawgroup_internal_security').GetCurrentlyActive.GetName] [AddTextIf(Not(StringIsEmpty(GetLawGroup('lawgroup_internal_security').GetCurrentlyActive.GetInstitution.GetDesc)),'\n')] [ROOT.GetScriptValueDesc('gate_hp_society_internal_security')]" #deepl:3152554974
- GATE_HP_SOC_FREE_SPEECH: "출처: [GetLawGroup('lawgroup_free_speech').GetCurrentlyActive.GetName]" #deepl:2579174679
- GATE_HP_SOC_EDUCATION: "출처: [GetLawGroup('lawgroup_education_system').GetCurrentlyActive.GetName] [AddTextIf(Not(StringIsEmpty(GetLawGroup('lawgroup_education_system').GetCurrentlyActive.GetInstitution.GetDesc)),'\n')] [SCOPE.GetScriptValueDesc('gate_hp_society_education')]" #deepl:3332741363
- GATE_HP_SOC_HEALTHCARE: "출처: [GetLawGroup('lawgroup_health_system').GetCurrentlyActive.GetName] [AddTextIf(Not(StringIsEmpty(GetLawGroup('lawgroup_health_system').GetCurrentlyActive.GetInstitution.GetDesc)),'\n')] [SCOPE.GetScriptValueDesc('gate_hp_society_healthcare')]" #deepl:1929910180
- GATE_HP_SOC_WELFARE: "출처: [GetLawGroup('lawgroup_welfare').GetCurrentlyActive.GetName] [AddTextIf(Not(StringIsEmpty(GetLawGroup('lawgroup_welfare').GetCurrentlyActive.GetInstitution.GetDesc)),'\n')] [SCOPE.GetScriptValueDesc('gate_hp_society_welfare')]" #deepl:1990737559
- GATE_HP_SOC_SLAVERY: "출처: [GetLawGroup('lawgroup_slavery').GetCurrentlyActive.GetName]" #deepl:3389607976
- GATE_HP_SOC_MAGIC_USERS: "출처: [GetLawGroup('lawgroup_gate_magic_users').GetCurrentlyActive.GetName] [AddTextIf(Not(StringIsEmpty(GetLawGroup('lawgroup_gate_magic_users').GetCurrentlyActive.GetInstitution.GetDesc)),'\n')] [SCOPE.GetScriptValueDesc('gate_hp_society_gate_magic_users')]" #deepl:748658128
- GATE_HP_SOC_TREND_FROM_DEMOGRAPHICS: "#b  #blue  인구 통계: #! #! \n [SCOPE.GetScriptValueDesc('gate_harmony_pledge_society_trend_from_demographics')]" #deepl:773562607
- GATE_HP_SOC_TREND_FROM_OTHER_SPHERES: "#b  #blue  기타 국가별 사이트: #! #! \n [SCOPE.GetScriptValueDesc('gate_harmony_pledge_society_trend_from_other_spheres')]" #deepl:2565440765
- GATE_HP_SOC_TREND_FROM_ECONOMY: "『경제적 영향』에서 발췌" #deepl:1955267202
- GATE_HP_SOC_TREND_FROM_STATE: "출처: Legislative Influences \n [SCOPE.GetScriptValueDesc('gate_harmony_pledge_society_trend_from_legislative')]" #deepl:468869797
- GATE_HP_SOC_TREND_MOD_FROM_STATE: "경제적 영향에 대한 입법적 제약" #deepl:208844930
- GATE_HP_SOC_TREND_FROM_STATE_BASE: "입법 역량의 취약점" #deepl:15785930
- GATE_HP_SOC_TREND_FROM_MODIFIERS: "#b  #blue  임시 수식어: #! #! [AddTextIf(NotEqualTo_CFixedPoint(SCOPE.ScriptValue('gate_harmony_pledge_society_trend_from_modifiers'),'(CFixedPoint)0'),'\n')] [SCOPE.GetScriptValueDesc('gate_harmony_pledge_society_trend_from_modifiers')]" #deepl:1978969243
- # GATE_HP_SOC_TREND_FROM_MODIFIERS_NEGATIVE: "#indent_newline:3 주문 수정 사항: \n [ROOT.GetCountry.GetModifier.GetDescFor('country_gate_harmony_pledge_society_drift_negative')] #!" #deepl:4136663304
- # GATE_HP_SOC_TREND_FROM_MODIFIERS_POSITIVE: "#indent_newline:3 카오스 수정자: \n [ROOT.GetCountry.GetModifier.GetDescFor('country_gate_harmony_pledge_society_drift_positive')] #!" #deepl:1293762303
- GATE_HP_SOC_STATUS_QUO_HARMONY: "#b  #blue  불협화음에 대한 문화적 저항: #! #! [AddTextIf(NotEqualTo_CFixedPoint(SCOPE.ScriptValue('gate_harmony_pledge_society_trend_scaling'),'(CFixedPoint)0'),'\n')] [SCOPE.GetScriptValueDesc('gate_harmony_pledge_society_trend_scaling')]" #deepl:3863469130
-## Economy
- GATE_HP_ECO_TREND_FROM_LAWS: "#b  #blue  관련 법률: #! #! \n [SCOPE.GetScriptValueDesc('gate_harmony_pledge_economy_trend_from_laws')]" #deepl:201400274
- GATE_HP_ECO_DIST_OF_POWER: "출처: [GetLawGroup('lawgroup_distribution_of_power').GetCurrentlyActive.GetName]" #deepl:273555089
- GATE_HP_ECO_ECONOMIC_SYSTEM: "출처: [GetLawGroup('lawgroup_economic_system').GetCurrentlyActive.GetName]" #deepl:279347942
- GATE_HP_ECO_TRADE_POLICY: "출처: [GetLawGroup('lawgroup_trade_policy').GetCurrentlyActive.GetName]" #deepl:1362791199
- GATE_HP_ECO_LAND_REFORM: "출처: [GetLawGroup('lawgroup_land_reform').GetCurrentlyActive.GetName]" #deepl:3454678071
- GATE_HP_ECO_POLICING: "출처: [GetLawGroup('lawgroup_policing').GetCurrentlyActive.GetName] [AddTextIf(Not(StringIsEmpty(GetLawGroup('lawgroup_policing').GetCurrentlyActive.GetInstitution.GetDesc)),'\n')] [SCOPE.GetScriptValueDesc('gate_hp_economy_policing')]" #deepl:3640898407
- GATE_HP_ECO_LABOR_RIGHTS: "출처: [GetLawGroup('lawgroup_labor_rights').GetCurrentlyActive.GetName] [AddTextIf(Not(StringIsEmpty(GetLawGroup('lawgroup_labor_rights').GetCurrentlyActive.GetInstitution.GetDesc)),'\n')] [SCOPE.GetScriptValueDesc('gate_hp_economy_labor_rights')]" #deepl:3526176452
- GATE_HP_ECO_LABOR_ASSOCIATIONS: "출처: [GetLawGroup('lawgroup_labour_associations').GetCurrentlyActive.GetName]" #deepl:1726768423
- GATE_HP_ECO_MAGIC_USERS: "출처: [GetLawGroup('lawgroup_gate_magic_users').GetCurrentlyActive.GetName] [AddTextIf(Not(StringIsEmpty(GetLawGroup('lawgroup_gate_magic_users').GetCurrentlyActive.GetInstitution.GetDesc)),'\n')] [SCOPE.GetScriptValueDesc('gate_hp_economy_gate_magic_users')]" #deepl:2025585440
- GATE_HP_ECO_TREND_FROM_CITIZENSHIP: "#b  #blue  시민권: #! #! \n [SCOPE.GetScriptValueDesc('gate_harmony_pledge_economy_trend_from_citizenship')]" #deepl:2790924573
- GATE_HP_ECO_TREND_FROM_TAXATION: "#b  #blue  조세: #! #! \n [SCOPE.GetScriptValueDesc('gate_harmony_pledge_economy_trend_from_taxation')]" #deepl:3992921682
- GATE_HP_ECO_TAXATION: "출처: [GetLawGroup('lawgroup_taxation').GetCurrentlyActive.GetName]" #deepl:2721741755
- GATE_HP_ECO_TAXATION_LEVEL: "출처: [Concept('concept_taxes','$concept_tax_level$')]" #deepl:1076257550
- GATE_HP_ECO_TREND_FROM_OTHER_SPHERES: "#b  #blue  기타 국가별 사이트: #! #! \n [SCOPE.GetScriptValueDesc('gate_harmony_pledge_economy_trend_from_other_spheres')]" #deepl:836584586
- GATE_HP_ECO_TREND_FROM_LEGISLATIVE: "‘입법적 영향’에서 발췌" #deepl:2518471932
- GATE_HP_ECO_TREND_FROM_MODIFIERS: "#b  #blue  임시 수식어: #! #! [AddTextIf(NotEqualTo_CFixedPoint(SCOPE.ScriptValue('gate_harmony_pledge_economy_trend_from_modifiers'),'(CFixedPoint)0'),'\n')] [SCOPE.GetScriptValueDesc('gate_harmony_pledge_economy_trend_from_modifiers')]" #deepl:815960214
- # GATE_HP_ECO_TREND_FROM_MODIFIERS_NEGATIVE: "#indent_newline:3 주문 수정 사항: \n [ROOT.GetCountry.GetModifier.GetDescFor('country_gate_harmony_pledge_economy_drift_negative')] #!" #deepl:2729713656
- # GATE_HP_ECO_TREND_FROM_MODIFIERS_POSITIVE: "#indent_newline:3 카오스 수정자: \n [ROOT.GetCountry.GetModifier.GetDescFor('country_gate_harmony_pledge_economy_drift_positive')] #!" #deepl:423188495
- GATE_HP_ECO_STATUS_QUO_HARMONY: "#b  #blue  불협화음에 대한 문화적 저항: #! #! [AddTextIf(NotEqualTo_CFixedPoint(SCOPE.ScriptValue('gate_harmony_pledge_economy_trend_scaling'),'(CFixedPoint)0'),'\n')] [SCOPE.GetScriptValueDesc('gate_harmony_pledge_economy_trend_scaling')]" #deepl:3828478147
-## Legislative
- GATE_HP_LEG_TREND_FROM_LAWS: "#b  #blue  관련 법률: #! #! \n [SCOPE.GetScriptValueDesc('gate_harmony_pledge_legislative_trend_from_laws')]" #deepl:2741427054
- GATE_HP_LEG_DIST_OF_POWER: "출처: [GetLawGroup('lawgroup_distribution_of_power').GetCurrentlyActive.GetName]" #deepl:273555089
- GATE_HP_LEG_BUREAUCRACY: "출처: [GetLawGroup('lawgroup_bureaucracy').GetCurrentlyActive.GetName]" #deepl:4051431654
- GATE_HP_LEG_INTERNAL_SECURITY: "출처: [GetLawGroup('lawgroup_internal_security').GetCurrentlyActive.GetName]" #deepl:1130559370
- GATE_HP_LEG_ECONOMIC_SYSTEM: "출처: [GetLawGroup('lawgroup_economic_system').GetCurrentlyActive.GetName]" #deepl:279347942
- GATE_HP_LEG_POLICING: "출처: [GetLawGroup('lawgroup_policing').GetCurrentlyActive.GetName]" #deepl:2353767776
- GATE_HP_LEG_LABOR_ASSOCIATIONS: "출처: [GetLawGroup('lawgroup_labour_associations').GetCurrentlyActive.GetName]" #deepl:1726768423
- GATE_HP_LEG_MAGIC_USERS: "출처: [GetLawGroup('lawgroup_gate_magic_users').GetCurrentlyActive.GetName]" #deepl:1768242513
- GATE_HP_LEG_TREND_FROM_AUTHORITY: "사용되지 않은 [concept_authority]에서" #deepl:2617420046
- GATE_HP_LEG_TREND_FROM_INFLUENCE: "사용되지 않은 [concept_influence]에서" #deepl:2734058883
- GATE_HP_LEG_TREND_FROM_BUREACRACY: "출처: [concept_bureaucracy]" #deepl:3604557277
- GATE_HP_LEG_STATUS_QUO_HARMONY: "#b  #blue  불협화음에 대한 문화적 저항: #! #! [AddTextIf(NotEqualTo_CFixedPoint(SCOPE.ScriptValue('gate_harmony_pledge_legislative_trend_scaling'),'(CFixedPoint)0'),'\n')] [SCOPE.GetScriptValueDesc('gate_harmony_pledge_legislative_trend_scaling')]" #deepl:4187140369
- GATE_HP_LEG_TREND_FROM_MODIFIERS: "#b  #blue  임시 수식어: #! #! [AddTextIf(NotEqualTo_CFixedPoint(SCOPE.ScriptValue('gate_harmony_pledge_legislative_trend_from_modifiers'),'(CFixedPoint)0'),'\n')] [SCOPE.GetScriptValueDesc('gate_harmony_pledge_legislative_trend_from_modifiers')]" #deepl:1308323771
-## Shared
- GATE_HP_NATURAL_CHANGE_RESISTANCE: "출처: 변화에 대한 비[GetCulture('gnomish').GetName]적 저항" #deepl:3262074769
- GATE_HP_GNOMISH_POP_PERCENT: "출처: [ROOT.GetCountry.MakeScope.Var('gate_hp_gnomish_percent').GetValue|%1] [GetCulture('gnomish').GetName] 인구" #deepl:1258130712
- GATE_HP_NON_GNOME_POP_PERCENT: "출처: [ROOT.GetCountry.MakeScope.Var('gate_hp_non_gnomish_percent').GetValue|%1] 비-[GetCulture('gnomish').GetName] 인구" #deepl:1561752062
- GATE_HP_CITIZEN_POP_PERCENT: "출처: [ROOT.GetCountry.MakeScope.Var('gate_hp_citizenship_percent').GetValue|%1] [concept_gate_harmony_pledge_citizens]" #deepl:2485422644
- GATE_HP_NON_CITIZEN_POP_PERCENT: "출처: [ROOT.GetCountry.MakeScope.Var('gate_hp_non_citizen_percent').GetValue|%1] Non-[concept_gate_harmony_pledge_citizens]" #deepl:434864772
- GATE_HP_PLEDGE_PERCENT: "[ROOT.GetCountry.MakeScope.Var('gate_hp_pledge_percent').GetValue|%1]에서 수정됨 [GetReligion('gate_harmony_pledge').GetName] 지지자들" #deepl:1178107763
- GATE_HP_PLEDGE_PERCENT_SCALING: "[ROOT.GetCountry.MakeScope.Var('gate_hp_pledge_percent').GetValue|%1]의 기능 개선 [GetReligion('gate_harmony_pledge').GetName] 지지자들" #deepl:1415264399
-# Modifiers
- modifier_gate_harmony_pledge_abandoned: "지켜지지 않은 서약" #deepl:535689830
- modifier_gate_harmony_pledge_society_harmonious: "저희 ‘[concept_gate_harmony_pledge_society]’의 주소는 $je_gate_harmony_pledge_harmonious$입니다." #deepl:2867902875
- modifier_gate_harmony_pledge_society_tilting: "저희 ‘[concept_gate_harmony_pledge_society]’의 주소는 $je_gate_harmony_pledge_tilting$입니다." #deepl:2586416020
- modifier_gate_harmony_pledge_society_disharmonious: "저희 ‘[concept_gate_harmony_pledge_society]’의 주소는 $je_gate_harmony_pledge_disharmonious$입니다." #deepl:3725460851
- modifier_gate_harmony_pledge_economy_harmonious: "저희 ‘[concept_gate_harmony_pledge_economy]’의 주소는 $je_gate_harmony_pledge_harmonious$입니다." #deepl:1218889220
- modifier_gate_harmony_pledge_economy_tilting: "저희 ‘[concept_gate_harmony_pledge_economy]’의 주소는 $je_gate_harmony_pledge_tilting$입니다." #deepl:1370881737
- modifier_gate_harmony_pledge_economy_disharmonious: "저희 ‘[concept_gate_harmony_pledge_economy]’의 주소는 $je_gate_harmony_pledge_disharmonious$입니다." #deepl:1848921
- modifier_gate_harmony_pledge_legislative_harmonious: "저희 ‘[concept_gate_harmony_pledge_legislative]’의 주소는 $je_gate_harmony_pledge_harmonious$입니다." #deepl:3110269305
- modifier_gate_harmony_pledge_legislative_tilting: "저희 ‘[concept_gate_harmony_pledge_legislative]’의 주소는 $je_gate_harmony_pledge_tilting$입니다." #deepl:2790751481
- modifier_gate_harmony_pledge_legislative_disharmonious: "저희 ‘[concept_gate_harmony_pledge_legislative]’의 주소는 $je_gate_harmony_pledge_disharmonious$입니다." #deepl:3723725320
- modifier_gate_harmony_pledge_enthusiasm_without_boundaries: "$gate_harmony_pledge.1.t$" #deepl:1084110770
- modifier_gate_harmony_pledge_rewritten_ledger: "$gate_harmony_pledge.2.t$" #deepl:2320696223
- modifier_gate_harmony_pledge_refinement_without_end: "$gate_harmony_pledge.3.t$" #deepl:1427434629
- modifier_gate_harmony_pledge_construction_drive: "$gate_harmony_pledge.4.t$" #deepl:3033296582
- modifier_gate_harmony_pledge_excess_theory: "$gate_harmony_pledge.5.t$" #deepl:1804304860
- modifier_gate_harmony_pledge_abstract_wealth: "$gate_harmony_pledge.6.t$" #deepl:2705765873
- modifier_gate_harmony_pledge_subterranean_fixation: "$gate_harmony_pledge.7.t$" #deepl:2114018027
- modifier_gate_harmony_pledge_cash_crop_fever: "$gate_harmony_pledge.8.t$" #deepl:3388126324
- modifier_gate_harmony_pledge_agrarian_security: "$gate_harmony_pledge.9.t$" #deepl:380984174
- modifier_gate_harmony_pledge_woven_monument: "$gate_harmony_pledge.10.t$" #deepl:2253197101
- modifier_gate_harmony_pledge_unwanted_inquiry: "$gate_harmony_pledge.11.t$" #deepl:1493884983
- modifier_gate_harmony_pledge_land_rush: "$gate_harmony_pledge.14.t$" #deepl:2908272963
- modifier_gate_harmony_pledge_animistic_engineering: "$gate_harmony_pledge.15.t$" #deepl:1914656345
-# Events
- gate_harmony_pledge.1.t: "한계를 모르는 열정" #deepl:3398040805
- gate_harmony_pledge.1.d: "[TopScope.sS('event_state').GetName]에 등장한 ‘[GetCulture('gnomish').GetName]’ 캐릭터가 대중의 분노를 불러일으켰습니다. 이 분노는 제대로 대처하지 못할 경우 [concept_assimilation]의 인기가 떨어질 수 있습니다." #deepl:767208063
- gate_harmony_pledge.1.f: "붐비는 광장에서, 완전히 매료된 한 그놈이 불운한 방문객에게 쏟아지는 듯한 질문을 퍼붓는다. 사적인 것부터 기술적, 철학적 질문까지, 점점 더 사생활을 침해하는 방향으로 이어지는 이 질문들은 유쾌한 열기를 띠며 예의 따위는 아랑곳하지 않고 이어진다. 어떤 이에게는 순수한 호기심으로 비칠지 모르지만, 다른 이들에게는 공공장소에서 사생활을 침해하는 행위로 여겨진다." #deepl:978833871
- gate_harmony_pledge.1.a: "그저 호기심이 들었을 뿐이에요." #deepl:1356077208
- gate_harmony_pledge.1.b: "이러한 행동을 규탄하십시오." #deepl:2455540265
- gate_harmony_pledge.2.t: "『레저』 재구성" #deepl:686309308
- gate_harmony_pledge.2.d: "새로운 경영 방식은 [concept_bureaucracy]의 생산성을 높여주지만, 동시에 [concept_innovation]의 활기를 저해하기도 한다." #deepl:1040782432
- gate_harmony_pledge.2.f: "우리 공무원은 매우 정교한 새로운 감독 및 배분 시스템을 성공적으로 도입했습니다. 행정 효율성은 최고 수준에 달했으며, 관료적 낭비는 사실상 전무합니다. 그러나 학계 및 문화계 자문위원들은 이러한 끊임없는 구조적 최적화가 주도권을 억누르고 있어, 전국적으로 독립적인 연구와 창의적인 활동이 정체되고 있다고 보고하고 있습니다." #deepl:2507388011
- gate_harmony_pledge.2.a: "이러한 새로운 경영 방식을 금지해야 한다." #deepl:2819019753
- gate_harmony_pledge.2.b: "최악의 영향을 완화하십시오." #deepl:410557116
- gate_harmony_pledge.2.c: "그 잠재력을 마음껏 발휘해 보세요." #deepl:2727038369
- gate_harmony_pledge.3.t: "끝없는 정교함" #deepl:1065897276
- gate_harmony_pledge.3.d: "이러한 개선으로 [GetBuildingType('building_trade_center').GetName] [concept_throughput]의 성능이 향상되는 동시에 [GetBuildingGroup('bg_light_industry').GetName] [concept_throughput]의 성능도 향상됩니다." #deepl:2944350912
- gate_harmony_pledge.3.f: "제조업 현장의 보고에 따르면 장인 활동이 전례 없는 수준으로 급증하고 있는 것으로 나타났습니다. 작업장들은 최대 가동률을 기록하며 국내 생산량을 사상 최고 수준으로 끌어올리고 있습니다. 그러나 무역 장관들은 이러한 열기 속에서 상업적 유통이 소홀해지고 있다고 경고합니다. 완제품들이 국내외 시장에 유통되지 못하고 창고에 쌓여만 가고 있기 때문입니다." #deepl:1479994007
- gate_harmony_pledge.3.a: "판매 직원의 최소 배정 인원을 지정하십시오." #deepl:2053133893
- gate_harmony_pledge.3.b: "최악의 영향을 완화하십시오." #deepl:410557116
- gate_harmony_pledge.3.c: "그 잠재력을 마음껏 발휘해 보세요." #deepl:2727038369
- gate_harmony_pledge.4.t: "건설 캠페인" #deepl:1868878426
- gate_harmony_pledge.4.d: "건축에 대한 관심이 급증함에 따라 ‘[concept_construction]’의 생산량은 증가하는 반면, 전국적으로 ‘[GetBuildingGroup('bg_agriculture').GetName]’의 생산량은 감소하고 있다." #deepl:2253421195
- gate_harmony_pledge.4.f: "전국 각지에서 전해지는 보고에 따르면, 건축 및 공공 사업이 조직적으로 급증하고 있는 것으로 나타났습니다. 기획자와 건설업자들은 이례적으로 적극적인 태도로 대대적인 재설계를 추진하고 있으며, 그 결과 건설 생산량이 급격히 증가했습니다. 그러나 이와 함께 발표된 평가 보고서에 따르면 농업에 대한 관심이 줄어들면서 농장에 투입되는 노동자가 감소했고, 식량 비축량에 부담이 가해지기 시작한 초기 징후가 나타나고 있습니다." #deepl:2088678352
- gate_harmony_pledge.4.a: "그들을 밭으로 보내세요." #deepl:4018618871
- gate_harmony_pledge.4.b: "최악의 영향을 완화하십시오." #deepl:410557116
- gate_harmony_pledge.4.c: "그 잠재력을 마음껏 발휘해 보세요." #deepl:2727038369
- gate_harmony_pledge.5.t: "지나친 이론" #deepl:3548768388
- gate_harmony_pledge.5.d: "이론적 지식에 중점을 두는 것은 [concept_innovation]을 촉진하지만, [concept_construction]을 저해한다." #deepl:3715153279
- gate_harmony_pledge.5.f: "국내 학술 기관들의 보고에 따르면, 이론적 연구와 발견이 폭발적으로 증가하고 있는 것으로 나타났습니다. 학자들은 전례 없는 속도로 새로운 이론을 제시하며, 우리 국가의 지식 기반을 급속히 확장시키고 있습니다. 그러나 각 지방 자치단체장들은 실질적인 실행이 소홀히 다루어지고 있다고 경고하고 있습니다. 지적 관심이 전적으로 추상적인 영역으로 쏠리면서, 주요 인프라 및 공공 사업들이 심각한 지연을 겪고 있기 때문입니다." #deepl:1215646789
- gate_harmony_pledge.5.a: "연구 자금을 실용적인 응용 분야로 재조정해야 한다." #deepl:403732231
- gate_harmony_pledge.5.b: "최악의 영향을 완화하십시오." #deepl:410557116
- gate_harmony_pledge.5.c: "그 잠재력을 마음껏 발휘해 보세요." #deepl:2727038369
- gate_harmony_pledge.6.t: "추상적 부" #deepl:3374874366
- gate_harmony_pledge.6.d: "새로운 금융 상품은 ‘[concept_investment_pool]’ 기여도를 높이지만, 우리 업계의 ‘[concept_cash_reserves]’ 상한선을 낮춥니다." #deepl:805899902
- gate_harmony_pledge.6.f: "금융권에서 전해지는 소식에 따르면, 복잡한 금융 상품에 대한 갑작스럽고도 극심한 열풍이 불고 있는 것으로 나타났습니다. 은행가들과 금융계 지도자들은 어지러울 정도로 빠른 속도로 투기성 계약과 투자를 주고받으며, 국가 세수와 자본 유동을 급격히 늘리고 있습니다. 그러나 실물 산업계는 심각한 자본 유출을 경고하고 있습니다. 자금이 전적으로 명목상의 부로 유출되면서, 제조업과 중공업 등 실물 경제가 정체되고 있기 때문입니다." #deepl:2095828964
- gate_harmony_pledge.6.a: "법정 최소 적립금 납입액을 인상한다." #deepl:3977047276
- gate_harmony_pledge.6.b: "최악의 영향을 완화하십시오." #deepl:410557116
- gate_harmony_pledge.6.c: "그 잠재력을 마음껏 발휘해 보세요." #deepl:2727038369
- gate_harmony_pledge.7.t: "지하 집착" #deepl:101694213
- gate_harmony_pledge.7.d: "[GetBuildingGroup('bg_extraction').GetName] 산업에 대한 집착은 [concept_throughput]을 증가시키지만, 동시에 [GetBuildingGroup('bg_plantations').GetName] 산업에 대한 [concept_throughput]을 감소시키기도 한다." #deepl:927365228
- gate_harmony_pledge.7.f: "전선에서 전해지는 소식에 따르면, 자원 채굴이 대규모로, 조직적으로 가속화되고 있는 것으로 나타났습니다. 광부들과 엔지니어들은 공격적인 새로운 채굴 기법을 도입하여, 원광과 광물들이 비축 창고를 넘쳐나게 하고 있습니다. 그러나 지방 행정관들은 이러한 무분별한 채굴이 지역 생태계를 교란시키고 있다고 경고합니다. 경작지가 훼손되고 수원이 우회되면서, 우리 농장의 농작물 수확량이 급격히 감소하고 있습니다." #deepl:4159305287
- gate_harmony_pledge.7.a: "우리의 자원 채굴 산업이 주변 경작지를 보존하도록 의무화해야 한다." #deepl:77699677
- gate_harmony_pledge.7.b: "최악의 영향을 완화하십시오." #deepl:410557116
- gate_harmony_pledge.7.c: "그 잠재력을 마음껏 발휘해 보세요." #deepl:2727038369
- gate_harmony_pledge.8.t: "수출용 작물 열풍" #deepl:1069755938
- gate_harmony_pledge.8.d: "[GetBuildingGroup('bg_plantations').GetName] 산업에 대한 집착은 [concept_throughput]를 증가시키지만, 동시에 [GetBuildingGroup('bg_agriculture').GetName] 산업에 대한 [concept_throughput]을 감소시키기도 한다." #deepl:288115478
- gate_harmony_pledge.8.f: "농업 지역들의 보고에 따르면, 수익성이 높은 수출 작물에 대한 광범위한 집착이 나타나고 있다. 대규모 농장 경영이 막대한 부를 보장한다는 갑작스럽고 열광적인 믿음에 이끌려, 지주들과 농촌 공동체들은 주곡 작물을 서둘러 뽑아내고 향신료, 커피, 고무를 심고 있다. 무역 장관들은 수출 수입이 급증하고 있다고 보고하는 반면, 지역 행정관들은 마을 시장이 텅 비기 시작했다고 경고하며, 임박한 식량 부족에 대한 심각한 우려를 제기하고 있다." #deepl:2362294843
- gate_harmony_pledge.8.a: "농장당 최소 식량 생산량을 설정하십시오." #deepl:1576472696
- gate_harmony_pledge.8.b: "최악의 영향을 완화하십시오." #deepl:410557116
- gate_harmony_pledge.8.c: "그 잠재력을 마음껏 발휘해 보세요." #deepl:2727038369
- gate_harmony_pledge.9.t: "농업 안보" #deepl:288080293
- gate_harmony_pledge.9.d: "[GetBuildingGroup('bg_agriculture').GetName] 산업에 대한 집착은 [concept_throughput]을 증가시키지만, 동시에 [GetBuildingGroup('bg_plantations').GetName] 산업에 대한 [concept_throughput]을 감소시키기도 한다." #deepl:3228164820
- gate_harmony_pledge.9.f: "식량 안보와 자급자족에 대한 강렬하고 집단적인 집착에 힘입어, 농촌 전역에 반동적인 움직임이 확산되고 있다. 농민들과 지역 지도자들은 뿌리채소와 곡물의 수확량을 극대화하기 위해 상업용 농장의 생산량을 체계적으로 줄이고 있다. 국가 곡물 창고는 넘쳐나고 국내 식량 공급 상황은 개선되고 있지만, 농장 생산량은 급감했다." #deepl:3116472441
- gate_harmony_pledge.9.a: "식량 생산을 억제함으로써 농장 생산량을 늘린다." #deepl:2902570733
- gate_harmony_pledge.9.b: "최악의 영향을 완화하십시오." #deepl:410557116
- gate_harmony_pledge.9.c: "그 잠재력을 마음껏 발휘해 보세요." #deepl:2727038369
- gate_harmony_pledge.10.t: "엮인 기념비" #deepl:6943227
- gate_harmony_pledge.10.d: "문화유산은 우리의[concept_gate_harmony_pledge_society]을 높여줄 것입니다." #deepl:4054858405
- gate_harmony_pledge.10.f: "우리 장인들 사이에서 아름답고 자연스러운 협업이 이루어졌습니다. 인간 조각가들과 그놈 공학자들은 웅장한 새로운 공공 파빌리온을 짓기 위해 온 힘을 다해 매진해 왔습니다. 이 건축물은 인간 고유의 전통에서 비롯된 심오하고 영적인 유려한 목공예와, 그놈족 디자인 특유의 정교하고 수학적인 시계 장치가 완벽하게 조화를 이루고 있습니다. 이 건축적 경이로움은 ‘조화의 서약’을 물리적으로 구현한 것으로, 전국에 걸쳐 시민의 자부심과 문화적 위상을 고취시키고 있습니다." #deepl:548123886
- gate_harmony_pledge.10.a: "정말 멋지네요." #deepl:2942415708
- gate_harmony_pledge.11.t: "원치 않는 문의" #deepl:3472512289
- gate_harmony_pledge.11.d: "이 문화적 사태를 신중하게 다루지 않으면, ‘[concept_conversion]’는 ‘[GetReligion('gate_harmony_pledge').GetNameNoIcon]’로 전락할 것입니다." #deepl:1581847826
- gate_harmony_pledge.11.f: "최근 열린 조상 제사와 관련해 인간 영적 지도자들로부터 격렬한 항의를 받았습니다. 노미족 학자 일행이 지나치게 강렬하고 통제되지 않은 호기심에 이끌려 엄숙한 의식에 참석했으나, 이를 상호작용형 퍼즐처럼 취급했습니다. 그들은 기도가 진행되는 도중 연달아 쏟아지는 질문으로 의식을 방해하고, 신성한 유물을 측정하려 시도했으며, 의식용 불의 특성에 대해 큰 소리로 논쟁을 벌였습니다. 악의는 없었겠지만, 이러한 공격적인 세속적 호기심은 전통주의자들을 깊이 모욕시켰고 사회적 화합을 해쳤습니다." #deepl:489344487
- gate_harmony_pledge.11.a: "이건 안 좋은데." #deepl:2087564719
- gate_harmony_pledge.11.b: "이러한 행동을 규탄하십시오." #deepl:2455540265
- gate_harmony_pledge.12.t: "서약 포기" #deepl:3780230732
- gate_harmony_pledge.12.d: "‘[TopScope.sL('atheism_law').GetName]’ 법안이 제정되면 우리는 ‘[concept_gate_harmony_pledge]’를 포기하게 될 것입니다. 이는 재앙적인 결과를 초래할 것입니다." #deepl:3068637803
- gate_harmony_pledge.12.f: "의회에서 전해지는 보고에 따르면, ‘조화 서약’을 완전히 폐기할 것을 요구하는 급진적인 치안 판사들의 연합이 점점 확대되고 있는 것으로 드러났다. 이들은 우리의 세심한 사회적 조정이 진정한 잠재력을 억누르는 감옥과 다름없다고 주장하며, 우리의 타고난 극단적 성향이 아무런 제약 없이 마음껏 꽃피울 수 있도록 허용해야 한다고 요구하고 있다. 자문위원들은 이 안건을 검토하는 것만으로도 단기적으로 재앙적인 결과를 초래할 것이라고 경고하고 있다." #deepl:3395286884
- gate_harmony_pledge.12.a: "그것을 포기하는 것이 최선이다." #deepl:2265107712
- gate_harmony_pledge.12.b: "이 문제에 대해 한번 생각해 봅시다." #deepl:2399731022
- gate_harmony_pledge.13.t: "서약의 재확립" #deepl:1485235099
- gate_harmony_pledge.13.d: "우리는 ‘[concept_gate_harmony_pledge]’의 가르침을 다시 받아들였습니다." #deepl:2063420038
- gate_harmony_pledge.13.f: "통제되지 않은 극단주의로 인한 피로감이 마침내 이 나라의 열기를 가라앉혔다. 전국 각지에서 시민과 관리들이 모두 ‘조화 서약’이 제시한 신중한 구상으로의 회귀를 요구하고 있다." #deepl:2354966606
- gate_harmony_pledge.13.a: "우리는 조화를 위해 헌신합니다." #deepl:2290051607
- gate_harmony_pledge.14.t: "토지 쟁탈전" #deepl:4201529643
- gate_harmony_pledge.14.d: "토지 쟁탈전은 [concept_pop_growth]를 상승시킬 뿐만 아니라, [concept_generated_pollution]도 대폭 증가시킬 것입니다." #deepl:2567934868
- gate_harmony_pledge.14.f: "고수익을 내는 그놈족 농기구의 힘을 빌려, 인간 농경 가문들은 정글 깊숙한 곳까지 농장을 빠르게 확장하고 있다. 광활한 토지를 확보하고 대가족에게 막대한 유산을 남기려는 인간 특유의 욕구에 이끌려, 그들은 놀라운 속도로 울창한 땅을 개간하고 있습니다. 이러한 야망은 인구 증가와 원자재 채굴에 엄청난 호황을 가져오고 있지만, 동시에 우리의 영토 계획을 완전히 뒤흔들고 있으며, ‘서약’이 유지하고자 하는 생태적 균형을 위협하고 있습니다." #deepl:2383172291
- gate_harmony_pledge.14.a: "자연 보호 구역을 지정한다." #deepl:3058232922
- gate_harmony_pledge.14.b: "최악의 영향을 완화하십시오." #deepl:410557116
- gate_harmony_pledge.14.c: "그 잠재력을 마음껏 발휘해 보세요." #deepl:2727038369
- gate_harmony_pledge.15.t: "정령주의 공학" #deepl:1278909608
- gate_harmony_pledge.15.d: "애니미즘 신념은 ‘[concept_conversion]’을 ‘[GetReligion('gate_harmony_pledge').GetNameNoIcon]’로 낮추고, ‘[GetCulture('gnomish').GetName]’ 근로자들의 ‘[Concept('concept_radical', '$concept_radicalism$')]’을 증가시킵니다." #deepl:2042378649
- gate_harmony_pledge.15.f: "인간 노동자들은 거대한 증기 기관과 시계 태엽 직기를 강력한 지역 정령이 깃든 그릇으로 여기며, 그놈족의 산업 기계들을 자신들의 정령 숭배 체계에 직접 통합하기 시작했습니다. 이제 공장 바닥은 무성한 꽃 제물로 장식되어 있으며, 기계들에는 신성한 기하학적 문양이 정교하게 그려져 있다. 이러한 아름다운 문화적 융합은 노동자들 사이에 강한 충성심과 단결을 불러일으켰다. 그러나 인간 조작자들이 “불길한” 날이나 영혼을 화나게 할 수 있는 최적의 속도로 기계를 가동하는 것을 단호히 거부하고 있어, 그놈족 엔지니어들은 머리를 쥐어뜯고 있다." #deepl:196278460
- gate_harmony_pledge.15.a: "해당 관행을 금지해야 한다." #deepl:3854349238
- gate_harmony_pledge.15.b: "최악의 영향을 완화하십시오." #deepl:410557116
- gate_harmony_pledge.15.c: "그 잠재력을 마음껏 발휘해 보세요." #deepl:2727038369
- gate_harmony_pledge.16.t: "강제된 혼돈" #deepl:3726813281
- gate_harmony_pledge.16.d: "[TopScope.sCha('event_character').GetFullName] [TopScope.sPM('event_movement').GetNameNoIcon]를 설립했다." #deepl:1840134710
- gate_harmony_pledge.16.f: "절대적 무정부주의와 타협 없는 권위주의적 통제의 융합을 공개적으로 주창하는 그놈족 이데올로그가 이끄는 신생 정치 운동에 대한 보고가 수도에 전해졌다. 이 파벌은 공개 성명을 통해 국가와 모든 공식 기관의 완전한 해체를 촉구하는 한편, 이러한 “순수한” 무법 상태를 유지하기 위해 영구적이고 군사화된 집행 기구의 필요성을 강조하고 있다." #deepl:1348690011
- gate_harmony_pledge.16.a: "뭐라고요?" #deepl:1732307125
+ je_gate_harmony_pledge: "$gate_harmony_pledge$"
+ je_gate_harmony_pledge_reason: "$concept_gate_harmony_pledge_desc$"
+ pb_gate_harmony_pledge_economy: "경제적 조화"
+ pb_gate_harmony_pledge_legislative: "입법적 조화"
+ pb_gate_harmony_pledge_society: "사회적 조화"
+ je_gate_harmony_pledge_lobby: "$concept_gate_harmony_pledge_desc$"
+ je_gate_harmony_pledge_fail: "[concept_gate_harmony_pledge]의 어느 측면이든 #v 0#! 또는 #v 100#!에 도달합니다."
+ je_gate_harmony_pledge_status_hamony: "우리 국가는 $je_gate_harmony_pledge_harmonious$임"
+ je_gate_harmony_pledge_status_tilting: "우리 국가는 $je_gate_harmony_pledge_tilting$임"
+ je_gate_harmony_pledge_status_dishamony: "우리 국가는 $je_gate_harmony_pledge_disharmonious$임"
+ je_gate_harmony_pledge_harmonious: "#g 조화로움#!"
+ je_gate_harmony_pledge_tilting: "#o;bold 기울여짐#!"
+ je_gate_harmony_pledge_disharmonious: "#r 조화롭지 않음#!"
+ je_gate_harmony_pledge_abandon_warning: "[concept_gate_harmony_pledge]을 포기하면 #v 10#!년 동안 #tooltippable #tooltip:[GetRawTextTooltipTag('je_gate_harmony_pledge_abandon_warning_modifier_tooltip')] [GetStaticModifier('modifier_gate_harmony_pledge_abandoned').GetName]#!#! 보정치를 받습니다."
+ je_gate_harmony_pledge_abandon_warning_modifier_tooltip: "#v [GetStaticModifier('modifier_gate_harmony_pledge_abandoned').GetName]\n[GetStaticModifier('modifier_gate_harmony_pledge_abandoned').GetDesc]"
+ pb_gate_harmony_pledge_society_desc_left: "#v 사회 ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]/100)#!"
+ pb_gate_harmony_pledge_society_desc_right: "[JournalEntry.GetCustom('gate_harmony_pledge_indicator_society')]"
+ pb_gate_harmony_pledge_society_center_drift_modifier: "#tooltip:[GetRawTextTooltipTag('country_gate_harmony_pledge_society_drift_center_desc')] #yellow $country_gate_harmony_pledge_society_drift_center$#!#! 보정치"
+ pb_gate_harmony_pledge_economy_desc_left: "#v 경제 ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]/100)#!"
+ pb_gate_harmony_pledge_economy_desc_right: "[JournalEntry.GetCustom('gate_harmony_pledge_indicator_economy')]"
+ pb_gate_harmony_pledge_economy_center_drift_modifier: "#tooltip:[GetRawTextTooltipTag('country_gate_harmony_pledge_economy_drift_center_desc')] #yellow $country_gate_harmony_pledge_economy_drift_center$#!#! 보정치"
+ pb_gate_harmony_pledge_legislative_desc_left: "#v 입법 ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]/100)#!"
+ pb_gate_harmony_pledge_legislative_desc_right: "[JournalEntry.GetCustom('gate_harmony_pledge_indicator_legislative')]"
+ pb_gate_harmony_pledge_legislative_center_drift_modifier: "#tooltip:[GetRawTextTooltipTag('country_gate_harmony_pledge_legislative_drift_center_desc')] #yellow $country_gate_harmony_pledge_legislative_drift_center$#!#! 보정치"
+ pb_gate_harmony_pledge_order: "[AddLocalizationIf(EqualTo_string(ScriptedProgressBar.GetName,Localize('pb_gate_harmony_pledge_society')),'pb_gate_harmony_pledge_order_society')][AddLocalizationIf(EqualTo_string(ScriptedProgressBar.GetName,Localize('pb_gate_harmony_pledge_economy')),'pb_gate_harmony_pledge_order_economy')][AddLocalizationIf(EqualTo_string(ScriptedProgressBar.GetName,Localize('pb_gate_harmony_pledge_legislative')),'pb_gate_harmony_pledge_order_legislative')]"
+ pb_gate_harmony_pledge_order_society: "[concept_gate_harmony_pledge_stratified]"
+ pb_gate_harmony_pledge_order_economy: "[concept_gate_harmony_pledge_cartelised]"
+ pb_gate_harmony_pledge_order_legislative: "[concept_gate_harmony_pledge_despotic]"
+ pb_gate_harmony_pledge_chaos: "[AddLocalizationIf(EqualTo_string(ScriptedProgressBar.GetName,Localize('pb_gate_harmony_pledge_society')),'pb_gate_harmony_pledge_chaos_society')][AddLocalizationIf(EqualTo_string(ScriptedProgressBar.GetName,Localize('pb_gate_harmony_pledge_economy')),'pb_gate_harmony_pledge_chaos_economy')][AddLocalizationIf(EqualTo_string(ScriptedProgressBar.GetName,Localize('pb_gate_harmony_pledge_legislative')),'pb_gate_harmony_pledge_chaos_legislative')]"
+ pb_gate_harmony_pledge_chaos_society: "[concept_gate_harmony_pledge_antinomian]"
+ pb_gate_harmony_pledge_chaos_economy: "[concept_gate_harmony_pledge_febrile]"
+ pb_gate_harmony_pledge_chaos_legislative: "[concept_gate_harmony_pledge_anaemic]"
+ GATE_HP_TOP_VALUE_FORMAT: "#indent_newline:6 $VALUE|=2+$ $KEY$#!"
+ GATE_HP_SCRIPT_VALUE_FORMAT: "#indent_newline:6 $VALUE|=2+$ $KEY$#!"
+ GATE_HP_BASE_LAW: "[concept_law] 기준치에서"
+ GATE_HP_INSTITUTION_LEVEL: "[concept_institution] 단계에서"
+ GATE_HP_SOC_TREND_FROM_LAWS: "#b #blue 제정된 법률:#!#! \n[SCOPE.GetScriptValueDesc('gate_harmony_pledge_society_trend_from_laws')]"
+ GATE_HP_SOC_DIST_OF_POWER: "[GetLawGroup('lawgroup_distribution_of_power').GetCurrentlyActive.GetName]에서"
+ GATE_HP_SOC_CHURCH_AND_STATE: "[GetLawGroup('lawgroup_church_and_state').GetCurrentlyActive.GetName]에서"
+ GATE_HP_SOC_BUREAUCRACY: "[GetLawGroup('lawgroup_bureaucracy').GetCurrentlyActive.GetName]에서"
+ GATE_HP_SOC_INTERNAL_SECURITY: "[GetLawGroup('lawgroup_internal_security').GetCurrentlyActive.GetName]에서[AddTextIf(Not(StringIsEmpty(GetLawGroup('lawgroup_internal_security').GetCurrentlyActive.GetInstitution.GetDesc)),'\n')][ROOT.GetScriptValueDesc('gate_hp_society_internal_security')]"
+ GATE_HP_SOC_FREE_SPEECH: "[GetLawGroup('lawgroup_free_speech').GetCurrentlyActive.GetName]에서"
+ GATE_HP_SOC_EDUCATION: "[GetLawGroup('lawgroup_education_system').GetCurrentlyActive.GetName]에서[AddTextIf(Not(StringIsEmpty(GetLawGroup('lawgroup_education_system').GetCurrentlyActive.GetInstitution.GetDesc)),'\n')][SCOPE.GetScriptValueDesc('gate_hp_society_education')]"
+ GATE_HP_SOC_HEALTHCARE: "[GetLawGroup('lawgroup_health_system').GetCurrentlyActive.GetName]에서[AddTextIf(Not(StringIsEmpty(GetLawGroup('lawgroup_health_system').GetCurrentlyActive.GetInstitution.GetDesc)),'\n')][SCOPE.GetScriptValueDesc('gate_hp_society_healthcare')]"
+ GATE_HP_SOC_WELFARE: "[GetLawGroup('lawgroup_welfare').GetCurrentlyActive.GetName]에서[AddTextIf(Not(StringIsEmpty(GetLawGroup('lawgroup_welfare').GetCurrentlyActive.GetInstitution.GetDesc)),'\n')][SCOPE.GetScriptValueDesc('gate_hp_society_welfare')]"
+ GATE_HP_SOC_SLAVERY: "[GetLawGroup('lawgroup_slavery').GetCurrentlyActive.GetName]에서"
+ GATE_HP_SOC_MAGIC_USERS: "[GetLawGroup('lawgroup_gate_magic_users').GetCurrentlyActive.GetName]에서[AddTextIf(Not(StringIsEmpty(GetLawGroup('lawgroup_gate_magic_users').GetCurrentlyActive.GetInstitution.GetDesc)),'\n')][SCOPE.GetScriptValueDesc('gate_hp_society_gate_magic_users')]"
+ GATE_HP_SOC_TREND_FROM_DEMOGRAPHICS: "#b #blue 인구 구성:#!#! \n[SCOPE.GetScriptValueDesc('gate_harmony_pledge_society_trend_from_demographics')]"
+ GATE_HP_SOC_TREND_FROM_OTHER_SPHERES: "#b #blue 기타 국가 영역:#!#! \n[SCOPE.GetScriptValueDesc('gate_harmony_pledge_society_trend_from_other_spheres')]"
+ GATE_HP_SOC_TREND_FROM_ECONOMY: "경제적 영향으로부터"
+ GATE_HP_SOC_TREND_FROM_STATE: "입법적 영향으로부터 \n[SCOPE.GetScriptValueDesc('gate_harmony_pledge_society_trend_from_legislative')]"
+ GATE_HP_SOC_TREND_MOD_FROM_STATE: "경제적 영향에 대한 입법적 제약"
+ GATE_HP_SOC_TREND_FROM_STATE_BASE: "입법 역량의 취약점"
+ GATE_HP_SOC_TREND_FROM_MODIFIERS: "#b #blue 임시 수정치:#!#! [AddTextIf(NotEqualTo_CFixedPoint(SCOPE.ScriptValue('gate_harmony_pledge_society_trend_from_modifiers'),'(CFixedPoint)0'),'\n')][SCOPE.GetScriptValueDesc('gate_harmony_pledge_society_trend_from_modifiers')]"
+ GATE_HP_SOC_STATUS_QUO_HARMONY: "#b #blue 부조화에 대한 문화적 저항:#!#! [AddTextIf(NotEqualTo_CFixedPoint(SCOPE.ScriptValue('gate_harmony_pledge_society_trend_scaling'),'(CFixedPoint)0'),'\n')][SCOPE.GetScriptValueDesc('gate_harmony_pledge_society_trend_scaling')]"
+ GATE_HP_ECO_TREND_FROM_LAWS: "#b #blue 제정된 법률:#!#! \n[SCOPE.GetScriptValueDesc('gate_harmony_pledge_economy_trend_from_laws')]"
+ GATE_HP_ECO_DIST_OF_POWER: "[GetLawGroup('lawgroup_distribution_of_power').GetCurrentlyActive.GetName]에서"
+ GATE_HP_ECO_ECONOMIC_SYSTEM: "[GetLawGroup('lawgroup_economic_system').GetCurrentlyActive.GetName]으로부터"
+ GATE_HP_ECO_TRADE_POLICY: "[GetLawGroup('lawgroup_trade_policy').GetCurrentlyActive.GetName]으로부터"
+ GATE_HP_ECO_LAND_REFORM: "[GetLawGroup('lawgroup_land_reform').GetCurrentlyActive.GetName]으로부터"
+ GATE_HP_ECO_POLICING: "[GetLawGroup('lawgroup_policing').GetCurrentlyActive.GetName][AddTextIf(Not(StringIsEmpty(GetLawGroup('lawgroup_policing').GetCurrentlyActive.GetInstitution.GetDesc)),'\n')][SCOPE.GetScriptValueDesc('gate_hp_economy_policing')]에서"
+ GATE_HP_ECO_LABOR_RIGHTS: "[GetLawGroup('lawgroup_labor_rights').GetCurrentlyActive.GetName][AddTextIf(Not(StringIsEmpty(GetLawGroup('lawgroup_labor_rights').GetCurrentlyActive.GetInstitution.GetDesc)),'\n')][SCOPE.GetScriptValueDesc('gate_hp_economy_labor_rights')]에서"
+ GATE_HP_ECO_LABOR_ASSOCIATIONS: "[GetLawGroup('lawgroup_labour_associations').GetCurrentlyActive.GetName]에서"
+ GATE_HP_ECO_MAGIC_USERS: "[GetLawGroup('lawgroup_gate_magic_users').GetCurrentlyActive.GetName][AddTextIf(Not(StringIsEmpty(GetLawGroup('lawgroup_gate_magic_users').GetCurrentlyActive.GetInstitution.GetDesc)),'\n')][SCOPE.GetScriptValueDesc('gate_hp_economy_gate_magic_users')]에서"
+ GATE_HP_ECO_TREND_FROM_CITIZENSHIP: "#b #blue 시민권:#!#! \n[SCOPE.GetScriptValueDesc('gate_harmony_pledge_economy_trend_from_citizenship')]"
+ GATE_HP_ECO_TREND_FROM_TAXATION: "#b #blue 조세:#!#! \n[SCOPE.GetScriptValueDesc('gate_harmony_pledge_economy_trend_from_taxation')]"
+ GATE_HP_ECO_TAXATION: "[GetLawGroup('lawgroup_taxation').GetCurrentlyActive.GetName]에서"
+ GATE_HP_ECO_TAXATION_LEVEL: "[Concept('concept_taxes','$concept_tax_level$')]에서"
+ GATE_HP_ECO_TREND_FROM_OTHER_SPHERES: "#b #blue 기타 국가 영역:#!#! \n[SCOPE.GetScriptValueDesc('gate_harmony_pledge_economy_trend_from_other_spheres')]"
+ GATE_HP_ECO_TREND_FROM_LEGISLATIVE: "입법적 영향으로부터"
+ GATE_HP_ECO_TREND_FROM_MODIFIERS: "#b #blue 임시 보정치:#!#! [AddTextIf(NotEqualTo_CFixedPoint(SCOPE.ScriptValue('gate_harmony_pledge_economy_trend_from_modifiers'),'(CFixedPoint)0'),'\n')][SCOPE.GetScriptValueDesc('gate_harmony_pledge_economy_trend_from_modifiers')]"
+ GATE_HP_ECO_STATUS_QUO_HARMONY: "#b #blue 부조화에 대한 문화적 저항:#!#! [AddTextIf(NotEqualTo_CFixedPoint(SCOPE.ScriptValue('gate_harmony_pledge_economy_trend_scaling'),'(CFixedPoint)0'),'\n')][SCOPE.GetScriptValueDesc('gate_harmony_pledge_economy_trend_scaling')]"
+ GATE_HP_NATURAL_CHANGE_RESISTANCE: "[GetCulture('gnomish').GetName] 이외 문화의 변화에 대한 저항에서"
+ GATE_HP_GNOMISH_POP_PERCENT: "[ROOT.GetCountry.MakeScope.Var('gate_hp_gnomish_percent').GetValue|%1]의 [GetCulture('gnomish').GetName] 인구에서"
+ GATE_HP_NON_GNOME_POP_PERCENT: "[ROOT.GetCountry.MakeScope.Var('gate_hp_non_gnomish_percent').GetValue|%1]의 비-[GetCulture('gnomish').GetName] 인구에서"
+ GATE_HP_CITIZEN_POP_PERCENT: "[ROOT.GetCountry.MakeScope.Var('gate_hp_citizenship_percent').GetValue|%1]의 [concept_gate_harmony_pledge_citizens]에서"
+ GATE_HP_NON_CITIZEN_POP_PERCENT: "[ROOT.GetCountry.MakeScope.Var('gate_hp_non_citizen_percent').GetValue|%1]의 비-[concept_gate_harmony_pledge_citizens]에서"
+ GATE_HP_PLEDGE_PERCENT: "[ROOT.GetCountry.MakeScope.Var('gate_hp_pledge_percent').GetValue|%1]의 [GetReligion('gate_harmony_pledge').GetName] 신봉자로 인한 보정치"
+ GATE_HP_PLEDGE_PERCENT_SCALING: "[ROOT.GetCountry.MakeScope.Var('gate_hp_pledge_percent').GetValue|%1]의 [GetReligion('gate_harmony_pledge').GetName] 신봉자로 인한 보정치"
+ modifier_gate_harmony_pledge_abandoned: "지켜지지 않은 서약"
+ modifier_gate_harmony_pledge_society_harmonious: "우리의 [concept_gate_harmony_pledge_society]는 $je_gate_harmony_pledge_harmonious$ 상태임"
+ modifier_gate_harmony_pledge_society_tilting: "우리의 [concept_gate_harmony_pledge_society]는 $je_gate_harmony_pledge_tilting$ 상태임"
+ modifier_gate_harmony_pledge_society_disharmonious: "우리의 [concept_gate_harmony_pledge_society]는 $je_gate_harmony_pledge_disharmonious$ 상태임"
+ modifier_gate_harmony_pledge_economy_harmonious: "우리의 [concept_gate_harmony_pledge_economy]는 $je_gate_harmony_pledge_harmonious$ 상태임"
+ modifier_gate_harmony_pledge_economy_tilting: "우리의 [concept_gate_harmony_pledge_economy]는 $je_gate_harmony_pledge_tilting$ 상태임"
+ modifier_gate_harmony_pledge_economy_disharmonious: "우리의 [concept_gate_harmony_pledge_economy]는 $je_gate_harmony_pledge_disharmonious$ 상태임"
+ modifier_gate_harmony_pledge_legislative_harmonious: "우리의 [concept_gate_harmony_pledge_legislative]는 $je_gate_harmony_pledge_harmonious$ 상태임"
+ modifier_gate_harmony_pledge_legislative_tilting: "우리의 [concept_gate_harmony_pledge_legislative]는 $je_gate_harmony_pledge_tilting$ 상태임"
+ modifier_gate_harmony_pledge_legislative_disharmonious: "우리의 [concept_gate_harmony_pledge_legislative]는 $je_gate_harmony_pledge_disharmonious$ 상태임"
+ modifier_gate_harmony_pledge_enthusiasm_without_boundaries: "$gate_harmony_pledge.1.t$"
+ modifier_gate_harmony_pledge_rewritten_ledger: "$gate_harmony_pledge.2.t$"
+ modifier_gate_harmony_pledge_refinement_without_end: "$gate_harmony_pledge.3.t$"
+ modifier_gate_harmony_pledge_construction_drive: "$gate_harmony_pledge.4.t$"
+ modifier_gate_harmony_pledge_excess_theory: "$gate_harmony_pledge.5.t$"
+ modifier_gate_harmony_pledge_abstract_wealth: "$gate_harmony_pledge.6.t$"
+ modifier_gate_harmony_pledge_subterranean_fixation: "$gate_harmony_pledge.7.t$"
+ modifier_gate_harmony_pledge_cash_crop_fever: "$gate_harmony_pledge.8.t$"
+ modifier_gate_harmony_pledge_agrarian_security: "$gate_harmony_pledge.9.t$"
+ modifier_gate_harmony_pledge_woven_monument: "$gate_harmony_pledge.10.t$"
+ modifier_gate_harmony_pledge_unwanted_inquiry: "$gate_harmony_pledge.11.t$"
+ modifier_gate_harmony_pledge_land_rush: "$gate_harmony_pledge.14.t$"
+ modifier_gate_harmony_pledge_animistic_engineering: "$gate_harmony_pledge.15.t$"
+ gate_harmony_pledge.1.t: "한계를 모르는 열정"
+ gate_harmony_pledge.1.d: "[TopScope.sS('event_state').GetName]의 [GetCulture('gnomish').GetName] 사람이 대중의 분노를 불러일으켰습니다. 이 사태를 제대로 처리하지 못하면 [concept_assimilation]이 감소합니다."
+ gate_harmony_pledge.1.f: "붐비는 광장에서 한 노움이 완전히 호기심에 사로잡힌 채, 불운한 손님에게 쉴 새 없이 질문을 퍼붓고 있습니다. 개인적인 것에서 기술적인 것, 철학적인 것에 이르기까지 질문은 점점 더 사적인 영역을 침범해 가며, 예의범절 따위는 전혀 아랑곳하지 않은 채 유쾌하고도 집요하게 이어집니다. 한쪽에게는 순수한 호기심일 뿐이지만, 다른 이들에게는 공개적인 불쾌감과 불편을 초래하는 무례한 행동으로 비칩니다."
+ gate_harmony_pledge.1.a: "그저 호기심이 들었을 뿐이다."
+ gate_harmony_pledge.1.b: "이러한 행동을 규탄하라."
+ gate_harmony_pledge.2.t: "다시 쓰인 장부"
+ gate_harmony_pledge.2.d: "새로운 관리 방식은 [concept_bureaucracy] 산출량을 향상시키지만, 동시에 [concept_innovation]을 저해합니다."
+ gate_harmony_pledge.2.f: "우리의 관료 조직은 감독과 자원 배분을 위한 새롭고 고도로 정교한 체계를 성공적으로 도입했습니다. 행정 효율은 정점에 이르렀으며, 관료제의 낭비는 사실상 사라졌습니다. 그러나 학계와 문화계의 고문들은 이러한 끊임없는 구조적 최적화가 자발성과 창의성을 억누르고 있으며, 그 결과 전국적으로 독립적인 연구와 창작 활동이 정체되고 있다고 보고하고 있습니다."
+ gate_harmony_pledge.2.a: "이러한 새로운 경영 방식을 금지해야 한다."
+ gate_harmony_pledge.2.b: "최악의 영향을 완화하라."
+ gate_harmony_pledge.2.c: "그 잠재력을 마음껏 발휘해보아라."
+ gate_harmony_pledge.3.t: "끝없는 정교함"
+ gate_harmony_pledge.3.d: "이러한 개선은 [GetBuildingType('building_trade_center').GetName]의 [concept_throughput]을 감소시키는 한편, [GetBuildingGroup('bg_light_industry').GetName]의 [concept_throughput]을 증가시킵니다."
+ gate_harmony_pledge.3.f: "우리 제조업 부문에서 올라온 보고에 따르면 장인들의 생산 활동이 전례 없이 급증하고 있습니다. 작업장들은 최대 가동률로 운영되며 국내 생산량을 새로운 수준으로 끌어올리고 있습니다. 그러나 무역 담당관들은 이러한 생산 열풍 속에서 상품 유통이 소홀해지고 있다고 경고합니다. 완성된 상품들이 국내외 시장으로 유통되지 못한 채 창고에 쌓여가고 있습니다."
+ gate_harmony_pledge.3.a: "최소한의 판매 인력을 배치하라."
+ gate_harmony_pledge.3.b: "최악의 영향을 완화하라."
+ gate_harmony_pledge.3.c: "그 잠재력을 마음껏 발휘해보아라."
+ gate_harmony_pledge.4.t: "건설 박차"
+ gate_harmony_pledge.4.d: "건설에 대한 관심이 급증함에 따라 [concept_construction]의 생산량은 증가하는 반면, 전국적으로 [GetBuildingGroup('bg_agriculture').GetName]의 생산량은 감소하고 있습니다."
+ gate_harmony_pledge.4.f: "전국 각지에서 올라온 보고에 따르면 건축 및 공공사업이 일제히 급증하고 있습니다. 설계자와 건설업자들은 이례적일 정도의 열의를 보이며 대대적인 재설계에 나섰고, 그 결과 건설 산출량도 크게 증가했습니다. 그러나 이에 따른 평가에서는 농업에 대한 관심이 줄어들고 있다고 지적합니다. 농경지에 배치되는 노동자 수가 감소하면서 식량 비축량에도 이미 부담의 조짐이 나타나고 있습니다."
+ gate_harmony_pledge.4.a: "그들을 밭으로 보내라."
+ gate_harmony_pledge.4.b: "최악의 영향을 완화하라."
+ gate_harmony_pledge.4.c: "그 잠재력을 마음껏 발휘해보아라."
+ gate_harmony_pledge.5.t: "지나친 이론"
+ gate_harmony_pledge.5.d: "이론적 지식에 중점을 두면 [concept_innovation]은 촉진되지만 [concept_construction]은 저해됩니다."
+ gate_harmony_pledge.5.f: "우리 학술 기관에서 올라온 보고에 따르면 이론 연구와 새로운 발견이 폭발적으로 증가하고 있습니다. 학자들은 전례 없는 속도로 새로운 이론을 내놓으며 국가의 지식 기반을 빠르게 확장하고 있습니다. 그러나 지방 행정관들은 실질적인 적용이 소홀해지고 있다고 경고합니다. 학계의 관심이 지나치게 추상적인 연구에 집중되면서 주요 기반 시설과 공공사업이 심각하게 지연되고 있습니다."
+ gate_harmony_pledge.5.a: "연구 자금을 실용적인 응용 분야로 재조정해야 한다."
+ gate_harmony_pledge.5.b: "최악의 영향을 완화하라."
+ gate_harmony_pledge.5.c: "그 잠재력을 마음껏 발휘해보아라."
+ gate_harmony_pledge.6.t: "추상적인 부"
+ gate_harmony_pledge.6.d: "새로운 금융 수단은 [concept_investment_pool] 기여도를 증가시키지만, 우리 산업의 최대 [concept_cash_reserves]를 감소시킵니다."
+ gate_harmony_pledge.6.f: "금융 지구에서 올라온 보고에 따르면 복잡한 금융 수단에 대한 관심이 갑작스럽고도 강박적으로 급증하고 있습니다. 은행가와 길드 지도자들은 투기성 계약과 투자 상품을 현기증이 날 정도의 속도로 거래하며, 국가 수입과 자본의 흐름을 크게 증가시키고 있습니다. 그러나 실물 산업 부문에서는 심각한 자본 유출을 경고하고 있습니다. 자금이 장부상의 부에 지나치게 몰리면서 실제 제조업과 중공업이 정체되고 있습니다."
+ gate_harmony_pledge.6.a: "의무 최저 지급준비금 적립 비율을 인상하라."
+ gate_harmony_pledge.6.b: "최악의 영향을 완화하라."
+ gate_harmony_pledge.6.c: "그 잠재력을 마음껏 발휘해보아라."
+ gate_harmony_pledge.7.t: "지하에 대한 집착"
+ gate_harmony_pledge.7.d: "[GetBuildingGroup('bg_extraction').GetName] 산업에 대한 집착은 [concept_throughput]을 증가시키지만, 동시에 [GetBuildingGroup('bg_plantations').GetName] 산업의 [concept_throughput] 감소를 초래합니다."
+ gate_harmony_pledge.7.f: "변경 지역에서 올라온 보고에 따르면 자원 채굴이 대규모로, 그리고 조직적으로 가속되고 있습니다. 광부들과 기술자들은 공격적인 신형 굴착 기술을 도입해 원광과 광물을 우리의 비축고에 쏟아붓고 있습니다. 그러나 지방 행정관들은 이러한 무분별한 채굴이 지역 생태계를 교란하고 있다고 경고합니다. 경작지가 파헤쳐지고 수원이 다른 곳으로 돌려지면서, 플랜테이션의 농업 생산량이 급격히 감소하고 있습니다."
+ gate_harmony_pledge.7.a: "우리의 자원 채굴 산업이 주변 경작지를 보존하도록 의무화해야 한다."
+ gate_harmony_pledge.7.b: "최악의 영향을 완화하라."
+ gate_harmony_pledge.7.c: "그 잠재력을 마음껏 발휘해보아라."
+ gate_harmony_pledge.8.t: "수출용 작물 열풍"
+ gate_harmony_pledge.8.d: "[GetBuildingGroup('bg_plantations').GetName] 산업에 대한 집착은 [concept_throughput]을 증가시키지만, 동시에 [GetBuildingGroup('bg_agriculture').GetName] 산업의 [concept_throughput] 감소를 초래합니다."
+ gate_harmony_pledge.8.f: "농업 지역에서 올라온 보고에 따르면 수익성 높은 수출 작물에 대한 집착이 광범위하게 퍼지고 있습니다. 플랜테이션 농업이 막대한 부를 보장한다는 갑작스럽고 열광적인 믿음에 이끌린 지주들과 농촌 공동체들은 주식용 작물을 갈아엎고 향신료, 커피, 고무를 재배하는 데 열을 올리고 있습니다. 무역 담당관들은 수출 수입이 급증하고 있다고 보고하지만, 지방 행정관들은 마을 시장에서 식량이 점차 사라지고 있다며 심각한 식량 부족이 임박할 수 있다고 경고하고 있습니다."
+ gate_harmony_pledge.8.a: "농장당 최소 식량 생산량을 설정하라."
+ gate_harmony_pledge.8.b: "최악의 영향을 완화하라."
+ gate_harmony_pledge.8.c: "그 잠재력을 마음껏 발휘해보아라."
+ gate_harmony_pledge.9.t: "농업 안보"
+ gate_harmony_pledge.9.d: "[GetBuildingGroup('bg_agriculture').GetName] 산업에 대한 집착은 [concept_throughput]을 증가시키지만, 동시에 [GetBuildingGroup('bg_plantations').GetName] 산업의 [concept_throughput] 감소를 초래합니다."
+ gate_harmony_pledge.9.f: "농촌 지역 전반에 반동적인 움직임이 뿌리내리고 있으며, 식량 안보와 자급자족에 대한 강렬한 집단적 집착이 이를 이끌고 있습니다. 농민들과 지역 지도자들은 뿌리채소와 곡물의 수확량을 극대화하기 위해 상업용 플랜테이션의 생산을 체계적으로 줄이고 있습니다. 국가의 곡물 비축고는 넘쳐나고 국내 식량 사정도 개선되고 있지만, 플랜테이션 생산량은 급감했습니다."
+ gate_harmony_pledge.9.a: "식량 생산에 대한 유인을 줄여 플랜테이션 생산량을 늘려라."
+ gate_harmony_pledge.9.b: "최악의 영향을 완화하라."
+ gate_harmony_pledge.9.c: "그 잠재력을 마음껏 발휘해보아라."
+ gate_harmony_pledge.10.t: "직조된 기념비"
+ gate_harmony_pledge.10.d: "문화적 기념비는 우리의 [concept_gate_harmony_pledge_society]를 향상시킵니다."
+ gate_harmony_pledge.10.f: "우리 장인들 사이에서 아름답고 자발적인 협업이 이루어졌습니다. 인간 조각가들과 노움 기술자들은 새로운 대형 공공 누각을 건설하는 데 열정적으로 힘을 쏟았습니다. 이 건축물은 토착 인간 전통의 깊은 영성과 유려한 목공예를 노움식 설계의 정교하고 수학적인 태엽 장치와 완벽하게 조화시켰습니다. 이 경이로운 건축물은 조화 서약을 물질적으로 구현한 상징으로 우뚝 서며, 전국적으로 시민적 자긍심과 문화적 위신을 드높이고 있습니다."
+ gate_harmony_pledge.10.a: "정말 멋지군."
+ gate_harmony_pledge.11.t: "원치 않는 질문"
+ gate_harmony_pledge.11.d: "이 문화적 사건을 신중하게 처리하지 않으면 [GetReligion('gate_harmony_pledge').GetNameNoIcon](으)로의 [concept_conversion]이 감소합니다."
+ gate_harmony_pledge.11.f: "최근 거행된 조상 제례와 관련해 인간 종교 지도자들로부터 격렬한 항의가 들어왔습니다. 강렬하고 통제되지 않은 호기심에 이끌린 노움 학자 무리가 엄숙한 의식에 참석했지만, 이를 마치 풀어야 할 흥미로운 수수께끼처럼 다루었습니다. 이들은 기도 도중 쉴 새 없이 질문을 쏟아냈고, 신성한 유물의 치수를 재려 했으며, 의식용 불의 특성을 두고 큰 소리로 논쟁하기까지 했습니다. 악의에서 비롯된 행동은 아니었지만, 이러한 공격적인 세속적 호기심은 전통주의자들에게 깊은 모욕감을 안겼으며 사회적 조화를 훼손했습니다."
+ gate_harmony_pledge.11.a: "이건 안 좋은데."
+ gate_harmony_pledge.11.b: "이러한 행동을 규탄하라."
+ gate_harmony_pledge.12.t: "서약의 포기"
+ gate_harmony_pledge.12.d: "[TopScope.sL('atheism_law').GetName]을 제정하면 [concept_gate_harmony_pledge]을 포기하게 됩니다. 이는 파국적인 결과를 초래할 것입니다."
+ gate_harmony_pledge.12.f: "의회에서 올라온 보고에 따르면, 조화 서약의 완전한 폐기를 요구하는 급진적 행정관들의 연합이 점차 세력을 키우고 있습니다. 이들은 우리의 세심한 사회 조율이 진정한 잠재력을 억누르는 족쇄에 불과하다고 주장하며, 타고난 극단적 성향들이 아무런 제약 없이 발현되도록 허용할 것을 요구하고 있습니다. 고문들은 이 제안을 논의하는 것만으로도 단기적으로 파국적인 결과를 초래할 수 있다고 경고하고 있습니다."
+ gate_harmony_pledge.12.a: "포기하는 것이 최선이다."
+ gate_harmony_pledge.12.b: "이 문제에 대해 한번 생각해 보겠다."
+ gate_harmony_pledge.13.t: "서약의 회복"
+ gate_harmony_pledge.13.d: "우리는 [concept_gate_harmony_pledge]의 가르침을 다시 받아들였습니다."
+ gate_harmony_pledge.13.f: "통제되지 않은 극단으로 인한 피로가 마침내 국가를 휩쓴 열기를 가라앉혔습니다. 전국 각지에서 시민과 행정관 모두가 조화 서약이 추구하던 의도적이고 균형 잡힌 사회 설계로 돌아갈 것을 요구하고 있습니다."
+ gate_harmony_pledge.13.a: "우리는 조화를 위해 최선을 다할 것이다."
+ gate_harmony_pledge.14.t: "토지 쟁탈전"
+ gate_harmony_pledge.14.d: "토지 쟁탈전은 [concept_pop_growth]을 증가시키지만, 동시에 [concept_generated_pollution]도 크게 증가시킵니다."
+ gate_harmony_pledge.14.f: "고수익의 노움식 농업 도구를 손에 넣은 인간 농가들은 정글 깊숙한 곳까지 빠르게 농지를 확장하고 있습니다. 광대한 토지를 확보하고 대가족에게 상당한 유산을 남기려는 인간 특유의 욕망에 이끌려, 이들은 놀라운 속도로 울창한 땅을 개간하고 있습니다. 이러한 야심은 인구 증가와 원자원 채굴의 폭발적인 증가를 이끌고 있지만, 동시에 우리의 영토 계획을 크게 흐트러뜨리고 조화 서약이 유지하고자 하는 생태적 균형까지 위협하고 있습니다."
+ gate_harmony_pledge.14.a: "자연 보호 구역을 지정하라."
+ gate_harmony_pledge.14.b: "최악의 영향을 완화하라."
+ gate_harmony_pledge.14.c: "그 잠재력을 마음껏 발휘해보아라."
+ gate_harmony_pledge.15.t: "정령주의 공학"
+ gate_harmony_pledge.15.d: "정령주의는 [GetReligion('gate_harmony_pledge').GetNameNoIcon](으)로의 [concept_conversion]을 감소시키고, 동시에 우리 [GetCulture('gnomish').GetName] 노동자들의 [Concept('concept_radical', '$concept_radicalism$')]을 증가시킵니다."
+ gate_harmony_pledge.15.f: "인간 노동자들은 노움의 산업 기계를 자신들의 정령신앙 체계에 직접 받아들이기 시작했습니다. 거대한 증기기관과 태엽식 직조기를 강력한 지역 정령이 깃든 그릇으로 여기고 있는 것입니다. 공장 바닥은 이제 풍성한 꽃 공양물로 장식되고, 기계에는 신성한 기하학 문양이 정성스럽게 그려지고 있습니다. 이러한 아름다운 문화적 융합은 노동자들 사이에 강한 충성심과 결속력을 만들어냈습니다. 그러나 인간 작업자들이 \"불길한\" 날에는 기계를 가동하려 하지 않고, 정령의 노여움을 살 수 있다며 최적 속도로 운전하는 것조차 완강히 거부하면서 노움 기술자들은 골머리를 앓고 있습니다."
+ gate_harmony_pledge.15.a: "해당 관행을 금지해야 한다."
+ gate_harmony_pledge.15.b: "최악의 영향을 완화하라."
+ gate_harmony_pledge.15.c: "그 잠재력을 마음껏 발휘해보아라."
+ gate_harmony_pledge.16.t: "강제된 혼돈"
+ gate_harmony_pledge.16.d: "[TopScope.sCha('event_character').GetFullName](이)가 [TopScope.sPM('event_movement').GetNameNoIcon]을 창설했습니다."
+ gate_harmony_pledge.16.f: "새로 결성된 정치 운동에 관한 보고가 수도에 도착했습니다. 이 운동은 절대적 무정부 상태와 타협 없는 권위주의적 통제를 결합해야 한다고 공개적으로 주장하는 한 노움 사상가가 이끌고 있습니다. 이 세력은 공개 선언을 통해 국가와 모든 공식 제도의 완전한 해체를 요구하는 동시에, 이러한 \"순수한\" 무법 상태를 유지하기 위해 영구적이고 군사화된 강제 집행 기구가 필요하다고 주장하고 있습니다."
+ gate_harmony_pledge.16.a: "뭐라고?"
+ GATE_HP_SCRIPT_VALUE_FORMAT_MULT: "#indent_newline:6 $VALUE|%v0$ $KEY$#!"
+ GATE_HP_LEG_TREND_FROM_LAWS: "#b #blue 제정된 법률:#!#! \n[SCOPE.GetScriptValueDesc('gate_harmony_pledge_legislative_trend_from_laws')]"
+ GATE_HP_LEG_DIST_OF_POWER: "[GetLawGroup('lawgroup_distribution_of_power').GetCurrentlyActive.GetName]에서"
+ GATE_HP_LEG_BUREAUCRACY: "[GetLawGroup('lawgroup_bureaucracy').GetCurrentlyActive.GetName]에서"
+ GATE_HP_LEG_INTERNAL_SECURITY: "[GetLawGroup('lawgroup_internal_security').GetCurrentlyActive.GetName]에서"
+ GATE_HP_LEG_ECONOMIC_SYSTEM: "[GetLawGroup('lawgroup_economic_system').GetCurrentlyActive.GetName]에서"
+ GATE_HP_LEG_POLICING: "[GetLawGroup('lawgroup_policing').GetCurrentlyActive.GetName]에서"
+ GATE_HP_LEG_LABOR_ASSOCIATIONS: "[GetLawGroup('lawgroup_labour_associations').GetCurrentlyActive.GetName]에서"
+ GATE_HP_LEG_MAGIC_USERS: "[GetLawGroup('lawgroup_gate_magic_users').GetCurrentlyActive.GetName]에서"
+ GATE_HP_LEG_TREND_FROM_AUTHORITY: "사용되지 않은 [concept_authority]에서"
+ GATE_HP_LEG_TREND_FROM_INFLUENCE: "사용되지 않은 [concept_influence]에서"
+ GATE_HP_LEG_TREND_FROM_BUREACRACY: "[concept_bureaucracy]에서"
+ GATE_HP_LEG_STATUS_QUO_HARMONY: "#b #blue 부조화에 대한 문화적 저항:#!#! [AddTextIf(NotEqualTo_CFixedPoint(SCOPE.ScriptValue('gate_harmony_pledge_legislative_trend_scaling'),'(CFixedPoint)0'),'\n')][SCOPE.GetScriptValueDesc('gate_harmony_pledge_legislative_trend_scaling')]"
+ GATE_HP_LEG_TREND_FROM_MODIFIERS: "#b #blue 임시 보정치:#!#! [AddTextIf(NotEqualTo_CFixedPoint(SCOPE.ScriptValue('gate_harmony_pledge_legislative_trend_from_modifiers'),'(CFixedPoint)0'),'\n')][SCOPE.GetScriptValueDesc('gate_harmony_pledge_legislative_trend_from_modifiers')]"
