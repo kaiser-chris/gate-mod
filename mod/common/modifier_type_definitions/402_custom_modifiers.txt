@@ -56,7 +56,7 @@ state_gate_monthly_gnomish_immigration_add = {
     script_only = yes
 }
 
-state_gate_monthly_bear_immigration_add = {
+state_gate_monthly_ogre_immigration_add = {
 	decimals = 0
 	color = good
 	percent = no
@@ -137,5 +137,12 @@ character_gate_experience_gain_mult = {
 	decimals = 0
 	color = good
 	percent = yes
+	script_only = yes
+}
+
+state_gate_situation_golden_religion_conversion = {
+	boolean = yes
+	color = neutral
+	percent = no
 	script_only = yes
 }

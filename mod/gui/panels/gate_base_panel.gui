@@ -1507,6 +1507,35 @@ types gate_base_panel_types {
                 }
                 gate_left_icon_button = {
                     blockoverride "datacontext" {
+                        datacontext = "[GetScriptedGui('gg_project_investigate_magic_gate')]"
+                    }
+                    blockoverride "button_content" {
+                        text = button_project_investigate_magic_gate
+                    }
+                    blockoverride "icon" {
+                        texture = "gfx/interface/icons/gui_icons/projects/gate_project_magic_innovation.dds"
+                    }
+                    blockoverride "tooltip" {
+                        tooltipwidget = {
+                            RegularTooltip = {
+                                blockoverride "tooltip_content" {
+                                    custom_tooltip_textbox = {
+                                        text = "[Localize('je_gate_project_investigate_magic_gate')] [concept_gate_project]"
+                                        default_format = "#header"
+                                    }
+                                    custom_tooltip_textbox_with_empty_line = {
+                                        text = je_gate_project_investigate_magic_gate_description
+                                    }
+                                    custom_tooltip_textbox = {
+                                        text = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(Country.MakeScope).End)]"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                gate_left_icon_button = {
+                    blockoverride "datacontext" {
                         datacontext = "[GetScriptedGui('gg_project_artificial_ecosystem')]"
                     }
                     blockoverride "button_content" {
