@@ -1,0 +1,154 @@
+﻿gate_set_situation = {
+    # Gate in Alxa
+    random_scope_building = {
+        limit = {
+            is_building_type = building_gate_alxa
+        }
+        state = {
+            activate_production_method = {
+                building_type = building_gate_alxa
+                production_method = pm_gate_situation_normal
+            }
+        }
+    }
+
+    # Dwarven Gate in Tyrol
+    random_scope_building = {
+        limit = {
+            is_building_type = building_gate_tyrol
+        }
+        if = {
+            limit = {
+                owner = {
+                    has_technology_researched = gate_dwarven_immigration_treaty
+                }
+            }
+            state = {
+                activate_production_method = {
+                    building_type = building_gate_tyrol
+                    production_method = pm_gate_situation_treaty_dwarven
+                }
+            }
+        }
+        else = {
+            state = {
+                activate_production_method = {
+                    building_type = building_gate_tyrol
+                    production_method = pm_gate_situation_normal
+                }
+            }
+        }
+    }
+
+    # Ogre Gate in Yukon
+    random_scope_building = {
+        limit = {
+            is_building_type = building_gate_yukon
+        }
+        if = {
+            limit = {
+                owner = {
+                    has_technology_researched = gate_ogre_immigration_treaty
+                }
+            }
+            state = {
+                activate_production_method = {
+                    building_type = building_gate_yukon
+                    production_method = pm_gate_situation_treaty_ogre
+                }
+            }
+        }
+        else = {
+            state = {
+                activate_production_method = {
+                    building_type = building_gate_yukon
+                    production_method = pm_gate_situation_normal
+                }
+            }
+        }
+    }
+
+    # Elven Gate in Alxa
+    random_scope_building = {
+        limit = {
+            is_building_type = building_gate_zambia
+        }
+        if = {
+            limit = {
+                owner = {
+                    has_technology_researched = gate_elven_immigration_treaty
+                }
+            }
+            state = {
+                activate_production_method = {
+                    building_type = building_gate_zambia
+                    production_method = pm_gate_situation_treaty_elven
+                }
+            }
+        }
+        else = {
+            state = {
+                activate_production_method = {
+                    building_type = building_gate_zambia
+                    production_method = pm_gate_situation_normal
+                }
+            }
+        }
+    }
+
+    # Orcish Gate in Alxa
+    random_scope_building = {
+        limit = {
+            is_building_type = building_gate_equateur
+        }
+        if = {
+            limit = {
+                owner = {
+                    has_technology_researched = gate_orcish_immigration_treaty
+                }
+            }
+            state = {
+                activate_production_method = {
+                    building_type = building_gate_equateur
+                    production_method = pm_gate_situation_treaty_orcish
+                }
+            }
+        }
+        else = {
+            state = {
+                activate_production_method = {
+                    building_type = building_gate_equateur
+                    production_method = pm_gate_situation_normal
+                }
+            }
+        }
+    }
+
+    # Gnomish Gate in New Guinea
+    random_scope_building = {
+        limit = {
+            is_building_type = building_gate_eastern_new_guinea
+        }
+        if = {
+            limit = {
+                owner = {
+                    has_technology_researched = gate_gnomish_immigration_treaty
+                }
+            }
+            state = {
+                activate_production_method = {
+                    building_type = building_gate_eastern_new_guinea
+                    production_method = pm_gate_situation_treaty_gnomish
+                }
+            }
+        }
+        else = {
+            state = {
+                activate_production_method = {
+                    building_type = building_gate_eastern_new_guinea
+                    production_method = pm_gate_situation_normal
+                }
+            }
+        }
+    }
+}

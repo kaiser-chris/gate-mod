@@ -15,18 +15,6 @@ GLOBAL = {
 				value = 63
 			}
 		}
-
-		# Add Researching Gate journal entry
-		add_journal_entry = {
-			type = je_gate_investigate_gate
-		}
-
-		# Add progress to gate research since they have
-		# had access to a gate for years
-		set_variable = {
-			name = je_gate_investigate_gate_progress
-			value = 29
-		}
 	}
 
 	# Joseon / Korea

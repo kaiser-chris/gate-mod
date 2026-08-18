@@ -1,4 +1,5 @@
-﻿pm_gate_immigration_none = {
+﻿# No Immigration
+pm_gate_immigration_none = {
 	texture = "gfx/interface/icons/production_method_icons/gate_barred.dds"
 
 	building_modifiers = {
@@ -14,6 +15,7 @@
 	}
 }
 
+# Dwarven Immigration
 pm_gate_immigration_dwarves = {
 	texture = "gfx/interface/icons/production_method_icons/gate_immigration.dds"
 
@@ -24,7 +26,7 @@ pm_gate_immigration_dwarves = {
 	}
 
 	state_modifiers = {
-		level_scaled = {
+		workforce_scaled = {
 			state_gate_monthly_dwarven_immigration_add = 10000
 		}
 	}
@@ -40,7 +42,6 @@ pm_gate_immigration_dwarves = {
 		}
 	}
 }
-
 pm_gate_mass_immigration_dwarves = {
 	texture = "gfx/interface/icons/production_method_icons/gate_mass_immigration.dds"
 
@@ -51,7 +52,7 @@ pm_gate_mass_immigration_dwarves = {
 	}
 
 	state_modifiers = {
-		level_scaled = {
+		workforce_scaled = {
 			state_gate_monthly_dwarven_immigration_add = 30000
 		}
 	}
@@ -67,7 +68,60 @@ pm_gate_mass_immigration_dwarves = {
 		}
 	}
 }
+pm_gate_immigration_dwarves_treaty = {
+	texture = "gfx/interface/icons/production_method_icons/gate_immigration.dds"
 
+	is_hidden_when_unavailable = yes
+
+	unlocking_technologies = {
+		gate_dwarven_immigration_treaty
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_gate_monthly_dwarven_immigration_add = 5000
+		}
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_output_gate_mana_add = 20
+		}
+
+		level_scaled = {
+			building_employment_gate_mages_add = 100
+			building_employment_bureaucrats_add = 1000
+		}
+	}
+}
+pm_gate_mass_immigration_dwarves_treaty = {
+	texture = "gfx/interface/icons/production_method_icons/gate_mass_immigration.dds"
+
+	is_hidden_when_unavailable = yes
+
+	unlocking_technologies = {
+		gate_dwarven_immigration_treaty
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_gate_monthly_dwarven_immigration_add = 15000
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_output_gate_mana_add = 30
+		}
+		level_scaled = {
+			building_employment_gate_mages_add = 100
+			building_employment_bureaucrats_add = 2000
+		}
+	}
+}
+
+# Orcish Migration
 pm_gate_immigration_orcish = {
 	texture = "gfx/interface/icons/production_method_icons/gate_immigration.dds"
 
@@ -78,7 +132,7 @@ pm_gate_immigration_orcish = {
 	}
 
 	state_modifiers = {
-		level_scaled = {
+		workforce_scaled = {
 			state_gate_monthly_orcish_immigration_add = 30000
 		}
 	}
@@ -95,7 +149,6 @@ pm_gate_immigration_orcish = {
 		}
 	}
 }
-
 pm_gate_mass_immigration_orcish = {
 	texture = "gfx/interface/icons/production_method_icons/gate_mass_immigration.dds"
 
@@ -106,7 +159,7 @@ pm_gate_mass_immigration_orcish = {
 	}
 
 	state_modifiers = {
-		level_scaled = {
+		workforce_scaled = {
 			state_gate_monthly_orcish_immigration_add = 60000
 		}
 	}
@@ -122,7 +175,61 @@ pm_gate_mass_immigration_orcish = {
 		}
 	}
 }
+pm_gate_immigration_orcish_treaty = {
+	texture = "gfx/interface/icons/production_method_icons/gate_immigration.dds"
 
+	is_hidden_when_unavailable = yes
+
+	unlocking_technologies = {
+		gate_orcish_immigration_treaty
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_gate_monthly_orcish_immigration_add = 15000
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_output_gate_mana_add = 20
+		}
+
+		level_scaled = {
+			building_employment_gate_mages_add = 100
+			building_employment_bureaucrats_add = 1000
+		}
+	}
+}
+pm_gate_mass_immigration_orcish_treaty = {
+	texture = "gfx/interface/icons/production_method_icons/gate_mass_immigration.dds"
+
+	is_hidden_when_unavailable = yes
+
+	unlocking_technologies = {
+		gate_orcish_immigration_treaty
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_gate_monthly_orcish_immigration_add = 30000
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_output_gate_mana_add = 30
+		}
+		level_scaled = {
+			building_employment_gate_mages_add = 100
+			building_employment_bureaucrats_add = 1000
+		}
+	}
+}
+
+# Elven Migration
 pm_gate_immigration_elven = {
 	texture = "gfx/interface/icons/production_method_icons/gate_immigration.dds"
 
@@ -133,7 +240,7 @@ pm_gate_immigration_elven = {
 	}
 
 	state_modifiers = {
-		level_scaled = {
+		workforce_scaled = {
 			state_gate_monthly_elven_immigration_add = 10000
 		}
 	}
@@ -150,7 +257,6 @@ pm_gate_immigration_elven = {
 		}
 	}
 }
-
 pm_gate_mass_immigration_elven = {
 	texture = "gfx/interface/icons/production_method_icons/gate_mass_immigration.dds"
 
@@ -161,7 +267,7 @@ pm_gate_mass_immigration_elven = {
 	}
 
 	state_modifiers = {
-		level_scaled = {
+		workforce_scaled = {
 			state_gate_monthly_elven_immigration_add = 20000
 		}
 	}
@@ -177,7 +283,61 @@ pm_gate_mass_immigration_elven = {
 		}
 	}
 }
+pm_gate_immigration_elven_treaty = {
+	texture = "gfx/interface/icons/production_method_icons/gate_immigration.dds"
 
+	is_hidden_when_unavailable = yes
+
+	unlocking_technologies = {
+		gate_elven_immigration
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_gate_monthly_elven_immigration_add = 5000
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_output_gate_mana_add = 20
+		}
+
+		level_scaled = {
+			building_employment_gate_mages_add = 100
+			building_employment_bureaucrats_add = 500
+		}
+	}
+}
+pm_gate_mass_immigration_elven_treaty = {
+	texture = "gfx/interface/icons/production_method_icons/gate_mass_immigration.dds"
+
+	is_hidden_when_unavailable = yes
+
+	unlocking_technologies = {
+		gate_elven_immigration
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_gate_monthly_elven_immigration_add = 10000
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_output_gate_mana_add = 30
+		}
+		level_scaled = {
+			building_employment_gate_mages_add = 100
+			building_employment_bureaucrats_add = 1000
+		}
+	}
+}
+
+# Gnomish Migration
 pm_gate_immigration_gnomish = {
 	texture = "gfx/interface/icons/production_method_icons/gate_immigration.dds"
 
@@ -188,7 +348,7 @@ pm_gate_immigration_gnomish = {
 	}
 
 	state_modifiers = {
-		level_scaled = {
+		workforce_scaled = {
 			state_gate_monthly_gnomish_immigration_add = 10000
 		}
 	}
@@ -205,7 +365,6 @@ pm_gate_immigration_gnomish = {
 		}
 	}
 }
-
 pm_gate_mass_immigration_gnomish = {
 	texture = "gfx/interface/icons/production_method_icons/gate_mass_immigration.dds"
 
@@ -216,7 +375,7 @@ pm_gate_mass_immigration_gnomish = {
 	}
 
 	state_modifiers = {
-		level_scaled = {
+		workforce_scaled = {
 			state_gate_monthly_gnomish_immigration_add = 30000
 		}
 	}
@@ -232,19 +391,18 @@ pm_gate_mass_immigration_gnomish = {
 		}
 	}
 }
-
-pm_gate_immigration_bear = {
+pm_gate_immigration_gnomish_treaty = {
 	texture = "gfx/interface/icons/production_method_icons/gate_immigration.dds"
 
 	is_hidden_when_unavailable = yes
 
 	unlocking_technologies = {
-		gate_ogre_immigration
+		gate_gnomish_immigration
 	}
 
 	state_modifiers = {
-		level_scaled = {
-			state_gate_monthly_bear_immigration_add = 10000
+		workforce_scaled = {
+			state_gate_monthly_gnomish_immigration_add = 5000
 		}
 	}
 
@@ -260,8 +418,62 @@ pm_gate_immigration_bear = {
 		}
 	}
 }
+pm_gate_mass_immigration_gnomish_treaty = {
+	texture = "gfx/interface/icons/production_method_icons/gate_mass_immigration.dds"
 
-pm_gate_mass_immigration_bear = {
+	is_hidden_when_unavailable = yes
+
+	unlocking_technologies = {
+		gate_gnomish_immigration
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_gate_monthly_gnomish_immigration_add = 15000
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_output_gate_mana_add = 30
+		}
+		level_scaled = {
+			building_employment_gate_mages_add = 100
+			building_employment_bureaucrats_add = 2000
+		}
+	}
+}
+
+# Ogre Migration
+pm_gate_immigration_ogre = {
+	texture = "gfx/interface/icons/production_method_icons/gate_immigration.dds"
+
+	is_hidden_when_unavailable = yes
+
+	unlocking_technologies = {
+		gate_ogre_immigration
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_gate_monthly_ogre_immigration_add = 10000
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_output_gate_mana_add = 20
+		}
+
+		level_scaled = {
+			building_employment_gate_mages_add = 100
+			building_employment_bureaucrats_add = 1000
+		}
+	}
+}
+pm_gate_mass_immigration_ogre = {
 	texture = "gfx/interface/icons/production_method_icons/gate_mass_immigration.dds"
 
 	is_hidden_when_unavailable = yes
@@ -271,8 +483,61 @@ pm_gate_mass_immigration_bear = {
 	}
 
 	state_modifiers = {
+		workforce_scaled = {
+			state_gate_monthly_ogre_immigration_add = 30000
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_output_gate_mana_add = 30
+		}
 		level_scaled = {
-			state_gate_monthly_bear_immigration_add = 30000
+			building_employment_gate_mages_add = 100
+			building_employment_bureaucrats_add = 2000
+		}
+	}
+}
+pm_gate_immigration_ogre_treaty = {
+	texture = "gfx/interface/icons/production_method_icons/gate_immigration.dds"
+
+	is_hidden_when_unavailable = yes
+
+	unlocking_technologies = {
+		gate_ogre_immigration_treaty
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_gate_monthly_ogre_immigration_add = 5000
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_output_gate_mana_add = 20
+		}
+
+		level_scaled = {
+			building_employment_gate_mages_add = 100
+			building_employment_bureaucrats_add = 1000
+		}
+	}
+}
+pm_gate_mass_immigration_ogre_treaty = {
+	texture = "gfx/interface/icons/production_method_icons/gate_mass_immigration.dds"
+
+	is_hidden_when_unavailable = yes
+
+	unlocking_technologies = {
+		gate_ogre_immigration_treaty
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_gate_monthly_ogre_immigration_add = 15000
 		}
 	}
 

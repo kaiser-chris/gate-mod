@@ -1,19 +1,7 @@
-﻿je_gate_investigate_gate = {
-	icon = "gfx/interface/icons/event_icons/event_gate_magic_knowledge.dds"
+﻿je_gate_project_investigate_magic_gate_alxa = {
+	icon = "gfx/interface/icons/event_icons/event_gate_project.dds"
 
-	group = je_group_gate_magical_affairs
-
-	scripted_button = je_gate_investigate_gate_button_focus_academia
-	scripted_button = je_gate_investigate_gate_button_cancel_focus_academia
-
-	complete = {
-		OR = {
-			scope:journal_entry = {
-				is_goal_complete = yes
-			}
-			has_technology_researched = gate_expeditions
-		}
-	}
+	group = je_group_gate_projects
 
 	widget = {
 		gui = "gui/com_journal_injects/injects.gui"
@@ -21,53 +9,76 @@
 		container = "custom_widget_container_7"
 	}
 
-	immediate = {
-		add_gate_dlc_icon = yes
-		set_variable = {
-			name = je_gate_investigate_gate_progress
-			value = 0
+	widget = {
+		gui = "gui/com_journal_injects/injects.gui"
+		name = "com_journal_entry_building"
+		container = "custom_widget_container_1"
+	}
+
+	status_desc = {
+		triggered_desc = {
+			trigger = {
+				has_gate_magic_researcher = no
+			}
+			desc = gg_projects_invalid_arcanist
 		}
 	}
 
-	invalid = {
-		AND = {
-			hidden_trigger = {
-				is_gate_planet_country = no
+	immediate = {
+		add_gate_dlc_icon = yes
+		random_scope_building = {
+			limit = {
+				is_building_type = building_gate_alxa
 			}
-            has_magic_gate = no
+			scope:journal_entry = {
+				set_variable = {
+					name = com_journal_entry_building
+					value = prev
+				}
+			}
 		}
+	}
+
+	complete = {
+		gate_project_check_complete = yes
 	}
 
 	on_monthly_pulse = {
 		effect = {
 			if = {
 				limit = {
-					has_magic_gate = yes
-				}
-				change_variable = {
-					name = je_gate_investigate_gate_progress
-					add = {
-						# Base
-						value = 1
-						if = {
-							limit = {
-								has_modifier = modifier_gate_focus_investigate_gate_cost
-							}
-							# Focused Efforts
-							add = 2
-						}
+					any_scope_building = {
+						is_building_type = building_gate_alxa
 					}
+				}
+				gate_project_progress = yes
+			}
+		}
+	}
+
+	invalid = {
+		OR = {
+			hidden_trigger = {
+				OR = {
+					has_gate_active_magic_project = no
+					has_variable = gate_project_building_gate_alxa_unlocked
+				}
+			}
+			NOT = {
+				any_scope_building = {
+					is_building_type = building_gate_alxa
 				}
 			}
 		}
 	}
 
+	on_invalid = {
+		hidden_effect = {
+			gate_stop_magic_project = yes
+		}
+	}
 
 	on_complete = {
-		hidden_effect = {
-			remove_modifier = modifier_gate_focus_investigate_gate_cost
-		}
-		remove_variable = je_gate_investigate_gate_progress
 		trigger_event = {
 			id = gate_investigate_gate.1
 			popup = yes
@@ -83,28 +94,680 @@
 				}
 			}
 		}
+		gate_add_magic_innovation = {
+			amount = 500
+		}
+		gate_add_researcher_experience = {
+			amount = 10
+		}
+		hidden_effect = {
+			set_variable = gate_has_finished_project
+			set_variable = gate_project_building_gate_alxa_unlocked
+			gate_stop_magic_project = yes
+		}
+	}
+
+	current_value = {
+		value = gate_project_current_progress
+	}
+
+	goal_add_value = {
+		add = scope:target
+	}
+
+	scripted_button = gate_project_button_pause
+	scripted_button = gate_project_button_continue
+	scripted_button = gate_project_button_stop
+
+	display_progressbar_as_months = yes
+	progressbar = yes
+
+	weight = 1000
+
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}
+
+je_gate_project_investigate_magic_gate_tyrol = {
+	icon = "gfx/interface/icons/event_icons/event_gate_project.dds"
+
+	group = je_group_gate_projects
+
+	widget = {
+		gui = "gui/com_journal_injects/injects.gui"
+		name = "com_journal_entry_dlc_icon"
+		container = "custom_widget_container_7"
+	}
+
+	widget = {
+		gui = "gui/com_journal_injects/injects.gui"
+		name = "com_journal_entry_building"
+		container = "custom_widget_container_1"
+	}
+
+	status_desc = {
+		triggered_desc = {
+			trigger = {
+				has_gate_magic_researcher = no
+			}
+			desc = gg_projects_invalid_arcanist
+		}
+	}
+
+	immediate = {
+		add_gate_dlc_icon = yes
+		random_scope_building = {
+			limit = {
+				is_building_type = building_gate_tyrol
+			}
+			scope:journal_entry = {
+				set_variable = {
+					name = com_journal_entry_building
+					value = prev
+				}
+			}
+		}
+	}
+
+	complete = {
+		gate_project_check_complete = yes
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			if = {
+				limit = {
+					any_scope_building = {
+						is_building_type = building_gate_tyrol
+					}
+				}
+				gate_project_progress = yes
+			}
+		}
+	}
+
+	invalid = {
+		OR = {
+			hidden_trigger = {
+				OR = {
+					has_gate_active_magic_project = no
+					has_variable = gate_project_building_gate_tyrol_unlocked
+				}
+			}
+			NOT = {
+				any_scope_building = {
+					is_building_type = building_gate_tyrol
+				}
+			}
+		}
 	}
 
 	on_invalid = {
 		hidden_effect = {
-			remove_modifier = modifier_gate_focus_investigate_gate_cost
+			gate_stop_magic_project = yes
 		}
-		remove_variable = je_gate_investigate_gate_progress
+	}
+
+	on_complete = {
+		trigger_event = {
+			id = gate_investigate_gate.2
+			popup = yes
+		}
+		if = {
+			limit = {
+				has_journal_entry = je_gate_researching_magic
+			}
+			je:je_gate_researching_magic = {
+				add_progress = {
+					name = pb_gate_researching_magic
+					value = 10
+				}
+			}
+		}
+		gate_add_magic_innovation = {
+			amount = 500
+		}
+		gate_add_researcher_experience = {
+			amount = 10
+		}
+		hidden_effect = {
+			set_variable = gate_project_building_gate_tyrol_unlocked
+			set_variable = gate_has_finished_project
+			gate_stop_magic_project = yes
+		}
 	}
 
 	current_value = {
-		value = root.var:je_gate_investigate_gate_progress
+		value = gate_project_current_progress
 	}
 
 	goal_add_value = {
-		add = 60
+		add = scope:target
 	}
 
+	scripted_button = gate_project_button_pause
+	scripted_button = gate_project_button_continue
+	scripted_button = gate_project_button_stop
+
+	display_progressbar_as_months = yes
 	progressbar = yes
 
-	transferable = no
-	can_revolution_inherit = yes
+	weight = 1000
 
-	weight = 200
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}
+
+je_gate_project_investigate_magic_gate_zambia = {
+	icon = "gfx/interface/icons/event_icons/event_gate_project.dds"
+
+	group = je_group_gate_projects
+
+	widget = {
+		gui = "gui/com_journal_injects/injects.gui"
+		name = "com_journal_entry_dlc_icon"
+		container = "custom_widget_container_7"
+	}
+
+	widget = {
+		gui = "gui/com_journal_injects/injects.gui"
+		name = "com_journal_entry_building"
+		container = "custom_widget_container_1"
+	}
+
+	status_desc = {
+		triggered_desc = {
+			trigger = {
+				has_gate_magic_researcher = no
+			}
+			desc = gg_projects_invalid_arcanist
+		}
+	}
+
+	immediate = {
+		add_gate_dlc_icon = yes
+		random_scope_building = {
+			limit = {
+				is_building_type = building_gate_zambia
+			}
+			scope:journal_entry = {
+				set_variable = {
+					name = com_journal_entry_building
+					value = prev
+				}
+			}
+		}
+	}
+
+	complete = {
+		gate_project_check_complete = yes
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			if = {
+				limit = {
+					any_scope_building = {
+						is_building_type = building_gate_zambia
+					}
+				}
+				gate_project_progress = yes
+			}
+		}
+	}
+
+	invalid = {
+		OR = {
+			hidden_trigger = {
+				OR = {
+					has_gate_active_magic_project = no
+					has_variable = gate_project_building_gate_zambia_unlocked
+				}
+			}
+			NOT = {
+				any_scope_building = {
+					is_building_type = building_gate_zambia
+				}
+			}
+		}
+	}
+
+	on_invalid = {
+		hidden_effect = {
+			gate_stop_magic_project = yes
+		}
+	}
+
+	on_complete = {
+		trigger_event = {
+			id = gate_investigate_gate.3
+			popup = yes
+		}
+		if = {
+			limit = {
+				has_journal_entry = je_gate_researching_magic
+			}
+			je:je_gate_researching_magic = {
+				add_progress = {
+					name = pb_gate_researching_magic
+					value = 10
+				}
+			}
+		}
+		gate_add_magic_innovation = {
+			amount = 500
+		}
+		gate_add_researcher_experience = {
+			amount = 10
+		}
+		hidden_effect = {
+			set_variable = gate_project_building_gate_zambia_unlocked
+			set_variable = gate_has_finished_project
+			gate_stop_magic_project = yes
+		}
+	}
+
+	current_value = {
+		value = gate_project_current_progress
+	}
+
+	goal_add_value = {
+		add = scope:target
+	}
+
+	scripted_button = gate_project_button_pause
+	scripted_button = gate_project_button_continue
+	scripted_button = gate_project_button_stop
+
+	display_progressbar_as_months = yes
+	progressbar = yes
+
+	weight = 1000
+
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}
+
+je_gate_project_investigate_magic_gate_yukon = {
+	icon = "gfx/interface/icons/event_icons/event_gate_project.dds"
+
+	group = je_group_gate_projects
+
+	widget = {
+		gui = "gui/com_journal_injects/injects.gui"
+		name = "com_journal_entry_dlc_icon"
+		container = "custom_widget_container_7"
+	}
+
+	widget = {
+		gui = "gui/com_journal_injects/injects.gui"
+		name = "com_journal_entry_building"
+		container = "custom_widget_container_1"
+	}
+
+	status_desc = {
+		triggered_desc = {
+			trigger = {
+				has_gate_magic_researcher = no
+			}
+			desc = gg_projects_invalid_arcanist
+		}
+	}
+
+	immediate = {
+		add_gate_dlc_icon = yes
+		random_scope_building = {
+			limit = {
+				is_building_type = building_gate_yukon
+			}
+			scope:journal_entry = {
+				set_variable = {
+					name = com_journal_entry_building
+					value = prev
+				}
+			}
+		}
+	}
+
+	complete = {
+		gate_project_check_complete = yes
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			if = {
+				limit = {
+					any_scope_building = {
+						is_building_type = building_gate_yukon
+					}
+				}
+				gate_project_progress = yes
+			}
+		}
+	}
+
+	invalid = {
+		OR = {
+			hidden_trigger = {
+				OR = {
+					has_gate_active_magic_project = no
+					has_variable = gate_project_building_gate_yukon_unlocked
+				}
+			}
+			NOT = {
+				any_scope_building = {
+					is_building_type = building_gate_yukon
+				}
+			}
+		}
+	}
+
+	on_invalid = {
+		hidden_effect = {
+			gate_stop_magic_project = yes
+		}
+	}
+
+	on_complete = {
+		trigger_event = {
+			id = gate_investigate_gate.4
+			popup = yes
+		}
+		if = {
+			limit = {
+				has_journal_entry = je_gate_researching_magic
+			}
+			je:je_gate_researching_magic = {
+				add_progress = {
+					name = pb_gate_researching_magic
+					value = 10
+				}
+			}
+		}
+		gate_add_magic_innovation = {
+			amount = 500
+		}
+		gate_add_researcher_experience = {
+			amount = 10
+		}
+		hidden_effect = {
+			set_variable = gate_project_building_gate_yukon_unlocked
+			set_variable = gate_has_finished_project
+			gate_stop_magic_project = yes
+		}
+	}
+
+	current_value = {
+		value = gate_project_current_progress
+	}
+
+	goal_add_value = {
+		add = scope:target
+	}
+
+	scripted_button = gate_project_button_pause
+	scripted_button = gate_project_button_continue
+	scripted_button = gate_project_button_stop
+
+	display_progressbar_as_months = yes
+	progressbar = yes
+
+	weight = 1000
+
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}
+
+je_gate_project_investigate_magic_gate_equateur = {
+	icon = "gfx/interface/icons/event_icons/event_gate_project.dds"
+
+	group = je_group_gate_projects
+
+	widget = {
+		gui = "gui/com_journal_injects/injects.gui"
+		name = "com_journal_entry_dlc_icon"
+		container = "custom_widget_container_7"
+	}
+
+	widget = {
+		gui = "gui/com_journal_injects/injects.gui"
+		name = "com_journal_entry_building"
+		container = "custom_widget_container_1"
+	}
+
+	status_desc = {
+		triggered_desc = {
+			trigger = {
+				has_gate_magic_researcher = no
+			}
+			desc = gg_projects_invalid_arcanist
+		}
+	}
+
+	immediate = {
+		add_gate_dlc_icon = yes
+		random_scope_building = {
+			limit = {
+				is_building_type = building_gate_equateur
+			}
+			scope:journal_entry = {
+				set_variable = {
+					name = com_journal_entry_building
+					value = prev
+				}
+			}
+		}
+	}
+
+	complete = {
+		gate_project_check_complete = yes
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			if = {
+				limit = {
+					any_scope_building = {
+						is_building_type = building_gate_equateur
+					}
+				}
+				gate_project_progress = yes
+			}
+		}
+	}
+
+	invalid = {
+		OR = {
+			hidden_trigger = {
+				OR = {
+					has_gate_active_magic_project = no
+					has_variable = gate_project_building_gate_equateur_unlocked
+				}
+			}
+			NOT = {
+				any_scope_building = {
+					is_building_type = building_gate_equateur
+				}
+			}
+		}
+	}
+
+	on_invalid = {
+		hidden_effect = {
+			gate_stop_magic_project = yes
+		}
+	}
+
+	on_complete = {
+		trigger_event = {
+			id = gate_investigate_gate.5
+			popup = yes
+		}
+		if = {
+			limit = {
+				has_journal_entry = je_gate_researching_magic
+			}
+			je:je_gate_researching_magic = {
+				add_progress = {
+					name = pb_gate_researching_magic
+					value = 10
+				}
+			}
+		}
+		gate_add_magic_innovation = {
+			amount = 500
+		}
+		gate_add_researcher_experience = {
+			amount = 10
+		}
+		hidden_effect = {
+			set_variable = gate_project_building_gate_equateur_unlocked
+			set_variable = gate_has_finished_project
+			gate_stop_magic_project = yes
+		}
+	}
+
+	current_value = {
+		value = gate_project_current_progress
+	}
+
+	goal_add_value = {
+		add = scope:target
+	}
+
+	scripted_button = gate_project_button_pause
+	scripted_button = gate_project_button_continue
+	scripted_button = gate_project_button_stop
+
+	display_progressbar_as_months = yes
+	progressbar = yes
+
+	weight = 1000
+
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}
+
+je_gate_project_investigate_magic_gate_eastern_new_guinea = {
+	icon = "gfx/interface/icons/event_icons/event_gate_project.dds"
+
+	group = je_group_gate_projects
+
+	widget = {
+		gui = "gui/com_journal_injects/injects.gui"
+		name = "com_journal_entry_dlc_icon"
+		container = "custom_widget_container_7"
+	}
+
+	widget = {
+		gui = "gui/com_journal_injects/injects.gui"
+		name = "com_journal_entry_building"
+		container = "custom_widget_container_1"
+	}
+
+	status_desc = {
+		triggered_desc = {
+			trigger = {
+				has_gate_magic_researcher = no
+			}
+			desc = gg_projects_invalid_arcanist
+		}
+	}
+
+	immediate = {
+		add_gate_dlc_icon = yes
+		random_scope_building = {
+			limit = {
+				is_building_type = building_gate_eastern_new_guinea
+			}
+			scope:journal_entry = {
+				set_variable = {
+					name = com_journal_entry_building
+					value = prev
+				}
+			}
+		}
+	}
+
+	complete = {
+		gate_project_check_complete = yes
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			if = {
+				limit = {
+					any_scope_building = {
+						is_building_type = building_gate_eastern_new_guinea
+					}
+				}
+				gate_project_progress = yes
+			}
+		}
+	}
+
+	invalid = {
+		OR = {
+			hidden_trigger = {
+				OR = {
+					has_gate_active_magic_project = no
+					has_variable = gate_project_building_gate_eastern_new_guinea_unlocked
+				}
+			}
+			NOT = {
+				any_scope_building = {
+					is_building_type = building_gate_eastern_new_guinea
+				}
+			}
+		}
+	}
+
+	on_invalid = {
+		hidden_effect = {
+			gate_stop_magic_project = yes
+		}
+	}
+
+	on_complete = {
+		trigger_event = {
+			id = gate_investigate_gate.6
+			popup = yes
+		}
+		if = {
+			limit = {
+				has_journal_entry = je_gate_researching_magic
+			}
+			je:je_gate_researching_magic = {
+				add_progress = {
+					name = pb_gate_researching_magic
+					value = 10
+				}
+			}
+		}
+		gate_add_magic_innovation = {
+			amount = 500
+		}
+		gate_add_researcher_experience = {
+			amount = 10
+		}
+		hidden_effect = {
+			set_variable = gate_project_building_gate_eastern_new_guinea_unlocked
+			set_variable = gate_has_finished_project
+			gate_stop_magic_project = yes
+		}
+	}
+
+	current_value = {
+		value = gate_project_current_progress
+	}
+
+	goal_add_value = {
+		add = scope:target
+	}
+
+	scripted_button = gate_project_button_pause
+	scripted_button = gate_project_button_continue
+	scripted_button = gate_project_button_stop
+
+	display_progressbar_as_months = yes
+	progressbar = yes
+
+	weight = 1000
+
 	should_be_pinned_by_default_uninvolved_or_context = yes
 }

@@ -45,6 +45,7 @@ gate_project_can_start_any = {
 		gate_project_can_start_domain = yes
 		gate_project_can_start_improve_mana_extraction = yes
 		gate_project_can_start_modernize_seed_selection = yes
+		gate_project_can_start_investigate_magic_gate = yes
 	}
 }
 
@@ -140,6 +141,102 @@ gate_project_can_start_modernize_seed_selection = {
 		}
 	}
 	is_gate_magic_country = yes
+	has_gate_magic_researcher = yes
+	has_gate_active_magic_project = no
+}
+
+gate_project_can_start_investigate_magic_gate = {
+	custom_tooltip = {
+		text = trigger_gate_project_can_has_locked_gate
+		OR = {
+			AND = {
+				NOT = {
+					has_technology_researched = gate_expeditions
+				}
+				any_scope_building = {
+					is_building_type = building_gate_alxa
+				}
+				NOT = {
+					has_variable = gate_project_building_gate_alxa_unlocked
+				}
+			}
+
+			AND = {
+				NOT = {
+					has_technology_researched = gate_ogre_immigration
+				}
+				NOT = {
+					has_technology_researched = gate_ogre_immigration_treaty
+				}
+				any_scope_building = {
+					is_building_type = building_gate_yukon
+				}
+				NOT = {
+					has_variable = gate_project_building_gate_yukon_unlocked
+				}
+			}
+
+			AND = {
+				NOT = {
+					has_technology_researched = gate_orcish_immigration
+				}
+				NOT = {
+					has_technology_researched = gate_orcish_immigration_treaty
+				}
+				any_scope_building = {
+					is_building_type = building_gate_equateur
+				}
+				NOT = {
+					has_variable = gate_project_building_gate_equateur_unlocked
+				}
+			}
+
+			AND = {
+				NOT = {
+					has_technology_researched = gate_elven_immigration
+				}
+				NOT = {
+					has_technology_researched = gate_elven_immigration_treaty
+				}
+				any_scope_building = {
+					is_building_type = building_gate_zambia
+				}
+				NOT = {
+					has_variable = gate_project_building_gate_zambia_unlocked
+				}
+			}
+
+			AND = {
+				NOT = {
+					has_technology_researched = gate_dwarven_immigration
+				}
+				NOT = {
+					has_technology_researched = gate_dwarven_immigration_treaty
+				}
+				any_scope_building = {
+					is_building_type = building_gate_tyrol
+				}
+				NOT = {
+					has_variable = gate_project_building_gate_tyrol_unlocked
+				}
+			}
+
+			AND = {
+				NOT = {
+					has_technology_researched = gate_gnomish_immigration
+				}
+				NOT = {
+					has_technology_researched = gate_gnomish_immigration_treaty
+				}
+				any_scope_building = {
+					is_building_type = building_gate_eastern_new_guinea
+				}
+				NOT = {
+					has_variable = gate_project_building_gate_eastern_new_guinea_unlocked
+				}
+			}
+		}
+	}
 	has_gate_magic_researcher = yes
 	has_gate_active_magic_project = no
 }

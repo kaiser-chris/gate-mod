@@ -1,45 +1,4 @@
-﻿investigate_gate_decision = {
-	is_shown = {
-		NOT = {
-			is_gate_magic_country = yes
-		}
-		NOT = {
-			is_country_type = decentralized
-		}
-	}
-
-	possible = {
-		is_diplomatic_play_committed_participant = no
-		is_at_war = no
-		NOT = {
-			has_technology_researched = gate_expeditions
-		}
-		custom_tooltip = {
-			text = is_gate_planet_country_tt
-			is_gate_planet_country = no
-		}
-		has_magic_gate = yes
-		hidden_trigger = {
-			NOT = { has_variable = je_gate_investigate_gate_progress }
-		}
-	}
-
-	when_taken = {
-		set_variable = {
-			name = je_gate_investigate_gate_progress
-			value = 0
-		}
-		add_journal_entry = {
-			type = je_gate_investigate_gate
-		}
-	}
-
-	ai_chance = {
-		value = 100
-	}
-}
-
-research_magic_decision = {
+﻿research_magic_decision = {
 	is_shown = {
 		is_gate_magic_country = no
 		NOT = {
