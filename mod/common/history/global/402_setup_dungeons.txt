@@ -1,0 +1,15 @@
+﻿# This script is run after all other history scripts were run
+GLOBAL = {
+
+	# Alpine Caves in Tyrol
+	# id = gate_dungeon_tyrol
+	gate_create_dungeon_tyrol = yes
+
+	#TODO: REMOVE THIS
+	c:GATE_MK = {
+		add_journal_entry = {
+			type = je_gate_expedition_dungeon
+		}
+	}
+
+}

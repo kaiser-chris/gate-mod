@@ -1,0 +1,14 @@
+﻿sgui_gate_dungeon_layer_complete = {
+	scope = journal_entry
+
+	saved_scopes = {
+		layer
+	}
+
+	is_shown = {
+		any_in_list = {
+			variable = completed_layers
+			scope:layer ?= this
+		}
+	}
+}
