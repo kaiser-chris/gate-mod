@@ -1,7 +1,7 @@
 ﻿je_gate_expedition_dungeon = {
-	icon = "gfx/interface/icons/event_icons/event_gate_expedition.dds"
+	icon = gfx/interface/icons/event_icons/event_gate_dungeon.dds
 
-	group = je_group_expeditions
+	group = je_group_gate_dungeons
 
 	widget = {
 		gui = "gui/journal_injects/gate_expedition_injects.gui"
@@ -18,9 +18,9 @@
 	immediate = {
 		add_gate_dlc_icon = yes
 		scope:journal_entry = {
-			set_variable = {
-				name = dungeon
-				value = container:gate_dungeon_tyrol
+			gate_create_dungeon_expedition = {
+				dungeon = container:gate_dungeon_tyrol
+				scope = expedition
 			}
 
 			# Set active layer
@@ -30,7 +30,7 @@
 				limit = {
 					var:name ?= flag:je_gate_expedition_dungeon_step_two
 				}
-				prev = {
+				scope:expedition = {
 					set_variable = {
 						name = current_step
 						value = prev
@@ -44,11 +44,11 @@
 				tag = gate_dungeon_layer
 				limit = {
 					OR = {
-						var:name ?= flag:je_gate_expedition_dungeon_step_supplies
+						var:name ?= flag:je_gate_expedition_dungeon_step_entrance
 						var:name ?= flag:je_gate_expedition_dungeon_step_one
 					}
 				}
-				prev = {
+				scope:expedition = {
 					add_to_variable_list = {
 						name = completed_layers
 						target = prev

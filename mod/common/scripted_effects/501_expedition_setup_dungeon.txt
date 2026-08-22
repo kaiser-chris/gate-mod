@@ -1,31 +1,63 @@
-﻿gate_create_dungeon_tyrol = {
+﻿gate_create_dungeon_expedition = {
+	create_container = {
+		tags = { gate_expedition }
+		on_created = {
+			set_variable = {
+				name = dungeon
+				value = $dungeon$
+			}
+
+			# Set first layer as current step
+			var:dungeon = {
+				ordered_in_list = {
+					variable = layers
+					position = 0
+					save_scope_as = temp_first_layer
+				}
+			}
+			set_variable = {
+				name = current_step
+				value = scope:temp_first_layer
+			}
+		}
+		save_scope_as = $scope$
+	}
+	set_variable = {
+		name = expedition
+		value = scope:expedition
+	}
+	clear_saved_scope = temp_first_layer
+}
+
+gate_create_dungeon_tyrol = {
 	container:gate_dungeon_tyrol ?= {
 		destroy_container = yes
 	}
 	gate_create_dungeon = {
 		name = gate_dungeon_tyrol
 		state_region = STATE_TYROL
+		type = gate_dungeon_cave_01
 	}
 	container:gate_dungeon_tyrol = {
 		gate_create_dungeon_layer = {
-			name = je_gate_expedition_dungeon_step_supplies
-			layer_type = gate_dungeon_layer_top_cave_01
+			name = je_gate_expedition_dungeon_step_entrance
+			type = gate_dungeon_layer_top_cave_01
 		}
 		gate_create_dungeon_layer = {
 			name = je_gate_expedition_dungeon_step_one
-			layer_type = gate_dungeon_layer_inner_classic_01
+			type = gate_dungeon_layer_inner_classic_01
 		}
 		gate_create_dungeon_layer = {
 			name = je_gate_expedition_dungeon_step_two
-			layer_type = gate_dungeon_layer_inner_classic_02
+			type = gate_dungeon_layer_inner_classic_02
 		}
 		gate_create_dungeon_layer = {
 			name = je_gate_expedition_dungeon_step_three
-			layer_type = gate_dungeon_layer_inner_classic_03
+			type = gate_dungeon_layer_inner_classic_03
 		}
 		gate_create_dungeon_layer = {
 			name = je_gate_expedition_dungeon_step_complete
-			layer_type = gate_dungeon_layer_inner_classic_04
+			type = gate_dungeon_layer_inner_classic_04
 		}
 	}
 }
@@ -34,7 +66,7 @@
 gate_create_dungeon = {
 	create_container = {
 		name = $name$
-		tags = { gate_expedition gate_dungeon }
+		tags = { gate_dungeon }
 		on_created = {
 			fix_variable_error = { variable = $name$ }
 			fix_variable_error = { variable = $name$_desc }
@@ -49,6 +81,10 @@ gate_create_dungeon = {
 			set_variable = {
 				name = location
 				value = s:$state_region$
+			}
+			set_variable = {
+				name = type
+				value = $type$
 			}
 		}
 	}
@@ -77,7 +113,7 @@ gate_create_dungeon_layer = {
 			}
 			set_variable = {
 				name = type
-				value = $layer_type$
+				value = $type$
 			}
 		}
 		save_scope_as = temp_dungeon_layer
