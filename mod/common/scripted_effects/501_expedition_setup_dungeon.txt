@@ -1,0 +1,93 @@
+﻿gate_create_dungeon_tyrol = {
+	container:gate_dungeon_tyrol ?= {
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_tyrol
+		state_region = STATE_TYROL
+	}
+	container:gate_dungeon_tyrol = {
+		gate_create_dungeon_layer = {
+			name = je_gate_expedition_dungeon_step_supplies
+			layer_type = gate_dungeon_layer_top_cave_01
+		}
+		gate_create_dungeon_layer = {
+			name = je_gate_expedition_dungeon_step_one
+			layer_type = gate_dungeon_layer_inner_classic_01
+		}
+		gate_create_dungeon_layer = {
+			name = je_gate_expedition_dungeon_step_two
+			layer_type = gate_dungeon_layer_inner_classic_02
+		}
+		gate_create_dungeon_layer = {
+			name = je_gate_expedition_dungeon_step_three
+			layer_type = gate_dungeon_layer_inner_classic_03
+		}
+		gate_create_dungeon_layer = {
+			name = je_gate_expedition_dungeon_step_complete
+			layer_type = gate_dungeon_layer_inner_classic_04
+		}
+	}
+}
+
+
+gate_create_dungeon = {
+	create_container = {
+		name = $name$
+		tags = { gate_expedition gate_dungeon }
+		on_created = {
+			fix_variable_error = { variable = $name$ }
+			fix_variable_error = { variable = $name$_desc }
+			set_variable = {
+				name = name
+				value = flag:$name$
+			}
+			set_variable = {
+				name = desc
+				value = flag:$name$_desc
+			}
+			set_variable = {
+				name = location
+				value = s:$state_region$
+			}
+		}
+	}
+	add_to_global_variable_list = {
+		name = gate_dungeons
+		target = container:$name$
+	}
+}
+
+
+gate_create_dungeon_layer = {
+	fix_variable_error = { variable = $name$ }
+	fix_variable_error = { variable = $name$_desc }
+	fix_variable_error = { variable = gate_dungeon_layers }
+	create_container = {
+		name = $name$
+		tags = { gate_expedition_step gate_dungeon_layer }
+		on_created = {
+			set_variable = {
+				name = name
+				value = flag:$name$
+			}
+			set_variable = {
+				name = desc
+				value = flag:$name$_desc
+			}
+			set_variable = {
+				name = type
+				value = $layer_type$
+			}
+		}
+		save_scope_as = temp_dungeon_layer
+	}
+	scope:temp_dungeon_layer = {
+		set_parent = prev
+	}
+	add_to_variable_list = {
+		name = layers
+		target = scope:temp_dungeon_layer
+	}
+	clear_saved_scope = temp_dungeon_layer
+}

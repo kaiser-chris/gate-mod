@@ -1,0 +1,383 @@
+# INHERITED FROM BASE GAME
+@panel_width_minus_30 = 510
+@panel_width_minus_20 = 520
+@panel_width_minus_10 = 530			# used to be 450
+@panel_width = 540  				# used to be 460
+@panel_width_half = 270				# used to be 230
+@panel_width_plus_10 = 550  		# used to be 470
+@panel_width_plus_14 = 554			# used to be 474
+@panel_width_plus_14_half = 277		# used to be 237
+@panel_width_plus_20 = 560			# used to be 480
+@panel_width_plus_30 = 570			# used to be 490
+@panel_width_plus_70 = 610			# used to be 530
+
+#### WIDGETS
+flowcontainer = {
+	name = "gate_inject_dungeon_layers"
+	parentanchor = hcenter
+	direction = vertical
+	spacing = 20
+	visible = "[JournalEntry.MakeScope.Var('dungeon').IsSet]"
+	datacontext = "[JournalEntry.MakeScope.Var('dungeon').GetScriptContainer]"
+
+	flowcontainer = {
+		parentanchor = hcenter
+		direction = vertical
+		margin_top = -2
+		background = {
+			using = simple_frame
+		}
+		margin_bottom = 2
+
+		default_header_clean_faded = {
+			blockoverride "text" {
+				text = je_gate_expedition_dungeon_step_active
+			}
+			blockoverride "size" {
+				size = { 500 45 }
+			}
+		}
+
+		gate_dungeon_layer = {
+			visible = "[JournalEntry.MakeScope.Var('current_step').IsSet]"
+			datacontext = "[JournalEntry.MakeScope.Var('current_step')]"
+			blockoverride "top_line" {
+				visible = no
+			}
+		}
+	}
+
+	textbox = {
+		text = "[ScriptContainer.MakeScope.Var('name').GetFlagName]"
+	}
+
+	flowcontainer = {
+		parentanchor = hcenter
+		direction = vertical
+		oncreate = "[BindFoldOutContext]"
+		visible = "[DataModelHasItems(ScriptContainer.MakeScope.GetList('layers'))]"
+
+		section_header_button = {
+			onclick = "[PdxGuiFoldOut.Toggle]"
+
+			blockoverride "onclick_showmore" {
+				visible = "[Not(PdxGuiFoldOut.IsUnfolded)]"
+			}
+			blockoverride "onclick_showless" {
+				visible = "[PdxGuiFoldOut.IsUnfolded]"
+			}
+			blockoverride "left_text" {
+				text = je_gate_expedition_dungeon_step_all
+			}
+		}
+
+		gate_dungeon_layers = {
+			blockoverride "datamodel" {
+				datamodel = "[DataModelFirst(ScriptContainer.MakeScope.GetList('layers'), '(int32)1')]"
+			}
+			blockoverride "top_line" {
+				visible = no
+			}
+			visible = "[PdxGuiFoldOut.IsUnfolded]"
+		}
+		gate_dungeon_layers = {
+			blockoverride "datamodel" {
+				datamodel = "[DataModelSubSpan(
+				ScriptContainer.MakeScope.GetList('layers'),
+				'(int32)1',
+				GetDataModelSize(ScriptContainer.MakeScope.GetList('layers'))
+			)]"
+			}
+			visible = "[PdxGuiFoldOut.IsUnfolded]"
+		}
+	}
+
+}
+
+types gate_inject_dungeon_layer_types {
+
+	type gate_dungeon_layers = flowcontainer {
+		using = default_list_position
+		direction = vertical
+		block "datamodel" {
+			datamodel = "[ScriptContainer.MakeScope.GetList('layers')]"
+		}
+
+		item = {
+			gate_dungeon_layer = {}
+		}
+	}
+
+	type gate_dungeon_layer = widget {
+		size = { 500 52 }
+
+		gate_dungeon_layer_image = {
+			visible = "[EqualTo_CFixedPoint(Scope.Var('type').GetValue, Scope.ScriptValue('gate_dungeon_layer_top_cave_01'))]"
+			blockoverride "texture" {
+				texture = gfx/map/gate/dungeon_layers/top_cave_01.dds
+			}
+		}
+		gate_dungeon_layer_image = {
+			visible = "[EqualTo_CFixedPoint(Scope.Var('type').GetValue, Scope.ScriptValue('gate_dungeon_layer_inner_classic_01'))]"
+			blockoverride "texture" {
+				texture = gfx/map/gate/dungeon_layers/inner_classic_01.dds
+			}
+		}
+		gate_dungeon_layer_image = {
+			visible = "[EqualTo_CFixedPoint(Scope.Var('type').GetValue, Scope.ScriptValue('gate_dungeon_layer_inner_classic_02'))]"
+			blockoverride "texture" {
+				texture = gfx/map/gate/dungeon_layers/inner_classic_02.dds
+			}
+		}
+		gate_dungeon_layer_image = {
+			visible = "[EqualTo_CFixedPoint(Scope.Var('type').GetValue, Scope.ScriptValue('gate_dungeon_layer_inner_classic_03'))]"
+			blockoverride "texture" {
+				texture = gfx/map/gate/dungeon_layers/inner_classic_03.dds
+			}
+		}
+		gate_dungeon_layer_image = {
+			visible = "[EqualTo_CFixedPoint(Scope.Var('type').GetValue, Scope.ScriptValue('gate_dungeon_layer_inner_classic_04'))]"
+			blockoverride "texture" {
+				texture = gfx/map/gate/dungeon_layers/inner_classic_04.dds
+			}
+		}
+	}
+
+	type gate_dungeon_layer_image = icon {
+		size = { 500 52 }
+		parentanchor = center
+
+		block "texture" {}
+
+		block "layer_mask" {
+			modify_texture = {
+				texture = "gfx/interface/masks/fade_horizontal_center.dds"
+				spriteType = Corneredtiled
+				spriteborder = { 200 200 }
+				texture_density = 4
+				blend_mode = alphamultiply
+			}
+		}
+
+		container = {
+			parentanchor = vcenter|left
+			minimumsize = { -1 52 }
+			maximumsize = { -1 52 }
+			visible = "[Or(
+				GetScriptedGui('sgui_gate_dungeon_layer_complete').IsShown(GuiScope.SetRoot(JournalEntry.MakeScope).AddScope('layer', Scope.GetScriptContainer.MakeScope).End),
+				ObjectsEqual(JournalEntry.MakeScope.Var('current_step').Var('name').GetFlagName, Scope.Var('name').GetFlagName)
+			)]"
+
+			background = {
+				using = dark_area
+				alpha = 0.75
+
+				modify_texture = {
+					texture = "gfx/interface/masks/fade_horizontal_center.dds"
+					blend_mode = alphamultiply
+				}
+			}
+
+			textbox = {
+				minimumsize = { -1 52 }
+				maximumsize = { -1 52 }
+				margin_left = 60
+				margin_right = 20
+				autoresize = yes
+				text = "[Scope.Var('name').GetFlagName]"
+				align = vcenter|left
+			}
+		}
+
+		### Darken uncompleted layers
+		icon = {
+			visible = "[And(
+				Not(GetScriptedGui('sgui_gate_dungeon_layer_complete').IsShown(GuiScope.SetRoot(JournalEntry.MakeScope).AddScope('layer', Scope.GetScriptContainer.MakeScope).End)),
+				Not(ObjectsEqual(JournalEntry.MakeScope.Var('current_step').Var('name').GetFlagName, Scope.Var('name').GetFlagName))
+			)]"
+			size = { 500 52 }
+			parentanchor = center
+			texture = "gfx/frontend/interface/colors/black.dds"
+			alpha = 0.7
+
+			modify_texture = {
+				texture = "gfx/interface/masks/fade_horizontal_center.dds"
+				spriteType = Corneredtiled
+				spriteborder = { 200 200 }
+				texture_density = 4
+				blend_mode = alphamultiply
+			}
+		}
+
+		### Progress between layers
+		gate_dungeon_layer_image_progress = {
+			block "top_line" {
+				visible = "[And(
+					GetScriptedGui('sgui_gate_dungeon_layer_complete').IsShown(GuiScope.SetRoot(JournalEntry.MakeScope).AddScope('layer', Scope.GetScriptContainer.MakeScope).End),
+					Not(ObjectsEqual(JournalEntry.MakeScope.Var('current_step').Var('name').GetFlagName, Scope.Var('name').GetFlagName))
+				)]"
+			}
+			blockoverride "line_texture" {
+				texture = "gfx/interface/progressbar/progressbar_green.dds"
+			}
+			parentanchor = top|left
+			size = { 8 24 }
+			position = { 31 -12 }
+		}
+		gate_dungeon_layer_image_progress = {
+			block "top_line" {
+				visible = "[And(
+					Not(GetScriptedGui('sgui_gate_dungeon_layer_complete').IsShown(GuiScope.SetRoot(JournalEntry.MakeScope).AddScope('layer', Scope.GetScriptContainer.MakeScope).End)),
+					Not(ObjectsEqual(JournalEntry.MakeScope.Var('current_step').Var('name').GetFlagName, Scope.Var('name').GetFlagName))
+				)]"
+			}
+			blockoverride "line_texture" {
+				texture = "gfx/interface/progressbar/progressbar_empty.dds"
+			}
+			parentanchor = top|left
+			size = { 8 24 }
+			position = { 31 -12 }
+		}
+		gate_dungeon_layer_image_progress = {
+			block "top_line" {
+				visible = "[ObjectsEqual(JournalEntry.MakeScope.Var('current_step').Var('name').GetFlagName, Scope.Var('name').GetFlagName)]"
+			}
+			blockoverride "line_texture" {
+				texture = "gfx/interface/progressbar/progressbar_default.dds"
+			}
+			blockoverride "line_in_progress" {
+				visible = yes
+			}
+			parentanchor = top|left
+			size = { 8 24 }
+			position = { 31 -12 }
+		}
+
+		### Layer state icon
+		icon = {
+			parentanchor = vcenter|left
+			position = { 20 0 }
+			size = { 30 30 }
+			texture = "gfx/interface/buttons/round_button_big_bg.dds"
+
+			modify_texture = {
+				visible = "[ObjectsEqual(JournalEntry.MakeScope.Var('current_step').Var('name').GetFlagName, Scope.Var('name').GetFlagName)]"
+				name = "selected"
+				texture = "gfx/interface/buttons/round_button_selected.dds"
+				spriteType = Corneredstretched
+				spriteborder = { 0 0 }
+				blend_mode = overlay
+			}
+
+			icon = {
+				visible = "[GetScriptedGui('sgui_gate_dungeon_layer_complete').IsShown(GuiScope.SetRoot(JournalEntry.MakeScope).AddScope('layer', Scope.GetScriptContainer.MakeScope).End)]"
+				parentanchor = center
+				size = { 25 25 }
+				texture = "gfx/interface/buttons/button_icons/unlock.dds"
+			}
+
+			icon = {
+				visible = "[Not(GetScriptedGui('sgui_gate_dungeon_layer_complete').IsShown(GuiScope.SetRoot(JournalEntry.MakeScope).AddScope('layer', Scope.GetScriptContainer.MakeScope).End))]"
+				parentanchor = center
+				size = { 25 25 }
+				texture = "gfx/interface/buttons/button_icons/lock.dds"
+			}
+		}
+
+		### Layer Tooltip
+		tooltipwidget = {
+			RegularTooltip = {
+				blockoverride "tooltip_content" {
+					custom_tooltip_textbox = {
+						text = "[Scope.Var('name').GetFlagName]"
+						default_format = "#header"
+					}
+					custom_tooltip_textbox_with_empty_line = {
+						text = "[Scope.Var('desc').GetFlagName]"
+					}
+					custom_tooltip_textbox = {
+						visible = "[And(
+							GetScriptedGui('sgui_gate_dungeon_layer_complete').IsShown(GuiScope.SetRoot(JournalEntry.MakeScope).AddScope('layer', Scope.GetScriptContainer.MakeScope).End),
+							Not(ObjectsEqual(JournalEntry.MakeScope.Var('current_step').Var('name').GetFlagName, Scope.Var('name').GetFlagName))
+						)]"
+						text = gate_dungeon_layer_done
+					}
+					custom_tooltip_textbox = {
+						visible = "[And(
+							Not(GetScriptedGui('sgui_gate_dungeon_layer_complete').IsShown(GuiScope.SetRoot(JournalEntry.MakeScope).AddScope('layer', Scope.GetScriptContainer.MakeScope).End)),
+							Not(ObjectsEqual(JournalEntry.MakeScope.Var('current_step').Var('name').GetFlagName, Scope.Var('name').GetFlagName))
+						)]"
+						text = gate_dungeon_layer_open
+					}
+					custom_tooltip_textbox = {
+						visible = "[ObjectsEqual(JournalEntry.MakeScope.Var('current_step').Var('name').GetFlagName, Scope.Var('name').GetFlagName)]"
+						text = gate_dungeon_layer_in_progress
+					}
+				}
+			}
+		}
+	}
+
+	type gate_dungeon_layer_image_progress = icon {
+		block "line_texture" {
+			texture = "gfx/interface/progressbar/progressbar_default.dds"
+		}
+		framesize = { 32 8 }
+		frame = 2
+
+		icon = {
+			block "line_in_progress" {
+				visible = no
+			}
+			size = { 100% 100% }
+			block "line_texture" {
+				texture = "gfx/interface/progressbar/progressbar_default.dds"
+			}
+			shaderfile = "gfx/FX/pdxgui_repeat_texture.shader"
+
+			modify_texture = {
+				texture = "gfx/interface/backgrounds/light_bg.dds"
+				spriteType = CorneredTiled
+				spriteborder = { 6 6 }
+				texture_density = 2
+				blend_mode = overlay
+			}
+
+			modify_texture = {
+				name = arrow_animation
+				texture = "gfx/interface/progressbar/gate_progressbar_arrow_horizontal.dds"
+				spriteType = Corneredtiled
+				spriteborder = { 0 0 }
+				block "arrow_texture_density" {
+					texture_density = 20 #use to match height of progressbar
+				}
+				translate_uv = { 0 0 }
+				blend_mode = alphamultiply
+				mirror = horizontal
+			}
+
+			state = {
+				trigger_on_create = yes
+				name = arrow_animation_1
+				next = arrow_animation_2
+				duration = 1
+
+				modify_texture = {
+					name = arrow_animation
+					translate_uv = { 0 -1 }
+				}
+			}
+			state = {
+				name = arrow_animation_2
+				next = arrow_animation_1
+				duration = 0
+
+				modify_texture = {
+					name = arrow_animation
+					translate_uv = { 0 0 }
+				}
+			}
+		}
+	}
+
+}
