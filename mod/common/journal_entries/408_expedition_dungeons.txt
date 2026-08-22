@@ -23,16 +23,30 @@
 				scope = expedition
 			}
 
+			random_container = {
+				parent = scope:expedition.var:dungeon
+				tag = gate_dungeon_layer
+				limit = {
+					has_variable = is_last
+				}
+				prev = {
+					set_variable = {
+						name = last_layer
+						value = prev
+					}
+				}
+			}
+
 			# Set active layer
 			random_container = {
 				parent = container:gate_dungeon_tyrol
 				tag = gate_dungeon_layer
 				limit = {
-					var:name ?= flag:je_gate_expedition_dungeon_step_two
+					var:name ?= flag:gate_dungeon_layer_generic_two
 				}
 				scope:expedition = {
 					set_variable = {
-						name = current_step
+						name = current_layer
 						value = prev
 					}
 				}
@@ -44,8 +58,8 @@
 				tag = gate_dungeon_layer
 				limit = {
 					OR = {
-						var:name ?= flag:je_gate_expedition_dungeon_step_entrance
-						var:name ?= flag:je_gate_expedition_dungeon_step_one
+						var:name ?= flag:gate_dungeon_layer_generic_entrance
+						var:name ?= flag:gate_dungeon_layer_generic_one
 					}
 				}
 				scope:expedition = {
@@ -59,8 +73,14 @@
 	}
 
 	complete = {
-		scope:journal_entry = {
-			var:current_step ?= container:je_gate_expedition_dungeon_step_complete
+		custom_tooltip = {
+			text = je_gate_expedition_dungeon_complete
+			scope:expedition = {
+				any_in_list = {
+					variable = completed_layers
+					scope:journal_entry.var:last_layer ?= this
+				}
+			}
 		}
 	}
 

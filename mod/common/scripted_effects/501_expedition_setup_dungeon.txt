@@ -16,7 +16,7 @@
 				}
 			}
 			set_variable = {
-				name = current_step
+				name = current_layer
 				value = scope:temp_first_layer
 			}
 		}
@@ -40,24 +40,29 @@ gate_create_dungeon_tyrol = {
 	}
 	container:gate_dungeon_tyrol = {
 		gate_create_dungeon_layer = {
-			name = je_gate_expedition_dungeon_step_entrance
+			name = gate_dungeon_layer_generic_entrance
 			type = gate_dungeon_layer_top_cave_01
+			is_last = no
 		}
 		gate_create_dungeon_layer = {
-			name = je_gate_expedition_dungeon_step_one
+			name = gate_dungeon_layer_generic_one
 			type = gate_dungeon_layer_inner_classic_01
+			is_last = no
 		}
 		gate_create_dungeon_layer = {
-			name = je_gate_expedition_dungeon_step_two
+			name = gate_dungeon_layer_generic_two
 			type = gate_dungeon_layer_inner_classic_02
+			is_last = no
 		}
 		gate_create_dungeon_layer = {
-			name = je_gate_expedition_dungeon_step_three
+			name = gate_dungeon_layer_generic_three
 			type = gate_dungeon_layer_inner_classic_03
+			is_last = no
 		}
 		gate_create_dungeon_layer = {
-			name = je_gate_expedition_dungeon_step_complete
+			name = gate_dungeon_layer_generic_boss
 			type = gate_dungeon_layer_inner_classic_04
+			is_last = yes
 		}
 	}
 }
@@ -66,10 +71,8 @@ gate_create_dungeon_tyrol = {
 gate_create_dungeon = {
 	create_container = {
 		name = $name$
-		tags = { gate_dungeon }
+		tags = { gate_mod gate_dungeon }
 		on_created = {
-			fix_variable_error = { variable = $name$ }
-			fix_variable_error = { variable = $name$_desc }
 			set_variable = {
 				name = name
 				value = flag:$name$
@@ -86,6 +89,8 @@ gate_create_dungeon = {
 				name = type
 				value = $type$
 			}
+			fix_variable_error = { variable = $name$ }
+			fix_variable_error = { variable = $name$_desc }
 		}
 	}
 	add_to_global_variable_list = {
@@ -96,12 +101,8 @@ gate_create_dungeon = {
 
 
 gate_create_dungeon_layer = {
-	fix_variable_error = { variable = $name$ }
-	fix_variable_error = { variable = $name$_desc }
-	fix_variable_error = { variable = gate_dungeon_layers }
 	create_container = {
-		name = $name$
-		tags = { gate_expedition_step gate_dungeon_layer }
+		tags = { gate_mod gate_dungeon_layer }
 		on_created = {
 			set_variable = {
 				name = name
@@ -115,6 +116,15 @@ gate_create_dungeon_layer = {
 				name = type
 				value = $type$
 			}
+			if = {
+				limit = {
+					always = $is_last$
+				}
+				set_variable = is_last
+			}
+			fix_variable_error = { variable = $name$ }
+			fix_variable_error = { variable = $name$_desc }
+			fix_variable_error = { variable = gate_dungeon_layers }
 		}
 		save_scope_as = temp_dungeon_layer
 	}

@@ -9,57 +9,11 @@ flowcontainer = {
 	direction = vertical
 	spacing = 12
 	visible = "[JournalEntry.MakeScope.Var('expedition').IsSet]"
+	datacontext = "[JournalEntry.MakeScope.Var('expedition').GetScriptContainer]"
 
-	gate_journal_dungeon_expedition = {
-		datacontext = "[JournalEntry.MakeScope.Var('expedition').GetScriptContainer]"
-	}
+	gate_journal_dungeon_expedition = {}
 
-	flowcontainer = {
-		visible = "[DataModelHasItems(ScriptContainer.MakeScope.Var('dungeon').GetList('layers'))]"
-		datacontext = "[JournalEntry.MakeScope.Var('expedition').GetScriptContainer]"
-		parentanchor = hcenter
-		direction = vertical
-		oncreate = "[BindFoldOutContext]"
-
-		section_header_button = {
-			parentanchor = hcenter
-			onclick = "[PdxGuiFoldOut.Toggle]"
-
-			blockoverride "layout" {
-				size = { 500 38 }
-			}
-			blockoverride "onclick_showmore" {
-				visible = "[Not(PdxGuiFoldOut.IsUnfolded)]"
-			}
-			blockoverride "onclick_showless" {
-				visible = "[PdxGuiFoldOut.IsUnfolded]"
-			}
-			blockoverride "left_text" {
-				text = je_gate_expedition_dungeon_step_all
-			}
-		}
-
-		gate_dungeon_layers = {
-			blockoverride "datamodel" {
-				datamodel = "[DataModelFirst(ScriptContainer.MakeScope.Var('dungeon').GetList('layers'), '(int32)1')]"
-			}
-			blockoverride "top_line" {
-				visible = no
-			}
-			visible = "[PdxGuiFoldOut.IsUnfolded]"
-		}
-		gate_dungeon_layers = {
-			blockoverride "datamodel" {
-				datamodel = "[DataModelSubSpan(
-				ScriptContainer.MakeScope.Var('dungeon').GetList('layers'),
-				'(int32)1',
-				GetDataModelSize(ScriptContainer.MakeScope.Var('dungeon').GetList('layers'))
-			)]"
-			}
-			visible = "[PdxGuiFoldOut.IsUnfolded]"
-		}
-	}
-
+	gate_journal_dungeon_layers = {}
 }
 
 types gate_inject_dungeon_layer_types {
@@ -76,37 +30,49 @@ types gate_inject_dungeon_layer_types {
 
 			com_journal_entry_frame_text = {
 				blockoverride "text_top" {
-					raw_text = "[concept_gate_expedition_leader]"
+					text = je_gate_expedition_dungeon_party_leader
 				}
 				blockoverride "text" {
 					text = "[GetPlayer.GetRuler.GetFullName]"
 				}
 				blockoverride "icon" {
-					texture = "gfx/interface/icons/character_role_icons/executive.dds"
+					visible = no
 				}
 			}
 
 			com_journal_entry_frame_text = {
 				blockoverride "text_top" {
-					raw_text = "[concept_gate_dungeon]"
+					text = je_gate_expedition_dungeon_name
 				}
 				blockoverride "text" {
 					text = "[ScriptContainer.MakeScope.Var('dungeon').Var('name').GetFlagName]"
 				}
 				blockoverride "icon" {
-					texture = "gfx/interface/icons/notification_icons/buildings.dds"
+					visible = no
 				}
 			}
 
 			com_journal_entry_frame_text = {
 				blockoverride "text_top" {
-					text = je_gate_expedition_dungeon_step_active
+					text = je_gate_expedition_dungeon_location
 				}
 				blockoverride "text" {
-					text = "[ScriptContainer.MakeScope.Var('current_step').Var('name').GetFlagName]"
+					text = "[ScriptContainer.MakeScope.Var('dungeon').Var('location').GetStateRegion.GetName]"
 				}
 				blockoverride "icon" {
-					texture = "gfx/interface/icons/alert_icons/formable_possible.dds"
+					visible = no
+				}
+			}
+
+			com_journal_entry_frame_text = {
+				blockoverride "text_top" {
+					text = je_gate_expedition_dungeon_layer_active
+				}
+				blockoverride "text" {
+					text = "[ScriptContainer.MakeScope.Var('current_layer').Var('name').GetFlagName]"
+				}
+				blockoverride "icon" {
+					visible = no
 				}
 			}
 		}
@@ -162,6 +128,51 @@ types gate_inject_dungeon_layer_types {
 		}
 	}
 
+	type gate_journal_dungeon_layers = flowcontainer {
+		visible = "[DataModelHasItems(ScriptContainer.MakeScope.Var('dungeon').GetList('layers'))]"
+		parentanchor = hcenter
+		direction = vertical
+		oncreate = "[BindFoldOutContext]"
+
+		section_header_button = {
+			parentanchor = hcenter
+			onclick = "[PdxGuiFoldOut.Toggle]"
+
+			blockoverride "layout" {
+				size = { @layer_width 38 }
+			}
+			blockoverride "onclick_showmore" {
+				visible = "[Not(PdxGuiFoldOut.IsUnfolded)]"
+			}
+			blockoverride "onclick_showless" {
+				visible = "[PdxGuiFoldOut.IsUnfolded]"
+			}
+			blockoverride "left_text" {
+				text = je_gate_expedition_dungeon_layer_all
+			}
+		}
+
+		gate_dungeon_layers = {
+			blockoverride "datamodel" {
+				datamodel = "[DataModelFirst(ScriptContainer.MakeScope.Var('dungeon').GetList('layers'), '(int32)1')]"
+			}
+			blockoverride "top_line" {
+				visible = no
+			}
+			visible = "[PdxGuiFoldOut.IsUnfolded]"
+		}
+		gate_dungeon_layers = {
+			blockoverride "datamodel" {
+				datamodel = "[DataModelSubSpan(
+				ScriptContainer.MakeScope.Var('dungeon').GetList('layers'),
+				'(int32)1',
+				GetDataModelSize(ScriptContainer.MakeScope.Var('dungeon').GetList('layers'))
+			)]"
+			}
+			visible = "[PdxGuiFoldOut.IsUnfolded]"
+		}
+	}
+
 	type gate_dungeon_layers = flowcontainer {
 		using = default_list_position
 		direction = vertical
@@ -199,7 +210,7 @@ types gate_inject_dungeon_layer_types {
 			maximumsize = { -1 @layer_height }
 			visible = "[Or(
 				GetScriptedGui('sgui_gate_dungeon_layer_complete').IsShown(GuiScope.SetRoot(ScriptContainer.MakeScope).AddScope('layer', Scope.GetScriptContainer.MakeScope).End),
-				ObjectsEqual(ScriptContainer.MakeScope.Var('current_step').Var('name').GetFlagName, Scope.Var('name').GetFlagName)
+				ObjectsEqual(ScriptContainer.MakeScope.Var('current_layer').Var('name').GetFlagName, Scope.Var('name').GetFlagName)
 			)]"
 
 			background = {
@@ -227,7 +238,7 @@ types gate_inject_dungeon_layer_types {
 		icon = {
 			visible = "[And(
 				Not(GetScriptedGui('sgui_gate_dungeon_layer_complete').IsShown(GuiScope.SetRoot(ScriptContainer.MakeScope).AddScope('layer', Scope.GetScriptContainer.MakeScope).End)),
-				Not(ObjectsEqual(ScriptContainer.MakeScope.Var('current_step').Var('name').GetFlagName, Scope.Var('name').GetFlagName))
+				Not(ObjectsEqual(ScriptContainer.MakeScope.Var('current_layer').Var('name').GetFlagName, Scope.Var('name').GetFlagName))
 			)]"
 			size = { @layer_width @layer_height }
 			parentanchor = center
@@ -248,7 +259,7 @@ types gate_inject_dungeon_layer_types {
 			block "top_line" {
 				visible = "[And(
 					GetScriptedGui('sgui_gate_dungeon_layer_complete').IsShown(GuiScope.SetRoot(ScriptContainer.MakeScope).AddScope('layer', Scope.GetScriptContainer.MakeScope).End),
-					Not(ObjectsEqual(ScriptContainer.MakeScope.Var('current_step').Var('name').GetFlagName, Scope.Var('name').GetFlagName))
+					Not(ObjectsEqual(ScriptContainer.MakeScope.Var('current_layer').Var('name').GetFlagName, Scope.Var('name').GetFlagName))
 				)]"
 			}
 			blockoverride "line_texture" {
@@ -262,7 +273,7 @@ types gate_inject_dungeon_layer_types {
 			block "top_line" {
 				visible = "[And(
 					Not(GetScriptedGui('sgui_gate_dungeon_layer_complete').IsShown(GuiScope.SetRoot(ScriptContainer.MakeScope).AddScope('layer', Scope.GetScriptContainer.MakeScope).End)),
-					Not(ObjectsEqual(ScriptContainer.MakeScope.Var('current_step').Var('name').GetFlagName, Scope.Var('name').GetFlagName))
+					Not(ObjectsEqual(ScriptContainer.MakeScope.Var('current_layer').Var('name').GetFlagName, Scope.Var('name').GetFlagName))
 				)]"
 			}
 			blockoverride "line_texture" {
@@ -274,7 +285,7 @@ types gate_inject_dungeon_layer_types {
 		}
 		gate_dungeon_layer_image_progress = {
 			block "top_line" {
-				visible = "[ObjectsEqual(ScriptContainer.MakeScope.Var('current_step').Var('name').GetFlagName, Scope.Var('name').GetFlagName)]"
+				visible = "[ObjectsEqual(ScriptContainer.MakeScope.Var('current_layer').Var('name').GetFlagName, Scope.Var('name').GetFlagName)]"
 			}
 			blockoverride "line_texture" {
 				texture = "gfx/interface/progressbar/progressbar_default.dds"
@@ -295,7 +306,7 @@ types gate_inject_dungeon_layer_types {
 			texture = "gfx/interface/buttons/round_button_big_bg.dds"
 
 			modify_texture = {
-				visible = "[ObjectsEqual(ScriptContainer.MakeScope.Var('current_step').Var('name').GetFlagName, Scope.Var('name').GetFlagName)]"
+				visible = "[ObjectsEqual(ScriptContainer.MakeScope.Var('current_layer').Var('name').GetFlagName, Scope.Var('name').GetFlagName)]"
 				name = "selected"
 				texture = "gfx/interface/buttons/round_button_selected.dds"
 				spriteType = Corneredstretched
@@ -332,20 +343,20 @@ types gate_inject_dungeon_layer_types {
 					custom_tooltip_textbox = {
 						visible = "[And(
 							GetScriptedGui('sgui_gate_dungeon_layer_complete').IsShown(GuiScope.SetRoot(ScriptContainer.MakeScope).AddScope('layer', Scope.GetScriptContainer.MakeScope).End),
-							Not(ObjectsEqual(ScriptContainer.MakeScope.Var('current_step').Var('name').GetFlagName, Scope.Var('name').GetFlagName))
+							Not(ObjectsEqual(ScriptContainer.MakeScope.Var('current_layer').Var('name').GetFlagName, Scope.Var('name').GetFlagName))
 						)]"
-						text = gate_dungeon_layer_done
+						text = je_gate_expedition_dungeon_layer_done
 					}
 					custom_tooltip_textbox = {
 						visible = "[And(
 							Not(GetScriptedGui('sgui_gate_dungeon_layer_complete').IsShown(GuiScope.SetRoot(ScriptContainer.MakeScope).AddScope('layer', Scope.GetScriptContainer.MakeScope).End)),
-							Not(ObjectsEqual(ScriptContainer.MakeScope.Var('current_step').Var('name').GetFlagName, Scope.Var('name').GetFlagName))
+							Not(ObjectsEqual(ScriptContainer.MakeScope.Var('current_layer').Var('name').GetFlagName, Scope.Var('name').GetFlagName))
 						)]"
-						text = gate_dungeon_layer_open
+						text = je_gate_expedition_dungeon_layer_open
 					}
 					custom_tooltip_textbox = {
-						visible = "[ObjectsEqual(ScriptContainer.MakeScope.Var('current_step').Var('name').GetFlagName, Scope.Var('name').GetFlagName)]"
-						text = gate_dungeon_layer_in_progress
+						visible = "[ObjectsEqual(ScriptContainer.MakeScope.Var('current_layer').Var('name').GetFlagName, Scope.Var('name').GetFlagName)]"
+						text = je_gate_expedition_dungeon_layer_in_progress
 					}
 				}
 			}
