@@ -5,6 +5,7 @@ on_yearly_pulse_character = {
     }
 }
 
+# Calculate character experience
 on_yearly_gate_magic_researcher_experience = {
     trigger = {
         OR = {
@@ -13,7 +14,43 @@ on_yearly_gate_magic_researcher_experience = {
         }
     }
     effect = {
+        if = {
+            limit = {
+                NOT = { has_variable = com_character_background }
+            }
+            #= Set arcanist character background
+            # on_character_spawned_in_pool and on_character_creation do
+            # not seem to work
+            set_com_character_background = {
+                background = character_background_gate_char_role_arcanist
+            }
+        }
         gate_calculate_researcher_experience = yes
+    }
+}
+
+on_game_started = {
+    on_actions = {
+        on_gate_setup_character_background
+    }
+}
+
+#= Set arcanist character background
+# on_character_spawned_in_pool and on_character_creation do
+# not seem to work
+on_gate_setup_character_background = {
+    effect = {
+        every_character = {
+            limit = {
+                OR = {
+                    has_role = gate_arcanist
+                    has_role = gate_active_arcanist
+                }
+            }
+            set_com_character_background = {
+                background = character_background_gate_char_role_arcanist
+            }
+        }
     }
 }
 
@@ -24,6 +61,7 @@ on_character_death = {
     }
 }
 
+# Send character death notification
 on_gate_magic_researcher_death = {
     trigger = {
         has_role = gate_active_arcanist
