@@ -1,26 +1,42 @@
-﻿gate_create_dungeon_expedition = {
-	create_container = {
-		tags = { gate_expedition }
-		on_created = {
-			set_variable = {
-				name = dungeon
-				value = $dungeon$
-			}
-
-			# Set first layer as current step
-			var:dungeon = {
-				ordered_in_list = {
-					variable = layers
-					position = 0
-					save_scope_as = temp_first_layer
+﻿gate_setup_dungeon_event = {
+	scope:expedition = {
+		var:dungeon = {
+			var:location = {
+				random_scope_state = {
+					save_scope_as = dungeon_state
 				}
 			}
-			set_variable = {
-				name = current_layer
-				value = scope:temp_first_layer
+		}
+	}
+	set_local_variable = {
+		name = expedition
+		value = scope:expedition
+	}
+}
+
+gate_create_dungeon_expedition = {
+	create_container = {
+		tags = { gate_expedition }
+		save_scope_as = expedition
+		parent = this
+	}
+	scope:expedition = {
+		set_variable = {
+			name = dungeon
+			value = $dungeon$
+		}
+		# Set first layer as current step
+		var:dungeon = {
+			ordered_in_list = {
+				variable = layers
+				position = 0
+				save_scope_as = temp_first_layer
 			}
 		}
-		save_scope_as = $scope$
+		set_variable = {
+			name = current_layer
+			value = scope:temp_first_layer
+		}
 	}
 	set_variable = {
 		name = expedition

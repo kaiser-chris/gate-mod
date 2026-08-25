@@ -5,7 +5,7 @@
 
 	widget = {
 		gui = "gui/journal_injects/gate_expedition_injects.gui"
-		name = "gate_inject_dungeon_layers"
+		name = "gate_inject_dungeon_expedition"
 		container = "custom_widget_container_2"
 	}
 
@@ -17,12 +17,16 @@
 
 	immediate = {
 		add_gate_dlc_icon = yes
+		debug_log_scopes = yes
 		scope:journal_entry = {
+			# Create dungeon expedition container
+			# and save it as scope expedition (scope:expedition)
 			gate_create_dungeon_expedition = {
-				dungeon = container:gate_dungeon_tyrol
-				scope = expedition
+				dungeon = scope:target
 			}
 
+			# Find last layer in dungeon and set it
+			# as a variable for the complete condition
 			random_container = {
 				parent = scope:expedition.var:dungeon
 				tag = gate_dungeon_layer
@@ -37,6 +41,7 @@
 				}
 			}
 
+			## TODO: REMOVE DEBUG
 			# Set active layer
 			random_container = {
 				parent = container:gate_dungeon_tyrol
@@ -52,6 +57,7 @@
 				}
 			}
 
+			## TODO: REMOVE DEBUG
 			# Complete first two layers
 			every_container = {
 				parent = container:gate_dungeon_tyrol
@@ -75,6 +81,7 @@
 	complete = {
 		custom_tooltip = {
 			text = je_gate_expedition_dungeon_complete
+			# Has the last layer been added to the list of completed layers?
 			scope:expedition = {
 				any_in_list = {
 					variable = completed_layers
@@ -83,6 +90,8 @@
 			}
 		}
 	}
+
+	scripted_button = sb_gate_dungeon_test
 
 	transferable = no
 	can_revolution_inherit = yes

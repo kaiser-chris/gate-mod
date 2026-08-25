@@ -10,6 +10,8 @@
  je_gate_expedition_dungeon_layer_done: "This [concept_gate_dungeon_layer] has been #bold completed#!."
  je_gate_expedition_dungeon_layer_open: "This [concept_gate_dungeon_layer] is #bold not completed#! yet."
  je_gate_expedition_dungeon_layer_in_progress: "This [concept_gate_dungeon_layer] is #bold in progress#!."
+ je_gate_expedition_dungeon_name_and_location: "[Scope.Var('name').GetFlagName] in [Scope.Var('location').GetStateRegion.GetName]"
+ event_gate_dungeon: "Event in #yellow [Scope.Var('name').GetFlagName]#! [concept_gate_dungeon]"
 # Dungeons
  gate_dungeon_tyrol: "Alpine Caves"
  gate_dungeon_tyrol_desc: "This [concept_gate_dungeon] is nestled in some caves near the [GetBuildingType('building_gate_tyrol').GetName] in [GetStateRegion('STATE_TYROL').GetName]. The high level of [concept_gate_mana_saturation] in the area seems to have lead to its formation."
