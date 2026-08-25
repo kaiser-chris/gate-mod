@@ -35,3 +35,6 @@
 - ROUND CRYSTAL by Hanna Vernydub from <a href="https://thenounproject.com/browse/icons/term/round-crystal/" target="_blank" title="ROUND CRYSTAL Icons">Noun Project</a> (CC BY 3.0)
 - seed by Arian N. from <a href="https://thenounproject.com/browse/icons/term/seed/" target="_blank" title="seed Icons">Noun Project</a> (CC BY 3.0)
 - Forbidden by zahrotul fuadah from <a href="https://thenounproject.com/browse/icons/term/forbidden/" target="_blank" title="Forbidden Icons">Noun Project</a> (CC BY 3.0)
+- Location by Graphtend from <a href="https://thenounproject.com/browse/icons/term/location/" target="_blank" title="Location Icons">Noun Project</a> (CC BY 3.0)
+- checkmark by komsiatun from <a href="https://thenounproject.com/browse/icons/term/checkmark/" target="_blank" title="checkmark Icons">Noun Project</a> (CC BY 3.0)
+- Question by James Kopina from <a href="https://thenounproject.com/browse/icons/term/question/" target="_blank" title="Question Icons">Noun Project</a> (CC BY 3.0)

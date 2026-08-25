@@ -3,24 +3,20 @@
 gate_expedition_dungeons_base.1 = {
     type = country_event
     dlc = dlc_magic_gate
-    placement = scope:gate_expedition_state
+    placement = scope:dungeon_state
 
     title = gate_expedition_activities.1.t
     desc = gate_expedition_activities.1.d
     flavor = gate_expedition_activities.1.f
 
+    gui_window = event_window_gate_dungeon
+
     event_image = {
         video = "middleeast_jungle_expedition"
     }
 
-    trigger = {
-        gate_expedition_has_covered = yes
-    }
-
     immediate = {
-        gate_expedition_set_state_scope = {
-            scope = gate_expedition_state
-        }
+        gate_setup_dungeon_event = yes
     }
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -32,16 +28,9 @@ gate_expedition_dungeons_base.1 = {
     option = {
         name = gate_expedition_activities.1.a
         default_option = yes
-        gate_expedition_uncover_state = yes
     }
 
     option = {
         name = gate_expedition_activities.1.b
-        gate_expedition_uncover_state = yes
-        gate_expedition_open_map = yes
-    }
-
-    after = {
-        gate_expedition_set_idle = yes
     }
 }
