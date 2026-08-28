@@ -1,0 +1,193 @@
+@layer_width = 500
+@layer_height = 52
+
+flowcontainer = {
+	name = "gate_inject_dungeon"
+	parentanchor = hcenter
+	direction = vertical
+	spacing = 12
+	visible = "[JournalEntry.MakeScope.Var('expedition').IsSet]"
+	datacontext = "[JournalEntry.MakeScope.Var('expedition').GetScriptContainer]"
+
+	gate_journal_dungeon_expedition = {}
+
+	gate_dungeon_layer_progress_line = {}
+
+	gate_journal_dungeon_layers = {}
+}
+
+types gate_inject_dungeon_types {
+
+	type gate_journal_dungeon_expedition = widget {
+		parentanchor = hcenter
+		size = { 500 300 }
+		using = gate_dungeon_background
+
+		flowcontainer = {
+			parentanchor = right|vcenter
+			direction = vertical
+			spacing = 5
+
+			com_journal_entry_frame_text = {
+				blockoverride "text_top" {
+					text = je_gate_expedition_dungeon_party_leader
+				}
+				blockoverride "text" {
+					raw_text = "[GetPlayer.GetRuler.GetFullName]"
+				}
+				blockoverride "icon" {
+					visible = no
+				}
+			}
+
+			com_journal_entry_frame_text = {
+				blockoverride "text_top" {
+					text = je_gate_expedition_dungeon_name
+				}
+				blockoverride "text" {
+					raw_text = "#yellow [ScriptContainer.MakeScope.Var('dungeon').Var('name').GetFlagName]#!"
+				}
+				blockoverride "icon" {
+					visible = no
+				}
+				tooltipwidget = {
+					gate_dungeon_tooltip = {
+						datacontext = "[ScriptContainer.MakeScope.Var('dungeon')]"
+					}
+				}
+			}
+
+			com_journal_entry_frame_text = {
+				blockoverride "text_top" {
+					text = je_gate_expedition_dungeon_location
+				}
+				blockoverride "text" {
+					raw_text = "[ScriptContainer.MakeScope.Var('dungeon').Var('location').GetStateRegion.GetName]"
+				}
+				blockoverride "icon" {
+					visible = no
+				}
+			}
+
+			com_journal_entry_frame_text = {
+				visible = "[ScriptContainer.MakeScope.Var('current_layer').IsSet]"
+				blockoverride "text_top" {
+					text = je_gate_expedition_dungeon_layer_active
+				}
+				blockoverride "text" {
+					raw_text = "#yellow [ScriptContainer.MakeScope.Var('current_layer').Var('name').GetFlagName]#!"
+				}
+				blockoverride "icon" {
+					visible = no
+				}
+				tooltipwidget = {
+					gate_dungeon_layer_tooltip = {
+						datacontext = "[ScriptContainer.MakeScope.Var('current_layer')]"
+					}
+				}
+			}
+		}
+
+		character_portrait_base_no_mask = {
+			parentanchor = left|bottom
+			ignore_in_debug_draw = yes
+			size = { 300 300 }
+
+			datacontext = "[GetPlayer.GetRuler]"
+
+			block "character_layout" {
+				position = { -30 2 }
+			}
+			blockoverride "portrait_size" {
+				block "character_portrait_size" {
+					size = { 300 300 }
+				}
+			}
+			blockoverride "portrait_texture" {
+				portrait_texture = "[Character.GetAnimatedPortrait(
+							'ruler_environment',
+							'camera_body',
+							'idle',
+							GetPortraitRenderSize(PdxGuiWidget.Self))
+						]"
+			}
+			blockoverride "portrait_icons" {}
+			blockoverride "tooltip" {
+				tooltipwidget = {
+					FancyTooltip_Character = {}
+				}
+			}
+		}
+
+		# FRAME
+		widget = {
+			size = { 100% 100% }
+			background = {
+				texture = "gfx/interface/character_panel/char_bg_frame.dds"
+				margin_left = 18
+				margin_right = 12
+				margin_bottom = 10
+				spriteType = Corneredtiled
+
+				spriteborder_left = 200
+				spriteborder_right = 60
+				spriteborder_top = 170
+				spriteborder_bottom = 180
+
+				texture_density = 2
+			}
+		}
+	}
+
+	type gate_journal_dungeon_layers = flowcontainer {
+		visible = "[DataModelHasItems(ScriptContainer.MakeScope.Var('dungeon').GetList('layers'))]"
+		parentanchor = hcenter
+		direction = vertical
+		oncreate = "[BindFoldOutContext]"
+
+		section_header_button = {
+			parentanchor = hcenter
+			onclick = "[PdxGuiFoldOut.Toggle]"
+
+			blockoverride "layout" {
+				size = { @layer_width 38 }
+			}
+			blockoverride "onclick_showmore" {
+				visible = "[Not(PdxGuiFoldOut.IsUnfolded)]"
+			}
+			blockoverride "onclick_showless" {
+				visible = "[PdxGuiFoldOut.IsUnfolded]"
+			}
+			blockoverride "left_text" {
+				text = je_gate_expedition_dungeon_layer_all
+			}
+		}
+
+		gate_dungeon_layers = {
+			blockoverride "datamodel" {
+				datamodel = "[DataModelFirst(ScriptContainer.MakeScope.Var('dungeon').GetList('layers'), '(int32)1')]"
+			}
+			blockoverride "top_line" {
+				visible = no
+			}
+			blockoverride "layer_content" {
+				gate_dungeon_layer_status = {}
+			}
+			visible = "[PdxGuiFoldOut.IsUnfolded]"
+		}
+		gate_dungeon_layers = {
+			blockoverride "datamodel" {
+				datamodel = "[DataModelSubSpan(
+					ScriptContainer.MakeScope.Var('dungeon').GetList('layers'),
+					'(int32)1',
+					GetDataModelSize(ScriptContainer.MakeScope.Var('dungeon').GetList('layers'))
+				)]"
+			}
+			blockoverride "layer_content" {
+				gate_dungeon_layer_status = {}
+			}
+			visible = "[PdxGuiFoldOut.IsUnfolded]"
+		}
+	}
+
+}

@@ -8,3 +8,14 @@
         }
 	}
 }
+
+sb_gate_dungeon_advance = {
+	name = sb_gate_veiled_interior_scout
+	desc = sb_gate_veiled_interior_scout_desc
+
+	effect = {
+		scope:expedition = {
+			gate_dungeon_advance_layer = yes
+		}
+	}
+}

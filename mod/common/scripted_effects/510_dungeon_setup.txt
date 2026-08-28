@@ -58,31 +58,25 @@ gate_create_dungeon_tyrol = {
 		gate_create_dungeon_layer = {
 			name = gate_dungeon_layer_generic_entrance
 			type = gate_dungeon_layer_top_cave_01
-			is_last = no
 		}
 		gate_create_dungeon_layer = {
 			name = gate_dungeon_layer_generic_one
 			type = gate_dungeon_layer_inner_classic_01
-			is_last = no
 		}
 		gate_create_dungeon_layer = {
 			name = gate_dungeon_layer_generic_two
 			type = gate_dungeon_layer_inner_classic_02
-			is_last = no
 		}
 		gate_create_dungeon_layer = {
 			name = gate_dungeon_layer_generic_three
 			type = gate_dungeon_layer_inner_classic_03
-			is_last = no
 		}
 		gate_create_dungeon_layer = {
 			name = gate_dungeon_layer_generic_boss
 			type = gate_dungeon_layer_inner_classic_04
-			is_last = yes
 		}
 	}
 }
-
 
 gate_create_dungeon = {
 	create_container = {
@@ -115,7 +109,6 @@ gate_create_dungeon = {
 	}
 }
 
-
 gate_create_dungeon_layer = {
 	create_container = {
 		tags = { gate_mod gate_dungeon_layer }
@@ -132,24 +125,34 @@ gate_create_dungeon_layer = {
 				name = type
 				value = $type$
 			}
-			if = {
-				limit = {
-					always = $is_last$
-				}
-				set_variable = is_last
-			}
+			set_variable = is_last
 			fix_variable_error = { variable = $name$ }
 			fix_variable_error = { variable = $name$_desc }
 			fix_variable_error = { variable = gate_dungeon_layers }
 		}
 		save_scope_as = temp_dungeon_layer
 	}
-	scope:temp_dungeon_layer = {
-		set_parent = prev
+	# Current element is the new last one
+	# So remove the designation from all others
+	every_in_list = {
+		variable = layers
+		if = {
+			limit = {
+				has_variable = is_last
+			}
+			remove_variable = is_last
+		}
 	}
 	add_to_variable_list = {
 		name = layers
 		target = scope:temp_dungeon_layer
+	}
+	scope:temp_dungeon_layer = {
+		set_parent = prev
+		set_variable = {
+			name = index
+			value = prev.gate_layer_index_max
+		}
 	}
 	clear_saved_scope = temp_dungeon_layer
 }

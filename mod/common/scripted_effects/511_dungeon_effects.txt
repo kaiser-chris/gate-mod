@@ -1,0 +1,49 @@
+﻿gate_dungeon_advance_layer = {
+	hidden_effect = {
+		# Complete current layer
+		add_to_variable_list = {
+			name = completed_layers
+			target = var:current_layer
+		}
+	}
+
+	# Select new current layer
+	# (if appropriate)
+	if = {
+		limit = {
+			var:current_layer = {
+				has_variable = is_last
+			}
+		}
+		custom_tooltip = {
+			text = effect_gate_dungeon_complete
+			# We are done
+			remove_variable = current_layer
+		}
+	}
+	else = {
+		custom_tooltip = {
+			text = effect_gate_dungeon_advance
+			save_scope_as = temp_expedition
+
+			# Find next layer
+			var:dungeon = {
+				random_in_list = {
+					variable = layers
+					limit = {
+						# Next layer
+						var:index = scope:temp_expedition.gate_layer_index_next
+					}
+					scope:temp_expedition = {
+						set_variable = {
+							name = current_layer
+							value = prev
+						}
+					}
+				}
+			}
+
+			clear_saved_scope = temp_expedition
+		}
+	}
+}
