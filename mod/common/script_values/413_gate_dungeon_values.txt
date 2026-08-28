@@ -1,0 +1,12 @@
+﻿# Static
+gate_layer_index_max = {
+    every_in_list = {
+        variable = layers
+        add = 1
+    }
+}
+
+gate_layer_index_next = {
+    value = var:current_layer.var:index
+    add = 1
+}
