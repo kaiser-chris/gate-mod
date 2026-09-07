@@ -424,23 +424,25 @@ types gate_dungeon_types {
             custom_tooltip_textbox_with_empty_line = {
                 text = "[Scope.Var('desc').GetFlagName]"
             }
-            custom_tooltip_textbox = {
-                visible = "[And(
+            block "tooltip_layer_status" {
+                custom_tooltip_textbox = {
+                    visible = "[And(
 					GetScriptedGui('sgui_gate_dungeon_layer_complete').IsShown(GuiScope.SetRoot(ScriptContainer.MakeScope).AddScope('layer', Scope.GetScriptContainer.MakeScope).End),
 					Not(ObjectsEqual(ScriptContainer.MakeScope.Var('current_layer').Var('name').GetFlagName, Scope.Var('name').GetFlagName))
 				)]"
-                text = je_gate_expedition_dungeon_layer_done
-            }
-            custom_tooltip_textbox = {
-                visible = "[And(
+                    text = je_gate_expedition_dungeon_layer_done
+                }
+                custom_tooltip_textbox = {
+                    visible = "[And(
 					Not(GetScriptedGui('sgui_gate_dungeon_layer_complete').IsShown(GuiScope.SetRoot(ScriptContainer.MakeScope).AddScope('layer', Scope.GetScriptContainer.MakeScope).End)),
 					Not(ObjectsEqual(ScriptContainer.MakeScope.Var('current_layer').Var('name').GetFlagName, Scope.Var('name').GetFlagName))
 				)]"
-                text = je_gate_expedition_dungeon_layer_open
-            }
-            custom_tooltip_textbox = {
-                visible = "[ObjectsEqual(ScriptContainer.MakeScope.Var('current_layer').Var('name').GetFlagName, Scope.Var('name').GetFlagName)]"
-                text = je_gate_expedition_dungeon_layer_in_progress
+                    text = je_gate_expedition_dungeon_layer_open
+                }
+                custom_tooltip_textbox = {
+                    visible = "[ObjectsEqual(ScriptContainer.MakeScope.Var('current_layer').Var('name').GetFlagName, Scope.Var('name').GetFlagName)]"
+                    text = je_gate_expedition_dungeon_layer_in_progress
+                }
             }
         }
     }
@@ -464,6 +466,9 @@ types gate_dungeon_types {
             custom_tooltip_textbox_with_empty_line = {
                 text = "[Scope.Var('desc').GetFlagName]"
             }
+            custom_tooltip_textbox_with_empty_line = {
+                raw_text = "[Concept('concept_gate_dungeon_layer', Localize('concept_gate_dungeon_layers'))]"
+            }
             gate_dungeon_layers = {
                 blockoverride "datamodel" {
                     datamodel = "[DataModelFirst(Scope.GetList('layers'), '(int32)1')]"
@@ -478,6 +483,48 @@ types gate_dungeon_types {
 						Scope.GetList('layers'),
 						'(int32)1',
 						GetDataModelSize(Scope.GetList('layers'))
+					)]"
+                }
+            }
+        }
+    }
+
+    type gate_dungeon_tooltip_selector = FancyTooltipWidgetType {
+        blockoverride "text" {} # Fully replaced by everything in tooltip_content_after
+
+        blockoverride "icon_texture" {
+            texture = gfx/interface/icons/event_icons/event_gate_dungeon.dds
+        }
+
+        blockoverride "name" {
+            text = je_gate_expedition_dungeon_name_and_location_selector
+        }
+
+        blockoverride "type" {
+            raw_text = "[concept_gate_dungeon]"
+        }
+
+        blockoverride "tooltip_content_after" {
+            custom_tooltip_textbox_with_empty_line = {
+                text = "[Scope.Var('dungeon').Var('desc').GetFlagName]"
+            }
+            custom_tooltip_textbox_with_empty_line = {
+                raw_text = "[Concept('concept_gate_dungeon_layer', Localize('concept_gate_dungeon_layers'))]"
+            }
+            gate_dungeon_layers = {
+                blockoverride "datamodel" {
+                    datamodel = "[DataModelFirst(Scope.Var('dungeon').GetList('layers'), '(int32)1')]"
+                }
+                blockoverride "top_line" {
+                    visible = no
+                }
+            }
+            gate_dungeon_layers = {
+                blockoverride "datamodel" {
+                    datamodel = "[DataModelSubSpan(
+						Scope.Var('dungeon').GetList('layers'),
+						'(int32)1',
+						GetDataModelSize(Scope.Var('dungeon').GetList('layers'))
 					)]"
                 }
             }

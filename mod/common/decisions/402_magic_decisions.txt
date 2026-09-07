@@ -144,3 +144,67 @@ decision_gate_start_expedition_reytu = {
 		}
 	}
 }
+
+decision_gate_start_dungeon_exploration = {
+	is_shown = {
+		any_scope_building = {
+			is_building_group = bg_gate_dungeons
+			has_active_production_method = pm_gate_dungeon_unexplored
+		}
+	}
+
+	possible = {
+		any_scope_building = {
+			is_building_group = bg_gate_dungeons
+			has_active_production_method = pm_gate_dungeon_unexplored
+		}
+		NOT = {
+			has_journal_entry = je_gate_expedition_dungeon
+		}
+		NOT = {
+			has_variable_list = gate_project_dungeon_selector
+		}
+	}
+
+	when_taken = {
+		hidden_effect = {
+			every_scope_building = {
+				limit = {
+					is_building_group = bg_gate_dungeons
+					has_active_production_method = pm_gate_dungeon_unexplored
+				}
+				if = {
+					limit = {
+						exists = "global_variable_map(dungeons|type)"
+					}
+					create_container = {
+						parent = root
+						tags = { gate_mod gate_selector_element }
+						save_scope_as = temp_container
+					}
+					scope:temp_container ?= {
+						set_variable = {
+							name = building
+							value = prev
+						}
+						set_variable = {
+							name = dungeon
+							value = "global_variable_map(dungeons|prev.type)"
+						}
+					}
+					root = {
+						add_to_variable_list = {
+							name = gate_project_dungeon_selector
+							target = scope:temp_container
+						}
+					}
+					clear_saved_scope = temp_container
+				}
+			}
+		}
+	}
+
+	ai_chance = {
+		value = 1000
+	}
+}

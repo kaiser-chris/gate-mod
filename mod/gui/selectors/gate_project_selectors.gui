@@ -85,4 +85,31 @@
 
     }
 
+    type gate_project_select_dungeon_window = gate_selector_window_single_element {
+        blockoverride "selector_visibility" {
+            visible = "[DataModelHasItems(Country.MakeScope.GetList('gate_project_dungeon_selector'))]"
+        }
+        blockoverride "selector_title" {
+            text = gate_project_select_dungeon_window
+        }
+        blockoverride "selector_button_close" {
+            datacontext = "[GetScriptedGui('gg_project_dungeon_selector_close')]"
+            onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
+        }
+        blockoverride "selector_datamodel" {
+            datamodel = "[Country.MakeScope.GetList('gate_project_dungeon_selector')]"
+        }
+        blockoverride "selector_element_button" {
+            datacontext = "[GetScriptedGui('gg_project_dungeon')]"
+            onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('dungeon', Scope.Var('dungeon').GetScriptContainer.MakeScope).End)]"
+            enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('dungeon', Scope.Var('dungeon').GetScriptContainer.MakeScope).End)]"
+            tooltip = gate_project_select_dungeon_window_select
+        }
+        blockoverride "selector_sort_buttons" {}
+        blockoverride "selector_element_content" {
+            gate_selector_dungeon_element = {}
+        }
+
+    }
+
 }

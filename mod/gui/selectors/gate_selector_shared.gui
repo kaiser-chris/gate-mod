@@ -356,6 +356,60 @@
         }
     }
 
+    type gate_selector_dungeon_element = hbox {
+        layoutpolicy_horizontal = expanding
+        layoutpolicy_vertical = expanding
+        spacing = 15
+
+        icon = {
+            size = { 70 70 }
+            texture = "[Scope.Var('building').GetBuilding.GetIcon]"
+
+            tooltipwidget = {
+                gate_dungeon_tooltip_selector = {
+                    blockoverride "dungeon_layer_status" {}
+                }
+            }
+        }
+
+        # Name
+        vbox = {
+            layoutpolicy_horizontal = expanding
+            textbox = {
+                raw_text = "#yellow [Scope.Var('dungeon').Var('name').GetFlagName]#!"
+                minimumsize = { -1 25 }
+                elide = right
+                align = nobaseline
+                using = fontsize_medium
+                layoutpolicy_horizontal = expanding
+                autoresize = yes
+                using = tooltip_below
+
+                tooltipwidget = {
+                    gate_dungeon_tooltip_selector = {
+                        blockoverride "dungeon_layer_status" {}
+                    }
+                }
+            }
+            textbox = {
+                text = "gg_selector_state_dungeon_text"
+                minimumsize = { -1 25 }
+                elide = right
+                align = nobaseline
+                using = fontsize_medium
+                layoutpolicy_horizontal = expanding
+                autoresize = yes
+            }
+        }
+
+        # Divider
+        vertical_divider = {
+            blockoverride "size" {
+                size = { 3 70 }
+            }
+        }
+    }
+
     type gate_selector_sort_button = button {
         using = sort_button_sound
         using = sort_button_bg

@@ -46,15 +46,15 @@ gate_create_dungeon_expedition = {
 }
 
 gate_create_dungeon_tyrol = {
-	container:gate_dungeon_tyrol ?= {
+	container:gate_dungeon_alpine_caves ?= {
 		destroy_container = yes
 	}
 	gate_create_dungeon = {
-		name = gate_dungeon_tyrol
+		name = gate_dungeon_alpine_caves
 		state_region = STATE_TYROL
 		type = gate_dungeon_cave_01
 	}
-	container:gate_dungeon_tyrol = {
+	container:gate_dungeon_alpine_caves = {
 		gate_create_dungeon_layer = {
 			name = gate_dungeon_layer_generic_entrance
 			type = gate_dungeon_layer_top_cave_01
@@ -75,6 +75,11 @@ gate_create_dungeon_tyrol = {
 			name = gate_dungeon_layer_generic_boss
 			type = gate_dungeon_layer_inner_classic_04
 		}
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_alpine_caves
+		value = container:gate_dungeon_alpine_caves
 	}
 }
 

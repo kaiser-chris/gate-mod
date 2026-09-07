@@ -1,0 +1,21 @@
+﻿building_gate_dungeon_alpine_caves = {
+	building_group = bg_gate_dungeons
+	icon = gfx/interface/icons/building_icons/building_gate_dungeon_alpine_caves.dds
+	buildable = no
+	expandable = no
+	downsizeable = no
+	unique = yes
+
+	production_method_groups = {
+		pmg_gate_dungeon_exploitation
+		pmg_gate_dungeon_exploration
+	}
+
+	can_build_private = {
+		always = no
+	}
+
+	required_construction = construction_cost_monument
+
+	background = gfx/interface/icons/building_icons/backgrounds/building_panel_bg_gate_magic.dds
+}
