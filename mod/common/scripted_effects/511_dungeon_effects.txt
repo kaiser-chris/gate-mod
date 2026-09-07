@@ -1,4 +1,18 @@
-﻿gate_dungeon_advance_layer = {
+﻿gate_start_dungeon = {
+	custom_tooltip = {
+		text = effect_gate_dungeon_start
+		add_journal_entry = {
+			type = je_gate_expedition_dungeon
+			target = $dungeon$
+		}
+		set_local_variable = {
+			name = gate_dungeon
+			value = $dungeon$
+		}
+	}
+}
+
+gate_dungeon_advance_layer = {
 	hidden_effect = {
 		# Complete current layer
 		add_to_variable_list = {
@@ -44,6 +58,42 @@
 			}
 
 			clear_saved_scope = temp_expedition
+		}
+	}
+}
+
+gate_set_dungeon_status = {
+	gate_set_dungeon_building_status = {
+		building = building_gate_dungeon_alpine_caves
+		dungeon = gate_dungeon_alpine_caves
+	}
+	# Add new dungeons here
+}
+
+gate_set_dungeon_building_status = {
+	if = {
+		limit = {
+			has_building = $building$
+		}
+		if = {
+			limit = {
+				owner = {
+					is_target_in_variable_list = {
+						name = gate_completed_dungeons
+						target = container:$dungeon$
+					}
+				}
+			}
+			activate_production_method = {
+				building_type = $building$
+				production_method = pm_gate_dungeon_explored
+			}
+		}
+		else = {
+			activate_production_method = {
+				building_type = $building$
+				production_method = pm_gate_dungeon_unexplored
+			}
 		}
 	}
 }

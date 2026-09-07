@@ -41,41 +41,6 @@
 					}
 				}
 			}
-
-			# ## TODO: REMOVE DEBUG
-			# # Set active layer
-			# random_container = {
-			# 	parent = container:gate_dungeon_tyrol
-			# 	tag = gate_dungeon_layer
-			# 	limit = {
-			# 		var:name ?= flag:gate_dungeon_layer_generic_two
-			# 	}
-			# 	scope:expedition = {
-			# 		set_variable = {
-			# 			name = current_layer
-			# 			value = prev
-			# 		}
-			# 	}
-			# }
-			#
-			# ## TODO: REMOVE DEBUG
-			# # Complete first two layers
-			# every_container = {
-			# 	parent = container:gate_dungeon_tyrol
-			# 	tag = gate_dungeon_layer
-			# 	limit = {
-			# 		OR = {
-			# 			var:name ?= flag:gate_dungeon_layer_generic_entrance
-			# 			var:name ?= flag:gate_dungeon_layer_generic_one
-			# 		}
-			# 	}
-			# 	scope:expedition = {
-			# 		add_to_variable_list = {
-			# 			name = completed_layers
-			# 			target = prev
-			# 		}
-			# 	}
-			# }
 		}
 	}
 
@@ -92,6 +57,29 @@
 		}
 	}
 
+	on_complete = {
+		scope:expedition = {
+			# Scope switch for the tooltip
+			custom_tooltip = {
+				text = je_gate_expedition_dungeon_on_complete
+
+				# Real effect is run in country scope
+				root = {
+					# Register dungeon as completed
+					add_to_variable_list = {
+						name = gate_completed_dungeons
+						target = scope:target
+					}
+					# Update production method to unlock
+					# the dungeon exploitation production methods
+					every_scope_state = {
+						gate_set_dungeon_status = yes
+					}
+				}
+			}
+		}
+	}
+
 	scripted_button = sb_gate_dungeon_test
 	scripted_button = sb_gate_dungeon_advance
 
@@ -101,3 +89,4 @@
 	weight = 200
 	should_be_pinned_by_default_uninvolved_or_context = yes
 }
+

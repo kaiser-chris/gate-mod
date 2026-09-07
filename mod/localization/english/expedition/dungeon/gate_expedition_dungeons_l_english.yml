@@ -1,7 +1,9 @@
 ﻿l_english:
+# Journal Entry
  je_gate_expedition_dungeon: "Dungeon Delve"
  je_gate_expedition_dungeon_reason: "This is a [concept_gate_dungeon] description" #TODO: Write a description for dungeon delves
  je_gate_expedition_dungeon_complete: "Has completed the #v [TopScope.sJE('journal_entry').MakeScope.Var('last_layer').Var('name').GetFlagName]#! [Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple$')]"
+ je_gate_expedition_dungeon_on_complete: "Unlock this [concept_gate_dungeon] for exploitation"
  je_gate_expedition_dungeon_party_leader: "[Concept('concept_gate_dungeon_party_leader', '$concept_gate_dungeon_party_leader_simple$')]"
  je_gate_expedition_dungeon_name: "[concept_gate_dungeon] Name"
  je_gate_expedition_dungeon_location: "[concept_gate_dungeon] Location"
@@ -11,10 +13,18 @@
  je_gate_expedition_dungeon_layer_open: "This [concept_gate_dungeon_layer] is #bold not completed#! yet."
  je_gate_expedition_dungeon_layer_in_progress: "This [concept_gate_dungeon_layer] is #bold in progress#!."
  je_gate_expedition_dungeon_name_and_location: "[Scope.Var('name').GetFlagName] in [Scope.Var('location').GetStateRegion.GetName]"
+ je_gate_expedition_dungeon_name_and_location_selector: "[Scope.Var('dungeon').Var('name').GetFlagName] in [Scope.Var('dungeon').Var('location').GetStateRegion.GetName]"
+# Events
  event_gate_dungeon: "Event in #yellow [Scope.Var('name').GetFlagName]#! [concept_gate_dungeon]"
+# Decision
+ decision_gate_start_dungeon_exploration: "Start exploring a [concept_gate_dungeon]"
+ decision_gate_start_dungeon_exploration_desc: "Open the [concept_gate_dungeon] selector and start an exploration."
+# Selector Window
+ gate_project_select_dungeon_window: "Select [concept_gate_dungeon]"
+ gate_project_select_dungeon_window_select: "#header [Scope.Var('dungeon').Var('name').GetFlagName] in [Scope.Var('building').GetBuilding.GetState.GetName]#!\nStart the exploration of this [concept_gate_dungeon]."
 # Dungeons
- gate_dungeon_tyrol: "Alpine Caves"
- gate_dungeon_tyrol_desc: "This [concept_gate_dungeon] is nestled in some caves near the [GetBuildingType('building_gate_tyrol').GetName] in [GetStateRegion('STATE_TYROL').GetName]. The high level of [concept_gate_mana_saturation] in the area seems to have lead to its formation."
+ gate_dungeon_alpine_caves: "Alpine Caves"
+ gate_dungeon_alpine_caves_desc: "This [concept_gate_dungeon] is nestled in some caves near the [GetBuildingType('building_gate_tyrol').GetName] in [GetStateRegion('STATE_TYROL').GetName]. The high level of [concept_gate_mana_saturation] in the area seems to have lead to its formation."
 # Generic Dungeon Layer types
  gate_dungeon_layer_generic_entrance: "Entrance"
  gate_dungeon_layer_generic_entrance_desc: "The entrance of this [concept_gate_dungeon]."

@@ -12,3 +12,46 @@
 		}
 	}
 }
+
+gg_project_dungeon = {
+	scope = country
+
+	saved_scopes = {
+		dungeon
+	}
+
+	is_valid = {
+		NOT = {
+			has_journal_entry = je_gate_expedition_dungeon
+		}
+	}
+
+	effect = {
+		# Start JE
+		gate_start_dungeon = {
+			dungeon = scope:dungeon
+		}
+
+		# Destroy surrounding containers
+		every_in_list = {
+			variable = gate_project_dungeon_selector
+			destroy_container = yes
+		}
+		# Clear list
+		clear_variable_list = gate_project_dungeon_selector
+	}
+}
+
+gg_project_dungeon_selector_close = {
+	scope = country
+
+	effect = {
+		# Destroy surrounding containers
+		every_in_list = {
+			variable = gate_project_dungeon_selector
+			destroy_container = yes
+		}
+		# Clear list
+		clear_variable_list = gate_project_dungeon_selector
+	}
+}

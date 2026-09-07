@@ -61,3 +61,10 @@ bg_gate_mana_extraction = {
     foreign_investment_ai_factor = 1.0
     default_building = building_gate_mana_extractor
 }
+
+bg_gate_dungeons = {
+    parent_group = bg_government
+    lens = special
+    inheritable_construction = yes
+    economy_of_scale = no
+}

@@ -1,16 +1,22 @@
 ﻿# This script is run after all other history scripts were run
 GLOBAL = {
 
+	# How to setup a new dungeon:
+	# - Create dungeon building in common/buildings/gate_buildings_dungeon.txt
+	# - Spawn dungeon building in common/history/buildings/gate_dungeons.txt
+	# - Create dungeons here (see "gate_create_dungeon_tyrol" for reference)
+	# - Add the dungeon to the "gate_set_dungeon_status" effect in common/scripted_effects/511_dungeon_effects.txt
+
 	# Alpine Caves in Tyrol
-	# id = gate_dungeon_tyrol
+	# id = gate_dungeon_alpine_caves
 	gate_create_dungeon_tyrol = yes
 
 	#TODO: REMOVE THIS
-	c:GATE_MK = {
-		add_journal_entry = {
-			type = je_gate_expedition_dungeon
-			target = container:gate_dungeon_tyrol
-		}
-	}
+	# c:GATE_MK = {
+	# 	add_journal_entry = {
+	# 		type = je_gate_expedition_dungeon
+	# 		target = container:gate_dungeon_alpine_caves
+	# 	}
+	# }
 
 }

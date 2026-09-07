@@ -1,0 +1,18 @@
+﻿BUILDINGS = {
+
+    # Alpine Caves in Tyrol
+    s:STATE_TYROL = {
+        region_state:GATE_MK = {
+            create_building = {
+                building = building_gate_dungeon_alpine_caves
+                level = 1
+                reserves = 1
+                activate_production_methods = {
+                    pm_gate_dungeon_closed
+                    pm_gate_dungeon_unexplored
+                }
+            }
+        }
+    }
+
+}

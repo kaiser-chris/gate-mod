@@ -1,0 +1,54 @@
+﻿pm_gate_dungeon_unexplored = {
+	texture = gfx/interface/icons/production_method_icons/gate_support_locked.dds
+	is_default = yes
+	is_hidden_when_unavailable = yes
+
+	unlocking_production_methods = {
+		pm_gate_dungeon_unexplored
+	}
+}
+
+pm_gate_dungeon_explored = {
+	texture = gfx/interface/icons/production_method_icons/gate_support_locked_research.dds
+	is_hidden_when_unavailable = yes
+
+	unlocking_production_methods = {
+		pm_gate_dungeon_explored
+	}
+}
+
+pm_gate_dungeon_closed = {
+	texture = gfx/interface/icons/production_method_icons/gate_support_locked.dds
+	replacement_if_valid = pm_gate_dungeon_taxed_access
+	is_default = yes
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_officers_add = 1000
+			building_employment_soldiers_add = 1000
+		}
+	}
+}
+
+pm_gate_dungeon_taxed_access = {
+	texture = gfx/interface/icons/production_method_icons/gate_support_locked.dds
+	is_default = yes
+
+	unlocking_production_methods = {
+		pm_gate_dungeon_explored
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_minting_add = 2500
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_clerks_add = 1000
+			building_employment_soldiers_add = 1000
+		}
+	}
+}
+
