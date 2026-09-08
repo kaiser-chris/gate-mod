@@ -34,3 +34,109 @@ gate_expedition_dungeons_base.1 = {
         name = gate_expedition_activities.1.b
     }
 }
+
+gate_expedition_dungeons_base.2 = {
+    type = country_event
+    dlc = dlc_magic_gate
+    placement = scope:dungeon_state
+
+    title = gate_expedition_dungeons_base.2.t
+    desc = gate_expedition_dungeons_base.2.d
+    flavor = gate_expedition_dungeons_base.2.f
+
+    category = gate_dungeon_preparation
+
+    gui_window = event_window_gate_dungeon_setup
+
+    event_image = {
+        video = "middleeast_jungle_expedition"
+    }
+
+    immediate = {
+        # Create dungeon expedition container
+        # and save it as scope expedition (scope:expedition)
+        gate_create_dungeon_expedition = {
+            dungeon = scope:dungeon
+        }
+        gate_setup_dungeon_event = yes
+
+        # Create three potential dungeon party leaders
+        create_character = {
+            template = gate_dungeon_party_leader_template
+            save_scope_as = gate_potential_leader
+        }
+        add_to_variable_list = {
+            name = gate_potential_dungeon_party_leaders
+            target = scope:gate_potential_leader
+        }
+        clear_saved_scope = yes
+        create_character = {
+            template = gate_dungeon_party_leader_template
+            save_scope_as = gate_potential_leader
+        }
+        add_to_variable_list = {
+            name = gate_potential_dungeon_party_leaders
+            target = scope:gate_potential_leader
+        }
+        clear_saved_scope = yes
+        create_character = {
+            template = gate_dungeon_party_leader_template
+            save_scope_as = gate_potential_leader
+        }
+        add_to_variable_list = {
+            name = gate_potential_dungeon_party_leaders
+            target = scope:gate_potential_leader
+        }
+        clear_saved_scope = yes
+    }
+
+    is_popup = yes
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_gate_expedition.dds"
+
+    option = {
+        name = gate_expedition_dungeons_base.2.a
+        default_option = yes
+        show_as_unavailable = {
+            NOT = {
+                scope:expedition = {
+                    var:party = {
+                        has_variable = party_leader
+                    }
+                }
+            }
+        }
+        gate_start_dungeon = {
+            expedition = scope:expedition
+        }
+        hidden_effect = {
+            # Remove selected leader from the list so
+            # the character isn't killed in the clean up
+            remove_list_variable = {
+                name = gate_potential_dungeon_party_leaders
+                target = scope:expedition.var:party.var:party_leader
+            }
+        }
+    }
+
+    option = {
+        name = gate_expedition_dungeons_base.2.b
+        gate_cleanup_dungeon_expedition = yes
+    }
+
+    after = {
+        hidden_effect = {
+            # Clean up unchosen party leaders
+            every_in_list = {
+                variable = gate_potential_dungeon_party_leaders
+                kill_character = {
+                    value = yes
+                    hidden = yes
+                }
+            }
+            clear_variable_list = gate_potential_dungeon_party_leaders
+        }
+    }
+}

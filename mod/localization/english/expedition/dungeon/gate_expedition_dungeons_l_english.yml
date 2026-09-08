@@ -15,7 +15,14 @@
  je_gate_expedition_dungeon_name_and_location: "[Scope.Var('name').GetFlagName] in [Scope.Var('location').GetStateRegion.GetName]"
  je_gate_expedition_dungeon_name_and_location_selector: "[Scope.Var('dungeon').Var('name').GetFlagName] in [Scope.Var('dungeon').Var('location').GetStateRegion.GetName]"
 # Events
+ gate_expedition_dungeons_base.2.t: "Party Setup"
+ gate_expedition_dungeons_base.2.d: "#debug TODO Description#!" #TODO: Write party setup description
+ gate_expedition_dungeons_base.2.f: "#debug TODO Flavor#!" #TODO: Write party setup flavor
+ gate_expedition_dungeons_base.2.a: "Start Exploration"
+ gate_expedition_dungeons_base.2.b: "Cancel Exploration"
  event_gate_dungeon: "Event in #yellow [Scope.Var('name').GetFlagName]#! [concept_gate_dungeon]"
+ event_gate_dungeon_party: "Focus"
+ event_gate_dungeon_leader: "Leader"
 # Decision
  decision_gate_start_dungeon_exploration: "Start exploring a [concept_gate_dungeon]"
  decision_gate_start_dungeon_exploration_desc: "Open the [concept_gate_dungeon] selector and start an exploration."

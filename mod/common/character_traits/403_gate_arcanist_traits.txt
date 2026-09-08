@@ -55,8 +55,8 @@ gate_arcanist_magic_sight = {
 
     possible = {
         OR = {
-            has_role = gate_arcanist
-            has_role = gate_active_arcanist
+            has_role = role_gate_arcanist
+            has_role = role_gate_active_arcanist
             owner = {
                 is_gate_magic_country = yes
             }
@@ -81,8 +81,8 @@ gate_arcanist_magic_sight = {
         if = {
             limit = {
                 OR = {
-                    has_role = gate_arcanist
-                    has_role = gate_active_arcanist
+                    has_role = role_gate_arcanist
+                    has_role = role_gate_active_arcanist
                 }
             }
             add = 10
@@ -104,8 +104,8 @@ gate_arcanist_magic_voice = {
 
     possible = {
         OR = {
-            has_role = gate_arcanist
-            has_role = gate_active_arcanist
+            has_role = role_gate_arcanist
+            has_role = role_gate_active_arcanist
             owner = {
                 is_gate_magic_country = yes
             }
@@ -130,8 +130,8 @@ gate_arcanist_magic_voice = {
         if = {
             limit = {
                 OR = {
-                    has_role = gate_arcanist
-                    has_role = gate_active_arcanist
+                    has_role = role_gate_arcanist
+                    has_role = role_gate_active_arcanist
                 }
             }
             add = 10
@@ -155,7 +155,7 @@ gate_arcanist_bound_name = {
     possible = {
         OR = {
             has_role = gate_arcanist
-            has_role = gate_active_arcanist
+            has_role = role_gate_active_arcanist
             owner = {
                 is_gate_magic_country = yes
             }
@@ -184,7 +184,7 @@ gate_arcanist_bound_name = {
             limit = {
                 OR = {
                     has_role = gate_arcanist
-                    has_role = gate_active_arcanist
+                    has_role = role_gate_active_arcanist
                 }
             }
             add = 10
@@ -208,7 +208,7 @@ gate_arcanist_split_mind = {
     possible = {
         OR = {
             has_role = gate_arcanist
-            has_role = gate_active_arcanist
+            has_role = role_gate_active_arcanist
             owner = {
                 is_gate_magic_country = yes
             }
@@ -237,7 +237,7 @@ gate_arcanist_split_mind = {
             limit = {
                 OR = {
                     has_role = gate_arcanist
-                    has_role = gate_active_arcanist
+                    has_role = role_gate_active_arcanist
                 }
             }
             add = 10
