@@ -169,8 +169,8 @@ gate_bear_portrait_pop_trigger = {
 gate_arcanist_portrait_trigger = {
     scope:character ?= {
         OR = {
-            has_role = gate_arcanist
-            has_role = gate_active_arcanist
+            has_role = role_gate_arcanist
+            has_role = role_gate_active_arcanist
         }
     }
 }

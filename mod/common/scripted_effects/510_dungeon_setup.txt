@@ -15,12 +15,37 @@
 }
 
 gate_create_dungeon_expedition = {
+	# Create expedition container
 	create_container = {
-		tags = { gate_expedition }
+		tags = { gate_mod gate_expedition }
 		save_scope_as = expedition
 		parent = this
 	}
+	# Create party container
+	create_container = {
+		tags = { gate_mod gate_expedition_party }
+		save_scope_as = temp_party
+		parent = scope:expedition
+	}
+	scope:temp_party = {
+		set_variable = {
+			name = cohesion
+			value = gate_dungeon_party_cohesion_default
+		}
+		set_variable = {
+			name = condition
+			value = gate_dungeon_party_condition_default
+		}
+		set_variable = {
+			name = renown
+			value = gate_dungeon_party_renown_default
+		}
+	}
 	scope:expedition = {
+		set_variable = {
+			name = party
+			value = scope:temp_party
+		}
 		set_variable = {
 			name = dungeon
 			value = $dungeon$
@@ -38,11 +63,8 @@ gate_create_dungeon_expedition = {
 			value = scope:temp_first_layer
 		}
 	}
-	set_variable = {
-		name = expedition
-		value = scope:expedition
-	}
 	clear_saved_scope = temp_first_layer
+	clear_saved_scope = temp_party
 }
 
 gate_create_dungeon_tyrol = {

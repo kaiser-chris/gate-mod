@@ -13,6 +13,93 @@
 	}
 }
 
+sgui_gate_change_cohesion = {
+	scope = container
+
+	saved_scopes = {
+		index
+	}
+
+	effect = {
+		var:party = {
+			set_variable = {
+				name = cohesion
+				value = {
+					value = 1
+					subtract = {
+						value = 1
+						divide = 8
+						multiply = scope:index
+					}
+				}
+			}
+			clamp_variable = {
+				name = cohesion
+				min = gate_dungeon_party_cohesion_minimum
+				max = gate_dungeon_party_cohesion_maximum
+			}
+		}
+	}
+}
+
+sgui_gate_change_condition = {
+	scope = container
+
+	saved_scopes = {
+		index
+	}
+
+	effect = {
+		var:party = {
+			set_variable = {
+				name = condition
+				value = {
+					value = 1
+					subtract = {
+						value = 1
+						divide = 8
+						multiply = scope:index
+					}
+				}
+			}
+			clamp_variable = {
+				name = condition
+				min = gate_dungeon_party_condition_minimum
+				max = gate_dungeon_party_condition_maximum
+			}
+		}
+	}
+}
+
+sgui_gate_change_renown = {
+	scope = container
+
+	saved_scopes = {
+		index
+	}
+
+	effect = {
+		var:party = {
+			set_variable = {
+				name = renown
+				value = {
+					value = 1
+					subtract = {
+						value = 1
+						divide = 8
+						multiply = scope:index
+					}
+				}
+			}
+			clamp_variable = {
+				name = renown
+				min = gate_dungeon_party_renown_minimum
+				max = gate_dungeon_party_renown_maximum
+			}
+		}
+	}
+}
+
 gg_project_dungeon = {
 	scope = country
 
@@ -24,13 +111,13 @@ gg_project_dungeon = {
 		NOT = {
 			has_journal_entry = je_gate_expedition_dungeon
 		}
+		num_pending_events:gate_dungeon_preparation <= 0
 	}
 
 	effect = {
 		# Start JE
-		gate_start_dungeon = {
-			dungeon = scope:dungeon
-		}
+		# Needs scope:dungeon set
+		trigger_event = gate_expedition_dungeons_base.2
 
 		# Destroy surrounding containers
 		every_in_list = {

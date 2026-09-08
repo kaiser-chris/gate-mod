@@ -3,12 +3,26 @@
 		text = effect_gate_dungeon_start
 		add_journal_entry = {
 			type = je_gate_expedition_dungeon
-			target = $dungeon$
+			target = $expedition$
 		}
 		set_local_variable = {
 			name = gate_dungeon
-			value = $dungeon$
+			value = $expedition$.var:dungeon
 		}
+	}
+}
+
+gate_cleanup_dungeon_expedition = {
+	scope:expedition = {
+		var:party = {
+			var:party_leader ?= {
+				kill_character = {
+					value = yes
+					hidden = yes
+				}
+			}
+		}
+		destroy_container = yes
 	}
 }
 

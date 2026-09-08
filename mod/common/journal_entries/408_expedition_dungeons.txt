@@ -22,8 +22,12 @@
 			# Create dungeon expedition container
 			# and save it as scope expedition
 			# (scope:expedition and var:expedition)
-			gate_create_dungeon_expedition = {
-				dungeon = scope:target
+			set_variable = {
+				name = expedition
+				value = scope:target
+			}
+			scope:target = {
+				save_scope_as = expedition
 			}
 
 			# Find last layer in dungeon and set it
@@ -77,6 +81,9 @@
 					}
 				}
 			}
+		}
+		hidden_effect = {
+			gate_cleanup_dungeon_expedition = yes
 		}
 	}
 
