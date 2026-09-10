@@ -161,13 +161,18 @@ decision_gate_start_dungeon_exploration = {
 		NOT = {
 			has_journal_entry = je_gate_expedition_dungeon
 		}
-		NOT = {
-			has_variable_list = gate_project_dungeon_selector
+		custom_tooltip = {
+			text = decision_gate_start_dungeon_exploration_is_selector_open_tooltip
+			NOT = {
+				has_variable_list = gate_project_dungeon_selector
+			}
+			num_pending_events:gate_dungeon_preparation <= 0
 		}
 	}
 
 	when_taken = {
-		hidden_effect = {
+		custom_tooltip = {
+			text = decision_gate_start_dungeon_exploration_selector_tooltip
 			every_scope_building = {
 				limit = {
 					is_building_group = bg_gate_dungeons

@@ -1,24 +1,130 @@
-﻿# Static
-gate_layer_index_max = {
+﻿gate_layer_index_max = {
     every_in_list = {
         variable = layers
         add = 1
     }
 }
-
 gate_layer_index_next = {
     value = var:current_layer.var:index
     add = 1
+}
+gate_layer_count = {
+    every_in_list = {
+        variable = layers
+        add = 1
+    }
+}
+gate_dungeon_creation_time = {
+    if = {
+        limit = {
+            has_variable = creation_date
+        }
+        value = var:creation_date
+        subtract = game_date
+    }
+    else = {
+        value = 0
+    }
+
+}
+
+
+gate_dungeon_party_points_max = 15
+gate_dungeon_party_points = {
+    value = {
+        value = gate_dungeon_party_points_max
+        desc = gate_dungeon_party_points_from_base
+        format = gate_dungeon_party_points_format
+    }
+    if = {
+        limit = {
+            var:party ?= {
+                has_variable = party_leader
+            }
+        }
+        add = {
+            var:party ?= {
+                var:party_leader ?= {
+                    value = modifier:character_gate_dungeon_party_points
+                }
+            }
+            desc = gate_dungeon_party_points_from_party_leader
+            format = gate_dungeon_party_points_format
+        }
+    }
+    subtract = {
+        value = gate_dungeon_party_cohesion_value
+        desc = gate_dungeon_party_points_from_cohesion
+        format = gate_dungeon_party_points_format
+    }
+    subtract = {
+        value = gate_dungeon_party_condition_value
+        desc = gate_dungeon_party_points_from_condition
+        format = gate_dungeon_party_points_format
+    }
+    subtract = {
+        value = gate_dungeon_party_renown_value
+        desc = gate_dungeon_party_points_from_renown
+        format = gate_dungeon_party_points_format
+    }
 }
 
 gate_dungeon_party_cohesion_minimum = 0
 gate_dungeon_party_cohesion_maximum = 1
 gate_dungeon_party_cohesion_default = 0.5
+gate_dungeon_party_cohesion_value = {
+    var:party = {
+        if = {
+            limit = {
+                NOT = {
+                    var:cohesion ?= 0
+                }
+            }
+            value = var:cohesion
+            multiply = 8
+        }
+        else = {
+            value = 0
+        }
+    }
+}
 
 gate_dungeon_party_condition_minimum = 0
 gate_dungeon_party_condition_maximum = 1
 gate_dungeon_party_condition_default = 0.5
+gate_dungeon_party_condition_value = {
+    var:party = {
+        if = {
+            limit = {
+                NOT = {
+                    var:condition ?= 0
+                }
+            }
+            value = var:condition
+            multiply = 8
+        }
+        else = {
+            value = 0
+        }
+    }
+}
 
 gate_dungeon_party_renown_minimum = 0
 gate_dungeon_party_renown_maximum = 1
 gate_dungeon_party_renown_default = 0.5
+gate_dungeon_party_renown_value = {
+    var:party = {
+        if = {
+            limit = {
+                NOT = {
+                    var:renown ?= 0
+                }
+            }
+            value = var:renown
+            multiply = 8
+        }
+        else = {
+            value = 0
+        }
+    }
+}

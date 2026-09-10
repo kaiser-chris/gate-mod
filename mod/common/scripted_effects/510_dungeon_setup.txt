@@ -97,6 +97,13 @@ gate_create_dungeon_tyrol = {
 			name = gate_dungeon_layer_generic_boss
 			type = gate_dungeon_layer_inner_classic_04
 		}
+		set_variable = {
+			name = creation_date
+			value = {
+				value = game_date
+				subtract = 580
+			}
+		}
 	}
 	add_to_global_variable_map = {
 		name = dungeons
@@ -125,6 +132,10 @@ gate_create_dungeon = {
 			set_variable = {
 				name = type
 				value = $type$
+			}
+			set_variable = {
+				name = creation_date
+				value = game_date
 			}
 			fix_variable_error = { variable = $name$ }
 			fix_variable_error = { variable = $name$_desc }

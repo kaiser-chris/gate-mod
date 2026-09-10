@@ -179,7 +179,6 @@
     }
 
     # Blocks
-    # - sort_button_name
     # - sort_button_size
     # - sort_button_productivity
     # - sort_button_employment
@@ -407,6 +406,96 @@
             blockoverride "size" {
                 size = { 3 70 }
             }
+        }
+
+        # Creation Date
+        textbox = {
+            raw_text = "#v [TimeKeeper.GetCurrentDateWithDiff(FixedPointToInt(Scope.Var('dungeon').ScriptValue('gate_dungeon_creation_time')))]#!"
+            size = { 100 70 }
+            tooltip = gg_selector_dungeon_creation_date_tooltip
+            elide = right
+            align = center|nobaseline
+            using = fontsize_medium
+        }
+
+        # Divider
+        vertical_divider = {
+            blockoverride "size" {
+                size = { 3 70 }
+            }
+        }
+
+        # Layer Count
+        textbox = {
+            text = "[Scope.Var('dungeon').ScriptValue('gate_layer_count')|v0]"
+            size = { 50 70 }
+            tooltip = gg_selector_dungeon_layers_tooltip
+            elide = right
+            align = center|nobaseline
+            using = fontsize_medium
+        }
+
+        # Divider
+        vertical_divider = {
+            blockoverride "size" {
+                size = { 3 70 }
+            }
+        }
+    }
+
+    # Blocks
+    # - sort_button_creation_date
+    # - sort_button_count
+    type gate_selector_dungeon_sort_buttons = hbox {
+        margin = { 10 0 }
+        margin_top = 5
+        spacing = 2
+        layoutpolicy_horizontal = expanding
+
+        gate_selector_sort_button = {
+            layoutpolicy_horizontal = expanding
+            layoutpolicy_vertical = expanding
+            tooltip = "gg_selector_sort_by_creation_date_tooltip"
+            blockoverride "text" {
+                text = "gg_selector_sort_by_creation_date"
+            }
+            blockoverride "selected_visibility" {
+                visible = "[GetVariableSystem.HasValue('gate_sort_active', 'sort_creation_date')]"
+            }
+            onclick = "[GetVariableSystem.Set('gate_sort_active', 'sort_creation_date')]"
+            block "sort_button_creation_date" {
+                enabled = no
+            }
+            onclick = "[ScriptedGui.Execute(GuiScope
+                .SetRoot(Country.MakeScope)
+                .AddScope('reverse', MakeScopeBool(GetVariableSystem.Exists('sort_creation_date_reverse')))
+                .End
+            )]"
+            onclick = "[GetVariableSystem.Toggle('sort_creation_date_reverse')]"
+            onclick = "[GetVariableSystem.Clear('sort_count_reverse')]"
+        }
+
+        gate_selector_sort_button = {
+            layoutpolicy_horizontal = expanding
+            layoutpolicy_vertical = expanding
+            tooltip = "gg_selector_sort_by_layer_count_tooltip"
+            blockoverride "text" {
+                text = "gg_selector_sort_by_layer_count"
+            }
+            blockoverride "selected_visibility" {
+                visible = "[GetVariableSystem.HasValue('gate_sort_active', 'sort_count')]"
+            }
+            onclick = "[GetVariableSystem.Set('gate_sort_active', 'sort_count')]"
+            block "sort_button_count" {
+                enabled = no
+            }
+            onclick = "[ScriptedGui.Execute(GuiScope
+                .SetRoot(Country.MakeScope)
+                .AddScope('reverse', MakeScopeBool(GetVariableSystem.Exists('sort_count_reverse')))
+                .End
+            )]"
+            onclick = "[GetVariableSystem.Toggle('sort_count_reverse')]"
+            onclick = "[GetVariableSystem.Clear('sort_creation_date_reverse')]"
         }
     }
 

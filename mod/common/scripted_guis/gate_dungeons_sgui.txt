@@ -25,8 +25,8 @@ sgui_gate_change_cohesion = {
 			set_variable = {
 				name = cohesion
 				value = {
-					value = 1
-					subtract = {
+					value = 0
+					add = {
 						value = 1
 						divide = 8
 						multiply = scope:index
@@ -54,8 +54,8 @@ sgui_gate_change_condition = {
 			set_variable = {
 				name = condition
 				value = {
-					value = 1
-					subtract = {
+					value = 0
+					add = {
 						value = 1
 						divide = 8
 						multiply = scope:index
@@ -83,8 +83,8 @@ sgui_gate_change_renown = {
 			set_variable = {
 				name = renown
 				value = {
-					value = 1
-					subtract = {
+					value = 0
+					add = {
 						value = 1
 						divide = 8
 						multiply = scope:index
@@ -95,6 +95,29 @@ sgui_gate_change_renown = {
 				name = renown
 				min = gate_dungeon_party_renown_minimum
 				max = gate_dungeon_party_renown_maximum
+			}
+		}
+	}
+}
+
+sgui_gate_select_dungeon_party_leader = {
+	scope = container
+
+	saved_scopes = {
+		leader
+	}
+
+	is_shown = {
+		var:party ?= {
+			var:party_leader ?= scope:leader
+		}
+	}
+
+	effect = {
+		var:party = {
+			set_variable = {
+				name = party_leader
+				value = scope:leader
 			}
 		}
 	}
@@ -140,5 +163,35 @@ gg_project_dungeon_selector_close = {
 		}
 		# Clear list
 		clear_variable_list = gate_project_dungeon_selector
+	}
+}
+
+gate_project_dungeon_selector_sort_layer_count = {
+	scope = country
+
+	saved_scopes = {
+		reverse
+	}
+
+	effect = {
+		gate_order_list_with_reverse = {
+			list = gate_project_dungeon_selector
+			order = var:dungeon.gate_layer_count
+		}
+	}
+}
+
+gate_project_dungeon_selector_sort_creation_date = {
+	scope = country
+
+	saved_scopes = {
+		reverse
+	}
+
+	effect = {
+		gate_order_list_with_reverse = {
+			list = gate_project_dungeon_selector
+			order = var:dungeon.var:creation_date
+		}
 	}
 }

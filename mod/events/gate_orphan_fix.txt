@@ -20,6 +20,7 @@ gate_orphan_fix.1 = {
 
 	immediate = {
 		fix_variable_error = { variable = ottoman_grand_collapse }
+		fix_variable_error = { variable = yes }
 
 		# Topbar
 		fix_variable_error = { variable = gg_topbar_magic_innovation }
@@ -126,10 +127,12 @@ gate_orphan_fix.1 = {
 
 		# Gate Dungeons
 		fix_variable_error = { variable = gate_dungeons }
+		fix_variable_error = { variable = gate_dungeon }
 		fix_variable_error = { variable = dungeon }
 		fix_variable_error = { variable = current_layer }
 		fix_variable_error = { variable = layers }
 		fix_variable_error = { variable = expedition }
+		fix_variable_error = { variable = creation_date }
 
 		# Community Outfit Mod
 		fix_variable_error = { variable = mr_is_engineer_var }

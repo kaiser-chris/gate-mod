@@ -1,3 +1,9 @@
 ﻿l_english:
  gg_selector_state_building_text: "in [Building.GetState.GetName]"
  gg_selector_state_dungeon_text: "in [Scope.Var('building').GetBuilding.GetState.GetName]"
+ gg_selector_sort_by_layer_count: "Layers"
+ gg_selector_sort_by_layer_count_tooltip: "Sort by [concept_gate_dungeon] layer count ([Concept('concept_gate_dungeon_layer','$concept_gate_dungeon_layers$')])"
+ gg_selector_sort_by_creation_date: "Discovery Date"
+ gg_selector_sort_by_creation_date_tooltip: "Sort by [concept_gate_dungeon] discovery date"
+ gg_selector_dungeon_layers_tooltip: "#header [Concept('concept_gate_dungeon_layer','$concept_gate_dungeon_layers$')]#!\n$concept_gate_dungeon_layer_desc$"
+ gg_selector_dungeon_creation_date_tooltip: "#header Discovery Date#!\nThis is the date when this [concept_gate_dungeon] was first discovered."

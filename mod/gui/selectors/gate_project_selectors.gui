@@ -86,6 +86,14 @@
     }
 
     type gate_project_select_dungeon_window = gate_selector_window_single_element {
+        state = {
+            name = _show
+            # Close open panel before showing this one
+            # since we are coming from a decision this
+            # should be the decision panel
+            on_finish = "[InformationPanelBar.ClosePanel]"
+            on_finish = "[MapListPanelManager.CloseCurrentPanel]"
+        }
         blockoverride "selector_visibility" {
             visible = "[DataModelHasItems(Country.MakeScope.GetList('gate_project_dungeon_selector'))]"
         }
@@ -105,7 +113,16 @@
             enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('dungeon', Scope.Var('dungeon').GetScriptContainer.MakeScope).End)]"
             tooltip = gate_project_select_dungeon_window_select
         }
-        blockoverride "selector_sort_buttons" {}
+        blockoverride "selector_sort_buttons" {
+            gate_selector_dungeon_sort_buttons = {
+                blockoverride "sort_button_count" {
+                    datacontext = "[GetScriptedGui('gate_project_dungeon_selector_sort_layer_count')]"
+                }
+                blockoverride "sort_button_creation_date" {
+                    datacontext = "[GetScriptedGui('gate_project_dungeon_selector_sort_creation_date')]"
+                }
+            }
+        }
         blockoverride "selector_element_content" {
             gate_selector_dungeon_element = {}
         }

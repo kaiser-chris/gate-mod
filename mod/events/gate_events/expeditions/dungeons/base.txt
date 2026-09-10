@@ -97,17 +97,33 @@ gate_expedition_dungeons_base.2 = {
     icon = "gfx/interface/icons/event_icons/event_gate_expedition.dds"
 
     option = {
-        name = gate_expedition_dungeons_base.2.a
+        name = gate_expedition_dungeons_base.2.b
         default_option = yes
+        gate_cleanup_dungeon_expedition = yes
+    }
+
+    option = {
+        name = gate_expedition_dungeons_base.2.a
         show_as_unavailable = {
-            NOT = {
+            always = yes
+        }
+        trigger = {
+            custom_tooltip = {
+                text = event_gate_dungeon_has_leader_tooltip
                 scope:expedition = {
                     var:party = {
                         has_variable = party_leader
                     }
                 }
             }
+            custom_tooltip = {
+                text = event_gate_dungeon_valid_points_tooltip
+                scope:expedition = {
+                    gate_dungeon_party_points = 0
+                }
+            }
         }
+        highlighted_option = yes
         gate_start_dungeon = {
             expedition = scope:expedition
         }
@@ -119,11 +135,6 @@ gate_expedition_dungeons_base.2 = {
                 target = scope:expedition.var:party.var:party_leader
             }
         }
-    }
-
-    option = {
-        name = gate_expedition_dungeons_base.2.b
-        gate_cleanup_dungeon_expedition = yes
     }
 
     after = {
