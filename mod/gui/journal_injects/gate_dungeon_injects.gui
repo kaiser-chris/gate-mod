@@ -9,7 +9,9 @@ flowcontainer = {
 	visible = "[JournalEntry.MakeScope.Var('expedition').IsSet]"
 	datacontext = "[JournalEntry.MakeScope.Var('expedition').GetScriptContainer]"
 
-	gate_journal_dungeon_expedition = {}
+	gate_journal_dungeon_expedition = {
+		parentanchor = hcenter
+	}
 
 	gate_dungeon_layer_progress_line = {}
 
@@ -19,55 +21,15 @@ flowcontainer = {
 types gate_inject_dungeon_types {
 
 	type gate_journal_dungeon_expedition = widget {
-		parentanchor = hcenter
-		size = { 500 300 }
+		block "dungeon_expedition_widget_size" {
+			size = { 500 300 }
+		}
 		using = gate_dungeon_background
 
 		flowcontainer = {
 			parentanchor = right|vcenter
 			direction = vertical
 			spacing = 5
-
-			com_journal_entry_frame_text = {
-				blockoverride "text_top" {
-					text = je_gate_expedition_dungeon_party_leader
-				}
-				blockoverride "text" {
-					raw_text = "[GetPlayer.GetRuler.GetFullName]"
-				}
-				blockoverride "icon" {
-					visible = no
-				}
-			}
-
-			com_journal_entry_frame_text = {
-				blockoverride "text_top" {
-					text = je_gate_expedition_dungeon_name
-				}
-				blockoverride "text" {
-					raw_text = "#yellow [ScriptContainer.MakeScope.Var('dungeon').Var('name').GetFlagName]#!"
-				}
-				blockoverride "icon" {
-					visible = no
-				}
-				tooltipwidget = {
-					gate_dungeon_tooltip = {
-						datacontext = "[ScriptContainer.MakeScope.Var('dungeon')]"
-					}
-				}
-			}
-
-			com_journal_entry_frame_text = {
-				blockoverride "text_top" {
-					text = je_gate_expedition_dungeon_location
-				}
-				blockoverride "text" {
-					raw_text = "[ScriptContainer.MakeScope.Var('dungeon').Var('location').GetStateRegion.GetName]"
-				}
-				blockoverride "icon" {
-					visible = no
-				}
-			}
 
 			com_journal_entry_frame_text = {
 				visible = "[ScriptContainer.MakeScope.Var('current_layer').IsSet]"
@@ -86,6 +48,47 @@ types gate_inject_dungeon_types {
 					}
 				}
 			}
+
+			com_journal_entry_frame_text = {
+				blockoverride "text_top" {
+					raw_text = "[Concept('concept_gate_dungeon_party_cohesion', Localize('concept_gate_dungeon_party_cohesion_simple'))]"
+				}
+				blockoverride "text" {
+					raw_text = "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_cohesion_value')|0v]"
+				}
+				blockoverride "icon" {
+					visible = no
+				}
+				tooltipwidget = {
+					gate_dungeon_tooltip = {
+						datacontext = "[ScriptContainer.MakeScope.Var('dungeon')]"
+					}
+				}
+			}
+
+			com_journal_entry_frame_text = {
+				blockoverride "text_top" {
+					raw_text = "[Concept('concept_gate_dungeon_party_condition', Localize('concept_gate_dungeon_party_condition_medium'))]"
+				}
+				blockoverride "text" {
+					raw_text = "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_condition_value')|0v]"
+				}
+				blockoverride "icon" {
+					visible = no
+				}
+			}
+
+			com_journal_entry_frame_text = {
+				blockoverride "text_top" {
+					raw_text = "[Concept('concept_gate_dungeon_party_renown', Localize('concept_gate_dungeon_party_renown_medium'))]"
+				}
+				blockoverride "text" {
+					raw_text = "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_renown_value')|0v]"
+				}
+				blockoverride "icon" {
+					visible = no
+				}
+			}
 		}
 
 		character_portrait_base_no_mask = {
@@ -93,7 +96,8 @@ types gate_inject_dungeon_types {
 			ignore_in_debug_draw = yes
 			size = { 300 300 }
 
-			datacontext = "[GetPlayer.GetRuler]"
+			datacontext = "[ScriptContainer.MakeScope.Var('party').Var('party_leader').GetCharacter]"
+			visible = "[ScriptContainer.MakeScope.Var('party').Var('party_leader').IsSet]"
 
 			block "character_layout" {
 				position = { -30 2 }
@@ -105,17 +109,56 @@ types gate_inject_dungeon_types {
 			}
 			blockoverride "portrait_texture" {
 				portrait_texture = "[Character.GetAnimatedPortrait(
-							'ruler_environment',
-							'camera_body',
-							'idle',
-							GetPortraitRenderSize(PdxGuiWidget.Self))
-						]"
+					'ruler_environment',
+					'camera_body',
+					'idle',
+					GetPortraitRenderSize(PdxGuiWidget.Self))
+				]"
 			}
 			blockoverride "portrait_icons" {}
 			blockoverride "tooltip" {
 				tooltipwidget = {
 					FancyTooltip_Character = {}
 				}
+			}
+		}
+
+		icon = {
+			position = { -30 2 }
+			parentanchor = left|bottom
+			size = { 300 300 }
+			visible = "[Not(ScriptContainer.MakeScope.Var('party').Var('party_leader').IsSet)]"
+			texture = gfx/portraits/example_portraits/unknown.dds
+		}
+
+
+		gate_titled_character = {
+			parentanchor = left|bottom
+			position = { 0 -20 }
+			visible = "[Not(ScriptContainer.MakeScope.Var('party').Var('party_leader').IsSet)]"
+			blockoverride "text_top" {
+				text = je_gate_expedition_dungeon_party_leader
+			}
+			blockoverride "text" {
+				raw_text = je_gate_expedition_dungeon_party_leader_empty
+			}
+			blockoverride "icon" {
+				visible = no
+			}
+		}
+
+		gate_titled_character = {
+			parentanchor = left|bottom
+			position = { 0 -20 }
+			visible = "[ScriptContainer.MakeScope.Var('party').Var('party_leader').IsSet]"
+			blockoverride "text_top" {
+				text = je_gate_expedition_dungeon_party_leader
+			}
+			blockoverride "text" {
+				raw_text = "[ScriptContainer.MakeScope.Var('party').Var('party_leader').GetCharacter.GetFullName]"
+			}
+			blockoverride "icon" {
+				visible = no
 			}
 		}
 
@@ -135,6 +178,72 @@ types gate_inject_dungeon_types {
 				spriteborder_bottom = 180
 
 				texture_density = 2
+			}
+		}
+	}
+
+	type gate_titled_character = widget {
+		background = {
+			using = dark_area
+			alpha = 0.75
+
+			modify_texture = {
+				texture = "gfx/interface/masks/fade_horizontal_center.dds"
+				blend_mode = alphamultiply
+			}
+		}
+
+		size = { 250 53 }
+
+		divider_clean = {
+			parentanchor = top
+		}
+		divider_clean = {
+			parentanchor = bottom
+		}
+
+		hbox = {
+			margin_right = 13
+			margin_left = 10
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = expanding
+			spacing = 7
+
+			vbox = {
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
+				margin = { 0 7 }
+				spacing = 3
+
+				textbox = {
+					layoutpolicy_horizontal = expanding
+					size = { 0 16 }
+					block "text_top" {
+						raw_text = "#r frame_text text_top#!"
+					}
+					align = center
+					elide = right
+					fontsize_min = 12
+				}
+
+				textbox = {
+					layoutpolicy_horizontal = expanding
+					size = { 0 20 }
+					block "text" {
+						raw_text = "#r frame_text text#!"
+					}
+					align = center
+					elide = right
+					fontsize_min = 12
+					using = fontsize_large
+				}
+			}
+
+			icon = {
+				size = { 35 35 }
+				block "icon" {
+					texture = gfx/interface/icons/alert_icons/placeholder.dds
+				}
 			}
 		}
 	}

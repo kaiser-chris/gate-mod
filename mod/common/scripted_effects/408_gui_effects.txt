@@ -48,13 +48,11 @@ gate_order_list_with_reverse = {
                 multiply = -1
             }
         }
-        error_log = "reverse"
     }
     else = {
         sort_variable_list = {
             name = $list$
             order = $order$
         }
-        error_log = "normal"
     }
 }
