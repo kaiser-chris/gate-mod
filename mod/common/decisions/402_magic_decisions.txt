@@ -168,6 +168,17 @@ decision_gate_start_dungeon_exploration = {
 			}
 			num_pending_events:gate_dungeon_preparation <= 0
 		}
+		trigger_if = {
+			limit = {
+				has_variable = gate_dungeon_delve_cooldown
+			}
+			custom_tooltip = {
+				text = decision_gate_start_dungeon_exploration_cooldown_tooltip
+				NOT = {
+					has_variable = gate_dungeon_delve_cooldown
+				}
+			}
+		}
 	}
 
 	when_taken = {

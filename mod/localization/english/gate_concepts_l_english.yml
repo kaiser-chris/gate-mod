@@ -56,25 +56,26 @@
  concept_gate_dungeon_layer_desc: "A [concept_gate_dungeon] is divided into a number of $concept_gate_dungeon_layers$, each one entered only after the last has been cleared. Later $concept_gate_dungeon_layers$ are generally more dangerous than earlier ones, and the total count is the simplest measure of how dangerous a given [concept_gate_dungeon] is likely to be, though it is not the only one. Monsters, terrain, and hazards on each $concept_gate_dungeon_layer$ follow the parent [concept_gate_dungeon]'s theme, and may shift between visits as the [concept_gate_dungeon] adjusts to whatever tactics have proven effective against it. A group that clears every $concept_gate_dungeon_layer$ is considered to have cleared the [concept_gate_dungeon] itself, after which it will repopulate within a day to a month."
  concept_gate_dungeon_party: "Dungeon Party"
  concept_gate_dungeon_party_simple: "Party"
- concept_gate_dungeon_party_desc: "TODO" #TODO
+ concept_gate_dungeon_party_desc: "A $concept_gate_dungeon_party$ is the small group sent to explore a [concept_gate_dungeon], the only means by which anyone ever sees what lies beyond its entrance. Once assembled under a [Concept('concept_gate_dungeon_party_leader','$concept_gate_dungeon_party_leader_simple$')], the $concept_gate_dungeon_party$ passes through the barrier and is sealed in alongside it, unable to be reinforced, resupplied, or withdrawn from outside until it clears the [concept_gate_dungeon], retreats on its own, or is lost entirely. Its progress through the [Concept('concept_gate_dungeon_layer','$concept_gate_dungeon_layer$')] is tracked by three measures: [Concept('concept_gate_dungeon_party_cohesion','$concept_gate_dungeon_party_cohesion_simple$')], how well the party is holding together under the strain of the delve, [Concept('concept_gate_dungeon_party_condition','$concept_gate_dungeon_party_condition_simple$')], the state of its provisions and equipment, and [Concept('concept_gate_dungeon_party_renown','$concept_gate_dungeon_party_renown_simple$')], the skill and standing its members carry in with them. The first $concept_gate_dungeon_party$ sent into a newly discovered [concept_gate_dungeon] is typically fielded by the local [concept_country], since no chartered company or independent band can be trusted with unmapped ground."
  concept_gate_dungeon_party_leader: "Dungeon Party Leader"
  concept_gate_dungeon_party_leader_simple: "Party Leader"
+ concept_gate_dungeon_party_leaders_simple: "Party Leaders"
  concept_gate_dungeon_party_leader_desc: "When a [concept_gate_dungeon] is first discovered, responsibility for the initial delve falls to the [concept_country] who controls it. Before it can be opened up to independent adventuring companies, a $concept_gate_dungeon_party_leader$ must be chosen to lead a party in, survive its [Concept('concept_gate_dungeon_layer','$concept_gate_dungeon_layers$')], and return with the first map of what lies inside."
  concept_gate_dungeon_party_points: "Dungeon Party Points"
  concept_gate_dungeon_party_points_simple: "Party Points"
- concept_gate_dungeon_party_points_desc: "TODO" #TODO
+ concept_gate_dungeon_party_points_desc: "$concept_gate_dungeon_party_points_simple$ represent the budget available for a [concept_gate_dungeon] delve. They are limited and are used in the planning phase to decide a [concept_gate_dungeon_party]'s [Concept('concept_gate_dungeon_party_cohesion','$concept_gate_dungeon_party_cohesion_simple$')], [Concept('concept_gate_dungeon_party_condition','$concept_gate_dungeon_party_condition_simple$')] and [Concept('concept_gate_dungeon_party_renown','$concept_gate_dungeon_party_renown_simple$')]. Distributing them wisely can decide whether a delve is a success or a failure."
  concept_gate_dungeon_party_cohesion: "Dungeon Party Cohesion"
  concept_gate_dungeon_party_cohesion_medium: "Party Cohesion"
  concept_gate_dungeon_party_cohesion_simple: "Cohesion"
- concept_gate_dungeon_party_cohesion_desc: "TODO" #TODO
+ concept_gate_dungeon_party_cohesion_desc: "$concept_gate_dungeon_party_cohesion_medium$ reflects how well this [concept_gate_dungeon_party] is holding together under the strain of the [concept_gate_dungeon]. It starts at the party's maximum and is worn down by hardship encountered within, if it ever reaches zero, the party fractures and the delve ends in failure."
  concept_gate_dungeon_party_condition: "Dungeon Party Condition"
  concept_gate_dungeon_party_condition_medium: "Party Condition"
  concept_gate_dungeon_party_condition_simple: "Condition"
- concept_gate_dungeon_party_condition_desc: "TODO" #TODO
+ concept_gate_dungeon_party_condition_desc: "$concept_gate_dungeon_party_condition_medium$ reflects the state of everything a [concept_gate_dungeon_party] carries with it into a [concept_gate_dungeon]: provisions, equipment, and supplies alike. It starts at its maximum and is worn down by the dungeon itself, spent rations, damaged gear, and the general toll of the delve. A party whose $concept_gate_dungeon_party_condition_simple$ runs low will not automatically fail but the chances for success fall drastically."
  concept_gate_dungeon_party_renown: "Dungeon Party Renown"
  concept_gate_dungeon_party_renown_medium: "Party Renown"
  concept_gate_dungeon_party_renown_simple: "Renown"
- concept_gate_dungeon_party_renown_desc: "TODO" #TODO
+ concept_gate_dungeon_party_renown_desc: "$concept_gate_dungeon_party_renown_medium$ reflects the skill and standing this [concept_gate_dungeon_party] has built up, largely from experience outside the current [concept_gate_dungeon] rather than anything happening within it, and so it rarely changes over the course of a single delve. A sufficiently renowned party may find additional options available to it when facing the [concept_gate_dungeon]'s events."
  concept_gate_expedition: "Expedition to $gate_planet$"
  concept_gate_expedition_desc: "When we have control over a [GetBuildingType('building_gate_alxa').GetName] and have developed our control over them with [GetTechnology('gate_expeditions').GetName], we can start an Expedition to [concept_gate_planet]."
  concept_gate_expedition_location: "Expedition Location"

@@ -38,6 +38,10 @@ sgui_gate_change_cohesion = {
 				min = gate_dungeon_party_cohesion_minimum
 				max = gate_dungeon_party_cohesion_maximum
 			}
+			set_variable = {
+				name = cohesion_max
+				value = var:cohesion
+			}
 		}
 	}
 }
@@ -67,6 +71,10 @@ sgui_gate_change_condition = {
 				min = gate_dungeon_party_condition_minimum
 				max = gate_dungeon_party_condition_maximum
 			}
+			set_variable = {
+				name = condition_max
+				value = var:condition
+			}
 		}
 	}
 }
@@ -95,6 +103,10 @@ sgui_gate_change_renown = {
 				name = renown
 				min = gate_dungeon_party_renown_minimum
 				max = gate_dungeon_party_renown_maximum
+			}
+			set_variable = {
+				name = renown_max
+				value = var:renown
 			}
 		}
 	}
