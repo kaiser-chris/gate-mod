@@ -99,7 +99,19 @@ gate_expedition_dungeons_base.2 = {
     option = {
         name = gate_expedition_dungeons_base.2.b
         default_option = yes
-        gate_cleanup_dungeon_expedition = yes
+        custom_tooltip = {
+            text = event_gate_dungeon_cancel_exploration_tooltip
+            gate_cleanup_dungeon_expedition = yes
+        }
+        # Happens in the "after" block
+        custom_tooltip = event_gate_dungeon_dismiss_leaders_tooltip
+        custom_tooltip_no_bullet = {
+            text = event_gate_dungeon_cooldown_tooltip
+            set_variable = {
+                name = gate_dungeon_delve_cooldown
+                days = 180
+            }
+        }
     }
 
     option = {

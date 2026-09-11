@@ -13,6 +13,9 @@
  je_gate_expedition_dungeon_layer_all: "Show all [Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layers$')]"
  je_gate_expedition_dungeon_layer_done: "This [concept_gate_dungeon_layer] has been #bold completed#!."
  je_gate_expedition_dungeon_layer_open: "This [concept_gate_dungeon_layer] is #bold not completed#! yet."
+ je_gate_expedition_dungeon_cohesion_tooltip: "#header [concept_gate_dungeon_party_cohesion]#!\nHow well this [concept_gate_dungeon_party] is holding together. If it reaches zero, the party fractures and the delve ends in failure.\n\nCurrent: [ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_cohesion_value')|0v] / [ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_cohesion_max_value')|0]"
+ je_gate_expedition_dungeon_condition_tooltip: "#header [concept_gate_dungeon_party_condition]#!\nThe state of this [concept_gate_dungeon_party]'s provisions, equipment, and supplies. Runs down over the course of the delve and leaves the party worse equipped as it drops.\n\nCurrent: [ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_condition_value')|0v] / [ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_condition_max_value')|0]"
+ je_gate_expedition_dungeon_renown_tooltip: "#header [concept_gate_dungeon_party_renown]#!\nThe skill and standing this [concept_gate_dungeon_party] has earned. Rarely changes during a delve, but a high enough $concept_gate_dungeon_party_renown_simple$ can unlock additional options in the [concept_gate_dungeon]'s events.\n\nCurrent: [ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_renown_value')|0v]"
  je_gate_expedition_dungeon_layer_in_progress: "This [concept_gate_dungeon_layer] is #bold in progress#!."
  je_gate_expedition_dungeon_name_and_location: "[Scope.Var('name').GetFlagName] in [Scope.Var('location').GetStateRegion.GetName]"
  je_gate_expedition_dungeon_name_and_location_selector: "[Scope.Var('dungeon').Var('name').GetFlagName] in [Scope.Var('dungeon').Var('location').GetStateRegion.GetName]"
@@ -24,8 +27,11 @@
  gate_expedition_dungeons_base.2.f: "#debug TODO Flavor#!" #TODO: Write party setup flavor
  gate_expedition_dungeons_base.2.points: "We have a limited budget of [concept_gate_dungeon_party_points] to distribute. Each attribute has their own use and points should be distributed to best fit the [concept_gate_dungeon] you want to delve into.\nPoints can be distributed by clicking on the bars below." #TODO: Write party setup points
  gate_expedition_dungeons_base.2.leaders: "For each dungeon exploration we need to chose a [Concept('concept_gate_dungeon_party_leader','$concept_gate_dungeon_party_leader_simple$')]. A leaders [Concept('concept_character_trait','$concept_character_traits$')] can influence the [Concept('concept_gate_dungeon_party_points','$concept_gate_dungeon_party_points_simple$')] budget or [Concept('concept_gate_dungeon_party','$concept_gate_dungeon_party_simple$')] attributes like [Concept('concept_gate_dungeon_party_cohesion','$concept_gate_dungeon_party_cohesion_simple$')], [Concept('concept_gate_dungeon_party_condition','$concept_gate_dungeon_party_condition_simple$')] and [Concept('concept_gate_dungeon_party_renown','$concept_gate_dungeon_party_renown_simple$')]."
- gate_expedition_dungeons_base.2.a: "Start Exploration"
- gate_expedition_dungeons_base.2.b: "Cancel Exploration"
+ gate_expedition_dungeons_base.2.a: "Start [concept_gate_dungeon] delve."
+ gate_expedition_dungeons_base.2.b: "Cancel [concept_gate_dungeon] delve."
+ event_gate_dungeon_cancel_exploration_tooltip: "Cancel the planned [concept_gate_dungeon] delve"
+ event_gate_dungeon_dismiss_leaders_tooltip: "Dismiss all [Concept('concept_gate_dungeon_party_leader','$concept_gate_dungeon_party_leaders_simple$')]"
+ event_gate_dungeon_cooldown_tooltip: "\n@warning! You will not be able to start another [concept_gate_dungeon] delve again for #v 180 days#!"
  event_gate_dungeon_has_leader_tooltip: "Has selected a [concept_gate_dungeon_party_leader]"
  event_gate_dungeon_valid_points_tooltip: "Used up all available [concept_gate_dungeon_party_points]"
  event_gate_dungeon: "Event in #yellow [Scope.Var('name').GetFlagName]#! [concept_gate_dungeon]"
@@ -47,9 +53,10 @@
  gate_dungeon_party_points_from_renown: "selected [Concept('concept_gate_dungeon_party_renown','$concept_gate_dungeon_party_renown_simple$')]"
 # Decision
  decision_gate_start_dungeon_exploration: "Start exploring a [concept_gate_dungeon]"
- decision_gate_start_dungeon_exploration_desc: "Open the [concept_gate_dungeon] selector and start an exploration."
- decision_gate_start_dungeon_exploration_selector_tooltip: "Open the [concept_gate_dungeon] exploration planner"
- decision_gate_start_dungeon_exploration_is_selector_open_tooltip: "#bold Not#! already planning a [concept_gate_dungeon] exploration"
+ decision_gate_start_dungeon_exploration_desc: "Open the [concept_gate_dungeon] selector and start a new delve."
+ decision_gate_start_dungeon_exploration_selector_tooltip: "Open the [concept_gate_dungeon] selector"
+ decision_gate_start_dungeon_exploration_is_selector_open_tooltip: "#bold Not#! already planning a [concept_gate_dungeon] delve"
+ decision_gate_start_dungeon_exploration_cooldown_tooltip: "An attempted [concept_gate_dungeon] delve was made to recently. Wait another #v [LabelingHelper.GetDaysLocWithoutTooltip(TopScope.GetRootScope.VarRemaining('gate_dungeon_delve_cooldown'))]#! before another attempt."
 # Selector Window
  gate_project_select_dungeon_window: "Select a [concept_gate_dungeon]"
  gate_project_select_dungeon_window_select: "#header [Scope.Var('dungeon').Var('name').GetFlagName] in [Scope.Var('building').GetBuilding.GetState.GetName]#!\nStart the exploration of this [concept_gate_dungeon]."

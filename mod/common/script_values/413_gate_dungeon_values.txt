@@ -88,6 +88,22 @@ gate_dungeon_party_cohesion_value = {
         }
     }
 }
+gate_dungeon_party_cohesion_max_value = {
+    var:party = {
+        if = {
+            limit = {
+                NOT = {
+                    var:cohesion_max ?= 0
+                }
+            }
+            value = var:cohesion_max
+            multiply = 8
+        }
+        else = {
+            value = 0
+        }
+    }
+}
 
 gate_dungeon_party_condition_minimum = 0
 gate_dungeon_party_condition_maximum = 1
@@ -108,6 +124,22 @@ gate_dungeon_party_condition_value = {
         }
     }
 }
+gate_dungeon_party_condition_max_value = {
+    var:party = {
+        if = {
+            limit = {
+                NOT = {
+                    var:condition_max ?= 0
+                }
+            }
+            value = var:condition_max
+            multiply = 8
+        }
+        else = {
+            value = 0
+        }
+    }
+}
 
 gate_dungeon_party_renown_minimum = 0
 gate_dungeon_party_renown_maximum = 1
@@ -121,6 +153,22 @@ gate_dungeon_party_renown_value = {
                 }
             }
             value = var:renown
+            multiply = 8
+        }
+        else = {
+            value = 0
+        }
+    }
+}
+gate_dungeon_party_renown_max_value = {
+    var:party = {
+        if = {
+            limit = {
+                NOT = {
+                    var:renown_max ?= 0
+                }
+            }
+            value = var:renown_max
             multiply = 8
         }
         else = {

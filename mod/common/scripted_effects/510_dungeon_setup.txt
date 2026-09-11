@@ -33,11 +33,23 @@ gate_create_dungeon_expedition = {
 			value = gate_dungeon_party_cohesion_default
 		}
 		set_variable = {
+			name = cohesion_max
+			value = gate_dungeon_party_cohesion_default
+		}
+		set_variable = {
 			name = condition
 			value = gate_dungeon_party_condition_default
 		}
 		set_variable = {
+			name = condition_max
+			value = gate_dungeon_party_condition_default
+		}
+		set_variable = {
 			name = renown
+			value = gate_dungeon_party_renown_default
+		}
+		set_variable = {
+			name = renown_max
 			value = gate_dungeon_party_renown_default
 		}
 	}
@@ -74,28 +86,28 @@ gate_create_dungeon_tyrol = {
 	gate_create_dungeon = {
 		name = gate_dungeon_alpine_caves
 		state_region = STATE_TYROL
-		type = gate_dungeon_cave_01
+		background = dungeon_background_gate_cave_01
 	}
 	container:gate_dungeon_alpine_caves = {
 		gate_create_dungeon_layer = {
 			name = gate_dungeon_layer_generic_entrance
-			type = gate_dungeon_layer_top_cave_01
+			background = dungeon_layer_gate_top_cave_01
 		}
 		gate_create_dungeon_layer = {
 			name = gate_dungeon_layer_generic_one
-			type = gate_dungeon_layer_inner_classic_01
+			background = dungeon_layer_gate_inner_classic_01
 		}
 		gate_create_dungeon_layer = {
 			name = gate_dungeon_layer_generic_two
-			type = gate_dungeon_layer_inner_classic_02
+			background = dungeon_layer_gate_inner_classic_02
 		}
 		gate_create_dungeon_layer = {
 			name = gate_dungeon_layer_generic_three
-			type = gate_dungeon_layer_inner_classic_03
+			background = dungeon_layer_gate_inner_classic_03
 		}
 		gate_create_dungeon_layer = {
 			name = gate_dungeon_layer_generic_boss
-			type = gate_dungeon_layer_inner_classic_04
+			background = dungeon_layer_gate_inner_classic_04
 		}
 		set_variable = {
 			name = creation_date
@@ -130,8 +142,8 @@ gate_create_dungeon = {
 				value = s:$state_region$
 			}
 			set_variable = {
-				name = type
-				value = $type$
+				name = background
+				value = flag:$background$
 			}
 			set_variable = {
 				name = creation_date
@@ -160,8 +172,8 @@ gate_create_dungeon_layer = {
 				value = flag:$name$_desc
 			}
 			set_variable = {
-				name = type
-				value = $type$
+				name = background
+				value = flag:$background$
 			}
 			set_variable = is_last
 			fix_variable_error = { variable = $name$ }

@@ -1078,7 +1078,7 @@ types gate_event_window_types {
 
             event_window_gate_dungeon_setup_party_attribute_selector = {
                 blockoverride "attribute_name" {
-                    raw_text = "[Concept('concept_gate_dungeon_party_cohesion', Localize('concept_gate_dungeon_party_cohesion_simple'))]"
+                    raw_text = "[Concept('concept_gate_dungeon_party_cohesion', Localize('concept_gate_dungeon_party_cohesion_medium'))]"
                 }
                 blockoverride "attribute_number" {
                     raw_text = "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_cohesion_value')|0v]"
@@ -1092,7 +1092,7 @@ types gate_event_window_types {
             }
             event_window_gate_dungeon_setup_party_attribute_selector = {
                 blockoverride "attribute_name" {
-                    raw_text = "[Concept('concept_gate_dungeon_party_condition', Localize('concept_gate_dungeon_party_condition_simple'))]"
+                    raw_text = "[Concept('concept_gate_dungeon_party_condition', Localize('concept_gate_dungeon_party_condition_medium'))]"
                 }
                 blockoverride "attribute_number" {
                     raw_text = "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_condition_value')|0v]"
@@ -1106,7 +1106,7 @@ types gate_event_window_types {
             }
             event_window_gate_dungeon_setup_party_attribute_selector = {
                 blockoverride "attribute_name" {
-                    raw_text = "[Concept('concept_gate_dungeon_party_renown', Localize('concept_gate_dungeon_party_renown_simple'))]"
+                    raw_text = "[Concept('concept_gate_dungeon_party_renown', Localize('concept_gate_dungeon_party_renown_medium'))]"
                 }
                 blockoverride "attribute_number" {
                     raw_text = "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_renown_value')|0v]"

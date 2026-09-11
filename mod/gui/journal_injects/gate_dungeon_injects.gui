@@ -24,7 +24,13 @@ types gate_inject_dungeon_types {
 		block "dungeon_expedition_widget_size" {
 			size = { 500 300 }
 		}
-		using = gate_dungeon_background
+
+		background = {
+			visible = "[GetIdeology(ScriptContainer.MakeScope.Var('dungeon').Var('type').GetFlagName).GetTexture]"
+			texture = gfx/map/gate/dungeon/types/cave_01.dds
+			fittype = centercrop
+			alpha = 0.5
+		}
 
 		flowcontainer = {
 			parentanchor = right|vcenter
@@ -51,19 +57,15 @@ types gate_inject_dungeon_types {
 
 			com_journal_entry_frame_text = {
 				blockoverride "text_top" {
-					raw_text = "[Concept('concept_gate_dungeon_party_cohesion', Localize('concept_gate_dungeon_party_cohesion_simple'))]"
+					raw_text = "[Concept('concept_gate_dungeon_party_cohesion', Localize('concept_gate_dungeon_party_cohesion_medium'))]"
 				}
 				blockoverride "text" {
-					raw_text = "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_cohesion_value')|0v]"
+					raw_text = "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_cohesion_value')|0v] / [ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_cohesion_max_value')|0]"
 				}
 				blockoverride "icon" {
 					visible = no
 				}
-				tooltipwidget = {
-					gate_dungeon_tooltip = {
-						datacontext = "[ScriptContainer.MakeScope.Var('dungeon')]"
-					}
-				}
+				tooltip = je_gate_expedition_dungeon_cohesion_tooltip
 			}
 
 			com_journal_entry_frame_text = {
@@ -71,11 +73,12 @@ types gate_inject_dungeon_types {
 					raw_text = "[Concept('concept_gate_dungeon_party_condition', Localize('concept_gate_dungeon_party_condition_medium'))]"
 				}
 				blockoverride "text" {
-					raw_text = "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_condition_value')|0v]"
+					raw_text = "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_condition_value')|0v] / [ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_condition_max_value')|0]"
 				}
 				blockoverride "icon" {
 					visible = no
 				}
+				tooltip = je_gate_expedition_dungeon_condition_tooltip
 			}
 
 			com_journal_entry_frame_text = {
@@ -88,6 +91,7 @@ types gate_inject_dungeon_types {
 				blockoverride "icon" {
 					visible = no
 				}
+				tooltip = je_gate_expedition_dungeon_renown_tooltip
 			}
 		}
 
