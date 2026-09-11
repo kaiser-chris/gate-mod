@@ -6,7 +6,10 @@
 - Thank you to [伊恩](https://steamcommunity.com/profiles/76561199142528477/) for his work on the Chinese translation.
 - Thank you to [시아츠](https://steamcommunity.com/profiles/76561198319776515/) and PatronPasta for their work on the Korean translation.
 
-## Images
+## Morgenröte
+- Rating images in [gfx/interface/icons/generic_icons/rating/](mod/gfx/interface/icons/generic_icons/rating/)
+
+## Noun Project
 - eyes by Jojoid from <a href="https://thenounproject.com/browse/icons/term/eyes/" target="_blank" title="eyes Icons">Noun Project</a> (CC BY 3.0)
 - Crystal by diyah yunisa from <a href="https://thenounproject.com/browse/icons/term/crystal/" target="_blank" title="Crystal Icons">Noun Project</a> (CC BY 3.0)
 - Square mirror abstract by Tresnatiq from <a href="https://thenounproject.com/browse/icons/term/square-mirror-abstract/" target="_blank" title="Square mirror abstract Icons">Noun Project</a> (CC BY 3.0)
@@ -38,3 +41,4 @@
 - Location by Graphtend from <a href="https://thenounproject.com/browse/icons/term/location/" target="_blank" title="Location Icons">Noun Project</a> (CC BY 3.0)
 - checkmark by komsiatun from <a href="https://thenounproject.com/browse/icons/term/checkmark/" target="_blank" title="checkmark Icons">Noun Project</a> (CC BY 3.0)
 - Question by James Kopina from <a href="https://thenounproject.com/browse/icons/term/question/" target="_blank" title="Question Icons">Noun Project</a> (CC BY 3.0)
+- Bar by MHDK from <a href="https://thenounproject.com/browse/icons/term/bar/" target="_blank" title="Bar Icons">Noun Project</a> (CC BY 3.0)
