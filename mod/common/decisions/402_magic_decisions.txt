@@ -88,9 +88,9 @@ decision_gate_start_expedition_reytu = {
 				is_player = yes
 			}
 			hidden_effect = {
-				create_struct = {
-					struct_scope = expedition
-					struct_type = gate_expedition_progress
+				create_container = {
+					tags = { gate_mod gate_expedition_progress }
+					save_scope_as = expedition
 				}
 				set_variable = {
 					name = gate_expedition

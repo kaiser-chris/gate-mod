@@ -60,9 +60,10 @@ gate_setup_expedition_locations = {
 
 gate_setup_expedition_reytu = {
 	# Expedition Container
-	create_struct = {
-		struct_scope = gate_reytu
-		struct_type = gate_expedition
+	create_container = {
+		name = gate_reytu
+		tags = { gate_mod gate_expedition }
+		save_scope_as = gate_reytu
 	}
 	set_global_variable = {
 		name = gate_expedition_reytu

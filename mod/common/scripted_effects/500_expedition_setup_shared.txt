@@ -4,10 +4,10 @@
 }
 
 gate_setup_expedition_create_state = {
-	create_struct = {
-		struct_scope = state_$id$
-		struct_type = gate_expedition_state
-	}
+    create_container = {
+        tags = { gate_mod gate_expedition_state }
+        save_scope_as = state_$id$
+    }
 	scope:state_$id$ ?= {
 		set_variable = {
 			name = id
@@ -47,10 +47,10 @@ gate_setup_expedition_create_location_type = {
 	fix_variable_error = { variable = $name$_desc }
 	fix_variable_error = { variable = $name$_flavor }
 	fix_variable_error = { variable = $name$_sgui }
-	create_struct = {
-		struct_scope = $name$_interaction
-		struct_type = gate_expedition_interaction
-	}
+    create_container = {
+        tags = { gate_mod gate_expedition_interaction }
+        save_scope_as = $name$_interaction
+    }
 	scope:$name$_interaction ?= {
 		set_variable = {
 			name = text
@@ -65,10 +65,10 @@ gate_setup_expedition_create_location_type = {
 			value = flag:$name$_sgui
 		}
 	}
-	create_struct = {
-		struct_scope = $name$
-		struct_type = gate_expedition_location
-	}
+    create_container = {
+        tags = { gate_mod gate_expedition_location }
+        save_scope_as = $name$
+    }
 	scope:$name$ ?= {
 		set_variable = {
 			name = name
@@ -101,10 +101,10 @@ gate_setup_expedition_create_location_interaction = {
 	fix_variable_error = { variable = $name$ }
 	fix_variable_error = { variable = $name$_tooltip }
 	fix_variable_error = { variable = $name$_sgui }
-	create_struct = {
-		struct_scope = $name$
-		struct_type = gate_expedition_interaction
-	}
+    create_container = {
+        tags = { gate_mod gate_expedition_interaction }
+        save_scope_as = $name$
+    }
 	scope:$name$ ?= {
 		set_variable = {
 			name = text
@@ -130,10 +130,10 @@ gate_setup_expedition_create_location_interaction = {
 }
 
 gate_setup_expedition_create_location = {
-	create_struct = {
-		struct_scope = location_$location_id$
-		struct_type = gate_expedition_state_location
-	}
+    create_container = {
+        tags = { gate_mod gate_expedition_location }
+        save_scope_as = location_$location_id$
+    }
 	scope:location_$location_id$ ?= {
 		set_variable = {
 			name = id
