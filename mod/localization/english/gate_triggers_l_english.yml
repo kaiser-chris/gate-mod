@@ -62,6 +62,10 @@
  trigger_has_finished_monster_congress_third: "[COUNTRY.GetNameNoFlag] has had their #yellow #tooltip:[GetRawTextTooltipTag('je_gate_monster_congress_reason')] $je_gate_monster_congress$#!#!"
  trigger_has_finished_monster_congress_third_not: "[COUNTRY.GetNameNoFlag] did #bold not#! have their #yellow #tooltip:[GetRawTextTooltipTag('je_gate_monster_congress_reason')] $je_gate_monster_congress$#!#! yet"
 
+ trigger_gate_dungeon_has_cohesion: "[concept_gate_dungeon_party] has a [Concept('concept_gate_dungeon_party_cohesion','$concept_gate_dungeon_party_cohesion_simple$')] of at least [SCOPE.GetValue('temp_cohesion')|v1] (currently [SCOPE.GetLocalVariable('expedition').ScriptValue('gate_dungeon_party_cohesion_value')|b1])"
+ trigger_gate_dungeon_has_condition: "[concept_gate_dungeon_party] has a [Concept('concept_gate_dungeon_party_condition','$concept_gate_dungeon_party_condition_simple$')] of at least [SCOPE.GetValue('temp_condition')|v1] (currently [SCOPE.GetLocalVariable('expedition').ScriptValue('gate_dungeon_party_condition_value')|b1])"
+ trigger_gate_dungeon_has_renown: "[concept_gate_dungeon_party] has a [Concept('concept_gate_dungeon_party_renown','$concept_gate_dungeon_party_renown_simple$')] of at least [SCOPE.GetValue('temp_renown')|v1] (currently [SCOPE.GetLocalVariable('expedition').ScriptValue('gate_dungeon_party_renown_value')|b1])"
+
  trigger_gate_project_has_any_selector_open: "Any [concept_gate_project] selectors are open"
  trigger_gate_project_has_any_selector_open_not: "No [concept_gate_project] selectors are open"
 

@@ -76,6 +76,60 @@ gate_dungeon_advance_layer = {
 	}
 }
 
+gate_dungeon_party_condition_change = {
+	custom_description = {
+		text = gate_dungeon_party_condition_change
+		value = $amount$
+		var:party = {
+			change_variable = {
+				name = condition
+				add = $amount$
+			}
+			clamp_variable = {
+				name = condition
+				min = gate_dungeon_party_condition_minimum
+				max = gate_dungeon_party_condition_maximum
+			}
+		}
+	}
+}
+
+gate_dungeon_party_cohesion_change = {
+	custom_description = {
+		text = gate_dungeon_party_cohesion_change
+		value = $amount$
+		var:party = {
+			change_variable = {
+				name = cohesion
+				add = $amount$
+			}
+			clamp_variable = {
+				name = cohesion
+				min = gate_dungeon_party_cohesion_minimum
+				max = gate_dungeon_party_cohesion_maximum
+			}
+		}
+	}
+}
+
+gate_dungeon_party_renown_change = {
+	custom_description = {
+		text = gate_dungeon_party_renown_change
+		value = $amount$
+		var:party = {
+			change_variable = {
+				name = renown
+				add = $amount$
+			}
+			clamp_variable = {
+				name = renown
+				min = gate_dungeon_party_renown_minimum
+				max = gate_dungeon_party_renown_maximum
+			}
+		}
+	}
+}
+
 gate_set_dungeon_status = {
 	gate_set_dungeon_building_status = {
 		building = building_gate_dungeon_alpine_caves

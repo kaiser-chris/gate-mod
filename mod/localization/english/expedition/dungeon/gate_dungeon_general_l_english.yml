@@ -19,16 +19,12 @@
  je_gate_expedition_dungeon_layer_in_progress: "This [concept_gate_dungeon_layer] is #bold in progress#!."
  je_gate_expedition_dungeon_name_and_location: "[Scope.Var('name').GetFlagName] in [Scope.Var('location').GetStateRegion.GetName]"
  je_gate_expedition_dungeon_name_and_location_selector: "[Scope.Var('dungeon').Var('name').GetFlagName] in [Scope.Var('dungeon').Var('location').GetStateRegion.GetName]"
- je_gate_expedition_dungeon_stats_header: "[Concept('concept_gate_dungeon_party_cohesion', Localize('concept_gate_dungeon_party_cohesion_simple'))] / [Concept('concept_gate_dungeon_party_condition', Localize('concept_gate_dungeon_party_condition_simple'))] / [Concept('concept_gate_dungeon_party_renown', Localize('concept_gate_dungeon_party_renown_simple'))]"
- je_gate_expedition_dungeon_stats_values: "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_cohesion_value')|0v] / [ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_condition_value')|0v] / [ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_renown_value')|0v]"
 # Events
- gate_expedition_dungeons_base.2.t: "Setup your [concept_gate_dungeon_party]"
- gate_expedition_dungeons_base.2.d: "#debug TODO Description#!" #TODO: Write party setup description
- gate_expedition_dungeons_base.2.f: "#debug TODO Flavor#!" #TODO: Write party setup flavor
- gate_expedition_dungeons_base.2.points: "We have a limited budget of [concept_gate_dungeon_party_points] to distribute. Each attribute has their own use and points should be distributed to best fit the [concept_gate_dungeon] you want to delve into.\nPoints can be distributed by clicking on the bars below." #TODO: Write party setup points
- gate_expedition_dungeons_base.2.leaders: "For each dungeon exploration we need to chose a [Concept('concept_gate_dungeon_party_leader','$concept_gate_dungeon_party_leader_simple$')]. A leaders [Concept('concept_character_trait','$concept_character_traits$')] can influence the [Concept('concept_gate_dungeon_party_points','$concept_gate_dungeon_party_points_simple$')] budget or [Concept('concept_gate_dungeon_party','$concept_gate_dungeon_party_simple$')] attributes like [Concept('concept_gate_dungeon_party_cohesion','$concept_gate_dungeon_party_cohesion_simple$')], [Concept('concept_gate_dungeon_party_condition','$concept_gate_dungeon_party_condition_simple$')] and [Concept('concept_gate_dungeon_party_renown','$concept_gate_dungeon_party_renown_simple$')]."
- gate_expedition_dungeons_base.2.a: "Start [concept_gate_dungeon] delve."
- gate_expedition_dungeons_base.2.b: "Cancel [concept_gate_dungeon] delve."
+ gate_dungeon_setup.1.t: "Setup your [concept_gate_dungeon_party]"
+ gate_dungeon_setup.1.points: "We have a limited budget of [concept_gate_dungeon_party_points] to distribute. Each attribute has their own use and points should be distributed to best fit the [concept_gate_dungeon] you want to delve into.\nPoints can be distributed by clicking on the bars below." #TODO: Write party setup points
+ gate_dungeon_setup.1.leaders: "For each dungeon exploration we need to chose a [Concept('concept_gate_dungeon_party_leader','$concept_gate_dungeon_party_leader_simple$')]. A leaders [Concept('concept_character_trait','$concept_character_traits$')] can influence the [Concept('concept_gate_dungeon_party_points','$concept_gate_dungeon_party_points_simple$')] budget or [Concept('concept_gate_dungeon_party','$concept_gate_dungeon_party_simple$')] attributes like [Concept('concept_gate_dungeon_party_cohesion','$concept_gate_dungeon_party_cohesion_simple$')], [Concept('concept_gate_dungeon_party_condition','$concept_gate_dungeon_party_condition_simple$')] and [Concept('concept_gate_dungeon_party_renown','$concept_gate_dungeon_party_renown_simple$')]."
+ gate_dungeon_setup.1.a: "Start [concept_gate_dungeon] delve."
+ gate_dungeon_setup.1.b: "Cancel [concept_gate_dungeon] delve."
  event_gate_dungeon_cancel_exploration_tooltip: "Cancel the planned [concept_gate_dungeon] delve"
  event_gate_dungeon_dismiss_leaders_tooltip: "Dismiss all [Concept('concept_gate_dungeon_party_leader','$concept_gate_dungeon_party_leaders_simple$')]"
  event_gate_dungeon_cooldown_tooltip: "\n@warning! You will not be able to start another [concept_gate_dungeon] delve again for #v 180 days#!"
@@ -56,7 +52,7 @@
  decision_gate_start_dungeon_exploration_desc: "Open the [concept_gate_dungeon] selector and start a new delve."
  decision_gate_start_dungeon_exploration_selector_tooltip: "Open the [concept_gate_dungeon] selector"
  decision_gate_start_dungeon_exploration_is_selector_open_tooltip: "#bold Not#! already planning a [concept_gate_dungeon] delve"
- decision_gate_start_dungeon_exploration_cooldown_tooltip: "An attempted [concept_gate_dungeon] delve was made to recently. Wait another #v [LabelingHelper.GetDaysLocWithoutTooltip(TopScope.GetRootScope.VarRemaining('gate_dungeon_delve_cooldown'))]#! before another attempt."
+ decision_gate_start_dungeon_exploration_cooldown_tooltip: "An attempted [concept_gate_dungeon] delve was made too recently. Wait another #v [LabelingHelper.GetDaysLocWithoutTooltip(TopScope.GetRootScope.VarRemaining('gate_dungeon_delve_cooldown'))]#! before another attempt."
 # Selector Window
  gate_project_select_dungeon_window: "Select a [concept_gate_dungeon]"
  gate_project_select_dungeon_window_select: "#header [Scope.Var('dungeon').Var('name').GetFlagName] in [Scope.Var('building').GetBuilding.GetState.GetName]#!\nStart the exploration of this [concept_gate_dungeon]."

@@ -1,0 +1,41 @@
+﻿gate_dungeon_has_cohesion = {
+	save_temporary_scope_value_as = {
+		name = temp_cohesion
+		value = $amount$
+	}
+	custom_tooltip = {
+		text = trigger_gate_dungeon_has_cohesion
+		subject = $amount$
+		scope:expedition = {
+			gate_dungeon_party_cohesion_value >= $amount$
+		}
+	}
+}
+
+gate_dungeon_has_condition = {
+	save_temporary_scope_value_as = {
+		name = temp_condition
+		value = $amount$
+	}
+	custom_tooltip = {
+		text = trigger_gate_dungeon_has_condition
+		subject = $amount$
+		scope:expedition = {
+			gate_dungeon_party_condition_value >= $amount$
+		}
+	}
+}
+
+gate_dungeon_has_renown = {
+	save_temporary_scope_value_as = {
+		name = temp_renown
+		value = $amount$
+	}
+	custom_tooltip = {
+		text = trigger_gate_dungeon_has_renown
+		subject = $amount$
+		scope:expedition = {
+			gate_dungeon_party_renown_value >= $amount$
+		}
+	}
+}

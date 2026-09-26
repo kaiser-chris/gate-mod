@@ -1,0 +1,108 @@
+﻿namespace = gate_dungeon_delve
+
+gate_dungeon_delve.1 = {
+    type = country_event
+    dlc = dlc_magic_gate
+    placement = scope:dungeon_state
+
+    title = gate_dungeon_delve.1.t
+    desc = gate_dungeon_delve.1.d
+    flavor = gate_dungeon_delve.1.f
+
+    gui_window = event_window_gate_dungeon
+
+    event_image = {
+        video = "middleeast_jungle_expedition"
+    }
+
+    immediate = {
+        gate_setup_dungeon_event = yes
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_gate_dungeon.dds"
+
+    duration = 3
+
+    option = {
+        name = gate_dungeon_delve.1.a
+        highlighted_option = yes
+        show_as_unavailable = {
+            # Show as disabled instead of
+            # hiding the option
+            always = yes
+        }
+        trigger = {
+            gate_dungeon_has_renown = {
+                amount = 6
+            }
+        }
+        scope:expedition = {
+            gate_dungeon_advance_layer = yes
+        }
+        custom_tooltip_no_bullet = gate_dungeon_tooltip_renown_check
+    }
+
+    option = {
+        name = gate_dungeon_delve.1.b
+        default_option = yes
+        random_list = {
+            1 = {
+                modifier = gate_dungeon_party_cohesion_check_hard_success
+                trigger = {
+                    gate_dungeon_has_cohesion = {
+                        amount = 4
+                    }
+                }
+                scope:expedition = {
+                    gate_dungeon_advance_layer = yes
+                    gate_dungeon_party_cohesion_change = {
+                        amount = 0.5
+                    }
+                }
+            }
+            1 = {
+                modifier = gate_dungeon_party_cohesion_check_hard_neutral
+                custom_tooltip = gate_dungeon_tooltip_other_route
+            }
+            1 = {
+                modifier = gate_dungeon_party_cohesion_check_hard_fail
+                custom_tooltip = gate_dungeon_tooltip_other_route
+                scope:expedition = {
+                    gate_dungeon_party_cohesion_change = {
+                        amount = -0.5
+                    }
+                }
+            }
+        }
+        custom_tooltip_no_bullet = gate_dungeon_tooltip_cohesion_check
+    }
+
+    option = {
+        name = gate_dungeon_delve.1.c
+        random_list = {
+            1 = {
+                modifier = gate_dungeon_party_condition_check_medium_success
+                trigger = {
+                    gate_dungeon_has_condition = {
+                        amount = 4
+                    }
+                }
+                scope:expedition = {
+                    gate_dungeon_advance_layer = yes
+                }
+            }
+            1 = {
+                modifier = gate_dungeon_party_condition_check_medium_fail
+                custom_tooltip = gate_dungeon_tooltip_other_route
+                scope:expedition = {
+                    gate_dungeon_party_condition_change = {
+                        amount = -0.5
+                    }
+                }
+            }
+        }
+        custom_tooltip_no_bullet = gate_dungeon_tooltip_condition_check
+    }
+}

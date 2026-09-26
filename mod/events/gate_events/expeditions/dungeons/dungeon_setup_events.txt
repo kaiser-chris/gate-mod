@@ -1,48 +1,11 @@
-﻿namespace = gate_expedition_dungeons_base
+﻿namespace = gate_dungeon_setup
 
-gate_expedition_dungeons_base.1 = {
+gate_dungeon_setup.1 = {
     type = country_event
     dlc = dlc_magic_gate
     placement = scope:dungeon_state
 
-    title = gate_expedition_activities.1.t
-    desc = gate_expedition_activities.1.d
-    flavor = gate_expedition_activities.1.f
-
-    gui_window = event_window_gate_dungeon
-
-    event_image = {
-        video = "middleeast_jungle_expedition"
-    }
-
-    immediate = {
-        gate_setup_dungeon_event = yes
-    }
-
-    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-    icon = "gfx/interface/icons/event_icons/event_gate_expedition.dds"
-
-    duration = 3
-
-    option = {
-        name = gate_expedition_activities.1.a
-        default_option = yes
-    }
-
-    option = {
-        name = gate_expedition_activities.1.b
-    }
-}
-
-gate_expedition_dungeons_base.2 = {
-    type = country_event
-    dlc = dlc_magic_gate
-    placement = scope:dungeon_state
-
-    title = gate_expedition_dungeons_base.2.t
-    desc = gate_expedition_dungeons_base.2.d
-    flavor = gate_expedition_dungeons_base.2.f
+    title = gate_dungeon_setup.1.t
 
     category = gate_dungeon_preparation
 
@@ -97,7 +60,7 @@ gate_expedition_dungeons_base.2 = {
     icon = "gfx/interface/icons/event_icons/event_gate_expedition.dds"
 
     option = {
-        name = gate_expedition_dungeons_base.2.b
+        name = gate_dungeon_setup.1.b
         default_option = yes
         custom_tooltip = {
             text = event_gate_dungeon_cancel_exploration_tooltip
@@ -115,7 +78,7 @@ gate_expedition_dungeons_base.2 = {
     }
 
     option = {
-        name = gate_expedition_dungeons_base.2.a
+        name = gate_dungeon_setup.1.a
         show_as_unavailable = {
             always = yes
         }

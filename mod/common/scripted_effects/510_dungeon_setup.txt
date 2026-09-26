@@ -3,6 +3,9 @@
 		var:dungeon = {
 			var:location = {
 				random_scope_state = {
+					limit = {
+						owner = root
+					}
 					save_scope_as = dungeon_state
 				}
 			}
@@ -151,6 +154,7 @@ gate_create_dungeon = {
 			}
 			fix_variable_error = { variable = $name$ }
 			fix_variable_error = { variable = $name$_desc }
+			fix_variable_error = { variable = $background$ }
 		}
 	}
 	add_to_global_variable_list = {
@@ -179,6 +183,7 @@ gate_create_dungeon_layer = {
 			fix_variable_error = { variable = $name$ }
 			fix_variable_error = { variable = $name$_desc }
 			fix_variable_error = { variable = gate_dungeon_layers }
+			fix_variable_error = { variable = $background$ }
 		}
 		save_scope_as = temp_dungeon_layer
 	}
