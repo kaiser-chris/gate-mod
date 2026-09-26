@@ -60,7 +60,7 @@ types gate_inject_dungeon_types {
 					raw_text = "[Concept('concept_gate_dungeon_party_cohesion', Localize('concept_gate_dungeon_party_cohesion_medium'))]"
 				}
 				blockoverride "text" {
-					raw_text = "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_cohesion_value')|0v] / [ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_cohesion_max_value')|0]"
+					raw_text = "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_cohesion_value')|1v] / [ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_cohesion_max_value')|1]"
 				}
 				blockoverride "icon" {
 					visible = no
@@ -73,7 +73,7 @@ types gate_inject_dungeon_types {
 					raw_text = "[Concept('concept_gate_dungeon_party_condition', Localize('concept_gate_dungeon_party_condition_medium'))]"
 				}
 				blockoverride "text" {
-					raw_text = "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_condition_value')|0v] / [ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_condition_max_value')|0]"
+					raw_text = "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_condition_value')|1v] / [ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_condition_max_value')|1]"
 				}
 				blockoverride "icon" {
 					visible = no
@@ -86,7 +86,7 @@ types gate_inject_dungeon_types {
 					raw_text = "[Concept('concept_gate_dungeon_party_renown', Localize('concept_gate_dungeon_party_renown_medium'))]"
 				}
 				blockoverride "text" {
-					raw_text = "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_renown_value')|0v]"
+					raw_text = "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_renown_value')|1v]"
 				}
 				blockoverride "icon" {
 					visible = no

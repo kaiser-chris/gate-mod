@@ -1,0 +1,13 @@
+﻿l_english:
+# Shared Tooltips
+ gate_dungeon_tooltip_cohesion_check: "\n@information! This is a [Concept('concept_gate_dungeon_party_cohesion','$concept_gate_dungeon_party_cohesion_medium$')] check. We currently have [TopScope.GetLocalVariable('expedition').ScriptValue('gate_dungeon_party_cohesion_value')|1v] [Concept('concept_gate_dungeon_party_cohesion','$concept_gate_dungeon_party_cohesion_medium$')]."
+ gate_dungeon_tooltip_condition_check: "\n@information! This is a [Concept('concept_gate_dungeon_party_condition','$concept_gate_dungeon_party_condition_medium$')] check. We currently have [TopScope.GetLocalVariable('expedition').ScriptValue('gate_dungeon_party_condition_value')|1v] [Concept('concept_gate_dungeon_party_condition','$concept_gate_dungeon_party_condition_medium$')]."
+ gate_dungeon_tooltip_renown_check: "\n@information! This is a [Concept('concept_gate_dungeon_party_renown','$concept_gate_dungeon_party_renown_medium$')] check. We currently have [TopScope.GetLocalVariable('expedition').ScriptValue('gate_dungeon_party_renown_value')|1v] [Concept('concept_gate_dungeon_party_renown','$concept_gate_dungeon_party_renown_medium$')]."
+ gate_dungeon_tooltip_other_route: "We will search for another round"
+# Events
+ gate_dungeon_delve.1.t: "Something Underfoot"
+ gate_dungeon_delve.1.d: "The [concept_gate_dungeon_party] scouts have detected a trap. How are we going to deal with it?"
+ gate_dungeon_delve.1.f: "The corridor ahead looked no different from the last twenty stretches of it, until our scout raised a fist and the column stopped without a word passing between them. She'd found the tripwire first, then the pressure plate beneath a shift in the dust that shouldn't have been there. Spears, from the look of the housing cut into the walls, old work but not decayed, the way nothing in a dungeon decays until something walks through it again."
+ gate_dungeon_delve.1.a: "Our experienced scouts can disarm it."
+ gate_dungeon_delve.1.b: "Send someone to trigger it and dodge the spears."
+ gate_dungeon_delve.1.c: "Use some of our equipment to disable the trap."

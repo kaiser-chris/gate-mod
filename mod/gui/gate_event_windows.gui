@@ -479,6 +479,12 @@ types gate_event_window_types {
                             texture = "[Event.GetDLCIcon]"
                         }
                     }
+
+
+                    flowcontainer = {
+                        margin = { 20 20 }
+                        gate_dungeon_party_condensed = {}
+                    }
                 }
             }
         }
@@ -1084,7 +1090,7 @@ types gate_event_window_types {
                     raw_text = "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_cohesion_value')|0v]"
                 }
                 blockoverride "attribute_value" {
-                    value = "[ScriptContainer.MakeScope.Var('party').Var('cohesion').GetValue]"
+                    value = "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_cohesion_percentage')]"
                 }
                 blockoverride "attribute_sgui" {
                     datacontext = "[GetScriptedGui('sgui_gate_change_cohesion')]"
@@ -1098,7 +1104,7 @@ types gate_event_window_types {
                     raw_text = "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_condition_value')|0v]"
                 }
                 blockoverride "attribute_value" {
-                    value = "[ScriptContainer.MakeScope.Var('party').Var('condition').GetValue]"
+                    value = "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_condition_percentage')]"
                 }
                 blockoverride "attribute_sgui" {
                     datacontext = "[GetScriptedGui('sgui_gate_change_condition')]"
@@ -1112,7 +1118,7 @@ types gate_event_window_types {
                     raw_text = "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_renown_value')|0v]"
                 }
                 blockoverride "attribute_value" {
-                    value = "[ScriptContainer.MakeScope.Var('party').Var('renown').GetValue]"
+                    value = "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_renown_percentage')]"
                 }
                 blockoverride "attribute_sgui" {
                     datacontext = "[GetScriptedGui('sgui_gate_change_renown')]"
@@ -1175,10 +1181,12 @@ types gate_event_window_types {
                         gate_scale_button = {
                             visible = "[EqualTo_int32(PdxGuiWidget.GetIndexInDataModel, '(int32)0')]"
                             onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(ScriptContainer.MakeScope).AddScope('index', MakeScopeValue('(CFixedPoint)0')).End)]"
+                            enabled = no
                         }
                         gate_scale_button = {
                             visible = "[EqualTo_int32(PdxGuiWidget.GetIndexInDataModel, '(int32)1')]"
                             onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(ScriptContainer.MakeScope).AddScope('index', MakeScopeValue('(CFixedPoint)1')).End)]"
+                            enabled = no
                         }
                         gate_scale_button = {
                             visible = "[EqualTo_int32(PdxGuiWidget.GetIndexInDataModel, '(int32)2')]"
@@ -1267,16 +1275,154 @@ types gate_event_window_types {
         }
     }
 
+    type gate_dungeon_party_condensed = flowcontainer {
+        visible = "[ScriptContainer.MakeScope.Var('party').IsSet]"
+        using = entry_bg_fancy_solid_bg
+
+        @condensed_party_width = 190
+        @condensed_party_row_width = @[condensed_party_width - 40]
+        @condensed_party_value_width = 70
+        @condensed_party_text_width = @[condensed_party_row_width - condensed_party_value_width]
+        maximumsize = { @condensed_party_width -1 }
+        minimumsize = { @condensed_party_width -1 }
+
+        flowcontainer = {
+            maximumsize = { @condensed_party_width -1 }
+            minimumsize = { @condensed_party_width -1 }
+            direction = vertical
+            margin_bottom = 10
+
+            # Header
+            widget = {
+                tooltip = concept_gate_dungeon_party_desc
+                size = { 100% 40 }
+
+                background = {
+                    using = default_header_bg
+                    using = frame_small_mask_top
+                }
+
+                textbox = {
+                    raw_text = "[concept_gate_dungeon_party]"
+                    margin_left = 40
+                    size = { 100% 100% }
+                    align = left|nobaseline
+                    using = fontsize_large
+                    default_format = "#title"
+                    elide = right
+                }
+            }
+
+            # Attributes
+            flowcontainer = {
+                maximumsize = { @condensed_party_row_width -1 }
+                minimumsize = { @condensed_party_row_width -1 }
+                direction = vertical
+                margin = { 20 0 }
+
+                # Party Cohesion
+                flowcontainer = {
+                    maximumsize = { @condensed_party_row_width 30 }
+                    minimumsize = { @condensed_party_row_width 30 }
+
+                    textbox = {
+                        size = { @condensed_party_text_width 30 }
+                        raw_text = "[Concept('concept_gate_dungeon_party_cohesion', Localize('concept_gate_dungeon_party_cohesion_simple'))]"
+                        align = left|nobaseline
+                    }
+                    textbox = {
+                        size = { @condensed_party_value_width 30 }
+                        raw_text = "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_cohesion_value')|1v] / [ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_cohesion_max_value')|1]"
+                        align = right|nobaseline
+                    }
+                }
+
+                # Party Condition
+                flowcontainer = {
+                    maximumsize = { @condensed_party_row_width 30 }
+                    minimumsize = { @condensed_party_row_width 30 }
+
+                    textbox = {
+                        size = { @condensed_party_text_width 30 }
+                        raw_text = "[Concept('concept_gate_dungeon_party_condition', Localize('concept_gate_dungeon_party_condition_simple'))]"
+                        align = left|nobaseline
+                    }
+                    textbox = {
+                        size = { @condensed_party_value_width 30 }
+                        raw_text = "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_condition_value')|1v] / [ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_condition_max_value')|1]"
+                        align = right|nobaseline
+                    }
+                }
+
+                # Party Renown
+                flowcontainer = {
+                    maximumsize = { @condensed_party_row_width 30 }
+                    minimumsize = { @condensed_party_row_width 30 }
+
+                    textbox = {
+                        size = { @condensed_party_text_width 30 }
+                        raw_text = "[Concept('concept_gate_dungeon_party_renown', Localize('concept_gate_dungeon_party_renown_simple'))]"
+                        align = left|nobaseline
+                    }
+                    textbox = {
+                        size = { @condensed_party_value_width 30 }
+                        raw_text = "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_renown_value')|1v]"
+                        align = right|nobaseline
+                    }
+                }
+            }
+        }
+
+        # Party Leader
+        widget = {
+            size = { 40 40 }
+            parentanchor = left|top
+            position = { -7 -2 }
+
+            character_portrait_small = {
+                visible = "[ScriptContainer.MakeScope.Var('party').Var('party_leader').IsSet]"
+                datacontext = "[ScriptContainer.MakeScope.Var('party').Var('party_leader').GetCharacter]"
+            }
+        }
+
+    }
+
     type gate_scale_button = button {
         minimumsize = { 30 -1 }
         layoutpolicy_vertical = expanding
-        using = default_button_animation
+        #using = default_button_animation
         using = confirm_button_sound
+
+        onmousehierarchyenter = "[PdxGuiWidget.AccessChild('hover').TriggerAnimation('mouse_enter')]"
+        onmousehierarchyleave = "[PdxGuiWidget.AccessChild('hover').TriggerAnimation('mouse_leave')]"
 
         icon = {
             parentanchor = center
             size = { 30 5 }
             texture = gfx/interface/backgrounds/divider_gold.dds
+
+        }
+
+        icon = {
+            name = hover
+            parentanchor = center
+            size = { 32 10 }
+            using = highlighted_square_selection
+            alpha = 0
+
+            state = {
+                name = "mouse_enter"
+                using = Animation_Curve_Default
+                using = button_animation_duration
+                alpha = 1
+            }
+
+            state = {
+                name = "mouse_leave"
+                using = Animation_Curve_Default
+                using = button_animation_duration
+                alpha = 0
+            }
         }
     }
 

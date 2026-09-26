@@ -70,9 +70,9 @@ gate_dungeon_party_points = {
 }
 
 gate_dungeon_party_cohesion_minimum = 0
-gate_dungeon_party_cohesion_maximum = 1
-gate_dungeon_party_cohesion_default = 0.5
-gate_dungeon_party_cohesion_value = {
+gate_dungeon_party_cohesion_maximum = 8
+gate_dungeon_party_cohesion_default = 4
+gate_dungeon_party_cohesion_percentage = {
     var:party = {
         if = {
             limit = {
@@ -81,34 +81,75 @@ gate_dungeon_party_cohesion_value = {
                 }
             }
             value = var:cohesion
-            multiply = 8
+            divide = 8
         }
         else = {
             value = 0
         }
+    }
+}
+gate_dungeon_party_cohesion_value = {
+    var:party = {
+        value = var:cohesion
     }
 }
 gate_dungeon_party_cohesion_max_value = {
     var:party = {
-        if = {
-            limit = {
-                NOT = {
-                    var:cohesion_max ?= 0
-                }
-            }
-            value = var:cohesion_max
-            multiply = 8
-        }
-        else = {
-            value = 0
-        }
+        value = var:cohesion_max
+    }
+}
+gate_dungeon_party_cohesion_check_hard_success = {
+    scope:expedition = {
+        value = gate_dungeon_party_cohesion_percentage
+        multiply = 100
+    }
+}
+gate_dungeon_party_cohesion_check_hard_neutral = {
+    value = 20
+}
+gate_dungeon_party_cohesion_check_hard_fail = {
+    scope:expedition = {
+        value = 100
+        subtract = gate_dungeon_party_cohesion_check_hard_success
+    }
+}
+gate_dungeon_party_cohesion_check_medium_success = {
+    scope:expedition = {
+        value = gate_dungeon_party_cohesion_percentage
+        multiply = 100
+        add = 10
+    }
+}
+gate_dungeon_party_cohesion_check_medium_neutral = {
+    value = 20
+}
+gate_dungeon_party_cohesion_check_medium_fail = {
+    scope:expedition = {
+        value = 100
+        subtract = gate_dungeon_party_cohesion_percentage
+    }
+}
+gate_dungeon_party_cohesion_check_easy_success = {
+    scope:expedition = {
+        value = gate_dungeon_party_cohesion_percentage
+        multiply = 100
+        add = 20
+    }
+}
+gate_dungeon_party_cohesion_check_easy_neutral = {
+    value = 20
+}
+gate_dungeon_party_cohesion_check_easy_fail = {
+    scope:expedition = {
+        value = 100
+        subtract = gate_dungeon_party_cohesion_check_easy_success
     }
 }
 
 gate_dungeon_party_condition_minimum = 0
-gate_dungeon_party_condition_maximum = 1
-gate_dungeon_party_condition_default = 0.5
-gate_dungeon_party_condition_value = {
+gate_dungeon_party_condition_maximum = 8
+gate_dungeon_party_condition_default = 4
+gate_dungeon_party_condition_percentage = {
     var:party = {
         if = {
             limit = {
@@ -117,34 +158,75 @@ gate_dungeon_party_condition_value = {
                 }
             }
             value = var:condition
-            multiply = 8
+            divide = 8
         }
         else = {
             value = 0
         }
+    }
+}
+gate_dungeon_party_condition_value = {
+    var:party = {
+        value = var:condition
     }
 }
 gate_dungeon_party_condition_max_value = {
     var:party = {
-        if = {
-            limit = {
-                NOT = {
-                    var:condition_max ?= 0
-                }
-            }
-            value = var:condition_max
-            multiply = 8
-        }
-        else = {
-            value = 0
-        }
+        value = var:condition_max
+    }
+}
+gate_dungeon_party_condition_check_hard_success = {
+    scope:expedition = {
+        value = gate_dungeon_party_condition_percentage
+        multiply = 100
+    }
+}
+gate_dungeon_party_condition_check_hard_neutral = {
+    value = 20
+}
+gate_dungeon_party_condition_check_hard_fail = {
+    scope:expedition = {
+        value = 100
+        subtract = gate_dungeon_party_condition_check_hard_success
+    }
+}
+gate_dungeon_party_condition_check_medium_success = {
+    scope:expedition = {
+        value = gate_dungeon_party_condition_percentage
+        multiply = 100
+        add = 10
+    }
+}
+gate_dungeon_party_condition_check_medium_neutral = {
+    value = 20
+}
+gate_dungeon_party_condition_check_medium_fail = {
+    scope:expedition = {
+        value = 100
+        subtract = gate_dungeon_party_condition_percentage
+    }
+}
+gate_dungeon_party_condition_check_easy_success = {
+    scope:expedition = {
+        value = gate_dungeon_party_condition_percentage
+        multiply = 100
+        add = 20
+    }
+}
+gate_dungeon_party_condition_check_easy_neutral = {
+    value = 20
+}
+gate_dungeon_party_condition_check_easy_fail = {
+    scope:expedition = {
+        value = 100
+        subtract = gate_dungeon_party_condition_check_easy_success
     }
 }
 
 gate_dungeon_party_renown_minimum = 0
-gate_dungeon_party_renown_maximum = 1
-gate_dungeon_party_renown_default = 0.5
-gate_dungeon_party_renown_value = {
+gate_dungeon_party_renown_maximum = 8
+gate_dungeon_party_renown_default = 4
+gate_dungeon_party_renown_percentage = {
     var:party = {
         if = {
             limit = {
@@ -153,26 +235,20 @@ gate_dungeon_party_renown_value = {
                 }
             }
             value = var:renown
-            multiply = 8
+            divide = 8
         }
         else = {
             value = 0
         }
     }
 }
+gate_dungeon_party_renown_value = {
+    var:party = {
+        value = var:renown
+    }
+}
 gate_dungeon_party_renown_max_value = {
     var:party = {
-        if = {
-            limit = {
-                NOT = {
-                    var:renown_max ?= 0
-                }
-            }
-            value = var:renown_max
-            multiply = 8
-        }
-        else = {
-            value = 0
-        }
+        value = var:renown_max
     }
 }
