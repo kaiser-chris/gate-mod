@@ -191,9 +191,9 @@ gate_expedition_start_activity = {
 # - scope:activity
 gate_expedition_create_activity = {
 	hidden_effect = {
-		create_struct = {
-			struct_scope = activity
-			struct_type = gate_expedition_activity
+		create_container = {
+			tags = { gate_mod gate_expedition_activity }
+			save_scope_as = activity
 		}
 		scope:activity ?= {
 			set_variable = {
@@ -265,8 +265,8 @@ gate_expedition_set_state_scope = {
 
 gate_expedition_end = {
 	hidden_effect = {
-		destroy_struct = {
-			struct = var:gate_expedition
+		var:gate_expedition = {
+			destroy_container = yes
 		}
 		remove_variable = gate_expedition
 	}
@@ -275,8 +275,8 @@ gate_expedition_end = {
 gate_expedition_set_idle = {
 	hidden_effect = {
 		var:gate_expedition ?= {
-			destroy_struct = {
-				struct = var:activity
+			var:activity = {
+				destroy_container = yes
 			}
 			remove_variable = activity
 		}
