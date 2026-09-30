@@ -25,7 +25,6 @@ gate_dungeon_creation_time = {
     else = {
         value = 0
     }
-
 }
 
 
@@ -100,49 +99,112 @@ gate_dungeon_party_cohesion_max_value = {
 }
 gate_dungeon_party_cohesion_check_hard_success = {
     scope:expedition = {
-        value = gate_dungeon_party_cohesion_percentage
-        multiply = 100
+        if = {
+            limit = {
+                gate_dungeon_party_cohesion_value = 0
+            }
+            # never succeed when there is no cohesion
+            value = 0
+        }
+        else = {
+            value = gate_dungeon_party_cohesion_percentage
+            multiply = 100
+        }
     }
 }
 gate_dungeon_party_cohesion_check_hard_neutral = {
-    value = 20
+    scope:expedition = {
+        if = {
+            limit = {
+                gate_dungeon_party_cohesion_value = 0
+            }
+            # never neutral when there is no cohesion
+            value = 0
+        }
+        else = {
+            value = 20
+        }
+    }
 }
 gate_dungeon_party_cohesion_check_hard_fail = {
     scope:expedition = {
         value = 100
         subtract = gate_dungeon_party_cohesion_check_hard_success
+        min = 10 # there should always be a chance to fail
     }
 }
 gate_dungeon_party_cohesion_check_medium_success = {
     scope:expedition = {
-        value = gate_dungeon_party_cohesion_percentage
-        multiply = 100
-        add = 10
+        if = {
+            limit = {
+                gate_dungeon_party_cohesion_value <= 0
+            }
+            # never succeed when there is no cohesion
+            value = 0
+        }
+        else = {
+            value = gate_dungeon_party_cohesion_percentage
+            multiply = 100
+            add = 10
+        }
     }
 }
 gate_dungeon_party_cohesion_check_medium_neutral = {
-    value = 20
+    scope:expedition = {
+        if = {
+            limit = {
+                gate_dungeon_party_cohesion_value <= 0
+            }
+            # never neutral when there is no cohesion
+            value = 0
+        }
+        else = {
+            value = 20
+        }
+    }
 }
 gate_dungeon_party_cohesion_check_medium_fail = {
     scope:expedition = {
         value = 100
         subtract = gate_dungeon_party_cohesion_percentage
+        min = 10 # there should always be a chance to fail
     }
 }
 gate_dungeon_party_cohesion_check_easy_success = {
     scope:expedition = {
-        value = gate_dungeon_party_cohesion_percentage
-        multiply = 100
-        add = 20
+        if = {
+            limit = {
+                gate_dungeon_party_cohesion_value <= 0
+            }
+            # never succeed when there is no cohesion
+            value = 0
+        }
+        else = {
+            value = gate_dungeon_party_cohesion_percentage
+            multiply = 100
+            add = 20
+        }
     }
 }
 gate_dungeon_party_cohesion_check_easy_neutral = {
-    value = 20
+    scope:expedition = {
+        if = {
+            limit = {
+                gate_dungeon_party_cohesion_value = 0
+            }
+            # never neutral when there is no cohesion
+            value = 0
+        }
+        else = {
+            value = 20
+        }
+    }
 }
 gate_dungeon_party_cohesion_check_easy_fail = {
     scope:expedition = {
         value = 100
         subtract = gate_dungeon_party_cohesion_check_easy_success
+        min = 10 # there should always be a chance to fail
     }
 }
 
@@ -179,6 +241,13 @@ gate_dungeon_party_condition_check_hard_success = {
     scope:expedition = {
         value = gate_dungeon_party_condition_percentage
         multiply = 100
+        if = {
+            limit = {
+                gate_dungeon_party_cohesion_value <= 0
+            }
+            # Zero cohesion malus
+            subtract = 15
+        }
     }
 }
 gate_dungeon_party_condition_check_hard_neutral = {
@@ -188,6 +257,7 @@ gate_dungeon_party_condition_check_hard_fail = {
     scope:expedition = {
         value = 100
         subtract = gate_dungeon_party_condition_check_hard_success
+        min = 10 # there should always be a chance to fail
     }
 }
 gate_dungeon_party_condition_check_medium_success = {
@@ -195,6 +265,13 @@ gate_dungeon_party_condition_check_medium_success = {
         value = gate_dungeon_party_condition_percentage
         multiply = 100
         add = 10
+        if = {
+            limit = {
+                gate_dungeon_party_cohesion_value <= 0
+            }
+            # Zero cohesion malus
+            subtract = 15
+        }
     }
 }
 gate_dungeon_party_condition_check_medium_neutral = {
@@ -204,6 +281,7 @@ gate_dungeon_party_condition_check_medium_fail = {
     scope:expedition = {
         value = 100
         subtract = gate_dungeon_party_condition_percentage
+        min = 10 # there should always be a chance to fail
     }
 }
 gate_dungeon_party_condition_check_easy_success = {
@@ -211,6 +289,13 @@ gate_dungeon_party_condition_check_easy_success = {
         value = gate_dungeon_party_condition_percentage
         multiply = 100
         add = 20
+        if = {
+            limit = {
+                gate_dungeon_party_cohesion_value <= 0
+            }
+            # Zero cohesion malus
+            subtract = 15
+        }
     }
 }
 gate_dungeon_party_condition_check_easy_neutral = {
@@ -220,6 +305,7 @@ gate_dungeon_party_condition_check_easy_fail = {
     scope:expedition = {
         value = 100
         subtract = gate_dungeon_party_condition_check_easy_success
+        min = 10
     }
 }
 

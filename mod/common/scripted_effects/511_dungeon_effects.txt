@@ -130,6 +130,86 @@ gate_dungeon_party_renown_change = {
 	}
 }
 
+gate_dungeon_create_log_entry = {
+	hidden_effect = {
+		create_container = {
+			parent = scope:expedition
+			save_scope_as = temp_log_entry
+			tags = { gate_mod gate_dungeon_log_entry }
+		}
+		scope:temp_log_entry ?= {
+			set_variable = {
+				name = rating
+				value = flag:gate_dungeon_rating_$rating$
+			}
+			set_variable = {
+				name = event
+				value = flag:$event$
+			}
+			set_variable = {
+				name = outcome_text
+				value = flag:$outcome_text$
+			}
+			set_variable = {
+				name = creation_date
+				value = game_date
+			}
+		}
+		fix_variable_error = { variable = gate_dungeon_rating_$rating$ }
+		fix_variable_error = { variable = $event$ }
+		fix_variable_error = { variable = $outcome_text$ }
+		scope:expedition = {
+			add_to_variable_list = {
+				name = log_entries
+				target = scope:temp_log_entry
+			}
+		}
+		clear_saved_scope = temp_log_entry
+	}
+}
+
+gate_dungeon_create_log_entry_value = {
+	hidden_effect = {
+		create_container = {
+			parent = scope:journal_entry
+			save_scope_as = temp_log_entry
+			tags = { gate_mod gate_dungeon_log_entry }
+		}
+		scope:temp_log_entry ?= {
+			set_variable = {
+				name = rating
+				value = flag:gate_dungeon_rating_$rating$
+			}
+			set_variable = {
+				name = event
+				value = flag:$event$
+			}
+			set_variable = {
+				name = outcome_text
+				value = flag:$outcome_text$
+			}
+			set_variable = {
+				name = outcome_value
+				value = $outcome_value$
+			}
+			set_variable = {
+				name = creation_date
+				value = game_date
+			}
+		}
+		fix_variable_error = { variable = gate_dungeon_rating_$rating$ }
+		fix_variable_error = { variable = $event$ }
+		fix_variable_error = { variable = $outcome_text$ }
+		scope:expedition = {
+			add_to_variable_list = {
+				name = log_entries
+				target = scope:temp_log_entry
+			}
+		}
+		clear_saved_scope = temp_log_entry
+	}
+}
+
 gate_set_dungeon_status = {
 	gate_set_dungeon_building_status = {
 		building = building_gate_dungeon_alpine_caves

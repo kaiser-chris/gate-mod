@@ -28,6 +28,7 @@
 			}
 			scope:target = {
 				save_scope_as = expedition
+				set_parent = scope:journal_entry
 			}
 
 			# Find last layer in dungeon and set it
@@ -82,6 +83,24 @@
 				}
 			}
 		}
+		hidden_effect = {
+			gate_cleanup_dungeon_expedition = yes
+		}
+	}
+
+	fail = {
+		custom_tooltip = {
+			text = je_gate_expedition_dungeon_fail
+			# Does the party have 0 condition
+			scope:expedition = {
+				var:party = {
+					var:condition <= 0
+				}
+			}
+		}
+	}
+
+	on_fail = {
 		hidden_effect = {
 			gate_cleanup_dungeon_expedition = yes
 		}

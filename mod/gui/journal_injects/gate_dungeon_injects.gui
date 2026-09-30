@@ -1,6 +1,7 @@
 @layer_width = 500
 @layer_height = 52
 
+
 flowcontainer = {
 	name = "gate_inject_dungeon"
 	parentanchor = hcenter
@@ -16,6 +17,8 @@ flowcontainer = {
 	gate_dungeon_layer_progress_line = {}
 
 	gate_journal_dungeon_layers = {}
+
+	gate_journal_dungeon_logs = {}
 }
 
 types gate_inject_dungeon_types {
@@ -40,9 +43,11 @@ types gate_inject_dungeon_types {
 			com_journal_entry_frame_text = {
 				visible = "[ScriptContainer.MakeScope.Var('current_layer').IsSet]"
 				blockoverride "text_top" {
+					margin_right = 5
 					text = je_gate_expedition_dungeon_layer_active
 				}
 				blockoverride "text" {
+					margin_right = 5
 					raw_text = "#yellow [ScriptContainer.MakeScope.Var('current_layer').Var('name').GetFlagName]#!"
 				}
 				blockoverride "icon" {
@@ -57,9 +62,11 @@ types gate_inject_dungeon_types {
 
 			com_journal_entry_frame_text = {
 				blockoverride "text_top" {
+					margin_right = 5
 					raw_text = "[Concept('concept_gate_dungeon_party_cohesion', Localize('concept_gate_dungeon_party_cohesion_medium'))]"
 				}
 				blockoverride "text" {
+					margin_right = 5
 					raw_text = "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_cohesion_value')|1v] / [ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_cohesion_max_value')|1]"
 				}
 				blockoverride "icon" {
@@ -70,9 +77,11 @@ types gate_inject_dungeon_types {
 
 			com_journal_entry_frame_text = {
 				blockoverride "text_top" {
+					margin_right = 5
 					raw_text = "[Concept('concept_gate_dungeon_party_condition', Localize('concept_gate_dungeon_party_condition_medium'))]"
 				}
 				blockoverride "text" {
+					margin_right = 5
 					raw_text = "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_condition_value')|1v] / [ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_condition_max_value')|1]"
 				}
 				blockoverride "icon" {
@@ -83,9 +92,11 @@ types gate_inject_dungeon_types {
 
 			com_journal_entry_frame_text = {
 				blockoverride "text_top" {
+					margin_right = 5
 					raw_text = "[Concept('concept_gate_dungeon_party_renown', Localize('concept_gate_dungeon_party_renown_medium'))]"
 				}
 				blockoverride "text" {
+					margin_right = 5
 					raw_text = "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_renown_value')|1v]"
 				}
 				blockoverride "icon" {
@@ -263,7 +274,7 @@ types gate_inject_dungeon_types {
 			onclick = "[PdxGuiFoldOut.Toggle]"
 
 			blockoverride "layout" {
-				size = { @layer_width 38 }
+				size = { @[layer_width + 30] 38 }
 			}
 			blockoverride "onclick_showmore" {
 				visible = "[Not(PdxGuiFoldOut.IsUnfolded)]"
@@ -300,6 +311,238 @@ types gate_inject_dungeon_types {
 				gate_dungeon_layer_status = {}
 			}
 			visible = "[PdxGuiFoldOut.IsUnfolded]"
+		}
+	}
+
+	type gate_journal_dungeon_logs = flowcontainer {
+		parentanchor = hcenter
+		direction = vertical
+		oncreate = "[BindFoldOutContext]"
+
+		@log_entry_width = 500
+		@log_entry_height = 60
+		@log_entry_icon_width = 60
+		@log_entry_date_width = 120
+		@log_entry_info_width = @[log_entry_width - log_entry_icon_width - log_entry_date_width]
+
+		section_header_button = {
+			parentanchor = hcenter
+			onclick = "[PdxGuiFoldOut.Toggle]"
+
+			blockoverride "layout" {
+				size = { @[layer_width + 30] 38 }
+			}
+			blockoverride "onclick_showmore" {
+				visible = "[Not(PdxGuiFoldOut.IsUnfolded)]"
+			}
+			blockoverride "onclick_showless" {
+				visible = "[PdxGuiFoldOut.IsUnfolded]"
+			}
+			blockoverride "left_text" {
+				text = je_gate_expedition_dungeon_log_entries_all
+			}
+		}
+
+		flowcontainer = {
+			using = default_list_position
+			direction = vertical
+			margin_top = 5
+			margin_bottom = 10
+
+			# Header
+			widget = {
+				parentanchor = hcenter
+				size = { @log_entry_width 30 }
+				visible = "[PdxGuiFoldOut.IsUnfolded]"
+				hbox = {
+					spacing = 2
+					layoutpolicy_horizontal = expanding
+					button = {
+						using = sort_button_bg
+						enabled = no
+						text = je_gate_expedition_dungeon_log_entries_header_type
+						minimumsize = { @log_entry_icon_width 30 }
+						maximumsize = { @log_entry_icon_width 30 }
+						align = hcenter|nobaseline
+						margin_left = 10
+						margin_right = 10
+						elide = right
+					}
+					button = {
+						using = sort_button_bg
+						layoutpolicy_horizontal = expanding
+						enabled = no
+						text = je_gate_expedition_dungeon_log_entries_header_event
+						minimumsize = { -1 30 }
+						maximumsize = { -1 30 }
+						align = hcenter|nobaseline
+						margin_left = 10
+						margin_right = 10
+						elide = right
+					}
+					button = {
+						using = sort_button_bg
+						enabled = no
+						text = je_gate_expedition_dungeon_log_entries_header_date
+						minimumsize = { @log_entry_date_width 30 }
+						maximumsize = { @log_entry_date_width 30 }
+						align = hcenter|nobaseline
+						margin_left = 10
+						margin_right = 10
+						elide = right
+					}
+				}
+			}
+
+			# Over 10 items
+			flowcontainer = {
+				using = default_list_position
+				visible = "[And3(
+					PdxGuiFoldOut.IsUnfolded,
+					DataModelHasItems(ScriptContainer.MakeScope.GetList('log_entries')),
+					GreaterThan_int32(GetDataModelSize(ScriptContainer.MakeScope.GetList('log_entries')), '(int32)10')
+				)]"
+				margin_top = 5
+				direction = vertical
+				datamodel = "[DataModelLast(ScriptContainer.MakeScope.GetList('log_entries'), '(int32)10')]"
+				spacing = 5
+				bottomtotop = yes
+
+				item = {
+					gate_journal_dungeon_log_entry = {}
+				}
+			}
+			textbox = {
+				visible = "[And3(
+					PdxGuiFoldOut.IsUnfolded,
+					DataModelHasItems(ScriptContainer.MakeScope.GetList('log_entries')),
+					GreaterThan_int32(GetDataModelSize(ScriptContainer.MakeScope.GetList('log_entries')), '(int32)10')
+				)]"
+				margin_top = 10
+				size = { @log_entry_width 20 }
+				text = je_gate_expedition_dungeon_log_entries_limit
+				align = center
+			}
+
+			# Under 10 items
+			flowcontainer = {
+				using = default_list_position
+				visible = "[And3(
+					PdxGuiFoldOut.IsUnfolded,
+					DataModelHasItems(ScriptContainer.MakeScope.GetList('log_entries')),
+					Not(GreaterThan_int32(GetDataModelSize(ScriptContainer.MakeScope.GetList('log_entries')), '(int32)10'))
+				)]"
+				margin_top = 5
+				direction = vertical
+				datamodel = "[ScriptContainer.MakeScope.GetList('log_entries')]"
+				spacing = 5
+				bottomtotop = yes
+
+				item = {
+					gate_journal_dungeon_log_entry = {}
+				}
+			}
+
+			flowcontainer = {
+				using = default_list_position
+				visible = "[And(
+					PdxGuiFoldOut.IsUnfolded,
+					Not(DataModelHasItems(ScriptContainer.MakeScope.GetList('log_entries')))
+				)]"
+				direction = vertical
+
+				textbox = {
+					size = { @log_entry_width 80 }
+					text = je_gate_expedition_dungeon_log_entries_empty
+					align = center
+				}
+			}
+		}
+	}
+
+	type gate_journal_dungeon_log_entry = widget {
+		size = { @log_entry_width @log_entry_height }
+
+		background = {
+			using = dark_area
+			margin_left = -25
+			alpha = 0.1
+			modify_texture = {
+				using = simple_frame_mask
+			}
+		}
+		background = {
+			using = simple_frame
+			margin_left = -25
+		}
+
+		flowcontainer = {
+			textbox = {
+				size = { @log_entry_icon_width @log_entry_height }
+				align = center
+				raw_text = "[Scope.Var('rating').GetFlagName]"
+				using = fontsize_xxl
+				background = {
+					margin = { 3 3 }
+					texture = "gfx/interface/backgrounds/round_button_bg.dds"
+				}
+			}
+			widget = {
+				size = { @log_entry_info_width @log_entry_height }
+				# Event Name
+				textbox = {
+					size = { @[log_entry_info_width - 10] @[log_entry_height / 2] }
+					margin_bottom = 4
+					parentanchor = right|top
+					raw_text = "[Scope.Var('event').GetFlagName]"
+					default_format = "#header"
+					align = center
+					background = {
+						using = default_header_bg_faded
+						margin_top = 2
+					}
+				}
+				# Result: text only
+				textbox = {
+					visible = "[Not(Scope.Var('outcome_value').IsSet)]"
+					size = { @[log_entry_info_width - 10] @[log_entry_height / 2] }
+					position = { 0 -2 }
+					parentanchor = right|bottom
+					raw_text = "[Scope.Var('outcome_text').GetFlagName]"
+					align = center
+				}
+				# Result: text + value
+				widget = {
+					visible = "[Scope.Var('outcome_value').IsSet]"
+					size = { @[log_entry_info_width - 10] @[log_entry_height / 2] }
+					position = { 0 -2 }
+					parentanchor = right|bottom
+					flowcontainer = {
+						parentanchor = center
+						spacing = 5
+						textbox = {
+							autoresize = yes
+							raw_text = "[Scope.Var('outcome_text').GetFlagName]"
+						}
+						textbox = {
+							autoresize = yes
+							raw_text = "[Scope.Var('outcome_value').GetValue|1+]"
+						}
+					}
+				}
+			}
+			widget = {
+				size = { @log_entry_date_width @log_entry_height }
+				textbox = {
+					autoresize = yes
+					parentanchor = center
+					raw_text = "#v [TimeKeeper.GetCurrentDateWithDiff(FixedPointToInt(Scope.ScriptValue('gate_dungeon_creation_time')))]#!"
+					background = {
+						using = entry_bg
+						margin = { 10 5 }
+					}
+				}
+			}
 		}
 	}
 
