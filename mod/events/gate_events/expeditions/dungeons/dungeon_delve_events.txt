@@ -5,9 +5,9 @@ gate_dungeon_delve.1 = {
     dlc = dlc_magic_gate
     placement = scope:dungeon_state
 
-    title = gate_dungeon_delve.1.t
-    desc = gate_dungeon_delve.1.d
-    flavor = gate_dungeon_delve.1.f
+    title = gate_dungeon_delve_1_t
+    desc = gate_dungeon_delve_1_d
+    flavor = gate_dungeon_delve_1_f
 
     gui_window = event_window_gate_dungeon
 
@@ -26,7 +26,187 @@ gate_dungeon_delve.1 = {
     duration = 3
 
     option = {
-        name = gate_dungeon_delve.1.a
+        name = gate_dungeon_delve_1_a
+        highlighted_option = yes
+        show_as_unavailable = {
+            # Show as disabled instead of
+            # hiding the option
+            always = yes
+        }
+        trigger = {
+            gate_dungeon_has_renown = {
+                amount = 7
+            }
+        }
+        scope:expedition = {
+            gate_dungeon_advance_layer = yes
+            gate_dungeon_create_log_entry = {
+                rating = positive
+                event = gate_dungeon_delve_1_t
+                outcome_text = gate_dungeon_log_advance
+            }
+        }
+        custom_tooltip_no_bullet = gate_dungeon_tooltip_renown_check
+    }
+
+    option = {
+        name = gate_dungeon_delve_1_b
+        default_option = yes
+        random_list = {
+            1 = {
+                modifier = gate_dungeon_party_cohesion_check_hard_success
+                scope:expedition = {
+                    gate_dungeon_advance_layer = yes
+                    gate_dungeon_party_cohesion_change = {
+                        amount = 0.5
+                    }
+                    gate_dungeon_create_log_entry_value = {
+                        rating = positive
+                        event = gate_dungeon_delve_1_t
+                        outcome_text = gate_dungeon_log_cohesion
+                        outcome_value = 0.5
+                    }
+                    gate_dungeon_create_log_entry = {
+                        rating = positive
+                        event = gate_dungeon_delve_1_t
+                        outcome_text = gate_dungeon_log_advance
+                    }
+                }
+            }
+            1 = {
+                modifier = gate_dungeon_party_cohesion_check_hard_neutral
+                custom_tooltip = gate_dungeon_tooltip_other_route
+                gate_dungeon_create_log_entry = {
+                    rating = neutral
+                    event = gate_dungeon_delve_1_t
+                    outcome_text = gate_dungeon_log_stall
+                }
+            }
+            1 = {
+                modifier = gate_dungeon_party_cohesion_check_hard_fail
+                custom_tooltip = gate_dungeon_tooltip_other_route
+                scope:expedition = {
+                    gate_dungeon_party_cohesion_change = {
+                        amount = -0.5
+                    }
+                    gate_dungeon_create_log_entry_value = {
+                        rating = negative
+                        event = gate_dungeon_delve_1_t
+                        outcome_text = gate_dungeon_log_cohesion
+                        outcome_value = -0.5
+                    }
+                    gate_dungeon_create_log_entry = {
+                        rating = neutral
+                        event = gate_dungeon_delve_1_t
+                        outcome_text = gate_dungeon_log_stall
+                    }
+                }
+            }
+        }
+        custom_tooltip_no_bullet = gate_dungeon_tooltip_cohesion_check
+    }
+
+    option = {
+        name = gate_dungeon_delve_1_c
+        random_list = {
+            1 = {
+                modifier = gate_dungeon_party_condition_check_medium_success
+                scope:expedition = {
+                    gate_dungeon_advance_layer = yes
+                    gate_dungeon_create_log_entry = {
+                        rating = positive
+                        event = gate_dungeon_delve_1_t
+                        outcome_text = gate_dungeon_log_advance
+                    }
+                }
+            }
+            1 = {
+                modifier = gate_dungeon_party_condition_check_medium_fail
+                custom_tooltip = gate_dungeon_tooltip_other_route
+                scope:expedition = {
+                    gate_dungeon_party_condition_change = {
+                        amount = -0.5
+                    }
+                    gate_dungeon_create_log_entry_value = {
+                        rating = negative
+                        event = gate_dungeon_delve_1_t
+                        outcome_text = gate_dungeon_log_condition
+                        outcome_value = -0.5
+                    }
+                }
+            }
+        }
+        custom_tooltip_no_bullet = gate_dungeon_tooltip_condition_check
+    }
+}
+
+gate_dungeon_delve.2 = {
+    type = country_event
+    dlc = dlc_magic_gate
+    placement = scope:dungeon_state
+
+    title = gate_dungeon_delve_2_t
+    desc = gate_dungeon_delve_2_d
+    flavor = gate_dungeon_delve_2_f
+
+    gui_window = event_window_gate_dungeon
+
+    event_image = {
+        video = "middleeast_jungle_expedition"
+    }
+
+    immediate = {
+        gate_setup_dungeon_event = yes
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_gate_dungeon.dds"
+
+    duration = 3
+
+    option = {
+        name = gate_dungeon_delve_2_a
+        default_option = yes
+        random_list = {
+            1 = {
+                modifier = gate_dungeon_party_condition_check_medium_success
+                scope:expedition = {
+                    gate_dungeon_advance_layer = yes
+                }
+            }
+            1 = {
+                modifier = gate_dungeon_party_condition_check_medium_fail
+                custom_tooltip = gate_dungeon_tooltip_other_route
+                scope:expedition = {
+                    gate_dungeon_party_condition_change = {
+                        amount = -0.5
+                    }
+                }
+            }
+        }
+        custom_tooltip_no_bullet = gate_dungeon_tooltip_condition_check
+    }
+
+    option = {
+        name = gate_dungeon_delve_2_b
+        random_list = {
+            1 = {
+                modifier = gate_dungeon_party_cohesion_check_easy_success
+                scope:expedition = {
+                    gate_dungeon_advance_layer = yes
+                }
+            }
+            1 = {
+                modifier = gate_dungeon_party_cohesion_check_easy_neutral
+                custom_tooltip = gate_dungeon_tooltip_other_route
+            }
+        }
+        custom_tooltip_no_bullet = gate_dungeon_tooltip_cohesion_check
+    }
+
+    option = {
+        name = gate_dungeon_delve_2_c
         highlighted_option = yes
         show_as_unavailable = {
             # Show as disabled instead of
@@ -43,66 +223,491 @@ gate_dungeon_delve.1 = {
         }
         custom_tooltip_no_bullet = gate_dungeon_tooltip_renown_check
     }
+}
+
+gate_dungeon_delve.3 = {
+    type = country_event
+    dlc = dlc_magic_gate
+    placement = scope:dungeon_state
+
+    title = gate_dungeon_delve_3_t
+    desc = gate_dungeon_delve_3_d
+    flavor = gate_dungeon_delve_3_f
+
+    gui_window = event_window_gate_dungeon
+
+    event_image = {
+        video = "middleeast_jungle_expedition"
+    }
+
+    immediate = {
+        gate_setup_dungeon_event = yes
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_gate_dungeon.dds"
+
+    duration = 3
 
     option = {
-        name = gate_dungeon_delve.1.b
+        name = gate_dungeon_delve_3_a
         default_option = yes
         random_list = {
             1 = {
                 modifier = gate_dungeon_party_cohesion_check_hard_success
-                trigger = {
-                    gate_dungeon_has_cohesion = {
-                        amount = 4
-                    }
-                }
                 scope:expedition = {
-                    gate_dungeon_advance_layer = yes
-                    gate_dungeon_party_cohesion_change = {
+                    gate_dungeon_party_condition_change = {
                         amount = 0.5
                     }
+                    gate_dungeon_advance_layer = yes
                 }
-            }
-            1 = {
-                modifier = gate_dungeon_party_cohesion_check_hard_neutral
-                custom_tooltip = gate_dungeon_tooltip_other_route
             }
             1 = {
                 modifier = gate_dungeon_party_cohesion_check_hard_fail
-                custom_tooltip = gate_dungeon_tooltip_other_route
-                scope:expedition = {
-                    gate_dungeon_party_cohesion_change = {
-                        amount = -0.5
-                    }
-                }
-            }
-        }
-        custom_tooltip_no_bullet = gate_dungeon_tooltip_cohesion_check
-    }
-
-    option = {
-        name = gate_dungeon_delve.1.c
-        random_list = {
-            1 = {
-                modifier = gate_dungeon_party_condition_check_medium_success
-                trigger = {
-                    gate_dungeon_has_condition = {
-                        amount = 4
-                    }
-                }
-                scope:expedition = {
-                    gate_dungeon_advance_layer = yes
-                }
-            }
-            1 = {
-                modifier = gate_dungeon_party_condition_check_medium_fail
-                custom_tooltip = gate_dungeon_tooltip_other_route
                 scope:expedition = {
                     gate_dungeon_party_condition_change = {
                         amount = -0.5
                     }
                 }
+                custom_tooltip = gate_dungeon_tooltip_other_route
             }
         }
-        custom_tooltip_no_bullet = gate_dungeon_tooltip_condition_check
+    }
+
+    option = {
+        name = gate_dungeon_delve_3_b
+        random_list = {
+            1 = {
+                modifier = gate_dungeon_party_condition_check_easy_success
+                scope:expedition = {
+                    gate_dungeon_advance_layer = yes
+                    gate_dungeon_party_condition_change = {
+                        amount = -0.5
+                    }
+                }
+            }
+            1 = {
+                scope:expedition = {
+                    gate_dungeon_party_condition_change = {
+                        amount = -0.5
+                    }
+                }
+                modifier = gate_dungeon_party_condition_check_easy_neutral
+                custom_tooltip = gate_dungeon_tooltip_other_route
+            }
+        }
+    }
+
+    option = {
+        name = gate_dungeon_delve_3_c
+        random_list = {
+            1 = {
+                modifier = gate_dungeon_party_cohesion_check_easy_success
+                scope:expedition = {
+                    gate_dungeon_party_condition_change = {
+                        amount = -0.5
+                    }
+                    gate_dungeon_advance_layer = yes
+                }
+            }
+            1 = {
+                modifier = gate_dungeon_party_cohesion_check_easy_fail
+                scope:expedition = {
+                    gate_dungeon_party_condition_change = {
+                        amount = -1
+                    }
+                    gate_dungeon_advance_layer = yes
+                }
+            }
+        }
+    }
+}
+
+gate_dungeon_delve.4 = {
+    type = country_event
+    dlc = dlc_magic_gate
+    placement = scope:dungeon_state
+
+    title = gate_dungeon_delve_4_t
+    desc = gate_dungeon_delve_4_d
+    flavor = gate_dungeon_delve_4_f
+
+    gui_window = event_window_gate_dungeon
+
+    event_image = {
+        video = "middleeast_jungle_expedition"
+    }
+
+    immediate = {
+        gate_setup_dungeon_event = yes
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_gate_dungeon.dds"
+
+    duration = 3
+
+    option = {
+        name = gate_dungeon_delve_4_a
+        # This should be a cohesion check event (hard)
+        # Success should progress and increase renown by 0.5
+        # Neutral should search for another route
+        # Failure should reduce condition by 1 and cohesion by 0.5
+    }
+
+    option = {
+        name = gate_dungeon_delve_4_b
+        default_option = yes
+        # This should be a condition check event (easy)
+        # Success should progress
+        # Neutral should reduce condition by 0.5 and search for another route
+    }
+
+    option = {
+        name = gate_dungeon_delve_4_c
+        # This should require renown (7), no attribute check
+        # Success should progress (high weight)
+        # Neutral should search for another route (low weight)
+    }
+}
+
+gate_dungeon_delve.5 = {
+    type = country_event
+    dlc = dlc_magic_gate
+    placement = scope:dungeon_state
+
+    title = gate_dungeon_delve_5_t
+    desc = gate_dungeon_delve_5_d
+    flavor = gate_dungeon_delve_5_f
+
+    gui_window = event_window_gate_dungeon
+
+    event_image = {
+        video = "middleeast_jungle_expedition"
+    }
+
+    immediate = {
+        gate_setup_dungeon_event = yes
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_gate_dungeon.dds"
+
+    duration = 3
+
+    option = {
+        name = gate_dungeon_delve_5_a
+        # This should be a condition check event (medium)
+        # Success should grant a chest reward (raw materials)
+        # Failure should reduce condition by 1 (the chest was trapped)
+        # Neither result should progress, search for another route
+    }
+
+    option = {
+        name = gate_dungeon_delve_5_b
+        # This should require renown (5), no attribute check
+        # Success should grant a chest reward (raw materials) (high weight)
+        # Neutral should leave the chest unopened (low weight)
+    }
+
+    option = {
+        name = gate_dungeon_delve_5_c
+        default_option = yes
+        # This should be a cohesion check event (easy)
+        # Success should progress
+        # Neutral should search for another route
+    }
+}
+
+gate_dungeon_delve.6 = {
+    type = country_event
+    dlc = dlc_magic_gate
+    placement = scope:dungeon_state
+
+    title = gate_dungeon_delve_6_t
+    desc = gate_dungeon_delve_6_d
+    flavor = gate_dungeon_delve_6_f
+
+    gui_window = event_window_gate_dungeon
+
+    event_image = {
+        video = "middleeast_jungle_expedition"
+    }
+
+    immediate = {
+        gate_setup_dungeon_event = yes
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_gate_dungeon.dds"
+
+    duration = 3
+
+    option = {
+        name = gate_dungeon_delve_6_a
+        default_option = yes
+        # This should be a condition check event (medium)
+        # Success should progress
+        # Failure should reduce condition by 0.5 and search for another route
+    }
+
+    option = {
+        name = gate_dungeon_delve_6_b
+        # This should be a cohesion check event (hard)
+        # Success should progress
+        # Neutral should search for another route
+        # Failure should reduce cohesion by 1
+    }
+}
+
+gate_dungeon_delve.7 = {
+    type = country_event
+    dlc = dlc_magic_gate
+    placement = scope:dungeon_state
+
+    title = gate_dungeon_delve_7_t
+    desc = gate_dungeon_delve_7_d
+    flavor = gate_dungeon_delve_7_f
+
+    gui_window = event_window_gate_dungeon
+
+    event_image = {
+        video = "middleeast_jungle_expedition"
+    }
+
+    immediate = {
+        gate_setup_dungeon_event = yes
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_gate_dungeon.dds"
+
+    duration = 3
+
+    option = {
+        name = gate_dungeon_delve_7_a
+        # This should require renown (5), no attribute check
+        # Success should increase cohesion by 1 (high weight)
+        # Neutral should change nothing (low weight)
+    }
+
+    option = {
+        name = gate_dungeon_delve_7_b
+        default_option = yes
+        # This should be a cohesion check event (medium)
+        # Success should increase cohesion by 0.5
+        # Failure should reduce cohesion by 1
+    }
+
+    option = {
+        name = gate_dungeon_delve_7_c
+        # This should be a condition check event (easy)
+        # Success should reduce condition by 0.5 and increase cohesion by 0.5
+        # Neutral should reduce condition by 1 and increase cohesion by 0.5
+    }
+}
+
+gate_dungeon_delve.8 = {
+    type = country_event
+    dlc = dlc_magic_gate
+    placement = scope:dungeon_state
+
+    title = gate_dungeon_delve_8_t
+    desc = gate_dungeon_delve_8_d
+    flavor = gate_dungeon_delve_8_f
+
+    gui_window = event_window_gate_dungeon
+
+    event_image = {
+        video = "middleeast_jungle_expedition"
+    }
+
+    immediate = {
+        gate_setup_dungeon_event = yes
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_gate_dungeon.dds"
+
+    duration = 3
+
+    option = {
+        name = gate_dungeon_delve_8_a
+        default_option = yes
+        # This should be a cohesion check event (medium)
+        # Success should keep condition as is
+        # Failure should reduce cohesion by 0.5 and condition by 0.5
+    }
+
+    option = {
+        name = gate_dungeon_delve_8_b
+        # This should be a condition check event (easy)
+        # Neutral should reduce condition by 0.5
+        # Failure should reduce condition by 1
+    }
+
+    option = {
+        name = gate_dungeon_delve_8_c
+        # This should be a condition check event (hard)
+        # Success should increase condition by 0.5
+        # Neutral should reduce condition by 0.5
+        # Failure should reduce condition by 1 and cohesion by 0.5
+    }
+}
+
+gate_dungeon_delve.9 = {
+    type = country_event
+    dlc = dlc_magic_gate
+    placement = scope:dungeon_state
+
+    title = gate_dungeon_delve_9_t
+    desc = gate_dungeon_delve_9_d
+    flavor = gate_dungeon_delve_9_f
+
+    gui_window = event_window_gate_dungeon
+
+    event_image = {
+        video = "middleeast_jungle_expedition"
+    }
+
+    immediate = {
+        gate_setup_dungeon_event = yes
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_gate_dungeon.dds"
+
+    duration = 3
+
+    option = {
+        name = gate_dungeon_delve_9_a
+        default_option = yes
+        # This should be a cohesion check event (medium)
+        # Success should progress
+        # Failure should reduce cohesion by 0.5 and condition by 0.5 and search for another route
+    }
+
+    option = {
+        name = gate_dungeon_delve_9_b
+        # This should be a condition check event (medium)
+        # Success should progress and reduce condition by 0.5 (ropes and anchors left behind)
+        # Failure should reduce condition by 1 and search for another route
+    }
+
+    option = {
+        name = gate_dungeon_delve_9_c
+        # This should be a cohesion check event (easy)
+        # Neutral should search for another route
+        # Failure should reduce cohesion by 0.5 and search for another route
+    }
+}
+
+gate_dungeon_delve.10 = {
+    type = country_event
+    dlc = dlc_magic_gate
+    placement = scope:dungeon_state
+
+    title = gate_dungeon_delve_10_t
+    desc = gate_dungeon_delve_10_desc
+    flavor = gate_dungeon_delve_10_f
+
+    gui_window = event_window_gate_dungeon
+
+    event_image = {
+        video = "middleeast_jungle_expedition"
+    }
+
+    immediate = {
+        gate_setup_dungeon_event = yes
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_gate_dungeon.dds"
+
+    duration = 3
+
+    option = {
+        name = gate_dungeon_delve_10_a
+        # This should be a condition check event (hard)
+        # Success should progress
+        # Failure should reduce condition by 1 and cohesion by 0.5
+    }
+
+    option = {
+        name = gate_dungeon_delve_10_b
+        # This should require renown (8), no attribute check
+        # Success should progress and grant a chest reward (raw materials) (high weight)
+        # Neutral should search for another route (low weight)
+    }
+
+    option = {
+        name = gate_dungeon_delve_10_c
+        default_option = yes
+        # This should be a cohesion check event (easy)
+        # Success should progress
+        # Neutral should search for another route
+    }
+
+    option = {
+        name = gate_dungeon_delve_10_d
+        # This should be a condition check event (easy)
+        # Neutral should search for another route
+        # Failure should reduce condition by 0.5 and search for another route
+    }
+}
+
+gate_dungeon_delve.11 = {
+    type = country_event
+    dlc = dlc_magic_gate
+    placement = scope:dungeon_state
+
+    title = gate_dungeon_delve_11_t
+    desc = gate_dungeon_delve_11_d
+    flavor = gate_dungeon_delve_11_f
+
+    gui_window = event_window_gate_dungeon
+
+    event_image = {
+        video = "middleeast_jungle_expedition"
+    }
+
+    immediate = {
+        gate_setup_dungeon_event = yes
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_gate_dungeon.dds"
+
+    duration = 3
+
+    option = {
+        name = gate_dungeon_delve_11_a
+        default_option = yes
+        # This should be a condition check event (easy)
+        # Success should increase condition by 1
+        # Failure should reduce cohesion by 0.5 (something in the packs was still dangerous)
+    }
+
+    option = {
+        name = gate_dungeon_delve_11_b
+        # This should be a cohesion check event (easy)
+        # Success should increase cohesion by 0.5
+        # Neutral should change nothing
+    }
+
+    option = {
+        name = gate_dungeon_delve_11_c
+        # This should be a cohesion check event (medium)
+        # Success should progress (their notes lead the way)
+        # Failure should reduce cohesion by 1 and search for another route
     }
 }
