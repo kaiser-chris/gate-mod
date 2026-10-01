@@ -15,10 +15,32 @@
         }
     }
     flag_definition = {
+        coa = GATE_MK_communist_technocrat
+        priority = 2000
+        trigger = {
+            coa_def_communist_flag_trigger = yes
+            coa_def_technocracy_flag_trigger = yes
+        }
+    }
+    flag_definition = {
         coa = GATE_MK_fascist
         priority = 1000
         trigger = {
             coa_def_fascist_flag_trigger = yes
+        }
+    }
+}
+
+GATE_NS = {
+    flag_definition = {
+        coa = GATE_NS
+        priority = 100
+    }
+    flag_definition = {
+        coa = GATE_NS_communist
+        priority = 1000
+        trigger = {
+            coa_def_communist_flag_trigger = yes
         }
     }
 }

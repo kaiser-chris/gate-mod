@@ -9,7 +9,7 @@
 ## Morgenröte
 - Rating images in [gfx/interface/icons/generic_icons/rating/](mod/gfx/interface/icons/generic_icons/rating/)
 
-## Noun Project
+## Images
 - eyes by Jojoid from <a href="https://thenounproject.com/browse/icons/term/eyes/" target="_blank" title="eyes Icons">Noun Project</a> (CC BY 3.0)
 - Crystal by diyah yunisa from <a href="https://thenounproject.com/browse/icons/term/crystal/" target="_blank" title="Crystal Icons">Noun Project</a> (CC BY 3.0)
 - Square mirror abstract by Tresnatiq from <a href="https://thenounproject.com/browse/icons/term/square-mirror-abstract/" target="_blank" title="Square mirror abstract Icons">Noun Project</a> (CC BY 3.0)
@@ -43,3 +43,4 @@
 - Question by James Kopina from <a href="https://thenounproject.com/browse/icons/term/question/" target="_blank" title="Question Icons">Noun Project</a> (CC BY 3.0)
 - Bar by MHDK from <a href="https://thenounproject.com/browse/icons/term/bar/" target="_blank" title="Bar Icons">Noun Project</a> (CC BY 3.0)
 - Gear by Alice Design from <a href="https://thenounproject.com/browse/icons/term/gear/" target="_blank" title="Gear Icons">Noun Project</a> (CC BY 3.0)
+- Dwarven Helmet by Kier Heyl from [game-icons.net](https://game-icons.net/)
