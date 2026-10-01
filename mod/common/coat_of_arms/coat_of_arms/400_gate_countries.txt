@@ -429,3 +429,54 @@ GATE_MK_communist = {
 		}
 	}
 }
+
+GATE_AD_communist = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 105 11 16 }
+	color2 = "yellow"
+	color3 = "green"
+
+	colored_emblem = {
+		texture = "ce_bicolor_bottom.dds"
+		color1 = color3
+		instance = {
+			position = { 0.5 0.85 }
+			scale = { 1 1 }
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_gate_dominion.dds"
+		color1 = color2
+		color2 = color1
+		instance = {
+			position = { 0.186 0.346 }
+			scale = { 0.75 0.75 }
+		}
+	}
+}
+
+GATE_AD_communist_agrarian = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 105 11 16 }
+	color2 = "yellow"
+	color3 = "green"
+
+	colored_emblem = {
+		texture = "ce_bicolor_bottom.dds"
+		color1 = color3
+		instance = {
+			position = { 0.5 0.85 }
+			scale = { 1 1 }
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_gate_sapling.dds"
+		color1 = color2
+		instance = {
+			position = { 0.2 0.29 }
+			scale = { 0.5 0.5 }
+		}
+	}
+}
