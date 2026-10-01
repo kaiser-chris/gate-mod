@@ -44,3 +44,31 @@ GATE_NS = {
         }
     }
 }
+
+GATE_AD = {
+    flag_definition = {
+        coa = GATE_AD
+        priority = 100
+
+        coa_with_overlord_canton = GATE_AD
+        allow_overlord_canton = yes
+        overlord_canton_scale = { 0.4 0.4  }
+    }
+    flag_definition = {
+        coa = GATE_AD_communist
+        priority = 1000
+        trigger = {
+            coa_def_communist_flag_trigger = yes
+        }
+    }
+    flag_definition = {
+        coa = GATE_AD_communist_agrarian
+        priority = 2000
+        trigger = {
+            coa_def_communist_flag_trigger = yes
+            scope:actor ?= {
+                has_law_or_variant = law_type:law_agrarianism
+            }
+        }
+    }
+}
