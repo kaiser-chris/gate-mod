@@ -289,7 +289,7 @@ GATE_DIH = {
 	}
 }
 
-GATE_MK_communist = {
+GATE_MK_communist_technocrat = {
 	pattern = "pattern_solid.tga"
 	color1 = rgb { 177 25 37 }
 	color2 = "grey"
@@ -316,7 +316,7 @@ GATE_MK_subject = {
 		texture = "ce_gate_circle_half.dds"
 		color1 = color3
 		instance = {
-			position = { 0.6 0.6 }
+			position = { 0.6 0.8 }
 			scale = { 1 1 }
 		}
 	}
@@ -325,7 +325,7 @@ GATE_MK_subject = {
 		texture = "ce_gate_mountain.dds"
 		color1 = color2
 		instance = {
-			position = { 0.6 0.6 }
+			position = { 0.6 0.8 }
 			scale = { 1 1 }
 		}
 	}
@@ -342,44 +342,90 @@ GATE_MK_subject = {
 
 GATE_MK_fascist = {
 	pattern = "pattern_solid.tga"
-	color1 = "white"
-	color2 = "paneuropa_grey"
+	color1 = "paneuropa_grey"
+	color2 = "white"
+	color3 = "black"
+
+	colored_emblem = {
+		texture = "ce_rhombus.dds"
+		color1 = color3
+		instance = {
+			position = { 0.5 0.5 }
+			scale = { 1 1 }
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_rhombus.dds"
+		color1 = color2
+		instance = {
+			position = { 0.5 0.5 }
+			scale = { 0.95 0.95 }
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_gate_dwarven_helmet.dds"
+		color1 = color3
+		instance = {
+			position = { 0.5 0.46 }
+			scale = { 0.73 0.73 }
+		}
+	}
+}
+
+GATE_NS_communist = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 104 23 23 }
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_gate_gnomish_mark.dds"
+		color1 = color1
+		color2 = rgb { 80 15 15 }
+		color3 = color2
+		instance = {
+			position = { 0.5 0.75 }
+			scale = { 1.5 1.5 }
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_star_05.dds"
+		color1 = color2
+	}
+
+	colored_emblem = {
+		texture = "ce_star_05.dds"
+		color1 = color1
+		instance = {
+			position = { 0.5 0.5 }
+			scale = { 0.9 0.9 }
+		}
+	}
+}
+
+GATE_MK_communist = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 144 23 32 }
+	color2 = "grey"
 	color3 = "yellow"
-	color4 = "black"
+
+	colored_emblem = {
+		texture = "ce_gate_schlaegel_und_eisen.dds"
+		color1 = color3
+		instance = {
+			position = { 0.17 0.24 }
+			scale = { 0.35 0.35 }
+		}
+	}
 
 	colored_emblem = {
 		texture = "ce_gate_mountain_big.dds"
 		color1 = color2
 		instance = {
-			position = { 0.5 0.684 }
+			position = { 0.594 0.598 }
 			scale = { 1 1 }
-		}
-	}
-
-	colored_emblem = {
-		texture = "ce_cross_pointed.dds"
-		color1 = color4
-		instance = {
-			position = { 1 0.5 }
-			scale = { 1 1 }
-		}
-	}
-
-	colored_emblem = {
-		texture = "ce_cross_pointed.dds"
-		color1 = color4
-		instance = {
-			position = { 0 0.5 }
-			scale = { 1 1 }
-		}
-	}
-
-	colored_emblem = {
-		texture = "ce_frame_circle.dds"
-		color1 = color3
-		instance = {
-			position = { 0.5 0 }
-			scale = { 0.75 0.75 }
 		}
 	}
 }
