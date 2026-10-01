@@ -1,0 +1,11 @@
+﻿gate_communist_dwarves = {
+    color = rgb { 177 25 37 }
+
+    possible = {
+        OR = {
+            c:GATE_MK ?= this
+            was_formed_from = GATE_MK
+        }
+        has_law_or_variant = law_type:law_council_republic
+    }
+}

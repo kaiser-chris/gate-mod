@@ -1,0 +1,24 @@
+﻿GATE_MK = {
+    flag_definition = {
+        coa = GATE_MK
+        priority = 100
+
+        coa_with_overlord_canton = GATE_MK_subject
+        allow_overlord_canton = yes
+        overlord_canton_scale = { 0.4 0.4  }
+    }
+    flag_definition = {
+        coa = GATE_MK_communist
+        priority = 1000
+        trigger = {
+            coa_def_communist_flag_trigger = yes
+        }
+    }
+    flag_definition = {
+        coa = GATE_MK_fascist
+        priority = 1000
+        trigger = {
+            coa_def_fascist_flag_trigger = yes
+        }
+    }
+}

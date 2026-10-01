@@ -42,3 +42,4 @@
 - checkmark by komsiatun from <a href="https://thenounproject.com/browse/icons/term/checkmark/" target="_blank" title="checkmark Icons">Noun Project</a> (CC BY 3.0)
 - Question by James Kopina from <a href="https://thenounproject.com/browse/icons/term/question/" target="_blank" title="Question Icons">Noun Project</a> (CC BY 3.0)
 - Bar by MHDK from <a href="https://thenounproject.com/browse/icons/term/bar/" target="_blank" title="Bar Icons">Noun Project</a> (CC BY 3.0)
+- Gear by Alice Design from <a href="https://thenounproject.com/browse/icons/term/gear/" target="_blank" title="Gear Icons">Noun Project</a> (CC BY 3.0)
