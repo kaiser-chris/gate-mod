@@ -43,13 +43,19 @@ gate_dungeon_advance_layer = {
 				has_variable = is_last
 			}
 		}
+		# Finish
 		custom_tooltip = {
 			text = effect_gate_dungeon_complete
 			# We are done
 			remove_variable = current_layer
+
+			scope:journal_entry ?= {
+				post_notification = message_gate_dungeon_delve_finish
+			}
 		}
 	}
 	else = {
+		# Advance
 		custom_tooltip = {
 			text = effect_gate_dungeon_advance
 			save_scope_as = temp_expedition
@@ -72,6 +78,10 @@ gate_dungeon_advance_layer = {
 			}
 
 			clear_saved_scope = temp_expedition
+
+			scope:journal_entry ?= {
+				post_notification = message_gate_dungeon_delve_advance
+			}
 		}
 	}
 }
@@ -89,6 +99,24 @@ gate_dungeon_party_condition_change = {
 				name = condition
 				min = gate_dungeon_party_condition_minimum
 				max = gate_dungeon_party_condition_maximum
+			}
+		}
+		scope:journal_entry ?= {
+			set_local_variable = {
+				name = temp_condition_change
+				value = $amount$
+			}
+			if = {
+				limit = {
+					$amount$ > 0
+				}
+				post_notification = message_gate_dungeon_party_condition_increase
+			}
+			else_if = {
+				limit = {
+					$amount$ < 0
+				}
+				post_notification = message_gate_dungeon_party_condition_decrease
 			}
 		}
 	}
@@ -109,6 +137,24 @@ gate_dungeon_party_cohesion_change = {
 				max = gate_dungeon_party_cohesion_maximum
 			}
 		}
+		scope:journal_entry ?= {
+			set_local_variable = {
+				name = temp_cohesion_change
+				value = $amount$
+			}
+			if = {
+				limit = {
+					$amount$ > 0
+				}
+				post_notification = message_gate_dungeon_party_cohesion_increase
+			}
+			else_if = {
+				limit = {
+					$amount$ < 0
+				}
+				post_notification = message_gate_dungeon_party_cohesion_decrease
+			}
+		}
 	}
 }
 
@@ -125,6 +171,24 @@ gate_dungeon_party_renown_change = {
 				name = renown
 				min = gate_dungeon_party_renown_minimum
 				max = gate_dungeon_party_renown_maximum
+			}
+		}
+		scope:journal_entry ?= {
+			set_local_variable = {
+				name = temp_renown_change
+				value = $amount$
+			}
+			if = {
+				limit = {
+					$amount$ > 0
+				}
+				post_notification = message_gate_dungeon_party_renown_increase
+			}
+			else_if = {
+				limit = {
+					$amount$ < 0
+				}
+				post_notification = message_gate_dungeon_party_renown_decrease
 			}
 		}
 	}
