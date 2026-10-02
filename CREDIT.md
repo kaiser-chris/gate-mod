@@ -43,4 +43,5 @@
 - Question by James Kopina from <a href="https://thenounproject.com/browse/icons/term/question/" target="_blank" title="Question Icons">Noun Project</a> (CC BY 3.0)
 - Bar by MHDK from <a href="https://thenounproject.com/browse/icons/term/bar/" target="_blank" title="Bar Icons">Noun Project</a> (CC BY 3.0)
 - Gear by Alice Design from <a href="https://thenounproject.com/browse/icons/term/gear/" target="_blank" title="Gear Icons">Noun Project</a> (CC BY 3.0)
+- Tree by Sanjaya from <a href="https://thenounproject.com/browse/icons/term/tree/" target="_blank" title="Tree Icons">Noun Project</a> (CC BY 3.0)
 - Dwarven Helmet by Kier Heyl from [game-icons.net](https://game-icons.net/)
