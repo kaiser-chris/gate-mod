@@ -77,6 +77,8 @@ gate_orphan_fix.1 = {
 		fix_variable_error = { variable = event }
 		fix_variable_error = { variable = outcome_text }
 		fix_variable_error = { variable = outcome_value }
+		fix_variable_error = { variable = temp_cohesion_change }
+		fix_variable_error = { variable = temp_condition_change }
 
 		# Gate Expedition
 		fix_variable_error = { variable = is_expedition_leader }
