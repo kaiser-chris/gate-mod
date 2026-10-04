@@ -236,6 +236,39 @@ types gate_dungeon_types {
         }
 
         block "layer_content" {}
+
+        icon = {
+            texture = "gfx/interface/dividers/divider_clean.dds"
+            texture_density = 2
+            spriteType = CorneredTiled
+            spriteborder = { 4 0 }
+            alpha = 0.4
+            size =  { 100% 1 }
+            modify_texture = {
+                texture = "gfx/interface/masks/fade_horizontal_center.dds"
+                spriteType = Corneredtiled
+                spriteborder = { 200 200 }
+                texture_density = 4
+                blend_mode = alphamultiply
+            }
+            parentanchor = top
+        }
+        icon = {
+            texture = "gfx/interface/dividers/divider_clean.dds"
+            texture_density = 2
+            spriteType = CorneredTiled
+            spriteborder = { 4 0 }
+            alpha = 0.4
+            size =  { 100% 1 }
+            modify_texture = {
+                texture = "gfx/interface/masks/fade_horizontal_center.dds"
+                spriteType = Corneredtiled
+                spriteborder = { 200 200 }
+                texture_density = 4
+                blend_mode = alphamultiply
+            }
+            parentanchor = bottom
+        }
     }
 
     type gate_dungeon_layer_status = widget {
