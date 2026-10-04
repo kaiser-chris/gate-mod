@@ -166,7 +166,7 @@ gate_dungeon_party_cohesion_check_medium_neutral = {
 gate_dungeon_party_cohesion_check_medium_fail = {
     scope:expedition = {
         value = 100
-        subtract = gate_dungeon_party_cohesion_percentage
+        subtract = gate_dungeon_party_cohesion_check_medium_success
         min = 10 # there should always be a chance to fail
     }
 }
@@ -280,7 +280,7 @@ gate_dungeon_party_condition_check_medium_neutral = {
 gate_dungeon_party_condition_check_medium_fail = {
     scope:expedition = {
         value = 100
-        subtract = gate_dungeon_party_condition_percentage
+        subtract = gate_dungeon_party_condition_check_medium_success
         min = 10 # there should always be a chance to fail
     }
 }
