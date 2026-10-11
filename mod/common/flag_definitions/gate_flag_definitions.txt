@@ -31,9 +31,52 @@
     }
 }
 
+GATE_ME = {
+    flag_definition = {
+        coa = GATE_ME
+        priority = 100
+    }
+    flag_definition = {
+        coa = GATE_MK_communist
+        priority = 1000
+        trigger = {
+            coa_def_communist_flag_trigger = yes
+        }
+    }
+    flag_definition = {
+        coa = GATE_MK_communist_technocrat
+        priority = 2000
+        trigger = {
+            coa_def_communist_flag_trigger = yes
+            coa_def_technocracy_flag_trigger = yes
+        }
+    }
+    flag_definition = {
+        coa = GATE_MK_fascist
+        priority = 1000
+        trigger = {
+            coa_def_fascist_flag_trigger = yes
+        }
+    }
+}
+
 GATE_NS = {
     flag_definition = {
         coa = GATE_NS
+        priority = 100
+    }
+    flag_definition = {
+        coa = GATE_NS_communist
+        priority = 1000
+        trigger = {
+            coa_def_communist_flag_trigger = yes
+        }
+    }
+}
+
+GATE_NS_EMPIRE = {
+    flag_definition = {
+        coa = GATE_NS_EMPIRE
         priority = 100
     }
     flag_definition = {
@@ -53,6 +96,30 @@ GATE_AD = {
         coa_with_overlord_canton = GATE_AD
         allow_overlord_canton = yes
         overlord_canton_scale = { 0.4 0.4  }
+    }
+    flag_definition = {
+        coa = GATE_AD_communist
+        priority = 1000
+        trigger = {
+            coa_def_communist_flag_trigger = yes
+        }
+    }
+    flag_definition = {
+        coa = GATE_AD_communist_agrarian
+        priority = 2000
+        trigger = {
+            coa_def_communist_flag_trigger = yes
+            scope:actor ?= {
+                has_law_or_variant = law_type:law_agrarianism
+            }
+        }
+    }
+}
+
+GATE_AD_EMPIRE = {
+    flag_definition = {
+        coa = GATE_AD_EMPIRE
+        priority = 100
     }
     flag_definition = {
         coa = GATE_AD_communist
