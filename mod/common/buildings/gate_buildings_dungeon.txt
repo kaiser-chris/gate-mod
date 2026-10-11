@@ -1,6 +1,94 @@
 ﻿building_gate_dungeon_tiefburg = {
 	building_group = bg_gate_dungeons
-	icon = gfx/interface/icons/building_icons/building_gate_dungeon_tiefburg.dds
+	icon = gfx/interface/icons/building_icons/dungeons/gate_dungeon_tiefburg.dds
+	buildable = no
+	expandable = no
+	downsizeable = no
+	unique = yes
+
+	production_method_groups = {
+		pmg_gate_dungeon_exploitation
+		pmg_gate_dungeon_exploration
+	}
+
+	can_build_private = {
+		always = no
+	}
+
+	required_construction = construction_cost_monument
+
+	background = gfx/interface/icons/building_icons/backgrounds/building_panel_bg_gate_magic.dds
+}
+
+building_gate_dungeon_dunmorrach = {
+	building_group = bg_gate_dungeons
+	icon = gfx/interface/icons/building_icons/dungeons/gate_dungeon_dunmorrach.dds
+	buildable = no
+	expandable = no
+	downsizeable = no
+	unique = yes
+
+	production_method_groups = {
+		pmg_gate_dungeon_exploitation
+		pmg_gate_dungeon_exploration
+	}
+
+	can_build_private = {
+		always = no
+	}
+
+	required_construction = construction_cost_monument
+
+	background = gfx/interface/icons/building_icons/backgrounds/building_panel_bg_gate_magic.dds
+}
+
+building_gate_dungeon_oldewaard = {
+	building_group = bg_gate_dungeons
+	icon = gfx/interface/icons/building_icons/dungeons/gate_dungeon_oldewaard.dds
+	buildable = no
+	expandable = no
+	downsizeable = no
+	unique = yes
+
+	production_method_groups = {
+		pmg_gate_dungeon_exploitation
+		pmg_gate_dungeon_exploration
+	}
+
+	can_build_private = {
+		always = no
+	}
+
+	required_construction = construction_cost_monument
+
+	background = gfx/interface/icons/building_icons/backgrounds/building_panel_bg_gate_magic.dds
+}
+
+building_gate_dungeon_mongibello = {
+	building_group = bg_gate_dungeons
+	icon = gfx/interface/icons/building_icons/dungeons/gate_dungeon_mongibello.dds
+	buildable = no
+	expandable = no
+	downsizeable = no
+	unique = yes
+
+	production_method_groups = {
+		pmg_gate_dungeon_exploitation
+		pmg_gate_dungeon_exploration
+	}
+
+	can_build_private = {
+		always = no
+	}
+
+	required_construction = construction_cost_monument
+
+	background = gfx/interface/icons/building_icons/backgrounds/building_panel_bg_gate_magic.dds
+}
+
+building_gate_dungeon_grieta_blanca = {
+	building_group = bg_gate_dungeons
+	icon = gfx/interface/icons/building_icons/dungeons/gate_dungeon_grieta_blanca.dds
 	buildable = no
 	expandable = no
 	downsizeable = no
