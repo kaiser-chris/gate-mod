@@ -1,0 +1,51 @@
+﻿sgui_gate_debug_start_dungeon_delve = {
+	scope = country
+
+	saved_scopes = {
+		dungeon
+	}
+
+	is_valid = {
+		NOT = {
+			exists = je:je_gate_expedition_dungeon
+		}
+	}
+
+	effect = {
+		gate_create_dungeon_expedition = {
+			dungeon = scope:dungeon
+		}
+		create_character = {
+			template = gate_dungeon_party_leader_template
+			save_scope_as = leader
+		}
+		scope:expedition ?= {
+			var:party = {
+				set_variable = {
+					name = party_leader
+					value = scope:leader
+				}
+			}
+		}
+		gate_start_dungeon = {
+			expedition = scope:expedition
+		}
+	}
+}
+
+sgui_gate_debug_spawn = {
+	scope = building_type
+
+	is_shown = {
+		"global_variable_map(dungeons|this)" ?= {
+			var:location ?= {
+				any_scope_state = {
+					state_has_building_type_levels = {
+						target = root
+						value >= 1
+					}
+				}
+			}
+		}
+	}
+}

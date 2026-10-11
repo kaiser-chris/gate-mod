@@ -1,0 +1,259 @@
+gate_dungeon_debug = {
+    name = "gate_dungeon_debug"
+}
+
+
+types gate_debug_types {
+
+    type gate_dungeon_debug = vbox {
+        using = dockable_background
+        layoutpolicy_horizontal = expanding
+        layoutpolicy_vertical = expanding
+        layer = popups
+        using = clickthrough_blocker
+        filter_mouse = all
+        parentanchor = hcenter|vcenter
+        datacontext = "[GetMetaPlayer.GetPlayedOrObservedCountry]"
+
+        vbox = {
+            layoutpolicy_horizontal = expanding
+            layoutpolicy_vertical = expanding
+            margin = { 4 0 }
+
+            vbox = {
+                margin = { 5 10 }
+                spacing = 10
+                layoutpolicy_horizontal = expanding
+                layoutpolicy_vertical = expanding
+
+                hbox = {
+                    layoutpolicy_horizontal = expanding
+                    spacing = 10
+
+                    editor_button = {
+                        size = { 0 30 }
+                        layoutpolicy_horizontal = expanding
+                        using = editor_font
+                        fontweight = bold
+                        raw_text = "Expand All"
+                        align = center|nobaseline
+                        raw_tooltip = "Expand all container data"
+
+                        onclick = "[GetVariableSystem.Toggle('gate_dungeon_debug_expand_all')]"
+                    }
+                }
+
+                inspector_scrollarea = {
+                    layoutpolicy_vertical = expanding
+                    layoutpolicy_horizontal = preferred
+                    scrollbarpolicy_vertical = always_on
+
+                    blockoverride "area_widget" {
+                        vbox = {
+                            layoutpolicy_vertical = expanding
+                            layoutpolicy_horizontal = expanding
+                            margin_right = 2
+
+                            vbox = {
+                                datamodel = "[GetGlobalMapKeys('dungeons')]"
+                                layoutpolicy_horizontal = expanding
+                                spacing = 4
+
+                                item = {
+                                    gate_dungeon_debug_entry = {
+                                        oncreate = "[BindFoldOutContext]"
+                                        datacontext = "[Scope.GetBuildingType]"
+                                        datacontext = "[GetVariableFromGlobalVariableMap('dungeons', Scope.GetBuildingType.MakeScope).GetScriptContainer]"
+                                    }
+                                }
+                            }
+
+                            expand = {}
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    type gate_dungeon_debug_entry = vbox {
+        layoutpolicy_vertical = preferred
+        layoutpolicy_horizontal = expanding
+        spacing = 2
+
+        # Foldout
+        hbox = {
+            layoutpolicy_horizontal = expanding
+            spacing = 4
+            gate_dungeon_debug_entry_header = {
+                blockoverride "textbox" {
+                    fontcolor = { 1 1 1 1 }
+                    raw_text = "Dungeon: [ScriptContainer.MakeScope.Var('name').GetFlagName] in [ScriptContainer.MakeScope.Var('location').GetStateRegion.GetNameNoFormatting]"
+                }
+            }
+            editor_button = {
+                size = { 100 20 }
+                using = editor_font
+                raw_text = "Start Delve"
+                align = center|nobaseline
+                raw_tooltip = "Start a dungeon delve for this dungeon"
+
+                onclick = "[GetScriptedGui('sgui_gate_debug_start_dungeon_delve').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('dungeon', ScriptContainer.MakeScope).End)]"
+            }
+        }
+
+        hbox = {
+            layoutpolicy_horizontal = expanding
+            visible = "[Or(PdxGuiFoldOut.IsUnfolded, GetVariableSystem.Exists('gate_dungeon_debug_expand_all'))]"
+
+            # Attributes
+            vbox = {
+                using = InspectorSubIndentBig
+                layoutpolicy_horizontal = expanding
+                background = { using = EditorFoldoutBackground }
+
+                # Name
+                gate_dungeon_debug_entry_element = {
+                    blockoverride "name" {
+                        raw_text = "Name"
+                    }
+                    blockoverride "value" {
+                        raw_text = "#yellow [ScriptContainer.MakeScope.Var('name').GetFlagName]#!"
+                        tooltipwidget = {
+                            gate_dungeon_tooltip = {
+                                datacontext = "[ScriptContainer.MakeScope]"
+                            }
+                        }
+                    }
+                }
+
+                # Spawned
+                gate_dungeon_debug_entry_element = {
+                    blockoverride "name" {
+                        raw_text = "Spawned"
+                    }
+                    blockoverride "value" {
+                        text = "[Select_CString(GetScriptedGui('sgui_gate_debug_spawn').IsShown(GuiScope.SetRoot(BuildingType.MakeScope).End), 'Yes', 'No')]"
+                    }
+                    blockoverride "right" {
+                        visible = "[Not(GetScriptedGui('sgui_gate_debug_spawn').IsShown(GuiScope.SetRoot(BuildingType.MakeScope).End))]"
+                        editor_button = {
+                            size = { 100 20 }
+                            using = editor_font
+                            raw_text = "Spawn Dungeon"
+                            align = center|nobaseline
+                            raw_tooltip = "Spawn Dungeon"
+
+                            # TODO: not yet implemented
+                            #onclick = "[GetScriptedGui('sgui_gate_debug_spawn').Execute(GuiScope.SetRoot(BuildingType.MakeScope).End)]"
+                        }
+                    }
+                }
+
+                # Location
+                gate_dungeon_debug_entry_element = {
+                    blockoverride "name" {
+                        raw_text = "Location"
+                    }
+                    blockoverride "value" {
+                        text = "[ScriptContainer.MakeScope.Var('location').GetStateRegion.GetName]"
+                    }
+                }
+
+                # Building
+                gate_dungeon_debug_entry_element = {
+                    blockoverride "name" {
+                        raw_text = "Building"
+                    }
+                    blockoverride "value" {
+                        text = "[BuildingType.GetName]"
+                    }
+                }
+            }
+
+            vbox = {
+                layoutpolicy_horizontal = expanding
+                layoutpolicy_vertical = expanding
+                maximumsize = { 150 -1 }
+                widget = {
+                    size = { 90% 90% }
+                    background = {
+                        fittype = centercrop
+                        texture = "[GetIdeology(ScriptContainer.MakeScope.Var('background').GetFlagName).GetTexture]"
+                    }
+                }
+            }
+        }
+
+    }
+
+    type gate_dungeon_debug_entry_header = checkbutton {
+        shaderfile = "gfx/FX/pdxgui_pushbutton.shader"
+        texture = "gfx/tools/foldout_button.dds"
+        framesize = { 16 16 }
+        spriteType = CorneredStretched
+        spriteborder = { 4 4 }
+        gfxtype = checkbuttongfx
+
+        onclick = "[PdxGuiFoldOut.Toggle]"
+        checked = "[Or(PdxGuiFoldOut.IsUnfolded, GetVariableSystem.Exists('gate_dungeon_debug_expand_all'))]"
+
+        icon = {
+            texture = "gfx/editor_gui/editor_expand_checkbox.dds"
+            size = { 10 10 }
+            shaderfile = "gfx/FX/pdxgui_default.shader"
+            framesize = { 16 16 }
+            position = { 4 0 }
+            parentanchor = left|vcenter
+            frame = "[Select_int32(Or(PdxGuiFoldOut.IsUnfolded, GetVariableSystem.Exists('gate_dungeon_debug_expand_all')), '(int32)2', '(int32)1')]"
+        }
+        layoutpolicy_horizontal = preferred
+        layoutpolicy_vertical = fixed
+        size = { 0 20 }
+
+        color = { 1 1 1 1 }
+        tintcolor = { 1 1 1 1 }
+
+        editor_textbox = {
+            size = { 0 100% }
+            position = { 19 0 }
+            align = left|nobaseline
+            fontweight = light
+            block "textbox" {}
+        }
+    }
+
+    type gate_dungeon_debug_entry_element = hbox {
+        layoutpolicy_horizontal = expanding
+
+        textbox = {
+            fontsize = 12
+            size = { 70 20 }
+            block "name" {
+                raw_text = "#debug gate_dungeon_debug_entry_element - name#!"
+            }
+            using = editor_font
+            fontweight = bold
+        }
+
+        block "multi_value" {
+            editor_textinput = {
+                layoutpolicy_vertical = preferred
+                layoutpolicy_horizontal = expanding
+                fontsize = 12
+                block "value" {
+                    raw_text = "#debug gate_dungeon_debug_entry_element - name#!"
+                }
+                default_format = "#white"
+                enabled = no
+            }
+        }
+
+        hbox = {
+            block "right" {
+                visible = no
+            }
+        }
+    }
+
+}
