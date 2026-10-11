@@ -82,16 +82,16 @@ gate_create_dungeon_expedition = {
 	clear_saved_scope = temp_party
 }
 
-gate_create_dungeon_tyrol = {
-	container:gate_dungeon_alpine_caves ?= {
+create_gate_dungeon_tiefburg = {
+	container:gate_dungeon_tiefburg ?= {
 		destroy_container = yes
 	}
 	gate_create_dungeon = {
-		name = gate_dungeon_alpine_caves
+		name = gate_dungeon_tiefburg
 		state_region = STATE_TYROL
 		background = dungeon_background_gate_cave_01
 	}
-	container:gate_dungeon_alpine_caves = {
+	container:gate_dungeon_tiefburg = {
 		gate_create_dungeon_layer = {
 			name = gate_dungeon_layer_generic_entrance
 			background = dungeon_layer_gate_top_cave_01
@@ -121,8 +121,8 @@ gate_create_dungeon_tyrol = {
 	}
 	add_to_global_variable_map = {
 		name = dungeons
-		key = bt:building_gate_dungeon_alpine_caves
-		value = container:gate_dungeon_alpine_caves
+		key = bt:building_gate_dungeon_tiefburg
+		value = container:gate_dungeon_tiefburg
 	}
 }
 
