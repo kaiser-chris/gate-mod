@@ -31,8 +31,7 @@ types gate_inject_dungeon_types {
 		}
 
 		background = {
-			visible = "[GetIdeology(ScriptContainer.MakeScope.Var('dungeon').Var('type').GetFlagName).GetTexture]"
-			texture = gfx/map/gate/dungeon/types/cave_01.dds
+			texture = "[GetIdeology(ScriptContainer.MakeScope.Var('dungeon').Var('background').GetFlagName).GetTexture]"
 			fittype = centercrop
 			alpha = 0.5
 		}
