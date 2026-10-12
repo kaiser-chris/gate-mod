@@ -133,10 +133,10 @@ types gate_debug_types {
                         raw_text = "Spawned"
                     }
                     blockoverride "value" {
-                        text = "[Select_CString(GetScriptedGui('sgui_gate_debug_spawn').IsShown(GuiScope.SetRoot(BuildingType.MakeScope).End), 'Yes', 'No')]"
+                        text = "[Select_CString(GetScriptedGui('sgui_gate_debug_spawn').IsValid(GuiScope.SetRoot(BuildingType.MakeScope).End), 'Yes', 'No')]"
                     }
                     blockoverride "right" {
-                        visible = "[Not(GetScriptedGui('sgui_gate_debug_spawn').IsShown(GuiScope.SetRoot(BuildingType.MakeScope).End))]"
+                        visible = "[Not(GetScriptedGui('sgui_gate_debug_spawn').IsValid(GuiScope.SetRoot(BuildingType.MakeScope).End))]"
                         editor_button = {
                             size = { 100 20 }
                             using = editor_font
@@ -144,8 +144,7 @@ types gate_debug_types {
                             align = center|nobaseline
                             raw_tooltip = "Spawn Dungeon"
 
-                            # TODO: not yet implemented
-                            #onclick = "[GetScriptedGui('sgui_gate_debug_spawn').Execute(GuiScope.SetRoot(BuildingType.MakeScope).End)]"
+                            onclick = "[GetScriptedGui('sgui_gate_debug_spawn').Execute(GuiScope.SetRoot(BuildingType.MakeScope).End)]"
                         }
                     }
                 }

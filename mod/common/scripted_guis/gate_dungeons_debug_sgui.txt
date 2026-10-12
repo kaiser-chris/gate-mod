@@ -36,7 +36,29 @@
 sgui_gate_debug_spawn = {
 	scope = building_type
 
-	is_shown = {
+	# TODO: can not use building type
+	# effect = {
+	# 	"global_variable_map(dungeons|this)" ?= {
+	# 		var:location ?= {
+	# 			random_scope_state = {
+	# 				limit = {
+	# 					is_largest_state_in_region = yes
+	# 				}
+	# 				create_building = {
+	# 					building = root
+	# 					level = 1
+	# 					reserves = 1
+	# 					activate_production_methods = {
+	# 						pm_gate_dungeon_closed
+	# 						pm_gate_dungeon_unexplored
+	# 					}
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# }
+
+	is_valid = {
 		"global_variable_map(dungeons|this)" ?= {
 			var:location ?= {
 				any_scope_state = {
