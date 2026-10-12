@@ -1,8 +1,4 @@
 ﻿l_english:
- gate_dungeon_tiefburg: "Tiefburg"
- gate_dungeon_tiefburg_desc: "Nestled in the limestone caves above the [GetBuildingType('building_gate_tyrol').GetName] in [GetStateRegion('STATE_TYROL').GetName], the #bold $gate_dungeon_tiefburg$#! is believed to owe their formation to the surge in [concept_gate_mana_density] that came with the Gate itself. Local herders, following a stray goat into the hillside, were the first to find the entrance and the first to report what lay beyond it: a cave mouth opening onto stone halls, barred cells, and winding corridors that would look at home in any old castle keep, despite there being no ruin of a castle anywhere above ground."
- building_gate_dungeon_tiefburg: "$gate_dungeon_tiefburg$ $concept_gate_dungeon$"
-
  # Western Europe
  gate_dungeon_dunmorrach: "Dunmorrach"
  gate_dungeon_dunmorrach_desc: "On a headland above a grey sea loch stands the stump of a broch that no clan remembers raising, its dry-stone walls barely taller than a man. Step through its single low doorway, however, and the walls do not end: Dunmorrach opens onto vaulted halls, guardrooms, and spiral stairs that descend through floor after floor of a keep far too large to fit beneath the hill. Delvers speak of armoured sentinels that never tire, of banners in colours that belong to no clan, and of a great hall at the bottom where a cold hearth is always laid but never lit."
@@ -22,38 +18,50 @@
  # Balkans
  gate_dungeon_cetatea_neagra: "Cetatea Neagra"
  gate_dungeon_cetatea_neagra_desc: "On a wooded spur of the southern Carpathians stand the blackened walls of a fortress that appears in no chronicle, its gate tower intact and its courtyard choked with beech saplings. The villages in the valley below call it Cetatea Neagra, the Black Citadel, and keep their flocks well away from it. Through the gate tower lies a dungeon of the classic kind: torchlit corridors, barracks, prisons, and chapels stacked layer upon layer, patrolled by garrisons of armoured dead and lesser horrors that follow orders no one alive has given."
+ building_gate_dungeon_cetatea_neagra: "$gate_dungeon_cetatea_neagra$ $concept_gate_dungeon$"
  gate_dungeon_labyrinthos: "Labyrinthos"
  gate_dungeon_labyrinthos_desc: "In the hills south of the Messara plain lie old quarry galleries that Cretans have long called the Labyrinth, a maze of rock-cut passages once thought to be the very one of legend. One of those passages continues where the old maps say it ends. Beyond it the Labyrinthos twists through natural caverns of pale limestone, dripping galleries, and branching tunnels that rearrange themselves between visits more readily than in any other known dungeon. Delvers report horned beasts in the deeper layers and insist, half in jest, that the place knows exactly which story it is imitating."
+ building_gate_dungeon_labyrinthos: "$gate_dungeon_labyrinthos$ $concept_gate_dungeon$"
 
  # Central Europe
+ gate_dungeon_tiefburg: "Tiefburg"
+ gate_dungeon_tiefburg_desc: "Nestled in the limestone caves above the [GetBuildingType('building_gate_tyrol').GetName] in [GetStateRegion('STATE_TYROL').GetName], the #bold $gate_dungeon_tiefburg$#! is believed to owe their formation to the surge in [concept_gate_mana_density] that came with the Gate itself. Local herders, following a stray goat into the hillside, were the first to find the entrance and the first to report what lay beyond it: a cave mouth opening onto stone halls, barred cells, and winding corridors that would look at home in any old castle keep, despite there being no ruin of a castle anywhere above ground."
+ building_gate_dungeon_tiefburg: "$gate_dungeon_tiefburg$ $concept_gate_dungeon$"
  gate_dungeon_silbergrund: "Silbergrund"
  gate_dungeon_silbergrund_desc: "In the Ore Mountains, where silver has been dug for longer than anyone has kept records, an abandoned adit above a mining village leads back into the hillside along a gallery cut by miners' hands. Past the last tool marks the gallery becomes Silbergrund: a sprawl of natural caverns veined with glittering ore, underground lakes, and shafts that drop into darkness further than any lamp can reach. Old miners say the mountain is paying back what was taken from it, and the dungeon's chests are indeed rich in ore, but the things that guard them dig as well as any miner and know the tunnels better."
- gate_dungeon_firnschlund: "Firnschlund"
- gate_dungeon_firnschlund_desc: "Where a glacier tongue ends in the high valleys of the Grisons, meltwater pours from a blue ice cave like those found beneath many alpine glaciers. Firnschlund looks no different from its neighbours from the outside, but its meltwater never stops, even in the depths of winter, and its entrance never moves as the ice advances and retreats around it. Inside, the ice deepens into vaulted halls of blue and white, crevasses bridged by frozen arches, and chambers so cold that breath freezes before it leaves the lips. Mountain guides who lead parties to its mouth refuse to go one step beyond it."
+ building_gate_dungeon_silbergrund: "$gate_dungeon_silbergrund$ $concept_gate_dungeon$"
 
  # Northern Europe
  gate_dungeon_surtsdjup: "Surtsdjúp"
  gate_dungeon_surtsdjup_desc: "In the lava fields of the western highlands, old sagas tell of a fire giant who came north from Muspelheim and of caves where outlaws hid in his shadow. Surtsdjúp, the Deep of Surtr, begins in one such lava cave, its roof fallen in places to open on the grey sky. Further in, the cave does what no ordinary lava tube can: it grows hotter rather than colder, until the walls glow and rivers of molten rock flow where water should. Delvers count it among the most dangerous dungeons of the north, and the fire-born creatures of its lower layers seem to grow larger the deeper a party goes."
+ building_gate_dungeon_surtsdjup: "$gate_dungeon_surtsdjup$ $concept_gate_dungeon$"
  gate_dungeon_svartisgapet: "Svartisgapet"
  gate_dungeon_svartisgapet_desc: "Beneath the great icecap of Svartisen, whose old ice is so dense it looks almost black, a glacier tongue above a fjord has split open into a dark gap the locals call Svartisgapet. Fishermen rowing past say the gap breathes, drawing air in at dusk and letting it out at dawn. Within lies an ice cavern of black and blue, its walls holding stones, timbers, and the outlines of creatures frozen in mid-stride. Some of them are not as frozen as they appear."
+ building_gate_dungeon_svartisgapet: "$gate_dungeon_svartisgapet$ $concept_gate_dungeon$"
 
  # Russia
  gate_dungeon_ledyanoy_zev: "Ledyanoy Zev"
  gate_dungeon_ledyanoy_zev_desc: "Along the Sylva river in the western Urals, the gypsum hills are honeycombed with caves where ice lingers year round. Ledyanoy Zev, the Icy Maw, opens in one of these hills behind a curtain of icicles that regrows within the hour whenever it is broken. Inside, frost crystals as large as a man's hand grow on every surface, grottos fill with frozen lakes, and the cold seems to follow intruders rather than simply surround them. Its denizens are pale things that hunt by the warmth of a party's bodies."
+ building_gate_dungeon_ledyanoy_zev: "$gate_dungeon_ledyanoy_zev$ $concept_gate_dungeon$"
  gate_dungeon_kitezh: "Kitezh"
  gate_dungeon_kitezh_desc: "Lake Svetloyar is small, round, and deep, and for as long as anyone in the region can remember it has been said that a holy city lies beneath it, hidden from its enemies by the water, its bells still ringing on quiet nights. Kitezh is the dungeon the pilgrims did not expect: a flight of white stone steps descending from the lakeshore straight into the water, down which a party can walk dry-shod into a drowned city of churches, walls, and wooden streets beneath the lake. The bells do ring. No one who has returned has seen clearly what rings them."
+ building_gate_dungeon_kitezh: "$gate_dungeon_kitezh$ $concept_gate_dungeon$"
 
  # Eastern Europe
  gate_dungeon_qara_qoba: "Qara Qoba"
  gate_dungeon_qara_qoba_desc: "On the high karst plateaus of the Crimean mountains, the yayla pastures are pocked with sinkholes and shafts, most of them shallow and well known to the herders who graze their flocks there. Qara Qoba, the Black Cave, is a sinkhole that was always there but was never this deep. Below its lip a party descends into a world of marble-white chambers, curtain formations, and dripping galleries that branch endlessly. The deeper layers are said to be home to pale serpents and to echoes that answer back in voices other than one's own."
+ building_gate_dungeon_qara_qoba: "$gate_dungeon_qara_qoba$ $concept_gate_dungeon$"
  gate_dungeon_glebia_solna: "Glebia Solna"
  gate_dungeon_glebia_solna_desc: "South of Krakow, the salt mines run for miles underground, their chambers carved by generations of miners into chapels, halls, and staircases of grey-green rock salt. Glebia Solna, the Salt Deep, opens off a forgotten side gallery of one such mine. Its halls look carved rather than natural, with salt pillars, statues, and chandeliers of crystal, yet no miner's tools ever touched them. The deeper layers resemble a great salt palace more than a mine, garrisoned by figures of salt and stone that crumble when struck and reassemble when ignored."
+ building_gate_dungeon_glebia_solna: "$gate_dungeon_glebia_solna$ $concept_gate_dungeon$"
 
  # Nile Basin
  gate_dungeon_ta_djeser: "Ta-Djeser"
  gate_dungeon_ta_djeser_desc: "In the desert hills on the west bank of the Nile, where the old kings of Egypt cut their tombs into the rock, there is a tomb entrance no surveyor has listed and no robber has emptied. Its doorway is carved with the familiar figures of gods and kings, but the cartouches that should hold their names are blank. Ta-Djeser, named for the old Egyptian term for the sacred necropolis, descends through corridors and pillared halls painted with stars, burial chambers stacked with sealed sarcophagi, and false passages that end in pits. Its guardians are wrapped and patient, and they do not stay in their coffins."
+ building_gate_dungeon_ta_djeser: "$gate_dungeon_ta_djeser$ $concept_gate_dungeon$"
  gate_dungeon_deriba: "Deriba"
  gate_dungeon_deriba_desc: "Jebel Marra rises out of the dry plains of Darfur as a green island of cool slopes, streams, and terraced fields, and at its summit lies the Deriba caldera with its twin crater lakes. On the inner wall of the caldera, a fissure that should release nothing more than a breath of warm air opens into a dungeon of black rock and smouldering vents. Deriba is hotter than its surroundings by far, its layers crossed by rivers of molten stone and pools of boiling mud, and the creatures within are made as much of ash as of flesh."
+ building_gate_dungeon_deriba: "$gate_dungeon_deriba$ $concept_gate_dungeon$"
 
  # North Africa
  gate_dungeon_qabr_ar_raml: "Qabr ar-Raml"
