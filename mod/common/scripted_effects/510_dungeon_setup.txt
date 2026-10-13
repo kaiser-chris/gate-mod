@@ -82,50 +82,6 @@ gate_create_dungeon_expedition = {
 	clear_saved_scope = temp_party
 }
 
-create_gate_dungeon_tiefburg = {
-	container:gate_dungeon_tiefburg ?= {
-		destroy_container = yes
-	}
-	gate_create_dungeon = {
-		name = gate_dungeon_tiefburg
-		state_region = STATE_TYROL
-		background = dungeon_background_gate_tiefburg
-	}
-	container:gate_dungeon_tiefburg = {
-		gate_create_dungeon_layer = {
-			name = gate_dungeon_layer_generic_entrance
-			background = dungeon_layer_gate_top_tiefburg
-		}
-		gate_create_dungeon_layer = {
-			name = gate_dungeon_layer_generic_one
-			background = dungeon_layer_gate_inner_classic_01
-		}
-		gate_create_dungeon_layer = {
-			name = gate_dungeon_layer_generic_two
-			background = dungeon_layer_gate_inner_classic_02
-		}
-		gate_create_dungeon_layer = {
-			name = gate_dungeon_layer_generic_three
-			background = dungeon_layer_gate_inner_classic_03
-		}
-		gate_create_dungeon_layer = {
-			name = gate_dungeon_layer_generic_boss
-			background = dungeon_layer_gate_inner_classic_04
-		}
-		# dungeon exists at game start so its creation date needs
-		# to be shifted back to be before game start
-		change_variable = {
-			name = creation_date
-			subtract = 580 # days
-		}
-	}
-	add_to_global_variable_map = {
-		name = dungeons
-		key = bt:building_gate_dungeon_tiefburg
-		value = container:gate_dungeon_tiefburg
-	}
-}
-
 gate_create_dungeon = {
 	create_container = {
 		name = $name$
