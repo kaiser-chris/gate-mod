@@ -1,0 +1,103 @@
+﻿create_gate_dungeon_tiefburg = {
+	container:gate_dungeon_tiefburg ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_tiefburg
+		state_region = STATE_TYROL
+		background = dungeon_background_gate_tiefburg
+	}
+	container:gate_dungeon_tiefburg = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_tiefburg
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_classic_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_classic_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_classic_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_classic_04
+		}
+		# dungeon exists at game start so its creation date needs
+		# to be shifted back to be before game start
+		change_variable = {
+			name = creation_date
+			subtract = 580 # days
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_tiefburg
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_tiefburg
+		value = container:gate_dungeon_tiefburg
+	}
+}
+
+create_gate_dungeon_dunmorrach = {
+	container:gate_dungeon_dunmorrach ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_dunmorrach
+		state_region = STATE_HIGHLANDS
+		background = dungeon_background_gate_dunmorrach
+	}
+	container:gate_dungeon_dunmorrach = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_dunmorrach
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_classic_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_classic_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_classic_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_classic_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_classic_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_classic_01
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_dunmorrach
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_dunmorrach
+		value = container:gate_dungeon_dunmorrach
+	}
+}
