@@ -911,6 +911,11 @@ gate_veiled_interior.103 = {
 			days = very_long_modifier_time
 			is_decaying = yes
 		}
+		hidden_effect = {
+			scope:journal_entry ?= {
+				set_variable = gate_veiled_interior_done
+			}
+		}
 	}
 }
 

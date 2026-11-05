@@ -2,6 +2,11 @@
 	icon = gfx/interface/icons/religion_icons/gate_golden_faith.dds
 
 	group = je_group_internal_affairs
+	dlc = dlc_magic_gate
+
+	activation_description = {
+		always = yes
+	}
 
 	status_desc = {
 		first_valid = {
@@ -65,14 +70,7 @@
         c:GATE_AD ?= THIS
     }
 
-	widget = {
-		gui = "gui/com_journal_injects/injects.gui"
-		name = "com_journal_entry_dlc_icon"
-		container = "custom_widget_container_7"
-	}
-
 	immediate = {
-		add_gate_dlc_icon = yes
 		save_scope_as = gate_mbudye_dominion
 		c:LND = {
 			save_scope_as = gate_mbudye_lunda
@@ -115,113 +113,123 @@
 		}
 	}
 
-	complete = {
-		custom_tooltip = {
-			text = je_gate_mbudye_complete
-			AND = {
-				scope:journal_entry = {
-					scripted_bar_progress = {
-						name = pb_gate_mbudye
-						value < 100
-					}
-				}
-				OR = {
-					c:LND = {
-						NOT = {
-							is_subject_of = c:GATE_AD
-						}
-					}
-					scope:journal_entry = {
-						scripted_bar_progress = {
-							name = pb_gate_mbudye_lunda
-							value >= 100
-						}
-					}
-				}
-				OR = {
-					c:CHK = {
-						NOT = {
-							is_subject_of = c:GATE_AD
-						}
-					}
-					scope:journal_entry = {
-						scripted_bar_progress = {
-							name = pb_gate_mbudye_chokwe
-							value >= 100
-						}
-					}
-				}
-				OR = {
-					c:KZM = {
-						NOT = {
-							is_subject_of = c:GATE_AD
-						}
-					}
-					scope:journal_entry = {
-						scripted_bar_progress = {
-							name = pb_gate_mbudye_kazembe
-							value >= 100
-						}
-					}
-				}
-				OR = {
-					c:KSN = {
-						NOT = {
-							is_subject_of = c:GATE_AD
-						}
-					}
-					scope:journal_entry = {
-						scripted_bar_progress = {
-							name = pb_gate_mbudye_kasanje
-							value >= 100
-						}
-					}
-				}
-			}
-		}
-	}
-
-	fail = {
-		OR = {
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
 			custom_tooltip = {
-				text = je_gate_mbudye_fail_support
-				scope:journal_entry = {
-					scripted_bar_progress = {
-						name = pb_gate_mbudye
-						value <= 0
+				text = je_gate_mbudye_complete
+				AND = {
+					scope:journal_entry = {
+						scripted_bar_progress = {
+							name = pb_gate_mbudye
+							value < 100
+						}
+					}
+					OR = {
+						c:LND = {
+							NOT = {
+								is_subject_of = c:GATE_AD
+							}
+						}
+						scope:journal_entry = {
+							scripted_bar_progress = {
+								name = pb_gate_mbudye_lunda
+								value >= 100
+							}
+						}
+					}
+					OR = {
+						c:CHK = {
+							NOT = {
+								is_subject_of = c:GATE_AD
+							}
+						}
+						scope:journal_entry = {
+							scripted_bar_progress = {
+								name = pb_gate_mbudye_chokwe
+								value >= 100
+							}
+						}
+					}
+					OR = {
+						c:KZM = {
+							NOT = {
+								is_subject_of = c:GATE_AD
+							}
+						}
+						scope:journal_entry = {
+							scripted_bar_progress = {
+								name = pb_gate_mbudye_kazembe
+								value >= 100
+							}
+						}
+					}
+					OR = {
+						c:KSN = {
+							NOT = {
+								is_subject_of = c:GATE_AD
+							}
+						}
+						scope:journal_entry = {
+							scripted_bar_progress = {
+								name = pb_gate_mbudye_kasanje
+								value >= 100
+							}
+						}
 					}
 				}
 			}
-			custom_tooltip = {
-				text = je_gate_mbudye_fail_annex
-                OR = {
-                    has_global_variable = gate_mbudye_unification
-                    NAND = {
-                        exists = c:LND
-                        exists = c:CHK
-                        exists = c:KZM
-                        exists = c:KSN
-                    }
-                }
-			}
 		}
-	}
-
-	on_complete = {
-		trigger_event = {
-			id = gate_mbudye.1
-			popup = yes
-		}
-		add_journal_entry = {
-			type = je_gate_mbudye_integration
-		}
-	}
-
-	on_fail = {
-		hidden_effect = {
+		effect = {
 			trigger_event = {
-				id = gate_mbudye.2
+				id = gate_mbudye.1
 				popup = yes
+			}
+			add_journal_entry = {
+				type = je_gate_mbudye_integration
+			}
+		}
+	}
+
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			OR = {
+				custom_tooltip = {
+					text = je_gate_mbudye_fail_support
+					scope:journal_entry = {
+						scripted_bar_progress = {
+							name = pb_gate_mbudye
+							value <= 0
+						}
+					}
+				}
+				custom_tooltip = {
+					text = je_gate_mbudye_fail_annex
+					OR = {
+						has_global_variable = gate_mbudye_unification
+						NAND = {
+							exists = c:LND
+							exists = c:CHK
+							exists = c:KZM
+							exists = c:KSN
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			hidden_effect = {
+				trigger_event = {
+					id = gate_mbudye.2
+					popup = yes
+				}
 			}
 		}
 	}
@@ -248,6 +256,11 @@ je_gate_mbudye_integration = {
 	icon = gfx/interface/icons/religion_icons/gate_golden_faith.dds
 
 	group = je_group_internal_affairs
+	dlc = dlc_magic_gate
+
+	activation_description = {
+		always = yes
+	}
 
 	status_desc = {
 		first_valid = {
@@ -272,18 +285,6 @@ je_gate_mbudye_integration = {
 		}
 	}
 
-	complete = {
-		custom_tooltip = {
-			text = je_gate_mbudye_integration_complete
-			scope:journal_entry = {
-				scripted_bar_progress = {
-					name = pb_gate_mbudye_integration
-					value >= 12
-				}
-			}
-		}
-	}
-
 
 	immediate = {
 		save_scope_as = gate_mbudye_dominion
@@ -301,17 +302,25 @@ je_gate_mbudye_integration = {
 		}
 	}
 
-	on_complete = {
-		trigger_event = {
-			id = gate_mbudye.17
-			popup = yes
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				text = je_gate_mbudye_integration_complete
+				scope:journal_entry = {
+					scripted_bar_progress = {
+						name = pb_gate_mbudye_integration
+						value >= 12
+					}
+				}
+			}
 		}
-	}
-
-	on_fail = {
-		hidden_effect = {
+		effect = {
 			trigger_event = {
-				id = gate_mbudye.2
+				id = gate_mbudye.17
 				popup = yes
 			}
 		}

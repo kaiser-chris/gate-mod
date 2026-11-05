@@ -2,6 +2,11 @@
 	icon = "gfx/interface/icons/event_icons/event_gate_struggle_shield.dds"
 
 	group = je_group_foreign_affairs
+	dlc = dlc_magic_gate
+
+	activation_description = {
+		always = yes
+	}
 
 	status_desc = {
 		first_valid = {
@@ -46,70 +51,73 @@
 		has_building = building_gate_zambia
 		c:GATE_AD ?= this
 
-		# Debug
+		#TODO: Debug
 		has_global_variable = com_debug
         always = no
 	}
 
     possible = {
-        # Debug
+        #TODO: Debug
         has_global_variable = com_debug
         always = no
     }
 
-	widget = {
-		gui = "gui/com_journal_injects/injects.gui"
-		name = "com_journal_entry_dlc_icon"
-		container = "custom_widget_container_7"
-	}
-
 	immediate = {
-		add_gate_dlc_icon = yes
 		set_variable = je_gate_ankaris_orcish_elven_war
 		trigger_event = {
 			id = gate_ankaris_orcish_elven_war.1
 		}
 	}
 
-	complete = {
-		custom_tooltip = {
-			text = je_gate_ankaris_orcish_elven_war_complete
-			scope:journal_entry = {
-				scripted_bar_progress = {
-					name = pb_gate_ankaris_orcish_elven_war
-					value >= 100
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				text = je_gate_ankaris_orcish_elven_war_complete
+				scope:journal_entry = {
+					scripted_bar_progress = {
+						name = pb_gate_ankaris_orcish_elven_war
+						value >= 100
+					}
 				}
 			}
 		}
+		effect = {
+			hidden_effect = {
+				remove_variable = je_gate_ankaris_orcish_elven_war
+			}
+			trigger_event = gate_orcish_expansion.1
+		}
 	}
 
-	fail = {
-		NOT = {
-			has_building = building_gate_zambia
-		}
-		custom_tooltip = {
-			text = je_gate_ankaris_orcish_elven_war_fail
-			scope:journal_entry = {
-				scripted_bar_progress = {
-					name = pb_gate_ankaris_orcish_elven_war
-					value <= 0
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			NOT = {
+				has_building = building_gate_zambia
+			}
+			custom_tooltip = {
+				text = je_gate_ankaris_orcish_elven_war_fail
+				scope:journal_entry = {
+					scripted_bar_progress = {
+						name = pb_gate_ankaris_orcish_elven_war
+						value <= 0
+					}
 				}
 			}
 		}
-	}
-
-	on_complete = {
-		hidden_effect = {
-			remove_variable = je_gate_ankaris_orcish_elven_war
+		effect = {
+			hidden_effect = {
+				remove_variable = je_gate_ankaris_orcish_elven_war
+			}
+			trigger_event = gate_orcish_expansion.2
 		}
-		trigger_event = gate_orcish_expansion.1
-	}
-
-	on_fail = {
-		hidden_effect = {
-			remove_variable = je_gate_ankaris_orcish_elven_war
-		}
-		trigger_event = gate_orcish_expansion.2
 	}
 
 	scripted_progress_bar = pb_gate_ankaris_orcish_elven_war

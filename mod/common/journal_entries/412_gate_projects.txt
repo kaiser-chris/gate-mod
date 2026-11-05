@@ -2,11 +2,10 @@
 	icon = "gfx/interface/icons/event_icons/event_gate_project.dds"
 
 	group = je_group_gate_projects
+	dlc = dlc_magic_gate
 
-	widget = {
-		gui = "gui/com_journal_injects/injects.gui"
-		name = "com_journal_entry_dlc_icon"
-		container = "custom_widget_container_7"
+	activation_description = {
+		always = yes
 	}
 
 	widget = {
@@ -25,7 +24,6 @@
 	}
 
 	immediate = {
-        add_gate_dlc_icon = yes
 		capital = {
 			random_scope_building = {
 				limit = {
@@ -41,10 +39,6 @@
 		}
 	}
 
-	complete = {
-		gate_project_check_complete = yes
-	}
-
 	on_monthly_pulse = {
 		effect = {
 			if = {
@@ -58,8 +52,56 @@
 		}
 	}
 
-	invalid = {
-		hidden_trigger = {
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			gate_project_check_complete = yes
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_modifier = modifier_gate_project_institute_new_wing
+					}
+				}
+				add_modifier = modifier_gate_project_institute_new_wing
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_modifier = modifier_gate_project_institute_improved_instruments
+					}
+				}
+				add_modifier = modifier_gate_project_institute_improved_instruments
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_modifier = modifier_gate_project_institute_better_mana_conduits
+					}
+				}
+				add_modifier = modifier_gate_project_institute_better_mana_conduits
+			}
+			gate_add_magic_innovation = {
+				amount = 500
+			}
+			gate_add_researcher_experience = {
+				amount = 10
+			}
+			hidden_effect = {
+				set_variable = gate_has_finished_project
+				gate_stop_magic_project = yes
+			}
+		}
+	}
+
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
 			OR = {
 				has_gate_active_magic_project = no
 				AND = {
@@ -69,47 +111,7 @@
 				}
 			}
 		}
-	}
-
-	on_invalid = {
-		hidden_effect = {
-			gate_stop_magic_project = yes
-		}
-	}
-
-	on_complete = {
-		if = {
-			limit = {
-				NOT = {
-					has_modifier = modifier_gate_project_institute_new_wing
-				}
-			}
-			add_modifier = modifier_gate_project_institute_new_wing
-		}
-		else_if = {
-			limit = {
-				NOT = {
-					has_modifier = modifier_gate_project_institute_improved_instruments
-				}
-			}
-			add_modifier = modifier_gate_project_institute_improved_instruments
-		}
-		else_if = {
-			limit = {
-				NOT = {
-					has_modifier = modifier_gate_project_institute_better_mana_conduits
-				}
-			}
-			add_modifier = modifier_gate_project_institute_better_mana_conduits
-		}
-		gate_add_magic_innovation = {
-			amount = 500
-		}
-		gate_add_researcher_experience = {
-			amount = 10
-		}
-		hidden_effect = {
-			set_variable = gate_has_finished_project
+		effect = {
 			gate_stop_magic_project = yes
 		}
 	}
@@ -151,11 +153,10 @@ je_gate_project_domain = {
 	icon = "gfx/interface/icons/event_icons/event_gate_project.dds"
 
 	group = je_group_gate_projects
+	dlc = dlc_magic_gate
 
-	widget = {
-		gui = "gui/com_journal_injects/injects.gui"
-		name = "com_journal_entry_dlc_icon"
-		container = "custom_widget_container_7"
+	activation_description = {
+		always = yes
 	}
 
 	status_desc = {
@@ -167,48 +168,48 @@ je_gate_project_domain = {
 		}
 	}
 
-	immediate = {
-        add_gate_dlc_icon = yes
-	}
-
-	complete = {
-		gate_project_check_complete = yes
-	}
-
 	on_monthly_pulse = {
 		effect = {
 			gate_project_progress = yes
 		}
 	}
 
-	invalid = {
-		hidden_trigger = {
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			gate_project_check_complete = yes
+		}
+		effect = {
+			trigger_event = magic_ethic.1
+			gate_add_magic_innovation = {
+				amount = 500
+			}
+			gate_add_researcher_experience = {
+				amount = 10
+			}
+			hidden_effect = {
+				set_variable = gate_has_finished_project
+				gate_stop_magic_project = yes
+				set_variable = gate_has_researched_domain
+			}
+		}
+	}
+
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
 			OR = {
 				has_gate_active_magic_project = no
 				var:magic_ethics >= gate_max_ethics
 				has_variable = gate_has_researched_domain
 			}
 		}
-	}
-
-	on_invalid = {
-		hidden_effect = {
+		effect = {
 			gate_stop_magic_project = yes
-		}
-	}
-
-	on_complete = {
-		trigger_event = magic_ethic.1
-		gate_add_magic_innovation = {
-			amount = 500
-		}
-		gate_add_researcher_experience = {
-			amount = 10
-		}
-		hidden_effect = {
-			set_variable = gate_has_finished_project
-			gate_stop_magic_project = yes
-			set_variable = gate_has_researched_domain
 		}
 	}
 
@@ -236,11 +237,10 @@ je_gate_project_change_domain = {
 	icon = "gfx/interface/icons/event_icons/event_gate_project.dds"
 
 	group = je_group_gate_projects
+	dlc = dlc_magic_gate
 
-	widget = {
-		gui = "gui/com_journal_injects/injects.gui"
-		name = "com_journal_entry_dlc_icon"
-		container = "custom_widget_container_7"
+	activation_description = {
+		always = yes
 	}
 
 	status_desc = {
@@ -252,52 +252,52 @@ je_gate_project_change_domain = {
 		}
 	}
 
-	immediate = {
-		add_gate_dlc_icon = yes
-	}
-
-	complete = {
-		gate_project_check_complete = yes
-	}
-
 	on_monthly_pulse = {
 		effect = {
 			gate_project_progress = yes
 		}
 	}
 
-	invalid = {
-		hidden_trigger = {
-			has_gate_active_magic_project = no
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			gate_project_check_complete = yes
 		}
-	}
-
-	on_invalid = {
-		hidden_effect = {
-			gate_stop_magic_project = yes
-		}
-	}
-
-	on_complete = {
-		hidden_effect = {
-			set_variable = {
-				name = magic_ethics
-				value = 0
+		effect = {
+			hidden_effect = {
+				set_variable = {
+					name = magic_ethics
+					value = 0
+				}
+			}
+			gate_reset_ethics = yes
+			trigger_event = magic_ethic.1
+			trigger_event = magic_ethic.1
+			trigger_event = magic_ethic.1
+			gate_add_magic_innovation = {
+				amount = 500
+			}
+			gate_add_researcher_experience = {
+				amount = 15
+			}
+			hidden_effect = {
+				set_variable = gate_has_finished_project
+				set_variable = gate_has_researched_change_domains
+				gate_stop_magic_project = yes
 			}
 		}
-		gate_reset_ethics = yes
-		trigger_event = magic_ethic.1
-		trigger_event = magic_ethic.1
-		trigger_event = magic_ethic.1
-		gate_add_magic_innovation = {
-			amount = 500
+	}
+
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			has_gate_active_magic_project = no
 		}
-		gate_add_researcher_experience = {
-			amount = 15
-		}
-		hidden_effect = {
-			set_variable = gate_has_finished_project
-			set_variable = gate_has_researched_change_domains
+		effect = {
 			gate_stop_magic_project = yes
 		}
 	}
@@ -326,11 +326,10 @@ je_gate_project_improve_mana_extraction = {
 	icon = "gfx/interface/icons/event_icons/event_gate_project.dds"
 
 	group = je_group_gate_projects
+	dlc = dlc_magic_gate
 
-	widget = {
-		gui = "gui/com_journal_injects/injects.gui"
-		name = "com_journal_entry_dlc_icon"
-		container = "custom_widget_container_7"
+	activation_description = {
+		always = yes
 	}
 
 	widget = {
@@ -349,7 +348,6 @@ je_gate_project_improve_mana_extraction = {
 	}
 
 	immediate = {
-        add_gate_dlc_icon = yes
 		random_scope_building = {
 			# Selected outside this
 			scope:journal_entry = {
@@ -361,18 +359,41 @@ je_gate_project_improve_mana_extraction = {
 		}
 	}
 
-	complete = {
-		gate_project_check_complete = yes
-	}
-
 	on_monthly_pulse = {
 		effect = {
 			gate_project_progress = yes
 		}
 	}
 
-	invalid = {
-		hidden_trigger = {
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			gate_project_check_complete = yes
+		}
+		effect = {
+			scope:journal_entry.var:com_journal_entry_building ?= {
+				add_modifier = modifier_gate_project_improved_mana_extraction
+			}
+			gate_add_magic_innovation = {
+				amount = 500
+			}
+			gate_add_researcher_experience = {
+				amount = 10
+			}
+			hidden_effect = {
+				set_variable = gate_has_finished_project
+				gate_stop_magic_project = yes
+			}
+		}
+	}
+
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
 			OR = {
 				has_gate_active_magic_project = no
 				# Relevant Building has been removed
@@ -381,26 +402,7 @@ je_gate_project_improve_mana_extraction = {
 				}
 			}
 		}
-	}
-
-	on_invalid = {
-		hidden_effect = {
-			gate_stop_magic_project = yes
-		}
-	}
-
-	on_complete = {
-		scope:journal_entry.var:com_journal_entry_building ?= {
-			add_modifier = modifier_gate_project_improved_mana_extraction
-		}
-		gate_add_magic_innovation = {
-			amount = 500
-		}
-		gate_add_researcher_experience = {
-			amount = 10
-		}
-		hidden_effect = {
-			set_variable = gate_has_finished_project
+		effect = {
 			gate_stop_magic_project = yes
 		}
 	}
@@ -429,11 +431,10 @@ je_gate_project_modernize_seed_selection = {
 	icon = "gfx/interface/icons/event_icons/event_gate_project.dds"
 
 	group = je_group_gate_projects
+	dlc = dlc_magic_gate
 
-	widget = {
-		gui = "gui/com_journal_injects/injects.gui"
-		name = "com_journal_entry_dlc_icon"
-		container = "custom_widget_container_7"
+	activation_description = {
+		always = yes
 	}
 
 	widget = {
@@ -452,7 +453,6 @@ je_gate_project_modernize_seed_selection = {
 	}
 
 	immediate = {
-        add_gate_dlc_icon = yes
 		random_scope_building = {
 			# Selected outside this
 			scope:journal_entry = {
@@ -464,18 +464,41 @@ je_gate_project_modernize_seed_selection = {
 		}
 	}
 
-	complete = {
-		gate_project_check_complete = yes
-	}
-
 	on_monthly_pulse = {
 		effect = {
 			gate_project_progress = yes
 		}
 	}
 
-	invalid = {
-		hidden_trigger = {
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			gate_project_check_complete = yes
+		}
+		effect = {
+			scope:journal_entry.var:com_journal_entry_building ?= {
+				add_modifier = modifier_gate_project_modernize_seed_selection
+			}
+			gate_add_magic_innovation = {
+				amount = 500
+			}
+			gate_add_researcher_experience = {
+				amount = 10
+			}
+			hidden_effect = {
+				set_variable = gate_has_finished_project
+				gate_stop_magic_project = yes
+			}
+		}
+	}
+
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
 			OR = {
 				has_gate_active_magic_project = no
 				# Relevant Building has been removed
@@ -484,26 +507,7 @@ je_gate_project_modernize_seed_selection = {
 				}
 			}
 		}
-	}
-
-	on_invalid = {
-		hidden_effect = {
-			gate_stop_magic_project = yes
-		}
-	}
-
-	on_complete = {
-		scope:journal_entry.var:com_journal_entry_building ?= {
-			add_modifier = modifier_gate_project_modernize_seed_selection
-		}
-		gate_add_magic_innovation = {
-			amount = 500
-		}
-		gate_add_researcher_experience = {
-			amount = 10
-		}
-		hidden_effect = {
-			set_variable = gate_has_finished_project
+		effect = {
 			gate_stop_magic_project = yes
 		}
 	}

@@ -1,23 +1,24 @@
 ﻿je_obj_gate_hire_researcher = {
 	icon = "gfx/interface/icons/event_icons/event_gate_magic.dds"
 	group = je_group_objectives
+	dlc = dlc_magic_gate
 
-	widget = {
-		gui = "gui/com_journal_injects/injects.gui"
-		name = "com_journal_entry_dlc_icon"
-		container = "custom_widget_container_7"
+	activation_description = {
+		always = yes
 	}
-
-    immediate = {
-		add_gate_dlc_icon = yes
-    }
 
 	status_desc = {
 		desc = je_obj_gate_hire_researcher_status
 	}
 
-	complete = {
-		has_gate_magic_researcher = yes
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			has_gate_magic_researcher = yes
+		}
 	}
 
 	should_be_pinned_by_default_uninvolved_or_context = yes
@@ -28,24 +29,25 @@
 je_obj_gate_build_research_institute = {
 	icon = "gfx/interface/icons/event_icons/event_gate_magic.dds"
 	group = je_group_objectives
+	dlc = dlc_magic_gate
 
-	widget = {
-		gui = "gui/com_journal_injects/injects.gui"
-		name = "com_journal_entry_dlc_icon"
-		container = "custom_widget_container_7"
+	activation_description = {
+		always = yes
 	}
-
-    immediate = {
-		add_gate_dlc_icon = yes
-    }
 
 	status_desc = {
 		desc = je_obj_gate_build_research_institute_status
 	}
 
-	complete = {
-		capital = {
-			has_building = building_gate_magic_research_institute
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			capital = {
+				has_building = building_gate_magic_research_institute
+			}
 		}
 	}
 
@@ -57,23 +59,24 @@ je_obj_gate_build_research_institute = {
 je_obj_gate_magic_knowledge = {
 	icon = "gfx/interface/icons/event_icons/event_gate_magic.dds"
 	group = je_group_objectives
+	dlc = dlc_magic_gate
 
-	widget = {
-		gui = "gui/com_journal_injects/injects.gui"
-		name = "com_journal_entry_dlc_icon"
-		container = "custom_widget_container_7"
+	activation_description = {
+		always = yes
 	}
-
-    immediate = {
-		add_gate_dlc_icon = yes
-    }
 
 	status_desc = {
 		desc = je_obj_gate_magic_knowledge_status
 	}
 
-	complete = {
-		is_gate_magic_country = yes
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			is_gate_magic_country = yes
+		}
 	}
 
 	should_be_pinned_by_default_uninvolved_or_context = yes
@@ -84,25 +87,26 @@ je_obj_gate_magic_knowledge = {
 je_obj_gate_finish_magic_project = {
 	icon = "gfx/interface/icons/event_icons/event_gate_magic.dds"
 	group = je_group_objectives
+	dlc = dlc_magic_gate
 
-	widget = {
-		gui = "gui/com_journal_injects/injects.gui"
-		name = "com_journal_entry_dlc_icon"
-		container = "custom_widget_container_7"
+	activation_description = {
+		always = yes
 	}
-
-    immediate = {
-		add_gate_dlc_icon = yes
-    }
 
 	status_desc = {
 		desc = je_obj_gate_finish_magic_project_status
 	}
 
-	complete = {
-		custom_tooltip = {
-			text = je_obj_gate_finish_magic_project_goal_tooltip
-			has_variable = gate_has_finished_project
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				text = je_obj_gate_finish_magic_project_goal_tooltip
+				has_variable = gate_has_finished_project
+			}
 		}
 	}
 
@@ -114,27 +118,28 @@ je_obj_gate_finish_magic_project = {
 je_obj_gate_produce_magic_goods = {
 	icon = "gfx/interface/icons/event_icons/event_gate_magic.dds"
 	group = je_group_objectives
+	dlc = dlc_magic_gate
 
-    immediate = {
-		add_gate_dlc_icon = yes
-    }
-
-	widget = {
-		gui = "gui/com_journal_injects/injects.gui"
-		name = "com_journal_entry_dlc_icon"
-		container = "custom_widget_container_7"
+	activation_description = {
+		always = yes
 	}
 
 	status_desc = {
 		desc = je_obj_gate_produce_magic_goods_status
 	}
 
-	complete = {
-		any_scope_building = {
-			is_building_group = bg_gate_mana_extraction
-		}
-		any_scope_building = {
-			is_building_group = bg_gate_druid_groves
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			any_scope_building = {
+				is_building_group = bg_gate_mana_extraction
+			}
+			any_scope_building = {
+				is_building_group = bg_gate_druid_groves
+			}
 		}
 	}
 
@@ -146,24 +151,25 @@ je_obj_gate_produce_magic_goods = {
 je_obj_gate_magic_academy = {
 	icon = "gfx/interface/icons/event_icons/event_gate_magic.dds"
 	group = je_group_objectives
+	dlc = dlc_magic_gate
 
-	widget = {
-		gui = "gui/com_journal_injects/injects.gui"
-		name = "com_journal_entry_dlc_icon"
-		container = "custom_widget_container_7"
+	activation_description = {
+		always = yes
 	}
-
-    immediate = {
-		add_gate_dlc_icon = yes
-    }
 
 	status_desc = {
 		desc = je_obj_gate_magic_academy_status
 	}
 
-	complete = {
-		capital = {
-			has_building = building_gate_magic_academy
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			capital = {
+				has_building = building_gate_magic_academy
+			}
 		}
 	}
 

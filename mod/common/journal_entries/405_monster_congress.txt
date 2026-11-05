@@ -2,6 +2,11 @@
 	icon = "gfx/interface/icons/event_icons/event_gate_monster.dds"
 
 	group = je_group_gate_magical_affairs
+	dlc = dlc_magic_gate
+
+	activation_description = {
+		always = yes
+	}
 
 	scripted_button = je_gate_monster_congress_button_start
 
@@ -11,14 +16,7 @@
 		container = "custom_widget_container_2"
 	}
 
-	widget = {
-		gui = "gui/com_journal_injects/injects.gui"
-		name = "com_journal_entry_dlc_icon"
-		container = "custom_widget_container_7"
-	}
-
     immediate = {
-		add_gate_dlc_icon = yes
 		if = {
 			limit = {
 				NOT = {
@@ -119,91 +117,106 @@
 		}
 	}
 
-	complete = {
-		custom_tooltip = {
-			text = je_gate_monster_congress_custom_goal
-			scope:journal_entry = {
-				scripted_bar_progress = {
-					name = pb_gate_monster_congress
-					value >= 6 # Months
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				text = je_gate_monster_congress_custom_goal
+				scope:journal_entry = {
+					scripted_bar_progress = {
+						name = pb_gate_monster_congress
+						value >= 6 # Months
+					}
 				}
 			}
-		}
-		custom_tooltip = {
-			text = je_gate_monster_congress_button_start_block_no_law
-			scope:journal_entry = {
-				has_variable = selected_law
-			}
-		}
-	}
-
-	timeout = normal_modifier_time
-
-	invalid = {
-		is_gate_planet_country = yes
-	}
-
-	on_complete = {
-		set_variable = monster_congress_happened
-		if = {
-			limit = {
+			custom_tooltip = {
+				text = je_gate_monster_congress_button_start_block_no_law
 				scope:journal_entry = {
 					has_variable = selected_law
 				}
 			}
-			activate_law = scope:journal_entry.var:selected_law
 		}
-		trigger_event = gate_monster_attack.4
+		effect = {
+			set_variable = monster_congress_happened
+			if = {
+				limit = {
+					scope:journal_entry = {
+						has_variable = selected_law
+					}
+				}
+				activate_law = scope:journal_entry.var:selected_law
+			}
+			trigger_event = gate_monster_attack.4
+		}
 	}
 
-	on_timeout = {
-		set_variable = monster_congress_happened
-		if = {
-			limit = {
-				has_law = law_type:law_traditionalism
-			}
-			activate_law = law_type:law_gate_local_monster_hunters
-			law_type:law_gate_local_monster_hunters = {
-				save_scope_as = selected_law
-			}
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			is_gate_planet_country = yes
 		}
-		else_if = {
-			limit = {
-				ig:ig_industrialists = {
-					is_powerful = yes
-					is_in_government = yes
-				}
-				NOT = {
+	}
+
+	outcome = {
+		header = JOURNAL_ENTRY_TIMEOUT
+		effect_header = JOURNAL_ENTRY_ON_TIMEOUT
+		flags = { timeout }
+		conclusion_desc = JOURNAL_ENTRY_TIMEOUT_CONCLUSION_DESC
+		effect = {
+			set_variable = monster_congress_happened
+			if = {
+				limit = {
 					has_law = law_type:law_traditionalism
 				}
-				has_technology_researched = currency_standards
-			}
-			activate_law = law_type:law_gate_private_monster_hunters
-			law_type:law_gate_private_monster_hunters = {
-				save_scope_as = selected_law
-			}
-		}
-		else_if = {
-			limit = {
-				ig:ig_armed_forces = {
-					is_powerful = yes
-					is_in_government = yes
+				activate_law = law_type:law_gate_local_monster_hunters
+				law_type:law_gate_local_monster_hunters = {
+					save_scope_as = selected_law
 				}
-				has_technology_researched = logistics
 			}
-			activate_law = law_type:law_gate_militarized_monster_hunters
-			law_type:law_gate_militarized_monster_hunters = {
-				save_scope_as = selected_law
+			else_if = {
+				limit = {
+					ig:ig_industrialists = {
+						is_powerful = yes
+						is_in_government = yes
+					}
+					NOT = {
+						has_law = law_type:law_traditionalism
+					}
+					has_technology_researched = currency_standards
+				}
+				activate_law = law_type:law_gate_private_monster_hunters
+				law_type:law_gate_private_monster_hunters = {
+					save_scope_as = selected_law
+				}
 			}
+			else_if = {
+				limit = {
+					ig:ig_armed_forces = {
+						is_powerful = yes
+						is_in_government = yes
+					}
+					has_technology_researched = logistics
+				}
+				activate_law = law_type:law_gate_militarized_monster_hunters
+				law_type:law_gate_militarized_monster_hunters = {
+					save_scope_as = selected_law
+				}
+			}
+			else = {
+				activate_law = law_type:law_gate_dedicated_monster_hunters
+				law_type:law_gate_dedicated_monster_hunters = {
+					save_scope_as = selected_law
+				}
+			}
+			trigger_event = gate_monster_attack.4
 		}
-		else = {
-			activate_law = law_type:law_gate_dedicated_monster_hunters
-			law_type:law_gate_dedicated_monster_hunters = {
-				save_scope_as = selected_law
-			}
-		}
-		trigger_event = gate_monster_attack.4
 	}
+
+	timeout = normal_modifier_time
 
 	progressbar = no
 

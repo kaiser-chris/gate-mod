@@ -2,6 +2,11 @@
 	icon = "gfx/interface/icons/goods_icons/prestige_goods/gate_prestige_mana_crystals.dds"
 
 	group = je_group_technology
+	dlc = dlc_magic_gate
+
+	activation_description = {
+		always = yes
+	}
 
 	is_shown_when_inactive = {
 		has_dlc_feature = mp1_content
@@ -34,14 +39,7 @@
 		container = "custom_widget_container_2"
 	}
 
-	widget = {
-		gui = "gui/com_journal_injects/injects.gui"
-		name = "com_journal_entry_dlc_icon"
-		container = "custom_widget_container_7"
-	}
-
 	immediate = {
-		add_gate_dlc_icon = yes
 		random_company = {
 			limit = {
 				can_potentially_produce_prestige_goods = prestige_good_gate_generic_mana
@@ -68,34 +66,6 @@
 		}
 	}
 
-	complete = {
-		trigger_if = {
-			limit = {
-				has_variable = prestige_mana_timer_var
-			}
-			scope:journal_entry = {
-				is_goal_complete = yes
-			}
-		}
-		trigger_if = {
-			limit = {
-				exists = scope:relevant_company
-			}
-			scope:relevant_company ?= {
-				company_is_prosperous = yes
-			}
-		}
-		trigger_if = {
-			limit = {
-				exists = scope:relevant_goods
-			}
-			custom_tooltip = {
-				text = relevant_goods_production_rank_tt
-				"goods_production_rank(scope:relevant_goods)" <= 3
-			}
-		}
-	}
-
 	on_monthly_pulse = {
 		effect = {
 			if = {
@@ -110,24 +80,61 @@
 		}
 	}
 
-	on_complete = {
-		if = {
-			limit = {
-				exists = scope:relevant_company
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			trigger_if = {
+				limit = {
+					has_variable = prestige_mana_timer_var
+				}
+				scope:journal_entry = {
+					is_goal_complete = yes
+				}
 			}
-			custom_tooltip = {
-				text = je_prestige_goods_gate_mana_reward_tt
+			trigger_if = {
+				limit = {
+					exists = scope:relevant_company
+				}
 				scope:relevant_company ?= {
-					set_variable = gate_prestige_good_generic_mana
+					company_is_prosperous = yes
+				}
+			}
+			trigger_if = {
+				limit = {
+					exists = scope:relevant_goods
+				}
+				custom_tooltip = {
+					text = relevant_goods_production_rank_tt
+					"goods_production_rank(scope:relevant_goods)" <= 3
 				}
 			}
 		}
-		post_notification = message_prestige_good_gate_generic_mana_unlocked
+		effect = {
+			if = {
+				limit = {
+					exists = scope:relevant_company
+				}
+				custom_tooltip = {
+					text = je_prestige_goods_gate_mana_reward_tt
+					scope:relevant_company ?= {
+						set_variable = gate_prestige_good_generic_mana
+					}
+				}
+			}
+			post_notification = message_prestige_good_gate_generic_mana_unlocked
+		}
 	}
 
-	invalid = {
-		NOT = {
-			exists = scope:relevant_company
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			NOT = {
+				exists = scope:relevant_company
+			}
 		}
 	}
 
@@ -150,6 +157,11 @@ je_prestige_goods_gate_golem = {
 	icon = "gfx/interface/icons/goods_icons/prestige_goods/gate_prestige_golems.dds"
 
 	group = je_group_technology
+	dlc = dlc_magic_gate
+
+	activation_description = {
+		always = yes
+	}
 
 	is_shown_when_inactive = {
 		has_dlc_feature = mp1_content
@@ -182,14 +194,7 @@ je_prestige_goods_gate_golem = {
 		container = "custom_widget_container_2"
 	}
 
-	widget = {
-		gui = "gui/com_journal_injects/injects.gui"
-		name = "com_journal_entry_dlc_icon"
-		container = "custom_widget_container_7"
-	}
-
 	immediate = {
-		add_gate_dlc_icon = yes
 		random_company = {
 			limit = {
 				can_potentially_produce_prestige_goods = prestige_good_gate_generic_golem
@@ -216,34 +221,6 @@ je_prestige_goods_gate_golem = {
 		}
 	}
 
-	complete = {
-		trigger_if = {
-			limit = {
-				has_variable = prestige_golem_timer_var
-			}
-			scope:journal_entry = {
-				is_goal_complete = yes
-			}
-		}
-		trigger_if = {
-			limit = {
-				exists = scope:relevant_company
-			}
-			scope:relevant_company ?= {
-				company_is_prosperous = yes
-			}
-		}
-		trigger_if = {
-			limit = {
-				exists = scope:relevant_goods
-			}
-			custom_tooltip = {
-				text = relevant_goods_production_rank_tt
-				"goods_production_rank(scope:relevant_goods)" <= 3
-			}
-		}
-	}
-
 	on_monthly_pulse = {
 		effect = {
 			if = {
@@ -258,24 +235,61 @@ je_prestige_goods_gate_golem = {
 		}
 	}
 
-	on_complete = {
-		if = {
-			limit = {
-				exists = scope:relevant_company
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			trigger_if = {
+				limit = {
+					has_variable = prestige_golem_timer_var
+				}
+				scope:journal_entry = {
+					is_goal_complete = yes
+				}
 			}
-			custom_tooltip = {
-				text = je_prestige_goods_gate_golem_reward_tt
+			trigger_if = {
+				limit = {
+					exists = scope:relevant_company
+				}
 				scope:relevant_company ?= {
-					set_variable = gate_prestige_good_generic_golem
+					company_is_prosperous = yes
+				}
+			}
+			trigger_if = {
+				limit = {
+					exists = scope:relevant_goods
+				}
+				custom_tooltip = {
+					text = relevant_goods_production_rank_tt
+					"goods_production_rank(scope:relevant_goods)" <= 3
 				}
 			}
 		}
-		post_notification = message_prestige_good_gate_generic_golem_unlocked
+		effect = {
+			if = {
+				limit = {
+					exists = scope:relevant_company
+				}
+				custom_tooltip = {
+					text = je_prestige_goods_gate_golem_reward_tt
+					scope:relevant_company ?= {
+						set_variable = gate_prestige_good_generic_golem
+					}
+				}
+			}
+			post_notification = message_prestige_good_gate_generic_golem_unlocked
+		}
 	}
 
-	invalid = {
-		NOT = {
-			exists = scope:relevant_company
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			NOT = {
+				exists = scope:relevant_company
+			}
 		}
 	}
 
@@ -298,6 +312,11 @@ je_prestige_goods_gate_runic_paper = {
 	icon = "gfx/interface/icons/goods_icons/prestige_goods/gate_prestige_runic_paper.dds"
 
 	group = je_group_technology
+	dlc = dlc_magic_gate
+
+	activation_description = {
+		always = yes
+	}
 
 	is_shown_when_inactive = {
 		has_dlc_feature = mp1_content
@@ -330,14 +349,7 @@ je_prestige_goods_gate_runic_paper = {
 		container = "custom_widget_container_2"
 	}
 
-	widget = {
-		gui = "gui/com_journal_injects/injects.gui"
-		name = "com_journal_entry_dlc_icon"
-		container = "custom_widget_container_7"
-	}
-
 	immediate = {
-		add_gate_dlc_icon = yes
 		random_company = {
 			limit = {
 				can_potentially_produce_prestige_goods = prestige_good_gate_generic_runic_paper
@@ -364,34 +376,6 @@ je_prestige_goods_gate_runic_paper = {
 		}
 	}
 
-	complete = {
-		trigger_if = {
-			limit = {
-				has_variable = prestige_runic_paper_timer_var
-			}
-			scope:journal_entry = {
-				is_goal_complete = yes
-			}
-		}
-		trigger_if = {
-			limit = {
-				exists = scope:relevant_company
-			}
-			scope:relevant_company ?= {
-				company_is_prosperous = yes
-			}
-		}
-		trigger_if = {
-			limit = {
-				exists = scope:relevant_goods
-			}
-			custom_tooltip = {
-				text = relevant_goods_production_rank_tt
-				"goods_production_rank(scope:relevant_goods)" <= 3
-			}
-		}
-	}
-
 	on_monthly_pulse = {
 		effect = {
 			if = {
@@ -406,24 +390,61 @@ je_prestige_goods_gate_runic_paper = {
 		}
 	}
 
-	on_complete = {
-		if = {
-			limit = {
-				exists = scope:relevant_company
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			trigger_if = {
+				limit = {
+					has_variable = prestige_runic_paper_timer_var
+				}
+				scope:journal_entry = {
+					is_goal_complete = yes
+				}
 			}
-			custom_tooltip = {
-				text = je_prestige_goods_gate_runic_paper_reward_tt
+			trigger_if = {
+				limit = {
+					exists = scope:relevant_company
+				}
 				scope:relevant_company ?= {
-					set_variable = gate_prestige_good_generic_runic_paper
+					company_is_prosperous = yes
+				}
+			}
+			trigger_if = {
+				limit = {
+					exists = scope:relevant_goods
+				}
+				custom_tooltip = {
+					text = relevant_goods_production_rank_tt
+					"goods_production_rank(scope:relevant_goods)" <= 3
 				}
 			}
 		}
-		post_notification = message_prestige_good_gate_generic_runic_paper_unlocked
+		effect = {
+			if = {
+				limit = {
+					exists = scope:relevant_company
+				}
+				custom_tooltip = {
+					text = je_prestige_goods_gate_runic_paper_reward_tt
+					scope:relevant_company ?= {
+						set_variable = gate_prestige_good_generic_runic_paper
+					}
+				}
+			}
+			post_notification = message_prestige_good_gate_generic_runic_paper_unlocked
+		}
 	}
 
-	invalid = {
-		NOT = {
-			exists = scope:relevant_company
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			NOT = {
+				exists = scope:relevant_company
+			}
 		}
 	}
 
@@ -446,6 +467,11 @@ je_prestige_goods_gate_dwarven_iron = {
 	icon = "gfx/interface/icons/goods_icons/prestige_goods/gate_prestige_magic_iron.dds"
 
 	group = je_group_technology
+	dlc = dlc_magic_gate
+
+	activation_description = {
+		always = yes
+	}
 
 	is_shown_when_inactive = {
 		has_dlc_feature = mp1_content
@@ -479,14 +505,7 @@ je_prestige_goods_gate_dwarven_iron = {
 		container = "custom_widget_container_2"
 	}
 
-	widget = {
-		gui = "gui/com_journal_injects/injects.gui"
-		name = "com_journal_entry_dlc_icon"
-		container = "custom_widget_container_7"
-	}
-
 	immediate = {
-		add_gate_dlc_icon = yes
 		random_company = {
 			limit = {
 				can_potentially_produce_prestige_goods = prestige_good_gate_dwarven_iron
@@ -513,34 +532,6 @@ je_prestige_goods_gate_dwarven_iron = {
 		}
 	}
 
-	complete = {
-		trigger_if = {
-			limit = {
-				has_variable = prestige_good_dwarven_timer_var
-			}
-			scope:journal_entry = {
-				is_goal_complete = yes
-			}
-		}
-		trigger_if = {
-			limit = {
-				exists = scope:relevant_company
-			}
-			scope:relevant_company ?= {
-				company_is_prosperous = yes
-			}
-		}
-		trigger_if = {
-			limit = {
-				exists = scope:relevant_goods
-			}
-			custom_tooltip = {
-				text = relevant_goods_production_rank_tt
-				"goods_production_rank(scope:relevant_goods)" <= 3
-			}
-		}
-	}
-
 	on_monthly_pulse = {
 		effect = {
 			if = {
@@ -563,24 +554,61 @@ je_prestige_goods_gate_dwarven_iron = {
 		}
 	}
 
-	on_complete = {
-		if = {
-			limit = {
-				exists = scope:relevant_company
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			trigger_if = {
+				limit = {
+					has_variable = prestige_good_dwarven_timer_var
+				}
+				scope:journal_entry = {
+					is_goal_complete = yes
+				}
 			}
-			custom_tooltip = {
-				text = je_prestige_goods_gate_golem_reward_tt
+			trigger_if = {
+				limit = {
+					exists = scope:relevant_company
+				}
 				scope:relevant_company ?= {
-					set_variable = gate_prestige_good_dwarven_iron
+					company_is_prosperous = yes
+				}
+			}
+			trigger_if = {
+				limit = {
+					exists = scope:relevant_goods
+				}
+				custom_tooltip = {
+					text = relevant_goods_production_rank_tt
+					"goods_production_rank(scope:relevant_goods)" <= 3
 				}
 			}
 		}
-		post_notification = message_prestige_good_gate_dwarven_iron_unlocked
+		effect = {
+			if = {
+				limit = {
+					exists = scope:relevant_company
+				}
+				custom_tooltip = {
+					text = je_prestige_goods_gate_golem_reward_tt
+					scope:relevant_company ?= {
+						set_variable = gate_prestige_good_dwarven_iron
+					}
+				}
+			}
+			post_notification = message_prestige_good_gate_dwarven_iron_unlocked
+		}
 	}
 
-	invalid = {
-		NOT = {
-			exists = scope:relevant_company
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			NOT = {
+				exists = scope:relevant_company
+			}
 		}
 	}
 
@@ -603,6 +631,11 @@ je_prestige_goods_gate_asian_runic_paper = {
 	icon = "gfx/interface/icons/goods_icons/prestige_goods/gate_prestige_asian_runic_paper.dds"
 
 	group = je_group_technology
+	dlc = dlc_magic_gate
+
+	activation_description = {
+		always = yes
+	}
 
 	is_shown_when_inactive = {
 		has_dlc_feature = mp1_content
@@ -635,14 +668,7 @@ je_prestige_goods_gate_asian_runic_paper = {
 		container = "custom_widget_container_2"
 	}
 
-	widget = {
-		gui = "gui/com_journal_injects/injects.gui"
-		name = "com_journal_entry_dlc_icon"
-		container = "custom_widget_container_7"
-	}
-
 	immediate = {
-		add_gate_dlc_icon = yes
 		random_company = {
 			limit = {
 				can_potentially_produce_prestige_goods = prestige_good_gate_asian_runic_paper
@@ -669,34 +695,6 @@ je_prestige_goods_gate_asian_runic_paper = {
 		}
 	}
 
-	complete = {
-		trigger_if = {
-			limit = {
-				has_variable = prestige_asian_runic_paper_timer_var
-			}
-			scope:journal_entry = {
-				is_goal_complete = yes
-			}
-		}
-		trigger_if = {
-			limit = {
-				exists = scope:relevant_company
-			}
-			scope:relevant_company ?= {
-				company_is_prosperous = yes
-			}
-		}
-		trigger_if = {
-			limit = {
-				exists = scope:relevant_goods
-			}
-			custom_tooltip = {
-				text = relevant_goods_production_rank_tt
-				"goods_production_rank(scope:relevant_goods)" <= 3
-			}
-		}
-	}
-
 	on_monthly_pulse = {
 		effect = {
 			if = {
@@ -711,24 +709,61 @@ je_prestige_goods_gate_asian_runic_paper = {
 		}
 	}
 
-	on_complete = {
-		if = {
-			limit = {
-				exists = scope:relevant_company
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			trigger_if = {
+				limit = {
+					has_variable = prestige_asian_runic_paper_timer_var
+				}
+				scope:journal_entry = {
+					is_goal_complete = yes
+				}
 			}
-			custom_tooltip = {
-				text = je_prestige_goods_gate_asian_runic_paper_reward_tt
+			trigger_if = {
+				limit = {
+					exists = scope:relevant_company
+				}
 				scope:relevant_company ?= {
-					set_variable = gate_prestige_good_asian_runic_paper
+					company_is_prosperous = yes
+				}
+			}
+			trigger_if = {
+				limit = {
+					exists = scope:relevant_goods
+				}
+				custom_tooltip = {
+					text = relevant_goods_production_rank_tt
+					"goods_production_rank(scope:relevant_goods)" <= 3
 				}
 			}
 		}
-		post_notification = message_prestige_good_gate_asian_runic_paper_unlocked
+		effect = {
+			if = {
+				limit = {
+					exists = scope:relevant_company
+				}
+				custom_tooltip = {
+					text = je_prestige_goods_gate_asian_runic_paper_reward_tt
+					scope:relevant_company ?= {
+						set_variable = gate_prestige_good_asian_runic_paper
+					}
+				}
+			}
+			post_notification = message_prestige_good_gate_asian_runic_paper_unlocked
+		}
 	}
 
-	invalid = {
-		NOT = {
-			exists = scope:relevant_company
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			NOT = {
+				exists = scope:relevant_company
+			}
 		}
 	}
 

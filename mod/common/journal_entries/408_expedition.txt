@@ -2,6 +2,11 @@
 	icon = "gfx/interface/icons/event_icons/event_gate_expedition.dds"
 
 	group = je_group_expeditions
+	dlc = dlc_magic_gate
+
+	activation_description = {
+		always = yes
+	}
 
 	status_desc = {
 		first_valid = {
@@ -28,14 +33,7 @@
 		}
 	}
 
-	widget = {
-		gui = "gui/com_journal_injects/injects.gui"
-		name = "com_journal_entry_dlc_icon"
-		container = "custom_widget_container_7"
-	}
-
 	immediate = {
-		add_gate_dlc_icon = yes
 		set_variable = {
 			name = gate_expedition_preparation_progress
 			value = 0
@@ -46,48 +44,58 @@
 		}
 	}
 
-	complete = {
-		scope:journal_entry = {
-			is_goal_complete = yes
-		}
-	}
-
-	fail = {
-		custom_tooltip = {
-			text = je_gate_expedition_preparation_fail_tooltip
-			NOT = {
-				has_building = building_gate_alxa
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			scope:journal_entry = {
+				is_goal_complete = yes
 			}
-			has_variable = gate_expedition_cancel
 		}
-	}
-
-	on_complete = {
-		hidden_effect = {
-			var:gate_expedition ?= {
-				set_variable = expedition_started
-				set_variable = {
-					name = expedition_budget_total
-					value = {
-						value = var:expedition_type
-						multiply = gate_expedition_preparation_budget_multiplier
+		effect = {
+			hidden_effect = {
+				var:gate_expedition ?= {
+					set_variable = expedition_started
+					set_variable = {
+						name = expedition_budget_total
+						value = {
+							value = var:expedition_type
+							multiply = gate_expedition_preparation_budget_multiplier
+						}
 					}
 				}
+				remove_variable = gate_expedition_preparation_progress
+				remove_variable = gate_expedition_preparation_max
+				remove_variable = gate_expedition_cancel
 			}
-			remove_variable = gate_expedition_preparation_progress
-			remove_variable = gate_expedition_preparation_max
-			remove_variable = gate_expedition_cancel
-		}
-		add_journal_entry = {
-			type = je_gate_expedition_active
+			add_journal_entry = {
+				type = je_gate_expedition_active
+			}
 		}
 	}
 
-	on_fail = {
-		hidden_effect = {
-			remove_variable = gate_expedition_preparation_progress
-			remove_variable = gate_expedition_preparation_max
-			remove_variable = gate_expedition_cancel
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				text = je_gate_expedition_preparation_fail_tooltip
+				NOT = {
+					has_building = building_gate_alxa
+				}
+				has_variable = gate_expedition_cancel
+			}
+		}
+		effect = {
+			hidden_effect = {
+				remove_variable = gate_expedition_preparation_progress
+				remove_variable = gate_expedition_preparation_max
+				remove_variable = gate_expedition_cancel
+			}
 		}
 	}
 
@@ -128,6 +136,11 @@ je_gate_expedition_active = {
 	icon = "gfx/interface/icons/event_icons/event_gate_expedition.dds"
 
 	group = je_group_expeditions
+	dlc = dlc_magic_gate
+
+	activation_description = {
+		always = yes
+	}
 
 	status_desc = {
 		first_valid = {
@@ -147,14 +160,7 @@ je_gate_expedition_active = {
 		}
 	}
 
-	widget = {
-		gui = "gui/com_journal_injects/injects.gui"
-		name = "com_journal_entry_dlc_icon"
-		container = "custom_widget_container_7"
-	}
-
 	immediate = {
-		add_gate_dlc_icon = yes
 		je:je_gate_expedition_active ?= {
 			clear_variable_list = com_journal_characters
 			add_to_variable_list = {
@@ -168,25 +174,36 @@ je_gate_expedition_active = {
 		}
 	}
 
-	complete = {
-		custom_tooltip = {
-			text = gate_expedition_cancel_tooltip
-			has_variable = gate_expedition_blocked
-		}
-	}
-
-	fail = {
-		custom_tooltip = {
-			text = je_gate_expedition_preparation_fail_tooltip
-			NOT = {
-				has_building = building_gate_alxa
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				text = gate_expedition_cancel_tooltip
+				has_variable = gate_expedition_blocked
 			}
 		}
 	}
 
-	on_fail = {
-		hidden_effect = {
-			remove_variable = gate_expedition
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				text = je_gate_expedition_preparation_fail_tooltip
+				NOT = {
+					has_building = building_gate_alxa
+				}
+			}
+		}
+		effect = {
+			hidden_effect = {
+				remove_variable = gate_expedition
+			}
 		}
 	}
 

@@ -2,9 +2,13 @@
 	icon = gfx/interface/icons/religion_icons/gate_opera_mask.dds
 
 	group = je_group_internal_affairs
+	dlc = dlc_magic_gate
+
+	activation_description = {
+		always = yes
+	}
 
 	scripted_button = je_gate_vampire_emergence_button_decapitate
-	scripted_button = je_gate_vampire_emergence_button_purge
 
 	status_desc = {
 		first_valid = {
@@ -28,18 +32,11 @@
 
 	widget = {
 		gui = "gui/com_journal_injects/injects.gui"
-		name = "com_journal_entry_dlc_icon"
-		container = "custom_widget_container_7"
-	}
-
-	widget = {
-		gui = "gui/com_journal_injects/injects.gui"
 		name = "com_journal_entry_characters"
 		container = "custom_widget_container_1"
 	}
 
 	immediate = {
-		add_gate_dlc_icon = yes
 		save_scope_as = gate_vampire_country
 	}
 
@@ -125,39 +122,15 @@
 		}
 	}
 
-	possible = {
-		custom_tooltip = {
-			text = je_gate_vampire_emergence_activate
-			has_variable = gate_character_vampire
-		}
-	}
-
-	complete = {
-		custom_tooltip = {
-			text = je_gate_vampire_emergence_complete
+	outcome = {
+		header = je_gate_vampire_emergence_outcome_takeover
+		effect_header = je_gate_vampire_emergence_outcome_on_takeover
+		color = "gold_positive"
+		conclusion_desc = je_gate_vampire_emergence_outcome_takeover_conclusion_desc
+		trigger = {
 			has_law = law_type:law_gate_vampire_monarchy
 		}
-	}
-
-	fail = {
-		custom_tooltip = {
-			text = je_gate_vampire_emergence_fail
-			has_variable = gate_rejected_vampirism
-		}
-	}
-
-	invalid = {
-		custom_tooltip = {
-			text = je_gate_vampire_emergence_invalid
-			has_variable = gate_vampire_decapitated
-			NOT = {
-				has_variable = gate_vampire_wait
-			}
-		}
-	}
-
-	on_complete = {
-		hidden_effect = {
+		effect = {
 			trigger_event = {
 				id = gate_vampire.1
 				popup = yes
@@ -165,23 +138,77 @@
 		}
 	}
 
-	on_invalid = {
-		hidden_effect = {
+	outcome = {
+		header = je_gate_vampire_emergence_outcome_tolerated
+		effect_header = je_gate_vampire_emergence_outcome_on_tolerated
+		color = "white_outcome"
+		conclusion_desc = je_gate_vampire_emergence_outcome_tolerated_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				text = je_gate_vampire_emergence_outcome_tolerated_tooltip
+				has_variable = gate_vampire_decapitated
+				NOT = {
+					has_variable = gate_vampire_wait
+				}
+			}
+		}
+		effect = {
 			trigger_event = {
 				id = gate_vampire.10
 				popup = yes
 			}
-			remove_variable = gate_vampire_decapitated
-			remove_variable = gate_vampire_truth
+			hidden_effect = {
+				remove_variable = gate_vampire_decapitated
+				remove_variable = gate_vampire_truth
+			}
 		}
 	}
 
-	on_fail = {
-		hidden_effect = {
+	outcome = {
+		header = je_gate_vampire_emergence_outcome_purge
+		effect_header = je_gate_vampire_emergence_outcome_on_purge
+		color = "blue_negative"
+		conclusion_desc = je_gate_vampire_emergence_outcome_purge_conclusion_desc
+		trigger = {
+			OR = {
+				AND = {
+					custom_tooltip = {
+						text = je_gate_vampire_emergence_trigger_truth_known
+						has_variable = gate_vampire_truth
+					}
+					OR = {
+						ig:ig_devout ?= {
+							is_powerful = yes
+						}
+						ig:ig_devout ?= {
+							is_in_government = yes
+						}
+						has_law_or_variant = law_type:law_theocracy
+					}
+					custom_tooltip = {
+						text = je_gate_vampire_emergence_trigger_decapitated_false
+						NOT = {
+							has_variable = gate_vampire_decapitated
+						}
+					}
+				}
+				hidden_trigger = {
+					has_variable = gate_rejected_vampirism
+				}
+			}
+		}
+		effect = {
 			trigger_event = {
 				id = gate_vampire.2
 				popup = yes
 			}
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = je_gate_vampire_emergence_activate
+			has_variable = gate_character_vampire
 		}
 	}
 
