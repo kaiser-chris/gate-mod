@@ -1,13 +1,4 @@
-﻿gate_gnomish_clothes = {
-    usage = game
-    selection_behavior = weighted_random
-    fallback = default_clothes
-
-    default_clothes = {
-        weight = {
-            base = 1
-        }
-    }
+﻿INJECT:clothes = {
 
     gnomish_poor_clothes = {
         dna_modifiers = {

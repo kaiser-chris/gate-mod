@@ -1,13 +1,4 @@
-﻿gate_vampire_clothes = {
-    usage = game
-    selection_behavior = weighted_random
-    fallback = default_clothes
-
-    default_clothes = {
-        weight = {
-            base = 1
-        }
-    }
+﻿INJECT:clothes = {
 
     vampire_agitator_clothes = {
         dna_modifiers = {

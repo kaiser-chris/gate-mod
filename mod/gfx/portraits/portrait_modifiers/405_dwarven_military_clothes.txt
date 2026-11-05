@@ -1,11 +1,8 @@
-﻿
-    #############
-    # By Lord R #
-    #############
+﻿#############
+# By Lord R #
+#############
 
-GATE_clothes = {
-	usage = game
-	selection_behavior = weighted_random
+INJECT:clothes = {
 
     #Clothes for the Min Raetia Royals
     GATE_MK_royal_clothes = {
@@ -100,7 +97,7 @@ GATE_clothes = {
         weight = {
             base = 0
             modifier = {
-                add = 500
+                add = 50000
                 
                 scope:character ?= {
                     is_female = no
@@ -202,7 +199,7 @@ GATE_clothes = {
         weight = {
             base = 0
             modifier = {
-                add = 500
+                add = 50000
 
                 scope:character ?= {
                     is_female = no
@@ -318,7 +315,7 @@ GATE_clothes = {
         weight = {
             base = 0
             modifier = {
-                add = 501
+                add = 50100
 
                 scope:character ?= {
                     is_female = no
@@ -432,7 +429,7 @@ GATE_clothes = {
         weight = {
             base = 0
             modifier = {
-                add = 500
+                add = 50000
 
                 exists = scope:pop
                 scope:pop = {
@@ -532,7 +529,7 @@ GATE_clothes = {
         weight = {
             base = 0
             modifier = {
-                add = 501
+                add = 50100
 
                 exists = scope:pop
                 scope:pop = {
@@ -642,7 +639,7 @@ GATE_clothes = {
         weight = {
             base = 0
             modifier = {
-                add = 501
+                add = 50100
 
                 exists = scope:pop
                 scope:pop = {
@@ -747,7 +744,7 @@ GATE_clothes = {
         weight = {
             base = 0
             modifier = {
-                add = 500
+                add = 50000
 
                 exists = scope:pop
                 scope:pop = {
@@ -847,7 +844,7 @@ GATE_clothes = {
         weight = {
             base = 0
             modifier = {
-                add = 501
+                add = 50100
 
                 exists = scope:pop
                 scope:pop = {
@@ -951,7 +948,7 @@ GATE_clothes = {
         weight = {
             base = 0
             modifier = {
-                add = 501
+                add = 50100
 
                 exists = scope:pop
                 scope:pop = {
@@ -986,4 +983,5 @@ GATE_clothes = {
             }
         }
     }
+
 }

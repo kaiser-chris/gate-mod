@@ -1,13 +1,4 @@
-﻿gate_orcish_clothes = {
-    usage = game
-    selection_behavior = weighted_random
-    fallback = default_clothes
-
-    default_clothes = {
-        weight = {
-            base = 1
-        }
-    }
+﻿INJECT:clothes = {
 
     orcish_clothes = {
         dna_modifiers = {
@@ -27,7 +18,7 @@
         weight = {
             base = 0
             modifier = {
-                add = 200
+                add = 20000
                 orcish_portrait_trigger = yes
             }
         }
@@ -44,7 +35,7 @@
         weight = {
             base = 0
             modifier = {
-                add = 100
+                add = 10000
                 orcish_portrait_pop_trigger = yes
             }
         }
@@ -61,7 +52,7 @@
         weight = {
             base = 0
             modifier = {
-                add = 600
+                add = 60000
                 AND = {
                     orcish_portrait_pop_trigger = yes
                     middle_clothes_pop_trigger = yes
@@ -81,7 +72,7 @@
         weight = {
             base = 0
             modifier = {
-                add = 600
+                add = 60000
                 AND = {
                     orcish_portrait_pop_trigger = yes
                     upper_clothes_pop_trigger = yes
@@ -108,7 +99,7 @@
         weight = {
             base = 0
             modifier = {
-                add = 1000
+                add = 100000
                 has_dlc_feature = ep1_cosmetics
                 scope:character ?= {
                     is_ruler_of_any_country = yes
@@ -131,7 +122,7 @@
         weight = {
             base = 0
             modifier = {
-                add = 1000
+                add = 100000
                 has_dlc_feature = ep1_cosmetics
                 scope:character ?= {
                     is_heir_of_own_country = yes
@@ -160,7 +151,7 @@
         weight = {
             base = 0
             modifier = {
-                add = 1000
+                add = 100000
                 has_dlc_feature = ep1_cosmetics
                 OR = {
                     scope:pop ?= {

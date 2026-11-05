@@ -1,13 +1,4 @@
-﻿gate_south_ogre_clothes = {
-    usage = game
-    selection_behavior = weighted_random
-    fallback = default_clothes
-
-    default_clothes = {
-        weight = {
-            base = 1
-        }
-    }
+﻿INJECT:clothes = {
 
     arctic_ogre_pop_clothes = {
         dna_modifiers = {

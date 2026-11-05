@@ -1,13 +1,4 @@
-﻿gate_dwarven_clothes = {
-    usage = game
-    selection_behavior = weighted_random
-    fallback = default_clothes
-
-    default_clothes = {
-        weight = {
-            base = 1
-        }
-    }
+﻿INJECT:clothes = {
 
     dwarven_agitator_clothes = {
         dna_modifiers = {
@@ -644,7 +635,7 @@
                 }
             }
             modifier = { #If we want rulers to dress like politicians later.
-                add = 100
+                add = 300
                 AND = {
                     dwarven_portrait_trigger = yes
                     ruler_clothes_trigger = yes
@@ -678,7 +669,7 @@
         weight = {
             base = 0
             modifier = {
-                add = 100
+                add = 300
                 AND = {
                     dwarven_portrait_pop_trigger = yes
                     slaves_clothes_pop_trigger = no
