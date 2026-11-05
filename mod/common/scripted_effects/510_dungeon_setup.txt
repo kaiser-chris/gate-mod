@@ -103,10 +103,6 @@ gate_create_dungeon = {
 				name = background
 				value = flag:$background$
 			}
-			set_variable = {
-				name = creation_date
-				value = game_date
-			}
 			fix_variable_error = { variable = $name$ }
 			fix_variable_error = { variable = $name$_desc }
 			fix_variable_error = { variable = $background$ }

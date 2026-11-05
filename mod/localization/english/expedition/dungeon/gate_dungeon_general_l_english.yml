@@ -32,6 +32,10 @@
  gate_dungeon_setup.1.leaders: "For each dungeon exploration we need to chose a [Concept('concept_gate_dungeon_party_leader','$concept_gate_dungeon_party_leader_simple|q$')]. A leaders [Concept('concept_character_trait','$concept_character_traits|q$')] can influence the [Concept('concept_gate_dungeon_party_points','$concept_gate_dungeon_party_points_simple|q$')] budget or [Concept('concept_gate_dungeon_party','$concept_gate_dungeon_party_simple|q$')] attributes like [Concept('concept_gate_dungeon_party_cohesion','$concept_gate_dungeon_party_cohesion_simple|q$')], [Concept('concept_gate_dungeon_party_condition','$concept_gate_dungeon_party_condition_simple|q$')] and [Concept('concept_gate_dungeon_party_renown','$concept_gate_dungeon_party_renown_simple|q$')]."
  gate_dungeon_setup.1.a: "Start [concept_gate_dungeon] delve."
  gate_dungeon_setup.1.b: "Cancel [concept_gate_dungeon] delve."
+ gate_dungeon_setup.2.t: "A Dungeon appeared"
+ gate_dungeon_setup.2.d: "[TopScope.GetLocalVariable('gate_dungeon').Var('name').GetFlagName]"
+ gate_dungeon_setup.2.f: "[TopScope.GetLocalVariable('gate_dungeon').Var('desc').GetFlagName]"
+ gate_dungeon_setup.2.a: "We need to explore it!"
  event_gate_dungeon_cancel_exploration_tooltip: "Cancel the planned [concept_gate_dungeon] delve"
  event_gate_dungeon_dismiss_leaders_tooltip: "Dismiss all [Concept('concept_gate_dungeon_party_leader','$concept_gate_dungeon_party_leaders_simple|q$')]"
  event_gate_dungeon_cooldown_tooltip: "\n@warning! You will not be able to start another [concept_gate_dungeon] delve again for #v 180 days#!"
@@ -72,6 +76,7 @@
  decision_gate_start_dungeon_exploration_cooldown_tooltip: "An attempted [concept_gate_dungeon] delve was made too recently. Wait another #v [LabelingHelper.GetDaysLocWithoutTooltip(TopScope.GetRootScope.VarRemaining('gate_dungeon_delve_cooldown'))]#! before another attempt."
 # Selector Window
  gate_project_select_dungeon_window: "Select a [concept_gate_dungeon]"
+ gate_project_select_dungeon_window_sub_title: "Unexplored [Concept('concept_gate_dungeon','$concept_gate_dungeons|q$')] in [GetPlayer.GetAdjectiveNoFlag] [Concept('concept_state','$concept_states|q$')]"
  gate_project_select_dungeon_window_select: "#header [Scope.Var('dungeon').Var('name').GetFlagName] in [Scope.Var('building').GetBuilding.GetState.GetName]#!\nStart the exploration of this [concept_gate_dungeon]."
 # Generic Dungeon Layer types
  gate_dungeon_layer_generic_entrance: "Entrance"

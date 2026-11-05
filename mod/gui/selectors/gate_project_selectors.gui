@@ -94,6 +94,12 @@
             on_finish = "[InformationPanelBar.ClosePanel]"
             on_finish = "[MapListPanelManager.CloseCurrentPanel]"
         }
+        blockoverride "first_line_position" {
+            position = { 0 14 }
+        }
+        blockoverride "selector_sub_title" {
+            text = gate_project_select_dungeon_window_sub_title
+        }
         blockoverride "selector_visibility" {
             visible = "[DataModelHasItems(Country.MakeScope.GetList('gate_project_dungeon_selector'))]"
         }

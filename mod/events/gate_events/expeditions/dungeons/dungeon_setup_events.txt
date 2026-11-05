@@ -12,7 +12,7 @@ gate_dungeon_setup.1 = {
     gui_window = event_window_gate_dungeon_setup
 
     event_image = {
-        video = "middleeast_jungle_expedition"
+        video = "unspecific_military_parade"
     }
 
     immediate = {
@@ -57,7 +57,7 @@ gate_dungeon_setup.1 = {
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-    icon = "gfx/interface/icons/event_icons/event_gate_expedition.dds"
+    icon = "gfx/interface/icons/event_icons/event_gate_dungeon.dds"
 
     option = {
         name = gate_dungeon_setup.1.b
@@ -124,5 +124,50 @@ gate_dungeon_setup.1 = {
             }
             clear_variable_list = gate_potential_dungeon_party_leaders
         }
+    }
+}
+
+gate_dungeon_setup.2 = {
+    type = country_event
+    placement = scope:dungeon_state
+
+    title = gate_dungeon_setup.2.t
+    desc = gate_dungeon_setup.2.d
+    flavor = gate_dungeon_setup.2.f
+
+    icon = "gfx/interface/icons/event_icons/event_gate_dungeon.dds"
+
+    event_image = {
+        video = "southamerica_aristocrats"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    is_popup = yes
+
+    trigger = {
+        exists = scope:gate_dungeon
+    }
+
+    immediate = {
+        scope:gate_dungeon = {
+            var:location = {
+                random_scope_state = {
+                    limit = {
+                        owner = root
+                    }
+                    save_scope_as = dungeon_state
+                }
+            }
+        }
+        set_local_variable = {
+            name = gate_dungeon
+            value = scope:gate_dungeon
+        }
+    }
+
+    option = {
+        name = gate_dungeon_setup.2.a
+        default_option = yes
     }
 }

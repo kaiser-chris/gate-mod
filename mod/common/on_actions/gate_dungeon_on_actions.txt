@@ -4,6 +4,8 @@
     }
 }
 
+# Reset exploration status after the
+# dungeon state owner changed
 on_gate_check_dungeon = {
     trigger = {
         any_scope_building = {
@@ -12,5 +14,55 @@ on_gate_check_dungeon = {
     }
     effect = {
         gate_set_dungeon_status = yes
+    }
+}
+
+on_half_yearly_pulse = {
+    on_actions = {
+        on_gate_spawn_dungeon
+    }
+}
+
+on_gate_spawn_dungeon = {
+    effect = {
+        random_key_in_global_variable_map = {
+            variable = dungeons
+            limit = {
+                "global_variable_map(dungeons|this)" ?= {
+                    var:location ?= {
+                        # Location has reached maximum Mana Density
+                        gate_maximum_mana_density <= var:mana_density
+                    }
+                    NOT = {
+                        # Has not been created yet
+                        has_variable = creation_date
+                    }
+                }
+            }
+            "global_variable_map(dungeons|this)" ?= {
+                save_scope_as = gate_dungeon
+                var:location ?= {
+                    random_scope_state = {
+                        limit = {
+                            # Only spawn in the largest state in the region
+                            is_largest_state_in_region = yes
+                            owner = {
+                                NOT = {
+                                    # Do not spawn it in decentralized countries
+                                    is_country_type = decentralized
+                                }
+                            }
+                        }
+                        gate_build_dungeon = yes
+                        owner = {
+                            trigger_event = {
+                                id = gate_dungeon_setup.2
+                                popup = yes
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

@@ -61,7 +61,19 @@
                 default_format = "#header"
             }
 
-            block "selector_second_line" {}
+            block "selector_second_line" {
+                textbox = {
+                    block "selector_sub_title" {
+                        raw_text = "Second text"
+                        visible = no
+                    }
+                    position = { 0 49 }
+                    parentanchor = hcenter
+                    autoresize = yes
+                    align = nobaseline
+                    block "selector_sub_title_properties" {}
+                }
+            }
         }
 
         ### FRAME

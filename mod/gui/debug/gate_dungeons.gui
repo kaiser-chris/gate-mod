@@ -35,9 +35,21 @@ types gate_debug_types {
                         layoutpolicy_horizontal = expanding
                         using = editor_font
                         fontweight = bold
+                        raw_text = "Spawn Random Dungeon"
+                        align = center|nobaseline
+                        raw_tooltip = "Run random spawn logic. It still checks for all requirements like maximum Mana Density."
+
+                        onclick = "[GetScriptedGui('sgui_gate_debug_spawn_random').Execute(GuiScope.End)]"
+                    }
+
+                    editor_button = {
+                        size = { 0 30 }
+                        layoutpolicy_horizontal = expanding
+                        using = editor_font
+                        fontweight = bold
                         raw_text = "Expand All"
                         align = center|nobaseline
-                        raw_tooltip = "Expand all container data"
+                        raw_tooltip = "Expand all dungeon data below"
 
                         onclick = "[GetVariableSystem.Toggle('gate_dungeon_debug_expand_all')]"
                     }
@@ -91,6 +103,23 @@ types gate_debug_types {
                     raw_text = "Dungeon: [ScriptContainer.MakeScope.Var('name').GetFlagName] in [ScriptContainer.MakeScope.Var('location').GetStateRegion.GetNameNoFormatting]"
                 }
             }
+
+            widget = {
+                size = { 20 20 }
+
+                icon = {
+                    visible = "[Not(GetScriptedGui('sgui_gate_debug_spawn').IsValid(GuiScope.SetRoot(BuildingType.MakeScope).End))]"
+                    size = { 20 20 }
+                    texture = gfx/interface/icons/generic_icons/map_list_checkmark.dds
+                }
+
+                icon = {
+                    visible = "[GetScriptedGui('sgui_gate_debug_spawn').IsValid(GuiScope.SetRoot(BuildingType.MakeScope).End)]"
+                    size = { 20 20 }
+                    texture = gfx/interface/icons/generic_icons/map_list_cross.dds
+                }
+            }
+
             editor_button = {
                 size = { 100 20 }
                 using = editor_font
@@ -133,17 +162,16 @@ types gate_debug_types {
                         raw_text = "Spawned"
                     }
                     blockoverride "value" {
-                        text = "[Select_CString(GetScriptedGui('sgui_gate_debug_spawn').IsValid(GuiScope.SetRoot(BuildingType.MakeScope).End), 'Yes', 'No')]"
+                        raw_text = "[Select_CString(GetScriptedGui('sgui_gate_debug_spawn').IsValid(GuiScope.SetRoot(BuildingType.MakeScope).End), 'No', TimeKeeper.GetCurrentDateWithDiff(FixedPointToInt(ScriptContainer.MakeScope.ScriptValue('gate_dungeon_creation_time'))))]"
                     }
                     blockoverride "right" {
-                        visible = "[Not(GetScriptedGui('sgui_gate_debug_spawn').IsValid(GuiScope.SetRoot(BuildingType.MakeScope).End))]"
                         editor_button = {
                             size = { 100 20 }
                             using = editor_font
                             raw_text = "Spawn Dungeon"
                             align = center|nobaseline
                             raw_tooltip = "Spawn Dungeon"
-
+                            enabled = "[GetScriptedGui('sgui_gate_debug_spawn').IsValid(GuiScope.SetRoot(BuildingType.MakeScope).End)]"
                             onclick = "[GetScriptedGui('sgui_gate_debug_spawn').Execute(GuiScope.SetRoot(BuildingType.MakeScope).End)]"
                         }
                     }

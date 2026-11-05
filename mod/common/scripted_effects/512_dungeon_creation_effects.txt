@@ -33,9 +33,12 @@
 		}
 		# dungeon exists at game start so its creation date needs
 		# to be shifted back to be before game start
-		change_variable = {
+		set_variable = {
 			name = creation_date
-			subtract = 580 # days
+			value = {
+				value = game_date
+				subtract = 580 # days
+			}
 		}
 	}
 	remove_from_global_variable_map = {
