@@ -267,9 +267,12 @@ types gate_shared {
         }
     }
 
-    type gate_mana_density_colored = widget {
+    type gate_mana_density_colored = button {
         using = clickthrough_blocker
         tooltip = gg_map_marker_mana_density_tooltip
+
+        datacontext = "[GetPlayerJournalEntry('je_gate_mana_saturation')]"
+        onclick = "[InformationPanelBar.OpenJournalEntryPanel(JournalEntry.AccessSelf)]"
 
         block "mana_density_size" {
             size = { 70 45 }
