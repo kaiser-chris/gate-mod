@@ -45,4 +45,8 @@
 - Gear by Alice Design from <a href="https://thenounproject.com/browse/icons/term/gear/" target="_blank" title="Gear Icons">Noun Project</a> (CC BY 3.0)
 - Tree by Sanjaya from <a href="https://thenounproject.com/browse/icons/term/tree/" target="_blank" title="Tree Icons">Noun Project</a> (CC BY 3.0)
 - dungeon by nareerat jaikaew from <a href="https://thenounproject.com/browse/icons/term/dungeon/" target="_blank" title="dungeon Icons">Noun Project</a> (CC BY 3.0)
+- eye opened by Sonya Nikolaeva from <a href="https://thenounproject.com/browse/icons/term/eye-opened/" target="_blank" title="eye opened Icons">Noun Project</a> (CC BY 3.0)
+- eye closed by Sonya Nikolaeva from <a href="https://thenounproject.com/browse/icons/term/eye-closed/" target="_blank" title="eye closed Icons">Noun Project</a> (CC BY 3.0)
+- tax by Hanbai from <a href="https://thenounproject.com/browse/icons/term/tax/" target="_blank" title="tax Icons">Noun Project</a> (CC BY 3.0)
+- Coal by Michael Wohlwend from <a href="https://thenounproject.com/browse/icons/term/coal/" target="_blank" title="Coal Icons">Noun Project</a> (CC BY 3.0)
 - Dwarven Helmet by Kier Heyl from [game-icons.net](https://game-icons.net/)
