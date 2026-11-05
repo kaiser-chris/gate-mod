@@ -347,7 +347,7 @@ GLOBAL = {
 		}
 	}
 
-	s:STATE_CHUKOTKA = {
+	s:STATE_KAMCHATKA = {
 		add_to_variable_list = {
 			name = mana_propogation_states
 			target = s:STATE_ALASKA
@@ -357,7 +357,7 @@ GLOBAL = {
 	s:STATE_ALASKA = {
 		add_to_variable_list = {
 			name = mana_propogation_states
-			target = s:STATE_CHUKOTKA
+			target = s:STATE_KAMCHATKA
 		}
 	}
 
