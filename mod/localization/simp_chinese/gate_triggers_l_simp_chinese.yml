@@ -32,10 +32,10 @@
  trigger_gate_requirement_medium_mana_density: "要构建此[concept_building]，该州必须拥有至少[TopScope.ScriptValue('gate_medium_mana_density_threshhold')]的[concept_gate_mana_density]。" #deepl:2646883508
  trigger_gate_requirement_max_mana_density: "要构建此[concept_building]，该州必须拥有至少[TopScope.ScriptValue('gate_maximum_mana_density')]的[concept_gate_mana_density]。" #deepl:3902263656
 
- trigger_gate_ethic_has_all: "已选中所有可能的[Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')]" #deepl:1152229089
- trigger_gate_ethic_has_all_not: "尚未选中所有可用的[Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')]" #deepl:4243568538
- trigger_gate_ethic_has_all_third: "[COUNTRY.GetNameNoFlag] 已选中所有可能的 [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')]" #deepl:2160750419
- trigger_gate_ethic_has_all_third_not: "[COUNTRY.GetNameNoFlag] 尚未选中所有可用的[Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')]" #deepl:50095710
+ trigger_gate_ethic_has_all: "已选中所有可能的 [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')]" #deepl:1330937301
+ trigger_gate_ethic_has_all_not: "尚未选中所有可能的选项 [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')]" #deepl:2343287031
+ trigger_gate_ethic_has_all_third: "[COUNTRY.GetNameNoFlag]已选中所有可能的[Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')]" #deepl:1609356044
+ trigger_gate_ethic_has_all_third_not: "[COUNTRY.GetNameNoFlag] 尚未选择所有可能的 [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')]" #deepl:3370599694
 
  trigger_gate_is_arcane_council_leader: "领导奥术议会 [concept_com_international_organization]" #deepl:684660458
  trigger_gate_is_arcane_council_leader_not: "难道不是 #bold  而不是 #! 领导奥术议会 [concept_com_international_organization]" #deepl:2885476714
@@ -61,6 +61,10 @@
  trigger_has_finished_monster_congress_not: "#bold  是否还没有 #! 发布他们的 #yellow  #tooltip: [GetRawTextTooltipTag('je_gate_monster_congress_reason')] $je_gate_monster_congress$ #! #! 呢" #deepl:2159240394
  trigger_has_finished_monster_congress_third: "[COUNTRY.GetNameNoFlag] 已发布其#yellow  #tooltip：[GetRawTextTooltipTag('je_gate_monster_congress_reason')] $je_gate_monster_congress$ #! #!" #deepl:3095940376
  trigger_has_finished_monster_congress_third_not: "[COUNTRY.GetNameNoFlag] #bold  是否还没有 #! 发布其 #yellow  #tooltip: [GetRawTextTooltipTag('je_gate_monster_congress_reason')] $je_gate_monster_congress$ #! #! 呢" #deepl:1240828539
+
+ trigger_gate_dungeon_has_cohesion: "[concept_gate_dungeon_party]的[Concept('concept_gate_dungeon_party_cohesion','$concept_gate_dungeon_party_cohesion_simple|q$')]值至少为[SCOPE.GetValue('temp_cohesion')|v1]（当前值为[SCOPE.GetLocalVariable('expedition').ScriptValue('gate_dungeon_party_cohesion_value')|b1]）" #deepl:2828517866
+ trigger_gate_dungeon_has_condition: "[concept_gate_dungeon_party] 具有一个 [Concept('concept_gate_dungeon_party_condition','$concept_gate_dungeon_party_condition_simple|q$')]，其值至少为 [SCOPE.GetValue('temp_condition')|v1]（当前为 [SCOPE.GetLocalVariable('expedition').ScriptValue('gate_dungeon_party_condition_value')|b1]）" #deepl:1939407723
+ trigger_gate_dungeon_has_renown: "[concept_gate_dungeon_party]的[Concept('concept_gate_dungeon_party_renown','$concept_gate_dungeon_party_renown_simple|q$')]值至少为[SCOPE.GetValue('temp_renown')|v1]（当前为[SCOPE.GetLocalVariable('expedition').ScriptValue('gate_dungeon_party_renown_value')|b1]）" #deepl:2632016912
 
  trigger_gate_project_has_any_selector_open: "所有[concept_gate_project]选择器均处于开放状态" #deepl:3160324065
  trigger_gate_project_has_any_selector_open_not: "没有开放的[concept_gate_project]选择器" #deepl:2867891

@@ -1,13 +1,31 @@
 ﻿l_simp_chinese:
- investigate_gate_decision: "调查$building_gate$"
- investigate_gate_decision_desc: "研究[GetBuildingType('building_gate_alxa').GetName]以了解如何控制它。"
- je_gate_investigate_gate: "调查$building_gate$"
- je_gate_investigate_gate_reason: "在我们新征服的领土腹地，那座魔法门如同蕴含无尽力量的圣遗物巍然矗立。古老的符文泛着神秘光芒，在石质门楣上流转明灭，仿佛在低语着禁忌知识的秘辛。当学者们围聚在它斑驳的基座旁时，凝重的空气中跃动着电流般的兴奋。这道连接未知维度的门扉承载着智慧与力量的盟约，等待被契约者唤醒。此刻，我们将开启破译永恒奥秘的征程——这场朝圣之旅或将重塑魔法的认知边界，让我们的国度在星穹之下绽放新的辉光。"
- je_gate_investigate_gate_goal: "调查成功"
- je_gate_investigate_gate_button_focus_academia: "集中精力"
- je_gate_investigate_gate_button_focus_academia_desc: "我们将把精力都集中在这项调查上，即使这会损害我们的技术进步。"
- modifier_gate_focus_investigate_gate_cost: "专注调查"
+ gate_investigate_gate_closed_forever: "#r 这将永远关闭这扇门。#!" #deepl:243458715
  gate_investigate_gate.1.t: "调查成功"
  gate_investigate_gate.1.d: "对[GetBuildingType('building_gate_alxa').GetName]的调查使我们掌握了[GetTechnology('gate_expeditions').GetName]。\"  "
  gate_investigate_gate.1.f: "经过数月不懈的钻研与谨慎的低声探讨，我们的学者终于破译了那座被俘获的魔法门的奥秘。那些曾抗拒解读的远古符文如今在跃动的辉光中苏醒，将湮没于时光长河的知识重新昭示人间。随着魔法门的奥秘逐渐展现，奥秘能量的洪流涌入我们掌心，重写我们对世界的认知。凭借这种新发现的力量，我国即将迎接魔法复兴的黎明，掌控那世代求索而不得的天地伟力。"
  gate_investigate_gate.1.a: "一个等待探索的全新世界。"
+ gate_investigate_gate.2.t: "与“彼岸”的接触" #deepl:3372465699
+ gate_investigate_gate.2.d: "我们对[GetBuildingType('building_gate_tyrol').GetName]的调查，促使我们与来自[concept_gate_planet]的[GetCulture('dwarven').GetName]代表取得了联系。" #deepl:2796463179
+ gate_investigate_gate.2.f: "多年来，蒂罗尔的[GetBuildingType('building_gate_tyrol').GetNameNoFormatting]一直保持着沉默，自矮人最后一次掌控它以来，封印便从未被打破。我们的学者测量了每一道符文，测试了每一道护符，直到那块古老的石头终于松动，寒冷的空气从黑暗的彼方涌了上来。\n一支来自安卡里斯的使团，携带着精工雕琢的银器与密封的卷轴，用谨慎且带有口音的通用语向我们致意。他们并未对战争中被夺走之物心怀怨恨，只谈及机遇：一份移民条约，让他们的子民以有序的节奏来到我们中间，并随之带来知识——那些长久以来被地球所剥夺的魔法造诣。 这究竟是计谋，还是矮人将征服转化为贸易的惯常做法，我们的使者无法断言。但城门已然敞开，$gate_planet$的矮人们已准备好进行谈判。" #deepl:678047869
+ gate_investigate_gate.2.a: "这些可能会有帮助。" #deepl:3678068422
+ gate_investigate_gate.2.b: "我们不要他们。" #deepl:1435844639
+ gate_investigate_gate.3.t: "《镀金的沉默》" #deepl:3230941023
+ gate_investigate_gate.3.d: "我们对[GetBuildingType('building_gate_zambia').GetName]的调查，促使我们与来自[concept_gate_planet]的[GetCulture('elven').GetName]代表取得了联系。" #deepl:4260922901
+ gate_investigate_gate.3.f: "在另一边等待我们的，并非我们预想中的那群走投无路的残余势力。接待我们使团的精灵们一如既往地保持着他们一贯的风范：耐心、从容，坚信时间站在他们这一边，而且背后还有整个帝国作为后盾。他们并未放弃对高原的主张。 若说有什么变化，流放似乎反而让这份主张更加坚定了。\n\n他们既不派兵，也不提出最后通牒。只提出一项交换条件：让他们的子民得以返乡，并在我们学者至今仍难以掌握的魔力研究方面提供指导；作为回报，他们有权派遣祭司重返我们如今统治的领地，公开且不受限制地宣扬“黄金祝福”。\n\n我们的顾问们至少在一点上意见一致。《门户》是一处设有机能屏障且狭窄的咽喉要道，如果精灵们选择坚守此地，我们无论集结多少兵力都无法以武力夺回。无论此事最终如何发展，都将由精灵们设下的谈判桌来决定，而非在我们选择的战场上。" #deepl:3539908948
+ gate_investigate_gate.3.a: "这些可能会有帮助。" #deepl:3678068422
+ gate_investigate_gate.3.b: "我们不要他们。" #deepl:1435844639
+ gate_investigate_gate.4.t: "漫长的解冻" #deepl:3706078847
+ gate_investigate_gate.4.d: "我们对[GetBuildingType('building_gate_yukon').GetName]的调查，促使我们与来自[concept_gate_planet]的[GetCulture('gate_arctic_ogre').GetName]代表取得了联系。" #deepl:85472930
+ gate_investigate_gate.4.f: "多年来，这道封印一直有效。它周围的领土在实际意义上对我们而言毫无价值，过去如此，现在依然如此：土地贫瘠，几乎无法耕种，没有任何值得派驻守军的资源。 我们调集法师，致力于破解他们留下的安卡雷尼护符。\n\n历经数年耐心而枯燥的研究，我们终于解开了育空护符石的封印。从重新开启的门户中涌入的，并非一支军队。 那是乌尔萨利斯同盟的使者，他们并未要求收回昔日的领土——因为他们深知自己已败局已定——而是提出了一个更微小、更奇特的要求：允许他们的子民穿越这道门户，作为我们的臣民生活在我们中间；同时提供足够的谷物、水果和武器，以维持那些留在原地、在$gate_planet$这片敌对土地上生存的部族\n我们的将领们罕见地达成了共识。没有一支军队值得我们派去穿越那扇传送门——面对如此敌对的地形，为如此微薄的回报，根本不值得。" #deepl:3224725366
+ gate_investigate_gate.4.a: "这些可能会有帮助。" #deepl:3678068422
+ gate_investigate_gate.4.b: "我们不要他们。" #deepl:1435844639
+ gate_investigate_gate.5.t: "那扇打不开的门" #deepl:564381052
+ gate_investigate_gate.5.d: "我们对[GetBuildingType('building_gate_equateur').GetName]的调查，促使我们与来自[concept_gate_planet]的[GetCulture('orcish').GetName]代表取得了联系。" #deepl:679937690
+ gate_investigate_gate.5.f: "兽人并非仅仅封住了这扇门户，而是奋力将其封死——他们将铁块与骨骸塞进每一道缝隙，用粗糙却顽强的魔法将石块牢牢束缚，直到最后一名兽人从防线后撤。我们的研究人员耗费的时间比其他任何人都长，才最终攻破了这道门户。\n\n当门户终于被攻破时，另一边并没有任何仪式在等待。 唯有寂静，随后黑暗中传来动静——警惕、全副武装、戒备森严。\n\n他们并非以请愿者的身份而来。一名军阀的旗手伫立在门槛处，满身伤疤，面无表情，正打量着那些以武力攻占他们城门的来客。 双方都心知肚明这究竟意味着什么：一个被征服的民族，正在这个曾一度将他们击垮的世界里寻找立足之地。 他们所提供的直截了当：劳力、体魄、人数；而他们所求的回报同样明确：足够填饱那些饥肠辘辘已久的肚子所需的谷物和果实，以及足够在$gate_planet$上保护自己人的武器。" #deepl:1878112218
+ gate_investigate_gate.5.a: "这些可能会有帮助。" #deepl:3678068422
+ gate_investigate_gate.5.b: "我们不要他们。" #deepl:1435844639
+ gate_investigate_gate.6.t: "寂静之门外的声音" #deepl:3310024461
+ gate_investigate_gate.6.d: "我们对[GetBuildingType('building_gate_eastern_new_guinea').GetName]的调查，促使我们与来自[concept_gate_planet]的[GetCulture('gnomish').GetName]代表取得了联系。" #deepl:3062735215
+ gate_investigate_gate.6.f: "多年来，新几内亚东岸的那扇门始终保持着地精们离开时的原样：被封印着无法开启，符文冰冷，宛如一座纪念碑，纪念着那个宁愿流亡也不愿接受我们国旗的民族。我们的法师曾将其视为一具死物，不值得进一步研究，直到一位执着的研究者证明，那道封印咒语并非永恒，只是需要时间。\n当封印石终于裂开时，我们本以为另一边会是一片寂静。没想到却发现一支代表团早已在那里等候，他们神情自若，面不改色，仿佛他们从$gate_planet$观察这扇门的时间，远比我们所能想象的还要长久。\n我们的特使报告称，会面并未充满敌意。若说有什么不同，那便是结果比我们的顾问们预期的更为令人充满希望。这些流亡者并未放弃地球。他们谈论着自己开垦的海岸和建造的港口，并愿意为重见故土的机会进行艰难的谈判。\n我们的军事策划者已明确表态。 传送门是一处战略要冲，布满了严密的防护和坚固的防御，若想用武力强行打开，付出的鲜血代价将远超所获的利益。无论我们想从这些地精那里得到什么，都必须在谈判桌上争取，而非在战场上。" #deepl:3069336491
+ gate_investigate_gate.6.a: "这些可能会有帮助。" #deepl:3678068422
+ gate_investigate_gate.6.b: "我们不要他们。" #deepl:1435844639

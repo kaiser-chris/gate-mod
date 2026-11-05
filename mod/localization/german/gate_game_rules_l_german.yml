@@ -4,11 +4,11 @@
 # Magic Starting Countries
  rule_gate_magic_start: "$gate_rule_mod_prefix$ $concept_gate_magic_knowledge$ zu Spielbeginn" #deepl:1243071351
  setting_gate_deactivate_magic_start: "Historisch" #deepl:711774471
- setting_gate_deactivate_magic_start_desc: "Nur [Concept('concept_country', '$concept_countries|q$')] mit entsprechender Historie beginnen mit [concept_gate_magic_knowledge]." #deepl:2807387490
+ setting_gate_deactivate_magic_start_desc: "Nur [Concept('concept_country', '$concept_countries|q$')] mit entsprechender Historie beginnen mit [concept_gate_magic_knowledge]." #deepl:3906748128
  setting_gate_activate_magic_start_player: "Spieler Land + Historisch" #deepl:990927132
- setting_gate_activate_magic_start_player_desc: "Alle Spieler-[Concept('concept_country', '$concept_countries|q$')] sowie [Concept('concept_country', '$concept_countries|q$')] mit den entsprechenden Spielverläufen werden unter [concept_gate_magic_knowledge] erreichbar sein." #deepl:2982864521
+ setting_gate_activate_magic_start_player_desc: "Alle Spieler [Concept('concept_country', '$concept_countries|q$')] sowie [Concept('concept_country', '$concept_countries|q$')] mit entsprechender Vorgeschichte beginnen mit [concept_gate_magic_knowledge]." #deepl:2352302770
  setting_gate_activate_magic_start_all: "Alle Länder" #deepl:3544990229
- setting_gate_activate_magic_start_all_desc: "Alle E-Mail-Adressen von [Concept('concept_country', '$concept_countries|q$')] beginnen mit [concept_gate_magic_knowledge]." #deepl:3665199949
+ setting_gate_activate_magic_start_all_desc: "Alle [Concept('concept_country', '$concept_countries|q$')] beginnen mit [concept_gate_magic_knowledge]." #deepl:1302812341
 # Tutorials
  rule_gate_tutorials: "$gate_rule_mod_prefix$ Anleitungen" #deepl:2120626466
  setting_gate_tutorials_on: "Am" #deepl:1081340179

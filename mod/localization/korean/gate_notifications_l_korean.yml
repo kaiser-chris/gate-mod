@@ -1,7 +1,11 @@
 ﻿l_korean:
+## Groups
  notification_group_gate_arcane_council: "[concept_gate_arcane_council]"
  notification_group_gate_arcanist: "[concept_gate_magic_researcher]"
  notification_group_gate_veiled_interior: "$je_gate_veiled_interior$"
+ notification_group_gate_dungeon_delve: "[concept_gate_dungeon_delve]" #deepl:895328212
+ notification_group_gate_dungeon_party: "[concept_gate_dungeon_party]" #deepl:1182814095
+## Arcane Council
  notification_message_gate_new_high_mage_name: "[TopScope.sCha('new_high_mage').GetCountry.GetName]의 [TopScope.sCha('new_high_mage').GetFullName]가 [concept_gate_arcane_council_high_mage]가 됨"
  notification_message_gate_new_high_mage_desc: "[TopScope.sCha('new_high_mage').GetCountry.GetName]의 [TopScope.sCha('new_high_mage').GetFullName](이)가 [concept_gate_arcane_council]의 새로운 [concept_gate_arcane_council_high_mage](으)로 선출되었습니다."
  notification_message_gate_new_high_mage_tooltip: "#header $notification_message_gate_new_high_mage_name$#!\n$TOOLTIP_DELIMITER$\n$notification_message_gate_new_high_mage_desc$"
@@ -11,18 +15,47 @@
  notification_message_gate_arcane_council_member_leave_name: "[TopScope.sC('leaving_member').GetName](이)가 [concept_gate_arcane_council]에서 탈퇴함"
  notification_message_gate_arcane_council_member_leave_desc: "[TopScope.sC('leaving_member').GetName]가 [concept_gate_arcane_council]에서 탈퇴하여 더 이상 [concept_gate_magic_users]을 국제적으로 규제하지 않습니다."
  notification_message_gate_arcane_council_member_leave_tooltip: "#header $notification_message_gate_arcane_council_member_leave_name$#!\n$TOOLTIP_DELIMITER$\n$notification_message_gate_arcane_council_member_leave_desc$"
+## Veiled Interior
  notification_message_gate_veiled_interior_diplomacy_stall_name: "#tooltip:[GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow [TopScope.sJE('journal_entry').GetName]#!#! 협상이 교착 상태에 빠집니다."
  notification_message_gate_veiled_interior_diplomacy_stall_desc: "내륙과의 협상이 [TopScope.GetLocalVariable('stall_length').GetValue|v0]개월 동안 교착 상태에 빠졌습니다."
  notification_message_gate_veiled_interior_diplomacy_stall_tooltip: "#header $notification_message_gate_veiled_interior_diplomacy_stall_name$#!\n$TOOLTIP_DELIMITER$\n$notification_message_gate_veiled_interior_diplomacy_stall_desc$"
  notification_message_gate_veiled_interior_diplomacy_continue_name: "#tooltip:[GetRawTextTooltipTag('je_gate_veiled_interior_tooltip')] #yellow [TopScope.sJE('journal_entry').GetName]#!#! 협상이 계속됩니다."
  notification_message_gate_veiled_interior_diplomacy_continue_desc: "내륙과의 협상은 아무런 변화 없이 계속됩니다."
  notification_message_gate_veiled_interior_diplomacy_continue_tooltip: "#header $notification_message_gate_veiled_interior_diplomacy_continue_name$#!\n$TOOLTIP_DELIMITER$\n$notification_message_gate_veiled_interior_diplomacy_continue_desc$"
+## Arcanist
  notification_message_gate_arcanist_hired_name: "[TopScope.sCha('magic_researcher').GetFullName](을)를 새로운 [concept_gate_magic_researcher](으)로 고용했습니다."
  notification_message_gate_arcanist_hired_desc: "[TopScope.sCha('magic_researcher').GetFullName]를 새로운 [concept_gate_magic_researcher]로 고용했습니다."
  notification_message_gate_arcanist_hired_tooltip: "#header $notification_message_gate_arcanist_hired_name$#!\n$TOOLTIP_DELIMITER$\n$notification_message_gate_arcanist_hired_desc$"
  notification_message_gate_arcanist_died_name: "우리의 [concept_gate_magic_researcher] [TopScope.sCha('magic_researcher').GetFullName]가 사망함"
  notification_message_gate_arcanist_died_desc: "우리의 [concept_gate_magic_researcher] [TopScope.sCha('magic_researcher').GetFullName]가 사망했습니다."
  notification_message_gate_arcanist_died_tooltip: "#header $notification_message_gate_arcanist_died_name$#!\n$TOOLTIP_DELIMITER$\n$notification_message_gate_arcanist_died_desc$"
+## Dungeon Delve
+ notification_message_gate_dungeon_delve_advance_name: "저희 [concept_gate_dungeon_party]가 다음 [concept_gate_dungeon_layer]로 진행되었습니다." #deepl:3011053567
+ notification_message_gate_dungeon_delve_advance_desc: "" #deepl:849950284
+ notification_message_gate_dungeon_delve_advance_tooltip: "#header $notification_message_gate_dungeon_delve_advance_name$#!\n$TOOLTIP_DELIMITER$\n$notification_message_gate_dungeon_delve_advance_desc$" #deepl:2101048636
+ notification_message_gate_dungeon_delve_finish_name: "저희 [concept_gate_dungeon_party]가 [concept_gate_dungeon_delve]를 완료했습니다." #deepl:15384658
+ notification_message_gate_dungeon_delve_finish_desc: "" #deepl:626522059
+ notification_message_gate_dungeon_delve_finish_tooltip: "#header $notification_message_gate_dungeon_delve_advance_name$#!\n$TOOLTIP_DELIMITER$\n$notification_message_gate_dungeon_delve_advance_desc$" #deepl:2101048636
+## Dungeon Party
+ notification_message_gate_dungeon_party_condition_increase_name: "[concept_gate_dungeon_party]의 [Concept('concept_gate_dungeon_party_condition', '$concept_gate_dungeon_party_condition_simple|q$')]가 증가했습니다." #deepl:3506715862
+ notification_message_gate_dungeon_party_condition_increase_desc: "[concept_gate_dungeon_party]의 [Concept('concept_gate_dungeon_party_condition', '$concept_gate_dungeon_party_condition_simple|q$')] 값이 [TopScope.GetLocalVariable('temp_condition_change').GetValue|1+]만큼 증가했습니다." #deepl:3035265566
+ notification_message_gate_dungeon_party_condition_increase_tooltip: "#header $notification_message_gate_dungeon_party_condition_increase_name$#!\n$TOOLTIP_DELIMITER$\n$notification_message_gate_dungeon_party_condition_increase_desc$" #deepl:1946328712
+ notification_message_gate_dungeon_party_condition_decrease_name: "[concept_gate_dungeon_party]의 [Concept('concept_gate_dungeon_party_condition', '$concept_gate_dungeon_party_condition_simple|q$')]가 감소했습니다." #deepl:1595601755
+ notification_message_gate_dungeon_party_condition_decrease_desc: "[concept_gate_dungeon_party]의 [Concept('concept_gate_dungeon_party_condition', '$concept_gate_dungeon_party_condition_simple|q$')] 값이 [TopScope.GetLocalVariable('temp_condition_change').GetValue|1+]만큼 감소했습니다." #deepl:907352440
+ notification_message_gate_dungeon_party_condition_decrease_tooltip: "#header $notification_message_gate_dungeon_party_condition_decrease_name$#!\n$TOOLTIP_DELIMITER$\n$notification_message_gate_dungeon_party_condition_decrease_desc$" #deepl:3747246756
+ notification_message_gate_dungeon_party_cohesion_increase_name: "[concept_gate_dungeon_party]의 [Concept('concept_gate_dungeon_party_cohesion', '$concept_gate_dungeon_party_cohesion_simple|q$')]가 증가했습니다." #deepl:1723706380
+ notification_message_gate_dungeon_party_cohesion_increase_desc: "[concept_gate_dungeon_party]의 [Concept('concept_gate_dungeon_party_cohesion', '$concept_gate_dungeon_party_cohesion_simple|q$')] 값이 [TopScope.GetLocalVariable('temp_cohesion_change').GetValue|1+]만큼 증가했습니다." #deepl:1674295051
+ notification_message_gate_dungeon_party_cohesion_increase_tooltip: "#header $notification_message_gate_dungeon_party_cohesion_increase_name$#!\n$TOOLTIP_DELIMITER$\n$notification_message_gate_dungeon_party_cohesion_increase_desc$" #deepl:3393606123
+ notification_message_gate_dungeon_party_cohesion_decrease_name: "[concept_gate_dungeon_party]의 [Concept('concept_gate_dungeon_party_cohesion', '$concept_gate_dungeon_party_cohesion_simple|q$')]가 감소했습니다." #deepl:3903021953
+ notification_message_gate_dungeon_party_cohesion_decrease_desc: "[concept_gate_dungeon_party]의 [Concept('concept_gate_dungeon_party_cohesion', '$concept_gate_dungeon_party_cohesion_simple|q$')] 값이 [TopScope.GetLocalVariable('temp_cohesion_change').GetValue|1+]만큼 감소했습니다." #deepl:503154233
+ notification_message_gate_dungeon_party_cohesion_decrease_tooltip: "#header $notification_message_gate_dungeon_party_cohesion_decrease_name$#!\n$TOOLTIP_DELIMITER$\n$notification_message_gate_dungeon_party_cohesion_decrease_desc$" #deepl:4241902481
+ notification_message_gate_dungeon_party_renown_increase_name: "[concept_gate_dungeon_party]의 [Concept('concept_gate_dungeon_party_renown', '$concept_gate_dungeon_party_renown_simple|q$')]가 증가했습니다." #deepl:1687201497
+ notification_message_gate_dungeon_party_renown_increase_desc: "[concept_gate_dungeon_party]의 [Concept('concept_gate_dungeon_party_renown', '$concept_gate_dungeon_party_renown_simple|q$')] 값이 [TopScope.GetLocalVariable('temp_renown_change').GetValue|1+]만큼 증가했습니다." #deepl:1891094937
+ notification_message_gate_dungeon_party_renown_increase_tooltip: "#header $notification_message_gate_dungeon_party_renown_increase_name$#!\n$TOOLTIP_DELIMITER$\n$notification_message_gate_dungeon_party_renown_increase_desc$" #deepl:2140670420
+ notification_message_gate_dungeon_party_renown_decrease_name: "[concept_gate_dungeon_party]의 [Concept('concept_gate_dungeon_party_renown', '$concept_gate_dungeon_party_renown_simple|q$')]가 감소했습니다." #deepl:3935201620
+ notification_message_gate_dungeon_party_renown_decrease_desc: "[concept_gate_dungeon_party]의 [Concept('concept_gate_dungeon_party_renown', '$concept_gate_dungeon_party_renown_simple|q$')] 값이 [TopScope.GetLocalVariable('temp_renown_change').GetValue|1+]만큼 감소했습니다." #deepl:2418778642
+ notification_message_gate_dungeon_party_renown_decrease_tooltip: "#header $notification_message_gate_dungeon_party_renown_decrease_name$#!\n$TOOLTIP_DELIMITER$\n$notification_message_gate_dungeon_party_renown_decrease_desc$" #deepl:4053819040
+## Prestige Goods
  notification_message_prestige_good_gate_generic_mana_unlocked_name: "[SCOPE.sCompany('relevant_company').GetName](이)가 @prestige_good_gate_generic_mana! #b $prestige_good_gate_generic_mana$#!를 개발함"
  notification_message_prestige_good_gate_generic_mana_unlocked_desc: "이제 [SCOPE.sCompany('relevant_company').GetName]에서 소유한 [Concept('concept_building', '$concept_buildings|q$')]이 @prestige_good_gate_generic_mana! #b $prestige_good_gate_generic_mana$#! 생산을 시작할 수 있습니다."
  notification_message_prestige_good_gate_generic_mana_unlocked_tooltip: "#header $notification_message_prestige_good_gate_generic_mana_unlocked_name$#!\n$TOOLTIP_DELIMITER$\n$notification_message_prestige_good_gate_generic_mana_unlocked_desc$"

@@ -1,2 +1,9 @@
 ﻿l_german:
  gg_selector_state_building_text: "unter [Building.GetState.GetName]" #deepl:212754057
+ gg_selector_state_dungeon_text: "in [Scope.Var('building').GetBuilding.GetState.GetName]" #deepl:3447090773
+ gg_selector_sort_by_layer_count: "Ebenen" #deepl:2541609170
+ gg_selector_sort_by_layer_count_tooltip: "Nach der Anzahl der Ebenen von [concept_gate_dungeon] sortieren ([Concept('concept_gate_dungeon_layer','$concept_gate_dungeon_layers|q$')])" #deepl:590763720
+ gg_selector_sort_by_creation_date: "Entdeckungsdatum" #deepl:3793667089
+ gg_selector_sort_by_creation_date_tooltip: "Nach dem Entdeckungsdatum von [concept_gate_dungeon] sortieren" #deepl:1310373801
+ gg_selector_dungeon_layers_tooltip: "#header [Concept('concept_gate_dungeon_layer','$concept_gate_dungeon_layers|q$')]#!\n$concept_gate_dungeon_layer_desc$" #deepl:865559367
+ gg_selector_dungeon_creation_date_tooltip: "#header Entdeckungsdatum#!\nDies ist das Datum, an dem dieser [concept_gate_dungeon] erstmals entdeckt wurde." #deepl:3745191326

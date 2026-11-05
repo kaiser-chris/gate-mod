@@ -4,6 +4,7 @@
  gate_button_main_desc: "$gg_panel_base_title$" #deepl:1976458859
  gate_button_main_tooltip: "#header $gg_panel_base_title$#!\nAbkürzung: #V $gg_panel_base_title$ #! (#V CTRL + T#!)" #deepl:1050239708
  gg_panel_base_action: "Manaflow-Panel" #deepl:3726450867
+ gate_button_mana_saturation: "gate_button_mana_saturation" #deepl:1615157959
 # Panel
  gg_panel_base_title: "Manaflow" #deepl:1361387616
  gg_panel_base_tab_general: "Allgemein" #deepl:972568161
@@ -11,8 +12,8 @@
  gg_panel_base_no_researcher_tooltip: "#header  No [concept_gate_magic_researcher] #! \n $alert_has_no_magic_researcher_alert_desc$ \n \n $alert_has_no_magic_researcher_alert_hint$ \n \n #instruction  Klicken Sie hier, um das Fenster „$NATIONAL_CAST$“ zu öffnen #!" #deepl:4284619567
  gg_panel_base_no_researcher_blink: "#BOLD Einen neuen Arkanisten anheuern#!" #deepl:968085008
  gg_mana_saturation: "Mana-Sättigung" #deepl:1203188312
- gg_mana_saturation_tooltip: "#header  [concept_gate_mana_saturation] #! \n Derzeit ist #v  [GetGlobalVariable('global_mana_saturation').GetValue|1] % #! der Erde mit Mana bedeckt. \n \n Mana ist die Grundlage aller [concept_gate_magical_phenomena] und wird in [concept_gate_magic_technology] in großem Umfang genutzt." #deepl:2293098514
- gg_header_magic_ethic: "[Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')]" #deepl:1936122048
+ gg_mana_saturation_tooltip: "" #deepl:2966208219
+ gg_header_magic_ethic: "[Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')]" #deepl:1088607322
  gg_header_magic_countries: "Arkane Länder" #deepl:2611929564
  gg_ethic_empty_slot: "Leerer Domain Slot" #deepl:1572555500
  gg_ethic_empty_slot_tooltip: "#header  [concept_gate_magic_ethic] #! \n Dieser Platz unter „[concept_gate_magic_ethic]“ ist noch frei und kann durch Erfüllung der folgenden Voraussetzungen freigeschaltet werden. \n \n #title  Freigeschaltet #! \n $gg_ethic_empty_slot_tooltip_condition_one$ \n $gg_ethic_empty_slot_tooltip_condition_two$ \n $gg_ethic_empty_slot_tooltip_condition_three$" #deepl:1340166891

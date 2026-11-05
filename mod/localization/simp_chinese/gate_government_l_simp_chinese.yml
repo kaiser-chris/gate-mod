@@ -1,5 +1,10 @@
 ﻿l_simp_chinese:
+# Magocracy
  RULER_TITLE_GATE_ARCHWIZARD: "大法师"
  RULER_TITLE_GATE_ARCHWITCH: "大巫师"
  gov_gate_magocracy_base: "魔权国"
  gov_gate_magocracy_base_desc: "这种[concept_government_type]体制下，权力属于[Concept('concept_ruler','$RULER_TITLE_GATE_ARCHWIZARD|q$')]。\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+# Arcturian Theocracy
+ RULER_TITLE_GATE_LUMENARCH: "Lumenarch" #deepl:1290168808
+ gov_gate_golden_blessing_theocracy: "Lumenarchy" #deepl:1420908506
+ gov_gate_golden_blessing_theocracy_desc: "一种由[concept_government_type]地方层级体系所统治的[GetReligion('gate_golden_religion').GetName]政体。最高级别的[Concept('concept_ruler','$RULER_TITLE_GATE_LUMENARCH|q$')]担任[concept_head_of_state]一职。\n" #deepl:1522445250

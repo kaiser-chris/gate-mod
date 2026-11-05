@@ -28,9 +28,9 @@
  button_project_change_domain: "修改 $concept_gate_magic_ethics$" #deepl:211201186
  je_gate_project_change_domain: "修改 $concept_gate_magic_ethics$" #deepl:211201186
  je_gate_project_change_domain_reason: "$gg_projects_active_project_desc$\n$gate_journal_delimiter$\n$je_gate_project_change_domain_description$" #deepl:229067263
- je_gate_project_change_domain_description: "[Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')] 这体现了我们社会对魔法的看法，并将为我国带来巨大的推动力。该项目将使我们能够更改当前的 [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')]。#r  我们只能更改一次 [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')] 域名！#!" #deepl:1371592778
+ je_gate_project_change_domain_description: "[Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')] 代表了我们社会对魔法的看法，并为我国带来了巨大的推动力。该项目将使我们能够改变当前的 [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')]。#r 我们只能更改一次 [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')] 领域！#!" #deepl:2963146786
  je_gate_project_change_domain_condition_max_domains: "[THIS.GetCountry.GetNameNoFlag] 正在使用全部三个[concept_gate_magic_ethic]插槽" #deepl:4252664512
- je_gate_project_change_domain_condition_not_researched: "[THIS.GetCountry.GetNameNoFlag] 尚未更改其 [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')]" #deepl:2895666181
+ je_gate_project_change_domain_condition_not_researched: "[THIS.GetCountry.GetNameNoFlag]尚未更改其[Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')]" #deepl:827335679
 # Improve Mana Extraction
  button_project_improve_mana_extraction: "改进魔能提炼"
  je_gate_project_improve_mana_extraction: "改进魔能提炼"
@@ -53,6 +53,23 @@
  trigger_gate_project_can_has_unimproved_magic_seed: "我有一台 [GetBuildingType('building_gate_druid_grove').GetBuildingGroupName] [concept_building]，但没有 $modifier_gate_project_modernize_seed_selection_with_tooltip$ [concept_modifier]" #deepl:3857931699
  gate_project_select_modernize_seed_selection_window: "选择[GetGoods('gate_magic_seed').GetNameNoFormatting]大楼" #deepl:488013266
  gate_project_select_modernize_seed_selection_window_select: "#header  [Building.GetName] [Building.GetState.GetName] #! \n 请选择这栋建筑作为#V  $je_gate_project_modernize_seed_selection$ #! [concept_gate_project]。" #deepl:3259136530
+ # Modernizing Seed Selection
+ button_project_investigate_magic_gate: "调查$building_gate$" #deepl:123163404
+ je_gate_project_investigate_magic_gate: "调查$building_gate$" #deepl:557002480
+ je_gate_project_investigate_magic_gate_description: "[GetBuildingType('building_gate_alxa').GetName]建筑是通往[concept_gate_planet]的连接点，根据它们连接的位置不同，我们将能够与另一侧进行贸易、探索或接收移民。本项目将解锁$building_gate$。" #deepl:993983357
+ je_gate_project_investigate_magic_gate_alxa: "查询 [GetStateRegion('STATE_ALXA').GetNameNoFormatting] $building_gate$" #deepl:527164972
+ je_gate_project_investigate_magic_gate_alxa_reason: "$gg_projects_active_project_desc$\n$gate_journal_delimiter$\n$je_gate_project_investigate_magic_gate_description$" #deepl:2475108248
+ je_gate_project_investigate_magic_gate_tyrol: "调查 [GetStateRegion('STATE_TYROL').GetNameNoFormatting] $building_gate$" #deepl:2216351361
+ je_gate_project_investigate_magic_gate_tyrol_reason: "$gg_projects_active_project_desc$\n$gate_journal_delimiter$\n$je_gate_project_investigate_magic_gate_description$" #deepl:2475108248
+ je_gate_project_investigate_magic_gate_zambia: "查询 [GetStateRegion('STATE_ZAMBIA').GetNameNoFormatting] $building_gate$" #deepl:3867592549
+ je_gate_project_investigate_magic_gate_zambia_reason: "$gg_projects_active_project_desc$\n$gate_journal_delimiter$\n$je_gate_project_investigate_magic_gate_description$" #deepl:2475108248
+ je_gate_project_investigate_magic_gate_equateur: "查询 [GetStateRegion('STATE_EQUATEUR').GetNameNoFormatting] $building_gate$" #deepl:4149597471
+ je_gate_project_investigate_magic_gate_equateur_reason: "$gg_projects_active_project_desc$\n$gate_journal_delimiter$\n$je_gate_project_investigate_magic_gate_description$" #deepl:2475108248
+ je_gate_project_investigate_magic_gate_yukon: "查询 [GetStateRegion('STATE_YUKON_TERRITORY').GetNameNoFormatting] $building_gate$" #deepl:3157023531
+ je_gate_project_investigate_magic_gate_yukon_reason: "$gg_projects_active_project_desc$\n$gate_journal_delimiter$\n$je_gate_project_investigate_magic_gate_description$" #deepl:2475108248
+ je_gate_project_investigate_magic_gate_eastern_new_guinea: "查询 [GetStateRegion('STATE_EASTERN_NEW_GUINEA').GetNameNoFormatting] $building_gate$" #deepl:922839585
+ je_gate_project_investigate_magic_gate_eastern_new_guinea_reason: "$gg_projects_active_project_desc$\n$gate_journal_delimiter$\n$je_gate_project_investigate_magic_gate_description$" #deepl:2475108248
+ trigger_gate_project_can_has_locked_gate: "有一个被锁定的[GetBuildingType('building_gate_alxa').GetName] [concept_building]。" #deepl:366402738
 # Artificial Ecosystem
  button_project_artificial_ecosystem: "构建一个人工生态系统" #deepl:1402757762
  je_gate_project_artificial_ecosystem: "构建人工生态系统" #deepl:2735770378

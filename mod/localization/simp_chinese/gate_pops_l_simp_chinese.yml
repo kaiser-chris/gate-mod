@@ -18,11 +18,11 @@
  building_gate_mages_mortality_mult: "$state_gate_mages_mortality_mult$"
  building_gate_mages_mortality_mult_desc: "$state_gate_mages_mortality_mult_desc$"
  building_gate_mages_fertility_mult: "$gate_mages$[Concept('concept_pop_growth', '$concept_pop_growth_birthrate|q$')]"
- building_gate_mages_fertility_mult_desc: "$gate_mages$ 的 [Concept('concept_pop_growth', '$concept_pop_growth_birthrate|q$')] 发生增加或减少" #deepl:392709574
+ building_gate_mages_fertility_mult_desc: "$gate_mages$中[Concept('concept_pop_growth', '$concept_pop_growth_birthrate|q$')]的增减" #deepl:2877125950
  state_gate_mages_dependent_wage_mult: "$gate_mages$ 受抚养人收入" #deepl:3795312237
  state_gate_mages_dependent_wage_mult_desc: "$gate_mages$受抚养人收入的增加或减少" #deepl:3886930644
- state_gate_mages_mortality_mult: "[Concept('concept_pop_growth', '$concept_pop_growth_mortality|q$')] $gate_mages$" #deepl:216164754
- state_gate_mages_mortality_mult_desc: "$gate_mages$ 的 [Concept('concept_pop_growth', '$concept_pop_growth_mortality|q$')] 发生增加或减少" #deepl:3355836612
+ state_gate_mages_mortality_mult: "[Concept('concept_pop_growth', '$concept_pop_growth_mortality|q$')]的$gate_mages$" #deepl:3355552568
+ state_gate_mages_mortality_mult_desc: "$gate_mages$中[Concept('concept_pop_growth', '$concept_pop_growth_mortality|q$')]的增减" #deepl:2358730131
  state_gate_mages_investment_pool_contribution_add: "$gate_mages$ [concept_investment_pool] 贡献" #deepl:1142713103
  state_gate_mages_investment_pool_contribution_add_desc: "$gate_mages$将投资多少利润" #deepl:1925489735
  state_gate_mages_investment_pool_efficiency_mult: "$gate_mages$ [concept_investment_pool] 贡献效率" #deepl:2644908459
@@ -45,17 +45,17 @@
  building_employment_gate_druids_mult: "$building_employment_gate_druids_add$"
  building_employment_gate_druids_mult_desc: "$building_employment_gate_druids_add_desc$"
  building_gate_druids_shares_add: "$gate_druids$ [Concept('concept_ownership_share', '$concept_ownership_shares|q$')]"
- building_gate_druids_shares_add_desc: "$gate_druids$ [Concept('concept_ownership_share', '$concept_ownership_shares|q$')] 的增减" #deepl:2481023187
+ building_gate_druids_shares_add_desc: "$gate_druids$的增减 [Concept('concept_ownership_share', '$concept_ownership_shares|q$')]" #deepl:2314062382
  building_gate_druids_shares_mult: "$gate_druids$ [Concept('concept_ownership_share', '$concept_ownership_shares|q$')]"
- building_gate_druids_shares_mult_desc: "$gate_druids$ [Concept('concept_ownership_share', '$concept_ownership_shares|q$')] 的增减" #deepl:2481023187
+ building_gate_druids_shares_mult_desc: "$gate_druids$的增减 [Concept('concept_ownership_share', '$concept_ownership_shares|q$')]" #deepl:2314062382
  building_gate_druids_mortality_mult: "$state_gate_druids_mortality_mult$"
  building_gate_druids_mortality_mult_desc: "$state_gate_druids_mortality_mult_desc$"
  building_gate_druids_fertility_mult: "[Concept('concept_pop_growth', '$concept_pop_growth_birthrate|q$')] of $gate_druids$"
  building_gate_druids_fertility_mult_desc: "对$gate_druids$[Concept('concept_pop_growth', '$concept_pop_growth_birthrate|q$')]的增益或惩罚"
  building_gate_druids_dependent_wage_mult: "$gate_druids$受扶养人口收入"
  building_gate_druids_dependent_wage_mult_desc: "$gate_druids$受抚养人收入的增加或减少" #deepl:2478643756
- state_gate_druids_mortality_mult: "[Concept('concept_pop_growth', '$concept_pop_growth_mortality|q$')] $gate_druids$" #deepl:794346993
- state_gate_druids_mortality_mult_desc: "$gate_druids$ 的 [Concept('concept_pop_growth', '$concept_pop_growth_mortality|q$')] 发生增加或减少" #deepl:52091746
+ state_gate_druids_mortality_mult: "[Concept('concept_pop_growth', '$concept_pop_growth_mortality|q$')]，来自 $gate_druids$" #deepl:1976031693
+ state_gate_druids_mortality_mult_desc: "$gate_druids$中[Concept('concept_pop_growth', '$concept_pop_growth_mortality|q$')]的增减" #deepl:3057823943
  state_gate_druids_investment_pool_contribution_add: "$gate_druids$ [concept_investment_pool] 贡献" #deepl:1526115364
  state_gate_druids_investment_pool_contribution_add_desc: "$gate_druids$将投资多少利润" #deepl:3550467494
  state_gate_druids_investment_pool_efficiency_mult: "$gate_druids$ [concept_investment_pool] 贡献效率" #deepl:2064357148

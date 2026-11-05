@@ -1,0 +1,123 @@
+﻿l_korean:
+# Journal Entry
+ je_gate_expedition_dungeon: "던전 탐험" #deepl:3657803995
+ je_gate_expedition_dungeon_reason: "우리의 [concept_gate_dungeon_party]가 [concept_gate_dungeon]에 진입하여 이제 외부 세계와 단절된 상태입니다. 그들에게 닥칠 모든 시련을 잘 헤쳐나갈 수 있기를 바랄 뿐입니다." #deepl:3620273966
+ je_gate_expedition_dungeon_complete: "#v [TopScope.sJE('journal_entry').MakeScope.Var('last_layer').Var('name').GetFlagName]#! [Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')]를 완료했습니다." #deepl:3784952766
+ je_gate_expedition_dungeon_fail: "[concept_gate_dungeon_party]의 [Concept('concept_gate_dungeon_party_condition','$concept_gate_dungeon_party_condition_simple|q$')]가 #v 0#!로 떨어집니다!" #deepl:1565804638
+ je_gate_expedition_dungeon_on_complete: "이 [concept_gate_dungeon]을 잠금 해제하여 악용하세요" #deepl:1369792813
+ je_gate_expedition_dungeon_party_leader: "[Concept('concept_gate_dungeon_party_leader', '$concept_gate_dungeon_party_leader_simple|q$')]" #deepl:399795468
+ je_gate_expedition_dungeon_party_leader_empty: "비어 있음" #deepl:3407253358
+ je_gate_expedition_dungeon_status_pending_event: "저희 [concept_gate_dungeon_party]에서 긴급 상황을 처리하고 있습니다." #deepl:2396133135
+ je_gate_expedition_dungeon_name: "[concept_gate_dungeon] 이름" #deepl:4288637609
+ je_gate_expedition_dungeon_location: "[concept_gate_dungeon] 위치" #deepl:2505359440
+ je_gate_expedition_dungeon_layer_count: "[Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layers|q$')]" #deepl:245473234
+ je_gate_expedition_dungeon_layer_active: "현재 [concept_gate_dungeon_layer]" #deepl:3613301397
+ je_gate_expedition_dungeon_layer_all: "모두 표시 [Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layers|q$')]" #deepl:3855683733
+ je_gate_expedition_dungeon_log_entries_header_type: "유형" #deepl:2669039948
+ je_gate_expedition_dungeon_log_entries_header_event: "행사" #deepl:1263615171
+ je_gate_expedition_dungeon_log_entries_header_date: "날짜" #deepl:2200628797
+ je_gate_expedition_dungeon_log_entries_all: "[concept_gate_dungeon] 던전 이벤트 로그 표시" #deepl:2915958456
+ je_gate_expedition_dungeon_log_entries_limit: "#bold #!개 중 최신 #bold 10#!개를 표시 중입니다. #bold [GetDataModelSize(ScriptContainer.MakeScope.GetList('log_entries'))|0]#! 로그 항목" #deepl:3266392393
+ je_gate_expedition_dungeon_log_entries_empty: "아직 로그 항목이 없습니다." #deepl:4057840238
+ je_gate_expedition_dungeon_layer_done: "이 [concept_gate_dungeon_layer]은 #bold 완료#!되었습니다#!." #deepl:4131789566
+ je_gate_expedition_dungeon_layer_open: "이 [concept_gate_dungeon_layer]는 #bold 아직 완성되지 않았습니다#!#!." #deepl:2166738007
+ je_gate_expedition_dungeon_cohesion_tooltip: "#header [concept_gate_dungeon_party_cohesion]#!\n이 [concept_gate_dungeon_party]의 결속력이 얼마나 유지되고 있는지 나타냅니다. 이 수치가 0에 도달하면 파티가 해체되고 탐험은 실패로 끝납니다.\n" #deepl:9102788
+ je_gate_expedition_dungeon_condition_tooltip: "#header [concept_gate_dungeon_party_condition]#!\n이 [concept_gate_dungeon_party]의 식량, 장비, 보급품 상태입니다. 던전 탐험이 진행됨에 따라 점차 감소하며, 수치가 떨어질수록 파티의 장비 상태가 악화됩니다.\n" #deepl:2867010154
+ je_gate_expedition_dungeon_renown_tooltip: "#header [concept_gate_dungeon_party_renown]#!\n이 [concept_gate_dungeon_party]가 쌓아온 실력과 명성입니다. 던전 탐험 중에는 거의 변하지 않지만, $concept_gate_dungeon_party_renown_simple$ 값이 충분히 높으면 [concept_gate_dungeon]의 이벤트에서 추가 옵션을 해제할 수 있습니다.\n" #deepl:3924921469
+ je_gate_expedition_dungeon_layer_in_progress: "이 [concept_gate_dungeon_layer]은 #bold 현재 제작 중#!입니다." #deepl:608748958
+ je_gate_expedition_dungeon_name_and_location: "[Scope.Var('name').GetFlagName]에서 [Scope.Var('location').GetStateRegion.GetName]" #deepl:3754834739
+ je_gate_expedition_dungeon_name_and_location_selector: "[Scope.Var('dungeon').Var('name').GetFlagName]에서 [Scope.Var('dungeon').Var('location').GetStateRegion.GetName]" #deepl:2231344110
+ sb_gate_dungeon_debug_on_action: "#debug 작업 시 트리거 펄스 발생#!" #deepl:3988207702
+ sb_gate_dungeon_debug_on_action_desc: "월간 작업을 수동으로 실행하십시오." #deepl:4021187328
+ sb_gate_dungeon_debug_advance: "#debug 레이어 완료#!" #deepl:3809113979
+ sb_gate_dungeon_debug_advance_desc: "현재 층을 완료하고 다음 층으로 진행하거나 던전을 완료하세요." #deepl:3031981233
+# Events
+ gate_dungeon_setup.1.t: "[concept_gate_dungeon_party] 설정하기" #deepl:804843518
+ gate_dungeon_setup.1.points: "We have a limited budget of [concept_gate_dungeon_party_points] to distribute. Each attribute has their own use and points should be distributed to best fit the [concept_gate_dungeon] you want to delve into.\nPoints can be distributed by clicking on the bars below." #TODO: Write party setup points
+ gate_dungeon_setup.1.leaders: "각 던전 탐험마다 [Concept('concept_gate_dungeon_party_leader','$concept_gate_dungeon_party_leader_simple|q$')]를 선택해야 합니다. 리더의 [Concept('concept_character_trait','$concept_character_traits|q$')]는 [Concept('concept_gate_dungeon_party_points','$concept_gate_dungeon_party_points_simple|q$')] 예산이나 [Concept('concept_gate_dungeon_party','$concept_gate_dungeon_party_simple|q$')]의 속성(예: [Concept('concept_gate_dungeon_party_cohesion','$concept_gate_dungeon_party_cohesion_simple|q$')], [Concept('concept_gate_dungeon_party_condition','$concept_gate_dungeon_party_condition_simple|q$')], [Concept('concept_gate_dungeon_party_renown','$concept_gate_dungeon_party_renown_simple|q$')] 등)에 영향을 미칠 수 있습니다." #deepl:880312694
+ gate_dungeon_setup.1.a: "[concept_gate_dungeon] 던전 탐험을 시작하세요." #deepl:2440344134
+ gate_dungeon_setup.1.b: "[concept_gate_dungeon] 탐험을 취소합니다." #deepl:1190498725
+ gate_dungeon_setup.2.t: "던전이 나타났습니다" #deepl:1605878638
+ gate_dungeon_setup.2.d: "[TopScope.GetLocalVariable('gate_dungeon').Var('name').GetFlagName]" #deepl:140945318
+ gate_dungeon_setup.2.f: "[TopScope.GetLocalVariable('gate_dungeon').Var('desc').GetFlagName]" #deepl:3212054926
+ gate_dungeon_setup.2.a: "이걸 한번 살펴봐야겠어요!" #deepl:1439150194
+ event_gate_dungeon_cancel_exploration_tooltip: "예정된 [concept_gate_dungeon] 탐험을 취소하십시오" #deepl:1642937148
+ event_gate_dungeon_dismiss_leaders_tooltip: "[Concept('concept_gate_dungeon_party_leader','$concept_gate_dungeon_party_leaders_simple|q$')]를 모두 제거합니다." #deepl:2464524241
+ event_gate_dungeon_cooldown_tooltip: "\n@warning! #v 180일#! 동안 다른 [concept_gate_dungeon] 던전을 다시 시작할 수 없습니다#!!" #deepl:4073880866
+ event_gate_dungeon_has_leader_tooltip: "[concept_gate_dungeon_party_leader]를 선택했습니다." #deepl:1043323223
+ event_gate_dungeon_valid_points_tooltip: "사용 가능한 모든 [concept_gate_dungeon_party_points]를 소진했습니다." #deepl:3172369059
+ event_gate_dungeon: "#yellow 이벤트 [Scope.Var('name').GetFlagName]#! [concept_gate_dungeon]" #deepl:3342302506
+ event_gate_dungeon_party_points: "사용 가능[Concept('concept_gate_dungeon_party_points','$concept_gate_dungeon_party_points_simple|q$')]" #deepl:3439430320
+ event_gate_dungeon_party_points_cohesion: "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_cohesion_value')|0v][AddLocalizationIf(NotZero_CFixedPoint(ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_cohesion_modifier_value')), 'event_gate_dungeon_party_points_cohesion_modifier')]" #deepl:2363212472
+ event_gate_dungeon_party_points_condition: "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_condition_value')|0v][AddLocalizationIf(NotZero_CFixedPoint(ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_condition_modifier_value')), 'event_gate_dungeon_party_points_condition_modifier')]" #deepl:2263607463
+ event_gate_dungeon_party_points_renown: "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_renown_value')|0v][AddLocalizationIf(NotZero_CFixedPoint(ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_renown_modifier_value')), 'event_gate_dungeon_party_points_renown_modifier')]" #deepl:2677274729
+ event_gate_dungeon_party_points_cohesion_modifier: " #tooltippable;tooltip:[GetRawTextTooltipTag('event_gate_dungeon_party_points_modifier_tooltip')] [ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_cohesion_modifier_value')|1+=]#!" #deepl:45017088
+ event_gate_dungeon_party_points_condition_modifier: " #tooltippable;tooltip:[GetRawTextTooltipTag('event_gate_dungeon_party_points_modifier_tooltip')] [ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_condition_modifier_value')|1+=]#!" #deepl:171052897
+ event_gate_dungeon_party_points_renown_modifier: " #tooltippable;tooltip:[GetRawTextTooltipTag('event_gate_dungeon_party_points_modifier_tooltip')] [ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_renown_modifier_value')|1+=]#!" #deepl:2551046921
+ event_gate_dungeon_party_points_modifier_tooltip: "당 지도부[Concept('concept_character_trait','$concept_character_traits|q$')]로부터." #deepl:2113553868
+ event_gate_tab_dungeon: "던전" #deepl:716318657
+ event_gate_tab_dungeon_leader: "리더" #deepl:3690153812
+ event_gate_tab_dungeon_party: "초점" #deepl:4287666136
+ event_gate_dungeon_stats_layer_count: "레이어 수" #deepl:3473559825
+ event_gate_dungeon_stats_location: "위치" #deepl:226046482
+ event_gate_dungeon_stats_discovery_date: "발견" #deepl:3415578248
+ event_gate_dungeon_header_location: " [ScriptContainer.MakeScope.Var('dungeon').Var('location').GetStateRegion.GetName] 내" #deepl:3333710226
+ event_gate_dungeon_party_points_tooltip: "" #deepl:436350336
+# Log Entries
+ gate_dungeon_rating_positive: "@gate_rating_good!" #deepl:2620857918
+ gate_dungeon_rating_neutral: "@gate_rating_average!" #deepl:2950855055
+ gate_dungeon_rating_negative: "@gate_rating_low!" #deepl:3385981280
+ gate_dungeon_log_cohesion: "[concept_gate_dungeon_party_cohesion]" #deepl:238565165
+ gate_dungeon_log_condition: "[concept_gate_dungeon_party_condition]" #deepl:2073457821
+ gate_dungeon_log_renown: "[concept_gate_dungeon_party_renown]" #deepl:2839348269
+ gate_dungeon_log_advance: "다음 [concept_gate_dungeon_layer]로 진행했습니다." #deepl:1027887459
+ gate_dungeon_log_finish: "[concept_gate_dungeon] 탐험을 마쳤습니다." #deepl:1272257917
+ gate_dungeon_log_stall: "진전이 없음" #deepl:2920090806
+ gate_dungeon_log_notification_header: "행사" #deepl:1263615171
+# Values
+ gate_dungeon_party_points_format: "$KEY$에서 $VALUE|0=+$" #deepl:1778067772
+ gate_dungeon_party_points_from_base: "기초 탐사 예산" #deepl:1622342062
+ gate_dungeon_party_points_from_chosen_value: "선택된 예산" #deepl:2193077303
+ gate_dungeon_party_points_from_party_leader: "[concept_gate_dungeon_party_leader]" #deepl:3468755067
+ gate_dungeon_party_points_from_cohesion: "선택됨[Concept('concept_gate_dungeon_party_cohesion','$concept_gate_dungeon_party_cohesion_simple|q$')]" #deepl:3837915894
+ gate_dungeon_party_points_from_condition: "선택됨[Concept('concept_gate_dungeon_party_condition','$concept_gate_dungeon_party_condition_simple|q$')]" #deepl:529662619
+ gate_dungeon_party_points_from_renown: "선택됨[Concept('concept_gate_dungeon_party_renown','$concept_gate_dungeon_party_renown_simple|q$')]" #deepl:1575424417
+# Decision
+ decision_gate_start_dungeon_exploration: "[concept_gate_dungeon] 탐험을 시작해 보세요" #deepl:1985564299
+ decision_gate_start_dungeon_exploration_desc: "[concept_gate_dungeon] 선택기를 열고 새로운 탐험을 시작하세요." #deepl:3184066200
+ decision_gate_start_dungeon_exploration_selector_tooltip: "[concept_gate_dungeon] 선택기를 엽니다." #deepl:1503204404
+ decision_gate_start_dungeon_exploration_is_selector_open_tooltip: "#bold 아니#! 벌써 [concept_gate_dungeon] 탐험을 계획 중이네" #deepl:615235107
+ decision_gate_start_dungeon_exploration_cooldown_tooltip: "최근에 [concept_gate_dungeon] 탐험을 시도한 적이 있습니다. 다음 시도를 하려면 #v [LabelingHelper.GetDaysLocWithoutTooltip(TopScope.GetRootScope.VarRemaining('gate_dungeon_delve_cooldown'))]#!#!만큼 더 기다려 주세요." #deepl:1895868807
+# Selector Window
+ gate_project_select_dungeon_window: "[concept_gate_dungeon]을 선택하세요" #deepl:3990975967
+ gate_project_select_dungeon_window_sub_title: "[GetPlayer.GetAdjectiveNoFlag]에서 탐색되지 않은 [Concept('concept_gate_dungeon','$concept_gate_dungeons|q$')] [Concept('concept_state','$concept_states|q$')]" #deepl:3059112269
+ gate_project_select_dungeon_window_select: "#header [Scope.Var('dungeon').Var('name').GetFlagName]에서 [Scope.Var('building').GetBuilding.GetState.GetName]#!\n[concept_gate_dungeon]이 [concept_gate_dungeon]의 탐험을 시작하세요." #deepl:4119185143
+# Generic Dungeon Layer types
+ gate_dungeon_layer_generic_entrance: "입구" #deepl:3715858838
+ gate_dungeon_layer_generic_entrance_desc: "이 [concept_gate_dungeon]의 입구입니다." #deepl:3464955332
+ gate_dungeon_layer_generic_one: "레이어 1" #deepl:453656367
+ gate_dungeon_layer_generic_one_desc: "이 [concept_gate_dungeon]의 첫 번째 [Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')]입니다." #deepl:4130843665
+ gate_dungeon_layer_generic_two: "레이어 2" #deepl:446773802
+ gate_dungeon_layer_generic_two_desc: "이 [concept_gate_dungeon]의 두 번째 [Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')]입니다." #deepl:2319616567
+ gate_dungeon_layer_generic_three: "레이어 3" #deepl:2201696808
+ gate_dungeon_layer_generic_three_desc: "이 [concept_gate_dungeon]의 세 번째 [Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')]입니다." #deepl:1506460494
+ gate_dungeon_layer_generic_four: "레이어 4" #deepl:435630112
+ gate_dungeon_layer_generic_four_desc: "이 [concept_gate_dungeon]의 네 번째 [Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')]입니다." #deepl:4018344526
+ gate_dungeon_layer_generic_five: "5층" #deepl:2154639394
+ gate_dungeon_layer_generic_five_desc: "이 [concept_gate_dungeon]의 다섯 번째 [Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')]입니다." #deepl:3825766626
+ gate_dungeon_layer_generic_six: "레이어 6" #deepl:2177250599
+ gate_dungeon_layer_generic_six_desc: "이 [concept_gate_dungeon]의 여섯 번째 [Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')]입니다." #deepl:376117848
+ gate_dungeon_layer_generic_seven: "레이어 7" #deepl:408696101
+ gate_dungeon_layer_generic_seven_desc: "이 [concept_gate_dungeon]의 일곱 번째 [Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')]입니다." #deepl:2506350563
+ gate_dungeon_layer_generic_eight: "8층" #deepl:526066740
+ gate_dungeon_layer_generic_eight_desc: "이 [concept_gate_dungeon]의 여덟 번째 [Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')]입니다." #deepl:747921836
+ gate_dungeon_layer_generic_nine: "9층" #deepl:2260804662
+ gate_dungeon_layer_generic_nine_desc: "이 [concept_gate_dungeon]의 아홉 번째 [Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')]입니다." #deepl:363289065
+ gate_dungeon_layer_generic_ten: "10층" #deepl:536422430
+ gate_dungeon_layer_generic_ten_desc: "이 [concept_gate_dungeon]의 열 번째 [Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')]입니다." #deepl:4034484722
+ gate_dungeon_layer_generic_eleven: "11층" #deepl:2254645276
+ gate_dungeon_layer_generic_eleven_desc: "이 [concept_gate_dungeon]의 11번째 [Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')]입니다." #deepl:346134832
+ gate_dungeon_layer_generic_twelve: "12층" #deepl:2278042905
+ gate_dungeon_layer_generic_twelve_desc: "이 [concept_gate_dungeon]의 열두 번째 [Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')]입니다." #deepl:3323354251
+ gate_dungeon_layer_generic_boss: "사장님" #deepl:997107593
+ gate_dungeon_layer_generic_boss_desc: "이 [concept_gate_dungeon]의 보스 몬스터는 이 [Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')]에 서식하고 있습니다." #deepl:1547819432

@@ -19,11 +19,13 @@
  gate_magic_dwarf_murk_railways: "Murk-Eisenbahn" #deepl:2451893359
  gate_magic_dwarf_murk_railways_desc: "Der Einsatz von Eisenbahnen in der „[GetBuildingType('building_gate_murk_ways').GetName]“ ermöglicht einen höheren Durchsatz. Doch moderne Züge in den chaotischen und instabilen Portalen der „[GetBuildingType('building_gate_murk_ways').GetName]“ zum Laufen zu bringen, ist eine Kunst für sich." #deepl:4029042866
  gate_mana_cores: "Mana-Kerne" #deepl:596367649
- gate_mana_cores_desc: "Als Meisterwerk ritueller Magie und präziser Handwerkskunst stellen die „$gate_mana_cores$“ den Gipfel arkaner Technik dar. Eingebettet in filigrane und zugleich widerstandsfähige Glaskonstruktionen bündeln und stabilisieren diese Kerne rohes Mana mithilfe komplexer geometrischer Anordnungen und sorgfältig eingravierter Runen." #deepl:1471234393
+ gate_mana_cores_desc: "Als Meisterwerk ritueller Magie und präziser Handwerkskunst stellen die $gate_mana_cores$ einen neuen Höhepunkt der arkanen Technik dar. Eingebettet in filigrane und zugleich widerstandsfähige Glaskonstruktionen bündeln und stabilisieren diese Kerne rohes Mana mithilfe komplexer geometrischer Anordnungen und sorgfältig eingravierter Runen." #deepl:896846317
  gate_arcane_foundries: "Arkane Gießereien" #deepl:1872641235
  gate_arcane_foundries_desc: "Durch die Verschmelzung des revolutionären Bessemer-Verfahrens mit stabilisierten Mana-Kernen erreichen die Arcane Foundries eine beispiellose Effizienz bei der Metallveredelung. Verzauberte Luftströme beschleunigen die Reinigung, während mit Mana durchtränkte Schmelztiegel für Konsistenz und Festigkeit sorgen." #deepl:394896144
  gate_magic_golems: "Magische Golems" #deepl:1827092150
  gate_magic_golems_desc: "Magische Golems wurden an der Schnittstelle zwischen arkaner Meisterschaft und industriellem Einfallsreichtum geschmiedet und stellen ein Wunder der Innovation dar. Diese gewaltigen Konstrukte, die von komplizierten Manakernen angetrieben und mit genieteten Stahlrahmen verstärkt werden, vereinen die ätherische Präzision der Verzauberung mit der rohen Zweckmäßigkeit früher Maschinen." #deepl:1286311128
+ gate_mechanized_rune_etching: "Mechanische Runengravur" #deepl:3908797420
+ gate_mechanized_rune_etching_desc: "Das mechanisierte Gravieren von Runen war schon seit Generationen theoretisch in Betracht gezogen worden, doch die dafür erforderliche Präzision lag stets außerhalb der Möglichkeiten jeglicher Maschine. Der Durchbruch kam aus zwei Richtungen. Runenforscher reduzierten nach Jahren des Ausprobierens die traditionellen Glyphen auf das Wesentliche und tauschten fließende Kurven gegen gerade, maschinenfreundliche Striche aus, ohne dabei ihre Wirkkraft zu verlieren. Ingenieure wiederum verfeinerten ihre Pressen und Ätzarme auf eine zuvor unmögliche Toleranz." #deepl:1763882411
  gate_ley_line_tap: "Anzapfen der Ley-Linie" #deepl:2901625908
  gate_ley_line_tap_desc: "In einem kühnen Sprung der arkanen Technik haben Forscher eine Methode entwickelt, um Mana direkt aus den Ley-Linien selbst abzuzapfen - riesige Flüsse roher magischer Energie, die unter der Erde fließen. Da nun praktisch unbegrenzte Energie zur Verfügung steht, floriert die Industrie. Doch Gelehrte warnen: Das Anzapfen solcher Urkräfte birgt Risiken, und selbst die kleinste Fehlkalkulation könnte katastrophale Fluten auslösen." #deepl:3757947085
  gate_improved_extraction: "Effiziente Mana-Sammlung" #deepl:3550792917
@@ -33,14 +35,24 @@
  gate_magic_understanding_society_desc: "Ihr Land hat ein grundlegendes Verständnis für den Einsatz von Magie in der Gesellschaft." #deepl:144785039
  gate_dwarven_immigration: "Ein neuer Berg" #deepl:242687241
  gate_dwarven_immigration_desc: "Es gibt einen neuen Berg zu bewältigen, also ran an die Arbeit." #deepl:3401445944
+ gate_dwarven_immigration_treaty: "Vertrag vom Tiroler Tor" #deepl:1757638281
+ gate_dwarven_immigration_treaty_desc: "Der $gate_dwarven_immigration_treaty$, der ebenso fest in Stein gemeißelt ist wie mit Tinte geschrieben, öffnet das Tor in beide Richtungen: Zwergenhandwerker und -magier lassen sich unter uns nieder, während unsere Gelehrten das erlangen, was ihnen jahrhundertelang durch verschlossene Türen verwehrt geblieben war." #deepl:2253725953
  gate_orcish_immigration: "Frische Felder erwarten Sie" #deepl:3810430107
  gate_orcish_immigration_desc: "Diese Welt ist reif für die Eroberung, und es wird keinen Mangel an Kriegern geben, die sie sich sichern." #deepl:817285360
+ gate_orcish_immigration_treaty: "Vertrag von Broken Tusk" #deepl:4090164228
+ gate_orcish_immigration_treaty_desc: "Geschlagen, aber ungebrochen knien die Gesandten des Kriegsherrn nur halb nieder und bieten ihre kräftigen Rücken und ihre stahlharte Arbeitskraft im Tausch gegen einen Anteil an Getreide, Obst und Waffen an, um ihr Volk zu ernähren und gegen alles zu wappnen, was auch immer als Nächstes kommen mag." #deepl:1210503419
  gate_elven_immigration: "In eine neue Welt" #deepl:3526303108
  gate_elven_immigration_desc: "Langsam, aber stetig kommen die Gläubigsten des Glaubens auf die Erde, um die Bestrebungen des Dominion auf diesem dunklen Kontinent zu unterstützen." #deepl:1821309542
+ gate_elven_immigration_treaty: "Aurum Concord" #deepl:1943404143
+ gate_elven_immigration_treaty_desc: "Die „Aurum Concord“ gewährt elfischen Migranten und Magiern die Rückkehr durch das Tor und verpflichtet die Überreste des Dominions, ihr Wissen über Mana mit unseren Gelehrten zu teilen. Im Gegenzug erhalten die Priester von Auric die Erlaubnis, den „Goldenen Segen“ unter genau jenen Völkern zu predigen, die wir ihnen entrissen haben. Wir reden uns ein, dass wir Frieden und Fachwissen erkaufen. Der Klerus, so vermuten wir, glaubt, dass er lediglich eine Bekehrung wieder aufnimmt, die wir lediglich unterbrochen haben." #deepl:2387658862
  gate_gnomish_immigration: "Gnomish Immigration"
  gate_gnomish_immigration_desc: "TODO"
+ gate_gnomish_immigration_treaty: "Heimkehr-Abkommen" #deepl:4288461276
+ gate_gnomish_immigration_treaty_desc: "Der „$gate_gnomish_immigration_treaty$“, der in einem Zelt verfasst wurde, das in Sichtweite des Tores aufgeschlagen wurde, das sie einst mit eigenen Händen versiegelt hatten, verlangt wenig von uns und bietet viel: eine genehmigte Rückkehr in die Heimat für die Verbannten von New Samadore im Austausch gegen das arkane Wissen, das ihre Wächter über eine ganze Generation hinweg verfeinert haben. Keine der beiden Seiten gibt vor, alte Streitigkeiten seien beigelegt. Es besteht lediglich Einigkeit darüber, dass beide Nationen von diesem Tor mehr erwarten als einen weiteren Krieg." #deepl:2641841151
  gate_ogre_immigration: "Bear Immigration"
  gate_ogre_immigration_desc: "TODO"
+ gate_ogre_immigration_treaty: "Brot und Stahl – Concord" #deepl:1736581277
+ gate_ogre_immigration_treaty_desc: "Der „Brot-und-Stahl-Vertrag“ kostet uns kaum etwas, was wir sonst nutzen würden: Getreide, auf das wir verzichten können, Obst, das verderben würde, bevor es den Markt erreicht, Waffen, die in unseren eigenen Arsenalen kaum vermisst werden. Im Gegenzug dürfen die Oger des Ursalith-Vertrags das Yukon-Tor passieren und sich als Migranten nach unserem eigenen Recht unter uns niederlassen – nicht als Volk, das sein eigenes Land zurückerobert. Niemand in der Delegation gab vor, dies sei Großzügigkeit. Es ist einfach billiger als ein Krieg, den sich keine der beiden Seiten leisten kann." #deepl:1519261132
  gate_orc_clan_support: "Unterstützung der Clans" #deepl:2391407104
  gate_orc_clan_support_desc: "Für die Orks ist die Erde das gelobte Land. Ihre raue, karge Heimat auf [concept_gate_planet] bietet nur wenig Nahrung, aber die fruchtbaren Böden Mittelamerikas versprechen Überfluss und einfache Kultivierung - ein krasser Gegensatz zu den Kämpfen in ihrer Heimatwelt." #deepl:2834383223
  gate_elven_support: "Unterstützung durch Gläubige" #deepl:785896302
@@ -70,7 +82,7 @@
  gate_soulbound_currency: "Seelengebundene Währung" #deepl:1381352625
  gate_soulbound_currency_desc: "Münzen, die mit der Essenz des Besitzers gekennzeichnet sind, flüstern ihrem Träger zu und widerstehen fremden Händen. Reichtum wird zu mehr als nur Gold - er wird zu einer Erweiterung der eigenen Seele." #deepl:1174752036
  gate_expeditions: "Expedition ins Tor" #deepl:654044393
- gate_expeditions_desc: "Unser Land hat gelernt, die [GetBuildingType('building_gate_alxa').GetName] zu kontrollieren und kann nun eine [concept_gate_expedition] starten." #deepl:221212173
+ gate_expeditions_desc: "#r Dies ist für zukünftige Updates vorgesehen!#!\n\nUnser Land hat gelernt, das [GetBuildingType('building_gate_alxa').GetName] zu kontrollieren, und kann nun eine [concept_gate_expedition] starten." #deepl:4133301149
 # Military
  gate_magic_understanding_military: "Magisches Militär" #deepl:2502402122
  gate_magic_understanding_military_desc: "Ihr Land hat ein grundlegendes Verständnis für den Einsatz von Magie zu militärischen Zwecken." #deepl:1801473858

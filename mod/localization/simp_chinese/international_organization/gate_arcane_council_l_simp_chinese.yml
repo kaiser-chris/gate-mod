@@ -1,7 +1,7 @@
 ﻿l_simp_chinese:
  io_gate_arcane_council: "奥术委员会"
  io_gate_arcane_council_reason: "在一个[concept_gate_magic]普遍存在且强大的[concept_gate_magic_users]可以自由穿梭于各个国家之间的世界里，各国发现有必要进行合作。[concept_gate_arcane_council]应运而生，负责协调国际间关于秘法实践的规则与限制。"
- io_gate_arcane_council_election: "[concept_gate_arcane_council_high_mage]的任期贯穿其整个职业生涯。当现任[concept_gate_arcane_council_high_mage]退休或去世时，将举行新的选举。所有成员[Concept('concept_country','$concept_countries|q$')]的[concept_gate_magic_researcher]均有资格参选。[AddLocalizationIf(GetPlayer.MakeScope.Var('gate_joined_mage_council').IsSet, 'io_gate_arcane_council_election_involved')]" #deepl:272868124
+ io_gate_arcane_council_election: "[concept_gate_arcane_council_high_mage]的任期贯穿其整个职业生涯。当现任[concept_gate_arcane_council_high_mage]退休或去世时，将举行新的选举。所有成员[Concept('concept_country','$concept_countries|q$')]的[concept_gate_magic_researcher]均有资格参选。[AddLocalizationIf(GetPlayer.MakeScope.Var('gate_joined_mage_council').IsSet, 'io_gate_arcane_council_election_involved')]" #deepl:3887983115
  io_gate_arcane_council_election_involved: "\n \n 我们的[concept_gate_magic_researcher]网站的选举评分是#tooltippable  #tooltip: [GetRawTextTooltipTag('io_gate_arcane_council_election_score_tooltip')] [GetPlayer.MakeScope.ScriptValue('gate_arcane_council_election_score')|v] #! #! 而且我们很可能会在下次选举中[GetPlayer.GetCustom('gate_arcane_council_election_indicator')]。" #deepl:2891667291
  io_gate_arcane_council_election_indicator_loss: "#r  访问 #!" #deepl:3926816450
  io_gate_arcane_council_election_indicator_win: "#g  win #!" #deepl:3291145026
@@ -31,13 +31,13 @@
  decision_gate_leave_arcane_council_desc: "退出[concept_gate_arcane_council]"
  gate_arcane_council_event_hint: "通过建立一个国际网络安全监管机构（[concept_gate_arcane_council]）来对[concept_gate_magic]进行监管，有望防止此类事件在未来再次发生。" #deepl:767825992
  gate_arcane_council.1.t: "外来魔法，本土影响" #deepl:2618697781
- gate_arcane_council.1.d: "一辆来自 [TopScope.sC('source_country').GetName] 的[Concept('concept_gate_magic_users','$concept_gate_magic_uses|q$')]轿车在 [TopScope.sS('target_state').GetName] 发生失控，导致 [concept_devastation]。\n \n $gate_arcane_council_event_hint$" #deepl:1275259305
+ gate_arcane_council.1.d: "来自 [TopScope.sC('source_country').GetName] 的访客 [Concept('concept_gate_magic_users','$concept_gate_magic_user|q$')] 在 [TopScope.sS('target_state').GetName] 失控，并引发了 [concept_devastation]。\n" #deepl:2498515019
  gate_arcane_council.1.f: "一位来自[TopScope.sC('source_country').GetNameNoFormatting]的造访法师在与[GetPlayer.GetAdjectiveNoFormatting]当地居民发生冲突时失去了控制。由此引发的魔法爆炸摧毁了附近的街道，并已引发市民、商人和行政官员的普遍不安。如果处理不当，这一事件可能会同时损害本地的公共秩序以及与[TopScope.sC('source_country').GetNameNoFormatting]的关系。" #deepl:1079261975
  gate_arcane_council.1.a: "要求[TopScope.sC('source_country').GetNameNoFlag]作出解释。" #deepl:2732754887
  gate_arcane_council.1.b: "别理那件事。" #deepl:1652035745
  gate_arcane_council.1.c: "专注于重建。" #deepl:38167414
  gate_arcane_council.2.t: "《异乡人的诅咒》" #deepl:4133570612
- gate_arcane_council.2.d: "来自 [TopScope.sC('source_country').GetName] 的德鲁伊 [Concept('concept_gate_magic_users','$concept_gate_magic_uses|q$')] 在 [TopScope.sS('target_state').GetName] 引发了 [GetHarvestConditionType('drought').GetName] [concept_harvest_condition]。\n \n $gate_arcane_council_event_hint$" #deepl:3839380
+ gate_arcane_council.2.d: "来自[TopScope.sC('source_country').GetName]的德鲁伊[Concept('concept_gate_magic_users','$concept_gate_magic_user|q$')]导致了[GetHarvestConditionType('drought').GetName]中的[concept_harvest_condition]在[TopScope.sS('target_state').GetName]中出现。\n" #deepl:3278145789
  gate_arcane_council.2.f: "据信，一位来自[TopScope.sC('source_country').GetNameNoFormatting]的德鲁伊给[TopScope.sS('target_state').GetNameNoFormatting]的田野带来了毁灭。几周前还生机勃勃、丰饶富饶的田野，如今已变得荒芜灰暗，但初步报告显示，这可能是某位狂热分子的单独行动，而非官方行为。这种区别在外交层面或许重要，但对于眼睁睁看着生计在土地中消亡的农民来说，却毫无慰藉可言。" #deepl:1987967690
  gate_arcane_council.2.a: "要求[TopScope.sC('source_country').GetNameNoFlag]作出解释。" #deepl:2732754887
  gate_arcane_council.2.b: "别理那件事。" #deepl:1652035745

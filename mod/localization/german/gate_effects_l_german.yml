@@ -9,18 +9,22 @@
  effect_gate_expedition_uncover: "Entdecken Sie eine neue Region des [concept_gate_expedition_map]" #deepl:3316576148
  effect_gate_expedition_open_map: "Öffnen Sie [concept_gate_expedition_map]" #deepl:2134944514
  effect_gate_expedition_change_budget: "Ändert unsere [concept_gate_expedition_budget] durch [SCOPE.GetValue('budget_change')|+=0]" #deepl:566174399
- effect_gate_expedition_start_activity: "Startet eine [Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity|q$')] für [SCOPE.GetValue('months')|0v] Monate" #deepl:337475788
+ effect_gate_expedition_start_activity: "Beginnt eine [Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity|q$')] für [SCOPE.GetValue('months')|0v] Monate" #deepl:2705357863
  effect_gate_start_magic_project: "Start #bold [SCOPE.GetLocalVariable('gate_project_name').GetFlagName]#! [concept_gate_project]. This project will take #v [SCOPE.GetLocalVariable('months').GetValue|0] months#! and will cost us @money!#r -#![SCOPE.GetLocalVariable('monthly_cost').GetValue|-0v] every month"
- effect_gate_start_magic_infrastructure_project: "Starten Sie #bold [SCOPE.GetLocalVariable('gate_project_name').GetFlagName] #! [concept_gate_project] . Dieses Projekt wird #v [SCOPE.GetLocalVariable('construction').GetValue|0] #! [concept_construction] dauern und uns @money!#r  -#![SCOPE.GetLocalVariable('monthly_cost').GetValue|-0v] jeden Monat kosten. Während sich [Concept('concept_gate_project','$concept_gate_projects|q$')] auf die aktive Infrastruktur konzentriert, wird unser normaler [concept_construction] Output um #v die Hälfte reduziert#!!" #deepl:4011660078
+ effect_gate_start_magic_infrastructure_project: "Start #bold [SCOPE.GetLocalVariable('gate_project_name').GetFlagName]#! [concept_gate_project]. Dieses Projekt wird [SCOPE.GetLocalVariable('construction').GetValue|0]#v #! [concept_construction] in Anspruch nehmen und uns jeden Monat @money!#r -" #deepl:2861517780
  effect_gate_stop_magic_project: "Stoppen Sie derzeit aktiv [concept_gate_project]" #deepl:753901991
  effect_gate_activate_magic_researcher: "[SCOPE.GetLocalVariable('gate_magic_researcher').GetCharacter.GetFullNameWithTitle] will become our new [concept_gate_magic_researcher]"
  effect_gate_found_arcane_council: "[THIS.GetCountry.GetName] gründet die „[concept_gate_arcane_council]“." #deepl:3518858866
  effect_gate_join_arcane_council: "[THIS.GetCountry.GetName] tritt der „[concept_gate_arcane_council]“ bei." #deepl:3903757967
  effect_gate_leave_arcane_council: "[THIS.GetCountry.GetName] verlässt die „[concept_gate_arcane_council]“." #deepl:3594380064
- effect_gate_reset_ethics: "Entfernen Sie alle „[Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')]“-Dateien." #deepl:368403448
+ effect_gate_reset_ethics: "Entferne alle [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')]." #deepl:2509701990
  effect_gate_set_arcanist_traits_basic: "[THIS.GetCharacter.GetFullName] wird ein „[GetCharacterTrait('character_trait_gate_arcanist_basic').GetName]“" #deepl:3161098233
  effect_gate_set_arcanist_traits_experienced: "[THIS.GetCharacter.GetFullName] wird zum „[GetCharacterTrait('character_trait_gate_arcanist_experienced').GetName]“" #deepl:2741460078
  effect_gate_set_arcanist_traits_expert: "[THIS.GetCharacter.GetFullName] wird zum „[GetCharacterTrait('character_trait_gate_arcanist_expert').GetName]“" #deepl:112024080
+
+ effect_gate_dungeon_start: "Beginne mit der Erkundung von #bold [SCOPE.GetLocalVariable('gate_dungeon').Var('name').GetFlagName]#! [concept_gate_dungeon]" #deepl:1049004536
+ effect_gate_dungeon_complete: "Die Untersuchung von #bold [THIS.Var('dungeon').Var('name').GetFlagName]#! [concept_gate_dungeon] wird abgeschlossen sein" #deepl:3819255145
+ effect_gate_dungeon_advance: "Die Erkundung von #bold [THIS.Var('dungeon').Var('name').GetFlagName]#! [concept_gate_dungeon] schreitet zum nächsten [Concept('concept_gate_dungeon_layer','$concept_gate_dungeon_layer_simple|q$')] voran" #deepl:371214514
 
  effect_add_gate_society_harmony_progress: "[concept_gate_harmony_pledge_society] in [COUNTRY.GetName] #bold  wird #! um $VALUE|v0$ in Richtung [concept_gate_harmony_pledge_antinomian] verschoben" #deepl:3891418080
  effect_add_gate_society_harmony_progress_negative: "[concept_gate_harmony_pledge_society] in [COUNTRY.GetName] #bold  retreats #! um $VALUE|v0$ in Richtung [concept_gate_harmony_pledge_stratified]" #deepl:2259507543
@@ -36,3 +40,12 @@
  effect_add_gate_legislative_harmony_progress_negative: "[concept_gate_harmony_pledge_legislative] in [COUNTRY.GetName] #bold  retreats #! um $VALUE|v0$ in Richtung [concept_gate_harmony_pledge_despotic]" #deepl:4178695290
  effect_add_gate_legislative_harmony_progress_first: "[concept_gate_harmony_pledge_legislative] in [COUNTRY.GetNameNoFlag] #bold  wird #! um $VALUE|v0$ in Richtung [concept_gate_harmony_pledge_anaemic] verschoben" #deepl:965743047
  effect_add_gate_legislative_harmony_progress_first_negative: "[concept_gate_harmony_pledge_legislative] in [COUNTRY.GetNameNoFlag] #bold  retreats #! um $VALUE|v0$ in Richtung [concept_gate_harmony_pledge_despotic]" #deepl:2852839976
+
+ effect_gate_dungeon_party_condition_change: "[concept_gate_dungeon_party_condition] #bold erhöht #! um $VALUE|v1$" #deepl:3728303310
+ effect_gate_dungeon_party_condition_change_negative: "[concept_gate_dungeon_party_condition] #bold verringert #! um $VALUE|v1$" #deepl:3001948010
+
+ effect_gate_dungeon_party_cohesion_change: "[concept_gate_dungeon_party_cohesion] #bold erhöht #! um $VALUE|v1$" #deepl:440142178
+ effect_gate_dungeon_party_cohesion_change_negative: "[concept_gate_dungeon_party_cohesion] #bold verringert #! um $VALUE|v1$" #deepl:1995143878
+
+ effect_gate_dungeon_party_renown_change: "[concept_gate_dungeon_party_renown] #bold erhöht #! um $VALUE|v1$" #deepl:3059803275
+ effect_gate_dungeon_party_renown_change_negative: "[concept_gate_dungeon_party_renown] #bold verringert #! um $VALUE|v1$" #deepl:3669464879

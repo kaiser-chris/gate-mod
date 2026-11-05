@@ -1,0 +1,123 @@
+﻿l_german:
+# Journal Entry
+ je_gate_expedition_dungeon: "Dungeon-Erkundung" #deepl:3657803995
+ je_gate_expedition_dungeon_reason: "Unsere [concept_gate_dungeon_party] hat den [concept_gate_dungeon] betreten und ist nun vom Rest der Welt abgeschnitten. Wir können nur hoffen, dass sie alle Herausforderungen meistern werden, die auf sie warten." #deepl:3620273966
+ je_gate_expedition_dungeon_complete: "Hat #v abgeschlossen [TopScope.sJE('journal_entry').MakeScope.Var('last_layer').Var('name').GetFlagName]#! [Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')]" #deepl:3784952766
+ je_gate_expedition_dungeon_fail: "Das [Concept('concept_gate_dungeon_party_condition','$concept_gate_dungeon_party_condition_simple|q$')] des [concept_gate_dungeon_party] fällt auf #v 0#!" #deepl:1565804638
+ je_gate_expedition_dungeon_on_complete: "Schalte diesen [concept_gate_dungeon] frei, um ihn auszunutzen" #deepl:1369792813
+ je_gate_expedition_dungeon_party_leader: "[Concept('concept_gate_dungeon_party_leader', '$concept_gate_dungeon_party_leader_simple|q$')]" #deepl:399795468
+ je_gate_expedition_dungeon_party_leader_empty: "Leer" #deepl:3407253358
+ je_gate_expedition_dungeon_status_pending_event: "Unsere [concept_gate_dungeon_party] hat es mit einem dringenden Vorfall zu tun." #deepl:2396133135
+ je_gate_expedition_dungeon_name: "[concept_gate_dungeon] Name" #deepl:4288637609
+ je_gate_expedition_dungeon_location: "[concept_gate_dungeon]-Standort" #deepl:2505359440
+ je_gate_expedition_dungeon_layer_count: "[Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layers|q$')]" #deepl:245473234
+ je_gate_expedition_dungeon_layer_active: "Aktuell [concept_gate_dungeon_layer]" #deepl:3613301397
+ je_gate_expedition_dungeon_layer_all: "Alle anzeigen [Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layers|q$')]" #deepl:3855683733
+ je_gate_expedition_dungeon_log_entries_header_type: "Typ" #deepl:2669039948
+ je_gate_expedition_dungeon_log_entries_header_event: "Veranstaltung" #deepl:1263615171
+ je_gate_expedition_dungeon_log_entries_header_date: "Datum" #deepl:2200628797
+ je_gate_expedition_dungeon_log_entries_all: "[concept_gate_dungeon]-Dungeon-Ereignisprotokoll anzeigen" #deepl:2915958456
+ je_gate_expedition_dungeon_log_entries_limit: "Es werden die neuesten #bold 10#! von insgesamt #bold [GetDataModelSize(ScriptContainer.MakeScope.GetList('log_entries'))|0]#! Log-Einträgen angezeigt[GetDataModelSize(ScriptContainer.MakeScope.GetList('log_entries'))|0]#!" #deepl:3266392393
+ je_gate_expedition_dungeon_log_entries_empty: "Noch keine Protokolleinträge" #deepl:4057840238
+ je_gate_expedition_dungeon_layer_done: "Dieses [concept_gate_dungeon_layer] wurde #bold abgeschlossen#!." #deepl:4131789566
+ je_gate_expedition_dungeon_layer_open: "Diese [concept_gate_dungeon_layer] ist #bold noch nicht fertiggestellt#!." #deepl:2166738007
+ je_gate_expedition_dungeon_cohesion_tooltip: "#header [concept_gate_dungeon_party_cohesion]#!\nWie gut diese [concept_gate_dungeon_party] zusammenhält. Erreicht der Wert Null, zerfällt die Gruppe und der Dungeon-Einsatz endet mit einem Fehlschlag.\n\nAktuell: [ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_cohesion_value')|0v] / [ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_cohesion_max_value')|0]" #deepl:9102788
+ je_gate_expedition_dungeon_condition_tooltip: "#header [concept_gate_dungeon_party_condition]#!\nDer Zustand der Vorräte, Ausrüstung und Nachschub dieser [concept_gate_dungeon_party]. Er nimmt im Laufe des Abenteuers ab und führt dazu, dass die Gruppe mit sinkendem Wert schlechter ausgerüstet ist.\n\nAktuell: [ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_condition_value')|0v] / [ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_condition_max_value')|0]" #deepl:2867010154
+ je_gate_expedition_dungeon_renown_tooltip: "#header [concept_gate_dungeon_party_renown]#!\nDas Können und Ansehen, das sich diese [concept_gate_dungeon_party] erworben hat. Ändert sich während eines Dungeon-Durchlaufs selten, aber ein ausreichend hoher Wert von $concept_gate_dungeon_party_renown_simple$ kann zusätzliche Optionen in den Ereignissen des [concept_gate_dungeon] freischalten.\n" #deepl:3924921469
+ je_gate_expedition_dungeon_layer_in_progress: "Dieses [concept_gate_dungeon_layer] befindet sich #bold derzeit in Arbeit#!." #deepl:608748958
+ je_gate_expedition_dungeon_name_and_location: "[Scope.Var('name').GetFlagName] in [Scope.Var('location').GetStateRegion.GetName]" #deepl:3754834739
+ je_gate_expedition_dungeon_name_and_location_selector: "[Scope.Var('dungeon').Var('name').GetFlagName] in [Scope.Var('dungeon').Var('location').GetStateRegion.GetName]" #deepl:2231344110
+ sb_gate_dungeon_debug_on_action: "#debug Impuls bei Aktion auslösen#!" #deepl:3988207702
+ sb_gate_dungeon_debug_on_action_desc: "Führen Sie die monatliche Aktion manuell aus." #deepl:4021187328
+ sb_gate_dungeon_debug_advance: "#debug Ebene abgeschlossen#!" #deepl:3809113979
+ sb_gate_dungeon_debug_advance_desc: "Schließe die aktuelle Ebene ab und gehe zur nächsten über oder schließe den Dungeon ab." #deepl:3031981233
+# Events
+ gate_dungeon_setup.1.t: "Richte deine [concept_gate_dungeon_party] ein" #deepl:804843518
+ gate_dungeon_setup.1.points: "We have a limited budget of [concept_gate_dungeon_party_points] to distribute. Each attribute has their own use and points should be distributed to best fit the [concept_gate_dungeon] you want to delve into.\nPoints can be distributed by clicking on the bars below." #TODO: Write party setup points
+ gate_dungeon_setup.1.leaders: "Für jede Dungeon-Erkundung müssen wir ein [Concept('concept_gate_dungeon_party_leader','$concept_gate_dungeon_party_leader_simple|q$')] auswählen. Die Eigenschaften eines Anführers [Concept('concept_character_trait','$concept_character_traits|q$')] können das [Concept('concept_gate_dungeon_party_points','$concept_gate_dungeon_party_points_simple|q$')]-Budget oder die [Concept('concept_gate_dungeon_party','$concept_gate_dungeon_party_simple|q$')]-Attribute wie [Concept('concept_gate_dungeon_party_cohesion','$concept_gate_dungeon_party_cohesion_simple|q$')], [Concept('concept_gate_dungeon_party_condition','$concept_gate_dungeon_party_condition_simple|q$')] und [Concept('concept_gate_dungeon_party_renown','$concept_gate_dungeon_party_renown_simple|q$')] beeinflussen." #deepl:880312694
+ gate_dungeon_setup.1.a: "Starte den Dungeon [concept_gate_dungeon]." #deepl:2440344134
+ gate_dungeon_setup.1.b: "[concept_gate_dungeon]-Dungeon abbrechen." #deepl:1190498725
+ gate_dungeon_setup.2.t: "Ein Dungeon ist erschienen" #deepl:1605878638
+ gate_dungeon_setup.2.d: "[TopScope.GetLocalVariable('gate_dungeon').Var('name').GetFlagName]" #deepl:140945318
+ gate_dungeon_setup.2.f: "[TopScope.GetLocalVariable('gate_dungeon').Var('desc').GetFlagName]" #deepl:3212054926
+ gate_dungeon_setup.2.a: "Das müssen wir erkunden!" #deepl:1439150194
+ event_gate_dungeon_cancel_exploration_tooltip: "Die geplante Erkundung von [concept_gate_dungeon] absagen" #deepl:1642937148
+ event_gate_dungeon_dismiss_leaders_tooltip: "Alle [Concept('concept_gate_dungeon_party_leader','$concept_gate_dungeon_party_leaders_simple|q$')] verwerfen" #deepl:2464524241
+ event_gate_dungeon_cooldown_tooltip: "\n @warning! Du kannst [concept_gate_dungeon] für #v  180 Tage#! keinen weiteren Dungeon starten#!" #deepl:4073880866
+ event_gate_dungeon_has_leader_tooltip: "Hat einen [concept_gate_dungeon_party_leader] ausgewählt" #deepl:1043323223
+ event_gate_dungeon_valid_points_tooltip: "Alle verfügbaren [concept_gate_dungeon_party_points] wurden aufgebraucht" #deepl:3172369059
+ event_gate_dungeon: "Ereignis in #yellow [Scope.Var('name').GetFlagName]#! [concept_gate_dungeon]" #deepl:3342302506
+ event_gate_dungeon_party_points: "Verfügbar [Concept('concept_gate_dungeon_party_points','$concept_gate_dungeon_party_points_simple|q$')]" #deepl:3439430320
+ event_gate_dungeon_party_points_cohesion: "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_cohesion_value')|0v][AddLocalizationIf(NotZero_CFixedPoint(ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_cohesion_modifier_value')), 'event_gate_dungeon_party_points_cohesion_modifier')]" #deepl:2363212472
+ event_gate_dungeon_party_points_condition: "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_condition_value')|0v][AddLocalizationIf(NotZero_CFixedPoint(ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_condition_modifier_value')), 'event_gate_dungeon_party_points_condition_modifier')]" #deepl:2263607463
+ event_gate_dungeon_party_points_renown: "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_renown_value')|0v][AddLocalizationIf(NotZero_CFixedPoint(ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_renown_modifier_value')), 'event_gate_dungeon_party_points_renown_modifier')]" #deepl:2677274729
+ event_gate_dungeon_party_points_cohesion_modifier: " #tooltippable;tooltip:[GetRawTextTooltipTag('event_gate_dungeon_party_points_modifier_tooltip')] [ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_cohesion_modifier_value')|1+=]#!" #deepl:45017088
+ event_gate_dungeon_party_points_condition_modifier: " #tooltippable;tooltip:[GetRawTextTooltipTag('event_gate_dungeon_party_points_modifier_tooltip')] [ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_condition_modifier_value')|1+=]#!" #deepl:171052897
+ event_gate_dungeon_party_points_renown_modifier: " #tooltippable;tooltip:[GetRawTextTooltipTag('event_gate_dungeon_party_points_modifier_tooltip')] [ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_renown_modifier_value')|1+=]#!" #deepl:2551046921
+ event_gate_dungeon_party_points_modifier_tooltip: "Von den Anführern Ihrer Gruppe[Concept('concept_character_trait','$concept_character_traits|q$')]." #deepl:2113553868
+ event_gate_tab_dungeon: "Verlies" #deepl:716318657
+ event_gate_tab_dungeon_leader: "Leiter" #deepl:3690153812
+ event_gate_tab_dungeon_party: "Fokus" #deepl:4287666136
+ event_gate_dungeon_stats_layer_count: "Anzahl der Schichten" #deepl:3473559825
+ event_gate_dungeon_stats_location: "Standort" #deepl:226046482
+ event_gate_dungeon_stats_discovery_date: "Entdeckung" #deepl:3415578248
+ event_gate_dungeon_header_location: " in [ScriptContainer.MakeScope.Var('dungeon').Var('location').GetStateRegion.GetName]" #deepl:3333710226
+ event_gate_dungeon_party_points_tooltip: "#header [concept_gate_dungeon_party_points]#!\nWir verfügen derzeit über [ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_points')|0+] verfügbare Punkte. Dies liegt an:#indent_newline:3 \n[ScriptContainer.MakeScope.GetScriptValueDesc('gate_dungeon_party_points')]#!" #deepl:436350336
+# Log Entries
+ gate_dungeon_rating_positive: "@gate_rating_good!" #deepl:2620857918
+ gate_dungeon_rating_neutral: "@gate_rating_average!" #deepl:2950855055
+ gate_dungeon_rating_negative: "@gate_rating_low!" #deepl:3385981280
+ gate_dungeon_log_cohesion: "[concept_gate_dungeon_party_cohesion]" #deepl:238565165
+ gate_dungeon_log_condition: "[concept_gate_dungeon_party_condition]" #deepl:2073457821
+ gate_dungeon_log_renown: "[concept_gate_dungeon_party_renown]" #deepl:2839348269
+ gate_dungeon_log_advance: "Zur nächsten Stufe [concept_gate_dungeon_layer] vorgerückt" #deepl:1027887459
+ gate_dungeon_log_finish: "Die Erkundung des [concept_gate_dungeon] ist abgeschlossen." #deepl:1272257917
+ gate_dungeon_log_stall: "Keine Fortschritte" #deepl:2920090806
+ gate_dungeon_log_notification_header: "Veranstaltung" #deepl:1263615171
+# Values
+ gate_dungeon_party_points_format: "$VALUE|0=+$ aus $KEY$" #deepl:1778067772
+ gate_dungeon_party_points_from_base: "Grundbudget für die Exploration" #deepl:1622342062
+ gate_dungeon_party_points_from_chosen_value: "Ausgewählter Haushalt" #deepl:2193077303
+ gate_dungeon_party_points_from_party_leader: "[concept_gate_dungeon_party_leader]" #deepl:3468755067
+ gate_dungeon_party_points_from_cohesion: "ausgewählt: [Concept('concept_gate_dungeon_party_cohesion','$concept_gate_dungeon_party_cohesion_simple|q$')]" #deepl:3837915894
+ gate_dungeon_party_points_from_condition: "ausgewählt[Concept('concept_gate_dungeon_party_condition','$concept_gate_dungeon_party_condition_simple|q$')]" #deepl:529662619
+ gate_dungeon_party_points_from_renown: "ausgewählt[Concept('concept_gate_dungeon_party_renown','$concept_gate_dungeon_party_renown_simple|q$')]" #deepl:1575424417
+# Decision
+ decision_gate_start_dungeon_exploration: "Entdecke einen [concept_gate_dungeon]" #deepl:1985564299
+ decision_gate_start_dungeon_exploration_desc: "Öffne den [concept_gate_dungeon]-Selektor und starte einen neuen Dungeon-Lauf." #deepl:3184066200
+ decision_gate_start_dungeon_exploration_selector_tooltip: "Öffnen Sie den Auswahlbereich [concept_gate_dungeon]" #deepl:1503204404
+ decision_gate_start_dungeon_exploration_is_selector_open_tooltip: "#bold Nicht#! Ich plane bereits einen [concept_gate_dungeon]-Dungeon" #deepl:615235107
+ decision_gate_start_dungeon_exploration_cooldown_tooltip: "Vor kurzem wurde bereits ein Versuch unternommen, den [concept_gate_dungeon]-Dungeon zu erkunden. Warte noch weitere #v [LabelingHelper.GetDaysLocWithoutTooltip(TopScope.GetRootScope.VarRemaining('gate_dungeon_delve_cooldown'))]#!#!, bevor du einen neuen Versuch unternimmst." #deepl:1895868807
+# Selector Window
+ gate_project_select_dungeon_window: "Wähle einen [concept_gate_dungeon] aus" #deepl:3990975967
+ gate_project_select_dungeon_window_sub_title: "Unentdeckt [Concept('concept_gate_dungeon','$concept_gate_dungeons|q$')] in [GetPlayer.GetAdjectiveNoFlag] [Concept('concept_state','$concept_states|q$')]" #deepl:3059112269
+ gate_project_select_dungeon_window_select: "#header [Scope.Var('dungeon').Var('name').GetFlagName] in [Scope.Var('building').GetBuilding.GetState.GetName]#!\n\nBeginne mit der Erkundung dieses [concept_gate_dungeon]." #deepl:4119185143
+# Generic Dungeon Layer types
+ gate_dungeon_layer_generic_entrance: "Eingang" #deepl:3715858838
+ gate_dungeon_layer_generic_entrance_desc: "Der Eingang zu diesem [concept_gate_dungeon]." #deepl:3464955332
+ gate_dungeon_layer_generic_one: "Ebene 1" #deepl:453656367
+ gate_dungeon_layer_generic_one_desc: "Das erste [Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')] dieses [concept_gate_dungeon]." #deepl:4130843665
+ gate_dungeon_layer_generic_two: "Ebene 2" #deepl:446773802
+ gate_dungeon_layer_generic_two_desc: "Das zweite [Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')] dieses [concept_gate_dungeon]." #deepl:2319616567
+ gate_dungeon_layer_generic_three: "Ebene 3" #deepl:2201696808
+ gate_dungeon_layer_generic_three_desc: "Das dritte [Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')] dieses [concept_gate_dungeon]." #deepl:1506460494
+ gate_dungeon_layer_generic_four: "Schicht 4" #deepl:435630112
+ gate_dungeon_layer_generic_four_desc: "Das vierte [Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')] dieses [concept_gate_dungeon]." #deepl:4018344526
+ gate_dungeon_layer_generic_five: "Schicht 5" #deepl:2154639394
+ gate_dungeon_layer_generic_five_desc: "Das fünfte [Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')] dieses [concept_gate_dungeon]." #deepl:3825766626
+ gate_dungeon_layer_generic_six: "Schicht 6" #deepl:2177250599
+ gate_dungeon_layer_generic_six_desc: "Das sechste [Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')] dieses [concept_gate_dungeon]." #deepl:376117848
+ gate_dungeon_layer_generic_seven: "Schicht 7" #deepl:408696101
+ gate_dungeon_layer_generic_seven_desc: "Das siebte [Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')] dieses [concept_gate_dungeon]." #deepl:2506350563
+ gate_dungeon_layer_generic_eight: "Schicht 8" #deepl:526066740
+ gate_dungeon_layer_generic_eight_desc: "Das achte [Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')] dieses [concept_gate_dungeon]." #deepl:747921836
+ gate_dungeon_layer_generic_nine: "Ebene 9" #deepl:2260804662
+ gate_dungeon_layer_generic_nine_desc: "Die neunte [Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')] dieses [concept_gate_dungeon]." #deepl:363289065
+ gate_dungeon_layer_generic_ten: "Ebene 10" #deepl:536422430
+ gate_dungeon_layer_generic_ten_desc: "Die zehnte [Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')] dieses [concept_gate_dungeon]." #deepl:4034484722
+ gate_dungeon_layer_generic_eleven: "Ebene 11" #deepl:2254645276
+ gate_dungeon_layer_generic_eleven_desc: "Das elfte [Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')] dieses [concept_gate_dungeon]." #deepl:346134832
+ gate_dungeon_layer_generic_twelve: "Ebene 12" #deepl:2278042905
+ gate_dungeon_layer_generic_twelve_desc: "Die zwölfte [Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')] dieses [concept_gate_dungeon]." #deepl:3323354251
+ gate_dungeon_layer_generic_boss: "Chef" #deepl:997107593
+ gate_dungeon_layer_generic_boss_desc: "Das Endgegner-Monster dieses [concept_gate_dungeon] befindet sich auf dieser [Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')]." #deepl:1547819432

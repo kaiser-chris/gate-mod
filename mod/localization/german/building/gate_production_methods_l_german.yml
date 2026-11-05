@@ -1,25 +1,53 @@
 ﻿l_german:
  pm_gate_mr_locked: "Abgeschlossen" #deepl:862343296
- pm_gate_defend: "Verteidigtes Tor" #deepl:1978884887
+ pm_gate_defend: "Verschlossenes Tor" #deepl:3052382667
+ pm_gate_defend_research: "Research Gate" #deepl:2274659777
+ pm_gate_defend_research_alxa: "$pm_gate_defend_research$" #deepl:1758152694
+ pm_gate_defend_research_tyrol: "$pm_gate_defend_research$" #deepl:1758152694
+ pm_gate_defend_research_yukon: "$pm_gate_defend_research$" #deepl:1758152694
+ pm_gate_defend_research_eastern_new_guinea: "$pm_gate_defend_research$" #deepl:1758152694
+ pm_gate_defend_research_equateur: "$pm_gate_defend_research$" #deepl:1758152694
+ pm_gate_defend_research_zambia: "$pm_gate_defend_research$" #deepl:1758152694
  pm_gate_closed: "Geschlossenes Tor" #deepl:2852887165
  pm_gate_immigration_none: "Keine Einwanderung" #deepl:2753291473
  pm_gate_immigration_dwarves: "Einwanderung von Zwergen" #deepl:2082146653
  pm_gate_mass_immigration_dwarves: "Zwergen-Masseneinwanderung" #deepl:3180837978
+ pm_gate_immigration_dwarves_treaty: "$pm_gate_immigration_dwarves$" #deepl:2286603589
+ pm_gate_mass_immigration_dwarves_treaty: "$pm_gate_mass_immigration_dwarves$" #deepl:1187010715
  pm_gate_immigration_orcish: "Orkische Einwanderung" #deepl:331965909
  pm_gate_mass_immigration_orcish: "Orkische Masseneinwanderung" #deepl:1546405719
+ pm_gate_immigration_orcish_treaty: "$pm_gate_immigration_orcish$" #deepl:3674980772
+ pm_gate_mass_immigration_orcish_treaty: "$pm_gate_mass_immigration_orcish$" #deepl:3360279319
  pm_gate_immigration_elven: "Elfen-Einwanderung" #deepl:3298029567
  pm_gate_mass_immigration_elven: "Elfen-Masseneinwanderung" #deepl:34448720
+ pm_gate_immigration_elven_treaty: "$pm_gate_immigration_elven$" #deepl:2627961532
+ pm_gate_mass_immigration_elven_treaty: "$pm_gate_mass_immigration_elven$" #deepl:1741312669
  pm_gate_immigration_gnomish: "Gnomische Einwanderung" #deepl:242108005
  pm_gate_mass_immigration_gnomish: "Gnomische Masseneinwanderung" #deepl:393266393
- pm_gate_immigration_ogre: "Einwanderung von Bären" #deepl:665012530
- pm_gate_mass_immigration_ogre: "Bärenmasseneinwanderung" #deepl:1451339357
+ pm_gate_immigration_gnomish_treaty: "$pm_gate_immigration_gnomish$" #deepl:3232187994
+ pm_gate_mass_immigration_gnomish_treaty: "$pm_gate_mass_immigration_gnomish$" #deepl:237884292
+ pm_gate_immigration_ogre: "Ogre-Einwanderung" #deepl:470693113
+ pm_gate_mass_immigration_ogre: "Massenimmigration von Oger" #deepl:3710531452
+ pm_gate_immigration_ogre_treaty: "$pm_gate_immigration_ogre$" #deepl:2771604215
+ pm_gate_mass_immigration_ogre_treaty: "$pm_gate_mass_immigration_ogre$" #deepl:898893604
+ pm_gate_support_research: "Forschungsförderung" #deepl:1890951081
+ pm_gate_support_gnomes_research: "$pm_gate_support_research$" #deepl:382990508
+ pm_gate_support_ogres_research: "$pm_gate_support_research$" #deepl:382990508
+ pm_gate_support_dwarves_research: "$pm_gate_support_research$" #deepl:382990508
  pm_gate_support_orcs: "Unterstützung der Clans" #deepl:2391407104
+ pm_gate_support_orcs_research: "$pm_gate_support_research$" #deepl:382990508
  pm_gate_support_elves: "Unterstützung durch Gläubige" #deepl:785896302
  pm_gate_support_elves_plus: "Fanatische Unterstützung durch Gläubige" #deepl:877008664
+ pm_gate_support_elves_research: "$pm_gate_support_research$" #deepl:382990508
  pm_gate_reverse_support_elves: "Helfen Sie dem Heimatland" #deepl:3153848951
  pm_gate_reverse_support_elves_plus: "Verstärkte Hilfe für das Heimatland" #deepl:2372990167
  pm_gate_situation_normal: "Normal" #deepl:2638816514
  pm_gate_situation_orcish_elven_war: "Orkischer Elfenkrieg" #deepl:3797628113
+ pm_gate_situation_treaty_dwarven: "$gate_dwarven_immigration_treaty$" #deepl:1400504592
+ pm_gate_situation_treaty_orcish: "$gate_orcish_immigration_treaty$" #deepl:1323472458
+ pm_gate_situation_treaty_elven: "$gate_elven_immigration_treaty$" #deepl:359584383
+ pm_gate_situation_treaty_ogre: "$gate_ogre_immigration_treaty$" #deepl:764057648
+ pm_gate_situation_treaty_gnomish: "$gate_gnomish_immigration_treaty$" #deepl:4245399355
  pm_gate_mage_mana_extraction: "Einfache Mana-Extraktion" #deepl:1265043425
  pm_gate_druid_mana_extraction: "Einfache Manaentnahme für Druiden" #deepl:1753807027
  pm_gate_mage_ritual_extraction: "Rituelle Manaextraktion" #deepl:250534840
@@ -33,11 +61,13 @@
  pm_gate_murk_transportation: "Nur persönlicher Transport" #deepl:619256240
  pm_gate_murk_rail_transportation: "Schienenverkehr" #deepl:142739102
  pm_gate_magic_streetlights: "Magische Straßenlaternen" #deepl:3741854504
- pm_gate_crystal_explosives_building_coal_mine: "Magische Sprengstoffe" #deepl:2568459229
- pm_gate_crystal_explosives_building_iron_mine: "Magische Sprengstoffe" #deepl:2568459229
- pm_gate_crystal_explosives_building_lead_mine: "Magische Sprengstoffe" #deepl:2568459229
- pm_gate_crystal_explosives_building_sulfur_mine: "Magische Sprengstoffe" #deepl:2568459229
- pm_gate_crystal_explosives_building_gold_mine: "Magische Sprengstoffe" #deepl:2568459229
+ pm_gate_crystal_explosives: "Magische Sprengstoffe" #deepl:2568459229
+ pm_gate_crystal_explosives_building_coal_mine: "$pm_gate_crystal_explosives$" #deepl:775333761
+ pm_gate_crystal_explosives_building_iron_mine: "$pm_gate_crystal_explosives$" #deepl:775333761
+ pm_gate_crystal_explosives_building_lead_mine: "$pm_gate_crystal_explosives$" #deepl:775333761
+ pm_gate_crystal_explosives_building_sulfur_mine: "$pm_gate_crystal_explosives$" #deepl:775333761
+ pm_gate_crystal_explosives_building_gold_mine: "$pm_gate_crystal_explosives$" #deepl:775333761
+ pm_gate_crystal_explosives_building_copper_mine: "$pm_gate_crystal_explosives$" #deepl:775333761
  pm_gate_normal_seeds: "Normales Saatgut" #deepl:3030593412
  pm_gate_magic_seeds: "Magisches Saatgut" #deepl:392237414
  pm_gate_magic_seeds_advanced: "Fortgeschrittene magische Samen" #deepl:2097611361
@@ -123,3 +153,13 @@
  pm_gate_magic_tree_regeneration: "Regeneratives Holz" #deepl:2941077341
  pm_gate_mundane_communication: "Alltägliche Kommunikation" #deepl:2968078933
  pm_gate_scrying_communication: "Rituale der Wahrsagung" #deepl:2575404237
+ pm_gate_dungeon_unexplored: "Unentdeckter Dungeon" #deepl:564531284
+ pm_gate_dungeon_explored: "Erkundeter Dungeon" #deepl:871231571
+ pm_gate_dungeon_closed: "Geschlossen" #deepl:3427161634
+ pm_gate_dungeon_taxed_access: "Zugang gegen Gebühr" #deepl:3805253647
+ pm_gate_dungeon_resource_tax: "Rohstoffsteuer" #deepl:2565084826
+ pm_gate_dungeon_resource_tax_iron: "$pm_gate_dungeon_resource_tax$: Eisen" #deepl:3759991159
+ pm_gate_dungeon_resource_tax_lead: "$pm_gate_dungeon_resource_tax$: Blei" #deepl:3184425146
+ pm_gate_dungeon_resource_tax_coal: "$pm_gate_dungeon_resource_tax$: Kohle" #deepl:2347025056
+ pm_gate_dungeon_resource_tax_copper: "$pm_gate_dungeon_resource_tax$: Kupfer" #deepl:2935056259
+ pm_gate_dungeon_resource_tax_sulfur: "$pm_gate_dungeon_resource_tax$: Schwefel" #deepl:2086935754

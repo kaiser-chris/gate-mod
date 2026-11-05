@@ -1,13 +1,31 @@
 ﻿l_korean:
- investigate_gate_decision: "$building_gate$ 조사"
- investigate_gate_decision_desc: "[GetBuildingType('building_gate_alxa').GetName]을 조사하여 이를 통제하는 방법을 알아냅니다."
+ gate_investigate_gate_closed_forever: "#r 이렇게 하면 문이 영원히 닫힙니다.#!" #deepl:243458715
  gate_investigate_gate.1.t: "조사 성공"
  gate_investigate_gate.1.d: "우리는 [GetBuildingType('building_gate_alxa').GetName]에 대한 조사를 통해 [GetTechnology('gate_expeditions').GetName]을 발견했습니다."
  gate_investigate_gate.1.f: "수개월에 걸친 집요한 연구와 조심스러운 속삭임 끝에, 우리의 학자들은 마침내 포로로 잡힌 마법의 문이 숨기고 있던 비밀을 풀어냈습니다. 한때 이해할 수 없었던 고대의 룬들이 이제 생명력으로 깨어나, 오랫동안 잃어버린 지식을 드러냈습니다. 문에 숨겨진 미스터리가 풀리면서, 아케인 에너지가 우리의 손에 흐르며 세상에 대한 이해를 재구성했습니다. 이 새로 얻은 힘으로, 우리 국가는 마법의 르네상스의 문턱에 서 있으며, 세대를 넘어 우리를 피해온 힘들을 활용할 준비가 되어 있습니다."
  gate_investigate_gate.1.a: "완전히 새로운 세계를 탐험하라."
- je_gate_investigate_gate: "$building_gate$ 조사"
- je_gate_investigate_gate_reason: "새롭게 정복한 영토의 중심부에서, 마법 관문은 이루 말할 수 없는 힘의 유산처럼 우뚝 서 있다. 고대의 룬들은 신비로운 빛을 발하며 비전 지식의 비밀을 속삭이고 있다. 학자들이 그 주변에 모여들자 공기마저 긴장감으로 무거워진다. 이 관문은 지혜와 힘에 대한 약속을 품은 채, 그 잠금을 풀어줄 자를 기다리고 있다. 이제 그 신비를 해독하기 위한 고된 작업이 시작된다. 이는 마법에 대한 우리의 이해를 완전히 바꾸고, 우리 왕국을 새로운 경지로 끌어올릴 여정이 될지도 모른다."
- je_gate_investigate_gate_goal: "조사 성공"
- je_gate_investigate_gate_button_focus_academia: "모든 자원을 집중하라"
- je_gate_investigate_gate_button_focus_academia_desc: "비록 기술 발전에 차질이 생기더라도, 우리는 이 조사에 모든 역량을 집중할 것입니다."
- modifier_gate_focus_investigate_gate_cost: "집중 수사"
+ gate_investigate_gate.2.t: "저 세상과의 접촉" #deepl:3372465699
+ gate_investigate_gate.2.d: "[GetBuildingType('building_gate_tyrol').GetName]에 대한 조사 결과, [GetCulture('dwarven').GetName]의 [concept_gate_planet] 대표자들과 접촉하게 되었습니다." #deepl:2796463179
+ gate_investigate_gate.2.f: "수년 동안 티롤의 [GetBuildingType('building_gate_tyrol').GetNameNoFormatting]은 침묵을 지키고 있었으며, 드워프들이 마지막으로 이곳을 지배했던 이후로 봉인은 한 번도 깨지지 않은 채 남아 있었다. 우리 학자들은 모든 룬을 측정하고 모든 보호 주문을 시험한 끝에, 마침내 낡은 돌이 무너져 내리며 어둠 너머에서 차가운 공기가 솟아올랐다.\n안카리스에서 온 사절단은 정교하게 세공된 은제품과 봉인된 두루마리를 선물로 들고, 신중하고 억양이 뚜렷한 공통어로 말을 건넸다. 그들은 전쟁에서 빼앗긴 것에 대한 원망은 전혀 언급하지 않고, 오직 기회만을 이야기했다. 바로 이주 조약, 우리 곁으로 그들의 백성이 단계적으로 유입되는 것, 그리고 그들과 함께 지구에는 오랫동안 거부되어 온 지식과 마법의 형성이었다. 이것이 계략인지, 아니면 단순히 정복을 무역으로 전환하는 드워프 특유의 방식인지는 우리 사절단도 단정할 수 없다. 하지만 문은 활짝 열려 있고, $gate_planet$의 드워프들은 대화를 나눌 준비가 되어 있다." #deepl:678047869
+ gate_investigate_gate.2.a: "도움이 될 수도 있습니다." #deepl:3678068422
+ gate_investigate_gate.2.b: "우리는 그들을 원하지 않습니다." #deepl:1435844639
+ gate_investigate_gate.3.t: "‘금박을 입힌 침묵’" #deepl:3230941023
+ gate_investigate_gate.3.d: "[GetBuildingType('building_gate_zambia').GetName]에 대한 조사 결과, [GetCulture('elven').GetName]의 [concept_gate_planet] 측 대표자들과 접촉하게 되었습니다." #deepl:4260922901
+ gate_investigate_gate.3.f: "저편에서 우리를 기다리고 있던 것은 우리가 예상했던 절망에 빠진 잔존 세력이 아니었다. 우리 사절단을 맞이한 엘프들은 그들 종족 특유의 태도를 고스란히 드러내고 있었다. 인내심 있고, 서두르지 않으며, 시간이 자신들의 편이라고 확신하고, 거대한 제국이 뒤를 받쳐주고 있다는 확신을 품고 있었다. 그들은 고원에 대한 소유권을 포기하지 않았다. 오히려 유배 생활이 그 주장을 더욱 확고하게 만든 듯하다.\n\n그들은 군대도, 최후통첩도 제시하지 않았다. 오직 교환 조건만을 제시했을 뿐이다. 즉, 그들의 백성이 고향으로 돌아갈 수 있는 통행권과, 우리 학자들도 여전히 숙달하기 위해 고군분투하고 있는 마나 연구에 대한 조언을 제공하는 대신, 그들이 사제들을 우리가 현재 통치하는 백성들 사이로 돌려보내 ‘황금 축복’을 공개적이고 제한 없이 전파할 수 있는 권리를 달라는 것이다.\n\n우리의 고문들은 적어도 한 가지 점에 대해서는 만장일치로 의견을 모았습니다. 그 문은 방어막이 쳐져 있고 통로가 좁은 요충지이며, 엘프들이 그곳을 지키기로 결정한다면 우리가 동원할 수 있는 그 어떤 군대도 무력으로 되찾을 수 없을 것입니다. 이 일이 어떻게 결말이 나든, 그것은 우리가 선택한 전장이 아니라 엘프들이 마련한 협상 테이블에서 결정될 것입니다." #deepl:3539908948
+ gate_investigate_gate.3.a: "도움이 될 수도 있습니다." #deepl:3678068422
+ gate_investigate_gate.3.b: "우리는 그들을 원하지 않습니다." #deepl:1435844639
+ gate_investigate_gate.4.t: "긴 해빙기" #deepl:3706078847
+ gate_investigate_gate.4.d: "[GetBuildingType('building_gate_yukon').GetName]에 대한 조사 결과, [GetCulture('gate_arctic_ogre').GetName]의 [concept_gate_planet] 소속 관계자들과 접촉하게 되었습니다." #deepl:85472930
+ gate_investigate_gate.4.f: "수년 동안 그 봉인은 견고하게 유지되었다. 그 주변 지역은 실질적으로 우리에게 아무런 가치가 없었고, 지금도 여전히 그렇다. 가혹한 땅에, 말할 만한 수확도 없으며, 주둔군을 배치할 만한 가치가 전혀 없는 곳이다. 우리는 마법사들을 동원해 그들이 남긴 안카레네의 결계를 뚫는 데 집중했다.\n\n유콘의 결계석을 해제하기까지 수년간의 인내심 있고 지루한 연구가 필요했다. 다시 열린 문 너머로 나타난 것은 군대가 아니었다. 그것은 우르살리스 동맹의 사절단이었는데, 그들은 패배를 인정하고 옛 땅을 돌려달라고 요구하지 않았으며, 그보다 더 작고 기이한 것을 요청했다. 바로 그들의 백성이 우리 영토로 건너와 우리 백성으로서 살 수 있도록 허락해 달라는 것과, 뒤에 남는 부족들이 적대적인 $gate_planet$ 땅에서 살아남을 수 있도록 충분한 곡물, 과일, 무기를 제공해 달라는 것이었다.\n우리 장군들은 이례적으로 의견을 하나로 모았다. 그 문 너머로 보낼 만한 가치가 있는 군대는 없다. 이토록 적대적인 지형에서, 이토록 미미한 대가를 위해 군대를 파견할 수는 없다." #deepl:3224725366
+ gate_investigate_gate.4.a: "도움이 될 수도 있습니다." #deepl:3678068422
+ gate_investigate_gate.4.b: "우리는 그들을 원하지 않습니다." #deepl:1435844639
+ gate_investigate_gate.5.t: "열리지 않던 문" #deepl:564381052
+ gate_investigate_gate.5.d: "[GetBuildingType('building_gate_equateur').GetName]에 대한 조사 결과, [GetCulture('orcish').GetName]의 [concept_gate_planet] 측 관계자들과 접촉하게 되었습니다." #deepl:679937690
+ gate_investigate_gate.5.f: "오크들은 단순히 이 문을 봉인한 것이 아니라, 마지막 한 명까지 전선에서 물러나기 전까지 모든 틈새에 철과 뼈를 끼워 넣고, 투박하지만 끈질긴 마법으로 돌을 묶어내며 싸워서 문을 닫아버린 것이었다. 우리 연구진이 이 문을 뚫는 데는 다른 그 누구보다도 더 오랜 시간이 걸렸다.\n\n마침내 문이 무너졌을 때, 반대편에는 어떤 의식도 기다리고 있지 않았다. 오직 침묵뿐이었고, 이어 어둠 속에서 움직임이 감지되었다. 경계심에 가득 차 있고, 무장한 채, 지켜보고 있었다.\n\n그들은 청원자로 온 것이 아니었다. 흉터투성이에 미소 한 번 짓지 않은 한 장군의 깃발 수호자들이 문턱에 서서, 무력으로 자신들의 문을 점령한 사람들을 훑어보고 있었다. 양측 모두 이것이 무엇인지에 대해 아무런 체면 차릴 필요가 없었다. 이미 한 번 패배한 세상에서 설 자리를 찾고 있는 정복당한 백성들. 그들이 제시하는 것은 직설적이다. 노동, 근력, 숫자. 그리고 그 대가로 원하는 것도 마찬가지로 명백하다. 너무 오랫동안 텅 비어 있던 배를 채울 만큼의 곡식과 과일, 그리고 $gate_planet$에서 자신들의 백성을 지킬 수 있을 만큼의 무기." #deepl:1878112218
+ gate_investigate_gate.5.a: "도움이 될 수도 있습니다." #deepl:3678068422
+ gate_investigate_gate.5.b: "우리는 그들을 원하지 않습니다." #deepl:1435844639
+ gate_investigate_gate.6.t: "침묵의 문 너머에서 들려오는 목소리들" #deepl:3310024461
+ gate_investigate_gate.6.d: "[GetBuildingType('building_gate_eastern_new_guinea').GetName]에 대한 조사 결과, [GetCulture('gnomish').GetName]의 [concept_gate_planet] 대표자들과 접촉하게 되었습니다." #deepl:3062735215
+ gate_investigate_gate.6.f: "수년 동안 뉴기니 동부 해안에 있는 그 문은 노움들이 떠난 그대로의 모습을 유지하고 있었다. 봉인되어 굳게 닫혀 있었고, 룬 문양은 차갑게 식어 있었으며, 우리 깃발 대신 망명을 선택한 한 국가의 기념비나 다름없었다. 우리 마법사들은 그 문을 더 이상 연구할 가치가 없는 ‘죽은 존재’라고 여겼으나, 한 끈질긴 연구자가 그 봉인 주문이 영원한 것이 아니라 단지 시간이 걸릴 뿐임을 증명해 냈다.\n마침내 봉인석이 금이 갔을 때, 우리는 문 너머에서 침묵만이 기다리고 있을 것이라 예상했다. 그러나 그곳에는 이미 대표단이 기다리고 있었는데, 그들은 침착하고 놀라움조차 보이지 않았으며, 마치 우리가 짐작조차 하기 싫을 만큼 오랫동안 $gate_planet$에서 그 문을 지켜보고 있었던 듯했다.\n우리 사절단의 보고에 따르면 회의 분위기는 적대적이지 않았습니다. 오히려 우리 고문들이 예상했던 것보다 더 희망적이었습니다. 망명자들은 지구를 포기하지 않았습니다. 그들은 자신들이 일구어 낸 해안과 건설한 항구들에 대해 이야기하며, 그곳을 다시 볼 기회를 얻기 위해 치열하게 협상할 의향이 있습니다.\n우리 군사 기획자들은 이미 입장을 분명히 밝혔습니다. 게이트는 요충지로서 강력한 마법 장벽과 방어 체계로 둘러싸여 있으며, 무력으로 강제로 열 경우 얻는 이득보다 더 많은 피를 흘리게 될 것이다. 우리가 이 그놈들에게서 무엇을 원하든, 그것은 전장이 아닌 협상 테이블에서 얻어내야 할 것이다." #deepl:3069336491
+ gate_investigate_gate.6.a: "도움이 될 수도 있습니다." #deepl:3678068422
+ gate_investigate_gate.6.b: "우리는 그들을 원하지 않습니다." #deepl:1435844639

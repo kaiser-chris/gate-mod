@@ -21,16 +21,16 @@
  button_project_domain: "Forschungs-$concept_gate_magic_ethics$" #deepl:3174790821
  je_gate_project_domain: "Forschungs-$concept_gate_magic_ethics$" #deepl:3174790821
  je_gate_project_domain_reason: "$gg_projects_active_project_desc$\n$gate_journal_delimiter$\n$je_gate_project_domain_description$" #deepl:3778819820
- je_gate_project_domain_description: "[Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')] spiegeln unsere Sichtweise auf Magie in unserer Gesellschaft wider und verleihen unserem Land einen enormen Aufschwung. Dieses Projekt ermöglicht es uns, eine zusätzliche „[concept_gate_magic_ethic]“ auszuwählen." #deepl:1646339818
+ je_gate_project_domain_description: "[Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')] spiegeln unsere Sichtweise auf Magie in unserer Gesellschaft wider und verleihen unserem Land enorme Impulse. Dieses Projekt ermöglicht es uns, ein weiteres [concept_gate_magic_ethic] auszuwählen." #deepl:3947376978
  je_gate_project_domain_condition_not_researched: "[THIS.GetCountry.GetNameNoFlag] noch keine Nachforschungen zu einem neuen [concept_gate_magic_ethic] angestellt hat" #deepl:3134692073
  je_gate_project_domain_condition_domain_slot: "[THIS.GetCountry.GetNameNoFlag] verfügt über mindestens einen freien „[concept_gate_magic_ethic]“-Platz" #deepl:3894320359
  # Change Arcane Domains
  button_project_change_domain: "Änderungs-$concept_gate_magic_ethics$" #deepl:211201186
  je_gate_project_change_domain: "Änderungs-$concept_gate_magic_ethics$" #deepl:211201186
  je_gate_project_change_domain_reason: "$gg_projects_active_project_desc$\n$gate_journal_delimiter$\n$je_gate_project_change_domain_description$" #deepl:229067263
- je_gate_project_change_domain_description: "[Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')] spiegeln unsere Sichtweise auf Magie in unserer Gesellschaft wider und geben unserem Land enorme Impulse. Dieses Projekt ermöglicht es uns, unsere aktive [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')] zu ändern. #r  Wir können unsere [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')]-Domains nur einmal ändern!#!" #deepl:1371592778
+ je_gate_project_change_domain_description: "[Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')] spiegeln unsere Sichtweise auf Magie in unserer Gesellschaft wider und verleihen unserem Land enorme Impulse. Dieses Projekt ermöglicht es uns, unsere aktiven [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')] zu verändern. #r Wir können unsere [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')]-Domänen nur einmal ändern!#!" #deepl:2963146786
  je_gate_project_change_domain_condition_max_domains: "[THIS.GetCountry.GetNameNoFlag] nutzt alle drei „[concept_gate_magic_ethic]“-Steckplätze" #deepl:4252664512
- je_gate_project_change_domain_condition_not_researched: "[THIS.GetCountry.GetNameNoFlag] noch nicht seine E-Mail-Adresse geändert hat ([Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')])" #deepl:2895666181
+ je_gate_project_change_domain_condition_not_researched: "[THIS.GetCountry.GetNameNoFlag] hat sein [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')] noch nicht geändert" #deepl:827335679
 # Improve Mana Extraction
  button_project_improve_mana_extraction: "Verbesserte Mana-Extraktion" #deepl:4188291293
  je_gate_project_improve_mana_extraction: "Verbesserte Mana-Extraktion" #deepl:4188291293
@@ -53,6 +53,23 @@
  trigger_gate_project_can_has_unimproved_magic_seed: "Besuchen Sie [GetBuildingType('building_gate_druid_grove').GetBuildingGroupName] [concept_building] ohne $modifier_gate_project_modernize_seed_selection_with_tooltip$ [concept_modifier]" #deepl:3857931699
  gate_project_select_modernize_seed_selection_window: "Wählen Sie das Gebäude „[GetGoods('gate_magic_seed').GetNameNoFormatting]“ aus" #deepl:488013266
  gate_project_select_modernize_seed_selection_window_select: "#header  [Building.GetName] in [Building.GetState.GetName] #! \n Wählen Sie dieses Gebäude für die „#V “ aus $je_gate_project_modernize_seed_selection$ #! [concept_gate_project]." #deepl:3259136530
+ # Modernizing Seed Selection
+ button_project_investigate_magic_gate: "$building_gate$ untersuchen" #deepl:123163404
+ je_gate_project_investigate_magic_gate: "Untersuchung zu „$building_gate$“" #deepl:557002480
+ je_gate_project_investigate_magic_gate_description: "Die Gebäude [GetBuildingType('building_gate_alxa').GetName] sind Verbindungen zu [concept_gate_planet]. Je nachdem, womit sie verbunden sind, ermöglichen sie uns den Handel, die Erkundung oder die Aufnahme von Migranten von der anderen Seite. Dieses Projekt schaltet das $building_gate$ frei." #deepl:993983357
+ je_gate_project_investigate_magic_gate_alxa: "Untersuchung von [GetStateRegion('STATE_ALXA').GetNameNoFormatting] $building_gate$" #deepl:527164972
+ je_gate_project_investigate_magic_gate_alxa_reason: "$gg_projects_active_project_desc$\n$gate_journal_delimiter$\n$je_gate_project_investigate_magic_gate_description$" #deepl:2475108248
+ je_gate_project_investigate_magic_gate_tyrol: "Untersuchung von [GetStateRegion('STATE_TYROL').GetNameNoFormatting] $building_gate$" #deepl:2216351361
+ je_gate_project_investigate_magic_gate_tyrol_reason: "$gg_projects_active_project_desc$\n$gate_journal_delimiter$\n$je_gate_project_investigate_magic_gate_description$" #deepl:2475108248
+ je_gate_project_investigate_magic_gate_zambia: "[GetStateRegion('STATE_ZAMBIA').GetNameNoFormatting] untersuchen $building_gate$" #deepl:3867592549
+ je_gate_project_investigate_magic_gate_zambia_reason: "$gg_projects_active_project_desc$\n$gate_journal_delimiter$\n$je_gate_project_investigate_magic_gate_description$" #deepl:2475108248
+ je_gate_project_investigate_magic_gate_equateur: "Abfrage von [GetStateRegion('STATE_EQUATEUR').GetNameNoFormatting] $building_gate$" #deepl:4149597471
+ je_gate_project_investigate_magic_gate_equateur_reason: "$gg_projects_active_project_desc$\n$gate_journal_delimiter$\n$je_gate_project_investigate_magic_gate_description$" #deepl:2475108248
+ je_gate_project_investigate_magic_gate_yukon: "Abfrage von [GetStateRegion('STATE_YUKON_TERRITORY').GetNameNoFormatting] $building_gate$" #deepl:3157023531
+ je_gate_project_investigate_magic_gate_yukon_reason: "$gg_projects_active_project_desc$\n$gate_journal_delimiter$\n$je_gate_project_investigate_magic_gate_description$" #deepl:2475108248
+ je_gate_project_investigate_magic_gate_eastern_new_guinea: "Abfrage von [GetStateRegion('STATE_EASTERN_NEW_GUINEA').GetNameNoFormatting] $building_gate$" #deepl:922839585
+ je_gate_project_investigate_magic_gate_eastern_new_guinea_reason: "$gg_projects_active_project_desc$\n$gate_journal_delimiter$\n$je_gate_project_investigate_magic_gate_description$" #deepl:2475108248
+ trigger_gate_project_can_has_locked_gate: "Es gibt ein gesperrtes [GetBuildingType('building_gate_alxa').GetName] [concept_building]." #deepl:366402738
 # Artificial Ecosystem
  button_project_artificial_ecosystem: "Konstruieren Sie ein künstliches Ökosystem" #deepl:1402757762
  je_gate_project_artificial_ecosystem: "Aufbau eines künstlichen Ökosystems" #deepl:2735770378

@@ -1,4 +1,8 @@
 ﻿l_korean:
+ effect_gate_add_magic_innovation: "[SCOPE.GetLocalVariable('added_innovation').GetValue|+=0] [concept_gate_magic_innovation] 추가"
+ effect_gate_add_mana_density: "[SCOPE.GetLocalVariable('added_mana_density').GetValue|+=0] [concept_gate_mana_density] 추가"
+ effect_gate_learn_magic: "[SCOPE.sCountry('gate_magic_learner').GetName]이 [concept_gate_magic_knowledge]을 습득"
+ effect_gate_establish_treaty: "#bold [SCOPE.GetLocalVariable('gate_treaty_name').GetFlagName]#! [concept_treaty]를 [SCOPE.GetLocalVariable('gate_treaty_source').GetCountry.GetName]와(과) [SCOPE.GetLocalVariable('gate_treaty_target').GetCountry.GetName] 사이에 체결함"
  effect_pops_embrace_vampirism: "우리 인구의 일부가 [concept_gate_vampirism]을 받아들이고 [GetCulture('vampire').GetName] 문화와 [GetReligion('gate_lunar_masquerade').GetName] 종교로 개종함"
  effect_characters_embrace_vampirism: "우리의 지도자들과 정치인들은 [concept_gate_vampirism]을 받아들이고 [GetCulture('vampire').GetName] 문화와 [GetReligion('gate_lunar_masquerade').GetName] 종교로 개종함"
  effect_gate_magic_experience: "[SCOPE.GetLocalVariable('added_experience').GetValue|+=0]만큼의 [concept_gate_character_experience]이(가[THIS.GetCharacter.GetFullName]에게 추가됨"
@@ -6,30 +10,42 @@
  effect_gate_expedition_open_map: "[concept_gate_expedition_map] 개방"
  effect_gate_expedition_change_budget: "우리 [concept_gate_expedition_budget]이(가) [SCOPE.GetValue('budget_change')|+=0]만큼 변동됨"
  effect_gate_expedition_start_activity: "[SCOPE.GetValue('months')|0v]개월 동안 [Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity|q$')]를 시작함"
- effect_gate_establish_treaty: "#bold [SCOPE.GetLocalVariable('gate_treaty_name').GetFlagName]#! [concept_treaty]를 [SCOPE.GetLocalVariable('gate_treaty_source').GetCountry.GetName]와(과) [SCOPE.GetLocalVariable('gate_treaty_target').GetCountry.GetName] 사이에 체결함"
  effect_gate_start_magic_project: "#bold [SCOPE.GetLocalVariable('gate_project_name').GetFlagName]#! [concept_gate_project]를 시작합니다. 이 프로젝트는 #v [SCOPE.GetLocalVariable('months').GetValue|0] 개월#!이 소요되며, 매달 @money!#r -#![SCOPE.GetLocalVariable('monthly_cost').GetValue|-0v]의 비용이 듭니다"
- effect_gate_stop_magic_project: "현재 진행 중인 [concept_gate_project]를 중단함"
  effect_gate_start_magic_infrastructure_project: "#bold [SCOPE.GetLocalVariable('gate_project_name').GetFlagName]#! [concept_gate_project]을(를) 시작합니다. 이 사업에는 #v [SCOPE.GetLocalVariable('construction').GetValue|0]#! [concept_construction]이 소요되며, 매달 @money!#r -#![SCOPE.GetLocalVariable('monthly_cost').GetValue|-0v]의 비용이 듭니다. 또한 이 프로젝트가 진행되는 동안, 기반시설 중심의 [Concept('concept_gate_project','$concept_gate_projects|q$')]로 인해 기존 [concept_construction] 생산이 #v 절반#!으로 감소합니다!"
+ effect_gate_stop_magic_project: "현재 진행 중인 [concept_gate_project]를 중단함"
  effect_gate_activate_magic_researcher: "[SCOPE.GetLocalVariable('gate_magic_researcher').GetCharacter.GetFullNameWithTitle]가 우리의 새로운 [concept_gate_magic_researcher]가 될 것이다."
- effect_gate_add_magic_innovation: "[SCOPE.GetLocalVariable('added_innovation').GetValue|+=0] [concept_gate_magic_innovation] 추가"
- effect_gate_add_mana_density: "[SCOPE.GetLocalVariable('added_mana_density').GetValue|+=0] [concept_gate_mana_density] 추가"
- effect_gate_learn_magic: "[SCOPE.sCountry('gate_magic_learner').GetName]이 [concept_gate_magic_knowledge]을 습득"
  effect_gate_found_arcane_council: "[THIS.GetCountry.GetName]이 [concept_gate_arcane_council]을 설립함."
  effect_gate_join_arcane_council: "[THIS.GetCountry.GetName]이 [concept_gate_arcane_council]에 가입함."
  effect_gate_leave_arcane_council: "[THIS.GetCountry.GetName]이 [concept_gate_arcane_council]에서 탈퇴함."
  effect_gate_reset_ethics: "모든 [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')] 제거."
+ effect_gate_set_arcanist_traits_basic: "[THIS.GetCharacter.GetFullName]은(는) [GetCharacterTrait('character_trait_gate_arcanist_basic').GetName]이(가) 됨"
+ effect_gate_set_arcanist_traits_experienced: "[THIS.GetCharacter.GetFullName]은(는) [GetCharacterTrait('character_trait_gate_arcanist_experienced').GetName]이(가) 됨"
+ effect_gate_set_arcanist_traits_expert: "[THIS.GetCharacter.GetFullName]은(는) [GetCharacterTrait('character_trait_gate_arcanist_expert').GetName]이(가) 됨"
+
+ effect_gate_dungeon_start: "#bold [SCOPE.GetLocalVariable('gate_dungeon').Var('name').GetFlagName]#! [concept_gate_dungeon] 탐험을 시작해 보세요!" #deepl:1049004536
+ effect_gate_dungeon_complete: "#bold [THIS.Var('dungeon').Var('name').GetFlagName]#! [concept_gate_dungeon]에 대한 탐사가 완료될 예정입니다" #deepl:3819255145
+ effect_gate_dungeon_advance: "#bold [THIS.Var('dungeon').Var('name').GetFlagName]#! [concept_gate_dungeon]에 대한 탐색이 다음 [Concept('concept_gate_dungeon_layer','$concept_gate_dungeon_layer_simple|q$')] 단계로 진행됩니다." #deepl:371214514
+
  effect_add_gate_society_harmony_progress: "[COUNTRY.GetName]의 [concept_gate_harmony_pledge_society]이(가) [concept_gate_harmony_pledge_antinomian] 방향으로 $VALUE|v0$만큼 #bold 진전#!함"
  effect_add_gate_society_harmony_progress_negative: "[COUNTRY.GetName]의 [concept_gate_harmony_pledge_society]이(가) [concept_gate_harmony_pledge_stratified] 방향으로 $VALUE|v0$만큼 #bold 후퇴#!함"
  effect_add_gate_society_harmony_progress_first: "[COUNTRY.GetName]의 [concept_gate_harmony_pledge_society]이(가) [concept_gate_harmony_pledge_antinomian] 방향으로 $VALUE|v0$만큼 #bold 진전#!함"
  effect_add_gate_society_harmony_progress_first_negative: "[COUNTRY.GetName]의 [concept_gate_harmony_pledge_society]이(가) [concept_gate_harmony_pledge_stratified] 방향으로 $VALUE|v0$만큼 #bold 후퇴#!함"
+
  effect_add_gate_economy_harmony_progress: "[COUNTRY.GetName]의 [concept_gate_harmony_pledge_economy]이(가) [concept_gate_harmony_pledge_febrile] 방향으로 $VALUE|v0$만큼 #bold 진전#!함"
  effect_add_gate_economy_harmony_progress_negative: "[COUNTRY.GetName]의 [concept_gate_harmony_pledge_economy]이(가) [concept_gate_harmony_pledge_cartelised] 방향으로 $VALUE|v0$만큼 #bold 후퇴#!함"
  effect_add_gate_economy_harmony_progress_first: "[COUNTRY.GetNameNoFlag]의 [concept_gate_harmony_pledge_economy]이(가) [concept_gate_harmony_pledge_febrile] 방향으로 $VALUE|v0$만큼 #bold 진전#!함"
  effect_add_gate_economy_harmony_progress_first_negative: "[COUNTRY.GetNameNoFlag]의 [concept_gate_harmony_pledge_economy]이(가) [concept_gate_harmony_pledge_cartelised] 방향으로 $VALUE|v0$만큼 #bold 후퇴#!함"
+
  effect_add_gate_legislative_harmony_progress: "[COUNTRY.GetName]의 [concept_gate_harmony_pledge_legislative]이(가) [concept_gate_harmony_pledge_anaemic] 방향으로 $VALUE|v0$만큼 #bold 진전#!함"
  effect_add_gate_legislative_harmony_progress_negative: "[COUNTRY.GetName]의 [concept_gate_harmony_pledge_legislative]이(가) [concept_gate_harmony_pledge_despotic] 방향으로 $VALUE|v0$만큼 #bold 후퇴#!함"
  effect_add_gate_legislative_harmony_progress_first: "[COUNTRY.GetNameNoFlag]의 [concept_gate_harmony_pledge_legislative]이(가) [concept_gate_harmony_pledge_anaemic] 방향으로 $VALUE|v0$만큼 #bold 진전#!함"
  effect_add_gate_legislative_harmony_progress_first_negative: "[COUNTRY.GetNameNoFlag]의 [concept_gate_harmony_pledge_legislative]이(가) [concept_gate_harmony_pledge_despotic] 방향으로 $VALUE|v0$만큼 #bold 후퇴#!함"
- effect_gate_set_arcanist_traits_basic: "[THIS.GetCharacter.GetFullName]은(는) [GetCharacterTrait('character_trait_gate_arcanist_basic').GetName]이(가) 됨"
- effect_gate_set_arcanist_traits_experienced: "[THIS.GetCharacter.GetFullName]은(는) [GetCharacterTrait('character_trait_gate_arcanist_experienced').GetName]이(가) 됨"
- effect_gate_set_arcanist_traits_expert: "[THIS.GetCharacter.GetFullName]은(는) [GetCharacterTrait('character_trait_gate_arcanist_expert').GetName]이(가) 됨"
+
+ effect_gate_dungeon_party_condition_change: "[concept_gate_dungeon_party_condition] #bold 는 #!를 $VALUE|v1$만큼 증가시킵니다|v1$" #deepl:3728303310
+ effect_gate_dungeon_party_condition_change_negative: "[concept_gate_dungeon_party_condition] #bold 는 #!를 $VALUE|v1$만큼 감소시킵니다|v1$" #deepl:3001948010
+
+ effect_gate_dungeon_party_cohesion_change: "[concept_gate_dungeon_party_cohesion] #bold 는 #!를 $VALUE|v1$만큼 증가시킵니다|v1$" #deepl:440142178
+ effect_gate_dungeon_party_cohesion_change_negative: "[concept_gate_dungeon_party_cohesion] #bold 는 #!를 $VALUE|v1$만큼 감소시킵니다|v1$" #deepl:1995143878
+
+ effect_gate_dungeon_party_renown_change: "[concept_gate_dungeon_party_renown] #bold 는 #!를 $VALUE|v1$만큼 증가시킵니다|v1$" #deepl:3059803275
+ effect_gate_dungeon_party_renown_change_negative: "[concept_gate_dungeon_party_renown] #bold $VALUE|v1$만큼 #!을 감소시킵니다|v1$" #deepl:3669464879

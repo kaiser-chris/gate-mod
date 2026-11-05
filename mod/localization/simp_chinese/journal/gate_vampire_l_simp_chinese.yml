@@ -2,9 +2,6 @@
 # Conversion Journal Entry
  je_gate_vampire_emergence: "[GetReligion('gate_lunar_masquerade').GetNameNoFormatting]"
  je_gate_vampire_emergence_reason: "月光下的暗潮在沙龙雅舍与市井巷陌间悄然蔓延——月影舞会日渐壮大。年复一年，越来越多迷失的灵魂沉沦于其神秘诱惑。在银色月光与烛火集会中，谜一般的康斯坦丁·德·罗伊斯‑米尔扎讲述着超脱腐朽的觉醒，永不凋零的绝美，以及血脉中苏醒的力量。曾经被视为异端的理念，如今在理想破灭者与野心家的耳中化作天籁。贵族将造访称作风雅探索，商人视为奇货可居，平民向着银纱默默祝祷。月影舞会已非坊间传闻——它正在成为时代的脉搏。这场舞蹈才刚刚拉开帷幕。"
- je_gate_vampire_emergence_fail: "我们将驱除外来的[GetReligion('gate_lunar_masquerade').GetName]教派。"
- je_gate_vampire_emergence_invalid: "在[GetCulture('vampire').GetName]接管之前，我们将整合该赛事。" #deepl:271412993
- je_gate_vampire_emergence_complete: "我已经接受[concept_gate_vampirism]。"
  je_gate_vampire_emergence_activate: "[SCOPE.sCountry('gate_vampire_country').MakeScope.Var('gate_character_vampire').GetCharacter.GetFullName]已经建立[GetReligion('gate_lunar_masquerade').GetName]。"
  je_gate_vampire_emergence_allure: "渴望永生之人涌入[GetReligion('gate_lunar_masquerade').GetNameNoFormatting]。"
  je_gate_vampire_emergence_truth_known: "人们知道吸血鬼的真相，但有些人仍然对[GetReligion('gate_lunar_masquerade').GetNameNoFormatting]感兴趣。"
@@ -18,6 +15,16 @@
  je_gate_vampire_emergence_trigger_truth_known: "人们已经知道了关于[concept_gate_vampirism]的真相"
  je_gate_vampire_emergence_trigger_decapitated_true: "[GetReligion('gate_lunar_masquerade').GetName]的领导人已去世" #deepl:1713254295
  je_gate_vampire_emergence_trigger_decapitated_false: "“[GetReligion('gate_lunar_masquerade').GetName]”组织的头目还活着" #deepl:1292677351
+ je_gate_vampire_emergence_outcome_takeover: "#title 如果满足以下条件，[concept_gate_vampirism]将接管：\n#!" #deepl:1864883389
+ je_gate_vampire_emergence_outcome_on_takeover: "#title 如果[concept_gate_vampirism]占据上风：#!\n$EFFECT$" #deepl:1151302903
+ je_gate_vampire_emergence_outcome_takeover_conclusion_desc: "$concept_journal_entry$以[concept_gate_vampirism]的接管告终" #deepl:3764686941
+ je_gate_vampire_emergence_outcome_purge: "#title 如果满足以下条件，[concept_gate_vampirism]将被清除：\n#!" #deepl:2191099202
+ je_gate_vampire_emergence_outcome_on_purge: "#title 如果[concept_gate_vampirism]被清除：#!\n$EFFECT$" #deepl:4028958691
+ je_gate_vampire_emergence_outcome_purge_conclusion_desc: "$concept_journal_entry$以清除[concept_gate_vampirism]而告终" #deepl:2049651613
+ je_gate_vampire_emergence_outcome_tolerated: "#title 在以下情况下，[concept_gate_vampirism]将被容忍：\n#!" #deepl:2463824463
+ je_gate_vampire_emergence_outcome_on_tolerated: "#title 如果允许[concept_gate_vampirism]：#!\n$EFFECT$" #deepl:1257554150
+ je_gate_vampire_emergence_outcome_tolerated_tooltip: "我们已经铲除了[concept_gate_vampirism]运动" #deepl:2150324627
+ je_gate_vampire_emergence_outcome_tolerated_conclusion_desc: "$concept_journal_entry$以[concept_gate_vampirism]的容差值结束" #deepl:3597327179
 # Flags
  gate_vampire_cult_flag: "让[GetReligion('gate_lunar_masquerade').GetNameNoFormatting]就此开始吧。"
 # Events

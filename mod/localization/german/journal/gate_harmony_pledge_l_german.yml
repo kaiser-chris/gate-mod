@@ -72,7 +72,7 @@
  GATE_HP_ECO_TREND_FROM_CITIZENSHIP: "#b  #blue  Staatsangehörigkeit: #! #! \n [SCOPE.GetScriptValueDesc('gate_harmony_pledge_economy_trend_from_citizenship')]" #deepl:2790924573
  GATE_HP_ECO_TREND_FROM_TAXATION: "#b  #blue  Steuern: #! #! \n [SCOPE.GetScriptValueDesc('gate_harmony_pledge_economy_trend_from_taxation')]" #deepl:3992921682
  GATE_HP_ECO_TAXATION: "aus [GetLawGroup('lawgroup_taxation').GetCurrentlyActive.GetName]" #deepl:2721741755
- GATE_HP_ECO_TAXATION_LEVEL: "aus [Concept('concept_taxes','$concept_tax_level|q$')]" #deepl:1076257550
+ GATE_HP_ECO_TAXATION_LEVEL: "aus [Concept('concept_taxes','$concept_tax_level|q$')]" #deepl:3125070139
  GATE_HP_ECO_TREND_FROM_OTHER_SPHERES: "#b  #blue  Weitere nationale Bereiche: #! #! \n [SCOPE.GetScriptValueDesc('gate_harmony_pledge_economy_trend_from_other_spheres')]" #deepl:836584586
  GATE_HP_ECO_TREND_FROM_LEGISLATIVE: "aus „Legislative Influences“" #deepl:2518471932
  GATE_HP_ECO_TREND_FROM_MODIFIERS: "#b  #blue  Temporäre Modifikatoren: #! #! [AddTextIf(NotEqualTo_CFixedPoint(SCOPE.ScriptValue('gate_harmony_pledge_economy_trend_from_modifiers'),'(CFixedPoint)0'),'\n')] [SCOPE.GetScriptValueDesc('gate_harmony_pledge_economy_trend_from_modifiers')]" #deepl:815960214
@@ -204,7 +204,7 @@
  gate_harmony_pledge.14.b: "Die schlimmsten Auswirkungen abmildern." #deepl:410557116
  gate_harmony_pledge.14.c: "Nutzen Sie das Potenzial." #deepl:2727038369
  gate_harmony_pledge.15.t: "Animistische Technik" #deepl:1278909608
- gate_harmony_pledge.15.d: "Animistische Überzeugungen reduzieren [concept_conversion] auf die [GetReligion('gate_harmony_pledge').GetNameNoIcon] und steigern zudem [Concept('concept_radical', '$concept_radicalism|q$')] für unsere [GetCulture('gnomish').GetName] Mitarbeiter." #deepl:2042378649
+ gate_harmony_pledge.15.d: "Animistische Überzeugungen reduzieren [concept_conversion] auf das [GetReligion('gate_harmony_pledge').GetNameNoIcon] und erhöhen zudem [Concept('concept_radical', '$concept_radicalism|q$')] für unsere [GetCulture('gnomish').GetName]-Arbeiter." #deepl:4097858734
  gate_harmony_pledge.15.f: "Die menschlichen Arbeiter haben begonnen, die industriellen Maschinen der Gnome direkt in ihre animistischen Glaubenssysteme zu integrieren und betrachten riesige Dampfmaschinen und Uhrwerk-Webstühle als Gefäße für mächtige lokale Geister. Die Fabrikhallen sind nun mit üppigen Blumenopfern geschmückt, und die Maschinen werden sorgfältig mit heiligen geometrischen Mustern bemalt. Diese wunderschöne kulturelle Synthese hat zu einer starken Loyalität und Einheit unter den Arbeitern geführt. Die gnomenhaften Ingenieure raufen sich jedoch die Haare, da die menschlichen Bediener sich strikt weigern, die Maschinen an „ungünstigen“ Tagen oder mit optimalen, die Geister verärgernden Geschwindigkeiten zu betreiben." #deepl:196278460
  gate_harmony_pledge.15.a: "Diese Praxis verbieten." #deepl:3854349238
  gate_harmony_pledge.15.b: "Die schlimmsten Auswirkungen abmildern." #deepl:410557116

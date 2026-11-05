@@ -1,0 +1,74 @@
+﻿l_korean:
+# Shared Tooltips
+ gate_dungeon_tooltip_cohesion_check: "\n@information! 이것은 [Concept('concept_gate_dungeon_party_cohesion','$concept_gate_dungeon_party_cohesion_medium|q$')] 확인입니다. 현재 [TopScope.GetLocalVariable('expedition').ScriptValue('gate_dungeon_party_cohesion_value')|1v] [Concept('concept_gate_dungeon_party_cohesion','$concept_gate_dungeon_party_cohesion_medium|q$')]가 있습니다." #deepl:1502353143
+ gate_dungeon_tooltip_condition_check: "\n@information! 이것은 [Concept('concept_gate_dungeon_party_condition','$concept_gate_dungeon_party_condition_medium|q$')] 확인입니다. 현재 [TopScope.GetLocalVariable('expedition').ScriptValue('gate_dungeon_party_condition_value')|1v] [Concept('concept_gate_dungeon_party_condition','$concept_gate_dungeon_party_condition_medium|q$')]가 있습니다." #deepl:1639238710
+ gate_dungeon_tooltip_renown_check: "\n@information! 이것은 [Concept('concept_gate_dungeon_party_renown','$concept_gate_dungeon_party_renown_medium|q$')] 확인입니다. 현재 [TopScope.GetLocalVariable('expedition').ScriptValue('gate_dungeon_party_renown_value')|1v] [Concept('concept_gate_dungeon_party_renown','$concept_gate_dungeon_party_renown_medium|q$')]가 있습니다." #deepl:435962576
+ gate_dungeon_tooltip_other_route: "[concept_gate_dungeon_party]는 장애물을 우회할 다른 길을 찾을 것입니다" #deepl:1085871139
+# Events
+ gate_dungeon_delve_1_t: "발밑에 있는 무언가" #deepl:3461601225
+ gate_dungeon_delve_1_d: "[concept_gate_dungeon_party] 정찰대가 함정을 발견했습니다. 어떻게 대처할까요?" #deepl:919930308
+ gate_dungeon_delve_1_f: "앞쪽 복도는 지난 20개 구간과 별반 다르지 않아 보였지만, 정찰병이 주먹을 치켜들자 대열은 서로 한 마디도 나누지 않은 채 멈춰 섰다. 그녀는 먼저 걸이줄을 발견했고, 그다음에는 있을 리 없는 먼지 자국 아래에 숨겨진 압력판을 찾아냈다. 창들은 벽에 파인 홈으로 보아 오래된 것이었지만 썩지는 않은 상태였다. 던전 안의 어떤 것도 누군가가 다시 지나가기 전까지는 썩지 않는 법이다." #deepl:957671245
+ gate_dungeon_delve_1_a: "경험이 풍부한 우리 정찰대원들이 이를 해체할 수 있습니다." #deepl:3444440194
+ gate_dungeon_delve_1_b: "누군가를 보내서 그 능력을 발동시키고 창을 피하게 하세요." #deepl:1934814329
+ gate_dungeon_delve_1_c: "저희 장비 중 일부를 사용하여 함정을 무력화하십시오." #deepl:1646451376
+ gate_dungeon_delve_2_t: "길은 막혀 있다" #deepl:129269030
+ gate_dungeon_delve_2_d: "앞쪽 통로가 무너져 내렸고,[concept_gate_dungeon_party]는 부서진 돌로 이루어진 벽 앞에 막혀 버렸습니다. 이 벽을 어떻게 넘어가야 할까요?" #deepl:588048349
+ gate_dungeon_delve_2_f: "잔해는 방금 무너진 듯했다. 등불 빛 속에는 여전히 먼지가 떠돌고 있었고, 돌 중 일부는 장갑을 베어낼 만큼 날카로운 모서리를 드러내고 있었다. 무너지는 소리를 들은 사람은 아무도 없었는데, 바로 그 점이 남자들에게 가장 큰 걸림돌이었다. 잔해 더미 뒤쪽에서는 희미하지만 분명한 바람이 잔해 더미 깊숙한 곳에서 불어오고 있었다." #deepl:935841948
+ gate_dungeon_delve_2_a: "저희 도구를 활용해 꼼꼼히 살펴보세요." #deepl:2931959712
+ gate_dungeon_delve_2_b: "천장 근처에 틈이 하나 있습니다. 한 명씩 몸을 비집고 지나가세요." #deepl:3610253745
+ gate_dungeon_delve_2_c: "우리는 이전에도 이와 같은 붕괴를 목격한 적이 있습니다. 어떻게든 해결할 방법은 항상 있습니다." #deepl:1231802573
+ gate_dungeon_delve_3_t: "어둠 속의 추락" #deepl:3112404859
+ gate_dungeon_delve_3_d: "[concept_gate_dungeon_party] 멤버 중 한 명이 심하게 넘어져서 걷기조차 힘들어합니다. 이 사람을 어떻게 해야 할까요?" #deepl:2659091085
+ gate_dungeon_delve_3_f: "발걸음이 비틀거리고, 짧은 비명이 터져 나온 뒤, 모든 광부가 두려워하게 되는 그 소리가 들려왔다. 몸이 잘못 착지하는 소리였다. 다른 이들이 내려왔을 때쯤에는 발목이 이미 부츠 위로 부풀어 올라 있었다. 그는 걸을 수 있다고 고집했지만, 사실 걸을 수 없었고, 주위에 서 있던 모든 사람이 그 사실을 알고 있었다." #deepl:3654819201
+ gate_dungeon_delve_3_a: "누구도 뒤처지지 않습니다. 우리가 그들을 품에 안습니다." #deepl:2948614936
+ gate_dungeon_delve_3_b: "있는 대로 다리에 부목을 대고 계속 나아가자." #deepl:2744951164
+ gate_dungeon_delve_3_c: "지정된 장소에 두어 주세요. 돌아오는 길에 수거하겠습니다." #deepl:3291886358
+ gate_dungeon_delve_4_t: "고요한 봄" #deepl:1630631021
+ gate_dungeon_delve_4_d: "[concept_gate_dungeon_party]는 [concept_gate_dungeon]의 다른 부분과는 달리 손길이 닿지 않은 듯한 방에서 맑은 샘을 우연히 발견했습니다. 이 샘을 어떻게 활용해야 할까요?" #deepl:543633726
+ gate_dungeon_delve_4_f: "처음에는 아무도 그곳을 믿지 않았다. 맑은 물, 은은한 빛을 내는 창백한 이끼로 덮인 천장, 그리고 연못 주변 모래 위에는 발자국 하나 없었다. 정찰병은 누구에게도 물을 마시게 하기 전에 한 시간 가까이 벽을 꼼꼼히 살폈다. 마침내 그녀가 손짓으로 들어오라고 하자, 행렬을 가로지른 안도의 한숨 소리가 거의 들릴 듯이 컸다." #deepl:2806699518
+ gate_dungeon_delve_4_a: "물주머니에 물을 채우고 장비를 닦자." #deepl:1616531776
+ gate_dungeon_delve_4_b: "여기서 야영을 하고 모두 쉬게 하세요." #deepl:1488427664
+ gate_dungeon_delve_4_c: "후세들을 위해 샘물 위에 우리 회사의 흔적을 새겨 두자." #deepl:484491224
+ gate_dungeon_delve_5_t: "천장에서" #deepl:789805465
+ gate_dungeon_delve_5_d: "어둠 속에서 괴물들이 [concept_gate_dungeon_party]로 쏟아져 내려왔습니다. 이 전투를 피할 수는 없으며, 오직 어떻게 살아남을지만 선택해야 합니다." #deepl:3850122029
+ gate_dungeon_delve_5_f: "첫 번째 경고는 행렬 뒤쪽에서 터져 나온 비명 소리였다. 등불을 위로 치켜들었을 때, 천장이 움직이고 있었다. 온통 창백한 다리가 무수히 달린 것들이 바위에 달라붙어 일행이 그 아래를 지나가기를 기다리고 있었던 것이다. 그것들은 발톱과 키틴질 껍질이 빗발치듯 쏟아져 내려왔고, 좁은 복도에서는 도망칠 곳이 어디에도 없었다." #deepl:745020384
+ gate_dungeon_delve_5_a: "무슨 대가를 치르더라도 방어선을 지키며 적을 물리쳐라." #deepl:2071262088
+ gate_dungeon_delve_5_b: "복도 더 안쪽으로 흩어졌다가 다시 모여라." #deepl:1577747592
+ gate_dungeon_delve_5_c: "우리 참전용사들이 그 피해를 가장 크게 입습니다. 그들은 예전에도 이런 일을 겪은 적이 있습니다." #deepl:2021567021
+ gate_dungeon_delve_6_t: "잠자는 거인" #deepl:3329106004
+ gate_dungeon_delve_6_d: "앞으로 나아갈 유일한 길 건너편에 거대한 무언가가 잠들어 있습니다. [concept_gate_dungeon_party]는 어떻게 그곳을 지나가야 할까요?" #deepl:3283669806
+ gate_dungeon_delve_6_f: "처음에는 바위 붕괴로 착각했다. 그런데 그 바위 붕괴가 숨을 쉬기 시작했다. 그 생물은 복도를 벽에서 벽까지 가득 메웠고, 몸의 양쪽이 밀물처럼 천천히 오르내리며 숨을 쉴 때마다 바닥의 먼지를 휘저었다. 등 뒤와 천장 사이에는 사람 한 명 정도 들어갈 만한 틈이 있었다. 그 너머로 통로는 아래쪽으로 이어져 있었다." #deepl:1747446996
+ gate_dungeon_delve_6_a: "조용히, 한 명씩 차례대로 그 위를 넘어가세요." #deepl:1442372075
+ gate_dungeon_delve_6_b: "잠들어 있을 때 처리해 버려라." #deepl:982766350
+ gate_dungeon_delve_6_c: "아무리 시간이 걸리더라도, 그것이 깨어나서 저 멀리 떠나갈 때까지 기다려라." #deepl:429673587
+ gate_dungeon_delve_7_t: "속삭이는 홀" #deepl:1024240748
+ gate_dungeon_delve_7_d: "이 홀의 벽들은 [concept_gate_dungeon_party]에게 속삭이고, 그 목소리들은 알면 안 될 것들을 알고 있다. 어떻게 이 곳을 통과할 수 있을까?" #deepl:123588761
+ gate_dungeon_delve_7_f: "처음에는 옆방에서 들려오는 대화처럼, 간신히 들릴 정도의 속삭임으로 시작되었다. 그러다 어머니의 목소리로 한 남자의 이름이 불렸다. 그리고 또 다른 이름이 이어졌다. 벽들은 누가 어둠을 두려워하는지, 누가 고향에서 빚에 대해 거짓말을 했는지 알고 있었고, 그 사실을 모두에게 알리고 있었다. 학자들은 여전히 지하 감옥이 생각할 수 있는지 여부를 두고 논쟁을 벌이고 있다. 하지만 그 홀에 있던 누구도 이의를 제기하지 않았다." #deepl:2897827430
+ gate_dungeon_delve_7_a: "우리 참전용사들은 더 심한 말도 들어왔습니다. 그들을 따르고, 그런 목소리들은 무시하세요." #deepl:3039915935
+ gate_dungeon_delve_7_b: "가능한 한 빨리 훑어보자." #deepl:4171806532
+ gate_dungeon_delve_7_c: "귀에 밀랍과 천을 꽉 채우고 천천히 가자." #deepl:3900063775
+ gate_dungeon_delve_8_t: "밤의 도둑들" #deepl:2345300311
+ gate_dungeon_delve_8_d: "어젯밤 사이에 무언가가 [concept_gate_dungeon_party]의 야영지로 몰래 들어와 우리 보급품의 상당량을 훔쳐 갔습니다. 이제 어떻게 해야 할까요?" #deepl:303970605
+ gate_dungeon_delve_8_f: "보초는 자신이 잠들지 않았다고 맹세했다. 그러나 아침이 되자 배낭은 찢겨져 있었고, 식량 통은 갉아먹혀 있었으며, 부스러기와 찢어진 캔버스 조각들이 남긴 흔적은 그들 중 누구도 따라갈 수 없을 만큼 좁은 벽의 틈으로 이어져 있었다. 어둠 속 어딘가에서, 작고 영리한 무언가가 일행의 식량을 훔쳐 호화로운 잔치를 벌이고 있었다." #deepl:2987206613
+ gate_dungeon_delve_8_a: "그만 잊고 허리띠를 졸라매자." #deepl:2175357943
+ gate_dungeon_delve_8_b: "다른 이들에게 본보기가 되도록 그 보초를 처벌하라." #deepl:2487215040
+ gate_dungeon_delve_8_c: "균열을 더 넓혀서, 회수할 수 있는 것은 최대한 회수해 봅시다." #deepl:1963969597
+ gate_dungeon_delve_9_t: "물 상승" #deepl:888871876
+ gate_dungeon_delve_9_desc: "앞쪽 통로가 물에 잠겼고, 수위는 여전히 상승하고 있습니다. [concept_gate_dungeon_party]는 어떻게 진행해야 할까요?" #deepl:2410568068
+ gate_dungeon_delve_9_f: "물은 검고, 이가 시릴 정도로 차가웠다. 물은 복도를 사람 가슴 높이까지 채우고 있었고, 보이지 않는 곳에서 끊임없이 흘러들어오며 매분마다 수위가 조금씩 올라가고 있었다. 저편, 아마 40보 정도 떨어진 곳에서 바닥이 다시 물 위로 드러나기 시작했다. 40보란 그리 먼 거리가 아니다. 하지만 등에 배낭을 메고 어둠 속을 걷는다면 꽤 먼 거리다." #deepl:1154402857
+ gate_dungeon_delve_9_a: "배낭들을 묶은 다음, 물속을 헤쳐 나가세요." #deepl:422009657
+ gate_dungeon_delve_9_b: "물 수위가 내려갈 때까지 높은 곳에서 기다리세요." #deepl:904259468
+ gate_dungeon_delve_9_c: "우리는 더 험한 곳도 건넜다. 우리 최고의 수영 선수들이 줄을 지어 건너갈 것이다." #deepl:1658685036
+ gate_dungeon_delve_9_d: "뒤로 돌아가서 다른 길을 찾아 내려가세요." #deepl:2315468519
+ gate_dungeon_delve_10_t: "신곡" #deepl:3782047760
+ gate_dungeon_delve_10_d: "[concept_gate_dungeon_party]가 최근 이곳을 지나간 다른 파티의 흔적을 발견했습니다. 그들이 남긴 표식이 여전히 선명합니다. 이 정보를 어떻게 활용할까요?" #deepl:2282852152
+ gate_dungeon_delve_10_f: "벽에 그려진 분필 화살표, 받침대에 꽂힌 타버린 횃불, 갈림길마다 가지런히 쌓인 작은 돌무더기. 이곳을 지나간 사람은 자신이 무엇을 해야 할지 정확히 알고 있었으며, 뒤를 돌아보며 길을 표시해 두는 수고를 아끼지 않았다. 그 장벽이 그들의 뒤에서 닫힌 이후로, 누군가가 본 것 중 이보다 더 친절에 가까운 것은 없었다." #deepl:2139562807
+ gate_dungeon_delve_10_a: "그들의 흔적을 따라가라." #deepl:27888709
+ gate_dungeon_delve_10_b: "그들은 보급품을 숨겨두고 갔어. 마음껏 챙겨 먹자." #deepl:3607561192
+ gate_dungeon_delve_10_c: "그건 길드 표식입니다. 그 표식이 어디로 이어지는지 우리는 정확히 알고 있습니다." #deepl:1983287632
+ gate_dungeon_delve_11_t: "거울 연못" #deepl:1168754427
+ gate_dungeon_delve_11_d: "마나가 짙게 깔린 잔잔한 연못에 [concept_gate_dungeon_party]의 모습이 비치고 있지만, 그들이 실제 모습과는 조금 다릅니다. 이걸 어떻게 해야 할까요?" #deepl:2653778706
+ gate_dungeon_delve_11_f: "돌을 던져 넣었을 때 수면은 일렁이지 않았다. 그저 돌을 받아들인 뒤, 주위에 서 있는 남자들의 얼굴을 비춰주었을 뿐이었다. 어떤 이는 나이가 들어 보였고, 어떤 이는 흉터가 있었으며, 한 명은 왕관을 쓰고 있었다. 연못 위의 공기는 구리와 번개 냄새가 났다. 던전에 관한 이야기를 들어본 적이 있는 사람이라면 누구나 그곳을 건드리지 말아야 한다는 것을 알고 있었다. 하지만 아무도 자리를 떠나려 하지 않았다." #deepl:908434388
+ gate_dungeon_delve_11_a: "그것에서 한 모금 마셔 보고, 무엇이 나타나는지 보자." #deepl:2678965085
+ gate_dungeon_delve_11_b: "플라스크를 몇 개 채워 둬. 마나 덕분에 장비가 회복될지도 몰라." #deepl:681492015
+ gate_dungeon_delve_11_c: "우리의 베테랑들은 이런 수영장을 잘 알고 있습니다. 그들에게 이것이 어떤 의미인지 들어봅시다." #deepl:2775076160

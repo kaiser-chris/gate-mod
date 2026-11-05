@@ -1,0 +1,74 @@
+﻿l_simp_chinese:
+# Shared Tooltips
+ gate_dungeon_tooltip_cohesion_check: "\n@information! 这是一项[Concept('concept_gate_dungeon_party_cohesion','$concept_gate_dungeon_party_cohesion_medium|q$')]检查。我们当前有[TopScope.GetLocalVariable('expedition').ScriptValue('gate_dungeon_party_cohesion_value')|1v] [Concept('concept_gate_dungeon_party_cohesion','$concept_gate_dungeon_party_cohesion_medium|q$')]。" #deepl:1502353143
+ gate_dungeon_tooltip_condition_check: "\n@information! 这是一项 [Concept('concept_gate_dungeon_party_condition','$concept_gate_dungeon_party_condition_medium|q$')] 检查。我们当前有 [TopScope.GetLocalVariable('expedition').ScriptValue('gate_dungeon_party_condition_value')|1v] [Concept('concept_gate_dungeon_party_condition','$concept_gate_dungeon_party_condition_medium|q$')]。" #deepl:1639238710
+ gate_dungeon_tooltip_renown_check: "\n@information! 这是一项 [Concept('concept_gate_dungeon_party_renown','$concept_gate_dungeon_party_renown_medium|q$')] 检查。我们当前有 [TopScope.GetLocalVariable('expedition').ScriptValue('gate_dungeon_party_renown_value')|1v] [Concept('concept_gate_dungeon_party_renown','$concept_gate_dungeon_party_renown_medium|q$')]。" #deepl:435962576
+ gate_dungeon_tooltip_other_route: "[concept_gate_dungeon_party]将寻找另一条绕过障碍物的路" #deepl:1085871139
+# Events
+ gate_dungeon_delve_1_t: "脚下的东西" #deepl:3461601225
+ gate_dungeon_delve_1_d: "[concept_gate_dungeon_party]的侦察队员发现了陷阱。我们该如何应对？" #deepl:919930308
+ gate_dungeon_delve_1_f: "前方的走廊看起来和之前的二十段没什么两样，直到我们的侦察员举起拳头，队伍便在无人交谈的情况下停了下来。她先是发现了拉线，随后又在尘土中一处不该存在的凹陷处发现了压力板。 从墙上凿出的插槽来看，这些是长矛——虽是古老的工艺，却未见腐朽，正如地牢中的万物，只要无人踏足，便不会腐朽。" #deepl:957671245
+ gate_dungeon_delve_1_a: "我们经验丰富的侦察员可以解除它的武装。" #deepl:3444440194
+ gate_dungeon_delve_1_b: "派人去触发它，并躲开长矛。" #deepl:1934814329
+ gate_dungeon_delve_1_c: "使用我们的一些设备来解除这个陷阱。" #deepl:1646451376
+ gate_dungeon_delve_2_t: "道路被封了" #deepl:129269030
+ gate_dungeon_delve_2_d: "前方的通道已经坍塌，[concept_gate_dungeon_party]的队伍面前是一堵碎石墙。我们该怎么过去呢？" #deepl:588048349
+ gate_dungeon_delve_2_f: "瓦砾是刚坍塌的。灯笼光下仍飘着尘埃，有些石块的棱角锋利得足以割破手套。没人听到它坍塌的声音，这正是让工人们最不安的地方。瓦砾堆后方，从更深处传来一阵微弱却毫无疑问的凉风。" #deepl:935841948
+ gate_dungeon_delve_2_a: "利用我们的工具，深入挖掘。" #deepl:2931959712
+ gate_dungeon_delve_2_b: "天花板附近有个缝隙。大家一个接一个地挤过去。" #deepl:3610253745
+ gate_dungeon_delve_2_c: "我们以前也见过这样的崩盘。总会有办法解决的。" #deepl:1231802573
+ gate_dungeon_delve_3_t: "黑暗中的跌倒" #deepl:3112404859
+ gate_dungeon_delve_3_d: "[concept_gate_dungeon_party]中的一名成员摔得很重，几乎走不动了。我们该怎么处理？" #deepl:2659091085
+ gate_dungeon_delve_3_f: "脚步一滑，一声短促的惊呼，接着是每个矿工都深恶痛绝的那种声音：有人摔得姿势不对。等其他人爬下来时，他的脚踝已经肿得超过了靴口。他坚持说自己还能走。其实他走不了，围在他身边的每个人都心知肚明。" #deepl:3654819201
+ gate_dungeon_delve_3_a: "绝不让任何人掉队。我们会扶他们一把。" #deepl:2948614936
+ gate_dungeon_delve_3_b: "用现有的东西给腿上打上夹板，然后继续前进。" #deepl:2744951164
+ gate_dungeon_delve_3_c: "请将它们放在标记好的地方。我们回程时会去取。" #deepl:3291886358
+ gate_dungeon_delve_4_t: "一个宁静的春天" #deepl:1630631021
+ gate_dungeon_delve_4_d: "[concept_gate_dungeon_party]在[concept_gate_dungeon]其他区域似乎未曾涉足的一间密室中，偶然发现了一处清澈的泉水。我们该如何利用它呢？" #deepl:543633726
+ gate_dungeon_delve_4_f: "起初没人相信这里的水能喝。清澈的水面，天花板上覆盖着淡绿色的苔藓，散发出柔和的光芒，水池周围的沙地上连一道脚印都没有。那名侦察员花了将近一个小时仔细检查池壁，才允许大家饮水。当她终于挥手示意大家进去时，队伍中涌起的如释重负之感，几乎能听见那声响。" #deepl:2806699518
+ gate_dungeon_delve_4_a: "给水袋加满水，并清洗我们的装备。" #deepl:1616531776
+ gate_dungeon_delve_4_b: "就在这里扎营，让大家休息一下。" #deepl:1488427664
+ gate_dungeon_delve_4_c: "在泉水之上镌刻我们公司的印记，留给后人。" #deepl:484491224
+ gate_dungeon_delve_5_t: "从天花板上掉下来" #deepl:789805465
+ gate_dungeon_delve_5_d: "一些生物从头顶的黑暗中坠落到了[concept_gate_dungeon_party]。这场战斗无法避免，只能选择如何在其中生存下来。" #deepl:3850122029
+ gate_dungeon_delve_5_f: "第一个警报是队伍后方传来的尖叫声。 等灯笼光芒向上扫去时，天花板已经开始移动：那些苍白的、多腿的生物一直紧贴着岩壁，静待队伍从它们下方经过。它们如雨点般扑来，利爪与甲壳纷飞，而在狭窄的走廊里，根本无处可逃。" #deepl:745020384
+ gate_dungeon_delve_5_a: "坚守阵地，击退敌人，哪怕要牺牲我们的装备也在所不惜。" #deepl:2071262088
+ gate_dungeon_delve_5_b: "分散开来，然后在走廊更深处重新集结。" #deepl:1577747592
+ gate_dungeon_delve_5_c: "我们的退伍军人承受了最沉重的打击。他们以前也经历过这样的情况。" #deepl:2021567021
+ gate_dungeon_delve_6_t: "沉睡的巨人" #deepl:3329106004
+ gate_dungeon_delve_6_d: "在通往前方的唯一道路上，有某种庞然巨物正在沉睡。[concept_gate_dungeon_party]该如何绕过它呢？" #deepl:3283669806
+ gate_dungeon_delve_6_f: "起初，他们以为那是场落石。随后，那堆落石竟开始呼吸。那生物占据了整个大厅，从墙壁这一端延伸到另一端，它的两侧如潮水般缓慢起伏，每一次呼吸都搅动着地面的尘土。它的背部与天花板之间留有一道一人宽的缝隙。缝隙的另一端，通道继续向下延伸。" #deepl:1747446996
+ gate_dungeon_delve_6_a: "悄悄地、一个接一个地翻过去。" #deepl:1442372075
+ gate_dungeon_delve_6_b: "趁它睡着时干掉它。" #deepl:982766350
+ gate_dungeon_delve_6_c: "等着它醒来并走开，不管要花多长时间。" #deepl:429673587
+ gate_dungeon_delve_7_t: "《低语大厅》" #deepl:1024240748
+ gate_dungeon_delve_7_d: "这座大厅的墙壁正向[concept_gate_dungeon_party]低语，而那些声音知道了一些不该知道的事情。我们该如何通过这里？" #deepl:123588761
+ gate_dungeon_delve_7_f: "起初只是耳边若隐若现的低语，仿佛隔壁房间的谈话。接着，一个名字被念出——一个男人的名字，用他母亲的声音。随后又是一个。墙壁知道谁怕黑，谁在老家谎报了债务，而它们正把这一切告诉所有人。 学者们至今仍在争论地牢是否具有思维能力。但那大厅里，没有人对此提出异议。" #deepl:2897827430
+ gate_dungeon_delve_7_a: "我们的退伍军人经历过更糟糕的情况。跟随他们，别理会那些声音。" #deepl:3039915935
+ gate_dungeon_delve_7_b: "我们尽可能快地把这部分内容过一遍。" #deepl:4171806532
+ gate_dungeon_delve_7_c: "用蜡和布塞住耳朵，然后慢慢走。" #deepl:3900063775
+ gate_dungeon_delve_8_t: "夜半窃贼" #deepl:2345300311
+ gate_dungeon_delve_8_d: "昨晚，有东西潜入了[concept_gate_dungeon_party]的营地，偷走了我们相当一部分补给。现在该怎么办？" #deepl:303970605
+ gate_dungeon_delve_8_f: "哨兵发誓自己根本没睡。然而清晨时，他们发现行囊被划开，口粮罐被啃得千疮百孔，一串面包屑和撕碎的帆布碎片留下的痕迹，一直延伸到墙上的一道裂缝里——那裂缝太窄了，他们谁都无法钻进去。 在黑暗的某个角落，有某种小巧而狡猾的生物正以这支队伍为代价大快朵颐。" #deepl:2987206613
+ gate_dungeon_delve_8_a: "放手吧，勒紧裤腰带。" #deepl:2175357943
+ gate_dungeon_delve_8_b: "惩罚那名哨兵，以此作为对其他人的警示。" #deepl:2487215040
+ gate_dungeon_delve_8_c: "把裂缝撑大一点，尽量把能找回的东西找回来。" #deepl:1963969597
+ gate_dungeon_delve_9_t: "水位上涨" #deepl:888871876
+ gate_dungeon_delve_9_desc: "前方的通道已被水淹没，水位仍在上涨。[concept_gate_dungeon_party]该如何行动？" #deepl:2410568068
+ gate_dungeon_delve_9_f: "水是黑色的，冷得让人牙酸。水淹没了走廊，水位已达一个成年人的胸口，而且每过一分钟，水位就在不知从何处涌来的水流推动下，悄然上涨。在对面，大概四十步远的地方，地面又从水中露了出来。 四十步不算远。但在黑暗中背着行囊前行，这却是一段漫长的路程。" #deepl:1154402857
+ gate_dungeon_delve_9_a: "把背包绑在一起，然后涉水而过。" #deepl:422009657
+ gate_dungeon_delve_9_b: "在高处等待水位下降。" #deepl:904259468
+ gate_dungeon_delve_9_c: "我们以前也经历过更糟糕的情况。我们最优秀的游泳选手会横渡过去。" #deepl:1658685036
+ gate_dungeon_delve_9_d: "掉头，另找一条下山的路。" #deepl:2315468519
+ gate_dungeon_delve_10_t: "新鲜足迹" #deepl:3782047760
+ gate_dungeon_delve_10_d: "[concept_gate_dungeon_party]发现了一支最近路过的队伍留下的踪迹。他们的标记依然清晰可见。我们该如何利用这些线索呢？" #deepl:2282852152
+ gate_dungeon_delve_10_f: "墙上的粉笔箭头、支架上的一根熄灭的火把、每个岔路口整齐的小石堆。无论是谁从这里经过，都清楚自己在做什么，还特意在身后留下了路标。自从身后的屏障关闭以来，这是大家见过的最接近“善意”的一件事。" #deepl:2139562807
+ gate_dungeon_delve_10_a: "沿着他们的踪迹走。" #deepl:27888709
+ gate_dungeon_delve_10_b: "他们留下了一处补给藏匿点。大家自便。" #deepl:3607561192
+ gate_dungeon_delve_10_c: "那是公会标志。我们清楚它们会通向哪里。" #deepl:1983287632
+ gate_dungeon_delve_11_t: "镜池" #deepl:1168754427
+ gate_dungeon_delve_11_d: "一池静谧、魔力浓郁的水面映出了[concept_gate_dungeon_party]的身影，不过与他们真实的模样略有不同。我们该如何处理呢？" #deepl:2653778706
+ gate_dungeon_delve_11_f: "当一块石头被扔进池中时，水面并未泛起涟漪。它只是接住了那块石头，并将周围站着的人们的面容映照出来：有的显得年长，有的脸上带着伤疤，还有一人头戴王冠。水池上方的空气中弥漫着铜与闪电的气息。 凡是听过地牢故事的人都知道，他们本该敬而远之。但没有人动身离开。" #deepl:908434388
+ gate_dungeon_delve_11_a: "喝一口，看看它会向我们揭示什么。" #deepl:2678965085
+ gate_dungeon_delve_11_b: "装满几瓶。法力或许能修复我们的装备。" #deepl:681492015
+ gate_dungeon_delve_11_c: "我们的老兵们对这样的泳池很熟悉。就让他们来告诉我们这意味着什么吧。" #deepl:2775076160

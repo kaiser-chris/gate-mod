@@ -46,6 +46,38 @@
  concept_gate_ley_lines_desc: "灵脉是潜藏于地表之下的原始魔能脉络，常人不可见却维系着神秘学的根基。当其交汇之时，魔能会激涌而出，将所在区域化为强效魔法节点，并强化附近一切法术效果。"
  concept_gate_mana_well: "魔能井"
  concept_gate_mana_well_desc: "魔能井是[Concept('concept_gate_ley_lines','$concept_gate_ley_line|q$')]上的节点。魔能井几乎可以产生无尽的$gate_mana$。\n\n但它们可能引发当地[Concept('concept_gate_ley_lines','$concept_gate_ley_line|q$')]的#v 不稳定#!，进而导致#v 事故#!。"
+ concept_gate_dungeon: "地牢" #deepl:716318657
+ concept_gate_dungeons: "地牢" #deepl:3747571184
+ concept_gate_dungeon_desc: "$concept_gate_dungeon$是一种罕见的空间异常现象，仅会在[concept_gate_mana_density]极高的区域形成。一旦队伍进入，身后的通道便会封锁，迄今为止尚未有任何已知的武器或法术能从外部突破这道屏障，且该屏障在$concept_gate_dungeon$被清空或其中所有生物死亡之前都不会再次开启。 $concept_gate_dungeon$ 分为 [Concept('concept_gate_dungeon_layer','$concept_gate_dungeon_layers_simple|q$')] 层，层数越多通常意味着该 $concept_gate_dungeon$ 越危险。被清剿的 $concept_gate_dungeon$ 会在短时间内重新生成怪物。一些学者认为 $concept_gate_dungeons$ 具备一定程度的心智，并指出它们会根据对手采用的战术来改变自身布局和怪物配置，尽管这一观点尚未得到证实。" #deepl:3440055638
+ concept_gate_dungeon_delve: "地牢探险" #deepl:3657803995
+ concept_gate_dungeon_delve_desc: "新发现的[concept_gate_dungeon]尚未向公众开放探索。在任何私人冒险者进入之前，当地的[concept_country]必须发起一项$concept_gate_dungeon_delve$：这是一支由选定的[concept_gate_dungeon_party_leader]率领的官方探险队，其任务是在地牢中生存下来，并带回关于地牢内部情况的首份报告。 只有当$concept_gate_dungeon_delve$成功返回后，[concept_gate_dungeon]才被视为已绘制地图并解锁，此后才会向任何愿意冒险的人开放。若$concept_gate_dungeon_delve$失败，[concept_gate_dungeon]将保持未绘制地图且关闭的状态，[concept_country]必须组织另一次尝试后，该地牢才能被开发利用。" #deepl:551811917
+ concept_gate_dungeon_layer: "地牢层" #deepl:617689153
+ concept_gate_dungeon_layers: "地牢层" #deepl:181634150
+ concept_gate_dungeon_layer_simple: "图层" #deepl:1101962569
+ concept_gate_dungeon_layers_simple: "图层" #deepl:2541609170
+ concept_gate_dungeon_layer_desc: "一个[concept_gate_dungeon]被划分为多个$concept_gate_dungeon_layers$，只有在清空上一层后才能进入下一层。后面的$concept_gate_dungeon_layers$通常比前面的更危险，其总层数是衡量某个[concept_gate_dungeon]潜在危险程度最简单的指标，尽管并非唯一指标。 每个$concept_gate_dungeon_layer$中的怪物、地形和危险都遵循其父级[concept_gate_dungeon]的主题，并且随着[concept_gate_dungeon]根据玩家已验证有效的战术进行调整，这些要素在每次探险中可能会发生变化。若一支队伍通关了所有$concept_gate_dungeon_layer$，则视为已通关[concept_gate_dungeon]本身，此后该[concept_gate_dungeon]将在一天到一个月内重新生成怪物。" #deepl:1443480040
+ concept_gate_dungeon_party: "地牢派对" #deepl:550431021
+ concept_gate_dungeon_party_simple: "聚会" #deepl:1169245221
+ concept_gate_dungeon_party_desc: "$concept_gate_dungeon_party$是指被派去探索[concept_gate_dungeon]的小队，这是人们得以一窥其入口彼端景象的唯一途径。在[Concept('concept_gate_dungeon_party_leader','$concept_gate_dungeon_party_leader_simple|q$')]的统率下集结后，$concept_gate_dungeon_party$便会穿过屏障并被封锁在其中，在清理完[concept_gate_dungeon]、自行撤退或彻底失踪之前，无法从外部获得增援、补给或撤出。 该队伍在[Concept('concept_gate_dungeon_layer','$concept_gate_dungeon_layes|q$')]中的推进情况通过三项指标进行追踪：[Concept('concept_gate_dungeon_party_cohesion','$concept_gate_dungeon_party_cohesion_simple|q$')]（队伍在探险压力下保持团结的程度）、[Concept('concept_gate_dungeon_party_condition','$concept_gate_dungeon_party_condition_simple|q$')]（其补给和装备的状态），以及[Concept('concept_gate_dungeon_party_renown','$concept_gate_dungeon_party_renown_simple|q$')]（队员们所具备的技能和声望）。 首批被派往新发现的[concept_gate_dungeon]的$concept_gate_dungeon_party$，通常由当地[concept_country]派出，因为没有任何受雇公司或独立队伍值得信赖，无法让他们进入未勘测的区域。" #deepl:2181060346
+ concept_gate_dungeon_party_leader: "地下城队伍队长" #deepl:1556015516
+ concept_gate_dungeon_party_leader_simple: "党魁" #deepl:1499256547
+ concept_gate_dungeon_party_leaders_simple: "政党领导人" #deepl:3443453287
+ concept_gate_dungeon_party_leader_desc: "当一个[concept_gate_dungeon]首次被发现时，对其进行首次探险的责任由控制该地牢的[concept_country]承担。在向独立冒险团队开放之前，必须选出一名$concept_gate_dungeon_party_leader$，由其带领队伍进入地牢，在[Concept('concept_gate_dungeon_layer','$concept_gate_dungeon_layers|q$')]中生存下来，并带回第一份内部地图。" #deepl:4271500222
+ concept_gate_dungeon_party_points: "地下城派对积分" #deepl:3882747747
+ concept_gate_dungeon_party_points_simple: "派对积分" #deepl:3800840220
+ concept_gate_dungeon_party_points_desc: "$concept_gate_dungeon_party_points_simple$代表[concept_gate_dungeon]探险可用的预算。该预算有限，将在规划阶段用于决定[concept_gate_dungeon_party]的[Concept('concept_gate_dungeon_party_cohesion','$concept_gate_dungeon_party_cohesion_simple|q$')]、[Concept('concept_gate_dungeon_party_condition','$concept_gate_dungeon_party_condition_simple|q$')]和[Concept('concept_gate_dungeon_party_renown','$concept_gate_dungeon_party_renown_simple|q$')]。合理分配这些资源将决定探险的成败。" #deepl:3397300468
+ concept_gate_dungeon_party_cohesion: "地下城团队凝聚力" #deepl:4244939498
+ concept_gate_dungeon_party_cohesion_medium: "党的凝聚力" #deepl:898863178
+ concept_gate_dungeon_party_cohesion_simple: "凝聚力" #deepl:391001317
+ concept_gate_dungeon_party_cohesion_desc: "$concept_gate_dungeon_party_cohesion_medium$反映了该[concept_gate_dungeon_party]在[concept_gate_dungeon]带来的压力下保持团结的程度。该数值初始值为队伍的最高值，会因在地下城中遭遇的艰险而逐渐消耗；一旦降至零，队伍便会瓦解，探险也将以失败告终。" #deepl:3835217936
+ concept_gate_dungeon_party_condition: "地下城队伍状态" #deepl:1752708555
+ concept_gate_dungeon_party_condition_medium: "队伍状态" #deepl:923878169
+ concept_gate_dungeon_party_condition_simple: "状况" #deepl:1872064076
+ concept_gate_dungeon_party_condition_desc: "$concept_gate_dungeon_party_condition_medium$反映了[concept_gate_dungeon_party]进入[concept_gate_dungeon]时所携带的一切状态：包括补给、装备和物资。该数值初始为最大值，会因地牢本身的消耗、口粮消耗、装备受损以及探险过程中的各种损耗而逐渐减少。当队伍的$concept_gate_dungeon_party_condition_simple$值过低时，虽然不会自动失败，但成功几率会大幅下降。" #deepl:3611170961
+ concept_gate_dungeon_party_renown: "地下城派对声望" #deepl:970184516
+ concept_gate_dungeon_party_renown_medium: "团队声望" #deepl:1009903675
+ concept_gate_dungeon_party_renown_simple: "声誉" #deepl:3198056844
+ concept_gate_dungeon_party_renown_desc: "$concept_gate_dungeon_party_renown_medium$反映了该[concept_gate_dungeon_party]所积累的技能和声望，这些主要源于当前[concept_gate_dungeon]之外的经历，而非[concept_gate_dungeon]内部发生的事件，因此它在单次探险过程中很少发生变化。声望足够高的队伍在面对[concept_gate_dungeon]中的事件时，可能会获得额外的选择。" #deepl:2918772760
  concept_gate_expedition: "$gate_planet$远征"
  concept_gate_expedition_desc: "当我们掌控[GetBuildingType('building_gate_alxa').GetName]并完成[GetTechnology('gate_expeditions').GetName]的开发后，即可发起一场对[concept_gate_planet]的远征。"
  concept_gate_expedition_location: "Expedition Location"

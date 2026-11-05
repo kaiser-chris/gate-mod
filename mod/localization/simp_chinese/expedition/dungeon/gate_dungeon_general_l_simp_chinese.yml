@@ -1,0 +1,123 @@
+﻿l_simp_chinese:
+# Journal Entry
+ je_gate_expedition_dungeon: "地牢探险" #deepl:3657803995
+ je_gate_expedition_dungeon_reason: "我们的[concept_gate_dungeon_party]已经进入[concept_gate_dungeon]，目前与外界隔绝。我们只能希望他们能够应对前方等待着他们的所有挑战。" #deepl:3620273966
+ je_gate_expedition_dungeon_complete: "已完成 #v [TopScope.sJE('journal_entry').MakeScope.Var('last_layer').Var('name').GetFlagName]#! [Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')]" #deepl:3784952766
+ je_gate_expedition_dungeon_fail: "[concept_gate_dungeon_party] 的 [Concept('concept_gate_dungeon_party_condition','$concept_gate_dungeon_party_condition_simple|q$')] 概念值降为 #v 0#!" #deepl:1565804638
+ je_gate_expedition_dungeon_on_complete: "解锁此[concept_gate_dungeon]以进行利用" #deepl:1369792813
+ je_gate_expedition_dungeon_party_leader: "[Concept('concept_gate_dungeon_party_leader', '$concept_gate_dungeon_party_leader_simple|q$')]" #deepl:399795468
+ je_gate_expedition_dungeon_party_leader_empty: "空" #deepl:3407253358
+ je_gate_expedition_dungeon_status_pending_event: "我们的[concept_gate_dungeon_party]正在处理一桩紧急事件。" #deepl:2396133135
+ je_gate_expedition_dungeon_name: "[concept_gate_dungeon]名称" #deepl:4288637609
+ je_gate_expedition_dungeon_location: "[concept_gate_dungeon]位置" #deepl:2505359440
+ je_gate_expedition_dungeon_layer_count: "[Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layers|q$')]" #deepl:245473234
+ je_gate_expedition_dungeon_layer_active: "当前 [concept_gate_dungeon_layer]" #deepl:3613301397
+ je_gate_expedition_dungeon_layer_all: "显示全部 [Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layers|q$')]" #deepl:3855683733
+ je_gate_expedition_dungeon_log_entries_header_type: "类型" #deepl:2669039948
+ je_gate_expedition_dungeon_log_entries_header_event: "活动" #deepl:1263615171
+ je_gate_expedition_dungeon_log_entries_header_date: "日期" #deepl:2200628797
+ je_gate_expedition_dungeon_log_entries_all: "显示[concept_gate_dungeon]探险事件日志" #deepl:2915958456
+ je_gate_expedition_dungeon_log_entries_limit: "显示最新的 #bold 10#! 条（共 #bold [GetDataModelSize(ScriptContainer.MakeScope.GetList('log_entries'))|0]#! 条日志条目）#bold #!" #deepl:3266392393
+ je_gate_expedition_dungeon_log_entries_empty: "尚无日志条目" #deepl:4057840238
+ je_gate_expedition_dungeon_layer_done: "该[concept_gate_dungeon_layer]已#bold 完成#!。" #deepl:4131789566
+ je_gate_expedition_dungeon_layer_open: "该[concept_gate_dungeon_layer]目前#bold 尚未完成#!。" #deepl:2166738007
+ je_gate_expedition_dungeon_cohesion_tooltip: "#header [concept_gate_dungeon_party_cohesion]#!\n该[concept_gate_dungeon_party]的凝聚力状况如何。若该数值降至零，队伍将瓦解，探险以失败告终。\n" #deepl:9102788
+ je_gate_expedition_dungeon_condition_tooltip: "#header [concept_gate_dungeon_party_condition]#!\n该[concept_gate_dungeon_party]的补给、装备和物资状况。该数值会在探险过程中逐渐耗尽，随着数值下降，队伍的装备状况会越来越差。\n" #deepl:2867010154
+ je_gate_expedition_dungeon_renown_tooltip: "#header [concept_gate_dungeon_party_renown]#!\n该[concept_gate_dungeon_party]所获得的技能与声望。在探险过程中鲜有变化，但若$concept_gate_dungeon_party_renown_simple$值足够高，即可在[concept_gate_dungeon]的事件中解锁额外选项。\n" #deepl:3924921469
+ je_gate_expedition_dungeon_layer_in_progress: "该[concept_gate_dungeon_layer]目前#bold 正在开发中#!。" #deepl:608748958
+ je_gate_expedition_dungeon_name_and_location: "[Scope.Var('name').GetFlagName]在[Scope.Var('location').GetStateRegion.GetName]中" #deepl:3754834739
+ je_gate_expedition_dungeon_name_and_location_selector: "[Scope.Var('dungeon').Var('name').GetFlagName] 在 [Scope.Var('dungeon').Var('location').GetStateRegion.GetName] 中" #deepl:2231344110
+ sb_gate_dungeon_debug_on_action: "#debug 在操作时触发脉冲#!" #deepl:3988207702
+ sb_gate_dungeon_debug_on_action_desc: "手动执行该月度操作。" #deepl:4021187328
+ sb_gate_dungeon_debug_advance: "#debug 完成图层#!" #deepl:3809113979
+ sb_gate_dungeon_debug_advance_desc: "完成当前关卡，然后进入下一关，或者通关该地下城。" #deepl:3031981233
+# Events
+ gate_dungeon_setup.1.t: "设置您的[concept_gate_dungeon_party]" #deepl:804843518
+ gate_dungeon_setup.1.points: "We have a limited budget of [concept_gate_dungeon_party_points] to distribute. Each attribute has their own use and points should be distributed to best fit the [concept_gate_dungeon] you want to delve into.\nPoints can be distributed by clicking on the bars below." #TODO: Write party setup points
+ gate_dungeon_setup.1.leaders: "每次探索地牢时，我们都需要选择一个[Concept('concept_gate_dungeon_party_leader','$concept_gate_dungeon_party_leader_simple|q$')]。领导者的[Concept('concept_character_trait','$concept_character_traits|q$')]可能会影响[Concept('concept_gate_dungeon_party_points','$concept_gate_dungeon_party_points_simple|q$')]的预算，或[Concept('concept_gate_dungeon_party','$concept_gate_dungeon_party_simple|q$')]的属性，例如[Concept('concept_gate_dungeon_party_cohesion','$concept_gate_dungeon_party_cohesion_simple|q$')]、[Concept('concept_gate_dungeon_party_condition','$concept_gate_dungeon_party_condition_simple|q$')]和[Concept('concept_gate_dungeon_party_renown','$concept_gate_dungeon_party_renown_simple|q$')]。" #deepl:880312694
+ gate_dungeon_setup.1.a: "开始[concept_gate_dungeon]探险。" #deepl:2440344134
+ gate_dungeon_setup.1.b: "取消[concept_gate_dungeon]探险。" #deepl:1190498725
+ gate_dungeon_setup.2.t: "出现了一个地牢" #deepl:1605878638
+ gate_dungeon_setup.2.d: "[TopScope.GetLocalVariable('gate_dungeon').Var('name').GetFlagName]" #deepl:140945318
+ gate_dungeon_setup.2.f: "[TopScope.GetLocalVariable('gate_dungeon').Var('desc').GetFlagName]" #deepl:3212054926
+ gate_dungeon_setup.2.a: "我们得去探索一下！" #deepl:1439150194
+ event_gate_dungeon_cancel_exploration_tooltip: "取消计划中的[concept_gate_dungeon]探险" #deepl:1642937148
+ event_gate_dungeon_dismiss_leaders_tooltip: "忽略所有 [Concept('concept_gate_dungeon_party_leader','$concept_gate_dungeon_party_leaders_simple|q$')]" #deepl:2464524241
+ event_gate_dungeon_cooldown_tooltip: "\n@warning! 接下来#v 180天#!内，你将无法再次开启另一个[concept_gate_dungeon]副本#!#!！" #deepl:4073880866
+ event_gate_dungeon_has_leader_tooltip: "已选定[concept_gate_dungeon_party_leader]" #deepl:1043323223
+ event_gate_dungeon_valid_points_tooltip: "已用尽所有可用的[concept_gate_dungeon_party_points]" #deepl:3172369059
+ event_gate_dungeon: "#yellow 中的事件 [Scope.Var('name').GetFlagName]#! [concept_gate_dungeon]" #deepl:3342302506
+ event_gate_dungeon_party_points: "可用[Concept('concept_gate_dungeon_party_points','$concept_gate_dungeon_party_points_simple|q$')]" #deepl:3439430320
+ event_gate_dungeon_party_points_cohesion: "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_cohesion_value')|0v][AddLocalizationIf(NotZero_CFixedPoint(ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_cohesion_modifier_value')), 'event_gate_dungeon_party_points_cohesion_modifier')]" #deepl:2363212472
+ event_gate_dungeon_party_points_condition: "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_condition_value')|0v][AddLocalizationIf(NotZero_CFixedPoint(ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_condition_modifier_value')), 'event_gate_dungeon_party_points_condition_modifier')]" #deepl:2263607463
+ event_gate_dungeon_party_points_renown: "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_renown_value')|0v][AddLocalizationIf(NotZero_CFixedPoint(ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_renown_modifier_value')), 'event_gate_dungeon_party_points_renown_modifier')]" #deepl:2677274729
+ event_gate_dungeon_party_points_cohesion_modifier: " #tooltippable;tooltip:[GetRawTextTooltipTag('event_gate_dungeon_party_points_modifier_tooltip')] [ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_cohesion_modifier_value')|1+=]#!" #deepl:45017088
+ event_gate_dungeon_party_points_condition_modifier: " #tooltippable;tooltip:[GetRawTextTooltipTag('event_gate_dungeon_party_points_modifier_tooltip')] [ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_condition_modifier_value')|1+=]#!" #deepl:171052897
+ event_gate_dungeon_party_points_renown_modifier: " #tooltippable;tooltip:[GetRawTextTooltipTag('event_gate_dungeon_party_points_modifier_tooltip')] [ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_renown_modifier_value')|1+=]#!" #deepl:2551046921
+ event_gate_dungeon_party_points_modifier_tooltip: "来自你的党内领导[Concept('concept_character_trait','$concept_character_traits|q$')]。" #deepl:2113553868
+ event_gate_tab_dungeon: "地牢" #deepl:716318657
+ event_gate_tab_dungeon_leader: "领导者" #deepl:3690153812
+ event_gate_tab_dungeon_party: "焦点" #deepl:4287666136
+ event_gate_dungeon_stats_layer_count: "层数" #deepl:3473559825
+ event_gate_dungeon_stats_location: "位置" #deepl:226046482
+ event_gate_dungeon_stats_discovery_date: "发现" #deepl:3415578248
+ event_gate_dungeon_header_location: " 在[ScriptContainer.MakeScope.Var('dungeon').Var('location').GetStateRegion.GetName]中" #deepl:3333710226
+ event_gate_dungeon_party_points_tooltip: "" #deepl:436350336
+# Log Entries
+ gate_dungeon_rating_positive: "@gate_rating_good!" #deepl:2620857918
+ gate_dungeon_rating_neutral: "@gate_rating_average!" #deepl:2950855055
+ gate_dungeon_rating_negative: "@gate_rating_low!" #deepl:3385981280
+ gate_dungeon_log_cohesion: "[concept_gate_dungeon_party_cohesion]" #deepl:238565165
+ gate_dungeon_log_condition: "[concept_gate_dungeon_party_condition]" #deepl:2073457821
+ gate_dungeon_log_renown: "[concept_gate_dungeon_party_renown]" #deepl:2839348269
+ gate_dungeon_log_advance: "进入下一个[concept_gate_dungeon_layer]" #deepl:1027887459
+ gate_dungeon_log_finish: "已探索完[concept_gate_dungeon]" #deepl:1272257917
+ gate_dungeon_log_stall: "没有进展" #deepl:2920090806
+ gate_dungeon_log_notification_header: "活动" #deepl:1263615171
+# Values
+ gate_dungeon_party_points_format: "$VALUE|0=+$ 来自 $KEY$" #deepl:1778067772
+ gate_dungeon_party_points_from_base: "基地勘探预算" #deepl:1622342062
+ gate_dungeon_party_points_from_chosen_value: "选定预算" #deepl:2193077303
+ gate_dungeon_party_points_from_party_leader: "[concept_gate_dungeon_party_leader]" #deepl:3468755067
+ gate_dungeon_party_points_from_cohesion: "已选中 [Concept('concept_gate_dungeon_party_cohesion','$concept_gate_dungeon_party_cohesion_simple|q$')]" #deepl:3837915894
+ gate_dungeon_party_points_from_condition: "已选中 [Concept('concept_gate_dungeon_party_condition','$concept_gate_dungeon_party_condition_simple|q$')]" #deepl:529662619
+ gate_dungeon_party_points_from_renown: "已选中 [Concept('concept_gate_dungeon_party_renown','$concept_gate_dungeon_party_renown_simple|q$')]" #deepl:1575424417
+# Decision
+ decision_gate_start_dungeon_exploration: "开始探索[concept_gate_dungeon]" #deepl:1985564299
+ decision_gate_start_dungeon_exploration_desc: "打开[concept_gate_dungeon]选择器，开始一次新的探险。" #deepl:3184066200
+ decision_gate_start_dungeon_exploration_selector_tooltip: "打开[concept_gate_dungeon]选择器" #deepl:1503204404
+ decision_gate_start_dungeon_exploration_is_selector_open_tooltip: "#bold 不是#! 已经在计划一次[concept_gate_dungeon]探险了" #deepl:615235107
+ decision_gate_start_dungeon_exploration_cooldown_tooltip: "最近才尝试过一次[concept_gate_dungeon]探险。请再等待#v [LabelingHelper.GetDaysLocWithoutTooltip(TopScope.GetRootScope.VarRemaining('gate_dungeon_delve_cooldown'))]#!#!之后，才能再次尝试。" #deepl:1895868807
+# Selector Window
+ gate_project_select_dungeon_window: "选择一个[concept_gate_dungeon]" #deepl:3990975967
+ gate_project_select_dungeon_window_sub_title: "[GetPlayer.GetAdjectiveNoFlag]中的未探索[Concept('concept_gate_dungeon','$concept_gate_dungeons|q$')]，位于[Concept('concept_state','$concept_states|q$')]" #deepl:3059112269
+ gate_project_select_dungeon_window_select: "#header 在 [Scope.Var('dungeon').Var('name').GetFlagName] 中，位于 [Scope.Var('building').GetBuilding.GetState.GetName] 内#!\n\n开始探索这个 [concept_gate_dungeon]。" #deepl:4119185143
+# Generic Dungeon Layer types
+ gate_dungeon_layer_generic_entrance: "入口" #deepl:3715858838
+ gate_dungeon_layer_generic_entrance_desc: "这个[concept_gate_dungeon]的入口。" #deepl:3464955332
+ gate_dungeon_layer_generic_one: "第1层" #deepl:453656367
+ gate_dungeon_layer_generic_one_desc: "该[concept_gate_dungeon]的第一个[Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')]。" #deepl:4130843665
+ gate_dungeon_layer_generic_two: "第2层" #deepl:446773802
+ gate_dungeon_layer_generic_two_desc: "该[concept_gate_dungeon]的第二个[Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')]。" #deepl:2319616567
+ gate_dungeon_layer_generic_three: "第3层" #deepl:2201696808
+ gate_dungeon_layer_generic_three_desc: "该[concept_gate_dungeon]的第三个[Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')]。" #deepl:1506460494
+ gate_dungeon_layer_generic_four: "第4层" #deepl:435630112
+ gate_dungeon_layer_generic_four_desc: "该[concept_gate_dungeon]的第四个[Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')]。" #deepl:4018344526
+ gate_dungeon_layer_generic_five: "第5层" #deepl:2154639394
+ gate_dungeon_layer_generic_five_desc: "该[concept_gate_dungeon]的第五个[Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')]。" #deepl:3825766626
+ gate_dungeon_layer_generic_six: "第6层" #deepl:2177250599
+ gate_dungeon_layer_generic_six_desc: "该[concept_gate_dungeon]的第六个[Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')]。" #deepl:376117848
+ gate_dungeon_layer_generic_seven: "第7层" #deepl:408696101
+ gate_dungeon_layer_generic_seven_desc: "该[concept_gate_dungeon]的第七个[Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')]。" #deepl:2506350563
+ gate_dungeon_layer_generic_eight: "第8层" #deepl:526066740
+ gate_dungeon_layer_generic_eight_desc: "该[concept_gate_dungeon]的第八个[Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')]。" #deepl:747921836
+ gate_dungeon_layer_generic_nine: "第9层" #deepl:2260804662
+ gate_dungeon_layer_generic_nine_desc: "该[concept_gate_dungeon]的第九个[Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')]。" #deepl:363289065
+ gate_dungeon_layer_generic_ten: "第10层" #deepl:536422430
+ gate_dungeon_layer_generic_ten_desc: "该[concept_gate_dungeon]的第十个[Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')]。" #deepl:4034484722
+ gate_dungeon_layer_generic_eleven: "第11层" #deepl:2254645276
+ gate_dungeon_layer_generic_eleven_desc: "该[concept_gate_dungeon]的第十一层[Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')]。" #deepl:346134832
+ gate_dungeon_layer_generic_twelve: "第12层" #deepl:2278042905
+ gate_dungeon_layer_generic_twelve_desc: "该[concept_gate_dungeon]的第十二个[Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')]。" #deepl:3323354251
+ gate_dungeon_layer_generic_boss: "老板" #deepl:997107593
+ gate_dungeon_layer_generic_boss_desc: "这个[concept_gate_dungeon]的头目怪就栖息在这个[Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')]中。" #deepl:1547819432

@@ -1,0 +1,74 @@
+﻿l_german:
+# Shared Tooltips
+ gate_dungeon_tooltip_cohesion_check: "\n@information! Dies ist eine [Concept('concept_gate_dungeon_party_cohesion','$concept_gate_dungeon_party_cohesion_medium|q$')]-Prüfung. Derzeit haben wir [TopScope.GetLocalVariable('expedition').ScriptValue('gate_dungeon_party_cohesion_value')|1v] [Concept('concept_gate_dungeon_party_cohesion','$concept_gate_dungeon_party_cohesion_medium|q$')]." #deepl:1502353143
+ gate_dungeon_tooltip_condition_check: "\n@information! Dies ist eine [Concept('concept_gate_dungeon_party_condition','$concept_gate_dungeon_party_condition_medium|q$')]-Prüfung. Derzeit haben wir [TopScope.GetLocalVariable('expedition').ScriptValue('gate_dungeon_party_condition_value')|1v] [Concept('concept_gate_dungeon_party_condition','$concept_gate_dungeon_party_condition_medium|q$')]." #deepl:1639238710
+ gate_dungeon_tooltip_renown_check: "\n@information! Dies ist eine [Concept('concept_gate_dungeon_party_renown','$concept_gate_dungeon_party_renown_medium|q$')]-Prüfung. Derzeit haben wir [TopScope.GetLocalVariable('expedition').ScriptValue('gate_dungeon_party_renown_value')|1v] [Concept('concept_gate_dungeon_party_renown','$concept_gate_dungeon_party_renown_medium|q$')]." #deepl:435962576
+ gate_dungeon_tooltip_other_route: "Die [concept_gate_dungeon_party] wird nach einem anderen Weg suchen, um das Hindernis zu umgehen" #deepl:1085871139
+# Events
+ gate_dungeon_delve_1_t: "Etwas unter den Füßen" #deepl:3461601225
+ gate_dungeon_delve_1_d: "Die Späher von [concept_gate_dungeon_party] haben eine Falle entdeckt. Wie sollen wir damit umgehen?" #deepl:919930308
+ gate_dungeon_delve_1_f: "Der vor uns liegende Gang sah genauso aus wie die letzten zwanzig Abschnitte, bis unsere Späherin die Faust hob und die Kolonne ohne ein Wort anhalten ließ. Sie hatte zuerst den Stolperdraht entdeckt, dann die Druckplatte unter einer Staubverfärbung, die dort eigentlich nicht hätte sein dürfen. Speere – so wie es die in die Wände eingelassenen Halterungen vermuten ließen –, alte Arbeit, aber nicht verfallen, so wie nichts in einem Verlies verfällt, bis wieder jemand hindurchgeht." #deepl:957671245
+ gate_dungeon_delve_1_a: "Unsere erfahrenen Späher können es entschärfen." #deepl:3444440194
+ gate_dungeon_delve_1_b: "Schicke jemanden, der den Mechanismus auslöst, und weiche den Speeren aus." #deepl:1934814329
+ gate_dungeon_delve_1_c: "Nutzen Sie einige unserer Geräte, um die Falle zu deaktivieren." #deepl:1646451376
+ gate_dungeon_delve_2_t: "Der Weg ist versperrt" #deepl:129269030
+ gate_dungeon_delve_2_d: "Der vor uns liegende Durchgang ist eingestürzt, sodass die [concept_gate_dungeon_party] nun vor einer Wand aus Trümmern steht. Wie kommen wir da vorbei?" #deepl:588048349
+ gate_dungeon_delve_2_f: "Die Trümmer waren noch frisch. Im Licht der Laterne schwebte noch Staub, und einige der Steine hatten Kanten, die scharf genug waren, um einen Handschuh zu durchschneiden. Niemand hatte den Einsturz gehört, und genau das beunruhigte die Männer am meisten. Hinter dem Trümmerhaufen war ein schwacher, aber unverkennbarer Luftzug zu spüren, der von irgendwo tiefer aus der Trümmermasse heraufwehte." #deepl:935841948
+ gate_dungeon_delve_2_a: "Setzen Sie unsere Tools ein und gehen Sie der Sache auf den Grund." #deepl:2931959712
+ gate_dungeon_delve_2_b: "In der Nähe der Decke ist eine Lücke. Schlüpft nacheinander hindurch." #deepl:3610253745
+ gate_dungeon_delve_2_c: "Wir haben solche Zusammenbrüche schon früher erlebt. Es gibt immer einen Ausweg." #deepl:1231802573
+ gate_dungeon_delve_3_t: "Ein Sturz in der Dunkelheit" #deepl:3112404859
+ gate_dungeon_delve_3_d: "Eines der [concept_gate_dungeon_party]-Mitglieder ist schwer gestürzt und kann kaum noch laufen. Was sollen wir mit ihm machen?" #deepl:2659091085
+ gate_dungeon_delve_3_f: "Ein unsicherer Schritt, ein kurzer Schrei, und dann das Geräusch, das jeder Grubenarbeiter zu fürchten lernt: ein Körper, der unglücklich aufschlägt. Als die anderen heruntergeklettert waren, schwoll der Knöchel bereits über den Stiefel hinaus an. Er beharrte darauf, dass er laufen könne. Das konnte er nicht, und jeder, der um ihn herumstand, wusste das." #deepl:3654819201
+ gate_dungeon_delve_3_a: "Niemand wird zurückgelassen. Wir tragen sie." #deepl:2948614936
+ gate_dungeon_delve_3_b: "Schiene das Bein mit dem, was wir haben, und lass uns weitergehen." #deepl:2744951164
+ gate_dungeon_delve_3_c: "Lassen Sie sie an einer markierten Stelle stehen. Wir holen sie auf dem Rückweg ab." #deepl:3291886358
+ gate_dungeon_delve_4_t: "Ein stiller Frühling" #deepl:1630631021
+ gate_dungeon_delve_4_d: "Die [concept_gate_dungeon_party] ist in einer Kammer, die vom Rest des [concept_gate_dungeon] unberührt zu sein scheint, auf eine klare Quelle gestoßen. Wie sollen wir sie nutzen?" #deepl:543633726
+ gate_dungeon_delve_4_f: "Zunächst traute niemand der Sache. Klares Wasser, eine Decke aus blassem Moos, das ein sanftes Licht ausstrahlte, und keine einzige Spur im Sand rund um das Becken. Die Späherin verbrachte fast eine ganze Stunde damit, die Wände zu untersuchen, bevor sie irgendjemanden trinken ließ. Als sie sie schließlich hereinwinkte, war die Erleichterung, die durch die Kolonne ging, fast laut genug, um sie zu hören." #deepl:2806699518
+ gate_dungeon_delve_4_a: "Die Wasserschläuche auffüllen und unsere Ausrüstung reinigen." #deepl:1616531776
+ gate_dungeon_delve_4_b: "Schlagen wir hier unser Lager auf und lassen wir alle sich ausruhen." #deepl:1488427664
+ gate_dungeon_delve_4_c: "Lasst uns das Zeichen unseres Unternehmens über der Quelle für die Nachwelt verewigen." #deepl:484491224
+ gate_dungeon_delve_5_t: "Aus der Decke heraus" #deepl:789805465
+ gate_dungeon_delve_5_d: "Aus der Dunkelheit über uns sind Kreaturen auf das [concept_gate_dungeon_party] herabgestürzt. Diesem Kampf kann man nicht ausweichen – man kann nur entscheiden, wie man ihn überlebt." #deepl:3850122029
+ gate_dungeon_delve_5_f: "Die erste Warnung war ein Schrei aus dem hinteren Teil der Kolonne. Als die Laternen nach oben geschwenkt wurden, bewegte sich die Decke: blasse, vielbeinige Wesen, die die ganze Zeit über am Fels geklammert hatten und darauf gewartet hatten, dass die Gruppe unter ihnen hindurchging. Sie stürzten in einem Regen aus Klauen und Chitin herab, und in dem engen Gang gab es kein Entkommen." #deepl:745020384
+ gate_dungeon_delve_5_a: "Haltet die Stellung und wehrt sie ab, egal, was es unsere Ausrüstung kostet." #deepl:2071262088
+ gate_dungeon_delve_5_b: "Verteilt euch und sammelt euch weiter hinten im Flur wieder." #deepl:1577747592
+ gate_dungeon_delve_5_c: "Unsere Veteranen tragen die Hauptlast. Das haben sie schon früher getan." #deepl:2021567021
+ gate_dungeon_delve_6_t: "Ein schlafender Riese" #deepl:3329106004
+ gate_dungeon_delve_6_d: "Etwas Riesiges schlummert quer über dem einzigen Weg, der nach vorne führt. Wie soll die [concept_gate_dungeon_party] daran vorbeikommen?" #deepl:3283669806
+ gate_dungeon_delve_6_f: "Zunächst hielten sie es für einen Steinschlag. Dann atmete der Steinschlag. Das Wesen füllte die Halle von Wand zu Wand aus, seine Seiten hoben und senkten sich langsam wie eine Flut, und jeder Atemzug wirbelte den Staub auf dem Boden auf. Zwischen seinem Rücken und der Decke war eine Lücke, die so breit war wie ein Mensch. Dahinter führte der Gang weiter nach unten." #deepl:1747446996
+ gate_dungeon_delve_6_a: "Klettert darüber hinweg, leise und einer nach dem anderen." #deepl:1442372075
+ gate_dungeon_delve_6_b: "Schlag zu, solange es schläft." #deepl:982766350
+ gate_dungeon_delve_6_c: "Warte, bis es aufwacht und davonläuft, egal wie lange es dauert." #deepl:429673587
+ gate_dungeon_delve_7_t: "Die Flüsternde Halle" #deepl:1024240748
+ gate_dungeon_delve_7_d: "Die Wände dieser Halle flüstern der [concept_gate_dungeon_party] zu, und die Stimmen wissen Dinge, die sie nicht wissen sollten. Wie kommen wir hier durch?" #deepl:123588761
+ gate_dungeon_delve_7_f: "Es begann als ein Flüstern am Rande der Hörbarkeit, wie ein Gespräch im Nebenzimmer. Dann wurde ein Name genannt, der Name eines Mannes, mit der Stimme seiner Mutter. Dann noch einer. Die Wände wussten, wer Angst vor der Dunkelheit hatte und wer zu Hause über seine Schulden gelogen hatte, und sie erzählten es allen. Wissenschaftler streiten sich noch immer darüber, ob ein Verlies denken kann. Niemand in dieser Halle stritt sich." #deepl:2897827430
+ gate_dungeon_delve_7_a: "Unsere Veteranen haben schon Schlimmeres gehört. Folgt ihnen und ignoriert die Stimmen." #deepl:3039915935
+ gate_dungeon_delve_7_b: "Lass uns das so schnell wie möglich durchgehen." #deepl:4171806532
+ gate_dungeon_delve_7_c: "Stopfen wir uns die Ohren mit Wachs und Stoff voll und gehen wir langsam vor." #deepl:3900063775
+ gate_dungeon_delve_8_t: "Diebe in der Nacht" #deepl:2345300311
+ gate_dungeon_delve_8_d: "Über Nacht hat sich etwas in das Lager der [concept_gate_dungeon_party] eingeschlichen und einen Großteil unserer Vorräte mitgenommen. Was nun?" #deepl:303970605
+ gate_dungeon_delve_8_f: "Der Wachposten schwor, dass er nicht geschlafen habe. Doch am Morgen stellte sich heraus, dass die Rucksäcke aufgeschlitzt, die Verpflegungsdosen durchgenagt waren und eine Spur aus Krümeln und zerrissenem Segeltuch in einen Spalt in der Wand führte, der viel zu klein war, als dass einer von ihnen ihm hätte folgen können. Irgendwo in der Dunkelheit schlemte etwas Kleines und Schlaues auf Kosten der Gruppe." #deepl:2987206613
+ gate_dungeon_delve_8_a: "Lassen wir es sein und ziehen wir den Gürtel enger." #deepl:2175357943
+ gate_dungeon_delve_8_b: "Bestraft den Wachposten, um den anderen ein Exempel zu statuieren." #deepl:2487215040
+ gate_dungeon_delve_8_c: "Vergrößert den Spalt und versucht, so viel wie möglich zu retten." #deepl:1963969597
+ gate_dungeon_delve_9_t: "Steigendes Wasser" #deepl:888871876
+ gate_dungeon_delve_9_desc: "Der vor uns liegende Abschnitt ist überflutet, und der Wasserstand steigt weiter an. Wie soll die [concept_gate_dungeon_party]-Gruppe vorgehen?" #deepl:2410568068
+ gate_dungeon_delve_9_f: "Das Wasser war schwarz und so kalt, dass einem die Zähne schmerzten. Es stand im Gang bis zur Brusthöhe eines Mannes und stieg mit jeder Minute weiter an, gespeist von einer unsichtbaren Quelle. Am anderen Ende, vielleicht vierzig Schritte entfernt, ragte der Boden wieder aus dem Wasser heraus. Vierzig Schritte sind nicht weit. Doch in der Dunkelheit und mit einem Rucksack auf dem Rücken ist es ein langer Weg." #deepl:1154402857
+ gate_dungeon_delve_9_a: "Binde die Rucksäcke zusammen und watet hindurch." #deepl:422009657
+ gate_dungeon_delve_9_b: "Warten Sie auf höher gelegenem Gelände, bis der Wasserstand sinkt." #deepl:904259468
+ gate_dungeon_delve_9_c: "Wir haben schon Schlimmeres hinter uns gebracht. Unsere besten Schwimmer werden eine Linie bilden." #deepl:1658685036
+ gate_dungeon_delve_9_d: "Kehr um und such dir einen anderen Weg hinunter." #deepl:2315468519
+ gate_dungeon_delve_10_t: "Frische Spuren" #deepl:3782047760
+ gate_dungeon_delve_10_d: "Die [concept_gate_dungeon_party] hat die Spuren einer anderen Gruppe entdeckt, die vor kurzem hier vorbeigekommen ist. Ihre Markierungen sind noch deutlich zu erkennen. Wie können wir sie nutzen?" #deepl:2282852152
+ gate_dungeon_delve_10_f: "Kreidepfeile an der Wand, eine erloschene Fackel in einer Halterung, an jeder Weggabelung ein ordentlicher kleiner Steinhaufen. Wer auch immer hier vorbeigekommen war, hatte gewusst, was er tat, und sich die Mühe gemacht, den Weg hinter sich zu markieren. Das war das, was einer Freundlichkeit am nächsten kam, die jemand gesehen hatte, seit sich die Barriere hinter ihnen geschlossen hatte." #deepl:2139562807
+ gate_dungeon_delve_10_a: "Folge ihrer Spur." #deepl:27888709
+ gate_dungeon_delve_10_b: "Sie haben ein Versteck mit Vorräten zurückgelassen. Bedienen wir uns." #deepl:3607561192
+ gate_dungeon_delve_10_c: "Das sind Gildenzeichen. Wir wissen genau, wohin sie führen." #deepl:1983287632
+ gate_dungeon_delve_11_t: "Der Spiegelteich" #deepl:1168754427
+ gate_dungeon_delve_11_d: "Ein stiller, von Mana erfüllter Teich spiegelt die [concept_gate_dungeon_party] wider, wenn auch nicht ganz so, wie sie wirklich sind. Was sollen wir damit machen?" #deepl:2653778706
+ gate_dungeon_delve_11_f: "Die Oberfläche kräuselte sich nicht, als ein Stein hineingeworfen wurde. Sie nahm den Stein einfach auf und spiegelte die Gesichter der Männer wider, die um sie herumstanden: manche älter, manche vernarbt, und einer trug eine Krone. Die Luft über dem Teich roch nach Kupfer und Blitz. Jeder, der jemals eine Geschichte über einen Kerker gehört hatte, wusste, dass man ihn in Ruhe lassen sollte. Niemand machte Anstalten, zu gehen." #deepl:908434388
+ gate_dungeon_delve_11_a: "Trink daraus und schau, was es uns zeigt." #deepl:2678965085
+ gate_dungeon_delve_11_b: "Füllt ein paar Fläschchen. Das Mana könnte unsere Ausrüstung wiederherstellen." #deepl:681492015
+ gate_dungeon_delve_11_c: "Unsere Veteranen kennen solche Schwimmbäder. Lassen wir sie uns erzählen, was das für sie bedeutet." #deepl:2775076160

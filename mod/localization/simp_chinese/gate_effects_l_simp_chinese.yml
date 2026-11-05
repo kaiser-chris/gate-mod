@@ -22,6 +22,10 @@
  effect_gate_set_arcanist_traits_experienced: "[THIS.GetCharacter.GetFullName] 将变为 [GetCharacterTrait('character_trait_gate_arcanist_experienced').GetName]" #deepl:2741460078
  effect_gate_set_arcanist_traits_expert: "[THIS.GetCharacter.GetFullName] 将变为 [GetCharacterTrait('character_trait_gate_arcanist_expert').GetName]" #deepl:112024080
 
+ effect_gate_dungeon_start: "开始探索 #bold [SCOPE.GetLocalVariable('gate_dungeon').Var('name').GetFlagName]#! [concept_gate_dungeon]" #deepl:1049004536
+ effect_gate_dungeon_complete: "对 #bold [THIS.Var('dungeon').Var('name').GetFlagName]#! [concept_gate_dungeon] 的探索将完成" #deepl:3819255145
+ effect_gate_dungeon_advance: "对 #bold [THIS.Var('dungeon').Var('name').GetFlagName]#! [concept_gate_dungeon] 的探索进入下一阶段 [Concept('concept_gate_dungeon_layer','$concept_gate_dungeon_layer_simple|q$')]" #deepl:371214514
+
  effect_add_gate_society_harmony_progress: "[concept_gate_harmony_pledge_society] 在 [COUNTRY.GetName] 中，#bold  将 #! 的值增加 $VALUE|v0$，使其趋近于 [concept_gate_harmony_pledge_antinomian]" #deepl:3891418080
  effect_add_gate_society_harmony_progress_negative: "[concept_gate_harmony_pledge_society] 在 [COUNTRY.GetName] 中，#bold  向 [concept_gate_harmony_pledge_stratified] 方向后退 #! 距离 $VALUE|v0$" #deepl:2259507543
  effect_add_gate_society_harmony_progress_first: "[concept_gate_harmony_pledge_society] 在 [COUNTRY.GetName] 中，#bold  将 #! 的值增加 $VALUE|v0$，使其趋近于 [concept_gate_harmony_pledge_antinomian]" #deepl:3891418080
@@ -36,3 +40,12 @@
  effect_add_gate_legislative_harmony_progress_negative: "[concept_gate_harmony_pledge_legislative] 在 [COUNTRY.GetName] 中，#bold  向 [concept_gate_harmony_pledge_despotic] 方向后退 #!，后退距离为 $VALUE|v0$。" #deepl:4178695290
  effect_add_gate_legislative_harmony_progress_first: "[concept_gate_harmony_pledge_legislative] 在 [COUNTRY.GetNameNoFlag] 中，#bold  将 #! 的值增加 $VALUE|v0$，使其趋近于 [concept_gate_harmony_pledge_anaemic]" #deepl:965743047
  effect_add_gate_legislative_harmony_progress_first_negative: "[concept_gate_harmony_pledge_legislative] 在 [COUNTRY.GetNameNoFlag] 处，#bold  向 [concept_gate_harmony_pledge_despotic] 方向后退 #! 距离 $VALUE|v0$" #deepl:2852839976
+
+ effect_gate_dungeon_party_condition_change: "[concept_gate_dungeon_party_condition]#bold 将#!增加 $VALUE|v1$|v1$" #deepl:3728303310
+ effect_gate_dungeon_party_condition_change_negative: "[concept_gate_dungeon_party_condition]#bold 将#!减少 $VALUE|v1$|v1$" #deepl:3001948010
+
+ effect_gate_dungeon_party_cohesion_change: "[concept_gate_dungeon_party_cohesion]#bold 将#!增加 $VALUE|v1$|v1$" #deepl:440142178
+ effect_gate_dungeon_party_cohesion_change_negative: "[concept_gate_dungeon_party_cohesion]#bold 使#!减少 $VALUE|v1$|v1$" #deepl:1995143878
+
+ effect_gate_dungeon_party_renown_change: "[concept_gate_dungeon_party_renown]#bold 将#!增加 $VALUE|v1$|v1$" #deepl:3059803275
+ effect_gate_dungeon_party_renown_change_negative: "[concept_gate_dungeon_party_renown]#bold 将#!降低 $VALUE|v1$|v1$" #deepl:3669464879

@@ -2,9 +2,6 @@
 # Conversion Journal Entry
  je_gate_vampire_emergence: "[GetReligion('gate_lunar_masquerade').GetNameNoFormatting]" #deepl:3860346585
  je_gate_vampire_emergence_reason: "Geflüster verbreitet sich wie Seide in den Salons und Gassen - die Mondmaskerade wächst. Jedes Jahr werden mehr Seelen von ihrem geheimnisvollen Reiz angezogen. Im silbernen Mondlicht und bei Kerzenschein spricht der rätselhafte Constantin de Reuss-Mirza von der Befreiung vom Verfall, von der Schönheit, die von der Zeit unbefleckt bleibt, von der Kraft, die im Blut erwacht. Was einst nur am Rande vorkam, stößt heute bei den Desillusionierten und Ehrgeizigen auf offene Ohren. Adlige tarnen ihre Besuche als Neugier, Kaufleute nennen es eine Gelegenheit, und Bürgerliche flüstern dem silbernen Schleier Gebete zu. Die Maskerade ist kein Gerücht mehr - sie ist eine Bewegung. Und ihr Tanz hat gerade erst begonnen." #deepl:99740704
- je_gate_vampire_emergence_fail: "Wir säubern die Sekte [GetReligion('gate_lunar_masquerade').GetName] aus unserem Land." #deepl:1622777019
- je_gate_vampire_emergence_invalid: "Wir integrieren die „[GetCulture('vampire').GetName]“-Rennserie, bevor sie die Führung übernimmt." #deepl:271412993
- je_gate_vampire_emergence_complete: "Wir haben uns [concept_gate_vampirism] zu eigen gemacht." #deepl:3617232718
  je_gate_vampire_emergence_activate: "[SCOPE.sCountry('gate_vampire_country').MakeScope.Var('gate_character_vampire').GetCharacter.GetFullName] hat die [GetReligion('gate_lunar_masquerade').GetName] gegründet." #deepl:4204343519
  je_gate_vampire_emergence_allure: "Die Menschen sehnen sich nach Unsterblichkeit und strömen auf die [GetReligion('gate_lunar_masquerade').GetNameNoFormatting]." #deepl:2188732153
  je_gate_vampire_emergence_truth_known: "Die Menschen kennen die Wahrheit über Vampire, aber einige sind immer noch an der [GetReligion('gate_lunar_masquerade').GetNameNoFormatting] interessiert." #deepl:4113550510
@@ -18,6 +15,16 @@
  je_gate_vampire_emergence_trigger_truth_known: "Die Menschen kennen die Wahrheit über [concept_gate_vampirism]" #deepl:847730844
  je_gate_vampire_emergence_trigger_decapitated_true: "Der Vorsitzende der „[GetReligion('gate_lunar_masquerade').GetName]“ ist verstorben" #deepl:1713254295
  je_gate_vampire_emergence_trigger_decapitated_false: "Der Anführer der „[GetReligion('gate_lunar_masquerade').GetName]“ ist am Leben" #deepl:1292677351
+ je_gate_vampire_emergence_outcome_takeover: "#title „[concept_gate_vampirism]“ wird aktiv, wenn:\n#!" #deepl:1864883389
+ je_gate_vampire_emergence_outcome_on_takeover: "#title Wenn [concept_gate_vampirism] die Oberhand gewinnt:#!\n$EFFECT$" #deepl:1151302903
+ je_gate_vampire_emergence_outcome_takeover_conclusion_desc: "Der $concept_journal_entry$ endete mit einer Übernahme durch [concept_gate_vampirism]" #deepl:3764686941
+ je_gate_vampire_emergence_outcome_purge: "#title „[concept_gate_vampirism]“ wird gelöscht, wenn:\n#!" #deepl:2191099202
+ je_gate_vampire_emergence_outcome_on_purge: "#title Wenn [concept_gate_vampirism] beseitigt wird:#!\n$EFFECT$" #deepl:4028958691
+ je_gate_vampire_emergence_outcome_purge_conclusion_desc: "Der $concept_journal_entry$ endete mit einer Säuberungsaktion gegen [concept_gate_vampirism]" #deepl:2049651613
+ je_gate_vampire_emergence_outcome_tolerated: "#title „[concept_gate_vampirism]“ wird toleriert, wenn:\n#!" #deepl:2463824463
+ je_gate_vampire_emergence_outcome_on_tolerated: "#title Falls [concept_gate_vampirism] toleriert wird:#!\n$EFFECT$" #deepl:1257554150
+ je_gate_vampire_emergence_outcome_tolerated_tooltip: "Wir haben die [concept_gate_vampirism]-Bewegung zerschlagen" #deepl:2150324627
+ je_gate_vampire_emergence_outcome_tolerated_conclusion_desc: "Der Eintrag „$concept_journal_entry$“ endete mit einer Toleranz von [concept_gate_vampirism]" #deepl:3597327179
 # Flags
  gate_vampire_cult_flag: "Lasst die [GetReligion('gate_lunar_masquerade').GetNameNoFormatting] beginnen." #deepl:3937286745
 # Events
