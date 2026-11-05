@@ -34,7 +34,7 @@
  notification_message_gate_dungeon_delve_advance_desc: "In the [concept_gate_dungeon_delve] of the #v [TopScope.sJE('journal_entry').MakeScope.Var('expedition').Var('dungeon').Var('name').GetFlagName]#! [concept_gate_dungeon] our [concept_gate_dungeon_party] has advanced to the next [concept_gate_dungeon_layer]."
  notification_message_gate_dungeon_delve_advance_tooltip: "#header $notification_message_gate_dungeon_delve_advance_name$#!\n$TOOLTIP_DELIMITER$\n$notification_message_gate_dungeon_delve_advance_desc$"
  notification_message_gate_dungeon_delve_finish_name: "Our [concept_gate_dungeon_party] has finished the [concept_gate_dungeon_delve]"
- notification_message_gate_dungeon_delve_finish_desc: "In the [concept_gate_dungeon_delve] of the #v [TopScope.sJE('journal_entry').MakeScope.Var('expedition').Var('dungeon').Var('name').GetFlagName]#! [concept_gate_dungeon] our [concept_gate_dungeon_party] has successful."
+ notification_message_gate_dungeon_delve_finish_desc: "In the [concept_gate_dungeon_delve] of the #v [TopScope.sJE('journal_entry').MakeScope.Var('expedition').Var('dungeon').Var('name').GetFlagName]#! [concept_gate_dungeon] our [concept_gate_dungeon_party] has successfully finished their exploration and opened up the dungeon for exploitation."
  notification_message_gate_dungeon_delve_finish_tooltip: "#header $notification_message_gate_dungeon_delve_advance_name$#!\n$TOOLTIP_DELIMITER$\n$notification_message_gate_dungeon_delve_advance_desc$"
 ## Dungeon Party
  notification_message_gate_dungeon_party_condition_increase_name: "The [Concept('concept_gate_dungeon_party_condition', '$concept_gate_dungeon_party_condition_simple|q$')] of our [concept_gate_dungeon_party] increased"

@@ -109,6 +109,7 @@ gate_dungeon_party_cohesion_check_hard_success = {
         else = {
             value = gate_dungeon_party_cohesion_percentage
             multiply = 100
+            subtract = 10
         }
     }
 }
@@ -145,7 +146,6 @@ gate_dungeon_party_cohesion_check_medium_success = {
         else = {
             value = gate_dungeon_party_cohesion_percentage
             multiply = 100
-            add = 10
         }
     }
 }
@@ -182,7 +182,7 @@ gate_dungeon_party_cohesion_check_easy_success = {
         else = {
             value = gate_dungeon_party_cohesion_percentage
             multiply = 100
-            add = 20
+            add = 10
         }
     }
 }
@@ -241,6 +241,7 @@ gate_dungeon_party_condition_check_hard_success = {
     scope:expedition = {
         value = gate_dungeon_party_condition_percentage
         multiply = 100
+        subtract = 10
         if = {
             limit = {
                 gate_dungeon_party_cohesion_value <= 0
@@ -264,7 +265,6 @@ gate_dungeon_party_condition_check_medium_success = {
     scope:expedition = {
         value = gate_dungeon_party_condition_percentage
         multiply = 100
-        add = 10
         if = {
             limit = {
                 gate_dungeon_party_cohesion_value <= 0
@@ -288,7 +288,7 @@ gate_dungeon_party_condition_check_easy_success = {
     scope:expedition = {
         value = gate_dungeon_party_condition_percentage
         multiply = 100
-        add = 20
+        add = 10
         if = {
             limit = {
                 gate_dungeon_party_cohesion_value <= 0

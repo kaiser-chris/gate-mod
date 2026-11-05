@@ -1,12 +1,13 @@
 ﻿l_english:
 # Journal Entry
  je_gate_expedition_dungeon: "Dungeon Delve"
- je_gate_expedition_dungeon_reason: "This is a [concept_gate_dungeon] description" #TODO: Write a description for dungeon delves
+ je_gate_expedition_dungeon_reason: "Our [concept_gate_dungeon_party] has entered the [concept_gate_dungeon] and is now isolated from the rest of the world. We can only hope that they will be able to deal with all challenges that await them."
  je_gate_expedition_dungeon_complete: "Has completed the #v [TopScope.sJE('journal_entry').MakeScope.Var('last_layer').Var('name').GetFlagName]#! [Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layer_simple|q$')]"
  je_gate_expedition_dungeon_fail: "The [Concept('concept_gate_dungeon_party_condition','$concept_gate_dungeon_party_condition_simple|q$')] of the [concept_gate_dungeon_party] falls to #v 0#!"
  je_gate_expedition_dungeon_on_complete: "Unlock this [concept_gate_dungeon] for exploitation"
  je_gate_expedition_dungeon_party_leader: "[Concept('concept_gate_dungeon_party_leader', '$concept_gate_dungeon_party_leader_simple|q$')]"
  je_gate_expedition_dungeon_party_leader_empty: "Empty"
+ je_gate_expedition_dungeon_status_pending_event: "Our [concept_gate_dungeon_party] is dealing with an urgent event."
  je_gate_expedition_dungeon_name: "[concept_gate_dungeon] Name"
  je_gate_expedition_dungeon_location: "[concept_gate_dungeon] Location"
  je_gate_expedition_dungeon_layer_count: "[Concept('concept_gate_dungeon_layer', '$concept_gate_dungeon_layers|q$')]"
@@ -26,8 +27,10 @@
  je_gate_expedition_dungeon_layer_in_progress: "This [concept_gate_dungeon_layer] is #bold in progress#!."
  je_gate_expedition_dungeon_name_and_location: "[Scope.Var('name').GetFlagName] in [Scope.Var('location').GetStateRegion.GetName]"
  je_gate_expedition_dungeon_name_and_location_selector: "[Scope.Var('dungeon').Var('name').GetFlagName] in [Scope.Var('dungeon').Var('location').GetStateRegion.GetName]"
- sb_sb_gate_dungeon_debug_on_action: "#debug Trigger pulse on action#!"
- sb_sb_gate_dungeon_debug_on_action_desc: "Execute the monthly on action manually."
+ sb_gate_dungeon_debug_on_action: "#debug Trigger pulse on action#!"
+ sb_gate_dungeon_debug_on_action_desc: "Execute the monthly on action manually."
+ sb_gate_dungeon_debug_advance: "#debug Complete layer#!"
+ sb_gate_dungeon_debug_advance_desc: "Complete the current layer and advance to the next or complete the dungeon."
 # Events
  gate_dungeon_setup.1.t: "Setup your [concept_gate_dungeon_party]"
  gate_dungeon_setup.1.points: "We have a limited budget of [concept_gate_dungeon_party_points] to distribute. Each attribute has their own use and points should be distributed to best fit the [concept_gate_dungeon] you want to delve into.\nPoints can be distributed by clicking on the bars below." #TODO: Write party setup points
@@ -63,7 +66,7 @@
  gate_dungeon_log_advance: "Advanced to the next [concept_gate_dungeon_layer]"
  gate_dungeon_log_finish: "Finished exploring the [concept_gate_dungeon]"
  gate_dungeon_log_stall: "No progress"
- gate_dungeon_log_notification_header: "Event" #TODO: not sure how to name this
+ gate_dungeon_log_notification_header: "Event"
 # Values
  gate_dungeon_party_points_format: "$VALUE|0=+$ from $KEY$"
  gate_dungeon_party_points_from_base: "Base Exploration Budget"

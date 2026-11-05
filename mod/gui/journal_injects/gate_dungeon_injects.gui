@@ -27,9 +27,10 @@ flowcontainer = {
 
 		button = {
 			datacontext = "[GetScriptedGui('sgui_gate_debug_run_dungeon_delve_pulse')]"
-			size = { 200 40 }
-			using = default_button
-			raw_text = "#debug Run Pulse#!"
+			size = { 250 50 }
+			using = default_button_action
+			text = "sb_gate_dungeon_debug_on_action"
+			tooltip = "sb_gate_dungeon_debug_on_action_desc"
 			enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 			onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 			onclick = "[ExecuteConsoleCommand('Debug.ReseedEvents')]"
