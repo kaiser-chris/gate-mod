@@ -1,0 +1,101 @@
+﻿# Pointed ears, an accessory over the head's own ears, which the portrait
+# modifier of the elves shrinks away under them. They come in five lengths,
+# baked from the shapes of Anbennar's mer ears and halfway between them, as
+# the blendshapes of an accessory follow only what the head answers to.
+special_genes = {
+	accessory_genes = {
+		gate_gene_elf_ears = {
+			inheritable = no
+
+			no_elf_ears = {
+				index = 0
+				male = {
+					1 = empty
+				}
+				female = male
+				boy = male
+				girl = male
+			}
+
+			random_elf_ears = {
+				index = 1
+				male = {
+					1 = "male_gate_elf_ears_01"
+					1 = "male_gate_elf_ears_02"
+					1 = "male_gate_elf_ears_03"
+					1 = "male_gate_elf_ears_04"
+					1 = "male_gate_elf_ears_05"
+				}
+				female = {
+					1 = "female_gate_elf_ears_01"
+					1 = "female_gate_elf_ears_02"
+					1 = "female_gate_elf_ears_03"
+					1 = "female_gate_elf_ears_04"
+					1 = "female_gate_elf_ears_05"
+				}
+				boy = male
+				girl = female
+			}
+
+			elf_ears_01 = {
+				index = 2
+				male = {
+					1 = "male_gate_elf_ears_01"
+				}
+				female = {
+					1 = "female_gate_elf_ears_01"
+				}
+				boy = male
+				girl = female
+			}
+
+			elf_ears_02 = {
+				index = 3
+				male = {
+					1 = "male_gate_elf_ears_02"
+				}
+				female = {
+					1 = "female_gate_elf_ears_02"
+				}
+				boy = male
+				girl = female
+			}
+
+			elf_ears_03 = {
+				index = 4
+				male = {
+					1 = "male_gate_elf_ears_03"
+				}
+				female = {
+					1 = "female_gate_elf_ears_03"
+				}
+				boy = male
+				girl = female
+			}
+
+			elf_ears_04 = {
+				index = 5
+				male = {
+					1 = "male_gate_elf_ears_04"
+				}
+				female = {
+					1 = "female_gate_elf_ears_04"
+				}
+				boy = male
+				girl = female
+			}
+
+			elf_ears_05 = {
+				index = 6
+				male = {
+					1 = "male_gate_elf_ears_05"
+				}
+				female = {
+					1 = "female_gate_elf_ears_05"
+				}
+				boy = male
+				girl = female
+			}
+		}
+	}
+}

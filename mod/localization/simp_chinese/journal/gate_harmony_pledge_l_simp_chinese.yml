@@ -72,7 +72,7 @@
  GATE_HP_ECO_TREND_FROM_CITIZENSHIP: "#b  #blue  国籍：#! #! \n [SCOPE.GetScriptValueDesc('gate_harmony_pledge_economy_trend_from_citizenship')]" #deepl:2790924573
  GATE_HP_ECO_TREND_FROM_TAXATION: "#b  #blue  税收：#! #! \n [SCOPE.GetScriptValueDesc('gate_harmony_pledge_economy_trend_from_taxation')]" #deepl:3992921682
  GATE_HP_ECO_TAXATION: "来源：[GetLawGroup('lawgroup_taxation').GetCurrentlyActive.GetName]" #deepl:2721741755
- GATE_HP_ECO_TAXATION_LEVEL: "来源：[Concept('concept_taxes','$concept_tax_level$')]" #deepl:1076257550
+ GATE_HP_ECO_TAXATION_LEVEL: "来源：[Concept('concept_taxes','$concept_tax_level|q$')]" #deepl:1076257550
  GATE_HP_ECO_TREND_FROM_OTHER_SPHERES: "#b  #blue  其他国家站点：#! #! \n [SCOPE.GetScriptValueDesc('gate_harmony_pledge_economy_trend_from_other_spheres')]" #deepl:836584586
  GATE_HP_ECO_TREND_FROM_LEGISLATIVE: "摘自《立法影响》" #deepl:2518471932
  GATE_HP_ECO_TREND_FROM_MODIFIERS: "#b  #blue  临时修饰符：#! #! [AddTextIf(NotEqualTo_CFixedPoint(SCOPE.ScriptValue('gate_harmony_pledge_economy_trend_from_modifiers'),'(CFixedPoint)0'),'\n')] [SCOPE.GetScriptValueDesc('gate_harmony_pledge_economy_trend_from_modifiers')]" #deepl:815960214
@@ -204,7 +204,7 @@
  gate_harmony_pledge.14.b: "减轻最严重的影响。" #deepl:410557116
  gate_harmony_pledge.14.c: "拥抱潜力。" #deepl:2727038369
  gate_harmony_pledge.15.t: "万物有灵工程学" #deepl:1278909608
- gate_harmony_pledge.15.d: "泛灵信仰可将[concept_conversion]降低至[GetReligion('gate_harmony_pledge').GetNameNoIcon]，同时还能提高我们[GetCulture('gnomish').GetName]工人的[Concept('concept_radical', '$concept_radicalism$')]。" #deepl:2042378649
+ gate_harmony_pledge.15.d: "泛灵信仰可将[concept_conversion]降低至[GetReligion('gate_harmony_pledge').GetNameNoIcon]，同时还能提高我们[GetCulture('gnomish').GetName]工人的[Concept('concept_radical', '$concept_radicalism|q$')]。" #deepl:2042378649
  gate_harmony_pledge.15.f: "人类劳动者已开始将地精工业机械直接融入他们的万物有灵信仰体系，将巨大的蒸汽机和发条织机视为当地强大灵体的容器。 如今，工厂车间里摆满了郁郁葱葱的花卉供品，机器上也精心绘制着神圣几何图案。这种美妙的文化融合在劳动者之间培养了强烈的忠诚感和凝聚力。然而，地精工程师们却为此焦头烂额，因为人类操作员坚决拒绝在“不吉利”的日子里运行机器，也不愿以会激怒精魂的最佳速度进行操作。" #deepl:196278460
  gate_harmony_pledge.15.a: "禁止这种做法。" #deepl:3854349238
  gate_harmony_pledge.15.b: "减轻最严重的影响。" #deepl:410557116

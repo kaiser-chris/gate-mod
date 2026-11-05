@@ -140,8 +140,8 @@ character_trait_gate_mage = {
         if = {
             limit = {
                 OR = {
-                    has_role = gate_active_arcanist
-                    has_role = gate_arcanist
+                    has_role = role_gate_active_arcanist
+                    has_role = role_gate_arcanist
                 }
             }
             multiply = 3
@@ -213,8 +213,8 @@ character_trait_gate_druid = {
         if = {
             limit = {
                 OR = {
-                    has_role = gate_active_arcanist
-                    has_role = gate_arcanist
+                    has_role = role_gate_active_arcanist
+                    has_role = role_gate_arcanist
                 }
             }
             multiply = 3

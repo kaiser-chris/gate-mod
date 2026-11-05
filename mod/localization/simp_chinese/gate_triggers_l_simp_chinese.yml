@@ -26,16 +26,16 @@
 
  trigger_gate_expedition_budget: "#default_text 拥有一项或更多[SCOPE.GetValue('budget_cost')|0v][concept_gate_expedition_budget]#!"
  trigger_gate_expedition_has_covered: "#default_text [concept_gate_expedition]地图中有未探索部分。#!"
- trigger_gate_expedition_has_no_activity: "#default_text 我们未进行一项[Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')]。#!"
+ trigger_gate_expedition_has_no_activity: "#default_text 我们未进行一项[Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity|q$')]。#!"
 
  trigger_gate_requirement_low_mana_density: "要构建此[concept_building]，该州必须拥有至少[TopScope.ScriptValue('gate_low_mana_density_threshhold')]的[concept_gate_mana_density]。" #deepl:2132890702
  trigger_gate_requirement_medium_mana_density: "要构建此[concept_building]，该州必须拥有至少[TopScope.ScriptValue('gate_medium_mana_density_threshhold')]的[concept_gate_mana_density]。" #deepl:2646883508
  trigger_gate_requirement_max_mana_density: "要构建此[concept_building]，该州必须拥有至少[TopScope.ScriptValue('gate_maximum_mana_density')]的[concept_gate_mana_density]。" #deepl:3902263656
 
- trigger_gate_ethic_has_all: "已选中所有可能的[Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')]" #deepl:1152229089
- trigger_gate_ethic_has_all_not: "尚未选中所有可用的[Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')]" #deepl:4243568538
- trigger_gate_ethic_has_all_third: "[COUNTRY.GetNameNoFlag] 已选中所有可能的 [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')]" #deepl:2160750419
- trigger_gate_ethic_has_all_third_not: "[COUNTRY.GetNameNoFlag] 尚未选中所有可用的[Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')]" #deepl:50095710
+ trigger_gate_ethic_has_all: "已选中所有可能的[Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')]" #deepl:1152229089
+ trigger_gate_ethic_has_all_not: "尚未选中所有可用的[Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')]" #deepl:4243568538
+ trigger_gate_ethic_has_all_third: "[COUNTRY.GetNameNoFlag] 已选中所有可能的 [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')]" #deepl:2160750419
+ trigger_gate_ethic_has_all_third_not: "[COUNTRY.GetNameNoFlag] 尚未选中所有可用的[Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')]" #deepl:50095710
 
  trigger_gate_is_arcane_council_leader: "领导奥术议会 [concept_com_international_organization]" #deepl:684660458
  trigger_gate_is_arcane_council_leader_not: "难道不是 #bold  而不是 #! 领导奥术议会 [concept_com_international_organization]" #deepl:2885476714

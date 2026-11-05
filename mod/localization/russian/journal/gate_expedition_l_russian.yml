@@ -31,7 +31,7 @@
  je_gate_expedition_button_open_map_desc: "Opens the [concept_gate_expedition_map]."
  modifier_gate_expedition_preparation: "Preparation Cost"
  gate_expedition.1.t: "Choosing an $concept_gate_expedition_leader$"
- gate_expedition.1.d: "We have found these three potential [Concept('concept_gate_expedition_leader','$concept_gate_expedition_leaders$')] for our [concept_gate_expedition]. Now we have to choose one.\n\n@warning! This is an important choice and will decide which [concept_gate_expedition_activities] we can start on the [concept_gate_expedition_map]."
+ gate_expedition.1.d: "We have found these three potential [Concept('concept_gate_expedition_leader','$concept_gate_expedition_leaders|q$')] for our [concept_gate_expedition]. Now we have to choose one.\n\n@warning! This is an important choice and will decide which [concept_gate_expedition_activities] we can start on the [concept_gate_expedition_map]."
  gate_expedition.1.f: "After intense political maneuvering and backroom deals, three candidates have emerged as potential leaders for our expedition into the Magic Gate. One is a shrewd industrialist with deep ties to the economy, eager to exploit whatever resources lie beyond. Another is a decorated military officer, focused on securing a foothold and ensuring our dominance. The final candidate is a skilled politician, advocating for careful diplomacy and long-term stability. The choice we make will shape the future of our presence on $gate_planet$."
  gate_expedition.1.a: "[concept_gate_expedition_leader_militarist]: [SCOPE.sCharacter('expedition_militarist').GetFullName]"
  gate_expedition.1.b: "[concept_gate_expedition_leader_politician]: [SCOPE.sCharacter('expedition_politician').GetFullName]"

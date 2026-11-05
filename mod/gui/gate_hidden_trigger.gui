@@ -49,6 +49,18 @@ widget = {
                 on_finish = "[ScriptedGui.Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
             }
         }
+        widget = {
+            # Mana Saturation JE
+            datacontext = "[GetPlayerJournalEntry('je_gate_mana_saturation')]"
+            visible = "[GetVariableSystem.HasValue('com_open_window', 'gate_button_mana_saturation')]"
+            state = {
+                name = _show
+                on_finish = "[GetVariableSystem.Clear('com_open_window')]"
+                on_finish = "[InformationPanelBar.OpenJournalEntryPanel(JournalEntry.AccessSelf)]"
+            }
+        }
+
+
     }
 
     # Alerts

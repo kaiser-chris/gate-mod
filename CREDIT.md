@@ -6,6 +6,9 @@
 - Thank you to [伊恩](https://steamcommunity.com/profiles/76561199142528477/) for his work on the Chinese translation.
 - Thank you to [시아츠](https://steamcommunity.com/profiles/76561198319776515/) and PatronPasta for their work on the Korean translation.
 
+## Morgenröte
+- Rating images in [gfx/interface/icons/generic_icons/rating/](mod/gfx/interface/icons/generic_icons/rating/)
+
 ## Images
 - eyes by Jojoid from <a href="https://thenounproject.com/browse/icons/term/eyes/" target="_blank" title="eyes Icons">Noun Project</a> (CC BY 3.0)
 - Crystal by diyah yunisa from <a href="https://thenounproject.com/browse/icons/term/crystal/" target="_blank" title="Crystal Icons">Noun Project</a> (CC BY 3.0)
@@ -35,3 +38,15 @@
 - ROUND CRYSTAL by Hanna Vernydub from <a href="https://thenounproject.com/browse/icons/term/round-crystal/" target="_blank" title="ROUND CRYSTAL Icons">Noun Project</a> (CC BY 3.0)
 - seed by Arian N. from <a href="https://thenounproject.com/browse/icons/term/seed/" target="_blank" title="seed Icons">Noun Project</a> (CC BY 3.0)
 - Forbidden by zahrotul fuadah from <a href="https://thenounproject.com/browse/icons/term/forbidden/" target="_blank" title="Forbidden Icons">Noun Project</a> (CC BY 3.0)
+- Location by Graphtend from <a href="https://thenounproject.com/browse/icons/term/location/" target="_blank" title="Location Icons">Noun Project</a> (CC BY 3.0)
+- checkmark by komsiatun from <a href="https://thenounproject.com/browse/icons/term/checkmark/" target="_blank" title="checkmark Icons">Noun Project</a> (CC BY 3.0)
+- Question by James Kopina from <a href="https://thenounproject.com/browse/icons/term/question/" target="_blank" title="Question Icons">Noun Project</a> (CC BY 3.0)
+- Bar by MHDK from <a href="https://thenounproject.com/browse/icons/term/bar/" target="_blank" title="Bar Icons">Noun Project</a> (CC BY 3.0)
+- Gear by Alice Design from <a href="https://thenounproject.com/browse/icons/term/gear/" target="_blank" title="Gear Icons">Noun Project</a> (CC BY 3.0)
+- Tree by Sanjaya from <a href="https://thenounproject.com/browse/icons/term/tree/" target="_blank" title="Tree Icons">Noun Project</a> (CC BY 3.0)
+- dungeon by nareerat jaikaew from <a href="https://thenounproject.com/browse/icons/term/dungeon/" target="_blank" title="dungeon Icons">Noun Project</a> (CC BY 3.0)
+- eye opened by Sonya Nikolaeva from <a href="https://thenounproject.com/browse/icons/term/eye-opened/" target="_blank" title="eye opened Icons">Noun Project</a> (CC BY 3.0)
+- eye closed by Sonya Nikolaeva from <a href="https://thenounproject.com/browse/icons/term/eye-closed/" target="_blank" title="eye closed Icons">Noun Project</a> (CC BY 3.0)
+- tax by Hanbai from <a href="https://thenounproject.com/browse/icons/term/tax/" target="_blank" title="tax Icons">Noun Project</a> (CC BY 3.0)
+- Coal by Michael Wohlwend from <a href="https://thenounproject.com/browse/icons/term/coal/" target="_blank" title="Coal Icons">Noun Project</a> (CC BY 3.0)
+- Dwarven Helmet by Kier Heyl from [game-icons.net](https://game-icons.net/)

@@ -1,0 +1,14 @@
+﻿sb_gate_dungeon_debug_advance = {
+	name = sb_gate_dungeon_debug_advance
+	desc = sb_gate_dungeon_debug_advance_desc
+
+	effect = {
+		scope:expedition = {
+			gate_dungeon_advance_layer = yes
+		}
+	}
+
+	visible = {
+		has_global_variable = com_debug
+	}
+}

@@ -1,0 +1,34 @@
+@legend_width = 500
+@legend_height = 30
+
+#### WIDGETS
+gate_map_legend = {
+	name = "gate_inject_mana_saturation"
+
+	blockoverride "legend_items" {
+		gate_map_legend_item = {
+			blockoverride "legend_item_text" {
+				text = je_gate_mana_saturation_map_legend_gate
+			}
+			blockoverride "legend_item_icon_tint" {
+				tintcolor = { 0 0 1 1 }
+			}
+		}
+		gate_map_legend_item = {
+			blockoverride "legend_item_text" {
+				text = je_gate_mana_saturation_map_legend_high
+			}
+			blockoverride "legend_item_icon_tint" {
+				tintcolor = { 0 1 0 1 }
+			}
+		}
+		gate_map_legend_item = {
+			blockoverride "legend_item_text" {
+				text = je_gate_mana_saturation_map_legend_low
+			}
+			blockoverride "legend_item_icon_tint" {
+				tintcolor = { 1 0 0 1 }
+			}
+		}
+	}
+}

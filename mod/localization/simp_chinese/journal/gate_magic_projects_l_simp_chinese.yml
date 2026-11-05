@@ -21,16 +21,16 @@
  button_project_domain: "研究$concept_gate_magic_ethics$"
  je_gate_project_domain: "研究$concept_gate_magic_ethics$"
  je_gate_project_domain_reason: "[concept_gate_magic_researcher][GetPlayer.MakeScope.Var('gate_magic_researcher').GetCharacter.GetFullName]正在研究#bold $je_gate_project_domain$#!。\n$gate_journal_delimiter$\n$je_gate_project_domain_description$"
- je_gate_project_domain_description: "[Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')]代表了我们社会的魔法观念，并为我们的国家提供巨大增益。此项目将让我们能够选择一个额外的[concept_gate_magic_ethic]。"
+ je_gate_project_domain_description: "[Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')]代表了我们社会的魔法观念，并为我们的国家提供巨大增益。此项目将让我们能够选择一个额外的[concept_gate_magic_ethic]。"
  je_gate_project_domain_condition_not_researched: "[THIS.GetCountry.GetNameNoFlag] 尚未研究过新的 [concept_gate_magic_ethic]" #deepl:3134692073
  je_gate_project_domain_condition_domain_slot: "[THIS.GetCountry.GetNameNoFlag] 至少有一个空闲的[concept_gate_magic_ethic]插槽" #deepl:3894320359
  # Change Arcane Domains
  button_project_change_domain: "修改 $concept_gate_magic_ethics$" #deepl:211201186
  je_gate_project_change_domain: "修改 $concept_gate_magic_ethics$" #deepl:211201186
  je_gate_project_change_domain_reason: "$gg_projects_active_project_desc$\n$gate_journal_delimiter$\n$je_gate_project_change_domain_description$" #deepl:229067263
- je_gate_project_change_domain_description: "[Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')] 这体现了我们社会对魔法的看法，并将为我国带来巨大的推动力。该项目将使我们能够更改当前的 [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')]。#r  我们只能更改一次 [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')] 域名！#!" #deepl:1371592778
+ je_gate_project_change_domain_description: "[Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')] 这体现了我们社会对魔法的看法，并将为我国带来巨大的推动力。该项目将使我们能够更改当前的 [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')]。#r  我们只能更改一次 [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')] 域名！#!" #deepl:1371592778
  je_gate_project_change_domain_condition_max_domains: "[THIS.GetCountry.GetNameNoFlag] 正在使用全部三个[concept_gate_magic_ethic]插槽" #deepl:4252664512
- je_gate_project_change_domain_condition_not_researched: "[THIS.GetCountry.GetNameNoFlag] 尚未更改其 [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')]" #deepl:2895666181
+ je_gate_project_change_domain_condition_not_researched: "[THIS.GetCountry.GetNameNoFlag] 尚未更改其 [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')]" #deepl:2895666181
 # Improve Mana Extraction
  button_project_improve_mana_extraction: "改进魔能提炼"
  je_gate_project_improve_mana_extraction: "改进魔能提炼"

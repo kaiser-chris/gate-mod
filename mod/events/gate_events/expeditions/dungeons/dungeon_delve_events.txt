@@ -1,0 +1,1378 @@
+﻿namespace = gate_dungeon_delve
+
+gate_dungeon_delve.1 = {
+    type = country_event
+    dlc = dlc_magic_gate
+    placement = scope:dungeon_state
+
+    title = gate_dungeon_delve_1_t
+    desc = gate_dungeon_delve_1_d
+    flavor = gate_dungeon_delve_1_f
+
+    gui_window = event_window_gate_dungeon
+
+    category = gate_dungeon_event
+
+    event_image = {
+        video = "gate_unspecified_dungeon"
+    }
+
+    immediate = {
+        gate_setup_dungeon_event = yes
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_gate_dungeon.dds"
+
+    duration = 3
+
+    option = {
+        name = gate_dungeon_delve_1_a
+        highlighted_option = yes
+        show_as_unavailable = {
+            # Show as disabled instead of
+            # hiding the option
+            always = yes
+        }
+        trigger = {
+            gate_dungeon_has_renown = {
+                amount = 7
+            }
+        }
+        scope:expedition = {
+            gate_dungeon_advance_layer = yes
+            gate_dungeon_create_log_entry = {
+                rating = positive
+                event = gate_dungeon_delve_1_t
+                outcome_text = gate_dungeon_log_advance
+            }
+        }
+        custom_tooltip_no_bullet = gate_dungeon_tooltip_renown_check
+    }
+
+    option = {
+        name = gate_dungeon_delve_1_b
+        default_option = yes
+        random_list = {
+            1 = {
+                modifier = gate_dungeon_party_cohesion_check_hard_success
+                scope:expedition = {
+                    gate_dungeon_advance_layer = yes
+                    gate_dungeon_party_cohesion_change = {
+                        amount = 0.5
+                    }
+                    gate_dungeon_create_log_entry_value = {
+                        rating = positive
+                        event = gate_dungeon_delve_1_t
+                        outcome_text = gate_dungeon_log_cohesion
+                        outcome_value = 0.5
+                    }
+                    gate_dungeon_create_log_entry = {
+                        rating = positive
+                        event = gate_dungeon_delve_1_t
+                        outcome_text = gate_dungeon_log_advance
+                    }
+                }
+            }
+            1 = {
+                modifier = gate_dungeon_party_cohesion_check_hard_neutral
+                custom_tooltip = gate_dungeon_tooltip_other_route
+                gate_dungeon_create_log_entry = {
+                    rating = neutral
+                    event = gate_dungeon_delve_1_t
+                    outcome_text = gate_dungeon_log_stall
+                }
+            }
+            1 = {
+                modifier = gate_dungeon_party_cohesion_check_hard_fail
+                custom_tooltip = gate_dungeon_tooltip_other_route
+                scope:expedition = {
+                    gate_dungeon_party_cohesion_change = {
+                        amount = -0.5
+                    }
+                    gate_dungeon_create_log_entry_value = {
+                        rating = negative
+                        event = gate_dungeon_delve_1_t
+                        outcome_text = gate_dungeon_log_cohesion
+                        outcome_value = -0.5
+                    }
+                    gate_dungeon_create_log_entry = {
+                        rating = neutral
+                        event = gate_dungeon_delve_1_t
+                        outcome_text = gate_dungeon_log_stall
+                    }
+                }
+            }
+        }
+        custom_tooltip_no_bullet = gate_dungeon_tooltip_cohesion_check
+    }
+
+    option = {
+        name = gate_dungeon_delve_1_c
+        random_list = {
+            1 = {
+                modifier = gate_dungeon_party_condition_check_medium_success
+                scope:expedition = {
+                    gate_dungeon_advance_layer = yes
+                    gate_dungeon_create_log_entry = {
+                        rating = positive
+                        event = gate_dungeon_delve_1_t
+                        outcome_text = gate_dungeon_log_advance
+                    }
+                }
+            }
+            1 = {
+                modifier = gate_dungeon_party_condition_check_medium_fail
+                custom_tooltip = gate_dungeon_tooltip_other_route
+                scope:expedition = {
+                    gate_dungeon_party_condition_change = {
+                        amount = -0.5
+                    }
+                    gate_dungeon_create_log_entry_value = {
+                        rating = negative
+                        event = gate_dungeon_delve_1_t
+                        outcome_text = gate_dungeon_log_condition
+                        outcome_value = -0.5
+                    }
+                }
+            }
+        }
+        custom_tooltip_no_bullet = gate_dungeon_tooltip_condition_check
+    }
+}
+
+gate_dungeon_delve.2 = {
+    type = country_event
+    dlc = dlc_magic_gate
+    placement = scope:dungeon_state
+
+    title = gate_dungeon_delve_2_t
+    desc = gate_dungeon_delve_2_d
+    flavor = gate_dungeon_delve_2_f
+
+    gui_window = event_window_gate_dungeon
+
+    category = gate_dungeon_event
+
+    event_image = {
+        video = "gate_unspecified_dungeon"
+    }
+
+    immediate = {
+        gate_setup_dungeon_event = yes
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_gate_dungeon.dds"
+
+    duration = 3
+
+    option = {
+        name = gate_dungeon_delve_2_a
+        default_option = yes
+        random_list = {
+            1 = {
+                modifier = gate_dungeon_party_condition_check_medium_success
+                scope:expedition = {
+                    gate_dungeon_advance_layer = yes
+                    gate_dungeon_create_log_entry = {
+                        rating = positive
+                        event = gate_dungeon_delve_2_t
+                        outcome_text = gate_dungeon_log_advance
+                    }
+                }
+            }
+            1 = {
+                modifier = gate_dungeon_party_condition_check_medium_fail
+                custom_tooltip = gate_dungeon_tooltip_other_route
+                scope:expedition = {
+                    gate_dungeon_party_condition_change = {
+                        amount = -0.5
+                    }
+                    gate_dungeon_create_log_entry_value = {
+                        rating = negative
+                        event = gate_dungeon_delve_2_t
+                        outcome_text = gate_dungeon_log_condition
+                        outcome_value = -0.5
+                    }
+                    gate_dungeon_create_log_entry = {
+                        rating = neutral
+                        event = gate_dungeon_delve_2_t
+                        outcome_text = gate_dungeon_log_stall
+                    }
+                }
+            }
+        }
+        custom_tooltip_no_bullet = gate_dungeon_tooltip_condition_check
+    }
+
+    option = {
+        name = gate_dungeon_delve_2_b
+        random_list = {
+            1 = {
+                modifier = gate_dungeon_party_cohesion_check_easy_success
+                scope:expedition = {
+                    gate_dungeon_advance_layer = yes
+                    gate_dungeon_create_log_entry = {
+                        rating = positive
+                        event = gate_dungeon_delve_2_t
+                        outcome_text = gate_dungeon_log_advance
+                    }
+                }
+            }
+            1 = {
+                modifier = gate_dungeon_party_cohesion_check_easy_neutral
+                custom_tooltip = gate_dungeon_tooltip_other_route
+                scope:expedition = {
+                    gate_dungeon_create_log_entry = {
+                        rating = neutral
+                        event = gate_dungeon_delve_2_t
+                        outcome_text = gate_dungeon_log_stall
+                    }
+                }
+            }
+        }
+        custom_tooltip_no_bullet = gate_dungeon_tooltip_cohesion_check
+    }
+
+    option = {
+        name = gate_dungeon_delve_2_c
+        highlighted_option = yes
+        show_as_unavailable = {
+            # Show as disabled instead of
+            # hiding the option
+            always = yes
+        }
+        trigger = {
+            gate_dungeon_has_renown = {
+                amount = 6
+            }
+        }
+        scope:expedition = {
+            gate_dungeon_advance_layer = yes
+            gate_dungeon_create_log_entry = {
+                rating = positive
+                event = gate_dungeon_delve_2_t
+                outcome_text = gate_dungeon_log_advance
+            }
+        }
+        custom_tooltip_no_bullet = gate_dungeon_tooltip_renown_check
+    }
+}
+
+gate_dungeon_delve.3 = {
+    type = country_event
+    dlc = dlc_magic_gate
+    placement = scope:dungeon_state
+
+    title = gate_dungeon_delve_3_t
+    desc = gate_dungeon_delve_3_d
+    flavor = gate_dungeon_delve_3_f
+
+    gui_window = event_window_gate_dungeon
+
+    category = gate_dungeon_event
+
+    event_image = {
+        video = "gate_unspecified_dungeon"
+    }
+
+    immediate = {
+        gate_setup_dungeon_event = yes
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_gate_dungeon.dds"
+
+    duration = 3
+
+    option = {
+        name = gate_dungeon_delve_3_a
+        default_option = yes
+        random_list = {
+            1 = {
+                modifier = gate_dungeon_party_cohesion_check_hard_success
+                scope:expedition = {
+                    gate_dungeon_party_cohesion_change = {
+                        amount = 0.5
+                    }
+                    gate_dungeon_advance_layer = yes
+                    gate_dungeon_create_log_entry_value = {
+                        rating = positive
+                        event = gate_dungeon_delve_3_t
+                        outcome_text = gate_dungeon_log_cohesion
+                        outcome_value = 0.5
+                    }
+                    gate_dungeon_create_log_entry = {
+                        rating = positive
+                        event = gate_dungeon_delve_3_t
+                        outcome_text = gate_dungeon_log_advance
+                    }
+                }
+            }
+            1 = {
+                modifier = gate_dungeon_party_cohesion_check_hard_fail
+                scope:expedition = {
+                    gate_dungeon_party_cohesion_change = {
+                        amount = -0.5
+                    }
+                    gate_dungeon_create_log_entry_value = {
+                        rating = negative
+                        event = gate_dungeon_delve_3_t
+                        outcome_text = gate_dungeon_log_cohesion
+                        outcome_value = -0.5
+                    }
+                    gate_dungeon_create_log_entry = {
+                        rating = neutral
+                        event = gate_dungeon_delve_3_t
+                        outcome_text = gate_dungeon_log_stall
+                    }
+                }
+                custom_tooltip = gate_dungeon_tooltip_other_route
+            }
+        }
+        custom_tooltip_no_bullet = gate_dungeon_tooltip_cohesion_check
+    }
+
+    option = {
+        name = gate_dungeon_delve_3_b
+        random_list = {
+            1 = {
+                modifier = gate_dungeon_party_condition_check_easy_success
+                scope:expedition = {
+                    gate_dungeon_advance_layer = yes
+                    gate_dungeon_party_condition_change = {
+                        amount = -0.5
+                    }
+                    gate_dungeon_create_log_entry_value = {
+                        rating = negative
+                        event = gate_dungeon_delve_3_t
+                        outcome_text = gate_dungeon_log_condition
+                        outcome_value = -0.5
+                    }
+                    gate_dungeon_create_log_entry = {
+                        rating = positive
+                        event = gate_dungeon_delve_3_t
+                        outcome_text = gate_dungeon_log_advance
+                    }
+                }
+            }
+            1 = {
+                scope:expedition = {
+                    gate_dungeon_party_condition_change = {
+                        amount = -0.5
+                    }
+                    gate_dungeon_create_log_entry_value = {
+                        rating = negative
+                        event = gate_dungeon_delve_3_t
+                        outcome_text = gate_dungeon_log_condition
+                        outcome_value = -0.5
+                    }
+                    gate_dungeon_create_log_entry = {
+                        rating = neutral
+                        event = gate_dungeon_delve_3_t
+                        outcome_text = gate_dungeon_log_stall
+                    }
+                }
+                modifier = gate_dungeon_party_condition_check_easy_neutral
+                custom_tooltip = gate_dungeon_tooltip_other_route
+            }
+        }
+        custom_tooltip_no_bullet = gate_dungeon_tooltip_condition_check
+    }
+
+    option = {
+        name = gate_dungeon_delve_3_c
+        random_list = {
+            1 = {
+                modifier = gate_dungeon_party_cohesion_check_easy_success
+                scope:expedition = {
+                    gate_dungeon_party_cohesion_change = {
+                        amount = -0.5
+                    }
+                    gate_dungeon_advance_layer = yes
+                    gate_dungeon_create_log_entry_value = {
+                        rating = negative
+                        event = gate_dungeon_delve_3_t
+                        outcome_text = gate_dungeon_log_cohesion
+                        outcome_value = -0.5
+                    }
+                    gate_dungeon_create_log_entry = {
+                        rating = positive
+                        event = gate_dungeon_delve_3_t
+                        outcome_text = gate_dungeon_log_advance
+                    }
+                }
+            }
+            1 = {
+                modifier = gate_dungeon_party_cohesion_check_easy_fail
+                scope:expedition = {
+                    gate_dungeon_party_cohesion_change = {
+                        amount = -1
+                    }
+                    gate_dungeon_advance_layer = yes
+                    gate_dungeon_create_log_entry_value = {
+                        rating = negative
+                        event = gate_dungeon_delve_3_t
+                        outcome_text = gate_dungeon_log_cohesion
+                        outcome_value = -1
+                    }
+                    gate_dungeon_create_log_entry = {
+                        rating = positive
+                        event = gate_dungeon_delve_3_t
+                        outcome_text = gate_dungeon_log_advance
+                    }
+                }
+            }
+        }
+        custom_tooltip_no_bullet = gate_dungeon_tooltip_cohesion_check
+    }
+}
+
+gate_dungeon_delve.4 = {
+    type = country_event
+    dlc = dlc_magic_gate
+    placement = scope:dungeon_state
+
+    title = gate_dungeon_delve_4_t
+    desc = gate_dungeon_delve_4_d
+    flavor = gate_dungeon_delve_4_f
+
+    gui_window = event_window_gate_dungeon
+
+    category = gate_dungeon_event
+
+    event_image = {
+        video = "gate_unspecified_dungeon"
+    }
+
+    immediate = {
+        gate_setup_dungeon_event = yes
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_gate_dungeon.dds"
+
+    duration = 3
+
+    option = {
+        name = gate_dungeon_delve_4_a
+        default_option = yes
+        scope:expedition = {
+            gate_dungeon_party_condition_change = {
+                amount = 1
+            }
+            gate_dungeon_create_log_entry_value = {
+                rating = positive
+                event = gate_dungeon_delve_4_t
+                outcome_text = gate_dungeon_log_condition
+                outcome_value = 1
+            }
+        }
+    }
+
+    option = {
+        name = gate_dungeon_delve_4_b
+        scope:expedition = {
+            gate_dungeon_party_cohesion_change = {
+                amount = 1
+            }
+            gate_dungeon_create_log_entry_value = {
+                rating = positive
+                event = gate_dungeon_delve_4_t
+                outcome_text = gate_dungeon_log_cohesion
+                outcome_value = 1
+            }
+        }
+    }
+
+    option = {
+        name = gate_dungeon_delve_4_c
+        highlighted_option = yes
+        show_as_unavailable = {
+            # Show as disabled instead of
+            # hiding the option
+            always = yes
+        }
+        trigger = {
+            gate_dungeon_has_renown = {
+                amount = 5
+            }
+        }
+        scope:expedition = {
+            gate_dungeon_party_cohesion_change = {
+                amount = 0.5
+            }
+            gate_dungeon_party_renown_change = {
+                amount = 0.5
+            }
+            gate_dungeon_create_log_entry_value = {
+                rating = positive
+                event = gate_dungeon_delve_4_t
+                outcome_text = gate_dungeon_log_cohesion
+                outcome_value = 0.5
+            }
+            gate_dungeon_create_log_entry_value = {
+                rating = positive
+                event = gate_dungeon_delve_4_t
+                outcome_text = gate_dungeon_log_renown
+                outcome_value = 0.5
+            }
+        }
+        custom_tooltip_no_bullet = gate_dungeon_tooltip_renown_check
+    }
+}
+
+gate_dungeon_delve.5 = {
+    type = country_event
+    dlc = dlc_magic_gate
+    placement = scope:dungeon_state
+
+    title = gate_dungeon_delve_5_t
+    desc = gate_dungeon_delve_5_d
+    flavor = gate_dungeon_delve_5_f
+
+    gui_window = event_window_gate_dungeon
+
+    category = gate_dungeon_event
+
+    event_image = {
+        video = "gate_unspecified_dungeon"
+    }
+
+    immediate = {
+        gate_setup_dungeon_event = yes
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_gate_dungeon.dds"
+
+    duration = 3
+
+    option = {
+        name = gate_dungeon_delve_5_a
+        default_option = yes
+        scope:expedition = {
+            gate_dungeon_party_condition_change = {
+                amount = -1
+            }
+            gate_dungeon_create_log_entry_value = {
+                rating = negative
+                event = gate_dungeon_delve_5_t
+                outcome_text = gate_dungeon_log_condition
+                outcome_value = -1
+            }
+        }
+    }
+
+    option = {
+        name = gate_dungeon_delve_5_b
+        scope:expedition = {
+            gate_dungeon_party_cohesion_change = {
+                amount = -1
+            }
+            gate_dungeon_create_log_entry_value = {
+                rating = negative
+                event = gate_dungeon_delve_5_t
+                outcome_text = gate_dungeon_log_cohesion
+                outcome_value = -1
+            }
+        }
+    }
+
+    option = {
+        name = gate_dungeon_delve_5_c
+        highlighted_option = yes
+        show_as_unavailable = {
+            # Show as disabled instead of
+            # hiding the option
+            always = yes
+        }
+        trigger = {
+            gate_dungeon_has_renown = {
+                amount = 6
+            }
+        }
+        scope:expedition = {
+            gate_dungeon_party_condition_change = {
+                amount = -0.5
+            }
+            gate_dungeon_create_log_entry_value = {
+                rating = negative
+                event = gate_dungeon_delve_5_t
+                outcome_text = gate_dungeon_log_condition
+                outcome_value = -0.5
+            }
+        }
+        custom_tooltip_no_bullet = gate_dungeon_tooltip_renown_check
+    }
+}
+
+gate_dungeon_delve.6 = {
+    type = country_event
+    dlc = dlc_magic_gate
+    placement = scope:dungeon_state
+
+    title = gate_dungeon_delve_6_t
+    desc = gate_dungeon_delve_6_d
+    flavor = gate_dungeon_delve_6_f
+
+    gui_window = event_window_gate_dungeon
+
+    category = gate_dungeon_event
+
+    event_image = {
+        video = "gate_unspecified_dungeon"
+    }
+
+    immediate = {
+        gate_setup_dungeon_event = yes
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_gate_dungeon.dds"
+
+    duration = 3
+
+    option = {
+        name = gate_dungeon_delve_6_a
+        default_option = yes
+        random_list = {
+            1 = {
+                modifier = gate_dungeon_party_cohesion_check_hard_success
+                scope:expedition = {
+                    gate_dungeon_advance_layer = yes
+                    gate_dungeon_party_renown_change = {
+                        amount = 0.5
+                    }
+                    gate_dungeon_create_log_entry_value = {
+                        rating = positive
+                        event = gate_dungeon_delve_6_t
+                        outcome_text = gate_dungeon_log_renown
+                        outcome_value = 0.5
+                    }
+                    gate_dungeon_create_log_entry = {
+                        rating = positive
+                        event = gate_dungeon_delve_6_t
+                        outcome_text = gate_dungeon_log_advance
+                    }
+                }
+            }
+            1 = {
+                modifier = gate_dungeon_party_cohesion_check_hard_neutral
+                custom_tooltip = gate_dungeon_tooltip_other_route
+                scope:expedition = {
+                    gate_dungeon_create_log_entry = {
+                        rating = neutral
+                        event = gate_dungeon_delve_6_t
+                        outcome_text = gate_dungeon_log_stall
+                    }
+                }
+            }
+            1 = {
+                modifier = gate_dungeon_party_cohesion_check_hard_fail
+                custom_tooltip = gate_dungeon_tooltip_other_route
+                scope:expedition = {
+                    gate_dungeon_party_condition_change = {
+                        amount = -1
+                    }
+                    gate_dungeon_party_cohesion_change = {
+                        amount = -0.5
+                    }
+                    gate_dungeon_create_log_entry_value = {
+                        rating = negative
+                        event = gate_dungeon_delve_6_t
+                        outcome_text = gate_dungeon_log_condition
+                        outcome_value = -1
+                    }
+                    gate_dungeon_create_log_entry_value = {
+                        rating = negative
+                        event = gate_dungeon_delve_6_t
+                        outcome_text = gate_dungeon_log_cohesion
+                        outcome_value = -0.5
+                    }
+                    gate_dungeon_create_log_entry = {
+                        rating = neutral
+                        event = gate_dungeon_delve_6_t
+                        outcome_text = gate_dungeon_log_stall
+                    }
+                }
+            }
+        }
+        custom_tooltip_no_bullet = gate_dungeon_tooltip_cohesion_check
+    }
+
+    option = {
+        name = gate_dungeon_delve_6_b
+        random_list = {
+            1 = {
+                modifier = gate_dungeon_party_condition_check_medium_success
+                scope:expedition = {
+                    gate_dungeon_advance_layer = yes
+                    gate_dungeon_party_renown_change = {
+                        amount = 1
+                    }
+                    gate_dungeon_create_log_entry_value = {
+                        rating = positive
+                        event = gate_dungeon_delve_6_t
+                        outcome_text = gate_dungeon_log_renown
+                        outcome_value = 1
+                    }
+                    gate_dungeon_create_log_entry = {
+                        rating = positive
+                        event = gate_dungeon_delve_6_t
+                        outcome_text = gate_dungeon_log_advance
+                    }
+                }
+            }
+            1 = {
+                modifier = gate_dungeon_party_condition_check_medium_fail
+                custom_tooltip = gate_dungeon_tooltip_other_route
+                scope:expedition = {
+                    gate_dungeon_party_condition_change = {
+                        amount = -1.5
+                    }
+                    gate_dungeon_create_log_entry_value = {
+                        rating = negative
+                        event = gate_dungeon_delve_6_t
+                        outcome_text = gate_dungeon_log_condition
+                        outcome_value = -1.5
+                    }
+                    gate_dungeon_create_log_entry = {
+                        rating = neutral
+                        event = gate_dungeon_delve_6_t
+                        outcome_text = gate_dungeon_log_stall
+                    }
+                }
+            }
+        }
+        custom_tooltip_no_bullet = gate_dungeon_tooltip_condition_check
+    }
+
+    option = {
+        name = gate_dungeon_delve_6_c
+        scope:expedition = {
+            gate_dungeon_advance_layer = yes
+            gate_dungeon_party_condition_change = {
+                amount = -0.5
+            }
+            gate_dungeon_create_log_entry_value = {
+                rating = negative
+                event = gate_dungeon_delve_6_t
+                outcome_text = gate_dungeon_log_condition
+                outcome_value = -0.5
+            }
+            gate_dungeon_create_log_entry = {
+                rating = positive
+                event = gate_dungeon_delve_6_t
+                outcome_text = gate_dungeon_log_advance
+            }
+        }
+    }
+}
+
+gate_dungeon_delve.7 = {
+    type = country_event
+    dlc = dlc_magic_gate
+    placement = scope:dungeon_state
+
+    title = gate_dungeon_delve_7_t
+    desc = gate_dungeon_delve_7_d
+    flavor = gate_dungeon_delve_7_f
+
+    gui_window = event_window_gate_dungeon
+
+    category = gate_dungeon_event
+
+    event_image = {
+        video = "gate_unspecified_dungeon"
+    }
+
+    immediate = {
+        gate_setup_dungeon_event = yes
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_gate_dungeon.dds"
+
+    duration = 3
+
+    option = {
+        name = gate_dungeon_delve_7_a
+        highlighted_option = yes
+        show_as_unavailable = {
+            # Show as disabled instead of
+            # hiding the option
+            always = yes
+        }
+        trigger = {
+            gate_dungeon_has_renown = {
+                amount = 6
+            }
+        }
+        scope:expedition = {
+            gate_dungeon_advance_layer = yes
+            gate_dungeon_party_cohesion_change = {
+                amount = 0.5
+            }
+            gate_dungeon_create_log_entry_value = {
+                rating = positive
+                event = gate_dungeon_delve_7_t
+                outcome_text = gate_dungeon_log_cohesion
+                outcome_value = 0.5
+            }
+            gate_dungeon_create_log_entry = {
+                rating = positive
+                event = gate_dungeon_delve_7_t
+                outcome_text = gate_dungeon_log_advance
+            }
+        }
+        custom_tooltip_no_bullet = gate_dungeon_tooltip_renown_check
+    }
+
+    option = {
+        name = gate_dungeon_delve_7_b
+        default_option = yes
+        random_list = {
+            1 = {
+                modifier = gate_dungeon_party_cohesion_check_medium_success
+                scope:expedition = {
+                    gate_dungeon_advance_layer = yes
+                    gate_dungeon_create_log_entry = {
+                        rating = positive
+                        event = gate_dungeon_delve_7_t
+                        outcome_text = gate_dungeon_log_advance
+                    }
+                }
+            }
+            1 = {
+                modifier = gate_dungeon_party_cohesion_check_medium_fail
+                custom_tooltip = gate_dungeon_tooltip_other_route
+                scope:expedition = {
+                    gate_dungeon_party_cohesion_change = {
+                        amount = -1
+                    }
+                    gate_dungeon_create_log_entry_value = {
+                        rating = negative
+                        event = gate_dungeon_delve_7_t
+                        outcome_text = gate_dungeon_log_cohesion
+                        outcome_value = -1
+                    }
+                    gate_dungeon_create_log_entry = {
+                        rating = neutral
+                        event = gate_dungeon_delve_7_t
+                        outcome_text = gate_dungeon_log_stall
+                    }
+                }
+            }
+        }
+        custom_tooltip_no_bullet = gate_dungeon_tooltip_cohesion_check
+    }
+
+    option = {
+        name = gate_dungeon_delve_7_c
+        scope:expedition = {
+            gate_dungeon_advance_layer = yes
+            gate_dungeon_party_condition_change = {
+                amount = -0.5
+            }
+            gate_dungeon_create_log_entry_value = {
+                rating = negative
+                event = gate_dungeon_delve_7_t
+                outcome_text = gate_dungeon_log_condition
+                outcome_value = -0.5
+            }
+            gate_dungeon_create_log_entry = {
+                rating = positive
+                event = gate_dungeon_delve_7_t
+                outcome_text = gate_dungeon_log_advance
+            }
+        }
+    }
+}
+
+gate_dungeon_delve.8 = {
+    type = country_event
+    dlc = dlc_magic_gate
+    placement = scope:dungeon_state
+
+    title = gate_dungeon_delve_8_t
+    desc = gate_dungeon_delve_8_d
+    flavor = gate_dungeon_delve_8_f
+
+    gui_window = event_window_gate_dungeon
+
+    category = gate_dungeon_event
+
+    event_image = {
+        video = "gate_unspecified_dungeon"
+    }
+
+    immediate = {
+        gate_setup_dungeon_event = yes
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_gate_dungeon.dds"
+
+    duration = 3
+
+    option = {
+        name = gate_dungeon_delve_8_a
+        default_option = yes
+        scope:expedition = {
+            gate_dungeon_party_condition_change = {
+                amount = -1
+            }
+            gate_dungeon_create_log_entry_value = {
+                rating = negative
+                event = gate_dungeon_delve_8_t
+                outcome_text = gate_dungeon_log_condition
+                outcome_value = -1
+            }
+        }
+    }
+
+    option = {
+        name = gate_dungeon_delve_8_b
+        scope:expedition = {
+            gate_dungeon_party_cohesion_change = {
+                amount = -1
+            }
+            gate_dungeon_create_log_entry_value = {
+                rating = negative
+                event = gate_dungeon_delve_8_t
+                outcome_text = gate_dungeon_log_cohesion
+                outcome_value = -1
+            }
+        }
+    }
+
+    option = {
+        name = gate_dungeon_delve_8_c
+        random_list = {
+            1 = {
+                modifier = gate_dungeon_party_condition_check_easy_neutral
+                scope:expedition = {
+                    gate_dungeon_party_condition_change = {
+                        amount = -0.5
+                    }
+                    gate_dungeon_create_log_entry_value = {
+                        rating = negative
+                        event = gate_dungeon_delve_8_t
+                        outcome_text = gate_dungeon_log_condition
+                        outcome_value = -0.5
+                    }
+                }
+            }
+            1 = {
+                modifier = gate_dungeon_party_condition_check_easy_fail
+                scope:expedition = {
+                    gate_dungeon_party_condition_change = {
+                        amount = -1
+                    }
+                    gate_dungeon_party_cohesion_change = {
+                        amount = -0.5
+                    }
+                    gate_dungeon_create_log_entry_value = {
+                        rating = negative
+                        event = gate_dungeon_delve_8_t
+                        outcome_text = gate_dungeon_log_condition
+                        outcome_value = -1
+                    }
+                    gate_dungeon_create_log_entry_value = {
+                        rating = negative
+                        event = gate_dungeon_delve_8_t
+                        outcome_text = gate_dungeon_log_cohesion
+                        outcome_value = -0.5
+                    }
+                }
+            }
+        }
+        custom_tooltip_no_bullet = gate_dungeon_tooltip_condition_check
+    }
+}
+
+gate_dungeon_delve.9 = {
+    type = country_event
+    dlc = dlc_magic_gate
+    placement = scope:dungeon_state
+
+    title = gate_dungeon_delve_9_t
+    desc = gate_dungeon_delve_9_desc
+    flavor = gate_dungeon_delve_9_f
+
+    gui_window = event_window_gate_dungeon
+
+    category = gate_dungeon_event
+
+    event_image = {
+        video = "gate_unspecified_dungeon"
+    }
+
+    immediate = {
+        gate_setup_dungeon_event = yes
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_gate_dungeon.dds"
+
+    duration = 3
+
+    option = {
+        name = gate_dungeon_delve_9_a
+        default_option = yes
+        random_list = {
+            1 = {
+                modifier = gate_dungeon_party_condition_check_medium_success
+                scope:expedition = {
+                    gate_dungeon_advance_layer = yes
+                    gate_dungeon_create_log_entry = {
+                        rating = positive
+                        event = gate_dungeon_delve_9_t
+                        outcome_text = gate_dungeon_log_advance
+                    }
+                }
+            }
+            1 = {
+                modifier = gate_dungeon_party_condition_check_medium_fail
+                custom_tooltip = gate_dungeon_tooltip_other_route
+                scope:expedition = {
+                    gate_dungeon_party_condition_change = {
+                        amount = -1
+                    }
+                    gate_dungeon_create_log_entry_value = {
+                        rating = negative
+                        event = gate_dungeon_delve_9_t
+                        outcome_text = gate_dungeon_log_condition
+                        outcome_value = -1
+                    }
+                    gate_dungeon_create_log_entry = {
+                        rating = neutral
+                        event = gate_dungeon_delve_9_t
+                        outcome_text = gate_dungeon_log_stall
+                    }
+                }
+            }
+        }
+        custom_tooltip_no_bullet = gate_dungeon_tooltip_condition_check
+    }
+
+    option = {
+        name = gate_dungeon_delve_9_b
+        random_list = {
+            1 = {
+                modifier = gate_dungeon_party_cohesion_check_easy_success
+                scope:expedition = {
+                    gate_dungeon_advance_layer = yes
+                    gate_dungeon_create_log_entry = {
+                        rating = positive
+                        event = gate_dungeon_delve_9_t
+                        outcome_text = gate_dungeon_log_advance
+                    }
+                }
+            }
+            1 = {
+                modifier = gate_dungeon_party_cohesion_check_easy_neutral
+                custom_tooltip = gate_dungeon_tooltip_other_route
+                scope:expedition = {
+                    gate_dungeon_create_log_entry = {
+                        rating = neutral
+                        event = gate_dungeon_delve_9_t
+                        outcome_text = gate_dungeon_log_stall
+                    }
+                }
+            }
+        }
+        custom_tooltip_no_bullet = gate_dungeon_tooltip_cohesion_check
+    }
+
+    option = {
+        name = gate_dungeon_delve_9_c
+        highlighted_option = yes
+        show_as_unavailable = {
+            # Show as disabled instead of
+            # hiding the option
+            always = yes
+        }
+        trigger = {
+            gate_dungeon_has_renown = {
+                amount = 8
+            }
+        }
+        scope:expedition = {
+            gate_dungeon_advance_layer = yes
+            gate_dungeon_create_log_entry = {
+                rating = positive
+                event = gate_dungeon_delve_9_t
+                outcome_text = gate_dungeon_log_advance
+            }
+        }
+        custom_tooltip_no_bullet = gate_dungeon_tooltip_renown_check
+    }
+
+    option = {
+        name = gate_dungeon_delve_9_d
+        custom_tooltip = gate_dungeon_tooltip_other_route
+        scope:expedition = {
+            gate_dungeon_create_log_entry = {
+                rating = neutral
+                event = gate_dungeon_delve_9_t
+                outcome_text = gate_dungeon_log_stall
+            }
+        }
+    }
+}
+
+gate_dungeon_delve.10 = {
+    type = country_event
+    dlc = dlc_magic_gate
+    placement = scope:dungeon_state
+
+    title = gate_dungeon_delve_10_t
+    desc = gate_dungeon_delve_10_d
+    flavor = gate_dungeon_delve_10_f
+
+    gui_window = event_window_gate_dungeon
+
+    category = gate_dungeon_event
+
+    event_image = {
+        video = "gate_unspecified_dungeon"
+    }
+
+    immediate = {
+        gate_setup_dungeon_event = yes
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_gate_dungeon.dds"
+
+    duration = 3
+
+    option = {
+        name = gate_dungeon_delve_10_a
+        default_option = yes
+        scope:expedition = {
+            gate_dungeon_advance_layer = yes
+            gate_dungeon_create_log_entry = {
+                rating = positive
+                event = gate_dungeon_delve_10_t
+                outcome_text = gate_dungeon_log_advance
+            }
+        }
+    }
+
+    option = {
+        name = gate_dungeon_delve_10_b
+        scope:expedition = {
+            gate_dungeon_party_condition_change = {
+                amount = 0.5
+            }
+            gate_dungeon_create_log_entry_value = {
+                rating = positive
+                event = gate_dungeon_delve_10_t
+                outcome_text = gate_dungeon_log_condition
+                outcome_value = 0.5
+            }
+        }
+    }
+
+    option = {
+        name = gate_dungeon_delve_10_c
+        highlighted_option = yes
+        show_as_unavailable = {
+            # Show as disabled instead of
+            # hiding the option
+            always = yes
+        }
+        trigger = {
+            gate_dungeon_has_renown = {
+                amount = 7
+            }
+        }
+        scope:expedition = {
+            gate_dungeon_advance_layer = yes
+            gate_dungeon_party_renown_change = {
+                amount = 0.5
+            }
+            gate_dungeon_create_log_entry_value = {
+                rating = positive
+                event = gate_dungeon_delve_10_t
+                outcome_text = gate_dungeon_log_renown
+                outcome_value = 0.5
+            }
+            gate_dungeon_create_log_entry = {
+                rating = positive
+                event = gate_dungeon_delve_10_t
+                outcome_text = gate_dungeon_log_advance
+            }
+        }
+        custom_tooltip_no_bullet = gate_dungeon_tooltip_renown_check
+    }
+}
+
+gate_dungeon_delve.11 = {
+    type = country_event
+    dlc = dlc_magic_gate
+    placement = scope:dungeon_state
+
+    title = gate_dungeon_delve_11_t
+    desc = gate_dungeon_delve_11_d
+    flavor = gate_dungeon_delve_11_f
+
+    gui_window = event_window_gate_dungeon
+
+    category = gate_dungeon_event
+
+    event_image = {
+        video = "gate_unspecified_dungeon"
+    }
+
+    immediate = {
+        gate_setup_dungeon_event = yes
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_gate_dungeon.dds"
+
+    duration = 3
+
+    option = {
+        name = gate_dungeon_delve_11_a
+        random_list = {
+            1 = {
+                modifier = gate_dungeon_party_cohesion_check_hard_success
+                scope:expedition = {
+                    gate_dungeon_party_renown_change = {
+                        amount = 0.5
+                    }
+                    gate_dungeon_party_cohesion_change = {
+                        amount = 0.5
+                    }
+                    gate_dungeon_create_log_entry_value = {
+                        rating = positive
+                        event = gate_dungeon_delve_11_t
+                        outcome_text = gate_dungeon_log_renown
+                        outcome_value = 1
+                    }
+                    gate_dungeon_create_log_entry_value = {
+                        rating = positive
+                        event = gate_dungeon_delve_11_t
+                        outcome_text = gate_dungeon_log_cohesion
+                        outcome_value = 0.5
+                    }
+                }
+            }
+            1 = {
+                modifier = gate_dungeon_party_cohesion_check_hard_neutral
+                custom_tooltip = gate_dungeon_tooltip_other_route
+                scope:expedition = {
+                    gate_dungeon_create_log_entry = {
+                        rating = neutral
+                        event = gate_dungeon_delve_11_t
+                        outcome_text = gate_dungeon_log_stall
+                    }
+                }
+            }
+            1 = {
+                modifier = gate_dungeon_party_cohesion_check_hard_fail
+                scope:expedition = {
+                    gate_dungeon_party_cohesion_change = {
+                        amount = -0.5
+                    }
+                    gate_dungeon_party_condition_change = {
+                        amount = -0.5
+                    }
+                    gate_dungeon_create_log_entry_value = {
+                        rating = negative
+                        event = gate_dungeon_delve_11_t
+                        outcome_text = gate_dungeon_log_cohesion
+                        outcome_value = -0.5
+                    }
+                    gate_dungeon_create_log_entry_value = {
+                        rating = negative
+                        event = gate_dungeon_delve_11_t
+                        outcome_text = gate_dungeon_log_condition
+                        outcome_value = -0.5
+                    }
+                }
+            }
+        }
+        custom_tooltip_no_bullet = gate_dungeon_tooltip_cohesion_check
+    }
+
+    option = {
+        name = gate_dungeon_delve_11_b
+        default_option = yes
+        random_list = {
+            1 = {
+                modifier = gate_dungeon_party_condition_check_easy_success
+                scope:expedition = {
+                    gate_dungeon_party_condition_change = {
+                        amount = 0.5
+                    }
+                    gate_dungeon_create_log_entry_value = {
+                        rating = positive
+                        event = gate_dungeon_delve_11_t
+                        outcome_text = gate_dungeon_log_condition
+                        outcome_value = 0.5
+                    }
+                }
+            }
+            1 = {
+                modifier = gate_dungeon_party_condition_check_easy_fail
+                scope:expedition = {
+                    gate_dungeon_party_condition_change = {
+                        amount = -0.5
+                    }
+                    gate_dungeon_create_log_entry_value = {
+                        rating = negative
+                        event = gate_dungeon_delve_11_t
+                        outcome_text = gate_dungeon_log_condition
+                        outcome_value = -0.5
+                    }
+                }
+            }
+        }
+        custom_tooltip_no_bullet = gate_dungeon_tooltip_condition_check
+    }
+
+    option = {
+        name = gate_dungeon_delve_11_c
+        highlighted_option = yes
+        show_as_unavailable = {
+            # Show as disabled instead of
+            # hiding the option
+            always = yes
+        }
+        trigger = {
+            gate_dungeon_has_renown = {
+                amount = 7
+            }
+        }
+        scope:expedition = {
+            gate_dungeon_party_cohesion_change = {
+                amount = 0.5
+            }
+            gate_dungeon_create_log_entry_value = {
+                rating = positive
+                event = gate_dungeon_delve_11_t
+                outcome_text = gate_dungeon_log_cohesion
+                outcome_value = 0.5
+            }
+        }
+        custom_tooltip_no_bullet = gate_dungeon_tooltip_renown_check
+    }
+}

@@ -3,7 +3,11 @@
 	desc = pb_gate_ankaris_orcish_elven_war_pro
 	second_desc = pb_gate_ankaris_orcish_elven_war_anti
 
-	double_sided_bad = yes
+	progress_texture = "gfx/interface/progressbar/progressbar_green.dds"
+	background_texture = "gfx/interface/progressbar/progressbar_bad.dds"
+	glow_texture = "gfx/interface/progressbar/progressbar_green_glow.dds"
+	glow_line_texture = "gfx/interface/progressbar/progressbar_green_glow_line.dds"
+	marker = yes
 
 	yearly_progress = {
 		if = {

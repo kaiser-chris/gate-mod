@@ -39,10 +39,10 @@
  interest_group_ig_gate_magic_users_approval_add_desc: "$ig_variant_magic_users$의 총[concept_approval]에 적용되는 보너스 또는 페널티 [concept_interest_group]" #deepl:1240015381
  state_gate_arable_land_add: "경작지"
  state_gate_arable_land_add_desc: "[concept_state_region] 내 [concept_arable_land]의 증가 또는 감소."
- state_harvest_condition_gate_monster_attack_impact_mult: "[Concept('concept_gate_monster_attack','$concept_gate_monster_attacks$')]의 영향"
- state_harvest_condition_gate_monster_attack_impact_mult_desc: "[Concept('concept_gate_monster_attack','$concept_gate_monster_attacks$')]의 영향 증가 또는 감소."
- state_harvest_condition_gate_monster_horde_impact_mult: "[Concept('concept_gate_monster_horde','$concept_gate_monster_hordes$')]의 영향"
- state_harvest_condition_gate_monster_horde_impact_mult_desc: "[Concept('concept_gate_monster_horde','$concept_gate_monster_hordes$')]의 영향력 증가 또는 감소."
+ state_harvest_condition_gate_monster_attack_impact_mult: "[Concept('concept_gate_monster_attack','$concept_gate_monster_attacks|q$')]의 영향"
+ state_harvest_condition_gate_monster_attack_impact_mult_desc: "[Concept('concept_gate_monster_attack','$concept_gate_monster_attacks|q$')]의 영향 증가 또는 감소."
+ state_harvest_condition_gate_monster_horde_impact_mult: "[Concept('concept_gate_monster_horde','$concept_gate_monster_hordes|q$')]의 영향"
+ state_harvest_condition_gate_monster_horde_impact_mult_desc: "[Concept('concept_gate_monster_horde','$concept_gate_monster_hordes|q$')]의 영향력 증가 또는 감소."
  character_gate_immortal: "불멸"
  character_gate_immortal_desc: "이 [concept_character]는 불멸자입니다."
  country_gate_military_formation_forbid_no_magic_user_regulations: "[GetMobilizationOption('mobilization_option_gate_no_regulations').GetNameNoFormatting]에 따른 [concept_mobilization_option]을 금지"
@@ -51,12 +51,12 @@
  country_gate_military_formation_forbid_basic_magic_user_regulations_desc: "국가가 [GetMobilizationOption('mobilization_option_gate_basic_regulations').GetName] [concept_mobilization_option]을 사용하는 것을 금지한다."
  country_gate_military_formation_forbid_strict_magic_user_regulations: "[GetMobilizationOption('mobilization_option_gate_strict_regulations').GetNameNoFormatting]에 따른 [concept_mobilization_option]을 금지"
  country_gate_military_formation_forbid_strict_magic_user_regulations_desc: "국가가 [GetMobilizationOption('mobilization_option_gate_strict_regulations').GetName] [concept_mobilization_option]을 사용하는 것을 금지한다."
- character_gate_expedition_interaction_success_chance_industrial_add: "산업적 [Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')]의 성공 확률"
- character_gate_expedition_interaction_success_chance_industrial_add_desc: "산업적 [Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')]의 성공 확률에 대한 순 증가율"
- character_gate_expedition_interaction_success_chance_military_add: "군사적 [Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')]의 성공 확률"
- character_gate_expedition_interaction_success_chance_military_add_desc: "군사적 [Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')]의 성공 확률에 대한 순 증가율"
- character_gate_expedition_interaction_success_chance_political_add: "정치적 [Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')]의 성공 확률"
- character_gate_expedition_interaction_success_chance_political_add_desc: "정치적 [Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')]의 성공 확률에 대한 순 증가율"
+ character_gate_expedition_interaction_success_chance_industrial_add: "산업적 [Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity|q$')]의 성공 확률"
+ character_gate_expedition_interaction_success_chance_industrial_add_desc: "산업적 [Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity|q$')]의 성공 확률에 대한 순 증가율"
+ character_gate_expedition_interaction_success_chance_military_add: "군사적 [Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity|q$')]의 성공 확률"
+ character_gate_expedition_interaction_success_chance_military_add_desc: "군사적 [Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity|q$')]의 성공 확률에 대한 순 증가율"
+ character_gate_expedition_interaction_success_chance_political_add: "정치적 [Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity|q$')]의 성공 확률"
+ character_gate_expedition_interaction_success_chance_political_add_desc: "정치적 [Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity|q$')]의 성공 확률에 대한 순 증가율"
  character_gate_experience_gain_mult: "[concept_gate_character_experience]" #deepl:3056872711
  character_gate_experience_gain_mult_desc: "[concept_character]가 [concept_gate_character_experience]를 얼마나 빨리 획득하는지." #deepl:3284296799
  country_gate_harmony_pledge_society_drift_center: "[concept_gate_harmony_pledge_society]의 ‘Harmony Drift’" #deepl:22187047

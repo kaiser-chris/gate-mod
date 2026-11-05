@@ -20,6 +20,7 @@ gate_orphan_fix.1 = {
 
 	immediate = {
 		fix_variable_error = { variable = ottoman_grand_collapse }
+		fix_variable_error = { variable = yes }
 
 		# Topbar
 		fix_variable_error = { variable = gg_topbar_magic_innovation }
@@ -61,6 +62,24 @@ gate_orphan_fix.1 = {
 		fix_variable_error = { variable = je_gate_veiled_interior_phase_veiled }
 		fix_variable_error = { variable = je_gate_veiled_interior_phase_early_contact }
 		fix_variable_error = { variable = je_gate_veiled_interior_phase_diplomacy }
+
+		# Gate Dungeons
+		fix_variable_error = { variable = gate_dungeons }
+		fix_variable_error = { variable = gate_dungeon }
+		fix_variable_error = { variable = dungeon }
+		fix_variable_error = { variable = current_layer }
+		fix_variable_error = { variable = layers }
+		fix_variable_error = { variable = expedition }
+		fix_variable_error = { variable = creation_date }
+		fix_variable_error = { variable = background }
+		fix_variable_error = { variable = log_entries }
+		fix_variable_error = { variable = rating }
+		fix_variable_error = { variable = event }
+		fix_variable_error = { variable = outcome_text }
+		fix_variable_error = { variable = outcome_value }
+		fix_variable_error = { variable = temp_cohesion_change }
+		fix_variable_error = { variable = temp_condition_change }
+		fix_variable_error = { variable = temp_renown_change }
 
 		# Gate Expedition
 		fix_variable_error = { variable = is_expedition_leader }

@@ -1,0 +1,193 @@
+﻿namespace = gate_dungeon_setup
+
+gate_dungeon_setup.1 = {
+    type = country_event
+    dlc = dlc_magic_gate
+    placement = scope:dungeon_state
+
+    title = gate_dungeon_setup.1.t
+
+    category = gate_dungeon_preparation
+
+    gui_window = event_window_gate_dungeon_setup
+
+    event_image = {
+        video = "unspecific_military_parade"
+    }
+
+    immediate = {
+        # Create dungeon expedition container
+        # and save it as scope expedition (scope:expedition)
+        gate_create_dungeon_expedition = {
+            dungeon = scope:dungeon
+        }
+        gate_setup_dungeon_event = yes
+
+        # Create three potential dungeon party leaders
+        create_character = {
+            template = gate_dungeon_party_leader_template
+            save_scope_as = gate_potential_leader
+        }
+        add_to_variable_list = {
+            name = gate_potential_dungeon_party_leaders
+            target = scope:gate_potential_leader
+        }
+        clear_saved_scope = yes
+        create_character = {
+            template = gate_dungeon_party_leader_template
+            save_scope_as = gate_potential_leader
+        }
+        add_to_variable_list = {
+            name = gate_potential_dungeon_party_leaders
+            target = scope:gate_potential_leader
+        }
+        clear_saved_scope = yes
+        create_character = {
+            template = gate_dungeon_party_leader_template
+            save_scope_as = gate_potential_leader
+        }
+        add_to_variable_list = {
+            name = gate_potential_dungeon_party_leaders
+            target = scope:gate_potential_leader
+        }
+        clear_saved_scope = yes
+    }
+
+    is_popup = yes
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_gate_dungeon.dds"
+
+    option = {
+        name = gate_dungeon_setup.1.b
+        default_option = yes
+        custom_tooltip = {
+            text = event_gate_dungeon_cancel_exploration_tooltip
+            gate_cleanup_dungeon_expedition = yes
+        }
+        # Happens in the "after" block
+        custom_tooltip = event_gate_dungeon_dismiss_leaders_tooltip
+        custom_tooltip_no_bullet = {
+            text = event_gate_dungeon_cooldown_tooltip
+            set_variable = {
+                name = gate_dungeon_delve_cooldown
+                days = 180
+            }
+        }
+    }
+
+    option = {
+        name = gate_dungeon_setup.1.a
+        show_as_unavailable = {
+            always = yes
+        }
+        trigger = {
+            custom_tooltip = {
+                text = event_gate_dungeon_has_leader_tooltip
+                scope:expedition = {
+                    var:party = {
+                        has_variable = party_leader
+                    }
+                }
+            }
+            custom_tooltip = {
+                text = event_gate_dungeon_valid_points_tooltip
+                scope:expedition = {
+                    gate_dungeon_party_points = 0
+                }
+            }
+        }
+        highlighted_option = yes
+        gate_start_dungeon = {
+            expedition = scope:expedition
+        }
+        hidden_effect = {
+            # Remove selected leader from the list so
+            # the character isn't killed in the clean up
+            remove_list_variable = {
+                name = gate_potential_dungeon_party_leaders
+                target = scope:expedition.var:party.var:party_leader
+            }
+        }
+    }
+
+    after = {
+        hidden_effect = {
+            # Clean up unchosen party leaders
+            every_in_list = {
+                variable = gate_potential_dungeon_party_leaders
+                set_character_busy_and_immortal = no
+                kill_character = {
+                    value = yes
+                    hidden = yes
+                }
+            }
+            clear_variable_list = gate_potential_dungeon_party_leaders
+
+            # Set party attributes to the max level
+            # this is done so modifier values are
+            # also considered here
+            scope:expedition.var:party = {
+                set_variable = {
+                    name = condition
+                    value = scope:expedition.gate_dungeon_party_condition_max_value
+                }
+                set_variable = {
+                    name = cohesion
+                    value = scope:expedition.gate_dungeon_party_cohesion_max_value
+                }
+                set_variable = {
+                    name = renown
+                    value = scope:expedition.gate_dungeon_party_renown_max_value
+                }
+            }
+
+        }
+    }
+}
+
+gate_dungeon_setup.2 = {
+    type = country_event
+    placement = scope:dungeon_state
+
+    title = gate_dungeon_setup.2.t
+    desc = gate_dungeon_setup.2.d
+    flavor = gate_dungeon_setup.2.f
+
+    icon = "gfx/interface/icons/event_icons/event_gate_dungeon.dds"
+
+    event_image = {
+        video = "southamerica_aristocrats"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    is_popup = yes
+
+    trigger = {
+        exists = scope:gate_dungeon
+    }
+
+    immediate = {
+        scope:gate_dungeon = {
+            var:location = {
+                random_scope_state = {
+                    limit = {
+                        owner = root
+                    }
+                    save_scope_as = dungeon_state
+                }
+            }
+        }
+        set_local_variable = {
+            name = gate_dungeon
+            value = scope:gate_dungeon
+        }
+    }
+
+    option = {
+        name = gate_dungeon_setup.2.a
+        default_option = yes
+    }
+}

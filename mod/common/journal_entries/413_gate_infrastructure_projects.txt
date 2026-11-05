@@ -1,20 +1,14 @@
-﻿je_gate_project_artificial_ecosystem = {
+﻿#TODO: unfinished, needs refinement on cost and length
+# how to balance hard and rewarding
+# massive project should have a massive boost
+je_gate_project_artificial_ecosystem = {
 	icon = "gfx/interface/icons/event_icons/event_gate_project_ecosystem.dds"
 
 	group = je_group_gate_grand_projects
+	dlc = dlc_magic_gate
 
-	widget = {
-		gui = "gui/com_journal_injects/injects.gui"
-		name = "com_journal_entry_dlc_icon"
-		container = "custom_widget_container_7"
-	}
-
-	immediate = {
-        add_gate_dlc_icon = yes
-	}
-
-	complete = {
-        gate_project_check_complete = yes
+	activation_description = {
+		always = yes
 	}
 
 	on_weekly_pulse = {
@@ -23,21 +17,29 @@
 		}
 	}
 
-	invalid = {
-		hidden_trigger = {
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			gate_project_check_complete = yes
+		}
+		effect = {
+			hidden_effect = {
+				set_variable = gate_has_finished_project
+				gate_stop_magic_project = yes
+			}
+		}
+	}
+
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
 			has_gate_active_magic_project = no
 		}
-	}
-
-	on_invalid = {
-		hidden_effect = {
-			gate_stop_magic_project = yes
-		}
-	}
-
-	on_complete = {
-		hidden_effect = {
-			set_variable = gate_has_finished_project
+		effect = {
 			gate_stop_magic_project = yes
 		}
 	}

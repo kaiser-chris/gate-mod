@@ -1,0 +1,66 @@
+@legend_width = 500
+@legend_element_width = 160
+@legend_element_height = 35
+
+types "gate_injects" {
+
+	type gate_map_legend = flowcontainer {
+		parentanchor = hcenter
+		direction = vertical
+		spacing = 10
+		oncreate = "[BindFoldOutContext]"
+
+		section_header_button = {
+			parentanchor = hcenter
+			onclick = "[PdxGuiFoldOut.Toggle]"
+
+			blockoverride "layout" {
+				size = { @[legend_width + 30] 38 }
+			}
+			blockoverride "onclick_showmore" {
+				visible = "[Not(PdxGuiFoldOut.IsUnfolded)]"
+			}
+			blockoverride "onclick_showless" {
+				visible = "[PdxGuiFoldOut.IsUnfolded]"
+			}
+			blockoverride "left_text" {
+				text = gg_map_legend_header
+			}
+		}
+
+		flowcontainer = {
+			visible = "[PdxGuiFoldOut.IsUnfolded]"
+			minimumsize = { @legend_width -1 }
+			maximumsize = { @legend_width -1 }
+			parentanchor = hcenter
+			spacing = 10
+			wrap_count = 3
+
+			block "legend_items" {}
+		}
+	}
+
+	type gate_map_legend_item = widget {
+		size = { @legend_element_width @legend_element_height }
+		background = {
+			texture = "gfx/frontend/interface/colors/white.dds"
+			block "legend_item_icon_tint" {
+				tintcolor = { 1 0 1 1 }
+			}
+			alpha = 0.1
+			using = frame_small_mask
+		}
+		using = entry_bg_fancy
+
+		textbox = {
+			size = { @legend_element_width @legend_element_height }
+			align = center
+			margin = { 10 0 }
+
+			block "legend_item_text" {
+				raw_text = "#debug legend_item_text#!"
+			}
+		}
+	}
+
+}

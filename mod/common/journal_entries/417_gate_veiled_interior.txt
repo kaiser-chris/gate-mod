@@ -1,7 +1,12 @@
 ﻿je_gate_veiled_interior = {
     group = je_group_internal_affairs
+    dlc = dlc_magic_gate
     icon = "gfx/interface/icons/event_icons/event_gate_veiled_interior.dds"
     weight = 100
+
+    activation_description = {
+        always = yes
+    }
 
     widget = {
         gui = "gui/com_journal_injects/injects.gui"
@@ -13,12 +18,6 @@
         gui = "gui/journal_injects/gate_veiled_interior_injects.gui"
         name = "gate_inject_veiled_interior_phase"
         container = "custom_widget_container_4"
-    }
-
-    widget = {
-        gui = "gui/com_journal_injects/injects.gui"
-        name = "com_journal_entry_dlc_icon"
-        container = "custom_widget_container_7"
     }
 
     is_shown_in_lobby = {
@@ -104,7 +103,6 @@
     }
 
     immediate = {
-        add_gate_dlc_icon = yes
         scope:journal_entry = {
             set_variable = {
                 name = gate_veiled_interior_phase
@@ -200,12 +198,26 @@
         }
     }
 
-    invalid = {
-        NOT = {
-            any_scope_state = {
-                OR = {
-                    state_region = s:STATE_EASTERN_NEW_GUINEA
-                    state_region = s:STATE_WESTERN_NEW_GUINEA
+    outcome = {
+        flags = { hidden }
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            scope:journal_entry = {
+                has_variable = gate_veiled_interior_done
+            }
+        }
+    }
+
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            NOT = {
+                any_scope_state = {
+                    OR = {
+                        state_region = s:STATE_EASTERN_NEW_GUINEA
+                        state_region = s:STATE_WESTERN_NEW_GUINEA
+                    }
                 }
             }
         }

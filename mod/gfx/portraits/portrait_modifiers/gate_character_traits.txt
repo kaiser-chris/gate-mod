@@ -1,0 +1,47 @@
+﻿gate_character_trait_eyes = {
+    usage = game
+
+    arcane_eyes = {
+        dna_modifiers = {
+            accessory = {
+                # Arcane Eyes
+                mode = replace
+                gene = eye_accessory
+                template = gate_arcane_eyes
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                scope:character ?= {
+                    has_trait = gate_arcanist_magic_sight
+                }
+            }
+        }
+    }
+
+    golden_eyes = {
+        dna_modifiers = {
+            accessory = {
+                # Golden Eyes
+                mode = replace
+                gene = eye_accessory
+                template = gate_golden_eyes
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                scope:character ?= {
+                    # No character trait yet
+                    always = no
+                }
+            }
+        }
+    }
+
+}

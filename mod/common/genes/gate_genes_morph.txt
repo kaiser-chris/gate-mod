@@ -149,7 +149,7 @@ age_presets = {
 morph_genes = {
     INJECT:gene_bs_body_type = {
         body_fat_head_fat_low_elf = {
-            index = 6
+            index = 106
             male = {
                 # Fat body from 0.5 to 1.0 gene value
                 setting = {
@@ -285,7 +285,7 @@ morph_genes = {
             girl = female
         }
         body_fat_head_fat_medium_elf = {
-            index = 7
+            index = 107
             male = {
                 # Fat body from 0.5 to 1.0 gene value
                 setting = {
@@ -420,7 +420,7 @@ morph_genes = {
             girl = female
         }
         body_fat_head_fat_full_elf = {
-            index = 8
+            index = 108
             male = {
                 # Fat body from 0.5 to 1.0 gene value
                 setting = {
@@ -556,7 +556,7 @@ morph_genes = {
         }
         # Full 0.0 to 1.0 range
         body_fat_head_fat_full_range = {
-            index = 9
+            index = 109
             male = {
                 # Fat body from 0.5 to 1.0 gene value
                 setting = { # Head fat
@@ -628,11 +628,8 @@ morph_genes = {
     }
 
     INJECT:gene_age = {
-        no_aging = {
-            index = 5
-        }
         elf_aging = {
-            index = 6
+            index = 106
             generic = no # Can't be selected unless the character has a trait with forced_portrait_age_index matching this
             male = {
                 ## Children ##
@@ -707,7 +704,7 @@ morph_genes = {
             girl = female
         }
         always_old = {
-            index = 7
+            index = 107
             generic = no
             male = {
 
@@ -845,7 +842,7 @@ morph_genes = {
 
         }
         always_old_hag = {
-            index = 8
+            index = 108
             generic = no
             female = {
 
@@ -920,7 +917,7 @@ morph_genes = {
         }
         short_aging = {
             generic = no
-            index = 9
+            index = 109
             male = {
 
                 setting = {
@@ -1058,7 +1055,7 @@ morph_genes = {
         }
         short_aging_fat = {
             generic = no
-            index = 10
+            index = 110
             male = {
 
                 setting = {
@@ -1196,7 +1193,7 @@ morph_genes = {
         }
         very_short_aging = {
             generic = no
-            index = 11
+            index = 111
             male = {
 
                 setting = {
@@ -1333,7 +1330,7 @@ morph_genes = {
 
         }
         fat_aging = {
-            index = 12
+            index = 112
             male = {
 
                 setting = {
@@ -1473,37 +1470,37 @@ morph_genes = {
 
     INJECT:gene_old_ears = {
         old_ears_elf = {
-            index = 1
+            index = 101
         }
     }
 
     INJECT:gene_old_eyes = {
         old_eyes_elf = {
-            index = 3
+            index = 103
         }
     }
 
     INJECT:gene_old_forehead = {
         old_forehead_elf = {
-            index = 3
+            index = 103
         }
     }
 
     INJECT:gene_old_mouth = {
         old_mouth_elf = {
-            index = 3
+            index = 103
         }
     }
 
     INJECT:gene_old_nose = {
         old_nose_elf = {
-            index = 3
+            index = 103
         }
     }
 
     INJECT:gene_complexion = {
         complexion_05 = {
-            index = 4
+            index = 104
             male = {
                 texture_override = {
                     weight = 100  #if there are multiple texture_overrides in a character's dna one will be picked by weighted random
@@ -1568,7 +1565,7 @@ morph_genes = {
             girl = female
         }
         complexion_01_forced_female = {
-            index = 5
+            index = 105
             female = {
                 texture_override = {
                     weight = 100  #if there are multiple texture_overrides in a character's dna one will be picked by weighted random
@@ -1604,7 +1601,7 @@ morph_genes = {
             girl = female
         }
         complexion_02_forced_female = {
-            index = 6
+            index = 106
             female = {
                 texture_override = {
                     weight = 100  #if there are multiple texture_overrides in a character's dna one will be picked by weighted random
@@ -1640,7 +1637,7 @@ morph_genes = {
             girl = female
         }
         complexion_03_forced_female = {
-            index = 7
+            index = 107
             female = {
                 texture_override = {
                     weight = 100  #if there are multiple texture_overrides in a character's dna one will be picked by weighted random
@@ -1676,7 +1673,7 @@ morph_genes = {
             girl = female
         }
         complexion_04_forced_female = {
-            index = 8
+            index = 108
             female = {
                 texture_override = {
                     weight = 100  #if there are multiple texture_overrides in a character's dna one will be picked by weighted random
@@ -1715,7 +1712,7 @@ morph_genes = {
 
     INJECT:gene_eyebrows_shape = {
         avg_spacing_avg_thickness_elf = {
-            index = 16
+            index = 116
             male = {
                 decal = {
 
@@ -1746,7 +1743,7 @@ morph_genes = {
             girl = female
         }
         avg_spacing_high_thickness_elf = {
-            index = 17
+            index = 117
             male = {
                 decal = {
 
@@ -1777,7 +1774,7 @@ morph_genes = {
             girl = female
         }
         avg_spacing_low_thickness_elf = {
-            index = 18
+            index = 118
             male = {
                 decal = {
 
@@ -1808,7 +1805,7 @@ morph_genes = {
             girl = female
         }
         avg_spacing_lower_thickness_elf = {
-            index = 19
+            index = 119
             male = {
                 decal = {
 
@@ -1839,7 +1836,7 @@ morph_genes = {
             girl = female
         }
         avg_spacing_lowest_thickness_elf = {
-            index = 20
+            index = 120
             male = {
                 decal = {
 
@@ -1870,7 +1867,7 @@ morph_genes = {
             girl = female
         }
         far_spacing_avg_thickness_elf = {
-            index = 21
+            index = 121
             male = {
                 decal = {
 
@@ -1901,7 +1898,7 @@ morph_genes = {
             girl = female
         }
         far_spacing_high_thickness_elf = {
-            index = 22
+            index = 122
             male = {
                 decal = {
 
@@ -1932,7 +1929,7 @@ morph_genes = {
             girl = female
         }
         far_spacing_low_thickness_elf = {
-            index = 23
+            index = 123
             male = {
                 decal = {
 
@@ -1963,7 +1960,7 @@ morph_genes = {
             girl = female
         }
         far_spacing_lower_thickness_elf = {
-            index = 24
+            index = 124
             male = {
                 decal = {
 
@@ -1994,7 +1991,7 @@ morph_genes = {
             girl = female
         }
         far_spacing_lowest_thickness_elf = {
-            index = 25
+            index = 125
             male = {
                 decal = {
 
@@ -2025,7 +2022,7 @@ morph_genes = {
             girl = female
         }
         close_spacing_avg_thickness_elf = {
-            index = 26
+            index = 126
             male = {
                 decal = {
 
@@ -2056,7 +2053,7 @@ morph_genes = {
             girl = female
         }
         close_spacing_high_thickness_elf = {
-            index = 27
+            index = 127
             male = {
                 decal = {
 
@@ -2087,7 +2084,7 @@ morph_genes = {
             girl = female
         }
         close_spacing_low_thickness_elf = {
-            index = 28
+            index = 128
             male = {
                 decal = {
 
@@ -2118,7 +2115,7 @@ morph_genes = {
             girl = female
         }
         close_spacing_lower_thickness_elf = {
-            index = 29
+            index = 129
             male = {
                 decal = {
 
@@ -2149,7 +2146,7 @@ morph_genes = {
             girl = female
         }
         close_spacing_lowest_thickness_elf = {
-            index = 30
+            index = 130
             male = {
                 decal = {
 
@@ -2183,7 +2180,7 @@ morph_genes = {
 
     INJECT:gene_eyebrows_fullness = {
         layer_2_avg_thickness_elf = {
-            index = 6
+            index = 106
             male = {
                 decal = {
 
@@ -2212,7 +2209,7 @@ morph_genes = {
             girl = female
         }
         layer_2_high_thickness_elf = {
-            index = 7
+            index = 107
             male = {
                 decal = {
 
@@ -2241,7 +2238,7 @@ morph_genes = {
             girl = female
         }
         layer_2_low_thickness_elf = {
-            index = 8
+            index = 108
             male = {
                 decal = {
 
@@ -2270,7 +2267,7 @@ morph_genes = {
             girl = female
         }
         layer_2_lower_thickness_elf = {
-            index = 9
+            index = 109
             male = {
                 decal = {
 
@@ -2299,7 +2296,7 @@ morph_genes = {
             girl = female
         }
         layer_2_lowest_thickness_elf = {
-            index = 10
+            index = 110
             male = {
                 decal = {
 
@@ -2331,7 +2328,7 @@ morph_genes = {
 
     INJECT:gene_height = {
         short_height = {
-            index = 1
+            index = 101
             male = {
                 setting = {
                     attribute = "body_height"
@@ -2367,7 +2364,7 @@ morph_genes = {
             girl = male
         }
         giant_height = {
-            index = 2
+            index = 102
             male = {
                 setting = {
                     attribute = "body_height"

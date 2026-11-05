@@ -18,6 +18,10 @@ STATES = {
 			type = building_gold_mine
 			amount = 8
 		}
+		change_resource_potential = {
+			type = building_copper_mine
+			amount = 11
+		}
 		add_state_trait = state_trait_gate_dwarven_tunnels
 	}
 	s:STATE_SOUTH_TYROL = {
@@ -42,6 +46,10 @@ STATES = {
 		change_resource_potential = {
 			type = building_sulfur_mine
 			amount = 15
+		}
+		change_resource_potential = {
+			type = building_copper_mine
+			amount = 24
 		}
 		add_state_trait = state_trait_gate_dwarven_tunnels
 

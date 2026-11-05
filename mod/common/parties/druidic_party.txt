@@ -29,8 +29,8 @@
 			country_has_voting_franchise = yes
 			is_gate_magic_country = yes
 			OR = {
-				py:agrarian_party ?= {
-					any_member = {}
+				py:party_gate_druidic ?= {
+					party_has_members = yes
 				}
 				ig:ig_rural_folk ?= {
 					ig_counts_as_marginal = no
@@ -40,7 +40,10 @@
 				}
 			}
 			# only available when there are more druids than mages
-			gate_druids_population > gate_mages_population
+			gate_druids_population > {
+				value = gate_mages_population
+				multiply = 0.5
+			}
 		}
 	}
 

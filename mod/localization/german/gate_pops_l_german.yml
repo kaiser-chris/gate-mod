@@ -11,18 +11,18 @@
  building_employment_gate_mages_add_desc: "Ändert die Anzahl der „$gate_mages$“, die ein Gebäude pro Stufe einstellen kann" #deepl:1098497064
  building_employment_gate_mages_mult: "$building_employment_gate_mages_add$" #deepl:4036542122
  building_employment_gate_mages_mult_desc: "$building_employment_gate_mages_add_desc$" #deepl:3185331521
- building_gate_mages_shares_add: "$gate_mages$ [Concept('concept_ownership_share', '$concept_ownership_shares$')]" #deepl:1723678507
- building_gate_mages_shares_add_desc: "Eine Erhöhung oder Senkung der $gate_mages$ [Concept('concept_ownership_share', '$concept_ownership_shares$')]" #deepl:3100357980
- building_gate_mages_shares_mult: "$gate_mages$ [Concept('concept_ownership_share', '$concept_ownership_shares$')]" #deepl:1723678507
- building_gate_mages_shares_mult_desc: "Eine Erhöhung oder Senkung von $gate_mages$ [Concept('concept_ownership_share', '$concept_ownership_shares$')]" #deepl:3100357980
+ building_gate_mages_shares_add: "$gate_mages$ [Concept('concept_ownership_share', '$concept_ownership_shares|q$')]" #deepl:1723678507
+ building_gate_mages_shares_add_desc: "Eine Erhöhung oder Senkung der $gate_mages$ [Concept('concept_ownership_share', '$concept_ownership_shares|q$')]" #deepl:3100357980
+ building_gate_mages_shares_mult: "$gate_mages$ [Concept('concept_ownership_share', '$concept_ownership_shares|q$')]" #deepl:1723678507
+ building_gate_mages_shares_mult_desc: "Eine Erhöhung oder Senkung von $gate_mages$ [Concept('concept_ownership_share', '$concept_ownership_shares|q$')]" #deepl:3100357980
  building_gate_mages_mortality_mult: "$state_gate_mages_mortality_mult$" #deepl:1799082150
  building_gate_mages_mortality_mult_desc: "$state_gate_mages_mortality_mult_desc$" #deepl:199745660
- building_gate_mages_fertility_mult: "[Concept('concept_pop_growth', '$concept_pop_growth_birthrate$')] von $gate_mages$" #deepl:3549179024
- building_gate_mages_fertility_mult_desc: "Eine Erhöhung oder Verringerung des Wertes von [Concept('concept_pop_growth', '$concept_pop_growth_birthrate$')] auf $gate_mages$" #deepl:392709574
+ building_gate_mages_fertility_mult: "[Concept('concept_pop_growth', '$concept_pop_growth_birthrate|q$')] von $gate_mages$" #deepl:3549179024
+ building_gate_mages_fertility_mult_desc: "Eine Erhöhung oder Verringerung des Wertes von [Concept('concept_pop_growth', '$concept_pop_growth_birthrate|q$')] auf $gate_mages$" #deepl:392709574
  state_gate_mages_dependent_wage_mult: "$gate_mages$ Einkommen von Angehörigen" #deepl:3795312237
  state_gate_mages_dependent_wage_mult_desc: "Eine Erhöhung oder Verringerung des Einkommens von Angehörigen ($gate_mages$)" #deepl:3886930644
- state_gate_mages_mortality_mult: "[Concept('concept_pop_growth', '$concept_pop_growth_mortality$')] von $gate_mages$" #deepl:216164754
- state_gate_mages_mortality_mult_desc: "Eine Erhöhung oder Senkung der [Concept('concept_pop_growth', '$concept_pop_growth_mortality$')] von $gate_mages$" #deepl:3355836612
+ state_gate_mages_mortality_mult: "[Concept('concept_pop_growth', '$concept_pop_growth_mortality|q$')] von $gate_mages$" #deepl:216164754
+ state_gate_mages_mortality_mult_desc: "Eine Erhöhung oder Senkung der [Concept('concept_pop_growth', '$concept_pop_growth_mortality|q$')] von $gate_mages$" #deepl:3355836612
  state_gate_mages_investment_pool_contribution_add: "$gate_mages$ [concept_investment_pool] Beitrag" #deepl:1142713103
  state_gate_mages_investment_pool_contribution_add_desc: "Wie viel von ihren Gewinnen wird $gate_mages$ investieren?" #deepl:1925489735
  state_gate_mages_investment_pool_efficiency_mult: "$gate_mages$ [concept_investment_pool] Beitragseffizienz" #deepl:2644908459
@@ -44,18 +44,18 @@
  building_employment_gate_druids_add_desc: "Ändert die Anzahl der „$gate_druids$“, die ein Gebäude pro Stufe einstellen kann" #deepl:868990754
  building_employment_gate_druids_mult: "$building_employment_gate_druids_add$" #deepl:4286446978
  building_employment_gate_druids_mult_desc: "$building_employment_gate_druids_add_desc$" #deepl:1116465676
- building_gate_druids_shares_add: "$gate_druids$ [Concept('concept_ownership_share', '$concept_ownership_shares$')]" #deepl:2885715904
- building_gate_druids_shares_add_desc: "Eine Erhöhung oder Senkung von $gate_druids$ [Concept('concept_ownership_share', '$concept_ownership_shares$')]" #deepl:2481023187
- building_gate_druids_shares_mult: "$gate_druids$ [Concept('concept_ownership_share', '$concept_ownership_shares$')]" #deepl:2885715904
- building_gate_druids_shares_mult_desc: "Eine Erhöhung oder Senkung der $gate_druids$ [Concept('concept_ownership_share', '$concept_ownership_shares$')]" #deepl:2481023187
+ building_gate_druids_shares_add: "$gate_druids$ [Concept('concept_ownership_share', '$concept_ownership_shares|q$')]" #deepl:2885715904
+ building_gate_druids_shares_add_desc: "Eine Erhöhung oder Senkung von $gate_druids$ [Concept('concept_ownership_share', '$concept_ownership_shares|q$')]" #deepl:2481023187
+ building_gate_druids_shares_mult: "$gate_druids$ [Concept('concept_ownership_share', '$concept_ownership_shares|q$')]" #deepl:2885715904
+ building_gate_druids_shares_mult_desc: "Eine Erhöhung oder Senkung der $gate_druids$ [Concept('concept_ownership_share', '$concept_ownership_shares|q$')]" #deepl:2481023187
  building_gate_druids_mortality_mult: "$state_gate_druids_mortality_mult$" #deepl:3911871829
  building_gate_druids_mortality_mult_desc: "$state_gate_druids_mortality_mult_desc$" #deepl:3769466773
- building_gate_druids_fertility_mult: "[Concept('concept_pop_growth', '$concept_pop_growth_birthrate$')] von $gate_druids$" #deepl:3082202803
- building_gate_druids_fertility_mult_desc: "Eine Erhöhung oder Senkung der [Concept('concept_pop_growth', '$concept_pop_growth_birthrate$')] von $gate_druids$" #deepl:2616504352
+ building_gate_druids_fertility_mult: "[Concept('concept_pop_growth', '$concept_pop_growth_birthrate|q$')] von $gate_druids$" #deepl:3082202803
+ building_gate_druids_fertility_mult_desc: "Eine Erhöhung oder Senkung der [Concept('concept_pop_growth', '$concept_pop_growth_birthrate|q$')] von $gate_druids$" #deepl:2616504352
  building_gate_druids_dependent_wage_mult: "$gate_druids$ Einkommen von Angehörigen" #deepl:1490766306
  building_gate_druids_dependent_wage_mult_desc: "Eine Erhöhung oder Verringerung des Einkommens von Angehörigen ($gate_druids$)" #deepl:2478643756
- state_gate_druids_mortality_mult: "[Concept('concept_pop_growth', '$concept_pop_growth_mortality$')] von $gate_druids$" #deepl:794346993
- state_gate_druids_mortality_mult_desc: "Eine Erhöhung oder Verringerung der [Concept('concept_pop_growth', '$concept_pop_growth_mortality$')] von $gate_druids$" #deepl:52091746
+ state_gate_druids_mortality_mult: "[Concept('concept_pop_growth', '$concept_pop_growth_mortality|q$')] von $gate_druids$" #deepl:794346993
+ state_gate_druids_mortality_mult_desc: "Eine Erhöhung oder Verringerung der [Concept('concept_pop_growth', '$concept_pop_growth_mortality|q$')] von $gate_druids$" #deepl:52091746
  state_gate_druids_investment_pool_contribution_add: "$gate_druids$ [concept_investment_pool] Beitrag" #deepl:1526115364
  state_gate_druids_investment_pool_contribution_add_desc: "Wie viel von ihren Gewinnen wird $gate_druids$ investieren" #deepl:3550467494
  state_gate_druids_investment_pool_efficiency_mult: "$gate_druids$ [concept_investment_pool] Beitragseffizienz" #deepl:2064357148

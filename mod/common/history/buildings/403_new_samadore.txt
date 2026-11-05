@@ -27,6 +27,24 @@ BUILDINGS = {
                 }
             }
             create_building = {
+                building = building_copper_mine
+                add_ownership = {
+                    building = {
+                        type = building_gate_mage_tower
+                        country = c:GATE_NS
+                        levels = 1
+                        region = STATE_WESTERN_NEW_GUINEA
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_picks_and_shovels_building_copper_mine
+                    pm_gate_crystal_explosives_building_copper_mine
+                    pm_no_steam_automation
+                    pm_road_carts
+                }
+            }
+            create_building = {
                 building = building_logging_camp
                 add_ownership = {
                     building = {
@@ -243,6 +261,20 @@ BUILDINGS = {
                 }
             }
             create_building = {
+                building = building_artillery_foundry
+                add_ownership = {
+                    country = {
+                        country = c:GATE_NS
+                        levels = 1
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_bronze_cannons
+                    pm_automation_disabled
+                }
+            }
+            create_building = {
                 building = building_gate_mana_extractor
                 add_ownership = {
                     building = {
@@ -413,6 +445,7 @@ BUILDINGS = {
                 activate_production_methods = {
                     default_building_banana_plantation
                     pm_road_carts
+                    pm_gate_magic_seeds_banana
                 }
             }
             create_building = {
@@ -495,6 +528,7 @@ BUILDINGS = {
                 activate_production_methods = {
                     default_building_tea_plantation
                     pm_road_carts
+                    pm_gate_magic_seeds_tea
                 }
             }
             create_building = {
@@ -511,6 +545,7 @@ BUILDINGS = {
                 activate_production_methods = {
                     default_building_tobacco_plantation
                     pm_road_carts
+                    pm_gate_magic_seeds_tobacco
                 }
             }
             create_building = {
@@ -527,6 +562,7 @@ BUILDINGS = {
                 activate_production_methods = {
                     default_building_dye_plantation
                     pm_road_carts
+                    pm_gate_magic_seeds_dye
                 }
             }
             create_building = {

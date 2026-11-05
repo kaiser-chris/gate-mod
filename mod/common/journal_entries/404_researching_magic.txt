@@ -2,25 +2,20 @@
 	icon = "gfx/interface/icons/event_icons/event_gate_magic_knowledge.dds"
 
 	group = je_group_gate_magical_affairs
+	dlc = dlc_magic_gate
+
+	activation_description = {
+		always = yes
+	}
 
 	scripted_button = je_gate_researching_magic_button_focus_academia
 	scripted_button = je_gate_researching_magic_button_cancel_focus_academia
 
 	widget = {
 		gui = "gui/com_journal_injects/injects.gui"
-		name = "com_journal_entry_dlc_icon"
-		container = "custom_widget_container_7"
-	}
-
-	widget = {
-		gui = "gui/com_journal_injects/injects.gui"
 		name = "com_journal_entry_characters"
 		container = "custom_widget_container_1"
 	}
-
-    immediate = {
-		add_gate_dlc_icon = yes
-    }
 
 	status_desc = {
 		first_valid = {
@@ -84,39 +79,37 @@
 		}
 	}
 
-	complete = {
-		custom_tooltip = {
-			text = je_gate_researching_magic_goal_tt
-			scope:journal_entry = {
-				scripted_bar_progress = {
-					name = pb_gate_researching_magic
-					value >= 100
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				text = je_gate_researching_magic_goal_tt
+				scope:journal_entry = {
+					scripted_bar_progress = {
+						name = pb_gate_researching_magic
+						value >= 100
+					}
 				}
+			}
+		}
+		effect = {
+			gate_learn_magic = yes
+			hidden_effect = {
+				remove_modifier = modifier_gate_focus_researching_magic_cost
 			}
 		}
 	}
 
-	invalid = {
-		hidden_trigger = {
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
 			is_gate_magic_country = yes
 		}
-	}
-
-	on_complete = {
-		gate_learn_magic = yes
-		hidden_effect = {
-			remove_modifier = modifier_gate_focus_researching_magic_cost
-		}
-	}
-
-	on_invalid = {
-		hidden_effect = {
-			remove_modifier = modifier_gate_focus_researching_magic_cost
-		}
-	}
-
-	on_fail = {
-		hidden_effect = {
+		effect = {
 			remove_modifier = modifier_gate_focus_researching_magic_cost
 		}
 	}

@@ -1,0 +1,3956 @@
+﻿create_gate_dungeon_tiefburg = {
+	container:gate_dungeon_tiefburg ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_tiefburg
+		state_region = STATE_TYROL
+		background = dungeon_background_gate_tiefburg
+	}
+	container:gate_dungeon_tiefburg = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_tiefburg
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_classic_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_classic_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_classic_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_classic_04
+		}
+		# dungeon exists at game start so its creation date needs
+		# to be shifted back to be before game start
+		set_variable = {
+			name = creation_date
+			value = {
+				value = game_date
+				subtract = 580 # days
+			}
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_tiefburg
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_tiefburg
+		value = container:gate_dungeon_tiefburg
+	}
+}
+
+create_gate_dungeon_dunmorrach = {
+	container:gate_dungeon_dunmorrach ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_dunmorrach
+		state_region = STATE_HIGHLANDS
+		background = dungeon_background_gate_dunmorrach
+	}
+	container:gate_dungeon_dunmorrach = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_dunmorrach
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_classic_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_classic_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_classic_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_classic_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_classic_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_classic_01
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_dunmorrach
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_dunmorrach
+		value = container:gate_dungeon_dunmorrach
+	}
+}
+
+create_gate_dungeon_oldewaard = {
+	container:gate_dungeon_oldewaard ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_oldewaard
+		state_region = STATE_FRIESLAND
+		background = dungeon_background_gate_oldewaard
+	}
+	container:gate_dungeon_oldewaard = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_oldewaard
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_drowned_city_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_drowned_city_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_drowned_city_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_drowned_city_06
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_oldewaard
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_oldewaard
+		value = container:gate_dungeon_oldewaard
+	}
+}
+
+create_gate_dungeon_mongibello = {
+	container:gate_dungeon_mongibello ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_mongibello
+		state_region = STATE_SICILY
+		background = dungeon_background_gate_mongibello
+	}
+	container:gate_dungeon_mongibello = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_mongibello
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_volcanic_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_volcanic_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_volcanic_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_volcanic_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_volcanic_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_six
+			background = dungeon_layer_gate_inner_volcanic_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_seven
+			background = dungeon_layer_gate_inner_volcanic_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_volcanic_06
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_mongibello
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_mongibello
+		value = container:gate_dungeon_mongibello
+	}
+}
+
+create_gate_dungeon_grieta_blanca = {
+	container:gate_dungeon_grieta_blanca ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_grieta_blanca
+		state_region = STATE_ARAGON
+		background = dungeon_background_gate_grieta_blanca
+	}
+	container:gate_dungeon_grieta_blanca = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_grieta_blanca
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_ice_cavern_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_ice_cavern_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_ice_cavern_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_ice_cavern_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_ice_cavern_05
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_grieta_blanca
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_grieta_blanca
+		value = container:gate_dungeon_grieta_blanca
+	}
+}
+
+create_gate_dungeon_cetatea_neagra = {
+	container:gate_dungeon_cetatea_neagra ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_cetatea_neagra
+		state_region = STATE_SOUTHERN_TRANSYLVANIA
+		background = dungeon_background_gate_cetatea_neagra
+	}
+	container:gate_dungeon_cetatea_neagra = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_cetatea_neagra
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_classic_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_classic_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_classic_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_classic_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_classic_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_six
+			background = dungeon_layer_gate_inner_classic_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_classic_05
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_cetatea_neagra
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_cetatea_neagra
+		value = container:gate_dungeon_cetatea_neagra
+	}
+}
+
+create_gate_dungeon_labyrinthos = {
+	container:gate_dungeon_labyrinthos ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_labyrinthos
+		state_region = STATE_CRETE
+		background = dungeon_background_gate_labyrinthos
+	}
+	container:gate_dungeon_labyrinthos = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_labyrinthos
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_cavern_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_cavern_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_cavern_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_cavern_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_cavern_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_cavern_01
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_labyrinthos
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_labyrinthos
+		value = container:gate_dungeon_labyrinthos
+	}
+}
+
+create_gate_dungeon_silbergrund = {
+	container:gate_dungeon_silbergrund ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_silbergrund
+		state_region = STATE_SAXONY
+		background = dungeon_background_gate_silbergrund
+	}
+	container:gate_dungeon_silbergrund = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_silbergrund
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_cavern_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_cavern_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_cavern_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_cavern_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_cavern_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_cavern_02
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_silbergrund
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_silbergrund
+		value = container:gate_dungeon_silbergrund
+	}
+}
+
+create_gate_dungeon_surtsdjup = {
+	container:gate_dungeon_surtsdjup ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_surtsdjup
+		state_region = STATE_ICELAND
+		background = dungeon_background_gate_surtsdjup
+	}
+	container:gate_dungeon_surtsdjup = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_surtsdjup
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_volcanic_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_volcanic_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_volcanic_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_volcanic_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_volcanic_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_six
+			background = dungeon_layer_gate_inner_volcanic_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_seven
+			background = dungeon_layer_gate_inner_volcanic_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_eight
+			background = dungeon_layer_gate_inner_volcanic_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_volcanic_05
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_surtsdjup
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_surtsdjup
+		value = container:gate_dungeon_surtsdjup
+	}
+}
+
+create_gate_dungeon_svartisgapet = {
+	container:gate_dungeon_svartisgapet ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_svartisgapet
+		state_region = STATE_NORTHERN_NORWAY
+		background = dungeon_background_gate_svartisgapet
+	}
+	container:gate_dungeon_svartisgapet = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_svartisgapet
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_ice_cavern_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_ice_cavern_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_ice_cavern_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_ice_cavern_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_ice_cavern_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_ice_cavern_02
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_svartisgapet
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_svartisgapet
+		value = container:gate_dungeon_svartisgapet
+	}
+}
+
+create_gate_dungeon_ledyanoy_zev = {
+	container:gate_dungeon_ledyanoy_zev ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_ledyanoy_zev
+		state_region = STATE_PERM
+		background = dungeon_background_gate_ledyanoy_zev
+	}
+	container:gate_dungeon_ledyanoy_zev = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_ledyanoy_zev
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_ice_cavern_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_ice_cavern_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_ice_cavern_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_ice_cavern_04
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_ledyanoy_zev
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_ledyanoy_zev
+		value = container:gate_dungeon_ledyanoy_zev
+	}
+}
+
+create_gate_dungeon_kitezh = {
+	container:gate_dungeon_kitezh ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_kitezh
+		state_region = STATE_NIZHNY_NOVGOROD
+		background = dungeon_background_gate_kitezh
+	}
+	container:gate_dungeon_kitezh = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_kitezh
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_drowned_city_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_drowned_city_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_drowned_city_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_drowned_city_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_drowned_city_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_six
+			background = dungeon_layer_gate_inner_drowned_city_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_seven
+			background = dungeon_layer_gate_inner_drowned_city_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_drowned_city_01
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_kitezh
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_kitezh
+		value = container:gate_dungeon_kitezh
+	}
+}
+
+create_gate_dungeon_qara_qoba = {
+	container:gate_dungeon_qara_qoba ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_qara_qoba
+		state_region = STATE_CRIMEA
+		background = dungeon_background_gate_qara_qoba
+	}
+	container:gate_dungeon_qara_qoba = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_qara_qoba
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_cavern_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_cavern_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_cavern_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_cavern_03
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_qara_qoba
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_qara_qoba
+		value = container:gate_dungeon_qara_qoba
+	}
+}
+
+create_gate_dungeon_glebia_solna = {
+	container:gate_dungeon_glebia_solna ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_glebia_solna
+		state_region = STATE_LESSER_POLAND
+		background = dungeon_background_gate_glebia_solna
+	}
+	container:gate_dungeon_glebia_solna = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_glebia_solna
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_classic_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_classic_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_classic_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_classic_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_classic_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_classic_01
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_glebia_solna
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_glebia_solna
+		value = container:gate_dungeon_glebia_solna
+	}
+}
+
+create_gate_dungeon_ta_djeser = {
+	container:gate_dungeon_ta_djeser ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_ta_djeser
+		state_region = STATE_UPPER_EGYPT
+		background = dungeon_background_gate_ta_djeser
+	}
+	container:gate_dungeon_ta_djeser = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_ta_djeser
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_desert_tomb_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_desert_tomb_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_desert_tomb_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_desert_tomb_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_desert_tomb_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_six
+			background = dungeon_layer_gate_inner_desert_tomb_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_seven
+			background = dungeon_layer_gate_inner_desert_tomb_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_desert_tomb_02
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_ta_djeser
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_ta_djeser
+		value = container:gate_dungeon_ta_djeser
+	}
+}
+
+create_gate_dungeon_deriba = {
+	container:gate_dungeon_deriba ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_deriba
+		state_region = STATE_DARFUR
+		background = dungeon_background_gate_deriba
+	}
+	container:gate_dungeon_deriba = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_deriba
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_volcanic_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_volcanic_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_volcanic_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_volcanic_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_volcanic_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_volcanic_04
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_deriba
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_deriba
+		value = container:gate_dungeon_deriba
+	}
+}
+
+create_gate_dungeon_qabr_ar_raml = {
+	container:gate_dungeon_qabr_ar_raml ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_qabr_ar_raml
+		state_region = STATE_SAHARA
+		background = dungeon_background_gate_qabr_ar_raml
+	}
+	container:gate_dungeon_qabr_ar_raml = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_qabr_ar_raml
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_desert_tomb_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_desert_tomb_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_desert_tomb_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_desert_tomb_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_desert_tomb_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_six
+			background = dungeon_layer_gate_inner_desert_tomb_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_desert_tomb_06
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_qabr_ar_raml
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_qabr_ar_raml
+		value = container:gate_dungeon_qabr_ar_raml
+	}
+}
+
+create_gate_dungeon_tazrout = {
+	container:gate_dungeon_tazrout ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_tazrout
+		state_region = STATE_INNER_MOROCCO
+		background = dungeon_background_gate_tazrout
+	}
+	container:gate_dungeon_tazrout = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_tazrout
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_classic_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_classic_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_classic_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_classic_02
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_tazrout
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_tazrout
+		value = container:gate_dungeon_tazrout
+	}
+}
+
+create_gate_dungeon_tellemkoro = {
+	container:gate_dungeon_tellemkoro ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_tellemkoro
+		state_region = STATE_EASTERN_MALI
+		background = dungeon_background_gate_tellemkoro
+	}
+	container:gate_dungeon_tellemkoro = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_tellemkoro
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_cavern_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_cavern_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_cavern_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_cavern_04
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_tellemkoro
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_tellemkoro
+		value = container:gate_dungeon_tellemkoro
+	}
+}
+
+create_gate_dungeon_igbo_ojiji = {
+	container:gate_dungeon_igbo_ojiji ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_igbo_ojiji
+		state_region = STATE_YORUBA_STATES
+		background = dungeon_background_gate_igbo_ojiji
+	}
+	container:gate_dungeon_igbo_ojiji = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_igbo_ojiji
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_tropical_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_tropical_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_tropical_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_tropical_05
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_igbo_ojiji
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_igbo_ojiji
+		value = container:gate_dungeon_igbo_ojiji
+	}
+}
+
+create_gate_dungeon_mokele = {
+	container:gate_dungeon_mokele ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_mokele
+		state_region = STATE_CONGO_ORIENTALE
+		background = dungeon_background_gate_mokele
+	}
+	container:gate_dungeon_mokele = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_mokele
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_tropical_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_tropical_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_tropical_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_tropical_07
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_tropical_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_six
+			background = dungeon_layer_gate_inner_tropical_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_tropical_07
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_mokele
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_mokele
+		value = container:gate_dungeon_mokele
+	}
+}
+
+create_gate_dungeon_shimo_la_shaba = {
+	container:gate_dungeon_shimo_la_shaba ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_shimo_la_shaba
+		state_region = STATE_KATANGA
+		background = dungeon_background_gate_shimo_la_shaba
+	}
+	container:gate_dungeon_shimo_la_shaba = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_shimo_la_shaba
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_cavern_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_cavern_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_cavern_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_cavern_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_cavern_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_cavern_04
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_shimo_la_shaba
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_shimo_la_shaba
+		value = container:gate_dungeon_shimo_la_shaba
+	}
+}
+
+create_gate_dungeon_diepkloof = {
+	container:gate_dungeon_diepkloof ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_diepkloof
+		state_region = STATE_TRANSVAAL
+		background = dungeon_background_gate_diepkloof
+	}
+	container:gate_dungeon_diepkloof = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_diepkloof
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_cavern_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_cavern_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_cavern_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_cavern_06
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_diepkloof
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_diepkloof
+		value = container:gate_dungeon_diepkloof
+	}
+}
+
+create_gate_dungeon_bone_shoal = {
+	container:gate_dungeon_bone_shoal ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_bone_shoal
+		state_region = STATE_HEREROLAND
+		background = dungeon_background_gate_bone_shoal
+	}
+	container:gate_dungeon_bone_shoal = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_bone_shoal
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_drowned_city_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_drowned_city_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_drowned_city_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_drowned_city_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_drowned_city_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_drowned_city_02
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_bone_shoal
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_bone_shoal
+		value = container:gate_dungeon_bone_shoal
+	}
+}
+
+create_gate_dungeon_suswa = {
+	container:gate_dungeon_suswa ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_suswa
+		state_region = STATE_RIFT_VALLEY
+		background = dungeon_background_gate_suswa
+	}
+	container:gate_dungeon_suswa = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_suswa
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_volcanic_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_volcanic_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_volcanic_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_volcanic_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_volcanic_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_six
+			background = dungeon_layer_gate_inner_volcanic_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_volcanic_04
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_suswa
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_suswa
+		value = container:gate_dungeon_suswa
+	}
+}
+
+create_gate_dungeon_debre_sela = {
+	container:gate_dungeon_debre_sela ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_debre_sela
+		state_region = STATE_AMHARA
+		background = dungeon_background_gate_debre_sela
+	}
+	container:gate_dungeon_debre_sela = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_debre_sela
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_classic_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_classic_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_classic_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_classic_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_classic_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_classic_06
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_debre_sela
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_debre_sela
+		value = container:gate_dungeon_debre_sela
+	}
+}
+
+create_gate_dungeon_prasat_khmoch = {
+	container:gate_dungeon_prasat_khmoch ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_prasat_khmoch
+		state_region = STATE_CAMBODIA
+		background = dungeon_background_gate_prasat_khmoch
+	}
+	container:gate_dungeon_prasat_khmoch = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_prasat_khmoch
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_tropical_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_tropical_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_tropical_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_tropical_07
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_tropical_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_six
+			background = dungeon_layer_gate_inner_tropical_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_tropical_01
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_prasat_khmoch
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_prasat_khmoch
+		value = container:gate_dungeon_prasat_khmoch
+	}
+}
+
+create_gate_dungeon_hang_may = {
+	container:gate_dungeon_hang_may ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_hang_may
+		state_region = STATE_ANNAM
+		background = dungeon_background_gate_hang_may
+	}
+	container:gate_dungeon_hang_may = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_hang_may
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_cavern_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_cavern_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_cavern_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_cavern_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_cavern_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_six
+			background = dungeon_layer_gate_inner_cavern_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_seven
+			background = dungeon_layer_gate_inner_cavern_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_eight
+			background = dungeon_layer_gate_inner_cavern_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_cavern_06
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_hang_may
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_hang_may
+		value = container:gate_dungeon_hang_may
+	}
+}
+
+create_gate_dungeon_kawah_biru = {
+	container:gate_dungeon_kawah_biru ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_kawah_biru
+		state_region = STATE_EAST_JAVA
+		background = dungeon_background_gate_kawah_biru
+	}
+	container:gate_dungeon_kawah_biru = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_kawah_biru
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_volcanic_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_volcanic_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_volcanic_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_volcanic_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_volcanic_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_volcanic_02
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_kawah_biru
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_kawah_biru
+		value = container:gate_dungeon_kawah_biru
+	}
+}
+
+create_gate_dungeon_rimba_sunyi = {
+	container:gate_dungeon_rimba_sunyi ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_rimba_sunyi
+		state_region = STATE_WEST_BORNEO
+		background = dungeon_background_gate_rimba_sunyi
+	}
+	container:gate_dungeon_rimba_sunyi = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_rimba_sunyi
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_tropical_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_tropical_07
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_tropical_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_tropical_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_tropical_07
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_tropical_02
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_rimba_sunyi
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_rimba_sunyi
+		value = container:gate_dungeon_rimba_sunyi
+	}
+}
+
+create_gate_dungeon_jiulong_dong = {
+	container:gate_dungeon_jiulong_dong ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_jiulong_dong
+		state_region = STATE_GUANGXI
+		background = dungeon_background_gate_jiulong_dong
+	}
+	container:gate_dungeon_jiulong_dong = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_jiulong_dong
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_cavern_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_cavern_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_cavern_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_cavern_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_cavern_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_six
+			background = dungeon_layer_gate_inner_cavern_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_cavern_03
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_jiulong_dong
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_jiulong_dong
+		value = container:gate_dungeon_jiulong_dong
+	}
+}
+
+create_gate_dungeon_wuliang_lin = {
+	container:gate_dungeon_wuliang_lin ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_wuliang_lin
+		state_region = STATE_YUNNAN
+		background = dungeon_background_gate_wuliang_lin
+	}
+	container:gate_dungeon_wuliang_lin = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_wuliang_lin
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_tropical_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_tropical_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_tropical_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_tropical_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_tropical_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_tropical_06
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_wuliang_lin
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_wuliang_lin
+		value = container:gate_dungeon_wuliang_lin
+	}
+}
+
+create_gate_dungeon_khara_khoto = {
+	container:gate_dungeon_khara_khoto ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_khara_khoto
+		state_region = STATE_ALXA
+		background = dungeon_background_gate_khara_khoto
+	}
+	container:gate_dungeon_khara_khoto = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_khara_khoto
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_desert_tomb_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_desert_tomb_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_desert_tomb_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_desert_tomb_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_desert_tomb_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_six
+			background = dungeon_layer_gate_inner_desert_tomb_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_desert_tomb_02
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_khara_khoto
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_khara_khoto
+		value = container:gate_dungeon_khara_khoto
+	}
+}
+
+create_gate_dungeon_dixia_gong = {
+	container:gate_dungeon_dixia_gong ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_dixia_gong
+		state_region = STATE_XIAN
+		background = dungeon_background_gate_dixia_gong
+	}
+	container:gate_dungeon_dixia_gong = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_dixia_gong
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_classic_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_classic_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_classic_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_classic_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_classic_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_six
+			background = dungeon_layer_gate_inner_classic_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_seven
+			background = dungeon_layer_gate_inner_classic_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_classic_06
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_dixia_gong
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_dixia_gong
+		value = container:gate_dungeon_dixia_gong
+	}
+}
+
+create_gate_dungeon_ognennaya_past = {
+	container:gate_dungeon_ognennaya_past ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_ognennaya_past
+		state_region = STATE_KAMCHATKA
+		background = dungeon_background_gate_ognennaya_past
+	}
+	container:gate_dungeon_ognennaya_past = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_ognennaya_past
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_volcanic_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_volcanic_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_volcanic_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_volcanic_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_volcanic_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_six
+			background = dungeon_layer_gate_inner_volcanic_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_seven
+			background = dungeon_layer_gate_inner_volcanic_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_eight
+			background = dungeon_layer_gate_inner_volcanic_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_volcanic_04
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_ognennaya_past
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_ognennaya_past
+		value = container:gate_dungeon_ognennaya_past
+	}
+}
+
+create_gate_dungeon_hyoketsu = {
+	container:gate_dungeon_hyoketsu ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_hyoketsu
+		state_region = STATE_TOKAI
+		background = dungeon_background_gate_hyoketsu
+	}
+	container:gate_dungeon_hyoketsu = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_hyoketsu
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_ice_cavern_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_ice_cavern_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_ice_cavern_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_ice_cavern_01
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_hyoketsu
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_hyoketsu
+		value = container:gate_dungeon_hyoketsu
+	}
+}
+
+create_gate_dungeon_buus_khaya = {
+	container:gate_dungeon_buus_khaya ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_buus_khaya
+		state_region = STATE_YAKUTSK
+		background = dungeon_background_gate_buus_khaya
+	}
+	container:gate_dungeon_buus_khaya = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_buus_khaya
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_ice_cavern_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_ice_cavern_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_ice_cavern_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_ice_cavern_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_ice_cavern_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_six
+			background = dungeon_layer_gate_inner_ice_cavern_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_ice_cavern_02
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_buus_khaya
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_buus_khaya
+		value = container:gate_dungeon_buus_khaya
+	}
+}
+
+create_gate_dungeon_shamanka = {
+	container:gate_dungeon_shamanka ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_shamanka
+		state_region = STATE_IRKUTSK
+		background = dungeon_background_gate_shamanka
+	}
+	container:gate_dungeon_shamanka = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_shamanka
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_drowned_city_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_drowned_city_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_drowned_city_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_drowned_city_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_drowned_city_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_six
+			background = dungeon_layer_gate_inner_drowned_city_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_seven
+			background = dungeon_layer_gate_inner_drowned_city_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_drowned_city_05
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_shamanka
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_shamanka
+		value = container:gate_dungeon_shamanka
+	}
+}
+
+create_gate_dungeon_grose_hollow = {
+	container:gate_dungeon_grose_hollow ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_grose_hollow
+		state_region = STATE_NEW_SOUTH_WALES
+		background = dungeon_background_gate_grose_hollow
+	}
+	container:gate_dungeon_grose_hollow = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_grose_hollow
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_cavern_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_cavern_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_cavern_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_cavern_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_cavern_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_cavern_06
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_grose_hollow
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_grose_hollow
+		value = container:gate_dungeon_grose_hollow
+	}
+}
+
+create_gate_dungeon_ketetahi = {
+	container:gate_dungeon_ketetahi ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_ketetahi
+		state_region = STATE_NORTH_ISLAND
+		background = dungeon_background_gate_ketetahi
+	}
+	container:gate_dungeon_ketetahi = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_ketetahi
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_volcanic_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_volcanic_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_volcanic_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_volcanic_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_volcanic_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_six
+			background = dungeon_layer_gate_inner_volcanic_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_volcanic_06
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_ketetahi
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_ketetahi
+		value = container:gate_dungeon_ketetahi
+	}
+}
+
+create_gate_dungeon_nunataq = {
+	container:gate_dungeon_nunataq ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_nunataq
+		state_region = STATE_NUNAVUT
+		background = dungeon_background_gate_nunataq
+	}
+	container:gate_dungeon_nunataq = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_nunataq
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_ice_cavern_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_ice_cavern_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_ice_cavern_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_ice_cavern_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_ice_cavern_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_six
+			background = dungeon_layer_gate_inner_ice_cavern_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_seven
+			background = dungeon_layer_gate_inner_ice_cavern_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_ice_cavern_05
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_nunataq
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_nunataq
+		value = container:gate_dungeon_nunataq
+	}
+}
+
+create_gate_dungeon_red_deer_hollow = {
+	container:gate_dungeon_red_deer_hollow ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_red_deer_hollow
+		state_region = STATE_ALBERTA
+		background = dungeon_background_gate_red_deer_hollow
+	}
+	container:gate_dungeon_red_deer_hollow = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_red_deer_hollow
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_cavern_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_cavern_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_cavern_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_cavern_04
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_red_deer_hollow
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_red_deer_hollow
+		value = container:gate_dungeon_red_deer_hollow
+	}
+}
+
+create_gate_dungeon_tahoma_vent = {
+	container:gate_dungeon_tahoma_vent ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_tahoma_vent
+		state_region = STATE_WASHINGTON
+		background = dungeon_background_gate_tahoma_vent
+	}
+	container:gate_dungeon_tahoma_vent = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_tahoma_vent
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_volcanic_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_volcanic_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_volcanic_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_volcanic_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_volcanic_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_six
+			background = dungeon_layer_gate_inner_volcanic_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_seven
+			background = dungeon_layer_gate_inner_volcanic_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_volcanic_04
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_tahoma_vent
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_tahoma_vent
+		value = container:gate_dungeon_tahoma_vent
+	}
+}
+
+create_gate_dungeon_kaibab_vault = {
+	container:gate_dungeon_kaibab_vault ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_kaibab_vault
+		state_region = STATE_ARIZONA
+		background = dungeon_background_gate_kaibab_vault
+	}
+	container:gate_dungeon_kaibab_vault = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_kaibab_vault
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_desert_tomb_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_desert_tomb_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_desert_tomb_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_desert_tomb_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_desert_tomb_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_six
+			background = dungeon_layer_gate_inner_desert_tomb_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_desert_tomb_01
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_kaibab_vault
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_kaibab_vault
+		value = container:gate_dungeon_kaibab_vault
+	}
+}
+
+create_gate_dungeon_paha_sapa = {
+	container:gate_dungeon_paha_sapa ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_paha_sapa
+		state_region = STATE_SOUTH_DAKOTA
+		background = dungeon_background_gate_paha_sapa
+	}
+	container:gate_dungeon_paha_sapa = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_paha_sapa
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_cavern_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_cavern_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_cavern_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_cavern_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_cavern_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_cavern_03
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_paha_sapa
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_paha_sapa
+		value = container:gate_dungeon_paha_sapa
+	}
+}
+
+create_gate_dungeon_ville_engloutie = {
+	container:gate_dungeon_ville_engloutie ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_ville_engloutie
+		state_region = STATE_LOUISIANA
+		background = dungeon_background_gate_ville_engloutie
+	}
+	container:gate_dungeon_ville_engloutie = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_ville_engloutie
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_drowned_city_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_drowned_city_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_drowned_city_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_drowned_city_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_drowned_city_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_drowned_city_04
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_ville_engloutie
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_ville_engloutie
+		value = container:gate_dungeon_ville_engloutie
+	}
+}
+
+create_gate_dungeon_echo_deep = {
+	container:gate_dungeon_echo_deep ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_echo_deep
+		state_region = STATE_KENTUCKY
+		background = dungeon_background_gate_echo_deep
+	}
+	container:gate_dungeon_echo_deep = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_echo_deep
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_cavern_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_cavern_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_cavern_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_cavern_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_cavern_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_six
+			background = dungeon_layer_gate_inner_cavern_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_seven
+			background = dungeon_layer_gate_inner_cavern_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_eight
+			background = dungeon_layer_gate_inner_cavern_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_cavern_06
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_echo_deep
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_echo_deep
+		value = container:gate_dungeon_echo_deep
+	}
+}
+
+create_gate_dungeon_pahayokee = {
+	container:gate_dungeon_pahayokee ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_pahayokee
+		state_region = STATE_FLORIDA
+		background = dungeon_background_gate_pahayokee
+	}
+	container:gate_dungeon_pahayokee = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_pahayokee
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_tropical_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_tropical_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_tropical_03
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_pahayokee
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_pahayokee
+		value = container:gate_dungeon_pahayokee
+	}
+}
+
+create_gate_dungeon_chen_ha = {
+	container:gate_dungeon_chen_ha ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_chen_ha
+		state_region = STATE_YUCATAN
+		background = dungeon_background_gate_chen_ha
+	}
+	container:gate_dungeon_chen_ha = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_chen_ha
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_drowned_city_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_drowned_city_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_drowned_city_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_drowned_city_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_drowned_city_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_six
+			background = dungeon_layer_gate_inner_drowned_city_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_drowned_city_06
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_chen_ha
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_chen_ha
+		value = container:gate_dungeon_chen_ha
+	}
+}
+
+create_gate_dungeon_uxwitz = {
+	container:gate_dungeon_uxwitz ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_uxwitz
+		state_region = STATE_GUATEMALA
+		background = dungeon_background_gate_uxwitz
+	}
+	container:gate_dungeon_uxwitz = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_uxwitz
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_tropical_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_tropical_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_tropical_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_tropical_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_tropical_07
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_six
+			background = dungeon_layer_gate_inner_tropical_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_seven
+			background = dungeon_layer_gate_inner_tropical_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_tropical_06
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_uxwitz
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_uxwitz
+		value = container:gate_dungeon_uxwitz
+	}
+}
+
+create_gate_dungeon_igapo_escuro = {
+	container:gate_dungeon_igapo_escuro ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_igapo_escuro
+		state_region = STATE_AMAZONAS
+		background = dungeon_background_gate_igapo_escuro
+	}
+	container:gate_dungeon_igapo_escuro = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_igapo_escuro
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_tropical_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_tropical_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_tropical_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_tropical_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_tropical_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_six
+			background = dungeon_layer_gate_inner_tropical_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_seven
+			background = dungeon_layer_gate_inner_tropical_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_tropical_03
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_igapo_escuro
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_igapo_escuro
+		value = container:gate_dungeon_igapo_escuro
+	}
+}
+
+create_gate_dungeon_gruta_diamantina = {
+	container:gate_dungeon_gruta_diamantina ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_gruta_diamantina
+		state_region = STATE_BAHIA
+		background = dungeon_background_gate_gruta_diamantina
+	}
+	container:gate_dungeon_gruta_diamantina = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_gruta_diamantina
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_cavern_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_cavern_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_cavern_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_cavern_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_cavern_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_cavern_05
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_gruta_diamantina
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_gruta_diamantina
+		value = container:gate_dungeon_gruta_diamantina
+	}
+}
+
+create_gate_dungeon_chamak_uta = {
+	container:gate_dungeon_chamak_uta ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_chamak_uta
+		state_region = STATE_LA_PAZ
+		background = dungeon_background_gate_chamak_uta
+	}
+	container:gate_dungeon_chamak_uta = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_chamak_uta
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_drowned_city_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_drowned_city_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_drowned_city_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_drowned_city_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_drowned_city_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_six
+			background = dungeon_layer_gate_inner_drowned_city_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_drowned_city_01
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_chamak_uta
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_chamak_uta
+		value = container:gate_dungeon_chamak_uta
+	}
+}
+
+create_gate_dungeon_nina_uchku = {
+	container:gate_dungeon_nina_uchku ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_nina_uchku
+		state_region = STATE_AREQUIPA
+		background = dungeon_background_gate_nina_uchku
+	}
+	container:gate_dungeon_nina_uchku = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_nina_uchku
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_volcanic_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_volcanic_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_volcanic_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_volcanic_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_volcanic_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_six
+			background = dungeon_layer_gate_inner_volcanic_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_seven
+			background = dungeon_layer_gate_inner_volcanic_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_volcanic_03
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_nina_uchku
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_nina_uchku
+		value = container:gate_dungeon_nina_uchku
+	}
+}
+
+create_gate_dungeon_glaciar_del_silencio = {
+	container:gate_dungeon_glaciar_del_silencio ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_glaciar_del_silencio
+		state_region = STATE_PATAGONIA
+		background = dungeon_background_gate_glaciar_del_silencio
+	}
+	container:gate_dungeon_glaciar_del_silencio = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_glaciar_del_silencio
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_ice_cavern_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_ice_cavern_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_ice_cavern_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_ice_cavern_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_ice_cavern_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_six
+			background = dungeon_layer_gate_inner_ice_cavern_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_seven
+			background = dungeon_layer_gate_inner_ice_cavern_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_eight
+			background = dungeon_layer_gate_inner_ice_cavern_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_ice_cavern_02
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_glaciar_del_silencio
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_glaciar_del_silencio
+		value = container:gate_dungeon_glaciar_del_silencio
+	}
+}
+
+create_gate_dungeon_tavarangue = {
+	container:gate_dungeon_tavarangue ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_tavarangue
+		state_region = STATE_BAJO_PARAGUAY
+		background = dungeon_background_gate_tavarangue
+	}
+	container:gate_dungeon_tavarangue = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_tavarangue
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_classic_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_classic_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_classic_05
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_tavarangue
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_tavarangue
+		value = container:gate_dungeon_tavarangue
+	}
+}
+
+create_gate_dungeon_mawari_sima = {
+	container:gate_dungeon_mawari_sima ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_mawari_sima
+		state_region = STATE_GUAYANA
+		background = dungeon_background_gate_mawari_sima
+	}
+	container:gate_dungeon_mawari_sima = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_mawari_sima
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_tropical_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_tropical_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_tropical_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_tropical_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_tropical_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_six
+			background = dungeon_layer_gate_inner_tropical_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_tropical_01
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_mawari_sima
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_mawari_sima
+		value = container:gate_dungeon_mawari_sima
+	}
+}
+
+create_gate_dungeon_guatavita = {
+	container:gate_dungeon_guatavita ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_guatavita
+		state_region = STATE_CUNDINAMARCA
+		background = dungeon_background_gate_guatavita
+	}
+	container:gate_dungeon_guatavita = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_guatavita
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_drowned_city_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_drowned_city_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_drowned_city_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_drowned_city_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_drowned_city_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_drowned_city_03
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_guatavita
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_guatavita
+		value = container:gate_dungeon_guatavita
+	}
+}
+
+create_gate_dungeon_malakopi = {
+	container:gate_dungeon_malakopi ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_malakopi
+		state_region = STATE_KONYA
+		background = dungeon_background_gate_malakopi
+	}
+	container:gate_dungeon_malakopi = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_malakopi
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_classic_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_classic_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_classic_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_classic_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_classic_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_six
+			background = dungeon_layer_gate_inner_classic_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_classic_04
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_malakopi
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_malakopi
+		value = container:gate_dungeon_malakopi
+	}
+}
+
+create_gate_dungeon_khaznat_al_layl = {
+	container:gate_dungeon_khaznat_al_layl ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_khaznat_al_layl
+		state_region = STATE_TRANSJORDAN
+		background = dungeon_background_gate_khaznat_al_layl
+	}
+	container:gate_dungeon_khaznat_al_layl = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_khaznat_al_layl
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_desert_tomb_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_desert_tomb_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_desert_tomb_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_desert_tomb_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_desert_tomb_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_six
+			background = dungeon_layer_gate_inner_desert_tomb_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_desert_tomb_03
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_khaznat_al_layl
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_khaznat_al_layl
+		value = container:gate_dungeon_khaznat_al_layl
+	}
+}
+
+create_gate_dungeon_ubar = {
+	container:gate_dungeon_ubar ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_ubar
+		state_region = STATE_OMAN
+		background = dungeon_background_gate_ubar
+	}
+	container:gate_dungeon_ubar = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_ubar
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_desert_tomb_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_desert_tomb_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_desert_tomb_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_desert_tomb_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_desert_tomb_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_six
+			background = dungeon_layer_gate_inner_desert_tomb_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_seven
+			background = dungeon_layer_gate_inner_desert_tomb_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_desert_tomb_06
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_ubar
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_ubar
+		value = container:gate_dungeon_ubar
+	}
+}
+
+create_gate_dungeon_bir_barhut = {
+	container:gate_dungeon_bir_barhut ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_bir_barhut
+		state_region = STATE_YEMEN
+		background = dungeon_background_gate_bir_barhut
+	}
+	container:gate_dungeon_bir_barhut = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_bir_barhut
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_cavern_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_cavern_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_cavern_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_cavern_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_cavern_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_cavern_05
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_bir_barhut
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_bir_barhut
+		value = container:gate_dungeon_bir_barhut
+	}
+}
+
+create_gate_dungeon_takht_e_tariki = {
+	container:gate_dungeon_takht_e_tariki ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_takht_e_tariki
+		state_region = STATE_FARS
+		background = dungeon_background_gate_takht_e_tariki
+	}
+	container:gate_dungeon_takht_e_tariki = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_takht_e_tariki
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_desert_tomb_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_desert_tomb_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_desert_tomb_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_desert_tomb_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_desert_tomb_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_six
+			background = dungeon_layer_gate_inner_desert_tomb_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_desert_tomb_01
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_takht_e_tariki
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_takht_e_tariki
+		value = container:gate_dungeon_takht_e_tariki
+	}
+}
+
+create_gate_dungeon_zendan_e_damavand = {
+	container:gate_dungeon_zendan_e_damavand ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_zendan_e_damavand
+		state_region = STATE_MAZANDARAN
+		background = dungeon_background_gate_zendan_e_damavand
+	}
+	container:gate_dungeon_zendan_e_damavand = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_zendan_e_damavand
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_volcanic_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_volcanic_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_volcanic_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_volcanic_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_volcanic_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_six
+			background = dungeon_layer_gate_inner_volcanic_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_seven
+			background = dungeon_layer_gate_inner_volcanic_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_eight
+			background = dungeon_layer_gate_inner_volcanic_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_volcanic_01
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_zendan_e_damavand
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_zendan_e_damavand
+		value = container:gate_dungeon_zendan_e_damavand
+	}
+}
+
+create_gate_dungeon_muz_tor = {
+	container:gate_dungeon_muz_tor ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_muz_tor
+		state_region = STATE_KIRGHIZIA
+		background = dungeon_background_gate_muz_tor
+	}
+	container:gate_dungeon_muz_tor = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_muz_tor
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_ice_cavern_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_ice_cavern_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_ice_cavern_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_ice_cavern_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_ice_cavern_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_six
+			background = dungeon_layer_gate_inner_ice_cavern_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_ice_cavern_03
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_muz_tor
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_muz_tor
+		value = container:gate_dungeon_muz_tor
+	}
+}
+
+create_gate_dungeon_kara_kala = {
+	container:gate_dungeon_kara_kala ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_kara_kala
+		state_region = STATE_MERZ
+		background = dungeon_background_gate_kara_kala
+	}
+	container:gate_dungeon_kara_kala = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_kara_kala
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_desert_tomb_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_desert_tomb_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_desert_tomb_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_desert_tomb_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_desert_tomb_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_desert_tomb_03
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_kara_kala
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_kara_kala
+		value = container:gate_dungeon_kara_kala
+	}
+}
+
+create_gate_dungeon_simhagiri = {
+	container:gate_dungeon_simhagiri ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_simhagiri
+		state_region = STATE_CEYLON
+		background = dungeon_background_gate_simhagiri
+	}
+	container:gate_dungeon_simhagiri = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_simhagiri
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_classic_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_classic_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_classic_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_classic_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_classic_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_classic_06
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_simhagiri
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_simhagiri
+		value = container:gate_dungeon_simhagiri
+	}
+}
+
+create_gate_dungeon_irul_kaavu = {
+	container:gate_dungeon_irul_kaavu ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_irul_kaavu
+		state_region = STATE_TRAVANCORE
+		background = dungeon_background_gate_irul_kaavu
+	}
+	container:gate_dungeon_irul_kaavu = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_irul_kaavu
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_tropical_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_tropical_07
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_tropical_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_tropical_05
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_irul_kaavu
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_irul_kaavu
+		value = container:gate_dungeon_irul_kaavu
+	}
+}
+
+create_gate_dungeon_nagpo_dzong = {
+	container:gate_dungeon_nagpo_dzong ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_nagpo_dzong
+		state_region = STATE_NGARI
+		background = dungeon_background_gate_nagpo_dzong
+	}
+	container:gate_dungeon_nagpo_dzong = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_nagpo_dzong
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_classic_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_classic_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_classic_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_classic_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_classic_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_six
+			background = dungeon_layer_gate_inner_classic_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_classic_03
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_nagpo_dzong
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_nagpo_dzong
+		value = container:gate_dungeon_nagpo_dzong
+	}
+}
+
+create_gate_dungeon_gangri_phug = {
+	container:gate_dungeon_gangri_phug ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_gangri_phug
+		state_region = STATE_HIMALAYAS
+		background = dungeon_background_gate_gangri_phug
+	}
+	container:gate_dungeon_gangri_phug = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_gangri_phug
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_ice_cavern_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_ice_cavern_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_ice_cavern_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_ice_cavern_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_ice_cavern_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_six
+			background = dungeon_layer_gate_inner_ice_cavern_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_seven
+			background = dungeon_layer_gate_inner_ice_cavern_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_eight
+			background = dungeon_layer_gate_inner_ice_cavern_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_nine
+			background = dungeon_layer_gate_inner_ice_cavern_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_ice_cavern_02
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_gangri_phug
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_gangri_phug
+		value = container:gate_dungeon_gangri_phug
+	}
+}
+
+create_gate_dungeon_andheri_baori = {
+	container:gate_dungeon_andheri_baori ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_andheri_baori
+		state_region = STATE_RAJPUTANA
+		background = dungeon_background_gate_andheri_baori
+	}
+	container:gate_dungeon_andheri_baori = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_andheri_baori
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_drowned_city_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_drowned_city_06
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_drowned_city_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_drowned_city_04
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_drowned_city_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_drowned_city_02
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_andheri_baori
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_andheri_baori
+		value = container:gate_dungeon_andheri_baori
+	}
+}
+
+create_gate_dungeon_krem_ksuid = {
+	container:gate_dungeon_krem_ksuid ?= {
+		# Destroy previous container if there is one
+		# this is to be able to run the effect
+		# multiple times and to test changes
+		destroy_container = yes
+	}
+	gate_create_dungeon = {
+		name = gate_dungeon_krem_ksuid
+		state_region = STATE_ASSAM
+		background = dungeon_background_gate_krem_ksuid
+	}
+	container:gate_dungeon_krem_ksuid = {
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_entrance
+			background = dungeon_layer_gate_top_krem_ksuid
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_one
+			background = dungeon_layer_gate_inner_tropical_01
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_two
+			background = dungeon_layer_gate_inner_tropical_07
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_three
+			background = dungeon_layer_gate_inner_tropical_02
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_four
+			background = dungeon_layer_gate_inner_tropical_03
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_five
+			background = dungeon_layer_gate_inner_tropical_05
+		}
+		gate_create_dungeon_layer = {
+			name = gate_dungeon_layer_generic_boss
+			background = dungeon_layer_gate_inner_tropical_07
+		}
+	}
+	remove_from_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_krem_ksuid
+	}
+	add_to_global_variable_map = {
+		name = dungeons
+		key = bt:building_gate_dungeon_krem_ksuid
+		value = container:gate_dungeon_krem_ksuid
+	}
+}

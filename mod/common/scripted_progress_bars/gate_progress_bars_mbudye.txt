@@ -3,7 +3,10 @@
 	desc = pb_gate_mbudye_pro
 	second_desc = pb_gate_mbudye_anti
 
-	double_sided_bad = yes
+	progress_texture = "gfx/interface/progressbar/progressbar_green.dds"
+	background_texture = "gfx/interface/progressbar/progressbar_bad.dds"
+	glow_texture = "gfx/interface/progressbar/progressbar_green_glow.dds"
+	glow_line_texture = "gfx/interface/progressbar/progressbar_green_glow_line.dds"
 
 	yearly_progress = {
 		if = {
@@ -48,7 +51,7 @@ pb_gate_mbudye_lunda = {
 	name = pb_gate_mbudye_lunda_name
 	desc = pb_gate_mbudye_lunda_desc
 
-	default_green = yes
+	progress_texture = "gfx/interface/progressbar/progressbar_green.dds"
 
 	yearly_progress = {
 		if = {
@@ -92,7 +95,7 @@ pb_gate_mbudye_chokwe = {
 	name = pb_gate_mbudye_chokwe_name
 	desc = pb_gate_mbudye_chokwe_desc
 
-	default_green = yes
+	progress_texture = "gfx/interface/progressbar/progressbar_green.dds"
 
 	yearly_progress = {
 		if = {
@@ -136,7 +139,7 @@ pb_gate_mbudye_kazembe = {
 	name = pb_gate_mbudye_kazembe_name
 	desc = pb_gate_mbudye_kazembe_desc
 
-	default_green = yes
+	progress_texture = "gfx/interface/progressbar/progressbar_green.dds"
 
 	yearly_progress = {
 		if = {
@@ -180,7 +183,7 @@ pb_gate_mbudye_kasanje = {
 	name = pb_gate_mbudye_kasanje_name
 	desc = pb_gate_mbudye_kasanje_desc
 
-	default_green = yes
+	progress_texture = "gfx/interface/progressbar/progressbar_green.dds"
 
 	yearly_progress = {
 		if = {

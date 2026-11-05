@@ -4,6 +4,7 @@
  gate_button_main_desc: "$gg_panel_base_title$"
  gate_button_main_tooltip: "#header $gg_panel_base_title$#!\nShortcut: #V $gg_panel_base_title$#! (#V CTRL + T#!)"
  gg_panel_base_action: "Manaflow Panel"
+ gate_button_mana_saturation: "gate_button_mana_saturation"
 # Panel
  gg_panel_base_title: "Manaflow"
  gg_panel_base_tab_general: "General"
@@ -11,8 +12,8 @@
  gg_panel_base_no_researcher_tooltip: "#header No [concept_gate_magic_researcher]#!\n$alert_has_no_magic_researcher_alert_desc$\n\n$alert_has_no_magic_researcher_alert_hint$\n\n#instruction Click to open the $NATIONAL_CAST$ panel#!"
  gg_panel_base_no_researcher_blink: "#BOLD Hire a new Arcanist#!"
  gg_mana_saturation: "Mana Saturation"
- gg_mana_saturation_tooltip: "#header [concept_gate_mana_saturation]#!\nCurrently #v [GetGlobalVariable('global_mana_saturation').GetValue|1]%#! of earth is covered in Mana.\n\nMana is the foundation of all [concept_gate_magical_phenomena] and is used extensively in [concept_gate_magic_technology]."
- gg_header_magic_ethic: "[Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')]"
+ gg_mana_saturation_tooltip: "#header [concept_gate_mana_saturation]#!\nCurrently #v [GetGlobalVariable('global_mana_saturation').GetValue|1]%#! of earth is covered in Mana. [concept_gate_mana_saturation] is calculated based on the average [concept_gate_mana_density] in each [concept_state_region].\n\nMana is the foundation of all [concept_gate_magical_phenomena] and is used extensively in [concept_gate_magic_technology]."
+ gg_header_magic_ethic: "[Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')]"
  gg_header_magic_countries: "Arcane Countries"
  gg_ethic_empty_slot: "Empty Domain Slot"
  gg_ethic_empty_slot_tooltip: "#header [concept_gate_magic_ethic]#!\nThis [concept_gate_magic_ethic] slot is empty and can be unlocked by fulfilling the following requirements.\n\n#title Unlocked#!\n$gg_ethic_empty_slot_tooltip_condition_one$\n$gg_ethic_empty_slot_tooltip_condition_two$\n$gg_ethic_empty_slot_tooltip_condition_three$"

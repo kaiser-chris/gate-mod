@@ -1,5 +1,9 @@
-﻿gate_arcanist = {
+﻿role_gate_arcanist = {
     texture = "gfx/interface/icons/character_role_icons/gate_arcanist.dds"
+
+    character_background = {
+        texture = gfx/interface/character_backgrounds/gate_char_role_arcanist.dds
+    }
 
     type = other
 
@@ -37,8 +41,12 @@
     }
 }
 
-gate_active_arcanist = {
+role_gate_active_arcanist = {
     texture = "gfx/interface/icons/character_role_icons/gate_arcanist.dds"
+
+    character_background = {
+        texture = gfx/interface/character_backgrounds/gate_char_role_arcanist.dds
+    }
 
     type = other
 
@@ -56,5 +64,25 @@ gate_active_arcanist = {
     career_length = {
         10
         15
+    }
+}
+
+role_gate_dungeon_party_leader = {
+    texture = "gfx/interface/icons/character_role_icons/gate_dungeon_party_leader.dds"
+
+    character_background = {
+        texture = gfx/interface/character_backgrounds/gate_char_role_dungeon_party_leader.dds
+    }
+
+    type = other
+
+    priority = 100
+
+    spawn_characters_to_pool = no
+
+    # Should not time out while party is active
+    career_length = {
+        100
+        100
     }
 }

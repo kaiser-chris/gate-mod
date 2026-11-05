@@ -2,11 +2,10 @@
 	icon = "gfx/interface/icons/event_icons/event_gate_project.dds"
 
 	group = je_group_gate_projects
+	dlc = dlc_magic_gate
 
-	widget = {
-		gui = "gui/com_journal_injects/injects.gui"
-		name = "com_journal_entry_dlc_icon"
-		container = "custom_widget_container_7"
+	activation_description = {
+		always = yes
 	}
 
 	widget = {
@@ -25,7 +24,6 @@
 	}
 
 	immediate = {
-		add_gate_dlc_icon = yes
 		random_scope_building = {
 			limit = {
 				is_building_type = building_gate_alxa
@@ -37,10 +35,6 @@
 				}
 			}
 		}
-	}
-
-	complete = {
-		gate_project_check_complete = yes
 	}
 
 	on_monthly_pulse = {
@@ -56,53 +50,61 @@
 		}
 	}
 
-	invalid = {
-		OR = {
-			hidden_trigger = {
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			gate_project_check_complete = yes
+		}
+		effect = {
+			trigger_event = {
+				id = gate_investigate_gate.1
+				popup = yes
+			}
+			if = {
+				limit = {
+					has_journal_entry = je_gate_researching_magic
+				}
+				je:je_gate_researching_magic = {
+					add_progress = {
+						name = pb_gate_researching_magic
+						value = 10
+					}
+				}
+			}
+			gate_add_magic_innovation = {
+				amount = 500
+			}
+			gate_add_researcher_experience = {
+				amount = 10
+			}
+			hidden_effect = {
+				set_variable = gate_has_finished_project
+				set_variable = gate_project_building_gate_alxa_unlocked
+				gate_stop_magic_project = yes
+			}
+		}
+	}
+
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			OR = {
 				OR = {
 					has_gate_active_magic_project = no
 					has_variable = gate_project_building_gate_alxa_unlocked
 				}
-			}
-			NOT = {
-				any_scope_building = {
-					is_building_type = building_gate_alxa
+				NOT = {
+					any_scope_building = {
+						is_building_type = building_gate_alxa
+					}
 				}
 			}
 		}
-	}
-
-	on_invalid = {
-		hidden_effect = {
-			gate_stop_magic_project = yes
-		}
-	}
-
-	on_complete = {
-		trigger_event = {
-			id = gate_investigate_gate.1
-			popup = yes
-		}
-		if = {
-			limit = {
-				has_journal_entry = je_gate_researching_magic
-			}
-			je:je_gate_researching_magic = {
-				add_progress = {
-					name = pb_gate_researching_magic
-					value = 10
-				}
-			}
-		}
-		gate_add_magic_innovation = {
-			amount = 500
-		}
-		gate_add_researcher_experience = {
-			amount = 10
-		}
-		hidden_effect = {
-			set_variable = gate_has_finished_project
-			set_variable = gate_project_building_gate_alxa_unlocked
+		effect = {
 			gate_stop_magic_project = yes
 		}
 	}
@@ -131,11 +133,10 @@ je_gate_project_investigate_magic_gate_tyrol = {
 	icon = "gfx/interface/icons/event_icons/event_gate_project.dds"
 
 	group = je_group_gate_projects
+	dlc = dlc_magic_gate
 
-	widget = {
-		gui = "gui/com_journal_injects/injects.gui"
-		name = "com_journal_entry_dlc_icon"
-		container = "custom_widget_container_7"
+	activation_description = {
+		always = yes
 	}
 
 	widget = {
@@ -154,7 +155,6 @@ je_gate_project_investigate_magic_gate_tyrol = {
 	}
 
 	immediate = {
-		add_gate_dlc_icon = yes
 		random_scope_building = {
 			limit = {
 				is_building_type = building_gate_tyrol
@@ -166,10 +166,6 @@ je_gate_project_investigate_magic_gate_tyrol = {
 				}
 			}
 		}
-	}
-
-	complete = {
-		gate_project_check_complete = yes
 	}
 
 	on_monthly_pulse = {
@@ -185,53 +181,61 @@ je_gate_project_investigate_magic_gate_tyrol = {
 		}
 	}
 
-	invalid = {
-		OR = {
-			hidden_trigger = {
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			gate_project_check_complete = yes
+		}
+		effect = {
+			trigger_event = {
+				id = gate_investigate_gate.2
+				popup = yes
+			}
+			if = {
+				limit = {
+					has_journal_entry = je_gate_researching_magic
+				}
+				je:je_gate_researching_magic = {
+					add_progress = {
+						name = pb_gate_researching_magic
+						value = 10
+					}
+				}
+			}
+			gate_add_magic_innovation = {
+				amount = 500
+			}
+			gate_add_researcher_experience = {
+				amount = 10
+			}
+			hidden_effect = {
+				set_variable = gate_project_building_gate_tyrol_unlocked
+				set_variable = gate_has_finished_project
+				gate_stop_magic_project = yes
+			}
+		}
+	}
+
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			OR = {
 				OR = {
 					has_gate_active_magic_project = no
 					has_variable = gate_project_building_gate_tyrol_unlocked
 				}
-			}
-			NOT = {
-				any_scope_building = {
-					is_building_type = building_gate_tyrol
+				NOT = {
+					any_scope_building = {
+						is_building_type = building_gate_tyrol
+					}
 				}
 			}
 		}
-	}
-
-	on_invalid = {
-		hidden_effect = {
-			gate_stop_magic_project = yes
-		}
-	}
-
-	on_complete = {
-		trigger_event = {
-			id = gate_investigate_gate.2
-			popup = yes
-		}
-		if = {
-			limit = {
-				has_journal_entry = je_gate_researching_magic
-			}
-			je:je_gate_researching_magic = {
-				add_progress = {
-					name = pb_gate_researching_magic
-					value = 10
-				}
-			}
-		}
-		gate_add_magic_innovation = {
-			amount = 500
-		}
-		gate_add_researcher_experience = {
-			amount = 10
-		}
-		hidden_effect = {
-			set_variable = gate_project_building_gate_tyrol_unlocked
-			set_variable = gate_has_finished_project
+		effect = {
 			gate_stop_magic_project = yes
 		}
 	}
@@ -260,11 +264,10 @@ je_gate_project_investigate_magic_gate_zambia = {
 	icon = "gfx/interface/icons/event_icons/event_gate_project.dds"
 
 	group = je_group_gate_projects
+	dlc = dlc_magic_gate
 
-	widget = {
-		gui = "gui/com_journal_injects/injects.gui"
-		name = "com_journal_entry_dlc_icon"
-		container = "custom_widget_container_7"
+	activation_description = {
+		always = yes
 	}
 
 	widget = {
@@ -283,7 +286,6 @@ je_gate_project_investigate_magic_gate_zambia = {
 	}
 
 	immediate = {
-		add_gate_dlc_icon = yes
 		random_scope_building = {
 			limit = {
 				is_building_type = building_gate_zambia
@@ -295,10 +297,6 @@ je_gate_project_investigate_magic_gate_zambia = {
 				}
 			}
 		}
-	}
-
-	complete = {
-		gate_project_check_complete = yes
 	}
 
 	on_monthly_pulse = {
@@ -314,53 +312,61 @@ je_gate_project_investigate_magic_gate_zambia = {
 		}
 	}
 
-	invalid = {
-		OR = {
-			hidden_trigger = {
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			gate_project_check_complete = yes
+		}
+		effect = {
+			trigger_event = {
+				id = gate_investigate_gate.3
+				popup = yes
+			}
+			if = {
+				limit = {
+					has_journal_entry = je_gate_researching_magic
+				}
+				je:je_gate_researching_magic = {
+					add_progress = {
+						name = pb_gate_researching_magic
+						value = 10
+					}
+				}
+			}
+			gate_add_magic_innovation = {
+				amount = 500
+			}
+			gate_add_researcher_experience = {
+				amount = 10
+			}
+			hidden_effect = {
+				set_variable = gate_project_building_gate_zambia_unlocked
+				set_variable = gate_has_finished_project
+				gate_stop_magic_project = yes
+			}
+		}
+	}
+
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			OR = {
 				OR = {
 					has_gate_active_magic_project = no
 					has_variable = gate_project_building_gate_zambia_unlocked
 				}
-			}
-			NOT = {
-				any_scope_building = {
-					is_building_type = building_gate_zambia
+				NOT = {
+					any_scope_building = {
+						is_building_type = building_gate_zambia
+					}
 				}
 			}
 		}
-	}
-
-	on_invalid = {
-		hidden_effect = {
-			gate_stop_magic_project = yes
-		}
-	}
-
-	on_complete = {
-		trigger_event = {
-			id = gate_investigate_gate.3
-			popup = yes
-		}
-		if = {
-			limit = {
-				has_journal_entry = je_gate_researching_magic
-			}
-			je:je_gate_researching_magic = {
-				add_progress = {
-					name = pb_gate_researching_magic
-					value = 10
-				}
-			}
-		}
-		gate_add_magic_innovation = {
-			amount = 500
-		}
-		gate_add_researcher_experience = {
-			amount = 10
-		}
-		hidden_effect = {
-			set_variable = gate_project_building_gate_zambia_unlocked
-			set_variable = gate_has_finished_project
+		effect = {
 			gate_stop_magic_project = yes
 		}
 	}
@@ -389,11 +395,10 @@ je_gate_project_investigate_magic_gate_yukon = {
 	icon = "gfx/interface/icons/event_icons/event_gate_project.dds"
 
 	group = je_group_gate_projects
+	dlc = dlc_magic_gate
 
-	widget = {
-		gui = "gui/com_journal_injects/injects.gui"
-		name = "com_journal_entry_dlc_icon"
-		container = "custom_widget_container_7"
+	activation_description = {
+		always = yes
 	}
 
 	widget = {
@@ -412,7 +417,6 @@ je_gate_project_investigate_magic_gate_yukon = {
 	}
 
 	immediate = {
-		add_gate_dlc_icon = yes
 		random_scope_building = {
 			limit = {
 				is_building_type = building_gate_yukon
@@ -424,10 +428,6 @@ je_gate_project_investigate_magic_gate_yukon = {
 				}
 			}
 		}
-	}
-
-	complete = {
-		gate_project_check_complete = yes
 	}
 
 	on_monthly_pulse = {
@@ -443,53 +443,61 @@ je_gate_project_investigate_magic_gate_yukon = {
 		}
 	}
 
-	invalid = {
-		OR = {
-			hidden_trigger = {
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			gate_project_check_complete = yes
+		}
+		effect = {
+			trigger_event = {
+				id = gate_investigate_gate.4
+				popup = yes
+			}
+			if = {
+				limit = {
+					has_journal_entry = je_gate_researching_magic
+				}
+				je:je_gate_researching_magic = {
+					add_progress = {
+						name = pb_gate_researching_magic
+						value = 10
+					}
+				}
+			}
+			gate_add_magic_innovation = {
+				amount = 500
+			}
+			gate_add_researcher_experience = {
+				amount = 10
+			}
+			hidden_effect = {
+				set_variable = gate_project_building_gate_yukon_unlocked
+				set_variable = gate_has_finished_project
+				gate_stop_magic_project = yes
+			}
+		}
+	}
+
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			OR = {
 				OR = {
 					has_gate_active_magic_project = no
 					has_variable = gate_project_building_gate_yukon_unlocked
 				}
-			}
-			NOT = {
-				any_scope_building = {
-					is_building_type = building_gate_yukon
+				NOT = {
+					any_scope_building = {
+						is_building_type = building_gate_yukon
+					}
 				}
 			}
 		}
-	}
-
-	on_invalid = {
-		hidden_effect = {
-			gate_stop_magic_project = yes
-		}
-	}
-
-	on_complete = {
-		trigger_event = {
-			id = gate_investigate_gate.4
-			popup = yes
-		}
-		if = {
-			limit = {
-				has_journal_entry = je_gate_researching_magic
-			}
-			je:je_gate_researching_magic = {
-				add_progress = {
-					name = pb_gate_researching_magic
-					value = 10
-				}
-			}
-		}
-		gate_add_magic_innovation = {
-			amount = 500
-		}
-		gate_add_researcher_experience = {
-			amount = 10
-		}
-		hidden_effect = {
-			set_variable = gate_project_building_gate_yukon_unlocked
-			set_variable = gate_has_finished_project
+		effect = {
 			gate_stop_magic_project = yes
 		}
 	}
@@ -518,11 +526,10 @@ je_gate_project_investigate_magic_gate_equateur = {
 	icon = "gfx/interface/icons/event_icons/event_gate_project.dds"
 
 	group = je_group_gate_projects
+	dlc = dlc_magic_gate
 
-	widget = {
-		gui = "gui/com_journal_injects/injects.gui"
-		name = "com_journal_entry_dlc_icon"
-		container = "custom_widget_container_7"
+	activation_description = {
+		always = yes
 	}
 
 	widget = {
@@ -541,7 +548,6 @@ je_gate_project_investigate_magic_gate_equateur = {
 	}
 
 	immediate = {
-		add_gate_dlc_icon = yes
 		random_scope_building = {
 			limit = {
 				is_building_type = building_gate_equateur
@@ -553,10 +559,6 @@ je_gate_project_investigate_magic_gate_equateur = {
 				}
 			}
 		}
-	}
-
-	complete = {
-		gate_project_check_complete = yes
 	}
 
 	on_monthly_pulse = {
@@ -572,53 +574,61 @@ je_gate_project_investigate_magic_gate_equateur = {
 		}
 	}
 
-	invalid = {
-		OR = {
-			hidden_trigger = {
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			gate_project_check_complete = yes
+		}
+		effect = {
+			trigger_event = {
+				id = gate_investigate_gate.5
+				popup = yes
+			}
+			if = {
+				limit = {
+					has_journal_entry = je_gate_researching_magic
+				}
+				je:je_gate_researching_magic = {
+					add_progress = {
+						name = pb_gate_researching_magic
+						value = 10
+					}
+				}
+			}
+			gate_add_magic_innovation = {
+				amount = 500
+			}
+			gate_add_researcher_experience = {
+				amount = 10
+			}
+			hidden_effect = {
+				set_variable = gate_project_building_gate_equateur_unlocked
+				set_variable = gate_has_finished_project
+				gate_stop_magic_project = yes
+			}
+		}
+	}
+
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			OR = {
 				OR = {
 					has_gate_active_magic_project = no
 					has_variable = gate_project_building_gate_equateur_unlocked
 				}
-			}
-			NOT = {
-				any_scope_building = {
-					is_building_type = building_gate_equateur
+				NOT = {
+					any_scope_building = {
+						is_building_type = building_gate_equateur
+					}
 				}
 			}
 		}
-	}
-
-	on_invalid = {
-		hidden_effect = {
-			gate_stop_magic_project = yes
-		}
-	}
-
-	on_complete = {
-		trigger_event = {
-			id = gate_investigate_gate.5
-			popup = yes
-		}
-		if = {
-			limit = {
-				has_journal_entry = je_gate_researching_magic
-			}
-			je:je_gate_researching_magic = {
-				add_progress = {
-					name = pb_gate_researching_magic
-					value = 10
-				}
-			}
-		}
-		gate_add_magic_innovation = {
-			amount = 500
-		}
-		gate_add_researcher_experience = {
-			amount = 10
-		}
-		hidden_effect = {
-			set_variable = gate_project_building_gate_equateur_unlocked
-			set_variable = gate_has_finished_project
+		effect = {
 			gate_stop_magic_project = yes
 		}
 	}
@@ -647,11 +657,10 @@ je_gate_project_investigate_magic_gate_eastern_new_guinea = {
 	icon = "gfx/interface/icons/event_icons/event_gate_project.dds"
 
 	group = je_group_gate_projects
+	dlc = dlc_magic_gate
 
-	widget = {
-		gui = "gui/com_journal_injects/injects.gui"
-		name = "com_journal_entry_dlc_icon"
-		container = "custom_widget_container_7"
+	activation_description = {
+		always = yes
 	}
 
 	widget = {
@@ -670,7 +679,6 @@ je_gate_project_investigate_magic_gate_eastern_new_guinea = {
 	}
 
 	immediate = {
-		add_gate_dlc_icon = yes
 		random_scope_building = {
 			limit = {
 				is_building_type = building_gate_eastern_new_guinea
@@ -682,10 +690,6 @@ je_gate_project_investigate_magic_gate_eastern_new_guinea = {
 				}
 			}
 		}
-	}
-
-	complete = {
-		gate_project_check_complete = yes
 	}
 
 	on_monthly_pulse = {
@@ -701,53 +705,61 @@ je_gate_project_investigate_magic_gate_eastern_new_guinea = {
 		}
 	}
 
-	invalid = {
-		OR = {
-			hidden_trigger = {
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			gate_project_check_complete = yes
+		}
+		effect = {
+			trigger_event = {
+				id = gate_investigate_gate.6
+				popup = yes
+			}
+			if = {
+				limit = {
+					has_journal_entry = je_gate_researching_magic
+				}
+				je:je_gate_researching_magic = {
+					add_progress = {
+						name = pb_gate_researching_magic
+						value = 10
+					}
+				}
+			}
+			gate_add_magic_innovation = {
+				amount = 500
+			}
+			gate_add_researcher_experience = {
+				amount = 10
+			}
+			hidden_effect = {
+				set_variable = gate_project_building_gate_eastern_new_guinea_unlocked
+				set_variable = gate_has_finished_project
+				gate_stop_magic_project = yes
+			}
+		}
+	}
+
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			OR = {
 				OR = {
 					has_gate_active_magic_project = no
 					has_variable = gate_project_building_gate_eastern_new_guinea_unlocked
 				}
-			}
-			NOT = {
-				any_scope_building = {
-					is_building_type = building_gate_eastern_new_guinea
+				NOT = {
+					any_scope_building = {
+						is_building_type = building_gate_eastern_new_guinea
+					}
 				}
 			}
 		}
-	}
-
-	on_invalid = {
-		hidden_effect = {
-			gate_stop_magic_project = yes
-		}
-	}
-
-	on_complete = {
-		trigger_event = {
-			id = gate_investigate_gate.6
-			popup = yes
-		}
-		if = {
-			limit = {
-				has_journal_entry = je_gate_researching_magic
-			}
-			je:je_gate_researching_magic = {
-				add_progress = {
-					name = pb_gate_researching_magic
-					value = 10
-				}
-			}
-		}
-		gate_add_magic_innovation = {
-			amount = 500
-		}
-		gate_add_researcher_experience = {
-			amount = 10
-		}
-		hidden_effect = {
-			set_variable = gate_project_building_gate_eastern_new_guinea_unlocked
-			set_variable = gate_has_finished_project
+		effect = {
 			gate_stop_magic_project = yes
 		}
 	}

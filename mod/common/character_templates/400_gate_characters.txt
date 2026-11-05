@@ -1,7 +1,7 @@
 ﻿gate_magic_researcher_template = {
 	ideology = ideology_magic_hopeful
 
-	role = gate_arcanist
+	role = role_gate_arcanist
 
 	on_created = {
 		set_variable = is_magic_researcher
@@ -172,6 +172,52 @@ gate_expedition_leader_template = {
 				}
 			}
 		}
+	}
+
+	agitator_usage = {
+		country_trigger = {
+			always = no
+		}
+		interest_group_trigger = {
+			always = no
+		}
+		chance = 0
+	}
+
+	commander_usage = {
+		country_trigger = {
+			always = no
+		}
+		chance = 0
+	}
+
+	executive_usage = {
+		country_trigger = {
+			always = no
+		}
+		company_trigger = {
+			always = no
+		}
+		chance = 0
+	}
+
+	interest_group_leader_usage = {
+		country_trigger = {
+			always = no
+		}
+		interest_group_trigger = {
+			always = no
+		}
+		chance = 0
+	}
+}
+
+gate_dungeon_party_leader_template = {
+	role = general
+	role = role_gate_dungeon_party_leader
+
+	on_created = {
+		set_character_busy_and_immortal = yes
 	}
 
 	agitator_usage = {

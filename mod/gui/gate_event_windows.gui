@@ -1,0 +1,1429 @@
+@button_width = 350
+
+types gate_event_window_types {
+
+    type event_window_gate_dungeon = default_popup_two_lines {
+        name = event_window_gate_dungeon
+        datacontext = "[EventWindow.GetEvent]"
+        datacontext = "[EventWindow.GetEvent.GetTopScope.GetLocalVariable('expedition').GetScriptContainer]"
+
+        alpha = 0
+
+        blockoverride "minimize" {
+            minimize_button_large = {
+                onclick = "[PopupManager.HideOpenEvent(Event.Self)]"
+                parentanchor = center
+                shortcut = "close_window"
+            }
+        }
+
+        blockoverride "header_close_button_visibility" {
+            visible = yes
+        }
+
+        blockoverride "window_header_name" {
+            raw_text = "#BOLD [EventWindow.GetTitle]#!"
+        }
+
+        blockoverride "content" {}
+
+        blockoverride "second_text" {
+            datacontext = "[ScriptContainer.MakeScope.Var('dungeon')]"
+            text = event_gate_dungeon
+            tooltipwidget = {
+                gate_dungeon_tooltip = {}
+            }
+        }
+
+        blockoverride "goto_visibility" {
+            visible = yes
+        }
+
+        blockoverride "goto_properties" {
+            onclick = "[EventWindow.AccessEvent.AccessState.ZoomToCapital]"
+            tooltip = "ZOOM_TO_EVENT_WINDOW_STATE"
+            enabled = "[Not( EventWindow.AccessEvent.AccessState.IsZoomingToCapital )]"
+        }
+
+        state = {
+            trigger_on_create = yes
+            name = 1
+            duration = 0.3
+            using = Animation_Curve_EaseOut
+            alpha = 1
+            using = Snapshot_Mute_World_100
+            using = Snapshot_Mute_Vfx_War_100
+            start_sound = {
+                soundeffect = "[Event.GetOnOpenedSoundEvent]"
+            }
+        }
+
+
+        ### SETTING SIZE OF WINDOW
+        flowcontainer = {
+            resizeparent = yes
+            margin = { 30 0 }
+            margin_bottom = 35
+
+            container = {
+                ### HEADER FLAGS / PORTRAITS / ICONS
+                event_icon = {
+                    position = { 20 0 }
+                    datacontext = "[Event.GetIcon('minor_left_icon')]"
+                }
+
+                event_icon = {
+                    parentanchor = right
+                    position = { -25 0 }
+                    datacontext = "[Event.GetIcon('minor_right_icon')]"
+                }
+
+                container = {
+                    position = { 0 90 }
+
+                    ### INNER FRAME + FADE OVER THE IMAGE
+                    icon = {
+                        texture = "gfx/interface/event_window/event_inner_frame.dds"
+                        size = { 100% 100% }
+                        spriteType = Corneredtiled
+                        spriteborder = { 25 25 }
+                        spriteborder_right = 610
+                        spriteborder_top = 600
+                        texture_density = 2
+
+                        modify_texture = {
+                            texture = "gfx/interface/backgrounds/default_bg_shading.dds"
+                            spriteType = Corneredstretched
+                            spriteborder = { 0 0 }
+                            blend_mode = overlay
+                        }
+
+                        modify_texture = {
+                            using = texture_velvet
+                        }
+                    }
+
+                    ### EVENT IMAGE
+                    widget = {
+                        position = { 3 3 }
+                        size = { 100% 100% }
+                        block "event_content" {
+
+                            # image in case we have no video?
+                            icon = {
+                                visible = "[Event.HasTexture]"
+                                texture = "[Event.GetTexture]"
+                                alwaystransparent = yes
+                                size = { 100% 100% }
+
+                                modify_texture = {
+                                    texture = "gfx/interface/masks/fade_horizontal_right.dds"
+                                    spriteType = Corneredstretched
+                                    spriteborder = { 45 45 }
+                                    spriteborder_bottom = 0
+                                    blend_mode = alphamultiply
+                                    texture_density = 2
+                                }
+
+                                modify_texture = {
+                                    using = texture_velvet
+                                }
+                            }
+
+                            # animated video ( most images should have this )
+                            video_icon = {
+                                visible = "[Event.HasVideo]"
+                                video = "[Event.GetVideo]"
+                                size = { 100% 100% }
+                                alwaystransparent = yes
+                                loop = no
+
+                                modify_texture = {
+                                    texture = "gfx/interface/masks/fade_horizontal_right.dds"
+                                    spriteType = Corneredstretched
+                                    spriteborder = { 45 45 }
+                                    spriteborder_bottom = 0
+                                    blend_mode = alphamultiply
+                                    texture_density = 2
+                                }
+
+                                modify_texture = {
+                                    using = texture_velvet
+                                }
+                            }
+                        }
+                    }
+
+                    ### CONTENT
+                    flowcontainer = {
+                        spacing = 30
+                        margin = { 20 20 }
+
+                        widget = {
+                            size = { 600 10 }
+                        }
+
+                        ### DUNGEON LAYERS
+                        # flowcontainer = {
+                        #     direction = vertical
+                        #     margin = { 25 0 }
+                        #     margin_bottom = 45
+                        #     margin_top = 16
+                        #     spacing = 20
+                        #
+                        #     background = {
+                        #         using = entry_bg_simple_solid
+                        #     }
+                        #
+                        #     ### DUNGEON INFORMATION
+                        #     flowcontainer = {
+                        #         direction = vertical
+                        #         spacing = 10
+                        #
+                        #         default_header_clean_faded = {
+                        #             parentanchor = hcenter
+                        #             blockoverride "text" {
+                        #                 text = "[concept_gate_dungeon]"
+                        #             }
+                        #             blockoverride "size" {
+                        #                 size = { 500 45 }
+                        #             }
+                        #         }
+                        #         widget = {
+                        #             parentanchor = hcenter
+                        #             size = { 450 23 }
+                        #
+                        #             textbox = {
+                        #                 autoresize = yes
+                        #                 parentanchor = left
+                        #                 text = je_gate_expedition_dungeon_name
+                        #             }
+                        #
+                        #             textbox = {
+                        #                 autoresize = yes
+                        #                 parentanchor = right
+                        #                 text = "#yellow [ScriptContainer.MakeScope.Var('dungeon').Var('name').GetFlagName]#!"
+                        #                 tooltipwidget = {
+                        #                     gate_dungeon_tooltip = {
+                        #                         datacontext = "[ScriptContainer.MakeScope.Var('dungeon')]"
+                        #                     }
+                        #                 }
+                        #             }
+                        #         }
+                        #         widget = {
+                        #             parentanchor = hcenter
+                        #             size = { 450 23 }
+                        #
+                        #             textbox = {
+                        #                 autoresize = yes
+                        #                 parentanchor = left
+                        #                 text = je_gate_expedition_dungeon_location
+                        #             }
+                        #             textbox = {
+                        #                 autoresize = yes
+                        #                 parentanchor = right
+                        #                 text = "[ScriptContainer.MakeScope.Var('dungeon').Var('location').GetStateRegion.GetName]"
+                        #             }
+                        #         }
+                        #         widget = {
+                        #             parentanchor = hcenter
+                        #             size = { 450 23 }
+                        #
+                        #             textbox = {
+                        #                 autoresize = yes
+                        #                 parentanchor = left
+                        #                 text = je_gate_expedition_dungeon_layer_active
+                        #             }
+                        #             textbox = {
+                        #                 autoresize = yes
+                        #                 parentanchor = right
+                        #                 text = "#yellow [ScriptContainer.MakeScope.Var('current_layer').Var('name').GetFlagName]#!"
+                        #                 tooltipwidget = {
+                        #                     gate_dungeon_tooltip = {
+                        #                         datacontext = "[ScriptContainer.MakeScope.Var('current_layer')]"
+                        #                     }
+                        #                 }
+                        #             }
+                        #         }
+                        #         textbox = {
+                        #             parentanchor = hcenter
+                        #             minimumsize = { 450 -1 }
+                        #             maximumsize = { 450 -1 }
+                        #             autoresize = yes
+                        #             multiline = yes
+                        #             raw_text = "[ScriptContainer.MakeScope.Var('dungeon').Var('desc').GetFlagName]"
+                        #         }
+                        #     }
+                        #
+                        #     ### DUNGEON LAYERS
+                        #     flowcontainer = {
+                        #         direction = vertical
+                        #         default_header_clean_faded = {
+                        #             parentanchor = hcenter
+                        #             blockoverride "text" {
+                        #                 text = "[Concept('concept_gate_dungeon_layer', Localize('concept_gate_dungeon_layers'))]"
+                        #             }
+                        #             blockoverride "size" {
+                        #                 size = { 500 45 }
+                        #             }
+                        #         }
+                        #
+                        #         gate_dungeon_layers = {
+                        #             blockoverride "datamodel" {
+                        #                 datamodel = "[DataModelFirst(ScriptContainer.MakeScope.Var('dungeon').GetList('layers'), '(int32)1')]"
+                        #             }
+                        #             blockoverride "top_line" {
+                        #                 visible = no
+                        #             }
+                        #         }
+                        #         gate_dungeon_layers = {
+                        #             blockoverride "datamodel" {
+                        #                 datamodel = "[DataModelSubSpan(
+                        #                 ScriptContainer.MakeScope.Var('dungeon').GetList('layers'),
+                        #                 '(int32)1',
+                        #                 GetDataModelSize(ScriptContainer.MakeScope.Var('dungeon').GetList('layers'))
+                        #             )]"
+                        #             }
+                        #         }
+                        #     }
+                        # }
+
+                        ### TITLE / TEXT / OPTIONS
+                        flowcontainer = {
+                            minimumsize = { 550 606 }
+                            maximumsize = { 550 -1 }
+                            direction = vertical
+                            spacing = 20
+                            parentanchor = right|vcenter
+                            margin = { 25 40 }
+
+                            background = {
+                                using = entry_bg_simple_solid
+                            }
+
+                            background = {
+                                using = fade_center_colored_black
+                            }
+
+                            textbox = {
+                                name = "description"
+                                multiline = yes
+                                autoresize = yes
+                                minimumsize = { 500 -1 }
+                                maximumsize = { 500 -1 }
+                                parentanchor = top|hcenter
+                                align = nobaseline
+                                margin = { 10 0 }
+                                using = fontsize_large
+                                raw_text = "#bold [EventWindow.GetDescription]#!"
+                            }
+
+                            divider_decorative = { }
+
+                            textbox = {
+                                name = "flavortext"
+                                multiline = yes
+                                autoresize = yes
+                                minimumsize = { 500 -1 }
+                                maximumsize = { 500 -1 }
+                                parentanchor = top|hcenter
+                                align = top|left
+                                margin = { 10 10 }
+                                raw_text = "[EventWindow.GetFlavor]"
+                            }
+
+                            gate_dungeon_layer_progress_line = {}
+
+                            flowcontainer = {
+                                direction = vertical
+                                using = default_list_position
+                                datamodel = "[EventWindow.GetOptions]"
+                                spacing = 5
+
+                                item = {
+                                    container = {
+
+                                        widget = {
+                                            visible = "[EventOption.IsHighlightedOption]"
+
+                                            button = {
+                                                size = { 96% 100% }
+                                                parentanchor = hcenter
+                                                using = default_button_primary_action
+                                                tooltip = "[EventOption.GetDesc]"
+                                                using = tooltip_ws
+                                                using = confirm_button_sound
+                                                onclick = "[EventOption.Select]"
+                                                enabled = "[EventOption.IsEnabled]"
+                                            }
+
+                                            textbox = {
+                                                resizeparent = yes
+                                                minimumsize = { 500 42 }
+                                                maximumsize = { 500 -1 }
+                                                multiline = yes
+                                                align = "[GetEventOptionTextAlignment]"
+                                                autoresize = yes
+                                                margin = { 30 10 }
+                                                text = "[EventOption.GetText]"
+                                            }
+                                        }
+
+                                        widget = {
+                                            visible = "[Not(EventOption.IsHighlightedOption)]"
+
+                                            button = {
+                                                size = { 96% 100% }
+                                                parentanchor = hcenter
+                                                using = default_button_action
+                                                tooltip = "EVENT_OPTION_TOOLTIP"
+                                                using = tooltip_ws
+                                                using = confirm_button_sound
+                                                onclick = "[EventOption.Select]"
+                                                enabled = "[EventOption.IsEnabled]"
+                                            }
+
+                                            textbox = {
+                                                resizeparent = yes
+                                                minimumsize = { 500 42 }
+                                                maximumsize = { 500 -1 }
+                                                text = "[EventOption.GetText]"
+                                                multiline = yes
+                                                align = "[GetEventOptionTextAlignment]"
+                                                autoresize = yes
+                                                margin = { 25 10 }
+                                                margin_right = 50
+                                            }
+
+                                            ### Time until the default option will be picked
+                                            round_progress_default = {
+                                                visible = "[EventOption.IsDefaultOption]"
+                                                parentanchor = right|vcenter
+                                                position = { -20 0.5 }
+                                                size = { 27 27 }
+                                                tooltip = "DEFAULT_EVENT_OPTION"
+                                                value = "[Event.GetPercentageRemainingDays]"
+
+                                                icon = {
+                                                    size = { 26 26 }
+                                                    position = { -0.2 -0.2 }
+                                                    parentanchor = center
+                                                    texture = "gfx/interface/icons/generic_icons/event_default_option.dds"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            button = {
+                                visible = "[InDebugMode]"
+                                parentanchor = hcenter
+                                size = { 480 62 }
+                                using = default_button
+                                raw_text = "DEBUG: Open Event in text editor"
+                                onclick = "[EventWindow.AccessEvent.OpenInEditor]"
+                            }
+
+                            textbox = {
+                                visible = "[InDebugMode]"
+                                parentanchor = hcenter
+                                size = { 480 62 }
+                                raw_text = "DEBUG: Trigger description"
+                                tooltip = "[Event.GetTriggerDesc]"
+                                align = hcenter|nobaseline
+
+                                background = {
+                                    using = default_background
+                                }
+                            }
+
+                            textbox = {
+                                visible = "[InDebugMode]"
+                                parentanchor = hcenter
+                                align = hcenter
+                                raw_text = "Event ID: [Event.GetKey|v]"
+                            }
+                        }
+                    }
+
+                    ### DLC ICON
+                    flowcontainer = {
+                        visible = "[Event.IsDLCContent]"
+                        spacing = 5
+                        parentanchor = bottom
+                        righttoleft = yes
+                        position = { 10 10 }
+                        tooltip = "EVENT_DLC_TOOLTIP"
+
+                        textbox = {
+                            autoresize = yes
+                            align = vcenter
+                            parentanchor = vcenter
+                            using = fontsize_large
+                            using = elide_fontsize_min
+                            alpha = 0.7
+                            text = "[Event.GetDLCName]"
+
+                            background = {
+                                using = dark_area
+                                margin = { 10 5 }
+                                margin_left = 20
+                                alpha = 1
+                            }
+                        }
+
+                        icon = {
+                            parentanchor = vcenter
+                            size = { 50 50 }
+                            texture = "[Event.GetDLCIcon]"
+                        }
+                    }
+
+
+                    flowcontainer = {
+                        margin = { 20 20 }
+                        gate_dungeon_party_condensed = {}
+                    }
+                }
+            }
+        }
+    }
+
+    type event_window_gate_dungeon_setup = default_popup_two_lines {
+        name = event_window_gate_dungeon_setup
+        datacontext = "[EventWindow.GetEvent]"
+        datacontext = "[EventWindow.GetEvent.GetTopScope.GetLocalVariable('expedition').GetScriptContainer]"
+
+        blockoverride "minimize" {
+            minimize_button_large = {
+                onclick = "[PopupManager.HideOpenEvent(Event.Self)]"
+                parentanchor = center
+                shortcut = "close_window"
+            }
+        }
+
+        state = {
+            name = _show
+            trigger_on_create = yes
+            on_finish = "[GetVariableSystem.Clear('gate_dungeon_setup_tab')]"
+        }
+
+        blockoverride "header_close_button_visibility" {
+            visible = yes
+        }
+
+        blockoverride "window_header_name" {
+            raw_text = "#BOLD [EventWindow.GetTitle]#!"
+        }
+
+        blockoverride "content" {
+            vbox = {
+                resizeparent = yes
+                minimumsize = { 800 630 }
+                maximumsize = { 800 630 }
+                margin = { 50 0 }
+                margin_bottom = 30
+                margin_top = 100
+                spacing = 10
+
+                vbox = {
+                    visible = no
+                    layoutpolicy_horizontal = expanding
+                    margin = { 20 20 }
+                    spacing = 10
+                    background = {
+                        using = entry_bg
+                    }
+                    textbox = {
+                        name = "description"
+                        multiline = yes
+                        autoresize = yes
+                        layoutpolicy_horizontal = expanding
+                        align = nobaseline
+                        margin = { 10 0 }
+                        using = fontsize_large
+                        raw_text = "#bold [EventWindow.GetDescription]#!"
+                    }
+
+                    divider_decorative = {
+                        layoutpolicy_horizontal = expanding
+                    }
+
+                    textbox = {
+                        name = "flavortext"
+                        multiline = yes
+                        autoresize = yes
+                        layoutpolicy_horizontal = expanding
+                        align = top|left
+                        margin = { 10 10 }
+                        raw_text = "[EventWindow.GetFlavor]"
+                    }
+                }
+
+                vbox = {
+                    layoutpolicy_horizontal = expanding
+                    layoutpolicy_vertical = expanding
+                    tab_buttons = {
+                        blockoverride "first_button" {
+                            text = event_gate_tab_dungeon
+                        }
+                        blockoverride "first_button_tooltip" {
+                            tooltip = "event_gate_tab_dungeon"
+                        }
+                        blockoverride "first_button_click" {
+                            onclick = "[GetVariableSystem.Set('gate_dungeon_setup_tab', 'dungeon')]"
+                        }
+                        blockoverride "first_button_visibility" {
+                            visible = "[Or(
+                                GetVariableSystem.HasValue('gate_dungeon_setup_tab', 'dungeon'),
+                                Not(GetVariableSystem.Exists('gate_dungeon_setup_tab'))
+                            )]"
+                        }
+                        blockoverride "first_button_visibility_checked" {
+                            visible = "[Not(Or(
+                                GetVariableSystem.HasValue('gate_dungeon_setup_tab', 'dungeon'),
+                                Not(GetVariableSystem.Exists('gate_dungeon_setup_tab'))
+                            ))]"
+                        }
+                        blockoverride "first_button_selected" {
+                            text = event_gate_tab_dungeon
+                        }
+
+                        blockoverride "second_button" {
+                            text = event_gate_tab_dungeon_leader
+                        }
+                        blockoverride "second_button_tooltip" {
+                            tooltip = "event_gate_tab_dungeon_leader"
+                        }
+                        blockoverride "second_button_click" {
+                            onclick = "[GetVariableSystem.Set('gate_dungeon_setup_tab', 'leader')]"
+                        }
+                        blockoverride "second_button_visibility" {
+                            visible = "[GetVariableSystem.HasValue('gate_dungeon_setup_tab', 'leader')]"
+                        }
+                        blockoverride "second_button_visibility_checked" {
+                            visible = "[Not(GetVariableSystem.HasValue('gate_dungeon_setup_tab', 'leader'))]"
+                        }
+                        blockoverride "second_button_selected" {
+                            text = event_gate_tab_dungeon_leader
+                        }
+
+                        blockoverride "third_button" {
+                            text = event_gate_tab_dungeon_party
+                        }
+                        blockoverride "third_button_tooltip" {
+                            tooltip = "event_gate_tab_dungeon_party"
+                        }
+                        blockoverride "third_button_click" {
+                            onclick = "[GetVariableSystem.Set('gate_dungeon_setup_tab', 'party')]"
+                        }
+                        blockoverride "third_button_visibility" {
+                            visible = "[GetVariableSystem.HasValue('gate_dungeon_setup_tab', 'party')]"
+                        }
+                        blockoverride "third_button_visibility_checked" {
+                            visible = "[Not(GetVariableSystem.HasValue('gate_dungeon_setup_tab', 'party'))]"
+                        }
+                        blockoverride "third_button_selected" {
+                            text = event_gate_tab_dungeon_party
+                        }
+                    }
+                    event_window_gate_dungeon_setup_dungeon = {
+                        visible = "[Or(
+                            GetVariableSystem.HasValue('gate_dungeon_setup_tab', 'dungeon'),
+                            Not(GetVariableSystem.Exists('gate_dungeon_setup_tab'))
+                        )]"
+                    }
+                    event_window_gate_dungeon_setup_leader = {
+                        visible = "[GetVariableSystem.HasValue('gate_dungeon_setup_tab', 'leader')]"
+                    }
+                    event_window_gate_dungeon_setup_party = {
+                        visible = "[GetVariableSystem.HasValue('gate_dungeon_setup_tab', 'party')]"
+                    }
+                }
+
+                divider_decorative = {
+                    layoutpolicy_horizontal = expanding
+                }
+
+                hbox = {
+                    margin_top = 10
+                    datamodel = "[EventWindow.GetOptions]"
+                    spacing = 10
+
+                    item = {
+                        widget = {
+                            size = { @button_width 42 }
+                            widget = {
+                                size = { @button_width 42 }
+                                visible = "[EventOption.IsHighlightedOption]"
+
+                                button = {
+                                    size = { 96% 100% }
+                                    parentanchor = hcenter
+                                    using = default_button_primary_action
+                                    tooltip = "[EventOption.GetDesc]"
+                                    using = tooltip_ws
+                                    using = confirm_button_sound
+                                    onclick = "[EventOption.Select]"
+                                    enabled = "[EventOption.IsEnabled]"
+                                }
+
+                                textbox = {
+                                    resizeparent = yes
+                                    minimumsize = { @button_width 42 }
+                                    maximumsize = { @button_width -1 }
+                                    multiline = yes
+                                    align = "[GetEventOptionTextAlignment]"
+                                    autoresize = yes
+                                    margin = { 30 10 }
+                                    text = "[EventOption.GetText]"
+                                }
+                            }
+                            widget = {
+                                size = { 300 42 }
+                                visible = "[Not(EventOption.IsHighlightedOption)]"
+
+                                button = {
+                                    size = { 96% 100% }
+                                    parentanchor = hcenter
+                                    using = default_button_action
+                                    tooltip = "EVENT_OPTION_TOOLTIP"
+                                    using = tooltip_ws
+                                    using = confirm_button_sound
+                                    onclick = "[EventOption.Select]"
+                                    enabled = "[EventOption.IsEnabled]"
+                                }
+
+                                textbox = {
+                                    resizeparent = yes
+                                    minimumsize = { @button_width 42 }
+                                    maximumsize = { @button_width -1 }
+                                    text = "[EventOption.GetText]"
+                                    multiline = yes
+                                    align = "[GetEventOptionTextAlignment]"
+                                    autoresize = yes
+                                    margin = { 25 10 }
+                                    margin_right = 50
+                                }
+
+                                ### Time until the default option will be picked
+                                round_progress_default = {
+                                    visible = "[EventOption.IsDefaultOption]"
+                                    parentanchor = right|vcenter
+                                    position = { -20 0.5 }
+                                    size = { 27 27 }
+                                    tooltip = "DEFAULT_EVENT_OPTION"
+                                    value = "[Event.GetPercentageRemainingDays]"
+
+                                    icon = {
+                                        size = { 26 26 }
+                                        position = { -0.2 -0.2 }
+                                        parentanchor = center
+                                        texture = "gfx/interface/icons/generic_icons/event_default_option.dds"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        blockoverride "second_text" {
+            datacontext = "[ScriptContainer.MakeScope.Var('dungeon')]"
+            text = event_gate_dungeon
+            tooltipwidget = {
+                gate_dungeon_tooltip = {}
+            }
+        }
+
+        blockoverride "goto_visibility" {
+            visible = yes
+        }
+
+        blockoverride "goto_properties" {
+            onclick = "[EventWindow.AccessEvent.AccessState.ZoomToCapital]"
+            tooltip = "ZOOM_TO_EVENT_WINDOW_STATE"
+            enabled = "[Not( EventWindow.AccessEvent.AccessState.IsZoomingToCapital )]"
+        }
+
+        state = {
+            trigger_on_create = yes
+            name = 1
+            duration = 0.3
+            using = Animation_Curve_EaseOut
+            alpha = 1
+            using = Snapshot_Mute_World_100
+            using = Snapshot_Mute_Vfx_War_100
+            start_sound = {
+                soundeffect = "[Event.GetOnOpenedSoundEvent]"
+            }
+        }
+    }
+
+    type event_window_gate_dungeon_setup_dungeon = vbox {
+        layoutpolicy_horizontal = expanding
+        layoutpolicy_vertical = expanding
+        margin = { 0 10 }
+        spacing = 20
+
+        vbox = {
+            layoutpolicy_horizontal = expanding
+            spacing = 5
+
+            default_header_clean_faded = {
+                blockoverride "textbox" {
+                    hbox = {
+                        layoutpolicy_horizontal = expanding
+                        margin = { 10 0 }
+                        expand = {}
+                        textbox = {
+                            autoresize = yes
+                            align = nobaseline
+                            raw_text = "#yellow [ScriptContainer.MakeScope.Var('dungeon').Var('name').GetFlagName]#!"
+                            tooltipwidget = {
+                                gate_dungeon_tooltip = {
+                                    datacontext = "[ScriptContainer.MakeScope.Var('dungeon')]"
+                                }
+                            }
+                            using = fontsize_large
+                        }
+                        textbox = {
+                            autoresize = yes
+                            align = nobaseline
+                            text = event_gate_dungeon_header_location
+                            using = fontsize_large
+                        }
+                        expand = {}
+                    }
+                }
+                blockoverride "size" {
+                    size = { 710 45 }
+                }
+            }
+
+            hbox = {
+                minimumsize = { 710 -1 }
+                layoutpolicy_horizontal = expanding
+                spacing = 10
+
+                vbox = {
+                    layoutpolicy_horizontal = expanding
+                    margin = { 20 20 }
+                    background = {
+                        using = entry_bg
+                    }
+                    textbox = {
+                        maximumsize = { 460 -1 }
+                        multiline = yes
+                        autoresize = yes
+                        layoutpolicy_horizontal = expanding
+                        align = nobaseline
+                        raw_text = "[ScriptContainer.MakeScope.Var('dungeon').Var('desc').GetFlagName]"
+                    }
+                    expand = {}
+                }
+
+                vbox = {
+                    maximumsize = { 200 -1 }
+                    minimumsize = { 200 -1 }
+                    layoutpolicy_vertical = expanding
+                    layoutpolicy_horizontal = expanding
+
+                    vbox = {
+                        layoutpolicy_horizontal = expanding
+                        margin = { 20 20 }
+                        background = {
+                            using = entry_bg_simple
+                        }
+
+                        hbox = {
+                            layoutpolicy_horizontal = expanding
+                            textbox = {
+                                autoresize = yes
+                                align = left
+                                text = event_gate_dungeon_stats_discovery_date
+                            }
+                            expand = {}
+                            textbox = {
+                                autoresize = yes
+                                align = right
+                                raw_text = "#v [TimeKeeper.GetCurrentDateWithDiff(FixedPointToInt(ScriptContainer.MakeScope.Var('dungeon').ScriptValue('gate_dungeon_creation_time')))]#!"
+                            }
+                        }
+
+                        hbox = {
+                            layoutpolicy_horizontal = expanding
+                            textbox = {
+                                autoresize = yes
+                                align = left
+                                text = event_gate_dungeon_stats_layer_count
+                            }
+                            expand = {}
+                            textbox = {
+                                autoresize = yes
+                                align = right
+                                raw_text = "[ScriptContainer.MakeScope.Var('dungeon').ScriptValue('gate_layer_count')|v0]"
+                            }
+                        }
+
+                        hbox = {
+                            layoutpolicy_horizontal = expanding
+                            textbox = {
+                                autoresize = yes
+                                align = left
+                                text = event_gate_dungeon_stats_location
+                            }
+                            expand = {}
+                            textbox = {
+                                autoresize = yes
+                                align = right
+                                raw_text = "[ScriptContainer.MakeScope.Var('dungeon').Var('location').GetStateRegion.GetName]"
+                            }
+                        }
+                    }
+
+                    expand = {}
+                }
+            }
+        }
+
+        gate_journal_dungeon_expedition = {
+            blockoverride "dungeon_expedition_widget_size" {
+                size = { 710 300 }
+            }
+            blockoverride "layer_count_visible" {
+                visible = yes
+            }
+            blockoverride "current_layer_visible" {
+                visible = no
+            }
+        }
+    }
+
+    type event_window_gate_dungeon_setup_leader = vbox {
+        layoutpolicy_horizontal = expanding
+        layoutpolicy_vertical = expanding
+        margin = { 0 10 }
+
+        vbox = {
+            layoutpolicy_horizontal = expanding
+            margin = { 20 20 }
+            spacing = 10
+            background = {
+                using = entry_bg
+            }
+            textbox = {
+                maximumsize = { 690 -1 }
+                multiline = yes
+                autoresize = yes
+                layoutpolicy_horizontal = expanding
+                align = nobaseline
+                raw_text = "[Localize(Concatenate(Event.GetKey, '.leaders'))]"
+            }
+        }
+
+        hbox = {
+            layoutpolicy_horizontal = expanding
+            layoutpolicy_vertical = expanding
+
+            datamodel = "[GetPlayer.MakeScope.GetList('gate_potential_dungeon_party_leaders')]"
+            item = {
+                vbox = {
+                    spacing = 0
+                    datacontext = "[Scope.AccessCharacter]"
+                    character_portrait_base_torso = {
+                        blockoverride "portrait_button_onclick" {
+                            onclick = "[GetScriptedGui('sgui_gate_select_dungeon_party_leader').Execute(GuiScope.SetRoot(ScriptContainer.MakeScope).AddScope('leader', Character.MakeScope).End)]"
+                        }
+                        blockoverride "portrait_button_onrightclick" {}
+                        blockoverride "character_highlight" {
+                            icon = {
+                                name = hover_highlight
+                                parentanchor = top|right
+                                position = { 5 55 }
+                                visible = "[GetScriptedGui('sgui_gate_select_dungeon_party_leader').IsShown(GuiScope.SetRoot(ScriptContainer.MakeScope).AddScope('leader', Character.MakeScope).End)]"
+                                size = { 40 40 }
+                                texture = "gfx/interface/icons/generic_icons/map_list_checkmark.dds"
+                                background = {
+                                    margin = { 8 8 }
+                                    texture = "gfx/interface/backgrounds/round_button_bg.dds"
+                                }
+                            }
+                        }
+                        size = { 217 261 }
+                        blockoverride "portrait_position" {
+                            position = { 0 -21 }
+                        }
+                        blockoverride "portrait_frame" {
+                            icon = {
+                                name = portrait_frame_leader
+                                texture = "gfx/interface/portraits/portrait_frame_torso.dds"
+                                size = { 100% 240 }
+                                parentanchor = bottom|hcenter
+                                modify_texture = {
+                                    visible = "[GetScriptedGui('sgui_gate_select_dungeon_party_leader').IsShown(GuiScope.SetRoot(ScriptContainer.MakeScope).AddScope('leader', Character.MakeScope).End)]"
+                                    texture = "gfx/interface/selections/generic_highlight.dds"
+                                    spriteType = Corneredstretched
+                                    spriteborder = { 0 0 }
+                                    blend_mode = overlay
+                                }
+                            }
+                        }
+                        blockoverride "portrait_frame_on_top_of_portrait" {}
+                        blockoverride "portrait_size" {
+                            size = { 180 250 }
+                        }
+                    }
+                    default_header_clean_faded = {
+                        blockoverride "text" {
+                            raw_text = "[Character.GetFullName]"
+                        }
+                        blockoverride "size" {
+                            size = { 200 40 }
+                        }
+                    }
+                    dynamicgridbox = {
+                        datamodel = "[Character.AccessTraits]"
+                        flipdirection = yes
+                        datamodel_wrap = 5
+
+                        item = {
+                            flowcontainer = {
+                                margin = { 3 5 }
+                                using = tooltip_above
+                                alpha = "[TransparentIfTrue(CharacterTrait.IsDisabled)]"
+
+                                tooltipwidget = {
+                                    FancyTooltip_CharacterTrait = {}
+                                }
+
+                                icon = {
+                                    size = { 32 45 }
+                                    parentanchor = vcenter
+                                    texture = "[CharacterTrait.GetTexture]"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    type event_window_gate_dungeon_setup_party = vbox {
+        layoutpolicy_horizontal = expanding
+        layoutpolicy_vertical = expanding
+        margin = { 0 10 }
+
+        hbox = {
+            spacing = 20
+            layoutpolicy_horizontal = expanding
+
+            vbox = {
+                layoutpolicy_horizontal = expanding
+                layoutpolicy_vertical = expanding
+
+                vbox = {
+                    layoutpolicy_horizontal = expanding
+                    margin = { 20 20 }
+                    spacing = 10
+                    background = {
+                        using = entry_bg
+                    }
+                    textbox = {
+                        maximumsize = { 470 -1 }
+                        multiline = yes
+                        autoresize = yes
+                        layoutpolicy_horizontal = expanding
+                        align = nobaseline
+                        raw_text = "[Localize(Concatenate(Event.GetKey, '.points'))]"
+                    }
+                }
+
+                expand = {}
+            }
+
+            vbox = {
+                layoutpolicy_horizontal = expanding
+                layoutpolicy_vertical = expanding
+                margin_top = -2
+                spacing = 5
+
+                default_header_clean_faded = {
+                    blockoverride "text" {
+                        text = event_gate_dungeon_party_points
+                    }
+                    blockoverride "text_size" {}
+                    blockoverride "size" {
+                        size = { 170 35 }
+                    }
+                }
+
+                textbox = {
+                    size = { 40 40 }
+                    background = {
+                        using = entry_bg_simple_solid
+                    }
+                    align = center
+                    block "attribute_number" {
+                        raw_text = "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_points')|0+]"
+                    }
+                    using = fontsize_xxl
+                    tooltip = "event_gate_dungeon_party_points_tooltip"
+                }
+
+                expand = {}
+            }
+        }
+
+        hbox = {
+            layoutpolicy_horizontal = expanding
+            layoutpolicy_vertical = expanding
+
+            event_window_gate_dungeon_setup_party_attribute_selector = {
+                blockoverride "attribute_name" {
+                    raw_text = "[Concept('concept_gate_dungeon_party_cohesion', Localize('concept_gate_dungeon_party_cohesion_medium'))]"
+                }
+                blockoverride "attribute_number" {
+                    raw_text = event_gate_dungeon_party_points_cohesion
+                }
+                blockoverride "attribute_value" {
+                    value = "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_cohesion_percentage')]"
+                }
+                blockoverride "attribute_sgui" {
+                    datacontext = "[GetScriptedGui('sgui_gate_change_cohesion')]"
+                }
+            }
+            event_window_gate_dungeon_setup_party_attribute_selector = {
+                blockoverride "attribute_name" {
+                    raw_text = "[Concept('concept_gate_dungeon_party_condition', Localize('concept_gate_dungeon_party_condition_medium'))]"
+                }
+                blockoverride "attribute_number" {
+                    raw_text = event_gate_dungeon_party_points_condition
+                }
+                blockoverride "attribute_value" {
+                    value = "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_condition_percentage')]"
+                }
+                blockoverride "attribute_sgui" {
+                    datacontext = "[GetScriptedGui('sgui_gate_change_condition')]"
+                }
+            }
+            event_window_gate_dungeon_setup_party_attribute_selector = {
+                blockoverride "attribute_name" {
+                    raw_text = "[Concept('concept_gate_dungeon_party_renown', Localize('concept_gate_dungeon_party_renown_medium'))]"
+                }
+                blockoverride "attribute_number" {
+                    raw_text = event_gate_dungeon_party_points_renown
+                }
+                blockoverride "attribute_value" {
+                    value = "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_renown_percentage')]"
+                }
+                blockoverride "attribute_sgui" {
+                    datacontext = "[GetScriptedGui('sgui_gate_change_renown')]"
+                }
+            }
+        }
+
+    }
+
+    type event_window_gate_dungeon_setup_party_attribute_selector = vbox {
+        minimumsize = { 180 350 }
+        maximumsize = { 180 350 }
+        default_header_clean_faded = {
+            blockoverride "text" {
+                block "attribute_name" {
+                    raw_text = "#debug attribute_name#!"
+                }
+            }
+            blockoverride "text_size" {}
+            blockoverride "size" {
+                size = { 180 35 }
+            }
+        }
+
+        widget = {
+            size = { 30 300 }
+            widget = {
+                size = { 20 266 }
+                parentanchor = center
+                progressbar = {
+                    progresstexture = "gfx/interface/progressbar/progressbar_default.dds"
+                    spriteType = Corneredtiled
+                    spriteborder = { 4 4 }
+                    texture_density = 2
+                    size = { 100% 100% }
+                    block "attribute_value" {
+                        value = 0.5
+                    }
+                    direction = vertical
+                    min = 0
+                    max = 1
+                    using = progressbar_changed_animation
+                    parentanchor = center
+                }
+            }
+            vbox = {
+                layoutpolicy_vertical = expanding
+                bottomtotop = yes
+                datamodel = "[DataModelRepeatedItem('(int32)9')]"
+                background = {
+                    margin = { -14 -18 }
+                    texture = gfx/interface/dividers/divider_clean_vertical.dds
+                }
+                item = {
+                    hbox = {
+                        minimumsize = { 30 -1 }
+                        layoutpolicy_vertical = expanding
+                        block "attribute_sgui" {}
+
+                        gate_scale_button = {
+                            visible = "[EqualTo_int32(PdxGuiWidget.GetIndexInDataModel, '(int32)0')]"
+                            onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(ScriptContainer.MakeScope).AddScope('index', MakeScopeValue('(CFixedPoint)0')).End)]"
+                            enabled = no
+                        }
+                        gate_scale_button = {
+                            visible = "[EqualTo_int32(PdxGuiWidget.GetIndexInDataModel, '(int32)1')]"
+                            onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(ScriptContainer.MakeScope).AddScope('index', MakeScopeValue('(CFixedPoint)1')).End)]"
+                            enabled = no
+                        }
+                        gate_scale_button = {
+                            visible = "[EqualTo_int32(PdxGuiWidget.GetIndexInDataModel, '(int32)2')]"
+                            onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(ScriptContainer.MakeScope).AddScope('index', MakeScopeValue('(CFixedPoint)2')).End)]"
+                        }
+                        gate_scale_button = {
+                            visible = "[EqualTo_int32(PdxGuiWidget.GetIndexInDataModel, '(int32)3')]"
+                            onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(ScriptContainer.MakeScope).AddScope('index', MakeScopeValue('(CFixedPoint)3')).End)]"
+                        }
+                        gate_scale_button = {
+                            visible = "[EqualTo_int32(PdxGuiWidget.GetIndexInDataModel, '(int32)4')]"
+                            onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(ScriptContainer.MakeScope).AddScope('index', MakeScopeValue('(CFixedPoint)4')).End)]"
+                        }
+                        gate_scale_button = {
+                            visible = "[EqualTo_int32(PdxGuiWidget.GetIndexInDataModel, '(int32)5')]"
+                            onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(ScriptContainer.MakeScope).AddScope('index', MakeScopeValue('(CFixedPoint)5')).End)]"
+                        }
+                        gate_scale_button = {
+                            visible = "[EqualTo_int32(PdxGuiWidget.GetIndexInDataModel, '(int32)6')]"
+                            onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(ScriptContainer.MakeScope).AddScope('index', MakeScopeValue('(CFixedPoint)6')).End)]"
+                        }
+                        gate_scale_button = {
+                            visible = "[EqualTo_int32(PdxGuiWidget.GetIndexInDataModel, '(int32)7')]"
+                            onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(ScriptContainer.MakeScope).AddScope('index', MakeScopeValue('(CFixedPoint)7')).End)]"
+                        }
+                        gate_scale_button = {
+                            visible = "[EqualTo_int32(PdxGuiWidget.GetIndexInDataModel, '(int32)8')]"
+                            onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(ScriptContainer.MakeScope).AddScope('index', MakeScopeValue('(CFixedPoint)8')).End)]"
+                        }
+                    }
+                }
+            }
+            widget = {
+                size = { 70 266 }
+                parentanchor = center
+                progressbar = {
+                    progresstexture = "gfx/interface/icons/generic_icons/transparent.dds"
+                    size = { 100% 100% }
+                    block "attribute_value" {
+                        value = 0.5
+                    }
+                    direction = vertical
+                    min = 0
+                    max = 1
+                    using = progressbar_changed_animation
+                    parentanchor = center
+                    marker = {
+                        widget = {
+                            parentanchor = hcenter
+                            widgetanchor = center
+                            size = { 70 30 }
+                            background = {
+                                texture = "gfx/interface/misc/gate_grey.dds"
+
+                                modify_texture = {
+                                    using = texture_velvet
+                                }
+                                modify_texture = {
+                                    texture = "gfx/interface/backgrounds/gradient_overlay.dds"
+                                    spriteType = Corneredstretched
+                                    spriteborder = { 0 0 }
+                                    blend_mode = overlay
+                                    alpha = 0.5
+                                }
+                            }
+
+                            textbox = {
+                                size = { 70 30 }
+                                parentanchor = center
+                                align = center
+                                block "attribute_number" {
+                                    raw_text = "#debug 0#!"
+                                }
+                            }
+
+                            icon = {
+                                size = { 70 34 }
+                                parentanchor = center
+                                using = highlighted_square_selection
+                                alpha = 0.5
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    type gate_dungeon_party_condensed = flowcontainer {
+        visible = "[ScriptContainer.MakeScope.Var('party').IsSet]"
+        using = entry_bg_fancy_solid_bg
+
+        @condensed_party_width = 190
+        @condensed_party_row_width = @[condensed_party_width - 40]
+        @condensed_party_value_width = 70
+        @condensed_party_text_width = @[condensed_party_row_width - condensed_party_value_width]
+        maximumsize = { @condensed_party_width -1 }
+        minimumsize = { @condensed_party_width -1 }
+
+        flowcontainer = {
+            maximumsize = { @condensed_party_width -1 }
+            minimumsize = { @condensed_party_width -1 }
+            direction = vertical
+            margin_bottom = 10
+
+            # Header
+            widget = {
+                tooltip = concept_gate_dungeon_party_desc
+                size = { 100% 40 }
+
+                background = {
+                    using = default_header_bg
+                    using = frame_small_mask_top
+                }
+
+                textbox = {
+                    raw_text = "[concept_gate_dungeon_party]"
+                    margin_left = 40
+                    size = { 100% 100% }
+                    align = left|nobaseline
+                    using = fontsize_large
+                    default_format = "#title"
+                    elide = right
+                }
+            }
+
+            # Attributes
+            flowcontainer = {
+                maximumsize = { @condensed_party_row_width -1 }
+                minimumsize = { @condensed_party_row_width -1 }
+                direction = vertical
+                margin = { 20 0 }
+
+                # Party Cohesion
+                flowcontainer = {
+                    maximumsize = { @condensed_party_row_width 30 }
+                    minimumsize = { @condensed_party_row_width 30 }
+
+                    textbox = {
+                        size = { @condensed_party_text_width 30 }
+                        raw_text = "[Concept('concept_gate_dungeon_party_cohesion', Localize('concept_gate_dungeon_party_cohesion_simple'))]"
+                        align = left|nobaseline
+                    }
+                    textbox = {
+                        size = { @condensed_party_value_width 30 }
+                        raw_text = "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_cohesion_value')|1v] / [ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_cohesion_max_value')|1]"
+                        align = right|nobaseline
+                    }
+                }
+
+                # Party Condition
+                flowcontainer = {
+                    maximumsize = { @condensed_party_row_width 30 }
+                    minimumsize = { @condensed_party_row_width 30 }
+
+                    textbox = {
+                        size = { @condensed_party_text_width 30 }
+                        raw_text = "[Concept('concept_gate_dungeon_party_condition', Localize('concept_gate_dungeon_party_condition_simple'))]"
+                        align = left|nobaseline
+                    }
+                    textbox = {
+                        size = { @condensed_party_value_width 30 }
+                        raw_text = "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_condition_value')|1v] / [ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_condition_max_value')|1]"
+                        align = right|nobaseline
+                    }
+                }
+
+                # Party Renown
+                flowcontainer = {
+                    maximumsize = { @condensed_party_row_width 30 }
+                    minimumsize = { @condensed_party_row_width 30 }
+
+                    textbox = {
+                        size = { @condensed_party_text_width 30 }
+                        raw_text = "[Concept('concept_gate_dungeon_party_renown', Localize('concept_gate_dungeon_party_renown_simple'))]"
+                        align = left|nobaseline
+                    }
+                    textbox = {
+                        size = { @condensed_party_value_width 30 }
+                        raw_text = "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_renown_value')|1v]"
+                        align = right|nobaseline
+                    }
+                }
+            }
+        }
+
+        # Party Leader
+        widget = {
+            size = { 40 40 }
+            parentanchor = left|top
+            position = { -7 -2 }
+
+            character_portrait_small = {
+                visible = "[ScriptContainer.MakeScope.Var('party').Var('party_leader').IsSet]"
+                datacontext = "[ScriptContainer.MakeScope.Var('party').Var('party_leader').GetCharacter]"
+            }
+        }
+
+    }
+
+    type gate_scale_button = button {
+        minimumsize = { 30 -1 }
+        layoutpolicy_vertical = expanding
+        #using = default_button_animation
+        using = confirm_button_sound
+
+        onmousehierarchyenter = "[PdxGuiWidget.AccessChild('hover').TriggerAnimation('mouse_enter')]"
+        onmousehierarchyleave = "[PdxGuiWidget.AccessChild('hover').TriggerAnimation('mouse_leave')]"
+
+        icon = {
+            parentanchor = center
+            size = { 30 5 }
+            texture = gfx/interface/backgrounds/divider_gold.dds
+
+        }
+
+        icon = {
+            name = hover
+            parentanchor = center
+            size = { 32 10 }
+            using = highlighted_square_selection
+            alpha = 0
+
+            state = {
+                name = "mouse_enter"
+                using = Animation_Curve_Default
+                using = button_animation_duration
+                alpha = 1
+            }
+
+            state = {
+                name = "mouse_leave"
+                using = Animation_Curve_Default
+                using = button_animation_duration
+                alpha = 0
+            }
+        }
+    }
+
+}

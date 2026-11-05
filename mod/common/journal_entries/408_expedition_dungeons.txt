@@ -1,0 +1,140 @@
+﻿je_gate_expedition_dungeon = {
+	icon = gfx/interface/icons/event_icons/event_gate_dungeon.dds
+
+	group = je_group_gate_dungeons
+	dlc = dlc_magic_gate
+
+	activation_description = {
+		always = yes
+	}
+
+	status_desc = {
+		triggered_desc = {
+			trigger = {
+				num_pending_events:gate_dungeon_event > 0
+			}
+			desc = je_gate_expedition_dungeon_status_pending_event
+		}
+	}
+
+	widget = {
+		gui = "gui/journal_injects/gate_dungeon_injects.gui"
+		name = "gate_inject_dungeon"
+		container = "custom_widget_container_2"
+	}
+
+	immediate = {
+		debug_log_scopes = yes
+		scope:journal_entry = {
+			# Create dungeon expedition container
+			# and save it as scope expedition
+			# (scope:expedition and var:expedition)
+			set_variable = {
+				name = expedition
+				value = scope:target
+			}
+			scope:target = {
+				save_scope_as = expedition
+				set_parent = scope:journal_entry
+			}
+
+			# Find last layer in dungeon and set it
+			# as a variable for the complete condition
+			random_container = {
+				parent = scope:expedition.var:dungeon
+				tag = gate_dungeon_layer
+				limit = {
+					has_variable = is_last
+				}
+				prev = {
+					set_variable = {
+						name = last_layer
+						value = prev
+					}
+				}
+			}
+		}
+	}
+
+	on_monthly_pulse = {
+		on_actions = {
+			on_gate_dungeon_delve_pulse
+		}
+	}
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				text = je_gate_expedition_dungeon_complete
+				# Has the last layer been added to the list of completed layers?
+				scope:expedition = {
+					any_in_list = {
+						variable = completed_layers
+						scope:journal_entry.var:last_layer ?= this
+					}
+				}
+			}
+		}
+		effect = {
+			scope:expedition = {
+				# Scope switch for the tooltip
+				custom_tooltip = {
+					text = je_gate_expedition_dungeon_on_complete
+
+					# Real effect is run in country scope
+					root = {
+						# Register dungeon as completed
+						add_to_variable_list = {
+							name = gate_completed_dungeons
+							target = scope:target.var:dungeon
+						}
+						# Update production method to unlock
+						# the dungeon exploitation production methods
+						every_scope_state = {
+							gate_set_dungeon_status = yes
+						}
+					}
+				}
+			}
+			hidden_effect = {
+				gate_cleanup_dungeon_expedition = yes
+			}
+		}
+	}
+
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				text = je_gate_expedition_dungeon_fail
+				# Does the party have 0 condition
+				scope:expedition = {
+					var:party = {
+						var:condition <= 0
+					}
+				}
+			}
+		}
+		effect = {
+			hidden_effect = {
+				gate_cleanup_dungeon_expedition = yes
+			}
+		}
+	}
+
+	scripted_button = sb_gate_dungeon_debug_advance
+
+	transferable = no
+	can_revolution_inherit = yes
+
+	weight = 200
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}
+

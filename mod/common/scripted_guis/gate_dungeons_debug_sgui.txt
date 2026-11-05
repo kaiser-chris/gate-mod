@@ -1,0 +1,97 @@
+﻿sgui_gate_debug_start_dungeon_delve = {
+	scope = country
+
+	saved_scopes = {
+		dungeon
+	}
+
+	is_valid = {
+		NOT = {
+			exists = je:je_gate_expedition_dungeon
+		}
+	}
+
+	effect = {
+		gate_create_dungeon_expedition = {
+			dungeon = scope:dungeon
+		}
+		create_character = {
+			template = gate_dungeon_party_leader_template
+			save_scope_as = leader
+		}
+		scope:expedition ?= {
+			var:party = {
+				set_variable = {
+					name = party_leader
+					value = scope:leader
+				}
+			}
+		}
+		gate_start_dungeon = {
+			expedition = scope:expedition
+		}
+	}
+}
+
+sgui_gate_debug_run_dungeon_delve_pulse = {
+	scope = country
+
+	is_valid = {
+		exists = je:je_gate_expedition_dungeon
+	}
+
+	effect = {
+		je:je_gate_expedition_dungeon = {
+			save_scope_as = journal_entry
+		}
+		je:je_gate_expedition_dungeon.var:expedition = {
+			save_scope_as = expedition
+		}
+		trigger_event = {
+			on_action = on_gate_dungeon_delve_pulse
+		}
+	}
+}
+
+sgui_gate_debug_spawn = {
+	scope = building_type
+
+	effect = {
+		"global_variable_map(dungeons|this)" ?= {
+			var:location ?= {
+				random_scope_state = {
+					limit = {
+						is_largest_state_in_region = yes
+					}
+					gate_build_dungeon = yes
+				}
+			}
+		}
+	}
+
+	is_valid = {
+		NOT = {
+			"global_variable_map(dungeons|this)" ?= {
+				OR = {
+					var:location ?= {
+						any_scope_state = {
+							state_has_building_type_levels = {
+								target = root
+								value >= 1
+							}
+						}
+					}
+					has_variable = creation_date
+				}
+			}
+		}
+	}
+}
+
+sgui_gate_debug_spawn_random = {
+	scope = none
+
+	effect = {
+		gate_spawn_random_dungeon = yes
+	}
+}

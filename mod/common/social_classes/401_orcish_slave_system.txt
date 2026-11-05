@@ -3,7 +3,7 @@
 	strata = upper
 
 	pop_criteria = {
-		culture = cu:orcish
+		has_pop_culture = orcish
 	}
 
 	allowed_professions = {
@@ -20,7 +20,7 @@ gate_orc_lords = {
 	strata = upper
 
 	pop_criteria = {
-		culture = cu:orcish
+		has_pop_culture = orcish
 	}
 
 	allowed_professions = {
@@ -45,7 +45,7 @@ gate_orc_citizens = {
 	strata = middle
 
 	pop_criteria = {
-		culture = cu:orcish
+		has_pop_culture = orcish
 	}
 
 	allowed_professions = {
@@ -61,7 +61,7 @@ gate_orc_lowers = {
 	strata = lower
 
 	pop_criteria = {
-		culture = cu:orcish
+		has_pop_culture = orcish
 	}
 
 	allowed_professions = {
@@ -76,7 +76,7 @@ gate_orc_slaves = {
 
 	pop_criteria = {
 		NOT = {
-			culture = cu:orcish
+			has_pop_culture = orcish
 		}
 	}
 

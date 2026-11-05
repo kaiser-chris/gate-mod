@@ -1,44 +1,4 @@
-﻿je_gate_vampire_emergence_button_purge = {
-	name = je_gate_vampire_emergence_button_purge
-	desc = je_gate_vampire_emergence_button_purge_desc
-
-	possible = {
-		custom_tooltip = {
-			text = je_gate_vampire_emergence_trigger_truth_known
-			has_variable = gate_vampire_truth
-		}
-		OR = {
-			ig:ig_devout ?= {
-				is_powerful = yes
-			}
-			ig:ig_devout ?= {
-				is_in_government = yes
-			}
-			has_law_or_variant = law_type:law_theocracy
-		}
-		custom_tooltip = {
-			text = je_gate_vampire_emergence_trigger_decapitated_false
-			NOT = {
-				has_variable = gate_vampire_decapitated
-			}
-		}
-	}
-
-	ai_chance = {
-		value = 50
-	}
-
-	effect = {
-		show_as_tooltip = {
-			trigger_event = gate_vampire.2
-		}
-		hidden_effect = {
-			set_variable = gate_rejected_vampirism
-		}
-	}
-}
-
-je_gate_vampire_emergence_button_decapitate = {
+﻿je_gate_vampire_emergence_button_decapitate = {
 	name = je_gate_vampire_emergence_button_decapitate
 	desc = je_gate_vampire_emergence_button_decapitate_desc
 

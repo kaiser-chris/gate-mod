@@ -1,0 +1,194 @@
+﻿sgui_gate_dungeon_layer_complete = {
+	scope = container
+
+	saved_scopes = {
+		layer
+	}
+
+	is_shown = {
+		any_in_list = {
+			variable = completed_layers
+			scope:layer ?= this
+		}
+	}
+}
+
+sgui_gate_change_cohesion = {
+	scope = container
+
+	saved_scopes = {
+		index
+	}
+
+	effect = {
+		var:party = {
+			set_variable = {
+				name = cohesion
+				value = {
+					value = scope:index
+				}
+			}
+			clamp_variable = {
+				name = cohesion
+				min = gate_dungeon_party_cohesion_minimum
+				max = gate_dungeon_party_cohesion_maximum
+			}
+			set_variable = {
+				name = cohesion_max
+				value = var:cohesion
+			}
+		}
+	}
+}
+
+sgui_gate_change_condition = {
+	scope = container
+
+	saved_scopes = {
+		index
+	}
+
+	effect = {
+		var:party = {
+			set_variable = {
+				name = condition
+				value = {
+					value = scope:index
+				}
+			}
+			clamp_variable = {
+				name = condition
+				min = gate_dungeon_party_condition_minimum
+				max = gate_dungeon_party_condition_maximum
+			}
+			set_variable = {
+				name = condition_max
+				value = var:condition
+			}
+		}
+	}
+}
+
+sgui_gate_change_renown = {
+	scope = container
+
+	saved_scopes = {
+		index
+	}
+
+	effect = {
+		var:party = {
+			set_variable = {
+				name = renown
+				value = {
+					value = scope:index
+				}
+			}
+			clamp_variable = {
+				name = renown
+				min = gate_dungeon_party_renown_minimum
+				max = gate_dungeon_party_renown_maximum
+			}
+			set_variable = {
+				name = renown_max
+				value = var:renown
+			}
+		}
+	}
+}
+
+sgui_gate_select_dungeon_party_leader = {
+	scope = container
+
+	saved_scopes = {
+		leader
+	}
+
+	is_shown = {
+		var:party ?= {
+			var:party_leader ?= scope:leader
+		}
+	}
+
+	effect = {
+		var:party = {
+			set_variable = {
+				name = party_leader
+				value = scope:leader
+			}
+		}
+	}
+}
+
+gg_project_dungeon = {
+	scope = country
+
+	saved_scopes = {
+		dungeon
+	}
+
+	is_valid = {
+		NOT = {
+			has_journal_entry = je_gate_expedition_dungeon
+		}
+		num_pending_events:gate_dungeon_preparation <= 0
+	}
+
+	effect = {
+		# Start JE
+		# Needs scope:dungeon set
+		trigger_event = gate_dungeon_setup.1
+
+		# Destroy surrounding containers
+		every_in_list = {
+			variable = gate_project_dungeon_selector
+			destroy_container = yes
+		}
+		# Clear list
+		clear_variable_list = gate_project_dungeon_selector
+	}
+}
+
+gg_project_dungeon_selector_close = {
+	scope = country
+
+	effect = {
+		# Destroy surrounding containers
+		every_in_list = {
+			variable = gate_project_dungeon_selector
+			destroy_container = yes
+		}
+		# Clear list
+		clear_variable_list = gate_project_dungeon_selector
+	}
+}
+
+gate_project_dungeon_selector_sort_layer_count = {
+	scope = country
+
+	saved_scopes = {
+		reverse
+	}
+
+	effect = {
+		gate_order_list_with_reverse = {
+			list = gate_project_dungeon_selector
+			order = var:dungeon.gate_layer_count
+		}
+	}
+}
+
+gate_project_dungeon_selector_sort_creation_date = {
+	scope = country
+
+	saved_scopes = {
+		reverse
+	}
+
+	effect = {
+		gate_order_list_with_reverse = {
+			list = gate_project_dungeon_selector
+			order = var:dungeon.var:creation_date
+		}
+	}
+}

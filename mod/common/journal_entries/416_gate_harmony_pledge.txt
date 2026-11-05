@@ -1,7 +1,12 @@
 ﻿je_gate_harmony_pledge = {
     group = je_group_internal_affairs
+    dlc = dlc_magic_gate
     icon = "gfx/interface/icons/religion_icons/gate_harmony_pledge.dds"
     weight = 100
+
+    activation_description = {
+        always = yes
+    }
 
     scripted_progress_bar = pb_gate_harmony_pledge_society
     scripted_progress_bar = pb_gate_harmony_pledge_economy
@@ -23,12 +28,6 @@
         gui = "gui/journal_injects/gate_harmony_pledge_injects.gui"
         name = "gate_inject_harmony_pledge_modifiers"
         container = "com_custom_widget_container_scripted_progress_bars"
-    }
-
-    widget = {
-        gui = "gui/com_journal_injects/injects.gui"
-        name = "com_journal_entry_dlc_icon"
-        container = "custom_widget_container_7"
     }
 
     is_shown_in_lobby = {
@@ -96,7 +95,6 @@
 
     immediate = {
         set_variable = gate_harmony_pledge_country
-        add_gate_dlc_icon = yes
         scope:journal_entry = {
             set_variable = com_hide_modifiers
             add_modifier = modifier_gate_harmony_pledge_society_harmonious
@@ -105,15 +103,22 @@
         }
     }
 
-    fail = {
-        NOT = { country_has_state_religion = rel:gate_harmony_pledge }
-    }
-
-    on_fail = {
-        add_modifier = {
-            name = modifier_gate_harmony_pledge_abandoned
-            years = 10
-            is_decaying = yes
+    outcome = {
+        header = je_standard_failure_header
+        effect_header = je_standard_on_failure_header
+        color = "blue_negative"
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            NOT = {
+                country_has_state_religion = rel:gate_harmony_pledge
+            }
+        }
+        effect = {
+            add_modifier = {
+                name = modifier_gate_harmony_pledge_abandoned
+                years = 10
+                is_decaying = yes
+            }
         }
     }
 

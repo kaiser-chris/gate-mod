@@ -163,3 +163,35 @@ pm_gate_crystal_explosives_building_gold_mine = {
 		}
 	}
 }
+
+pm_gate_crystal_explosives_building_copper_mine = {
+	texture = "gfx/interface/icons/production_method_icons/gate_magic_explosives.dds"
+
+	unlocking_technologies = {
+		gate_mana_extraction
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 5
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_gate_mana_add = 5
+
+			# output goods
+			goods_output_copper_add = 12
+		}
+
+		level_scaled = {
+			building_employment_gate_mages_add = 250
+		}
+
+		unscaled = {
+			building_laborers_mortality_mult = 0.3
+		}
+	}
+}

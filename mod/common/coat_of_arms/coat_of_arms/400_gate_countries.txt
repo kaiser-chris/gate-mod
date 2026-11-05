@@ -1,4 +1,4 @@
-GATE_AD_HOME = {
+﻿GATE_AD_HOME = {
 	pattern = "pattern_border_fringe.tga"
 	color1 = "green_dark"
 	color2 = "gold"
@@ -61,13 +61,15 @@ GATE_MK = {
 	color1 = "blue_light"
 	color2 = "grey"
 	color3 = "yellow"
-	color4 = "grey"
+
+	colored_emblem = {
+		texture = "ce_gate_circle_half.dds"
+		color1 = color3
+	}
 
 	colored_emblem = {
 		texture = "ce_gate_mountain.dds"
 		color1 = color2
-		color2 = color3
-		color3 = color4
 	}
 }
 
@@ -76,13 +78,19 @@ GATE_ME = {
 	color1 = "blue_light"
 	color2 = "grey"
 	color3 = "yellow"
-	color4 = "grey"
 
 	colored_emblem = {
-		texture = "ce_gate_mountain_sun.dds"
+		texture = "ce_gate_sun_rays.dds"
+		color1 = color3
+		instance = {
+			position = { 0.5 0.682 }
+			scale = { 1.5 1.5 }
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_gate_mountain_big.dds"
 		color1 = color2
-		color2 = color3
-		color3 = color4
 	}
 }
 
@@ -177,10 +185,10 @@ GATE_OK_CENTRAL_AFRICA = {
 
 GATE_NS = {
 	pattern = "pattern_solid.tga"
-	color1 = rgb{ 197 190 144 }
-	color2 = rgb{ 171 126 41 }
-	color3 = rgb{ 19 48 26 }
-	color4 = rgb{ 136 94 11 }
+	color1 = rgb { 197 190 144 }
+	color2 = rgb { 171 126 41 }
+	color3 = rgb { 19 48 26 }
+	color4 = rgb { 136 94 11 }
 
 	colored_emblem = {
 		texture = "ce_gate_gnomish_mark.dds"
@@ -277,6 +285,198 @@ GATE_DIH = {
 			scale = { 0.9 0.9 }
 			position = { 0.5 0.5 }
 
+		}
+	}
+}
+
+GATE_MK_communist_technocrat = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 135 25 34 }
+	color2 = "grey"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_gate_gear_half.dds"
+		color1 = color3
+	}
+
+	colored_emblem = {
+		texture = "ce_gate_mountain.dds"
+		color1 = color2
+	}
+}
+
+GATE_MK_subject = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue_light"
+	color2 = "grey"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_gate_circle_half.dds"
+		color1 = color3
+		instance = {
+			position = { 0.6 0.8 }
+			scale = { 1 1 }
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_gate_mountain.dds"
+		color1 = color2
+		instance = {
+			position = { 0.6 0.8 }
+			scale = { 1 1 }
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "white"
+		instance = {
+			position = { 0.2 0.2 }
+			scale = { 0.4 0.4 }
+		}
+	}
+}
+
+GATE_MK_fascist = {
+	pattern = "pattern_solid.tga"
+	color1 = "paneuropa_grey"
+	color2 = "white"
+	color3 = "black"
+
+	colored_emblem = {
+		texture = "ce_rhombus.dds"
+		color1 = color3
+		instance = {
+			position = { 0.5 0.5 }
+			scale = { 1 1 }
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_rhombus.dds"
+		color1 = color2
+		instance = {
+			position = { 0.5 0.5 }
+			scale = { 0.95 0.95 }
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_gate_dwarven_helmet.dds"
+		color1 = color3
+		instance = {
+			position = { 0.5 0.46 }
+			scale = { 0.73 0.73 }
+		}
+	}
+}
+
+GATE_NS_communist = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 104 23 23 }
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_gate_gnomish_mark.dds"
+		color1 = color1
+		color2 = rgb { 80 15 15 }
+		color3 = color2
+		instance = {
+			position = { 0.5 0.75 }
+			scale = { 1.5 1.5 }
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_star_05.dds"
+		color1 = color2
+	}
+
+	colored_emblem = {
+		texture = "ce_star_05.dds"
+		color1 = color1
+		instance = {
+			position = { 0.5 0.5 }
+			scale = { 0.9 0.9 }
+		}
+	}
+}
+
+GATE_MK_communist = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 144 23 32 }
+	color2 = "grey"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_gate_schlaegel_und_eisen.dds"
+		color1 = color3
+		instance = {
+			position = { 0.17 0.24 }
+			scale = { 0.35 0.35 }
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_gate_mountain_big.dds"
+		color1 = color2
+		instance = {
+			position = { 0.594 0.598 }
+			scale = { 1 1 }
+		}
+	}
+}
+
+GATE_AD_communist = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 105 11 16 }
+	color2 = "yellow"
+	color3 = "green"
+
+	colored_emblem = {
+		texture = "ce_bicolor_bottom.dds"
+		color1 = color3
+		instance = {
+			position = { 0.5 0.85 }
+			scale = { 1 1 }
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_gate_dominion.dds"
+		color1 = color2
+		color2 = color1
+		instance = {
+			position = { 0.186 0.346 }
+			scale = { 0.75 0.75 }
+		}
+	}
+}
+
+GATE_AD_communist_agrarian = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 105 11 16 }
+	color2 = "yellow"
+	color3 = "green"
+
+	colored_emblem = {
+		texture = "ce_bicolor_bottom.dds"
+		color1 = color3
+		instance = {
+			position = { 0.5 0.85 }
+			scale = { 1 1 }
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_gate_sapling.dds"
+		color1 = color2
+		instance = {
+			position = { 0.2 0.29 }
+			scale = { 0.5 0.5 }
 		}
 	}
 }

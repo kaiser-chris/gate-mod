@@ -25,8 +25,8 @@
  pb_gate_german_integration_support_progess: "我们的整合工作"
  pb_gate_german_integration_support_desc_pro: "支持"
  pb_gate_german_integration_support_desc_anti: "反对"
- pb_gate_german_integration_support_state_peace: "低[concept_turmoil]的[Concept('concept_incorporated_state', '$concept_incorporated_states$')]"
- pb_gate_german_integration_support_state_turmoil: "高[concept_turmoil]的[Concept('concept_incorporated_state', '$concept_incorporated_states$')]"
+ pb_gate_german_integration_support_state_peace: "低[concept_turmoil]的[Concept('concept_incorporated_state', '$concept_incorporated_states|q$')]"
+ pb_gate_german_integration_support_state_turmoil: "高[concept_turmoil]的[Concept('concept_incorporated_state', '$concept_incorporated_states|q$')]"
  gate_dwarven_alps.1.t: "魔法联盟" #deepl:759580272
  gate_dwarven_alps.1.d: "[SCOPE.sCountry('loc_raetia_scope').GetName] 使用“[SCOPE.sCountry('loc_swiss_scope').GetName]”锻造了一把奥术[concept_alliance]。" #deepl:471135945
  gate_dwarven_alps.1.f: "在冰霜啃噬的$GATE_MK$峰峦间，矮人们从隐秘的锻造坊中现身，肩负着比群山本身更为古老的秘密。在古老石像守卫的注视下，他们与瑞士的使者会面，眼中闪烁着警惕与希望交织的光芒。为了分享他们的玄奥知识，矮人们寻求与地表居民结盟以获得力量。 双方以紧握的双手缔结盟约，将山峦与山谷紧密联结，这一联盟注定将重塑两个世界的命运。" #deepl:1658510880
@@ -60,7 +60,7 @@
  gate_dwarven_german_integration.2.a: "这是他们的权利。"
  gate_dwarven_german_integration.2.b: "传统需要改变。"
  gate_dwarven_german_integration.3.t: "文化和谐节"
- gate_dwarven_german_integration.3.d: "文化节促进了矮人和德意志[Concept('concept_culture', '$concept_cultures$')]之间的融合。"
+ gate_dwarven_german_integration.3.d: "文化节促进了矮人和德意志[Concept('concept_culture', '$concept_cultures|q$')]之间的融合。"
  gate_dwarven_german_integration.3.f: "$GATE_MK$的街道因$dwarven$工艺与德意志艺术的交融而生机勃勃。摊位上摆满阿尔卑斯山风味佳肴与矮人精酿啤酒，矮人与德意志民谣的旋律在空中交织。在这一天，隔阂悄然消融，各族群共庆携手同行的未来，在欢声笑语中播撒信任与理解的种子。"
  gate_dwarven_german_integration.3.a: "很好！"
  gate_dwarven_german_integration.4.t: "共享行会创新"

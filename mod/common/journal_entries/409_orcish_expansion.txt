@@ -2,6 +2,11 @@
 	icon = "gfx/interface/icons/event_icons/event_military.dds"
 
 	group = je_group_foreign_affairs
+	dlc = dlc_magic_gate
+
+	activation_description = {
+		always = yes
+	}
 
 	status_desc = {
 		first_valid = {
@@ -15,38 +20,38 @@
         c:GATE_OK ?= THIS
     }
 
-	widget = {
-		gui = "gui/com_journal_injects/injects.gui"
-		name = "com_journal_entry_dlc_icon"
-		container = "custom_widget_container_7"
-	}
-
-	immediate = {
-		add_gate_dlc_icon = yes
-	}
-
-	complete = {
-		any_scope_state = {
-			is_split_state = no
-			count >= 15
-		}
-	}
-
-	fail = {
-		OR = {
-			NOT = {
-				has_building = building_gate_equateur
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			any_scope_state = {
+				is_split_state = no
+				count >= 15
 			}
-			game_date > 1890
+		}
+		effect = {
+			trigger_event = gate_orcish_expansion.1
 		}
 	}
 
-	on_complete = {
-		trigger_event = gate_orcish_expansion.1
-	}
-
-	on_fail = {
-		trigger_event = gate_orcish_expansion.2
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			OR = {
+				NOT = {
+					has_building = building_gate_equateur
+				}
+				game_date > 1890
+			}
+		}
+		effect = {
+			trigger_event = gate_orcish_expansion.2
+		}
 	}
 
 	transferable = no

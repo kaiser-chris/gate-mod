@@ -25,8 +25,8 @@
  pb_gate_german_integration_support_progess: "unsere Integrationsbemühungen" #deepl:1385944843
  pb_gate_german_integration_support_desc_pro: "Unterstützung" #deepl:3673295989
  pb_gate_german_integration_support_desc_anti: "Missbilligung" #deepl:1104086786
- pb_gate_german_integration_support_state_peace: "[Concept('concept_incorporated_state', '$concept_incorporated_states$')] mit niedrigem [concept_turmoil]" #deepl:1473401999
- pb_gate_german_integration_support_state_turmoil: "[Concept('concept_incorporated_state', '$concept_incorporated_states$')] mit hoher [concept_turmoil]" #deepl:3656652028
+ pb_gate_german_integration_support_state_peace: "[Concept('concept_incorporated_state', '$concept_incorporated_states|q$')] mit niedrigem [concept_turmoil]" #deepl:1473401999
+ pb_gate_german_integration_support_state_turmoil: "[Concept('concept_incorporated_state', '$concept_incorporated_states|q$')] mit hoher [concept_turmoil]" #deepl:3656652028
  gate_dwarven_alps.1.t: "Magische Allianz" #deepl:759580272
  gate_dwarven_alps.1.d: "[SCOPE.sCountry('loc_raetia_scope').GetName] eine Arkane [concept_alliance] mit [SCOPE.sCountry('loc_swiss_scope').GetName] geschmiedet." #deepl:471135945
  gate_dwarven_alps.1.f: "In den frostigen Gipfeln von $GATE_MK$ kamen die Zwerge aus ihren verborgenen Schmieden und trugen Geheimnisse mit sich, die älter waren als die Berge selbst. Unter dem wachsamen Blick uralter steinerner Wächter trafen sie sich mit den Gesandten der Schweiz, deren Augen mit einer Mischung aus Vorsicht und Hoffnung funkelten. Als Gegenleistung für die Weitergabe ihres arkanen Wissens versprachen sich die Zwerge die Stärke eines Bündnisses mit den Oberflächenbewohnern. Der Pakt wurde mit einem Handschlag besiegelt und verband Berg und Tal in einem Bündnis, das versprach, das Schicksal beider Reiche neu zu gestalten." #deepl:1658510880
@@ -60,7 +60,7 @@
  gate_dwarven_german_integration.2.a: "Das ist ihr gutes Recht." #deepl:3791857386
  gate_dwarven_german_integration.2.b: "Die Traditionen müssen sich ändern." #deepl:3174251529
  gate_dwarven_german_integration.3.t: "Festival der kulturellen Harmonie" #deepl:3581183751
- gate_dwarven_german_integration.3.d: "Ein Kulturfestival fördert die Integration zwischen Zwergen und Deutschen [Concept('concept_culture', '$concept_cultures$')]." #deepl:26790199
+ gate_dwarven_german_integration.3.d: "Ein Kulturfestival fördert die Integration zwischen Zwergen und Deutschen [Concept('concept_culture', '$concept_cultures|q$')]." #deepl:26790199
  gate_dwarven_german_integration.3.f: "Die Straßen von $GATE_MK$ werden mit lebhaften Vorführungen von $dwarven$ und deutschen Kunsthandwerkern belebt. Stände mit alpenländischen Köstlichkeiten und Zwergenbräu quellen über, während Musik aus beiden Traditionen die Luft erfüllt. Für einen Tag schmelzen die Unterschiede dahin, wenn die Gemeinschaften ihre gemeinsame Zukunft feiern und die Saat für Vertrauen und Verständnis säen." #deepl:391190647
  gate_dwarven_german_integration.3.a: "Gut." #deepl:3593588592
  gate_dwarven_german_integration.4.t: "Gemeinsame Innovation der Gilde" #deepl:1234918696

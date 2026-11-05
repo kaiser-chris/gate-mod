@@ -88,9 +88,9 @@ decision_gate_start_expedition_reytu = {
 				is_player = yes
 			}
 			hidden_effect = {
-				create_struct = {
-					struct_scope = expedition
-					struct_type = gate_expedition_progress
+				create_container = {
+					tags = { gate_mod gate_expedition_progress }
+					save_scope_as = expedition
 				}
 				set_variable = {
 					name = gate_expedition
@@ -142,5 +142,85 @@ decision_gate_start_expedition_reytu = {
 			}
 			add = -1000
 		}
+	}
+}
+
+decision_gate_start_dungeon_exploration = {
+	is_shown = {
+		any_scope_building = {
+			is_building_group = bg_gate_dungeons
+			has_active_production_method = pm_gate_dungeon_unexplored
+		}
+	}
+
+	possible = {
+		any_scope_building = {
+			is_building_group = bg_gate_dungeons
+			has_active_production_method = pm_gate_dungeon_unexplored
+		}
+		NOT = {
+			has_journal_entry = je_gate_expedition_dungeon
+		}
+		custom_tooltip = {
+			text = decision_gate_start_dungeon_exploration_is_selector_open_tooltip
+			NOT = {
+				has_variable_list = gate_project_dungeon_selector
+			}
+			num_pending_events:gate_dungeon_preparation <= 0
+		}
+		trigger_if = {
+			limit = {
+				has_variable = gate_dungeon_delve_cooldown
+			}
+			custom_tooltip = {
+				text = decision_gate_start_dungeon_exploration_cooldown_tooltip
+				NOT = {
+					has_variable = gate_dungeon_delve_cooldown
+				}
+			}
+		}
+	}
+
+	when_taken = {
+		custom_tooltip = {
+			text = decision_gate_start_dungeon_exploration_selector_tooltip
+			every_scope_building = {
+				limit = {
+					is_building_group = bg_gate_dungeons
+					has_active_production_method = pm_gate_dungeon_unexplored
+				}
+				if = {
+					limit = {
+						exists = "global_variable_map(dungeons|type)"
+					}
+					create_container = {
+						parent = root
+						tags = { gate_mod gate_selector_element }
+						save_scope_as = temp_container
+					}
+					scope:temp_container ?= {
+						set_variable = {
+							name = building
+							value = prev
+						}
+						set_variable = {
+							name = dungeon
+							value = "global_variable_map(dungeons|prev.type)"
+						}
+					}
+					root = {
+						add_to_variable_list = {
+							name = gate_project_dungeon_selector
+							target = scope:temp_container
+						}
+					}
+					clear_saved_scope = temp_container
+				}
+			}
+		}
+	}
+
+	ai_chance = {
+		value = 1000
 	}
 }

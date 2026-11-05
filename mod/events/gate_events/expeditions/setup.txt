@@ -217,8 +217,8 @@ gate_expedition.2 = {
         name = gate_expedition.2.cancel
         custom_tooltip = {
             text = gate_expedition.2.cancel.tt
-            destroy_struct = {
-                struct = var:gate_expedition
+            var:gate_expedition = {
+                destroy_container = yes
             }
         }
     }

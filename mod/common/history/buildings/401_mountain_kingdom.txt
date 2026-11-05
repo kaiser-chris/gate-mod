@@ -476,6 +476,23 @@
                 }
             }
             create_building = {
+                building = building_copper_mine
+                add_ownership = {
+                    company = {
+                        type = company_gate_dwarven_mining_guild
+                        country = c:GATE_MK
+                        levels = 1
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_picks_and_shovels_building_copper_mine
+                    pm_gate_crystal_explosives_building_copper_mine
+                    pm_no_steam_automation
+                    pm_road_carts
+                }
+            }
+            create_building = {
                 building = building_lead_mine
                 add_ownership = {
                     company = {
