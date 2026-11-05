@@ -25,9 +25,6 @@
 			name = gate_hired
 			value = game_date
 		}
-		set_com_character_background = {
-			background = character_background_gate_char_role_arcanist
-		}
 	}
 
 	traits = {
@@ -220,9 +217,7 @@ gate_dungeon_party_leader_template = {
 	role = role_gate_dungeon_party_leader
 
 	on_created = {
-		set_com_character_background = {
-			background = character_background_gate_char_role_dungeon_party_leader
-		}
+		set_character_busy_and_immortal = yes
 	}
 
 	agitator_usage = {

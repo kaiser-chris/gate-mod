@@ -26,6 +26,8 @@
  je_gate_expedition_dungeon_layer_in_progress: "This [concept_gate_dungeon_layer] is #bold in progress#!."
  je_gate_expedition_dungeon_name_and_location: "[Scope.Var('name').GetFlagName] in [Scope.Var('location').GetStateRegion.GetName]"
  je_gate_expedition_dungeon_name_and_location_selector: "[Scope.Var('dungeon').Var('name').GetFlagName] in [Scope.Var('dungeon').Var('location').GetStateRegion.GetName]"
+ sb_sb_gate_dungeon_debug_on_action: "#debug Trigger pulse on action#!"
+ sb_sb_gate_dungeon_debug_on_action_desc: "Execute the monthly on action manually."
 # Events
  gate_dungeon_setup.1.t: "Setup your [concept_gate_dungeon_party]"
  gate_dungeon_setup.1.points: "We have a limited budget of [concept_gate_dungeon_party_points] to distribute. Each attribute has their own use and points should be distributed to best fit the [concept_gate_dungeon] you want to delve into.\nPoints can be distributed by clicking on the bars below." #TODO: Write party setup points
@@ -61,6 +63,7 @@
  gate_dungeon_log_advance: "Advanced to the next [concept_gate_dungeon_layer]"
  gate_dungeon_log_finish: "Finished exploring the [concept_gate_dungeon]"
  gate_dungeon_log_stall: "No progress"
+ gate_dungeon_log_notification_header: "Event" #TODO: not sure how to name this
 # Values
  gate_dungeon_party_points_format: "$VALUE|0=+$ from $KEY$"
  gate_dungeon_party_points_from_base: "Base Exploration Budget"

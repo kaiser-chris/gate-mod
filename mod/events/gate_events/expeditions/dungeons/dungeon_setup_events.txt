@@ -117,6 +117,7 @@ gate_dungeon_setup.1 = {
             # Clean up unchosen party leaders
             every_in_list = {
                 variable = gate_potential_dungeon_party_leaders
+                set_character_busy_and_immortal = no
                 kill_character = {
                     value = yes
                     hidden = yes

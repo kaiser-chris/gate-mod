@@ -72,8 +72,6 @@ sgui_gate_debug_spawn_random = {
 	scope = none
 
 	effect = {
-		trigger_event = {
-			on_action = on_gate_spawn_dungeon
-		}
+		gate_spawn_random_dungeon = yes
 	}
 }

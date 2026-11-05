@@ -16,7 +16,8 @@ gate_cleanup_dungeon_expedition = {
 	scope:expedition = {
 		var:party = {
 			var:party_leader ?= {
-				kill_character = {
+				set_character_busy_and_immortal = no
+				retire_character = {
 					value = yes
 					hidden = yes
 				}
@@ -271,6 +272,49 @@ gate_dungeon_create_log_entry_value = {
 			}
 		}
 		clear_saved_scope = temp_log_entry
+	}
+}
+
+gate_spawn_random_dungeon = {
+	# Pick a random dungeon which hasn't been spawned now
+	random_key_in_global_variable_map = {
+		variable = dungeons
+		limit = {
+			"global_variable_map(dungeons|this)" ?= {
+				var:location ?= {
+					# Location has reached maximum Mana Density
+					gate_maximum_mana_density <= var:mana_density
+				}
+				NOT = {
+					# Has not been created yet
+					has_variable = creation_date
+				}
+			}
+		}
+		"global_variable_map(dungeons|this)" ?= {
+			save_scope_as = gate_dungeon
+			var:location ?= {
+				random_scope_state = {
+					limit = {
+						# Only spawn in the largest state in the region
+						is_largest_state_in_region = yes
+						owner = {
+							NOT = {
+								# Do not spawn it in decentralized countries
+								is_country_type = decentralized
+							}
+						}
+					}
+					gate_build_dungeon = yes
+					owner = {
+						trigger_event = {
+							id = gate_dungeon_setup.2
+							popup = yes
+						}
+					}
+				}
+			}
+		}
 	}
 }
 

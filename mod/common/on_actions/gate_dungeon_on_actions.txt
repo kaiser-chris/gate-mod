@@ -23,46 +23,220 @@ on_half_yearly_pulse = {
     }
 }
 
+# Spawn up to three random dungeons which
+# meet the wanted requirements
+# (Does nothing if no state can have a new dungeon)
 on_gate_spawn_dungeon = {
     effect = {
-        random_key_in_global_variable_map = {
-            variable = dungeons
-            limit = {
-                "global_variable_map(dungeons|this)" ?= {
-                    var:location ?= {
-                        # Location has reached maximum Mana Density
-                        gate_maximum_mana_density <= var:mana_density
-                    }
-                    NOT = {
-                        # Has not been created yet
-                        has_variable = creation_date
-                    }
+        random = {
+            chance = 20
+            gate_spawn_random_dungeon = yes
+        }
+        random = {
+            chance = 20
+            gate_spawn_random_dungeon = yes
+        }
+        random = {
+            chance = 20
+            gate_spawn_random_dungeon = yes
+        }
+    }
+}
+
+# Triggered via dungeon delve journal entry (monthly)
+# root & this = country delving the dungeon
+# scope:journal_entry = dungeon delve journal entry
+# scope:expedition = expedition script container
+on_gate_dungeon_delve_pulse = {
+    effect = {
+        random_list = {
+            30 = {
+                # Stall
+                # no notification or log entry since nothing changed
+            }
+            30 = {
+                # An event appears
+                trigger_event = {
+                    on_action = on_gate_dungeon_delve_pulse_event
                 }
             }
-            "global_variable_map(dungeons|this)" ?= {
-                save_scope_as = gate_dungeon
-                var:location ?= {
-                    random_scope_state = {
+            40 = {
+                # A notification appears
+                trigger_event = {
+                    on_action = on_gate_dungeon_delve_pulse_notification
+                }
+                modifier = {
+                    value = 1
+                    if = {
                         limit = {
-                            # Only spawn in the largest state in the region
-                            is_largest_state_in_region = yes
-                            owner = {
-                                NOT = {
-                                    # Do not spawn it in decentralized countries
-                                    is_country_type = decentralized
-                                }
+                            OR = {
+                                scope:expedition.gate_dungeon_party_cohesion_value <= 2
+                                scope:expedition.gate_dungeon_party_condition_value <= 2
                             }
                         }
-                        gate_build_dungeon = yes
-                        owner = {
-                            trigger_event = {
-                                id = gate_dungeon_setup.2
-                                popup = yes
-                            }
-                        }
+                        # Reduce notifications and therefore increase events
+                        # when the delve is close to failure so the player
+                        # can feel agency about a potential loss
+                        multiply = 0.5
                     }
                 }
             }
         }
+    }
+}
+
+on_gate_dungeon_delve_pulse_notification = {
+    effect = {
+        random_list = {
+            20 = {
+                # Stall
+                # no notification or log entry since nothing changed
+            }
+            10 = {
+                # Advance
+                scope:expedition = {
+                    gate_dungeon_advance_layer = yes
+                    gate_dungeon_create_log_entry = {
+                        rating = positive
+                        event = gate_dungeon_log_notification_header
+                        outcome_text = gate_dungeon_log_advance
+                    }
+                }
+                modifier = {
+                    value = 1
+                    if = {
+                        limit = {
+                            scope:expedition.gate_dungeon_party_condition_percentage > 0.2
+                        }
+                        add = 1.3
+                    }
+                    if = {
+                        limit = {
+                            scope:expedition.gate_dungeon_party_cohesion_percentage < 0.2
+                        }
+                        multiply = 0.2
+                    }
+                    else = {
+                        multiply = gate_dungeon_party_cohesion_percentage
+                    }
+                }
+            }
+            10 = {
+                # Increase condition
+                gate_dungeon_party_condition_change = {
+                    amount = 0.5
+                }
+                gate_dungeon_create_log_entry_value = {
+                    rating = positive
+                    event = gate_dungeon_log_notification_header
+                    outcome_text = gate_dungeon_log_condition
+                    outcome_value = 0.5
+                }
+                modifier = {
+                    value = 1
+                    if = {
+                        limit = {
+                            scope:expedition.gate_dungeon_party_condition_percentage > 0.2
+                        }
+                        add = 1.3
+                    }
+                    if = {
+                        limit = {
+                            scope:expedition.gate_dungeon_party_cohesion_percentage < 0.2
+                        }
+                        multiply = 0.2
+                    }
+                    else = {
+                        multiply = gate_dungeon_party_cohesion_percentage
+                    }
+                    if = {
+                        limit = {
+                            scope:expedition.var:party = {
+                                var:condition = var:condition_max
+                            }
+                        }
+                        multiply = 0
+                    }
+                }
+            }
+            10 = {
+                # Reduce condition
+                gate_dungeon_party_condition_change = {
+                    amount = -0.5
+                }
+                gate_dungeon_create_log_entry_value = {
+                    rating = negative
+                    event = gate_dungeon_log_notification_header
+                    outcome_text = gate_dungeon_log_condition
+                    outcome_value = -0.5
+                }
+            }
+            10 = {
+                # Increase cohesion
+                gate_dungeon_party_cohesion_change = {
+                    amount = 0.5
+                }
+                gate_dungeon_create_log_entry_value = {
+                    rating = positive
+                    event = gate_dungeon_log_notification_header
+                    outcome_text = gate_dungeon_log_cohesion
+                    outcome_value = 0.5
+                }
+                modifier = {
+                    value = 1
+                    if = {
+                        limit = {
+                            scope:expedition.gate_dungeon_party_condition_percentage > 0.2
+                        }
+                        add = 1.3
+                    }
+                    if = {
+                        limit = {
+                            scope:expedition.gate_dungeon_party_cohesion_percentage < 0.2
+                        }
+                        multiply = 0.2
+                    }
+                    else = {
+                        multiply = gate_dungeon_party_cohesion_percentage
+                    }
+                    if = {
+                        limit = {
+                            scope:expedition.var:party = {
+                                var:cohesion = var:cohesion_max
+                            }
+                        }
+                        multiply = 0
+                    }
+                }
+            }
+            10 = {
+                # Reduce cohesion
+                gate_dungeon_party_cohesion_change = {
+                    amount = -0.5
+                }
+                gate_dungeon_create_log_entry_value = {
+                    rating = negative
+                    event = gate_dungeon_log_notification_header
+                    outcome_text = gate_dungeon_log_cohesion
+                    outcome_value = -0.5
+                }
+            }
+        }
+    }
+}
+
+on_gate_dungeon_delve_pulse_event = {
+    random_events = {
+        1 = gate_dungeon_delve.1
+        1 = gate_dungeon_delve.2
+        1 = gate_dungeon_delve.3
+        1 = gate_dungeon_delve.4
+        1 = gate_dungeon_delve.5
+        1 = gate_dungeon_delve.6
+        1 = gate_dungeon_delve.7
+        1 = gate_dungeon_delve.8
+        1 = gate_dungeon_delve.9
+        1 = gate_dungeon_delve.10
+        1 = gate_dungeon_delve.11
     }
 }

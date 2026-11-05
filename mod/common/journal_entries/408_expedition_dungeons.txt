@@ -47,6 +47,12 @@
 		}
 	}
 
+	on_monthly_pulse = {
+		on_actions = {
+			on_gate_dungeon_delve_pulse
+		}
+	}
+
 	outcome = {
 		header = je_standard_completion_header
 		effect_header = je_standard_on_completion_header
@@ -114,7 +120,7 @@
 		}
 	}
 
-	scripted_button = sb_gate_dungeon_test
+	scripted_button = sb_gate_dungeon_debug_on_action
 	scripted_button = sb_gate_dungeon_advance
 
 	transferable = no
