@@ -93,8 +93,27 @@ gate_dungeon_party_cohesion_value = {
     }
 }
 gate_dungeon_party_cohesion_max_value = {
-    var:party = {
-        value = var:cohesion_max
+    add = {
+        value = var:party.var:cohesion_max
+        desc = gate_dungeon_party_points_from_chosen_value
+    }
+    add = gate_dungeon_party_cohesion_modifier_value
+}
+gate_dungeon_party_cohesion_modifier_value = {
+    if = {
+        limit = {
+            var:party ?= {
+                has_variable = party_leader
+            }
+        }
+        value = {
+            var:party ?= {
+                var:party_leader ?= {
+                    value = modifier:character_gate_dungeon_party_cohesion
+                }
+            }
+            desc = gate_dungeon_party_points_from_party_leader
+        }
     }
 }
 gate_dungeon_party_cohesion_check_hard_success = {
@@ -233,8 +252,27 @@ gate_dungeon_party_condition_value = {
     }
 }
 gate_dungeon_party_condition_max_value = {
-    var:party = {
-        value = var:condition_max
+    add = {
+        value = var:party.var:condition_max
+        desc = gate_dungeon_party_points_from_chosen_value
+    }
+    add = gate_dungeon_party_condition_modifier_value
+}
+gate_dungeon_party_condition_modifier_value = {
+    if = {
+        limit = {
+            var:party ?= {
+                has_variable = party_leader
+            }
+        }
+        value = {
+            var:party ?= {
+                var:party_leader ?= {
+                    value = modifier:character_gate_dungeon_party_condition
+                }
+            }
+            desc = gate_dungeon_party_points_from_party_leader
+        }
     }
 }
 gate_dungeon_party_condition_check_hard_success = {
@@ -334,7 +372,26 @@ gate_dungeon_party_renown_value = {
     }
 }
 gate_dungeon_party_renown_max_value = {
-    var:party = {
-        value = var:renown_max
+    add = {
+        value = var:party.var:renown_max
+        desc = gate_dungeon_party_points_from_chosen_value
+    }
+    add = gate_dungeon_party_renown_modifier_value
+}
+gate_dungeon_party_renown_modifier_value = {
+    if = {
+        limit = {
+            var:party ?= {
+                has_variable = party_leader
+            }
+        }
+        value = {
+            var:party ?= {
+                var:party_leader ?= {
+                    value = modifier:character_gate_dungeon_party_renown
+                }
+            }
+            desc = gate_dungeon_party_points_from_party_leader
+        }
     }
 }

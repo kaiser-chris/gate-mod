@@ -124,6 +124,25 @@ gate_dungeon_setup.1 = {
                 }
             }
             clear_variable_list = gate_potential_dungeon_party_leaders
+
+            # Set party attributes to the max level
+            # this is done so modifier values are
+            # also considered here
+            scope:expedition.var:party = {
+                set_variable = {
+                    name = condition
+                    value = scope:expedition.gate_dungeon_party_condition_max_value
+                }
+                set_variable = {
+                    name = cohesion
+                    value = scope:expedition.gate_dungeon_party_cohesion_max_value
+                }
+                set_variable = {
+                    name = renown
+                    value = scope:expedition.gate_dungeon_party_renown_max_value
+                }
+            }
+
         }
     }
 }

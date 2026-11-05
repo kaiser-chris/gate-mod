@@ -1,0 +1,199 @@
+﻿# Party Points
+INJECT:basic_entrepreneur = {
+    character_modifier = {
+        character_gate_dungeon_party_points = 1
+    }
+}
+INJECT:experienced_entrepreneur = {
+    character_modifier = {
+        character_gate_dungeon_party_points = 1
+    }
+}
+INJECT:expert_entrepreneur = {
+    character_modifier = {
+        character_gate_dungeon_party_points = 1
+    }
+}
+INJECT:basic_political_operator = {
+    character_modifier = {
+        character_gate_dungeon_party_points = 1
+    }
+}
+INJECT:experienced_political_operator = {
+    character_modifier = {
+        character_gate_dungeon_party_points = 1
+    }
+}
+INJECT:expert_political_operator = {
+    character_modifier = {
+        character_gate_dungeon_party_points = 1
+    }
+}
+INJECT:master_bureaucrat = {
+    character_modifier = {
+        character_gate_dungeon_party_points = 1
+    }
+}
+INJECT:inept = {
+    character_modifier = {
+        character_gate_dungeon_party_points = -1
+    }
+}
+INJECT:pillager = {
+    character_modifier = {
+        character_gate_dungeon_party_points = 1
+        character_gate_dungeon_party_renown = -0.5
+    }
+}
+
+# Cohesion
+INJECT:basic_diplomat = {
+    character_modifier = {
+        character_gate_dungeon_party_cohesion = 0.5
+    }
+}
+INJECT:experienced_diplomat = {
+    character_modifier = {
+        character_gate_dungeon_party_cohesion = 0.5
+    }
+}
+INJECT:masterful_diplomat = {
+    character_modifier = {
+        character_gate_dungeon_party_cohesion = 0.5
+    }
+}
+INJECT:arrogant = {
+    character_modifier = {
+        character_gate_dungeon_party_cohesion = -0.5
+    }
+}
+INJECT:bigoted = {
+    character_modifier = {
+        character_gate_dungeon_party_cohesion = -0.5
+    }
+}
+INJECT:imperious = {
+    character_modifier = {
+        character_gate_dungeon_party_cohesion = -0.5
+    }
+}
+INJECT:wrathful = {
+    character_modifier = {
+        character_gate_dungeon_party_cohesion = -0.5
+    }
+}
+INJECT:cruel = {
+    character_modifier = {
+        character_gate_dungeon_party_cohesion = -0.5
+    }
+}
+INJECT:ruthless = {
+    character_modifier = {
+        character_gate_dungeon_party_cohesion = -0.5
+    }
+}
+INJECT:tactful = {
+    character_modifier = {
+        character_gate_dungeon_party_cohesion = 0.5
+    }
+}
+INJECT:charismatic = {
+    character_modifier = {
+        character_gate_dungeon_party_cohesion = 0.5
+    }
+}
+INJECT:popular_commander = {
+    character_modifier = {
+        character_gate_dungeon_party_cohesion = 0.5
+    }
+}
+INJECT:celebrity_commander = {
+    character_modifier = {
+        character_gate_dungeon_party_cohesion = 0.5
+    }
+}
+INJECT:inspirational_orator = {
+    character_modifier = {
+        character_gate_dungeon_party_cohesion = 0.5
+    }
+}
+INJECT:inexperienced = {
+    character_modifier = {
+        character_gate_dungeon_party_cohesion = -0.5
+        character_gate_dungeon_party_condition = -0.5
+    }
+}
+
+# Condition
+INJECT:meticulous = {
+    character_modifier = {
+        character_gate_dungeon_party_condition = 0.5
+    }
+}
+INJECT:innovative = {
+    character_modifier = {
+        character_gate_dungeon_party_condition = 0.5
+    }
+}
+INJECT:hedonist = {
+    character_modifier = {
+        character_gate_dungeon_party_condition = -0.5
+    }
+}
+INJECT:bandit = {
+    character_modifier = {
+        character_gate_dungeon_party_condition = 0.5
+    }
+}
+INJECT:engineer = {
+    character_modifier = {
+        character_gate_dungeon_party_condition = 0.5
+    }
+}
+
+# Renown
+INJECT:reckless = {
+    character_modifier = {
+        character_gate_dungeon_party_renown = -0.5
+    }
+}
+INJECT:honorable = {
+    character_modifier = {
+        character_gate_dungeon_party_renown = 0.5
+    }
+}
+INJECT:expert_defensive_strategist = {
+    character_modifier = {
+        character_gate_dungeon_party_renown = 0.5
+    }
+}
+INJECT:expert_offensive_planner = {
+    character_modifier = {
+        character_gate_dungeon_party_renown = 0.5
+    }
+}
+INJECT:expert_cavalry_commander = {
+    character_modifier = {
+        character_gate_dungeon_party_renown = 0.5
+    }
+}
+INJECT:expert_artillery_commander = {
+    character_modifier = {
+        character_gate_dungeon_party_renown = 0.5
+    }
+}
+INJECT:stalwart_defender = {
+    character_modifier = {
+        character_gate_dungeon_party_renown = 0.5
+    }
+}
+INJECT:trench_rat = {
+    character_modifier = {
+        character_gate_dungeon_party_renown = 0.5
+    }
+}
+INJECT:explorer = {
+    character_modifier = {
+        character_gate_dungeon_party_renown = 0.5
+    }
+}

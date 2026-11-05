@@ -1087,7 +1087,7 @@ types gate_event_window_types {
                     raw_text = "[Concept('concept_gate_dungeon_party_cohesion', Localize('concept_gate_dungeon_party_cohesion_medium'))]"
                 }
                 blockoverride "attribute_number" {
-                    raw_text = "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_cohesion_value')|0v]"
+                    raw_text = event_gate_dungeon_party_points_cohesion
                 }
                 blockoverride "attribute_value" {
                     value = "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_cohesion_percentage')]"
@@ -1101,7 +1101,7 @@ types gate_event_window_types {
                     raw_text = "[Concept('concept_gate_dungeon_party_condition', Localize('concept_gate_dungeon_party_condition_medium'))]"
                 }
                 blockoverride "attribute_number" {
-                    raw_text = "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_condition_value')|0v]"
+                    raw_text = event_gate_dungeon_party_points_condition
                 }
                 blockoverride "attribute_value" {
                     value = "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_condition_percentage')]"
@@ -1115,7 +1115,7 @@ types gate_event_window_types {
                     raw_text = "[Concept('concept_gate_dungeon_party_renown', Localize('concept_gate_dungeon_party_renown_medium'))]"
                 }
                 blockoverride "attribute_number" {
-                    raw_text = "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_renown_value')|0v]"
+                    raw_text = event_gate_dungeon_party_points_renown
                 }
                 blockoverride "attribute_value" {
                     value = "[ScriptContainer.MakeScope.ScriptValue('gate_dungeon_party_renown_percentage')]"
@@ -1220,7 +1220,7 @@ types gate_event_window_types {
                 }
             }
             widget = {
-                size = { 30 266 }
+                size = { 70 266 }
                 parentanchor = center
                 progressbar = {
                     progresstexture = "gfx/interface/icons/generic_icons/transparent.dds"
@@ -1237,7 +1237,7 @@ types gate_event_window_types {
                         widget = {
                             parentanchor = hcenter
                             widgetanchor = center
-                            size = { 30 30 }
+                            size = { 70 30 }
                             background = {
                                 texture = "gfx/interface/misc/gate_grey.dds"
 
@@ -1254,7 +1254,7 @@ types gate_event_window_types {
                             }
 
                             textbox = {
-                                size = { 30 30 }
+                                size = { 70 30 }
                                 parentanchor = center
                                 align = center
                                 block "attribute_number" {
@@ -1263,7 +1263,7 @@ types gate_event_window_types {
                             }
 
                             icon = {
-                                size = { 34 34 }
+                                size = { 70 34 }
                                 parentanchor = center
                                 using = highlighted_square_selection
                                 alpha = 0.5
