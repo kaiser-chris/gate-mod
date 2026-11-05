@@ -104,6 +104,24 @@
                 activate_production_methods = { "default_building_sugar_plantation" "pm_road_carts" }
             }
             create_building = {
+                building = building_copper_mine
+                add_ownership = {
+                    building = {
+                        type = building_copper_mine
+                        country = c:GATE_OK
+                        levels = 1
+                        region = STATE_EQUATEUR
+                    }
+                }
+                reserves = 1
+                activate_production_methods = {
+                    pm_picks_and_shovels_building_copper_mine
+                    pm_gate_crystal_explosives_building_copper_mine
+                    pm_no_steam_automation
+                    pm_road_carts
+                }
+            }
+            create_building = {
                 building = "building_gate_magic_research_institute"
                 level = 1
                 reserves = 1
