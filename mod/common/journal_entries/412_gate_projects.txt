@@ -116,17 +116,22 @@
 		}
 	}
 
-	fail = {
-		NOT = {
-			capital = {
-				has_building = building_gate_magic_research_institute
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			NOT = {
+				capital = {
+					has_building = building_gate_magic_research_institute
+				}
 			}
+			has_gate_magic_researcher = no
 		}
-        has_gate_magic_researcher = no
-	}
-
-	on_fail = {
-		gate_stop_magic_project = yes
+		effect = {
+			gate_stop_magic_project = yes
+		}
 	}
 
 	current_value = {
