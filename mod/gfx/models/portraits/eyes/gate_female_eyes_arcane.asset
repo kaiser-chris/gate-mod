@@ -1,0 +1,27 @@
+pdxmesh = {
+	name = "gate_female_eyes_arcane_mesh"
+	file = "gate_female_eyes_arcane.mesh"
+
+	meshsettings = {
+		name = "female_eyesShape"
+		index = 0
+		texture_diffuse = "gate_eyes_arcane_diffuse.dds"
+		texture_normal = "gate_eyes_arcane_normal.dds"
+		texture_specular = "gate_eyes_arcane_properties.dds"
+		shader = "portrait_eye"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "gate_female_eyes_arcane_entity"
+	pdxmesh = "gate_female_eyes_arcane_mesh"
+
+	game_data = {
+		portrait_entity_user_data = {
+			color_mask_remap_interval = {
+				interval = {0.0 1.0}
+			}
+		}
+	}
+}

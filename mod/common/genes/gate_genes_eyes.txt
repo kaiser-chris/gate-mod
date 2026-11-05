@@ -1,13 +1,37 @@
 ﻿accessory_genes = {
     INJECT:eye_accessory = {
-		no_eyes = {
-			index = 1
+		gate_no_eyes = {
+			index = 37 # random starting index to prevent collisions
 			male = {
 				1 = empty
 			}
 			female = male
 			boy = male
 			girl = male
+		}
+
+		gate_golden_eyes = {
+			index = 38
+			male = {
+				1 = "gate_male_eyes_gold"
+			}
+			female = {
+				1 = "gate_female_eyes_gold"
+			}
+			boy = male
+			girl = female
+		}
+
+		gate_arcane_eyes = {
+			index = 39
+			male = {
+				1 = "gate_male_eyes_arcane"
+			}
+			female = {
+				1 = "gate_female_eyes_arcane"
+			}
+			boy = male
+			girl = female
 		}
 	}
 }
