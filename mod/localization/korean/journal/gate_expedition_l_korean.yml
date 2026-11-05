@@ -30,7 +30,7 @@
  je_gate_expedition_button_open_map: "탐험 지도 열기"
  je_gate_expedition_button_open_map_desc: "[concept_gate_expedition_map] 열기."
  gate_expedition.1.t: "$concept_gate_expedition_leader$ 선택"
- gate_expedition.1.d: "우리 [concept_gate_expedition]을 위해 세 명의 잠재적인 [Concept('concept_gate_expedition_leader','$concept_gate_expedition_leaders$')]를 찾았습니다. 이제 그중 한 명을 선택해야 합니다.\n\n@warning! 이 선택은 매우 중요하며, 우리가 [concept_gate_expedition_map]에서 시작할 수 있는 [concept_gate_expedition_activities]를 결정합니다."
+ gate_expedition.1.d: "우리 [concept_gate_expedition]을 위해 세 명의 잠재적인 [Concept('concept_gate_expedition_leader','$concept_gate_expedition_leaders|q$')]를 찾았습니다. 이제 그중 한 명을 선택해야 합니다.\n\n@warning! 이 선택은 매우 중요하며, 우리가 [concept_gate_expedition_map]에서 시작할 수 있는 [concept_gate_expedition_activities]를 결정합니다."
  gate_expedition.1.f: "치열한 정치적 술책과 은밀한 거래 끝에, 마법의 관문 원정대의 잠재적 지도자로 세 후보가 떠올랐습니다. 한 명은 경제와 깊은 연줄을 가진 노련한 산업가로, 그 너머 자원을 적극적으로 개척하려 합니다. 또 다른 한 명은 훈장을 받은 군 장교로, 발판 확보와 지배력 강화를 목표로 합니다. 마지막 후보는 뛰어난 정치가로, 신중한 외교와 장기적 안정을 옹호합니다. 우리가 내리는 선택이 $gate_planet$에서 우리의 미래를 결정할 것입니다."
  gate_expedition.1.a: "[concept_gate_expedition_leader_militarist]: [SCOPE.sCharacter('expedition_militarist').GetFullName]"
  gate_expedition.1.b: "[concept_gate_expedition_leader_politician]: [SCOPE.sCharacter('expedition_politician').GetFullName]"

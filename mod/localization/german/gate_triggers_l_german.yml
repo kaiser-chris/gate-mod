@@ -26,16 +26,16 @@
 
  trigger_gate_expedition_budget: "#default_text Hat eine [concept_gate_expedition_budget] von [SCOPE.GetValue('budget_cost')|0v] oder mehr.#!" #deepl:2216446202
  trigger_gate_expedition_has_covered: "#default_text Hat einen unerforschten Teil der [concept_gate_expedition] Karte.#!" #deepl:663241663
- trigger_gate_expedition_has_no_activity: "#default_text Wir machen nicht schon eine [Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity$')].#!" #deepl:3118854392
+ trigger_gate_expedition_has_no_activity: "#default_text Wir machen nicht schon eine [Concept('concept_gate_expedition_activities','$concept_gate_expedition_activity|q$')].#!" #deepl:3118854392
 
  trigger_gate_requirement_low_mana_density: "Um diese [concept_building] einzurichten, muss ein Bundesstaat über eine [concept_gate_mana_density] mit der Adresse [TopScope.ScriptValue('gate_low_mana_density_threshhold')] verfügen." #deepl:2132890702
  trigger_gate_requirement_medium_mana_density: "Um diese [concept_building] zu erstellen, muss ein Bundesstaat über eine [concept_gate_mana_density] von mindestens [TopScope.ScriptValue('gate_medium_mana_density_threshhold')] verfügen." #deepl:2646883508
  trigger_gate_requirement_max_mana_density: "Um diese [concept_building] zu erstellen, muss ein Bundesstaat über eine [concept_gate_mana_density] mit mindestens [TopScope.ScriptValue('gate_maximum_mana_density')] verfügen." #deepl:3902263656
 
- trigger_gate_ethic_has_all: "Hat alle möglichen [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')] ausgewählt" #deepl:1152229089
- trigger_gate_ethic_has_all_not: "Hat nicht alle möglichen Optionen ausgewählt [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')]" #deepl:4243568538
- trigger_gate_ethic_has_all_third: "[COUNTRY.GetNameNoFlag] hat alle möglichen [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')] ausgewählt" #deepl:2160750419
- trigger_gate_ethic_has_all_third_not: "[COUNTRY.GetNameNoFlag] hat nicht alle möglichen [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics$')] ausgewählt" #deepl:50095710
+ trigger_gate_ethic_has_all: "Hat alle möglichen [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')] ausgewählt" #deepl:1152229089
+ trigger_gate_ethic_has_all_not: "Hat nicht alle möglichen Optionen ausgewählt [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')]" #deepl:4243568538
+ trigger_gate_ethic_has_all_third: "[COUNTRY.GetNameNoFlag] hat alle möglichen [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')] ausgewählt" #deepl:2160750419
+ trigger_gate_ethic_has_all_third_not: "[COUNTRY.GetNameNoFlag] hat nicht alle möglichen [Concept('concept_gate_magic_ethic','$concept_gate_magic_ethics|q$')] ausgewählt" #deepl:50095710
 
  trigger_gate_is_arcane_council_leader: "Leitet den Arkanen Rat [concept_com_international_organization]" #deepl:684660458
  trigger_gate_is_arcane_council_leader_not: "Leitet nicht #bold  #! den Arkanen Rat [concept_com_international_organization]" #deepl:2885476714

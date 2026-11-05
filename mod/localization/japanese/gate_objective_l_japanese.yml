@@ -20,7 +20,7 @@
  objective_magic_dominance_idle_header: "Continue on your path"
  objective_magic_dominance_idle_hint: "More challenges will appear eventually"
  magic_dominance_welcome: "Magic Dominance"
- magic_dominance_welcome_desc: "Welcome to the $objective_magic_dominance$ Player Objective. In this objective you will be given a series of [Concept('concept_journal_entry', '$concept_journal_entries$')] to complete that will guide you down a path towards dominating magic and technology."
+ magic_dominance_welcome_desc: "Welcome to the $objective_magic_dominance$ Player Objective. In this objective you will be given a series of [Concept('concept_journal_entry', '$concept_journal_entries|q$')] to complete that will guide you down a path towards dominating magic and technology."
 # Journal Entries
  je_obj_gate_hire_researcher: "Hire an $concept_gate_magic_researcher$"
  je_obj_gate_hire_researcher_reason: "The Arcanist is the cornerstone of magical advancement in our society. As the chief authority on arcane knowledge, they initiate and guide research into the mysteries of magic. From leading transformative projects to enhancing everyday life with spellcraft, to generating vital magic innovation needed for unlocking powerful technologies, the Arcanist is essential to harnessing the full potential of mana in the modern age."
@@ -33,7 +33,7 @@
  je_obj_gate_magic_knowledge_status: "[concept_gate_magic_knowledge] can be learned through our [concept_gate_magic_researcher] or through a [concept_treaty] with an [concept_gate_magic_country]."
  je_obj_gate_finish_magic_project: "Finish an $concept_gate_project$"
  je_obj_gate_finish_magic_project_reason: "Arcanist Projects are vital research initiatives led by your nation's top magical expert. These projects transform raw arcane theory into tangible improvements—enhancing industry, empowering society, and enriching infrastructure. By investing in Arcanist Projects, you shape a future where magic becomes a cornerstone of national progress."
- je_obj_gate_finish_magic_project_status: "[Concept('concept_gate_project','$concept_gate_projects$')] are started from the Manaflow panel."
+ je_obj_gate_finish_magic_project_status: "[Concept('concept_gate_project','$concept_gate_projects|q$')] are started from the Manaflow panel."
  je_obj_gate_finish_magic_project_goal_tooltip: "Successfully finished an [concept_gate_project]"
  je_obj_gate_produce_magic_goods: "Produce [GetGoods('gate_mana').GetNameNoFormatting] & [GetGoods('gate_magic_seed').GetNameNoFormatting]"
  je_obj_gate_produce_magic_goods_reason: "Mana Crystals and Magic Seeds form the backbone of any thriving magical economy. Mana Crystals, extracted from the atmosphere by skilled Mages, are essential for powering magical industries and technologies. Meanwhile, Druids cultivate Magic Seeds in sacred Groves to boost agricultural output—freeing up labor and fueling industrial growth. Together, they lay the foundation for a magically empowered nation."
