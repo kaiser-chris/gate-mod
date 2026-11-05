@@ -33,6 +33,26 @@
 	}
 }
 
+sgui_gate_debug_run_dungeon_delve_pulse = {
+	scope = country
+
+	is_valid = {
+		exists = je:je_gate_expedition_dungeon
+	}
+
+	effect = {
+		je:je_gate_expedition_dungeon = {
+			save_scope_as = journal_entry
+		}
+		je:je_gate_expedition_dungeon.var:expedition = {
+			save_scope_as = expedition
+		}
+		trigger_event = {
+			on_action = on_gate_dungeon_delve_pulse
+		}
+	}
+}
+
 sgui_gate_debug_spawn = {
 	scope = building_type
 

@@ -1,7 +1,6 @@
 @layer_width = 500
 @layer_height = 52
 
-
 flowcontainer = {
 	name = "gate_inject_dungeon"
 	parentanchor = hcenter
@@ -21,6 +20,21 @@ flowcontainer = {
 	gate_journal_dungeon_layers = {}
 
 	gate_journal_dungeon_logs = {}
+
+	flowcontainer = {
+		visible = "[GetGlobalVariable('com_debug').IsSet]"
+		parentanchor = hcenter
+
+		button = {
+			datacontext = "[GetScriptedGui('sgui_gate_debug_run_dungeon_delve_pulse')]"
+			size = { 200 40 }
+			using = default_button
+			raw_text = "#debug Run Pulse#!"
+			enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			onclick = "[ExecuteConsoleCommand('Debug.ReseedEvents')]"
+		}
+	}
 }
 
 types gate_inject_dungeon_types {

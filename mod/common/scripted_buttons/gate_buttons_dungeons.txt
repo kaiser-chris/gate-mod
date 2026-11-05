@@ -1,21 +1,4 @@
-﻿sb_gate_dungeon_debug_on_action = {
-	name = sb_sb_gate_dungeon_debug_on_action
-	desc = sb_sb_gate_dungeon_debug_on_action_desc
-
-	effect = {
-        trigger_event = {
-            on_action = on_gate_dungeon_delve_pulse
-        }
-	}
-
-	visible = {
-		# Debug button
-		is_player = yes
-		has_global_variable = com_debug
-	}
-}
-
-sb_gate_dungeon_advance = {
+﻿sb_gate_dungeon_advance = {
 	name = sb_gate_veiled_interior_scout
 	desc = sb_gate_veiled_interior_scout_desc
 
