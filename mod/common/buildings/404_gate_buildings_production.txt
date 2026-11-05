@@ -76,7 +76,8 @@ building_gate_mana_well = {
 building_gate_mana_core_workshop = {
 	building_group = bg_gate_magic_industry
 	icon = "gfx/interface/icons/building_icons/building_gate_mana_core_workshop.dds"
-	city_type = none
+	city_type = city
+	levels_per_mesh = 50
 
 	potential = {
 		owner = {
