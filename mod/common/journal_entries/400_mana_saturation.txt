@@ -15,6 +15,9 @@
             name = global_mana_saturation
             value = 0
         }
+		scope:journal_entry = {
+			set_variable = com_hide_involved_countries
+		}
 	}
 
     should_be_involved = {
@@ -53,6 +56,30 @@
             }
         }
     }
+
+	map_color = {
+		if = {
+			limit = {
+				has_magic_gate = yes
+			}
+			# States with gates are marked blue
+			value = gate_map_mode_mana_density_gate
+		}
+		else_if = {
+			limit = {
+				state_region.var:mana_density > 0
+			}
+			# States with mana density are marked from red to green
+			lerp = {
+				factor = {
+					value = state_region.var:mana_density
+					divide = 100
+				}
+				min_color = gate_map_mode_mana_density_min
+				max_color = gate_map_mode_mana_density_max
+			}
+		}
+	}
 
 	status_desc = {
 		first_valid = {
