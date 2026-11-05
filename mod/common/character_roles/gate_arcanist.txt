@@ -1,6 +1,10 @@
 ﻿role_gate_arcanist = {
     texture = "gfx/interface/icons/character_role_icons/gate_arcanist.dds"
 
+    character_background = {
+        texture = gfx/interface/character_backgrounds/gate_char_role_arcanist.dds
+    }
+
     type = other
 
     priority = 100
@@ -40,6 +44,10 @@
 role_gate_active_arcanist = {
     texture = "gfx/interface/icons/character_role_icons/gate_arcanist.dds"
 
+    character_background = {
+        texture = gfx/interface/character_backgrounds/gate_char_role_arcanist.dds
+    }
+
     type = other
 
     priority = 100
@@ -60,7 +68,11 @@ role_gate_active_arcanist = {
 }
 
 role_gate_dungeon_party_leader = {
-    texture = "gfx/interface/icons/character_role_icons/gate_arcanist.dds"
+    texture = "gfx/interface/icons/character_role_icons/gate_dungeon_party_leader.dds"
+
+    character_background = {
+        texture = gfx/interface/character_backgrounds/gate_char_role_dungeon_party_leader.dds
+    }
 
     type = other
 
