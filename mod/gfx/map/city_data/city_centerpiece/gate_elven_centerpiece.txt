@@ -1,0 +1,51 @@
+﻿gate_elven_city_01 = {
+	city_graphics_type = gate_elven_city
+	grid_size = { 2 2 }
+	attach = {
+		variant = {
+			entity = gate_elven_city_centerpiece_entity
+		}
+	}
+}
+
+gate_elven_mine_01 = {
+	city_graphics_type = gate_elven_mine
+	grid_size = { 3 3 }
+	attach = { variant = { entity = european_mining_centerpiece_01_entity } }
+}
+
+gate_elven_wood_01 = {
+	city_graphics_type = gate_elven_wood
+	grid_size = { 2 2 }
+	attach = { variant = { entity = european_forestry_centerpiece_01_entity } }
+}
+
+gate_elven_farm_01 = {
+	city_graphics_type = gate_elven_farm
+	grid_size = { 2 2 }
+	attach = { variant = { entity = european_rural_center_piece_01_entity } }
+}
+
+gate_elven_skyscraper_01 = {
+	city_graphics_type = gate_elven_city
+	priority = 10
+	grid_size = { 2 2 }
+
+	trigger = {
+		any_scope_state = {
+			"b(building_skyscraper)" ?= {
+				OR = {
+					is_under_construction = yes
+					level > 0
+				}
+			}
+		}
+	}
+
+	attach = {
+		variant = {
+			entity = gate_elven_city_centerpiece_skyscraper_entity
+			building_type = building_skyscraper
+		}
+	}
+}
