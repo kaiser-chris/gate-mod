@@ -182,39 +182,110 @@ decision_gate_start_dungeon_exploration = {
 	}
 
 	when_taken = {
-		custom_tooltip = {
-			text = decision_gate_start_dungeon_exploration_selector_tooltip
-			every_scope_building = {
+		if = {
+			# Select dungeon and do dungeon setup
+			# for player countries
+			limit = {
+				is_player = yes
+			}
+			custom_tooltip = {
+				text = decision_gate_start_dungeon_exploration_selector_tooltip
+				every_scope_building = {
+					limit = {
+						is_building_group = bg_gate_dungeons
+						has_active_production_method = pm_gate_dungeon_unexplored
+					}
+					if = {
+						limit = {
+							exists = "global_variable_map(dungeons|type)"
+						}
+						create_container = {
+							parent = root
+							tags = { gate_mod gate_selector_element }
+							save_scope_as = temp_container
+						}
+						scope:temp_container ?= {
+							set_variable = {
+								name = building
+								value = prev
+							}
+							set_variable = {
+								name = dungeon
+								value = "global_variable_map(dungeons|prev.type)"
+							}
+						}
+						root = {
+							add_to_variable_list = {
+								name = gate_project_dungeon_selector
+								target = scope:temp_container
+							}
+						}
+						clear_saved_scope = temp_container
+					}
+				}
+			}
+		}
+		else = {
+			# Directly start the expedition
+			# for AI countries
+			random_scope_building = {
 				limit = {
 					is_building_group = bg_gate_dungeons
 					has_active_production_method = pm_gate_dungeon_unexplored
+					exists = "global_variable_map(dungeons|type)"
 				}
-				if = {
-					limit = {
-						exists = "global_variable_map(dungeons|type)"
-					}
-					create_container = {
-						parent = root
-						tags = { gate_mod gate_selector_element }
-						save_scope_as = temp_container
-					}
-					scope:temp_container ?= {
+				"global_variable_map(dungeons|type)" = {
+					save_scope_as = temp_dungeon
+				}
+			}
+			if = {
+				limit = {
+					exists = scope:temp_dungeon
+				}
+				# Create dungeon expedition container
+				# and save it as scope expedition (scope:expedition)
+				gate_create_dungeon_expedition = {
+					dungeon = scope:temp_dungeon
+				}
+				create_character = {
+					template = gate_dungeon_party_leader_template
+					save_scope_as = leader
+				}
+				scope:expedition ?= {
+					var:party = {
 						set_variable = {
-							name = building
-							value = prev
+							name = party_leader
+							value = scope:leader
+						}
+						# Set AI default values
+						set_variable = {
+							name = cohesion
+							value = gate_dungeon_party_cohesion_ai
 						}
 						set_variable = {
-							name = dungeon
-							value = "global_variable_map(dungeons|prev.type)"
+							name = cohesion_max
+							value = gate_dungeon_party_cohesion_ai
+						}
+						set_variable = {
+							name = condition
+							value = gate_dungeon_party_condition_ai
+						}
+						set_variable = {
+							name = condition_max
+							value = gate_dungeon_party_condition_ai
+						}
+						set_variable = {
+							name = renown
+							value = gate_dungeon_party_renown_ai
+						}
+						set_variable = {
+							name = renown_max
+							value = gate_dungeon_party_renown_ai
 						}
 					}
-					root = {
-						add_to_variable_list = {
-							name = gate_project_dungeon_selector
-							target = scope:temp_container
-						}
-					}
-					clear_saved_scope = temp_container
+				}
+				gate_start_dungeon = {
+					expedition = scope:expedition
 				}
 			}
 		}
