@@ -54,6 +54,17 @@ pdxmesh = {
 	}
 
 	meshsettings = {
+		name = "LOD_0|tree_lawn|tree_lawnShape"
+		index = 0
+		texture_diffuse = "gate_elven_tree_lawn_diffuse.dds"
+		texture_normal = "gate_elven_tree_lawn_normal.dds"
+		texture_specular = "gate_elven_tree_lawn_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
 		name = "LOD_1|mesh|meshShape"
 		index = 0
 		texture_diffuse = "gate_elven_urban_residential_mid_01_diffuse.dds"
@@ -98,6 +109,17 @@ pdxmesh = {
 	}
 
 	meshsettings = {
+		name = "LOD_1|tree_lawn|tree_lawnShape"
+		index = 0
+		texture_diffuse = "gate_elven_tree_lawn_diffuse.dds"
+		texture_normal = "gate_elven_tree_lawn_normal.dds"
+		texture_specular = "gate_elven_tree_lawn_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
 		name = "LOD_2|mesh|meshShape"
 		index = 0
 		texture_diffuse = "gate_elven_urban_residential_mid_01_diffuse.dds"
@@ -136,6 +158,17 @@ pdxmesh = {
 		texture_diffuse = "gate_elven_urban_residential_decal_diffuse.dds"
 		texture_normal = "gate_elven_urban_residential_decal_normal.dds"
 		texture_specular = "gate_elven_urban_residential_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "LOD_2|tree_lawn|tree_lawnShape"
+		index = 0
+		texture_diffuse = "gate_elven_tree_lawn_diffuse.dds"
+		texture_normal = "gate_elven_tree_lawn_normal.dds"
+		texture_specular = "gate_elven_tree_lawn_properties.dds"
 		shader = "decal_local"
 		shader_file = "gfx/FX/pdxmesh_decal.shader"
 		subpass = "LocalDecals"
