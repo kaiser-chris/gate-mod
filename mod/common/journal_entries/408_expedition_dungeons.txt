@@ -129,6 +129,23 @@
 		}
 	}
 
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			NOT = {
+				any_scope_state = {
+					state_region = scope:expedition.var:dungeon.var:location
+				}
+			}
+		}
+		effect = {
+			hidden_effect = {
+				gate_cleanup_dungeon_expedition = yes
+			}
+		}
+	}
+
 	scripted_button = sb_gate_dungeon_debug_advance
 
 	transferable = no
