@@ -1,0 +1,6 @@
+﻿gate_elven_buildings_trigger = {
+	OR = {
+		has_variable = gate_elven_buildings_enabled
+		is_homeland = cu:elven
+	}
+}
