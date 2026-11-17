@@ -14,6 +14,12 @@
 		container = "custom_widget_container_1"
 	}
 
+	widget = {
+		gui = "gui/journal_injects/gate_project_injects.gui"
+		name = "gate_inject_project_progress"
+		container = "com_custom_widget_container_scripted_progress_bars"
+	}
+
 	status_desc = {
 		triggered_desc = {
 			trigger = {
@@ -35,19 +41,28 @@
 				}
 			}
 		}
+		scope:journal_entry = {
+			set_variable = {
+				name = gate_project_cost
+				value = scope:target
+			}
+			# Hide progress conditions since we are going to build our own
+			set_variable = com_hide_progress_conditions
+		}
 	}
 
-	on_monthly_pulse = {
+	on_weekly_pulse = {
 		effect = {
-			if = {
-				limit = {
-					any_scope_building = {
-						is_building_type = building_gate_alxa
-					}
-				}
-				gate_project_progress = yes
+			trigger_event = {
+				on_action = on_gate_project_tick
 			}
 		}
+	}
+
+	# Needs a researcher and is not paused
+	is_progressing = {
+		gate_project_is_paused = no
+		has_gate_magic_researcher = yes
 	}
 
 	outcome = {
@@ -109,20 +124,12 @@
 		}
 	}
 
-	current_value = {
-		value = gate_project_current_progress
-	}
-
-	goal_add_value = {
-		add = scope:target
-	}
-
 	scripted_button = gate_project_button_pause
 	scripted_button = gate_project_button_continue
 	scripted_button = gate_project_button_stop
 
-	display_progressbar_as_months = yes
-	progressbar = yes
+	scripted_progress_bar = pb_gate_project_progress
+	scripted_progress_bar = pb_gate_project_tick
 
 	weight = 1000
 
@@ -143,6 +150,12 @@ je_gate_project_investigate_magic_gate_tyrol = {
 		gui = "gui/com_journal_injects/injects.gui"
 		name = "com_journal_entry_building"
 		container = "custom_widget_container_1"
+	}
+
+	widget = {
+		gui = "gui/journal_injects/gate_project_injects.gui"
+		name = "gate_inject_project_progress"
+		container = "com_custom_widget_container_scripted_progress_bars"
 	}
 
 	status_desc = {
@@ -166,19 +179,28 @@ je_gate_project_investigate_magic_gate_tyrol = {
 				}
 			}
 		}
+		scope:journal_entry = {
+			set_variable = {
+				name = gate_project_cost
+				value = scope:target
+			}
+			# Hide progress conditions since we are going to build our own
+			set_variable = com_hide_progress_conditions
+		}
 	}
 
-	on_monthly_pulse = {
+	on_weekly_pulse = {
 		effect = {
-			if = {
-				limit = {
-					any_scope_building = {
-						is_building_type = building_gate_tyrol
-					}
-				}
-				gate_project_progress = yes
+			trigger_event = {
+				on_action = on_gate_project_tick
 			}
 		}
+	}
+
+	# Needs a researcher and is not paused
+	is_progressing = {
+		gate_project_is_paused = no
+		has_gate_magic_researcher = yes
 	}
 
 	outcome = {
@@ -240,20 +262,12 @@ je_gate_project_investigate_magic_gate_tyrol = {
 		}
 	}
 
-	current_value = {
-		value = gate_project_current_progress
-	}
-
-	goal_add_value = {
-		add = scope:target
-	}
-
 	scripted_button = gate_project_button_pause
 	scripted_button = gate_project_button_continue
 	scripted_button = gate_project_button_stop
 
-	display_progressbar_as_months = yes
-	progressbar = yes
+	scripted_progress_bar = pb_gate_project_progress
+	scripted_progress_bar = pb_gate_project_tick
 
 	weight = 1000
 
@@ -274,6 +288,12 @@ je_gate_project_investigate_magic_gate_zambia = {
 		gui = "gui/com_journal_injects/injects.gui"
 		name = "com_journal_entry_building"
 		container = "custom_widget_container_1"
+	}
+
+	widget = {
+		gui = "gui/journal_injects/gate_project_injects.gui"
+		name = "gate_inject_project_progress"
+		container = "com_custom_widget_container_scripted_progress_bars"
 	}
 
 	status_desc = {
@@ -297,19 +317,28 @@ je_gate_project_investigate_magic_gate_zambia = {
 				}
 			}
 		}
+		scope:journal_entry = {
+			set_variable = {
+				name = gate_project_cost
+				value = scope:target
+			}
+			# Hide progress conditions since we are going to build our own
+			set_variable = com_hide_progress_conditions
+		}
 	}
 
-	on_monthly_pulse = {
+	on_weekly_pulse = {
 		effect = {
-			if = {
-				limit = {
-					any_scope_building = {
-						is_building_type = building_gate_zambia
-					}
-				}
-				gate_project_progress = yes
+			trigger_event = {
+				on_action = on_gate_project_tick
 			}
 		}
+	}
+
+	# Needs a researcher and is not paused
+	is_progressing = {
+		gate_project_is_paused = no
+		has_gate_magic_researcher = yes
 	}
 
 	outcome = {
@@ -371,20 +400,12 @@ je_gate_project_investigate_magic_gate_zambia = {
 		}
 	}
 
-	current_value = {
-		value = gate_project_current_progress
-	}
-
-	goal_add_value = {
-		add = scope:target
-	}
-
 	scripted_button = gate_project_button_pause
 	scripted_button = gate_project_button_continue
 	scripted_button = gate_project_button_stop
 
-	display_progressbar_as_months = yes
-	progressbar = yes
+	scripted_progress_bar = pb_gate_project_progress
+	scripted_progress_bar = pb_gate_project_tick
 
 	weight = 1000
 
@@ -405,6 +426,12 @@ je_gate_project_investigate_magic_gate_yukon = {
 		gui = "gui/com_journal_injects/injects.gui"
 		name = "com_journal_entry_building"
 		container = "custom_widget_container_1"
+	}
+
+	widget = {
+		gui = "gui/journal_injects/gate_project_injects.gui"
+		name = "gate_inject_project_progress"
+		container = "com_custom_widget_container_scripted_progress_bars"
 	}
 
 	status_desc = {
@@ -428,19 +455,28 @@ je_gate_project_investigate_magic_gate_yukon = {
 				}
 			}
 		}
+		scope:journal_entry = {
+			set_variable = {
+				name = gate_project_cost
+				value = scope:target
+			}
+			# Hide progress conditions since we are going to build our own
+			set_variable = com_hide_progress_conditions
+		}
 	}
 
-	on_monthly_pulse = {
+	on_weekly_pulse = {
 		effect = {
-			if = {
-				limit = {
-					any_scope_building = {
-						is_building_type = building_gate_yukon
-					}
-				}
-				gate_project_progress = yes
+			trigger_event = {
+				on_action = on_gate_project_tick
 			}
 		}
+	}
+
+	# Needs a researcher and is not paused
+	is_progressing = {
+		gate_project_is_paused = no
+		has_gate_magic_researcher = yes
 	}
 
 	outcome = {
@@ -502,20 +538,12 @@ je_gate_project_investigate_magic_gate_yukon = {
 		}
 	}
 
-	current_value = {
-		value = gate_project_current_progress
-	}
-
-	goal_add_value = {
-		add = scope:target
-	}
-
 	scripted_button = gate_project_button_pause
 	scripted_button = gate_project_button_continue
 	scripted_button = gate_project_button_stop
 
-	display_progressbar_as_months = yes
-	progressbar = yes
+	scripted_progress_bar = pb_gate_project_progress
+	scripted_progress_bar = pb_gate_project_tick
 
 	weight = 1000
 
@@ -536,6 +564,12 @@ je_gate_project_investigate_magic_gate_equateur = {
 		gui = "gui/com_journal_injects/injects.gui"
 		name = "com_journal_entry_building"
 		container = "custom_widget_container_1"
+	}
+
+	widget = {
+		gui = "gui/journal_injects/gate_project_injects.gui"
+		name = "gate_inject_project_progress"
+		container = "com_custom_widget_container_scripted_progress_bars"
 	}
 
 	status_desc = {
@@ -559,19 +593,28 @@ je_gate_project_investigate_magic_gate_equateur = {
 				}
 			}
 		}
+		scope:journal_entry = {
+			set_variable = {
+				name = gate_project_cost
+				value = scope:target
+			}
+			# Hide progress conditions since we are going to build our own
+			set_variable = com_hide_progress_conditions
+		}
 	}
 
-	on_monthly_pulse = {
+	on_weekly_pulse = {
 		effect = {
-			if = {
-				limit = {
-					any_scope_building = {
-						is_building_type = building_gate_equateur
-					}
-				}
-				gate_project_progress = yes
+			trigger_event = {
+				on_action = on_gate_project_tick
 			}
 		}
+	}
+
+	# Needs a researcher and is not paused
+	is_progressing = {
+		gate_project_is_paused = no
+		has_gate_magic_researcher = yes
 	}
 
 	outcome = {
@@ -633,20 +676,12 @@ je_gate_project_investigate_magic_gate_equateur = {
 		}
 	}
 
-	current_value = {
-		value = gate_project_current_progress
-	}
-
-	goal_add_value = {
-		add = scope:target
-	}
-
 	scripted_button = gate_project_button_pause
 	scripted_button = gate_project_button_continue
 	scripted_button = gate_project_button_stop
 
-	display_progressbar_as_months = yes
-	progressbar = yes
+	scripted_progress_bar = pb_gate_project_progress
+	scripted_progress_bar = pb_gate_project_tick
 
 	weight = 1000
 
@@ -667,6 +702,12 @@ je_gate_project_investigate_magic_gate_eastern_new_guinea = {
 		gui = "gui/com_journal_injects/injects.gui"
 		name = "com_journal_entry_building"
 		container = "custom_widget_container_1"
+	}
+
+	widget = {
+		gui = "gui/journal_injects/gate_project_injects.gui"
+		name = "gate_inject_project_progress"
+		container = "com_custom_widget_container_scripted_progress_bars"
 	}
 
 	status_desc = {
@@ -690,19 +731,28 @@ je_gate_project_investigate_magic_gate_eastern_new_guinea = {
 				}
 			}
 		}
+		scope:journal_entry = {
+			set_variable = {
+				name = gate_project_cost
+				value = scope:target
+			}
+			# Hide progress conditions since we are going to build our own
+			set_variable = com_hide_progress_conditions
+		}
 	}
 
-	on_monthly_pulse = {
+	on_weekly_pulse = {
 		effect = {
-			if = {
-				limit = {
-					any_scope_building = {
-						is_building_type = building_gate_eastern_new_guinea
-					}
-				}
-				gate_project_progress = yes
+			trigger_event = {
+				on_action = on_gate_project_tick
 			}
 		}
+	}
+
+	# Needs a researcher and is not paused
+	is_progressing = {
+		gate_project_is_paused = no
+		has_gate_magic_researcher = yes
 	}
 
 	outcome = {
@@ -764,20 +814,12 @@ je_gate_project_investigate_magic_gate_eastern_new_guinea = {
 		}
 	}
 
-	current_value = {
-		value = gate_project_current_progress
-	}
-
-	goal_add_value = {
-		add = scope:target
-	}
-
 	scripted_button = gate_project_button_pause
 	scripted_button = gate_project_button_continue
 	scripted_button = gate_project_button_stop
 
-	display_progressbar_as_months = yes
-	progressbar = yes
+	scripted_progress_bar = pb_gate_project_progress
+	scripted_progress_bar = pb_gate_project_tick
 
 	weight = 1000
 

@@ -1,0 +1,855 @@
+﻿namespace = gate_arcanist_project
+
+# scope:gate_project_researcher - the arcanist working on the project
+# scope:gate_project_je         - the journal entry of the running project
+
+gate_arcanist_project.1 = {
+	type = country_event
+	dlc = dlc_magic_gate
+	
+	title = gate_arcanist_project.1.t
+	desc = gate_arcanist_project.1.d
+	flavor = gate_arcanist_project.1.f
+
+	event_image = {
+		video = "gate_unspecified_magic_phenomena"
+	}
+
+	trigger = {
+		gate_project_can_have_generic_event = yes
+	}
+
+	immediate = {
+		gate_project_event_save_scopes = yes
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/event_icons/event_gate_project.dds
+
+	left_icon = scope:gate_project_researcher
+
+	cooldown = {
+		years = 1
+	}
+
+	option = {
+		name = gate_arcanist_project.1.a
+		custom_tooltip = {
+			text = gate_arcanist_project.1.a.result_tooltip
+
+			random_list = {
+				40 = {
+					# Fail
+					send_interface_message = {
+						title = gate_arcanist_project.1.a.fail.t
+						desc = gate_arcanist_project.1.a.fail.d
+						icon = gfx/interface/icons/event_icons/event_gate_project.dds
+
+						gate_add_magic_innovation = {
+							amount = -200
+						}
+						# Also change sgui: gate_arcanist_project.1.a.fail
+						# In: common/scripted_guis/gate_message_tooltip_sgui.txt
+					}
+				}
+				60 = {
+					# Success
+					send_interface_message = {
+						title = gate_arcanist_project.1.a.success.t
+						desc = gate_arcanist_project.1.a.success.d
+						icon = gfx/interface/icons/event_icons/event_gate_project.dds
+
+						gate_add_magic_innovation = {
+							amount = 500
+						}
+						# Also change sgui: gate_arcanist_project.1.a.success
+						# In: common/scripted_guis/gate_message_tooltip_sgui.txt
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = gate_arcanist_project.1.b
+		default_option = yes
+		scope:gate_project_je = {
+			add_gate_magic_project_progress = {
+				amount = -2
+			}
+		}
+	}
+}
+
+###############################################
+# Generic project events
+# Fired by on_gate_project_tick_events while any project is running.
+# All of them are either positive, negative or a choice - no random outcomes.
+#
+###############################################
+
+###############################################
+# Positive events
+###############################################
+
+# Positive: A Sudden Insight
+gate_arcanist_project.2 = {
+	type = country_event
+	dlc = dlc_magic_gate
+
+	title = gate_arcanist_project.2.t
+	desc = gate_arcanist_project.2.d
+	flavor = gate_arcanist_project.2.f
+
+	event_image = {
+		video = "gate_unspecified_magic_phenomena"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/event_icons/event_gate_project.dds
+
+	left_icon = scope:gate_project_researcher
+
+	duration = 3
+
+	cooldown = {
+		years = 2
+	}
+
+	trigger = {
+		gate_project_can_have_generic_event = yes
+	}
+
+	immediate = {
+		gate_project_event_save_scopes = yes
+	}
+
+	# Put it straight to use
+	option = {
+		name = gate_arcanist_project.2.a
+		default_option = yes
+		scope:gate_project_je = {
+			add_gate_magic_project_progress = {
+				amount = 5
+			}
+		}
+		ai_chance = {
+			base = 75
+		}
+	}
+
+	# Write it down properly first
+	option = {
+		name = gate_arcanist_project.2.b
+		scope:gate_project_je = {
+			add_gate_magic_project_progress = {
+				amount = 2
+			}
+		}
+		gate_add_magic_innovation = {
+			amount = 300
+		}
+		gate_add_researcher_experience = {
+			amount = 3
+		}
+		ai_chance = {
+			base = 25
+		}
+	}
+}
+
+# Positive: A Gifted Assistant
+gate_arcanist_project.3 = {
+	type = country_event
+	dlc = dlc_magic_gate
+
+	title = gate_arcanist_project.3.t
+	desc = gate_arcanist_project.3.d
+	flavor = gate_arcanist_project.3.f
+
+	event_image = {
+		video = "ip4_university_lecture"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/event_icons/event_gate_project.dds
+
+	left_icon = scope:gate_project_researcher
+
+	duration = 3
+
+	cooldown = {
+		years = 2
+	}
+
+	trigger = {
+		gate_project_can_have_generic_event = yes
+	}
+
+	immediate = {
+		gate_project_event_save_scopes = yes
+	}
+
+	# Give the assistant more of the routine work
+	option = {
+		name = gate_arcanist_project.3.a
+		default_option = yes
+		scope:gate_project_je = {
+			add_gate_magic_project_progress = {
+				amount = 3
+			}
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	# Have the arcanist teach them
+	option = {
+		name = gate_arcanist_project.3.b
+		scope:gate_project_je = {
+			add_gate_magic_project_progress = {
+				amount = 1
+			}
+		}
+		gate_add_researcher_experience = {
+			amount = 5
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
+# Positive: Notes From the Archive
+gate_arcanist_project.4 = {
+	type = country_event
+	dlc = dlc_magic_gate
+
+	title = gate_arcanist_project.4.t
+	desc = gate_arcanist_project.4.d
+	flavor = gate_arcanist_project.4.f
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/event_icons/event_gate_project.dds
+
+	left_icon = scope:gate_project_researcher
+
+	duration = 3
+
+	cooldown = {
+		years = 2
+	}
+
+	trigger = {
+		gate_project_can_have_generic_event = yes
+	}
+
+	immediate = {
+		gate_project_event_save_scopes = yes
+	}
+
+	# Use the old notes for the project
+	option = {
+		name = gate_arcanist_project.4.a
+		default_option = yes
+		scope:gate_project_je = {
+			add_gate_magic_project_progress = {
+				amount = 4
+			}
+		}
+		ai_chance = {
+			base = 60
+		}
+	}
+
+	# Have the whole archive catalogued
+	option = {
+		name = gate_arcanist_project.4.b
+		scope:gate_project_je = {
+			add_gate_magic_project_progress = {
+				amount = 2
+			}
+		}
+		gate_add_magic_innovation = {
+			amount = 250
+		}
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+
+# Negative: A Flawed Premise
+gate_arcanist_project.5 = {
+	type = country_event
+	dlc = dlc_magic_gate
+
+	title = gate_arcanist_project.5.t
+	desc = gate_arcanist_project.5.d
+	flavor = gate_arcanist_project.5.f
+
+	event_image = {
+		video = "ip4_university_lecture"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/event_icons/event_gate_project.dds
+
+	left_icon = scope:gate_project_researcher
+
+	duration = 3
+
+	cooldown = {
+		years = 2
+	}
+
+	trigger = {
+		gate_project_can_have_generic_event = yes
+		# There has to be some work that can be lost
+		var:gate_magic_project ?= {
+			scripted_bar_progress:pb_gate_project_progress >= 10
+		}
+	}
+
+	immediate = {
+		gate_project_event_save_scopes = yes
+	}
+
+	# Redo the affected work
+	option = {
+		name = gate_arcanist_project.5.a
+		default_option = yes
+		scope:gate_project_je = {
+			add_gate_magic_project_progress = {
+				amount = -4
+			}
+		}
+		ai_chance = {
+			base = 60
+		}
+	}
+
+	# Find out why it went wrong
+	option = {
+		name = gate_arcanist_project.5.b
+		scope:gate_project_je = {
+			add_gate_magic_project_progress = {
+				amount = -6
+			}
+		}
+		gate_add_magic_innovation = {
+			amount = 200
+		}
+		gate_add_researcher_experience = {
+			amount = 2
+		}
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+
+# Negative: Mana Discharge
+gate_arcanist_project.6 = {
+	type = country_event
+	dlc = dlc_magic_gate
+
+	title = gate_arcanist_project.6.t
+	desc = gate_arcanist_project.6.d
+	flavor = gate_arcanist_project.6.f
+
+	event_image = {
+		video = "unspecific_fire"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/event_icons/event_gate_project.dds
+
+	left_icon = scope:gate_project_researcher
+
+	duration = 3
+
+	cooldown = {
+		years = 2
+	}
+
+	trigger = {
+		gate_project_can_have_generic_event = yes
+		# There has to be some work that can be lost
+		var:gate_magic_project ?= {
+			scripted_bar_progress:pb_gate_project_progress >= 10
+		}
+	}
+
+	immediate = {
+		gate_project_event_save_scopes = yes
+	}
+
+	# Rebuild with what the institute has
+	option = {
+		name = gate_arcanist_project.6.a
+		default_option = yes
+		scope:gate_project_je = {
+			add_gate_magic_project_progress = {
+				amount = -5
+			}
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	# Buy replacements at once
+	option = {
+		name = gate_arcanist_project.6.b
+		scope:gate_project_je = {
+			add_gate_magic_project_progress = {
+				amount = -2
+			}
+		}
+		add_modifier = {
+			name = modifier_gate_project_replaced_equipment
+			days = short_modifier_time
+			multiplier = money_amount_multiplier_small
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
+# Negative: An Exhausted Arcanist
+gate_arcanist_project.7 = {
+	type = country_event
+	dlc = dlc_magic_gate
+
+	title = gate_arcanist_project.7.t
+	desc = gate_arcanist_project.7.d
+	flavor = gate_arcanist_project.7.f
+
+	event_image = {
+		video = "unspecific_sick_in_hospital"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/event_icons/event_gate_project.dds
+
+	left_icon = scope:gate_project_researcher
+
+	duration = 3
+
+	cooldown = {
+		years = 2
+	}
+
+	trigger = {
+		gate_project_can_have_generic_event = yes
+	}
+
+	immediate = {
+		gate_project_event_save_scopes = yes
+	}
+
+	# Order a few weeks of rest
+	option = {
+		name = gate_arcanist_project.7.a
+		default_option = yes
+		scope:gate_project_je = {
+			add_gate_magic_project_progress = {
+				amount = -3
+			}
+		}
+		ai_chance = {
+			base = 70
+		}
+	}
+
+	# The work can't wait
+	option = {
+		name = gate_arcanist_project.7.b
+		gate_add_researcher_experience = {
+			amount = 2
+		}
+		var:gate_magic_researcher = {
+			add_modifier = {
+				name = modifier_gate_project_exhausted
+				days = very_short_modifier_time
+			}
+		}
+		ai_chance = {
+			base = 30
+		}
+	}
+}
+
+# Choice: Drawing on the Reserves
+gate_arcanist_project.8 = {
+	type = country_event
+	dlc = dlc_magic_gate
+
+	title = gate_arcanist_project.8.t
+	desc = gate_arcanist_project.8.d
+	flavor = gate_arcanist_project.8.f
+
+	event_image = {
+		video = "gate_unspecified_magic_phenomena"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/event_icons/event_gate_project.dds
+
+	left_icon = scope:gate_project_researcher
+
+	duration = 3
+
+	cooldown = {
+		years = 2
+	}
+
+	trigger = {
+		gate_project_can_have_generic_event = yes
+		has_variable = magic_innovation
+		var:magic_innovation >= 300
+	}
+
+	immediate = {
+		gate_project_event_save_scopes = yes
+	}
+
+	# Spend the reserves on the project
+	option = {
+		name = gate_arcanist_project.8.a
+		scope:gate_project_je = {
+			add_gate_magic_project_progress = {
+				amount = 5
+			}
+		}
+		gate_add_magic_innovation = {
+			amount = -300
+		}
+		ai_chance = {
+			base = 40
+		}
+	}
+
+	# Keep the reserves
+	option = {
+		name = gate_arcanist_project.8.b
+		default_option = yes
+		gate_add_researcher_experience = {
+			amount = 1
+		}
+		ai_chance = {
+			base = 60
+		}
+	}
+}
+
+# Choice: An Interesting Detour
+gate_arcanist_project.9 = {
+	type = country_event
+	dlc = dlc_magic_gate
+
+	title = gate_arcanist_project.9.t
+	desc = gate_arcanist_project.9.d
+	flavor = gate_arcanist_project.9.f
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/event_icons/event_gate_project.dds
+
+	left_icon = scope:gate_project_researcher
+
+	duration = 3
+
+	cooldown = {
+		years = 2
+	}
+
+	trigger = {
+		gate_project_can_have_generic_event = yes
+	}
+
+	immediate = {
+		gate_project_event_save_scopes = yes
+	}
+
+	# Follow the detour
+	option = {
+		name = gate_arcanist_project.9.a
+		scope:gate_project_je = {
+			add_gate_magic_project_progress = {
+				amount = -3
+			}
+		}
+		gate_add_magic_innovation = {
+			amount = 400
+		}
+		gate_add_researcher_experience = {
+			amount = 3
+		}
+		ai_chance = {
+			base = 40
+		}
+	}
+
+	# Stay with the project
+	option = {
+		name = gate_arcanist_project.9.b
+		default_option = yes
+		scope:gate_project_je = {
+			add_gate_magic_project_progress = {
+				amount = 1
+			}
+		}
+		ai_chance = {
+			base = 60
+		}
+	}
+}
+
+# Choice: Request for Additional Funds
+gate_arcanist_project.10 = {
+	type = country_event
+	dlc = dlc_magic_gate
+
+	title = gate_arcanist_project.10.t
+	desc = gate_arcanist_project.10.d
+	flavor = gate_arcanist_project.10.f
+
+	event_image = {
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/event_icons/event_gate_project.dds
+
+	left_icon = scope:gate_project_researcher
+
+	duration = 3
+
+	cooldown = {
+		years = 2
+	}
+
+	trigger = {
+		gate_project_can_have_generic_event = yes
+	}
+
+	immediate = {
+		gate_project_event_save_scopes = yes
+	}
+
+	# Grant the request in full
+	option = {
+		name = gate_arcanist_project.10.a
+		scope:gate_project_je = {
+			add_gate_magic_project_progress = {
+				amount = 5
+			}
+		}
+		add_modifier = {
+			name = modifier_gate_project_replaced_equipment
+			days = short_modifier_time
+			multiplier = money_amount_multiplier_medium
+		}
+		ai_chance = {
+			base = 40
+		}
+	}
+
+	# Let the institute pay for it
+	option = {
+		name = gate_arcanist_project.10.b
+		trigger = {
+			var:magic_innovation >= 200
+		}
+		scope:gate_project_je = {
+			add_gate_magic_project_progress = {
+				amount = 3
+			}
+		}
+		gate_add_magic_innovation = {
+			amount = -200
+		}
+		ai_chance = {
+			base = 30
+		}
+	}
+
+	# The budget stands
+	option = {
+		name = gate_arcanist_project.10.c
+		default_option = yes
+		ai_chance = {
+			base = 30
+		}
+	}
+}
+
+# Choice: A Public Demonstration
+gate_arcanist_project.11 = {
+	type = country_event
+	dlc = dlc_magic_gate
+
+	title = gate_arcanist_project.11.t
+	desc = gate_arcanist_project.11.d
+	flavor = gate_arcanist_project.11.f
+
+	event_image = {
+		video = "unspecific_world_fair"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/event_icons/event_gate_project.dds
+
+	left_icon = scope:gate_project_researcher
+
+	duration = 3
+
+	cooldown = {
+		years = 2
+	}
+
+	trigger = {
+		gate_project_can_have_generic_event = yes
+		# There has to be something to show
+		var:gate_magic_project ?= {
+			scripted_bar_progress:pb_gate_project_progress >= 25
+		}
+	}
+
+	immediate = {
+		gate_project_event_save_scopes = yes
+	}
+
+	# Hold the demonstration
+	option = {
+		name = gate_arcanist_project.11.a
+		scope:gate_project_je = {
+			add_gate_magic_project_progress = {
+				amount = -2
+			}
+		}
+		add_modifier = {
+			name = modifier_gate_project_impressive_demonstration
+			days = short_modifier_time
+			is_decaying = yes
+		}
+		ai_chance = {
+			base = 40
+		}
+	}
+
+	# The work comes first
+	option = {
+		name = gate_arcanist_project.11.b
+		default_option = yes
+		scope:gate_project_je = {
+			add_gate_magic_project_progress = {
+				amount = 1
+			}
+		}
+		ai_chance = {
+			base = 60
+		}
+	}
+}
+
+# Choice: Foreign Correspondence
+gate_arcanist_project.12 = {
+	type = country_event
+	dlc = dlc_magic_gate
+
+	title = gate_arcanist_project.12.t
+	desc = gate_arcanist_project.12.d
+	flavor = gate_arcanist_project.12.f
+
+	event_image = {
+		video = "europenorthamerica_london_center"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = gfx/interface/icons/event_icons/event_gate_project.dds
+
+	left_icon = scope:gate_project_researcher
+
+	duration = 3
+
+	cooldown = {
+		years = 2
+	}
+
+	trigger = {
+		gate_project_can_have_generic_event = yes
+		var:magic_innovation >= 150
+		any_country = {
+			is_gate_magic_country = yes
+			this != root
+			relations:root >= relations_threshold:cordial
+		}
+	}
+
+	immediate = {
+		gate_project_event_save_scopes = yes
+		random_country = {
+			limit = {
+    			is_gate_magic_country = yes
+				this != root
+				relations:root >= relations_threshold:cordial
+			}
+			save_scope_as = other_country
+		}
+	}
+
+	# Trade findings with them
+	option = {
+		name = gate_arcanist_project.12.a
+		scope:gate_project_je = {
+			add_gate_magic_project_progress = {
+				amount = 4
+			}
+		}
+		gate_add_magic_innovation = {
+			amount = -150
+		}
+		trigger = {
+			var:magic_innovation >= 150
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	# Our findings stay here
+	option = {
+		name = gate_arcanist_project.12.b
+		default_option = yes
+		gate_add_researcher_experience = {
+			amount = 3
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+}

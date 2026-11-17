@@ -11,10 +11,6 @@
 		}
         var:gate_magic_project ?= {
             set_variable = {
-                name = gate_magic_project_type
-                value = gate_project_type_normal
-            }
-            set_variable = {
                 name = gate_magic_project_progress
                 value = 0
             }
@@ -62,10 +58,6 @@ gate_start_magic_infrastructure_project = {
         }
         var:gate_magic_project ?= {
             set_variable = {
-                name = gate_magic_project_type
-                value = gate_project_type_infrastructure
-            }
-            set_variable = {
                 name = gate_magic_project_progress
                 value = 0
             }
@@ -103,15 +95,33 @@ gate_start_magic_infrastructure_project = {
     }
 }
 
+add_gate_magic_project_progress = {
+    custom_description = {
+        text = add_gate_magic_project_progress
+        subject = this
+        value = $amount$
+
+        add_progress = {
+            name = pb_gate_project_progress
+            value = $amount$
+        }
+    }
+}
+
+# Saves the scopes used by the generic project events
+# In: events/gate_events/arcanist_project_events.txt
+gate_project_event_save_scopes = {
+    var:gate_magic_researcher ?= {
+        save_scope_as = gate_project_researcher
+    }
+    var:gate_magic_project ?= {
+        save_scope_as = gate_project_je
+    }
+}
+
 gate_pause_magic_project = {
     scope:journal_entry = {
         remove_modifier = modifier_gate_project_cost
-        if = {
-            limit = {
-                var:gate_magic_project_type ?= gate_project_type_infrastructure
-            }
-            remove_modifier = modifier_gate_project_infrastructure_cost
-        }
     }
 }
 
@@ -121,12 +131,6 @@ gate_continue_magic_project = {
             name = modifier_gate_project_cost
             multiplier = scope:journal_entry.var:gate_magic_project_monthly_cost
         }
-        if = {
-            limit = {
-                var:gate_magic_project_type ?= gate_project_type_infrastructure
-            }
-            add_modifier = modifier_gate_project_infrastructure_cost
-        }
     }
 }
 
@@ -134,21 +138,6 @@ gate_stop_magic_project = {
 	custom_tooltip = {
 		text = effect_gate_stop_magic_project
 		remove_variable = gate_magic_project
-	}
-}
-
-gate_project_progress = {
-	if = {
-		limit = {
-			has_gate_magic_researcher = yes
-            gate_project_is_paused = no
-		}
-        scope:journal_entry = {
-            change_variable = {
-                name = gate_magic_project_progress
-                add = 1
-            }
-        }
 	}
 }
 

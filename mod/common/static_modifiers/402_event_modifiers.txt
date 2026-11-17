@@ -83,3 +83,19 @@ modifier_gate_dragon_invasion_boost = {
 	military_formation_mobilization_speed_mult = 100
 	unit_supply_consumption_mult = -1
 }
+
+modifier_gate_project_impressive_demonstration = {
+	icon = gfx/interface/icons/timed_modifier_icons/gate_modifier_project_positive.dds
+	country_prestige_add = 10
+}
+
+modifier_gate_project_replaced_equipment = {
+	icon = gfx/interface/icons/timed_modifier_icons/gate_modifier_project_negative.dds
+	country_expenses_add = 1
+}
+
+modifier_gate_project_exhausted = {
+	icon = gfx/interface/icons/timed_modifier_icons/gate_modifier_project_negative.dds
+	character_gate_arcanist_project_speed = -0.05
+	character_health_add = -0.05
+}

@@ -36,8 +36,7 @@
  gg_projects_invalid_arcanist: "Our [concept_gate_project] is stalled until we hire a new [concept_gate_magic_researcher]."
  gg_projects_active_project: "Our [concept_gate_magic_researcher] is currently working on #v [GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.GetName]#!."
  gg_projects_active_project_desc: "[SelectLocalization(GetScriptedGui('sgui_gate_has_researcher').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End), 'gg_projects_active_project', 'gg_projects_invalid_arcanist')]"
- gg_projects_progress_months: "[GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.CalcCurrentGoalValue|v0] of [GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.GetTotalGoalValue|v0] months"
- gg_projects_progress_construction: "[GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.CalcCurrentGoalValue|v0] of [GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.GetTotalGoalValue|v0K] [concept_construction]"
+ gg_projects_progress: "$pb_gate_project_progress_name$: [GetPlayer.MakeScope.Var('gate_magic_project').ScriptValue('gate_project_implementation_percent')|v2%]"
 # Arcanist Stats
  gg_arcanist_statistics_header: "Statistics"
  gg_arcanist_statistics_flavor: "Our [concept_gate_magic_researcher] [GetPlayer.MakeScope.Var('gate_magic_researcher').GetCharacter.GetPrimaryRoleTitle] [GetPlayer.MakeScope.Var('gate_magic_researcher').GetCharacter.GetFullName] has been in his [concept_character_role] for [LabelingHelper.GetDaysLocWithoutTooltip(FixedPointToInt(GetPlayer.MakeScope.Var('gate_magic_researcher').ScriptValue('gate_character_hired_days')))]."

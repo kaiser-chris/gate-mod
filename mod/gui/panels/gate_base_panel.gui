@@ -1636,20 +1636,13 @@ types gate_base_panel_types {
                     size = { 300 25 }
 
                     blockoverride "values" {
-                        value = "[GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.CalcCurrentGoalValue]"
+                        value = "[GetPlayer.MakeScope.Var('gate_magic_project').ScriptValue('gate_project_implementation_percent')]"
                         min = 0
-                        max = "[GetPlayer.MakeScope.Var('gate_magic_project').GetJournalEntry.GetTotalGoalValue]"
+                        max = 1
                     }
                     textbox = {
-                        visible = "[EqualTo_CFixedPoint(GetPlayer.MakeScope.Var('gate_magic_project').Var('gate_magic_project_type').GetValue, GetPlayer.MakeScope.ScriptValue('gate_project_type_normal'))]"
                         size = { 300 25 }
-                        text = gg_projects_progress_months
-                        align = center
-                    }
-                    textbox = {
-                        visible = "[EqualTo_CFixedPoint(GetPlayer.MakeScope.Var('gate_magic_project').Var('gate_magic_project_type').GetValue, GetPlayer.MakeScope.ScriptValue('gate_project_type_infrastructure'))]"
-                        size = { 300 25 }
-                        text = gg_projects_progress_construction
+                        text = gg_projects_progress
                         align = center
                     }
                 }

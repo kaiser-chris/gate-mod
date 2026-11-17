@@ -1,0 +1,51 @@
+﻿on_gate_project_tick = {
+    trigger = {
+        # We only do anything when a tick has been completed
+        scope:journal_entry.scripted_bar_progress:pb_gate_project_tick >= 100
+    }
+    effect = {
+        scope:journal_entry = {
+            # Reset tick progress
+            set_bar_progress = {
+                name = pb_gate_project_tick
+                value = 0
+            }
+            # Add progress to the implementation progress bar
+            add_progress = {
+                name = pb_gate_project_progress
+                value = gate_project_implementation_tick
+            }
+        }
+        trigger_event = {
+            on_action = on_gate_project_tick_events
+        }
+    }
+}
+
+on_gate_project_tick_events = {
+    trigger = {
+        # Only fire an event if the journal hasn't been completed yet
+        scope:journal_entry.scripted_bar_progress:pb_gate_project_progress < 100
+    }
+    random_events = {
+        chance_of_no_event = 95
+        10 = gate_arcanist_project.1
+
+        # Positive
+        10 = gate_arcanist_project.2
+        10 = gate_arcanist_project.3
+        10 = gate_arcanist_project.4
+
+        # Negative
+        10 = gate_arcanist_project.5
+        10 = gate_arcanist_project.6
+        10 = gate_arcanist_project.7
+
+        # Choice
+        10 = gate_arcanist_project.8
+        10 = gate_arcanist_project.9
+        10 = gate_arcanist_project.10
+        10 = gate_arcanist_project.11
+        10 = gate_arcanist_project.12
+    }
+}

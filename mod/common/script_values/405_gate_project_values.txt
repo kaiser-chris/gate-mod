@@ -1,25 +1,174 @@
-﻿gate_project_journal_entry_short = 24
+﻿# Months at average speed
+gate_project_journal_entry_short = 24
 gate_project_journal_entry_medium = 36
 gate_project_journal_entry_long = 48
 gate_project_journal_entry_very_long = 60
 
 gate_project_type_normal = 0
-gate_project_type_infrastructure = 1
 
-gate_project_current_progress = {
-    scope:journal_entry ?= {
-        if = {
-            limit = {
-                exists = var:gate_magic_project_progress
-            }
-            value = var:gate_magic_project_progress
+gate_project_tick_speed = {
+    progress_condition = {
+        limit = {
+            always = yes
         }
-        else = {
-            value = 0
+        add = {
+            value = 15 # 15% per week is the base tick speed
+            desc = pb_gate_project_progress_base
+        }
+    }
+    progress_condition = {
+        limit = {
+            has_gate_magic_researcher = yes
+            var:gate_magic_researcher ?= {
+                has_trait = character_trait_gate_arcanist_basic
+            }
+        }
+        add = {
+            value = 5
+            desc = pb_gate_project_progress_magic_researcher_basic
+        }
+    }
+    progress_condition = {
+        limit = {
+            has_gate_magic_researcher = yes
+            var:gate_magic_researcher ?= {
+                has_trait = character_trait_gate_arcanist_experienced
+            }
+        }
+        add = {
+            value = 7
+            desc = pb_gate_project_progress_magic_researcher_experienced
+        }
+    }
+    progress_condition = {
+        limit = {
+            has_gate_magic_researcher = yes
+            var:gate_magic_researcher ?= {
+                has_trait = character_trait_gate_arcanist_expert
+            }
+        }
+        add = {
+            value = 10
+            desc = pb_gate_project_progress_magic_researcher_expert
+        }
+    }
+    progress_condition = {
+        limit = {
+            has_gate_magic_researcher = yes
+            var:gate_magic_researcher ?= {
+                has_trait = character_trait_gate_mage
+            }
+        }
+        add = {
+            value = 2
+            desc = pb_gate_project_progress_magic_researcher_mage
+        }
+    }
+    progress_condition = {
+        limit = {
+            has_gate_magic_researcher = yes
+            var:gate_magic_researcher ?= {
+                has_trait = character_trait_gate_druid
+            }
+        }
+        add = {
+            value = 2
+            desc = pb_gate_project_progress_magic_researcher_druid
+        }
+    }
+    progress_condition = {
+        limit = {
+            has_gate_magic_researcher = yes
+            var:gate_magic_researcher ?= {
+                has_trait = gate_arcanist_magic_sight
+            }
+        }
+        add = {
+            value = 5
+            desc = pb_gate_project_progress_magic_researcher_magic_sight
+        }
+    }
+    progress_condition = {
+        limit = {
+            has_gate_magic_researcher = yes
+            var:gate_magic_researcher ?= {
+                has_trait = gate_arcanist_magic_voice
+            }
+        }
+        add = {
+            value = 5
+            desc = pb_gate_project_progress_magic_researcher_magic_voice
+        }
+    }
+    progress_condition = {
+        limit = {
+            has_gate_magic_researcher = yes
+            var:gate_magic_researcher ?= {
+                has_trait = gate_arcanist_split_mind
+            }
+        }
+        add = {
+            value = 5
+            desc = pb_gate_project_progress_magic_researcher_split_mind
+        }
+    }
+    progress_condition = {
+        limit = {
+            has_gate_magic_researcher = yes
+            var:gate_magic_researcher ?= {
+                modifier:character_gate_arcanist_project_speed != 0
+            }
+        }
+        var:gate_magic_researcher ?= {
+            add = {
+                value = {
+                    value = modifier:character_gate_arcanist_project_speed
+                    multiply = 100
+                }
+                desc = pb_gate_project_progress_modifier
+            }
         }
     }
 }
+gate_ticks_to_progress = {
+    if = {
+        limit = {
+            scripted_bar_progress:pb_gate_project_tick < 100
+        }
+        value = 100
+        subtract = scripted_bar_progress:pb_gate_project_tick
+        owner = {
+            divide = gate_project_tick_speed
+        }
+        round_to = 1
+    }
+    else = {
+        value = 0
+    }
+}
+gate_project_implementation_tick = {
+    value = {
+        value = gate_project_implementation_tick_base
+        desc = pb_gate_project_progress_base
+    }
+}
+gate_project_implementation_tick_base = {
+    value = 100
+    divide = var:gate_project_cost
+}
 
+gate_project_implementation_percent = {
+    if = {
+        limit = {
+            scripted_bar_progress:pb_gate_project_progress > 0
+        }
+        value = scripted_bar_progress:pb_gate_project_progress
+        divide = 100
+    }
+    else = {
+        value = 0
+    }
+}
 # Scales with base game construction cost
 gate_project_construction_cost_huge = {
     value = construction_cost_very_high

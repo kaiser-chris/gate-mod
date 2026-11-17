@@ -1,31 +1,26 @@
 ﻿gate_project_check_complete = {
-    custom_tooltip = {
-        text = gate_project_goal
-        scope:journal_entry = {
-            trigger_if = {
-                limit = {
-                    has_variable = gate_magic_project_progress
-                }
-                is_goal_complete = yes
-            }
-            trigger_else = {
-                always = no
-            }
-        }
-    }
+	custom_tooltip = {
+		text = pb_gate_project_progress_complete_tooltip
+		scope:journal_entry.scripted_bar_progress:pb_gate_project_progress >= 100
+	}
 }
 
 gate_project_is_paused = {
     NOT = {
         scope:journal_entry = {
             has_modifier = modifier_gate_project_cost
-            trigger_if = {
-                limit = {
-                    var:gate_magic_project_type ?= gate_project_type_infrastructure
-                }
-                has_modifier = modifier_gate_project_infrastructure_cost
-            }
         }
+    }
+}
+
+gate_project_can_have_generic_event = {
+    has_gate_magic_researcher = yes
+    has_gate_active_magic_project = yes
+    var:gate_magic_project ?= {
+        # Project is not paused
+        has_modifier = modifier_gate_project_cost
+        # Project is not about to finish anyway
+        scripted_bar_progress:pb_gate_project_progress < 95
     }
 }
 

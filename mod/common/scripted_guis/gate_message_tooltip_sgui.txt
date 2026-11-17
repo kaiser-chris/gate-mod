@@ -1,0 +1,20 @@
+﻿# Event: gate_arcanist_project.1
+# In: events/gate_events/arcanist_project_events.txt
+gate_arcanist_project_1_fail = {
+	scope = country
+
+	effect = {
+		gate_add_magic_innovation = {
+			amount = -200
+		}
+	}
+}
+gate_arcanist_project_1_success = {
+	scope = country
+
+	effect = {
+		gate_add_magic_innovation = {
+			amount = 500
+		}
+	}
+}

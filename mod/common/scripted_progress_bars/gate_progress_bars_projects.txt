@@ -1,0 +1,29 @@
+﻿pb_gate_project_tick = {
+ 	name = pb_gate_project_tick_name
+ 	desc = pb_gate_project_tick_desc
+
+	default_green = yes
+
+	weekly_progress = {
+		add = gate_project_tick_speed
+	}
+
+ 	start_value = 0
+ 	min_value = 0
+ 	max_value = 100
+}
+
+pb_gate_project_progress = {
+	name = pb_gate_project_progress_name
+	desc = pb_gate_project_progress_desc
+
+	default = yes
+
+	# Progress is done via tick
+	# see "on_weekly_pulse" in the event
+	# and the "gate_project_implementation_tick" script value
+
+	start_value = 0
+	min_value = 0
+	max_value = 100
+}
