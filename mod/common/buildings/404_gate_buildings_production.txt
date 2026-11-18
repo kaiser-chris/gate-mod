@@ -141,7 +141,8 @@ building_gate_golem_workshop = {
 building_gate_golem_depot = {
 	building_group = bg_public_infrastructure
 	icon = "gfx/interface/icons/building_icons/building_gate_golem_depot.dds"
-	city_type = none
+	city_type = city
+	levels_per_mesh = 50
 	expandable = no
 
 	potential = {
