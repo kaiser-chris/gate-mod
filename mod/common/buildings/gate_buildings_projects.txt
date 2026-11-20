@@ -1,0 +1,20 @@
+﻿building_gate_project_greenvein_network = {
+	building_group = bg_gate_projects
+	icon = gfx/interface/icons/building_icons/building_gate_placeholder.dds #TODO
+	buildable = no
+	expandable = no
+	downsizeable = no
+	unique = yes
+
+	production_method_groups = {
+		pmg_base_building_eiffel_tower
+	}
+
+	can_build_private = {
+		always = no
+	}
+
+	required_construction = construction_cost_monument
+
+	background = gfx/interface/icons/building_icons/backgrounds/building_panel_bg_gate_magic.dds
+}

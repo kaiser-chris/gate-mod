@@ -235,3 +235,18 @@ gate_project_can_start_investigate_magic_gate = {
 	has_gate_magic_researcher = yes
 	has_gate_active_magic_project = no
 }
+
+gate_project_can_start_greenvein_network = {
+	has_technology_researched = gate_living_irrigation
+	NOT = {
+		any_scope_state = {
+			has_building = building_gate_project_greenvein_network
+		}
+	}
+	any_scope_state = {
+		arable_land >= 20
+	}
+	is_gate_magic_country = yes
+	has_gate_magic_researcher = yes
+	has_gate_active_magic_project = no
+}

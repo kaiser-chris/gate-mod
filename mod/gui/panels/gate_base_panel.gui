@@ -1536,24 +1536,24 @@ types gate_base_panel_types {
                 }
                 gate_left_icon_button = {
                     blockoverride "datacontext" {
-                        datacontext = "[GetScriptedGui('gg_project_artificial_ecosystem')]"
+                        datacontext = "[GetScriptedGui('gg_project_greenvein_network_selector_open')]"
                     }
                     blockoverride "button_content" {
-                        text = button_project_artificial_ecosystem
+                        text = button_project_greenvein_network
                     }
                     blockoverride "icon" {
-                        texture = "gfx/interface/icons/gui_icons/projects/gate_project_artificial_ecosystem.dds"
+                        texture = "gfx/interface/icons/gui_icons/projects/gate_project_greenvein_network.dds"
                     }
                     blockoverride "tooltip" {
                         tooltipwidget = {
                             RegularTooltip = {
                                 blockoverride "tooltip_content" {
                                     custom_tooltip_textbox = {
-                                        text = "[Localize('je_gate_project_artificial_ecosystem')] [concept_gate_project]"
+                                        text = "[Localize('je_gate_project_greenvein_network')] [concept_gate_project]"
                                         default_format = "#header"
                                     }
                                     custom_tooltip_textbox_with_empty_line = {
-                                        text = je_gate_project_artificial_ecosystem_description
+                                        text = je_gate_project_greenvein_network_description
                                     }
                                     custom_tooltip_textbox = {
                                         text = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(Country.MakeScope).End)]"

@@ -367,6 +367,62 @@
         }
     }
 
+    # Blocks
+    # - sort_button_creation_date
+    # - sort_button_count
+    type gate_selector_dungeon_sort_buttons = hbox {
+        margin = { 10 0 }
+        margin_top = 5
+        spacing = 2
+        layoutpolicy_horizontal = expanding
+
+        gate_selector_sort_button = {
+            layoutpolicy_horizontal = expanding
+            layoutpolicy_vertical = expanding
+            tooltip = "gg_selector_sort_by_creation_date_tooltip"
+            blockoverride "text" {
+                text = "gg_selector_sort_by_creation_date"
+            }
+            blockoverride "selected_visibility" {
+                visible = "[GetVariableSystem.HasValue('gate_sort_active', 'sort_creation_date')]"
+            }
+            onclick = "[GetVariableSystem.Set('gate_sort_active', 'sort_creation_date')]"
+            block "sort_button_creation_date" {
+                enabled = no
+            }
+            onclick = "[ScriptedGui.Execute(GuiScope
+                .SetRoot(Country.MakeScope)
+                .AddScope('reverse', MakeScopeBool(GetVariableSystem.Exists('sort_creation_date_reverse')))
+                .End
+            )]"
+            onclick = "[GetVariableSystem.Toggle('sort_creation_date_reverse')]"
+            onclick = "[GetVariableSystem.Clear('sort_count_reverse')]"
+        }
+
+        gate_selector_sort_button = {
+            layoutpolicy_horizontal = expanding
+            layoutpolicy_vertical = expanding
+            tooltip = "gg_selector_sort_by_layer_count_tooltip"
+            blockoverride "text" {
+                text = "gg_selector_sort_by_layer_count"
+            }
+            blockoverride "selected_visibility" {
+                visible = "[GetVariableSystem.HasValue('gate_sort_active', 'sort_count')]"
+            }
+            onclick = "[GetVariableSystem.Set('gate_sort_active', 'sort_count')]"
+            block "sort_button_count" {
+                enabled = no
+            }
+            onclick = "[ScriptedGui.Execute(GuiScope
+                .SetRoot(Country.MakeScope)
+                .AddScope('reverse', MakeScopeBool(GetVariableSystem.Exists('sort_count_reverse')))
+                .End
+            )]"
+            onclick = "[GetVariableSystem.Toggle('sort_count_reverse')]"
+            onclick = "[GetVariableSystem.Clear('sort_creation_date_reverse')]"
+        }
+    }
+
     type gate_selector_dungeon_element = hbox {
         layoutpolicy_horizontal = expanding
         layoutpolicy_vertical = expanding
@@ -456,9 +512,10 @@
     }
 
     # Blocks
-    # - sort_button_creation_date
-    # - sort_button_count
-    type gate_selector_dungeon_sort_buttons = hbox {
+    # - sort_button_population
+    # - sort_button_infrastructure
+    # - sort_button_arable_land
+    type gate_selector_state_sort_buttons = hbox {
         margin = { 10 0 }
         margin_top = 5
         spacing = 2
@@ -467,47 +524,158 @@
         gate_selector_sort_button = {
             layoutpolicy_horizontal = expanding
             layoutpolicy_vertical = expanding
-            tooltip = "gg_selector_sort_by_creation_date_tooltip"
+            tooltip = "SORT_BY_POPULATION"
             blockoverride "text" {
-                text = "gg_selector_sort_by_creation_date"
+                text = "POPULATION"
             }
             blockoverride "selected_visibility" {
-                visible = "[GetVariableSystem.HasValue('gate_sort_active', 'sort_creation_date')]"
+                visible = "[GetVariableSystem.HasValue('gate_sort_active', 'sort_population')]"
             }
-            onclick = "[GetVariableSystem.Set('gate_sort_active', 'sort_creation_date')]"
-            block "sort_button_creation_date" {
+            onclick = "[GetVariableSystem.Set('gate_sort_active', 'sort_population')]"
+            block "sort_button_population" {
                 enabled = no
             }
             onclick = "[ScriptedGui.Execute(GuiScope
                 .SetRoot(Country.MakeScope)
-                .AddScope('reverse', MakeScopeBool(GetVariableSystem.Exists('sort_creation_date_reverse')))
+                .AddScope('reverse', MakeScopeBool(GetVariableSystem.Exists('sort_population_reverse')))
                 .End
             )]"
-            onclick = "[GetVariableSystem.Toggle('sort_creation_date_reverse')]"
-            onclick = "[GetVariableSystem.Clear('sort_count_reverse')]"
+            onclick = "[GetVariableSystem.Toggle('sort_population_reverse')]"
+            onclick = "[GetVariableSystem.Clear('sort_infrastructure_reverse')]"
+            onclick = "[GetVariableSystem.Clear('sort_arable_land_reverse')]"
         }
 
         gate_selector_sort_button = {
             layoutpolicy_horizontal = expanding
             layoutpolicy_vertical = expanding
-            tooltip = "gg_selector_sort_by_layer_count_tooltip"
+            tooltip = "gg_selector_sort_by_free_infrastructure"
             blockoverride "text" {
-                text = "gg_selector_sort_by_layer_count"
+                text = "gg_selector_free_infrastructure"
             }
             blockoverride "selected_visibility" {
-                visible = "[GetVariableSystem.HasValue('gate_sort_active', 'sort_count')]"
+                visible = "[GetVariableSystem.HasValue('gate_sort_active', 'sort_infrastructure')]"
             }
-            onclick = "[GetVariableSystem.Set('gate_sort_active', 'sort_count')]"
-            block "sort_button_count" {
+            onclick = "[GetVariableSystem.Set('gate_sort_active', 'sort_infrastructure')]"
+            block "sort_button_infrastructure" {
                 enabled = no
             }
             onclick = "[ScriptedGui.Execute(GuiScope
                 .SetRoot(Country.MakeScope)
-                .AddScope('reverse', MakeScopeBool(GetVariableSystem.Exists('sort_count_reverse')))
+                .AddScope('reverse', MakeScopeBool(GetVariableSystem.Exists('sort_infrastructure_reverse')))
                 .End
             )]"
-            onclick = "[GetVariableSystem.Toggle('sort_count_reverse')]"
-            onclick = "[GetVariableSystem.Clear('sort_creation_date_reverse')]"
+            onclick = "[GetVariableSystem.Clear('sort_population_reverse')]"
+            onclick = "[GetVariableSystem.Toggle('sort_infrastructure_reverse')]"
+            onclick = "[GetVariableSystem.Clear('sort_arable_land_reverse')]"
+        }
+
+        gate_selector_sort_button = {
+            layoutpolicy_horizontal = expanding
+            layoutpolicy_vertical = expanding
+            tooltip = "gg_selector_sort_by_free_arable_land"
+            blockoverride "text" {
+                text = "gg_selector_arable_land"
+            }
+            blockoverride "selected_visibility" {
+                visible = "[GetVariableSystem.HasValue('gate_sort_active', 'sort_arable_land')]"
+            }
+            onclick = "[GetVariableSystem.Set('gate_sort_active', 'sort_arable_land')]"
+            block "sort_button_arable_land" {
+                enabled = no
+            }
+            onclick = "[ScriptedGui.Execute(GuiScope
+                .SetRoot(Country.MakeScope)
+                .AddScope('reverse', MakeScopeBool(GetVariableSystem.Exists('sort_arable_land_reverse')))
+                .End
+            )]"
+            onclick = "[GetVariableSystem.Clear('sort_population_reverse')]"
+            onclick = "[GetVariableSystem.Clear('sort_infrastructure_reverse')]"
+            onclick = "[GetVariableSystem.Toggle('sort_arable_land_reverse')]"
+        }
+    }
+
+    type gate_selector_state_element = hbox {
+        layoutpolicy_horizontal = expanding
+        layoutpolicy_vertical = expanding
+        spacing = 5
+
+        # Name
+        vbox = {
+            textbox = {
+                text = "[State.GetName]"
+                size = { 130 25 }
+                elide = right
+                align = nobaseline
+                using = fontsize_medium
+            }
+            textbox = {
+                text = "gg_selector_market_state_text"
+                size = { 130 25 }
+                elide = right
+                align = nobaseline
+                using = fontsize_medium
+            }
+        }
+
+        # Divider
+        vertical_divider = {
+            blockoverride "size" {
+                size = { 3 70 }
+            }
+        }
+
+        # Population
+        textbox = {
+            raw_text = "[State.GetPopulationSize|*v]"
+            size = { 70 70 }
+            elide = right
+            align = center|nobaseline
+            using = fontsize_medium
+            tooltip = TOOLTIP_STATE_POPULATION
+            using = tooltip_ne
+        }
+
+        # Divider
+        vertical_divider = {
+            blockoverride "size" {
+                size = { 3 70 }
+            }
+        }
+
+        # Infrastructure
+        textbox = {
+            raw_text = "[State.GetInfrastructureBalance|0+=]"
+            size = { 60 70 }
+            elide = right
+            align = center|nobaseline
+            using = fontsize_medium
+            tooltip = STATE_INFRASTRUCTURE_DESC
+            using = tooltip_ne
+        }
+
+        # Divider
+        vertical_divider = {
+            blockoverride "size" {
+                size = { 3 70 }
+            }
+        }
+
+        # Arable Land
+        textbox = {
+            raw_text = "[State.GetNumFreeArableLand|+=]/[State.GetArableLandCapacity|v]"
+            size = { 50 70 }
+            elide = right
+            align = center|nobaseline
+            using = fontsize_medium
+            tooltip = LAND_TEXT_TOOLTIP
+            using = tooltip_ne
+        }
+
+        # Divider
+        vertical_divider = {
+            blockoverride "size" {
+                size = { 3 70 }
+            }
         }
     }
 

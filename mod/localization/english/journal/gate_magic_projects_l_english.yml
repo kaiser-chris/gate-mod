@@ -87,11 +87,13 @@
  je_gate_project_investigate_magic_gate_eastern_new_guinea: "Investigating [GetStateRegion('STATE_EASTERN_NEW_GUINEA').GetNameNoFormatting] $building_gate$"
  je_gate_project_investigate_magic_gate_eastern_new_guinea_reason: "$gg_projects_active_project_desc$\n$gate_journal_delimiter$\n$je_gate_project_investigate_magic_gate_description$"
  trigger_gate_project_can_has_locked_gate: "Have a locked [GetBuildingType('building_gate_alxa').GetName] [concept_building]."
-# Artificial Ecosystem
- button_project_artificial_ecosystem: "Construct an Artificial Ecosystem"
- je_gate_project_artificial_ecosystem: "Constructing an Artificial Ecosystem"
- je_gate_project_artificial_ecosystem_reason: "[concept_gate_magic_researcher] [GetPlayer.MakeScope.Var('gate_magic_researcher').GetCharacter.GetFullName] is currently working on #bold $je_gate_project_artificial_ecosystem$#!.\n$gate_journal_delimiter$\n$je_gate_project_artificial_ecosystem_description$"
- je_gate_project_artificial_ecosystem_description: "[GetGoods('gate_magic_seed').GetName] are used to increase crop yield. Modernizing selection of those seeds for a better yield will improve our production. This project adds the $modifier_gate_project_modernize_seed_selection_with_tooltip$ [concept_modifier] to one of our [GetBuildingType('building_gate_druid_grove').GetBuildingGroupName]."
+# Greenvein Network
+ button_project_greenvein_network: "Construct the Greenvein Network"
+ je_gate_project_greenvein_network: "Constructing the Greenvein Network"
+ je_gate_project_greenvein_network_reason: "[concept_gate_magic_researcher] [GetPlayer.MakeScope.Var('gate_magic_researcher').GetCharacter.GetFullName] is currently working on #bold $je_gate_project_greenvein_network$#!.\n$gate_journal_delimiter$\n$je_gate_project_greenvein_network_description$"
+ je_gate_project_greenvein_network_description: "TODO."
+ gate_project_select_greenvein_network_window: "Select construction [concept_state]"
+ gate_project_select_greenvein_network_window_select: "#header [State.GetName]#!\nSelect this [concept_state] for the #V $je_gate_project_greenvein_network$#! [concept_gate_project]."
 # Event Modifier
  modifier_gate_project_impressive_demonstration: "[concept_gate_project]: Impressive Demonstration"
  modifier_gate_project_replaced_equipment: "[concept_gate_project]: Replaced Equipment"

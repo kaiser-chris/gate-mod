@@ -264,24 +264,3 @@ gg_project_investigate_magic_gate = {
         gate_start_investigate_magic_gate = yes
     }
 }
-
-
-gg_project_artificial_ecosystem = {
-    scope = country
-
-    is_valid = {
-        has_global_variable = com_debug
-    }
-
-    is_shown = {
-        has_global_variable = com_debug
-    }
-
-    effect = {
-        gate_start_magic_infrastructure_project = {
-            project = je_gate_project_artificial_ecosystem
-            construction = gate_project_construction_cost_huge
-            monthly_cost = money_amount_multiplier_very_small
-        }
-    }
-}

@@ -1,0 +1,142 @@
+﻿je_gate_project_greenvein_network = {
+	icon = "gfx/interface/icons/event_icons/event_gate_project.dds"
+
+	group = je_group_gate_projects
+	dlc = dlc_magic_gate
+
+	activation_description = {
+		always = yes
+	}
+
+	widget = {
+		gui = "gui/journal_injects/gate_project_injects.gui"
+		name = "gate_inject_project_progress"
+		container = "com_custom_widget_container_scripted_progress_bars"
+	}
+
+	status_desc = {
+		triggered_desc = {
+			trigger = {
+				has_gate_magic_researcher = no
+			}
+			desc = gg_projects_invalid_arcanist
+		}
+	}
+
+	immediate = {
+		scope:journal_entry = {
+			set_variable = {
+				name = gate_project_cost
+				value = scope:target
+			}
+			# Hide progress conditions since we are going to build our own
+			set_variable = com_hide_progress_conditions
+		}
+	}
+
+	on_weekly_pulse = {
+		effect = {
+			trigger_event = {
+				on_action = on_gate_project_tick
+			}
+		}
+	}
+
+	# Needs a researcher, the institute and is not paused
+	is_progressing = {
+		gate_project_is_paused = no
+		has_gate_magic_researcher = yes
+	}
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			gate_project_check_complete = yes
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_modifier = modifier_gate_project_institute_new_wing
+					}
+				}
+				add_modifier = modifier_gate_project_institute_new_wing
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_modifier = modifier_gate_project_institute_improved_instruments
+					}
+				}
+				add_modifier = modifier_gate_project_institute_improved_instruments
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_modifier = modifier_gate_project_institute_better_mana_conduits
+					}
+				}
+				add_modifier = modifier_gate_project_institute_better_mana_conduits
+			}
+			gate_add_magic_innovation = {
+				amount = 500
+			}
+			gate_add_researcher_experience = {
+				amount = 10
+			}
+			hidden_effect = {
+				set_variable = gate_has_finished_project
+				gate_stop_magic_project = yes
+			}
+		}
+	}
+
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			OR = {
+				has_gate_active_magic_project = no
+				AND = {
+					has_modifier = modifier_gate_project_institute_new_wing
+					has_modifier = modifier_gate_project_institute_improved_instruments
+					has_modifier = modifier_gate_project_institute_better_mana_conduits
+				}
+			}
+		}
+		effect = {
+			gate_stop_magic_project = yes
+		}
+	}
+
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			NOT = {
+				capital = {
+					has_building = building_gate_magic_research_institute
+				}
+			}
+		}
+		effect = {
+			gate_stop_magic_project = yes
+		}
+	}
+
+	scripted_button = gate_project_button_pause
+	scripted_button = gate_project_button_continue
+	scripted_button = gate_project_button_stop
+
+	scripted_progress_bar = pb_gate_project_progress
+	scripted_progress_bar = pb_gate_project_tick
+
+	weight = 1000
+
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}

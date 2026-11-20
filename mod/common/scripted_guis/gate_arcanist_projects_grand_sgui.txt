@@ -1,0 +1,95 @@
+﻿gg_project_greenvein_network_selector_open = {
+    scope = country
+
+    is_shown = {
+        has_global_variable = com_debug
+    }
+
+    is_valid = {
+        gate_project_can_start_greenvein_network = yes
+        gate_project_has_any_selector_open = no
+    }
+
+    effect = {
+        every_scope_state = {
+            limit = {
+                arable_land >= 20
+            }
+            root = {
+                add_to_variable_list = {
+                    name = gate_project_greenvein_network_selector
+                    target = prev
+                }
+            }
+        }
+    }
+}
+gg_project_greenvein_network_selector_close = {
+    scope = country
+
+    effect = {
+        clear_variable_list = gate_project_greenvein_network_selector
+    }
+}
+gg_project_greenvein_network_selector_sort_population = {
+    scope = country
+
+    saved_scopes = {
+        reverse
+    }
+
+    effect = {
+        gate_order_list_with_reverse = {
+            list = gate_project_greenvein_network_selector
+            order = state_population
+        }
+    }
+}
+gg_project_greenvein_network_selector_sort_infrastructure = {
+    scope = country
+
+    saved_scopes = {
+        reverse
+    }
+
+    effect = {
+        gate_order_list_with_reverse = {
+            list = gate_project_greenvein_network_selector
+            order = infrastructure_delta
+        }
+    }
+}
+gg_project_greenvein_network_selector_sort_arable_land = {
+    scope = country
+
+    saved_scopes = {
+        reverse
+    }
+
+    effect = {
+        gate_order_list_with_reverse = {
+            list = gate_project_greenvein_network_selector
+            order = free_arable_land
+        }
+    }
+}
+gg_project_greenvein_network = {
+    scope = country
+
+    saved_scopes = {
+        state
+    }
+
+    is_valid = {
+        gate_project_can_start_greenvein_network = yes
+    }
+
+    effect = {
+        clear_variable_list = gate_project_greenvein_network_selector
+        gate_start_magic_project = {
+            project = je_gate_project_greenvein_network
+            monthly_cost = money_amount_multiplier_small
+            months = gate_project_journal_entry_very_long
+        }
+    }
+}

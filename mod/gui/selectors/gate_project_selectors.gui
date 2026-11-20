@@ -41,7 +41,6 @@
         blockoverride "selector_element_content" {
             gate_selector_building_element = {}
         }
-
     }
 
     type gate_project_select_modernize_seed_selection_window = gate_selector_window_single_element {
@@ -82,7 +81,6 @@
         blockoverride "selector_element_content" {
             gate_selector_building_element = {}
         }
-
     }
 
     type gate_project_select_dungeon_window = gate_selector_window_single_element {
@@ -132,7 +130,46 @@
         blockoverride "selector_element_content" {
             gate_selector_dungeon_element = {}
         }
+    }
 
+    type gate_project_select_greenvein_network_window = gate_selector_window_single_element {
+        blockoverride "selector_visibility" {
+            visible = "[DataModelHasItems(Country.MakeScope.GetList('gate_project_greenvein_network_selector'))]"
+        }
+        blockoverride "selector_title" {
+            text = gate_project_select_greenvein_network_window
+        }
+        blockoverride "selector_button_close" {
+            datacontext = "[GetScriptedGui('gg_project_greenvein_network_selector_close')]"
+            onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
+        }
+        blockoverride "selector_datamodel" {
+            datamodel = "[Country.MakeScope.GetList('gate_project_greenvein_network_selector')]"
+        }
+        blockoverride "selector_element_context" {
+            datacontext = "[Scope.GetState]"
+        }
+        blockoverride "selector_element_button" {
+            datacontext = "[GetScriptedGui('gg_project_greenvein_network')]"
+            onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('state', State.MakeScope).End)]"
+            tooltip = gate_project_select_greenvein_network_window_select
+        }
+        blockoverride "selector_sort_buttons" {
+            gate_selector_state_sort_buttons = {
+                blockoverride "sort_button_population" {
+                    datacontext = "[GetScriptedGui('gg_project_greenvein_network_selector_sort_population')]"
+                }
+                blockoverride "sort_button_infrastructure" {
+                    datacontext = "[GetScriptedGui('gg_project_greenvein_network_selector_sort_infrastructure')]"
+                }
+                blockoverride "sort_button_arable_land" {
+                    datacontext = "[GetScriptedGui('gg_project_greenvein_network_selector_sort_arable_land')]"
+                }
+            }
+        }
+        blockoverride "selector_element_content" {
+            gate_selector_state_element = {}
+        }
     }
 
 }
