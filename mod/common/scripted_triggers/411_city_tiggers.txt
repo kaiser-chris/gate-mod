@@ -4,3 +4,14 @@
 		is_homeland = cu:elven
 	}
 }
+
+gate_has_project_greenvein_network = {
+	any_scope_state = {
+		"b(building_gate_project_greenvein_network)" ?= {
+			OR = {
+				is_under_construction = yes
+				level > 0
+			}
+		}
+	}
+}
