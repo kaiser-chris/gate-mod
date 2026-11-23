@@ -1,0 +1,13 @@
+﻿gate_fortress_available_modules = {
+    power_bloc ?= {
+        add = modifier:power_bloc_gate_flying_fortress_modules
+    }
+}
+
+gate_fortress_selected_modules = {
+    add = 1 # The fortress core itself counts as a module
+    every_in_list = {
+        variable = gate_designer_selections
+        add = 1 # Each selected module
+    }
+}

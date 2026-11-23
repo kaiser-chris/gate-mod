@@ -1,0 +1,425 @@
+﻿@designer_window_width = 1200
+@designer_window_height = 800
+@designer_window_margin_top = 82
+@designer_window_margin_bottom = 15
+@designer_window_margin_side = 20
+@designer_window_content_spacing = 15
+@designer_window_content_width = @[designer_window_width - (designer_window_margin_side * 2)]
+@designer_window_content_height = @[designer_window_height - designer_window_margin_top - designer_window_margin_bottom]
+@designer_window_footer_height = 80
+@designer_window_stats_width = 285
+@designer_window_stats_height = @[designer_window_content_height - designer_window_footer_height]
+@designer_window_modules_width = 215
+@designer_window_modules_height = @[designer_window_content_height - designer_window_footer_height]
+@designer_window_model_width = @[designer_window_content_width - designer_window_stats_width - designer_window_modules_width - (2 * designer_window_content_spacing)]
+@designer_window_model_height = @[designer_window_content_height - designer_window_footer_height]
+
+
+types selector_shared {
+
+    # Blocks:
+    # - designer_hide
+    # - designer_title
+    # - designer_second_line
+    # - designer_sub_title
+    # - designer_sub_title_properties
+    # - designer_content
+    # - designer_visibility
+    # - designer_button_close
+    # - designer_window_size
+    type gate_designer_window = window {
+        layer = popups
+        using = clickthrough_blocker
+        filter_mouse = all
+        parentanchor = hcenter|vcenter
+
+        block "designer_visibility" {
+            visible = no
+        }
+
+        block "designer_window_size" {
+            size = { @designer_window_width @designer_window_height }
+        }
+
+        background = {
+            texture = "gfx/interface/backgrounds/popup_bg.dds"
+            spriteType = Corneredstretched
+            spriteborder = { 90 90 }
+            texture_density = 2
+
+            modify_texture = {
+                texture = "gfx/interface/backgrounds/default_bg_shading.dds"
+                spriteType = Corneredstretched
+                spriteborder = { 0 0 }
+                blend_mode = overlay
+            }
+            modify_texture = {
+                using = texture_velvet
+            }
+        }
+
+        ### HEADER
+        widget = {
+            size = { 100% 82 }
+
+            popup_top_header = {}
+
+            textbox = {
+                block "first_line_position" {
+                    position = { 0 24 }
+                }
+                size = { 75% 40 }
+                block "designer_title" {
+                    raw_text = "#debug designer_title#!"
+                }
+                elide = right
+                fontsize_min = 14
+                parentanchor = hcenter
+                align = hcenter|nobaseline
+                using = header_font
+                using = header_font_size
+                default_format = "#header"
+            }
+
+            block "designer_second_line" {
+                textbox = {
+                    block "designer_sub_title" {
+                        raw_text = "Second text"
+                        visible = no
+                    }
+                    position = { 0 49 }
+                    parentanchor = hcenter
+                    autoresize = yes
+                    align = nobaseline
+                    block "designer_sub_title_properties" {}
+                }
+            }
+        }
+
+        ### FRAME
+        popup_bg_frame = {}
+
+        gate_designer_content = {}
+
+        # Close button
+        button_icon_round = {
+            name = "tutorial_highlight_close_button"
+            parentanchor = top|right
+            size = { 42 42 }
+            position = { -5 13 }
+            shortcut = "close_window"
+
+            block "designer_button_close" {}
+
+            blockoverride "icon" {
+                texture = "gfx/interface/buttons/button_icons/close.dds"
+            }
+            blockoverride "icon_size" {
+                size = { 100% 100% }
+            }
+        }
+    }
+
+    type gate_designer_content = vbox {
+        maximumsize = { @designer_window_width -1 }
+        margin = { @designer_window_margin_side @designer_window_margin_bottom }
+        margin_top = @designer_window_margin_top
+        layoutpolicy_horizontal = expanding
+        layoutpolicy_vertical = expanding
+
+        hbox = {
+            spacing = 15
+            gate_designer_controls = {}
+            gate_designer_model = {}
+            gate_designer_stats = {}
+        }
+
+        gate_designer_footer = {}
+
+    }
+
+    type gate_designer_footer = widget {
+        size = { @[designer_window_width - (2 * designer_window_margin_side)] @designer_window_footer_height }
+
+        divider_clean = {
+            parentanchor = top
+        }
+
+        hbox = {
+            layoutpolicy_horizontal = expanding
+            layoutpolicy_vertical = expanding
+            margin = { 15 15 }
+            spacing = 10
+
+            button = {
+                size = { 200 40 }
+                using = default_button_action
+                text = gg_designer_button_cancel
+                onclick = "[GetScriptedGui('gg_designer_flying_fortress_window').Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
+            }
+
+            expand = {}
+
+            button = {
+                size = { 250 50 }
+                using = default_button_primary_action
+                text = gg_designer_button_finish
+            }
+        }
+    }
+
+    type gate_designer_model_view = cameracontrolwidget {
+        size = { @designer_window_model_width @designer_window_model_height }
+
+        gfxtype = jomini_entitygfx_sprite
+        block "entity" {
+            entity_instance = "gate_flying_fortress_base_entity"
+        }
+
+        shaderfile = "gfx/FX/pdxgui_default.shader"
+        effectname = "PdxGuiDefault"
+
+        gfx_environment_file = "gfx/map/environment/ui_ship_viewer_environment.txt"
+        enabled_post_effects = luminance
+
+        camera_fov_y_degrees = 12
+        camera_zoom_limits = { 0.4 2 }
+        camera_near_far = { 0.1 500 }
+        camera_position = { 4.0 10.0 -18.0 }
+        entity_enable_sound = no
+        alwaystransparent = no
+    }
+
+    type gate_designer_model = widget {
+        size = { @designer_window_model_width @designer_window_model_height }
+
+        gate_designer_model_view = {
+            blockoverride "entity" {
+                entity_instance = "[Country.MakeScope.Var('gate_designer_entity').GetFlagName]"
+            }
+        }
+
+        background = {
+            texture = "gfx/map/gate/designer/skybox.dds"
+        }
+
+        textbox = {
+            visible = "[InDebugMode]"
+            autoresize = yes
+            align = center
+            parentanchor = hcenter|bottom
+            position = { 0 -20 }
+            raw_text = "#debug [Country.MakeScope.Var('gate_designer_entity').GetFlagName]#!"
+            background = {
+                using = entry_bg_fancy_dark
+                alpha = 1
+                margin = { 20 5 }
+            }
+        }
+
+        icon = {
+            size = { 100% 100% }
+            alwaystransparent = yes
+            texture = "gfx/interface/navy/navy_bg_frame.dds"
+            spriteType = Corneredtiled
+
+            spriteborder_left = 200
+            spriteborder_right = 60
+            spriteborder_top = 170
+            spriteborder_bottom = 180
+
+            texture_density = 2
+        }
+    }
+
+    type gate_designer_stats = scrollarea {
+        size = { @designer_window_stats_width @designer_window_stats_height }
+
+        scrollbarpolicy_horizontal = always_off
+        scrollbarpolicy_vertical = as_needed
+
+        scrollbar_vertical = {
+            using = Scrollbar_Vertical
+        }
+
+        scrollwidget = {
+            vbox = {
+                margin = { 0 10 }
+                spacing = 10
+                layoutpolicy_vertical = expanding
+                gate_designer_module_stats = {
+                    datacontext = "[Country.MakeScope.Var('gate_designer_base')]"
+                }
+                vbox = {
+                    spacing = 10
+                    datamodel = "[Country.MakeScope.GetList('gate_designer_selections')]"
+                    item = {
+                        gate_designer_module_stats = {}
+                    }
+
+                }
+                expand = {}
+            }
+        }
+
+    }
+
+    type gate_designer_controls = vbox {
+        maximumsize = { @designer_window_modules_width @designer_window_content_height }
+        layoutpolicy_vertical = expanding
+        margin = { 0 10 }
+        spacing = 10
+
+        textbox = {
+            maximumsize = { 200 -1 }
+            minimumsize = { 200 -1 }
+            autoresize = yes
+            text = gg_designer_modules_info
+            tooltip = gg_designer_modules_info_tooltip
+        }
+
+        vbox = {
+            datamodel = "[Country.MakeScope.GetList('gate_designer_choices')]"
+            spacing = 5
+
+            item = {
+                widget = {
+                    size = { 200 40 }
+                    button = {
+                        datacontext = "[GetScriptedGui('gg_designer_select_element')]"
+                        size = { 100% 100% }
+                        using = default_button
+                        enabled = "[ScriptedGui.IsValid(GuiScope
+                            .SetRoot(Country.MakeScope)
+                            .AddScope('element', Scope.GetScriptContainer.MakeScope)
+                            .End
+                        )]"
+                        visible = "[ScriptedGui.IsShown(GuiScope
+                            .SetRoot(Country.MakeScope)
+                            .AddScope('element', Scope.GetScriptContainer.MakeScope)
+                            .End
+                        )]"
+                        onclick = "[ScriptedGui.Execute(GuiScope
+                            .SetRoot(Country.MakeScope)
+                            .AddScope('element', Scope.GetScriptContainer.MakeScope)
+                            .End
+                        )]"
+                        raw_text = "[Scope.Var('name').GetFlagName]"
+                        tooltip = gg_designer_element_tooltip
+                    }
+                    button = {
+                        datacontext = "[GetScriptedGui('gg_designer_remove_element')]"
+                        size = { 100% 100% }
+                        using = default_button
+                        visible = "[ScriptedGui.IsShown(GuiScope
+                            .SetRoot(Country.MakeScope)
+                            .AddScope('element', Scope.GetScriptContainer.MakeScope)
+                            .End
+                        )]"
+                        onclick = "[ScriptedGui.Execute(GuiScope
+                            .SetRoot(Country.MakeScope)
+                            .AddScope('element', Scope.GetScriptContainer.MakeScope)
+                            .End
+                        )]"
+                        raw_text = "[Scope.Var('name').GetFlagName]"
+                        tooltip = gg_designer_element_tooltip
+
+                        icon = {
+                            using = highlighted_square_selection
+                        }
+                    }
+                }
+            }
+        }
+
+        expand = {}
+
+        button = {
+            size = { 200 40 }
+            using = default_button_action
+            text = gg_designer_button_reset
+            enabled = "[GetScriptedGui('gg_designer_reset_elements').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
+            onclick = "[GetScriptedGui('gg_designer_reset_elements').Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
+        }
+    }
+
+    type gate_designer_module_stats = vbox {
+        layoutpolicy_vertical = shrinking
+
+        background = {
+            using = entry_bg_fancy_dark
+            alpha = 0.6
+        }
+
+        widget = {
+            size = { 270 45 }
+            background = {
+                using = default_header_bg
+                using = entry_bg_mask_top
+                margin = { -4 0 }
+                margin_top = -2
+            }
+
+            textbox = {
+                margin = { 20 0 }
+                size = { 270 45 }
+                align = nobaseline
+                using = elide_fontsize_min
+                text = "[GetStaticModifier(Scope.Var('modifier').GetFlagName).GetName]"
+            }
+        }
+
+        vbox = {
+            layoutpolicy_vertical = shrinking
+            datamodel = "[GetStaticModifier(Scope.Var('modifier').GetFlagName).GetEntries]"
+            item = {
+                gate_designer_stat = {}
+            }
+        }
+    }
+
+    type gate_designer_stat = widget {
+        parentanchor = left
+        size = { 270 45 }
+        tooltip = gg_designer_modifier_tooltip
+
+        hbox = {
+            layoutpolicy_horizontal = expanding
+            margin = { 15 5 }
+            spacing = 5
+
+            hbox = {
+                spacing = 5
+
+                block "stat_tooltip" {
+                }
+
+                textbox = {
+                    size = { 46 30 }
+                    align = nobaseline
+                    using = elide_fontsize_min
+
+                    block "stat_value" {
+                        raw_text = "[ModifierEntry.GetFormattedValue]"
+                    }
+                }
+            }
+
+            textbox = {
+                layoutpolicy_horizontal = expanding
+                layoutpolicy_vertical = expanding
+                align = nobaseline
+                using = elide_fontsize_min
+
+                block "stat_label" {
+                    raw_text = "[ModifierEntry.GetName]"
+                }
+            }
+        }
+
+        divider_clean = {
+            parentanchor = top
+        }
+    }
+
+}

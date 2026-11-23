@@ -1,0 +1,24 @@
+﻿gate_flying_fortress = {
+	entities = {
+		
+		base = {
+			name = "gate_flying_fortress_base_entity"
+			possible = {
+			}
+			
+			weight = {
+				value = 1
+			}
+		}
+	}
+	
+	
+	possible = {
+		has_variable = gate_flying_fortress
+	}
+	
+	entity_length = 3.0
+	speed = 0.2
+	max_count = 1
+	height = 3.0
+}

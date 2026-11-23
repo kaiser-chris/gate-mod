@@ -1,0 +1,159 @@
+﻿setup_gate_fortress_designer = {
+    create_gate_designer_element = {
+        name = gate_designer_base_name
+        desc = gate_designer_base_desc
+        element = gate_designer_base
+        modifier = gate_designer_fortress_base_modifier
+        is_base = yes
+    }
+    create_gate_designer_element = {
+        name = gate_designer_fortress_armored_name
+        desc = gate_designer_fortress_armored_desc
+        element = gate_designer_fortress_armored
+        modifier = gate_designer_fortress_armored_modifier
+        is_base = no
+    }
+    create_gate_designer_element = {
+        name = gate_designer_fortress_cannons_name
+        desc = gate_designer_fortress_cannons_desc
+        element = gate_designer_fortress_cannons
+        modifier = gate_designer_fortress_cannons_modifier
+        is_base = no
+    }
+    select_gate_fortress_designer_entity = yes
+}
+
+select_gate_fortress_designer_entity = {
+    if = {
+        limit = {
+            NOT = {
+                any_in_list = {
+                    variable = gate_designer_selections
+                }
+            }
+        }
+        set_variable = {
+            name = gate_designer_entity
+            value = flag:gate_flying_fortress_base_entity
+        }
+        fix_variable_error = { variable = gate_flying_fortress_base_entity }
+    }
+    else = {
+        # Most combinations to least combination
+        if = {
+            limit = {
+                any_in_list = {
+                    variable = gate_designer_selections
+                    var:element ?= flag:gate_designer_fortress_armored
+                }
+                any_in_list = {
+                    variable = gate_designer_selections
+                    var:element ?= flag:gate_designer_fortress_cannons
+                }
+            }
+            set_variable = {
+                name = gate_designer_entity
+                value = flag:gate_flying_fortress_cannons_armored_entity
+            }
+            fix_variable_error = { variable = gate_flying_fortress_cannons_armored_entity }
+        }
+        else_if = {
+            limit = {
+                any_in_list = {
+                    variable = gate_designer_selections
+                    var:element ?= flag:gate_designer_fortress_armored
+                }
+            }
+            set_variable = {
+                name = gate_designer_entity
+                value = flag:gate_flying_fortress_armored_entity
+            }
+            fix_variable_error = { variable = gate_flying_fortress_armored_entity }
+        }
+        else_if = {
+            limit = {
+                any_in_list = {
+                    variable = gate_designer_selections
+                    var:element ?= flag:gate_designer_fortress_cannons
+                }
+            }
+            set_variable = {
+                name = gate_designer_entity
+                value = flag:gate_flying_fortress_cannons_entity
+            }
+            fix_variable_error = { variable = gate_flying_fortress_cannons_entity }
+        }
+    }
+}
+
+create_gate_designer_element = {
+    create_container = {
+        parent = this # at the very latest delete it when the country is gone
+        tags = { gate_mod gate_designer_element }
+        on_created = {
+            set_variable = {
+                name = name
+                value = flag:$name$
+            }
+            set_variable = {
+                name = desc
+                value = flag:$desc$
+            }
+            set_variable = {
+                name = modifier
+                value = flag:$modifier$
+            }
+            set_variable = {
+                name = element
+                value = flag:$element$
+            }
+        }
+        save_scope_as = temp_container
+    }
+    if = {
+        limit = {
+            always = $is_base$
+        }
+        # Set as base element and do not show up in the list
+        set_variable = {
+            name = gate_designer_base
+            value = scope:temp_container
+        }
+    }
+    else = {
+        # Add to choice list if it is not the base element
+        add_to_variable_list = {
+            name = gate_designer_choices
+            target = scope:temp_container
+        }
+    }
+    clear_saved_scope = temp_container
+    fix_variable_error = { variable = $name$ }
+    fix_variable_error = { variable = $desc$ }
+    fix_variable_error = { variable = $element$ }
+    fix_variable_error = { variable = $modifier$ }
+}
+
+cleanup_gate_designer_elements = {
+    every_in_list = {
+        variable = gate_designer_choices
+        destroy_container = yes
+    }
+    clear_variable_list = gate_designer_choices
+    clear_variable_list = gate_designer_selections
+    if = {
+        limit = {
+            has_variable = gate_designer_base
+        }
+        var:gate_designer_base ?= {
+            destroy_container = yes
+        }
+        remove_variable = gate_designer_base
+    }
+    if = {
+        limit = {
+            has_variable = gate_designer_entity
+        }
+        remove_variable = gate_designer_entity
+    }
+}

@@ -21,6 +21,9 @@ gate_orphan_fix.1 = {
 	immediate = {
 		fix_variable_error = { variable = yes }
 		fix_variable_error = { variable = gate_elven_buildings_enabled }
+		fix_variable_error = { variable = gate_flying_fortress }
+		fix_variable_error = { variable = element }
+		fix_variable_error = { variable = modifier }
 
 		# Topbar
 		fix_variable_error = { variable = gg_topbar_magic_innovation }

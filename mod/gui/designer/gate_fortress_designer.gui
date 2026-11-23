@@ -1,0 +1,26 @@
+﻿types project_designers {
+
+    type gate_fortress_designer = gate_designer_window {
+        datacontext = "[GetScriptedGui('gg_designer_flying_fortress_window')]"
+        state = {
+            name = _hide
+            on_finish = "[ScriptedGui.Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
+        }
+        blockoverride "designer_visibility" {
+            visible = "[ScriptedGui.IsValid(GuiScope.SetRoot(Country.MakeScope).End)]"
+        }
+        blockoverride "designer_title" {
+            text = gg_designer_fortress_title
+        }
+        blockoverride "designer_sub_title" {
+            text = gg_designer_fortress_sub_title
+        }
+        blockoverride "first_line_position" {
+            position = { 0 14 }
+        }
+        blockoverride "designer_button_close" {
+            onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(Country.MakeScope).End)]"
+        }
+    }
+
+}

@@ -1,0 +1,105 @@
+﻿gg_designer_flying_fortress_window = {
+    scope = country
+
+    is_valid = {
+        AND = {
+            has_variable = gate_flying_fortress_designer
+            exists = power_bloc
+        }
+    }
+
+    effect = {
+        remove_variable = gate_flying_fortress_designer
+        cleanup_gate_designer_elements = yes
+    }
+}
+
+gg_designer_reset_elements = {
+    scope = country
+
+    is_valid = {
+        any_in_list = {
+            variable = gate_designer_selections
+        }
+    }
+
+    effect = {
+        clear_variable_list = gate_designer_selections
+    }
+
+    confirm_title = gg_designer_button_reset_confirm_title
+    confirm_text = gg_designer_button_reset_confirm_text
+}
+
+gg_designer_select_element = {
+    scope = country
+
+    saved_scopes = {
+        element
+    }
+
+    is_shown = {
+        NOT = {
+            is_target_in_variable_list = {
+                name = gate_designer_selections
+                target = scope:element
+            }
+        }
+    }
+
+    is_valid = {
+        trigger_if = {
+            limit = {
+                exists = power_bloc
+            }
+            power_bloc.modifier:power_bloc_gate_flying_fortress_modules > gate_fortress_selected_modules
+        }
+        trigger_else = {
+            # Never allow when there are no power bloc
+            always = no
+        }
+    }
+
+    effect = {
+        add_to_variable_list = {
+            name = gate_designer_selections
+            target = scope:element
+        }
+        select_gate_fortress_designer_entity = yes
+    }
+}
+
+gg_designer_remove_element = {
+    scope = country
+
+    saved_scopes = {
+        element
+    }
+
+    is_shown = {
+        is_target_in_variable_list = {
+            name = gate_designer_selections
+            target = scope:element
+        }
+    }
+
+    effect = {
+        remove_list_variable = {
+            name = gate_designer_selections
+            target = scope:element
+        }
+        select_gate_fortress_designer_entity = yes
+    }
+}
+
+gg_designer_used_modules = {
+    scope = country
+
+    effect = {
+        custom_tooltip = gg_designer_modules_base
+        every_in_list = {
+            variable = gate_designer_selections
+            custom_tooltip = gg_designer_modules_dynamic
+        }
+    }
+}

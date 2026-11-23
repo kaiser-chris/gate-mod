@@ -1,0 +1,48 @@
+pdxmesh = {
+	name = "gate_flying_fortress_weapons_mesh"
+	file = "gate_flying_fortress_weapons.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 8.0 }
+		lod = { index = 2 percent = 4.0 }
+	}
+
+	scale = 3.0
+
+
+	meshsettings = {
+		name = "LOD_0|mesh|meshShape"
+		index = 0
+		texture_diffuse = "gate_flying_fortress_weapons_diffuse.dds"
+		texture_normal = "gate_flying_fortress_weapons_normal.dds"
+		texture_specular = "gate_flying_fortress_weapons_properties.dds"
+		shader = "standard"
+		additional_shader_defines = { "EMISSIVE_NIGHT" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	meshsettings = {
+		name = "LOD_1|mesh|meshShape"
+		index = 0
+		texture_diffuse = "gate_flying_fortress_weapons_diffuse.dds"
+		texture_normal = "gate_flying_fortress_weapons_normal.dds"
+		texture_specular = "gate_flying_fortress_weapons_properties.dds"
+		shader = "standard"
+		additional_shader_defines = { "EMISSIVE_NIGHT" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	meshsettings = {
+		name = "LOD_2|mesh|meshShape"
+		index = 0
+		texture_diffuse = "gate_flying_fortress_weapons_diffuse.dds"
+		texture_normal = "gate_flying_fortress_weapons_normal.dds"
+		texture_specular = "gate_flying_fortress_weapons_properties.dds"
+		shader = "standard"
+		additional_shader_defines = { "EMISSIVE_NIGHT" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "gate_flying_fortress_weapons_entity"
+	pdxmesh = "gate_flying_fortress_weapons_mesh"
+}

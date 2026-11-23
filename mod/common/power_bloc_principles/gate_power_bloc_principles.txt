@@ -1,0 +1,39 @@
+﻿principle_gate_flying_fortress_1 = {
+    icon = gfx/interface/icons/event_icons/event_gate_flying_fortress.dds
+    background = "gfx/interface/icons/principles_icons/principle_tier_1.dds"
+
+    power_bloc_modifier = {
+        power_bloc_gate_flying_fortress_modules = 1
+        power_bloc_cohesion_add = 5
+    }
+
+    ai_weight = {
+        value = 0 # TODO: Flying fortresses are deactivated for AI power bloc leaders
+    }
+}
+principle_gate_flying_fortress_2 = {
+    icon = gfx/interface/icons/event_icons/event_gate_flying_fortress.dds
+    background = "gfx/interface/icons/principles_icons/principle_tier_2.dds"
+
+    power_bloc_modifier = {
+        power_bloc_gate_flying_fortress_modules = 2
+        power_bloc_cohesion_add = 5
+    }
+
+    ai_weight = {
+        value = 1000 # AI prefers upgrading groups it has already picked to unlocking new ones
+    }
+}
+principle_gate_flying_fortress_3 = {
+    icon = gfx/interface/icons/event_icons/event_gate_flying_fortress.dds
+    background = "gfx/interface/icons/principles_icons/principle_tier_3.dds"
+
+    power_bloc_modifier = {
+        power_bloc_gate_flying_fortress_modules = 3
+        power_bloc_cohesion_add = 5
+    }
+
+    ai_weight = {
+        value = 1000 # AI prefers upgrading groups it has already picked to unlocking new ones
+    }
+}

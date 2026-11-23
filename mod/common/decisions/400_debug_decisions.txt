@@ -392,3 +392,25 @@ debug_decision_gate_join_mage_council = {
 		value = 0
 	}
 }
+
+debug_decision_gate_open_fortress_designer = {
+	is_shown = {
+		has_global_variable = com_debug
+		is_player = yes
+	}
+
+	possible = {
+		NOT = {
+			has_variable = gate_flying_fortress_designer
+		}
+	}
+
+	when_taken = {
+		set_variable = gate_flying_fortress_designer
+		setup_gate_fortress_designer = yes
+	}
+
+	ai_chance = {
+		value = 0
+	}
+}

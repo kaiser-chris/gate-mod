@@ -1,0 +1,21 @@
+﻿gate_flying_fortress_core = {
+    icon = gfx/interface/icons/timed_modifier_icons/gate_modifier_flying_fortress_positive.dds
+    unit_provinces_lost_mult = -0.5
+}
+
+gate_flying_fortress_cannons = {
+    icon = gfx/interface/icons/timed_modifier_icons/gate_modifier_flying_fortress_positive.dds
+    unit_devastation_mult = 0.1
+    unit_kill_rate_add = 0.2
+}
+
+gate_flying_fortress_armored = {
+    icon = gfx/interface/icons/timed_modifier_icons/gate_modifier_flying_fortress_positive.dds
+    unit_morale_recovery_mult = 0.2
+    unit_recovery_rate_add = 0.2
+}
+
+gate_flying_fortess_debug = {
+    icon = gfx/interface/icons/timed_modifier_icons/gate_modifier_flying_fortress_positive.dds
+    power_bloc_gate_flying_fortress_modules = 5
+}
